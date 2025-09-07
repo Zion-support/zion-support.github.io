@@ -1,6 +1,5 @@
-'use client';
-import React, { useState } from 'react';
-
+'use client'
+import React, { useState } from 'react'
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -9,34 +8,29 @@ export default function ContactForm() {
     service: '',
     budget: '',
     message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
-
+    })
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
+      })
+  if($2) {
+        setSubmitStatus('success')
         setFormData({
           name: '',
           email: '',
@@ -44,17 +38,14 @@ export default function ContactForm() {
           service: '',
           budget: '',
           message: ''
-        });
+        })
       } else {
-        setSubmitStatus('error');
-      }
+        setSubmitStatus('error')
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false);
-    }
-  };
-
+      setIsSubmitting(false)
+  }
   return (
     <div className="max-w-4xl mx-auto">
       {/* Hero Section */}
@@ -63,7 +54,7 @@ export default function ContactForm() {
           Get in Touch
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Ready to transform your business with cutting-edge technology? 
+          Ready to transform your business with cutting-edge technology?
           Let&apos;s discuss your project and explore how we can help you achieve your goals.
         </p>
       </div>
@@ -72,7 +63,7 @@ export default function ContactForm() {
         {/* Contact Form */}
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
-          
+
           {submitStatus === 'success' && (
             <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
               Thank you for your message! We&apos;ll get back to you soon.
@@ -271,5 +262,4 @@ export default function ContactForm() {
         </div>
       </div>
     </div>
-  );
-}
+  )

@@ -1,44 +1,23 @@
 {
-<<<<<<< HEAD
   "extends": ["next/core-web-vitals"],
   "rules": {
     "no-unused-vars": "warn",
     "no-console": "warn",
     "prefer-const": "error"
   }
-}
-=======
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-<<<<<<< HEAD
-
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-  "extends": [
-    "next/core-web-vitals",
-    "@typescript-eslint/recommended"
-  ],
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-origin/automation-improvements-final
-=======
->>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
-  "parser": "@typescript-eslint/parser",
+}  "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
     "es6": true,
     "jest": true,
-<<<<<<< HEAD
 
     "jest": true
     "es6": true,
     "jest": true
     "es6": true,
-    "jest": true
-=======
->>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
-    "es2021": true
+    "jest": true    "es2021": true
   },
   "globals": {
     "IntersectionObserver": "readonly",
@@ -47,8 +26,6 @@ origin/automation-improvements-final
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
-<<<<<<< HEAD
-
 
     "es6": true,
     "jest": true
@@ -57,16 +34,12 @@ origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-=======
->>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
-  },
+origin/automation-improvements-final  },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
-<<<<<<< HEAD
     "no-console": "warn"
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
@@ -88,13 +61,7 @@ origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-=======
-    "no-console": "warn",
-    "react/react-in-jsx-scope": "off",
-    "no-undef": "error"
->>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
-  },
+origin/automation-improvements-final  },
   "ignorePatterns": [
     "node_modules/",
     ".next/",
@@ -166,12 +133,8 @@ origin/automation-improvements-final
     "security-reports/",
     "pages.__backup/",
     "pages-disabled/",
-<<<<<<< HEAD
 
     "pages.disabled_auto/"
-
-=======
->>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
     "pages.disabled_auto/",
     "zion_academy/",
     "pm2-automation/",
@@ -296,7 +259,6 @@ origin/automation-improvements-final
     "automated-merge-conflict-resolver.cjs",
     "automation/**",
     "backup-problematic-files/**"
-<<<<<<< HEAD
     "pages.disabled_auto/"
 
     "pages.disabled_auto/"
@@ -429,9 +391,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-=======
->>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
-  ]
+origin/automation-improvements-final  ]
 }
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

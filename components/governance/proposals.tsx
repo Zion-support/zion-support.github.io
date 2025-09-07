@@ -1,24 +1,17 @@
-  data;
-
-              View;
-            </a>;
-          </li>;
+  data
+              View
+            </a>
+          </li>
         ))}
         )}
 
       </ul>
     </div>
-  );
-
+  )
     return { props: { data: JSON && JSON.parse(raw) } }
-  }catch{;
+  }catch{
   try{}
-    </div>;
-  );
-}
-
-}
+    </div>
+  )
     return { props: { data: { updated_at: null, proposals: [] } } }
-  }
-}
 

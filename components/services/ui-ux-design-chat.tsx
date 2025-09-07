@@ -1,30 +1,25 @@
-
-
 import type { NextPage } from "next";"
 import Head from "next/head";"
-import Link from "next/link";
+import Link from "next/link"
 import type { NextPage } from 'next';'
 import Head from 'next/head';'
-import Link from 'next/link';
-
+import Link from 'next/link'
 const UiUxDesignChat: NextPage = () => {}
   return (
     <div>
       <Head>
 
-import type { NextPage } from "next";
-import Head from "next/head";
-
-import Link from "next/link";
-const UiUxDesignChat: NextPage = () => {;
+import type { NextPage } from "next"
+import Head from "next/head"
+import Link from "next/link"
+const UiUxDesignChat: NextPage = () => {
   return (
-    <div>;
-      <Head>;
+    <div>
+      <Head>
         <title>UiUxDesignChat - Zion Tech Solutions</title>;"
         <meta name="description" content="UiUxDesignChat service" />{" "}
 
-      </Head>;
-
+      </Head>
         <meta name="description" content="UiUxDesignChat service" />
       </Head>
 pr-12243
@@ -35,39 +30,31 @@ pr-12243
         <a href="/services">Back to Services</a>
       </main>
     </div>
-      </Head>;
-
-      <main>;
-        <h1>UiUxDesignChat</h1>;
+      </Head>
+      <main>
+        <h1>UiUxDesignChat</h1>
         <p>Service details coming soon...</p>;"
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>;
-  );
-}
-export default UiUxDesignChat;
-
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
+  )
+export default UiUxDesignChat
         <title>UiUxDesignChat - Zion Tech Solutions</title>
 
-import type { NextPage } from './next';
-import Head from './next / head';
-
-import Link from './next / link';
+import type { NextPage } from './next'
+import Head from './next / head'
+import Link from './next / link'
 const UiUxDesignChat: NextPage = () => {}
   return (
-    <div>;
-      <Head>;
+    <div>
+      <Head>
         <title > UiUxDesignChat - Zion Tech Solutions</title>;"
         <meta name="description" content="UiUxDesignChat service" />{" "}
-      </Head>;
-      <main>;
-        <h1 > UiUxDesignChat</h1>;
+      </Head>
+      <main>
+        <h1 > UiUxDesignChat</h1>
         <p > Service details coming soon...</p>;"
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>);
-}
-;
-export default UiUxDesignChat;
-;
-
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>)
+export default UiUxDesignChat

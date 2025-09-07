@@ -1,4 +1,3 @@
-
   Star,
   TrendingUp,
   Users,
@@ -49,52 +48,47 @@
   Sparkles as SparklesIcon,
   Zap as ZapIcon,
   Brain as BrainIcon,
-  Play as PlayIcon,';
-} from 'lucide-react';
+  Play as PlayIcon,'
+} from 'lucide-react'
 '
 import Layout from '../components/layout/Layout';'
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {}
-  Star, TrendingUp, Users, Award, Clock, Heart, ;
-  Brain, Atom, Shield, Rocket, Zap, Globe, ;
+  Star, TrendingUp, Users, Award, Clock, Heart,
+  Brain, Atom, Shield, Rocket, Zap, Globe,
   Brain as BrainIcon,
   Play as PlayIcon,'
-} from 'lucide-react';
-import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
-
+} from 'lucide-react'
+import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services'
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https://ziontechgroup.com',}
-};
+}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-  CheckCircle, ArrowRight, Search, Filter;
-
-  ChevronDown, ChevronUp, Eye, Play, Sparkles;
-  Target, Microscope, Lock, Cloud, BarChart3;
-  Settings, Cpu, Database, Network, Server;
-  ShieldCheck, GlobeIcon, StarIcon, TrendingUpIcon;
-  UsersIcon, CheckCircleIcon, ArrowRightIcon;
-  CpuIcon, DollarSign, Phone, Mail, MapPin;
-  Dna, Target as TargetIcon, Shield as ShieldIcon;
-
-  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
-
-      case 'rating':;
+  CheckCircle, ArrowRight, Search, Filter
+  ChevronDown, ChevronUp, Eye, Play, Sparkles
+  Target, Microscope, Lock, Cloud, BarChart3
+  Settings, Cpu, Database, Network, Server
+  ShieldCheck, GlobeIcon, StarIcon, TrendingUpIcon
+  UsersIcon, CheckCircleIcon, ArrowRightIcon
+  CpuIcon, DollarSign, Phone, Mail, MapPin
+  Dna, Target as TargetIcon, Shield as ShieldIcon
+  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon
+      case 'rating':
         return b && b.rating - a && a.rating;'
-      case 'customers':;
-        return b && b.customers - a && a.customers;
-      default:;
-        return b && b.popular ? 1 : -1;      default: return b && b.popular ? 1 : -1;
-    }
-  });
+      case 'customers':
+        return b && b.customers - a && a.customers
+      default:
+        return b && b.popular ? 1 : -1;      default: return b && b.popular ? 1 : -1
+  })
   return (
-    <Layout>;
-      <Head>;
-        <title>;
-          Ultimate Futuristic Services Showcase 2025 | Zion Tech Group;
-        </title>;
+    <Layout>
+      <Head>
+        <title>
+          Ultimate Futuristic Services Showcase 2025 | Zion Tech Group
+        </title>
         <meta name="description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology." />"
         <meta name="keywords" content="futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group" />"
         <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />"
@@ -104,36 +98,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
       </Head>"
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">
-                Services 2025;
+                Services 2025
               </span>
             </h1>"
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the future of technology with our revolutionary services that combine AI consciousness;
+              Experience the future of technology with our revolutionary services that combine AI consciousness
               quantum computing, space technology, and breakthrough innovations to transform your business.
             </p>"
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              Experience the future of technology with our revolutionary;
-              services that combine AI consciousness, quantum computing, space;
-              technology, and breakthrough innovations to transform your;
-              business.;
-            </p>;
+              Experience the future of technology with our revolutionary
+              services that combine AI consciousness, quantum computing, space
+              technology, and breakthrough innovations to transform your
+              business.
+            </p>
           parseFloat(b.price.replace(/[^0-9.]/g, '')) -
           parseFloat(a.price.replace(/[^0-9.]/g, ''))
-        );
+        )
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating
       case 'customers':
-        return b.customers - a.customers;
+        return b.customers - a.customers
 default:}
         return b.popular ? 1 : -1;}
-    }
-  });
 
+  })
 const containerVariants = {}
     hidden: { opacity: 0,}
-}
+
     visible: {
-      opacity: 1;
+      opacity: 1
 transition: {}
 staggerChildren: 0.1,}
       },
@@ -153,59 +146,59 @@ duration: 0.5,}
   return (
     <Layout    />
       <Head><title>
-          Ultimate Futuristic Services Showcase 2025 | Zion Tech Group;
+          Ultimate Futuristic Services Showcase 2025 | Zion Tech Group
         </title>
-        <meta;
+        <meta
 name='description'
           content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology.'
            />
-        <meta;
+        <meta
 name='keywords'
           content='futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group'
            />
-        <meta;
+        <meta
 property='og:title'
           content='Ultimate Futuristic Services Showcase 2025 | Zion Tech Group'
            />
-        <meta;
+        <meta
 property='og:description'
           content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations.'
            />
-        <meta;
+        <meta
 property='og: url'
           content='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
            />
         <meta property='og:type' content='website'    />
-        <link;
+        <link
 rel='canonical'
           href='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
            />
       </Head>
       {/* Hero Section *,}
-}
+
       <section className='relative py-20 lg:py-32 overflow-hidden'    />
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'    /></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />
-          <motion.div;
+          <motion.div
 initial={{ opacity: 0, y: 30 ,}
-}
+
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 ,}
-}
+
               />
 <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'    />
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />
-                Ultimate Futuristic;
+                Ultimate Futuristic
               </span>
               <br    />
               <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent'    />
-                Services 2025;
+                Services 2025
               </span>
             </h1>
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'    />
-              Experience the future of technology with our revolutionary;
-services that combine AI consciousness, quantum computing, space;
-technology, and breakthrough innovations to transform your;
+              Experience the future of technology with our revolutionary
+services that combine AI consciousness, quantum computing, space
+technology, and breakthrough innovations to transform your
 business.
             </p>
             <div className='flex flex-wrap justify-center gap-4 mb-12'    />
@@ -213,9 +206,9 @@ business.
                 <motion.div;}
 key={index}
                   initial={{ opacity: 0, scale: 0.8 ,}
-}
+
                   animate={{ opacity: 1, scale: 1 ,}
-}
+
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 
       {/* Search and Filter Section */}
@@ -224,21 +217,20 @@ key={index}
 
               ))}
       {/* Search and Filter Section */}
-      <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'    />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />;
-          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'    />;
+      <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'    />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />
+          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'    />
             {/* Search */}
-            <div className='relative flex-1 max-w-md'    />;
-              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5'    />;
-
-              <input;
+            <div className='relative flex-1 max-w-md'    />
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5'    />
+              <input
 type='text'
                 placeholder='Search futuristic services...'
                 value={searchTerm}
 
             {/* Category Filter */}"
             <div className="flex flex-wrap gap-3">
-              <select;
+              <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -259,7 +251,7 @@ type='text'
                   </option>
 
               {/* Sort Options */}
-              <select;
+              <select
                 value={sortBy}
 
                 className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
@@ -272,7 +264,7 @@ type='text'
                 <option value='customers'>Most Customers</option>
               </select>
               {/* Sort Options */}
-              <select;
+              <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}'
                 className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
@@ -292,42 +284,42 @@ type='text'
                 <option value="price-low">Price: Low to High</option>;"
                 <option value="price-high">Price: High to Low</option>;"
                 <option value="rating">Highest Rated</option>;"
-                <option value="customers">Most Customers</option>;
-              </select>;
+                <option value="customers">Most Customers</option>
+              </select>
               {/* Sort Options */}
-              <select;
+              <select
                 value={sortBy}
 onChange={e =    /> setSortBy(e.target.value)}
                 className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'>
 
-                <option value='popular'    />Most Popular</option>;
-                <option value='price-low'    />Price: Low to High</option>;
-                <option value='price-high'    />Price: High to Low</option>;
-                <option value='rating'    />Highest Rated</option>;
-                <option value='customers'    />Most Customers</option>;
-              </select>;
+                <option value='popular'    />Most Popular</option>
+                <option value='price-low'    />Price: Low to High</option>
+                <option value='price-high'    />Price: High to Low</option>
+                <option value='rating'    />Highest Rated</option>
+                <option value='customers'    />Most Customers</option>
+              </select>
               {/* Sort Options */}
-              <select;
+              <select
                 value={sortBy}
                 onChange={e =    /> setSortBy(e.target.value)}
-                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
+                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
                 ))}
 
               {/* View Mode Toggle */}
 
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'    />
-                <button;
+                <button
 onClick={() =    /> setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}>
 
-<div className='grid grid-cols-2 gap-1 w-4 h-4'    />;
-                    <div className='bg-current rounded-sm'    /></div>;
-                    <div className='bg-current rounded-sm'    /></div>;
-                    <div className='bg-current rounded-sm'    /></div>;
-                    <div className='bg-current rounded-sm'    /></div>;
-                  </div>;
-                </button>;
-                <button;
+<div className='grid grid-cols-2 gap-1 w-4 h-4'    />
+                    <div className='bg-current rounded-sm'    /></div>
+                    <div className='bg-current rounded-sm'    /></div>
+                    <div className='bg-current rounded-sm'    /></div>
+                    <div className='bg-current rounded-sm'    /></div>
+                  </div>
+                </button>
+                <button
                   onClick={() =    /> setViewMode('list')}
                   className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}
 
@@ -347,15 +339,14 @@ onClick={() =    /> setViewMode('grid')}
       {/* Services Grid */}
 <section className='py-16'    />
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'    />
-          <motion.div;
+          <motion.div
 variants={containerVariant,}
-}
-            initial='hidden';
-            animate='visible';
-            className={viewMode === 'grid';
+
+            initial='hidden'
+            animate='visible'
+            className={viewMode === 'grid'
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';}
                 : 'space-y-6';}
-            }
 
               />
             {sortedServices.map((service, index) => (}
@@ -367,7 +358,7 @@ key={service.id}
 viewMode === 'grid'
                     ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover: border-purple-500/50 transition-all duration-300 hover:scale-105'
                     : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300'}
-}
+
                 }`}    />
 
                 {/* Popular Badge */}
@@ -378,13 +369,13 @@ viewMode === 'grid'
                   </div>}
                 )}
                 {/* Service Header */}
-<div;
+<div
 className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}
                     />
-                  <div;
+                  <div
 className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mx-auto mb-4'}`}
                       />
-                    <div;
+                    <div
 className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}
                         />
                       {service.icon}
@@ -394,37 +385,36 @@ className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-
 }    />
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'    />
 
-                    Popular;
-                  </div>;
+                    Popular
+                  </div>
                 )}
                 {/* Service Header */}
-<div;
+<div
                   className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}    />
 
-                  <div;
+                  <div
                     className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mx-auto mb-4'}`}    />
 
-                    <div;
+                    <div
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}    />
 
                       {service.icon}
-                    </div>;
-                  </div>;
+                    </div>
+                  </div>
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}    />
 
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'    />;
-                    Popular;
-                  </div>;
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'    />
+                    Popular
+                  </div>
                 {service.popular && ()}
                 {/* Service Header */}
                       {service.name}
-                    </h3>;
-                    <p className='text - gray - 300 text - sm mb - 3'    />;
+                    </h3>
+                    <p className='text - gray - 300 text - sm mb - 3'    />
                       {service.tagline}
                     {/* Price */}
-                    <div className='flex items - center justify - center space - x-2 mb - 4'    />;
-                      <span className='text - 3xl font - bold text - white'    />;
-
+                    <div className='flex items - center justify - center space - x-2 mb - 4'    />
+                      <span className='text - 3xl font - bold text - white'    />
                         {service.price}
 
                       </span>
@@ -434,16 +424,16 @@ className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-
                 </div>
                 {/* Description */}
 
-                    <Sparkles className='w-4 h-4 mr-2 text-purple-400' />;
-                    Key Features;
+                    <Sparkles className='w-4 h-4 mr-2 text-purple-400' />
+                    Key Features
                   </h4>;'
-                  <div className='grid grid-cols-1 gap-2'>;
-                    {service && service.features.slice(0, 4).map((feature, idx) => (;
-                      <div;
+                  <div className='grid grid-cols-1 gap-2'>
+                    {service && service.features.slice(0, 4).map((feature, idx) => (
+                      <div
                         key={idx}'
                         className='flex items-center text-sm text-gray-300'>;'
                         <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                        {feature}
-                      </div>;
+                      </div>
                     ))}
                         {feature}
                       </div>))}
@@ -457,7 +447,7 @@ className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-
                   <div className='text-gray-400'>'
                     <span className='block'>Trial</span>'
                     <span className='text-white font-medium'>
-                      {service.trialDays} days;
+                      {service.trialDays} days
                     </span>
                   </div>'
                   <div className='text-gray-400'>'
@@ -498,7 +488,7 @@ className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-
                       {service && service.roi}
                     </div>;'
                     <div className='text-gray-300'>;'
-                      <span className='font-semibold text-white'>;
+                      <span className='font-semibold text-white'>
                         Market Size:;'
                       </span>{' '}"
                   <div className="text-sm">"
@@ -514,17 +504,17 @@ className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-
                     </div>;"
                     <div className="text-gray-300">;"
                       <span className="font-semibold text-white">Market Size: </span> {service && service.marketSize}
-                  </div>;
-                  <div className='text-gray-400'    />;
-                    <span className='block'    />Trial</span>;
-                    <span className='text-white font-medium'    />;
-                      {service.trialDays} days;
-                    </span>;
-                  </div>;
-                  <div className='text-gray-400'    />;
-                    <span className='block'    />Rating</span>;
-                    <div className='flex items-center'    />;
-                      <span className='text-white font-medium mr-1'    />;
+                  </div>
+                  <div className='text-gray-400'    />
+                    <span className='block'    />Trial</span>
+                    <span className='text-white font-medium'    />
+                      {service.trialDays} days
+                    </span>
+                  </div>
+                  <div className='text-gray-400'    />
+                    <span className='block'    />Rating</span>
+                    <div className='flex items-center'    />
+                      <span className='text-white font-medium mr-1'    />
                         {service.rating}
 
                       </span>
@@ -541,44 +531,42 @@ className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-
                 </div>
                 {/* Contact Info */}'
                 <div className='mt-6 pt-6 border-t border-white/10'>;'
-                  <div className='text-center text-sm text-gray-400'>;
+                  <div className='text-center text-sm text-gray-400'>
                     <p>Contact us for custom pricing and implementation</p>;'
-                    <div className='flex items-center justify-center space-x-4 mt-2'>;
-
-                        <Phone className='w-4 h-4 mr-1' />;
+                    <div className='flex items-center justify-center space-x-4 mt-2'>
+                        <Phone className='w-4 h-4 mr-1' />
                         {contactInfo && contactInfo.mobile}
-                      </a>;
+                      </a>
                       <a;`
                         href={`mailto:${contactInfo && contactInfo.email}`}'
                         className='flex items-center text-purple-400 hover:text-purple-300'>;'
                         <Mail className='w-4 h-4 mr-1' />                        {contactInfo && contactInfo.email}                    <p>Contact us for custom pricing and implementation</p>;"
                     <div className="flex items-center justify-center space-x-4 mt-2">;"`
                       <a href={`tel:${contactInfo && contactInfo.mobile}`} className="flex items-center text-purple-400 hover:text-purple-300">;"
-                        <Phone className="w-4 h-4 mr-1" />;
+                        <Phone className="w-4 h-4 mr-1" />
                         {contactInfo && contactInfo.mobile}
                       </a>;"`
                       <a href={`mailto:${contactInfo && contactInfo.email}`} className="flex items-center text-purple-400 hover:text-purple-300">;"
-                        <Mail className="w-4 h-4 mr-1" />;
+                        <Mail className="w-4 h-4 mr-1" />
                         {contactInfo && contactInfo.email}
-                      </a>;
-                    </div>;
-                  </div>;
-                </div>;
+                      </a>
+                    </div>
+                  </div>
+                </div>
                 {/* Contact Info */}
 
 <div className='mt-6 pt-6 border-t border-white/10'    />
                   <div className='text-center text-sm text-gray-400'    />
                     <p    />Contact us for custom pricing and implementation</p>
                     <div className='flex items-center justify-center space-x-4 mt-2'    />
-                      <a;
+                      <a
 href={`tel: ${contactInfo && contactInfo.mobile},
-}
-                        className='flex items-center text-purple-400 hover:text-purple-300'    />;
-                        <Phone className='w-4 h-4 mr-1'    />;
-                        {contactInfo && contactInfo.mobile}
-                      </a>;
 
-                      <a;
+                        className='flex items-center text-purple-400 hover:text-purple-300'    />
+                        <Phone className='w-4 h-4 mr-1'    />
+                        {contactInfo && contactInfo.mobile}
+                      </a>
+                      <a
 href={`mailto: ${contactInfo.email}`}
                         className='flex items-center text-purple-400 hover:text-purple-300'
                           />
@@ -592,20 +580,20 @@ href={`mailto: ${contactInfo.email}`}
             ))}
           </motion.div>
 
-                  setSearchTerm('');
+                  setSearchTerm('')
                 }}"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300";
-              >;
-                Clear Filters;
-              </button>;
-            </div>;
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+              >
+                Clear Filters
+              </button>
+            </div>
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300'
 
                   setSelectedCategory('all')
                 }}
                 className=\"bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300\"
               >
-                Clear Filters;
+                Clear Filters
               </button>
             </div>
 
@@ -619,27 +607,27 @@ href={`mailto: ${contactInfo.email}`}
       {/* CTA Section */}'
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;'"
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;"
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div;
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;'
 
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
-              Ready to Experience the Future?;
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+              Ready to Experience the Future?
             </h2>;'
-            <p className='text-xl text-gray-300 mb-8'>;
-              Transform your business with our revolutionary futuristic;
-              services. Get in touch with our experts to discuss your specific;
-              needs and implementation strategy.;
+            <p className='text-xl text-gray-300 mb-8'>
+              Transform your business with our revolutionary futuristic
+              services. Get in touch with our experts to discuss your specific
+              needs and implementation strategy.
             </p>;'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link'
                 href='/contact''
-                className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'>;
-                Contact Our Experts;
-              </Link>;
+                className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'>
+                Contact Our Experts
+              </Link>
               <Link'
                 href='/pricing'
             </h2>"
@@ -648,223 +636,213 @@ href={`mailto: ${contactInfo.email}`}
               Get in touch with our experts to discuss your specific needs and implementation strategy.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">'
-                className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors'>              Ready to Experience the Future?;
+                className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors'>              Ready to Experience the Future?
             </h2>;"
-            <p className="text-xl text-gray-300 mb-8">;
-              Transform your business with our revolutionary futuristic services. ;
-              Get in touch with our experts to discuss your specific needs and implementation strategy.;
+            <p className="text-xl text-gray-300 mb-8">
+              Transform your business with our revolutionary futuristic services.
+              Get in touch with our experts to discuss your specific needs and implementation strategy.
             </p>;"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-  );
-}
-}
-  );
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+  )
+  )
 }'"
-                      <div className='text - sm text - purple - 400 mt - 2'>                      <div className="text - sm text - purple - 400 mt - 2">;
-                        +{service.features.length - 4} more features;
+                      <div className='text - sm text - purple - 400 mt - 2'>                      <div className="text - sm text - purple - 400 mt - 2">
+                        +{service.features.length - 4} more features
                       </div>)}
-                  </div>;
-                </div>;
+                  </div>
+                </div>
                 {/* Service Details */}'
                 <div className='grid grid - cols - 2 gap - 4 mb - 6 text - sm'>;'
                   <div className='text - gray - 400'>;'
                     <span className='block'>Setup Time</span>;'
-                    <span className='text - white font - medium'>;
+                    <span className='text - white font - medium'>
                       {service.setup_time}
-                    </span>;
+                    </span>
                   </div>;'
                   <div className='text - gray - 400'>;'
                     <span className='block'>Trial</span>;'
-                    <span className='text - white font - medium'>;
-                      {service.trial_days} days;
-                    </span>;
+                    <span className='text - white font - medium'>
+                      {service.trial_days} days
+                    </span>
                   </div>;'
                   <div className='text - gray - 400'>;'
                     <span className='block'>Rating</span>;'
                     <div className='flex items - center'>;'
-                      <span className='text - white font - medium mr - 1'>;
+                      <span className='text - white font - medium mr - 1'>
                         {service.rating}
                       </span>;'
-                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
-                    </div>;
+                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />
+                    </div>
                   </div>;'
                   <div className='text - gray - 400'>;'
                     <span className='block'>Customers</span>;'
-                    <span className='text - white font - medium'>;
-                      {service.customers}+;
-                    </span>                  </div>;
-                </div>;
+                    <span className='text - white font - medium'>
+                      {service.customers}+
+                    </span>                  </div>
+                </div>
                 {/* ROI and Market Info */}                  </div>;"
                   <div className="text - gray - 400">;"
                     <span className="block">Trial</span>;"
-                    <span className="text - white font - medium">{service.trial_days} days</span>;
+                    <span className="text - white font - medium">{service.trial_days} days</span>
                   </div>;"
                   <div className="text - gray - 400">;"
                     <span className="block">Rating</span>;"
                     <div className="flex items - center">;"
                       <span className="text - white font - medium mr - 1">{service.rating}</span>;"
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
-                    </div>;
+                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
+                    </div>
                   </div>;"
                   <div className="text - gray - 400">;"
                     <span className="block">Customers</span>;"
-                    <span className="text - white font - medium">{service.customers}+</span>;
-                  </div>;
-                </div>;
-
+                    <span className="text - white font - medium">{service.customers}+</span>
+                  </div>
+                </div>
                       {service.roi}
                     </div>;'
                     <div className='text - gray - 300'>;'
-                      <span className='font - semibold text - white'>;
-
-                  </div>;
-                </div>;
+                      <span className='font - semibold text - white'>
+                  </div>
+                </div>
                 {/* Action Buttons */}'
-                <div className='flex flex - col sm:flex - row gap - 3'>;
-                  <Link;
+                <div className='flex flex - col sm:flex - row gap - 3'>
+                  <Link
                     href={service.link}'
-                    className='flex - 1 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg text - center hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105';
-                  >;
-                    Get Started;
+                    className='flex - 1 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg text - center hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105'
+                  >
+                    Get Started
                   </Link>;'
                   <button className='px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - purple - 500 / 50 transition - colors'>;'
-                    <Eye className='w - 5 h - 5' />                  </button>;
-                </div>;
+                    <Eye className='w - 5 h - 5' />                  </button>
+                </div>
                 {/* Contact Info */}'
                 <div className='mt - 6 pt - 6 border - t border - white / 10'>;'
-                  <div className='text - center text - sm text - gray - 400'>                  <Link;
+                  <div className='text - center text - sm text - gray - 400'>                  <Link
                     href={service.link}"
-                    className="flex - 1 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg text - center hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105";
-                  >;
-                    Get Started;
+                    className="flex - 1 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg text - center hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105"
+                  >
+                    Get Started
                   </Link>;"
                   <button className="px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - purple - 500 / 50 transition - colors">;"
-                    <Eye className="w - 5 h - 5" />;
-                  </button>;
-                </div>;
+                    <Eye className="w - 5 h - 5" />
+                  </button>
+                </div>
                 {/* Contact Info */}'
                 <div className='mt - 6 pt - 6 border - t border - white / 10'>;'
-                  <div className='text - center text - sm text - gray - 400'>;
+                  <div className='text - center text - sm text - gray - 400'>
                     <p > Contact us for custom pricing and implementation</p>;'
-                    <div className='flex items - center justify - center space - x-4 mt - 2'>;
-
-                        className='flex items - center text - purple - 400 hover:text - purple - 300';
+                    <div className='flex items - center justify - center space - x-4 mt - 2'>
+                        className='flex items - center text - purple - 400 hover:text - purple - 300'
                       >;'
-                        <Phone className='w - 4 h - 4 mr - 1' />;
+                        <Phone className='w - 4 h - 4 mr - 1' />
                         {contact_info.mobile}
-                      </a>;
-
-                        <Mail className="w - 4 h - 4 mr - 1" />;
+                      </a>
+                        <Mail className="w - 4 h - 4 mr - 1" />
                         {contact_info.email}
-                      </a>;
-                    </div>;
-                  </div>;
-                </div>;
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </motion.div>))}
-          </motion.div>;
+          </motion.div>
           {/* No Results */}
           {sorted_services.length === 0 && ('
             <div className='text - center py - 16'>;'
               <div className='text - 6xl mb - 4'>🔍</div>;'
-              <h3 className='text - 2xl font - bold text - white mb - 2'>;
-                No services found;
+              <h3 className='text - 2xl font - bold text - white mb - 2'>
+                No services found
               </h3>;'
-              <p className='text - gray - 400 mb - 6'>;
-                Try adjusting your search criteria or category filter;
-              </p>;
-              <button;
+              <p className='text - gray - 400 mb - 6'>
+                Try adjusting your search criteria or category filter
+              </p>
+              <button
                 on_click={() => {'
                   setSearchTerm ('');'
-                  setSelectedCategory ('all');
+                  setSelectedCategory ('all')
                 }}'
-                className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300'              >              <button;
+                className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300'              >              <button
                 on_click={() => {'
                   setSearchTerm ('');'
-                  setSelectedCategory ('all');
+                  setSelectedCategory ('all')
                 }}"
-                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300";
-              >;
-                Clear Filters;
-              </button>;
+                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300"
+              >
+                Clear Filters
+              </button>
             </div>)}
-        </div>;
-      </section>;
+        </div>
+      </section>
       {/* CTA Section */}'
       <section className='py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to - pink - 900 / 20'>;'"
         <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to - pink - 900 / 20">;"
-        <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">;
-          <motion.div;
-
-            <h2 className='text - 3xl md:text - 5xl font - bold text - white mb - 6'>;
-              Ready to Experience the Future?;
+        <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">
+          <motion.div
+            <h2 className='text - 3xl md:text - 5xl font - bold text - white mb - 6'>
+              Ready to Experience the Future?
             </h2>;'
-            <p className='text - xl text - gray - 300 mb - 8'>;
-              Transform your business with our revolutionary futuristic;
-              services. Get in touch with our experts to discuss your specific;
-              needs and implementation strategy.;
+            <p className='text - xl text - gray - 300 mb - 8'>
+              Transform your business with our revolutionary futuristic
+              services. Get in touch with our experts to discuss your specific
+              needs and implementation strategy.
             </p>;'
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>
               <Link;'
                 href='/contact';'
-                className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105'              >;
-                Contact Our Experts;
-              </Link>;
+                className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105'              >
+                Contact Our Experts
+              </Link>
               <Link;'
                 href='/pricing';'
-                className='border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors'              >              Ready to Experience the Future?;
+                className='border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors'              >              Ready to Experience the Future?
             </h2>;"
-            <p className="text - xl text - gray - 300 mb - 8">;
-              Transform your business with our revolutionary futuristic services.;
-              Get in touch with our experts to discuss your specific needs and implementation strategy.;
+            <p className="text - xl text - gray - 300 mb - 8">
+              Transform your business with our revolutionary futuristic services.
+              Get in touch with our experts to discuss your specific needs and implementation strategy.
             </p>;"
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">
               <Link;"
                 href="/contact";"
-                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105";
-              >;
-                Contact Our Experts;
-              </Link>;
+                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105"
+              >
+                Contact Our Experts
+              </Link>
               <Link;'
                 href='/pricing';'"
                 className='border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors'                href="/pricing";"
-                className="border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors";
-              >;
-                View Pricing;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </Layout>);
-}
-
+                className="border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </Layout>)
 <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Experience the Future?
             </h2>
             <p className='text-xl text-gray-300 mb-8'    />
-              Transform your business with our revolutionary futuristic;
-services. Get in touch with our experts to discuss your specific;
+              Transform your business with our revolutionary futuristic
+services. Get in touch with our experts to discuss your specific
 needs and implementation strategy.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'    />
-              <Link;
+              <Link
 href='/contact'
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'
                   />
-                Contact Our Experts;
+                Contact Our Experts
               </Link>
-              <Link;
+              <Link
 href='/pricing'
                 className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors'
                   />
-                View Pricing;
+                View Pricing
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
-  );
-}
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

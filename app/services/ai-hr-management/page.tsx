@@ -1,12 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI HR Management - Zion Tech Group',
   description: 'Intelligent HR management platform with AI-powered recruitment, employee analytics, and automated HR processes.',
   keywords: 'AI HR management, recruitment automation, employee analytics, HR software, talent management'
-};
-
+}
 function FeatureCard({ title, features, icon }: { title: string; features: string[]; icon: string }) {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
@@ -21,9 +19,7 @@ function FeatureCard({ title, features, icon }: { title: string; features: strin
         ))}
       </ul>
     </div>
-  );
-}
-
+  )
 function PricingCard({ name, price, duration, features, popular }: { name: string; price: string; duration: string; features: string[]; popular: boolean }) {
   return (
     <div className={`border rounded-xl p-6 bg-white hover:shadow-lg transition-shadow ${popular ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-200'}`}>
@@ -50,9 +46,7 @@ function PricingCard({ name, price, duration, features, popular }: { name: strin
         Get Started
       </a>
     </div>
-  );
-}
-
+  )
 function PricingSection() {
   return (
     <section className="py-16">
@@ -100,9 +94,7 @@ function PricingSection() {
         </div>
       </div>
     </section>
-  );
-}
-
+  )
 function ContactSection() {
   return (
     <section className="py-16 bg-gray-50">
@@ -133,9 +125,7 @@ function ContactSection() {
         </div>
       </div>
     </section>
-  );
-}
-
+  )
 export default function AIHRManagementPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -229,10 +219,8 @@ export default function AIHRManagementPage() {
           </div>
         </div>
       </div>
-      
+
       <PricingSection />
       <ContactSection />
     </div>
-  );
-}
-
+  )

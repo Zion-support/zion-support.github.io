@@ -34,7 +34,6 @@
     ".next": {
       "size": 29182248,
       "sizeMB": "27.83"
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
     },
     "node_modules": {
       "size": 0,
@@ -43,7 +42,6 @@
   },
   "fileCounts": {
     ".tsx": 25,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     ".ts": 0,
     ".jsx": 0,
     ".js": 0,
@@ -54,5 +52,4 @@
   "recommendations": []
 
   }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }

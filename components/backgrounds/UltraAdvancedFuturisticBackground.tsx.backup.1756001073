@@ -282,12 +282,10 @@ export default function UltraAdvancedFuturisticBackground({
       animationRef.current = requestAnimationFrame(animate);
     };
 
-=======
     // Initialize and start animation
     initParticles();
     animate();
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     // Handle window resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
@@ -295,7 +293,6 @@ export default function UltraAdvancedFuturisticBackground({
     };
 
     window.addEventListener('resize', handleResize);
-<<<<<<< HEAD
     initParticles();
     animate();
     </div>

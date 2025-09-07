@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link"
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
     "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",
-};
+}
 export default function ServicesOverviewPage() {
   return (
     <div className="animate-fade-in">
@@ -69,8 +69,7 @@ export default function ServicesOverviewPage() {
       </div>{" "}
       <CTA />{" "}
     </div>
-  );
-}
+  )
 function ServiceCard({
   href,
   title,
@@ -78,11 +77,11 @@ function ServiceCard({
   bullets,
   icon,
 }: {
-  href: string;
-  title: string;
-  description: string;
-  bullets: string[];
-  icon: string;
+  href: string
+  title: string
+  description: string
+  bullets: string[]
+  icon: string
 }) {
   return (
     <Link
@@ -105,8 +104,7 @@ function ServiceCard({
         ))}{" "}
       </ul>{" "}
     </Link>
-  );
-}
+  )
 function CTA() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
@@ -137,5 +135,4 @@ function CTA() {
         </a>{" "}
       </div>{" "}
     </div>
-  );
-}
+  )

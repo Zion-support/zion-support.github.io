@@ -1,39 +1,29 @@
-
-import React from 'react';
-
-interface OptimizedImageProps {;
-  src: string, alt: string,;
-
-export default OptimizedImage;
-
-  );
-};
-
-export default OptimizedImage;
-
+import React from 'react'
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  className?: string;
-
-  priority?: boolean;
-  quality?: number;
-  sizes?: string;
+  src: string, alt: string,
+export default OptimizedImage
+  )
 }
-
+export default OptimizedImage
+interface OptimizedImageProps {
+  src: string
+  alt: string
+  width: number
+  height: number
+  className?: string
+  priority?: boolean
+  quality?: number
+  sizes?: string
   src,
   alt,
   width,
   height,
 
-}
     return (
-      <Image;
+      <Image
         src={src}
         alt={alt}
-        fill;
+        fill
         className={class_name}
         priority={priority}
         sizes={sizes}
@@ -52,8 +42,6 @@ interface OptimizedImageProps {
       quality={quality}
 
     />
-  );
-};
-
-export default OptimizedImage;
-
+  )
+}
+export default OptimizedImage

@@ -1,12 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Crm Solution - Zion Tech Group',
   description: 'Professional crm solution services to help your business grow and succeed.',
   keywords: 'crm solution, business solutions, professional services'
-};
-
+}
 export default function CrmSolutionPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -35,6 +33,4 @@ export default function CrmSolutionPage() {
         </a>
       </div>
     </div>
-  );
-}
-
+  )

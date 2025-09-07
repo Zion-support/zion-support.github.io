@@ -1,100 +1,94 @@
-
     {'
       title: 'AI Services Docs'
       links: ['
       color: 'text-green-400'
-    }
 
-import Head from 'next/head';
-
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
+import Head from 'next/head'
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground'
+import Card from '../components/ui/Card'
+import Button from '../components/ui/Button'
     const matchesSearch =
       doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      doc.description.toLowerCase().includes(searchTerm.toLowerCase());
-
-  const sections = [;
+      doc.description.toLowerCase().includes(searchTerm.toLowerCase())
+  const sections = [
     {;'
-      title: 'Getting Started',;
+      title: 'Getting Started',
       links: [;'
         { name: 'Overview', href: '/enhanced-services-showcase' },;'
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },;'
-        { name: 'Contact Sales', href: '/contact' },;
+        { name: 'Contact Sales', href: '/contact' },
       ],;'
-    },    {        { name: 'Contact Sales', href: '/contact' }];
-    };
+    },    {        { name: 'Contact Sales', href: '/contact' }]
+    }
     {;'
-      title: 'AI Services Docs',;
+      title: 'AI Services Docs',
       links: [;'
         { name: 'AI Guardrails', href: '/ai-guardrails' },;'
         { name: 'AI Evals', href: '/ai-evals' },;'
-        { name: 'Agentic RAG', href: '/agentic-rag' },;
+        { name: 'Agentic RAG', href: '/agentic-rag' },
       ],;'
-    },    {        { name: 'Agentic RAG', href: '/agentic-rag' }];
-    };
+    },    {        { name: 'Agentic RAG', href: '/agentic-rag' }]
+    }
     {;'
-      title: 'IT & Platform Docs',;
+      title: 'IT & Platform Docs',
       links: [;'
         { name: 'API Observability', href: '/api-observability' },;'
         { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },;'
-        { name: 'Status Pages & SLO', href: '/status-pages-slo' },;
-      ],;
+        { name: 'Status Pages & SLO', href: '/status-pages-slo' },
+      ],
     },;'
-  ];        { name: 'Status Pages & SLO', href: '/status-pages-slo' }];
-    }];
+  ];        { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
+    }]
   const external = [;'
     { name: 'OpenAI API pricing', url: 'https://openai && openai.com/api/pricing' },;'
     { name: 'Anthropic pricing', url: 'https://www && www.anthropic.com/pricing' },;'
     { name: 'Pinecone pricing', url: 'https://www && www.pinecone.io/pricing/' },;'
     { name: 'Snowflake pricing', url: 'https://www && www.snowflake.com/pricing/' },;'
-  ];    { name: 'Snowflake pricing', url: 'https://www && www.snowflake.com/pricing/' }],;
-  const quickLinks = [;
+  ];    { name: 'Snowflake pricing', url: 'https://www && www.snowflake.com/pricing/' }],
+  const quickLinks = [
     {;'
       title: 'API Status',;'
       description: 'Check service availability and performance',;'
       icon: <CheckCircle className='w-6 h-6' />,;'
-      color: 'text-green-400',;
-    },;
+      color: 'text-green-400',
+    },
     {;'
       title: 'SDK Downloads',;'
       description: 'Get the latest SDKs and client libraries',;'
       icon: <Download className='w-6 h-6' />,;'
       href: '/downloads',;'
-      color: 'text-blue-400',;
-    },;
+      color: 'text-blue-400',
+    },
     {;'
       title: 'Support Portal',;'
       description: 'Get help from our technical support team',;'
       icon: <ExternalLink className='w-6 h-6' />,;'
       href: '/support',;'
-      color: 'text-purple-400',;
-    },;
+      color: 'text-purple-400',
+    },
     {;'
       title: 'Community Forum',;'
       description: 'Connect with other developers and users',;'
       icon: <ExternalLink className='w-6 h-6' />,;'
       href: '/community',;'
-      color: 'text-yellow-400',;
-    },;
-  ];
-  const filteredDocs = documentationItems && documentationItems.filter(doc => {;
-    const matchesSearch =;
-      doc && doc.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      doc && doc.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+      color: 'text-yellow-400',
+    },
+  ]
+  const filteredDocs = documentationItems && documentationItems.filter(doc => {
+    const matchesSearch =
+      doc && doc.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||
+      doc && doc.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase())
     const matchesCategory =;'
-      selectedCategory === 'all' || doc && doc.category === selectedCategory;
-    return matchesSearch && matchesCategory;  });
-  const getDifficultyColor = (difficulty: string) => {;
-    switch (difficulty) {    const matchesSearch = doc && doc.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      selectedCategory === 'all' || doc && doc.category === selectedCategory
+    return matchesSearch && matchesCategory;  })
+  const getDifficultyColor = (difficulty: string) => {
+  switch($2) {    const matchesSearch = doc && doc.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||
                          doc && doc.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());'
-    const matchesCategory = selectedCategory === 'all' || doc && doc.category === selectedCategory;
-
-        return 'bg-red-500/20 text-red-400';
+    const matchesCategory = selectedCategory === 'all' || doc && doc.category === selectedCategory
+        return 'bg-red-500/20 text-red-400'
       default:;'
         return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';'
-      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
+      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400'
   const formatDate = (dateString: string) => {'
     return new Date(dateString).toLocaleDateString('en-US', {}
 '
@@ -104,44 +98,38 @@ import Button from '../components/ui/Button';
       day: 'numeric''
     });  };      day: 'numeric'
     })
-  }
 
-        return 'bg-red-500/20 text-red-400';
-
+        return 'bg-red-500/20 text-red-400'
       default:
         return 'bg-gray-500/20 text-gray-400';) => {
   return $3;}
-}
-    }
-  };
 
+  }
 const formatDate = (
-   ;
+
   return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
 day: 'numeric',
 origin/cursor/automate-test-improve-and-merge-code-2533
-    });
-  };
-
+    })
+  }
   return (
 
-                <h2 className='text-xl font-semibold mb-4 text-white'>;
+                <h2 className='text-xl font-semibold mb-4 text-white'>
                   {s && s.title}
                 </h2>;'
-                <ul className='space-y-2'>;
-                  {s && s.links.map(l => (;
-                    <li key={l && l.name}>;
-
+                <ul className='space-y-2'>
+                  {s && s.links.map(l => (
+                    <li key={l && l.name}>
                   ))}
                 </ul>
               </Card>
             ))}
 
-                    className='text-cyan-400 hover:underline'>;
+                    className='text-cyan-400 hover:underline'>
                     {e && e.name}
-                  </a>;
+                  </a>
                 </li>              ))}
           <Card className="p-6 bg-black/40 border border-gray-700/50">"
             <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>"
@@ -153,9 +141,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       />
 
                     {e.nam,}
-}
-                  </a>;
-                </li>;
+
+                  </a>
+                </li>
               ))}
 
             </ul>
@@ -170,114 +158,108 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
                 href='/contact'
 
-                className='bg-gradient-to-r from-cyan-600 to-blue-600 text-white'>;
-                Contact Support;
-              </Button>;
-              <Button;
+                className='bg-gradient-to-r from-cyan-600 to-blue-600 text-white'>
+                Contact Support
+              </Button>
+              <Button
                 href={contact && contact.website}
-                variant='outline';
-                className='border-gray-600 text-gray-200'    />;
-                Visit Website;
-              </Button>;
-              <a;
-                className='text-cyan-400';
-                href={`tel:${contact && contact.mobile.replace(/[^+\\d]/g, '')}`}    />;
+                variant='outline'
+                className='border-gray-600 text-gray-200'    />
+                Visit Website
+              </Button>
+              <a
+                className='text-cyan-400'
+                href={`tel:${contact && contact.mobile.replace(/[^+\\d]/g, '')}`}    />
                 {contact && contact.mobile}
-              </a>;
+              </a>
               <a className='text-purple-400' href={`mailto: ${contact && contact.email},
-}    />;
+}    />
                 {contact && contact.email}
-              </a>            </div>          <Card className=\"p-6 bg-black/40 border border-gray-700/50\"    />;
-            <h2 className=\"text-xl font-semibold mb-4 text-white\"    />Need help?</h2>;
-            <div className=\"flex flex-col sm:flex-row gap-3\"    />;
-              <Button href=\"/contact\" className=\"bg-gradient-to-r from-cyan-600 to-blue-600 text-white\"    />Contact Support</Button>;
-              <Button href={contact && contact.website} variant=\"outline\" className=\"border-gray-600 text-gray-200\"    />Visit Website</Button>;
-              <a className=\"text-cyan-400\" href={`tel:${contact && contact.mobile.replace(/[^+\\d]/g, '')}`}    />{contact && contact.mobile}</a>;
+              </a>            </div>          <Card className=\"p-6 bg-black/40 border border-gray-700/50\"    />
+            <h2 className=\"text-xl font-semibold mb-4 text-white\"    />Need help?</h2>
+            <div className=\"flex flex-col sm:flex-row gap-3\"    />
+              <Button href=\"/contact\" className=\"bg-gradient-to-r from-cyan-600 to-blue-600 text-white\"    />Contact Support</Button>
+              <Button href={contact && contact.website} variant=\"outline\" className=\"border-gray-600 text-gray-200\"    />Visit Website</Button>
+              <a className=\"text-cyan-400\" href={`tel:${contact && contact.mobile.replace(/[^+\\d]/g, '')}`}    />{contact && contact.mobile}</a>
               <a className=\"text-purple-400\" href={`mailto: ${contact && contact.email}`}    />{contact && contact.emai,}
-}</a>;
-          </Card>;
-        </div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>;
-                      </a>                    </li>      </Head>;
-      <div className=\"min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8\"    />;
-        <div className=\"max - w-6xl mx - auto space - y-10\"    />;
-          <div className=\"text - center\"    />;
-            <h1 className=\"text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent\"    />Documentation</h1>;
-            <p className=\"text - slate - 300 mt - 4\"    />Quick links, references, and integration guides for our services.</p>;
-          </div>;
-          <div className=\"grid grid - cols - 1 md:grid - cols - 3 gap - 6\"    />;
-            {sections.map ((s) => (<Card key={s.title} className=\"p - 6 bg - black / 40 border border - gray - 700 / 50\"    />;
-                <h2 className=\"text - xl font - semibold mb - 4 text - white\"    />{s.title}</h2>;
-                <ul className=\"space - y-2\"    />;
-                  {s.links.map ((l) => (<li key={l.name}    />;
+}</a>
+          </Card>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+                      </a>                    </li>      </Head>
+      <div className=\"min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8\"    />
+        <div className=\"max - w-6xl mx - auto space - y-10\"    />
+          <div className=\"text - center\"    />
+            <h1 className=\"text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent\"    />Documentation</h1>
+            <p className=\"text - slate - 300 mt - 4\"    />Quick links, references, and integration guides for our services.</p>
+          </div>
+          <div className=\"grid grid - cols - 1 md:grid - cols - 3 gap - 6\"    />
+            {sections.map ((s) => (<Card key={s.title} className=\"p - 6 bg - black / 40 border border - gray - 700 / 50\"    />
+                <h2 className=\"text - xl font - semibold mb - 4 text - white\"    />{s.title}</h2>
+                <ul className=\"space - y-2\"    />
+                  {s.links.map ((l) => (<li key={l.name}    />
                       <a href={l.href} className=\"text - cyan - 400 hover: underline\"    />{l.nam,}
-}</a>;
+}</a>
                     </li>))}
-                </ul>;
+                </ul>
               </Card>))}
-          </div>;
-          <Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'    />;
-            <h2 className='text - xl font - semibold mb - 4 text - white'    />;
-              External References;
-            </h2>;
-            <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3 text - slate - 300'    />;
-              {external.map (e => (<li key={e.name}    />;
-                  <a;
+          </div>
+          <Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'    />
+            <h2 className='text - xl font - semibold mb - 4 text - white'    />
+              External References
+            </h2>
+            <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3 text - slate - 300'    />
+              {external.map (e => (<li key={e.name}    />
+                  <a
                     href={e.url}
-                    target='_blank';
-                    rel='noopener noreferrer';
+                    target='_blank'
+                    rel='noopener noreferrer'
                     className='text - cyan - 400 hover: underline'    />
 
                     {e.nam,}
-}
-                  </a>;
+
+                  </a>
                 </li>              ))}
-            </ul>;
-          </Card>;
-          <Card className=\"p - 6 bg - black / 40 border border - gray - 700 / 50\"    />;
-            <h2 className=\"text - xl font - semibold mb - 4 text - white\"    />External References</h2>;
-            <ul className=\"grid grid - cols - 1 md:grid - cols - 2 gap - 3 text - slate - 300\"    />;
+            </ul>
+          </Card>
+          <Card className=\"p - 6 bg - black / 40 border border - gray - 700 / 50\"    />
+            <h2 className=\"text - xl font - semibold mb - 4 text - white\"    />External References</h2>
+            <ul className=\"grid grid - cols - 1 md:grid - cols - 2 gap - 3 text - slate - 300\"    />
               {external.map ((e) => (<li key={e.name}    /><a href={e.url} target=\"_blank\" rel=\"noopener noreferrer\" className=\"text - cyan - 400 hover: underline\"    />{e.nam,}
-}</a></li>;
-            </ul>;
-          </Card>;
-          <Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'    />;
-            <h2 className='text - xl font - semibold mb - 4 text - white'    />;
-              Need help?;
-            </h2>;
-            <div className='flex flex - col sm:flex - row gap - 3'    />;
-              <Button;
-                href='/contact';
+}</a></li>
+            </ul>
+          </Card>
+          <Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'    />
+            <h2 className='text - xl font - semibold mb - 4 text - white'    />
+              Need help?
+            </h2>
+            <div className='flex flex - col sm:flex - row gap - 3'    />
+              <Button
+                href='/contact'
                 className='bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white'    />
 
-                Contact Support;
-              </Button>;
-              <Button;
+                Contact Support
+              </Button>
+              <Button
                 href={contact.website}
-                variant='outline';
+                variant='outline'
                 className='border - gray - 600 text - gray - 200'    />
 
-                Visit Website;
-              </Button>;
-              <a;
-                className='text - cyan - 400';
+                Visit Website
+              </Button>
+              <a
+                className='text - cyan - 400'
                 href={`tel:${contact.mobile.replace (/[^+\\d]/g, '')}`}
-                  />;
+                  />
                 {contact.mobile}
               </a>;'`
-              <a className='text - purple - 400' href={`mailto:${contact.email}`}>;
-
-              <a className="text - purple - 400" href={`mailto:${contact.email}`}>{contact.email}</a>;
-          </Card>;
-        </div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-}
-
-;
-}
-
+              <a className='text - purple - 400' href={`mailto:${contact.email}`}>
+              <a className="text - purple - 400" href={`mailto:${contact.email}`}>{contact.email}</a>
+          </Card>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>)
               ))}
             </ul>
           </Card>
@@ -288,7 +270,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
-}
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

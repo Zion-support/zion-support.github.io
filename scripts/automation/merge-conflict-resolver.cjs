@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
       this.projectRoot,merge-conflict-resolver-report.json"
-const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
       this.projectRoot,merge-conflict-resolver-report.json"
   this.log(" Starting Merge Conflict Resolver...")
@@ -77,7 +68,7 @@ const { execSync } = require("child_process")
         .split("\n")
         .filter(line => line.length > 0)} catch (error) {  this.log(" Could not check git "status": ${error.message  }")
         line => line.startsWith("M ") || line.startsWith("A ")
-      if (resolvedFiles.length > 0) {this.log("� Committing ${resolvedFiles.length} resolved files...")
+  if($2) {this.log("� Committing ${resolvedFiles.length} resolved files...")
 const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files resolved";execSync("git commit -m ${message}"", { "stdio": "pipe"})
         this.log(" Conflicts committed successfully")
     } catch (error) {  this.log(" Could not commit resolved "conflicts": ${error.message  }")
@@ -96,29 +87,6 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   process.on(")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   process.on(")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  process.on(")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

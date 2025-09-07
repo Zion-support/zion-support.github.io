@@ -46,38 +46,9 @@
   ],
   "exclude": [
     "node_modules",
-<<<<<<< HEAD
     "src_backup",
     "temp_backup",
     "recovered-branches",
     "api.disabled",
-    "lib"
-=======
-    ".next",
-    "out",
-    "dist",
-    "api-backup",
-    "pages.disabled",
-    "backup-pages",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "contracts",
-    "cypress",
-    "temp_working",
-    "supabase/functions",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.backup",
-    "**/*.disabled",
-    "src",
-    "src.pages.disabled",
-    "src.pages.disabled.auto",
-    "components.disabled",
-    "src.disabled",
-    "src.pages.disabled"
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  ]
+    "lib"  ]
 }

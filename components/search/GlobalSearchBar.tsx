@@ -1,247 +1,198 @@
-
 class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+  constructor($2) {
+    super(props)
+    this.state = { hasError: false }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { useEffect, useMemo, useRef, useState  } from 'react';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
-
+    return { hasError: true }
+  componentDidCatch($2) {
+    console.error('Error caught by boundary:', error, errorInfo)
+  render($2) {
+  if($2) {
+      return <div>Something went wrong.</div>
+    return this.props.children
+import React from 'react'
+import { useEffect, useMemo, useRef, useState  } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { useRouter } from 'next/router'
 export default function GlobalSearchBar() {
 
-export default function GlobalSearchBar() {;
-
-const router = useRouter();
-
-const [query, setQuery] = useState('');
-
-const [suggestions, setSuggestions] = useState<string[]    />([]);
-
-const [open, setOpen] = useState(false);
-
-const controller = useRef<AbortController | null    />(null);
+export default function GlobalSearchBar() {
+const router = useRouter()
+const [query, setQuery] = useState('')
+const [suggestions, setSuggestions] = useState<string[]    />([])
+const [open, setOpen] = useState(false)
+const controller = useRef<AbortController | null    />(null)
   useEffect(() => {
-
-    if (!query) {
-      setSuggestions([]);
+  if($2) {
+      setSuggestions([])
       return;      return
 
 class ErrorBoundary extends React.Component {
-  constructor(props) {
+  constructor($2) {
 
-    super(props);
-    this.state = { hasError: false };
-  }
-  
+    super(props)
+    this.state = { hasError: false }
   static getDerivedStateFromError(error) {}
     return { hasError: true}
-};
-  }
-  
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
-  }
-  
-  render() {
-    if (this.state.hasError) {}
-      return <div    />Something went wrong.</div>;}
-    }
-    controller && controller.current?.abort()controller && controller.current = new AbortController()const run = async () => {try {const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller && controller.current!.signal})const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
-   
 }
+  componentDidCatch($2) {}
+    console.error('Error caught by boundary:', error, errorInfo);}
+  render($2) {
+  if($2) {}
+      return <div    />Something went wrong.</div>;}
+
+    controller && controller.current?.abort()controller && controller.current = new AbortController()const run = async () => {try {const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller && controller.current!.signal})const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
 
 const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
-    }
 
-const id = setTimeout(run, 150;
+const id = setTimeout(run, 150
   return () => clearTimeout(id)const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal}
 }),const j = await r.json()setSuggestions(j.suggestions || [])setOpen(true)} catch {}
-   ;
-}
 
-const id = setTimeout(run, 150;
+const id = setTimeout(run, 150
   return () => clearTimeout(id)}, [query])fetch('/api/telemetry/search', { method: 'POST'}
-  headers: { 'Content-Type': 'application/json'}
-}, body: JSON.stringify({ q: query }) }).catch(() => 
+  headers: { "Content-Type": "application/json"}
+}, body: JSON.stringify({ q: query }) }).catch(() =>
 }),router.push(`/search?q=${encodeURIComponent(query)}`)setOpen(false)}
-;
-  const startVoice = (if (typeof window === 'undefined');
-  return;
 
+  const startVoice = (if (typeof window === 'undefined')
+  return
 const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,import {;) => {
   return $3;}
-}
-  useEffect, useMemo, useRef, useState   } from 'react';
 
-export default function GlobalSearchBar() {export default function GlobalSearchBar() {const router = useRouter()const [query, setQuery] =;
-  useState('');
-  const [suggestions, setSuggestions] = useState<string[]    />([])const [open, setOpen] = useState(false;
-  const controller = useRef<AbortController | null    />(null;
+  useEffect, useMemo, useRef, useState   } from 'react'
+export default function GlobalSearchBar() {export default function GlobalSearchBar() {const router = useRouter()const [query, setQuery] =
+  useState('')
+  const [suggestions, setSuggestions] = useState<string[]    />([])const [open, setOpen] = useState(false
+  const controller = useRef<AbortController | null    />(null
   useEffect(() => {}
-if (!query) {setSuggestions([])return;      return;}
+  if($2) {setSuggestions([])return;      return;}
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }
-}
-  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true }
+  componentDidCatch($2) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div    />Something went wrong.</div>;}
-    }return this.props.children;
-  }
-}
-
+    }return this.props.children
 export default function GlobalSearchBar() {useEffect(() => {
-if (!query) {setSuggestions([])return;      return;}
+  if($2) {setSuggestions([])return;      return;}
       setSuggestions([])return;}
     }}controller && controller.current?.abort()controller && controller.current = new AbortController()const run = async () => {try {const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller && controller.current!.signal})const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
-   
-}
 
-const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true;
+const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true
   return () => clearTimeout(id)}, [query])const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
-   ;
-}
 
-const id = setTimeout(run, 150)const router = useRouter()const [query, setQuery] =;
-  useState('');
-  const [suggestions, setSuggestions] = useState<string[]    />([])const [open, setOpen] = useState(false;
-  const controller = useRef<AbortController | null    />(null)setSuggestions([];
-  return;      return;
-      setSuggestions([])return;
-    }
+const id = setTimeout(run, 150)const router = useRouter()const [query, setQuery] =
+  useState('')
+  const [suggestions, setSuggestions] = useState<string[]    />([])const [open, setOpen] = useState(false
+  const controller = useRef<AbortController | null    />(null)setSuggestions([]
+  return;      return
+      setSuggestions([])return
         setOpen(true)} catch {}
-    }
 
-const id = setTimeout(run, 150)}, [query])if (!Speech);
-  return;
-
-const rec = new Speech()rec.lang = 'en-US';
+const id = setTimeout(run, 150)}, [query])if (!Speech)
+  return
+const rec = new Speech()rec.lang = 'en-US'
     rec.onresult = (e: any) => {<input;}
         value={query}
         onChange={e =    /> setQuery(e && e.target.value)}
         onFocus={() => setOpen(suggestions && suggestions.length > 0)}
-        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500';
-        placeholder='Search talent, jobs, projects...';
-        aria-label='Search';
-      />;
-      <div className='absolute inset-y-0 right-2 flex items-center gap-2'    />;
-        <button;
-          type='button';
+        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500'
+        placeholder='Search talent, jobs, projects...'
+        aria-label='Search'
+      />
+      <div className='absolute inset-y-0 right-2 flex items-center gap-2'    />
+        <button
+          type='button'
           onClick={startVoice}
-          className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200';
-          aria-label='Voice search'    />;
-          🎤;
-        </button>;
-        <button;
-          type='submit';
-          className='text-sm font-medium text-indigo-600 hover:text-indigo-700'    />;
-          Search;
-        </button>;
-      </div>;
+          className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+          aria-label='Voice search'    />
+          🎤
+        </button>
+        <button
+          type='submit'
+          className='text-sm font-medium text-indigo-600 hover:text-indigo-700'    />
+          Search
+        </button>
+      </div>
       {open && suggestions && suggestions.length > 0 && (;'
         <div className='absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg'>;'
-          <ul className='max-h-64 overflow-auto py-1 text-sm'>;
-            {suggestions && suggestions.map((s, i) => (;
-              <li key={i}>;
+          <ul className='max-h-64 overflow-auto py-1 text-sm'>
+            {suggestions && suggestions.map((s, i) => (
+              <li key={i}>
                 <button'
                   type='button'
-                  onClick={() => {;
-                    setQuery(s);
+                  onClick={() => {
+                    setQuery(s)
                     setOpen(false);`
-                    router && router.push(`/search?q=${encodeURIComponent(s)}`);
+                    router && router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
 
     rec.start()
   }'
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
-    rec && rec.start();
-  };
-
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
+    rec && rec.start()
+  }
   return (
-    <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
-      <input;
+    <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">
+      <input
         value={query}
         onChange={(e) =    /> setQuery(e && e.target.value)}
         onFocus={() => setOpen(suggestions && suggestions.length > 0)}"
         className=\'w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500\';"
         placeholder=\'Search talent, jobs, projects...\';"
-        aria-label=\'Search\';
+        aria-label=\'Search\'
       />;"
       <div className="absolute inset-y-0 right-2 flex items-center gap-2">;"
         <button type="button" onClick={startVoice} className="inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200" aria-label="Voice search">🎤</button>;"
-        <button type="submit" className="text-sm font-medium text-indigo-600 hover:text-indigo-700">Search</button>;
-      </div>;
+        <button type="submit" className="text-sm font-medium text-indigo-600 hover:text-indigo-700">Search</button>
+      </div>
       {open && suggestions && suggestions.length > 0 && (;"
         <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg">;"
-          <ul className="max-h-64 overflow-auto py-1 text-sm">;
-            {suggestions && suggestions.map((s, i) => (;
-              <li key={i}>;
-
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
+          <ul className="max-h-64 overflow-auto py-1 text-sm">
+            {suggestions && suggestions.map((s, i) => (
+              <li key={i}>
+    return this.props.children
+import React from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { useRouter } from 'next/router'
 export default function GlobalSearchBar() {
-  const router = useRouter();
-  const [query, setQuery] = useState('');
-  const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [open, setOpen] = useState(false);
-  const controller = useRef<AbortController | null>(null);
+  const router = useRouter()
+  const [query, setQuery] = useState('')
+  const [suggestions, setSuggestions] = useState<string[]>([])
+  const [open, setOpen] = useState(false)
+  const controller = useRef<AbortController | null>(null)
   useEffect(() => {
-    if (!query) {
-      setSuggestions([]);
-      return;      return;
-      setSuggestions([]);
+  if($2) {
+      setSuggestions([])
+      return;      return
+      setSuggestions([])
       return
-import { useEffect, useMemo, useRef, useState  } from 'react';
-import { useRouter } from 'next/router';
-  const router = null;
+import { useEffect, useMemo, useRef, useState  } from 'react'
+import { useRouter } from 'next/router'
+  const router = null
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-    }
-    controller.current?.abort();
-    controller.current = new AbortController();
+    controller.current?.abort()
+    controller.current = new AbortController()
     const run = async () => {
       try {
 
-        });
-        const j = await r.json();
-        setSuggestions(j.suggestions |[]);
-        setOpen(true);
+        })
+        const j = await r.json()
+        setSuggestions(j.suggestions |[])
+        setOpen(true)
       } catch {}
-    }
-    const id = setTimeout(run, 150);
 
+    const id = setTimeout(run, 150)
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-    return () => clearTimeout(id);
-  }, [query]);
-
+    return () => clearTimeout(id)
+  }, [query])
 const onSubmit = (
-    e?.preventDefault();
-
-    if (!Speech) return;
+    e?.preventDefault()
+    if (!Speech) return
     const rec = new Speech();'
-    rec.lang = 'en-US';
-
+    rec.lang = 'en-US'
         <button
 
           type='button'
@@ -252,11 +203,11 @@ const onSubmit = (
          />
           🎤
         </button>
-        <button;
+        <button
 type='submit'
           className='text-sm font-medium text-indigo-600 hover:text-indigo-700'
             />
-          Search;
+          Search
         </button>
       </div>
       {open && suggestions.length > 0 && (
@@ -268,15 +219,14 @@ type='submit'
                 <button
                   type='button'
                   onClick={() => {
-                    setQuery(s);
-                    setOpen(false);
-                    router.push(`/search?q=${encodeURIComponent(s)}`);
+                    setQuery(s)
+                    setOpen(false)
+                    router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
-  }
-  };
 
+  }
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">
       <input
@@ -300,8 +250,8 @@ pr-12243
                 <button
 
                   type="button"
-                  onClick={() => {;
-                    setQuery(s);
+                  onClick={() => {
+                    setQuery(s)
                     setOpen(false);'
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
@@ -315,16 +265,16 @@ pr-12243
 
                 >
 
-                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
-                >;
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
                   {s}
                   {}
-}
-                </button>;
-              </li>;
+
+                </button>
+              </li>
             ))}
-          </ul>;
-        </div>;
+          </ul>
+        </div>
       )}
 
                   {s}
@@ -347,74 +297,53 @@ pr-12243
     </form>
 
   )
-}
-  )
-}
 
   )
-}
+
+  )
+
 pr-12243
 
-import { use_router } from 'next / router';
-export default /**;
- * GlobalSearchBar - Function description;
+import { use_router } from 'next / router'
+export default /**
+ * GlobalSearchBar - Function description
  */
 function GlobalSearchBar() {}
   const router = use_router ();'
-  const [query, set_query] = useState ('');
-  const [suggestions, set_suggestions] = useState < string[]>([]);
-  const [open, set_open] = useState (false);
-  const controller = useRef < AbortController | null>(null);
-;
+  const [query, set_query] = useState ('')
+  const [suggestions, set_suggestions] = useState < string[]>([])
+  const [open, set_open] = useState (false)
+  const controller = useRef < AbortController | null>(null)
   useEffect (() => {}
-    // Check condition;
-if ( {) {}
-  $2;
-
-}
-      set_suggestions ([]);
-      return;      return;
-    }
-
-}
+    // Check condition
+  if($2) {}
+  $2
+      set_suggestions ([])
+      return;      return
     fetch ('/api / telemetry / search', {method: 'POST'}
-  headers: { 'Content - Type': 'application / json'}
+  headers: { "Content - Type": "application / json"}
 },body: JSON.stringify ({ q: query })body: JSON.stringify ({ q: query })}).catch (() => {})router.push (`/search?q = ${encodeURIComponent (query)}`)set_open (false
-}
-;
+
   const start_voice = () =>: any {// Check condition;}
-if (return) {$2;}
-}
+  if($2) {$2;}
 
-const Speech: any =;
-      (window as any).SpeechRecognition ||;
-      (window as any).webkitSpeechRecognition;    // Check condition;
-
-}
-
-const Speech: any =;
-      (window as any).SpeechRecognition ||;
-
-}
-    }
-    rec.start ()}>;
-      <input;
+const Speech: any =
+      (window as any).SpeechRecognition ||
+      (window as any).webkitSpeechRecognition;    // Check condition
+const Speech: any =
+      (window as any).SpeechRecognition ||
+    rec.start ()}>
+      <input
         value={query}
 
-                </button>;
+                </button>
               </li>))}
           </ul>
     </div>
-  );
-}
-    </form>))})ursor/fix-website-loading-errors-and-merge-6662;
+  )
+    </form>))})ursor/fix-website-loading-errors-and-merge-6662
   )))}
   ))
-    </form>));
-}
-
-  );
-
+    </form>))
+  )
 );  )
-}
-

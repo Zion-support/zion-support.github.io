@@ -1,4 +1,3 @@
-
   X,
   Home,
   Users,
@@ -39,13 +38,10 @@
   Shield,
   Zap,
 
-} from "lucide-react";
-
+} from "lucide-react"
 interface SidebarProps {
-  isOpen: boolean;
+  isOpen: boolean
   onClose: () => void;}
-}
-}
 
 const quickLinks = [}
   { name: \"Home\", href: \"/\", icon: Home}"
@@ -53,8 +49,7 @@ const quickLinks = [}
 },{ name: \"Solutions\", href: \"/solutions\", icon: Target}"
 },{ name: \"About\", href: \"/about\", icon: Users}"
 },{ name: \"Contact\", href: \"/contact\", icon: Phone}
-}];
-
+}]
 const serviceLinks = ["
   { name: \"AI Services\", href: \"/ai-services\", icon: Brain}"
 },{ name: \"IT Services\", href: \"/it-services\", icon: Server}"
@@ -62,11 +57,9 @@ const serviceLinks = ["
 },{ name: \"Security\", href: \"/security\", icon: Shield}"
 },{ name: \"Cloud Solutions\", href: \"/cloud-solutions\", icon: Cloud}"
 },{ name: \"Database Solutions\", href: \"/database-solutions\", icon: Database}
-}];
-
+}]
     { name: "Contact", href: "/contact", icon: Phone },
-  ];
-
+  ]
 const companyLinks = ["
   { name: \"About Us\", href: \"/about\", icon: Users}"
 },{ name: \"Our Team\", href: \"/team\", icon: Users}"
@@ -74,7 +67,7 @@ const companyLinks = ["
 },{ name: \"Partners\", href: \"/partners\", icon: Handshake}"
 },{ name: \"News\", href: \"/news\", icon: Newspaper}"
 },{ name: \"Contact\", href: \"/contact\", icon: Phone}
-}];return (<>;
+}];return (<>
       {/* Overlay */}
 
         className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
@@ -88,7 +81,7 @@ const companyLinks = ["
 
               </span>
             </div>
-            <button;
+            <button
               onClick={onClose}"
               className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
             >"
@@ -99,11 +92,11 @@ const companyLinks = ["
           {/* Quick Links */}"
           <div className="mb-8">"
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Quick Links;
+              Quick Links
             </h3>"
             <div className="space-y-2">
               {quickLinks.map((link) => (
-                <Link;
+                <Link
                   key={link.name}
                   href={link.href}"
                   className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
@@ -119,11 +112,11 @@ const companyLinks = ["
           {/* Services */}"
           <div className="mb-8">"
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Services;
+              Services
             </h3>"
             <div className="space-y-2">
               {serviceLinks.map((link) => (
-                <Link;
+                <Link
                   key={link.name}
                   href={link.href}"
                   className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
@@ -139,11 +132,11 @@ const companyLinks = ["
           {/* Solutions */}"
           <div className="mb-8">"
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Solutions;
+              Solutions
             </h3>"
             <div className="space-y-2">
               {solutionLinks.map((link) => (
-                <Link;
+                <Link
                   key={link.name}
                   href={link.href}"
                   className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
@@ -159,11 +152,11 @@ const companyLinks = ["
           {/* Company */}"
           <div className="mb-8">"
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Company;
+              Company
             </h3>"
             <div className="space-y-2">
               {companyLinks.map((link) => (
-                <Link;
+                <Link
                   key={link.name}
                   href={link.href}"
                   className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
@@ -174,46 +167,46 @@ const companyLinks = ["
                 </Link>
 
               ))}
-            </div>;
-          </div>;
+            </div>
+          </div>
           {/* Contact Info */}"
           <div className=\"border-t border-gray-200 pt-6\"    />;"
-            <h3 className=\"text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4\"    />;
-              Contact Info;
+            <h3 className=\"text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4\"    />
+              Contact Info
             </h3>;"
             <div className=\"space-y-3\"    />;"
               <div className=\"flex items-center text-gray-600\"    />;"
                 <Phone className=\"h-4 w-4 mr-3 text-blue-500\"    />;"
-                <span className=\"text-sm\"    />+1 (555) 123-4567</span>;
+                <span className=\"text-sm\"    />+1 (555) 123-4567</span>
               </div>;"
               <div className=\"flex items-center text-gray-600\"    />;"
                 <Mail className=\"h-4 w-4 mr-3 text-blue-500\"    />;"
-                <span className=\"text-sm\"    />info@ziontechgroup.com</span>;
+                <span className=\"text-sm\"    />info@ziontechgroup.com</span>
               </div>;"
               <div className=\"flex items-center text-gray-600\"    />;"
                 <MapPin className=\"h-4 w-4 mr-3 text-blue-500\"    />;"
-                <span className=\"text-sm\"    />;
-                  123 Tech Street, Innovation City;
-                </span>;
-              </div>;
-            </div>;
-          </div>;
+                <span className=\"text-sm\"    />
+                  123 Tech Street, Innovation City
+                </span>
+              </div>
+            </div>
+          </div>
           {/* Trust Indicators */}"
           <div className=\"border-t border-gray-200 pt-6 mt-6\"    />;"
             <div className=\"grid grid-cols-2 gap-4\"    />;"
               <div className=\"text-center\"    />;"
                 <div className=\"text-2xl font-bold text-blue-600\"    />500+</div>;"
-                <div className=\"text-xs text-gray-500\"    />Projects</div>;
+                <div className=\"text-xs text-gray-500\"    />Projects</div>
               </div>;"
               <div className=\"text-center\"    />;"
                 <div className=\"text-2xl font-bold text-green-600\"    />99%</div>;"
-                <div className=\"text-xs text-gray-500\"    />Satisfaction</div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </motion.div>;
-    <   />;
+                <div className=\"text-xs text-gray-500\"    />Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    <   />
   )}
 
                 </span>
@@ -238,7 +231,5 @@ const companyLinks = ["
       </motion.div>
     </>
   )
-};
-
-export default Sidebar;
-
+}
+export default Sidebar

@@ -1,36 +1,28 @@
-
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-
-  language?: string;
-  customPrompt?: string;
+    return this.props.children
+import React, { useState } from 'react'
+  language?: string
+  customPrompt?: string
 }'
-export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
+export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education'
 export type ProposalForm = {}
-  targetInstitution: string,;
+  targetInstitution: string,
   custom_prompt?: string;}export type ProposalForm = {}
   target_institution: string,
   type: ProposalType,
   regional_scope: string,
   budgetOrGoals: string,
 
-  });
-
-const [isGenerating, setIsGenerating] = useState(false);
-
-const [draftMarkdown, setDraftMarkdown] = useState('');
-
-const [draftJson, setDraftJson] = useState<any    />(null);
-    pdfUrl?: string;
-    jsonUrl?: string;
-    mdUrl?: string;
+  })
+const [isGenerating, setIsGenerating] = useState(false)
+const [draftMarkdown, setDraftMarkdown] = useState('')
+const [draftJson, setDraftJson] = useState<any    />(null)
+    pdfUrl?: string
+    jsonUrl?: string
+    mdUrl?: string
   } | null>(null);'
   const [statusMessage, setStatusMessage] = useState('');'
-  const [draftMarkdown, setDraftMarkdown] = useState('');
-  const [draftJson, setDraftJson] = useState<any>(null);
+  const [draftMarkdown, setDraftMarkdown] = useState('')
+  const [draftJson, setDraftJson] = useState<any>(null)
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);'
   const [statusMessage, setStatusMessage] = useState('');'
       setStatusMessage('Draft ready. You can edit and export.')
@@ -38,17 +30,12 @@ const [draftJson, setDraftJson] = useState<any    />(null);
       console.error(e);'
       setStatusMessage('Failed to generate. You can edit manually and export.')
 
-    }
-  }
     } finally {}
-}
+
       setIsGenerating(false);    }
 
-    }
-  }
-
   async function handleExport() { return null; }
-        headers: { 'Content-Type': 'application/json' }
+        headers: { "Content-Type": "application/json" }
         body: JSON.stringify({'
       setStatusMessage('Exported. Files saved.')
     } catch (e) {}
@@ -57,101 +44,86 @@ const [draftJson, setDraftJson] = useState<any    />(null);
 
       setStatusMessage('Export failed');    }
 
-    }
-
-
-  }
   async function handleSubmitBridge() { return null; }
       const res = await fetch('/api/proposals/submit', {}
 
-    }
-  }
-
   async function handleSubmitBridge() {
-    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
+    setStatusMessage('Submitting via bridge (email/IPFS/signature)...')
     try {
       const res = await fetch('/api/proposals/submit', {
 
         method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
+  headers: { "Content-Type": "application/json",}
 },
 body: JSON.stringify({
           markdown: draftMarkdown,
           json: draftJson,}
           meta: form,}
         }),
-      });
-
-const data = await res && res.json();
-      setExportLinks({;
-        pdfUrl: data && data.pdfUrl,;
-
-        body: JSON && JSON.stringify({;
-          markdown: draftMarkdown,;
+      })
+const data = await res && res.json()
+      setExportLinks({
+        pdfUrl: data && data.pdfUrl,
+        body: JSON && JSON.stringify({
+          markdown: draftMarkdown,
           json: draftJson,;}
           meta: form,;}
-        }),;
-      });
-
-      );
-
+        }),
+      })
+      )
     } catch (e) {
-      console.error(e);
+      console.error(e)
       setStatusMessage('Submission failed');}
       setStatusMessage('Submission failed')}
-    }
-
-  }
 
         <div className='space-y-4'>
           <div>'
             <label className='block text-sm font-medium'>
-              Target institution;
+              Target institution
             </label>
             <input'
               className='w-full border rounded px-3 py-2'
               value={form && form.targetInstitution}'
               onChange={e => handleChange('targetInstitution', e && e.target.value)}'
 
-              placeholder='UNDP / World Bank / ILO';
-            />;
-          </div>;
+              placeholder='UNDP / World Bank / ILO'
+            />
+          </div>
           <div>;'
-            <label className='block text-sm font-medium'>Type</label>;
+            <label className='block text-sm font-medium'>Type</label>
             <select'
               className='w-full border rounded px-3 py-2'
               value={form && form.type}
               onChange={e =>;'
-                handleChange('type', e && e.target.value as ProposalType);
-              }            >          <div>;
-            <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>;
+                handleChange('type', e && e.target.value as ProposalType)
+              }            >          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>
             <input"
               className="w-full border rounded px-3 py-2"
               value={form && form.targetInstitution}'
               onChange={(e) => handleChange('targetInstitution', e && e.target.value)}"
-              placeholder="UNDP / World Bank / ILO";
-            />;
-          </div>;
+              placeholder="UNDP / World Bank / ILO"
+            />
+          </div>
           <div>;"
-            <label className="block text-sm font-medium" htmlFor="input-Type">Type</label>;
+            <label className="block text-sm font-medium" htmlFor="input-Type">Type</label>
             <select"
               className="w-full border rounded px-3 py-2"
               value={form && form.type}'
               onChange={(e) => handleChange('type', e && e.target.value as ProposalType)}
-            >;
-              <option>Workforce Dev</option>;
-              <option>AI Ethics</option>;
-              <option>Digital ID</option>;
-              <option>Education</option>;
-            </select>;
-          </div>;
+            >
+              <option>Workforce Dev</option>
+              <option>AI Ethics</option>
+              <option>Digital ID</option>
+              <option>Education</option>
+            </select>
+          </div>
           <div>;'
-            <label className='block text-sm font-medium'>Regional scope</label>;
-
+            <label className='block text-sm font-medium'>Regional scope</label>
               value={form.type}
               onChange={e =    />}
                 handleChange('type', e.target.value as ProposalType)}
-              }
+
             >
               <option    />Workforce Dev</option>
               <option    />AI Ethics</option>
@@ -166,80 +138,73 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               className='w-full border rounded px-3 py-2'
 
-              />;
-            </div>;
+              />
+            </div>
           </div>;'
-          <div className='flex gap-2'>;
-
+          <div className='flex gap-2'>
               className="w-full border rounded px-3 py-2 min-h-[80px]"
               value={form && form.budgetOrGoals}'
               onChange={(e) => handleChange('budgetOrGoals', e && e.target.value)}"
-              placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc.";
-            />;
-          </div>;
+              placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc."
+            />
+          </div>
           <div>;"
-            <label className="block text-sm font-medium" htmlFor="input-Supporting multiverse(s)">Supporting multiverse(s)</label>;
+            <label className="block text-sm font-medium" htmlFor="input-Supporting multiverse(s)">Supporting multiverse(s)</label>
             <input"
               className="w-full border rounded px-3 py-2"
               value={form && form.supportingMultiverses}'
               onChange={(e) => handleChange('supportingMultiverses', e && e.target.value)}"
-              placeholder="Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work";
-            />;
+              placeholder="Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work"
+            />
           </div>;"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>;"
-              <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>;
+              <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
               <input"
                 className="w-full border rounded px-3 py-2"
                 value={form && form.language}'
                 onChange={(e) => handleChange('language', e && e.target.value)}"
-                placeholder="English / French / Spanish / Arabic / ...";
-              />;
-            </div>;
+                placeholder="English / French / Spanish / Arabic / ..."
+              />
+            </div>
             <div>;"
-              <label className="block text-sm font-medium" htmlFor="input-GPT Prompt Assist">GPT Prompt Assist</label>;
+              <label className="block text-sm font-medium" htmlFor="input-GPT Prompt Assist">GPT Prompt Assist</label>
               <textarea"
                 className="w-full border rounded px-3 py-2 min-h-[80px]"
                 value={form && form.customPrompt}'
                 onChange={(e) => handleChange('customPrompt', e && e.target.value)}
-              />;
-            </div>;
+              />
+            </div>
           </div>;"
-          <div className="flex gap-2">;
-
+          <div className="flex gap-2">
               onClick={handleGenerate}
               disabled={isGenerating}>;'
 
               {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>;
-
+            </button>
               onClick={handleExport}
-              disabled={!draftMarkdown}    />;
-              Export (PDF/JSON/MD);
-            </button>;
-
+              disabled={!draftMarkdown}    />
+              Export (PDF/JSON/MD)
+            </button>
               onClick={handleGenerate}
               disabled={isGenerating}>;'
               {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>;
-
+            </button>
               onClick={handleExport}
-              disabled={!draftMarkdown}>;
-              Export (PDF/JSON/MD);
-            </button>;
-
-              disabled={!draftMarkdown}>;
-              Submit Bridge;
-            </button>;
-          </div>;
+              disabled={!draftMarkdown}>
+              Export (PDF/JSON/MD)
+            </button>
+              disabled={!draftMarkdown}>
+              Submit Bridge
+            </button>
+          </div>
           {statusMessage && (;'
-            <p className='text-sm text-gray-600'>{statusMessage}</p>;
-
+            <p className='text-sm text-gray-600'>{statusMessage}</p>
 className='px-4 py-2 bg-purple-600 text-white rounded'
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
                 />
-              Submit Bridge;
+              Submit Bridge
             </button>
           </div>
 {statusMessage && (}
@@ -247,24 +212,23 @@ className='px-4 py-2 bg-purple-600 text-white rounded'
 
           )}
 
-                    rel='noreferrer'>;
-                    PDF;
-                  </a>                </div>;
+                    rel='noreferrer'>
+                    PDF
+                  </a>                </div>
               )}
-              {exportLinks && exportLinks.mdUrl && (;
+              {exportLinks && exportLinks.mdUrl && (
                 <div>          {exportLinks && (;"
-            <div className="text-sm space-y-1">;
-              {exportLinks && exportLinks.pdfUrl && (;
+            <div className="text-sm space-y-1">
+              {exportLinks && exportLinks.pdfUrl && (
                 <div>;"
-                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>;
-                </div>;
+                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
+                </div>
               )}
-              {exportLinks && exportLinks.mdUrl && (;
-                <div>;
-
+              {exportLinks && exportLinks.mdUrl && (
+                <div>
                     rel='noreferrer'
                       />
-                    PDF;
+                    PDF
                   </a>
                 </div>
               )}
@@ -275,20 +239,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     className='text-blue-600 underline'
 
-                    rel='noreferrer'>;
-                    Markdown;
-                  </a>                </div>;
+                    rel='noreferrer'>
+                    Markdown
+                  </a>                </div>
               )}
               {exportLinks && exportLinks.jsonUrl && (;"
-                <div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>;
-                </div>;
+                <div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
+                </div>
               )}
-              {exportLinks && exportLinks.jsonUrl && (;
-                <div>;
-
+              {exportLinks && exportLinks.jsonUrl && (
+                <div>
                     rel='noreferrer'
                       />
-                    Markdown;
+                    Markdown
                   </a>
                 </div>
               )}
@@ -299,22 +262,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     className='text-blue-600 underline'
 
-                    rel='noreferrer'>;
+                    rel='noreferrer'>
                     JSON;"
-                  </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>;
-                </div>;
-
+                  </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
+                </div>
                     rel='noreferrer'
                       />
-                    JSON;
+                    JSON
                   </a>
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
               )}
-            </div>;
+            </div>
           )}
 
-          <label className='block text-sm font-medium'>Draft (Markdown)</label>;
+          <label className='block text-sm font-medium'>Draft (Markdown)</label>
           <textarea'
             className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}
@@ -323,16 +285,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             value={draftMarkdown}
 
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
-          />;
-        </div>;
-      </div>;
-    </div>;
+          />
+        </div>
+      </div>
+    </div>
             onChange={(e) => setDraftMarkdown(e.target.value)}
 
         </div>
 <div className='space-y-2'    />
           <label className='block text-sm font-medium'    />Draft (Markdown)</label>
-          <textarea;
+          <textarea
 className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}
             onChange={e =    /> setDraftMarkdown(e.target.value)}
@@ -340,19 +302,12 @@ className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
         </div>
       </div>
     </div>
-  );
-
-  );
-
-}
-}
-  );
-}
-  custom_prompt?: string;
-}
-;
-export default /**;
- * ProposalGenerator - Function description;
+  )
+  )
+  )
+  custom_prompt?: string
+export default /**
+ * ProposalGenerator - Function description
  */
 function ProposalGenerator() {}
   const [form, set_form] = useState < ProposalForm>({'
@@ -364,274 +319,258 @@ function ProposalGenerator() {}
     language: 'English',
     custom_prompt:;'
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO - based governance logic.',
-  });
+  })
   const [is_generating, setIsGenerating] = useState (false);'
-  const [draft_markdown, setDraftMarkdown] = useState ('');
-  const [draft_json, setDraftJson] = useState < any>(null);
+  const [draft_markdown, setDraftMarkdown] = useState ('')
+  const [draft_json, setDraftJson] = useState < any>(null)
   const [export_links, setExportLinks] = useState<{}
-    pdf_url?: string;
-    json_url?: string;
-    md_url?: string;
+    pdf_url?: string
+    json_url?: string
+    md_url?: string
   } | null>(null);'
-  const [status_message, setStatusMessage] = useState ('');
-;
+  const [status_message, setStatusMessage] = useState ('')
   function handle_change < K extends keyof ProposalForm>(
     key: K,
     value: ProposalForm[K]) {}
     set_form (prev => ({ ...prev, [key]: value }));  }  const [is_generating, setIsGenerating] = useState (false);'
-  const [draft_markdown, setDraftMarkdown] = useState ('');
-  const [draft_json, setDraftJson] = useState < any>(null);
+  const [draft_markdown, setDraftMarkdown] = useState ('')
+  const [draft_json, setDraftJson] = useState < any>(null)
   const [export_links, setExportLinks] = useState<{ pdf_url?: string, json_url?: string, md_url?: string } | null>(null);'
-  const [status_message, setStatusMessage] = useState ('');
-;
+  const [status_message, setStatusMessage] = useState ('')
   function handle_change < K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {}
-    set_form ((prev) => ({ ...prev, [key]: value }));
-  }
+    set_form ((prev) => ({ ...prev, [key]: value }))
   async /**
- * handle_generate - Function description;
+ * handle_generate - Function description
  */
 function handle_generate() {}
     setIsGenerating (true);'
-    setStatusMessage ('Generating draft...');
+    setStatusMessage ('Generating draft...')
     try {'
       const res = await fetch ('/api / proposals / generate', {'
         method: 'POST','
-        headers: { 'Content - Type': 'application / json' },
+        headers: { "Content - Type": "application / json" },
         body: JSON.stringify (form),
-      });
+      })
       const data = await res.json ();'
-      setDraftMarkdown (data.markdown || '');
+      setDraftMarkdown (data.markdown || '')
       setDraftJson (data.json || null);'
-      setStatusMessage ('Draft ready. You can edit and export.');
+      setStatusMessage ('Draft ready. You can edit and export.')
     } catch (e: any) {}
       console.error (e);'
-      setStatusMessage ('Failed to generate. You can edit manually and export.');
+      setStatusMessage ('Failed to generate. You can edit manually and export.')
     } finally {}
       setIsGenerating (false);    }      const data = await res.json ();'
-      setDraftMarkdown (data.markdown || '');
+      setDraftMarkdown (data.markdown || '')
       setDraftJson (data.json || null);'
-      setStatusMessage ('Draft ready. You can edit and export.');
+      setStatusMessage ('Draft ready. You can edit and export.')
     } catch (e: any) {}
       console.error (e);'
-      setStatusMessage ('Failed to generate. You can edit manually and export.');
+      setStatusMessage ('Failed to generate. You can edit manually and export.')
     } finally {}
-      setIsGenerating (false);
-    }
-  }
+      setIsGenerating (false)
   async /**
- * handle_export - Function description;
+ * handle_export - Function description
  */
 function handle_export() { return null; }
-        headers: { 'Content - Type': 'application / json' },
+        headers: { "Content - Type": "application / json" },
         body: JSON.stringify ({}
           markdown: draft_markdown,
           json: draft_json,
           meta: form,
         }),
-      });
-      const data = await res.json ();
+      })
+      const data = await res.json ()
       setExportLinks ({}
         pdf_url: data.pdf_url,
         json_url: data.json_url,
         md_url: data.md_url,
       });'
-      setStatusMessage ('Exported. Files saved.');
+      setStatusMessage ('Exported. Files saved.')
     } catch (e) {}
       console.error (e);'
-      setStatusMessage ('Export failed');    }      const data = await res.json ();
+      setStatusMessage ('Export failed');    }      const data = await res.json ()
       setExportLinks ({ pdf_url: data.pdf_url, json_url: data.json_url, md_url: data.md_url }),'
-      setStatusMessage ('Exported. Files saved.');
+      setStatusMessage ('Exported. Files saved.')
     } catch (e) {}
       console.error (e);'
-      setStatusMessage ('Export failed');
-    }
-  }
+      setStatusMessage ('Export failed')
   async /**
- * handleSubmitBridge - Function description;
+ * handleSubmitBridge - Function description
  */
 function handleSubmitBridge() { return null; }
-        headers: { 'Content - Type': 'application / json' },
+        headers: { "Content - Type": "application / json" },
         body: JSON.stringify ({}
           markdown: draft_markdown,
           json: draft_json,
           meta: form,
         }),
-      });
-      const data = await res.json ();
+      })
+      const data = await res.json ()
       setStatusMessage ('`
-        `Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfs_cid || 'N / A'}`);
+        `Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfs_cid || 'N / A'}`)
     } catch (e) {}
       console.error (e);'
       setStatusMessage ('Submission failed');    }
-  }
+
   return ('
     <div className='space - y-6'>;'
       <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;'
         <div className='space - y-4'>      const data = await res.json ();'`
-      setStatusMessage (`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfs_cid || 'N / A'}`);
+      setStatusMessage (`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfs_cid || 'N / A'}`)
     } catch (e) {}
       console.error (e);'
-      setStatusMessage ('Submission failed');
-    }
-  }
+      setStatusMessage ('Submission failed')
   return ('
     <div className='space - y-6'>;'
       <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;'
-        <div className='space - y-4'>;
+        <div className='space - y-4'>
           <div>;'
-            <label className='block text - sm font - medium'>;
-              Target institution;
-            </label>;
+            <label className='block text - sm font - medium'>
+              Target institution
+            </label>
             <input;'
-              className='w - full border rounded px - 3 py - 2';
+              className='w - full border rounded px - 3 py - 2'
               value={form.target_institution}'
               on_change={e => handle_change ('target_institution', e.target.value)}'
-              placeholder='UNDP / World Bank / ILO';
-            />;
-          </div>;
+              placeholder='UNDP / World Bank / ILO'
+            />
+          </div>
           <div>;'
-            <label className='block text - sm font - medium'>Type</label>;
+            <label className='block text - sm font - medium'>Type</label>
             <select;'
-              className='w - full border rounded px - 3 py - 2';
+              className='w - full border rounded px - 3 py - 2'
               value={form.type}
               on_change={e =>;'
-                handle_change ('type', e.target.value as ProposalType);
-
+                handle_change ('type', e.target.value as ProposalType)
               on_change={(e) => handle_change ('type', e.target.value as ProposalType)}
-            >;
-              <option > Workforce Dev</option>;
-              <option > AI Ethics</option>;
-              <option > Digital ID</option>;
-              <option > Education</option>;
-            </select>;
-          </div>;
+            >
+              <option > Workforce Dev</option>
+              <option > AI Ethics</option>
+              <option > Digital ID</option>
+              <option > Education</option>
+            </select>
+          </div>
           <div>;'
-            <label className='block text - sm font - medium'>Regional scope</label>;
+            <label className='block text - sm font - medium'>Regional scope</label>
             <input;'
-              className='w - full border rounded px - 3 py - 2';
+              className='w - full border rounded px - 3 py - 2'
               value={form.regional_scope}'
               on_change={e => handle_change ('regional_scope', e.target.value)}'
-              placeholder='Global / Africa / LATAM / APAC / EU / ...';
-            />;
-          </div>;
+              placeholder='Global / Africa / LATAM / APAC / EU / ...'
+            />
+          </div>
           <div>;'
-            <label className='block text - sm font - medium'>;
-              Budget / Resolution goals;
-            </label>;
+            <label className='block text - sm font - medium'>
+              Budget / Resolution goals
+            </label>
             <textarea;'
-              className='w - full border rounded px - 3 py - 2 min - h-[80px]';
+              className='w - full border rounded px - 3 py - 2 min - h-[80px]'
               value={form.budgetOrGoals}'
               on_change={e => handle_change ('budgetOrGoals', e.target.value)}'
-              placeholder='$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc.';
-            />;
-          </div>;
+              placeholder='$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc.'
+            />
+          </div>
           <div>;'
-            <label className='block text - sm font - medium'>;
-              Supporting multiverse (s);
-            </label>;
+            <label className='block text - sm font - medium'>
+              Supporting multiverse (s)
+            </label>
             <input;'
-              className='w - full border rounded px - 3 py - 2';
+              className='w - full border rounded px - 3 py - 2'
               value={form.supporting_multiverses}
               on_change={e =>;'
-                handle_change ('supporting_multiverses', e.target.value);
+                handle_change ('supporting_multiverses', e.target.value)
               }'
-              placeholder='Eg. Zion.ai, Zion.ID, Zion.Work';
-            />;
+              placeholder='Eg. Zion.ai, Zion.ID, Zion.Work'
+            />
           </div>;'
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>
             <div>;'
-              <label className='block text - sm font - medium'>Language</label>;
+              <label className='block text - sm font - medium'>Language</label>
               <input;'
-                className='w - full border rounded px - 3 py - 2';
+                className='w - full border rounded px - 3 py - 2'
                 value={form.language}'
                 on_change={e => handle_change ('language', e.target.value)}'
-                placeholder='English / French / Spanish / Arabic / ...';
-              />;
-            </div>;
+                placeholder='English / French / Spanish / Arabic / ...'
+              />
+            </div>
             <div>;'
-              <label className='block text - sm font - medium'>;
-                GPT Prompt Assist;
-              </label>;
+              <label className='block text - sm font - medium'>
+                GPT Prompt Assist
+              </label>
               <textarea;'
-                className='w - full border rounded px - 3 py - 2 min - h-[80px]';
+                className='w - full border rounded px - 3 py - 2 min - h-[80px]'
                 value={form.custom_prompt}'
                 on_change={e => handle_change ('custom_prompt', e.target.value)}
-              />;
-            </div>;
+              />
+            </div>
           </div>;'
-          <div className='flex gap - 2'>;
-
+          <div className='flex gap - 2'>
               on_click={handle_generate}
               disabled={is_generating}
             >;'
               {is_generating ? 'Generating...' : 'Generate Draft'}
-            </button>;
-
+            </button>
               on_click={handle_export}
               disabled={!draft_markdown}
-            >;
-              Export (PDF / JSON / MD);
-            </button>;
-
+            >
+              Export (PDF / JSON / MD)
+            </button>
               on_click={handleSubmitBridge}
               disabled={!draft_markdown}
-            >;
-              Submit Bridge;
-            </button>;
-          </div>;
+            >
+              Submit Bridge
+            </button>
+          </div>
           {status_message && ('
             <p className='text - sm text - gray - 600'>{status_message}</p>)}
           {export_links && ('
-            <div className='text - sm space - y-1'>;
+            <div className='text - sm space - y-1'>
               {export_links.pdf_url && (
-                <div>;
+                <div>
                   <a;'
-                    className='text - blue - 600 underline';
+                    className='text - blue - 600 underline'
                     href={export_links.pdf_url}'
                     target='_blank';'
-                    rel='noreferrer';
-                  >;
-                    PDF;
+                    rel='noreferrer'
+                  >
+                    PDF
                   </a>                </div>)}
               {export_links.md_url && (
 
                 </div>)}
               {export_links.md_url && (
-                <div>;
+                <div>
                   <a;'
-                    className='text - blue - 600 underline';
+                    className='text - blue - 600 underline'
                     href={export_links.md_url}'
                     target='_blank';'
-                    rel='noreferrer';
-                  >;
-                    Markdown;
+                    rel='noreferrer'
+                  >
+                    Markdown
                   </a>                </div>)}
 
                 </div>)}
               {export_links.json_url && (
-                <div>;
+                <div>
                   <a;'
-                    className='text - blue - 600 underline';
+                    className='text - blue - 600 underline'
                     href={export_links.json_url}'
                     target='_blank';'
-                    rel='noreferrer';
-                  >;
-
+                    rel='noreferrer'
+                  >
                 </div>)}
             </div>)}
         </div>;'
         <div className='space - y-2'>;'
-          <label className='block text - sm font - medium'>Draft (Markdown)</label>;
+          <label className='block text - sm font - medium'>Draft (Markdown)</label>
           <textarea;'
-            className='w - full border rounded px - 3 py - 2 min - h-[520px] font - mono';
+            className='w - full border rounded px - 3 py - 2 min - h-[520px] font - mono'
             value={draft_markdown}
 
             value={draft_markdown}
             on_change={(e) => setDraftMarkdown (e.target.value)}
-          />;
-        </div>;
-      </div>;
-    </div>);
+          />
+        </div>
+      </div>
+    </div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
-}
-

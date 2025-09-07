@@ -1,12 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI Chatbot Development - Zion Tech Group',
   description: 'Build intelligent AI chatbots with natural language processing, multi-channel support, and seamless human handoff capabilities.',
   keywords: 'AI chatbot, natural language processing, conversational AI, customer support automation'
-};
-
+}
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
@@ -20,9 +18,7 @@ function Item({ title, details }: { title: string; details: string[] }) {
         ))}
       </ul>
     </div>
-  );
-}
-
+  )
 function Plan({ name, price, duration, features }: { name: string; price: string; duration: string; features: string[] }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -44,9 +40,7 @@ function Plan({ name, price, duration, features }: { name: string; price: string
         Get Started
       </a>
     </div>
-  );
-}
-
+  )
 function Pricing() {
   return (
     <section className="py-16">
@@ -94,9 +88,7 @@ function Pricing() {
         </div>
       </div>
     </section>
-  );
-}
-
+  )
 export default function AIChatbotPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -198,5 +190,4 @@ export default function AIChatbotPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )

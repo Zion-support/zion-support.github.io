@@ -14,7 +14,6 @@ export default function Header() {
     { name: 'Contact', href: '/contact' },
   ];
 
-=======
   const productDropdown = [
     { name: 'AI Content Generator', href: '/micro-saas#ai-content-generator-pro', description: 'Professional AI-powered content creation' },
     { name: 'Cloud Cost Optimizer', href: '/micro-saas#cloud-cost-optimizer', description: 'Reduce cloud spending by 30%' },
@@ -26,7 +25,6 @@ export default function Header() {
 
   const isActive = (href: string) => router.pathname === href;
 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-19ef
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,7 +40,6 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link

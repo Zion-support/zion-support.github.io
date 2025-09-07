@@ -117,11 +117,9 @@ export default function Layout({ children, seo }: LayoutProps) {
         Skip to main content
       </a>
 
-=======
       {/* Enhanced Futuristic Background */}
       <UltraFuturisticBackground2038 intensity="medium" theme="quantum-neon" />
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       {/* Loading State */}
       <AnimatePresence>
         {isLoading && (
@@ -194,7 +192,6 @@ export default function Layout({ children, seo }: LayoutProps) {
           viewBox="0 0 24 24"
           aria-hidden="true"
         >
-<<<<<<< HEAD
           {children}
         </UltraAdvancedFuturisticBackground>
       </main>

@@ -1,188 +1,155 @@
-// Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
-// Check condition'
-if (strength = 'very - weak') {}
-  $2;
-}
+//
+  if($2) {}
+  $2
 else // Check condition'
-if (strength = 'weak') {}
-  $2;
-}
+  if($2) {}
+  $2
 else // Check condition'
-if (strength = 'medium') {}
-  $2;
-}
+  if($2) {}
+  $2
 else // Check condition'
-if (strength = 'strong') {}
-  $2;
+  if($2) {}
+  $2
 }'
-else strength = 'very - strong';
-// Generate feedback const feedback: string[] = [];
+else strength = 'very - strong'
+// Generate feedback const feedback: string[] = []
 interface PasswordStrengthResult {}
   password: string;'
-  strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
-  score: number;
-  feedback: string[];
-
+  strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong'
+  score: number
+  feedback: string[]
     const suggestions: string[] = []
-    if (score < 50) {}
-      password;
-      strength;
+  if($2) {}
+      password
+      strength
       score: Math.max(0, Math.min(100, score))
-      feedback;
+      feedback
       details: {}
-        length;
-        hasUppercase;
-        hasLowercase;
-        hasNumbers;
-        hasSymbols;
-        hasCommonPatterns;
-        entropy: Math.round(entropy * 100) / 100;
-      }
-      suggestions;
-    }
-    res.status(200).json(result);
+        length
+        hasUppercase
+        hasLowercase
+        hasNumbers
+        hasSymbols
+        hasCommonPatterns
+        entropy: Math.round(entropy * 100) / 100
+      suggestions
+    res.status(200).json(result)
   } catch (error) {'
     console.error('Password strength check error:', error);'
     res.status(500).json({ error: 'Internal server error' });'
   }      suggestions.push('Make it at least 12 characters long');'
       suggestions.push('Avoid personal information and common words')
-    }
-    if (hasCommonPatterns) {'
+  if($2) {'
       suggestions && suggestions.push('Replace common patterns with random characters');'
       suggestions && suggestions.push('Consider using a passphrase instead')
-    }
-    if (entropy < 40) {'
+  if($2) {'
       suggestions && suggestions.push('Increase randomness by using more character types');'
       suggestions && suggestions.push('Consider using a password generator')
         entropy: Math.round (entropy * 100) / 100,
       },
       suggestions,
-    }
-;
-    res.status (200).json (result);
+
+    res.status (200).json (result)
   } catch (error) {'
     console.error ('Password strength check error:', error);'
     res.status (500).json ({ error: 'Internal server error' });'
   }      suggestions.push ('Make it at least 12 characters long');'
-      suggestions.push ('Avoid personal information and common words');
-    }
-    // Check condition;
-if ( {) {}
-  $2;
+      suggestions.push ('Avoid personal information and common words')
+    // Check condition
+  if($2) {}
+  $2
 }'
       suggestions.push ('Replace common patterns with random characters');'
-      suggestions.push ('Consider using a passphrase instead');
-    }
-    // Check condition;
-if ( {) {}
-  $2;
+      suggestions.push ('Consider using a passphrase instead')
+    // Check condition
+  if($2) {}
+  $2
 }'
       suggestions.push ('Increase randomness by using more character types');'
-      suggestions.push ('Consider using a password generator');
-    }
+      suggestions.push ('Consider using a password generator')
     const result: PasswordStrengthResult = {}
-      password;
-      strength;
-      feedback;
+      password
+      strength
+      feedback
       details: {}
-        length;
-        has_uppercase;
-        has_lowercase;
-        has_numbers;
-        has_symbols;
-
-else strength = 'very-strong';
-
-// Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next';
+        length
+        has_uppercase
+        has_lowercase
+        has_numbers
+        has_symbols
+else strength = 'very-strong'
+// Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next'
 interface PasswordStrengthResult {}
   password: string;'
-  strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
-  score: number;
-  feedback: string[];
+  strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong'
+  score: number
+  feedback: string[]
   details: {}
-    length: number;
-    hasUppercase: boolean;
-    hasLowercase: boolean;
-    hasNumbers: boolean;
-    hasSymbols: boolean;
-
+    length: number
+    hasUppercase: boolean
+    hasLowercase: boolean
+    hasNumbers: boolean
+    hasSymbols: boolean
     entropy: number
 
-  }
   suggestions: string[]
 
-    hasCommonPatterns: boolean;
-    entropy: number;
- 
-}
-
+    hasCommonPatterns: boolean
+    entropy: number
     return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
-  }
-  try {}
-    const { password } = req.body;
 
+  try {}
+    const { password } = req.body
     const hasCommonPatterns = commonPatterns.some(pattern =>
       password.toLowerCase().includes(pattern)
-    );
+    )
     // Calculate entropy (simplified)
 const charsetSize =
       (hasUppercase ? 26 : 0) +
       (hasLowercase ? 26 : 0) +
       (hasNumbers ? 10 : 0) +
-      (hasSymbols ? 32 : 0);
+      (hasSymbols ? 32 : 0)
     const entropy =
-      charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length)) : 0;
-    // Calculate score;
-    let score = 0;
-    score += Math.min(length * 2, 20)// Length contribution (max 20)score += hasUppercase ? 10 : 0;
-    score += hasLowercase ? 10 : 0;
-    score += hasNumbers ? 10 : 0;
-    score += hasSymbols ? 15 : 0;
-
-    if (entropy < 30) feedback.push('Password is too predictable');
-    // Generate suggestions;
+      charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length)) : 0
+    // Calculate score
+    let score = 0
+    score += Math.min(length * 2, 20)// Length contribution (max 20)score += hasUppercase ? 10 : 0
+    score += hasLowercase ? 10 : 0
+    score += hasNumbers ? 10 : 0
+    score += hasSymbols ? 15 : 0
+    if (entropy < 30) feedback.push('Password is too predictable')
+    // Generate suggestions
     const suggestions: string[] = []
 
         'Use a mix of uppercase, lowercase, numbers, and symbols'
       );'
       suggestions.push('Make it at least 12 characters long');'
-      suggestions.push('Avoid personal information and common words');
-    }
-    if (hasCommonPatterns) {'
+      suggestions.push('Avoid personal information and common words')
+  if($2) {'
       suggestions.push('Replace common patterns with random characters');'
-      suggestions.push('Consider using a passphrase instead');
-    }
-    if (entropy < 40) {'
+      suggestions.push('Consider using a passphrase instead')
+  if($2) {'
       suggestions.push('Increase randomness by using more character types');'
-      suggestions.push('Consider using a password generator');
-    }
+      suggestions.push('Consider using a password generator')
     const result: PasswordStrengthResult = {}
-      password;
-      strength;
-      score: Math.max(0, Math.min(100, score))feedback;
-      details: {length;
-        hasUppercase;
-        hasLowercase;
-        hasNumbers;
-        hasSymbols;
+      password
+      strength
+      score: Math.max(0, Math.min(100, score))feedback
+      details: {length
+        hasUppercase
+        hasLowercase
+        hasNumbers
+        hasSymbols
         hasCommonPatterns;}
         entropy: Math.round(entropy * 100) / 100;}
-      }
-      suggestions;
-    }
 
-    res.status(200).json(result);
+      suggestions
+    res.status(200).json(result)
   } catch (error) {
     console.error('Password strength check error:', error);}
     res.status(500).json({ error: 'Internal server error'}
-});
-
-  }
-}
-  }
-
+})
     res.status(500).json({ error: 'Internal server error' })
-  }
-}
+
 origin/cursor/automate-test-improve-and-merge-code-2533
 

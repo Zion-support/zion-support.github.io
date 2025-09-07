@@ -1,8 +1,4 @@
-
-
 interface SeparatorProps {
-  className?: string;
+  className?: string
   orientation?: 'horizontal' | 'vertical';}
-}
-}
 

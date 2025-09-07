@@ -1,6 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
+import React from 'react'
+import { motion } from 'framer-motion'
 const solutions = [
   {
     category: 'AI & Machine Learning',
@@ -29,9 +28,8 @@ const solutions = [
     description: 'Turn your data into actionable insights with our analytics platform.',
     icon: '📊',
     features: ['Real-time Dashboards', 'Custom Reports', 'Data Visualization']
-  }
-];
 
+]
 export default function SolutionsPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -72,5 +70,4 @@ export default function SolutionsPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )

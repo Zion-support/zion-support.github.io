@@ -1,12 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Finance - Zion Tech Group',
   description: 'Professional finance services to help your business grow and succeed.',
   keywords: 'finance, business solutions, professional services'
-};
-
+}
 export default function FinancePage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -35,6 +33,4 @@ export default function FinancePage() {
         </a>
       </div>
     </div>
-  );
-}
-
+  )

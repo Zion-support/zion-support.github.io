@@ -1,19 +1,10 @@
-  return <OrgChartPage    />;
-}
-
-}
-
-}
-export default function OrgChartGovernancePage() {};
-  return <OrgChartPage />;
-}
-;
-export default /**;
- * OrgChartGovernancePage - Function description;
+  return <OrgChartPage    />
+export default function OrgChartGovernancePage() {}
+  return <OrgChartPage />
+export default /**
+ * OrgChartGovernancePage - Function description
  */
 
  */
 function OrgChartGovernancePage() {}
-  return <OrgChartPage />;
-}
-
+  return <OrgChartPage />

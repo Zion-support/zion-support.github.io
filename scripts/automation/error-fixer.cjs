@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "reports")
-const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
   fs.mkdirSync(this.reportsDir, { "recursive"})
@@ -54,7 +45,7 @@ const { execSync } = require("child_process")
     const reactFiles = this.findFiles(["**/*.tsx"", "**/*.jsx")]
   let content = fs.readFileSync(file, "utf8")
         if (content.includes("React") && !content.includes("import React")
-  content = "import React from "react";
+  content = "import React from "react"
         if (content.includes("<Helmet>") && !content.includes("<>")
   content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")
             /<\/Helmet>\s*<\/div>/g,</Helmet>\n      </div>\n    </>"
@@ -110,33 +101,10 @@ const { execSync } = require("child_process")
     const reportFile = path.join(this.reportsDir, `error-fixer-report-${timestamp.replace(/[:.]/g, "-"`})
     this.log(` Report "generated"`)
   this.log(" Starting Error Fixer Automation")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       this.log(")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       this.log(")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      this.log(")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         if (content.includes("<Helmet>") && !content.includes("<>")"
 "
   content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")"
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

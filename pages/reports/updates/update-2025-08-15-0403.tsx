@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 export default function Page() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -10,5 +9,4 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
-}
+  )

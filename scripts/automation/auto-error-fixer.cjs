@@ -1,33 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
 
-=======
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-#!/usr/bin/env node;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-#!/usr/bin/env node;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
-  const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
     this.logFile = path.join(this.projectRoot, "auto-error-fixer-report.json")
   this.log(" Starting Auto Error Fixer...")
@@ -175,27 +151,6 @@ const { execSync } = require("child_process")
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   process.on(")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   process.on(")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  process.on(")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

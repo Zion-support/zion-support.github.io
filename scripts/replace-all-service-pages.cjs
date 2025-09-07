@@ -1,18 +1,16 @@
-#!/usr/bin/env node
+///usr/bin/env node
 /**
  * Replace All Service Pages
  * Replaces all service pages with simple working ones
  */
-const fs = require("fs");
-const path = require("path");
-
+const fs = require("fs")
+const path = require("path")
 function createServicePage(serviceName, serviceTitle, description) {
   return `export const metadata = {
   title: '${serviceTitle} | Zion Tech Group',
   description: '${description}',
   keywords: '${serviceName}, services, business, technology'
-};
-
+}
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -25,7 +23,7 @@ export default function ServicePage() {
             ${description}
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
@@ -33,14 +31,14 @@ export default function ServicePage() {
               Tailored ${serviceName} solutions designed for your specific business requirements.
             </p>
           </div>
-          
+
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
             <p className="text-gray-300">
               Cutting-edge technology and best practices to deliver exceptional results.
             </p>
           </div>
-          
+
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
             <p className="text-gray-300">
@@ -50,20 +48,14 @@ export default function ServicePage() {
         </div>
       </div>
     </div>
-  );
-}`;
-}
-
+  )
+}`
 function replaceAllServicePages() {
-  console.log("🔧 Replacing all service pages...");
-  
-  const servicesDir = path.join(process.cwd(), "app", "services");
-  
+  console.log("🔧 Replacing all service pages...")
+  const servicesDir = path.join(process.cwd(), "app", "services")
   if (!fs.existsSync(servicesDir)) {
-    console.log("Services directory not found");
-    return;
-  }
-  
+    console.log("Services directory not found")
+    return
   const services = [
     { name: 'ai-analytics-platform', title: 'AI Analytics Platform', description: 'Professional AI analytics platform services for your business needs.' },
     { name: 'ai-chatbot', title: 'AI Chatbot', description: 'Advanced AI chatbot solutions for customer engagement and support.' },
@@ -139,21 +131,14 @@ function replaceAllServicePages() {
     { name: 'vulnerability-scanner', title: 'Vulnerability Scanner', description: 'Comprehensive vulnerability scanning for security assessment.' },
     { name: 'web-development', title: 'Web Development', description: 'Professional web development services.' },
     { name: 'website-analyzer', title: 'Website Analyzer', description: 'Advanced website analysis tools for optimization.' }
-  ];
-  
-  for (const service of services) {
-    const serviceDir = path.join(servicesDir, service.name);
-    const pagePath = path.join(serviceDir, 'page.tsx');
-    
+  ]
+  for($2) {
+    const serviceDir = path.join(servicesDir, service.name)
+    const pagePath = path.join(serviceDir, 'page.tsx')
     if (fs.existsSync(pagePath)) {
-      console.log(`Replacing ${service.name}...`);
-      const content = createServicePage(service.name, service.title, service.description);
-      fs.writeFileSync(pagePath, content, 'utf8');
-      console.log(`✅ Replaced ${service.name}`);
-    }
-  }
-  
-  console.log("✅ All service pages replaced!");
-}
-
-replaceAllServicePages();
+      console.log(`Replacing ${service.name}...`)
+      const content = createServicePage(service.name, service.title, service.description)
+      fs.writeFileSync(pagePath, content, 'utf8')
+      console.log(`✅ Replaced ${service.name}`)
+  console.log("✅ All service pages replaced!")
+replaceAllServicePages()

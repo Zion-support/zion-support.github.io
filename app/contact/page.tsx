@@ -1,6 +1,5 @@
-'use client';
-import React, { useState } from 'react';
-
+'use client'
+import React, { useState } from 'react'
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -8,35 +7,31 @@ export default function ContactPage() {
     company: '',
     service: '',
     message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
-
+    })
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault()
+    setIsSubmitting(true)
     // Simulate form submission
     setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
+      setIsSubmitting(false)
+      setSubmitStatus('success')
       setFormData({
         name: '',
         email: '',
         company: '',
         service: '',
         message: ''
-      });
-    }, 2000);
-  };
-
+      })
+    }, 2000)
+  }
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -109,7 +104,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
-              
+
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
                   Thank you for your message! We'll get back to you soon.
@@ -217,5 +212,4 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )

@@ -1,17 +1,14 @@
-
-
-import type { DefaultSeoProps } from 'next-seo';
-
-  defaultTitle: 'Zion Tech Solutions';
+import type { DefaultSeoProps } from 'next-seo'
+  defaultTitle: 'Zion Tech Solutions'
   titleTemplate: '%s | Zion Tech Solutions'
-  description: 'Engineering services, AI/ML, DevOps, and product development by Zion.';
+  description: 'Engineering services, AI/ML, DevOps, and product development by Zion.'
   openGraph: {
-    type: 'website';
-    locale: 'en_US';
+    type: 'website'
+    locale: 'en_US'
     url: 'https://ziontechgroup.netlify.app'
     siteName: 'Zion Tech Solutions'}
   twitter: {
-    handle: '@ziontech';
+    handle: '@ziontech'
     site: '@ziontech'
     cardType: 'summary_large_image'}
 const config: DefaultSeoProps = {
@@ -24,18 +21,16 @@ const config: DefaultSeoProps = {
     },
     twitter: {
     handle: '@ziontech', site: '@ziontech',
-    cardType: 'summary_large_image'};
-
+    cardType: 'summary_large_image'}
   additionalMetaTags: [
 { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     { name: 'theme-color', content: '#111827' }]}
-export default config;
-
-import type { DefaultSeoProps } from 'next - seo';
-  default_title: 'Zion Tech Solutions';
+export default config
+import type { DefaultSeoProps } from 'next - seo'
+  default_title: 'Zion Tech Solutions'
   title_template: '%s | Zion Tech Solutions',
 
-  description: 'Engineering services, AI / ML, DevOps, and product development by Zion.';
+  description: 'Engineering services, AI / ML, DevOps, and product development by Zion.'
   open_graph: {'
     type: 'website';'
     locale: 'en_US';'
@@ -48,7 +43,5 @@ import type { DefaultSeoProps } from 'next - seo';
   additionalMetaTags: [;'
 { name: 'viewport', content: 'width = device - width, initial - scale = 1' }'
     { name: 'theme - color', content: '#111827' }]}
-;
-export default config;
-;
 
+export default config

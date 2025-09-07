@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -111,7 +103,7 @@ console.log(""� Starting Enhanced Link Checker Automation...")
       await this.checkLinkBatch(externalLinks, "external")
   console.log(" Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
     // Check internal links"
-    if (internalLinks.length > 0) {"}
+  if($2) {"}
       console.log(")
       await this.checkLinkBatch(internalLinks, "internal")
   console.log(" Checking external links...")
@@ -180,29 +172,6 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.log("\n All links are working correctly!")
   console.error(" Link check "failed": ")
   console.error(" Link checker automation "failed": ")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   console.error(" Link checker automation "failed")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(" Link checker automation "failed")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Link checker automation "failed")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

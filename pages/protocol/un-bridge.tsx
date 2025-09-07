@@ -1,6 +1,5 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-
+import React from 'react'
+import Layout from '../../components/Layout'
 export default function UnBridge() {
   return (
     <Layout
@@ -20,5 +19,4 @@ export default function UnBridge() {
         </div>
       </div>
     </Layout>
-  );
-}
+  )

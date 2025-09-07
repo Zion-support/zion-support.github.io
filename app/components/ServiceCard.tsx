@@ -1,16 +1,13 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
-
+'use client'
+import React from 'react'
+import Link from 'next/link'
 interface ServiceCardProps {
-  title: string;
-  href: string;
-  description: string;
-  bullets?: string[];
-  icon?: string;
-  className?: string;
-}
-
+  title: string
+  href: string
+  description: string
+  bullets?: string[]
+  icon?: string
+  className?: string
 export default function ServiceCard({
   title,
   href,
@@ -46,5 +43,4 @@ export default function ServiceCard({
         </div>
       </div>
     </Link>
-  );
-}
+  )

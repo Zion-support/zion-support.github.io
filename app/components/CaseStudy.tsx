@@ -1,13 +1,10 @@
-import React from 'react';
-
+import React from 'react'
 interface CaseStudyProps {
-  company: string;
-  industry: string;
-  result: string;
-  description: string;
-  metrics: string[];
-}
-
+  company: string
+  industry: string
+  result: string
+  description: string
+  metrics: string[]
 export default function CaseStudy({
   company,
   industry,
@@ -37,5 +34,4 @@ export default function CaseStudy({
         </ul>
       </div>
     </div>
-  );
-}
+  )

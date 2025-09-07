@@ -68,7 +68,6 @@ const footerSections = [
   }
 ];
 
-=======
 const quickLinks = [
   { name: 'All Services', href: '/comprehensive-services-showcase-2025' },
   { name: 'Pricing', href: '/pricing' },
@@ -78,7 +77,6 @@ const quickLinks = [
   { name: 'Contact', href: '/contact' }
 ];
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Our Team', href: '/team' },
@@ -295,7 +293,6 @@ export default function UltraFuturisticFooter2035() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
 
       {/* Bottom Gradient Line */}

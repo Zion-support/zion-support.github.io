@@ -1,31 +1,21 @@
-
-
-import React from 'react';
-
+import React from 'react'
 export default function FuturisticBackground() {
 
 class ErrorBoundary extends React.Component {
-  constructor(props) {
+  constructor($2) {
     super(props);}
     this.state = { hasError: false,}
-};
-  }
+}
   static getDerivedStateFromError(error) {}
     return { hasError: true,}
-};
-  }
-  componentDidCatch(error, errorInfo) {}
+}
+  componentDidCatch($2) {}
     console.error('Error caught by boundary:', error, errorInfo);}
-  }
-  render() {
-    if (this.state.hasError) {
+  render($2) {
+  if($2) {
       return <div    />Something went wrong.</div>;}
-}
-    }
-    return this.props.children;
-  }
-}
 
+    return this.props.children
 export default function FuturisticBackground() {return (<div className='pointer-events-none absolute inset-0 overflow-hidden'    />;}
       {/* Animated gradient background */}
       {/* Glow orbs */}
@@ -35,5 +25,4 @@ export default function FuturisticBackground() {return (<div className='pointer-
       <div className='absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]'    />
 
     </div>
-  );
-
+  )

@@ -1,26 +1,18 @@
-
-    res && res.status(500).json({ error: 'Failed to read content' });
-  }
-;'
-const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json');
-;
-export default /**;
- * handler - Function description;
+    res && res.status(500).json({ error: 'Failed to read content' });'
+const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json')
+export default /**
+ * handler - Function description
  */
 function handler() { return null; }
-if ( {) {}
-  $2;
+  if($2) {}
+  $2
 }'
-    return res.status (403).json ({ error: 'Forbidden' });
-  }
+    return res.status (403).json ({ error: 'Forbidden' })
   try {'
-    const data = fs.readFileSync (CONTENT_PATH, 'utf8');
-    res.status (200).json (JSON.parse (data));
-
+    const data = fs.readFileSync (CONTENT_PATH, 'utf8')
+    res.status (200).json (JSON.parse (data))
   } catch (e) {
 
-    res.status (500).json ({ error: 'Failed to read content' });
-  }
+    res.status (500).json ({ error: 'Failed to read content' })
   } catch (e) {'
-    res.status (500).json ({ error: 'Failed to read content' });
-
+    res.status (500).json ({ error: 'Failed to read content' })

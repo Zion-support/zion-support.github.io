@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -44,7 +36,7 @@ const path = require("path")
           "success"
           "timestamp"
           "output"
-        if (result.success) {await this.log(" ${process.name} completed successfully")} else {await this.log(" ${process.name} failed")
+  if($2) {await this.log(" ${process.name} completed successfully")} else {await this.log(" ${process.name} failed")
   "process"
             "error"
             "timestamp"
@@ -64,7 +56,7 @@ const path = require("path")
   "name"
           "success"
           "timestamp"
-        if (result.success) {await this.log(" ${check.name} passed")} else {await this.log(" ${check.name} failed")
+  if($2) {await this.log(" ${check.name} passed")} else {await this.log(" ${check.name} failed")
   "check"
             "error"
             "timestamp"
@@ -127,7 +119,7 @@ const path = require("path")
     await fs.writeFile(this.coordinationReportFile, JSON.stringify(report, null, 2));await this.log(" Coordination report "generated": ${this.coordinationReportFile}")
   await this.log("� Restarting failed processes...")
   try {await this.log("� Restarting ${process.name}...");const restartResult = await this.runCommand("pm2 restart ${process.name}", { "silent"})
-        if (restartResult.success) {await this.log(" ${process.name} restarted successfully")} else {await this.log(" Failed to restart ${process.name}")
+  if($2) {await this.log(" ${process.name} restarted successfully")} else {await this.log(" Failed to restart ${process.name}")
       } catch (error) {  await this.log(" Error restarting ${process.name  }: ${error.message}")
   await this.log(" Starting Master Error Coordinator")
   await this.log(" Starting Master Error Coordinator")
@@ -135,29 +127,6 @@ const path = require("path")
       return report} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")} catch (error) {await this.log(" Master Error Coordinator "failed": ${error.message}")
       throw error} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")
   console.log("Master error coordinator completed successfully")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   console.error("Master error coordinator "failed")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error("Master error coordinator "failed")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error("Master error coordinator "failed")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -351,8 +351,3 @@ export default function EnhancedSidebar2025() {
     </AnimatePresence>
   );
 };
-<<<<<<< HEAD
-=======
-
-export default EnhancedSidebar2025;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6

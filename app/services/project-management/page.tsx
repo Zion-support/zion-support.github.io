@@ -1,13 +1,11 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Project Management - Zion Tech Group',
   description: 'Professional project management services to help your business grow and succeed.',
   keywords: 'project management, business solutions, professional services'
 
-};
-
+}
 export default function ServicePage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -36,6 +34,4 @@ export default function ServicePage() {
         </a>
       </div>
     </div>
-  );
-}
-
+  )

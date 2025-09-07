@@ -1,23 +1,21 @@
-
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-export default function ContentMap({ report }: Props) {};
-  if (!report) return <div>No content map yet. Check back later.</div>;
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
+export default function ContentMap({ report }: Props) {}
+  if (!report) return <div>No content map yet. Check back later.</div>
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1])
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
 
-  if (!report) return <div>No content map yet. Check back later.</div>;
-  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
-
+  if (!report) return <div>No content map yet. Check back later.</div>
+  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1])
 import fs from 'fs',
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Entry = any;
+import path from 'path'
+import type { GetStaticProps } from 'next'
+type Entry = any
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">"
@@ -35,37 +33,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {sections.map(([sec, n]) => ("
             <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
 
-};
-) ) ;
-}</ul> </section> <section    />) ) ;
-}</ul> </section> </div>) ;
-
-export default function ContentMap(): any ({ report }: Props) {;
-
+}
+) )
+}</ul> </section> <section    />) )
+}</ul> </section> </div>)
+export default function ContentMap(): any ({ report }: Props) {
           ))}
 
         </ul>
       </section>
 
           ))}
-}
-) );
-}</ul> </section> <section>) );
-}</ul> </section> </div>);
-export default /**;
- * ContentMap - Function description;
+
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
+export default /**
+ * ContentMap - Function description
  */
 function ContentMap() {}
-  // Check condition;
-if (return <div > No content map yet. Check back later.</div>) {}
-  $2;
-}
-  const sections = Object.entries (report.by_section).sort ((a, b) => b[1] - a[1]);
-
+  // Check condition
+  if($2) {}
+  $2
+  const sections = Object.entries (report.by_section).sort ((a, b) => b[1] - a[1])
         </ul>
       </section>
     </div>
-);
-}
+)
 origin/cursor/automate-test-improve-and-merge-code-2533
 

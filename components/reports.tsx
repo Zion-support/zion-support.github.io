@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 import {
   FileText,
   Download,
@@ -19,9 +19,8 @@ import {
   Eye,
   Clock,
   Award,
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from './ui/UltraAdvancedFuturisticBackground';
-
+} from 'lucide-react'
+import UltraAdvancedFuturisticBackground from './ui/UltraAdvancedFuturisticBackground'
 const reports = [
   {
     id: 1,
@@ -82,29 +81,25 @@ const reports = [
     featured: false,
     color: 'from-green-500 to-emerald-500',
     icon: <Globe className="w-8 h-8" />
-  }
-];
 
+]
 const categories = [
   { name: 'All', count: reports.length, active: true, href: '#' },
   { name: 'Business Intelligence', count: 1, active: false, href: '#' },
   { name: 'Security', count: 1, active: false, href: '#' },
   { name: 'Finance', count: 1, active: false, href: '#' },
   { name: 'Environment', count: 1, active: false, href: '#' }
-];
-
+]
 const formatNumber = (num: number) => {
-  return new Intl.NumberFormat('en-US').format(num);
-};
-
+  return new Intl.NumberFormat('en-US').format(num)
+}
 const formatDate = (date: string) => {
   return new Intl.DateTimeFormat('en-US', {
     month: 'long',
     day: 'numeric',
     year: 'numeric'
-  }).format(new Date(date));
-};
-
+  }).format(new Date(date))
+}
 export default function ReportsPage() {
   return (
     <>
@@ -113,7 +108,7 @@ export default function ReportsPage() {
         <meta name="description" content="Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making." />
       </Head>
       <UltraAdvancedFuturisticBackground />
-      
+
       <div className="relative z-10">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -356,5 +351,4 @@ export default function ReportsPage() {
         </section>
       </div>
     </>
-  );
-}
+  )

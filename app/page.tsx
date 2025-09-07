@@ -1,22 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-<<<<<<< HEAD
-=======
-import {
-  LightBulbIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  StarIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline';
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-import { Metadata } from 'next';
-
+import React from 'react'
+import Link from 'next/link'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development',
   description: 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
@@ -28,32 +12,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-<<<<<<< HEAD
-=======
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-};
-
+}
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 text-center relative overflow-hidden">
@@ -66,13 +27,13 @@ export default function HomePage() {
             Innovative Micro SaaS, AI Services & IT Solutions
           </p>
           <p className="text-lg text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with our cutting-edge technology solutions. 
-            From AI-powered automation to cloud infrastructure, we deliver 
+            Transform your business with our cutting-edge technology solutions.
+            From AI-powered automation to cloud infrastructure, we deliver
             enterprise-grade solutions that drive growth and innovation.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
             >
               Get Started Today
@@ -80,8 +41,8 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-            <Link 
-              href="/services" 
+            <Link
+              href="/services"
               className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,7 +53,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
+
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -113,184 +74,70 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
+
       {/* Services Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-=======
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-700 to-purple-700 text-white py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/services"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Explore Services
-              </Link>
-              <Link
-                href="/contact"
-                className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-              Our Services
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">              Our Services
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
               Comprehensive technology solutions designed to accelerate your business growth
             </p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card 
-              title="Micro SaaS" 
-              href="/services/micro-saas" 
-              description="End-to-end product engineering with billing, auth, analytics and growth." 
-              icon="🚀" 
+            <Card
+              title="Micro SaaS"
+              href="/services/micro-saas"
+              description="End-to-end product engineering with billing, auth, analytics and growth."
+              icon="🚀"
             />
-            <Card 
-              title="AI Services" 
-              href="/services/ai-services" 
-              description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps." 
-              icon="🤖" 
+            <Card
+              title="AI Services"
+              href="/services/ai-services"
+              description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps."
+              icon="🤖"
             />
-            <Card 
-              title="IT Services" 
-              href="/services/it-services" 
-              description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
-              icon="⚙️" 
+            <Card
+              title="IT Services"
+              href="/services/it-services"
+              description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
+              icon="⚙️"
             />
-            <Card 
-              title="Blockchain Solutions" 
-              href="/services/blockchain" 
-              description="Smart contracts, DeFi protocols, NFT platforms, and Web3 applications." 
-              icon="⛓️" 
+            <Card
+              title="Blockchain Solutions"
+              href="/services/blockchain"
+              description="Smart contracts, DeFi protocols, NFT platforms, and Web3 applications."
+              icon="⛓️"
             />
-            <Card 
-              title="Automation Services" 
-              href="/services/automation" 
-              description="RPA, workflow automation, and AI-powered business process optimization." 
-              icon="⚡" 
+            <Card
+              title="Automation Services"
+              href="/services/automation"
+              description="RPA, workflow automation, and AI-powered business process optimization."
+              icon="⚡"
             />
-            <Card 
-              title="Technology Consulting" 
-              href="/services/consulting" 
-              description="Digital transformation, technology strategy, and architecture consulting." 
-              icon="📋" 
+            <Card
+              title="Technology Consulting"
+              href="/services/consulting"
+              description="Digital transformation, technology strategy, and architecture consulting."
+              icon="📋"
             />
           </div>
         </div>
       </section>
-      
+
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
-              <p className="text-gray-600">
-                Advanced AI and machine learning solutions to automate and optimize your business processes.
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Micro SaaS</h3>
-              <p className="text-gray-600">
-                Custom micro SaaS applications tailored to your specific business needs.
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">IT Services</h3>
-              <p className="text-gray-600">
-                Complete IT infrastructure and support services for enterprise environments.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-16 md:py-24 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Us?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We combine technical expertise with business acumen to deliver solutions that drive real results.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <LightBulbIcon className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Innovation</h3>
-              <p className="text-gray-600">Cutting-edge technology solutions</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ShieldCheckIcon className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Security</h3>
-              <p className="text-gray-600">Enterprise-grade security measures</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ChartBarIcon className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Performance</h3>
-              <p className="text-gray-600">Optimized for speed and efficiency</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <UserGroupIcon className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Support</h3>
-              <p className="text-gray-600">24/7 expert support team</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="bg-gradient-to-r from-blue-700 to-purple-700 text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-            Ready to Transform Your Business?
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-slate-400 mb-12">
-            Get in touch with our experts to discuss your project requirements and discover 
+            Get in touch with our experts to discuss your project requirements and discover
             how our innovative solutions can drive your business forward.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
             >
               Get Started Today
@@ -298,8 +145,8 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -310,26 +157,15 @@ export default function HomePage() {
           </div>
           <div className="mt-6 text-sm text-gray-600">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-          </div>
-=======
-          <Link
-            href="/contact"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-block"
-          >
-            Contact Us
-          </Link>
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-        </div>
+          </div>        </div>
       </section>
     </div>
-  );
-}
-
+  )
 function Card({ title, href, description, icon }: {
-  title: string;
-  href: string;
-  description: string;
-  icon: string;
+  title: string
+  href: string
+  description: string
+  icon: string
 }) {
   return (
     <Link
@@ -340,5 +176,4 @@ function Card({ title, href, description, icon }: {
       <h3 className="text-xl font-semibold mb-4">{title}</h3>
       <p className="text-slate-400">{description}</p>
     </Link>
-  );
-}
+  )

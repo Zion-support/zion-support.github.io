@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+///""usr/bin/env""
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+console.log(""� Starting continuous dependency updates automation...")
+const { execSync } = require("child_process")
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
 console.log(""� Starting continuous dependency updates automation...")
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log(""� Starting continuous dependency updates automation...")
-// Get automation interval from environment variable ("default")
-// console.log(`" Checking for outdated dependencies..."`)
+//
   console.log("� Starting continuous dependency updates automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Checking for outdated dependencies..."`)
@@ -88,29 +78,6 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   console.error(" Failed to start continuous dependency "updates": ")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(" Failed to start continuous dependency "updates": ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Failed to start continuous dependency "updates": ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

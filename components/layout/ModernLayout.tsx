@@ -1,8 +1,5 @@
-
         {children}
-      </div>;
+      </div>
 </>),
-}
-;
 
 export default ModernLayout;"

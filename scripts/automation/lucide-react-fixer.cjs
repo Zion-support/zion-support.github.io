@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -65,7 +57,7 @@ const { execSync } = require("child_process")
       if (line.trim().startsWith("import ") && line.includes("lucide-react")
         const match = line.match(/import\s*\{([^}]+)\}\s*from\s*["]lucide-react[""]
   const icons = match[1].split(",")
-          if (usedIcons.length > 0) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
+  if($2) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
       } else if (inImportBlock && line.trim() === ""
         newLines.push("")
     return newLines.join("\n")
@@ -80,29 +72,6 @@ const { execSync } = require("child_process")
       .replace(/{\s*}/g, "{}")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   const fullPath = path.join(dirPath, ")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   const fullPath = path.join(dirPath, ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  const fullPath = path.join(dirPath, ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

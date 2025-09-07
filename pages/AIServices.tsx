@@ -1,12 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI Services - Zion Tech Group',
   description: 'Professional AI services to help your business grow and succeed.',
   keywords: 'AI services, business solutions, professional services'
-};
-
+}
 export default function AIServicesPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -35,5 +33,4 @@ export default function AIServicesPage() {
         </a>
       </div>
     </div>
-  );
-}
+  )

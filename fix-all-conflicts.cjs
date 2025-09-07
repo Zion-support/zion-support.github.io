@@ -6,24 +6,12 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Remove all merge conflict markers and keep the better version (after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]*/g, '$1');
-    
+    // Remove all merge conflict markers and keep the better version (after )
+    content = content.replace(/[\s\S]*?    
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    
+    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    
     // Clean up any remaining markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
-    
-    // Remove any orphaned conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*$/g, '');
-    content = content.replace(/=======[\s\S]*$/g, '');
-    content = content.replace(/>>>>>>> [^\n]*/g, '');
-    
+    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
@@ -40,7 +28,7 @@ function fixMergeConflicts(filePath) {
 const { execSync } = require('child_process');
 let files = [];
 try {
-  const output = execSync('find . -name "*.tsx" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD"', { encoding: 'utf8' });
+  const output = execSync('find . -name "*.tsx" -o -name "*.ts" | xargs grep -l ""', { encoding: 'utf8' });
   files = output.trim().split('\n').filter(f => f);
 } catch (error) {
   console.log('No files with merge conflicts found');

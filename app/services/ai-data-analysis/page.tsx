@@ -1,12 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI Data Analysis Platform - Zion Tech Group',
   description: 'Build AI-powered data analysis platforms with automated insights, predictive analytics, and intelligent business intelligence tools.',
   keywords: 'AI data analysis, machine learning, predictive analytics, business intelligence, data visualization'
-};
-
+}
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
@@ -20,9 +18,7 @@ function Item({ title, details }: { title: string; details: string[] }) {
         ))}
       </ul>
     </div>
-  );
-}
-
+  )
 function Plan({ name, price, duration, features }: { name: string; price: string; duration: string; features: string[] }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -44,9 +40,7 @@ function Plan({ name, price, duration, features }: { name: string; price: string
         Get Started
       </a>
     </div>
-  );
-}
-
+  )
 function Pricing() {
   return (
     <section className="py-16">
@@ -94,9 +88,7 @@ function Pricing() {
         </div>
       </div>
     </section>
-  );
-}
-
+  )
 export default function AIDataAnalysisPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -198,5 +190,4 @@ export default function AIDataAnalysisPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )

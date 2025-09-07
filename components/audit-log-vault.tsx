@@ -1,4 +1,3 @@
-
   return (
     <UltraAdvancedFuturisticBackground    />
       <Head><title>Audit Log Vault | Zion Tech Group</title>
@@ -9,7 +8,7 @@
         <div className=\"max-w-6xl mx-auto\"    />
           <div className=\"text-center mb-10\"    />
             <h1 className=\"text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-indigo-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3\"    />
-              <ShieldCheck className=\"w-10 h-10\"    /> Audit Log Vault;
+              <ShieldCheck className=\"w-10 h-10\"    /> Audit Log Vault
             </h1>
             <p className=\"mt-4 text-xl text-gray-300 max-w-3xl mx-auto\"    />Compliance-first audit log storage and search with WORM options, retention, attestations and exports.</p>
           </div>
@@ -22,7 +21,7 @@
                 {features.map((f) => (}
                   <li key={f} className=\"flex items-start gap-2\"    /><Check className=\"w-4 h-4 text-emerald-400 mt-0.5\"    /> <span    />{f}</span></li>
                 ),
-}
+
               </ul>
             </Card>
             <Card className=\"p-6 bg-black/40 border border-gray-700/50\"    />
@@ -44,7 +43,6 @@
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
-}
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

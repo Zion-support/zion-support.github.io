@@ -1,6 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
-
+import React from 'react'
+import Link from 'next/link'
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -37,5 +36,4 @@ export default function ResourcesPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )

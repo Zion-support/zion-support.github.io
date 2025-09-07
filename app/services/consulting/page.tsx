@@ -1,8 +1,7 @@
-export const metadata = { 
+export const metadata = {
   title: 'Technology Consulting | Zion Tech Group',
   description: 'Strategic technology consulting services including digital transformation, technology strategy, architecture design, and digital innovation. Expert guidance for your technology journey.'
-};
-
+}
 export default function ConsultingPage() {
   return (
     <div className="animate-fade-in">
@@ -11,7 +10,7 @@ export default function ConsultingPage() {
           Technology Consulting
         </h1>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
-          Strategic technology consulting services including digital transformation, technology strategy, 
+          Strategic technology consulting services including digital transformation, technology strategy,
           architecture design, and digital innovation. Get expert guidance for your technology journey.
         </p>
       </section>
@@ -69,8 +68,8 @@ export default function ConsultingPage() {
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Core Consulting Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ConsultingServiceItem 
-            title="Strategic Planning" 
+          <ConsultingServiceItem
+            title="Strategic Planning"
             details={[
               "Technology roadmap development",
               "Digital transformation strategy",
@@ -78,10 +77,10 @@ export default function ConsultingPage() {
               "Technology investment prioritization",
               "Competitive analysis and benchmarking",
               "Future technology trends analysis"
-            ]} 
+            ]}
           />
-          <ConsultingServiceItem 
-            title="Architecture & Design" 
+          <ConsultingServiceItem
+            title="Architecture & Design"
             details={[
               "System architecture design",
               "Cloud architecture planning",
@@ -89,10 +88,10 @@ export default function ConsultingPage() {
               "Scalability and performance planning",
               "Security architecture design",
               "Technology stack recommendations"
-            ]} 
+            ]}
           />
-          <ConsultingServiceItem 
-            title="Implementation Support" 
+          <ConsultingServiceItem
+            title="Implementation Support"
             details={[
               "Project management and oversight",
               "Vendor selection and management",
@@ -100,7 +99,7 @@ export default function ConsultingPage() {
               "Change management and training",
               "Quality assurance and testing",
               "Post-implementation support"
-            ]} 
+            ]}
           />
         </div>
       </section>
@@ -167,9 +166,9 @@ export default function ConsultingPage() {
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ConsultingPricingPlan 
-            name="Strategy Workshop" 
-            price="$5k–$15k" 
+          <ConsultingPricingPlan
+            name="Strategy Workshop"
+            price="$5k–$15k"
             duration="1–2 weeks"
             features={[
               "Current state assessment",
@@ -180,9 +179,9 @@ export default function ConsultingPage() {
             ]}
             popular={false}
           />
-          <ConsultingPricingPlan 
-            name="Full Consulting Engagement" 
-            price="$25k–$150k" 
+          <ConsultingPricingPlan
+            name="Full Consulting Engagement"
+            price="$25k–$150k"
             duration="4–16 weeks"
             features={[
               "Comprehensive strategy development",
@@ -193,9 +192,9 @@ export default function ConsultingPage() {
             ]}
             popular={true}
           />
-          <ConsultingPricingPlan 
-            name="Retainer Consulting" 
-            price="$10k+/mo" 
+          <ConsultingPricingPlan
+            name="Retainer Consulting"
+            price="$10k+/mo"
             duration="Ongoing"
             features={[
               "Monthly strategy sessions",
@@ -212,15 +211,13 @@ export default function ConsultingPage() {
       {/* Contact CTA */}
       <ContactCTA />
     </div>
-  );
-}
-
+  )
 function ConsultingSolution({ title, description, features, pricing, icon }: {
-  title: string;
-  description: string;
-  features: string[];
-  pricing: string;
-  icon: string;
+  title: string
+  description: string
+  features: string[]
+  pricing: string
+  icon: string
 }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
@@ -237,12 +234,10 @@ function ConsultingSolution({ title, description, features, pricing, icon }: {
       </ul>
       <div className="text-lg font-bold text-blue-600">{pricing}</div>
     </div>
-  );
-}
-
-function ConsultingServiceItem({ title, details }: { 
-  title: string; 
-  details: string[]; 
+  )
+function ConsultingServiceItem({ title, details }: {
+  title: string
+  details: string[]
 }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
@@ -256,13 +251,11 @@ function ConsultingServiceItem({ title, details }: {
         ))}
       </ul>
     </div>
-  );
-}
-
+  )
 function IndustryCard({ title, description, icon }: {
-  title: string;
-  description: string;
-  icon: string;
+  title: string
+  description: string
+  icon: string
 }) {
   return (
     <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
@@ -270,14 +263,12 @@ function IndustryCard({ title, description, icon }: {
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  );
-}
-
+  )
 function ProcessStep({ step, title, description, icon }: {
-  step: string;
-  title: string;
-  description: string;
-  icon: string;
+  step: string
+  title: string
+  description: string
+  icon: string
 }) {
   return (
     <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
@@ -288,15 +279,13 @@ function ProcessStep({ step, title, description, icon }: {
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  );
-}
-
+  )
 function ConsultingPricingPlan({ name, price, duration, features, popular }: {
-  name: string;
-  price: string;
-  duration: string;
-  features: string[];
-  popular: boolean;
+  name: string
+  price: string
+  duration: string
+  features: string[]
+  popular: boolean
 }) {
   return (
     <div className={`bg-white border-2 rounded-xl p-6 ${popular ? 'border-blue-500 relative' : 'border-gray-200'}`}>
@@ -329,9 +318,7 @@ function ConsultingPricingPlan({ name, price, duration, features, popular }: {
         Get Started
       </a>
     </div>
-  );
-}
-
+  )
 function ContactCTA() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center mt-12">
@@ -339,7 +326,7 @@ function ContactCTA() {
         Ready to Transform Your Technology Strategy?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your technology challenges and create a strategic roadmap for success. 
+        Let's discuss your technology challenges and create a strategic roadmap for success.
         Our consultants have guided 500+ companies through digital transformation.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,5 +347,4 @@ function ContactCTA() {
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
     </div>
-  );
-}
+  )

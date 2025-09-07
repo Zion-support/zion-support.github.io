@@ -1,13 +1,11 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Analytics Dashboard - Zion Tech Group',
   description: 'Professional analytics dashboard services to help your business grow and succeed.',
   keywords: 'analytics dashboard, business solutions, professional services'
 
-};
-
+}
 export default function ServicePage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -36,6 +34,4 @@ export default function ServicePage() {
         </a>
       </div>
     </div>
-  );
-}
-
+  )

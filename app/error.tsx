@@ -1,12 +1,8 @@
-'use client';
-
-import React from 'react';
-
+'use client'
+import React from 'react'
 interface ErrorProps {
-  error: Error & { digest?: string };
-  reset: () => void;
-}
-
+  error: Error & { digest?: string }
+  reset: () => void
 export default function Error({ error, reset }: ErrorProps) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50">
@@ -31,7 +27,7 @@ export default function Error({ error, reset }: ErrorProps) {
           >
             Try Again
           </button>
-          
+
           <a
             href="/"
             className="block w-full border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors text-center focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
@@ -53,5 +49,4 @@ export default function Error({ error, reset }: ErrorProps) {
         )}
       </div>
     </div>
-  );
-}
+  )

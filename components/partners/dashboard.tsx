@@ -1,65 +1,50 @@
-
-import Head from "next/head";
-
-  }, []);
-
-
+import Head from "next/head"
+  }, [])
     const saved = null;}
     if (saved) setToken(saved);}
-  }, []);
+  }, [])
   async function getToken() {
     const res = await fetch('/api/partners/token', {}
       method: 'POST'}
-      headers: { 'Content-Type': 'application/json' }
+      headers: { "Content-Type": "application/json" }
       body: JSON.stringify({ apiKey })
-   
-});
 
-const data = await res.json();
-    if (data.token) {
+})
+const data = await res.json()
+  if($2) {
       localStorage.setItem('zion_partner_token', data.token);}
       setToken(data.token);}
-    }
-  }
 
   async function fetchUsage() { return null; }
-    });
-    const data = await res && res.json();
+    })
+    const data = await res && res.json()
     setLoading(false)
-  }
+
   async function regenerateKey() { return null; }
       headers: token ? { Authorization: `Bearer ${token}` } : {}})
-    const data = await res.json();
-    }
-  }
+    const data = await res.json()
   return (
 
 const res = await fetch('/api/partners/usage', {
-      headers: token ? { Authorization: `Bearer ${token}` } : {},
-    });
-    const data = await res.json();
-}
+      headers: token ? { Authorization: `Bearer ${token}` } :
+    })
+    const data = await res.json()
 const res = await fetch('/api/partners/usage', {}
-      headers: token ? { Authorization: `Bearer ${token}` } : 
-}
-    });
+      headers: token ? { Authorization: `Bearer ${token}` } :
 
-const data = await res.json();
-    setUsage(data.summary |null);
-    setLoading(false);
-  }
+    })
+const data = await res.json()
+    setUsage(data.summary |null)
+    setLoading(false)
   async function regenerateKey() {
     const res = await fetch('/api/partners/key', {
       method: 'POST'}
-}
-      headers: token ? { Authorization: `Bearer ${token}` } : {}
-   
-};
-  const data = await res.json()if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)}
- 
-}
 
- ;
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
+
+}
+  const data = await res.json()if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)}
+
   return (
 <div className='min-h-screen bg-gray-50 text-gray-900'    />
       <Head><title>Zion Partner Dashboard</title></Head>
@@ -80,29 +65,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='bg-white p-6 rounded-lg shadow mb-8' />
             <h2 className='text-lg font-medium mb-3' />Authenticate</h2>
             <div className='flex gap-2' />
-              <input;
+              <input
 className='border rounded px-3 py-2 flex-1'}
                 placeholder='Paste your API key'}
                 value={apiKey}
                 onChange={e =    /> setApiKey(e && e.target.value)}
-              />;
-
-                className='bg-black text-white px-4 py-2 rounded'>;
-                Get JWT;
-              </button>            </div>;
-          </div>;
+              />
+                className='bg-black text-white px-4 py-2 rounded'>
+                Get JWT
+              </button>            </div>
+          </div>
         )}"
           <div className="bg-white p-6 rounded-lg shadow mb-8">;"
             <h2 className="text-lg font-medium mb-3">Authenticate</h2>;"
             <div className="flex gap-2">;"
               <input className="border rounded px-3 py-2 flex-1" placeholder="Paste your API key" value={apiKey} onChange={(e) => setApiKey(e && e.target.value)} />;"
-              <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>;
-          </div>;
+              <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>
+          </div>
         )}
 
                 className='bg-black text-white px-4 py-2 rounded'
                   />
-                Get JWT;
+                Get JWT
               </button>
             </div>
           </div>
@@ -111,11 +95,11 @@ className='border rounded px-3 py-2 flex-1'}
 <div className='grid md: grid-cols-3 gap-6'    />
           <div className='bg-white p-6 rounded-lg shadow'    />
             <h3 className='font-medium mb-2'    />API Keys</h3>
-            <button;
+            <button
 onClick={regenerateKey}
               className='bg-gray-900 text-white px-3 py-2 rounded text-sm'
                 />
-              Generate New Key;
+              Generate New Key
             </button>
             <p className='text-xs text-gray-500 mt-2'    />
               Old key becomes inactive.
@@ -126,7 +110,7 @@ onClick={regenerateKey}
 origin/cursor/automate-test-improve-and-merge-code-2533
             <button
               onClick={fetchUsage}
-              className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3'>;
+              className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3'>
               {loading ? 'Loading...' : 'Refresh'}
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
@@ -155,10 +139,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </li>
 
                     ))}
-                  </ul>;
-                </div>;
-              </div>;
-
+                  </ul>
+                </div>
+              </div>
                   </ul>
                 </div>
               </div>
@@ -178,28 +161,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <a
             className='text-blue-600 underline mr-4'
 
-            href='/api/partners/sdk?type=rest'>;
-            REST SDK;
-          </a>;
-
-            href='/api/partners/sdk?type=graphql'>;
-            GraphQL SDK;
-          </a>        </div>;
-      </div>;
-    </div>;
-  );
+            href='/api/partners/sdk?type=rest'>
+            REST SDK
+          </a>
+            href='/api/partners/sdk?type=graphql'>
+            GraphQL SDK
+          </a>        </div>
+      </div>
+    </div>
+  )
           </div>
 
         </div>
 
             href='/api/partners/sdk?type=graphql'
               />
-            GraphQL SDK;
+            GraphQL SDK
           </a>
         </div>
       </div>
     </div>
-  );
-}
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

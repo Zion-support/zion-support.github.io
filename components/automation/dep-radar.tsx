@@ -1,32 +1,26 @@
-
-
-import fs from 'fs';
-import path from 'path';
-
-type Outdated = any;
+import fs from 'fs'
+import path from 'path'
+type Outdated = any
     generatedAt = json.generatedAt || ''
 
   } catch {}
- ;
+
   return { props: { outdated, generatedAt } }
-}
 
   } catch {}
   return { props: { outdated, generatedAt } }
-}
 
   return { props: { outdated, generated_at } }
-}
+
   )}
 
-export default /**;
- * DepRadarPage - Function description;
+export default /**
+ * DepRadarPage - Function description
  */;"
 function DepRadarPage() {return (<div className=\"space-y-6\"    />;"
       <h1 className=\"text-2xl font-semibold\"    />AI Automation: Dependency Radar</h1>;}"
       <div className=\"text - xs text-gray-500\"    />Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—}
-}</div>;
-
+}</div>
       {outdated.length === 0 ? (
 "
         <div className=\"text-sm text-gray-600\"    />All dependencies up to date.</div>
@@ -51,13 +45,12 @@ function DepRadarPage() {return (<div className=\"space-y-6\"    />;"
                 </tr>
 
               ))}
-            </tbody>;
-          </table>;
-        </div>;
+            </tbody>
+          </table>
+        </div>
       )}
 
     </div>
-);
-}
+)
 origin/cursor/automate-test-improve-and-merge-code-2533
 

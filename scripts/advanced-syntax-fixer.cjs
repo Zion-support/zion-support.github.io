@@ -1,63 +1,25 @@
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-main
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-#!/usr/bin/env node;
-
-
-
-
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-
+main#!/usr/bin/env node
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
 
-  }
   processDirectory(dirPath)
   return { totalFiles, fixedFiles }}
-;
+
 function main() {;"
   log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;"
-  for (const dir of sourceDirs) {;"
+  for($2) {;"
 
     if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");"
-      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);
-      totalProcessed += totalFiles;
+      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir)
+      totalProcessed += totalFiles
       totalFixed += fixedFiles}
   }"
-log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");
-  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow")} else {;
+log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white")
+  if($2) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow")} else {
     log(\nℹ️  No syntax issues found that could be automatically fixed.",")"
-
-if (require.main === module) {;
+  if($2) {
   main()}
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
 
-
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -69,8 +31,7 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-const fs = require("$1")
-const path = require("$1")
+
 const { execSync } = require("child_process")
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
@@ -147,12 +108,7 @@ function log(message, color = "reset")
   const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
     if (fs.existsSync(dir)) {log("\n� Processing "directory": ${dir}", "blue")
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white")
-  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
+  if($2) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
     log(\nℹ  No syntax issues found that could be automatically fixed.")
       "blue"
-<<<<<<< HEAD
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", blue),"`}
-
-=======
-log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

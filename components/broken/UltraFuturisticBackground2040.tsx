@@ -1,74 +1,58 @@
-      x: number;
-
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-
-const UltraFuturisticBackground2040: React.FC;
-
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      // Update and draw particles;
+      x: number
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+const UltraFuturisticBackground2040: React.FC
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
+      // Update and draw particles
       particles.forEach((particle, index) => {}
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        // Wrap around edges;
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-
-        // Draw particle with glow effect;
-ctx.save();
-        ctx.globalAlpha = particle.opacity;
-
-// Glow effect;
-ctx.shadowColor = particle.color;
-        ctx.shadowBlur = 10;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.fill();
+        particle.x += particle.vx
+        particle.y += particle.vy
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width
+        if (particle.x > canvas.width) particle.x = 0
+        if (particle.y < 0) particle.y = canvas.height
+        if (particle.y > canvas.height) particle.y = 0
+        // Draw particle with glow effect
+ctx.save()
+        ctx.globalAlpha = particle.opacity
+// Glow effect
+ctx.shadowColor = particle.color
+        ctx.shadowBlur = 10
+        ctx.beginPath()
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
+        ctx.fillStyle = particle.color
+        ctx.fill()
 ctx.restore();) => {
   return $3;}
-}
-      });
-      // Draw connecting lines between nearby particles;
-ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
-      ctx.lineWidth = 0.5;
 
-for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-
-const dy = particles[i].y - particles[j].y;
-
-const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < 100) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
+      })
+      // Draw connecting lines between nearby particles
+ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)'
+      ctx.lineWidth = 0.5
+  for($2) {
+  for($2) {
+          const dx = particles[i].x - particles[j].x
+const dy = particles[i].y - particles[j].y
+const distance = Math.sqrt(dx * dx + dy * dy)
+  if($2) {
+            ctx.beginPath()
+            ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y);}
 ctx.stroke();}
-          }
 
-        }
-      }
-
-      // Draw animated grid;
-ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
-      ctx.lineWidth = 0.5;
-
-const gridSize = 50;
-
-const offset = (time * 20) % gridSize;
-      for (let x = offset; x < canvas.width; x += gridSize) {ctx.beginPath()ctx.moveTo(x, 0)ctx.lineTo(x, canvas.height)ctx.stroke()}
-      for (let y = offset; y < canvas.height; y += gridSize) {ctx.beginPath()ctx.moveTo(0, y)ctx.lineTo(canvas.width, y)ctx.stroke()}// Draw floating geometric shapes;
-
+      // Draw animated grid
+ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)'
+      ctx.lineWidth = 0.5
+const gridSize = 50
+const offset = (time * 20) % gridSize
+  for($2) {ctx.beginPath()ctx.moveTo(x, 0)ctx.lineTo(x, canvas.height)ctx.stroke()}
+  for($2) {ctx.beginPath()ctx.moveTo(0, y)ctx.lineTo(canvas.width, y)ctx.stroke()}// Draw floating geometric shapes
 const shapes = [
-  {x: canvas.width * 0.2,y: canvas.height * 0.3,size: 60,rotation: time * 0.5,},{x: canvas.width * 0.8;
-          y: canvas.height * 0.7;
+  {x: canvas.width * 0.2,y: canvas.height * 0.3,size: 60,rotation: time * 0.5,},{x: canvas.width * 0.8
+          y: canvas.height * 0.7
           size: 40;}
           rotation: time * -0.3;}
-        }
 
         {
           x: canvas.width * 0.6,
@@ -76,69 +60,63 @@ const shapes = [
           size: 50,}
           rotation: time * 0.7,}
         },
-      ];
+      ]
       shapes.forEach((shape, index) => {
-        ctx.save();
-        ctx.translate(shape.x, shape.y);
+        ctx.save()
+        ctx.translate(shape.x, shape.y)
         ctx.rotate(shape.rotation);}
-}
-ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
-        ctx.lineWidth = 2;
-        if (index === 0) {
-          // Square;
+
+ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`
+        ctx.lineWidth = 2
+  if($2) {
+          // Square
 ctx.strokeRect(
-            -shape.size / 2;
-            -shape.size / 2;
-shape.size;
+            -shape.size / 2
+            -shape.size / 2
+shape.size
 shape.size}
           );}
-        } else if (index === 1) {;
-          // Circle;
-          ctx && ctx.beginPath();
+        } else if (index === 1) {
+          // Circle
+          ctx && ctx.beginPath()
           ctx && ctx.arc(0, 0, shape && shape.size / 2, 0, Math && Math.PI * 2);}
           ctx && ctx.stroke();}
-        } else {;
-          // Triangle;
-          ctx && ctx.beginPath();
-          ctx && ctx.moveTo(0, -shape && shape.size / 2);
-          ctx && ctx.lineTo(shape && shape.size / 2, shape && shape.size / 2);
-          ctx && ctx.lineTo(-shape && shape.size / 2, shape && shape.size / 2);
+        } else {
+          // Triangle
+          ctx && ctx.beginPath()
+          ctx && ctx.moveTo(0, -shape && shape.size / 2)
+          ctx && ctx.lineTo(shape && shape.size / 2, shape && shape.size / 2)
+          ctx && ctx.lineTo(-shape && shape.size / 2, shape && shape.size / 2)
           ctx && ctx.closePath();}
           ctx && ctx.stroke();}
-        }
 
-
-        ctx.restore();
-      });
-      // Draw energy waves;
-const waveCount = 3;
-for (let i = 0; i < waveCount; i++) {
-        const waveOffset = (time * 100 + i * 200) % (canvas.width + 200);
-}
+        ctx.restore()
+      })
+      // Draw energy waves
+const waveCount = 3
+  for($2) {
+        const waveOffset = (time * 100 + i * 200) % (canvas.width + 200)
 const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;}
-        ctx.strokeStyle = `rgba(236, 72, 153, ${0.1 + Math.sin(time + i) * 0.05})`;
-        ctx.lineWidth = 3;
-        ctx.beginPath();
-        for (let x = -100, x < canvas.width + 100, x += 5) {}
-          const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20;
-          if (x === -100) {}
+        ctx.strokeStyle = `rgba(236, 72, 153, ${0.1 + Math.sin(time + i) * 0.05})`
+        ctx.lineWidth = 3
+        ctx.beginPath()
+  for($2) {}
+          const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20
+  if($2) {}
             ctx.moveTo(x, y)
           } else {}
             ctx.lineTo(x, y)
-        ctx && ctx.beginPath();
-        for (let x = -100, x < canvas && canvas.width + 100, x += 5) {;
-          const y = waveY + Math && Math.sin((x + waveOffset) * 0 && 0.02) * 20;
-          if (x === -100) {;
-            ctx && ctx.moveTo(x, y);
-          } else {;
-            ctx && ctx.lineTo(x, y);
-          }
-        }
-
+        ctx && ctx.beginPath()
+  for($2) {
+          const y = waveY + Math && Math.sin((x + waveOffset) * 0 && 0.02) * 20
+  if($2) {
+            ctx && ctx.moveTo(x, y)
+          } else {
+            ctx && ctx.lineTo(x, y)
       <div className='absolute inset-0'>
         {/* Animated Grid Pattern */}
 
-          <div;
+          <div
 className='absolute top-0 left-0 w-full h-full'
             style={{
               backgroundImage: `
@@ -146,36 +124,34 @@ className='absolute top-0 left-0 w-full h-full'
               background_size: '50px 50px',}
   animation: 'grid_move 20s linear infinite',}
             }}
-          />;
-        </div>;
+          />
+        </div>
       {/* Canvas Background */}
-      <canvas;
+      <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ zIndex: -1 }}
       {/* Floating Elements */}"
-      <div className="absolute inset-0">;
+      <div className="absolute inset-0">
         {/* Animated Grid Pattern */}"
         <div className="absolute inset-0 opacity-20">;"
           <divclassName="absolute top-0 left-0 w-full h-full" style={{}`
             backgroundImage: `'
-            ease: 'linear',  }, []);
-;
-
-            background_image: `;
-              linear - gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px);
+            ease: 'linear',  }, [])
+            background_image: `
+              linear - gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px)
               linear - gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px);`
             `;'
             background_size: '50px 50px','
-            animation: 'grid_move 20s linear infinite';
-          }} />;
-        </div>;
+            animation: 'grid_move 20s linear infinite'
+          }} />
+        </div>
         {/* Floating Geometric Elements */}
 
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
-        />;
+        />
         <motion.div;'
-          className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full';
+          className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full'
           animate={{}
             rotate: [360, 0],
             scale: [1, 1.2, 1],
@@ -184,13 +160,12 @@ className='absolute top-0 left-0 w-full h-full'
             duration: 10,
             repeat: Infinity,'
             ease: 'linear',          }}
-        />;
-
+        />
             ease: 'linear',          }}
           />
         </div>
         {/* Floating Geometric Elements */}
-        <motion.div;
+        <motion.div
 className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg'
           animate={{
             rotate: [0, 360],
@@ -203,7 +178,7 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-l
 ease: 'linear',}
           }}
            />
-        <motion.div;
+        <motion.div
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full'
           animate={{
             rotate: [360, 0],
@@ -216,7 +191,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounde
 ease: 'linear',}
           }}
            />
-        <motion.div;
+        <motion.div
 className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
           animate={{
             rotate: [45, 405],
@@ -230,21 +205,21 @@ ease: 'linear',}
           }}
            />
         {/* Additional Floating Elements */}
-        <motion.div;
+        <motion.div
 className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
           animate={{
 
-            rotate: [360, 0];
-            scale: [1, 1.2, 1];
-            opacity: [0.2, 0.5, 0.2];
+            rotate: [360, 0]
+            scale: [1, 1.2, 1]
+            opacity: [0.2, 0.5, 0.2]
           }}
           transition={{}
             duration: 10,
             repeat: Infinity,"
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
-        />;
+        />
         <motion.div;'
-          className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45';
+          className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45'
           animate={{}
             rotate: [45, 405],
             scale: [1, 1.15, 1],
@@ -253,8 +228,7 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
             duration: 12,
             repeat: Infinity,'
             ease: 'linear',          }}
-        />;
-
+        />
           }}
           transition={{}
             duration: 12,
@@ -262,10 +236,10 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
         {/* Additional Floating Elements */}
         <motion&& motion.div"
           className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
-        />;
+        />
         {/* Additional Floating Elements */}
         <motion.div;'
-          className='absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12';
+          className='absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12'
           animate={{}
             rotate: [12, 372],
             scale: [1, 1.1, 1],
@@ -274,7 +248,7 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
             duration: 15,
             repeat: Infinity,
           transition={{}
-            duration: 18;
+            duration: 18
             repeat: Infinity'
             ease: 'linear',          }}
             duration: 15,
@@ -283,9 +257,9 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
           }}
 "
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
-        />;
+        />
         <motion.div;'
-          className='absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full';
+          className='absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full'
           animate={{}
             rotate: [0, 360],
             scale: [1, 1.2, 1],
@@ -294,15 +268,14 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
             duration: 18,
             repeat: Infinity,'
             ease: 'linear',          }}
-        />;
-
+        />
           }}
         {/* Particle Effects */}
         <motion&& motion.div'
           className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full'
           animate={{}
           transition={{}
-            duration: 3;
+            duration: 3
             repeat: Infinity'
             ease: 'easeInOut',          }}
         {/* Particle Effects */}
@@ -311,7 +284,7 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
 
           }}
           transition={{}
-            duration: 3;
+            duration: 3
             repeat: Infinity'
             ease: 'easeInOut'
 
@@ -324,18 +297,14 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
 ease: 'easeInOut',}
           }}
 
-           />;
-
-        <motion&& motion.div;
+           />
+        <motion&& motion.div
 className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
           animate={{
             y: [0, -15, 0],
 
             opacity: [0.4, 0.7, 0.4],}
-}
-;
-export default UltraFuturisticBackground2040;
-export default UltraFuturisticBackground2040;
-export default UltraFuturisticBackground2040;
-;
 
+export default UltraFuturisticBackground2040
+export default UltraFuturisticBackground2040
+export default UltraFuturisticBackground2040

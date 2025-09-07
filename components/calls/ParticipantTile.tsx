@@ -1,70 +1,55 @@
-
-
-import React, { useEffect, useRef } from 'react';
-import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
-
-type Props = any;
-
-  Track;
+import React, { useEffect, useRef } from 'react'
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client'
+type Props = any
+  Track
   RemoteParticipant,
   LocalParticipant,
-  TrackPublication,;
-  Track,;
-
-type Props = {participant: RemoteParticipant | LocalParticipant;
-  isLocal?: boolean;
-  displayName?: string;participant;
+  TrackPublication,
+  Track,
+type Props = {participant: RemoteParticipant | LocalParticipant
+  isLocal?: boolean
+  displayName?: string;participant
   isLocal;}
   displayName;}
-  participant,isLocal,displayName}: Props) {  const videoRef = useRef<HTMLVideoElement | null    />(null)type Props = {participant: RemoteParticipant | LocalParticipant;
-  isLocal?: boolean;
-  displayName?: string;
-}
-}
-}
-
+  participant,isLocal,displayName}: Props) {  const videoRef = useRef<HTMLVideoElement | null    />(null)type Props = {participant: RemoteParticipant | LocalParticipant
+  isLocal?: boolean
+  displayName?: string
 export default function ParticipantTile({
   participant,
   isLocal}
   displayName}
 }: Props) {
-  const videoRef = useRef<HTMLVideoElement | null    />(null);
-
-const audioRef = useRef<HTMLAudioElement | null    />(null);
+  const videoRef = useRef<HTMLVideoElement | null    />(null)
+const audioRef = useRef<HTMLAudioElement | null    />(null)
   useEffect(() => {
 
-  useEffect(() => {;
+  useEffect(() => {
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {;'
-      if (track && track.kind === 'video' && videoRef && videoRef.current) {;
-        track && track.attach(videoRef && videoRef.current);
+  if($2) {
+        track && track.attach(videoRef && videoRef.current)
       }'
-      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
+  if($2) {
         track && track.attach(audioRef && audioRef.current);      }
-    };
+    }
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;'
-      if (track && track.kind === 'video' && videoRef && videoRef.current) {;
-        track && track.detach(videoRef && videoRef.current);
+  if($2) {
+        track && track.detach(videoRef && videoRef.current)
       }'
-      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
-        track && track.detach(audioRef && audioRef.current);      }        track && track.attach(videoRef && videoRef.current);
+  if($2) {
+        track && track.detach(audioRef && audioRef.current);      }        track && track.attach(videoRef && videoRef.current)
       }'
-      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
-        track && track.attach(audioRef && audioRef.current);
-      }
+  if($2) {
+        track && track.attach(audioRef && audioRef.current)
       }'
-      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
-        track && track.detach(audioRef && audioRef.current);        track && track.detach(videoRef && videoRef.current);
-      }
-      }
-    };
-
-    participant.on('trackUnsubscribed', handleTrackUnsubscribed);
+  if($2) {
+        track && track.detach(audioRef && audioRef.current);        track && track.detach(videoRef && videoRef.current)
+    }
+    participant.on('trackUnsubscribed', handleTrackUnsubscribed)
     return () => {
-      participant.off('trackSubscribed', handleTrackSubscribed);
-
+      participant.off('trackSubscribed', handleTrackSubscribed)
         ref={videoRef}
-        autoPlay;
-        playsInline;
+        autoPlay
+        playsInline
         muted={Boolean(isLocal)}
 
         className='w-full h-48 object-cover bg-black'
@@ -77,7 +62,7 @@ const audioRef = useRef<HTMLAudioElement | null    />(null);
           (isLocal ? 'You' : 'Participant')}
       </div>
     </div>
-  );
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
@@ -85,35 +70,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   LocalParticipant,
   TrackPublication,
 
-  participant: RemoteParticipant | LocalParticipant;
-
+  participant: RemoteParticipant | LocalParticipant
   is_local?: boolean;}
   display_name?: string;}
-}
 
-}
         track.attach (audio_ref.current)}
-    }
 
-}
         track.attach (audio_ref.current)}
-    }
 
-      <video;
+      <video
         ref={video_ref}
-        auto_play;
-        plays_inline;
+        auto_play
+        plays_inline
         muted={Boolean (is_local)}
-        className='w - full h - 48 object - cover bg - black';
-
+        className='w - full h - 48 object - cover bg - black'
         {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
-      </div>;
-
-    </div>);
-}
+      </div>
+    </div>)
       </div>
     </div>
-);
-}
-  );
-
+)
+  )
