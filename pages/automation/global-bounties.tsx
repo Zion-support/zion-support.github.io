@@ -1,31 +1,25 @@
-  const items: any[] = (data?.items || []).slice(0, 100);
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/global-bounties.json',
-export default function GlobalBountiesPage() {
-  const items: any[] = (data?.items || []).slice($2);
+import React from 'react';
+import Head from 'next/head';
+
+export default function GlobalBounties() {
   return (
-    <EnhancedLayout>
-      <div className="max-w-5xl mx-auto py-10">
-        <h1 className="text-3xl font-bold">Global Bounties</h1>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
-        <ul className="mt-6 space-y-4">
-          {items.map((it, idx) => (
-            <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">
-                {it.title}
-              </a>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                {it.repo} · {it.language} · {new Date(it.created_at).toLocaleString()}
-              </div>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels |[]).join(', ')}</div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
-            </li>
-          ))}
-        </ul>
+    <>
+      <Head>
+        <title>global-bounties | Zion Tech Group</title>
+        <meta name="description" content="global-bounties page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              global-bounties
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the global-bounties page.
+            </p>
+          </div>
+        </div>
       </div>
-    </EnhancedLayout>
-  )
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
+    </>
+  );
 }

@@ -1,22 +1,25 @@
-import type { NextPage } from 'next';
-import Seo from '../components/seo/Seo';
-import { JobPostingJsonLd } from 'next-seo';
-const Jobs: NextPage = $2;
-    description: 'Build modern AI-enabled web apps at Zion Tech Solutions.',
-    datePosted: new Date().toISOString().slice($2);
-    employmentType: 'FULL_TIME',
-    validThrough: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString().slice($2);
-    baseSalary: {
-      currency: 'USD',
-      value: 160000,
-      unitText: 'YEAR'},
-    hiringOrganization: {
-      name: 'Zion Tech Solutions',
-      sameAs: 'https://ziontechgroup.netlify.app',
-      logo: 'https://ziontechgroup.netlify.app/logo.png'},
-    jobLocationType: 'TELECOMMUTE'} as const,
+import React from 'react';
+import Head from 'next/head';
 
+export default function Jobs() {
   return (
-    <div>
-      <Seo title = $2;
-export default Jobs,
+    <>
+      <Head>
+        <title>jobs | Zion Tech Group</title>
+        <meta name="description" content="jobs page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              jobs
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the jobs page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

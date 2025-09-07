@@ -1,7 +1,15 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-    return
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
   }
-  // TODO: Implement authentication logic here
-  res.status(200).json({ message: 'Auth endpoint placeholder' })
-} 
 
+  try {
+    // TODO: Implement nextauth logic
+    res.status(200).json({ message: 'nextauth endpoint' });
+  } catch (error) {
+    console.error('Error in nextauth:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+}

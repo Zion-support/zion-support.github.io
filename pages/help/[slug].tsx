@@ -1,43 +1,29 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
-import type { HelpArticle } from '../../utils/support';
-export const getStaticPaths: GetStaticPaths = async () => {
-  const articles = readJson<HelpArticle[]>('help/articles.json', []),
-  return {
-    paths: articles.map((a) => ({ params: { slug: a.slug } })),
-    fallback: false}
-},
+import React from 'react';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 
-export const getStaticProps: GetStaticProps = $2;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []),
-  const article = $2;
-  return { props: { article } }
-},
-
-export default function HelpArticlePage({ article }: { article: HelpArticle}) {
-  const [voted, setVoted] = useState<null | boolean>(null),
-
-  async function vote(helpful: boolean) {
-    await fetch('/api/support/feedback', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ articleId: article.id, helpful })}),
-    setVoted(helpful)
-  }
+export default function DynamicPage() {
+  const router = useRouter();
+  const { slug } = router.query;
 
   return (
-    <article className="prose dark:prose-invert max-w-none">
-      <h1>{article.title}</h1>
-      <div className="text-sm opacity-70">Last updated {new Date(article.updatedAt).toLocaleDateString()}</div>
-      <div className="mt-6 whitespace-pre-wrap">{article.body}</div>
-      <div className="mt-8 p-4 rounded-lg border border-gray-200 dark:border-gray-800 flex items-center justify-between">
-        <div>Was this article helpful?</div>
-        <div className="flex gap-2">
-          <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
-          <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
+    <>
+      <Head>
+        <title>{slug} | Zion Tech Group</title>
+        <meta name="description" content="Dynamic page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              {slug}
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is a dynamic page.
+            </p>
+          </div>
         </div>
       </div>
-    </article>
-  )
+    </>
+  );
 }

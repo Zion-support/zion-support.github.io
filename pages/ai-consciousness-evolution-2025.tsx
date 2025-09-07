@@ -1,20 +1,25 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIConsciousnessEvolution2025() {
-	return (
-		<ServiceLanding
-			title="AI Consciousness Evolution 2025"
-			slug="ai-consciousness-evolution-2025"
-			description="Applied research and productization of affective computing, theory-of-mind modeling, and reflective agents. Build empathetic systems that understand context and intent."
-			subtitle = $2;
-				"Self-reflection loops and memory consolidation",
-				"Safety layers for alignment and guardrails",
-				"Evaluation harness for subjective tasks",
-				"Multi-modal context fusion (text, voice, UI)",
-				"Partnered research roadmap and governance"
-			]}
-			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
-			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
-		/>
-	)
+import Head from 'next/head';
+
+export default function AiConsciousnessEvolution2025() {
+  return (
+    <>
+      <Head>
+        <title>ai-consciousness-evolution-2025 | Zion Tech Group</title>
+        <meta name="description" content="ai-consciousness-evolution-2025 page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ai-consciousness-evolution-2025
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the ai-consciousness-evolution-2025 page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

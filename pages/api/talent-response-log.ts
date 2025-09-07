@@ -1,16 +1,15 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-    return res.status(405).json({ error: 'Method Not Allowed' })
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  const { talentId, action } = req.body || {},
-  if (!talentId || !['AcceptDeclineNegotiate'].includes(action)) {
-    return res.status(400).json({ error: 'Invalid payload' })
+  try {
+    // TODO: Implement talentresponselog logic
+    res.status(200).json({ message: 'talentresponselog endpoint' });
+  } catch (error) {
+    console.error('Error in talentresponselog:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
-
-  // Placeholder for persistence, echo the response for now
-
-  const payload = { talentId, action, at: new Date().toISOString() }
-
-  return res.status(200).json({ ok: true, data: payload })
-
+}

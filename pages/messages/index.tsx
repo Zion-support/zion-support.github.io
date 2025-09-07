@@ -1,24 +1,25 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import EmptyState from '../../components/ui/EmptyState';
-const Messages: NextPage = () => {
+
+export default function Index() {
   return (
-    <div className="space-y-6 pb-16">
+    <>
       <Head>
-        <title>Messages - Zion</title>
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index page" />
       </Head>
-
-      <h1 className="text-2xl font-semibold">Messages</h1>
-
-      <EmptyState
-        title="No messages yet"
-        description="Start a conversation by requesting a quote or responding to an existing one."
-        icon={<span>📫</span>}
-        primaryAction={{ label: 'Explore talent', href: '/talent' }}
-        secondaryAction={{ label: 'Browse services', href: '/services' }}
-      />
-    </div>
-  )
-},
-
-export default Messages,
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              index
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the index page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

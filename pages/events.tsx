@@ -1,24 +1,25 @@
+import React from 'react';
+import Head from 'next/head';
 
-import React from 'react',
-import SEO from '../components / SEO',
-export default /**
- * EventsPage - Function description
- */
-function EventsPage() {
-return (
-  <>;
-  <SEO title="Events | Zion Tech Group" description="Upcoming events and conferences." canonical="/events" />;
-  <div className="container mx - auto px - 4 py - 16">;
-    <h1 className="text - 4xl font - bold mb - 4">Events</h1>;
-    <p className="text - gray - 300">No upcoming events at this time. Check back soon.</p>;
-  </div>;
-  </>);
+export default function Events() {
+  return (
+    <>
+      <Head>
+        <title>events | Zion Tech Group</title>
+        <meta name="description" content="events page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              events
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the events page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-

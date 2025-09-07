@@ -1,28 +1,25 @@
-import type { NextPage, GetServerSideProps } from 'next';
-import fs from 'fs';
-import path from 'path';
-type Props = { urlCount: number },
+import React from 'react';
+import Head from 'next/head';
 
-const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
+export default function SitemapStatus() {
   return (
-    <main className="space-y-4">
-      <h1 className="text-2xl font-semibold">Sitemap Status</h1>
-      <p className="text-sm text-gray-600">Nightly generated. <a className="text-blue-500 underline" href="/sitemap.xml">View sitemap</a></p>
-      <div className="enhanced-card">
-        <div className="text-lg">Indexed URLs: {urlCount}</div>
+    <>
+      <Head>
+        <title>sitemap-status | Zion Tech Group</title>
+        <meta name="description" content="sitemap-status page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              sitemap-status
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the sitemap-status page.
+            </p>
+          </div>
+        </div>
       </div>
-    </main>
-  )
-};
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join(process.cwd(), 'publicsitemap.xml');
-  let urlCount = 0;
-  try {
-    const raw = fs.readFileSync(p, 'utf8');
-    urlCount = (raw.match(/<url>/g) || []).length
-  } catch {}
-  return { props: { urlCount } }
-};
-
-export default SitemapStatus;
+    </>
+  );
+}

@@ -1,23 +1,25 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import { useState } from 'react';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-const steps = $2;
-const Onboarding: NextPage = () => {
-  const [step, setStep] = useState($2);
-  const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
-  const prev = () => setStep((s) => Math.max(s - 1, 0)),
 
+export default function Index() {
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Authentication - Zion Tech Group</title>
-        <meta name="description" content="Authentication page." />
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index page" />
       </Head>
-
-      <h1 className="text-2xl font-semibold">Get Started</h1>
-
-      <div className="flex items-center gap-2 text-sm flex-wrap">
-        {steps.map((label, i) => (
-          <div key = $2;
-export default Onboarding,
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              index
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the index page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

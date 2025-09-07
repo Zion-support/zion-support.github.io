@@ -1,25 +1,25 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIAutonomousEcosystemManager() {
-	return (
-		<ServiceLanding
-			title="AI Autonomous Ecosystem Manager"
-			slug="ai-autonomous-ecosystem-manager"
-			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem."
-			subtitle="Govern multi-agent systems with policy, observability, and guardrails."
-			pricePerMonthUSD={2999}
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Average ROI 4–9x within 6 months"
-			features={[
-				"Agent registry, roles, and capabilities graph",
-				"Policy engine with human-in-the-loop controls",
-				"Observability: traces, metrics, red-teaming",
-				"Sandboxing and E2E approvals for sensitive actions",
-				"Cost and performance optimization",
-				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
-			]}
-			industries={["Platform Teams", "R&D", "Operations", "Security"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
-		/>
-	)
+import Head from 'next/head';
+
+export default function AiAutonomousEcosystemManager() {
+  return (
+    <>
+      <Head>
+        <title>ai-autonomous-ecosystem-manager | Zion Tech Group</title>
+        <meta name="description" content="ai-autonomous-ecosystem-manager page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ai-autonomous-ecosystem-manager
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the ai-autonomous-ecosystem-manager page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

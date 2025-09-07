@@ -1,15 +1,25 @@
+import React from 'react';
+import Head from 'next/head';
+
 export default function BrandKit() {
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">Influencer Brand Kit</h1>
-      <p>Download assets and messaging to promote Zion AI Marketplace.</p>
-      <ul className="list-disc pl-6">
-        <li><a className="text-blue-600 underline" href="/brand-kit.txt">Brand Kit (txt)</a></li>
-      </ul>
-      <div className="mt-4 p-4 rounded border">
-        <h2 className="font-medium mb-2">Smart CTA</h2>
-        <p>Invite your AI audience to earn & help them get hired.</p>
+    <>
+      <Head>
+        <title>brand-kit | Zion Tech Group</title>
+        <meta name="description" content="brand-kit page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              brand-kit
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the brand-kit page.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  )
+    </>
+  );
 }

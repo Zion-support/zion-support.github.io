@@ -1,20 +1,25 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIEthicsGovernanceFramework() {
-	return (
-		<ServiceLanding
-			title="AI Ethics & Governance Framework"
-			slug="ai-ethics-governance-framework"
-			description="Operationalize responsible AI with policies, risk assessments, model monitoring, and documentation. Align with global standards and regulatory expectations."
-			subtitle = $2;
-				"Bias/fairness tests, red-teaming workflows",
-				"Model cards, data sheets, and change logs",
-				"Prompt governance and access controls",
-				"Regulatory mapping (EU AI Act, NIST AI RMF)",
-				"Training and incident response runbooks"
-			]}
-			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
-			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
-		/>
-	)
+import Head from 'next/head';
+
+export default function AiEthicsGovernanceFramework() {
+  return (
+    <>
+      <Head>
+        <title>ai-ethics-governance-framework | Zion Tech Group</title>
+        <meta name="description" content="ai-ethics-governance-framework page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ai-ethics-governance-framework
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the ai-ethics-governance-framework page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

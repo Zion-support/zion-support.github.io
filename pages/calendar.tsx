@@ -1,47 +1,25 @@
+import React from 'react';
+import Head from 'next/head';
 
-  Calendar,
-  Clock,
-  Users,
-  CheckCircle,
-
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Video,
-  MessageSquare,
-
-  },
-  {
-    title: "Technical Consultation",
-    duration: "60 minutes",
-
-  },
-  {
-    title: "Strategy Session",
-    duration: "90 minutes",
-
-  {
-    name: "Sarah Johnson",
-    role: "CEO & Founder",
-    expertise: "Strategic Planning, AI Strategy",
-
-  },
-  {
-    name: "Michael Chen",
-    role: "CTO",
-    expertise: "Cloud Architecture, Quantum Computing",
-
-  },
-  {
-    name: "Dr. Emily Rodriguez",
-    role: "Head of AI Research",
-    expertise: "Machine Learning, AI Research",
-
-  },
-  {
-    name: "David Kim",
-    role: "Head of Cybersecurity",
-    expertise: "Cybersecurity, Risk Management",
-
+export default function Calendar() {
+  return (
+    <>
+      <Head>
+        <title>calendar | Zion Tech Group</title>
+        <meta name="description" content="calendar page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              calendar
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the calendar page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

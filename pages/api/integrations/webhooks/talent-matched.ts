@@ -1,59 +1,15 @@
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { writeState, readState } from "../../../../lib/integrations/fileStore";
-import { crm } from "../../../../lib/integrations/connectors";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-    s && s.events.push({
-
-    });
-  const eventId = `${Date.now()}-talent-matched`;
-  writeState(s => {
-    s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })
-  });
-
-;
-  // log to connected CRMs as a note;
-  const state = read_state ();
-  const crms = state.connections.filter ((c) =>;
-    ["salesforce", "hubspot", "zoho", "pipedrive"].includes (c.provider_id)
-  );
-  for (const conn of crms) {
-    const log = {
-      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
-      provider_id: conn.provider_id
-      level: "info"
-      action: "add_project_note"
-    }
-    await crm.addProjectNote (conn, {
-      job_id: match.job_id
-      note: `Talent ${match.talent_id} matched. ${match.summary || ""}`.trim ()
-    });
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { writeState, readState } from '../../../../lib/integrations/fileStore';
-import { crm } from '../../../../lib/integrations/connectors';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json($2);
-  const { match } = req.body as { match?: { talentId: string, jobId: string, summary?: string } },
-  if (!match) return res.status(400).json($2);
-  // record Zapier event
-  const eventId = $2;
-  writeState(s => {
-    s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })
-  }),
-
-  // log to connected CRMs as a note
-  const state = readState($2);
-  const crms = $2;
-  for (const conn of crms) {
-    const { log } = await crm.addProjectNote(conn, { jobId: match.jobId, note: `Talent ${match.talentId} matched. ${match.summary || ''}`.trim() }),
-    writeState(s => s.logs.push(log))
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  res.status(200).json({ ok: true, eventId })
+  try {
+    // TODO: Implement talentmatched logic
+    res.status(200).json({ message: 'talentmatched endpoint' });
+  } catch (error) {
+    console.error('Error in talentmatched:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
 }

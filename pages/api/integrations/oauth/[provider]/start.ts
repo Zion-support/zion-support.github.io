@@ -1,7 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { provider } = req.query as { provider: string},
-  const callbackUrl = $2;
-  res.writeHead($2);
-  res.end()
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  try {
+    // TODO: Implement start logic
+    res.status(200).json({ message: 'start endpoint' });
+  } catch (error) {
+    console.error('Error in start:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
 }

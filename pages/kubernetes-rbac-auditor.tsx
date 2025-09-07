@@ -1,24 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 
-export default function kubernetesrbacauditor() {
+export default function KubernetesRbacAuditor() {
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Kubernetes Rbac Auditor - Zion Tech Group</title>
-        <meta name="description" content="Kubernetes Rbac Auditor solutions and services." />
+        <title>kubernetes-rbac-auditor | Zion Tech Group</title>
+        <meta name="description" content="kubernetes-rbac-auditor page" />
       </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Kubernetes Rbac Auditor</h1>
-          <p className="text-lg text-gray-600">
-            Professional kubernetes rbac auditor solutions tailored to your business needs.
-          </p>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              kubernetes-rbac-auditor
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the kubernetes-rbac-auditor page.
+            </p>
+          </div>
         </div>
       </div>
-    </Layout>
-  )
+    </>
+  );
 }
-

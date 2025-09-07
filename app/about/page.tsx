@@ -1,4 +1,6 @@
 
+import Link from 'next/link';
+
 export const metadata = {
   title: 'About Us - Zion Tech Group',
   description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
@@ -24,11 +26,12 @@ export default function AboutPage() {
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
           >
             Get in Touch
-            <ArrowRightIcon className="ml-2 h-5 w-5" />
+            <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </Link>
         </div>
       </div>
-      </section>
     </div>
   );
 }

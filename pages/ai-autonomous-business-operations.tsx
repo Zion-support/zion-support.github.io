@@ -1,20 +1,25 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIAutonomousBusinessOperations() {
-	return (
-		<ServiceLanding
-			title="AI‑Powered Autonomous Business Operations"
-			slug="ai-autonomous-business-operations"
-			description="Continuous AI agents coordinate workflows across sales, support, finance, and operations. They monitor KPIs, trigger automations, and collaborate with humans to keep your business always-on."
-			subtitle = $2;
-				"Agentic workflows for ticket triage, billing, collections, and renewals",
-				"Human-in-the-loop approvals and audit trails",
-				"Playbooks for incident response and customer recovery",
-				"Compliance logging and role-based access",
-				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
-			]}
-			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
-		/>
-	)
+import Head from 'next/head';
+
+export default function AiAutonomousBusinessOperations() {
+  return (
+    <>
+      <Head>
+        <title>ai-autonomous-business-operations | Zion Tech Group</title>
+        <meta name="description" content="ai-autonomous-business-operations page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ai-autonomous-business-operations
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the ai-autonomous-business-operations page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

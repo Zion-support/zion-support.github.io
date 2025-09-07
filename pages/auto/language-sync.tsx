@@ -1,15 +1,25 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-const LanguageSync: NextPage = () => {
+
+export default function LanguageSync() {
   return (
-    <div>
+    <>
       <Head>
-        <title>Global Language Sync Agent</title>
-        <meta name="description" content="AI-powered translation backfill for locale files." />
+        <title>language-sync | Zion Tech Group</title>
+        <meta name="description" content="language-sync page" />
       </Head>
-      <main className="space-y-4">
-        <h1 className="text-2xl font-bold">Global Language Sync Agent</h1>
-        <p>This autonomous agent scans English strings and backfills missing translations in Portuguese, Spanish, and Arabic. It opens commits automatically.</p>
-        <div className = $2;
-export default LanguageSync,
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              language-sync
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the language-sync page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

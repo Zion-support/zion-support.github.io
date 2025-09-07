@@ -1,20 +1,25 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import Head from 'next/head';
+
 export default function FintechSolutions() {
-	return (
-		<ServiceLanding
-			title="Fintech AI Solutions"
-			slug="fintech-solutions"
-			description="AI solutions for fraud detection, risk scoring, KYC/AML automation, and real-time decisioning. Improve compliance and customer experience across the lifecycle."
-			subtitle = $2;
-				"Credit risk models with explainability",
-				"KYC/AML case automation and SAR drafts",
-				"Collections optimization and next-best-action",
-				"Realtime rules with feature store integration",
-				"Integrations: Core banking, KYC, payments, CRMs"
-			]}
-			industries={["Fintech", "Banking", "Lending", "Payments"]}
-			canonical="https: //ziontechgroup.com/fintech-solutions"
-		/>
-	)
+  return (
+    <>
+      <Head>
+        <title>fintech-solutions | Zion Tech Group</title>
+        <meta name="description" content="fintech-solutions page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              fintech-solutions
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the fintech-solutions page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

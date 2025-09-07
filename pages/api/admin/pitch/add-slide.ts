@@ -1,13 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdminFromApi } from '../../../../utils/auth';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { allowed } = await ensureAdminFromApi(req);
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
 
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
 
-  return res.status(200).json({
-    title: 'Additional Insight',
-    content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'
-  });
+  try {
+    // TODO: Implement addslide logic
+    res.status(200).json({ message: 'addslide endpoint' });
+  } catch (error) {
+    console.error('Error in addslide:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
 }

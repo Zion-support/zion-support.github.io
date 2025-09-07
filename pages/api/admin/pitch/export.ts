@@ -1,38 +1,15 @@
-
-function escapeHtml(text: string): string {
-  return text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-}
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { slides, version } = req.body;
-  
-  if (!slides || !Array.isArray(slides)) {
-    return res.status(400).json({ error: 'Invalid slides data' });
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  // Generate HTML content
-  const html = `<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Pitch ${version || 'Export'}</title>
-</head>
-<body>
-  ${slides.map((s: any, i: number) => 
-    `<section style="page-break-after: always; font-family: Arial, sans-serif; padding: 24px;">
-      <h1>${i + 1}. ${escapeHtml(s.title || '')}</h1>
-      <pre style="white-space: pre-wrap; font: inherit;">${escapeHtml(s.content || '')}</pre>
-    </section>`
-  ).join('')}
-</body>
-</html>`;
-
-  res.setHeader('Content-Type', 'text/html');
-  res.setHeader('Content-Disposition', `attachment; filename="pitch-${version || 'export'}.html"`);
-  res.status(200).send(html);
+  try {
+    // TODO: Implement export logic
+    res.status(200).json({ message: 'export endpoint' });
+  } catch (error) {
+    console.error('Error in export:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
 }

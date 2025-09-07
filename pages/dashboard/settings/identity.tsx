@@ -1,49 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import type { KycProfile } from '../../../utils/kyc';
-import { ProfileBadges } from '../../../components/ui/ProfileBadges';
-export default function IdentitySettingsPage() {
-  const [userId, setUserId] = useState($2);
-  const [profile, setProfile] = useState<KycProfile | null>(null),
-  const [error, setError] = useState($2);
-  async function load() {
-    try {
-      const res = $2;
-      const data = await res.json($2);
-      if (data.ok) setProfile($2);
-      else setError(data.error || 'Not found')
-    } catch (e) {
-      setError('Failed to fetch')
-    }
-  }
 
-  useEffect(() => {
-    load($2);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []),
-
-export default function DashboardSettingsIdentity() {
+export default function Identity() {
   return (
     <>
       <Head>
-        <title>Identity Settings - Zion</title>
-        <meta name="description" content="Manage your identity verification status" />
+        <title>identity | Zion Tech Group</title>
+        <meta name="description" content="identity page" />
       </Head>
-      <main className="max-w-3xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-4">Identity</h1>
-
-        <div className="mb-4">
-          <ProfileBadges profile={profile || undefined} />
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              identity
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the identity page.
+            </p>
+          </div>
         </div>
-
-        <div className="mb-4 text-sm text-gray-600">
-          Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'}
-        </div>
-
-        <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</a>
-
-        {error && <div className="mt-3 text-sm text-red-600">{error}</div>}
-      </main>
+      </div>
     </>
-  )
+  );
 }

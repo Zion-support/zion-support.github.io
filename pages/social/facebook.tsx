@@ -1,24 +1,25 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
-export default function FacebookRedirect() {
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			window.location.replace('https: //facebook.com/ziontechgroup')
-		}
-	}, []),
-	return (
-		<>
-			<Head>
-				<title>Facebook | Zion Tech Group</title>
-				<link rel="canonical" href="https: //facebook.com/ziontechgroup" />
-				<meta httpEquiv="refresh" content="0,url=https://facebook.com/ziontechgroup" />
-				<meta name="robots" content="noindex, nofollow" />
-			</Head>
-			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
-				<a href="https: //facebook.com/ziontechgroup" className="text-cyan-400 underline">
-					Continue to Facebook
-				</a>
-			</div>
-		</>
-	)
+
+export default function Facebook() {
+  return (
+    <>
+      <Head>
+        <title>facebook | Zion Tech Group</title>
+        <meta name="description" content="facebook page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              facebook
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the facebook page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

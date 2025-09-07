@@ -1,5 +1,15 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req, res) {
-  return res.status(200).json({ notes: getAllNotes() });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  try {
+    // TODO: Implement notesall logic
+    res.status(200).json({ message: 'notesall endpoint' });
+  } catch (error) {
+    console.error('Error in notesall:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
 }
-

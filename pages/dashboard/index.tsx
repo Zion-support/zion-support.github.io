@@ -1,38 +1,25 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import EmptyState from '../../components/ui/EmptyState';
-const Dashboard: NextPage = () => {
+
+export default function Index() {
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Index - Zion Tech Group</title>
-        <meta name="description" content="Index solutions and services." />
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index page" />
       </Head>
-
-      <h1 className="text-2xl font-semibold">Dashboard</h1>
-
-      <section>
-        <h2 className="text-lg font-semibold mb-2">My Jobs</h2>
-        <EmptyState
-          title="No jobs yet"
-          description="Post your first job to get quotes from top talent."
-          icon={<span>🧰</span>}
-          primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
-          secondaryAction={{ label: 'Explore talent', href: '/talent' }}
-        />
-      </section>
-
-      <section>
-        <h2 className="text-lg font-semibold mb-2">Messages</h2>
-        <EmptyState
-          title="No messages yet"
-          description="When conversations start, they’ll show up here."
-          icon={<span>💬</span>}
-          primaryAction={{ label: 'Browse services', href: '/services' }}
-        />
-      </section>
-    </div>
-  )
-},
-
-export default Dashboard,
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              index
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the index page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

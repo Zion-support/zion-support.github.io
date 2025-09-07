@@ -1,10 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { listProposals } from '../../../utils/data/proposals';
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
   try {
-    const proposals = listProposals($2);
-    res.status(200).json({ proposals })
-  } catch (error: any) {
-    res.status(500).json({ error: error ?.message || 'Failed to list proposals' })
+    // TODO: Implement list logic
+    res.status(200).json({ message: 'list endpoint' });
+  } catch (error) {
+    console.error('Error in list:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
 }

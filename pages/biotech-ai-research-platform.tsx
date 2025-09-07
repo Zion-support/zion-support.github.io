@@ -1,24 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 
-export default function biotechairesearchplatform() {
+export default function BiotechAiResearchPlatform() {
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Biotech Ai Research Platform - Zion Tech Group</title>
-        <meta name="description" content="Biotech Ai Research Platform solutions and services." />
+        <title>biotech-ai-research-platform | Zion Tech Group</title>
+        <meta name="description" content="biotech-ai-research-platform page" />
       </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Biotech Ai Research Platform</h1>
-          <p className="text-lg text-gray-600">
-            Professional biotech ai research platform solutions tailored to your business needs.
-          </p>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              biotech-ai-research-platform
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the biotech-ai-research-platform page.
+            </p>
+          </div>
         </div>
       </div>
-    </Layout>
-  )
+    </>
+  );
 }
-

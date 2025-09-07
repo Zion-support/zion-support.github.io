@@ -1,34 +1,15 @@
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
-import {getWalletSummary} from '../../../utils/token/service';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const { userId } = req.query;
 
-  if (!userId |typeof userId !== 'string') {
-    return res.status(400).json({ error: 'Missing userId' });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
 
-    return res.status(500).json({ error: err.message |'Unknown error' });
-  }
-import type { NextApiRequest, NextApiResponse } from 'next';
-    return res.status(500).json({ error: err.message || 'Unknown error' });
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from "next"
-import { getWalletSummary } from "../../../utils/token/service"
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { userId } = req.query
-  if (!userId || typeof userId !== "string") {
-    return res.status(400).json({ error: "Missing userId" })
-  }
   try {
-    const summary = getWalletSummary($2);
-    return res.status(200).json(summary)
-  } catch (err: any) {
-    return res.status(500).json({ error: err.message || "Unknown error" })
+    // TODO: Implement index logic
+    res.status(200).json({ message: 'index endpoint' });
+  } catch (error) {
+    console.error('Error in index:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
 }
-  }
-
-}
-

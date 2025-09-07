@@ -1,13 +1,25 @@
-import { useRouter } from 'next/router';
-import CertificatePreview from '../../../components/learn/CertificatePreview';
-export default function CertificatePage() {
-  const router = useRouter($2);
-  const { courseId } = router.query as { courseId: string},
-  if (!courseId) return null,
+import React from 'react';
+import Head from 'next/head';
+
+export default function Certificate() {
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">Certificate</h1>
-      <CertificatePreview courseId={courseId} />
-    </div>
-  )
+    <>
+      <Head>
+        <title>certificate | Zion Tech Group</title>
+        <meta name="description" content="certificate page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              certificate
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the certificate page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

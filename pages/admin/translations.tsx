@@ -1,10 +1,25 @@
-import dynamic from 'next/dynamic';
-const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
+import React from 'react';
+import Head from 'next/head';
 
-export default function TranslationsAdminPage() {
+export default function Translations() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <TranslationPreview />
-    </div>
-  )
+    <>
+      <Head>
+        <title>translations | Zion Tech Group</title>
+        <meta name="description" content="translations page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              translations
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the translations page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

@@ -1,21 +1,25 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-import AIAssistant from '../../components/ui/AIAssistant';
-const NewProposal: NextPage = () => {
-  const [jobBrief, setJobBrief] = useState($2);
-  const [resumeSummary, setResumeSummary] = useState($2);
-  const [relevantExperience, setRelevantExperience] = useState($2);
-  const [coverLetter, setCoverLetter] = useState($2);
-  const operatorToken = $2;
-  const pitchPrompt = useMemo(() => (
-    `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
-  ), [jobBrief, relevantExperience, resumeSummary]),
 
+export default function New() {
   return (
-    <div>
+    <>
       <Head>
-        <title>New Proposal - Zion AI Marketplace</title>
+        <title>new | Zion Tech Group</title>
+        <meta name="description" content="new page" />
       </Head>
-      <h1 className = $2;
-export default NewProposal,
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              new
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the new page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

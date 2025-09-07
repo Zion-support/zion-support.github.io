@@ -1,40 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-type ProposalListItem = $2;
-  title: string,
-  targetInstitution: string,
-  regionalScope: string,
-  type: string,
-  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
-  createdAt: string},
+import React from 'react';
+import Head from 'next/head';
 
-export default function InternationalProposalsPage() {
-  const [items, setItems] = useState<ProposalListItem[]>([]),
-  const [filter, setFilter] = useState($2);
-  useEffect(() => {
-    fetch('/api/proposals')
-      .then((r) => r.json())
-      .then((d) => setItems(d.items || []))
-      .catch(() => setItems([]))
-  }, []),
-
-  const filtered = $2;
+export default function International() {
   return (
-    <EnhancedLayout>
-      <div className="space-y-4">
-        <h1 className="text-2xl font-semibold">International Proposals</h1>
-        <div className="flex items-center gap-2 text-sm">
-          <span>Filter by region:</span>
-          <select className="border rounded px-2 py-1" value={filter} onChange={(e) => setFilter(e.target.value)}>
-            <option>All</option>
-            <option>Global</option>
-            <option>Africa</option>
-            <option>LATAM</option>
-            <option>APAC</option>
-            <option>EU</option>
-          </select>
+    <>
+      <Head>
+        <title>international | Zion Tech Group</title>
+        <meta name="description" content="international page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              international
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the international page.
+            </p>
+          </div>
         </div>
       </div>
-    </EnhancedLayout>
-  )
+    </>
+  );
 }

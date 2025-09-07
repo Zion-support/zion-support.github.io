@@ -1,9 +1,25 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-export default function ContractBuilderRedirect() {
-  const router = useRouter($2);
-  useEffect(() => {
-    router.replace('/automation/contract-builder')
-  }, [router]),
-  return null
+import React from 'react';
+import Head from 'next/head';
+
+export default function ContractBuilder() {
+  return (
+    <>
+      <Head>
+        <title>contract-builder | Zion Tech Group</title>
+        <meta name="description" content="contract-builder page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              contract-builder
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the contract-builder page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

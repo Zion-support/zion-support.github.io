@@ -1,20 +1,25 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIAutonomousResearchAssistant() {
-	return (
-		<ServiceLanding
-			title="AI Autonomous Research Assistant"
-			slug="ai-autonomous-research-assistant"
-			description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actions—so your team stays ahead."
-			subtitle = $2;
-				"Daily/weekly executive briefs and dashboards",
-				"Regulatory watchlists and impact analysis",
-				"RFP/RFI opportunity discovery and alerts",
-				"Export to Slides/Docs/Notion",
-				"Compliance-friendly data handling, audit logs"
-			]}
-			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
-		/>
-	)
+import Head from 'next/head';
+
+export default function AiAutonomousResearchAssistant() {
+  return (
+    <>
+      <Head>
+        <title>ai-autonomous-research-assistant | Zion Tech Group</title>
+        <meta name="description" content="ai-autonomous-research-assistant page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ai-autonomous-research-assistant
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the ai-autonomous-research-assistant page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

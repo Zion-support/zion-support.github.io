@@ -1,5 +1,33 @@
-import React from 'react;
-import Link from next/link';
+import React from 'react';
+import Link from 'next/link';
+
+const footerLinks = {
+  company: [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' }
+  ],
+  services: [
+    { name: 'AI Solutions', href: '/services/ai' },
+    { name: 'Automation', href: '/services/automation' },
+    { name: 'Consulting', href: '/services/consulting' },
+    { name: 'Development', href: '/services/development' }
+  ],
+  resources: [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Support', href: '/support' }
+  ],
+  legal: [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' }
+  ]
+};
+
+const currentYear = new Date().getFullYear();
 
 export default function Footer() {
 
@@ -112,4 +140,5 @@ export default function Footer() {
       </div>
     </footer>
   );
+}
 

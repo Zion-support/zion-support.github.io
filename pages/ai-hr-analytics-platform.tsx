@@ -1,20 +1,25 @@
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+import React from 'react';
+import Head from 'next/head';
+
 export default function AiHrAnalyticsPlatform() {
-	return (
-		<ServiceLanding
-			title="AI HR Analytics Platform"
-			description="Understand attrition, performance, and workforce planning with AI. Combine HRIS, ATS, and engagement data for proactive people decisions."
-			subtitle = $2;
-				"Diversity and inclusion analytics",
-				"Recruiting funnel and hiring yield insights",
-				"Performance signal detection and calibration",
-				"Headcount planning and skills inventory",
-				"Integrations: Workday, BambooHR, Greenhouse, Lever",
-				"Compensation benchmarking and ranges",
-				"Engagement drivers and action suggestions"
-			]}
-			industries={["SaaS", "Retail", "Healthcare", "Manufacturing"]}
-			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
-		/>
-	)
+  return (
+    <>
+      <Head>
+        <title>ai-hr-analytics-platform | Zion Tech Group</title>
+        <meta name="description" content="ai-hr-analytics-platform page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ai-hr-analytics-platform
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the ai-hr-analytics-platform page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

@@ -1,7 +1,25 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-export default function IntegrationsRedirect() {
-  const router = useRouter($2);
-  useEffect(() => { router.replace('/admin/integrations') }, [router]),
-  return null
+import React from 'react';
+import Head from 'next/head';
+
+export default function Integrations() {
+  return (
+    <>
+      <Head>
+        <title>integrations | Zion Tech Group</title>
+        <meta name="description" content="integrations page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              integrations
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the integrations page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

@@ -1,61 +1,25 @@
-import React, { useEffect, useState } from 'react';
-export default function PrivacySettingsPage() {
-  const [userId, setUserId] = useState($2);
-  const [optOut, setOptOut] = useState($2);
-  const [loading, setLoading] = useState($2);
-  const [message, setMessage] = useState($2);
-  const load = $2;
-    setLoading($2);
-    setMessage($2);
-    const res = $2;
-    const json = await res.json($2);
-    if (res.ok) setOptOut($2);
-    else setMessage($2);
-    setLoading(false)
-  },
+import React from 'react';
+import Head from 'next/head';
 
-  const save = $2;
-    setLoading($2);
-    setMessage($2);
-    const res = await fetch('/api/fraud/settings/opt-out', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, optOut })}),
-    const json = await res.json($2);
-    if (res.ok) setMessage($2);
-    else setMessage($2);
-    setLoading(false)
-  },
-
-  useEffect(() => {
-    const savedUser = localStorage.getItem($2);
-    if (savedUser) setUserId(savedUser)
-  }, []),
-
-  const onSaveUser = () => {
-    localStorage.setItem($2);
-    load()
-  },
-
-export default function privacy() {
+export default function Privacy() {
   return (
-    <div className="p-6 max-w-2xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
-      <div className="space-y-3">
-        <div className="flex items-center gap-2">
-          <input className="border px-2 py-1 rounded w-80" placeholder="Your User ID" value={userId} onChange={(e) => setUserId(e.target.value)} />
-          <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveUser}>Use</button>
-        </div>
-        <div className="flex items-center gap-2">
-          <input id="optout" type="checkbox" checked={optOut} onChange={(e) => setOptOut(e.target.checked)} />
-          <label htmlFor="optout">Opt-out of GPT content analysis (basic heuristics still apply)</label>
-        </div>
-        <div className="flex items-center gap-2">
-          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
-          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
-          {message && <div>{message}</div>}
+    <>
+      <Head>
+        <title>privacy | Zion Tech Group</title>
+        <meta name="description" content="privacy page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              privacy
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the privacy page.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    </>
+  );
 }

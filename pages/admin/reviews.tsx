@@ -1,63 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import type { NextPage } from 'next';
-import type { Review } from '../../types/reviews';
-const ADMIN_KEY = $2;
-const AdminReviewsPage: NextPage = () => {
-  const [pending, setPending] = useState<Review[]>([]),
-  const [all, setAll] = useState<Review[]>([]),
-  const [adminKey, setAdminKey] = useState($2);
-  async function refresh() {
-    const res = await fetch($2);
-    const data = await res.json($2);
-    if (res.ok) {
-      setAll($2);
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
-    }
-  }
+import React from 'react';
+import Head from 'next/head';
 
-  useEffect(() => { refresh() }, []),
-
-  async function moderate(action: 'approve' | 'remove', reviewId: string) {
-    const res = await fetch('/api/reviews/moderate', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},
-      body: JSON.stringify({ action, reviewId })}),
-    if (res.ok) refresh()
-  }
-
+export default function Reviews() {
   return (
-    <main className="max-w-5xl mx-auto p-6 space-y-6">
-      <h1 className="text-2xl font-semibold">Review Moderation</h1>
-
-      <div className="enhanced-card">
-        <label className="block text-sm mb-2">Admin Key</label>
-        <input className="border p-2 rounded w-full" value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder="Enter admin key" />
-      </div>
-
-      <section className="enhanced-card">
-        <h2 className="text-xl font-semibold mb-4">Pending Reviews</h2>
-        <div className="space-y-4">
-          {pending.map((r) => (
-            <div key={r.id} className="border rounded p-3">
-              <div className="text-sm text-gray-600 mb-1">Project: {r.projectId} • To: {r.toRole} {r.toId}</div>
-              <div className="font-medium">{r.rating}★ — {r.text}</div>
-              <div className="mt-2 flex gap-2">
-                <button className="enhanced-button enhanced-button-primary" onClick={() => moderate('approve', r.id)}>Approve</button>
-                <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>
-              </div>
-            </div>
-          ))}
-          {!pending.length && <div>No pending reviews.</div>}
+    <>
+      <Head>
+        <title>reviews | Zion Tech Group</title>
+        <meta name="description" content="reviews page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              reviews
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the reviews page.
+            </p>
+          </div>
         </div>
-      </section>
-
-      <section className="enhanced-card">
-        <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
-        <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
-      </section>
-    </main>
-  )
-},
-
-export default AdminReviewsPage,
+      </div>
+    </>
+  );
+}

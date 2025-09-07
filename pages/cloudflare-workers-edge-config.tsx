@@ -1,24 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 
-export default function cloudflareworkersedgeconfig() {
+export default function CloudflareWorkersEdgeConfig() {
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Cloudflare Workers Edge Config - Zion Tech Group</title>
-        <meta name="description" content="Cloudflare Workers Edge Config solutions and services." />
+        <title>cloudflare-workers-edge-config | Zion Tech Group</title>
+        <meta name="description" content="cloudflare-workers-edge-config page" />
       </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cloudflare Workers Edge Config</h1>
-          <p className="text-lg text-gray-600">
-            Professional cloudflare workers edge config solutions tailored to your business needs.
-          </p>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              cloudflare-workers-edge-config
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the cloudflare-workers-edge-config page.
+            </p>
+          </div>
         </div>
       </div>
-    </Layout>
-  )
+    </>
+  );
 }
-

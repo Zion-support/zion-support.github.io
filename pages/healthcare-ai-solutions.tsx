@@ -1,20 +1,25 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function HealthcareAISolutions() {
-	return (
-		<ServiceLanding
-			title="Healthcare AI Solutions"
-			slug="healthcare-ai-solutions"
-			description="Deploy AI for diagnostics assistance, care management, operational optimization, and compliance workflows. Improve outcomes while protecting patient privacy."
-			subtitle = $2;
-				"Diagnostic support with literature grounding",
-				"Prior auth automation and appeals drafts",
-				"Capacity forecasting and staffing optimization",
-				"HIPAA-compliant data pipelines and audit",
-				"EHR integrations: HL7/FHIR, Epic, Cerner"
-			]}
-			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
-			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
-		/>
-	)
+import Head from 'next/head';
+
+export default function HealthcareAiSolutions() {
+  return (
+    <>
+      <Head>
+        <title>healthcare-ai-solutions | Zion Tech Group</title>
+        <meta name="description" content="healthcare-ai-solutions page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              healthcare-ai-solutions
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the healthcare-ai-solutions page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

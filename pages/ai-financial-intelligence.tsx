@@ -1,15 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 
-export default function aifinancialintelligence() {
+export default function AiFinancialIntelligence() {
   return (
-    <div className="min-h-[60vh] px-6 py-24">
-      <SEO title="AI Financial Intelligence | Zion Tech Group" description="AI for financial analytics" />
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-4">AI Financial Intelligence</h1>
-        <p className="text-gray-300">Risk analysis and forecasting powered by AI. Details coming soon.</p>
+    <>
+      <Head>
+        <title>ai-financial-intelligence | Zion Tech Group</title>
+        <meta name="description" content="ai-financial-intelligence page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ai-financial-intelligence
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the ai-financial-intelligence page.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  )
+    </>
+  );
 }

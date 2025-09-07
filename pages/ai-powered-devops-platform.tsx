@@ -1,27 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredDevOpsPlatformPage() {
-	return (
-		<>
-			<Head>
-				<title>AI-Powered DevOps Platform | Zion Tech Group</title>
-				<meta name="description" content="Intelligent CI/CD, test acceleration, incident prevention, and release automation powered by AI." />
-				<link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops-platform" />
-			</Head>
-			<ServiceLanding
-				title="AI-Powered DevOps Platform"
-				description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration."
-				subtitle = $2;
-					"Flaky test detection and auto quarantine",
-					"Change-risk scoring before deploy",
-					"Automated canary and feature flags",
-					"Rollback orchestration with blast radius limits",
-					"Incident prediction, runbooks, and guardrails"
-				]}
-				industries={["SaaS", "E-commerce", "Fintech", "Media", "Enterprise IT"]}
-				canonical="https: //ziontechgroup.com/ai-powered-devops-platform"
-			/>
-		</>
-	)
+
+export default function AiPoweredDevopsPlatform() {
+  return (
+    <>
+      <Head>
+        <title>ai-powered-devops-platform | Zion Tech Group</title>
+        <meta name="description" content="ai-powered-devops-platform page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ai-powered-devops-platform
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the ai-powered-devops-platform page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

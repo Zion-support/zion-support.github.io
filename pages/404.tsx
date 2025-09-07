@@ -1,23 +1,25 @@
 import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
+import Head from 'next/head';
 
-const Page = () => {
+export default function Page() {
   return (
-    <MainLayout
-      title="404 - Page Not Found"
-      description="Page not found"
-    >
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-          <p className="text-xl text-gray-600 mb-8">Page not found</p>
-          <a href="/" className="text-blue-600 hover:text-blue-800">
-            Go back home
-          </a>
+    <>
+      <Head>
+        <title>404 | Zion Tech Group</title>
+        <meta name="description" content="404 page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              404
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the 404 page.
+            </p>
+          </div>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
-};
-
-export default Page;
+}

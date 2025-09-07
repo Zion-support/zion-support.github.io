@@ -17,7 +17,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-
     "plugins": [
       {
         "name": "next"
@@ -30,20 +29,13 @@
       "@/lib/*": ["./lib/*"],
       "@/utils/*": ["./utils/*"],
       "@/hooks/*": ["./hooks/*"],
-      "@/types/*": ["./types/*"]
+      "@/types/*": ["./types/*"],
+      "@/app/*": ["./app/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/public/*": ["./public/*"]
     },
     "allowSyntheticDefaultImports": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "types/**", "netlify/**", "components/**"]
-    ]
-  },
-  "include": [
-      "@/app/*": ["./app/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/public/*": ["./public/*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "types/**", "netlify/**"]
 }

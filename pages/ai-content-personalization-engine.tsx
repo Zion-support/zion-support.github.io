@@ -1,20 +1,25 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIContentPersonalizationEngine() {
-	return (
-		<ServiceLanding
-			title="AI Content Personalization Engine"
-			slug="ai-content-personalization-engine"
-			description="Deliver tailored content, offers, and UX per user in real-time. Optimize journeys across web, email, and in-app to maximize engagement and conversions."
-			subtitle = $2;
-				"Real-time content and offer selection",
-				"A/B/n and multi-armed bandit experimentation",
-				"Journey orchestration across channels",
-				"Privacy-safe profiling and consent management",
-				"Integrations: CDP, ESP, CMS, Web SDK"
-			]}
-			industries={["E‑commerce", "Media", "SaaS", "Education"]}
-			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
-		/>
-	)
+import Head from 'next/head';
+
+export default function AiContentPersonalizationEngine() {
+  return (
+    <>
+      <Head>
+        <title>ai-content-personalization-engine | Zion Tech Group</title>
+        <meta name="description" content="ai-content-personalization-engine page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ai-content-personalization-engine
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the ai-content-personalization-engine page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

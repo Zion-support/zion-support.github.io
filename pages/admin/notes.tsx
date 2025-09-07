@@ -1,55 +1,25 @@
-import { useEffect, useState } from 'react';
-type Note = $2;
-  targetType: string,
-  targetId: string,
-  text: string,
-  authorId: string,
-  createdAt: number},
+import React from 'react';
+import Head from 'next/head';
 
-export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState($2);
-  const [notes, setNotes] = useState<Note[]>([]),
-  const [loading, setLoading] = useState($2);
-  useEffect(() => {
-    async function load() {
-      setLoading($2);
-      try {
-        const res = await fetch($2);
-        if (!res.ok) return,
-        const data = await res.json($2);
-        setNotes(data.notes || [])
-      } finally {
-        setLoading(false)
-      }
-    }
-    if (isAdmin) load()
-  }, [isAdmin]),
-
+export default function Notes() {
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-xl font-semibold">Admin Notes</h1>
-        <label className="inline-flex items-center gap-2 text-sm">
-          <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
-          <span>Admin</span>
-        </label>
-      </div>
-
-      {loading ? (
-        <div>Loading…</div>
-      ) : notes.length === 0 ? (
-        <div className="opacity-70">No notes found.</div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {notes.map((n) => (
-            <div key={n.id} className="rounded border p-3 text-sm">
-              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-              <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
-              <div>{n.text}</div>
-            </div>
-          ))}
+    <>
+      <Head>
+        <title>notes | Zion Tech Group</title>
+        <meta name="description" content="notes page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              notes
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the notes page.
+            </p>
+          </div>
         </div>
-      )}
-    </div>
-  )
+      </div>
+    </>
+  );
 }

@@ -1,23 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 
-export default function quantumcybersecurityplatform() {
+export default function QuantumCybersecurityPlatform() {
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Quantum Cybersecurity Platform - Zion Tech Group</title>
-        <meta name="description" content="Quantum Cybersecurity Platform solutions and services." />
+        <title>quantum-cybersecurity-platform | Zion Tech Group</title>
+        <meta name="description" content="quantum-cybersecurity-platform page" />
       </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Quantum Cybersecurity Platform</h1>
-          <p className="text-lg text-gray-600">
-            Professional quantum cybersecurity platform solutions tailored to your business needs.
-          </p>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              quantum-cybersecurity-platform
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the quantum-cybersecurity-platform page.
+            </p>
+          </div>
         </div>
       </div>
     </>
-  )
+  );
 }

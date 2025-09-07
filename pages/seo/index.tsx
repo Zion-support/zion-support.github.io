@@ -1,25 +1,25 @@
 import React from 'react';
-export default function SEOIndex() {
-  const [slugs, setSlugs] = React.useState<string[]>([]),
+import Head from 'next/head';
 
-  React.useEffect(() => {
-    // In a real app, list from API or build-time, here we rely on directory hint not available at runtime.
-    setSlugs([])
-  }, []),
-
-export default function index() {
+export default function Index() {
   return (
-    <div>
-      <h1 className="text-2xl font-semibold mb-4">SEO Landing Pages</h1>
-      {slugs.length === 0 ? (
-        <div className="text-sm text-gray-500">Generated pages will appear once deployed.</div>
-      ) : (
-        <ul className="list-disc ml-5">
-          {slugs.map((s) => (
-            <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</a></li>
-          ))}
-        </ul>
-      )}
-    </div>
-  )
+    <>
+      <Head>
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              index
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the index page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

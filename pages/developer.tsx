@@ -1,24 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
-export default function DeveloperPage() {
+
+export default function Developer() {
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Developer - Zion Tech Group</title>
-        <meta name="description" content="Developer solutions and services." />
+        <title>developer | Zion Tech Group</title>
+        <meta name="description" content="developer page" />
       </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Developer</h1>
-          <p className="text-lg text-gray-600">
-            Professional developer solutions tailored to your business needs.
-          </p>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              developer
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the developer page.
+            </p>
+          </div>
         </div>
       </div>
-      </div>
     </>
-  )
+  );
 }

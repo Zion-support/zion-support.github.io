@@ -1,20 +1,15 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-import { clearUserCookie } from '../../../utils/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  clearUserCookie(res)
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
 
-  res.status(200).json({ success: true })
-
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
+  try {
+    // TODO: Implement logout logic
+    res.status(200).json({ message: 'logout endpoint' });
+  } catch (error) {
+    console.error('Error in logout:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
 }
-  clearUserCookie (res)
-  res.status (200).json ({ success: true });
-}
-

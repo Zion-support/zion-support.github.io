@@ -1,21 +1,15 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../utils/auth';
-import { sendMessage } from '../../../utils/messaging/storage';
-import { ConversationContext } from '../../../utils/messaging/types';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser($2);
-  if (!user) return,
-  if (req.method !== 'POST') return res.status(405).json($2);
-  const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
-    recipientId: string,
-    body: string,
-    linkUrl?: string,
-    attachmentBase64?: string,
-    attachmentName?: string,
-    context?: ConversationContext
-  },
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-  if (!recipientId || !body) return res.status(400).json($2);
-  const { conversation, message } = sendMessage($2);
-  res.status(200).json({ conversation, message })
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  try {
+    // TODO: Implement compose logic
+    res.status(200).json({ message: 'compose endpoint' });
+  } catch (error) {
+    console.error('Error in compose:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
 }

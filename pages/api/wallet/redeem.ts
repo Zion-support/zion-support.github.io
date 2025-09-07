@@ -1,7 +1,15 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
 
-    return res.status(200).json(result)
-  } catch (err: any) {
-    return res.status(400).json({ error: err.message })
-
+  try {
+    // TODO: Implement redeem logic
+    res.status(200).json({ message: 'redeem endpoint' });
+  } catch (error) {
+    console.error('Error in redeem:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+}

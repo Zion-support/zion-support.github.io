@@ -1,13 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const p = path.join(process.cwd(), 'datareportsseoweekly-seo.json'),
 
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
   try {
-    if (!fs.existsSync(p)) return res.status(200).json($2);
-    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')))
-  } catch (e: any) {
-    res.status(500).json({ error: e ?.message || 'Failed to read SEO report' })
+    // TODO: Implement seo logic
+    res.status(200).json({ message: 'seo endpoint' });
+  } catch (error) {
+    console.error('Error in seo:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
 }

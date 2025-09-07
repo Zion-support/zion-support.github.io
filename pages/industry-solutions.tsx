@@ -1,23 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 
-export default function industrysolutions() {
+export default function IndustrySolutions() {
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Industry Solutions - Zion Tech Group</title>
-        <meta name="description" content="Industry Solutions solutions and services." />
+        <title>industry-solutions | Zion Tech Group</title>
+        <meta name="description" content="industry-solutions page" />
       </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Industry Solutions</h1>
-          <p className="text-lg text-gray-600">
-            Professional industry solutions solutions tailored to your business needs.
-          </p>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              industry-solutions
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the industry-solutions page.
+            </p>
+          </div>
         </div>
       </div>
     </>
-  )
+  );
 }
