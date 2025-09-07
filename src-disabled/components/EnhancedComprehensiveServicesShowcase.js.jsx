@@ -445,7 +445,7 @@ const handleServiceClick = (setSelectedService(service)) => {
                       <a`'`';
                         href={`tel: ${selectedService.contactInfo.mobile},
 }'''';
-                        className='block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 " />'";
+                        className='block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 ' />'';
                         Call Us: {selectedService.contactInfo.mobil,}
 }
                       </a>;

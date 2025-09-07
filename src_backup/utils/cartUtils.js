@@ -56,11 +56,11 @@ export const updateCartItemQuantity = (currentCart, itemId, quantity) => {if (qu
  * @returns {Object} Total information*/;
  */;
 export const calculateCartTotal = (cart) => {if (!Array.isArray(cart) || cart.length === 0) {return {subtotal: 0, tax: 0,total: 0, itemCount: 0;
-    }}const subtotal = cart.reduce((sum, item) => {const price = parseFloat(item.price) || 0;
+    }const subtotal = cart.reduce((sum, item) => {const price = parseFloat(item.price) || 0;
     const quantity = parseInt(item.quantity) || 0;
     return sum + (price * quantity)}, 0)// Calculate tax (example: 8.5%)const tax = subtotal * 0.085;
   const total  = subtotal + tax;const itemCount  = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 0), 0)return {subtotal: Math.round(subtotal * 100) / 100, tax: Math.round(tax * 100) / 100, total: Math.round(total * 100) / 100, itemCount;
-  }}/**;
+  }/**;
  * Check if cart is empty*/;
  * @param {Array} cart - Cart items array*/;
  * @returns {boolean} True if cart is empty*/;
@@ -104,7 +104,7 @@ export const formatPrice = (price, currency = 'USD') => {if (typeof price !== 'n
  * @param {Array} cart - Cart items array*/;
  * @returns {Object} Cart summary*/;
  */;
-export const getCartSummary = (cart) => {const total  = calculateCartTotal(cart)return {itemCount: total.itemCount, uniqueItems: cart.length,subtotal: formatPrice(total.subtotal), tax: formatPrice(total.tax), total: formatPrice(total.total), isEmpty: isCartEmpty(cart)}}/**;
+export const getCartSummary = (cart) => {const total  = calculateCartTotal(cart)return {itemCount: total.itemCount, uniqueItems: cart.length,subtotal: formatPrice(total.subtotal), tax: formatPrice(total.tax), total: formatPrice(total.total), isEmpty: isCartEmpty(cart)}/**;
  * Export cart data (useful for debugging or backup)*/;
  * @param {Array} cart - Cart items array*/;
  * @returns {string} JSON string of cart data*/;

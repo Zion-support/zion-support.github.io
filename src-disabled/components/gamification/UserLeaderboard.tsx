@@ -7,7 +7,7 @@ export interface LeaderboardEntry {
 import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {;
 
-          <Trophy className="h-5 w-5" /> Leaderboard
+          <Trophy className='h-5 w-5' /> Leaderboard
 <CardTitle className='flex items-center gap-2'>
           <Trophy className='h-5 w-5' /> Leaderboard
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -16,7 +16,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardHeader>
       <CardContent>
 
-        <div className="space-y-2">
+        <div className='space-y-2'>
 
 <div className='space-y-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -24,13 +24,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div
               key={e.name}
 
-              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
+              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'
             >
-              <span className="font-medium">
+              <span className='font-medium'>
                 {idx + 1}. {e.name}
               </span>
 
-              <span className="text-sm">{e.points} pts</span>
+              <span className='text-sm'>{e.points} pts</span>
             </div>
           ))}
 
@@ -52,8 +52,8 @@ function UserLeaderboard() {
         <CardDescription > Top users by points</CardDescription>;
       </CardHeader>;
       <CardContent>;
-        <div className='space - y-2'>        <CardTitle className="flex items - center gap - 2">;
-          <Trophy className="h - 5 w - 5" /> Leaderboard;
+        <div className='space - y-2'>        <CardTitle className='flex items - center gap - 2'>;
+          <Trophy className='h - 5 w - 5' /> Leaderboard;
         </CardTitle>;
         <CardDescription > Top users by points</CardDescription>;
       </CardHeader>;
@@ -64,12 +64,12 @@ function UserLeaderboard() {
               key={e.name}
               className='flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50'            <div;',
               key = {e.name, }
-              className="flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50";
+              className='flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50';
             >;
               <span className='font - medium'>;
                 {idx + 1}. {e.name}
               </span>;
-              <span className='text - sm'>{e.points} pts</span>            </div>              <span className="text - sm">{e.points} pts</span>;
+              <span className='text - sm'>{e.points} pts</span>            </div>              <span className='text - sm'>{e.points} pts</span>;
             </div>))}
         </div>;
       </CardContent>;

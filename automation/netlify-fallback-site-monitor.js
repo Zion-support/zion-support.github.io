@@ -162,7 +162,7 @@ exports.handler = async (_event, _context) => {console.log('site-monitor fallbac
             })},return result;
     } catch (error) {console.error ('Fallback execution error:', error),return {status_code: 500,body: JSON.stringify ({error: 'Fallback execution failed',message: error.message;
             })}
-    }},;
+    },;
 #!/usr/bin/env node;
 // Netlify Function Fallback: site-monitor;
 // This is a local fallback when the main function is unavailable;

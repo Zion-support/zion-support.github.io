@@ -69,7 +69,7 @@ import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-
     "defaultValues": {
       }
       "password": "password","
-    "confirmPassword": ""}})"
+    "confirmPassword": ""})"
   useEffect(() => {
     // Extract access token from URL hash
     } else {
@@ -188,7 +188,7 @@ export default function UpdatePassword() {;
     "defaultValues": {;
       }
       "password": "",;"
-      "confirmPassword": ""}}),;"
+      "confirmPassword": ""}),;"
   useEffect(() => {;
     // Extract access token from URL hash;
     }

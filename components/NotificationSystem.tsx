@@ -49,7 +49,7 @@ export function NotificationProvider() {const [notifications, setNotifications] 
     },[maxNotifications, removeNotification];
   )const clearAll = useCallback(() => {setNotifications([])}, [];
   return (<NotificationContext.Provider;
-      value={{ notifications, addNotification, removeNotification, clearAll }}
+      value={ notifications, addNotification, removeNotification, clearAll }
      />;
       {children}
       <NotificationContainer />;
@@ -66,11 +66,11 @@ export function NotificationProvider() {const [notifications, setNotifications] 
       </AnimatePresence>;
       {notifications.length > 1 && (<motion.button;
           }
-          initial={{ "opacity": 0, "scale": 0.8 
+          initial={ "opacity": 0, "scale": 0.8 
 }
-          animate={{ "opacity": 1, "scale": 1 
+          animate={ "opacity": 1, "scale": 1 
 }
-          exit={{ "opacity": 0, "scale": 0.8 }}
+          exit={ "opacity": 0, "scale": 0.8 }
           onClick={clearAll}
           className="w-full bg-gray-800 text-gray-300 text-sm py-2 px-3 rounded-lg "hover":bg-gray-700 transition-colors duration-200">"
 
@@ -124,13 +124,13 @@ const getProgressColor = ("type": NotificationType) => {switch (type) {case 'suc
         return 'bg-gray-400';'
     }
   }return (<motion.div;
-      initial={{ "opacity": 0, "x": 300, "scale": 0.8 
+      initial={ "opacity": 0, "x": 300, "scale": 0.8 
 }
-      animate={{ "opacity": 1, "x": 0, "scale": 1 
+      animate={ "opacity": 1, "x": 0, "scale": 1 
 }
-      exit={{ "opacity": 0, "x": 300, "scale": 0.8 
+      exit={ "opacity": 0, "x": 300, "scale": 0.8 
 }
-      transition={{ "type": 'spring', "stiffness": 300, "damping": 30 }}'
+      transition={ "type": 'spring', "stiffness": 300, "damping": 30 }'
       className={`${getColors(notification.type)} border-l-4 rounded-lg shadow-lg overflow-hidden,`}>
 
       <div className="p-4">;"
@@ -169,10 +169,10 @@ const getProgressColor = ("type": NotificationType) => {switch (type) {case 'suc
       {notification.duration && notification.duration > 0 && (<motion.div;
           }
           className={`h-1 ${getProgressColor(notification.type)}`}`
-          initial={{ "width": '100%' }}'
-          animate={{ "width": '0%' ,'
+          initial={ "width": '100%' }'
+          animate={ "width": '0%' ,'
 }
-          transition={{"duration": notification.duration / 1000,"ease": 'linear'}}' />;
+          transition={"duration": notification.duration / 1000,"ease": 'linear'}' />;
       )}
     </motion.div>;
   )}// Hook for easy notification creation;
@@ -182,7 +182,7 @@ export const useNotificationActions = () => {const { addNotification }  = useNot
   )const showError = useCallback(("title": string, "message": string, options?: Partial<Notification>) => {addNotification({ "type": 'error', title, message, ...options })},[addNotification];'
   )const showWarning = useCallback(("title": string, "message": string, options?: Partial<Notification>) => {addNotification({ "type": 'warning', title, message, ...options })},[addNotification];'
   )const showInfo = useCallback(("title": string, "message": string, options?: Partial<Notification>) => {addNotification({ "type": 'info', title, message, ...options })},[addNotification];'
-  )return { showSuccess, showError, showWarning, showInfo }}// Example usage component;
+  )return { showSuccess, showError, showWarning, showInfo }// Example usage component;
 
 export function NotificationExample() {const { showSuccess, showError, showWarning, showInfo } =;
     useNotificationActions()return (<div className="space-y-4 p-6">;"

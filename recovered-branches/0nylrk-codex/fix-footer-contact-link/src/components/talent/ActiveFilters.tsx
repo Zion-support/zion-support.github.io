@@ -65,7 +65,7 @@ export function ActiveFilters({
   setPriceRange,
   experienceRange,
   setExperienceRange,
-}}: ActiveFiltersProps) {
+}: ActiveFiltersProps) {
   // Check if any filters are active
 
     selectedSkills.length > 0 || 

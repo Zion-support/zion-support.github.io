@@ -19,7 +19,6 @@ const CommunityRoutes = () => {;  return (
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
 
 const CommunityRoutes = () => {
-=======const CommunityRoutes = () => {;
   return (
     <Routes>;
       {/* Public routes */}

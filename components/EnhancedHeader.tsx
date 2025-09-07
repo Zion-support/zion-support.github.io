@@ -175,7 +175,7 @@ const navigation = [;
                               key={dropdownItem.name}
                               href={dropdownItem.href}
                               className="block px-3 py-2 text-sm text-gray-600 "hover": text-blue-600 "hover":bg-gray-50 rounded-md";"
-                              onClick={() => {setMobileMenuOpen(false)setActiveDropdown(null)}}
+                              onClick={() => {setMobileMenuOpen(false)setActiveDropdown(null)}
                             >;
                               {dropdownItem.name}
                             </Link>;

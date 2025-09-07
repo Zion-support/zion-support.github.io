@@ -8,15 +8,12 @@ import { motion } from 'framer-motion';'
 };
 export default Homepage2044;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 }viewport= {}
   {}
   once: true;"
 }> <h2 className="text - 5xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 400 mb - 12 max - w-3xl mx - auto" > Join thousands of forward - thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex - col sm:flex - row gap - 6 justify - center items - center" > <button > <span className="flex items - center" > Start Your Journey <Rocket className="w - 7 h - 7 ml - 4 group - hover:translate - x-1 transition - transform duration - 300" /> </span> </button> <button > <span className="flex items - center" > Schedule Demo <Play className="w - 7 h - 7 ml - 4" /> </span> </button> </div> </div> </section> </main> </Layout> </>);
 }
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 ;
 import React, { useEffect, useState, useCallback, useMemo } from 'react',import Layout from './layout/Layout';
@@ -44,7 +41,6 @@ import { innovativeMicroSaasSolutions2025  } from '../data/2025-innovative-micro
 // Lazy load new components for better performance;
 const ServiceCard = null;
 
-<<<<<<< HEAD
 //Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
 </div>)//Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
 </div>)//Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
@@ -67,14 +63,14 @@ const ServiceCard = null;
 }onClick= {() => handleCategoryChange (category.id)}className= {`px-6 py-3 rounded-full border transition-all duration-300 flex items-center gap-2 $ {selectedCategory === category.id ? `bg-gradient-to-r $ {category.color;`}text-white border-transparent shadow-lg`: 'bg-gray-900/50 text-gray-300 border-gray-600 "hover":border-gray-500 "hover":text-white';'
 }`;`}> </button>) )}</div> key= {service.id;
 }className= {`relative group cursor-pointer $ {index === currentServiceIndex ? 'scale-105' : 'scale-100';'
-}transition-transform duration-500`;`}onClick= {() => handleServiceClick (service)}whileHover= {{"scale": 1.05;
-}whileTap= {{"scale": 0.95;
-}initial= {{"opacity": 0, "y": 20;
-}animate= {{"opacity": 1, "y": 0;
-}transition= {{"duration": 0.5, "delay": index * 0.1;
-}> <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0 0 50px rgba (0, 0, 0, 0.5) ] "hover":shadow-[0 0 80px rgba (6, 182, 212, 0.3) ] transition-all duration-300 group-"hover":border-cyan-500/50" > <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-"hover":opacity-100 transition-opacity duration-300" ></div> <div className="relative z-10" > <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0 0 30px rgba (6, 182, 212, 0.3) ] mb-6" > <feature.icon className="w-8 h-8 text-white" /> </div> </p> </div> </div> </motion.div>) )}</div> </div> </section> > <h2 className="text-5xl font-bold text-white mb-6" > Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" >Features</span> </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion.div> > Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300" /> </a> </div> </div> </motion.div>) )}</div> </div> </section> <motion.div initial= {{"opacity": 0, "y": 30;"
-}whileInView= {{"opacity": 1, "y": 0;
-}transition= {{], [])}window.location.href = '/revolutionary - 2044 - pricing - showcase';'
+}transition-transform duration-500`;`}onClick= {() => handleServiceClick (service)}whileHover= {"scale": 1.05;
+}whileTap= {"scale": 0.95;
+}initial= {"opacity": 0, "y": 20;
+}animate= {"opacity": 1, "y": 0;
+}transition= {"duration": 0.5, "delay": index * 0.1;
+}> <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0 0 50px rgba (0, 0, 0, 0.5) ] "hover":shadow-[0 0 80px rgba (6, 182, 212, 0.3) ] transition-all duration-300 group-"hover":border-cyan-500/50" > <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-"hover":opacity-100 transition-opacity duration-300" ></div> <div className="relative z-10" > <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0 0 30px rgba (6, 182, 212, 0.3) ] mb-6" > <feature.icon className="w-8 h-8 text-white" /> </div> </p> </div> </div> </motion.div>) )}</div> </div> </section> > <h2 className="text-5xl font-bold text-white mb-6" > Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" >Features</span> </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion.div> > Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300" /> </a> </div> </div> </motion.div>) )}</div> </div> </section> <motion.div initial= {"opacity": 0, "y": 30;"
+}whileInView= {"opacity": 1, "y": 0;
+}transition= {], [])}window.location.href = '/revolutionary - 2044 - pricing - showcase';'
 }, [])const handleWatchDemo = useCallback ( () => {//Add analytics tracking // Check condition;
 }
 if (.gtag) {) {$2;
@@ -144,18 +140,16 @@ if ( {) {$2;
 };
 
 export default Homepage2044;
-=======
                   onClick = $2;
 export default Homepage2044,
-=======
-}onClick= {() => handleServiceClick (service)}whileHover= {{scale: 1.05;}
-}whileTap= {{scale: 0.95;}
-}initial= {{opacity: 0, y: 20;}
-}animate= {{opacity: 1, y: 0;}
-}transition= {{duration: 0.5, delay: index * 0.1;}"
-}> <div className=\"relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0 0 50px rgba (0, 0, 0, 0.5) ] hover:shadow-[0 0 80px rgba (6, 182, 212, 0.3) ] transition-all duration-300 group-hover:border-cyan-500/50\"  /> <div className=\"absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300\"  /></div> <div className=\"relative z-10\"  /> <div className=\"w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0 0 30px rgba (6, 182, 212, 0.3) ] mb-6\"  /> <feature.icon className=\"w-8 h-8 text-white\" /> </div> </p> </div> </div> </motion.div>) )}</div> </div> </section> > <h2 className=\"text-5xl font-bold text-white mb-6\"  /> Revolutionary <span className=\"bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent\"  />Features</span> </h2> <p className=\"text-xl text-gray-400 max-w-3xl mx-auto\"  /> Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion.div> > Learn More <ArrowRight className=\"w-4 h-4 transition-transform duration-300\" /> </a> </div> </div> </motion.div>) )}</div> </div> </section> <motion.div initial= {{opacity: 0, y: 30;}
-}whileInView= {{opacity: 1, y: 0;}
-}transition= {{], [])}window.location.href = '/revolutionary - 2044 - pricing - showcase';
+}onClick= {() => handleServiceClick (service)}whileHover= {scale: 1.05;}
+}whileTap= {scale: 0.95;}
+}initial= {opacity: 0, y: 20;}
+}animate= {opacity: 1, y: 0;}
+}transition= {duration: 0.5, delay: index * 0.1;}"
+}> <div className=\"relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0 0 50px rgba (0, 0, 0, 0.5) ] hover:shadow-[0 0 80px rgba (6, 182, 212, 0.3) ] transition-all duration-300 group-hover:border-cyan-500/50\"  /> <div className=\"absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300\"  /></div> <div className=\"relative z-10\"  /> <div className=\"w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0 0 30px rgba (6, 182, 212, 0.3) ] mb-6\"  /> <feature.icon className=\"w-8 h-8 text-white\" /> </div> </p> </div> </div> </motion.div>) )}</div> </div> </section> > <h2 className=\"text-5xl font-bold text-white mb-6\"  /> Revolutionary <span className=\"bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent\"  />Features</span> </h2> <p className=\"text-xl text-gray-400 max-w-3xl mx-auto\"  /> Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion.div> > Learn More <ArrowRight className=\"w-4 h-4 transition-transform duration-300\" /> </a> </div> </div> </motion.div>) )}</div> </div> </section> <motion.div initial= {opacity: 0, y: 30;}
+}whileInView= {opacity: 1, y: 0;}
+}transition= {], [])}window.location.href = '/revolutionary - 2044 - pricing - showcase';
 }, [])const handleWatchDemo = useCallback ( () = /> {//Add analytics tracking // Check condition;}
 if (.gtag) {) {$2;}
 }
@@ -214,8 +208,6 @@ const handleServiceClick = useCallback ( (service: unknown) => {
 top: `$ {
   Math.random () * 100 
 }%` 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 ...revolutionary2044AIServices ], []);
 const featuredServices = useMemo ( () => allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices]);
 ], []);
@@ -230,7 +222,6 @@ const handleServiceClick = useCallback ( (service: unknown) => {
 }window.location.href = service.slug
 }, []);
 }, []);
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
 //Loading state if (isLoading) {
   return (<Layout> <div className="min-h-screen flex items-center justify-center" > <motion.div > <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" ></div> <p className="text-cyan-400 text-lg" >Loading Zion Tech Group...</p> </motion.div> </div> </Layout>)
@@ -293,8 +284,6 @@ top: `$ {
   duration: 0.8
 }viewport= {
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   once: true }
 }"
@@ -303,22 +292,13 @@ top: `$ {
 export default Homepage2044;
 
 "
-=======
   once: true 
 }
 }> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>) 
 }
 export default Homepage2044
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   once: true
 }> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>)
 }
 export default Homepage2044;export default Homepage2044;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -137,9 +137,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div className='relative z-10 max-w-7xl mx-auto px-6 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
 <h1 className='text-5xl md:text-7xl font-bold mb-6'>
               <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
@@ -155,8 +155,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <motion.a
                 href='/contact'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl'
               >
                 Get Started Today
@@ -164,27 +164,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.a>
               <motion.a
                 href='tel:+13024640950'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className='inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
               >
                 <Phone className='mr-2 w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
               quantum computing, enterprise IT, and innovative micro SAAS solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <motion.a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
+                href='/contact'
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl'
               >
                 Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className='ml-2 w-5 h-5' />
               </motion.a>
               <motion.a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                href='tel:+13024640950'
+                className='inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
               >
-                <Phone className="mr-2 w-5 h-5" />
+                <Phone className='mr-2 w-5 h-5' />
                 Call Now
               </motion.a>
             </div>
@@ -195,10 +195,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-6'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -216,24 +216,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='space-y-16'>
             {serviceCategories.map((category, index) => (
               <motion.div
-            className="text - center mb - 16";
+            className='text - center mb - 16';
           >;
-            <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - purple - 600 bg - clip - text text - transparent">;
+            <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - purple - 600 bg - clip - text text - transparent'>;
               Revolutionary Technology Categories;
             </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
               Explore our comprehensive portfolio of cutting - edge services designed to transform your business;
               and give you a competitive advantage in the digital age.;
             </p>;
           </motion.div>;
-          <div className="space - y-16">;
+          <div className='space - y-16'>;
             {service_categories.map ((category, index) => (
               <motion.div;
                 key={category.title}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
               >
 <div className='text-center mb-12'>
                   <div
@@ -253,10 +253,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
+                      initial={ opacity: 0, y: 20 }
+                      whileInView={ opacity: 1, y: 0 }
+                      transition={ duration: 0.6, delay: serviceIndex * 0.1 }
+                      viewport={ once: true }
 className='group'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     >
@@ -271,8 +271,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <div className='text-2xl font-bold text-cyan-400'>
                               ${service.pricing.starter.price}
                             {service.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                             </div>
@@ -351,10 +351,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-6'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
 className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent'>
@@ -371,10 +371,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {['Starter', 'Professional', 'Enterprise'].map((plan, index) => (
               <motion.div
                 key={plan}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
 className='group'
               >
                 <div className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
@@ -452,10 +452,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-4xl mx-auto text-center px-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
 <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent'>
               Ready to Experience the Future?
@@ -490,8 +490,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <motion.a
                 href='/contact'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -500,8 +500,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.a>
               <motion.a
                 href='tel:+13024640950'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className='inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >

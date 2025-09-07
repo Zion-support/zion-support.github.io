@@ -399,7 +399,7 @@ type="text""
                   }
                   setSearchQuery ("");"
                   setSelectedCategory ("All Categories");"
-                }}
+                }
                 className="border - zion - purple text - zion - purple "hover":bg - zion-purple / 10";"
               >;
                 Clear all filters;

@@ -28,7 +28,7 @@ interface ContractBuilderProps  {"isOpen": boolean;
 export function ContractBuilder() {const [activeTab, setActiveTab] = useState<string>("form")const [generatedContract, setGeneratedContract] = useState<string | null>(null)const [formValues, setFormValues] = useState<ContractFormValues | undefined>(undefined;"
   ),const [templateManagerOpen, setTemplateManagerOpen] = useState(false)const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false)const handleLoadTemplate = null;
           }
-          onClose()}}
+          onClose()}
         talent = {talent}
         clientName = {clientName}
         onContractGenerated = {onContractGenerated}import { useState } from "react",import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",import { Button } from "@/components/ui/button",import { TalentProfile } from "@/types/talent",import { ContractForm, ContractFormValues } from "./components/ContractForm",import { ContractPreview } from "./components/ContractPreview",/>;"
@@ -44,7 +44,7 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;"
             </TabsList>;
       />;
-    )}}return (<div className="flex gap-2">;"
+    )}return (<div className="flex gap-2">;"
               <Button;
                 variant="outline";"
                 size="sm";"
@@ -161,7 +161,7 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
 }on_close= {() => setTemplateManagerOpen (false)}onSelectTemplate= {handleLoadTemplate;
 }current_values= {form_values;
 }/> </DialogContent> </Dialog>)}"}"
-})}}/>)}</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {talent ;"
+})}/>)}</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {talent ;"
 }clientName= {clientName ;
 }initialValues= {formValues ;
 }onFormValuesChange= {setFormValues ;

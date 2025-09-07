@@ -21,7 +21,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 '';
 '';
 '''';
-            document.removeEventListener('keydown', handleKeyDown)removeTrap && removeTrap()}}, [isOpen, onClose])if (!isOpen) {}
+            document.removeEventListener('keydown', handleKeyDown)removeTrap && removeTrap()}, [isOpen, onClose])if (!isOpen) {}
         return null}
     const handleSubmit = async(e) => {}
         e.preventDefault()if (!subject.trim() || !message.trim()) {}
@@ -75,7 +75,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
           </button>;
         </form>;
       </div>;
-    </div>)}'"""'";
+    </div>)}'''''';
           </button>;
         </form>;
       </div>;

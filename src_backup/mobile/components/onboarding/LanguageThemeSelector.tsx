@@ -4,11 +4,11 @@ import { useTheme } from '@/hooks/useTheme';
 import { Moon, Sun, Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useTheme } from "@/hooks/useTheme";
+import React, { useState } from 'react',
+import { Button } from '@/components/ui/button',
+import { useTheme } from '@/hooks/useTheme';
 import { Moon, Sun, Check } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from '@/components/ui/card';
 interface Language {
   code: string;
   name: string;
@@ -22,7 +22,7 @@ const languages: Language[] = [
 ]
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
+  const [selectedLanguage, setSelectedLanguage] = useState<string>('en'),
 
   return (
     <div className='space-y-8 px-4'>
@@ -32,11 +32,11 @@ export function LanguageThemeSelector() {
         <div className='grid grid-cols-2 gap-3 mt-4'>
           {languages.map(language => (
             <Card
-              key={language.code}    <div className="space-y-8 px-4">
-      <div className="space-y-2">
-        <h2 className="text-xl font-medium">Select your language</h2>
-        <p className="text-muted-foreground">Choose your preferred language</p>
-        <div className="grid grid-cols-2 gap-3 mt-4">
+              key={language.code}    <div className='space-y-8 px-4'>
+      <div className='space-y-2'>
+        <h2 className='text-xl font-medium'>Select your language</h2>
+        <p className='text-muted-foreground'>Choose your preferred language</p>
+        <div className='grid grid-cols-2 gap-3 mt-4'>
           {languages.map((language,) => (
             <Card
               key = {language.code,}
@@ -94,8 +94,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 : 'border-border hover:border-primary/40'
             }`}
             onClick = {() => setTheme('dark'),}
-<<<<<<< HEAD
-<<<<<<< HEAD
           >;
             <CardContent className='p-3 flex flex-col items-center justify-center'>;
               <Moon className='h-8 w-8 mb-2' />;
@@ -104,33 +102,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Check className='h-4 w-4 text-primary mt-2' />              )}              )}
             </CardContent>;
           </Card>;
-                <Check className="h-4 w-4 text-primary mt-2" />;
+                <Check className='h-4 w-4 text-primary mt-2' />;
 
         </div>
       </div>
 
 
-      <div className="space-y-2">
-        <h2 className="text-xl font-medium">Choose theme</h2>
-        <p className="text-muted-foreground">Select your preferred appearance</p>
+      <div className='space-y-2'>
+        <h2 className='text-xl font-medium'>Choose theme</h2>
+        <p className='text-muted-foreground'>Select your preferred appearance</p>
         
-        <div className="flex gap-3 mt-4">
+        <div className='flex gap-3 mt-4'>
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'light' 
-                ? "border-primary bg-primary/5" 
-                : "border-border hover:border-primary/40"
+                ? 'border-primary bg-primary/5' 
+                : 'border-border hover:border-primary/40'
 
 
 
             }`}
             onClick={() => setTheme('light')}
           >
-            <CardContent className="p-3 flex flex-col items-center justify-center">
-              <Sun className="h-8 w-8 mb-2" />
+            <CardContent className='p-3 flex flex-col items-center justify-center'>
+              <Sun className='h-8 w-8 mb-2' />
               <span>Light</span>
               {theme === 'light' && (
-                <Check className="h-4 w-4 text-primary mt-2" />
+                <Check className='h-4 w-4 text-primary mt-2' />
               )}
 
             </CardContent>;
@@ -151,8 +149,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
               theme === 'dark' 
-                ? "border-primary bg-primary/5" 
-                : "border-border hover:border-primary/40"
+                ? 'border-primary bg-primary/5' 
+                : 'border-border hover:border-primary/40'
             }`}
             onClick={() => setTheme('dark')}
 
@@ -196,11 +194,11 @@ function LanguageThemeSelector() {
         <div className='grid grid - cols - 2 gap - 3 mt - 4'>;
           {languages.map (language => (
             <Card;
-              key={language.code}    <div className="space - y-8 px - 4">;
-      <div className="space - y-2">;
-        <h2 className="text - xl font - medium">Select your language</h2>;
-        <p className="text - muted - foreground">Choose your preferred language</p>;
-        <div className="grid grid - cols - 2 gap - 3 mt - 4">;
+              key={language.code}    <div className='space - y-8 px - 4'>;
+      <div className='space - y-2'>;
+        <h2 className='text - xl font - medium'>Select your language</h2>;
+        <p className='text - muted - foreground'>Choose your preferred language</p>;
+        <div className='grid grid - cols - 2 gap - 3 mt - 4'>;
           {languages.map ((language, ) => (
             <Card;
               key = {language.code, }
@@ -222,18 +220,18 @@ function LanguageThemeSelector() {
               key={language.code}
               className={`cursor - pointer transition - all ${
                 selected_language === language.code;
-                  ? "border - primary bg - primary / 5";
-                  : "border - border hover:border - primary / 40";
+                  ? 'border - primary bg - primary / 5';
+                  : 'border - border hover:border - primary / 40';
               }`}
               on_click={() => setSelectedLanguage (language.code)}
             >;
-              <CardContent className="p - 3 flex items - center justify - between">;
-                <div className="flex items - center">;
-                  <span className="text - xl mr - 2">{language.flag}</span>;
+              <CardContent className='p - 3 flex items - center justify - between'>;
+                <div className='flex items - center'>;
+                  <span className='text - xl mr - 2'>{language.flag}</span>;
                   <span>{language.name}</span>;
                 </div>;
                 {selected_language === language.code && (
-                  <Check className="h - 4 w - 4 text - primary" />)}
+                  <Check className='h - 4 w - 4 text - primary' />)}
               </CardContent>;
             </Card>))}
         </div>;
@@ -273,22 +271,22 @@ function LanguageThemeSelector() {
                 <Check className='h - 4 w - 4 text - primary mt - 2' />              )}              )}
             </CardContent>;
           </Card>;
-                <Check className="h - 4 w - 4 text - primary mt - 2" />)}
+                <Check className='h - 4 w - 4 text - primary mt - 2' />)}
             </CardContent>;
           </Card>;
           <Card;
             className={`flex - 1 cursor - pointer transition - all ${
               theme === 'dark';
-                ? "border - primary bg - primary / 5";
-                : "border - border hover:border - primary / 40";
+                ? 'border - primary bg - primary / 5';
+                : 'border - border hover:border - primary / 40';
             }`}
             on_click={() => set_theme ('dark')}
           >;
-            <CardContent className="p - 3 flex flex - col items - center justify - center">;
-              <Moon className="h - 8 w - 8 mb - 2" />;
+            <CardContent className='p - 3 flex flex - col items - center justify - center'>;
+              <Moon className='h - 8 w - 8 mb - 2' />;
               <span > Dark</span>;
               {theme === 'dark' && (
-                <Check className="h - 4 w - 4 text - primary mt - 2" />)}
+                <Check className='h - 4 w - 4 text - primary mt - 2' />)}
             </CardContent>;
           </Card>;
         </div>;
@@ -300,9 +298,6 @@ function LanguageThemeSelector() {
     </div>);
 }
 ;
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           >
             <CardContent className='p-3 flex flex-col items-center justify-center'>
               <Moon className='h-8 w-8 mb-2' />

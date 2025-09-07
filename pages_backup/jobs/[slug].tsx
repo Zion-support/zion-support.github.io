@@ -96,22 +96,22 @@ export default function JobDetailsPage() { return null; }
   return (
 
   return (
-    <div className="relative">
+    <div className='relative'>
       {loading ? (
         <EnhancedLoading lines={5} />
-      ) : ("
-        <div className="space-y-4">
-          <EnhancedCard>"
-            <div className="flex items-start justify-between gap-3">
+      ) : ('
+        <div className='space-y-4'>
+          <EnhancedCard>'
+            <div className='flex items-start justify-between gap-3'>
               <div>
 
             </div>
           </EnhancedCard>
 
           <EnhancedCard>
-"
-            <h2 className="font-semibold mb-2">Description</h2>"
-            <p className="text-sm text-gray-700 dark:text-gray-300">You will design, build, and scale AI features using LLMs and modern tooling.</p>
+'
+            <h2 className='font-semibold mb-2'>Description</h2>'
+            <p className='text-sm text-gray-700 dark:text-gray-300'>You will design, build, and scale AI features using LLMs and modern tooling.</p>
           </EnhancedCard>
 
               <li>3+ years with Python or TypeScript</li>
@@ -132,21 +132,21 @@ export default function JobDetailsPage() { return null; }
             </div>
           </EnhancedCard>
           <EnhancedCard>
-            <h2 className="font-semibold mb-2">Description</h2>
-            <p className="text-sm text-gray-700 dark:text-gray-300">You will design, build, and scale AI features using LLMs and modern tooling.</p>
+            <h2 className='font-semibold mb-2'>Description</h2>
+            <p className='text-sm text-gray-700 dark:text-gray-300'>You will design, build, and scale AI features using LLMs and modern tooling.</p>
           </EnhancedCard>
           <EnhancedCard>
             <h2 className='font-semibold mb-2'>Requirements</h2>
             <ul className='list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300'>              <li>3+ years with Python or TypeScript</li>
 
-                <p className="text-sm text-gray-600 dark:text-gray-300">Remote • Contract • Posted today</p>
+                <p className='text-sm text-gray-600 dark:text-gray-300'>Remote • Contract • Posted today</p>
 
               </div>
-              {!isMobile && ("
-                <EnhancedButton onClick={onApply} variant="primary">Apply Now</EnhancedButton>
-              )  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              {!isMobile && ('
+                <EnhancedButton onClick={onApply} variant='primary'>Apply Now</EnhancedButton>
+              )  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -192,14 +192,14 @@ export default function JobDetailsPage() { return null; }
               Apply Now
             </EnhancedButton>          </div>
       )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
       {/* Sticky mobile apply CTA */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -228,16 +228,16 @@ export default function JobDetailsPage() { return null; }
 }
 
       )  } catch (error) {
-    console.error("Error:", error);
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     </div>;
   );
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 

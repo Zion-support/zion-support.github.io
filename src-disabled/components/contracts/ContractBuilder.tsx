@@ -26,7 +26,7 @@ export function ContractBuilder({
   const handleLoadTemplate = null;
           onClose()
 
-        }}
+        }
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
@@ -320,7 +320,7 @@ export function ContractBuilder({;
         onClose={() => {;
           setShowSmartContractBuilder(false);
           onClose();
-        }}
+        }
         talent={talent}
         clientName={clientName}
         onContractGenerated={onContractGenerated}

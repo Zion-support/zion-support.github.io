@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
-import { useReviews } from "@/hooks/useReviews";
-import { useAuth } from "@/hooks/useAuth";
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { ReviewsList } from '@/components/reviews/ReviewsList',
+import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal',
+import { useReviews } from '@/hooks/useReviews';
+import { useAuth } from '@/hooks/useAuth';
 interface ProjectReviewSectionProps {
   project: Project
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
@@ -63,9 +63,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       <CardContent>
         {isCompleted ? (
-          <div className="space-y-6">
+          <div className='space-y-6'>
             {(isClient || isTalent) && (
-              <div className="border-b pb-4 mb-4">
+              <div className='border-b pb-4 mb-4'>
                 {canLeaveReview ? (
                   <div className='bg-muted/20 rounded-lg p-4 text-center'>
                     <h3 className='font-medium mb-2'>Share your experience</h3>
@@ -79,26 +79,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ) : hasLeftReview ? (
 
 import { useState } from 'react';
-                  <div className="bg-muted/20 rounded-lg p-4 text-center">
-                    <h3 className="font-medium mb-2">Thank you for your review!</h3>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      Your review is {userReview.status === "approved" ? "published" : "pending approval"}
+                  <div className='bg-muted/20 rounded-lg p-4 text-center'>
+                    <h3 className='font-medium mb-2'>Thank you for your review!</h3>
+                    <p className='text-sm text-muted-foreground mb-3'>
+                      Your review is {userReview.status === 'approved' ? 'published' : 'pending approval'}
                     </p>
 
-                    {userReview.status === "pending" && (
-                      <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
+                    {userReview.status === 'pending' && (
+                      <Button variant='outline' onClick={() => setIsReviewModalOpen(true)}>
                         Edit Review
                       </Button>
 import { Project } from '@/types/projects',;
-import { useState } from "react",;
+import { useState } from 'react',;
 
 import { Star } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReviewsList } from "@/components/reviews/ReviewsList",;
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",;
-import { useReviews } from "@/hooks/useReviews",;
-import { useAuth } from "@/hooks/useAuth",;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { ReviewsList } from '@/components/reviews/ReviewsList',;
+import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal',;
+import { useReviews } from '@/hooks/useReviews',;
+import { useAuth } from '@/hooks/useAuth',;
 interface ProjectReviewSectionProps {;
   project: Project;
 }
@@ -107,7 +107,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
   const { user } = useAuth(),;
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),;
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),;
-  const isCompleted = project.status === "completed",;
+  const isCompleted = project.status === 'completed',;
   const isClient = user?.id === project.client_id,;
   const isTalent = user?.id === project.talent_id,;
   const clientProfile = project?.talent_profile,;
@@ -115,15 +115,15 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
   // Determine who the current user needs to review;
   const revieweeId = isClient ? project.talent_id : project.client_id,;
   const revieweeName = isClient;
-    ? talentProfile?.full_name || "Talent";
-    : clientProfile?.full_name || "Client",;
+    ? talentProfile?.full_name || 'Talent';
+    : clientProfile?.full_name || 'Client',;
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
   const hasLeftReview = userReview != null;
   return (;
-    <Card className="mt-6">;
+    <Card className='mt-6'>;
       <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <Star className="h-5 w-5 text-yellow-400" />;
+        <CardTitle className='flex items-center gap-2'>;
+          <Star className='h-5 w-5 text-yellow-400' />;
           Reviews;
         </CardTitle>;
         <CardDescription>;
@@ -132,13 +132,13 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
       </CardHeader>;
       <CardContent>;
         {isCompleted ? (;
-          <div className="space-y-6">;
+          <div className='space-y-6'>;
             {(isClient || isTalent) && (;
-              <div className="border-b pb-4 mb-4">;
+              <div className='border-b pb-4 mb-4'>;
                 {canLeaveReview ? (;
-                  <div className="bg-muted/20 rounded-lg p-4 text-center">;
-                    <h3 className="font-medium mb-2">Share your experience</h3>;
-                    <p className="text-sm text-muted-foreground mb-3">;
+                  <div className='bg-muted/20 rounded-lg p-4 text-center'>;
+                    <h3 className='font-medium mb-2'>Share your experience</h3>;
+                    <p className='text-sm text-muted-foreground mb-3'>;
                       Your review will help build a trustworthy community;
                     </p>;
                     <Button onClick={() => setIsReviewModalOpen(true)}>;
@@ -157,8 +157,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                         ? 'published';
                         : 'pending approval'}
                     </p>;
-                    {userReview.status === "pending" && (;
-                      <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
+                    {userReview.status === 'pending' && (;
+                      <Button variant='outline' onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
 
@@ -194,8 +194,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
         />
 
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </Card>;
   );
@@ -214,9 +212,9 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
             />
           </div>
         ) : (
-          <div className="bg-muted/20 rounded-lg p-6 text-center">
-            <h3 className="font-medium mb-2">Reviews will be available once the project is completed</h3>
-            <p className="text-sm text-muted-foreground">
+          <div className='bg-muted/20 rounded-lg p-6 text-center'>
+            <h3 className='font-medium mb-2'>Reviews will be available once the project is completed</h3>
+            <p className='text-sm text-muted-foreground'>
               After the project is marked as completed, both parties will be able to leave reviews
             </p>
           </div>
@@ -342,9 +340,6 @@ function ProjectReviewSection() {
 }
 
 ;
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </Card>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533

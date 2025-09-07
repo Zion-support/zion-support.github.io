@@ -15,15 +15,15 @@ class BuildWatcher {
   constructor() {
     this.projectRoot = process.cwd();
     this.buildReport = {
-      "timestamp": new Date().toISOString(),
-      "duration": 0,
-      "buildAttempts": [],
-      "fileChanges": [],
-      "buildSuccess": false,
-      "lastBuildTime": null,
-      "totalBuilds": 0,
-      "successfulBuilds": 0,
-      "failedBuilds": 0};
+      'timestamp': new Date().toISOString(),
+      'duration': 0,
+      'buildAttempts': [],
+      'fileChanges': [],
+      'buildSuccess': false,
+      'lastBuildTime': null,
+      'totalBuilds': 0,
+      'successfulBuilds': 0,
+      'failedBuilds': 0};
     this.startTime = Date.now();
     this.isRunning = false;
     this.watchPatterns = ['src/**/*.{ts,tsx,js,jsx}',
@@ -73,7 +73,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     }
 
 
-      fs.mkdirSync(logsDir, { "recursive": true });
+      fs.mkdirSync(logsDir, { 'recursive': true });
     }
     // Initial build check
     await this.performInitialBuild()
@@ -103,15 +103,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       console.log(`👀 Watching directory: ${dir}`);
 
       const watcher = fs.watch(
-        dir,"
-        { "recursive": true },
+        dir,'
+        { 'recursive': true },
         (eventType, filename) => {
           if (filename && this.shouldWatchFile(filename)) {
             this.handleFileChange(eventType, path.join(dir, filename));
           }
         }
       );
-      console.log(`👀 Watching "directory": ${dir}`);
+      console.log(`👀 Watching 'directory': ${dir}`);
     } catch (error) {
       console.error(`Error watching directory ${dir}:`, error);
     }
@@ -130,7 +130,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
       console.log(`👀 Watching file: ${filePath}`);
       console.log(`👀 Watching file: ${filePath}`);
-      console.log(`👀 Watching "file": ${filePath}`);
+      console.log(`👀 Watching 'file': ${filePath}`);
     } catch (error) {
       console.error(`Error watching file ${filePath}:`, error);
     }
@@ -174,7 +174,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
   patternToRegex(pattern) {
     // Convert glob pattern to regex
-    const regexStr = pattern;"
+    const regexStr = pattern;'
       .replace(/\./g, '\\.')
       .replace(/\*/g, '.*')
       .replace(/\?/g, '.')
@@ -206,11 +206,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
   handleFileChange(eventType, filePath) {
     const relativePath = path.relative(this.projectRoot, filePath);
-    console.log(`📝 File change "detected": ${eventType} - ${relativePath}`);
+    console.log(`📝 File change 'detected': ${eventType} - ${relativePath}`);
     this.buildReport.fileChanges.push({
       eventType,
-      "file": relativePath,
-      "timestamp": new Date().toISOString()});
+      'file': relativePath,
+      'timestamp': new Date().toISOString()});
     // Queue build
     this.queueBuild()
   queueBuild($2) {}
@@ -239,10 +239,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       await this.runNextBuild();
       const buildDuration = Date.now() - buildStartTime;
       this.buildReport.buildAttempts.push({
-        "timestamp": new Date().toISOString(),
-        "duration": buildDuration,
-        "success": true,
-        "type": 'full_build'});
+        'timestamp': new Date().toISOString(),
+        'duration': buildDuration,
+        'success': true,
+        'type': 'full_build'});
       this.buildReport.buildSuccess = true;
       this.buildReport.lastBuildTime = new Date().toISOString();
       this.buildReport.totalBuilds += 1;
@@ -261,15 +261,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     } catch (error) {
       const buildDuration = Date.now() - buildStartTime;
       this.buildReport.buildAttempts.push({
-        "timestamp": new Date().toISOString(),
-        "duration": buildDuration,
-        "success": false,
-        "type": 'full_build',
-        "error": error.message});
+        'timestamp': new Date().toISOString(),
+        'duration': buildDuration,
+        'success': false,
+        'type': 'full_build',
+        'error': error.message});
       this.buildReport.buildSuccess = false;
       this.buildReport.totalBuilds += 1;
       this.buildReport.failedBuilds += 1;
-      console.log(`❌ Build failed after ${buildDuration}"ms": `, error.message);
+      console.log(`❌ Build failed after ${buildDuration}'ms': `, error.message);
       // Trigger error fixer on build failure
       await this.triggerErrorFixer();
     } finally {
@@ -280,10 +280,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     console.log('🔍 Running type check...');
     try {
       execSync('npx tsc --noEmit', {
-        "encoding": 'utf8',
-        "cwd": this.projectRoot,
-        "stdio": 'pipe',
-        "timeout": 60000, // 1 minute timeout
+        'encoding': 'utf8',
+        'cwd': this.projectRoot,
+        'stdio': 'pipe',
+        'timeout': 60000, // 1 minute timeout
       });
 
       console.log('✅ Type check passed');
@@ -294,17 +294,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       console.log('✅ Type check passed');
     } catch (error) {
       console.log('❌ Type check failed');
-      throw new Error(`Type check "failed": ${error.message}`);
+      throw new Error(`Type check 'failed': ${error.message}`);
     }
   }
   async runLintCheck() {
     console.log('🧹 Running lint check...');
     try {
       execSync('npx eslint . --max-warnings 0', {
-        "encoding": 'utf8',
-        "cwd": this.projectRoot,
-        "stdio": 'pipe',
-        "timeout": 60000, // 1 minute timeout
+        'encoding': 'utf8',
+        'cwd': this.projectRoot,
+        'stdio': 'pipe',
+        'timeout': 60000, // 1 minute timeout
       });
 
       console.log('✅ Lint check passed');
@@ -315,7 +315,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       console.log('✅ Lint check passed');
     } catch (error) {
       console.log('❌ Lint check failed');
-      throw new Error(`Lint check "failed": ${error.message}`);
+      throw new Error(`Lint check 'failed': ${error.message}`);
     }
   }
   async runNextBuild() {
@@ -335,14 +335,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       throw new Error(`Next.js build failed: ${error.message}`);
 
       execSync('npx next build', {
-        "encoding": 'utf8',
-        "cwd": this.projectRoot,
-        "stdio": 'pipe',
-        "timeout": this.buildTimeout})
+        'encoding': 'utf8',
+        'cwd': this.projectRoot,
+        'stdio': 'pipe',
+        'timeout': this.buildTimeout})
       console.log('✅ Next.js build completed')
     } catch (error) {'
-      console.log('❌ Next.js build failed');"`
-      throw new Error(`Next.js build "failed": ${error.message}`)
+      console.log('❌ Next.js build failed');'`
+      throw new Error(`Next.js build 'failed': ${error.message}`)
       const automation = new ErrorFixerAutomation()
       await automation.run();'
       console.log('✅ Error fixer completed')
@@ -359,7 +359,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
     } catch (error) {
-      console.error('❌ Error fixer "failed": ', error);
+      console.error('❌ Error fixer 'failed': ', error);
     }
   }
   startPeriodicHealthChecks() {
@@ -423,7 +423,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     }
 
 
-      fs.mkdirSync(reportDir, { "recursive": true });
+      fs.mkdirSync(reportDir, { 'recursive': true });
     }
     // Add duration to report
     this.buildReport.duration = Date.now() - this.startTime;
@@ -437,9 +437,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         .readdirSync(reportDir)
         .filter(file => file.startsWith('build-watcher-report-'))
         .map(file => ({
-          "name": file,
-          "path": path.join(reportDir, file),
-          "time": fs.statSync(path.join(reportDir, file)).mtime.getTime()}))
+          'name': file,
+          'path': path.join(reportDir, file),
+          'time': fs.statSync(path.join(reportDir, file)).mtime.getTime()}))
         .sort((a, b) => b.time - a.time);
       // Remove old reports (keep only the latest 10)
       if (files.length > 10) {
@@ -457,7 +457,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
       console.error('Error cleaning up old reports:', error);
       console.error('Error cleaning up old reports:', error);
-      console.error('Error cleaning up old "reports": ', error);
+      console.error('Error cleaning up old 'reports': ', error);
     }
   }
   async shutdown() {

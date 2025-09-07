@@ -46,7 +46,7 @@ export function addEducationSection (
   start_y: number): number {
   // Check condition
 if (return start_y) {
-  $2}}
+  $2}
 import { jsPDF } from 'jspdf';
 import { Education } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';

@@ -62,7 +62,7 @@ export default function PublishProduct() {;
   // Redirect to login if not authenticated;
   if (!isAuthenticated) {;
     }
-    return <Navigate to="/login" state={{ "from": '/publish' }} replace />;'
+    return <Navigate to="/login" state={ "from": '/publish' } replace />;'
   }
 ;
   return (;
@@ -101,7 +101,7 @@ return (;
 if ( {) {
   $2
 }
-    return <Navigate to="/login" state={{ "from": '/publish' }} replace />;'
+    return <Navigate to="/login" state={ "from": '/publish' } replace />;'
   }
 return (;
     <div className="min - h-screen flex flex - col bg - zion-blue">;"
@@ -126,7 +126,7 @@ return (;
 }
 ;
     </div>);
-}}
+}
     </div>);
 }
     </div>);

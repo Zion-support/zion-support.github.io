@@ -63,7 +63,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
     }
     "default_values": {
       }
-      "content": ""}});"
+      "content": ""});"
 ;
   const handle_submit = async ("values": ReplyFormValues) => {
     }
@@ -197,7 +197,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
     }
     "default_values": {
       }
-      "content": ""}});"
+      "content": ""});"
 ;
   const handle_submit = async ("values": ReplyFormValues) => {
     }

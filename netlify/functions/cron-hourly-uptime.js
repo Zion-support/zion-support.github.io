@@ -73,7 +73,7 @@ const resp = await fetch(existingUrl;
     }
     return {"statusCode": 200,"body": JSON && JSON.stringify({ "ok": true, "count": results && results.length
 })"body": JSON && JSON.stringify({ "ok": true, "count": results && results.length })
-} catch (e) {return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }}
+} catch (e) {return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }
 }try {const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
 }
 const endpoints = [;

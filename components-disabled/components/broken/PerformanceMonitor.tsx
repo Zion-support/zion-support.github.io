@@ -20,22 +20,22 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 
 }) ;
 }, []);
-//Check for performance issues and add alerts const "newAlerts": string[] = [];
+//Check for performance issues and add alerts const 'newAlerts': string[] = [];
 if (newMetrics && newMetrics.loadTime > 3000) {;
   }
-  const formatTime = ("ms": number) : (string) => {;
+  const formatTime = ('ms': number) : (string) => {;
   }
   if (ms === 0) return 'N/A';'
 
 };
 
-//Get device icon const getDeviceIcon = ("deviceType": string) => {
+//Get device icon const getDeviceIcon = ('deviceType': string) => {
   }
   switch (deviceType) {
   }
   case 'mobile': return Smartphone;'
 case 'tablet': return Tablet;'
-"default": return Laptop;
+'default': return Laptop;
 
 const getPerformanceScore = () => {
   }
@@ -51,10 +51,10 @@ else score += 25
 
 //Don't render anything in production return (<AnimatePresence> {'
   }
-  isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {"
+  isVisible && (<motion.div </div> <div className='flex items-center space-x-2' > <button > <RefreshCw className= {'
   `w-4 h-4 $ {`  }
   isLoading ? 'animate-spin': '''
-}``} /> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {"
+}``} /> </button> <button > <BarChart3 className='w-4 h-4' /> </button> <button > <X className='w-4 h-4' /> </button> </div> </div> </div> </div> </div> </div> {'
   /* Expanded View */
 }<AnimatePresence> {
   }
@@ -69,7 +69,7 @@ else score += 25
 }</div> </div> </div> </motion.div>)
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
 
-// Helper functions const getScoreLabel = ("score": number) => {
+// Helper functions const getScoreLabel = ('score': number) => {
   }
   if (score >= 90) return 'Excellent';'
 if (score >= 70) return 'Good';'
@@ -94,12 +94,12 @@ if ( {) {
 
 });
 }, []);
-//Check for performance issues and add alerts const "new_alerts": string[] = [];
+//Check for performance issues and add alerts const 'new_alerts': string[] = [];
 // Check condition,
 if ( {) {
   $2
 }
-const format_time = ("ms": number) : (string) => {
+const format_time = ('ms': number) : (string) => {
   // Check condition
 }
 if (return 'N / A') {'
@@ -112,13 +112,13 @@ if (return `$ {) {`  $2
 Math.round (ms);
 }ms`;`;
 
-//Get device icon const getDeviceIcon = ("device_type": string) =>: any {
+//Get device icon const getDeviceIcon = ('device_type': string) =>: any {
   }
   switch (device_type) {
   }
   case 'mobile': return Smartphone;'
 case 'tablet': return Tablet;'
-"default": return Laptop;
+'default': return Laptop;
 ;
 
 const getPerformanceScore = () =>: any {
@@ -206,11 +206,11 @@ else score += 25;
 
 //Don't render anything in production return (<AnimatePresence> {'
   }
-  is_visible && (<motion.div </div> <div className="flex items - center space - x-2" > <button > <RefreshCw className= {"
+  is_visible && (<motion.div </div> <div className='flex items - center space - x-2' > <button > <RefreshCw className= {'
   `w - 4 h - 4 $ {`  }
   is_loading ? 'animate - spin': '';'
 }`;`
-} /> </button> <button > <BarChart3 className="w - 4 h - 4" /> </button> <button > <X className="w - 4 h - 4" /> </button> </div> </div> </div> </div> </div> </div> {"
+} /> </button> <button > <BarChart3 className='w - 4 h - 4' /> </button> <button > <X className='w - 4 h - 4' /> </button> </div> </div> </div> </div> </div> </div> {'
   /* Expanded View */;
 }<AnimatePresence> {
   }
@@ -224,7 +224,7 @@ else score += 25;
 }</div> </div> </div> </motion.div>);
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>);
 
-// Helper functions const getScoreLabel = ("score": number) =>: any {
+// Helper functions const getScoreLabel = ('score': number) =>: any {
   // Check condition
 }
 if (return 'Excellent') {'

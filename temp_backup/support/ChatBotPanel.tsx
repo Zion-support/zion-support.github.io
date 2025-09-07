@@ -33,7 +33,6 @@ id: `user-$ {;
 }`;
 content: text;
 setIsLoading (true);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const botMessage: Message = {;`
   id: `bot-$ {;
   Date.now () ;`
 }`;
@@ -56,7 +55,6 @@ headers: {";""
 body: JSON.stringify ({;
 }) ;
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }const data = await response.json ();
 return {;
   success: true;
@@ -93,7 +91,6 @@ timestamp: new Date () ;
 }]);
 //In a real implementation, this would trigger a live chat request ;
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleEmailSupport = () => {;
   setMessages ( (prev) => [ ...prev, {;`
   id: `user-$ {;'"
   Date.now () ;'"'"`

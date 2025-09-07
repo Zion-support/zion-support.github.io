@@ -17,7 +17,7 @@ import ProductCard from '@/components/ProductCard';
                     // though ProductCard will reset its state in .finally() regardless.;
                     throw error;
                   }
-                }}
+                }
                 buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth;
               />;
               {/* AI Score Badge */}
@@ -53,8 +53,8 @@ import ProductCard from '@/components/ProductCard';
       {(isFetching ||,  loading) && (;
         <motion&& motion.div
           className='mt-8''
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
         >
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>'
             {Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />`
@@ -67,8 +67,8 @@ import ProductCard from '@/components/ProductCard';
       {(isFetching || loading) && (;
         <motion.div;
           className="mt-8";
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
         >;
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">;
             {Array.from({ length: 4 }).map((_, i) => (;
@@ -87,8 +87,8 @@ import ProductCard from '@/components/ProductCard';
       {!hasMore && products.length > 0 && (;
         <motion.div;
           className="text-center mt-12 py-8 border-t";
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
         >;
           <div className="text-muted-foreground text-lg mb-2">;
             🎉 You've explored all available products!;
@@ -145,7 +145,7 @@ import ProductCard from '@/components/ProductCard';
                     // though ProductCard will reset its state in .finally () regardless.;
                     throw error;
                   }
-                }}
+                }
                 buy_disabled={false} // Still false, ProductCard handles its own disabled state based on auth;
               />;
               {/* AI Score Badge */}
@@ -167,8 +167,8 @@ import ProductCard from '@/components/ProductCard';
       {(is_fetching ||,  loading) && (
         <motion.div;
           className='mt - 8';
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
         >;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 6'>;
             {Array.from ({ length: 4 }).map ((_, i) => (              <SkeletonCard key={`loading-${i}`} />))}`
@@ -178,8 +178,8 @@ import ProductCard from '@/components/ProductCard';
       {!has_more && products.length > 0 && (
         <motion.div;
           className='text - center mt - 12 py - 8 border - t';
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
         >;
           <div className='text - muted - foreground text - lg mb - 2'>;
             🎉 You've explored all available products!;
@@ -193,11 +193,11 @@ import ProductCard from '@/components/ProductCard';
         {showScrollTop && (
           <motion.button;
             on_click={scrollToTop}
-            className='fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50'            initial={{ opacity: 0, scale: 0 }}'
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            while_hover={{ scale: 1.1 }}
-            while_tap={{ scale: 0.9 }}
+            className='fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50'            initial={ opacity: 0, scale: 0 }'
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0 }
+            while_hover={ scale: 1.1 }
+            while_tap={ scale: 0.9 }
           >;
             <ArrowUp className='h - 5 w - 5 text - primary - foreground' />;
           </motion.button>)}
@@ -220,10 +220,10 @@ case 'price-high': return (b && b.price || 0) - (a && a.price || 0);';
 case 'rating': return (b && b.rating || 0) - (a && a.rating || 0);';
 case 'popular': return (b && b.reviewCount || 0) - (a && a.reviewCount || 0);';
 case 'ai-score': return (b && b.aiScore || 0) - (a && a.aiScore || 0);';
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0 }
+            whileHover={ scale: 1.1 }
+            whileTap={ scale: 0.9 }
           >
             <ArrowUp className='h-5 w-5 text-primary-foreground' />
           </motion.button>
@@ -743,7 +743,7 @@ const Marketplace = () =>: any {
           <motion.button;
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
-            initial={{ opacity: 0, scale: 0 }}
+            initial={ opacity: 0, scale: 0 }
   i ;
 }` ;
 }/>) ) ;
@@ -797,10 +797,10 @@ import Link from "next/link";
             </div>;
       )}
       {/* Scroll to Top Button */}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0 }
+            whileHover={ scale: 1.1 }
+            whileTap={ scale: 0.9 }
 ;
 }
 }
@@ -828,7 +828,7 @@ import Link from "next/link";
   );
 }
 ;
-}}}}}}}}}}}
+}}}}}}
 ;
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533

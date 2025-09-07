@@ -13,7 +13,7 @@ import { Button  } from '@/components/ui/button';'
 const mockScreenshots = [;
   { "id": 1, "alt": "Dashboard screen", "src": "/placeholder && placeholder.svg" },{ "id": 2, "alt": "Talent matching screen", "src": "/placeholder && placeholder.svg" },{ "id": 3, "alt": "Resume builder screen", "src": "/placeholder && placeholder.svg" },{ "id": 4, "alt": "Messaging screen", "src": "/placeholder && placeholder.svg" },{ "id": 5, "alt": "Profile screen", "src": "/placeholder && placeholder.svg" }],export const "AppScreenshots": React.FC = () => {const scrollContainerRef  = useRef<HTMLDivElement>(null)const scroll = ("direction": "left" | "right",) => {if (scrollContainerRef && scrollContainerRef.current) {const scrollAmount = 300,scrollContainerRef && scrollContainerRef.current.scrollBy({"left": direction === "left" ? -scrollAmount : scrollAmount,"behavior": "smooth"})}"
   }
-    }},return (<section className="py-16 bg-zion-blue-dark">;"
+    },return (<section className="py-16 bg-zion-blue-dark">;"
       <div className="container mx-auto px-4">;"
         <div className="text-center mb-12">;"
           <h2 className="text-3xl "md":text-4xl font-bold mb-4">App Screenshots</h2>;"
@@ -43,7 +43,7 @@ const mockScreenshots = [;
           </Button>;<div;
             ref = {scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";"
-            style={{ "scrollbarWidth": "none", "msOverflowStyle": "none" }}>;"
+            style={ "scrollbarWidth": "none", "msOverflowStyle": "none" }>;"
             {mockScreenshots && mockScreenshots.map((screenshot,) => (<div;
                 }
                 key = {screenshot && screenshot.id}
@@ -56,7 +56,7 @@ const mockScreenshots = [;
             ))}</div>;<div;
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";"
-            style={{ "scrollbarWidth": "none", "msOverflowStyle": "none" }}"
+            style={ "scrollbarWidth": "none", "msOverflowStyle": "none" }"
           >;
             {mockScreenshots.map((screenshot) => (<div;
                 }
@@ -106,7 +106,7 @@ const mockScreenshots = [;
         </div>;
       </div>;
     </section>;
-  )}'"}}}"
+  )}'"}}"
 import React, { useRef } from './react';'
 import { Button   } from '@/components / ui / button';'
 // These would be replaced with actual screenshots;
@@ -138,7 +138,7 @@ if ( {) {$2;
           <div;
             ref = {scrollContainerRef }
             className="flex overflow - x-auto gap - 4 py - 8 px - 4 scrollbar - hide snap - x snap - mandatory";"
-            style={{ "scrollbar_width": "none", "msOverflowStyle": "none" }}"
+            style={ "scrollbar_width": "none", "msOverflowStyle": "none" }"
           >;
             {mock_screenshots.map ((screenshot, ) => (<div;
                 }
@@ -164,5 +164,5 @@ if ( {) {$2;
         </div>;
       </div>;
     </section>)}
-'"}}))// These would be replaced with actual screenshots;"
+'"}))// These would be replaced with actual screenshots;"
   )}'";

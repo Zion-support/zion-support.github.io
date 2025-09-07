@@ -248,7 +248,7 @@ export function TalentCard(): any ({;
               onClick={(e) => {
                 e.stopPropagation($2);
                 handleViewProfile()
-              }}
+              }
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
               View <ArrowRight className="ml-1 h-4 w-4" />

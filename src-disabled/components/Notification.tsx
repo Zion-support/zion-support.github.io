@@ -37,16 +37,16 @@ const Notification: React.FC<NotificationProps> = ({,
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, x: 300, scale: 0.8 }}
-        animate={{ opacity: 1, x: 0, scale: 1 }}
-        exit={{ opacity: 0, x: 300, scale: 0.8 }}
+        initial={ opacity: 0, x: 300, scale: 0.8 }
+        animate={ opacity: 1, x: 0, scale: 1 }
+        exit={ opacity: 0, x: 300, scale: 0.8 }
 
           </div>
           <button
             onClick={() => onClose(id)}
-            className="ml-3 flex-shrink-0 hover:opacity-75 transition-opacity""
+            className='ml-3 flex-shrink-0 hover:opacity-75 transition-opacity''
           >
-            <X className="w-4 h-4" />"
+            <X className='w-4 h-4' />'
           </button>
         </div>
       </motion.div>

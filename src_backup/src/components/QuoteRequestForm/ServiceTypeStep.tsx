@@ -78,10 +78,10 @@ import { useEffect, useState } from "react",import { QuoteFormData, ListingItem,
             className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "equipment";"
                 ? "bg-zion-purple/20 border-zion-purple";"
                 : "bg-zion-blue-light/20 border-zion-blue-light "hover":border-zion-purple/50";"
-            }`}`            onClick={() => handleTypeSelect("equipment")}})}const listing_schema = z.object ({"id": z.string (),"title": z.string (),"category": z.string (),"image": z.string ().optional ()}),const max_retries = 3;"
+            }`}`            onClick={() => handleTypeSelect("equipment")})}const listing_schema = z.object ({"id": z.string (),"title": z.string (),"category": z.string (),"image": z.string ().optional ()}),const max_retries = 3;"
   const source_listings = listings;
 }
-  )}},fetchServices()}, [formData.serviceType, debouncedQuery, isMounted]),const handleTypeSelect = ("type": ServiceType) => {updateFormData({ "serviceType": type })},const handleItemSelect = ("item": ListingItem) => {updateFormData({"specificItem": item,"serviceCategory": item.category,"serviceType": item.category.toLowerCase() as ServiceType;
+  )},fetchServices()}, [formData.serviceType, debouncedQuery, isMounted]),const handleTypeSelect = ("type": ServiceType) => {updateFormData({ "serviceType": type })},const handleItemSelect = ("item": ListingItem) => {updateFormData({"specificItem": item,"serviceCategory": item.category,"serviceType": item.category.toLowerCase() as ServiceType;
     })},const sourceListings = listings,const filteredListings = sourceListings.filter((item) => {// Filter by category only when a service type has been selected;
     }
     if (formData.serviceType !== "") {const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),if (!categoryMatch) return false;"

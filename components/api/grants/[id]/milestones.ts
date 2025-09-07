@@ -8,15 +8,15 @@ function grantPath() {
 
   return path.join(GRANTS_DIR, `${id}.json`);`
 
-function readGrant("id": string): GrantApplication | null {
+function readGrant('id': string): GrantApplication | null {
   }
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { "recursive": true
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { 'recursive': true
 });
 return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;'
 
 function writeGrant() {
   }
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { "recursive": true
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { 'recursive': true
 });
   fs.writeFileSync(
     grantPath(record.id)
@@ -26,7 +26,6 @@ function writeGrant() {
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |'';
   const token = header.replace('Bearer ', '');  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 
 function writeGrant(record: GrantApplication) {
@@ -51,7 +50,7 @@ export default function handler() {
 
   if (!isAuthorized(req)) {
     }
-    res.status(401).json({ "error": 'Unauthorized','
+    res.status(401).json({ 'error': 'Unauthorized','
 });
 return;
 function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
@@ -75,8 +74,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-const { id } = req.query as { "id": string }
-  if (!id) {res.status(400).json({ "error": 'Missing id','
+const { id } = req.query as { 'id': string }
+  if (!id) {res.status(400).json({ 'error': 'Missing id','
 })return;
   }
 
@@ -84,16 +83,16 @@ const { id } = req.query as { "id": string }
    ;
   }
   const existing = readGrant(id);
-    if (!existing) return res.status(404).json({ "error": 'Not found','
+    if (!existing) return res.status(404).json({ 'error': 'Not found','
 });
-return res.status(200).json({ "milestones": existing.milestones || [],;
+return res.status(200).json({ 'milestones': existing.milestones || [],;
 });
   }
   if (req.method = == 'POST') {'
    ;
   }
   const existing = readGrant(id);
-    if (!existing) return res.status(404).json({ "error": 'Not found','
+    if (!existing) return res.status(404).json({ 'error': 'Not found','
 });
 
   if (req.method === 'GET') {
@@ -116,19 +115,16 @@ function is_authorized() {
     token &&;
     process.env.ZION_ADMIN_TOKEN &&;
     token === process.env.ZION_ADMIN_TOKEN);
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default /**
  * handler - Function description
  */
 function handler() {
   if () {) {
   $2
-<<<<<<< HEAD
 }
     res.status (401).json ({ error: 'Unauthorized' });
     return;  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
@@ -138,7 +134,6 @@ export default /**
  */
 function handler() {
   if () {) {
-=======
 }'
     res.status (401).json ({ error: 'Unauthorized' })
     return;    return
@@ -149,13 +144,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const { id } = req.query as { id: string }
   // Check condition
   if($2) {}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   $2
 }
     res.status (401).json ({ error: 'Unauthorized' });
     return;    return;
   }
-<<<<<<< HEAD
   if (req.method === 'GET') {const existing = readGrant(id)if (!existing) return res.status(404).json({ error: 'Not found' })return res.status(200).json({ milestones: existing.milestones || [] })}
   if (req.method === 'POST') {const existing = readGrant(id)if (!existing) return res.status(404).json({ error: 'Not found' })const payload = req.body as MilestonesUpdatePayload;
     existing.milestones = payload.milestones |[];
@@ -201,7 +194,6 @@ if ( {) {$2;
   res.set_header ('Allow', 'GET, POST')res.status (405).end ('Method Not Allowed')return res.status (200).json ({ record: existing })}
   res.set_header ('AllowGET, POST')res.status (405).end ('Method Not Allowed')res.setHeader('Allow', 'GET, POST')}res.status(405).end('Method Not Allowed')res.status(405).end('Method Not Allowed')}
   }
-=======
   if (req.method === 'GET') {
     const existing = readGrant(id);
     if (!existing) return res.status(404).json({ error: 'Not found' });
@@ -214,16 +206,16 @@ if ( {) {$2;
     existing.milestones = payload.milestones |[];
     existing.updatedAt = new Date().toISOString();
     writeGrant(existing);
-return res.status(200).json({ "record": existing,;
+return res.status(200).json({ 'record': existing,;
 });
   }
 
-const { id } = req.query as { "id": string,;
+const { id } = req.query as { 'id': string,;
 }
   // Check condition;
 if ( {) {$2;
 }
-    res.status (400).json ({ "error": 'Missing id','
+    res.status (400).json ({ 'error': 'Missing id','
 })return;  }    return;
   }
   // Check condition;
@@ -231,17 +223,17 @@ if ( {) {$2;
 }
 
 const existing = read_grant (id)if ;
-return res.status (404).json ({ "error": 'Not found',;'
+return res.status (404).json ({ 'error': 'Not found',;'
 })) {$2;
 }
-return res.status (200).json ({ "milestones": existing.milestones || [] })}    return res.status (200).json ({ "milestones": existing.milestones || [] },;
+return res.status (200).json ({ 'milestones': existing.milestones || [] })}    return res.status (200).json ({ 'milestones': existing.milestones || [] },;
 }
   // Check condition;
 if ( {) {$2;
 }
 
 const existing = read_grant (id)if ;
-return res.status (404).json ({ "error": 'Not found',;'
+return res.status (404).json ({ 'error': 'Not found',;'
 })) {$2;
 }
 
@@ -250,11 +242,11 @@ const payload = req.body as MilestonesUpdatePayload;
 
     existing.updated_at = new Date ().toISOString ();
     write_grant (existing);
-return res.status (200).json ({ "record": existing,;
+return res.status (200).json ({ 'record': existing,;
 });
   }
   res.set_header ('Allow', 'GET, POST');'
-  res.status (405).end ('Method Not Allowed');    return res.status (200).json ({ "record": existing,'
+  res.status (405).end ('Method Not Allowed');    return res.status (200).json ({ 'record': existing,'
 });
   }
   res.set_header ('AllowGET, POST');'
@@ -264,7 +256,6 @@ return res.status (200).json ({ "record": existing,;
   res.status(405).end('Method Not Allowed');'
   res.status(405).end('Method Not Allowed')'
 }
-=======
   if (!isAuthorized(req)) {
     res.status(401).json({ error: 'Unauthorized' });
 return;
@@ -282,12 +273,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   if (req.method === 'POST') {
     const existing = readGrant(id);
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   }'
   if (req.method === 'POST') {};
     const existing = readGrant(id);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (!existing) return res.status(404).json({ error: 'Not found' });
     const payload = req.body as MilestonesUpdatePayload;
     existing.milestones = payload.milestones |[];
@@ -358,7 +347,6 @@ if ( {) {}
   res.setHeader('Allow', 'GET, POST');
   }
 
-<<<<<<< HEAD
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed')
 }

@@ -128,7 +128,6 @@ export function Step() { return null; }
 
 
             {/* Step number would go here */}
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
           </span>;
 
           </span>
@@ -195,7 +194,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {}
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
       className;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -217,7 +215,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
-            style={{
+            style={
 
 
 interface StepsProps {;
@@ -293,10 +291,9 @@ export function Steps() {const childrenArray  = React.Children.toArray(children)
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
           <div;"
             className="h-full bg-zion-purple transition-all";
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
-            style={{;
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
-            style={{interface StepsProps  {currentStep: number,className?: string;
+            style={;
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}
+            style={interface StepsProps  {currentStep: number,className?: string;
   children: React && React.ReactNode;
 }export function Steps(): any ({ currentStep, className, children }: StepsProps) {const childrenArray  = React && React.Children.toArray(children)return (}/> </div> </div> </div>)}"};
 export function Steps() {const childrenArray = React.Children.toArray(children),return (<div className={cn("w-full", className)}>;
@@ -309,7 +306,7 @@ export function Steps() {const childrenArray = React.Children.toArray(children),
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
           <div;
             className="h-full bg-zion-purple transition-all";
-            style={{width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}/>;
+            style={width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}/>;
         </div>;
       </div>;
     </div>;
@@ -408,12 +405,11 @@ if (status = "current") {}
         <div className="ml-[18px] w-[calc (100%-36px)] h - 0.5 bg - zion - blue - light">;
           <div;"
             className="h - full bg - zion - purple transition - all";
-            style={{}`
-              width: `${(current_step / (children_array.length - 1)) * 100}%`}}
+            style={}`
+              width: `${(current_step / (children_array.length - 1)) * 100}%`}
           />;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
     </div>);
 }/> </div> </div> </div>);"
 }"}

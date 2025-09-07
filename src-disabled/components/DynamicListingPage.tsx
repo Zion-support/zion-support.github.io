@@ -423,7 +423,7 @@ pr-12325
             id: listing.id,
             title: listing.title,
             category: listing.category,
-            image: listing.images?.[0]}},
+            image: listing.images?.[0]},
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
@@ -492,7 +492,7 @@ pr-12325
             id: listing.id,;
             title: listing.title,;
             category: listing.category,;
-            image: listing.images?.[0]}},;
+            image: listing.images?.[0]},;
         if (typeof window !== 'undefined') {;
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData));
         }
@@ -884,7 +884,7 @@ pr-12325
                       size='sm''
                       onClick={() => {;
                         logInfo('Rating selected:', { data: rating });
-                        setSelectedRating(rating);                      }}
+                        setSelectedRating(rating);                      }
                       aria-pressed = {selectedRating === rating,}
                       className={`{;`
                         selectedRating === rating;
@@ -913,7 +913,7 @@ pr-12325
                       onClick={() => {
                         logInfo('Rating selected:', { data: rating }),'
                         setSelectedRating(rating)
-                      }}
+                      }
                       aria-pressed={selectedRating === rating}
                       className={`{`
                         selectedRating === rating
@@ -958,7 +958,7 @@ pr-12325
                       onClick={() => {
                         logInfo('Rating selected:', { data: rating }),
                         setSelectedRating(rating)
-                      }}
+                      }
                       aria-pressed={selectedRating === rating}
                       className={`{
                         selectedRating === rating
@@ -1007,7 +1007,7 @@ pr-12325
                   setSelectedBrand("all"),
                   setSpecQuery(""),
                   setSelectedAvailability("all")
-                }}
+                }
               >
                 Clear All
               </Button>
@@ -1027,7 +1027,7 @@ pr-12325
                   setSelectedBrand('all');
                   setSpecQuery('');
                   setSelectedAvailability('all');
-                }}
+                }
     <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
       <div className='container mx - auto'>;
         <div className='text - center mb - 12'>;
@@ -1235,7 +1235,7 @@ pr-12325
                       size='sm';
                       on_click={() => {
                         log_info ('Rating selected:', { data: rating });
-                        setSelectedRating (rating) }}
+                        setSelectedRating (rating) }
                       aria - pressed = {selected_rating === rating, }
                       className={`{`
                         selected_rating === rating;
@@ -1267,7 +1267,7 @@ pr-12325
                   setSelectedBrand ('all');
                   setSpecQuery ('');
                   setSelectedAvailability ('all');
-                }}
+                }
           <div className="lg:col-span-3">"
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">"
               <div className="flex flex-col md:flex-row gap-4">"
@@ -1307,7 +1307,7 @@ pr-12325
                   setSelectedBrand("all"),;
                   setSpecQuery(""),;
                   setSelectedAvailability("all");
-                }}
+                }
               >;
                 Clear All;
               </Button>;
@@ -1325,7 +1325,7 @@ pr-12325
                     onChange={(e: React.ChangeEvent<HTMLInputElement />) => {;,
                       logInfo('Search query:', { data: e.target.value }),;
                       setSearchQuery(e.target.value);
-                    }}
+                    }
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white""
                   />
                 </div>
@@ -1351,7 +1351,7 @@ pr-12325
                   </Select>
                     onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => {;,
                       logInfo('Search query:', { data: e && e.target.value });
-                      setSearchQuery(e && e.target.value);                    }}
+                      setSearchQuery(e && e.target.value);                    }
                     className='pl-10 bg-zion-blue border border-zion-blue-light text-white';
                   />;
                 </div>;
@@ -1476,7 +1476,7 @@ pr-12325
                     value={search_query}
                     on_change={(e: React.ChangeEvent < HTMLInputElement />) => {,
                       log_info ('Search query:', { data: e.target.value });
-                      setSearchQuery (e.target.value) }}
+                      setSearchQuery (e.target.value) }
                     className='pl - 10 bg - zion - blue border border - zion - blue - light text - white';
                   />;
                 </div>;
@@ -1631,7 +1631,7 @@ pr-12325
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {;
                       logInfo('Search query:', { data: e.target.value }),;
                       setSearchQuery(e.target.value);
-                    }}
+                    }
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                   />
                 </div>
@@ -1792,7 +1792,7 @@ pr-12325
                     setSelectedBrand("all"),"
                     setSpecQuery(""),"
                     setSelectedAvailability("all")"
-                  }}
+                  }
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10""
               </div>
             ) : (
@@ -1813,7 +1813,7 @@ pr-12325
                     setSelectedBrand("all"),
                     setSpecQuery(""),
                     setSelectedAvailability("all")
-                  }}
+                  }
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
 
@@ -1865,7 +1865,7 @@ export function DynamicListingPage({
   categoryFilters;
   initialPrice;
                     setSelectedAvailability("all")
-                  }}
+                  }
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
                 >
@@ -1879,7 +1879,7 @@ export function DynamicListingPage({
                     setSelectedRating(null);
                     setSelectedBrand('all');
                     setSpecQuery('');
-                    setSelectedAvailability('all');                  }}'
+                    setSelectedAvailability('all');                  }'
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
               </div>;
             ) : (;
@@ -1900,7 +1900,7 @@ export function DynamicListingPage({
                     setSelectedBrand("all");
                     setSpecQuery("");
                     setSelectedAvailability("all");
-                  }}
+                  }
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
                 >;
                   Clear All;
@@ -2057,7 +2057,7 @@ pr-12325
                     setSelectedRating (null);
                     setSelectedBrand ('all');
                     setSpecQuery ('');
-                    setSelectedAvailability ('all') }}'
+                    setSelectedAvailability ('all') }'
                   className='border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
                 >;
                   Clear All;

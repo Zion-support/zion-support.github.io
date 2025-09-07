@@ -189,23 +189,23 @@ import { Link   } from 'react-router-dom';{"title": 'Revolutionary 2030 Services
         <div  className="container - responsive py-16">;"
           {/* Stats Section */}
           <motion.div;
-            className="grid grid - cols - 2 "md":grid - cols - 4 gap-8 mb-16"            initial={{ "opacity": 0, "y": 20 }}"
+            className="grid grid - cols - 2 "md":grid - cols - 4 gap-8 mb-16"            initial={ "opacity": 0, "y": 20 }"
         <div  className="container-responsive py-16">;"
           {/* Stats Section */}
           <motion.div;
-            className="grid grid - cols - 2 "md":grid - cols-4 gap-8 mb-16"            initial={{ "opacity": 0, "y": 20 }}"
-            whileInView={{ "opacity": 1, "y": 0 }}
-            viewport={{ "once": true }}
-            transition={{ "duration": 0.6, "staggerChildren": 0.1 }}
+            className="grid grid - cols - 2 "md":grid - cols-4 gap-8 mb-16"            initial={ "opacity": 0, "y": 20 }"
+            whileInView={ "opacity": 1, "y": 0 }
+            viewport={ "once": true }
+            transition={ "duration": 0.6, "staggerChildren": 0.1 }
           >;
             {stats.map((stat, index) => (<motion.div;
                 }
                 key={stat.label}";"
                 className="text-center";"
-                initial={{ "opacity": 0, "y": 20 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                viewport={{ "once": true }}
-                transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                whileInView={ "opacity": 1, "y": 0 }
+                viewport={ "once": true }
+                transition={ "duration": 0.6, "delay": index * 0.1 }
               >";"
                 <div className="flex justify-center mb-3">";"
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center border border-cyan-400/30">";"
@@ -224,9 +224,9 @@ import { Link   } from 'react-router-dom';{"title": 'Revolutionary 2030 Services
           <div  className="grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 "xl":grid - cols-6 gap-8 mb-12">;"
             {/* Company Info */}
             <div  className=""lg":col-span -2">;"
-              <motion.div                initial={{ "opacity": 0, "y": 20 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.6 }}";"
+              <motion.div                initial={ "opacity": 0, "y": 20 }
+                whileInView={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.6 }";"
                 className="flex items-center space-x-3 mb-6";"
               >";"
                 <div className="relative">";"
@@ -407,4 +407,4 @@ import { Link   } from 'react-router-dom';{"title": 'Revolutionary 2030 Services
   ];
 }
 import React from 'react'; import { Link  } from 'react-router-dom';'
-import React from 'react'; import { Link } from 'react-router-dom'; <<<<<<<HEADexport function EnhancedFuturisticFooter() { const year = new Date().getFullYear()return ('; <footer style="{{{ "borderTop": '1px solid #e5e7eb'; "background": '#fafafa'; "marginTop": 48}}"}>'; <divstyle="{{{ "display": 'grid'; "gridTemplateColumns": 'repeat(3; "gap": 16; "padding": '24px 16px'; "maxWidth": 1100; "margin": '0 auto'}}"}> <section>'; <h2 style="{{{ "fontSize": 14; "color": '#6b7280'; "margin": '0 0 8px'}}"}>Company</h2> <navaria-label="Company">'; <Link to="/about" style="{{{ "display": 'block'; "color": '#374151'}}"}>About</Link>'; <Link to="/careers" style="{{{ "display": 'block'; "color": '#374151'}}"}>Careers</Link>'; <Link to="/contact" style="{{{ "display": 'block'; "color": '#374151'}}"}>Contact</Link> </nav> </section> <section>'; <h2 style="{{{ "fontSize": 14; "color": '#6b7280'; "margin": '0 0 8px'}}"}>Services</h2> <navaria-label="Services">'; <Link to="/services" style="{{{ "display": 'block'; "color": '#374151'}}"}>All Services</Link>'; <Link to="/services/ai-services" style="{{{ "display": 'block'; "color": '#374151'}}"}>AI Services</Link>'; <Link to="/services/it-services" style="{{{ "display": 'block'; "color": '#374151'}}"}>IT Services</Link>'; <Link to="/services/micro-saas" style="{{{ "display": 'block'; "color": '#374151'}}"}>Micro SaaS</Link> </nav> </section> <section>'; <h2 style="{{{ "fontSize": 14; "color": '#6b7280'; "margin": '0 0 8px'}}"}>Solutions</h2> <navaria-label="Solutions">'; <Link to="/solutions" style="{{{ "display": 'block'; "color": '#374151'}}"}>Overview</Link>'; <Link to="/solutions/enterprise" style="{{{ "display": 'block'; "color": '#374151'}}"}>Enterprise</Link> </nav> </section> </div>'; <div style="{{{ "padding": '12px 16px'; "borderTop": '1px solid #e5e7eb'; "color": '#6b7280'; "textAlign": 'center'}}"}>© {year} Zion Tech Group</div> </footer> )} export default EnhancedFuturisticFooter;  const footerSections = [;
+import React from 'react'; import { Link } from 'react-router-dom'; <<<<<<<HEADexport function EnhancedFuturisticFooter() { const year = new Date().getFullYear()return ('; <footer style="{{ "borderTop": '1px solid #e5e7eb'; "background": '#fafafa'; "marginTop": 48}"}>'; <divstyle="{{ "display": 'grid'; "gridTemplateColumns": 'repeat(3; "gap": 16; "padding": '24px 16px'; "maxWidth": 1100; "margin": '0 auto'}"}> <section>'; <h2 style="{{ "fontSize": 14; "color": '#6b7280'; "margin": '0 0 8px'}"}>Company</h2> <navaria-label="Company">'; <Link to="/about" style="{{ "display": 'block'; "color": '#374151'}"}>About</Link>'; <Link to="/careers" style="{{ "display": 'block'; "color": '#374151'}"}>Careers</Link>'; <Link to="/contact" style="{{ "display": 'block'; "color": '#374151'}"}>Contact</Link> </nav> </section> <section>'; <h2 style="{{ "fontSize": 14; "color": '#6b7280'; "margin": '0 0 8px'}"}>Services</h2> <navaria-label="Services">'; <Link to="/services" style="{{ "display": 'block'; "color": '#374151'}"}>All Services</Link>'; <Link to="/services/ai-services" style="{{ "display": 'block'; "color": '#374151'}"}>AI Services</Link>'; <Link to="/services/it-services" style="{{ "display": 'block'; "color": '#374151'}"}>IT Services</Link>'; <Link to="/services/micro-saas" style="{{ "display": 'block'; "color": '#374151'}"}>Micro SaaS</Link> </nav> </section> <section>'; <h2 style="{{ "fontSize": 14; "color": '#6b7280'; "margin": '0 0 8px'}"}>Solutions</h2> <navaria-label="Solutions">'; <Link to="/solutions" style="{{ "display": 'block'; "color": '#374151'}"}>Overview</Link>'; <Link to="/solutions/enterprise" style="{{ "display": 'block'; "color": '#374151'}"}>Enterprise</Link> </nav> </section> </div>'; <div style="{{ "padding": '12px 16px'; "borderTop": '1px solid #e5e7eb'; "color": '#6b7280'; "textAlign": 'center'}"}>© {year} Zion Tech Group</div> </footer> )} export default EnhancedFuturisticFooter;  const footerSections = [;

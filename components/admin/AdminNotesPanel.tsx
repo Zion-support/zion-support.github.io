@@ -1,42 +1,42 @@
 ;
 
-export type AdminNotesPanelProps = {"targetType": string; // e && e.g., 'user' | 'listing';'
+export type AdminNotesPanelProps = {'targetType': string; // e && e.g., 'user' | 'listing';'
   }
-  "targetId": string; // unique identifier for the target;
+  'targetId': string; // unique identifier for the target;
 }
 
-type Note = {"target_type": string; // e.g., 'user' | 'listing';'
+type Note = {'target_type': string; // e.g., 'user' | 'listing';'
   }
-  "target_id": string; // unique identifier for the target;
+  'target_id': string; // unique identifier for the target;
 import React, { useEffect, useMemo, useState } from 'react';'
 
 export type AdminNotesPanelProps = any;
-  "targetId": string; // unique identifier for the target
+  'targetId': string; // unique identifier for the target
 }
 ;
 type Note = {
   }
-  "id": string;
+  'id': string;
 
-  "target_type": string;
-  "target_id": string;
-  "text": string;targetType,targetId}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)}
+  'target_type': string;
+  'target_id': string;
+  'text': string;targetType,targetId}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)}
 
-type Note = {"id": string;
+type Note = {'id': string;
   }
-  "targetType": string;
-  "targetId": string;
-  "text": string;
+  'targetType': string;
+  'targetId': string;
+  'text': string;
 
 
 
-  "authorId": string;
-  "createdAt": number;
-}}
+  'authorId': string;
+  'createdAt': number;
+}
 
-export default function AdminNotesPanel() {"authorId": string;
+export default function AdminNotesPanel() {'authorId': string;
   }
-  "createdAt": number;
+  'createdAt': number;
 }
 
 export default function AdminNotesPanel() {
@@ -63,11 +63,11 @@ const res = await fetch(;
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,`
         {
           }
-          "headers": { 'X-Admin': isAdmin ? 'true' : 'false' }'
+          'headers': { 'X-Admin': isAdmin ? 'true' : 'false' }'
 
        
 }
-        "body": JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {"method": 'POST',"headers": {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId},"body": JSON.stringify({ targetType, targetId, text })})if (!res.ok) {alert('Failed to add note';'
+        'body': JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {'method': 'POST','headers': {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId},'body': JSON.stringify({ targetType, targetId, text })})if (!res.ok) {alert('Failed to add note';'
   }
   return;
       }
@@ -82,18 +82,15 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     try {
       setLoading($2);
       const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
-        headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}),
+        headers: { 'X-Admin': isAdmin ? 'true' : 'false' }),
       if (!res.ok) {
         setNotes($2);
         return
       }
       const data = await res.json($2);
       setNotes(data.notes || [])
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 export default function AdminNotesPanel() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       );
       if (!res && res.ok) {;
@@ -104,16 +101,13 @@ export default function AdminNotesPanel() { return null; }
         method: 'POST','
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
-<<<<<<< HEAD
       const data = await res.json();
       setNotes(data.notes |[]);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     } finally {
       }
       setLoading(false);
     }
   }
-<<<<<<< HEAD
 
 
         method: 'POST',
@@ -138,13 +132,13 @@ if (isAdmin) fetchNotes();
 
         }
 
-        "method": 'POST','
-"headers": {
+        'method': 'POST','
+'headers': {
           'Content-Type': 'application/json','
           'X-Admin': isAdmin ? 'true' : 'false','
           'X-Admin-User': adminId,'
         },
-        "body": JSON.stringify({ targetType, targetId, text })
+        'body': JSON.stringify({ targetType, targetId, text })
       });
       if (!res.ok) {
         }
@@ -154,30 +148,24 @@ if (isAdmin) fetchNotes();
       setText('');'
 
 
-<<<<<<< HEAD
-=======
       await fetchNotes();
     } finally {
       }
       setAdding(false);
-=======
   target_id: string; // unique identifier for the target;
 import React, { useEffect, useMemo, useState } from 'react';
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       await fetchNotes()
     } finally {
       }
       setAdding(false)
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
   }
 
     }
   }
 
-<<<<<<< HEAD
   if (!isAdmin) {
 }
 return (;
@@ -215,13 +203,13 @@ id='isAdminToggle''
           placeholder='Write a private note (abuse, spam, special support)';'
           value={text}</div>;
     </div>;
-  ))}}
+  ))}
   )}
   useEffect (() => {if (fetch_notes ()) {$2;
 }    if (fetch_notes ()) {$2;
 }
 }
-    set_adding (true)try {const res = await fetch ('/api / admin / notes', {"method": 'POST',"headers": {'Content - Type': 'application / json','X - Admin': is_admin ? 'true' : 'false','X - Admin - User': admin_id},"body": JSON.stringify ({ target_type, target_id, text })})// Check condition;'
+    set_adding (true)try {const res = await fetch ('/api / admin / notes', {'method': 'POST','headers': {'Content - Type': 'application / json','X - Admin': is_admin ? 'true' : 'false','X - Admin - User': admin_id},'body': JSON.stringify ({ target_type, target_id, text })})// Check condition;'
 if ( {) {$2;
 }
         alert ('Failed to add note')return;'
@@ -280,7 +268,7 @@ if ( {) {$2;
         <button;
           disabled={!text.trim () || adding}
           on_click={add_note}
-          className='px - 3 py - 2 rounded - md bg - gray - 900 text - white "disabled": opacity - 50'>'
+          className='px - 3 py - 2 rounded - md bg - gray - 900 text - white 'disabled': opacity - 50'>'
 
           {adding ? 'Adding…' : 'Add Note,'
 }
@@ -294,9 +282,9 @@ if ( {) {$2;
             {notes.map (number => (<li key={n.id} className='rounded border p - 2 text - sm'>;'
                 <div className='opacity - 60 text - xs mb - 1'>;'
                   {new Date (n.created_at).toLocaleString ()} • {n.author_id}
-                </div>                <div>{n.text}</div>          <ul className="space - y-2">;"
-            {notes.map ((n) => (<li key={n.id} className="rounded border p - 2 text - sm">;"
-                <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;"
+                </div>                <div>{n.text}</div>          <ul className='space - y-2'>;'
+            {notes.map ((n) => (<li key={n.id} className='rounded border p - 2 text - sm'>;'
+                <div className='opacity - 60 text - xs mb - 1'>{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;'
               </li>))}
           </ul>)}
       </div>;
@@ -307,7 +295,6 @@ if ( {) {$2;
     </div>
   )
 }
-=======
   if (!isAdmin) {
     return (
       <div className='rounded border p-3'>
@@ -321,13 +308,10 @@ if ( {) {$2;
         <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
       </div>
     )
-=======
     <div className='rounded border p-4 space-y-3'>
       <div className='flex items-center justify-between'>
         <h3 className='font-medium'>Admin Notes</h3>
         <div className='flex items-center gap-3 text-sm'>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           <label className='inline-flex items-center gap-2'>
             <input'
               type='checkbox'
@@ -339,12 +323,8 @@ if ( {) {$2;
           <input'
             className='border rounded px-2 py-1'
             value={adminId}
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
         <textarea'
-=======
             onChange={e => setAdminId(e.target.value)}
             placeholder='Admin ID'
           />
@@ -352,16 +332,11 @@ if ( {) {$2;
       </div>
       <div className='space-y-2'>
         <textarea
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           className='w-full border rounded-md px-3 py-2'
           rows={3}'
           placeholder='Write a private note (abuse, spam, special support)'
           value={text}
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
       </div>;
     </div>;
@@ -456,7 +431,7 @@ if ( {) {}
       <div className=&quot;space-y-2&quot>
 
         <textarea className=&quot;w-full border rounded-md px-3 py-2&quot; rows={3} placeholder=&quot;Write a private note (abuse, spam, special support)&quot; value={text} onChange={(e) => setText(e.target.value)} />;
-        <button disabled={!text.trim() || adding} onClick={addNote} className=&quot;px-3 py-2 rounded-md bg-gray-900 text-white "disabled":opacity-50&quot;>{adding ? 'Adding…' : 'Add Note'}</button>;'
+        <button disabled={!text.trim() || adding} onClick={addNote} className=&quot;px-3 py-2 rounded-md bg-gray-900 text-white 'disabled':opacity-50&quot;>{adding ? 'Adding…' : 'Add Note'}</button>;'
       </div>;
       <div className=&quot;border-t pt-3&quot>
 
@@ -474,17 +449,13 @@ if ( {) {}
         <button;
           disabled={!text.trim() |adding}
           onClick={addNote}
-          className='px-3 py-2 rounded-md bg-gray-900 text-white "disabled": opacity-50'>'
+          className='px-3 py-2 rounded-md bg-gray-900 text-white 'disabled': opacity-50'>'
 
           {adding ? 'Adding…' : 'Add Note,'
 }
-=======
 );
 }
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -496,7 +467,6 @@ class ErrorBoundary extends React.Component {}
   }
   
   componentDidCatch(error, errorInfo) {'
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -506,7 +476,6 @@ class ErrorBoundary extends React.Component {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
 }
@@ -766,26 +735,19 @@ if ( {) {}
             {notes.map (number => ('
               <li key={n.id} className='rounded border p - 2 text - sm'>;'
                 <div className='opacity - 60 text - xs mb - 1'>;
-                  {new Date (n.created_at).toLocaleString ()} • {n.author_id}"
-                </div>                <div>{n.text}</div>          <ul className="space - y-2">;
-            {notes.map ((n) => ("
-              <li key={n.id} className="rounded border p - 2 text - sm">;"
-                <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
+                  {new Date (n.created_at).toLocaleString ()} • {n.author_id}'
+                </div>                <div>{n.text}</div>          <ul className='space - y-2'>;
+            {notes.map ((n) => ('
+              <li key={n.id} className='rounded border p - 2 text - sm'>;'
+                <div className='opacity - 60 text - xs mb - 1'>{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
               </li>))}
           </ul>)}
       </div>;
     </div>);
 }
-<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+''
   );
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

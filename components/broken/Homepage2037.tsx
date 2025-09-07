@@ -101,10 +101,10 @@ const featuredMicroSaas = realMicroSaasServices2025;
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>;"
           </div>;<div className="text-center max-w-5xl mx-auto relative z-10">;"
             <motion&& motion.div;
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 1 
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 1 
 }>;
 
               {/* Main heading with enhanced typography */}
@@ -130,8 +130,8 @@ drives business transformation and shapes the future.
               <div className='flex flex-col "sm":flex-row gap-6 justify-center items-center'>;'
                 <Link href='/contact'>;'
                   <motion.button;
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ "scale": 0.95 }}
+                    whileHover={ "scale": 1.05 }
+                    whileTap={ "scale": 0.95 }
 
                     className='px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl "hover":from-cyan-600 "hover":to-blue-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 "hover":shadow-cyan-500/40''
                   >
@@ -141,16 +141,13 @@ drives business transformation and shapes the future.
 
 <Link href='/services'>'
                   <motion.button,
-whileHover={{ "scale": 1.05 }}
-                    whileTap={{ "scale": 0.95 }}
+whileHover={ "scale": 1.05 }
+                    whileTap={ "scale": 0.95 }
                     className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl "hover":bg-cyan-400 "hover":text-black transition-all duration-300 transform "hover":scale-105''
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
                     Explore Services
-=======
                     Explore Services;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   </motion.button>
                 </Link>
               </div>
@@ -163,11 +160,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-24 px-4 bg-black/40 backdrop-blur-sm'>'
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true 
 }
 
 className='text-center mb-16''
@@ -199,13 +196,13 @@ className='text-center mb-16'>;'
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
                 Our innovative solutions are powering the future of technology across industries;
               </p>;
-            </motion && motion.div>;initial={{ "opacity": 0, "y": 20 
+            </motion && motion.div>;initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.8, "delay": 0 && 0.1 }}
+                transition={ "duration": 0 && 0.8, "delay": 0 && 0.1 }
 
-                viewport={{ "once": true 
+                viewport={ "once": true 
 }
 
 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 "hover":border-cyan-500/40 transition-all duration-300''
@@ -224,11 +221,11 @@ className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rou
                 <div className=\"text-gray-300 text-lg\"    />AI Services</div>;"
                 <div className=\"text-cyan-400 text-sm mt-2\"    />Revolutionary Solutions</div>
               </motion && motion.div>
-                initial={{ opacity: 0, y: 20 }
+                initial={ opacity: 0, y: 20 }
 
-                whileInView={{ opacity: 1, y: 0 }
+                whileInView={ opacity: 1, y: 0 }
 
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+                transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
 
                 <div className='text-5xl font-bold text-blue-400 mb-3'>
                   100+
@@ -250,13 +247,13 @@ className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rou
                 <div className=\"text-gray-300 text-lg\"    />Quantum Solutions</div>;"
                 <div className=\"text-blue-400 text-sm mt-2\"    />Future Technology</div>
               </motion && motion.div>
-                initial={{ opacity: 0, y: 20 }
+                initial={ opacity: 0, y: 20 }
 
-                whileInView={{ opacity: 1, y: 0 }
+                whileInView={ opacity: 1, y: 0 }
 
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
+                transition={ duration: 0 && 0.8, delay: 0 && 0.3 }
 
-                viewport={{ once: true }
+                viewport={ once: true }
 
 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300'
               >
@@ -282,13 +279,13 @@ className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 r
                 <div className="text-gray-300 text-lg">AI Services</div>;"
                 <div className="text-cyan-400 text-sm mt-2">Revolutionary Solutions</div>;"
               </motion && motion.div>;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.8, "delay": 0 && 0.2 }}
+                transition={ "duration": 0 && 0.8, "delay": 0 && 0.2 }
 
-                viewport={{ "once": true 
+                viewport={ "once": true 
 }
 
 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 "hover":border-blue-500/40 transition-all duration-300''
@@ -315,13 +312,13 @@ className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 r
                 <div className="text-gray-300 text-lg">Quantum Solutions</div>;"
                 <div className="text-blue-400 text-sm mt-2">Future Technology</div>;"
               </motion && motion.div>;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.8, "delay": 0 && 0.3 }}
+                transition={ "duration": 0 && 0.8, "delay": 0 && 0.3 }
 
-                viewport={{ "once": true 
+                viewport={ "once": true 
 }
 
 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 "hover":border-purple-500/40 transition-all duration-300''
@@ -352,13 +349,13 @@ className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 r
                 <div className="text-gray-300 text-lg">Autonomous Operations</div>;"
                 <div className="text-purple-400 text-sm mt-2">Always Available</div>;"
               </motion && motion.div>;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.8, "delay": 0 && 0.4 }}
+                transition={ "duration": 0 && 0.8, "delay": 0 && 0.4 }
 
-                viewport={{ "once": true }}
+                viewport={ "once": true }
 
 className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 "hover":border-green-500/40 transition-all duration-300''
               >
@@ -379,11 +376,11 @@ className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 ro
 <section className='py-24 px-4'>'
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true 
 }
 
 className='text-center mb-16''
@@ -433,12 +430,12 @@ key={service.id}
               {featuredAI && featuredAI.map((service, index) => (<motion&& motion.div;
                   }
                   key={service && service.id}
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }
+                  viewport={ "once": true 
 }>;
                   <UltraFuturisticServiceCard2026;
   ArrowRight,Star,Users,Award,Clock,Brain,Atom,Shield,Rocket,Zap,TrendingUp,Globe,Cpu,Database,Cloud,Lock,Palette,Target,CheckCircle,Sparkles} from 'lucide-react';import { ArrowRight, Star, Users, Award, Clock,Brain, Atom, Shield, Rocket, Zap;'
@@ -490,10 +487,10 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
           </div>;
           <div className="text-center max-w-5xl mx-auto relative z-10">;"
             <motion.div;
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 1 
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 1 
 }
              />;
               {/* Main heading with enhanced typography */}
@@ -516,8 +513,8 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
               <div className='flex flex - col "sm":flex - row gap - 6 justify - center items - center'>;'
                 <Link href='/contact'>;'
                   <motion.button;
-                    while_hover={{ "scale": 1.05 }}
-                    while_tap={{ "scale": 0.95 
+                    while_hover={ "scale": 1.05 }
+                    while_tap={ "scale": 0.95 
 }
                     className='px - 10 py - 5 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold text - lg rounded - 2xl "hover":from - cyan - 600 "hover":to - blue - 700 transition - all duration - 300 shadow - 2xl shadow - cyan - 500 / 25 "hover":shadow - cyan - 500 / 40'                  >;'
                     Start Your Transformation;
@@ -539,8 +536,8 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
               <div className="flex flex - col "sm":flex - row gap - 6 justify - center items - center">;"
                 <Link href="/contact">;"
                   <motion.button;
-                    while_hover={{ "scale": 1.05 }}
-                    while_tap={{ "scale": 0.95 
+                    while_hover={ "scale": 1.05 }
+                    while_tap={ "scale": 0.95 
 }
                     className="px - 10 py - 5 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold text - lg rounded - 2xl "hover":from - cyan - 600 "hover":to - blue - 700 transition - all duration - 300 shadow - 2xl shadow - cyan - 500 / 25 "hover":shadow - cyan - 500 / 40">"
 
@@ -549,13 +546,13 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
                 </Link>;
                 <Link href='/services'>;'
                   <motion.button;
-                    while_hover={{ "scale": 1.05 }}
-                    while_tap={{ "scale": 0.95 
+                    while_hover={ "scale": 1.05 }
+                    while_tap={ "scale": 0.95 
 }
                     className='px - 10 py - 5 border - 2 border - cyan - 400 text - cyan - 400 font - bold text - lg rounded - 2xl "hover":bg - cyan - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105'                  >                <Link href="/services">;"
                   <motion.button;
-                    while_hover={{ "scale": 1.05 }}
-                    while_tap={{ "scale": 0.95 
+                    while_hover={ "scale": 1.05 }
+                    while_tap={ "scale": 0.95 
 }
                     className="px - 10 py - 5 border - 2 border - cyan - 400 text - cyan - 400 font - bold text - lg rounded - 2xl "hover":bg - cyan - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105";"
                     Explore Services;
@@ -570,11 +567,11 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/40 backdrop-blur-sm">;"
           <div className="max-w-7xl mx-auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
               className='text-center mb-16'>'
 
@@ -596,12 +593,12 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
             </motion.div>;
             <div className="grid grid-cols-2 "md":grid-cols-4 gap-8">;"
               <motion.div;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0.8, "delay": 0.1 }}
-                viewport={{ "once": true 
+                transition={ "duration": 0.8, "delay": 0.1 }
+                viewport={ "once": true 
 }
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 "hover":border-cyan-500/40 transition-all duration-300'>'
 
@@ -616,12 +613,12 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
                 <div className="text-cyan-400 text-sm mt-2">Revolutionary Solutions</div>;"
               </motion.div>;
               <motion.div;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0.8, "delay": 0.2 }}
-                viewport={{ "once": true 
+                transition={ "duration": 0.8, "delay": 0.2 }
+                viewport={ "once": true 
 }
                 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 "hover":border-blue-500/40 transition-all duration-300'>'
 
@@ -638,12 +635,12 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
                 <div className="text-blue-400 text-sm mt-2">Future Technology</div>;"
               </motion.div>;
               <motion.div;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0.8, "delay": 0.3 }}
-                viewport={{ "once": true 
+                transition={ "duration": 0.8, "delay": 0.3 }
+                viewport={ "once": true 
 }
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 "hover":border-purple-500/40 transition-all duration-300'>'
 
@@ -662,12 +659,12 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
                 <div className="text-purple-400 text-sm mt-2">Always Available</div>;"
               </motion.div>;
               <motion.div;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0.8, "delay": 0.4 }}
-                viewport={{ "once": true 
+                transition={ "duration": 0.8, "delay": 0.4 }
+                viewport={ "once": true 
 }
                 className='text - center p - 8 bg - gradient - to - br from - green - 500 / 10 to - teal - 500 / 10 rounded - 2xl border border - green - 500 / 20 "hover":border - green - 500 / 40 transition - all duration - 300'>'
 
@@ -690,11 +687,11 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">;"
           <div className="max-w-7xl mx-auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
               className='text-center mb-16'>'
 
@@ -725,18 +722,18 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
               {featuredAI.map((service, index) => (<motion.div;
                   }
                   key={service.id}
-                  initial={{ "opacity": 0, "coordinate_y": 20 
+                  initial={ "opacity": 0, "coordinate_y": 20 
 }
-                  whileInView={{ "opacity": 1, "coordinate_y": 0 
+                  whileInView={ "opacity": 1, "coordinate_y": 0 
 }
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                  transition={ "duration": 0.8, "delay": index * 0.1 }
 
-                  viewport={{ "once": true 
+                  viewport={ "once": true 
 }
 
                 >
                   <UltraFuturisticServiceCard2026,
-service={{
+service={
                       }
                       "id": service.id,
                       "name": service.name,
@@ -748,19 +745,19 @@ service={{
                       "popular": service.popular,
                       "category": service.category,
                       "icon": service.icon
-                    }}
+                    }
 variant='ai';' />
                 </motion.div>
               ))}
             </div>
 
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 
+              whileInView={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0 && 0.8, "delay": 0 && 0.2 }}
-              viewport={{ "once": true 
+              transition={ "duration": 0 && 0.8, "delay": 0 && 0.2 }
+              viewport={ "once": true 
 }
 
 className='text-center mt-12''
@@ -802,11 +799,11 @@ className='text-center mt-12''
 <section className='py-24 px-4 bg-black/20'>'
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true 
 }
 
 className='text-center mb-16''
@@ -858,16 +855,16 @@ key={service.id}
               {featuredIT && featuredIT.map((service, index) => (<motion&& motion.div;
                   }
                   key={service && service.id}
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }
+                  viewport={ "once": true 
 }>;
 
                   <UltraFuturisticServiceCard2026,
-service={{
+service={
                       }
                       "id": service.id,
                       "name": service.name,
@@ -879,18 +876,18 @@ service={{
                       "popular": service.popular,
                       "category": service.category,
                       "icon": service.icon
-                    }}
+                    }
                     variant='ai'                  />;
                 </motion.div>))}
             </div>                      popular: service.popular,
                       category: service.category,
-                    }}
-                    }}
+                    }
+                    }
                     variant='enterprise'                  />;
                 </motion && motion.div>;
               ))}
                       icon: service.icon
-                    }}
+                    }
                     variant="enterprise"
             </div>
 
@@ -910,17 +907,17 @@ variant='enterprise';' />
             </div>;
             <motion.div;
             </div>;<motion&& motion.div;
-                    }}
+                    }
                     variant="enterprise";" />;
                 </motion && motion.div>;
               ))}
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 
+              whileInView={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0 && 0.8, "delay": 0 && 0.2 }}
+              transition={ "duration": 0 && 0.8, "delay": 0 && 0.2 }
 
-              viewport={{ "once": true 
+              viewport={ "once": true 
 }
 
 className='text-center mt-12''
@@ -962,11 +959,11 @@ className='text-center mt-12''
 <section className='py-24 px-4'>'
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true 
 }
 
 className='text-center mb-16''
@@ -1018,16 +1015,16 @@ key={service.id}
               {featuredMicroSaas && featuredMicroSaas.map((service, index) => (<motion&& motion.div;
                   }
                   key={service && service.id}
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }
+                  viewport={ "once": true 
 }>;
 
                   <UltraFuturisticServiceCard2026,
-service={{
+service={
                       }
                       "id": service.id,
                       "name": service.name,
@@ -1039,18 +1036,18 @@ service={{
                       "popular": service.popular,
                       "category": service.category,
                       "icon": service.icon
-                    }}
+                    }
                     variant='enterprise'                  />;
                 </motion.div>))}
             </div>                      popular: service.popular,
                       category: service.category,
-                    }}
-                    }}
+                    }
+                    }
                     variant='automation'                  />;
                 </motion && motion.div>;
               ))}
                       icon: service.icon
-                    }}
+                    }
                     variant="automation"
             </div>
 
@@ -1061,15 +1058,15 @@ variant='automation';' />
             
             <motion.div
                   <UltraFuturisticServiceCard2026;
-                      features: service.features.slice (0, 5),service={{id: service.id,name: service.name,tagline: service.tagline,description: service.description,price: service.price,period: service.period,features: service.features.slice(0, 5),popular: service.popular,category: service.category,icon: service.icon,}}variant='enterprise'                  />;
+                      features: service.features.slice (0, 5),service={id: service.id,name: service.name,tagline: service.tagline,description: service.description,price: service.price,period: service.period,features: service.features.slice(0, 5),popular: service.popular,category: service.category,icon: service.icon,}variant='enterprise'                  />;
                 </motion.div>))}
-            </div>                      popular: service.popular,category: service.category,}}
-                    }}
+            </div>                      popular: service.popular,category: service.category,}
+                    }
                     variant='automation'                  />;
                 </motion && motion.div>;
               ))}
                       icon: service.icon;
-                    }}
+                    }
                     variant="automation";
             </div>;
                     variant='automation';'
@@ -1079,17 +1076,17 @@ variant='automation';' />
             </div>;
             <motion.div;
             </div>;<motion&& motion.div;
-                    }}
+                    }
                     variant="automation";" />;
                 </motion && motion.div>;
               ))}
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 
+              whileInView={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0 && 0.8, "delay": 0 && 0.2 }}
+              transition={ "duration": 0 && 0.8, "delay": 0 && 0.2 }
 
-              viewport={{ "once": true 
+              viewport={ "once": true 
 }
 
 className='text-center mt-12''
@@ -1131,11 +1128,11 @@ className='text-center mt-12''
 <section className='py-24 px-4 bg-black/30'>'
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true 
 }
 
 className='text-center mb-16''
@@ -1169,13 +1166,13 @@ className='text-center mb-16'>;'
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
                 We combine cutting-edge technology with proven expertise to deliver exceptional results;
               </p>;
-            </motion && motion.div>;initial={{ "opacity": 0, "y": 20 
+            </motion && motion.div>;initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.8, "delay": 0 && 0.1 }}
+                transition={ "duration": 0 && 0.8, "delay": 0 && 0.1 }
 
-                viewport={{ "once": true 
+                viewport={ "once": true 
 }
 
 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 "hover":border-cyan-500/40 transition-all duration-300 group''
@@ -1210,13 +1207,13 @@ evolve, and transform your business operations
                 <h3 className="text-2xl font-bold text-white mb-4">AI-First Approach</h3>;"
                 <p className="text-gray-300 leading-relaxed">Leading-edge artificial intelligence solutions that adapt, evolve, and transform your business operations</p>;"
               </motion && motion.div>;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.8, "delay": 0 && 0.2 }}
+                transition={ "duration": 0 && 0.8, "delay": 0 && 0.2 }
 
-                viewport={{ "once": true 
+                viewport={ "once": true 
 }
 
 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 "hover":border-blue-500/40 transition-all duration-300 group''
@@ -1252,13 +1249,13 @@ prepare you for the future
                 <h3 className="text-2xl font-bold text-white mb-4">Quantum Innovation</h3>;"
                 <p className="text-gray-300 leading-relaxed">Next-generation quantum computing and security solutions that prepare you for the future</p>;"
               </motion && motion.div>;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.8, "delay": 0 && 0.3 }}
+                transition={ "duration": 0 && 0.8, "delay": 0 && 0.3 }
 
-                viewport={{ "once": true 
+                viewport={ "once": true 
 }
 
 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 "hover":border-purple-500/40 transition-all duration-300 group''
@@ -1294,13 +1291,13 @@ your most valuable assets
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>;"
                 <p className="text-gray-300 leading-relaxed">Military-grade security and compliance solutions that protect your most valuable assets</p>;"
               </motion && motion.div>;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.8, "delay": 0 && 0.4 }}
+                transition={ "duration": 0 && 0.8, "delay": 0 && 0.4 }
 
-                viewport={{ "once": true }}
+                viewport={ "once": true }
 
 className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 "hover":border-green-500/40 transition-all duration-300 group''
               >
@@ -1325,11 +1322,11 @@ and running quickly
 <section className='py-24 px-4'>'
           <div className='max-w-5xl mx-auto text-center'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true }
 
 className='relative''
             >
@@ -1349,8 +1346,8 @@ className='relative''
                 <div className='flex flex-col "sm":flex-row gap-6 justify-center items-center'>;'
                   <Link href='/contact'>;'
                     <motion.button;
-                      whileHover={{ "scale": 1.05 }}
-                      whileTap={{ "scale": 0.95 }}
+                      whileHover={ "scale": 1.05 }
+                      whileTap={ "scale": 0.95 }
 
                       className='px-12 py-5 bg-gradient-to-r from-green-500 to-teal-600 text-white font-bold text-xl rounded-2xl "hover":from-green-600 "hover":to-teal-700 transition-all duration-300 transform "hover":scale-105 shadow-2xl shadow-green-500/25''
                     >
@@ -1360,14 +1357,11 @@ className='relative''
 
 <Link href='/demo'>'
                     <motion.button,
-whileHover={{ "scale": 1.05 }}
-                      whileTap={{ "scale": 0.95 }}
+whileHover={ "scale": 1.05 }
+                      whileTap={ "scale": 0.95 }
                       className='px-12 py-5 border-2 border-green-400 text-green-400 font-bold text-xl rounded-2xl "hover":bg-green-400 "hover":text-black transition-all duration-300 transform "hover":scale-105''
                     >
-<<<<<<< HEAD
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       Request Demo
                     </motion.button>
                   </Link>
@@ -1396,17 +1390,13 @@ href='"mailto":kleber@ziontechgroup.com''
                   </p>
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                     <a;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
       </main>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 };
 export default Homepage2037;
@@ -1415,43 +1405,28 @@ export default Homepage2037;
 };
 
 
-<<<<<<< HEAD
     </Layout>)}export default Homepage2037)}export default Homepage2037;export default Homepage2037;})}export default Homepage2037;
         <section className="py-24 px-4">
           <div className="max-w-5xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={ opacity: 0, y: 20}
+              whileInView={ opacity: 1, y: 0}
               transition = $2;
 export default Homepage2037,
-=======
   );
 }
 export default Homepage2037;  )
 }
 export default Homepage2037;
-<<<<<<< HEAD
 
 "
-=======
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
 }</div> <motion.div > <Link href="/micro-saas" > <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-green-500/25" > View All SAAS Solutions <ArrowRight className="w-5 h-5" /> </button> </a> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine cutting-edge technology with proven expertise to deliver exceptional results </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" > <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Brain className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >AI-First Approach</h3> <p className="text-gray-300 leading-relaxed" >Leading-edge artificial intelligence solutions that adapt, evolve, and transform your business operations</p> </motion.div> <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Atom className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Quantum Innovation</h3> <p className="text-gray-300 leading-relaxed" >Next-generation quantum computing and security solutions that prepare you for the future</p> </motion.div> <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Shield className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Enterprise Security</h3> <p className="text-gray-300 leading-relaxed" >Military-grade security and compliance solutions that protect your most valuable assets</p> </motion.div> <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Zap className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Rapid Deployment</h3> <p className="text-gray-300 leading-relaxed" >Fast implementation and continuous optimization to get you up and running quickly</p> </motion.div> </div> </div> </section> <div className="relative z-10 p-12 bg-gradient-to-r from-black/80 to-gray-900/80 backdrop-blur-xl rounded-3xl border border-cyan-500/30" > <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 via-cyan-400 to-teal-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Join the future of technology with Zion Tech Group. Let's build something extraordinary together and shape the future of your industry. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <Link href="/contact" > <motion.button > Start Your Journey Today </motion.button> </a> <Link href="/demo" > <motion.button mt-8 text-gray-400"> <p className=" text-sm">Contact us: <a href=" tel:+13024640950"className=" text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p> <p className=" text-sm">Email: <a href=" mailto:kleber@ziontechgroup.com"className=" text-cyan-400 hover:text-cyan-300" >kleber@ziontechgroup.com</a></p> </div> </div> </motion.div> </div> </section> </main> </Layout>) 
 }
 export default Homepage2037
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
 );
 };
 
 export default Homepage2037;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

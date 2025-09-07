@@ -37,7 +37,7 @@ const ReviewSubmitPage: NextPage<Props> = ({
   return (
     <main className="max-w-2xl mx-auto p-6">
       <h1 className="text-2xl font-semibold mb-6">Leave a review</h1>
-      <ReviewForm initial={{ projectId, fromRole, fromId }} />
+      <ReviewForm initial={ projectId, fromRole, fromId } />
     </main>
   );
 }

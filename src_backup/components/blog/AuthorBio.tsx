@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/blog/AuthorBio.tsx
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps {
@@ -17,11 +16,11 @@ export function AuthorBio({ author }: AuthorBioProps) {
 
         src={author.avatarUrl}
         alt={author.name}
-        className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
+        className='w-16 h-16 rounded-full mr-4 mb-4 md: mb-0'
         onError={(e) => {
 
           target.src = '/images/blog-placeholder.svg'
-        }}
+        }
       />
       <div>
 
@@ -33,13 +32,13 @@ import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps  {author: BlogAuthor;export function AuthorBio() {if (!author.bio) return null,return (<img;
         src={author.avatarUrl}
         alt={author.name}
-        className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0";
+        className='w-16 h-16 rounded-full mr-4 mb-4 md: mb-0';
         onError={(e) => {const target = e.currentTarget as HTMLImageElement,target.src = '/images/blog-placeholder.svg';
-        }}
+        }
       />;
       <div>;
-        <p className="font-medium text-lg">{author.name}</p>;
-        {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
+        <p className='font-medium text-lg'>{author.name}</p>;
+        {author.title && <p className='text-sm text-muted-foreground mb-2'>{author.title}</p>}
         <p>{author.bio}</p>;
       </div>;
     </div>;
@@ -55,21 +54,20 @@ interface AuthorBioProps  {author: BlogAuthor;
         alt={author && author.name}
         className='w-16 h-16 rounded-full mr-4 mb-4 md:mb-0';
         onError={e => {const target = e && e.currentTarget as HTMLImageElement;
-          target && target.src = '/images/blog-placeholder && placeholder.svg';        }}author.title;
+          target && target.src = '/images/blog-placeholder && placeholder.svg';        }author.title;
 }</p>;
 }<p> {author.bio ;
 }</p>;
-}'"}export function AuthorBio() {if (!author.bio) return null;
-  return (<div className="mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6">;
+}''}export function AuthorBio() {if (!author.bio) return null;
+  return (<div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>;
       <img;
         src={author.avatarUrl}
         alt={author.name}
-        className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0";
+        className='w-16 h-16 rounded-full mr-4 mb-4 md: mb-0';
         onError={(e) => {const target = e.currentTarget as HTMLImageElement;
           target.src = '/images/blog-placeholder.svg';
-<<<<<<< HEAD:src_backup/components/blog/AuthorBio.tsx
-        }}
-        }}import type { BlogAuthor } from '@/types / blog';
+        }
+        }import type { BlogAuthor } from '@/types / blog';
 interface AuthorBioProps  {author: BlogAuthor;
 export /**;
  * AuthorBio - Function description;
@@ -103,7 +101,6 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         )}        <p>{author && author.bio}</p>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/blog/AuthorBio.tsx
 
         <p className='font-medium text-lg'>{author && author.name}</p>;
         {author && author.title && (;
@@ -112,26 +109,25 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
       </div>;
     </div>;
   );
-        <p className="font-medium text-lg">{author && author.name}</p>;
-        {author && author.title && <p className="text-sm text-muted-foreground mb-2">{author && author.title}</p>}
+        <p className='font-medium text-lg'>{author && author.name}</p>;
+        {author && author.title && <p className='text-sm text-muted-foreground mb-2'>{author && author.title}</p>}
 
       <img
-  )<p className="font-medium text-lg">{author && author.name}</p>;
-        {author && author.title && <p className="text-sm text-muted-foreground mb-2">{author && author.title}</p>}<img;
+  )<p className='font-medium text-lg'>{author && author.name}</p>;
+        {author && author.title && <p className='text-sm text-muted-foreground mb-2'>{author && author.title}</p>}<img;
 
         src={author && author.avatarUrl}
         alt={author && author.name}
-        className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0";
+        className='w-16 h-16 rounded-full mr-4 mb-4 md: mb-0';
         onError={(e) => {const target = e && e.currentTarget as HTMLImageElement;
           target && target.src = '/images/blog-placeholder && placeholder.svg';
-        }}
+        }
       />;
-<<<<<<< HEAD:src_backup/components/blog/AuthorBio.tsx
       <div>;
       <div></div>;
     </div>;
-  )}<p className="font-medium text-lg">{author && author.name}</p>;
-        {author && author.title && <p className="text-sm text-muted-foreground mb-2">{author && author.title}</p>}
+  )}<p className='font-medium text-lg'>{author && author.name}</p>;
+        {author && author.title && <p className='text-sm text-muted-foreground mb-2'>{author && author.title}</p>}
         <p>{author && author.bio}</p>;
       </div>;
     </div>;
@@ -142,35 +138,34 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         alt={author.name}
         className='w - 16 h - 16 rounded - full mr - 4 mb - 4 md:mb - 0';
         on_error={e => {const target = e.current_target as HTMLImageElement;
-          target.src = '/images / blog - placeholder.svg' }}
+          target.src = '/images / blog - placeholder.svg' }
       />;
       <div>;
         <p className='font - medium text - lg'>{author.name}</p>;
         {author.title && (<p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>)}        <p>{author.bio}</p>;
       </div>;
-    </div>)<p className="font - medium text - lg">{author.name}</p>;
-        {author.title && <p className="text - sm text - muted - foreground mb - 2">{author.title}</p>}
+    </div>)<p className='font - medium text - lg'>{author.name}</p>;
+        {author.title && <p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>}
       <img;
         src={author.avatar_url}
         alt={author.name}
-        className="w - 16 h - 16 rounded - full mr - 4 mb - 4 md: mb - 0";
+        className='w - 16 h - 16 rounded - full mr - 4 mb - 4 md: mb - 0';
         on_error={(e) => {const target = e.current_target as HTMLImageElement;
           target.src = '/images / blog - placeholder.svg';
-        }}
+        }
       />;
       <div>;
-        <p className="font - medium text - lg">{author.name}</p>;
-        {author.title && <p className="text - sm text - muted - foreground mb - 2">{author.title}</p>}
+        <p className='font - medium text - lg'>{author.name}</p>;
+        {author.title && <p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>}
         <p>{author.bio}</p>;
       </div>;
-    </div>)}/> <div> <p className="font - medium text - lg" > {author.name;
-}</p> {";
-  author.title && <p className="text - sm text - muted - foreground mb - 2" > {author.title;
+    </div>)}/> <div> <p className='font - medium text - lg' > {author.name;
+}</p> {';
+  author.title && <p className='text - sm text - muted - foreground mb - 2' > {author.title;
 }</p>;
 }<p> {author.bio;
 }</p>;
-}'"}
-<<<<<<< HEAD:src_backup/components/blog/AuthorBio.tsx
+}''}
 }
 
 }
@@ -182,7 +177,7 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         className='w - 16 h - 16 rounded - full mr - 4 mb - 4 md:mb - 0';
         on_error={e => {
           const target = e.current_target as HTMLImageElement;
-          target.src = '/images / blog - placeholder.svg' }}
+          target.src = '/images / blog - placeholder.svg' }
       />;
       <div>;
         <p className='font - medium text - lg'>{author.name}</p>;
@@ -190,33 +185,33 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
           <p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>)}        <p>{author.bio}</p>;
       </div>;
     </div>);
-        <p className="font - medium text - lg">{author.name}</p>;
-        {author.title && <p className="text - sm text - muted - foreground mb - 2">{author.title}</p>}
+        <p className='font - medium text - lg'>{author.name}</p>;
+        {author.title && <p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>}
       <img;
         src={author.avatar_url}
         alt={author.name}
-        className="w - 16 h - 16 rounded - full mr - 4 mb - 4 md: mb - 0";
+        className='w - 16 h - 16 rounded - full mr - 4 mb - 4 md: mb - 0';
         on_error={(e) => {
           const target = e.current_target as HTMLImageElement;
           target.src = '/images / blog - placeholder.svg';
-        }}
+        }
       />;
       <div>;
-        <p className="font - medium text - lg">{author.name}</p>;
-        {author.title && <p className="text - sm text - muted - foreground mb - 2">{author.title}</p>}
+        <p className='font - medium text - lg'>{author.name}</p>;
+        {author.title && <p className='text - sm text - muted - foreground mb - 2'>{author.title}</p>}
         <p>{author.bio}</p>;
       </div>;
     </div>);
-}/> <div> <p className="font - medium text - lg" > {
+}/> <div> <p className='font - medium text - lg' > {
   author.name;
-}</p> {";
-  author.title && <p className="text - sm text - muted - foreground mb - 2" > {
+}</p> {';
+  author.title && <p className='text - sm text - muted - foreground mb - 2' > {
   author.title;
 }</p>;
 }<p> {
   author.bio;
 }</p>;
-}'"}
+}''}
 
 }
 ;
@@ -230,7 +225,7 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         className='w-16 h-16 rounded-full mr-4 mb-4 md:mb-0';
         onError={e => {const target = e.currentTarget as HTMLImageElement;
           target.src = '/images/blog-placeholder.svg';
-        }}
+        }
       />;
       <div>;
         <p className='font-medium text-lg'>{author.name}</p>;
@@ -239,11 +234,11 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         <p>{author.bio}</p>;
       </div>;
     </div>;
-  )}/> <div> <p className="font-medium text-lg" > {author.name ;
-}</p> {";
-  author.title && <p className="text-sm text-muted-foreground mb-2" > {author.title ;
+  )}/> <div> <p className='font-medium text-lg' > {author.name ;
+}</p> {';
+  author.title && <p className='text-sm text-muted-foreground mb-2' > {author.title ;
 }</p> ;
 }<p> {author.bio ;
 }</p> ;
-}'";
-}'"
+}'';
+}''

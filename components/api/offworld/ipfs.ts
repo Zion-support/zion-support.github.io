@@ -21,7 +21,7 @@ const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;'
   }
   const { cid, provider } = await addJSON(body);
 
-      if (!cid) return res.status(503).json({ "error": 'IPFS unavailable','
+      if (!cid) return res.status(503).json({ 'error': 'IPFS unavailable','
 });
 return res.status(200).json({ cid, provider });
 
@@ -33,25 +33,24 @@ return res.status(200).json({ cid, provider });
       );
       return res && res.status(200).json({ ok });
     }
-return res && res.status(400).json({ "error": 'Unsupported action',;'
+return res && res.status(400).json({ 'error': 'Unsupported action',;'
 });
-  } catch ("e": any) {
+  } catch ('e': any) {
 
 }
 
-return res.status(500).json({ "error": e.message,;
+return res.status(500).json({ 'error': e.message,;
 });
   }
 return res.status(200).json({ ok });
     }
-return res && res.status(400).json({ "error": 'Unsupported action' });'
-  } catch ("e": any) {
+return res && res.status(400).json({ 'error': 'Unsupported action' });'
+  } catch ('e': any) {
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 }
-<<<<<<< HEAD
       const { cid, provider } = await addJSON (body)if (return res.status (503).json ({ error: 'IPFS unavailable' })) {$2;
 }
 }
@@ -67,17 +66,14 @@ if ( {) {$2;
 if ( {) {$2;
 }
       const ok = await publish_manifesto (OFFWORLD_TOPICS.manifesto, body?.message || '')return res.status (200).json ({ ok })}
-    return res.status (400).json ({ error: 'Unsupported action' })} catch (e: any) {return res.status (500).json ({ error: e.message })}}
+    return res.status (400).json ({ error: 'Unsupported action' })} catch (e: any) {return res.status (500).json ({ error: e.message })}
     return res.status(500).json({ error: e.message })
   }
 }
-=======
-<<<<<<< HEAD
 '
-=======
 
 const ok = await publish_manifesto (OFFWORLD_TOPICS.manifesto, body?.message || '')return res.status (200).json ({ ok })}'
-return res.status (400).json ({ "error": 'Unsupported action' },;'
-} catch ("e": any) ;
-return res.status (500).json ({ "error": e.message }),;
+return res.status (400).json ({ 'error': 'Unsupported action' },;'
+} catch ('e': any) ;
+return res.status (500).json ({ 'error': e.message }),;
 }

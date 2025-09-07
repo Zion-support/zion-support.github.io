@@ -4,7 +4,7 @@ return (<div className=&quot;fixed inset - 0 -z - 10 overflow - hidden & quot>;
       <canvas;
         ref={canvas_ref}
         className=&quot;w - full h - full & quot;
-        style={{ "display": 'block' ,'
+        style={ 'display': 'block' ,'
 } />;
       {/* Additional overlay effects */}
 <div className=&quot;absolute inset-0 pointer-events-none&quot;>
@@ -16,20 +16,18 @@ return (<div className=&quot;fixed inset - 0 -z - 10 overflow - hidden & quot>;
                 }
                 key={i}
                 className=&quot;absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 30 to - transparent & quot;
-                style={{{/* AI neural network overlay */}
+                style={{/* AI neural network overlay */}
 {variant === 'ai' && (<div className=&quot;absolute inset - 0&quot>'
 
             {[...Array (6)].map ((_, i) => (<motion.div;
                 }
                 key={i}
                 className=&quot;absolute w - full h - px bg - gradient - to - r from - transparent via - green - 400 / 20 to - transparent & quot;
-                style={{"top": `${(i + 1) * 16.67}%`}}`
-                  "delay": i * 0.8}} />))}
+                style={'top': `${(i + 1) * 16.67}%`}`
+                  'delay': i * 0.8} />))}
           </div>
 }
-<<<<<<< HEAD
       </div>;
-=======
 let animationFrameId: number
 let particles: Particle[] = []
 const connections: Connection[] = []
@@ -84,7 +82,7 @@ ctx.arc (canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier, 0, Math.PI *
 ctx.fill () 
 }
 animate ()
-return (<div className="fixed inset-0 -z-10 overflow-hidden" > <canvas left: `$ {
+return (<div className='fixed inset-0 -z-10 overflow-hidden' > <canvas left: `$ {
   (i + 1) * 12.5 
 }%`
 transform: 'translateX (-50%) ' 
@@ -116,7 +114,4 @@ transform: 'translateX (-50%) '
 }</div> </div>) 
 }
 export default UltraFuturisticBackground2036
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 export default UltraFuturisticBackground2036;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

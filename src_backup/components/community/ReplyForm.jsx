@@ -20,7 +20,7 @@ import { Button  } from '@/components/ui/button';
         rows={3}'''';
       />'''';
       <div className='mt-2 flex justify-end'>'''';
-        <Button type='submit" disabled={!content.trim()}>'";
+        <Button type='submit' disabled={!content.trim()}>'';
           Post Reply;
         </Button>;
       </div>;

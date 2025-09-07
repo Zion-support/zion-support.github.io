@@ -110,7 +110,7 @@ id: string;
   contactInfo: {mobile: string;
     email: string;
     address: string;
-  }}
+  }
 }address: string;
   }
 export const extraServices: ExtraService[] = [;
@@ -169,7 +169,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
     contactInfo: {mobile: "+1 302 464 0950";email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
-  }];];;
+  }];];
     id: "cloud-migration-expert",name: "Cloud Migration Expert",tagline: "Seamless cloud migration and optimization",price: "$99/hour",description: "Professional cloud migration services for businesses looking to modernize their infrastructure.",features: [;
       "AWS/Azure/GCP migration","Performance optimization","Cost analysis","Security implementation","24/7 support";
     ],link: "/services/cloud-migration-expert",category: "Cloud Services",realImplementation: true,contactInfo: {mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";

@@ -1817,7 +1817,7 @@ export const Icon: React.FC<IconProps> = ({
 :src/components/icons/index.tsx
   const LucideIconComponent = iconMap[name]
   if (!LucideIconComponent) {
-    logWarn(`Icon "${name}" not found.`)
+    logWarn(`Icon '${name}' not found.`)
     return null
   }
   // Render the dynamically selected Lucide icon component
@@ -2766,7 +2766,7 @@ export const Icon: React.FC<IconProps> = ({;
 }) => {;
   const LucideIconComponent = iconMap[name];
   if (!LucideIconComponent) {;
-    logWarn(`Icon "${name}" not found.`);
+    logWarn(`Icon '${name}' not found.`);
     return null;
   }
 

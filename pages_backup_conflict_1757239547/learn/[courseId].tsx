@@ -91,8 +91,8 @@ export default function CourseView(req, res) {
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null);
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     load();
@@ -111,8 +111,8 @@ export default function CourseView(req, res) {
     const data = await resp.json();
     setProgress(data.progress);
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -120,8 +120,8 @@ export default function CourseView(req, res) {
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId);
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -130,14 +130,14 @@ export default function CourseView(req, res) {
     const passed = score >= needed;
     setFinalPassed(passed);
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   if (!course) return <div>Loading...</div>,
   return (
-    <div className="grid lg:grid-cols-3 gap-6">
-      <div className="lg:col-span-2 space-y-4">
+    <div className='grid lg:grid-cols-3 gap-6'>
+      <div className='lg:col-span-2 space-y-4'>
         <div>
           <h1 className='text-2xl font-semibold'>{course.title}</h1>
           <div className='text-gray-500 text-sm'>
@@ -168,33 +168,33 @@ export default function CourseView(req, res) {
           <section className='lg:col-span-3 space-y-4'>
                   <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
                     {l.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   </button>;
                 </li>;
               ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             </ul>
           </aside>
-          <section className="lg:col-span-3 space-y-4">
+          <section className='lg:col-span-3 space-y-4'>
             {currentLesson ? (
-              <div className="border rounded p-4">
-                <div className="font-medium">{currentLesson.title}</div>
-                <div className="mt-2 text-sm whitespace-pre-line">{currentLesson.content}</div>
+              <div className='border rounded p-4'>
+                <div className='font-medium'>{currentLesson.title}</div>
+                <div className='mt-2 text-sm whitespace-pre-line'>{currentLesson.content}</div>
                 {currentLesson.quiz?.questions?.length ? (
-                  <div className="mt-4">
+                  <div className='mt-4'>
                     <Quiz questions={currentLesson.quiz.questions} onComplete={onModuleQuizComplete} />
                   </div>
                 ) : (
-                  <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded" onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
+                  <button className='mt-3 px-4 py-2 bg-green-600 text-white rounded' onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
                 )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               </div>
@@ -202,8 +202,8 @@ export default function CourseView(req, res) {
               <div className='text-sm text-gray-500'>Select a lesson</div>
             )}
             {course.finalQuiz?.questions?.length ? (
-              <div className="border rounded p-4">
-                <div className="font-medium mb-2">Final Certification Quiz</div>
+              <div className='border rounded p-4'>
+                <div className='font-medium mb-2'>Final Certification Quiz</div>
                 <Quiz questions={course.finalQuiz.questions} onComplete={onFinalQuizComplete} />
                 {finalPassed && (
                   <div className='mt-3 text-green-700'>
@@ -216,10 +216,10 @@ export default function CourseView(req, res) {
       </div>
       <div className='space-y-4'>
         <CoachWidget />
-        <div className="border rounded p-3">
-          <div className="font-medium">Profile Boost</div>
-          <div className="text-sm text-gray-600 mt-1">Opt-in to boost your visibility in matches when certified skills apply.</div>
-          <button className="mt-2 px-3 py-2 bg-indigo-600 text-white rounded" onClick={() => alert('Preference saved (demo)')}>Enable Boost</button>
+        <div className='border rounded p-3'>
+          <div className='font-medium'>Profile Boost</div>
+          <div className='text-sm text-gray-600 mt-1'>Opt-in to boost your visibility in matches when certified skills apply.</div>
+          <button className='mt-2 px-3 py-2 bg-indigo-600 text-white rounded' onClick={() => alert('Preference saved (demo)')}>Enable Boost</button>
         </div>
       </div>
     </div>

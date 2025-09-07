@@ -932,7 +932,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9;
     reviews: 95;
   }
-];;
+];
 ursor/fix-website-loading-errors-and-merge-6662;
     reviews: 95
 
@@ -958,10 +958,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     customers: 180;
     rating: 4.9;
     reviews: 95;}
-];;
+];
 ursor/fix-website-loading-errors-and-merge-6662;
   }
-];;
+];
 import { ServiceVariant } from '../types/service-variants',export interface EnterpriseITBreakthroughService2029  {id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,variant: ServiceVariant,contactInfo: {mobile: string,email: string,address: string,website: string;
   },realImplementation: boolean,implementationDetails: string,launchDate: string,customers: number,rating: number,reviews: number;
 }export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] = [;

@@ -59,7 +59,7 @@
       ];
       "gradient": &quot;bg-gradient-to-r from-teal-600 to-cyan-600&quot;
     }
-    {{"icon": &quot;🏪&quot;,"title": &quot;Complete Marketplace & quot;,"description": &quot;Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.&quot;,"features": [;
+    {"icon": &quot;🏪&quot;,"title": &quot;Complete Marketplace & quot;,"description": &quot;Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.&quot;,"features": [;
         &quot;Job & Talent Marketplace & quot;,&quot;Token System + Rewards & quot;,&quot;On - chain Contract Builder & quot;,&quot;Multi - currency Support & quot;
       ],"gradient": &quot;bg - gradient - to - r from - green - 600 to - emerald - 600 & quot;
     },{"icon": &quot;🏪&quot;,"title": &quot;Complete Marketplace & quot;,"description": &quot;Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.&quot;,"features": [;
@@ -608,15 +608,15 @@ key={index}
               <div className=&quot;text - 3xl font - bold text - blue - 400 mb - 2&quot;>100+</div>;
               <div className=&quot;text - white / 70 & quot;>Features Available</div>;
             </div>;
-            <div className=&quot;animate - fade - in & quot; style={{"animation_delay": '0.1s'}}>;'
+            <div className=&quot;animate - fade - in & quot; style={"animation_delay": '0.1s'}>;'
               <div className=&quot;text - 3xl font - bold text - purple - 400 mb - 2&quot;>50+</div>;
               <div className=&quot;text - white / 70 & quot;>Deployment Options</div>;
             </div>;
-            <div className=&quot;animate - fade - in & quot; style={{"animation_delay": '0.2s'}}>;'
+            <div className=&quot;animate - fade - in & quot; style={"animation_delay": '0.2s'}>;'
               <div className=&quot;text - 3xl font - bold text - green - 400 mb - 2&quot;>24 / 7</div>;
               <div className=&quot;text - white / 70 & quot;>AI Orchestration</div>;
             </div>;
-            <div className=&quot;animate - fade - in & quot; style={{"animation_delay": '0.3s'}}>;'
+            <div className=&quot;animate - fade - in & quot; style={"animation_delay": '0.3s'}>;'
               <div className=&quot;text - 3xl font - bold text - orange - 400 mb - 2&quot;>∞</div>;
               <div className=&quot;text - white / 70 & quot;>Scalability</div>;</div>;
           </div>;
@@ -667,15 +667,15 @@ key={index}
               <div className="text-3xl font-bold text-blue-400 mb-2">100+</div>;"
               <div className="text-white/70">Features Available</div>;"
             </div>;
-            <div className="animate-fade-in" style={{"animationDelay": '0.1s'}}>;'
+            <div className="animate-fade-in" style={"animationDelay": '0.1s'}>;'
               <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>;"
               <div className="text-white/70">Deployment Options</div>;"
             </div>;
-            <div className="animate-fade-in" style={{"animationDelay": '0.2s'}}>;'
+            <div className="animate-fade-in" style={"animationDelay": '0.2s'}>;'
               <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>;"
               <div className="text-white/70">AI Orchestration</div>;"
             </div>;
-            <div className="animate-fade-in" style={{"animationDelay": '0.3s'}}>;'
+            <div className="animate-fade-in" style={"animationDelay": '0.3s'}>;'
               <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>;"
               <div className="text-white/70">Scalability</div>;"
             </div>;
@@ -683,7 +683,7 @@ key={index}
         </div>;
       </section>;
     </div>;
-  )}}
+  )}
       <section className="py-16 px-4 "sm":px-6 "lg":px-8 bg-white/5">"
         <div className="max-w-7xl mx-auto">"
           <div className="grid grid-cols-1 "md":grid-cols-4 gap-8 text-center">"
@@ -691,15 +691,15 @@ key={index}
               <div className="text-3xl font-bold text-blue-400 mb-2">100+</div>"
               <div className="text-white/70">Features Available</div>"
             </div>
-            <div className="animate-fade-in" style={{"animationDelay": '0.1s'}}>'
+            <div className="animate-fade-in" style={"animationDelay": '0.1s'}>'
               <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>"
               <div className="text-white/70">Deployment Options</div>"
             </div>
-            <div className="animate-fade-in" style={{"animationDelay": '0.2s'}}>'
+            <div className="animate-fade-in" style={"animationDelay": '0.2s'}>'
               <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>"
               <div className="text-white/70">AI Orchestration</div>"
             </div>
-            <div className="animate-fade-in" style={{"animationDelay": '0.3s'}}>'
+            <div className="animate-fade-in" style={"animationDelay": '0.3s'}>'
               <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>"
               <div className="text-white/70">Scalability</div>"
             </div>

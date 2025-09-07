@@ -16,19 +16,19 @@ import {logErrorToProduction} from '@/utils/productionLogger';
         ogImage = {product.images?.[0],}
 origin/cursor/automate-test-improve-and-merge-code-2533
       />
-        <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
+        <h1 className='text-2xl font-bold mb-4'>{product.title}</h1>
         {product.images?.length ? (
-          <div className="mb-4 relative w-full h-64">
+          <div className='mb-4 relative w-full h-64'>
             <Image
               src={product.images[0] || '/placeholder.svg'}
               alt={product.title}
-              className="object-cover rounded-md"
-              className="object-cover rounded-md"
+              className='object-cover rounded-md'
+              className='object-cover rounded-md'
               fill
             />
           </div>
         ) : null}
-        <p className="mb-6">{product.description}</p>
+        <p className='mb-6'>{product.description}</p>
         <Button onClick={handleAdd} disabled={adding || inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
         </Button>;

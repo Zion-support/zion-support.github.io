@@ -58,7 +58,7 @@ const fullImageUrl = image.startsWith('http')? image;'
       {/* Structured Data */}
       <script;
         type="application/ld+json";"
-        dangerouslySetInnerHTML={{"__html": JSON.stringify({'@context': '"https"://schema.org','@type': 'Organization',"name": 'Zion Tech Group',"url": '"https"://ziontechgroup.com',"logo": '"https"://ziontechgroup.com/images/logo.png',"description": description,"address": {'@type': 'PostalAddress',"streetAddress": '364 E Main St STE 1008',"addressLocality": 'Middletown',"addressRegion": 'DE',"postalCode": '19709',"addressCountry": 'US'},"contactPoint": {'@type': 'ContactPoint',"telephone": '+1-302-464-0950',"contactType": 'customer service',"email": 'kleber@ziontechgroup.com'}})}}' />;
+        dangerouslySetInnerHTML={"__html": JSON.stringify({'@context': '"https"://schema.org','@type': 'Organization',"name": 'Zion Tech Group',"url": '"https"://ziontechgroup.com',"logo": '"https"://ziontechgroup.com/images/logo.png',"description": description,"address": {'@type': 'PostalAddress',"streetAddress": '364 E Main St STE 1008',"addressLocality": 'Middletown',"addressRegion": 'DE',"postalCode": '19709',"addressCountry": 'US'},"contactPoint": {'@type': 'ContactPoint',"telephone": '+1-302-464-0950',"contactType": 'customer service',"email": 'kleber@ziontechgroup.com'})}' />;
     </Head>;
   )}
 

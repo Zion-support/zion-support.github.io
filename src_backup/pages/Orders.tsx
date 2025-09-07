@@ -53,8 +53,8 @@ export default function OrdersPage() {;
   const formatDate = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-    <div className="container max-w-4xl py-10">
-      <h1 className="text-3xl font-bold mb-6">Order History</h1>
+    <div className='container max-w-4xl py-10'>
+      <h1 className='text-3xl font-bold mb-6'>Order History</h1>
       {isLoading ? (
         <Table>
           <TableHeader>
@@ -69,11 +69,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <TableBody>
             {Array.from({ length: 3 }).map((_, i) => (
               <TableRow key={i}>
-                <TableCell><Skeleton className="h-4 w-20" /></TableCell>
-                <TableCell><Skeleton className="h-4 w-24" /></TableCell>
-                <TableCell><Skeleton className="h-4 w-16" /></TableCell>
-                <TableCell><Skeleton className="h-4 w-20" /></TableCell>
-                <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+                <TableCell><Skeleton className='h-4 w-20' /></TableCell>
+                <TableCell><Skeleton className='h-4 w-24' /></TableCell>
+                <TableCell><Skeleton className='h-4 w-16' /></TableCell>
+                <TableCell><Skeleton className='h-4 w-20' /></TableCell>
+                <TableCell><Skeleton className='h-4 w-24' /></TableCell>
               </TableRow>
             ))}
           </TableBody>;

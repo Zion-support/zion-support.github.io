@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/resume-builder/wizard/ResumeWizard.tsx
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useResume } from '@/hooks/useResume';
@@ -10,13 +9,11 @@ import { Button } from '@/components/ui/button';
 import { Resume } from '@/types/resume';
 
 import { useState, useEffect  } from 'react';
-=======
 
-if (isLoading) {return (<div className="flex justify-center items-center h-64">;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+if (isLoading) {return (<div className='flex justify-center items-center h-64'>;
+        <Loader2 className='h-8 w-8 animate-spin text-primary' />;
       </div>;
     )}if (error) {if (error) {import { useState, useEffect  } from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/wizard/ResumeWizard.tsx
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
 import { Tabs  } from '@/components/ui/tabs';
@@ -49,20 +46,17 @@ export function ResumeWizard() {const { user } = useAuth()const {isLoading;
     createResume;
   } = useResume()const [activeTab, setActiveTab] = useState('basic-info')const [showNewResumeForm, setShowNewResumeForm] = useState(false)// Use the extracted hook for progress calculation;
   const progress = null;
-<<<<<<< HEAD:src_backup/components/resume-builder/wizard/ResumeWizard.tsx
   if (isLoading) {
 origin/cursor/automate-test-improve-and-merge-code-2533
     return (
-      <div className="flex justify-center items-center h-64">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      <div className='flex justify-center items-center h-64'>
+        <Loader2 className='h-8 w-8 animate-spin text-primary' />
       </div>
     )
-=======
-  if (isLoading) {return (<div className="flex justify-center items-center h-64">;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+  if (isLoading) {return (<div className='flex justify-center items-center h-64'>;
+        <Loader2 className='h-8 w-8 animate-spin text-primary' />;
       </div>;
     )}if (!resume && !showNewResumeForm) {return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/wizard/ResumeWizard.tsx
   }
   if (showNewResumeForm) {if (!resume && !showNewResumeForm) {return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }if (showNewResumeForm) {return (<CreateResumeForm;
@@ -76,38 +70,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         isLoading={isLoading}
       />;
     )}return ({resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}<Button;
-            onClick={() => setShowNewResumeForm(true)}variant="outline";
-            size="sm";
-            className="gap-2";
+            onClick={() => setShowNewResumeForm(true)}variant='outline';
+            size='sm';
+            className='gap-2';
           >;
-            <FilePlus className="h-4 w-4" />;
+            <FilePlus className='h-4 w-4' />;
             Create New;
           </Button>;
         </div>;
       </div>;
       <Card>;
-        <CardContent className="pt-6">;
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">;
-            <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>;
+        <CardContent className='pt-6'>;
+          <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6'>;
+            <h2 className='text-xl font-semibold'>{resume?.basic_info?.title |'My Resume'}</h2>;
             <ResumeProgress resume={resume} progress={progress} />;
           </div>;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
-            variant="outline";
-            size="sm";
-            className="gap-2";
+            variant='outline';
+            size='sm';
+            className='gap-2';
           >;
-            <FilePlus className="h-4 w-4" /> ;
+            <FilePlus className='h-4 w-4' /> ;
   // Check condition;
 if ( {) {$2;
 }
-    return (<div className="flex justify - center items - center h - 64">;
-        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
+    return (<div className='flex justify - center items - center h - 64'>;
+        <Loader2 className='h - 8 w - 8 animate - spin text - primary' />;
       </div>)}
   // Check condition;
 if ( {) {$2;
 }
-    return (<Alert variant="destructive" className="mb - 6">;
-        <AlertCircle className="h - 4 w - 4" />;
+    return (<Alert variant='destructive' className='mb - 6'>;
+        <AlertCircle className='h - 4 w - 4' />;
         <AlertTitle > Error</AlertTitle>;
         <AlertDescription>{error}</AlertDescription>;
       </Alert>)}
@@ -124,22 +118,21 @@ if ( {) {$2;
         on_cancel = {(, ) => setShowNewResumeForm (false) }
         is_loading = {is_loading }
       />)}
-  return (<div className="space - y-6">;
-      <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4">;
-        <h1 className="text - 2xl font - bold">Resume Builder</h1>;
-        <div className="flex gap - 4 flex - wrap items - center">;
+  return (<div className='space - y-6'>;
+      <div className='flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4'>;
+        <h1 className='text - 2xl font - bold'>Resume Builder</h1>;
+        <div className='flex gap - 4 flex - wrap items - center'>;
           {resume && <ResumeVersionSelector current_resume={resume} onResumeChange={handleResumeChange} />}
           <Button;
             on_click = {(, ) => setShowNewResumeForm (true) }
-            variant="outline";
-            size="sm";
-            className="gap - 2";
+            variant='outline';
+            size='sm';
+            className='gap - 2';
           >;
-            <FilePlus className="h - 4 w - 4" />;
+            <FilePlus className='h - 4 w - 4' />;
             Create New;
           </Button>;
         </div>;
-<<<<<<< HEAD:src_backup/components/resume-builder/wizard/ResumeWizard.tsx
       </div>;
 
             />;
@@ -174,7 +167,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }isLoading= {;
   isLoading ;
 }/>) ;
-}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {;
+}> <FilePlus className='h-4 w-4' /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {;
   activeTab ;
 }onValueChange= {;
   setActiveTab ;
@@ -195,9 +188,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   prevStep ;
 }/>) ;
 }</Tabs> </CardContent> </Card> </div>) ;
-}'"
+}''
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       </div>;/>;{resume && (<ResumeStepContent;
                 activeTab = {activeTab}
                 resume = {resume as Resume}
@@ -211,18 +203,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardContent>;
       </Card>;
     </div>;
-  )}}<AlertTitle>Error</AlertTitle> <AlertDescription> {error ;
+  )}<AlertTitle>Error</AlertTitle> <AlertDescription> {error ;
 }</AlertDescription> </Alert>)}if (showNewResumeForm) {() => setShowNewResumeForm (false)}isLoading= {isLoading ;
-}/>)}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabsvalue= {activeTab;
+}/>)}> <FilePlus className='h-4 w-4' /> Create New </Button> </div> </div> <Card> </div> <Tabsvalue= {activeTab;
 }onValueChange= {setActiveTab;
 }> <ResumeStepssteps= {RESUME STEPS;
 }activeTab= {activeTab;
 }onChange= {setActiveTab;
 }/> {resume && (<ResumeStepContentactiveTab= {activeTab;
       <Card>;
-        <CardContent className="pt - 6">;
-          <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;
-            <h2 className="text - xl font - semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
+        <CardContent className='pt - 6'>;
+          <div className='flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6'>;
+            <h2 className='text - xl font - semibold'>{resume?.basic_info?.title || 'My Resume'}</h2>;
             <ResumeProgress resume={resume} progress={progress} />;
           </div>;
           <Tabs value={active_tab} onValueChange={setActiveTab}>;
@@ -247,7 +239,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if ( {) {$2;
 }
   () => setShowNewResumeForm (false)}is_loading= {is_loading;
-}/>)}> <FilePlus className="h - 4 w - 4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {active_tab;
+}/>)}> <FilePlus className='h - 4 w - 4' /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {active_tab;
 }onValueChange= {setActiveTab;
 }> <ResumeSteps steps= {RESUME STEPS;
 }active_tab= {active_tab;
@@ -255,7 +247,7 @@ if ( {) {$2;
 }/> {resume && (<ResumeStepContent active_tab= {active_tab;}resume= {resume as Resume;
 }onNextStep= {next_step;
 }onPrevStep= {prev_step;
-}/>)}</Tabs> </CardContent> </Card> </div>)}'"}}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {activeTab ;
+}/>)}</Tabs> </CardContent> </Card> </div>)}''}> <FilePlus className='h-4 w-4' /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {activeTab ;
 }onValueChange= {setActiveTab ;
 }> <ResumeSteps steps= {RESUME STEPS ;
 }activeTab= {activeTab ;
@@ -264,5 +256,4 @@ if ( {) {$2;
 }resume= {resume as Resume ;
 }onNextStep= {nextStep ;
 }onPrevStep= {prevStep ;
-}/>)}</Tabs> </CardContent> </Card> </div>)}'";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/wizard/ResumeWizard.tsx
+}/>)}</Tabs> </CardContent> </Card> </div>)}'';

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React, { useState } from 'react','
@@ -118,24 +117,24 @@ export default function Careers() {
     : jobOpenings.filter($2);
   return (
     <UltraFuturisticBackground>
-      <div className="min-h-screen">
+      <div className='min-h-screen'>
         <Head>
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
-          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
+          <meta name='description' content='Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects.' />
         </Head>
 
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div className='min-h-screen py-12 px-4 sm:px-6 lg:px-8'>
         {/* Hero Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          initial={ opacity: 0, y: 20}
+          animate={ opacity: 1, y: 0}
+          transition={ duration: 0.6 }
+          className='text-center mb-16'
         >
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+          <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
             Join Our Team
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
             Be part of a team that's revolutionizing technology through AI, quantum computing, 
             and space technology. Help us build the future.
           </p>
@@ -143,20 +142,20 @@ export default function Careers() {
 
         {/* Company Culture */}
         <motion.div 
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-16"
+          initial={ opacity: 0, y: 20}
+          animate={ opacity: 1, y: 0}
+          transition={ duration: 0.6, delay: 0.2 }
+          className='mb-16'
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Culture & Values</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className='text-3xl font-bold text-white text-center mb-12'>Our Culture & Values</h2>
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {companyValues.map((value, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center">
-                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">
+              <div key={index} className='bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center'>
+                <div className='w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400'>
                   {value.icon}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300 text-sm">{value.description}</p>
+                <h3 className='text-lg font-bold text-white mb-3'>{value.title}</h3>
+                <p className='text-gray-300 text-sm'>{value.description}</p>
               </div>
             ))}
           </div>
@@ -164,18 +163,18 @@ export default function Careers() {
 
         {/* Benefits */}
         <motion.div 
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-16"
+          initial={ opacity: 0, y: 20}
+          animate={ opacity: 1, y: 0}
+          transition={ duration: 0.6, delay: 0.4 }
+          className='mb-16'
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
-          <div className="bg-gradient-to-br from-gray-900/40 to-purple-900/20 p-8 rounded-2xl border border-gray-600/20 max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
+          <h2 className='text-3xl font-bold text-white text-center mb-12'>Why Work With Us?</h2>
+          <div className='bg-gradient-to-br from-gray-900/40 to-purple-900/20 p-8 rounded-2xl border border-gray-600/20 max-w-4xl mx-auto'>
+            <div className='grid md:grid-cols-2 gap-6'>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
+                <div key={index} className='flex items-center'>
+                  <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
+                  <span className='text-gray-300'>{benefit}</span>
                 </div>
               ))}
             </div>
@@ -184,15 +183,15 @@ export default function Careers() {
 
         {/* Job Openings */}
         <motion.div 
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mb-16"
+          initial={ opacity: 0, y: 20}
+          animate={ opacity: 1, y: 0}
+          transition={ duration: 0.6, delay: 0.6 }
+          className='mb-16'
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
+          <h2 className='text-3xl font-bold text-white text-center mb-8'>Open Positions</h2>
           
           {/* Department Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <div className='flex flex-wrap justify-center gap-3 mb-8'>
             {departments.map((dept) => (
               <button
                 key={dept.id}
@@ -209,49 +208,49 @@ export default function Careers() {
           </div>
 
           {/* Job Listings */}
-          <div className="space-y-6">
+          <div className='space-y-6'>
             {filteredJobs.map((job) => (
               <motion.div
                 key={job.id}
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
-                className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300"
+                initial={ opacity: 0, y: 20}
+                animate={ opacity: 1, y: 0}
+                className='bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300'
               >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4'>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>
-                    <div className="flex flex-wrap gap-3 text-sm">
-                      <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">
+                    <h3 className='text-xl font-bold text-white mb-2'>{job.title}</h3>
+                    <div className='flex flex-wrap gap-3 text-sm'>
+                      <span className='bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full'>
                         {departments.find(d => d.id === job.department)?.name}
                       </span>
-                      <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full">
+                      <span className='bg-green-500/20 text-green-400 px-3 py-1 rounded-full'>
                         {job.location}
                       </span>
-                      <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">
+                      <span className='bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full'>
                         {job.type}
                       </span>
-                      <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full">
+                      <span className='bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full'>
                         {job.experience}
                       </span>
                     </div>
                   </div>
                   <a
                     href={`/contact?position=${encodeURIComponent(job.title)}`}
-                    className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                    className='mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
                   >
                     Apply Now
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <ArrowRight className='w-5 h-5 ml-2' />
                   </a>
                 </div>
                 
-                <p className="text-gray-300 mb-4">{job.description}</p>
+                <p className='text-gray-300 mb-4'>{job.description}</p>
                 
                 <div>
-                  <h4 className="text-white font-semibold mb-2">Requirements:</h4>
-                  <ul className="space-y-1">
+                  <h4 className='text-white font-semibold mb-2'>Requirements:</h4>
+                  <ul className='space-y-1'>
                     {job.requirements.map((req, index) => (
-                      <li key={index} className="flex items-start text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                      <li key={index} className='flex items-start text-sm text-gray-300'>
+                        <CheckCircle className='w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0' />
                         {req}
                       </li>
                     ))}
@@ -262,10 +261,10 @@ export default function Careers() {
           </div>
 
           {filteredJobs.length === 0 && (
-            <div className="text-center py-12">
-              <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>
-              <p className="text-gray-500">
+            <div className='text-center py-12'>
+              <Briefcase className='w-16 h-16 text-gray-500 mx-auto mb-4' />
+              <h3 className='text-xl font-semibold text-gray-400 mb-2'>No Open Positions</h3>
+              <p className='text-gray-500'>
                 We don't have any open positions in this department at the moment. 
                 Check back later or send us your resume for future opportunities.
               </p>
@@ -275,10 +274,9 @@ export default function Careers() {
 
         {/* General Application */}
         <motion.div 
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={ opacity: 0, y: 20}
+          animate={ opacity: 1, y: 0}
+          transition={ duration: 0.6, delay: 0.8 }
         </motion.div>;
       </div>;
     </Layout>;
@@ -294,6 +292,3 @@ export default function Careers() {const [selectedDepartment, setSelectedDepartm
 export default CareersPage;
           className = $2;
 export default CareersPage,
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1156,7 +1156,7 @@ const supportLevels = [{;
 ];
 export default function ITServicesPage() {;
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
                   <Head>;
                   <title>IT Services - Zion Tech Group</title>;
     pricing: '$5, 000 - $40, 000 / project',
@@ -1670,46 +1670,46 @@ export default /**
  */
 function ITServicesPage() {
   return (
-    <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
+    <div className='min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900'>;
                   <Head>;
                   <title > IT Services - Zion Tech Group</title>;
-                  <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration." />;
-                  <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />;
+                  <meta name='description' content='Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration.' />;
+                  <meta name='keywords' content='IT services, cloud infrastructure, cybersecurity, network management, system administration' />;
                   </Head>;
       {/* Hero Section */}
                   </div>;
-                  <div className="absolute top - 40 right - 10 w - 72 h - 72 bg - emerald - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse animation - delay - 2000">;
+                  <div className='absolute top - 40 right - 10 w - 72 h - 72 bg - emerald - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse animation - delay - 2000'>;
                   </div>;
                   </div>;
-                  <div className="container mx - auto px - 4 relative z - 10">;
+                  <div className='container mx - auto px - 4 relative z - 10'>;
                   <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text - center";
+            initial={ opacity: 0, coordinate_y: 30 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            className='text - center';
           >;
-<div className="flex items - center justify - center mb - 6">;
-                  <Server className="h - 16 w - 16 text - green - 400 mr - 4" />;
-                  <h1 className="text - 4xl md:text - 6xl font - bold">;
+<div className='flex items - center justify - center mb - 6'>;
+                  <Server className='h - 16 w - 16 text - green - 400 mr - 4' />;
+                  <h1 className='text - 4xl md:text - 6xl font - bold'>;
                 IT{' '}
       {/* Services Grid */}
-      <section className="py - 20 bg - gray - 50">;
-                  <div className="container mx - auto px - 4">;
+      <section className='py - 20 bg - gray - 50'>;
+                  <div className='container mx - auto px - 4'>;
                   <motion.div;
-            className="text - center mb - 16";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className='text - center mb - 16';
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
-<h2 className="text - 3xl sm:text - 4xl md:text - 5xl font - bold text - gray - 900 mb - 4">;
+<h2 className='text - 3xl sm:text - 4xl md:text - 5xl font - bold text - gray - 900 mb - 4'>;
               Our IT Solutions;
             </h2>;
-                  <p className="text - lg sm:text - xl text - gray - 600 max - w-4xl mx - auto leading - relaxed">;
+                  <p className='text - lg sm:text - xl text - gray - 600 max - w-4xl mx - auto leading - relaxed'>;
               End - to - end IT services designed to optimize your infrastructure and ensure business continuity.;
             </p>;
                   </motion.div>;
-                  <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+                  <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
             {it_services.map ((service, index) => {
               const IconComponent = service.icon;
               return (
@@ -1928,8 +1928,8 @@ const Page = () => {
       </section>
                   </div>
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -2294,30 +2294,30 @@ function ITServices() {
                         : 'bg - slate - 800 text - slate - 300 hover:bg - slate - 700';
                     }`}
                   >;
-          <section className="py-16 px-4" role="main">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <section className='py-16 px-4' role='main'>
+            <div className='max-w-7xl mx-auto'>
+              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {filteredServices.map((service, index) => (
                   <div 
                     key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    style={ transitionDelay: `${index * 100}ms` }
                   >
                     {service.popular && (
-                      <div className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                      <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
                         Popular
                       </div>
                     )}
                     
-                    <h3 className="text-xl font-bold mb-3">{service.name}</h3>
-                    <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
+                    <h3 className='text-xl font-bold mb-3'>{service.name}</h3>
+                    <p className='text-slate-300 mb-4 text-sm'>{service.description}</p>
                     
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-green-400 mb-2">Key Features:</h4>
-                      <ul className="text-slate-400 text-sm space-y-1">
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-green-400 mb-2'>Key Features:</h4>
+                      <ul className='text-slate-400 text-sm space-y-1'>
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center">
-                            <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0"></span>
+                          <li key={featureIndex} className='flex items-center'>
+                            <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>
                             {feature}
                           </li>
                         ))}
@@ -2357,16 +2357,16 @@ function ITServices() {
                     AWS, Azure, GCP, and hybrid cloud solutions
                   </p>
                 </div>
-                  <ul className="space-y-3 mb-8">
+                  <ul className='space-y-3 mb-8'>
                   {level.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className='flex items-center text-gray-600'>
+                  <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />
                       {feature}
                     </li>;
                   ))}
                 </ul>;
                   <Link
-                  href="/contact"
+                  href='/contact'
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
 ? 'bg-green-600 hover: bg-green-700 text-white'
@@ -2381,78 +2381,78 @@ function ITServices() {
     </>
   )
 }
-          <section className="py-16 px-4 bg-slate-900/40">;
-            <div className="max-w-6xl mx-auto">;
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
+          <section className='py-16 px-4 bg-slate-900/40'>;
+            <div className='max-w-6xl mx-auto'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>;
                 Our Technology Stack;
               </h2>;
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />;
+              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>;
+                <div className='text-center'>;
+                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+                    <svg className='w-8 h-8 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>;
+                      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' />;
                     </svg>;
                   </div>;
-                  <h3 className="text-xl font-bold mb-2">Cloud Platforms</h3>;
-                  <p className="text-slate-400">AWS, Azure, GCP, and hybrid cloud solutions</p>;
+                  <h3 className='text-xl font-bold mb-2'>Cloud Platforms</h3>;
+                  <p className='text-slate-400'>AWS, Azure, GCP, and hybrid cloud solutions</p>;
                 </div>;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />;
+                <div className='text-center'>;
+                  <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+                    <svg className='w-8 h-8 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>;
+                      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' />;
                     </svg>;
                   </div>;
-                  <h3 className="text-xl font-bold mb-2">Security</h3>;
-                  <p className="text-slate-400">Zero-trust architecture and advanced threat protection</p>;
+                  <h3 className='text-xl font-bold mb-2'>Security</h3>;
+                  <p className='text-slate-400'>Zero-trust architecture and advanced threat protection</p>;
                 </div>;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />;
+                <div className='text-center'>;
+                  <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+                    <svg className='w-8 h-8 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>;
+                      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z' />;
+                      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />;
                     </svg>;
                   </div>;
-                  <h3 className="text-xl font-bold mb-2">DevOps</h3>;
-                  <p className="text-slate-400">CI/CD pipelines and infrastructure automation</p>;
+                  <h3 className='text-xl font-bold mb-2'>DevOps</h3>;
+                  <p className='text-slate-400'>CI/CD pipelines and infrastructure automation</p>;
                 </div>;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />;
+                <div className='text-center'>;
+                  <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+                    <svg className='w-8 h-8 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>;
+                      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1' />;
                     </svg>;
                   </div>;
-                  <h3 className="text-xl font-bold mb-2">Blockchain</h3>;
-                  <p className="text-slate-400">Smart contracts and decentralized applications</p>;
+                  <h3 className='text-xl font-bold mb-2'>Blockchain</h3>;
+                  <p className='text-slate-400'>Smart contracts and decentralized applications</p>;
                 </div>;
 
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
-              viewport={{ once: true }}>;
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
-                <Building className="w-8 h-8 text-green-600" />;
+              transition={ duration: 0 && 0.8, delay: 0 && 0.3 }
+              viewport={ once: true }>;
+              <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>;
+                <Building className='w-8 h-8 text-green-600' />;
               </div>;
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>;
-              <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>;
-              <address className="text-green-600 font-semibold not-italic">;
+              <h3 className='text-xl font-bold text-gray-900 mb-2'>Visit Our Office</h3>;
+              <p className='text-gray-600 mb-4'>Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>;
+              <address className='text-green-600 font-semibold not-italic'>;
                 364 E Main St STE 1008<br />;
                 Middletown, DE 19709;
               </address>;
             </motion && motion.div>;
           </div>;
           <motion&& motion.div
-            className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>;
-            <p className="text-lg mb-6">;
+            className='bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center'
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
+            <h3 className='text-2xl font-bold mb-4'>Ready to Get Started?</h3>;
+            <p className='text-lg mb-6'>;
               Join 500+ successful businesses that trust Zion Tech Group for their IT infrastructure needs. Let&apos;s build the perfect technology solution for your business.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <Link href='/contact' className='px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold'>;
                 Start Building;
               </Link>;
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
+              <Link href='/services' className='px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold'>;
                 View All Services;
               </Link>;
             </div>;
@@ -2463,23 +2463,23 @@ function ITServices() {
   );
 }
 
-      <section className="py - 20 bg - gradient - to - r from - green - 600 to - emerald - 600 text - white">;
-<div className="container mx - auto px - 4 text - center">;
+      <section className='py - 20 bg - gradient - to - r from - green - 600 to - emerald - 600 text - white'>;
+<div className='container mx - auto px - 4 text - center'>;
                   <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
-<h2 className="text - 3xl md:text - 4xl font - bold mb - 6">Ready to Optimize Your IT Infrastructure?</h2>;
-            <p className="text - xl mb - 8 max - w-2xl mx - auto">;
+<h2 className='text - 3xl md:text - 4xl font - bold mb - 6'>Ready to Optimize Your IT Infrastructure?</h2>;
+            <p className='text - xl mb - 8 max - w-2xl mx - auto'>;
               Let our expert team help you build a robust, secure, and scalable IT environment.;
             </p>;
-                  <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                  <Link href="/contact" className="px - 8 py - 4 bg - white text - green - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold">;
+                  <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+                  <Link href='/contact' className='px - 8 py - 4 bg - white text - green - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold'>;
                 Get IT Assessment;
               </Link>;
-                  <Link href="/services" className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - green - 600 transition - all duration - 300 font - semibold">;
+                  <Link href='/services' className='px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - green - 600 transition - all duration - 300 font - semibold'>;
                 View All Services;
               </Link>;
                   </div>;
@@ -2487,89 +2487,89 @@ function ITServices() {
                   </div>;
                   </section>;
       {/* Contact Information Section */}
-      <section className="py - 20 bg - gray - 50">;
-        <div className="container mx - auto px - 4">;
+      <section className='py - 20 bg - gray - 50'>;
+        <div className='container mx - auto px - 4'>;
           <motion.div;
-            className="text - center mb - 16";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className='text - center mb - 16';
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
-            <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
+            <h2 className='text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4'>;
               Get Started with IT Services Today;
             </h2>;
-            <p className="text - lg text - gray - 600 max - w-3xl mx - auto mb - 8">;
+            <p className='text - lg text - gray - 600 max - w-3xl mx - auto mb - 8'>;
               Ready to transform your IT infrastructure? Our expert team is here to help you build, secure, and optimize your technology environment. Contact us for a free consultation and discover how we can accelerate your digital transformation.;
             </p>;
           </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12">;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12'>;
             <motion.div;
-              className="text - center p - 6 bg - white rounded - lg shadow - lg";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              className='text - center p - 6 bg - white rounded - lg shadow - lg';
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.1 }
+              viewport={ once: true }
             >;
-              <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
-                <MessageSquare className="w - 8 h - 8 text - green - 600" />;
+              <div className='bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4'>;
+                <MessageSquare className='w - 8 h - 8 text - green - 600' />;
               </div>;
-              <h3 className="text - xl font - bold text - gray - 900 mb - 2">Free IT Consultation</h3>;
-              <p className="text - gray - 600 mb - 4">Get expert advice on your IT project with our complimentary 30 - minute consultation.</p>;
-              <a href="tel:+13024640950" className="text - green - 600 font - semibold hover:text - green - 700">;
+              <h3 className='text - xl font - bold text - gray - 900 mb - 2'>Free IT Consultation</h3>;
+              <p className='text - gray - 600 mb - 4'>Get expert advice on your IT project with our complimentary 30 - minute consultation.</p>;
+              <a href='tel:+13024640950' className='text - green - 600 font - semibold hover:text - green - 700'>;
                 Call Now: +1 302 464 0950;
               </a>;
             </motion.div>;
             <motion.div;
-              className="text - center p - 6 bg - white rounded - lg shadow - lg";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              className='text - center p - 6 bg - white rounded - lg shadow - lg';
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }
             >;
-              <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
-                <Mail className="w - 8 h - 8 text - green - 600" />;
+              <div className='bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4'>;
+                <Mail className='w - 8 h - 8 text - green - 600' />;
               </div>;
-              <h3 className="text - xl font - bold text - gray - 900 mb - 2">Email Us</h3>;
-              <p className="text - gray - 600 mb - 4">Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>;
-              <a href="mailto:kleber@ziontechgroup.com" className="text - green - 600 font - semibold hover:text - green - 700">;
+              <h3 className='text - xl font - bold text - gray - 900 mb - 2'>Email Us</h3>;
+              <p className='text - gray - 600 mb - 4'>Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>;
+              <a href='mailto:kleber@ziontechgroup.com' className='text - green - 600 font - semibold hover:text - green - 700'>;
                 kleber@ziontechgroup.com;
               </a>;
             </motion.div>;
             <motion.div;
-              className="text - center p - 6 bg - white rounded - lg shadow - lg";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              className='text - center p - 6 bg - white rounded - lg shadow - lg';
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8, delay: 0.3 }
+              viewport={ once: true }
             >;
-              <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
-                <Building className="w - 8 h - 8 text - green - 600" />;
+              <div className='bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4'>;
+                <Building className='w - 8 h - 8 text - green - 600' />;
               </div>;
-              <h3 className="text - xl font - bold text - gray - 900 mb - 2">Visit Our Office</h3>;
-              <p className="text - gray - 600 mb - 4">Schedule an in - person meeting at our headquarters in Middletown, Delaware.</p>;
-              <address className="text - green - 600 font - semibold not - italic">;
+              <h3 className='text - xl font - bold text - gray - 900 mb - 2'>Visit Our Office</h3>;
+              <p className='text - gray - 600 mb - 4'>Schedule an in - person meeting at our headquarters in Middletown, Delaware.</p>;
+              <address className='text - green - 600 font - semibold not - italic'>;
                 364 E Main St STE 1008 < br />;
                 Middletown, DE 19709;
               </address>;
             </motion.div>;
           </div>;
           <motion.div;
-            className="bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - 2xl p - 8 text - white text - center";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className='bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - 2xl p - 8 text - white text - center';
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
-            <h3 className="text - 2xl font - bold mb - 4">Ready to Get Started?</h3>;
-            <p className="text - lg mb - 6">;
+            <h3 className='text - 2xl font - bold mb - 4'>Ready to Get Started?</h3>;
+            <p className='text - lg mb - 6'>;
               Join 500+ successful businesses that trust Zion Tech Group for their IT infrastructure needs. Let & apos;s build the perfect technology solution for your business.;
             </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-              <Link href="/contact" className="px - 8 py - 4 bg - white text - green - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold">;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <Link href='/contact' className='px - 8 py - 4 bg - white text - green - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold'>;
                 Start Building;
               </Link>;
-              <Link href="/services" className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - green - 600 transition - all duration - 300 font - semibold">;
+              <Link href='/services' className='px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - green - 600 transition - all duration - 300 font - semibold'>;
                 View All Services;
               </Link>;
             </div>;

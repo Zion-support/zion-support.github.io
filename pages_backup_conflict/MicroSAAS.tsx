@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 ;
 import React from 'react';'
@@ -96,10 +90,6 @@ export default function MicroSAAS() {const microSAAS = [{"name": "AI-Powered Inv
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       {/* Services Grid */}
       <section className="py-20 px-4 "sm": px-6 "lg":px-8">;"
         <div className="max-w-7xl mx-auto">;"
@@ -650,10 +640,7 @@ href="/request-quote""
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   );
 }
 import React from 'react'; import Link from 'next/link'; import Head from 'next/head';'

@@ -94,7 +94,7 @@ export function SharedInbox() {;
 }
 ;
     </Card>);
-}}
+}
     </Card>);
 }
     </Card>);

@@ -283,7 +283,7 @@ export default function MarketResearchPage() {
               <Card
                 key={index}
                 className="card-hover text-center border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="p-6">
                   <div className="text-3xl font-bold text-white mb-2">{insight.value}</div>
@@ -317,7 +317,7 @@ export default function MarketResearchPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue overflow-hidden"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="p-8">
                   <div className="flex flex-col lg:flex-row gap-8">
@@ -422,7 +422,7 @@ export default function MarketResearchPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-4">{analysis.company}</h3>
@@ -494,7 +494,7 @@ export default function MarketResearchPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
@@ -555,7 +555,7 @@ export default function MarketResearchPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{strategy.strategy}</h3>

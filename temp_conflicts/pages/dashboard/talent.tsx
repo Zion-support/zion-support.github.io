@@ -164,10 +164,10 @@ export default function TalentDashboardSuggestedJobs() {
           {items.map((s) => (
             <motion.div
               key={s.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              transition={{ duration: 0.2 }}
+              initial={ opacity: 0, y: 10 }
+              animate={ opacity: 1, y: 0 }
+              exit={ opacity: 0, y: 10 }
+              transition={ duration: 0.2 }
               className={`relative rounded-2xl border bg-white p-4 shadow-sm hover:shadow-md ${
                 highlightNew && (s.status || "new") === "new"
                   ? "border-emerald-200 ring-1 ring-emerald-200"

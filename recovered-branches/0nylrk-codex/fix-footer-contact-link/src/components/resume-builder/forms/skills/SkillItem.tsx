@@ -29,7 +29,7 @@ variant="ghost";"
         className="h-5 w-5 p-0 ml-1""
   );
   )
-}};
+};
       variant="secondary";"
       className="flex items - center gap - 1 py - 1.5 px-3";"
     >;

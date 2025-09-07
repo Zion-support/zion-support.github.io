@@ -88,7 +88,7 @@ export const CreateResumeForm = ({onCreateResume,onCancel;
     </Card>;
   )}w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text-center"> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <ButtononClick={handleSubmit;"
 }disabled= {!newResumeTitle && newResumeTitle.trim () || isLoading;
-}> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)}},'"},)}import { Card, CardContent  } from '@/components / ui / card';'
+}> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)},'"},)}import { Card, CardContent  } from '@/components / ui / card';'
 import { Button  } from '@/components / ui / button';'
 export const CreateResumeForm = ({onCreateResume,on_cancel,is_loading}: CreateResumeFormProps) =>: any {const [newResumeTitle, setNewResumeTitle] = useState ('')const handle_submit = async () => {if () return) {$2;'
 }

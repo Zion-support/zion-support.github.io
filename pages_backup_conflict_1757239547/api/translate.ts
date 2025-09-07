@@ -43,11 +43,11 @@ export default async function handler(req, res) {
   if (!text || !Array.isArray(targets) || targets.length === 0) {;
     return res.status(400).json({ error: 'Invalid input' });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   }

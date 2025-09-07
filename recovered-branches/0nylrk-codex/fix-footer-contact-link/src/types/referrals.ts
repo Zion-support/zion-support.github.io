@@ -69,7 +69,7 @@ export interface ReferralStats {;
   "totalRewards": number;
 }
 ;
-}}
+}
 
 export type ReferralStatus = $2;
 export interface ReferralCode {

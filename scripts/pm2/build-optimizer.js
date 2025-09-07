@@ -6,7 +6,7 @@
 
 
 
-}};
+};
 ; async analyzeBuild() {; try {; this && this.log('🏗️ Analyzing current build...');
 ; if (!fs && fs.existsSync('dist')) {; this && this.log('📦 Building project first...'); execSync('npm run build', {; cwd: this && this.projectRoot,
     stdio: 'pipe'})};
@@ -16,11 +16,11 @@
 ; if (stat && stat.isDirectory()) {; analyzeDirectory(fullPath)} else {; const fileInfo = {; path: fullPath && fullPath.replace(this && this.projectRoot + '/dist/', ''); size: stat && stat.size,
     sizeKB: Math && Math.round(stat && stat.size / 1024 * 100) / 100};
 ; buildStats && buildStats.totalSize + = stat && stat.size; buildStats && buildStats.fileCount++;
-; if (item && item.endsWith('.js')) {; buildStats && buildStats.jsFiles.push(fileInfo)} else if (item && item.endsWith('.css')) {; buildStats && buildStats.cssFiles.push(fileInfo)} else {; buildStats && buildStats.assetFiles.push(fileInfo)}}})};
+; if (item && item.endsWith('.js')) {; buildStats && buildStats.jsFiles.push(fileInfo)} else if (item && item.endsWith('.css')) {; buildStats && buildStats.cssFiles.push(fileInfo)} else {; buildStats && buildStats.assetFiles.push(fileInfo)}})};
 ; analyzeDirectory('dist');
 
 ursor/fix-syntax-push-and-merge-to-main-40de
-#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class BuildOptimizer { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'build-optimizer'; this.optimizeBundles = process.env.OPTIMIZE_BUNDLES === 'true'; this.treeShaking = process.env.TREE_SHAKING === 'true'; this.codeSplitting = process.env.CODE_SPLITTING === 'true'; this.minification = process.env.MINIFICATION === 'true'; this.logFile = 'logs/pm2/build-optimizer.log'; this.errorFile = 'logs/pm2/build-optimizer-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async analyzeBundleSize() { this.log('Analyzing bundle size...'); try { const buildDir = this.findBuildDirectory(); if (!buildDir) { this.log('No build directory found','WARNING'); return { success: false,message: 'No build directory found' }} const bundleInfo = this.getBundleInfo(buildDir); this.log(`Bundle analysis completed:`); this.log(` - Total files: ${bundleInfo.totalFiles}`); this.log(` - Total size: ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`); this.log(` - Largest files: ${bundleInfo.largestFiles.length}`); return { success: true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis failed: ${error.message}`); return { success: false,error: error.message }} } findBuildDirectory() { const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = []; const largestFiles = []; function scanDirectory(dir,basePath = '') { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const relativePath = path.join(basePath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { scanDirectory(fullPath,relativePath)} else if (stat.isFile()) { const fileInfo = { path: relativePath,size: stat.size,extension: path.extname(item) }; files.push(fileInfo); if (largestFiles.length < 10) { largestFiles.push(fileInfo); largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) { } } scanDirectory(buildDir); const totalSize = files.reduce((sum,file) => sum + file.size,0); const jsFiles = files.filter(f => f.extension === '.js'); const cssFiles = files.filter(f => f.extension === '.css'); return { totalFiles: files.length,totalSize,jsFiles: jsFiles.length,cssFiles: cssFiles.length,largestFiles: largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...'); try { const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies(); if (unusedDeps.length > 0) { optimizations.push({ type: 'unused_dependencies',count: unusedDeps.length,dependencies: unusedDeps })} } const bundleAnalysis = await this.analyzeBundleSize(); if (bundleAnalysis.success) { const largeFiles = bundleAnalysis.largestFiles.filter(f => f.size > 100 * 1024); if (largeFiles.length > 0) { optimizations.push({ type: 'large_files',count: largeFiles.length,files: largeFiles })} } const duplicates = await this.findDuplicateDependencies(); if (duplicates.length > 0) { optimizations.push({ type: 'duplicate_dependencies',count: duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`); return { success: true,optimizations }} catch (error) { this.error(`Bundle optimization failed: ${error.message}`); return { success: false,error: error.message }} } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); const allDeps = [...dependencies,...devDependencies]; const unusedDeps = []; for (const dep of allDeps) { if (!this.isDependencyUsed(dep)) { unusedDeps.push(dep)} } return unusedDeps} catch (error) { this.log(`Failed to check unused dependencies: ${error.message}`,'WARNING'); return []} } isDependencyUsed(dependency) { try { const files = this.getFilesToScan(['.js','.ts','.jsx','.tsx','.vue','.svelte']); for (const file of files) { try { const content = fs.readFileSync(file,'utf8'); const importPatterns = [ new RegExp(`import.*['"]${dependency}['"]`,'g'),new RegExp(`require\\(['"]${dependency}['"]\\)`,'g'),new RegExp(`from\\s+['"]${dependency}['"]`,'g'),new RegExp(`import\\s+['"]${dependency}/`,'g') ]; for (const pattern of importPatterns) { if (pattern.test(content)) { return true} } } catch (error) { } } return false} catch (error) { return false} } async findDuplicateDependencies() { try { const packageLockPath = 'package-lock.json'; if (!fs.existsSync(packageLockPath)) { return []} const packageLock = JSON.parse(fs.readFileSync(packageLockPath,'utf8')); const duplicates = []; const dependencyVersions = new Map(); function analyzeDependencies(deps,path = '') { if (!deps) return; for (const [name,version] of Object.entries(deps)) { const fullPath = path ? `${path}.${name}` : name; if (dependencyVersions.has(name)) { const existing = dependencyVersions.get(name); if (existing.version !== version) { duplicates.push({ name,versions: [existing.version,version],paths: [existing.path,fullPath] })} } else { dependencyVersions.set(name,{ version,path: fullPath })} if (typeof version === 'object' && version.dependencies) { analyzeDependencies(version.dependencies,fullPath)} } } analyzeDependencies(packageLock.dependencies); return duplicates} catch (error) { this.log(`Failed to check duplicate dependencies: ${error.message}`,'WARNING'); return []} } getFilesToScan(extensions) { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (extensions.includes(ext)) { files.push(fullPath)} } } } catch (error) { } } scanDirectory(process.cwd()); return files} async generateOptimizationReport() { this.log('Generating optimization report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,bundleAnalysis: await this.analyzeBundleSize(),optimizationResults: await this.optimizeBundle(),environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `optimization-reports/build-optimization-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Optimization report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate optimization report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateOptimizationReport(); const interval = 24 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled build optimization...'); await this.generateOptimizationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const optimizer = new BuildOptimizer(); optimizer.start().catch(error => { console.error('Build optimizer failed to start:',error); process.exit(1)})} module.exports = BuildOptimizer;
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class BuildOptimizer { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'build-optimizer'; this.optimizeBundles = process.env.OPTIMIZE_BUNDLES === 'true'; this.treeShaking = process.env.TREE_SHAKING === 'true'; this.codeSplitting = process.env.CODE_SPLITTING === 'true'; this.minification = process.env.MINIFICATION === 'true'; this.logFile = 'logs/pm2/build-optimizer.log'; this.errorFile = 'logs/pm2/build-optimizer-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async analyzeBundleSize() { this.log('Analyzing bundle size...'); try { const buildDir = this.findBuildDirectory(); if (!buildDir) { this.log('No build directory found','WARNING'); return { success: false,message: 'No build directory found' } const bundleInfo = this.getBundleInfo(buildDir); this.log(`Bundle analysis completed:`); this.log(` - Total files: ${bundleInfo.totalFiles}`); this.log(` - Total size: ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`); this.log(` - Largest files: ${bundleInfo.largestFiles.length}`); return { success: true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis failed: ${error.message}`); return { success: false,error: error.message } } findBuildDirectory() { const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = []; const largestFiles = []; function scanDirectory(dir,basePath = '') { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const relativePath = path.join(basePath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { scanDirectory(fullPath,relativePath)} else if (stat.isFile()) { const fileInfo = { path: relativePath,size: stat.size,extension: path.extname(item) }; files.push(fileInfo); if (largestFiles.length < 10) { largestFiles.push(fileInfo); largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) { } } scanDirectory(buildDir); const totalSize = files.reduce((sum,file) => sum + file.size,0); const jsFiles = files.filter(f => f.extension === '.js'); const cssFiles = files.filter(f => f.extension === '.css'); return { totalFiles: files.length,totalSize,jsFiles: jsFiles.length,cssFiles: cssFiles.length,largestFiles: largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...'); try { const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies(); if (unusedDeps.length > 0) { optimizations.push({ type: 'unused_dependencies',count: unusedDeps.length,dependencies: unusedDeps })} } const bundleAnalysis = await this.analyzeBundleSize(); if (bundleAnalysis.success) { const largeFiles = bundleAnalysis.largestFiles.filter(f => f.size > 100 * 1024); if (largeFiles.length > 0) { optimizations.push({ type: 'large_files',count: largeFiles.length,files: largeFiles })} } const duplicates = await this.findDuplicateDependencies(); if (duplicates.length > 0) { optimizations.push({ type: 'duplicate_dependencies',count: duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`); return { success: true,optimizations } catch (error) { this.error(`Bundle optimization failed: ${error.message}`); return { success: false,error: error.message } } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); const allDeps = [...dependencies,...devDependencies]; const unusedDeps = []; for (const dep of allDeps) { if (!this.isDependencyUsed(dep)) { unusedDeps.push(dep)} } return unusedDeps} catch (error) { this.log(`Failed to check unused dependencies: ${error.message}`,'WARNING'); return []} } isDependencyUsed(dependency) { try { const files = this.getFilesToScan(['.js','.ts','.jsx','.tsx','.vue','.svelte']); for (const file of files) { try { const content = fs.readFileSync(file,'utf8'); const importPatterns = [ new RegExp(`import.*['"]${dependency}['"]`,'g'),new RegExp(`require\\(['"]${dependency}['"]\\)`,'g'),new RegExp(`from\\s+['"]${dependency}['"]`,'g'),new RegExp(`import\\s+['"]${dependency}/`,'g') ]; for (const pattern of importPatterns) { if (pattern.test(content)) { return true} } } catch (error) { } } return false} catch (error) { return false} } async findDuplicateDependencies() { try { const packageLockPath = 'package-lock.json'; if (!fs.existsSync(packageLockPath)) { return []} const packageLock = JSON.parse(fs.readFileSync(packageLockPath,'utf8')); const duplicates = []; const dependencyVersions = new Map(); function analyzeDependencies(deps,path = '') { if (!deps) return; for (const [name,version] of Object.entries(deps)) { const fullPath = path ? `${path}.${name}` : name; if (dependencyVersions.has(name)) { const existing = dependencyVersions.get(name); if (existing.version !== version) { duplicates.push({ name,versions: [existing.version,version],paths: [existing.path,fullPath] })} } else { dependencyVersions.set(name,{ version,path: fullPath })} if (typeof version === 'object' && version.dependencies) { analyzeDependencies(version.dependencies,fullPath)} } } analyzeDependencies(packageLock.dependencies); return duplicates} catch (error) { this.log(`Failed to check duplicate dependencies: ${error.message}`,'WARNING'); return []} } getFilesToScan(extensions) { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (extensions.includes(ext)) { files.push(fullPath)} } } } catch (error) { } } scanDirectory(process.cwd()); return files} async generateOptimizationReport() { this.log('Generating optimization report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,bundleAnalysis: await this.analyzeBundleSize(),optimizationResults: await this.optimizeBundle(),environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `optimization-reports/build-optimization-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Optimization report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate optimization report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateOptimizationReport(); const interval = 24 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled build optimization...'); await this.generateOptimizationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const optimizer = new BuildOptimizer(); optimizer.start().catch(error => { console.error('Build optimizer failed to start:',error); process.exit(1)})} module.exports = BuildOptimizer;
 #!/usr/bin/env node
 /**
  * PM2 Build Optimizer Script
@@ -35,14 +35,14 @@ class BuildOptimizer {
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
-}}async analyzeBuild() {try {this && this.log('🏗️ Analyzing current build...')if (!fs && fs.existsSync('dist')) {this && this.log('📦 Building project first...')execSync('npm run build', {"cwd": this && this.projectRoot,"stdio": 'pipe'},'
+}async analyzeBuild() {try {this && this.log('🏗️ Analyzing current build...')if (!fs && fs.existsSync('dist')) {this && this.log('📦 Building project first...')execSync('npm run build', {"cwd": this && this.projectRoot,"stdio": 'pipe'},'
 }
 
 const buildStats = {"totalSize": 0, "fileCount": 0, "largestFiles": [], "jsFiles": [], "cssFiles": [],"assetFiles": [;
 }
 
 const analyzeDirectory = (dir) = > {const items = fs && fs.readdirSync(dir)items && items.forEach(item = > {const fileInfo = {"path": fullPath && fullPath.replace(this && this.projectRoot + '/dist/', '')"size": stat && stat.size,"sizeKB": Math && Math.round(stat && stat.size / 1024 * 100) / 10,;'
-}buildStats && buildStats.totalSize + = stat && stat.size; buildStats && buildStats.fileCount++;if (item && item.endsWith('.js')) {buildStats && buildStats.jsFiles.push(fileInfo)} else if (item && item.endsWith('.css')) {buildStats && buildStats.cssFiles.push(fileInfo)} else {buildStats && buildStats.assetFiles.push(fileInfo)}}})}analyzeDirectory('dist')ursor/fix-syntax-push-and-merge-to-main-40de;'
+}buildStats && buildStats.totalSize + = stat && stat.size; buildStats && buildStats.fileCount++;if (item && item.endsWith('.js')) {buildStats && buildStats.jsFiles.push(fileInfo)} else if (item && item.endsWith('.css')) {buildStats && buildStats.cssFiles.push(fileInfo)} else {buildStats && buildStats.assetFiles.push(fileInfo)}})}analyzeDirectory('dist')ursor/fix-syntax-push-and-merge-to-main-40de;'
 ursor/automate-test-improve-and-merge-code-646c;
 #!/usr/bin/env node const { execSync } = require('child_process')const fs = require('fs';'
   const path = require('path')class BuildOptimizer { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'build-optimizer'; this.optimizeBundles = process.env.OPTIMIZE_BUNDLES === 'true'; this.treeShaking = process.env.TREE_SHAKING === 'true'; this.codeSplitting = process.env.CODE_SPLITTING === 'true'; this.minification = process.env.MINIFICATION === 'true'; this.logFile = 'logs/pm2/build-optimizer.log'; this.errorFile = 'logs/pm2/build-optimizer-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile)if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ "recursive": true })},'
@@ -53,7 +53,7 @@ ursor/automate-test-improve-and-merge-code-646c;
   return { "success": false,"message": 'No build directory found' ;'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } findBuildDirectory() {;
   }
   const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
@@ -64,7 +64,7 @@ const largestFiles = []; function scanDirectory() { try { const items = fs.readd
 }
 const fileInfo = { "path": relativePath,"size": stat.size,"extension": path.extname(item),;
 }files.push(fileInfo)if (largestFiles.length < 10) { largestFiles.push(fileInfo)largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) {} } scanDirectory(buildDir)const totalSize = files.reduce((sum,file) => sum + file.size,0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...')try {;'
+  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...')try {;'
   }
   const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies()if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
@@ -73,7 +73,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 };
 }
 
-const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies,...devDependencies];
 
@@ -101,7 +101,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
   return { "success": false,"message": 'No build directory found' ;'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } findBuildDirectory() {;
   }
   const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
@@ -112,7 +112,7 @@ const largestFiles = []; function scanDirectory() { try { const items = fs.readd
 }
 const fileInfo = { "path": relativePath,"size": stat.size,"extension": path.extname(item),;
 }files.push(fileInfo)if (largestFiles.length < 10) { largestFiles.push(fileInfo)largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) {} } scanDirectory(buildDir)const totalSize = files.reduce((sum,file) => sum + file.size,0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...')try {;'
+  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...')try {;'
   }
   const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies()if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
@@ -121,7 +121,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 };
 }
 
-const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies,...devDependencies];
 
@@ -164,10 +164,10 @@ const { execSync } = require('child_process')const fs = require('fs';'
   error(message) {this.log(message, 'ERROR')try {fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] "ERROR": ${message}\n`)} catch (err) {console.error('Failed to write to error "file": ', err.message)}'  }
   async analyzeBundleSize() {this.log('Analyzing bundle size...')try {const buildDir = this.findBuildDirectory()if (!buildDir) {this.log('No build directory found', 'WARNING';'
   }
-  return { "success": false, "message": 'No build directory found' }}'
+  return { "success": false, "message": 'No build directory found' }'
 ;
 const bundleInfo = this.getBundleInfo(buildDir)this.log("Bundle analysis "completed": ")this.log(`  - Total "files": ${bundleInfo.totalFiles}`)this.log(`  - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(`  - Largest "files": ${bundleInfo.largestFiles.lengt,;"}`;`  return {"success": true,buildDir,...bundleInfo;"
-      }} catch (error) {this.error(`Bundle analysis "failed": ${error.message}`)return { "success": false, "error": error.message }}"  }
+      } catch (error) {this.error(`Bundle analysis "failed": ${error.message}`)return { "success": false, "error": error.message }"  }
   findBuildDirectory() {const possibleDirs = ['dist', 'build', 'out', '.next', 'public'];'
     }
     for (const dir of possibleDirs) {if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) {return dir;
@@ -190,7 +190,7 @@ const largestFiles = [];
       }
     }
     scanDirectory(buildDir)const totalSize = files.reduce((sum, file) => sum + file.size, 0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return {"totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0, 5)}}"
+  return {"totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0, 5)}"
   async optimizeBundle() {this.log('Optimizing bundle...')try ;'
   }
   const optimizations = [];
@@ -209,7 +209,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 
 const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) {optimizations.push({"type": 'duplicate_dependencies',"count": duplicates.length,duplicates;"
         })}
-      this.log(`Found ${optimizations.length} optimization opportunities`)return {"success": true,optimizations;"      }} catch (error) {this.error(`Bundle optimization "failed": ${error.message}`)return { "success": false, "error": error.message }}"  }
+      this.log(`Found ${optimizations.length} optimization opportunities`)return {"success": true,optimizations;"      } catch (error) {this.error(`Bundle optimization "failed": ${error.message}`)return { "success": false, "error": error.message }"  }
   async findUnusedDependencies() {try {const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies, ...devDependencies];
 
@@ -293,7 +293,7 @@ module.exports = BuildOptimizer;#!/usr/bin/env node const { execSync } = require
   return { "success": false,"message": 'No build directory found' ;'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } findBuildDirectory() {;
   }
   const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
@@ -304,7 +304,7 @@ const largestFiles = []; function scanDirectory() { try { const items = fs.readd
 }
 const fileInfo = { "path": relativePath,"size": stat.size,"extension": path.extname(item),;
 }files.push(fileInfo)if (largestFiles.length < 10) { largestFiles.push(fileInfo)largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) {} } scanDirectory(buildDir)const totalSize = files.reduce((sum,file) => sum + file.size,0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...')try {;'
+  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...')try {;'
   }
   const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies()if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
@@ -313,7 +313,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 };
 }
 
-const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies,...devDependencies];
 
@@ -339,7 +339,7 @@ const reportDir = path.dirname(reportFile)if (!fs.existsSync(reportDir)) { fs.mk
   return { "success": false,"message": 'No build directory found' ;'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } findBuildDirectory() {;
   }
   const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
@@ -350,7 +350,7 @@ const largestFiles = []; function scanDirectory() { try { const items = fs.readd
 }
 const fileInfo = { "path": relativePath,"size": stat.size,"extension": path.extname(item),;
 }files.push(fileInfo)if (largestFiles.length < 10) { largestFiles.push(fileInfo)largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) {} } scanDirectory(buildDir)const totalSize = files.reduce((sum,file) => sum + file.size,0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...')try {;'
+  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...')try {;'
   }
   const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies()if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
@@ -359,7 +359,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 };
 }
 
-const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies,...devDependencies];
 
@@ -386,7 +386,7 @@ const reportDir = path.dirname(reportFile)if (!fs.existsSync(reportDir)) { fs.mk
   return { "success": false,"message": 'No build directory found' ;'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } findBuildDirectory() {;
   }
   const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
@@ -397,7 +397,7 @@ const largestFiles = []; function scanDirectory() { try { const items = fs.readd
 }
 const fileInfo = { "path": relativePath,"size": stat.size,"extension": path.extname(item),;
 }files.push(fileInfo)if (largestFiles.length < 10) { largestFiles.push(fileInfo)largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) {} } scanDirectory(buildDir)const totalSize = files.reduce((sum,file) => sum + file.size,0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...')try {;'
+  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...')try {;'
   }
   const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies()if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
@@ -406,7 +406,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 };
 }
 
-const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies,...devDependencies];
 
@@ -423,20 +423,20 @@ const packageLock = JSON.parse(fs.readFileSync(packageLockPath,'utf8');'
   return files} async generateOptimizationReport() { this.log('Generating optimization report...')try { const reportFile = `optimization-reports/build-optimization-${Date.now()}.json`;`
 const reportDir = path.dirname(reportFile)if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ "recursive": true }
 } fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Optimization report saved "to": ${reportFile}`)return report} catch (error) { this.error(`Failed to generate optimization "report": ${error.messag,`}`;`  return null} } async start() { this.log(`Starting ${this.processName}...`)await this.generateOptimizationReport(;`  const interval = 24 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled build optimization...')await this.generateOptimizationReport()},interval)this.log(`${this.processName} started successfully`)} } if (require.main = == module) {;`  }
-  const optimizer = new BuildOptimizer()optimizer.start().catch((error) => { console.error('Build optimizer failed to "start":',error)process.exit(1)})} module.exports = BuildOptimizer;}}async analyzeBuild() {try {this.log('🏗️ Analyzing current build...')if (!fs.existsSync('dist')) {this.log('📦 Building project first...')execSync('npm run build', {"cwd": this.projectRoot; "stdio": 'pipe'},'
+  const optimizer = new BuildOptimizer()optimizer.start().catch((error) => { console.error('Build optimizer failed to "start":',error)process.exit(1)})} module.exports = BuildOptimizer;}async analyzeBuild() {try {this.log('🏗️ Analyzing current build...')if (!fs.existsSync('dist')) {this.log('📦 Building project first...')execSync('npm run build', {"cwd": this.projectRoot; "stdio": 'pipe'},'
 }
 
 const buildStats = {"totalSize": 0; "fileCount": 0; "largestFiles": []; "jsFiles": []; "cssFiles": []; "assetFiles": [,;
 }
 
 const analyzeDirectory = (dir) = > {const items = fs.readdirSync(dir)items.forEach(item = > {const fileInfo = {"path": fullPath.replace(this.projectRoot + '/dist/', '')"size": stat.size; "sizeKB": Math.round(stat.size / 1024 * 100) / 10,;'
-}buildStats.totalSize + = stat.size; buildStats.fileCount++;if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}}})}analyzeDirectory('dist')ursor/automate-test-improve-and-merge-code-646c;// Sort files by size;'
+}buildStats.totalSize + = stat.size; buildStats.fileCount++;if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}})}analyzeDirectory('dist')ursor/automate-test-improve-and-merge-code-646c;// Sort files by size;'
 
 const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles]; buildStats.largestFiles = allFiles; .sort((a, b) = > b.size - a.size).slice(0, 10)buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100;return {"success": true; "stats": buildStats,;
 } catch (error) {return {"success": false; "error": error.message; "stats": null}
 }async checkBundleAnalyzer() {try {this.log('📊 Checking bundle analyzer availability...')const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8');'
   }
-  const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer; "package": hasAnalyzer ?; (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {return {"available": false; "error": error.message},'
+  const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer; "package": hasAnalyzer ?; (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null} catch (error) {return {"available": false; "error": error.message},'
 }async checkOptimizationSettings() {try {this.log('⚙️ Checking optimization settings...')const settings = {"treeShaking": false; "minification": false; "codeSplitting": false; "compression": fals,'
 }// Check Next.js config; if (fs.existsSync('next.config.js')) {const nextConfig = fs.readFileSync('next.config.js', 'utf8')settings.minification = nextConfig.includes('"swcMinify": true') || nextConfig.includes('"swcMinify": true')settings.compression = nextConfig.includes('"compress": true') || nextConfig.includes('"compress": true','
 }// Check package.json for optimization scripts;
@@ -445,20 +445,20 @@ const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8');'
 const scripts  = packageJson.scripts || {}settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking')settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode'); return {"success": true,"settings": settings,;'
 } catch (error) {return {"success": false, "error": error.message, "settings": null}
 }async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {const report = {"timestamp": new Date().toISOString(), "summary": {, "buildSize": buildStats?.stats?.totalSizeMB || 0, "fileCount": buildStats?.stats?.fileCount || 0, "optimizationScore": 0;
-}}async analyzeBuild() {try {this.log('🏗️ Analyzing current build...')if (!fs.existsSync('dist')) {this.log('📦 Building project first...')execSync('npm run build', {"cwd": this.projectRoot,"stdio": 'pipe'},'
+}async analyzeBuild() {try {this.log('🏗️ Analyzing current build...')if (!fs.existsSync('dist')) {this.log('📦 Building project first...')execSync('npm run build', {"cwd": this.projectRoot,"stdio": 'pipe'},'
 }
 
 const buildStats = {"totalSize": 0, "fileCount": 0, "largestFiles": [], "jsFiles": [], "cssFiles": [],"assetFiles": [;
 }
 
 const analyzeDirectory = (dir) = > {const items = fs.readdirSync(dir)items.forEach(item = > {const fileInfo = {"path": fullPath.replace(this.projectRoot + '/dist/', '')"size": stat.size,"sizeKB": Math.round(stat.size / 1024 * 100) / 10,;'
-}buildStats.totalSize + = stat.size; buildStats.fileCount++;if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}}})}analyzeDirectory('dist')// Sort files by size;'
+}buildStats.totalSize + = stat.size; buildStats.fileCount++;if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}})}analyzeDirectory('dist')// Sort files by size;'
 
 const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles]; buildStats.largestFiles = allFiles; .sort((a, b) = > b.size - a.size).slice(0, 10)buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100;return {"success": true,"stats": buildStats,;
 } catch (error) {return {"success": false, "error": error.message, "stats": null}
 }async checkBundleAnalyzer() {try {this.log('📊 Checking bundle analyzer availability...')const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8');'
   }
-  const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {return {"available": false,"error": error.message},'
+  const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null} catch (error) {return {"available": false,"error": error.message},'
 }async checkOptimizationSettings() {try {this.log('⚙️ Checking optimization settings...')const settings = {"treeShaking": false, "minification": false, "codeSplitting": false,"compression": fals,'
 }// Check Next.js config; if (fs.existsSync('next.config.js')) {const nextConfig = fs.readFileSync('next.config.js', 'utf8')settings.minification = nextConfig.includes('"swcMinify": true') || nextConfig.includes('"swcMinify": true')settings.compression = nextConfig.includes('"compress": true') || nextConfig.includes('"compress": true','
 }// Check package.json for optimization scripts;
@@ -467,7 +467,7 @@ const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8');'
 const scripts  = packageJson.scripts || {}settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking')settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode'); return {"success": true,"settings": settings,;'
 } catch (error) {return {"success": false, "error": error.message, "settings": null}
 }async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {const report = {"timestamp": new Date().toISOString(), "summary": {, "buildSize": buildStats?.stats?.totalSizeMB || 0, "fileCount": buildStats?.stats?.fileCount || 0, "optimizationScore": 0;
-}}async analyzeBuild() {try {this.log('🏗️ Analyzing current build...')if (!fs.existsSync('dist')) {this.log('📦 Building project first...')execSync('npm run build', {"cwd": this.projectRoot;'
+}async analyzeBuild() {try {this.log('🏗️ Analyzing current build...')if (!fs.existsSync('dist')) {this.log('📦 Building project first...')execSync('npm run build', {"cwd": this.projectRoot;'
     }
     "stdio": 'pipe'},'
 }
@@ -480,7 +480,7 @@ const buildStats = {"totalSize": 0, "fileCount": 0, "largestFiles": [], "jsFiles
 const analyzeDirectory = (dir) = > {const items = fs.readdirSync(dir)items.forEach(item = > {const fileInfo = {"path": fullPath.replace(this.projectRoot + '/dist/', '')"size": stat.size;'
     }
     "sizeKB": Math.round(stat.size / 1024 * 100) / 10
-}buildStats.totalSize + = stat.size; buildStats.fileCount++; if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}}})}analyzeDirectory('dist')// Sort files by size;'
+}buildStats.totalSize + = stat.size; buildStats.fileCount++; if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}})}analyzeDirectory('dist')// Sort files by size;'
 
 const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles]; buildStats.largestFiles = allFiles; .sort((a, b) = > b.size - a.size).slice(0, 10)buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100; return {"success": true;
     }
@@ -488,7 +488,7 @@ const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.a
 } catch (error) {return {"success": false, "error": error.message, "stats": null}
 }async checkBundleAnalyzer() {try {this.log('📊 Checking bundle analyzer availability...')const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8');'
   }
-  const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] |; packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {return {"available": false;'
+  const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] |; packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null} catch (error) {return {"available": false;'
     }
     "error": error.message}
 }async checkOptimizationSettings() {try {this.log('⚙️ Checking optimization settings...')const settings = {"treeShaking": false, "minification": false, "codeSplitting": false;'
@@ -515,7 +515,7 @@ optimizer.run().catch(error = > {process.exit(1)})#!/usr/bin/env node const { ex
   return { "success": false,"message": 'No build directory found' ;'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } findBuildDirectory() {;
   }
   const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
@@ -526,7 +526,7 @@ const largestFiles = []; function scanDirectory() { try { const items = fs.readd
 }
 const fileInfo = { "path": relativePath,"size": stat.size,"extension": path.extname(item),;
 }files.push(fileInfo)if (largestFiles.length < 10) { largestFiles.push(fileInfo)largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) {} } scanDirectory(buildDir)const totalSize = files.reduce((sum,file) => sum + file.size,0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...')try {;'
+  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...')try {;'
   }
   const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies()if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
@@ -535,7 +535,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 };
 }
 
-const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies,...devDependencies];
 
@@ -580,7 +580,7 @@ const path = require('path'); class BuildOptimizer { constructor() { this.proces
 const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log "file":',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] "ERROR": ${message}\n`,`} catch (err) { console.error('Failed to write to error "file":',err.message)} } async analyzeBundleSize() { this.log('Analyzing bundle size...'); try { const buildDir = this.findBuildDirectory(); if (!buildDir) { this.log('No build directory found','WARNING'); return { "success": false,"message": 'No build directory found' ,'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir); this.log(`Bundle analysis "completed":`); this.log(` - Total "files": ${bundleInfo.totalFile,;`}`); this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2,`} MB`); this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,`}`); return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`); return { "success": false,"error": error.message }},`} findBuildDirectory() { const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
+const bundleInfo = this.getBundleInfo(buildDir); this.log(`Bundle analysis "completed":`); this.log(` - Total "files": ${bundleInfo.totalFile,;`}`); this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2,`} MB`); this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,`}`); return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`); return { "success": false,"error": error.message },`} findBuildDirectory() { const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
 
 }
 
@@ -599,13 +599,13 @@ const totalSize = files.reduce((sum,file) => sum + file.size,0);
 
 const jsFiles = files.filter(f => { return f.extension === '.js'); }'
 
-const cssFiles = files.filter(f => { return f.extension === '.css'); } return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...'); try { const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies(); if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
+const cssFiles = files.filter(f => { return f.extension === '.css'); } return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...'); try { const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies(); if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
 
 const bundleAnalysis = await this.analyzeBundleSize(); if (bundleAnalysis.success) { const largeFiles = bundleAnalysis.largestFiles.filter(f => { return f.size > 100 * 1024); } if (largeFiles.length > 0) { optimizations.push({ "type": 'large_files',"count": largeFiles.length,"files": largeFiles })},'
 }
 
-const duplicates = await this.findDuplicateDependencies(); if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`); return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`); return { "success": false,"error": error.message }},`} async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));'
+const duplicates = await this.findDuplicateDependencies(); if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`); return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`); return { "success": false,"error": error.message },`} async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));'
 
 }
 
@@ -631,7 +631,7 @@ const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.
 } fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Optimization report saved "to": ${reportFil,`}`); return report} catch (error) { this.error(`Failed to generate optimization "report": ${error.messag,`}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateOptimizationReport();`
 const interval = 24 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled build optimization...'); await this.generateOptimizationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main = == module) {;`  }
   const optimizer = new BuildOptimizer(); optimizer.start().catch((error) => { console.error('Build optimizer failed to "start":',error); process.exit(1)})} module.exports = BuildOptimizer;'
-}};
+};
 ; async analyzeBuild() {; try {; this.log('🏗️ Analyzing current build...');'
 ; if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', {; "cwd": this.projectRoot; "stdio": 'pipe'},'
 };
@@ -663,7 +663,7 @@ const fileInfo = {
   "path": fullPath.replace(this.projectRoot + '/dist/', ''); "size": stat.size; "sizeKB": Math.round(stat.size / 1024 * 100) / 10,'
 };
 ; buildStats.totalSize + = stat.size; buildStats.fileCount++;
-; if (item.endsWith('.js')) {; buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {; buildStats.cssFiles.push(fileInfo)} else {; buildStats.assetFiles.push(fileInfo)}}})};'
+; if (item.endsWith('.js')) {; buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {; buildStats.cssFiles.push(fileInfo)} else {; buildStats.assetFiles.push(fileInfo)}})};'
 ; analyzeDirectory('dist');'
 ; // Sort files by size;
 
@@ -680,7 +680,7 @@ const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.a
 const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));'
 
 const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson.devDependencies['@next/bundle-analyzer']);'
-; return {; "available": hasAnalyzer; "package": hasAnalyzer ?; (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {; return {; "available": false; "error": error.message},'
+; return {; "available": hasAnalyzer; "package": hasAnalyzer ?; (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null} catch (error) {; return {; "available": false; "error": error.message},'
 };
 ; async checkOptimizationSettings() {; try {; this.log('⚙️ Checking optimization settings...');'
 ;
@@ -705,7 +705,7 @@ const scripts = packageJson.scripts || {};
 ; settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking'); settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode');'
 
 
-}}; async analyzeBuild() {try {; this.log('🏗️ Analyzing current build...'); if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', {; "cwd": this.projectRoot'
+}; async analyzeBuild() {try {; this.log('🏗️ Analyzing current build...'); if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', {; "cwd": this.projectRoot'
     }
     "stdio": 'pipe'},'
 };
@@ -726,7 +726,7 @@ const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; analyzeDirectory(
   }
   "path": fullPath.replace(this.projectRoot + '/dist/', ''); "size": stat.size'
     "sizeKB": Math.round(stat.size / 1024 * 100) / 10
-}; buildStats.totalSize + = stat.size; buildStats.fileCount++; if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}}})}; analyzeDirectory('dist'); // Sort files by size;'
+}; buildStats.totalSize + = stat.size; buildStats.fileCount++; if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}})}; analyzeDirectory('dist'); // Sort files by size;'
 
 const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles]; buildStats.largestFiles = allFiles; .sort((a, b) = > b.size - a.size); .slice(0, 10); buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100; return {"success": true;
     }
@@ -738,7 +738,7 @@ const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.a
 
 const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));'
 
-const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] |; packageJson.devDependencies['@next/bundle-analyzer']); return {; "available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {return {; "available": false'
+const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] |; packageJson.devDependencies['@next/bundle-analyzer']); return {; "available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null} catch (error) {return {; "available": false'
     }
     "error": error.message}
 }; async checkOptimizationSettings() {try {; this.log('⚙️ Checking optimization settings...');'
@@ -780,7 +780,7 @@ const maxScore = 100; if (buildStats?.stats?.totalSizeMB < 2) score + = 30; else
 }if (!settingsInfo?.settings?.compression) {report.optimizations.push({"priority": 'medium', "type": 'compression', "message": 'Compression not enabled', "action": 'Enable gzip compression', "impact": 'medium'},'
 }if (!analyzerInfo?.available) {report.optimizations.push({"priority": 'low', "type": 'analysis', "message": 'Bundle analyzer not available', "action": 'Install webpack-bundle-analyzer for detailed analysis', "impact": 'low'})}return repor,'
 }async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { "recursive": true }
-}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}}async run() {this.log('🚀 Starting Build Optimizer...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
+}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}async run() {this.log('🚀 Starting Build Optimizer...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
 
 }
 
@@ -800,7 +800,7 @@ const maxScore  = 100;if (buildStats?.stats?.totalSizeMB < 2) score + = 30; else
 }if (!settingsInfo?.settings?.compression) {report.optimizations.push({"priority": 'medium'; "type": 'compression'; "message": 'Compression not enabled'; "action": 'Enable gzip compression'; "impact": 'medium'},'
 }if (!analyzerInfo?.available) {report.optimizations.push({"priority": 'low'; "type": 'analysis'; "message": 'Bundle analyzer not available'; "action": 'Install webpack-bundle-analyzer for detailed analysis'; "impact": 'low'})}return repor,'
 }async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { "recursive": true }
-}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}}async run() {this.log('🚀 Starting Build Optimizer...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
+}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}async run() {this.log('🚀 Starting Build Optimizer...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
 
 }
 
@@ -808,7 +808,7 @@ const logsDir = path.dirname(this.logFile)if (!fs.existsSync(logsDir)) {fs.mkdir
 }// Run all optimization checks;
 
 const buildStats = await this.analyzeBuild()const analyzerInfo = await this.checkBundleAnalyzer(;
-  const settingsInfo  = await this.checkOptimizationSettings()// Generate report; this.log('📊 Generating optimization report...')const report  = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo)// Save report; await this.saveReport(report)const duration  = Date.now() - this.startTime;// Log summary; this.log('\n📊 Build Optimizer "Summary": ')this.log(`Build "size": ${report.summary.buildSize} MB`)this.log(`File "count": ${report.summary.fileCount}`)this.log(`Optimization "score": ${report.summary.optimizationScore}/100`)this.log(`"Duration": ${duration}ms`)if (report.optimizations.length > 0) {this.log('\n💡 Optimization "Recommendations": ')report.optimizations.forEach(opt = > {this.log(` [${opt.priority.toUpperCase()}] ${opt.message}`)this.log(` "Action": ${opt.action}`)this.log(` "Impact": ${opt.impact}`)})} else {this.log('\n✨ Build is well optimized!')}} catch (error) {this.log(`❌ Error running build "optimizer": ${error.message}`)process.exit(1)}}},`}async analyzeBuild() {try {execSync('npm run build', {"cwd": this.projectRoot, "stdio": 'pipe';'
+  const settingsInfo  = await this.checkOptimizationSettings()// Generate report; this.log('📊 Generating optimization report...')const report  = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo)// Save report; await this.saveReport(report)const duration  = Date.now() - this.startTime;// Log summary; this.log('\n📊 Build Optimizer "Summary": ')this.log(`Build "size": ${report.summary.buildSize} MB`)this.log(`File "count": ${report.summary.fileCount}`)this.log(`Optimization "score": ${report.summary.optimizationScore}/100`)this.log(`"Duration": ${duration}ms`)if (report.optimizations.length > 0) {this.log('\n💡 Optimization "Recommendations": ')report.optimizations.forEach(opt = > {this.log(` [${opt.priority.toUpperCase()}] ${opt.message}`)this.log(` "Action": ${opt.action}`)this.log(` "Impact": ${opt.impact}`)})} else {this.log('\n✨ Build is well optimized!')} catch (error) {this.log(`❌ Error running build "optimizer": ${error.message}`)process.exit(1)}},`}async analyzeBuild() {try {execSync('npm run build', {"cwd": this.projectRoot, "stdio": 'pipe';'
         })}
 
 const buildStats = {"totalSize": 0, "fileCount": 0,"largestFiles": [], "jsFiles": [],"cssFiles": [], "assetFiles": [];
@@ -818,13 +818,13 @@ const buildStats = {"totalSize": 0, "fileCount": 0,"largestFiles": [], "jsFiles"
 const analyzeDirectory = (dir) => {const items = fs.readdirSync(dir)items.forEach((item) => {const fileInfo = {"path": fullPath.replace(this.projectRoot + '/dist/', '')"size": stat.size, "sizeKB": Math.round(stat.size / 1024 * 100) / 100,;'
             }
             buildStats.totalSize += stat.size;
-            buildStats.fileCount++;if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}}})}analyzeDirectory('dist')// Sort files by size;'
+            buildStats.fileCount++;if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}})}analyzeDirectory('dist')// Sort files by size;'
 
 const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles];
       buildStats.largestFiles = allFiles;
         .sort((a, b) => b.size - a.size).slice(0, 10)buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100;return {"success": true, "stats": buildStat
 } catch (error) {return {"success": false, "error": error.message,"stats": null;
-}}async checkBundleAnalyzer() {try {const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8');'
+}async checkBundleAnalyzer() {try {const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8');'
   }
   const hasAnalyzer = packageJson.devDependencies &&;
         (packageJson.devDependencies['webpack-bundle-analyzer'] ||;'
@@ -843,7 +843,7 @@ const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8');'
 const scripts = packageJson.scripts || {}settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking')settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode')return {"success": true, "settings": setting,;'
 } catch (error) ;
   return {"success": false, "error": error.message,"settings": null;
-}}async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {const report = {"timestamp": new Date().toISOString(), "summary": {,"buildSize": buildStats?.stats?.totalSizeMB || 0, "fileCount": buildStats?.stats?.fileCount || 0,"optimizationScore": 0, "recommendations": [],"details": {, "build": buildStats,"analyzer": analyzerInfo, "settings": settingsInfo,"optimizations": [], ,// Calculate optimization score;
+}async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {const report = {"timestamp": new Date().toISOString(), "summary": {,"buildSize": buildStats?.stats?.totalSizeMB || 0, "fileCount": buildStats?.stats?.fileCount || 0,"optimizationScore": 0, "recommendations": [],"details": {, "build": buildStats,"analyzer": analyzerInfo, "settings": settingsInfo,"optimizations": [], ,// Calculate optimization score;
     }
     let score = 0;
     const maxScore  = 100;if (buildStats?.stats?.totalSizeMB < 2) score += 30;
@@ -859,7 +859,7 @@ const scripts = packageJson.scripts || {}settings.treeShaking = scripts.build &&
       })}if (!analyzerInfo?.available) {report.optimizations.push({"priority": 'low', "type": 'analysis',"message": 'Bundle analyzer not available', "action": 'Install webpack-bundle-analyzer for detailed analysis',"impact": 'low';'
       })}return report;
 }async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { "recursive": true }
-}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}}async run() {this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
+}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}async run() {this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
 
 }
 
@@ -873,7 +873,7 @@ const report  = await this.generateOptimizationReport(buildStats, analyzerInfo, 
       await this.saveReport(report)const duration  = Date.now() - this.startTime;// Log summary;
       this.log(`Build "size": ${report.summary.buildSize} MB`)this.log(`File "count": ${report.summary.fileCount}`)this.log(`Optimization "score": ${report.summary.optimizationScore}/100`)this.log(`"Duration": ${duration}ms`)if (report.optimizations.length > 0) {this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`)this.log(`    "Action": ${opt.action}`)this.log(`    "Impact": ${opt.impact}`)})} else {process.exit(1)},`}// Run the build optimizer;
 
-const optimizer = new BuildOptimizer()optimizer.run().catch((error) => {process.exit(1)})}},async analyzeBuild() {,try {,this.log('🏗️  Analyzing current build...'),,if (!fs.existsSync('dist')) {,this.log('📦 Building project first...'),execSync('npm run build', {,"cwd": this.projectRoot,"stdio": 'pipe';'
+const optimizer = new BuildOptimizer()optimizer.run().catch((error) => {process.exit(1)})},async analyzeBuild() {,try {,this.log('🏗️  Analyzing current build...'),,if (!fs.existsSync('dist')) {,this.log('📦 Building project first...'),execSync('npm run build', {,"cwd": this.projectRoot,"stdio": 'pipe';'
         }),optimizer.run().catch(error = > {process.exit(1)})optimizer.run().catch(error = > {process.exit(1)})},"details": {, "build": buildStats, "analyzer": analyzerInfo,"settings": settingsInfo}"optimizations": [
 }ursor/fix-syntax-push-and-merge-to-main-40de;
 // Run the build optimizer;
@@ -887,7 +887,7 @@ const optimizer = new BuildOptimizer()#!/usr/bin/env node const { execSync } = r
   return { "success": false,"message": 'No build directory found' ;'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } findBuildDirectory() {;
   }
   const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
@@ -898,7 +898,7 @@ const largestFiles = []; function scanDirectory() { try { const items = fs.readd
 }
 const fileInfo = { "path": relativePath,"size": stat.size,"extension": path.extname(item),;
 }files.push(fileInfo)if (largestFiles.length < 10) { largestFiles.push(fileInfo)largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) {} } scanDirectory(buildDir)const totalSize = files.reduce((sum,file) => sum + file.size,0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...')try {;'
+  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...')try {;'
   }
   const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies()if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
@@ -907,7 +907,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 };
 }
 
-const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies,...devDependencies];
 
@@ -1328,7 +1328,7 @@ const path = require('path'); class BuildOptimizer { constructor() { this.proces
 const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log "file":',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] "ERROR": ${message}\n`,`} catch (err) { console.error('Failed to write to error "file":',err.message)} } async analyzeBundleSize() { this.log('Analyzing bundle size...'); try { const buildDir = this.findBuildDirectory(); if (!buildDir) { this.log('No build directory found','WARNING'); return { "success": false,"message": 'No build directory found' ,'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir); this.log(`Bundle analysis "completed":`); this.log(` - Total "files": ${bundleInfo.totalFile,;`}`); this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2,`} MB`); this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,`}`); return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`); return { "success": false,"error": error.message }},`} findBuildDirectory() { const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
+const bundleInfo = this.getBundleInfo(buildDir); this.log(`Bundle analysis "completed":`); this.log(` - Total "files": ${bundleInfo.totalFile,;`}`); this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2,`} MB`); this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,`}`); return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`); return { "success": false,"error": error.message },`} findBuildDirectory() { const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
 
 }
 
@@ -1347,13 +1347,13 @@ const totalSize = files.reduce((sum,file) => sum + file.size,0);
 
 const jsFiles = files.filter(f => { return f.extension === '.js'); }'
 
-const cssFiles = files.filter(f => { return f.extension === '.css'); } return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...'); try { const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies(); if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
+const cssFiles = files.filter(f => { return f.extension === '.css'); } return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...'); try { const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies(); if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
 
 const bundleAnalysis = await this.analyzeBundleSize(); if (bundleAnalysis.success) { const largeFiles = bundleAnalysis.largestFiles.filter(f => { return f.size > 100 * 1024); } if (largeFiles.length > 0) { optimizations.push({ "type": 'large_files',"count": largeFiles.length,"files": largeFiles })},'
 }
 
-const duplicates = await this.findDuplicateDependencies(); if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`); return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`); return { "success": false,"error": error.message }},`} async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));'
+const duplicates = await this.findDuplicateDependencies(); if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`); return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`); return { "success": false,"error": error.message },`} async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));'
 
 }
 
@@ -1410,10 +1410,10 @@ class BuildOptimizer {
   error(message) {this.log(message, 'ERROR')try {fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] "ERROR": ${message}\n`)} catch (err) {console.error('Failed to write to error "file": ', err.message)}'  }
   async analyzeBundleSize() {this.log('Analyzing bundle size...')try {const buildDir = this.findBuildDirectory()if (!buildDir) {this.log('No build directory found', 'WARNING';'
   }
-  return { "success": false, "message": 'No build directory found' }}'
+  return { "success": false, "message": 'No build directory found' }'
 ;
 const bundleInfo = this.getBundleInfo(buildDir)this.log("Bundle analysis "completed": ")this.log(`  - Total "files": ${bundleInfo.totalFiles}`)this.log(`  - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(`  - Largest "files": ${bundleInfo.largestFiles.lengt,;"}`;`  return {"success": true,buildDir,...bundleInfo;"
-      }} catch (error) {this.error(`Bundle analysis "failed": ${error.message}`)return { "success": false, "error": error.message }}"  }
+      } catch (error) {this.error(`Bundle analysis "failed": ${error.message}`)return { "success": false, "error": error.message }"  }
   findBuildDirectory() {const possibleDirs = ['dist', 'build', 'out', '.next', 'public'];'
     }
     for (const dir of possibleDirs) {if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) {return dir;
@@ -1436,7 +1436,7 @@ const largestFiles = [];
       }
     }
     scanDirectory(buildDir)const totalSize = files.reduce((sum, file) => sum + file.size, 0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return {"totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0, 5)}}"
+  return {"totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0, 5)}"
   async optimizeBundle() {this.log('Optimizing bundle...')try ;'
   }
   const optimizations = [];
@@ -1455,7 +1455,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 
 const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) {optimizations.push({"type": 'duplicate_dependencies',"count": duplicates.length,duplicates;"
         })}
-      this.log(`Found ${optimizations.length} optimization opportunities`)return {"success": true,optimizations;"      }} catch (error) {this.error(`Bundle optimization "failed": ${error.message}`)return { "success": false, "error": error.message }}"  }
+      this.log(`Found ${optimizations.length} optimization opportunities`)return {"success": true,optimizations;"      } catch (error) {this.error(`Bundle optimization "failed": ${error.message}`)return { "success": false, "error": error.message }"  }
   async findUnusedDependencies() {try {const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies, ...devDependencies];
 
@@ -1561,7 +1561,7 @@ optimizer.run().catch(error = > {process.exit(1)})optimizer.run().catch(error = 
       })},,return report;
 },,async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { "recursiv": "e": true }
 },,fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report "saved": "to": ${this.reportFile}`,`} catch (error) {,this.log(`Error "saving": "report": ${error.message}`)},`},,async run() {,this.log('🚀 Starting Build Optimizer...'),this.log(`"Project": "root": ${this.projectRoo,`}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { "recursiv": "e": true },'
-},,// Run all optimization checks,const buildStats = await this.analyzeBuild(),const analyzerInfo = await this.checkBundleAnalyzer(),const settingsInfo = await this.checkOptimizationSettings(),,// Generate report,this.log('📊 Generating optimization report...'),const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Build "Optimizer": "Summary": '),this.log(`"Build": "size": ${report.summary.buildSiz,`} MB`),this.log(`"File": "count": ${report.summary.fileCoun,`}`),this.log(`"Optimization": "score": ${report.summary.optimizationScor,`}/100`),this.log(`"Duratio": "n": ${duratio,`}ms`),,if (report.optimizations.length > 0) {,this.log('\n💡 "Optimization": "Recommendations": '),report.optimizations.forEach((opt) => {,this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),this.log(`    "Actio": "n": ${opt.actio,`}`),this.log(`    "Impac": "t": ${opt.impact}`)},`} else {,this.log('\n✨ Build is well optimized!')}} catch (error) {,this.log(`❌ Error running "build": "optimizer": ${error.messag,`}`),process.exit(1)}`}
+},,// Run all optimization checks,const buildStats = await this.analyzeBuild(),const analyzerInfo = await this.checkBundleAnalyzer(),const settingsInfo = await this.checkOptimizationSettings(),,// Generate report,this.log('📊 Generating optimization report...'),const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Build "Optimizer": "Summary": '),this.log(`"Build": "size": ${report.summary.buildSiz,`} MB`),this.log(`"File": "count": ${report.summary.fileCoun,`}`),this.log(`"Optimization": "score": ${report.summary.optimizationScor,`}/100`),this.log(`"Duratio": "n": ${duratio,`}ms`),,if (report.optimizations.length > 0) {,this.log('\n💡 "Optimization": "Recommendations": '),report.optimizations.forEach((opt) => {,this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),this.log(`    "Actio": "n": ${opt.actio,`}`),this.log(`    "Impac": "t": ${opt.impact}`)},`} else {,this.log('\n✨ Build is well optimized!')} catch (error) {,this.log(`❌ Error running "build": "optimizer": ${error.messag,`}`),process.exit(1)}`}
 },,// Run the build optimizer;
   const optimizer = new BuildOptimizer(),optimizer.run().catch((error) => {,process.exit(1)})}
   },,async analyzeBuild() {,try {,this.log('🏗️  Analyzing current build...'),,if (!fs.existsSync('dist')) {,this.log('📦 Building project first...'),execSync('npm run build', {,"cw": "d": this.projectRoot,"stdi": "o": 'pipe';'
@@ -1607,18 +1607,18 @@ optimizer.run().catch(error = > {process.exit(1)})optimizer.run().catch(error = 
 },,fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report "saved": "to": ${this.reportFile}`,`} catch (error) {,this.log(`Error "saving": "report": ${error.message}`)}` 
 },,async run() {,this.log('🚀 Starting Build Optimizer...'),this.log(`"Project": "root": ${this.projectRoo,`}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { "recursiv": "e": true },'
 },,// Run all optimization checks,const buildStats = await this.analyzeBuild(),const analyzerInfo = await this.checkBundleAnalyzer(),const settingsInfo = await this.checkOptimizationSettings(),,// Generate report,this.log('📊 Generating optimization report...'),const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo),,// Save report,await this.saveReport(report),;'
-const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Build "Optimizer": "Summary": '),this.log(`"Build": "size": ${report.summary.buildSiz,;`} MB`),this.log(`"File": "count": ${report.summary.fileCoun,`}`),this.log(`"Optimization": "score": ${report.summary.optimizationScor,`}/100`),this.log(`"Duratio": "n": ${duratio,`}ms`),,if (report.optimizations.length > 0) {,this.log('\n💡 "Optimization": "Recommendations": '),report.optimizations.forEach((opt) => {,this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),this.log(`    "Actio": "n": ${opt.actio,`}`),this.log(`    "Impac": "t": ${opt.impact}`)},`} else {,this.log('\n✨ Build is well optimized!')}} catch (error) {_;'
+const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Build "Optimizer": "Summary": '),this.log(`"Build": "size": ${report.summary.buildSiz,;`} MB`),this.log(`"File": "count": ${report.summary.fileCoun,`}`),this.log(`"Optimization": "score": ${report.summary.optimizationScor,`}/100`),this.log(`"Duratio": "n": ${duratio,`}ms`),,if (report.optimizations.length > 0) {,this.log('\n💡 "Optimization": "Recommendations": '),report.optimizations.forEach((opt) => {,this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),this.log(`    "Actio": "n": ${opt.actio,`}`),this.log(`    "Impac": "t": ${opt.impact}`)},`} else {,this.log('\n✨ Build is well optimized!')} catch (error) {_;'
       }
       this.log(`❌ Error running build "optimizer": ${error.message}`)process.exit(1)}`}
 }// Run the build optimizer;
 
-const optimizer = new BuildOptimizer()optimizer.run().catch((error) => {process.exit(1)})}}ursor/fix-website-loading-errors-and-merge-6662;// Sort files by size;
+const optimizer = new BuildOptimizer()optimizer.run().catch((error) => {process.exit(1)})}ursor/fix-website-loading-errors-and-merge-6662;// Sort files by size;
 
 const allFiles = [...buildStats && buildStats.jsFiles, ...buildStats && buildStats.cssFiles, ...buildStats && buildStats.assetFiles]; buildStats && buildStats.largestFiles = allFiles; .sort((a, b) = > b && b.size - a && a.size).slice(0, 10)buildStats && buildStats.totalSizeMB = Math && Math.round(buildStats && buildStats.totalSize / (1024 * 1024) * 100) / 100;return {"success": true,"stats": buildStats,;
 } catch (error) {return {"success": false, "error": error && error.message, "stats": null}
 }async checkBundleAnalyzer() {try {this && this.log('📊 Checking bundle analyzer availability...')const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json', 'utf8');'
   }
-  const hasAnalyzer = packageJson && packageJson.devDependencies &&; (packageJson && packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson && packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson && packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {return {"available": false,"error": error && error.message},'
+  const hasAnalyzer = packageJson && packageJson.devDependencies &&; (packageJson && packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson && packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson && packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null} catch (error) {return {"available": false,"error": error && error.message},'
 }async checkOptimizationSettings() {try {this && this.log('⚙️ Checking optimization settings...')const settings = {"treeShaking": false, "minification": false, "codeSplitting": false,"compression": fals,'
 }// Check Next && Next.js config; if (fs && fs.existsSync('next && next.config.js')) {const nextConfig = fs && fs.readFileSync('next && next.config.js', 'utf8')settings && settings.minification = nextConfig && nextConfig.includes('"swcMinify": true') || nextConfig && nextConfig.includes('"swcMinify": true')settings && settings.compression = nextConfig && nextConfig.includes('"compress": true') || nextConfig && nextConfig.includes('"compress": true','
 }// Check package && package.json for optimization scripts;
@@ -1628,7 +1628,7 @@ const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package
 return {"success": false, "error": error && error.message, "settings": null},;
 }async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) ;
   const report = {"timestamp": new Date().toISOString(), "summary": {, "buildSize": buildStats?.stats?.totalSizeMB || 0, "fileCount": buildStats?.stats?.fileCount || 0, "optimizationScore": 0;
-}}async analyzeBuild() {try {this.log('🏗️ Analyzing current build...')if (!fs.existsSync('dist')) {this.log('📦 Building project first...')execSync('npm run build', {"cwd": this.projectRoot;'
+}async analyzeBuild() {try {this.log('🏗️ Analyzing current build...')if (!fs.existsSync('dist')) {this.log('📦 Building project first...')execSync('npm run build', {"cwd": this.projectRoot;'
     }
     "stdio": 'pipe'},'
 }
@@ -1641,7 +1641,7 @@ const buildStats = {"totalSize": 0, "fileCount": 0, "largestFiles": [], "jsFiles
 const analyzeDirectory = (dir) = > {const items = fs.readdirSync(dir)items.forEach(item = > {const fileInfo = {"path": fullPath.replace(this.projectRoot + '/dist/', '')"size": stat.size;'
     }
     "sizeKB": Math.round(stat.size / 1024 * 100) / 10
-}buildStats.totalSize + = stat.size; buildStats.fileCount++; if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}}})}analyzeDirectory('dist')// Sort files by size;'
+}buildStats.totalSize + = stat.size; buildStats.fileCount++; if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}})}analyzeDirectory('dist')// Sort files by size;'
 
 const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles]; buildStats.largestFiles = allFiles; .sort((a, b) = > b.size - a.size).slice(0, 10)buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100; return {"success": true;
     }
@@ -1649,7 +1649,7 @@ const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.a
 } catch (error) {return {"success": false, "error": error.message, "stats": null}
 }async checkBundleAnalyzer() {try {this.log('📊 Checking bundle analyzer availability...')const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8');'
   }
-  const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] |; packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {return {"available": false;'
+  const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] |; packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null} catch (error) {return {"available": false;'
     }
     "error": error.message}
 }async checkOptimizationSettings() {try {this.log('⚙️ Checking optimization settings...')const settings = {"treeShaking": false, "minification": false, "codeSplitting": false;'
@@ -1683,13 +1683,13 @@ const items = fs.readdirSync(dir)items.forEach(item = > {const fullPath = path.j
 }
 
 const fileInfo = {"path": fullPath.replace(this.projectRoot + '/dist/', _'')"size": stat.size; "sizeKB": Math.round(stat.size / 1024 * 100) / 10,;'
-}buildStats.totalSize + = stat.size; buildStats.fileCount++;if (item.endsWith('.js')) {_; buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {_; buildStats.cssFiles.push(fileInfo)} else {_; buildStats.assetFiles.push(fileInfo)}}})}analyzeDirectory('dist')// Sort files by size;'
+}buildStats.totalSize + = stat.size; buildStats.fileCount++;if (item.endsWith('.js')) {_; buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {_; buildStats.cssFiles.push(fileInfo)} else {_; buildStats.assetFiles.push(fileInfo)}})}analyzeDirectory('dist')// Sort files by size;'
 
 const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles]; buildStats.largestFiles = allFiles; .sort((a, b) = > b.size - a.size).slice(0, 10)buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100;return {_; "success": true, "stats": buildStats,;
 } catch (error) {_; return {"success": false, "error": error.message; "stats": null}
 }async checkBundleAnalyzer() {_; try {this.log('📊 Checking bundle analyzer availability...')const packageJson = JSON.parse(fs.readFileSync('package.json', _'utf8');'
   }
-  const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer, "package": hasAnalyzer ?; (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {_; return {"available": false, "error": error.message},'
+  const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson.devDependencies['@next/bundle-analyzer'])return {"available": hasAnalyzer, "package": hasAnalyzer ?; (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null} catch (error) {_; return {"available": false, "error": error.message},'
 }async checkOptimizationSettings() {_; try {this.log('⚙️ Checking optimization settings...')const settings = {"treeShaking": false, "minification": false, "codeSplitting": false, "compression": fals,'
 }// Check Next.js config; if (fs.existsSync('next.config.js')) {_;'
 
@@ -1726,7 +1726,7 @@ const buildStats = await this.analyzeBuild()const analyzerInfo = await this.chec
 const settingsInfo  = await this.checkOptimizationSettings()// Generate report; this.log('📊 Generating optimization report...')const report  = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo)// Save report; await this.saveReport(report)const duration  = Date.now() - this.startTime;// Log summary; this.log('\n📊 Build Optimizer "Summary": ')this.log(`Build "size": ${report.summary.buildSize} MB`)this.log(`File "count": ${report.summary.fileCount}`)this.log(`Optimization "score": ${report.summary.optimizationScore}/100`)this.log(`"Duration": ${duratio,;`}ms`)if (report.optimizations.length > 0) {_; this.log('\n💡 Optimization "Recommendations": ')report.optimizations.forEach(opt = > {this.log(` [${opt.priority.toUpperCase()}] ${opt.message}`)this.log(` "Action": ${opt.action}`)this.log(` "Impact": ${opt.impact}`)},`} else {_; this.log('\n✨ Build is well optimized!')}'
 } catch (error) {_; this.log(`❌ Error running build "optimizer": ${error.message}`)process.exit(1)},`}// Run the build optimizer;
 
-const optimizer = new BuildOptimizer()optimizer.run().catch(error = > {process.exit(1)})}}async analyzeBuild() {try {this.log('🏗️  Analyzing current build...')if (!fs.existsSync('dist')) {this.log('📦 Building project first...')execSync('npm run build', {"cw":"d":this.projectRoot;'
+const optimizer = new BuildOptimizer()optimizer.run().catch(error = > {process.exit(1)})}async analyzeBuild() {try {this.log('🏗️  Analyzing current build...')if (!fs.existsSync('dist')) {this.log('📦 Building project first...')execSync('npm run build', {"cw":"d":this.projectRoot;'
           }
           "stdi":"o":'pipe';        })}'
 
@@ -1904,7 +1904,7 @@ const report = await this.generateOptimizationReport(buildStats, analyzerInfo, s
 const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json', 'utf8'));'
 
 const hasAnalyzer = packageJson && packageJson.devDependencies &&; (packageJson && packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson && packageJson.devDependencies['@next/bundle-analyzer']);'
-; return {; "available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson && packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {; return {; "available": false,'
+; return {; "available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson && packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null} catch (error) {; return {; "available": false,'
     }
     "error": error && error.message}
 };
@@ -1965,7 +1965,7 @@ const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; analyzeDirectory(
   }
   "path": fullPath.replace(this.projectRoot + '/dist/', ''); "size": stat.size'
     "sizeKB": Math.round(stat.size / 1024 * 100) / 10
-}; buildStats.totalSize + = stat.size; buildStats.fileCount++; if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}}})}; analyzeDirectory('dist'); // Sort files by size;'
+}; buildStats.totalSize + = stat.size; buildStats.fileCount++; if (item.endsWith('.js')) {buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {buildStats.cssFiles.push(fileInfo)} else {buildStats.assetFiles.push(fileInfo)}})}; analyzeDirectory('dist'); // Sort files by size;'
 
 const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles]; buildStats.largestFiles = allFiles; .sort((a, b) = > b.size - a.size); .slice(0, 10); buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100; return {"success": true;
     }
@@ -1977,7 +1977,7 @@ const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.a
 
 const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));'
 
-const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] |; packageJson.devDependencies['@next/bundle-analyzer']); return {; "available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {return {; "available": false'
+const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] |; packageJson.devDependencies['@next/bundle-analyzer']); return {; "available": hasAnalyzer, "package": hasAnalyzer ?, (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null} catch (error) {return {; "available": false'
     }
     "error": error.message}
 }; async checkOptimizationSettings() {try {; this.log('⚙️ Checking optimization settings...');'
@@ -2032,7 +2032,7 @@ const fileInfo = {
   "path": fullPath.replace(this.projectRoot + '/dist/', _''); "size": stat.size; "sizeKB": Math.round(stat.size / 1024 * 100) / 10,'
 };
 ; buildStats.totalSize + = stat.size; buildStats.fileCount++;
-; if (item.endsWith('.js')) {_; buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {_; buildStats.cssFiles.push(fileInfo)} else {_; buildStats.assetFiles.push(fileInfo)}}})};'
+; if (item.endsWith('.js')) {_; buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {_; buildStats.cssFiles.push(fileInfo)} else {_; buildStats.assetFiles.push(fileInfo)}})};'
 ; analyzeDirectory('dist');'
 ; // Sort files by size;
 
@@ -2049,7 +2049,7 @@ const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.a
 const packageJson = JSON.parse(fs.readFileSync('package.json', _'utf8'));'
 
 const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson.devDependencies['@next/bundle-analyzer']);'
-; return {; "available": hasAnalyzer, "package": hasAnalyzer ?; (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {_; return {; "available": false, "error": error.message},'
+; return {; "available": hasAnalyzer, "package": hasAnalyzer ?; (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null} catch (error) {_; return {; "available": false, "error": error.message},'
 };
 ; async checkOptimizationSettings() {_; try {; this.log('⚙️ Checking optimization settings...');'
 ;
@@ -2128,10 +2128,10 @@ const report = await this.generateOptimizationReport(buildStats, analyzerInfo, s
 
 const duration = Date.now() - this.startTime;
 ; // Log summary; this.log('\n📊 Build Optimizer "Summary": '); this.log(`Build "size": ${report.summary.buildSiz,`} MB`); this.log(`File "count": ${report.summary.fileCoun,`}`); this.log(`Optimization "score": ${report.summary.optimizationScor,`}/100`); this.log(`"Duration": ${duratio,`}ms`);`; if (report.optimizations.length > 0) {_; this.log('\n💡 Optimization "Recommendations": '); report.optimizations.forEach(opt = > {; this.log(` [${opt.priority.toUpperCase()}] ${opt.message}`); this.log(` "Action": ${opt.actio,`}`); this.log(` "Impact": ${opt.impact}`)},`} else {_; this.log('\n✨ Build is well optimized!')}'
-} catch (error) {_; this.log(`❌ Error running build "optimizer": ${error.messag,`}`); process.exit(1)}}};`;
+} catch (error) {_; this.log(`❌ Error running build "optimizer": ${error.messag,`}`); process.exit(1)}};`;
 // Run the build optimizer;
 const optimizer = new BuildOptimizer();
-optimizer.run().catch(error = > {; process.exit(1)})}};
+optimizer.run().catch(error = > {; process.exit(1)})};
 ;
   async analyzeBuild() {;
     }
@@ -2341,10 +2341,10 @@ const buildStats = await this.analyzeBuild()const analyzerInfo = await this.chec
   const settingsInfo  = await this.checkOptimizationSettings()// Generate report;
       this.log('📊 Generating optimization report...')const report  = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo)// Save report;'
       await this.saveReport(report)const duration  = Date.now() - this.startTime;// Log summary;
-      this.log('\n📊 Build "Optimizer": "Summary":')this.log(`"Build":"size":${report.summary.buildSize} MB`)this.log(`"File":"count":${report.summary.fileCount}`)this.log(`"Optimization":"score":${report.summary.optimizationScore}/100`)this.log(`"Duratio":"n":${duration}ms`)if (report.optimizations.length > 0) {this.log('\n💡 "Optimization":"Recommendations":')report.optimizations.forEach((opt) => {this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`)this.log(`    "Actio":"n":${opt.action}`)this.log(`    "Impac":"t":${opt.impact}`)})} else {this.log('\n✨ Build is well optimized!')}} catch (error) {this.log(`❌ Error running "build":"optimizer":${error.message}`)process.exit(1)}}this.log('\n📊 Build Optimizer "Summary": ')this.log(`Build "size": ${report.summary.buildSize} MB`)this.log(`File "count": ${report.summary.fileCount}`)this.log(`Optimization "score": ${report.summary.optimizationScore}/100`)this.log(`"Duration": ${duratio,`}ms`)if (report.optimizations.length > 0) {_;`        }
+      this.log('\n📊 Build "Optimizer": "Summary":')this.log(`"Build":"size":${report.summary.buildSize} MB`)this.log(`"File":"count":${report.summary.fileCount}`)this.log(`"Optimization":"score":${report.summary.optimizationScore}/100`)this.log(`"Duratio":"n":${duration}ms`)if (report.optimizations.length > 0) {this.log('\n💡 "Optimization":"Recommendations":')report.optimizations.forEach((opt) => {this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`)this.log(`    "Actio":"n":${opt.action}`)this.log(`    "Impac":"t":${opt.impact}`)})} else {this.log('\n✨ Build is well optimized!')} catch (error) {this.log(`❌ Error running "build":"optimizer":${error.message}`)process.exit(1)}this.log('\n📊 Build Optimizer "Summary": ')this.log(`Build "size": ${report.summary.buildSize} MB`)this.log(`File "count": ${report.summary.fileCount}`)this.log(`Optimization "score": ${report.summary.optimizationScore}/100`)this.log(`"Duration": ${duratio,`}ms`)if (report.optimizations.length > 0) {_;`        }
         this.log('\n💡 Optimization "Recommendations": ')report.optimizations.forEach((opt) => {this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`)this.log(`    "Action": ${opt.action}`)this.log(`    "Impact": ${opt.impact}`)},`} else {_;
         }
-        this.log('\n✨ Build is well optimized!')}}}async analyze_build () { try { this.log ('🏗️ Analyzing current build...')if () {) {$2;'
+        this.log('\n✨ Build is well optimized!')}}async analyze_build () { try { this.log ('🏗️ Analyzing current build...')if () {) {$2;'
 } this.log ('📦 Building project first...')exec_sync ('npm run build', { "cwd": this.project_root,"stdio": 'pipe'},'
 }
 
@@ -2357,13 +2357,13 @@ const analyze_directory = (dir) = > { const items = fs.readdir_sync (dir)items.f
 } analyze_directory (full_path)} else { const file_info = { "path": full_path.replace (this.project_root + '/dist/', '')"size": stat.size,"sizeKB": Math.round (stat.size / 1024 * 100) / 10,'
 }build_stats.total_size + = stat.size; build_stats.file_count++;if () {) {$2;
 } build_stats.js_files.push (file_info)} else if () {) {$2;
-} build_stats.css_files.push (file_info)} else { build_stats.asset_files.push (file_info)}}})}analyze_directory ('dist')// Sort files by size;'
+} build_stats.css_files.push (file_info)} else { build_stats.asset_files.push (file_info)}})}analyze_directory ('dist')// Sort files by size;'
 
 const all_files = [...build_stats.js_files, ...build_stats.css_files, ...build_stats.asset_files]; build_stats.largest_files = all_files; .sort ((a, b) = > b.size - a.size).slice (0, 10)build_stats.totalSizeMB = Math.round (build_stats.total_size / (1024 * 1024) * 100) / 100;return { "success": true,"stats": build_stats,;
 } catch (error) { return { "success": false, "error": error.message, "stats": null}
 }async checkBundleAnalyzer () { try { this.log ('📊 Checking bundle analyzer availability...')const package_json = JSON.parse (fs.readFileSync ('package.json', 'utf8');'
   }
-  const has_analyzer = package_json.dev_dependencies &&; (package_json.dev_dependencies['webpack - bundle - analyzer'] ||; package_json.dev_dependencies['@next / bundle - analyzer'])return { "available": has_analyzer, "package": has_analyzer ?, (package_json.dev_dependencies['webpack - bundle - analyzer'] ? 'webpack - bundle - analyzer': '@next / bundle - analyzer'): ; null}} catch (error) { return { "available": false,"error": error.message},'
+  const has_analyzer = package_json.dev_dependencies &&; (package_json.dev_dependencies['webpack - bundle - analyzer'] ||; package_json.dev_dependencies['@next / bundle - analyzer'])return { "available": has_analyzer, "package": has_analyzer ?, (package_json.dev_dependencies['webpack - bundle - analyzer'] ? 'webpack - bundle - analyzer': '@next / bundle - analyzer'): ; null} catch (error) { return { "available": false,"error": error.message},'
 }async checkOptimizationSettings () { try { this.log ('⚙️ Checking optimization settings...')const settings = { "tree_shaking": false, "minification": false, "code_splitting": false,"compression": fals,'
 }// Check Next.js config; if () {) {$2;
 }
@@ -2411,7 +2411,7 @@ if ( {) {$2;
 } report.optimizations.push ({ "priority": 'low', "type": 'analysis', "message": 'Bundle analyzer not available', "action": 'Install webpack - bundle - analyzer for detailed analysis', "impact": 'low'})}return repor,'
 }async save_report (report) { try { const report_dir = path.dirname (this.report_file)if () {) {$2;
 } fs.mkdir_sync (report_dir, { "recursive": true }
-}fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2))this.log (`Report saved "to": ${this.report_file}`)} catch (error) { this.log (`Error saving "report": ${error.message}`)}}async run () { this.log ('🚀 Starting Build Optimizer...')this.log (`Project "root": ${this.project_roo,`}`)try { // Create logs directory if it doesn't exist;'
+}fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2))this.log (`Report saved "to": ${this.report_file}`)} catch (error) { this.log (`Error saving "report": ${error.message}`)}async run () { this.log ('🚀 Starting Build Optimizer...')this.log (`Project "root": ${this.project_roo,`}`)try { // Create logs directory if it doesn't exist;'
 
 }
 
@@ -2421,7 +2421,7 @@ const logs_dir = path.dirname (this.log_file)if () {) {$2;
 
 const build_stats = await this.analyze_build ()const analyzer_info = await this.checkBundleAnalyzer (;
 const settings_info  = await this.checkOptimizationSettings ()// Generate report; this.log ('📊 Generating optimization report...')const report  = await this.generateOptimizationReport (build_stats, analyzer_info, settings_info)// Save report; await this.save_report (report)const duration  = Date.now () - this.start_time;// Log summary; this.log ('\n📊 Build Optimizer "Summary": ')this.log (`Build "size": ${report.summary.build_size} MB`)this.log (`File "count": ${report.summary.file_count}`)this.log (`Optimization "score": ${report.summary.optimization_score}/100`)this.log (`"Duration": ${duratio,;`}ms`)// Check condition;`if ( {) {$2;
-} this.log ('\n💡 Optimization "Recommendations": '), report.optimizations.for_each (opt = > {, this.log (` [${opt.priority.toUpperCase ()}] ${opt.message}`)this.log (` "Action": ${opt.action}`)this.log (` "Impact": ${opt.impact}`)})} else { this.log ('\n✨ Build is well optimized!')}'} catch (error) { this.log (`❌ Error running build "optimizer": ${error.message}`)process.exit (1)}}}`}
+} this.log ('\n💡 Optimization "Recommendations": '), report.optimizations.for_each (opt = > {, this.log (` [${opt.priority.toUpperCase ()}] ${opt.message}`)this.log (` "Action": ${opt.action}`)this.log (` "Impact": ${opt.impact}`)})} else { this.log ('\n✨ Build is well optimized!')}'} catch (error) { this.log (`❌ Error running build "optimizer": ${error.message}`)process.exit (1)}}`}
 },,async analyzeBuild() {,try {,this.log('🏗️  Analyzing current build...'),,if (!fs.existsSync('dist')) {,this.log('📦 Building project first...'),execSync('npm run build', {,"cw": "d": this.projectRoot,"stdi": "o": 'pipe';'
         })},,const buildStats = {,"totalSiz": "e": 0,"fileCoun": "t": 0,"largestFile": "s": [],"jsFile": "s": [],"cssFile": "s": [],"assetFile": "s": [],,,const analyzeDirectory = (dir) => {,const items = fs.readdirSync(dir),items.forEach((item) => {,const fullPath = path.join(dir, item),const stat = fs.statSync(fullPath),,if (stat.isDirectory()) {,analyzeDirectory(fullPath)} else {,const fileInfo = {,"pat": "h": fullPath.replace(this.projectRoot + '/dist/', ''),"siz": "e": stat.size,"sizeK": "B": Math.round(stat.size / 1024 * 100) / 100,,,buildStats.totalSize += stat.size,buildStats.fileCount++,,if (item.endsWith('.js')) {,buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {,buildStats.cssFiles.push(fileInfo)} else {,buildStats.assetFiles.push(fileInfo)}'
 ;
@@ -2609,7 +2609,7 @@ const fileInfo = {,;
       })},,return report;
 },,async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { "recursiv": "e": true }
 },,fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report "saved": "to": ${this.reportFile}`,`} catch (error) {,this.log(`Error "saving": "report": ${error.message}`)},`},,async run() {,this.log('🚀 Starting Build Optimizer...'),this.log(`"Project": "root": ${this.projectRoo,`}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { "recursiv": "e": true },'
-},,// Run all optimization checks,const buildStats = await this.analyzeBuild(),const analyzerInfo = await this.checkBundleAnalyzer(),const settingsInfo = await this.checkOptimizationSettings(),,// Generate report,this.log('📊 Generating optimization report...'),const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Build "Optimizer": "Summary": '),this.log(`"Build": "size": ${report.summary.buildSiz,`} MB`),this.log(`"File": "count": ${report.summary.fileCoun,`}`),this.log(`"Optimization": "score": ${report.summary.optimizationScor,`}/100`),this.log(`"Duratio": "n": ${duratio,`}ms`),,if (report.optimizations.length > 0) {,this.log('\n💡 "Optimization": "Recommendations": '),report.optimizations.forEach((opt) => {,this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),this.log(`    "Actio": "n": ${opt.actio,`}`),this.log(`    "Impac": "t": ${opt.impact}`)},`} else {,this.log('\n✨ Build is well optimized!')}} catch (error) {,this.log(`❌ Error running "build": "optimizer": ${error.messag,`}`),process.exit(1)}`}
+},,// Run all optimization checks,const buildStats = await this.analyzeBuild(),const analyzerInfo = await this.checkBundleAnalyzer(),const settingsInfo = await this.checkOptimizationSettings(),,// Generate report,this.log('📊 Generating optimization report...'),const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Build "Optimizer": "Summary": '),this.log(`"Build": "size": ${report.summary.buildSiz,`} MB`),this.log(`"File": "count": ${report.summary.fileCoun,`}`),this.log(`"Optimization": "score": ${report.summary.optimizationScor,`}/100`),this.log(`"Duratio": "n": ${duratio,`}ms`),,if (report.optimizations.length > 0) {,this.log('\n💡 "Optimization": "Recommendations": '),report.optimizations.forEach((opt) => {,this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),this.log(`    "Actio": "n": ${opt.actio,`}`),this.log(`    "Impac": "t": ${opt.impact}`)},`} else {,this.log('\n✨ Build is well optimized!')} catch (error) {,this.log(`❌ Error running "build": "optimizer": ${error.messag,`}`),process.exit(1)}`}
 },,// Run the build optimizer;
   const optimizer = new BuildOptimizer(),optimizer.run().catch((error) => {,process.exit(1)})}
   },,async analyzeBuild() {,try {,this.log('🏗️  Analyzing current build...'),,if (!fs.existsSync('dist')) {,this.log('📦 Building project first...'),execSync('npm run build', {,"cw": "d": this.projectRoot,"stdi": "o": 'pipe';'
@@ -2654,7 +2654,7 @@ const fileInfo = {,;
   },,async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { "recursiv": "e": true }
 },,fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report "saved": "to": ${this.reportFile}`,`} catch (error) {,this.log(`Error "saving": "report": ${error.message}`)}` 
 },,async run() {,this.log('🚀 Starting Build Optimizer...'),this.log(`"Project": "root": ${this.projectRoo,`}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { "recursiv": "e": true },'
-},,// Run all optimization checks,const buildStats = await this.analyzeBuild(),const analyzerInfo = await this.checkBundleAnalyzer(),const settingsInfo = await this.checkOptimizationSettings(),,// Generate report,this.log('📊 Generating optimization report...'),const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Build "Optimizer": "Summary": '),this.log(`"Build": "size": ${report.summary.buildSiz,`} MB`),this.log(`"File": "count": ${report.summary.fileCoun,`}`),this.log(`"Optimization": "score": ${report.summary.optimizationScor,`}/100`),this.log(`"Duratio": "n": ${duratio,`}ms`),,if (report.optimizations.length > 0) {,this.log('\n💡 "Optimization": "Recommendations": '),report.optimizations.forEach((opt) => {,this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),this.log(`    "Actio": "n": ${opt.actio,`}`),this.log(`    "Impac": "t": ${opt.impact}`)},`} else {,this.log('\n✨ Build is well optimized!')}} catch (error) {,this.log(`❌ Error running "build": "optimizer": ${error.messag,`}`),process.exit(1)}`  }
+},,// Run all optimization checks,const buildStats = await this.analyzeBuild(),const analyzerInfo = await this.checkBundleAnalyzer(),const settingsInfo = await this.checkOptimizationSettings(),,// Generate report,this.log('📊 Generating optimization report...'),const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Build "Optimizer": "Summary": '),this.log(`"Build": "size": ${report.summary.buildSiz,`} MB`),this.log(`"File": "count": ${report.summary.fileCoun,`}`),this.log(`"Optimization": "score": ${report.summary.optimizationScor,`}/100`),this.log(`"Duratio": "n": ${duratio,`}ms`),,if (report.optimizations.length > 0) {,this.log('\n💡 "Optimization": "Recommendations": '),report.optimizations.forEach((opt) => {,this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),this.log(`    "Actio": "n": ${opt.actio,`}`),this.log(`    "Impac": "t": ${opt.impact}`)},`} else {,this.log('\n✨ Build is well optimized!')} catch (error) {,this.log(`❌ Error running "build": "optimizer": ${error.messag,`}`),process.exit(1)}`  }
 },,// Run the build optimizer;
   const optimizer = new BuildOptimizer ()optimizer.run ().catch (error = > { process.exit (1)})#!/usr/bin/env node const { execSync } = require('child_process')const fs = require('fs';'
   const path = require('path')class BuildOptimizer { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'build-optimizer'; this.optimizeBundles = process.env.OPTIMIZE_BUNDLES === 'true'; this.treeShaking = process.env.TREE_SHAKING === 'true'; this.codeSplitting = process.env.CODE_SPLITTING === 'true'; this.minification = process.env.MINIFICATION === 'true'; this.logFile = 'logs/pm2/build-optimizer.log'; this.errorFile = 'logs/pm2/build-optimizer-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile)if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ "recursive": true })},'
@@ -2665,7 +2665,7 @@ const fileInfo = {,;
   return { "success": false,"message": 'No build directory found' ;'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } findBuildDirectory() {;
   }
   const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
@@ -2676,7 +2676,7 @@ const largestFiles = []; function scanDirectory() { try { const items = fs.readd
 }
 const fileInfo = { "path": relativePath,"size": stat.size,"extension": path.extname(item),;
 }files.push(fileInfo)if (largestFiles.length < 10) { largestFiles.push(fileInfo)largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) {} } scanDirectory(buildDir)const totalSize = files.reduce((sum,file) => sum + file.size,0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...')try {;'
+  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...')try {;'
   }
   const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies()if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
@@ -2685,7 +2685,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 };
 }
 
-const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies,...devDependencies];
 
@@ -2712,7 +2712,7 @@ const reportDir = path.dirname(reportFile)if (!fs.existsSync(reportDir)) { fs.mk
   return { "success": false,"message": 'No build directory found' ;'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } findBuildDirectory() {;
   }
   const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
@@ -2723,7 +2723,7 @@ const largestFiles = []; function scanDirectory() { try { const items = fs.readd
 }
 const fileInfo = { "path": relativePath,"size": stat.size,"extension": path.extname(item),;
 }files.push(fileInfo)if (largestFiles.length < 10) { largestFiles.push(fileInfo)largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) {} } scanDirectory(buildDir)const totalSize = files.reduce((sum,file) => sum + file.size,0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...')try {;'
+  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...')try {;'
   }
   const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies()if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
@@ -2732,7 +2732,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 };
 }
 
-const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies,...devDependencies];
 
@@ -2758,7 +2758,7 @@ const reportDir = path.dirname(reportFile)if (!fs.existsSync(reportDir)) { fs.mk
   return { "success": false,"message": 'No build directory found' ;'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const bundleInfo = this.getBundleInfo(buildDir)this.log(`Bundle analysis "completed": `)this.log(` - Total "files": ${bundleInfo.totalFiles}`)this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)} MB`)this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,;`}`)return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } findBuildDirectory() {;
   }
   const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
@@ -2769,7 +2769,7 @@ const largestFiles = []; function scanDirectory() { try { const items = fs.readd
 }
 const fileInfo = { "path": relativePath,"size": stat.size,"extension": path.extname(item),;
 }files.push(fileInfo)if (largestFiles.length < 10) { largestFiles.push(fileInfo)largestFiles.sort((a,b) => b.size - a.size)} else if (fileInfo.size > largestFiles[largestFiles.length - 1].size) { largestFiles[largestFiles.length - 1] = fileInfo; largestFiles.sort((a,b) => b.size - a.size)} } } } catch (error) {} } scanDirectory(buildDir)const totalSize = files.reduce((sum,file) => sum + file.size,0)const jsFiles = files.filter(f => { return f.extension === '.js')const cssFiles = files.filter(f => f.extension === '.css'; }'
-  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...')try {;'
+  return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...')try {;'
   }
   const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies()if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
@@ -2778,7 +2778,7 @@ const bundleAnalysis = await this.analyzeBundleSize()if (bundleAnalysis.success)
 };
 }
 
-const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message }},;
+const duplicates = await this.findDuplicateDependencies()if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`)return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`;`return { "success": false,"error": error.message },;
 } async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {};'
   const allDeps = [...dependencies,...devDependencies];
 
@@ -2823,7 +2823,7 @@ const path = require('path'); class BuildOptimizer { constructor() { this.proces
 const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log "file":',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] "ERROR": ${message}\n`,`} catch (err) { console.error('Failed to write to error "file":',err.message)} } async analyzeBundleSize() { this.log('Analyzing bundle size...'); try { const buildDir = this.findBuildDirectory(); if (!buildDir) { this.log('No build directory found','WARNING'); return { "success": false,"message": 'No build directory found' ,'
 }
 
-const bundleInfo = this.getBundleInfo(buildDir); this.log(`Bundle analysis "completed":`); this.log(` - Total "files": ${bundleInfo.totalFile,;`}`); this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2,`} MB`); this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,`}`); return { "success": true,buildDir,...bundleInfo }} catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`); return { "success": false,"error": error.message }},`} findBuildDirectory() { const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
+const bundleInfo = this.getBundleInfo(buildDir); this.log(`Bundle analysis "completed":`); this.log(` - Total "files": ${bundleInfo.totalFile,;`}`); this.log(` - Total "size": ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2,`} MB`); this.log(` - Largest "files": ${bundleInfo.largestFiles.lengt,`}`); return { "success": true,buildDir,...bundleInfo } catch (error) { this.error(`Bundle analysis "failed": ${error.messag,`}`); return { "success": false,"error": error.message },`} findBuildDirectory() { const possibleDirs = ['dist','build','out','.next','public']; for (const dir of possibleDirs) { if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) { return dir} } return null} getBundleInfo(buildDir) { const files = [];'
 
 }
 
@@ -2842,13 +2842,13 @@ const totalSize = files.reduce((sum,file) => sum + file.size,0);
 
 const jsFiles = files.filter(f => { return f.extension === '.js'); }'
 
-const cssFiles = files.filter(f => { return f.extension === '.css'); } return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) }} async optimizeBundle() { this.log('Optimizing bundle...'); try { const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies(); if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
+const cssFiles = files.filter(f => { return f.extension === '.css'); } return { "totalFiles": files.length,totalSize,"jsFiles": jsFiles.length,"cssFiles": cssFiles.length,"largestFiles": largestFiles.slice(0,5) } async optimizeBundle() { this.log('Optimizing bundle...'); try { const optimizations = []; if (this.optimizeBundles) { const unusedDeps = await this.findUnusedDependencies(); if (unusedDeps.length > 0) { optimizations.push({ "type": 'unused_dependencies',"count": unusedDeps.length,"dependencies": unusedDeps })},'
 }
 
 const bundleAnalysis = await this.analyzeBundleSize(); if (bundleAnalysis.success) { const largeFiles = bundleAnalysis.largestFiles.filter(f => { return f.size > 100 * 1024); } if (largeFiles.length > 0) { optimizations.push({ "type": 'large_files',"count": largeFiles.length,"files": largeFiles })},'
 }
 
-const duplicates = await this.findDuplicateDependencies(); if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`); return { "success": true,optimizations }} catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`); return { "success": false,"error": error.message }},`} async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));'
+const duplicates = await this.findDuplicateDependencies(); if (duplicates.length > 0) { optimizations.push({ "type": 'duplicate_dependencies',"count": duplicates.length,duplicates })} this.log(`Found ${optimizations.length} optimization opportunities`); return { "success": true,optimizations } catch (error) { this.error(`Bundle optimization "failed": ${error.messag,`}`); return { "success": false,"error": error.message },`} async findUnusedDependencies() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));'
 
 }
 

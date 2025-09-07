@@ -42,13 +42,13 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
 <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative' />;
           <div className='max-w-7xl mx-auto text-center' />;
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              initial={ opacity: 0, y: 30 ,}
 }
-              animate={{ opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }
+              animate={ opacity: 1, y: 0 }
+              transition={duration: 0.8 }
 }
              />;
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent" />;
@@ -59,11 +59,11 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
           <div className='max-w-7xl mx-auto text-center' />            <motion && motion.div        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative" />;
           <div className="max-w-7xl mx-auto text-center" />;
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 }
+              initial={ opacity: 0, y: 30 ,}
 }
-              animate={{ opacity: 1, y: 0 }}
-              transition={{duration: 0 && 0.8 }
+              animate={ opacity: 1, y: 0 }
+              transition={duration: 0 && 0.8 }
 } />;
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent' />;
                 Revolutionary 2026 Services;
@@ -84,25 +84,25 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6" />;
                 <motion.a;
                   href="#services";
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200";
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200';
                  />;
                   Explore Services;
                 </motion.a>;
                 <motion.a;
                   href={`tel:${contactInfo.mobile}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200';
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200';
                  />;
-                  whileTap={{scale: 0.95 }
+                  whileTap={scale: 0.95 }
 }
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200";
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{scale: 0.95 }
+                  whileHover={ scale: 1.05 }
+                  whileTap={scale: 0.95 }
 }
                   className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200'>
 
@@ -110,8 +110,8 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
                 </motion.a>;
                 <motion.a;
                   href={`tel: ${contactInfo.mobile}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{scale: 0.95 }
+                  whileHover={ scale: 1.05 }
+                  whileTap={scale: 0.95 }
 }className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200' />
 
                   Get Started;
@@ -120,9 +120,9 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
             </motion.div>;
           </div>;
         </section>;
-        {/* Services Showcase */}whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
-                  whileTap={{scale: 0 && 0.95 }
+        {/* Services Showcase */}whileHover={ scale: 1 && 1.05 }
+                  whileTap={ scale: 0 && 0.95 }
+                  whileTap={scale: 0 && 0.95 }
 }
                   className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200'>                Revolutionary 2026 Services;
               </h1>;
@@ -133,8 +133,8 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6" />;
                 <motion&& motion.a;
                   href="#services";
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{scale: 0 && 0.95 }
+                  whileHover={ scale: 1 && 1.05 }
+                  whileTap={scale: 0 && 0.95 }
 }
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200" />;
                   Explore Services;
@@ -142,8 +142,8 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
                 <motion&& motion.a;
                   href={`tel:${contactInfo && contactInfo.mobile}`}
                   href={`tel: ${contactInfo && contactInfo.mobile}`}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{scale: 0 && 0.95 }
+                  whileHover={ scale: 1 && 1.05 }
+                  whileTap={scale: 0 && 0.95 }
 }
                   className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200' />                  className="px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200">
 
@@ -153,9 +153,9 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
             </motion && motion.div>;
           </div>;
         </section>;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              initial={ opacity: 0, y: 20 ,}
 }
 }transition= {
   {
@@ -174,15 +174,15 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative' />;
           <div className='max-w-4xl mx-auto text-center' />;
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{once: true }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={once: true }
 }
              />;
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
@@ -198,19 +198,19 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6' />;
                 <motion.a;
                   href={`tel:${contactInfo.mobile}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200";
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200";
                  />;
                   <span />Call {contactInfo.mobile}</span>;
                   href={`tel: ${contactInfo.mobile}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200">
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200">
 
                   <span />Call {contactInfo.mobil,}
 }</span>;
                 </motion.a>;
-              transition={{ duration: 0 && 0.6 }}
-              viewport={{once: true }
+              transition={ duration: 0 && 0.6 }
+              viewport={once: true }
 }>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
                 <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent' />;
@@ -266,10 +266,10 @@ function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 095
           <div className='max - w-7xl mx - auto text - center' />            <motion.div        <section className="pt - 32 pb - 20 px - 4 sm:px-6 lg:px-8 relative" />;
           <div className="max - w-7xl mx-auto text-center" />;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 ,}
+              initial={ opacity: 0, coordinate_y: 30 ,}
 }
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{duration: 0.8 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={duration: 0.8 }
 }
              />;
               <h1 className='text - 5xl md:text - 7xl font - bold text - white mb - 6 bg - gradient - to - r from - purple - 400 via - pink - 400 to - cyan - 400 bg - clip - text text - transparent' />;
@@ -283,8 +283,8 @@ function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 095
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6' />;
                 <motion.a;
                   href='#services';
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{scale: 0.95 }
+                  while_hover={ scale: 1.05 }
+                  while_tap={scale: 0.95 }
 }
                   className='px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold rounded - xl shadow - lg shadow - purple - 500 / 25 hover:shadow - xl hover:shadow - purple - 500 / 40 transition - all duration - 200'                 />                Revolutionary 2026 Services;
               </h1>;
@@ -295,8 +295,8 @@ function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 095
               <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space-y-0 sm:space-x-6" />;
                 <motion.a;
                   href="#services";
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{scale: 0.95 }
+                  while_hover={ scale: 1.05 }
+                  while_tap={scale: 0.95 }
 }
                   className="px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold rounded - xl shadow - lg shadow - purple - 500 / 25 hover:shadow - xl hover:shadow - purple - 500 / 40 transition-all duration-200" />
 
@@ -304,8 +304,8 @@ function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 095
                 </motion.a>;
                 <motion.a;
                   href={`tel: ${contact_info.mobile}`}
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{scale: 0.95 }
+                  while_hover={ scale: 1.05 }
+                  while_tap={scale: 0.95 }
 }
                   className='px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition - all duration - 200'                 />                  className="px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition-all duration-200">
 
@@ -328,11 +328,11 @@ function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 095
           <div className='max - w-4xl mx - auto text - center' />        <section className="py - 20 px - 4 sm:px-6 lg:px-8 relative" />;
           <div className="max - w-4xl mx-auto text-center" />;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 ,}
+              initial={ opacity: 0, coordinate_y: 20 ,}
 }
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{once: true }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.6 }
+              viewport={once: true }
 }
              />;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6' />;
@@ -347,8 +347,8 @@ function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 095
 }
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6' />                <motion.a;
                   href={`tel: ${contact_info.mobile}`}
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{scale: 0.95 }
+                  while_hover={ scale: 1.05 }
+                  while_tap={scale: 0.95 }
 }                  Ready to Transform Your Business?;
                 </span />;
               </h2>;
@@ -358,8 +358,8 @@ function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 095
               <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space-y-0 sm:space-x-6" />;
                 <motion.a;
                   href={`tel: ${contact_info.mobile}`}
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                   className='flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold rounded - xl shadow - lg shadow - purple - 500 / 25 hover:shadow - xl hover:shadow - purple - 500 / 40 transition - all duration - 200' />
 
                   <span /> Call {contact_info.mobil,}
@@ -371,8 +371,8 @@ function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 095
 }</span>;
                 </motion.a>;
                   href={`mailto: ${contact_info.email}`}
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{scale: 0.95 }
+                  while_hover={ scale: 1.05 }
+                  while_tap={scale: 0.95 }
 }
                   className='flex items - center space - x-2 px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition - all duration - 200'                >                  className="flex items - center space - x-2 px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition-all duration-200">
 
@@ -421,8 +421,8 @@ function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 095
                 </motion.a>;
                 <motion.a;
                   href={`mailto:${contactInfo.email}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
 className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200';
                  />;
     </UltraQuantumHolographicBackground>)className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover: shadow-xl hover:shadow-purple-500/40 transition-all duration-200'>
@@ -432,8 +432,8 @@ className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 t
                 </motion.a>;
                 <motion.a;
                   href={`mailto: ${contactInfo.email}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{scale: 0.95 }
+                  whileHover={ scale: 1.05 }
+                  whileTap={scale: 0.95 }
 }
 className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200' />
 

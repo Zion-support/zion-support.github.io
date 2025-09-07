@@ -5,7 +5,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: '/help'
-      permanent: false}}
+      permanent: false}
 }
 export default function SupportRedirect() { return null }
 export const getServerSideProps: GetServerSideProps = async () => {;

@@ -22,7 +22,6 @@ import { useState  } from 'react';
 
 ;
 
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
 
 import { useState } from 'react',
 import { useState } from 'react',
@@ -203,7 +202,6 @@ interface ServiceQuoteModalProps {;
   service: ProductListing | null;
 }
 ;
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
 
 const BUDGET_RANGES = [;
   { label: "Less than $5,000", value: "0-5000" },;
@@ -487,7 +485,6 @@ const TIMELINE_OPTIONS = [;"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                 >"
                   {isSubmitting ? "Submitting..." : "Submit Request"}
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
                 </Button>
               )}
 :src/components/ServiceQuoteModal.tsx
@@ -521,7 +518,7 @@ setCurrentStep ('details')}catch (error) {';
   if (currentStep === 'details') setCurrentStep ('timeline')';
 else if (currentStep === 'timeline') setCurrentStep ('contact')}const prevStep = () => {';
   if (currentStep === 'timeline') setCurrentStep ('details')';
-else if (currentStep === 'contact') setCurrentStep ('timeline')}}> <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]" > text-2xl font-semibold text-white"> Request Service Quote </DialogTitle> </DialogHeader> </div> <div className=" space-y-2"> <Label htmlFor=" description"className=" text-white">Project Description</Label> <Textarea required /> </div> <div className=" space-y-2"> <Label htmlFor=" budget"className=" text-white">Estimated Budget</Label> <Select value= {formData.budget ;
+else if (currentStep === 'contact') setCurrentStep ('timeline')}> <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]" > text-2xl font-semibold text-white"> Request Service Quote </DialogTitle> </DialogHeader> </div> <div className=" space-y-2"> <Label htmlFor=" description"className=" text-white">Project Description</Label> <Textarea required /> </div> <div className=" space-y-2"> <Label htmlFor=" budget"className=" text-white">Estimated Budget</Label> <Select value= {formData.budget ;
 }onValueChange= {(value) => setFormData (prev => ({...prev, budget: value ;
 }) ) ";
 }> <SelectTrigger className=" bg-zion-blue-dark border-zion-blue-light text-white"> <SelectValue placeholder=" Select your budget range"/> </SelectTrigger> </SelectItem>) )}</SelectContent> </Select> </div> </div>)}<Select value= {formData.timeframe ;
@@ -536,7 +533,6 @@ else if (currentStep === 'contact') setCurrentStep ('timeline')}}> <DialogConten
   currentStep !== 'contact' ? (<Button type=" button"onClick={nextStep ";
 }className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next </Button>) : (<Button </Button>)}</div> </DialogFooter> </form> </DialogContent> </Dialog>)}'";
 }
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 }

@@ -55,7 +55,7 @@ import { TemplateSaveForm } from "./TemplateSaveForm",              onEdit={(tem
                 }
                 setSelectedTemplate(template);
                 setMode("save");"
-              }}            <TemplateList;
+              }            <TemplateList;
               templates={templates}
               is_loading={is_loading}
               on_select={handleSelectTemplate}
@@ -63,7 +63,7 @@ import { TemplateSaveForm } from "./TemplateSaveForm",              onEdit={(tem
                 }
                 setSelectedTemplate (template);
                 set_mode ("save");"
-              }}
+              }
             />;
           </div>) : (
           <TemplateSaveForm;
@@ -71,7 +71,7 @@ import { TemplateSaveForm } from "./TemplateSaveForm",              onEdit={(tem
               }
               set_mode ("list");"
               setSelectedTemplate (null);
-            }}
+            }
             on_complete={handleSaveComplete}
             edit_template={selected_template}
             current_values={current_values}
@@ -145,7 +145,7 @@ return (<Dialog open= {
               onEdit={(template) => {
                 setSelectedTemplate($2);
                 setMode("save")
-              }}
+              }
             />
           </div>
         ) : (
@@ -153,7 +153,7 @@ return (<Dialog open= {
             onCancel={() => {
               setMode($2);
               setSelectedTemplate(null)
-            }}
+            }
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}
             currentValues={currentValues}

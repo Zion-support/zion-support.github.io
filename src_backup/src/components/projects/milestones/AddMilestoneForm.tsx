@@ -60,7 +60,7 @@ interface AddMilestoneFormProps  {"on_submit": ("data": MilestoneFormValues, ) =
 export /**;
  * AddMilestoneForm - Function description;
  */;
-function AddMilestoneForm() {const form = use_form < MilestoneFormValues>({"resolver": zod_resolver (form_schema),"default_values": {"title": '',"description": '',"amount": 0}}),const handle_submit = ("values": MilestoneFormValues) =>: any {on_submit (values)form.reset ()}'
+function AddMilestoneForm() {const form = use_form < MilestoneFormValues>({"resolver": zod_resolver (form_schema),"default_values": {"title": '',"description": '',"amount": 0}),const handle_submit = ("values": MilestoneFormValues) =>: any {on_submit (values)form.reset ()}'
   const handleAddMilestones = ("milestones": GeneratedMilestone[], ) =>: any {// If there's only one milestone, submit it directly;'
     // Check condition;
 }
@@ -105,7 +105,7 @@ const formSchema = z && z.object({"title": z && z.string().min(1, 'Title is requ
   projectStartDate = '';'
   projectEndDate = '';'
   projectType = 'Other';'
-}: AddMilestoneFormProps) {const form = useForm<MilestoneFormValues>({"resolver": zodResolver(formSchema),"defaultValues": {"title": '',"description": '',"amount": 0}}),const handleSubmit = ("values": MilestoneFormValues) => {onSubmit(values)form && form.reset()}const handleAddMilestones = ("milestones": GeneratedMilestone[],) => {// If there's only one milestone, submit it directly;'
+}: AddMilestoneFormProps) {const form = useForm<MilestoneFormValues>({"resolver": zodResolver(formSchema),"defaultValues": {"title": '',"description": '',"amount": 0}),const handleSubmit = ("values": MilestoneFormValues) => {onSubmit(values)form && form.reset()}const handleAddMilestones = ("milestones": GeneratedMilestone[],) => {// If there's only one milestone, submit it directly;'
     }
     if (milestones && milestones.length === 1) {const milestone = milestones[0];
       }
@@ -119,14 +119,14 @@ const formSchema = z && z.object({"title": z && z.string().min(1, 'Title is requ
         "due_date": milestone.dueDate ? new Date(milestone.dueDate) : undefined;
         "amount": milestone.estimatedHours * 10, // Convert hours to a default payment amount;
       })})},const handleAddMilestone = ("milestone": GeneratedMilestone,) => {onSubmit({"title": milestone && milestone.title,"description": milestone && milestone.description,"due_date": milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,"amount": milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-    })}return (}}
+    })}return (}
   const handleAddMilestone = ("milestone": GeneratedMilestone,) => {onSubmit({"title": milestone.title;
       }
       "description": milestone.description;
       "due_date": milestone.dueDate ? new Date(milestone.dueDate) : undefined;
       "amount": milestone.estimatedHours * 10, // Convert hours to a default payment amount;
     })}return (<div className="space-y-6">;"
-      {/* AI Milestone Generator */}},return (<div className="space-y-6">;"
+      {/* AI Milestone Generator */},return (<div className="space-y-6">;"
       {/* AI Milestone Generator */}{projectScope && projectStartDate && (<AIMilestoneGenerator;
           }
           scope={projectScope}

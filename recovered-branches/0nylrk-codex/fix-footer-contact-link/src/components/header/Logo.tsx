@@ -35,7 +35,7 @@ return (;
   }
 return (;
     <Link to="/" className="flex items-center">"
-      <div className="text-2xl font-bold" style={colorToUse ? { "color": colorToUse } : {}}>"
+      <div className="text-2xl font-bold" style={colorToUse ? { "color": colorToUse } : {}>"
         {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>"
       </div>
     </Link>
@@ -43,14 +43,14 @@ return (;
     <Link to="/" className="flex items-center">;"
       <div,
 className="text-2xl font-bold""
-        style={colorToUse ? { "color": colorToUse } : {}}>;
+        style={colorToUse ? { "color": colorToUse } : {}>;
         {isWhitelabel ? brandName : "Zion"}"
         <span className="text-zion-cyan">AI</span>;"
       </div>;
     </Link>;
   );
     <Link to="/" className="flex items-center">"
-      <div className="text-2xl font-bold" style={colorToUse ? { "color": colorToUse } : {}}>"
+      <div className="text-2xl font-bold" style={colorToUse ? { "color": colorToUse } : {}>"
         {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>"
       </div>
     </Link>  // Use the white - label logo if available and no specific custom_logo is provided;
@@ -70,7 +70,7 @@ return (;
     <Link to="/" className="flex items-center">;"
       <div;
         className="text - 2xl font-bold";"
-        style={colorToUse ? { "color": colorToUse } : {}}
+        style={colorToUse ? { "color": colorToUse } : {}
       >;
         {is_whitelabel ? brand_name : "Zion"}"
         <span className="text - zion-cyan">AI</span>;"
@@ -115,7 +115,7 @@ export function Logo() {;
   ;
   return (;
     <Link to="/" className="flex items-center">;"
-      <div className="text-2xl font-bold" style={colorToUse ? { "color":colorToUse } {}}>;"
+      <div className="text-2xl font-bold" style={colorToUse ? { "color":colorToUse } {}>;"
         {isWhitelabel ? brandName :'Zion'}<span className="text-zion-cyan">AI</span>;"
       </div>;
     </Link>;

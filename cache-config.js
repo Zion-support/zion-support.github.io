@@ -2,21 +2,21 @@
 const cacheConfig = {
   // Static generation
 }
-"staticGeneration": {
+'staticGeneration': {
     }
-    "revalidate": 3600, // 1 hour,
-"tags": ['services', 'pricing', 'content']'
+    'revalidate': 3600, // 1 hour,
+'tags': ['services', 'pricing', 'content']'
   },
   
   // API caching,
-"apiCaching": {
+'apiCaching': {
     'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400','
     'CDN-Cache-Control': 'public, max-age=86400','
     'Vercel-CDN-Cache-Control': 'public, max-age=31536000''
   },
   
   // Image optimization,
-"imageCaching": {
+'imageCaching': {
     'Cache-Control': 'public, max-age=31536000, immutable''
   }
 };

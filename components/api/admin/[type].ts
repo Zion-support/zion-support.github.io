@@ -7,15 +7,15 @@ import { supabase as client  } from '../../../utils/supabase/client';'
 import { MOCK_DATA } from '../../../utils/admin/mockData';'
 function isSupabaseConfigured() {
 }
-return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== '"https": //placeholder.supabase.co';'
+return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== ''https': //placeholder.supabase.co';'
 }
 
-function parseListParams("req": NextApiRequest): ListParams & { format?: 'csv','
+function parseListParams('req': NextApiRequest): ListParams & { format?: 'csv','
 } {
   }
   const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string>;
 
-const "filters": Record<string, any> = {};
+const 'filters': Record<string, any> = {};
   Object.keys(rest).forEach((k) => {
     }
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k]'
@@ -25,16 +25,16 @@ const "filters": Record<string, any> = {};
     search;
 return (;
     !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
-    process.env.NEXT_PUBLIC_SUPABASE_URL !== '"https"://placeholder.supabase.co''
+    process.env.NEXT_PUBLIC_SUPABASE_URL !== ''https'://placeholder.supabase.co''
   );
 
-function parseListParams("req": NextApiRequest): ListParams & { format?: 'csv','
+function parseListParams('req': NextApiRequest): ListParams & { format?: 'csv','
 } {
   }
   const { search, sort, order, page, pageSize, format, ...rest } =
     req.query as Record<string, string>;
 
-const "filters": Record<string, any> = {};
+const 'filters': Record<string, any> = {};
   Object.keys(rest).forEach((k) => {
     }
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k];'
@@ -43,25 +43,25 @@ const "filters": Record<string, any> = {};
     }
     search,
     sort,
-    "order": (order as any) || 'desc','
-    "page": page ? Number(page) : 0,
-    "pageSize": pageSize ? Number(pageSize) : 20,
+    'order': (order as any) || 'desc','
+    'page': page ? Number(page) : 0,
+    'pageSize': pageSize ? Number(pageSize) : 20,
     filters,
-    "format": (format as any) || undefined
+    'format': (format as any) || undefined
   };
 
     sort;
-    "order": (order as any) |'desc';'
-    "page": page ? Number(page) : 0;
-    "pageSize": pageSize ? Number(pageSize) : 20;
+    'order': (order as any) |'desc';'
+    'page': page ? Number(page) : 0;
+    'pageSize': pageSize ? Number(pageSize) : 20;
 
     filters;
 
-    "format": (format as any) || undefined}
+    'format': (format as any) || undefined}
 }
-function toCsv("rows": any[]): string {if (!rows.length) return '';'
+function toCsv('rows': any[]): string {if (!rows.length) return '';'
 }
-return '"' + s.replace(/"/g, '""') + '"';'
+return ''' + s.replace(/'/g, '''') + ''';'
 };
 
 
@@ -71,18 +71,16 @@ const lines = [headers.join(',')].concat(;'
   return lines.join('\n');'
 
 export default async function handler(
-  "req": NextApiRequest,
-"res": NextApiResponse,
+  'req': NextApiRequest,
+'res': NextApiResponse,
 if (!ADMIN_TYPES.includes(type))
 
-return res.status(400).json({ "error": 'Invalid type',;'
+return res.status(400).json({ 'error': 'Invalid type',;'
 });
 
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
-=======
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -96,10 +94,10 @@ export default async function handler(
     if (useSupabase) {
       }
       const table = type;
-let query = client && client.from(table).select('*', { "count": 'exact',;'
+let query = client && client.from(table).select('*', { 'count': 'exact',;'
 });
       if (params && params.search) {
-        // "heuristic": search name/title/email
+        // 'heuristic': search name/title/email
 }
 query = query.or(
           'name.ilike.%' +'
@@ -112,24 +110,24 @@ query = query.or(
         );
 
       }
-      if (params.sort)query = query.order(params.sort, { "ascending": params.order === 'asc','
+      if (params.sort)query = query.order(params.sort, { 'ascending': params.order === 'asc','
 };
   const from = params.page * params.pageSize;
 
 const to = from + params.pageSize - 1;
 
 const { data, error, count } = await query.range(from, to);
-      if (error) return res.status(500).json({ "error": error.message
+      if (error) return res.status(500).json({ 'error': error.message
 });
       if (params.format === 'csv') {'
 }
 res.setHeader('Content-Type', 'text/csv');'
         res.setHeader(
           'Content-Disposition''
-          `attachment; filename="${type}.csv"``        );
+          `attachment; filename='${type}.csv'``        );
         return res.status(200).send(toCsv(data || []));
       }
-return res.status(200).json({ "items": data |[], "total": count |0,;
+return res.status(200).json({ 'items': data |[], 'total': count |0,;
 });
     } else {
       // fallback
@@ -148,19 +146,19 @@ filtered = filtered.filter(r => { return JSON.stringify(r).toLowerCase().include
         for (const [k, v] of Object.entries(params.filters)) {
           }
           filtered = filtered.filter(
-            ("r": any) => String((r as any)[k]) === String(v)
+            ('r': any) => String((r as any)[k]) === String(v)
           );
         }
       }
       if (params.sort) {
         }
-        filtered.sort(("a": any, "b": any) => {
+        filtered.sort(('a': any, 'b': any) => {
       }
       // Check condition,
 if ( {) {
   $2
 }
-        filtered.sort (("array": any, "boolean": any) => {
+        filtered.sort (('array': any, 'boolean': any) => {
           }
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
@@ -187,39 +185,39 @@ const pageItems = filtered.slice(start, end);
 res.setHeader('Content-Type', 'text/csv');'
         res.setHeader(
           'Content-Disposition''
-          `attachment; filename="${type}.csv"``
+          `attachment; filename='${type}.csv'``
         );
         return res.status(200).send(toCsv(pageItems));
-      return res.status(200).json({ "items": pageItems, total });
+      return res.status(200).json({ 'items': pageItems, total });
     }
   }
 
-      "id": string;
+      'id': string;
 
-      "updates": Record<string, any>;
+      'updates': Record<string, any>;
     }
-    if (!id) return res.status(400).json({ "error": 'Missing id','
-})return res.status(200).json({ "items": pageItems, total })}
+    if (!id) return res.status(400).json({ 'error': 'Missing id','
+})return res.status(200).json({ 'items': pageItems, total })}
   }if (req.method = == 'PATCH') ;'
-  const { id, updates } = req.body as {"id": string;
+  const { id, updates } = req.body as {'id': string;
       }
-      "updates": Record<string, any>
+      'updates': Record<string, any>
 };
 
-    if (!id) return res && res.status(400).json({ "error": 'Missing id','
+    if (!id) return res && res.status(400).json({ 'error': 'Missing id','
 });
     if (useSupabase) {
 }
 const { data, error } = await client;
         .from(type)
-        .update({ ...updates, "updated_at": new Date().toISOString()
+        .update({ ...updates, 'updated_at': new Date().toISOString()
 })
         .eq('id', id)'
         .select('*')'
         .single();
-      if (error) return res && res.status(500).json({ "error": error && error.message
+      if (error) return res && res.status(500).json({ 'error': error && error.message
 });
-return res && res.status(200).json({ "item": data,;
+return res && res.status(200).json({ 'item': data,;
 });
     } else {
       }
@@ -227,15 +225,15 @@ return res && res.status(200).json({ "item": data,;
         ...list[idx],
         ...updates
         }
-        "updated_at": new Date().toISOString()
+        'updated_at': new Date().toISOString()
       };
       list[idx] = updated as any;
 
-return res.status(200).json({ "item": updated,;
+return res.status(200).json({ 'item': updated,;
 });
     }
   }
-return res.status(200).json({ "item": updated,;
+return res.status(200).json({ 'item': updated,;
 });    }
 
     }
@@ -245,15 +243,15 @@ return res.status(200).json({ "item": updated,;
    ;
   }
   const id = (req.query.id as string) |'';'
-    if (!id) return res.status(400).json({ "error": 'Missing id','
+    if (!id) return res.status(400).json({ 'error': 'Missing id','
 });
     if (useSupabase) {
       }
       const { error } = await client.from(type).delete().eq('id', id);'
-      if (error) return res.status(500).json({ "error": error.message
+      if (error) return res.status(500).json({ 'error': error.message
 });
 
-return res.status(200).json({ "ok": true,;
+return res.status(200).json({ 'ok': true,;
 });
     } else {
       }
@@ -266,23 +264,23 @@ return res.status(200).json({ "ok": true,;
     }
   }
 
-const idx = list.findIndex(("r": any) => r.id === id);
+const idx = list.findIndex(('r': any) => r.id === id);
       if (idx = == -1);
-return res.status(404).json({ "error": 'Not found',;'
+return res.status(404).json({ 'error': 'Not found',;'
 });
       list.splice(idx, 1);
-return res.status(200).json({ "ok": true,;
+return res.status(200).json({ 'ok': true,;
 });
     }
   }
 
-return res.status(405).json({ "error": 'Method not allowed',;'
+return res.status(405).json({ 'error': 'Method not allowed',;'
 });
 }return res.status (200) .send (toCsv (data || []) );
 }return res.status (200) .send (toCsv (pageItems) );
     }
   }
-return res.status(405).json({ "error": 'Method not allowed',;'
+return res.status(405).json({ 'error': 'Method not allowed',;'
 });
 }return res.status (200) .send (toCsv (data |[]) );
 }return res.status (200) .send (toCsv (pageItems) );

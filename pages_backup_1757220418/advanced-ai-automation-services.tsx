@@ -132,9 +132,9 @@ export default function AdvancedAIAutomationServices() {
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20}}
-            animate={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20}
+            animate={ opacity: 1, y: 0}
+            transition={ duration: 0.8 }
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Advanced AI Automation Services
@@ -145,9 +145,9 @@ export default function AdvancedAIAutomationServices() {
             <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1}
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30'
                 >
                   {stat.icon  } catch (error) {
@@ -182,10 +182,10 @@ export default function AdvancedAIAutomationServices() {
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            initial={ opacity: 0, y: 20}
+            whileInView={ opacity: 1, y: 0}
+            transition={ duration: 0.8 }
+            viewport={ once: true}
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -200,10 +200,10 @@ export default function AdvancedAIAutomationServices() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true}}
+                initial={ opacity: 0, y: 20}
+                whileInView={ opacity: 1, y: 0}
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true}
                 className="relative group"
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
@@ -226,10 +226,10 @@ export default function AdvancedAIAutomationServices() {
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            initial={ opacity: 0, y: 20}
+            whileInView={ opacity: 1, y: 0}
+            transition={ duration: 0.8 }
+            viewport={ once: true}
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -242,10 +242,10 @@ export default function AdvancedAIAutomationServices() {
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true}}
+                initial={ opacity: 0, y: 20}
+                whileInView={ opacity: 1, y: 0}
+                transition={ duration: 0.8, delay: categoryIndex * 0.2 }
+                viewport={ once: true}
                 className="relative"
               >
                 <div className="text-center mb-12">
@@ -258,10 +258,10 @@ export default function AdvancedAIAutomationServices() {
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1}}
-                      transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true}}
+                      initial={ opacity: 0, scale: 0.9 }
+                      whileInView={ opacity: 1, scale: 1}
+                      transition={ duration: 0.5, delay: serviceIndex * 0.1 }
+                      viewport={ once: true}
                       className="relative group"
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
@@ -331,10 +331,10 @@ export default function AdvancedAIAutomationServices() {
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            initial={ opacity: 0, y: 20}
+            whileInView={ opacity: 1, y: 0}
+            transition={ duration: 0.8 }
+            viewport={ once: true}
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -347,10 +347,10 @@ export default function AdvancedAIAutomationServices() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true}}
+                initial={ opacity: 0, y: 20}
+                whileInView={ opacity: 1, y: 0}
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true}
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20"
               >
                 <div className="flex items-center mb-4">
@@ -377,10 +377,10 @@ export default function AdvancedAIAutomationServices() {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            initial={ opacity: 0, y: 20}
+            whileInView={ opacity: 1, y: 0}
+            transition={ duration: 0.8 }
+            viewport={ once: true}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Operations with AI Automation?

@@ -19,10 +19,10 @@ import {Message, Conversation} from '@/types/messaging';'
 import {toast} from '@/hooks/use-toast';'
         { 
           }
-          "event": 'INSERT', '
-          "schema": 'public', '
-          "table": 'messages', '
-          "filter": `recipient_id=eq.${user && user.id}` `        }, 
+          'event': 'INSERT', '
+          'schema': 'public', '
+          'table': 'messages', '
+          'filter': `recipient_id=eq.${user && user.id}` `        }, 
         (payload) => {
           // Update messages if the conversation is selected
 }
@@ -47,10 +47,10 @@ toast({          })
         'postgres_changes','
         {
           }
-          "event": 'INSERT','
-          "schema": 'public','
-          "table": 'messages','
-          "filter": `recipient_id = eq.${user.id}`;`        },
+          'event': 'INSERT','
+          'schema': 'public','
+          'table': 'messages','
+          'filter': `recipient_id = eq.${user.id}`;`        },
         (payload) => {
           // Update messages if the conversation is selected;
           // Check condition
@@ -66,7 +66,7 @@ if ( {) {
           // Show toast notification for new message;
           toast ({
             }
-            "title": `New message from ${payload.new.sender_name || 'Someone'}`,`  "description": payload.new.content.substring (0, 50) + (payload.new.content.length > 50 ? '...' : '');'
+            'title': `New message from ${payload.new.sender_name || 'Someone'}`,`  'description': payload.new.content.substring (0, 50) + (payload.new.content.length > 50 ? '...' : '');'
           });
         }
       );
@@ -77,7 +77,7 @@ if ( {) {
       supabase.remove_channel (subscription);
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
-}}
+}
 }
 import { useEffect } from 'react';'
 import { supabase } from '@/integrations/supabase/client';'
@@ -89,10 +89,10 @@ import { toast } from '@/hooks/use-toast',;'
 type UserWithProfile = UserProfile | UserDetails | null,;
 ;
 export function useMessagingRealtime(;
-  "user":UserWithProfile,;
-  "activeConversation":Conversation | null,;
-  "setActiveMessages":("updater":("prev":Message[]) => Message[]) => void,;
-  "fetchConversations":() => Promise<void>;
+  'user':UserWithProfile,;
+  'activeConversation':Conversation | null,;
+  'setActiveMessages':('updater':('prev':Message[]) => Message[]) => void,;
+  'fetchConversations':() => Promise<void>;
 ) {;
   // Setup real-time subscription when user is logged in;
   }
@@ -107,10 +107,10 @@ export function useMessagingRealtime(;
         'postgres_changes',;'
         {;
           }
-          "event": 'INSERT',;'
-          "schema": 'public',;'
-          "table": 'messages',;'
-          "filter": `recipient_id=eq.${user.id}`;`        },;
+          'event': 'INSERT',;'
+          'schema': 'public',;'
+          'table': 'messages',;'
+          'filter': `recipient_id=eq.${user.id}`;`        },;
         (payload) => {;
           // Update messages if the conversation is selected;
           }
@@ -124,8 +124,8 @@ export function useMessagingRealtime(;
           // Show toast notification for new message;
           toast({;
             }
-            "title": `New message from ${payload.new.sender_name || 'Someone'}`,`
-  "description": payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '');'
+            'title': `New message from ${payload.new.sender_name || 'Someone'}`,`
+  'description': payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '');'
           });
         }
       );

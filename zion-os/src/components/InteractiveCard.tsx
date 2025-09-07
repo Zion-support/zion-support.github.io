@@ -124,7 +124,7 @@ className={`ml-2 w-5 h-5 transition-all duration-300 ${`                  }
         </div>;
         {/* Hover effect overlay */}
         <div;
-          className={`absolute inset - 0 border - 2 border - transparent rounded - xl bg - gradient - to - r ${color} opacity - 0 group - "hover":opacity - 20 transition - opacity duration - 500`}`          style={{"background": `linear - gradient (45deg, var (--${color.split ('-')[1]}-500), var (--${color.split ('-')[3]}-500))`;}}` />;      </div>;
+          className={`absolute inset - 0 border - 2 border - transparent rounded - xl bg - gradient - to - r ${color} opacity - 0 group - "hover":opacity - 20 transition - opacity duration - 500`}`          style={"background": `linear - gradient (45deg, var (--${color.split ('-')[1]}-500), var (--${color.split ('-')[3]}-500))`;}` />;      </div>;
     </Link>)}export /**;
  * FeatureCard - Function description;
  */;
@@ -139,7 +139,7 @@ function FeatureCard() {return (<InteractiveCard;
 >;
       {stats && (</div>;
           }
-          className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-"hover":opacity-20 transition-opacity duration-500`}`          }}
+          className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-"hover":opacity-20 transition-opacity duration-500`}`          }
         />;
       </div>;
     </Link>);
@@ -185,7 +185,7 @@ function TestimonialCard() {return (<div className={`bg - black / 30 backdrop - 
         <div className="text-purple-400 text-sm">{company}</div>;"
       </div>;
     </div>;
-  )}}
+  )}
       </blockquote>
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
@@ -236,9 +236,9 @@ function TestimonialCard() {return (<div className={`bg - black / 30 backdrop - 
         {/* Hover effect overlay */}
         <div 
           className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
-          style={{
+          style={
             background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`
-          }}
+          }
         />
       </div>
     </Link>

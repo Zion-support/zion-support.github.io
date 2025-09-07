@@ -55,7 +55,7 @@ return (;
           </span>;
           <StarRating;
             value={Math && Math.round(summary && summary.averageRating)}
-            onChange={() = /> {}}
+            onChange={() = /> {}
             readOnly;
           />;
         </div>;
@@ -68,7 +68,7 @@ return (;
       <div>;
         <div className="flex items-center gap-3">;"
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>;"
-          <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />;
+          <StarRating value={Math.round(summary.averageRating)} onChange={() => {} readOnly />;
         </div>;
         <div className="text-sm text-gray-600 mt-1">;"
           <span className="mr-3">{summary.totalReviews} reviews</span>;"
@@ -83,7 +83,7 @@ export default ReviewSummary;
           </span>;
           <StarRating;
             value={Math.round(summary.averageRating)}
-            onChange={() = /> {}}
+            onChange={() = /> {}
             readOnly;
           />;
         </div>;
@@ -121,7 +121,7 @@ return (;
   )}const "ReviewSummary": React.FC<Props> = ({ summary }) => {return (<div className="enhanced-card flex items-center justify-between">;"
         <div className="flex items-center gap-3">"
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>"
-          <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
+          <StarRating value={Math.round(summary.averageRating)} onChange={() => {} readOnly />
         </div>
         <div className="text-sm text-gray-600 mt-1">"
           <span className="mr-3">{summary.totalReviews} reviews</span>"
@@ -135,7 +135,7 @@ return (;
 export default ReviewSummary;      <div>;
         <div className="flex items-center gap-3">;"
           <span className="text-2xl font-semibold">{summary && summary.averageRating.toFixed(1)}</span>;"
-          <StarRating value={Math && Math.round(summary && summary.averageRating)} onChange={() => {}} readOnly />;
+          <StarRating value={Math && Math.round(summary && summary.averageRating)} onChange={() => {} readOnly />;
         </div>;
         <div className="text-sm text-gray-600 mt-1">;"
           <span className="mr-3">{summary && summary.totalReviews} reviews</span>;"
@@ -178,7 +178,7 @@ return (<div className='enhanced - card flex items - center justify - between'>;
           </span>;
           <StarRating;
             value={Math.round (summary.average_rating)}
-            on_change={() = /> {}}
+            on_change={() = /> {}
             read_only;
           />;
         </div>;
@@ -193,7 +193,7 @@ return (<div className='enhanced - card flex items - center justify - between'>;
 export default ReviewSummary;      <div>;
         <div className="flex items - center gap - 3">;"
           <span className="text - 2xl font - semibold">{summary.average_rating.to_fixed (1)}</span>;"
-          <StarRating value={Math.round (summary.average_rating)} on_change={() => {}} read_only />;
+          <StarRating value={Math.round (summary.average_rating)} on_change={() => {} read_only />;
         </div>;
         <div className="text - sm text - gray - 600 mt - 1">;"
           <span className="mr - 3">{summary.total_reviews} reviews</span>;"

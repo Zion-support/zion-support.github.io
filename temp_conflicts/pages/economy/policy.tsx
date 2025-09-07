@@ -30,10 +30,10 @@ export async function getStaticProps() {
 export default function PolicyPage({ latest, recommendation, proposal }: any) {
   return (
     <EnhancedLayout>
-      <div className="space-y-6">
-        <h1 className="text-2xl font-semibold">Policy Recommendation</h1>
+      <div className='space-y-6'>
+        <h1 className='text-2xl font-semibold'>Policy Recommendation</h1>
         {recommendation ? (
-          <div className="text-sm space-y-2">
+          <div className='text-sm space-y-2'>
             <div>Generated: {recommendation.createdAt}</div>
             <div>Burn/Tax: {recommendation.parameters.burnTaxPercent}%</div>
             <div>Schedule: {recommendation.parameters.emissionSchedule}</div>
@@ -42,11 +42,11 @@ export default function PolicyPage({ latest, recommendation, proposal }: any) {
             <div>Expected ending treasury: {Math.round(Number(recommendation.expected.endingTreasury)).toLocaleString()}</div>
             <div>Expected ending supply: {Math.round(Number(recommendation.expected.endingSupply)).toLocaleString()}</div>
             {proposal ? (
-              <div className="pt-2"><a className="underline" href={`/docs/governance/proposals/${proposal}`} target="_blank" rel="noreferrer">Open proposal</a></div>
+              <div className='pt-2'><a className='underline' href={`/docs/governance/proposals/${proposal}`} target='_blank' rel='noreferrer'>Open proposal</a></div>
             ) : null}
           </div>
         ) : (
-          <div className="text-sm opacity-80">No recommendation available yet.</div>
+          <div className='text-sm opacity-80'>No recommendation available yet.</div>
         )}
       </div>
     </EnhancedLayout>

@@ -31,145 +31,145 @@ const handleScroll = () => {;
 const navigationItems = [;
   {;
       }
-      "name": 'Home',;'
-      "href": '/',;'
-      "icon": <Zap className='w-4 h-4' />,;'
+      'name': 'Home',;'
+      'href': '/',;'
+      'icon': <Zap className='w-4 h-4' />,;'
     },;
     {;
       }
-      "name": 'Services',;'
-      "href": '/services',;'
-      "icon": <Brain className='w-4 h-4' />,;'
-      "dropdown": [;
+      'name': 'Services',;'
+      'href': '/services',;'
+      'icon': <Brain className='w-4 h-4' />,;'
+      'dropdown': [;
         {;
           }
-          "name": 'AI & Machine Learning',;'
-          "href": '/services?category=ai',;'
-          "icon": <Brain className='w-4 h-4' />,;'
+          'name': 'AI & Machine Learning',;'
+          'href': '/services?category=ai',;'
+          'icon': <Brain className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Quantum & Space Tech',;'
-          "href": '/services?category=quantum',;'
-          "icon": <Atom className='w-4 h-4' />,;'
+          'name': 'Quantum & Space Tech',;'
+          'href': '/services?category=quantum',;'
+          'icon': <Atom className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Emerging Technologies',;'
-          "href": '/services?category=emerging',;'
-          "icon": <Microscope className='w-4 h-4' />,;'
+          'name': 'Emerging Technologies',;'
+          'href': '/services?category=emerging',;'
+          'icon': <Microscope className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Micro SaaS',;'
-          "href": '/services?category=micro-saas',;'
-          "icon": <Code className='w-4 h-4' />,;'
+          'name': 'Micro SaaS',;'
+          'href': '/services?category=micro-saas',;'
+          'icon': <Code className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Metaverse & VR',;'
-          "href": '/services?category=metaverse',;'
-          "icon": <Gamepad2 className='w-4 h-4' />,;'
+          'name': 'Metaverse & VR',;'
+          'href': '/services?category=metaverse',;'
+          'icon': <Gamepad2 className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Cybersecurity',;'
-          "href": '/services?category=cybersecurity',;'
-          "icon": <Shield className='w-4 h-4' />,;'
+          'name': 'Cybersecurity',;'
+          'href': '/services?category=cybersecurity',;'
+          'icon': <Shield className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Space Technology',;'
-          "href": '/services?category=space',;'
-          "icon": <Rocket className='w-4 h-4' />,;'
+          'name': 'Space Technology',;'
+          'href': '/services?category=space',;'
+          'icon': <Rocket className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Biotech & Healthcare',;'
-          "href": '/services?category=biotech',;'
-          "icon": <TestTube className='w-4 h-4' />,;'
+          'name': 'Biotech & Healthcare',;'
+          'href': '/services?category=biotech',;'
+          'icon': <TestTube className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Blockchain & Web3',;'
-          "href": '/services?category=blockchain',;'
-          "icon": <Database className='w-4 h-4' />,;'
+          'name': 'Blockchain & Web3',;'
+          'href': '/services?category=blockchain',;'
+          'icon': <Database className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Autonomous Vehicles',;'
-          "href": '/services?category=transportation',;'
-          "icon": <Car className='w-4 h-4' />,;'
+          'name': 'Autonomous Vehicles',;'
+          'href': '/services?category=transportation',;'
+          'icon': <Car className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Cloud & Infrastructure',;'
-          "href": '/services?category=cloud',;'
-          "icon": <Cloud className='w-4 h-4' />,;'
+          'name': 'Cloud & Infrastructure',;'
+          'href': '/services?category=cloud',;'
+          'icon': <Cloud className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Edge Computing',;'
-          "href": '/services?category=edge',;'
-          "icon": <Server className='w-4 h-4' />,;'
+          'name': 'Edge Computing',;'
+          'href': '/services?category=edge',;'
+          'icon': <Server className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'IoT & Connectivity',;'
-          "href": '/services?category=iot',;'
-          "icon": <Network className='w-4 h-4' />,;'
+          'name': 'IoT & Connectivity',;'
+          'href': '/services?category=iot',;'
+          'icon': <Network className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Semiconductor Tech',;'
-          "href": '/services?category=semiconductor',;'
-          "icon": <Cpu className='w-4 h-4' />,;'
+          'name': 'Semiconductor Tech',;'
+          'href': '/services?category=semiconductor',;'
+          'icon': <Cpu className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Creative & Design',;'
-          "href": '/services?category=creative',;'
-          "icon": <Palette className='w-4 h-4' />,;'
+          'name': 'Creative & Design',;'
+          'href': '/services?category=creative',;'
+          'icon': <Palette className='w-4 h-4' />,;'
         },;
         {;
           }
-          "name": 'Global Solutions',;'
-          "href": '/services?category=global',;'
-          "icon": <Globe className='w-4 h-4' />,;'
+          'name': 'Global Solutions',;'
+          'href': '/services?category=global',;'
+          'icon': <Globe className='w-4 h-4' />,;'
         },;
       ],;
     },    {;
       }
-      "name": 'Showcase',;'
-      "href": '/enhanced-services-showcase-2026-v2',;'
-      "icon": <Rocket className='w-4 h-4' />,;'
+      'name': 'Showcase',;'
+      'href': '/enhanced-services-showcase-2026-v2',;'
+      'icon': <Rocket className='w-4 h-4' />,;'
     },;
     {;
       }
-      "name": 'Pricing',;'
-      "href": '/pricing-enhanced-2026',;'
-      "icon": <Database className='w-4 h-4' />,;'
+      'name': 'Pricing',;'
+      'href': '/pricing-enhanced-2026',;'
+      'icon': <Database className='w-4 h-4' />,;'
     },;
     {;
       }
-      "name": 'About',;'
-      "href": '/about',;'
-      "icon": <Globe className='w-4 h-4' />,;'
+      'name': 'About',;'
+      'href': '/about',;'
+      'icon': <Globe className='w-4 h-4' />,;'
     },;
     {;
       }
-      "name": 'Contact',;'
-      "href": '/contact',;'
-      "icon": <Mail className='w-4 h-4' />,;'
-    }  ];      "icon": <Mail className="w-4 h-4" />;"
+      'name': 'Contact',;'
+      'href': '/contact',;'
+      'icon': <Mail className='w-4 h-4' />,;'
+    }  ];      'icon': <Mail className='w-4 h-4' />;'
     }
   ];
 
 const contactInfo = {
   }
-  "mobile": '+1 302 464 0950',;'
-    "email": 'kleber@ziontechgroup && ziontechgroup.com',;'
-    "address": '364 E Main St STE 1008 Middletown DE 19709'  };    "address": '364 E Main St STE 1008 Middletown DE 19709';'
+  'mobile': '+1 302 464 0950',;'
+    'email': 'kleber@ziontechgroup && ziontechgroup.com',;'
+    'address': '364 E Main St STE 1008 Middletown DE 19709'  };    'address': '364 E Main St STE 1008 Middletown DE 19709';'
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);'
@@ -277,160 +277,156 @@ setIsScrolled(window.scrollY > 20)
     window.addEventListener('scroll', handleScroll);'
     return () => window.removeEventListener('scroll', handleScroll);'
   }, []);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const navigationItems = [;
     {
       }
-      "name": 'Home','
-      "href": '/','
-"icon": <Zap className='w-4 h-4' />,'
+      'name': 'Home','
+      'href': '/','
+'icon': <Zap className='w-4 h-4' />,'
     },
     {
       }
-      "name": 'Services','
-      "href": '/services','
-      "icon": <Brain className='w-4 h-4' />,'
-      "dropdown": [
+      'name': 'Services','
+      'href': '/services','
+      'icon': <Brain className='w-4 h-4' />,'
+      'dropdown': [
         {
           }
-          "name": 'AI & Machine Learning','
-          "href": '/services?category=ai','
-          "icon": <Brain className='w-4 h-4' />,'
+          'name': 'AI & Machine Learning','
+          'href': '/services?category=ai','
+          'icon': <Brain className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Quantum & Space Tech','
-          "href": '/services?category=quantum','
-          "icon": <Atom className='w-4 h-4' />,'
+          'name': 'Quantum & Space Tech','
+          'href': '/services?category=quantum','
+          'icon': <Atom className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Emerging Technologies','
-          "href": '/services?category=emerging','
-          "icon": <Microscope className='w-4 h-4' />,'
+          'name': 'Emerging Technologies','
+          'href': '/services?category=emerging','
+          'icon': <Microscope className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Micro SaaS','
-          "href": '/services?category=micro-saas','
-          "icon": <Code className='w-4 h-4' />,'
+          'name': 'Micro SaaS','
+          'href': '/services?category=micro-saas','
+          'icon': <Code className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Metaverse & VR','
-          "href": '/services?category=metaverse','
-          "icon": <Gamepad2 className='w-4 h-4' />,'
+          'name': 'Metaverse & VR','
+          'href': '/services?category=metaverse','
+          'icon': <Gamepad2 className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Cybersecurity','
-          "href": '/services?category=cybersecurity','
-          "icon": <Shield className='w-4 h-4' />,'
+          'name': 'Cybersecurity','
+          'href': '/services?category=cybersecurity','
+          'icon': <Shield className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Space Technology','
-          "href": '/services?category=space','
-          "icon": <Rocket className='w-4 h-4' />,'
+          'name': 'Space Technology','
+          'href': '/services?category=space','
+          'icon': <Rocket className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Biotech & Healthcare','
-          "href": '/services?category=biotech','
-          "icon": <TestTube className='w-4 h-4' />,'
+          'name': 'Biotech & Healthcare','
+          'href': '/services?category=biotech','
+          'icon': <TestTube className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Blockchain & Web3','
-          "href": '/services?category=blockchain','
-          "icon": <Database className='w-4 h-4' />,'
+          'name': 'Blockchain & Web3','
+          'href': '/services?category=blockchain','
+          'icon': <Database className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Autonomous Vehicles','
-          "href": '/services?category=transportation','
-          "icon": <Car className='w-4 h-4' />,'
+          'name': 'Autonomous Vehicles','
+          'href': '/services?category=transportation','
+          'icon': <Car className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Cloud & Infrastructure','
-          "href": '/services?category=cloud','
-          "icon": <Cloud className='w-4 h-4' />,'
+          'name': 'Cloud & Infrastructure','
+          'href': '/services?category=cloud','
+          'icon': <Cloud className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Edge Computing','
-          "href": '/services?category=edge','
-          "icon": <Server className='w-4 h-4' />,'
+          'name': 'Edge Computing','
+          'href': '/services?category=edge','
+          'icon': <Server className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'IoT & Connectivity','
-          "href": '/services?category=iot','
-          "icon": <Network className='w-4 h-4' />,'
+          'name': 'IoT & Connectivity','
+          'href': '/services?category=iot','
+          'icon': <Network className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Semiconductor Tech','
-          "href": '/services?category=semiconductor','
-          "icon": <Cpu className='w-4 h-4' />,'
+          'name': 'Semiconductor Tech','
+          'href': '/services?category=semiconductor','
+          'icon': <Cpu className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Creative & Design','
-          "href": '/services?category=creative','
-          "icon": <Palette className='w-4 h-4' />,'
+          'name': 'Creative & Design','
+          'href': '/services?category=creative','
+          'icon': <Palette className='w-4 h-4' />,'
         },
         {
           }
-          "name": 'Global Solutions','
-          "href": '/services?category=global','
-          "icon": <Globe className='w-4 h-4' />,'
+          'name': 'Global Solutions','
+          'href': '/services?category=global','
+          'icon': <Globe className='w-4 h-4' />,'
         }
       ]
     },
     {
       }
-      "name": 'Showcase','
-      "href": '/enhanced-services-showcase-2026-v2','
-      "icon": <Rocket className='w-4 h-4' />,'
+      'name': 'Showcase','
+      'href': '/enhanced-services-showcase-2026-v2','
+      'icon': <Rocket className='w-4 h-4' />,'
     },
     {
       }
-      "name": 'Pricing','
-      "href": '/pricing-enhanced-2026','
-      "icon": <Database className='w-4 h-4' />,'
+      'name': 'Pricing','
+      'href': '/pricing-enhanced-2026','
+      'icon': <Database className='w-4 h-4' />,'
     },
     {
       }
-      "name": 'About','
-      "href": '/about','
-      "icon": <Globe className='w-4 h-4' />,'
+      'name': 'About','
+      'href': '/about','
+      'icon': <Globe className='w-4 h-4' />,'
     },
     {
       }
-      "name": 'Contact','
-      "href": '/contact','
-      "icon": <Mail className='w-4 h-4' />,'
+      'name': 'Contact','
+      'href': '/contact','
+      'icon': <Mail className='w-4 h-4' />,'
     }
   ];
 
 const contactInfo = {
     }
-    "mobile": '+1 302 464 0950','
-    "email": 'kleber@ziontechgroup.com','
-"address": '364 E Main St STE 1008 Middletown DE 19709','
+    'mobile': '+1 302 464 0950','
+    'email': 'kleber@ziontechgroup.com','
+'address': '364 E Main St STE 1008 Middletown DE 19709','
   };
-=======
 
 const [isScrolled, setIsScrolled] = useState(false);
 
 const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
   useEffect(() => {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 return (;
     <>
@@ -448,19 +444,19 @@ export default function UltraAdvancedNavigation2026V2() {import { motion, Animat
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu  } from 'lucide-react';
 export default function UltraAdvancedNavigation2026V2() {const [isOpen, setIsOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null>(null)useEffect(() => {const handleScroll = () => {setIsScrolled(window && window.scrollY > 20)}window && window.addEventListener('scroll', handleScroll)return () => window && window.removeEventListener('scroll', handleScroll)}, [])setIsScrolled(window && window.scrollY > 20)}window && window.addEventListener('scroll', handleScroll)return () => window && window.removeEventListener('scroll', handleScroll)const navigationItems = [;
     {name: 'Home',href: '/',icon: <Zap className='w-4 h-4' />,},{name: 'Services',href: '/services',icon: <Brain className='w-4 h-4' />,dropdown: [;
-        {name: 'AI & Machine Learning',href: '/services?category=ai',icon: <Brain className='w-4 h-4' />,},{name: 'Quantum & Space Tech',href: '/services?category=quantum',icon: <Atom className='w-4 h-4' />,},{name: 'Emerging Technologies',href: '/services?category=emerging',icon: <Microscope className='w-4 h-4' />,},{name: 'Micro SaaS',href: '/services?category=micro-saas',icon: <Code className='w-4 h-4' />,},{name: 'Metaverse & VR',href: '/services?category=metaverse',icon: <Gamepad2 className='w-4 h-4' />,},{name: 'Cybersecurity',href: '/services?category=cybersecurity',icon: <Shield className='w-4 h-4' />,},{name: 'Space Technology',href: '/services?category=space',icon: <Rocket className='w-4 h-4' />,},{name: 'Biotech & Healthcare',href: '/services?category=biotech',icon: <TestTube className='w-4 h-4' />,},{name: 'Blockchain & Web3',href: '/services?category=blockchain',icon: <Database className='w-4 h-4' />,},{name: 'Autonomous Vehicles',href: '/services?category=transportation',icon: <Car className='w-4 h-4' />,},{name: 'Cloud & Infrastructure',href: '/services?category=cloud',icon: <Cloud className='w-4 h-4' />,},{name: 'Edge Computing',href: '/services?category=edge',icon: <Server className='w-4 h-4' />,},{name: 'IoT & Connectivity',href: '/services?category=iot',icon: <Network className='w-4 h-4' />,},{name: 'Semiconductor Tech',href: '/services?category=semiconductor',icon: <Cpu className='w-4 h-4' />,},{name: 'Creative & Design',href: '/services?category=creative',icon: <Palette className='w-4 h-4' />,},{name: 'Global Solutions',href: '/services?category=global',icon: <Globe className='w-4 h-4' />,},],},    {name: 'Showcase',href: '/enhanced-services-showcase-2026-v2',icon: <Rocket className='w-4 h-4' />,},{name: 'Pricing',href: '/pricing-enhanced-2026',icon: <Database className='w-4 h-4' />,},{name: 'About',href: '/about',icon: <Globe className='w-4 h-4' />,},{name: 'Contact',href: '/contact',icon: <Mail className='w-4 h-4' />,},  ];      icon: <Mail className="w-4 h-4" />;
+        {name: 'AI & Machine Learning',href: '/services?category=ai',icon: <Brain className='w-4 h-4' />,},{name: 'Quantum & Space Tech',href: '/services?category=quantum',icon: <Atom className='w-4 h-4' />,},{name: 'Emerging Technologies',href: '/services?category=emerging',icon: <Microscope className='w-4 h-4' />,},{name: 'Micro SaaS',href: '/services?category=micro-saas',icon: <Code className='w-4 h-4' />,},{name: 'Metaverse & VR',href: '/services?category=metaverse',icon: <Gamepad2 className='w-4 h-4' />,},{name: 'Cybersecurity',href: '/services?category=cybersecurity',icon: <Shield className='w-4 h-4' />,},{name: 'Space Technology',href: '/services?category=space',icon: <Rocket className='w-4 h-4' />,},{name: 'Biotech & Healthcare',href: '/services?category=biotech',icon: <TestTube className='w-4 h-4' />,},{name: 'Blockchain & Web3',href: '/services?category=blockchain',icon: <Database className='w-4 h-4' />,},{name: 'Autonomous Vehicles',href: '/services?category=transportation',icon: <Car className='w-4 h-4' />,},{name: 'Cloud & Infrastructure',href: '/services?category=cloud',icon: <Cloud className='w-4 h-4' />,},{name: 'Edge Computing',href: '/services?category=edge',icon: <Server className='w-4 h-4' />,},{name: 'IoT & Connectivity',href: '/services?category=iot',icon: <Network className='w-4 h-4' />,},{name: 'Semiconductor Tech',href: '/services?category=semiconductor',icon: <Cpu className='w-4 h-4' />,},{name: 'Creative & Design',href: '/services?category=creative',icon: <Palette className='w-4 h-4' />,},{name: 'Global Solutions',href: '/services?category=global',icon: <Globe className='w-4 h-4' />,},],},    {name: 'Showcase',href: '/enhanced-services-showcase-2026-v2',icon: <Rocket className='w-4 h-4' />,},{name: 'Pricing',href: '/pricing-enhanced-2026',icon: <Database className='w-4 h-4' />,},{name: 'About',href: '/about',icon: <Globe className='w-4 h-4' />,},{name: 'Contact',href: '/contact',icon: <Mail className='w-4 h-4' />,},  ];      icon: <Mail className='w-4 h-4' />;
     }
   ];
   const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',  }address: '364 E Main St STE 1008 Middletown DE 19709';
       setIsScrolled(window.scrollY > 20)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const navigationItems = [;
-    {name: 'Home',href: '/',icon: <Zap className="w-4 h-4" />;
-    }{name: 'Services',href: '/services',icon: <Brain className="w-4 h-4" />,dropdown: [;
-        { name: 'AI & Machine Learning', href: '/services?category=ai', icon: <Brain className="w-4 h-4" /> },{ name: 'Quantum & Space Tech', href: '/services?category=quantum', icon: <Atom className="w-4 h-4" /> },{ name: 'Emerging Technologies', href: '/services?category=emerging', icon: <Microscope className="w-4 h-4" /> },{ name: 'Micro SaaS', href: '/services?category=micro-saas', icon: <Code className="w-4 h-4" /> },{ name: 'Metaverse & VR', href: '/services?category=metaverse', icon: <Gamepad2 className="w-4 h-4" /> },{ name: 'Cybersecurity', href: '/services?category=cybersecurity', icon: <Shield className="w-4 h-4" /> },{ name: 'Space Technology', href: '/services?category=space', icon: <Rocket className="w-4 h-4" /> },{ name: 'Biotech & Healthcare', href: '/services?category=biotech', icon: <TestTube className="w-4 h-4" /> },{ name: 'Blockchain & Web3', href: '/services?category=blockchain', icon: <Database className="w-4 h-4" /> },{ name: 'Autonomous Vehicles', href: '/services?category=transportation', icon: <Car className="w-4 h-4" /> },{ name: 'Cloud & Infrastructure', href: '/services?category=cloud', icon: <Cloud className="w-4 h-4" /> },{ name: 'Edge Computing', href: '/services?category=edge', icon: <Server className="w-4 h-4" /> },{ name: 'IoT & Connectivity', href: '/services?category=iot', icon: <Network className="w-4 h-4" /> },{ name: 'Semiconductor Tech', href: '/services?category=semiconductor', icon: <Cpu className="w-4 h-4" /> },{ name: 'Creative & Design', href: '/services?category=creative', icon: <Palette className="w-4 h-4" /> },{ name: 'Global Solutions', href: '/services?category=global', icon: <Globe className="w-4 h-4" /> }
+    {name: 'Home',href: '/',icon: <Zap className='w-4 h-4' />;
+    }{name: 'Services',href: '/services',icon: <Brain className='w-4 h-4' />,dropdown: [;
+        { name: 'AI & Machine Learning', href: '/services?category=ai', icon: <Brain className='w-4 h-4' /> },{ name: 'Quantum & Space Tech', href: '/services?category=quantum', icon: <Atom className='w-4 h-4' /> },{ name: 'Emerging Technologies', href: '/services?category=emerging', icon: <Microscope className='w-4 h-4' /> },{ name: 'Micro SaaS', href: '/services?category=micro-saas', icon: <Code className='w-4 h-4' /> },{ name: 'Metaverse & VR', href: '/services?category=metaverse', icon: <Gamepad2 className='w-4 h-4' /> },{ name: 'Cybersecurity', href: '/services?category=cybersecurity', icon: <Shield className='w-4 h-4' /> },{ name: 'Space Technology', href: '/services?category=space', icon: <Rocket className='w-4 h-4' /> },{ name: 'Biotech & Healthcare', href: '/services?category=biotech', icon: <TestTube className='w-4 h-4' /> },{ name: 'Blockchain & Web3', href: '/services?category=blockchain', icon: <Database className='w-4 h-4' /> },{ name: 'Autonomous Vehicles', href: '/services?category=transportation', icon: <Car className='w-4 h-4' /> },{ name: 'Cloud & Infrastructure', href: '/services?category=cloud', icon: <Cloud className='w-4 h-4' /> },{ name: 'Edge Computing', href: '/services?category=edge', icon: <Server className='w-4 h-4' /> },{ name: 'IoT & Connectivity', href: '/services?category=iot', icon: <Network className='w-4 h-4' /> },{ name: 'Semiconductor Tech', href: '/services?category=semiconductor', icon: <Cpu className='w-4 h-4' /> },{ name: 'Creative & Design', href: '/services?category=creative', icon: <Palette className='w-4 h-4' /> },{ name: 'Global Solutions', href: '/services?category=global', icon: <Globe className='w-4 h-4' /> }
       ];
-    },    {{name: 'Showcase',href: '/enhanced-services-showcase-2026-v2',icon: <Rocket className="w-4 h-4" />;
-    }{name: 'Pricing',href: '/pricing-enhanced-2026',icon: <Database className="w-4 h-4" />;
-    }{name: 'About',href: '/about',icon: <Globe className="w-4 h-4" />;
-    }{name: 'Contact',href: '/contact',icon: <Mail className="w-4 h-4" />;
+    },    {name: 'Showcase',href: '/enhanced-services-showcase-2026-v2',icon: <Rocket className='w-4 h-4' />;
+    }{name: 'Pricing',href: '/pricing-enhanced-2026',icon: <Database className='w-4 h-4' />;
+    }{name: 'About',href: '/about',icon: <Globe className='w-4 h-4' />;
+    }{name: 'Contact',href: '/contact',icon: <Mail className='w-4 h-4' />;
   Menu,X,ChevronDown,Search,Phone,Mail,MapPin,Zap,Brain,Atom,Microscope,Gamepad2,Shield,Rocket,Database,TestTube,Car,Globe,Code,Palette,Cloud,Server,useEffect(() => {const handleScroll = null;
   Menu;
   X;
@@ -500,7 +496,6 @@ function UltraAdvancedNavigation2026V2() {const [is_open, setIsOpen] = useState 
 <div className='bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10'>;
   return (<span>{contactInfo.mobile}</span>;
     <>;
-<<<<<<< HEAD
       {/* Top Contact Bar */}'
       <div className='bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10'>;'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;'
@@ -515,10 +510,9 @@ function UltraAdvancedNavigation2026V2() {const [is_open, setIsOpen] = useState 
                 <span>{contactInfo && contactInfo.email}</span>;
               </div>;'
               <div className='flex items-center space-x-2'>;'
-=======
       {/* Top Contact Bar */}
       <div className='bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10'>;'
-        <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>;'
+        <div className='max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8'>;'
           <div className='flex items-center justify-between py-2 text-sm'>;'
             <div className='flex items-center space-x-6 text-gray-300'>;'
               <div className='flex items-center space-x-2'>;'
@@ -533,14 +527,13 @@ function UltraAdvancedNavigation2026V2() {const [is_open, setIsOpen] = useState 
                 <MapPin className='w-4 h-4 text-green-400' />;'
                 <span>{contactInfo && contactInfo.address}</span>;
               </div>;
-<<<<<<< HEAD
             </div>;
             <div className='flex items-center space-x-4'>;'
 
               <Link,
 href='/enhanced-services-showcase-2026-v2''
 
-                className='text-purple-400 "hover": text-purple-300 transition-colors''
+                className='text-purple-400 'hover': text-purple-300 transition-colors''
               >
                 🚀 New 2026 Services
               </Link>
@@ -548,32 +541,28 @@ href='/enhanced-services-showcase-2026-v2''
           </div>
         </div>
       </div>
-<<<<<<< HEAD
               <Link;
                 href='/enhanced-services-showcase-2026-v2';
               </div>;
-              <div className="flex items-center space-x-2">;
-                <Mail className="w-4 h-4 text-blue-400" />;
+              <div className='flex items-center space-x-2'>;
+                <Mail className='w-4 h-4 text-blue-400' />;
                 <span>{contactInfo.email}</span>;
               </div>;
-              <div className="flex items-center space-x-2">;
-                <MapPin className="w-4 h-4 text-green-400" />;
+              <div className='flex items-center space-x-2'>;
+                <MapPin className='w-4 h-4 text-green-400' />;
                 <span>{contactInfo.address}</span>;
               </div>;
             </div>;
-            <div className="flex items-center space-x-4">;
-              <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors">;
+            <div className='flex items-center space-x-4'>;
+              <Link href='/enhanced-services-showcase-2026-v2' className='text-purple-400 hover:text-purple-300 transition-colors'>;
                 className='text-purple-400 hover:text-purple-300 transition-colors';
               >;
                 🚀 New 2026 Services;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
               </Link>;
             </div>;
           </div>;
@@ -584,20 +573,19 @@ href='/enhanced-services-showcase-2026-v2''
               {navigationItems && navigationItems.map(item => (<div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (<button;
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">;
-              <div className="relative">;
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300">;
-=======
+            <Link href='/' className='flex items-center space-x-3 group'>;
+              <div className='relative'>;
+                <div className='w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300'>;
             {/* Desktop Navigation */}'
             <div className='hidden lg:flex items-center space-x-8'>;
               {navigationItems && navigationItems.map(item => (;'
                 <div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (;
                     <button;
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
-                      onMouseLeave={() => setActiveDropdown(null)}            {/* Logo */}"
-            <Link href="/" className="flex items-center space-x-3 group">;"
-              <div className="relative">;"
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300">;
+                      onMouseLeave={() => setActiveDropdown(null)}            {/* Logo */}'
+            <Link href='/' className='flex items-center space-x-3 group'>;'
+              <div className='relative'>;'
+                <div className='w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300'>;
 
       {/* Main Navigation */}
 <nav,
@@ -609,24 +597,23 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${`     
         }
 }>
 
-        <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>;'
+        <div className='max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8'>;'
           <div className='flex items-center justify-between h-20'>;'
             {/* Logo */}
             <Link href='/' className='flex items-center space-x-3 group'>;'
               <div className='relative'>;'
-                <div className='w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-"hover":scale-110 transition-transform duration-300'>;'
+                <div className='w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-'hover':scale-110 transition-transform duration-300'>;'
                   Z;
                 </div>;
-                <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur-lg opacity-50 group-"hover":opacity-75 transition-opacity duration-300'></div>;'
+                <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur-lg opacity-50 group-'hover':opacity-75 transition-opacity duration-300'></div>;'
               </div>;
-              <div className='hidden "sm":block'>;'
+              <div className='hidden 'sm':block'>;'
                 <div className='text-xl font-bold text-white'>;'
                   Zion Tech Group;
                 </div>;
                 <div className='text-xs text-gray-400'>Innovation 2026</div>;'
               </div>;
             </Link>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Main Navigation */}
 <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -653,66 +640,59 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${`     
               </div>
             </Link>
             {/* Desktop Navigation */}
-<div className='hidden "lg":flex items-center space-x-8'>;'
+<div className='hidden 'lg':flex items-center space-x-8'>;'
               {navigationItems.map(item => (<div key={item.name} className='relative group'>;'
                   {item.dropdown ? (<button;
                       }
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
-className='flex items-center space-x-2 text-gray-300 "hover": text-white transition-colors duration-200 py-2'>'
+className='flex items-center space-x-2 text-gray-300 'hover': text-white transition-colors duration-200 py-2'>'
 
                       {item.icon}
                       <span>{item.nam
 }</span>;
-                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-"hover":rotate-180' />;'
+                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-'hover':rotate-180' />;'
                     </button>;
                   ) : (<Link;
                       href={item.href}
-className='flex items-center space-x-2 text-gray-300 "hover": text-white transition-colors duration-200 py-2'>'
+className='flex items-center space-x-2 text-gray-300 'hover': text-white transition-colors duration-200 py-2'>'
 
                       {item.icon}
             </Link>;
                     </Link>
 
-                      className='flex items-center space-x-2 text-gray-300 "hover":text-white transition-colors duration-200 py-2'>'
+                      className='flex items-center space-x-2 text-gray-300 'hover':text-white transition-colors duration-200 py-2'>'
 
                       {item && item.icon}
                       <span>{item && item.nam
 }</span>;
-                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-"hover":rotate-180' />                    </button>;'
+                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-'hover':rotate-180' />                    </button>;'
                   ) : (<Link;
                       href={item && item.href}
-                      className='flex items-center space-x-2 text-gray-300 "hover": text-white transition-colors duration-200 py-2'>                      className="flex items-center space-x-2 text-gray-300 "hover":text-white transition-colors duration-200 py-2">"
+                      className='flex items-center space-x-2 text-gray-300 'hover': text-white transition-colors duration-200 py-2'>                      className='flex items-center space-x-2 text-gray-300 'hover':text-white transition-colors duration-200 py-2'>'
 
                       {item && item.icon}
                       <span>{item && item.nam
 }</span>;
-                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-"hover":rotate-180" />;"
+                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-'hover':rotate-180' />;'
                   ) : (<Link;
                       href={item && item.href}
-                      className='flex items-center space-x-2 text-gray-300 "hover":text-white transition-colors duration-200 py-2'                      className="flex items-center space-x-2 text-gray-300 "hover":text-white transition-colors duration-200 py-2">;"
+                      className='flex items-center space-x-2 text-gray-300 'hover':text-white transition-colors duration-200 py-2'                      className='flex items-center space-x-2 text-gray-300 'hover':text-white transition-colors duration-200 py-2'>;'
                       {item && item.icon}
                       <span>{item && item.name}</span>;
                     </Link>;
                   )}
                   {/* Dropdown Menu */}
-<<<<<<< HEAD
                   {item && item.dropdown && activeDropdown === item && item.name && (<div;
                       }
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
-=======
-<<<<<<< HEAD
                   {item && item.dropdown && activeDropdown === item && item.name && (;
                     <div;
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
-=======
                   {item && item.dropdown && activeDropdown === item && item.name && (<div;}
                       onMouseEnter={() = /> setActiveDropdown(item && item.name)}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       onMouseLeave={() => setActiveDropdown(null)}
-<<<<<<< HEAD
 className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -724,21 +704,19 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl borde
 }
 key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className='flex items-center space-x-3 p-3 rounded-xl "hover":bg-white/10 transition-colors duration-200 group'>'
+                            className='flex items-center space-x-3 p-3 rounded-xl 'hover':bg-white/10 transition-colors duration-200 group'>'
 
-                            <div className='text-purple-400 group-"hover":text-purple-300 transition-colors'>;'
+                            <div className='text-purple-400 group-'hover':text-purple-300 transition-colors'>;'
                               {dropdownItem.icon}
                             </div>;
-                            <span className='text-gray-300 group-"hover":text-white transition-colors'>;'
+                            <span className='text-gray-300 group-'hover':text-white transition-colors'>;'
                               {dropdownItem.name}
-                            <span className='text-gray-300 group-"hover": text-white transition-colors'>                              {dropdownItem.name}{dropdownItem.nam,'
+                            <span className='text-gray-300 group-'hover': text-white transition-colors'>                              {dropdownItem.name}{dropdownItem.nam,'
 }</span>;
                           </Link>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         ))}
                       </div>;
                     </div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   )}
 
                   {/* Dropdown Menu */}
@@ -746,9 +724,9 @@ key={dropdownItem.name}
                     <div
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
-                      className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4"
+                      className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4'
                     >
-                      <div className="grid grid-cols-1 gap-2">
+                      <div className='grid grid-cols-1 gap-2'>
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                       onMouseLeave={() => setActiveDropdown(null)}className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4';
@@ -757,12 +735,12 @@ key={dropdownItem.name}
                         {item.dropdown.map(dropdownItem => (<Link;
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
+                            className='flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group'
                           >
-                            <div className="text-purple-400 group-hover:text-purple-300 transition-colors">
+                            <div className='text-purple-400 group-hover:text-purple-300 transition-colors'>
                               {dropdownItem.icon}
                             </div>
-                            <span className="text-gray-300 group-hover:text-white transition-colors">
+                            <span className='text-gray-300 group-hover:text-white transition-colors'>
                               {dropdownItem.name}
                             </span>
                           </Link>
@@ -772,126 +750,108 @@ key={dropdownItem.name}
                   )}
                 </div>
               ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             </div>
             {/* CTA Button */}
-<div className='hidden "lg":flex items-center space-x-4'>'
+<div className='hidden 'lg':flex items-center space-x-4'>'
               <Link href='/contact'>'
-                <button className='bg-gradient-to-r from-purple-600 to-pink-600 "hover":from-purple-700 "hover":to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform "hover":scale-105 "hover":shadow-lg'>'
+                <button className='bg-gradient-to-r from-purple-600 to-pink-600 'hover':from-purple-700 'hover':to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform 'hover':scale-105 'hover':shadow-lg'>'
                   Get Started
-<<<<<<< HEAD
-=======
                   Get Started;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </div>
 
             {/* CTA Button */}
-<<<<<<< HEAD
               ))}
-            <div className="hidden lg:flex items-center space-x-4">
-              <Link href="/contact">
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+            <div className='hidden lg:flex items-center space-x-4'>
+              <Link href='/contact'>
+                <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
                   Get Started
-=======
 <div className='hidden lg:flex items-center space-x-4' />
               <Link href='/contact' />
                 <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg' />
                   Get Started;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </button>
               </Link>
             </div>
-<<<<<<< HEAD
 
             </div>;
             {/* CTA Button */}
-            <div className='hidden "lg":flex items-center space-x-4'>;'
+            <div className='hidden 'lg':flex items-center space-x-4'>;'
               <Link href='/contact'>;'
-                <button className='bg-gradient-to-r from-purple-600 to-pink-600 "hover":from-purple-700 "hover":to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform "hover":scale-105 "hover":shadow-lg'>                  Get Started            <div className="hidden "lg":flex items-center space-x-4">;"
-              <Link href="/contact">;"
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 "hover":from-purple-700 "hover":to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform "hover":scale-105 "hover":shadow-lg">;"
+                <button className='bg-gradient-to-r from-purple-600 to-pink-600 'hover':from-purple-700 'hover':to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform 'hover':scale-105 'hover':shadow-lg'>                  Get Started            <div className='hidden 'lg':flex items-center space-x-4'>;'
+              <Link href='/contact'>;'
+                <button className='bg-gradient-to-r from-purple-600 to-pink-600 'hover':from-purple-700 'hover':to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform 'hover':scale-105 'hover':shadow-lg'>;'
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled;`            ? 'bg - black / 90 backdrop - blur - xl border - b border - white / 10 shadow - 2xl';'
             : 'bg - transparent';'
         }`}>`
-        <div className='max - w-7xl mx - auto px - 4 "sm":px - 6 "lg":px - 8'>;'
+        <div className='max - w-7xl mx - auto px - 4 'sm':px - 6 'lg':px - 8'>;'
           <div className='flex items - center justify - between h - 20'>;'
             {/* Logo */}
             <Link href='/' className='flex items - center space - x-3 group'>;'
               <div className='relative'>;'
-                <div className='w - 10 h - 10 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl flex items - center justify - center text - white font - bold text - xl group - "hover":scale - 110 transition - transform duration - 300'>;'
+                <div className='w - 10 h - 10 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl flex items - center justify - center text - white font - bold text - xl group - 'hover':scale - 110 transition - transform duration - 300'>;'
                   Z;
                 </div>;
-                <div className='absolute inset - 0 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl blur - lg opacity - 50 group - "hover":opacity - 75 transition - opacity duration - 300'></div>;'
+                <div className='absolute inset - 0 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl blur - lg opacity - 50 group - 'hover':opacity - 75 transition - opacity duration - 300'></div>;'
               </div>;
-              <div className='hidden "sm":block'>;'
+              <div className='hidden 'sm':block'>;'
                 <div className='text - xl font - bold text - white'>;'
                   Zion Tech Group;
                 </div>;
                 <div className='text - xs text - gray - 400'>Innovation 2026</div>              </div>;'
             </Link>;
             {/* Desktop Navigation */}
-            <div className='hidden "lg":flex items - center space - x-8'>;'
+            <div className='hidden 'lg':flex items - center space - x-8'>;'
               {navigation_items.map (item => (<div key={item.name} className='relative group'>                  {item.dropdown ? (<button;'
                       }
                       onMouseEnter={() => setActiveDropdown (item.name)}
                       onMouseLeave={() => setActiveDropdown (null)}            {/* Logo */}
-            <Link href="/" className="flex items - center space - x-3 group">;"
-              <div className="relative">;"
-                <div className="w - 10 h - 10 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl flex items - center justify - center text - white font - bold text - xl group - "hover":scale - 110 transition - transform duration - 300">;"
+            <Link href='/' className='flex items - center space - x-3 group'>;'
+              <div className='relative'>;'
+                <div className='w - 10 h - 10 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl flex items - center justify - center text - white font - bold text - xl group - 'hover':scale - 110 transition - transform duration - 300'>;'
                   Z;
                 </div>;
-                <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl blur - lg opacity - 50 group - "hover":opacity - 75 transition - opacity duration - 300"></div>;"
+                <div className='absolute inset - 0 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl blur - lg opacity - 50 group - 'hover':opacity - 75 transition - opacity duration - 300'></div>;'
               </div>;
-              <div className="hidden "sm":block">;"
-                <div className="text - xl font - bold text - white">Zion Tech Group</div>;"
-                <div className="text - xs text - gray - 400">Innovation 2026</div>;"
+              <div className='hidden 'sm':block'>;'
+                <div className='text - xl font - bold text - white'>Zion Tech Group</div>;'
+                <div className='text - xs text - gray - 400'>Innovation 2026</div>;'
               </div>;
             </Link>;
             {/* Desktop Navigation */}
-            <div className='hidden "lg":flex items - center space - x-8'>;'
-              {navigation_items.map (item => (<div key={item.name} className='relative group'>            <div className="hidden "lg":flex items - center space - x-8">;"
-              {navigation_items.map ((item) => (<div key={item.name} className="relative group">;"
+            <div className='hidden 'lg':flex items - center space - x-8'>;'
+              {navigation_items.map (item => (<div key={item.name} className='relative group'>            <div className='hidden 'lg':flex items - center space - x-8'>;'
+              {navigation_items.map ((item) => (<div key={item.name} className='relative group'>;'
                   {item.dropdown ? (<button;
                       }
                       onMouseEnter={() => setActiveDropdown (item.name)}
                       onMouseLeave={() => setActiveDropdown (null)}
-                      className='flex items - center space - x-2 text - gray - 300 "hover": text - white transition - colors duration - 200 py - 2'>'
+                      className='flex items - center space - x-2 text - gray - 300 'hover': text - white transition - colors duration - 200 py - 2'>'
 
                       {item.icon}
                       <span>{item.nam
 }</span>;
-                      <ChevronDown className='w - 4 h - 4 transition - transform duration - 200 group - "hover":rotate - 180' />                    </button>) : (<Link;'
+                      <ChevronDown className='w - 4 h - 4 transition - transform duration - 200 group - 'hover':rotate - 180' />                    </button>) : (<Link;'
                       href={item.href}
-                      className='flex items - center space - x-2 text - gray - 300 "hover": text - white transition - colors duration - 200 py - 2'                    >                      className="flex items - center space - x-2 text - gray - 300 "hover":text - white transition - colors duration - 200 py - 2">"
+                      className='flex items - center space - x-2 text - gray - 300 'hover': text - white transition - colors duration - 200 py - 2'                    >                      className='flex items - center space - x-2 text - gray - 300 'hover':text - white transition - colors duration - 200 py - 2'>'
 
                       {item.icon}
                       <span>{item.nam
 }</span>;
-                      <ChevronDown className="w - 4 h - 4 transition - transform duration - 200 group - "hover":rotate - 180" />) : (<Link;"
+                      <ChevronDown className='w - 4 h - 4 transition - transform duration - 200 group - 'hover':rotate - 180' />) : (<Link;'
                       href={item.href}
-                      className='flex items - center space - x-2 text - gray - 300 "hover": text - white transition - colors duration - 200 py - 2'                      className="flex items - center space - x-2 text - gray - 300 "hover":text - white transition - colors duration - 200 py - 2">"
+                      className='flex items - center space - x-2 text - gray - 300 'hover': text - white transition - colors duration - 200 py - 2'                      className='flex items - center space - x-2 text - gray - 300 'hover':text - white transition - colors duration - 200 py - 2'>'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       {item.icon}
                       <span>{item.nam
 }</span>;
                     </Link>)}
                   {/* Dropdown Menu */}
-<<<<<<< HEAD
                   {item.dropdown && active_dropdown === item.name && (<div;
                       }
                       onMouseEnter={() => setActiveDropdown (item.name)}
-=======
-<<<<<<< HEAD
                   {item.dropdown && active_dropdown === item.name && (
                     <div;
                       onMouseEnter={() => setActiveDropdown (item.name)}
@@ -908,22 +868,20 @@ key={dropdownItem.name}
                             <div className='text - purple - 400 group - hover:text - purple - 300 transition - colors'>;
                               {dropdown_item.icon}
                             </div>;'
-                            <span className='text - gray - 300 group - hover:text - white transition - colors'>                              {dropdown_item.name}                    >;"
-                      <div className="grid grid - cols - 1 gap - 2">;
+                            <span className='text - gray - 300 group - hover:text - white transition - colors'>                              {dropdown_item.name}                    >;'
+                      <div className='grid grid - cols - 1 gap - 2'>;
                         {item.dropdown.map ((dropdown_item) => (
                           <Link;
                             key={dropdown_item.name}
-                            href={dropdown_item.href}"
-                            className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - white / 10 transition - colors duration - 200 group";
-                          >;"
-                            <div className="text - purple - 400 group - hover:text - purple - 300 transition - colors">;
+                            href={dropdown_item.href}'
+                            className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - white / 10 transition - colors duration - 200 group';
+                          >;'
+                            <div className='text - purple - 400 group - hover:text - purple - 300 transition - colors'>;
                               {dropdown_item.icon}
-                            </div>;"
-                            <span className="text - gray - 300 group - hover:text - white transition - colors">;
-=======
+                            </div>;'
+                            <span className='text - gray - 300 group - hover:text - white transition - colors'>;
                   {item.dropdown && active_dropdown === item.name && (<div;}
                       onMouseEnter={() = /> setActiveDropdown (item.name)}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       onMouseLeave={() => setActiveDropdown (null)}
                       className='absolute top - full left - 0 mt - 2 w - 80 bg - black / 95 backdrop - blur - xl border border - white / 10 rounded - 2xl shadow - 2xl p - 4'>'
 
@@ -932,25 +890,24 @@ key={dropdownItem.name}
                             }
                             key={dropdown_item.name}
                             href={dropdown_item.href}
-                            className='flex items - center space - x-3 p - 3 rounded - xl "hover":bg - white / 10 transition - colors duration - 200 group'>'
+                            className='flex items - center space - x-3 p - 3 rounded - xl 'hover':bg - white / 10 transition - colors duration - 200 group'>'
 
-                            <div className='text - purple - 400 group - "hover":text - purple - 300 transition - colors'>;'
+                            <div className='text - purple - 400 group - 'hover':text - purple - 300 transition - colors'>;'
                               {dropdown_item.icon}
                             </div>;
-                            <span className='text - gray - 300 group - "hover": text - white transition - colors'>                              {dropdown_item.nam,'
+                            <span className='text - gray - 300 group - 'hover': text - white transition - colors'>                              {dropdown_item.nam,'
 }                    >;
-                      <div className="grid grid - cols - 1 gap - 2">;"
+                      <div className='grid grid - cols - 1 gap - 2'>;'
                         {item.dropdown.map ((dropdown_item) => (<Link;
                             }
                             key={dropdown_item.name}
                             href={dropdown_item.href}
-                            className="flex items - center space - x-3 p - 3 rounded - xl "hover":bg - white / 10 transition - colors duration - 200 group">"
+                            className='flex items - center space - x-3 p - 3 rounded - xl 'hover':bg - white / 10 transition - colors duration - 200 group'>'
 
-                            <div className="text - purple - 400 group - "hover":text - purple - 300 transition - colors">;"
+                            <div className='text - purple - 400 group - 'hover':text - purple - 300 transition - colors'>;'
                               {dropdown_item.icon}
-<<<<<<< HEAD
                             </div>;
-                            <span className="text - gray - 300 group - "hover":text - white transition - colors">;"
+                            <span className='text - gray - 300 group - 'hover':text - white transition - colors'>;'
                               {dropdown_item.name}
                             </span>;
                           </Link>))}
@@ -958,20 +915,18 @@ key={dropdownItem.name}
                     </div>)}
                 </div>))}
             </div>;
-<<<<<<< HEAD
             {/* CTA Button */}'
             <div className='hidden lg:flex items - center space - x-4'>;'
-              <Link href='/contact'>;'"
-                <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg'>                  Get Started            <div className="hidden lg:flex items - center space - x-4">;"
-              <Link href="/contact">;"
-                <button className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg">;
-=======
-            {/* CTA Button */}
-            <div className='hidden "lg":flex items - center space - x-4'>;'
+              <Link href='/contact'>;''
+                <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg'>                  Get Started            <div className='hidden lg:flex items - center space - x-4'>;'
               <Link href='/contact'>;'
-                <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 "hover":from - purple - 700 "hover":to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform "hover":scale - 105 "hover":shadow - lg'>                  Get Started            <div className="hidden "lg":flex items - center space - x-4">;"
-              <Link href="/contact">;"
-                <button className="bg - gradient - to - r from - purple - 600 to - pink - 600 "hover":from - purple - 700 "hover":to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform "hover":scale - 105 "hover":shadow - lg">;"
+                <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg'>;
+            {/* CTA Button */}
+            <div className='hidden 'lg':flex items - center space - x-4'>;'
+              <Link href='/contact'>;'
+                <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 'hover':from - purple - 700 'hover':to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform 'hover':scale - 105 'hover':shadow - lg'>                  Get Started            <div className='hidden 'lg':flex items - center space - x-4'>;'
+              <Link href='/contact'>;'
+                <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 'hover':from - purple - 700 'hover':to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform 'hover':scale - 105 'hover':shadow - lg'>;'
                   Get Started;
                 </button>;
               </Link>;
@@ -980,51 +935,44 @@ key={dropdownItem.name}
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-className='"lg":hidden p-2 text-gray-300 "hover":text-white transition-colors'>'
+className=''lg':hidden p-2 text-gray-300 'hover':text-white transition-colors'>'
 
               {isOpen ? (<X className='w-6 h-6' />;'
               ) : (<Menu className='w-6 h-6' />;'
               )}
-=======
               ) : ('
-                <Menu className='w-6 h-6' />"
-              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
-            >"
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+                <Menu className='w-6 h-6' />'
+              )}            </button>              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
+            >'
+              {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
             </button>
           </div>
         </div>
       </nav>
-<<<<<<< HEAD
 
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0}}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.3 }}
-            className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden"
+            initial={ opacity: 0, x: '100%' }
+            animate={ opacity: 1, x: 0}
+            exit={ opacity: 0, x: '100%' }
+            transition={ duration: 0.3 }
+            className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
           >
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-8">
-                <div className="text-xl font-bold text-white">Menu</div>
+            <div className='p-6'>
+              <div className='flex items-center justify-between mb-8'>
+                <div className='text-xl font-bold text-white'>Menu</div>
                 <button
-            transition={{ duration: 0.3 }}className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden';
+            transition={ duration: 0.3 }className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden';
 className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden';
           >;
             <div className='p-6'>;
               <div className='flex items-center justify-between mb-8'>;
                 <div className='text-xl font-bold text-white'>Menu</div>;
-=======
-=======
               {isOpen ? (<X className='w-6 h-6' />;}
               ) : (<Menu className='w-6 h-6' />;}
               )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </button>;
           </div>;
         </div>;
@@ -1036,14 +984,14 @@ className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l
       <AnimatePresence>;
         {isOpen && (<motion&& motion.div;
             }
-            initial={{ "opacity": 0, "x": '100%' ,'
+            initial={ 'opacity': 0, 'x': '100%' ,'
 }
-            animate={{ "opacity": 1, "x": 0 
+            animate={ 'opacity': 1, 'x': 0 
 }
-            exit={{ "opacity": 0, "x": '100%' ,'
+            exit={ 'opacity': 0, 'x': '100%' ,'
 }
                 <button;
-                  onClick={() => setIsOpen(false)}className='p-2 text-gray-300 "hover":text-white transition-colors'>'
+                  onClick={() => setIsOpen(false)}className='p-2 text-gray-300 'hover':text-white transition-colors'>'
 
                   <X className='w-6 h-6' />;'
                 </button>;
@@ -1056,7 +1004,7 @@ className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l
                             }
                             setActiveDropdown(activeDropdown === item && item.name ? null : item && item.name;
                             )}
-                          className='flex items-center justify-between w-full text-left text-gray-300 "hover":text-white transition-colors duration-200 py-3'>'
+                          className='flex items-center justify-between w-full text-left text-gray-300 'hover':text-white transition-colors duration-200 py-3'>'
 
                           <div className='flex items-center space-x-3'>;'
                             {item && item.icon}
@@ -1071,9 +1019,8 @@ className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l
                                 key={dropdownItem && dropdownItem.name}
                                 href={dropdownItem && dropdownItem.href}
                                 onClick={() => setIsOpen(false)}
-                                className='flex items-center space-x-3 p-2 rounded-lg "hover": bg-white/10 transition-colors duration-200 text-gray-400 "hover":text-white'>'
+                                className='flex items-center space-x-3 p-2 rounded-lg 'hover': bg-white/10 transition-colors duration-200 text-gray-400 'hover':text-white'>'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                                 {dropdownItem && dropdownItem.icon}
                                 <span>{dropdownItem && dropdownItem.nam
 }</span>;
@@ -1088,15 +1035,15 @@ href={item && item.href}
       <AnimatePresence>;
         {isOpen && (<motion.div;
             }
-            initial={{ "opacity": 0, "x": '100%' ,'
+            initial={ 'opacity': 0, 'x': '100%' ,'
 }
-            animate={{ "opacity": 1, "x": 0 
+            animate={ 'opacity': 1, 'x': 0 
 }
-            exit={{ "opacity": 0, "x": '100%' }}'
+            exit={ 'opacity': 0, 'x': '100%' }'
 
-            transition={{ "duration": 0.3 }}
+            transition={ 'duration': 0.3 }
 
-className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 "lg":hidden''
+className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 'lg':hidden''
           >
             <div className='p-6'>'
               <div className='flex items-center justify-between mb-8'>'
@@ -1104,7 +1051,7 @@ className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l
                 <button,
 onClick={() => setIsOpen(false
 }
-                  className='p-2 text-gray-300 "hover":text-white transition-colors'>'
+                  className='p-2 text-gray-300 'hover':text-white transition-colors'>'
 
                   <X className='w-6 h-6' />;'
                 </button>;
@@ -1118,7 +1065,7 @@ onClick={() => setIsOpen(false
                             }
                             setActiveDropdown(activeDropdown === item.name ? null : item.name;
                             )}
-                          className='flex items-center justify-between w-full text-left text-gray-300 "hover":text-white transition-colors duration-200 py-3'>'
+                          className='flex items-center justify-between w-full text-left text-gray-300 'hover':text-white transition-colors duration-200 py-3'>'
 
                           <div className='flex items-center space-x-3'>;'
                             {item.icon}
@@ -1134,7 +1081,7 @@ onClick={() => setIsOpen(false
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
                                 onClick={() => setIsOpen(false)}
-                                className='flex items-center space-x-3 p-2 rounded-lg "hover": bg-white/10 transition-colors duration-200 text-gray-400 "hover":text-white'>'
+                                className='flex items-center space-x-3 p-2 rounded-lg 'hover': bg-white/10 transition-colors duration-200 text-gray-400 'hover':text-white'>'
 
                                 {dropdownItem.icon}
                                 <span>{dropdownItem.nam
@@ -1149,22 +1096,22 @@ onClick={() => setIsOpen(false
                         onClick={() => setIsOpen(false)}className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3';
                       >;
                   onClick={() => setIsOpen(false)}
-                  className="p-2 text-gray-300 hover:text-white transition-colors"
+                  className='p-2 text-gray-300 hover:text-white transition-colors'
                 >
-                  <X className="w-6 h-6" />
+                  <X className='w-6 h-6' />
                 </button>
               </div>
 
-              <div className="space-y-6">
+              <div className='space-y-6'>
                 {navigationItems.map((item) => (
                   <div key={item.name}>
                     {item.dropdown ? (
                       <div>
                             <button
                               onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                              className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
+                              className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3'
                             >
-                              <div className="flex items-center space-x-3">
+                              <div className='flex items-center space-x-3'>
                                 {item.icon}
                                 <span>{item.name}</span>
                               </div>
@@ -1173,13 +1120,13 @@ onClick={() => setIsOpen(false
                               }`} />
                             </button>
                             {activeDropdown === item.name && (
-                              <div className="ml-6 mt-2 space-y-2">
+                              <div className='ml-6 mt-2 space-y-2'>
                                 {item.dropdown.map((dropdownItem) => (
                                   <Link
                                     key={dropdownItem.name}
                                     href={dropdownItem.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white"
+                                    className='flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white'
                                   >
                                     {dropdownItem.icon}
                                     <span>{dropdownItem.name}</span>
@@ -1193,7 +1140,7 @@ onClick={() => setIsOpen(false
 href={item && item.href}
                         onClick={() => setIsOpen(false)}
 
-className='flex items-center space-x-3 text-gray-300 "hover": text-white transition-colors duration-200 py-3''
+className='flex items-center space-x-3 text-gray-300 'hover': text-white transition-colors duration-200 py-3''
                       >
                         {item.icon}
                         <span>{item.nam
@@ -1203,41 +1150,34 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
                   </div>;
                 ))}<div className='pt-6 border-t border-white/10'>;'
                   <Link href='/contact' onClick={() => setIsOpen(false)}>;'
-                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 "hover":from-purple-700 "hover":to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">;"
+                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 'hover':from-purple-700 'hover':to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className='pt-6 border-t border-white/10'>;'
                     )}
                   </div>;
                 ))}
-<<<<<<< HEAD
 '
                 <div className='pt-6 border-t border-white/10'>'
-                  <Link href='/contact' onClick={() => setIsOpen(false)}>'"
-=======
+                  <Link href='/contact' onClick={() => setIsOpen(false)}>''
 
 
 
 <div className='pt-6 border-t border-white/10'>'
                   <Link href='/contact' onClick={() => setIsOpen(false)}>'
-                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 "hover": from-purple-700 "hover":to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>'
+                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 'hover': from-purple-700 'hover':to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>'
                       Get Started
                     </button>
                   </Link>
                 </div>
 
-<<<<<<< HEAD
                 {/* Mobile Contact Info */}'
                 <div className='pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400'>;'
                   <div className='flex items-center space-x-2'>;'
-=======
                 {/* Mobile Contact Info */}
-<<<<<<< HEAD
-                <div className="pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400">
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-4 h-4 text-purple-400" />
+                <div className='pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400'>
+                  <div className='flex items-center space-x-2'>
+                    <Phone className='w-4 h-4 text-purple-400' />
                     <span>{contactInfo.mobile}</span>
-=======
                 <div className='pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400'>;
                   <div className='flex items-center space-x-2'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <Phone className='w-4 h-4 text-purple-400' />;
                     <span>{contactInfo && contactInfo.mobile}</span>;
                   </div>;'
@@ -1248,36 +1188,33 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
                   <div className='flex items-center space-x-2'>;'
                     <MapPin className='w-4 h-4 text-green-400' />;'
                     <span className='text-xs'>{contactInfo && contactInfo.address}</span>                  </div>                    <span>{contactInfo && contactInfo.mobile}</span>;
-                  </div>;"
-                  <div className="flex items-center space-x-2">;"
-                    <Mail className="w-4 h-4 text-blue-400" />;
+                  </div>;'
+                  <div className='flex items-center space-x-2'>;'
+                    <Mail className='w-4 h-4 text-blue-400' />;
                     <span>{contactInfo && contactInfo.email}</span>;
-                  </div>;"
-                  <div className="flex items-center space-x-2">;"
-                    <MapPin className="w-4 h-4 text-green-400" />;"
-                    <span className="text-xs">{contactInfo && contactInfo.address}</span>;
+                  </div>;'
+                  <div className='flex items-center space-x-2'>;'
+                    <MapPin className='w-4 h-4 text-green-400' />;'
+                    <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {is_open && (
-<<<<<<< HEAD
           <motion.div;'
-            initial={{ opacity: 0, coordinate_x: '100%' }}
-            animate={{ opacity: 1, coordinate_x: 0 }}'
-            exit={{ opacity: 0, coordinate_x: '100%' }}
-            transition={{ duration: 0.3 }}'
+            initial={ opacity: 0, coordinate_x: '100%' }
+            animate={ opacity: 1, coordinate_x: 0 }'
+            exit={ opacity: 0, coordinate_x: '100%' }
+            transition={ duration: 0.3 }'
             className='fixed top - 0 right - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - white / 10 z - 50 lg:hidden';'
             <div className='p - 6'>;'
               <div className='flex items - center justify - between mb - 8'>;'
-=======
           <motion.div;
-            initial={{ opacity: 0;, coordinate_x: '100%' ;}}
-            animate={{ opacity: 1;, coordinate_x: 0 ;}}
-            exit={{ opacity: 0;, coordinate_x: '100%' ;}}
-            transition={{ duration: 0.3 ;}}
+            initial={ opacity: 0;, coordinate_x: '100%' ;}
+            animate={ opacity: 1;, coordinate_x: 0 ;}
+            exit={ opacity: 0;, coordinate_x: '100%' ;}
+            transition={ duration: 0.3 ;}
             className='fixed top - 0 right - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - white / 10 z - 50 lg:hidden';
             <div className='p - 6'>;
               <div className='flex items - center justify - between mb - 8'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div className='text - xl font - bold text - white'>Menu</div>;
                 <button;
                   on_click={() => setIsOpen (false)}'
@@ -1328,18 +1265,18 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
                         className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3'                      >                    ) : (
                       <Link;
                         href={item.href}
-                        on_click={() => setIsOpen (false)}'"
-                        className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3'                        className="flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3";
+                        on_click={() => setIsOpen (false)}''
+                        className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3'                        className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3';
                       >;
                         {item.icon}
                         <span>{item.name}</span>;
                       </Link>)}
                   </div>))}'
                 <div className='pt - 6 border - t border - white / 10'>;'
-                  <Link href='/contact' on_click={() => setIsOpen (false)}>;'"
-                    <button className='w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300'>                      Get Started                <div className="pt - 6 border - t border - white / 10">;"
-                  <Link href="/contact" on_click={() => setIsOpen (false)}>;"
-                    <button className="w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300">;
+                  <Link href='/contact' on_click={() => setIsOpen (false)}>;''
+                    <button className='w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300'>                      Get Started                <div className='pt - 6 border - t border - white / 10'>;'
+                  <Link href='/contact' on_click={() => setIsOpen (false)}>;'
+                    <button className='w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300'>;
                       Get Started;
                     </button>;
                   </Link>;
@@ -1357,14 +1294,14 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
                   <div className='flex items - center space - x-2'>;'
                     <MapPin className='w - 4 h - 4 text - green - 400' />;'
                     <span className='text - xs'>{contact_info.address}</span>                  </div>                    <span>{contact_info.mobile}</span>;
-                  </div>;"
-                  <div className="flex items - center space - x-2">;"
-                    <Mail className="w - 4 h - 4 text - blue - 400" />;
+                  </div>;'
+                  <div className='flex items - center space - x-2'>;'
+                    <Mail className='w - 4 h - 4 text - blue - 400' />;
                     <span>{contact_info.email}</span>;
-                  </div>;"
-                  <div className="flex items - center space - x-2">;"
-                    <MapPin className="w - 4 h - 4 text - green - 400" />;"
-                    <span className="text - xs">{contact_info.address}</span>;
+                  </div>;'
+                  <div className='flex items - center space - x-2'>;'
+                    <MapPin className='w - 4 h - 4 text - green - 400' />;'
+                    <span className='text - xs'>{contact_info.address}</span>;
                   </div>;
                 </div>;
               </div>;
@@ -1390,9 +1327,8 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-                  <Link href="/contact" onClick={() => setIsOpen(false)}>;
-                    <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">;
+                  <Link href='/contact' onClick={() => setIsOpen(false)}>;
+                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>;
 <div className='pt-6 border-t border-white/10'>;
                   <Link href='/contact' onClick={() => setIsOpen(false)}>;
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>;
@@ -1414,20 +1350,20 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
                     <MapPin className='w-4 h-4 text-green-400' />;
                     <span className='text-xs'>{contactInfo && contactInfo.address}</span>                  </div>                    <span>{contactInfo && contactInfo.mobile}</span>;
                   </div>;
-                  <div className="flex items-center space-x-2">;
-                    <Mail className="w-4 h-4 text-blue-400" />;
+                  <div className='flex items-center space-x-2'>;
+                    <Mail className='w-4 h-4 text-blue-400' />;
                     <span>{contactInfo && contactInfo.email}</span>;
                   </div>;
-                  <div className="flex items-center space-x-2">;
-                    <MapPin className="w-4 h-4 text-green-400" />;
-                    <span className="text-xs">{contactInfo && contactInfo.address}</span>;
+                  <div className='flex items-center space-x-2'>;
+                    <MapPin className='w-4 h-4 text-green-400' />;
+                    <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {is_open && (<motion.div;
-            initial={{ opacity: 0, coordinate_x: '100%' }}
-            animate={{ opacity: 1, coordinate_x: 0 }}
-            exit={{ opacity: 0, coordinate_x: '100%' }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, coordinate_x: '100%' }
+            animate={ opacity: 1, coordinate_x: 0 }
+            exit={ opacity: 0, coordinate_x: '100%' }
+            transition={ duration: 0.3 }
             className='fixed top - 0 right - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - white / 10 z - 50 lg:hidden';
             <div className='p - 6'>;
               <div className='flex items - center justify - between mb - 8'>;
@@ -1473,7 +1409,7 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
                         className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3'                      >                    ) : (<Link;
                         href={item.href}
                         on_click={() => setIsOpen (false)}
-                        className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3'                        className="flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3";
+                        className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3'                        className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3';
                       >;
                         {item.icon}
                         <span>{item.name}</span>;
@@ -1481,9 +1417,9 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
                   </div>))}
                 <div className='pt - 6 border - t border - white / 10'>;
                   <Link href='/contact' on_click={() => setIsOpen (false)}>;
-                    <button className='w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300'>                      Get Started                <div className="pt - 6 border - t border - white / 10">;
-                  <Link href="/contact" on_click={() => setIsOpen (false)}>;
-                    <button className="w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300">;
+                    <button className='w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300'>                      Get Started                <div className='pt - 6 border - t border - white / 10'>;
+                  <Link href='/contact' on_click={() => setIsOpen (false)}>;
+                    <button className='w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300'>;
                       Get Started;
                     </button>;
                   </Link>;
@@ -1502,13 +1438,13 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
                     <MapPin className='w - 4 h - 4 text - green - 400' />;
                     <span className='text - xs'>{contact_info.address}</span>                  </div>                    <span>{contact_info.mobile}</span>;
                   </div>;
-                  <div className="flex items - center space - x-2">;
-                    <Mail className="w - 4 h - 4 text - blue - 400" />;
+                  <div className='flex items - center space - x-2'>;
+                    <Mail className='w - 4 h - 4 text - blue - 400' />;
                     <span>{contact_info.email}</span>;
                   </div>;
-                  <div className="flex items - center space - x-2">;
-                    <MapPin className="w - 4 h - 4 text - green - 400" />;
-                    <span className="text - xs">{contact_info.address}</span>;
+                  <div className='flex items - center space - x-2'>;
+                    <MapPin className='w - 4 h - 4 text - green - 400' />;
+                    <span className='text - xs'>{contact_info.address}</span>;
                   </div>;
                 </div>;
               </div>;
@@ -1528,13 +1464,11 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
                 </div>;
               </div>;
             </div>;
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div;
           </motion.div>)}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       {/* Overlay *
 }
@@ -1544,30 +1478,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Overlay */}
       {is_open && (<motion.div;
           }
-          initial={{ "opacity": 0 }}
-          animate={{ "opacity": 1 }}
+          initial={ 'opacity': 0 }
+          animate={ 'opacity': 1 }
 
-          exit={{ "opacity": 0 }}
+          exit={ 'opacity': 0 }
 
-          transition={{ "duration": 0.3 }}
-className='fixed inset-0 bg-black/50 z-40 "lg":hidden''
+          transition={ 'duration': 0.3 }
+className='fixed inset-0 bg-black/50 z-40 'lg':hidden''
 
-          transition={{ duration: 0.3 }}
-=======
+          transition={ duration: 0.3 }
       {is_open && (<motion.div;}
-          initial={{ opacity: 0 ;}}
-          animate={{ opacity: 1 ;}}
+          initial={ opacity: 0 ;}
+          animate={ opacity: 1 ;}
 
-          exit={{ opacity: 0 ;}}
-          transition={{ duration: 0.3 ;}}
+          exit={ opacity: 0 ;}
+          transition={ duration: 0.3 ;}
 className='fixed inset-0 bg-black/50 z-40 lg:hidden'
 origin/cursor/automate-test-improve-and-merge-code-2533
           onClick={() => setIsOpen(false)}
 
-          transition={{ duration: 0.3 ;}}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+          transition={ duration: 0.3 ;}
 className='fixed inset-0 bg-black/50 z-40 lg:hidden'
-          exit={{ opacity: 0 }}transition={{ duration: 0.3 }}
+          exit={ opacity: 0 }transition={ duration: 0.3 }
 className='fixed inset-0 bg-black/50 z-40 lg:hidden';
           onClick={() => setIsOpen(false)}
       )}
@@ -1575,46 +1507,40 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden';
 }
       <div className='h-32'></div>;'
     </>;
-  )<div className="h-32"></div>;"
+  )<div className='h-32'></div>;'
     </>;
-          className='fixed inset - 0 bg - black / 50 z - 40 "lg": hidden'          on_click={() => setIsOpen (false,'
-}          className="fixed inset - 0 bg - black / 50 z - 40 "lg":hidden";"
+          className='fixed inset - 0 bg - black / 50 z - 40 'lg': hidden'          on_click={() => setIsOpen (false,'
+}          className='fixed inset - 0 bg - black / 50 z - 40 'lg':hidden';'
           on_click={() => setIsOpen (false)}
         />)}
       {/* Spacer for fixed navigation */}
       <div className='h - 32'></div>;'
 
-    </>);      <div className="h - 32"></div>;"
+    </>);      <div className='h - 32'></div>;'
     </>);
 }
 
 '
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
-=======
       {/* Spacer for fixed navigation *}
 }
       <div className='h-32' /></div>;
-    </>;"
-  )<div className=\"h-32\" /></div>;
+    </>;'
+  )<div className=\'h-32\' /></div>;
     </>;
-          className='fixed inset - 0 bg - black / 50 z - 40 lg: hidden'          on_click={() => setIsOpen (false;}"
-}          className=\"fixed inset - 0 bg - black / 50 z - 40 lg:hidden\";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+          className='fixed inset - 0 bg - black / 50 z - 40 lg: hidden'          on_click={() => setIsOpen (false;}'
+}          className=\'fixed inset - 0 bg - black / 50 z - 40 lg:hidden\';
           on_click={() => setIsOpen (false)}
         />)}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Spacer for fixed navigation */}
-<<<<<<< HEAD
       <div className='h - 32'></div>;
-=======
       <div className='h - 32' /></div>;
-"
-    </>);      <div className=\"h - 32\" /></div>;
+'
+    </>);      <div className=\'h - 32\' /></div>;
     </>);
 }
 
-          className='fixed inset-0 bg-black/50 z-40 "lg": hidden'          onClick={() => setIsOpen(false)}'
+          className='fixed inset-0 bg-black/50 z-40 'lg': hidden'          onClick={() => setIsOpen(false)}'
 
           onClick={() => setIsOpen(false)}
         />
@@ -1625,15 +1551,13 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden';
 <div className='h-32'></div>'
     </>
   );
-<<<<<<< HEAD
 
-"
-=======
-</div> </div> <div className="flex items-center space-x-4" > <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors" > 🚀 New 2026 Services </a> </div> </div> </div> </div> {
+'
+</div> </div> <div className='flex items-center space-x-4' > <Link href='/enhanced-services-showcase-2026-v2' className='text-purple-400 hover:text-purple-300 transition-colors' > 🚀 New 2026 Services </a> </div> </div> </div> </div> {
   /* Main Navigation */ 
 }<nav className= {
   `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
-  isScrolled ? 'bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-2xl' Z </div> <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" ></div> </div> <div className="hidden sm:block" > <div className="text-xl font-bold text-white" >Zion Tech Group</div> <div className="text-xs text-gray-400" >Innovation 2026</div> </div> </a>) 
+  isScrolled ? 'bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-2xl' Z </div> <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' ></div> </div> <div className='hidden sm:block' > <div className='text-xl font-bold text-white' >Zion Tech Group</div> <div className='text-xs text-gray-400' >Innovation 2026</div> </div> </a>) 
 }{
   /* Dropdown Menu */ 
 }{
@@ -1646,9 +1570,9 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden';
   /* Mobile Menu Button */ 
 }<button </button> </div> </div> </nav> {
   /* Mobile Navigation */ 
-}<AnimatePresence> > <div className="p-6" > <div className="flex items-center justify-between mb-8" > <div className="text-xl font-bold text-white" >Menu</div> <button > <X className="w-6 h-6" /> </button> </div> <div> <button onClick= {
+}<AnimatePresence> > <div className='p-6' > <div className='flex items-center justify-between mb-8' > <div className='text-xl font-bold text-white' >Menu</div> <button > <X className='w-6 h-6' /> </button> </div> <div> <button onClick= {
   () => setActiveDropdown (activeDropdown === item.name ? null : item.name) 
-}className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3" > </div> <ChevronDown className= {
+}className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3' > </div> <ChevronDown className= {
   `w-4 h-4 transition-transform duration-200 $ {
   activeDropdown === item.name ? 'rotate-180' : '' 
 }` 
@@ -1659,12 +1583,7 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden';
 }Get Started </button> </a> </div> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 }
   );
 
-"
+'

@@ -187,48 +187,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             />
 origin/cursor/automate-test-improve-and-merge-code-2533
           </label>
-          <label className="block">
-            <span className="text-sm">Budget / Resolution goals</span>
-            <input name="budgetOrResolution" value={form.budgetOrResolution} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>Budget / Resolution goals</span>
+            <input name='budgetOrResolution' value={form.budgetOrResolution} onChange={onChange} className='w-full border rounded p-2' />
           </label>
-          <label className="block">
-            <span className="text-sm">Supporting multiverse(s) (comma separated)</span>
-            <input name="supportingMultiverses" value={form.supportingMultiverses} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>Supporting multiverse(s) (comma separated)</span>
+            <input name='supportingMultiverses' value={form.supportingMultiverses} onChange={onChange} className='w-full border rounded p-2' />
           </label>
-          <label className="block">
-            <span className="text-sm">GPT Prompt Assist</span>
-            <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>GPT Prompt Assist</span>
+            <textarea name='promptAssist' rows={5} value={form.promptAssist} onChange={onChange} className='w-full border rounded p-2' />
           </label>
-          <div className="flex gap-3">
+          <div className='flex gap-3'>
           </div>
-          <div className="flex items-center gap-2">
-            <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
-            <button onClick={() => translate('es')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate ES</button>
-            <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
+          <div className='flex items-center gap-2'>
+            <button onClick={() => translate('fr')} disabled={loading || !result} className='px-3 py-2 border rounded'>Translate FR</button>
+            <button onClick={() => translate('es')} disabled={loading || !result} className='px-3 py-2 border rounded'>Translate ES</button>
+            <button onClick={() => translate('ar')} disabled={loading || !result} className='px-3 py-2 border rounded'>Translate AR</button>
           </div>
           {translated && (
-            <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
+            <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
               {translated  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             </div>;
           )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           </div>
-          <div className="flex items-center gap-2">
+          <div className='flex items-center gap-2'>
           </div>
           {result?.meta && (
-            <div className="text-sm space-y-1">
-              <div><span className="font-medium">Status:</span> {result.meta.status}</div>
-                <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
+            <div className='text-sm space-y-1'>
+              <div><span className='font-medium'>Status:</span> {result.meta.status}</div>
+                <div><a className='text-blue-600 underline' href={result.meta.artifacts.pdfPath} target='_blank' rel='noreferrer'>PDF</Link></div>
               )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
 
   }
   return (

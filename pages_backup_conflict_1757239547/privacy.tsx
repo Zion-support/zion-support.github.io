@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   Shield
   Lock
@@ -17,8 +17,8 @@ import {
   Phone
   MapPin
   Users
-} from "lucide-react";
-import MainLayout from "../components/layout/MainLayout";
+} from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
 } from 'lucide-react';
 
 const PrivacyPage: React.FC = () => {
@@ -109,10 +109,10 @@ const PrivacyPage: React.FC = () => {
     },
   ];
 
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   Shield
   Lock
@@ -122,31 +122,31 @@ import {
   Phone
   MapPin
   Users
-} from "lucide-react";
-import MainLayout from "../components/layout/MainLayout";
+} from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
 
 export default function PrivacyPage() {
   return (
     <MainLayout
-      title="Privacy Policy - Zion Tech Group"
-      description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
-      keywords="privacy policy, data protection, personal information, GDPR compliance"
-      canonical="https://ziontechgroup.com/privacy"
+      title='Privacy Policy - Zion Tech Group'
+      description='Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information.'
+      keywords='privacy policy, data protection, personal information, GDPR compliance'
+      canonical='https://ziontechgroup.com/privacy'
     >
-      <div className="min-h-screen bg-gray-50">
+      <div className='min-h-screen bg-gray-50'>
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
+        <section className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20'>
+          <div className='max-w-7xl mx-auto px-4'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              className='text-center'
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className='text-4xl md:text-6xl font-bold mb-6'>
                 Privacy Policy
               </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
                 Your privacy is important to us. Learn how we collect, use, and
                 protect your information.
               </p>
@@ -154,16 +154,16 @@ export default function PrivacyPage() {
           </div>
         </section>
         {/* Content Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
+        <section className='py-16 px-4'>
+          <div className='max-w-4xl mx-auto'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              className='bg-white rounded-2xl shadow-lg p-8 md:p-12'
             >
-              <div className="prose prose-lg max-w-none">
-                <h2 className="text-2xl font-bold mb-6">
+              <div className='prose prose-lg max-w-none'>
+                <h2 className='text-2xl font-bold mb-6'>
                   Information We Collect
   const rights = [
     {
@@ -208,9 +208,9 @@ export default function PrivacyPage() {
           <section className='py-20 px-4'>
             <div className='max-w-6xl mx-auto text-center'>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
                 <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                   Privacy Policy
@@ -232,9 +232,9 @@ export default function PrivacyPage() {
             <div className='max-w-6xl mx-auto'>
               <div className='grid lg:grid-cols-2 gap-12 items-center'>
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={ opacity: 0, x: -20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6 }
                 >
                   <h2 className='text-4xl font-bold mb-6 text-white'>
                     Our Commitment to Privacy
@@ -260,9 +260,9 @@ export default function PrivacyPage() {
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={ opacity: 0, x: 20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6, delay: 0.2 }
                   className='relative'
                 >
                   <div className='bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30'>
@@ -302,23 +302,23 @@ export default function PrivacyPage() {
           <section className='py-20 px-4'>
             <div className='max-w-6xl mx-auto'>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
                   Our Privacy Principles
                 </h2>
-                <p className="mb-6">
+                <p className='mb-6'>
                   We collect information you provide directly to us, such as
                   when you create an account, use our services, or contact us
                   for support.
                 </p>
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className='text-xl font-semibold mb-4'>
                   Personal Information
                 </h3>
-                <ul className="list-disc pl-6 mb-6">
+                <ul className='list-disc pl-6 mb-6'>
                   <li>Name and contact information</li>
                   <li>Email address</li>
                   <li>Phone number</li>
@@ -326,10 +326,10 @@ export default function PrivacyPage() {
                   <li>Payment information</li>
                 </ul>
 
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className='text-xl font-semibold mb-4'>
                   Usage Information
                 </h3>
-                <ul className="list-disc pl-6 mb-6">
+                <ul className='list-disc pl-6 mb-6'>
                   <li>How you use our services</li>
                   <li>Device information</li>
                   <li>IP address</li>
@@ -337,14 +337,14 @@ export default function PrivacyPage() {
                   <li>Operating system</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold mb-6 mt-12">
+                <h2 className='text-2xl font-bold mb-6 mt-12'>
                   How We Use Your Information
                 </h2>
-                <p className="mb-6">
+                <p className='mb-6'>
                   We use the information we collect to provide, maintain, and
                   improve our services.
                 </p>
-                <ul className="list-disc pl-6 mb-6">
+                <ul className='list-disc pl-6 mb-6'>
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
                   <li>Send you technical notices and support messages</li>
@@ -353,43 +353,43 @@ export default function PrivacyPage() {
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold mb-6 mt-12">
+                <h2 className='text-2xl font-bold mb-6 mt-12'>
                   Information Sharing
                 </h2>
-                <p className="mb-6">
+                <p className='mb-6'>
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
-                <p className="mb-6">
+                <h2 className='text-2xl font-bold mb-6 mt-12'>Data Security</h2>
+                <p className='mb-6'>
                   We implement appropriate security measures to protect your
                   personal information against unauthorized access, alteration
                   disclosure, or destruction.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
-                <p className="mb-6">
+                <h2 className='text-2xl font-bold mb-6 mt-12'>Your Rights</h2>
+                <p className='mb-6'>
                   You have the right to access, update, or delete your personal
                   information. You may also opt out of certain communications
                   from us.
                 </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
-                <p className="mb-6">
+                <h2 className='text-2xl font-bold mb-6 mt-12'>Contact Us</h2>
+                <p className='mb-6'>
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
 
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <div className="flex items-center mb-4">
-                    <Mail className="w-5 h-5 text-blue-600 mr-3" />
+                <div className='bg-gray-50 rounded-lg p-6'>
+                  <div className='flex items-center mb-4'>
+                    <Mail className='w-5 h-5 text-blue-600 mr-3' />
                     <span>kleber@ziontechgroup.com</span>
                   </div>
-                  <div className="flex items-center mb-4">
-                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
+                  <div className='flex items-center mb-4'>
+                    <Phone className='w-5 h-5 text-blue-600 mr-3' />
                     <span>+1 302 464 0950</span>
                   </div>
-                  <div className="flex items-start">
-                    <Users className="w-5 h-5 text-blue-600 mr-3 mt-1" />
+                  <div className='flex items-start'>
+                    <Users className='w-5 h-5 text-blue-600 mr-3 mt-1' />
                     <div>
                       <p>Zion Tech Group</p>
                       <p>364 E Main St STE 1008</p>
@@ -398,8 +398,8 @@ export default function PrivacyPage() {
                   </div>
                 </div>
 
-<p className="text-sm text-gray-600 mt-8">
-                <p className="text-sm text-gray-600 mt-8">
+<p className='text-sm text-gray-600 mt-8'>
+                <p className='text-sm text-gray-600 mt-8'>
                   Last updated: January 2024
                 </p>
               </div>
@@ -418,9 +418,9 @@ export default function PrivacyPage() {
           {/* Hero Section */}
           <section className='py-20 px-4'>
             <div className='max-w-6xl mx-auto text-center'>              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
                 <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                   Privacy Policy
@@ -440,9 +440,9 @@ export default function PrivacyPage() {
           <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
             <div className='max-w-6xl mx-auto'>
               <div className='grid lg:grid-cols-2 gap-12 items-center'>                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={ opacity: 0, x: -20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6 }
                 >
                   <h2 className='text-4xl font-bold mb-6 text-white'>
                     Our Commitment to Privacy
@@ -467,9 +467,9 @@ export default function PrivacyPage() {
                   </div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={ opacity: 0, x: 20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6, delay: 0.2 }
                   className='relative'
                 >
                   <div className='bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30'>
@@ -507,9 +507,9 @@ export default function PrivacyPage() {
           {/* Privacy Principles */}
           <section className='py-20 px-4'>
             <div className='max-w-6xl mx-auto'>              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
@@ -523,9 +523,9 @@ export default function PrivacyPage() {
               <div className='grid md:grid-cols-2 gap-8'>                {privacySections.map((section, index) => (
                   <motion.div
                     key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
                     className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50'
                   >
                     <div
@@ -552,9 +552,9 @@ export default function PrivacyPage() {
           {/* Your Rights */}
           <section className='py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50'>
             <div className='max-w-6xl mx-auto'>              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
@@ -568,9 +568,9 @@ export default function PrivacyPage() {
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>                {rights.map((right, index) => (
                   <motion.div
                     key={right.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
                     className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center'
                   >
                     <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4'>
@@ -590,9 +590,9 @@ export default function PrivacyPage() {
           <section className='py-20 px-4'>
             <div className='max-w-4xl mx-auto'>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className='space-y-12'
               >
                 <div>
@@ -765,9 +765,9 @@ export default function PrivacyPage() {
           <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
             <div className='max-w-4xl mx-auto text-center'>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
                 <h2 className='text-4xl font-bold mb-6 text-white'>
                   Questions About Privacy?

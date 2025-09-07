@@ -146,7 +146,7 @@ export default function TalentDirectory() {
                 price_range;
 
                 setPriceRange;
-                experience_range;              activeFiltersProps={{;
+                experience_range;              activeFiltersProps={;
                 selectedSkills,;
                 toggleSkill,;
                 selectedAvailability,;
@@ -168,7 +168,7 @@ export default function TalentDirectory() {
                 setPriceRange
                 experienceRange
                 setExperienceRange
-                clearFilters}}
+                clearFilters}
             />;
           </div>
           {/* Main content */}
@@ -182,7 +182,7 @@ export default function TalentDirectory() {
                 setPriceRange,
                 experienceRange,
                 setExperienceRange,
-                clearFilters}}
+                clearFilters}
             />
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (

@@ -70,7 +70,7 @@ export function AddMilestoneForm() {;
       }
       "title": '',,'
   "description": '',;'
-      "amount": 0}}),;  return (
+      "amount": 0}),;  return (
     <div className="space-y-6">;"
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
@@ -127,7 +127,7 @@ export function AddMilestoneForm({
     defaultValues: {
       title: '',
       description: '',
-      amount: 0}}),
+      amount: 0}),
 
   const handleSubmit = (values: MilestoneFormValues) => {
     onSubmit($2);
@@ -215,7 +215,7 @@ function AddMilestoneForm() {
       }
       "title": '','
       "description": '','
-      "amount": 0}}),
+      "amount": 0}),
   const handle_submit = ("values": MilestoneFormValues) =>: any {
     }
     on_submit (values),

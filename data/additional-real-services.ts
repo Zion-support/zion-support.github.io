@@ -110,7 +110,7 @@ id: string;
   contactInfo: {mobile: string;
     email: string;
     address: string;
-  }}
+  }
 }address: string;
   }
 export const additionalEnhancedServices: AdditionalRealService[] = [;
@@ -169,7 +169,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
     contactInfo: {mobile: "+1 302 464 0950";email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
-  }];];;
+  }];];
     id: "ai-automation-suite",name: "AI Automation Suite",tagline: "Intelligent automation for modern businesses",price: "$79/month",description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.",features: [;
       "Workflow automation","AI decision making","Integration APIs","Custom workflows","Analytics dashboard";
     ],link: "/services/ai-automation-suite",category: "AI & Automation",realImplementation: true,contactInfo: {mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";

@@ -6,14 +6,14 @@ import { ApiDocsSpec, Visibility  } from '../../data/api-docs/types';'
 
 interface SidebarProps {
   }
-  "spec": ApiDocsSpec;
+  'spec': ApiDocsSpec;
   activeEndpointId?: string;
-  "onSelectEndpoint": ("endpointId": string) => void;
-  "selectedVersion": string;
-  "onChangeVersion": ("v": string) => void;
-  "visibilityFilter": Visibility | 'all';'
+  'onSelectEndpoint': ('endpointId': string) => void;
+  'selectedVersion': string;
+  'onChangeVersion': ('v': string) => void;
+  'visibilityFilter': Visibility | 'all';'
 
-  "onChangeVisibility": ("v": Visibility | 'all') => void'
+  'onChangeVisibility': ('v': Visibility | 'all') => void'
 
 }
 
@@ -28,7 +28,6 @@ key={v}
 
               {
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </button>;
           ))}
         </div>;
@@ -73,20 +72,17 @@ key={v}
                       <span className='font-mono'>{e.path}</span>'
                     </button>
                   </li>
-<<<<<<< HEAD
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 ))}
             </ul>
           </div>
         ))}
-  "onSelectEndpoint": ("endpoint_id": string) => void;
-  "selected_version": string;
-  "onChangeVersion": ("v": string) => void;
-  "visibility_filter": Visibility | 'all';'
-  "onChangeVisibility": ("v": Visibility | 'all') => void;'
+  'onSelectEndpoint': ('endpoint_id': string) => void;
+  'selected_version': string;
+  'onChangeVersion': ('v': string) => void;
+  'visibility_filter': Visibility | 'all';'
+  'onChangeVisibility': ('v': Visibility | 'all') => void;'
 
 export default /**;
  * Sidebar - Function description;
@@ -102,9 +98,9 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
               on_click={() => onChangeVersion (v)}
               className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}>`
               {v}
-            </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>;"
-        <div className="text - xs text - high-contrast-muted">Version</div>;"
-        <div className="flex gap - 2 mt-2 flex-wrap">;"
+            </button>          ))}        <div className='text-lg font-semibold'>Zion OS API</div>;'
+        <div className='text - xs text - high-contrast-muted'>Version</div>;'
+        <div className='flex gap - 2 mt-2 flex-wrap'>;'
           {spec.versions.map ((v) => (<button key={v} on_click={() => onChangeVersion (v)} className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}>{v}</button>;`        </div>;
       </div>;
       <div>;
@@ -133,12 +129,11 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
                     ? true;
                     : e.visibility === visibility_filter);
                 .map (e => (                  <li key={e.id}>        </select>;
-<<<<<<< HEAD
       </div>;
-      <nav className="space-y-3">;"
+      <nav className='space-y-3'>;'
         {spec.sections.map ((section) => (<div key={section.id}>;
-            <div className="text - sm font-medium mb-1">{section.title}</div>;"
-            <ul className="space-y-1">;"
+            <div className='text - sm font-medium mb-1'>{section.title}</div>;'
+            <ul className='space-y-1'>;'
               {section.endpoints;
                 .filter ((e) => e.versions.includes (selected_version)).filter ((e) => visibility_filter === 'all' ? true : e.visibility === visibility_filter).map ((e) => (<li key={e.id}>;'
                     <button;
@@ -147,20 +142,17 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
                     >;
                       <span className='mr - 2 inline - block w - 10 text - center text-[10px] opacity - 80'>;'
                         {e.method}
-<<<<<<< HEAD
                       </span>;
-                      <span className='font - mono'>{e.path}</span>                    </button>                      <span className="mr - 2 inline - block w - 10 text-center text-[10px] opacity-80">{e.method}</span>;"
-                      <span className="font-mono">{e.path}</span>;"
+                      <span className='font - mono'>{e.path}</span>                    </button>                      <span className='mr - 2 inline - block w - 10 text-center text-[10px] opacity-80'>{e.method}</span>;'
+                      <span className='font-mono'>{e.path}</span>;'
                     </button>;
                   </li>))}
             </ul>;
           </div>))}
       </nav>;
     </aside>)</nav>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     </aside>;
   )}
-=======
   onSelectEndpoint: (endpoint_id: string) => void
   selected_version: string
   onChangeVersion: (v: string) => void
@@ -176,29 +168,19 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
         <select
           className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary text - sm'
           value={visibility_filter}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     </aside>;
   )}
       </nav>
     </aside>
-<<<<<<< HEAD
   )
 }
-=======
   );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+''`
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+'

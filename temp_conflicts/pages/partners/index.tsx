@@ -21,7 +21,7 @@ export default function Partners() {
         name: form.name,
         entityType: form.entityType,
         useCaseType: form.useCaseType,
-        pointOfContact: { name: form.pocName, email: form.pocEmail }})}),
+        pointOfContact: { name: form.pocName, email: form.pocEmail })}),
     const data = await res.json(),
     setLoading(false),
     setResult(data)

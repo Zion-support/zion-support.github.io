@@ -14,10 +14,10 @@ import { DropdownMenu;
   DropdownMenuLabel  } from '@/components/ui/dropdown-menu';'
 import { User as UserIcon, Package  } from 'lucide-react';'
 import { LogOut } from 'lucide-react', // Assuming lucide-react is used;'
-export const "AvatarMenu": React.FC = () => {const { user, logout, avatarUrl }  = useAuth()if (!user) return null;const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase()return (<DropdownMenu>;'
+export const 'AvatarMenu': React.FC = () => {const { user, logout, avatarUrl }  = useAuth()if (!user) return null;const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase()return (<DropdownMenu>;'
       <DropdownMenuTrigger asChild data-testid='avatar-menu-trigger'>;'
         <button;
-          className='flex items-center gap-2 rounded-full "focus":outline-none "focus":ring-2 "focus":ring-ring "focus":ring-offset-2';'
+          className='flex items-center gap-2 rounded-full 'focus':outline-none 'focus':ring-2 'focus':ring-ring 'focus':ring-offset-2';'
           aria-label='Open user menu';'
         >;
           <Avatar className='h-8 w-8'>;'
@@ -70,4 +70,4 @@ export const "AvatarMenu": React.FC = () => {const { user, logout, avatarUrl }  
       </DropdownMenuContent>;
     </DropdownMenu>;
   )}export default AvatarMenu;
-";
+';

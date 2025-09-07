@@ -43,6 +43,6 @@ if ( {) {$2;
         className='h - 8';'
         width={32}
         height={32} />;
-    </Link>)}}/>;
+    </Link>)}/>;
     </Link>;
   )

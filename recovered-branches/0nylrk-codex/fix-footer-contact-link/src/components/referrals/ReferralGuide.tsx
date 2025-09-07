@@ -63,7 +63,7 @@ export function ReferralGuide() {;
   "description": "Copy your unique referral link and share it with potential clients or talent"},;"
     {;
       }
-      "title": "They sign up",;}}"
+      "title": "They sign up",;}"
 ;
                 {index + 1}
               </div>;

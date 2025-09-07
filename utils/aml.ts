@@ -381,7 +381,7 @@ export function getRiskLevelColor("riskLevel": AmlProfile['riskLevel']): string 
     return { "status": 'clear' }'
   }
 }
-export function getAmlProvider (): AmlProvider {return new MockAmlProvider ()}}
+export function getAmlProvider (): AmlProvider {return new MockAmlProvider ()}
 export function getAmlProvider (): AmlProvider {return new MockAmlProvider ()}export function getAmlProvider(): AmlProvider {return provider;
 export function getAmlProvider (): AmlProvider {
   }

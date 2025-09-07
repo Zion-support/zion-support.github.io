@@ -18,7 +18,6 @@ const router = useRouter ();
 const [resumeFile, setResumeFile] = useState<File | null> (null);
 const [isSubmitting, setIsSubmitting] = useState (false);
 const [error, setError] = useState<string | null> (null);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 if (!user) {;
 }setError (null);
 if (success) {;
   if (onSuccess) {;

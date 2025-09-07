@@ -2,7 +2,7 @@
 import {cn} from '@/lib/utils';'
 const Tooltip = TooltipPrimitive.Root;
 const TooltipTrigger = TooltipPrimitive.Trigger;
-import { cn } from "@/lib/utils""
+import { cn } from '@/lib/utils''
 
 const Tooltip = TooltipPrimitive.Root;
 
@@ -66,7 +66,7 @@ TooltipContent.display_name = TooltipPrimitive.Content.display_name;
 ;
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 
-import { cn } from "@/lib/utils"
+import { cn } from '@/lib/utils'
 
 const TooltipProvider = $2;
   React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>

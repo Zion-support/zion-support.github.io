@@ -163,9 +163,9 @@ title="Community - Zion Tech Group""
           
           <div className="container mx-auto px-4 relative z-10">"
             <motion.div,
-initial={{ "opacity": 0, "y": 30 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "y": 30 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
               className="text-center""
             >
               <h1 className="text-4xl "md":text-6xl font-bold mb-6">"
@@ -190,9 +190,9 @@ initial={{ "opacity": 0, "y": 30 }}
         <section className="py-16">"
           <div className="container mx-auto px-4">"
             <motion.div,
-initial={{ "opacity": 0, "y": 30 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "y": 30 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
               className="text-center mb-12""
             >
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">"
@@ -208,9 +208,9 @@ initial={{ "opacity": 0, "y": 30 }}
                 <motion.div
 }
 key={index}
-                  initial={{ "opacity": 0, "y": 30 }}
-                  animate={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                  initial={ "opacity": 0, "y": 30 }
+                  animate={ "opacity": 1, "y": 0 }
+                  transition={ "duration": 0.6, "delay": index * 0.1 }
                   className="bg-white rounded-xl shadow-lg "hover":shadow-xl transition-all duration-300 p-6 text-center""
                 >
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">"
@@ -237,10 +237,10 @@ key={index}
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Upcoming Events;
@@ -255,10 +255,10 @@ key={index}
                 <motion.div
                   key={event.id}
                   className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
@@ -307,10 +307,10 @@ key={index}
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Community Discussions;
@@ -350,10 +350,10 @@ key={index}
                 <motion.div
                   key={topic.id}
                   className="bg-white p-6 rounded-lg hover:shadow-lg transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -395,10 +395,10 @@ key={index}
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Community Resources;
@@ -440,9 +440,9 @@ key={index}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">"
             <motion.div,
-initial={{ "opacity": 0, "y": 30 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "y": 30 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
             >
               <h2 className="text-3xl "md":text-4xl font-bold mb-6">"
                 Ready to Join Our Community?

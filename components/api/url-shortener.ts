@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 
 interface ShortUrl {
   for (let i = 0, i < length, i++) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
   error?: string;  error?: string;
 }
@@ -10,11 +9,8 @@ interface ShortUrl {
 const url_storage = new Map < string, ShortUrl>();
 ;
 // Generate a random short code;
-<<<<<<< HEAD
 function generateShortCode (length: number = 6): string {
   const chars =;
-<<<<<<< HEAD
-=======
 
 }
 
@@ -52,7 +48,6 @@ const chars =;
     result += chars.char_at (Math.floor (Math.random () * chars.length));
   }
   return result;
->>>>>>> origin/main
 interface ShortUrl {
   id: string;
   originalUrl: string;
@@ -61,9 +56,7 @@ interface ShortUrl {
   createdAt: string;
   clicks: number;
   isActive: boolean
-=======
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 
 interface UrlShortenerRequest {
@@ -71,17 +64,12 @@ interface UrlShortenerRequest {
   customCode?: string
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 interface UrlShortenerResponse {
   success: boolean;
   data?: ShortUrl;
   error?: string
 }
 // In-memory storage (in production, use a database)
-<<<<<<< HEAD
 const urlStorage = new Map<string, ShortUrl>();
 
 // Generate a random short code
@@ -94,15 +82,12 @@ function generateShortCode(length: number = 6): string {
   return result
 }
 
-=======
 const chars =
 origin/cursor/automate-test-improve-and-merge-code-2533
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-=======
 function generateShortCode (length: number = 6): string {}
   const chars =;'
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   let result = '';
   for (let index = 0; i < length; i++) {}
     result += chars.char_at (Math.floor (Math.random () * chars.length));
@@ -112,7 +97,6 @@ function generateShortCode (length: number = 6): string {}
     result += chars.char_at (Math.floor (Math.random () * chars.length));
   }
   return result;
-<<<<<<< HEAD
   return result;
 
 // Validate URL format,
@@ -121,17 +105,14 @@ function isValidUrl("url": string): boolean {
   try {
     }
     new URL(url);
-<<<<<<< HEAD
     return true
   } catch {
     return false
-=======
 return true;
   } catch {
     }
     return false;
   }  } catch {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 
 export default async function handler() {
@@ -207,7 +188,6 @@ const "shortUrl": ShortUrl = {
         "success": false,
 "error": 'Internal server error','
       });
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
   } else if (req.method = == 'GET') {'
     // Get all URLs (for demo purposes)
@@ -232,7 +212,6 @@ const "shortUrl": ShortUrl = {
   const shortCode = params && params.shortCode;
   const shortUrl = urlStorage && urlStorage.get(shortCode);
 
->>>>>>> origin/main
       data: urls as any
     })
   } else {
@@ -289,7 +268,6 @@ export async function getServerSideProps() {
 
   // Increment click count
   shortUrl.clicks++;
-=======
 // Handle redirects for short URLs;
 export async function getServerSideProps({ params }: { params: { shortCode: string } }) {};
   const shortCode = params.shortCode;
@@ -301,19 +279,16 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
     };
   }
 
-<<<<<<< HEAD
   if (!shortUrl || !shortUrl && shortUrl.isActive) {
     }
     return {
 }
 "notFound": true
     };
-=======
   if (!shortUrl || !shortUrl && shortUrl.isActive) {}
     return {}
       notFound: true,    };      notFound: true;
     }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   // Increment click count,
 shortUrl.clicks++;

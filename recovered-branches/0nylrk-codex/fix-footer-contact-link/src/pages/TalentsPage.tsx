@@ -275,7 +275,7 @@ export default function TalentsPage() {;
       categorySlug="talents";"
       listings={TALENT_LISTINGS}
       categoryFilters={TALENT_FILTERS}
-      initialPrice={{ "min": 100, "max": 200 }} />;
+      initialPrice={ "min": 100, "max": 200 } />;
   );
 }
 ;
@@ -284,7 +284,7 @@ export default function TalentsPage() {;
       categorySlug="talents""
       listings={TALENT_LISTINGS}
       categoryFilters={TALENT_FILTERS}
-      initialPrice={{ "min": 100, "max": 200 }}
+      initialPrice={ "min": 100, "max": 200 }
       "name": "Sarah Johnson","
       "id": "sarah - johnson","
       "avatar_url": ""https"://images.unsplash.com / photo - 1573496359142 - b8d87734a5a2?auto = format & fit = crop & w=100 & h=100"},"
@@ -313,7 +313,7 @@ return (;
       category_slug="talents";"
       listings={TALENT_LISTINGS}
       category_filters={TALENT_FILTERS}
-      initial_price={{ "min": 100, "max": 200 }} />);
+      initial_price={ "min": 100, "max": 200 } />);
 }
 }/>)
 }

@@ -28,7 +28,7 @@ export interface HireRequestNotificationParams {;
   hireRequestId: string;
 }  userId: string;
   missingMilestone: string;
-  userRole: "talent" | "client";
+  userRole: 'talent' | 'client';
 }
 
 export interface SystemNotificationParams {;

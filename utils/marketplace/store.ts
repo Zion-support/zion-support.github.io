@@ -1128,7 +1128,7 @@ const DATA_DIR = path.join(process.cwd(), 'data', 'runtime')const DB_PATH  = pat
     if (!data.offers) data.offers = [];
     if (!data.projects) data.projects = [];
     return data;
-  } catch (err) {return { offers: [], projects: [] }}export function writeDb(db: MarketplaceDb): void {ensureDataFile()fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), 'utf-8')export function saveOffer(offer: Offer): Offer {const db = readDb()const index = db.offers.findIndex(o => o.id === offer.id)if (index >= 0) {db.offers[index] = offer;
+  } catch (err) {return { offers: [], projects: [] }export function writeDb(db: MarketplaceDb): void {ensureDataFile()fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), 'utf-8')export function saveOffer(offer: Offer): Offer {const db = readDb()const index = db.offers.findIndex(o => o.id === offer.id)if (index >= 0) {db.offers[index] = offer;
   } else {db.offers.push(offer)}
   writeDb(db)return offer;export function getOfferById(id: string): Offer | undefined {const db = readDb()return db.offers.find(o => o.id === id)export function listOffers(params?: {talentSlug?: string;
   clientId?: string;

@@ -68,48 +68,44 @@ return (;
               key={i}
 
               className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-20''
-              animate={{
-              }}
-              style={{
+              animate={
+              }
+              style={
 
                 }
 
                 "left": Math.random() * 100 + '%','
                 "top": Math.random() * 100 + '%','
-              }} />
+              } />
           ))}
         </div>
 
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* Grid Pattern */}
 <div className='absolute inset-0 opacity-10'>'
           <div,
 className='absolute inset-0''
-            style={{
+            style={
               }
               "backgroundImage": `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)``              "backgroundSize": '50px 50px''
-            }} />
+            } />
 
-<<<<<<< HEAD
         {/* Grid Pattern */}
         <div className='absolute inset-0 opacity-10'>
           <div
             className='absolute inset-0'
-            style={{
+            style={
               backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`
-=======
         {/* Grid Pattern */}'
         <div className='absolute inset-0 opacity-10'>
           <div'
             className='absolute inset-0'
-            style={{}`
+            style={}`
               backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               backgroundSize: '50px 50px'
-            }}
+            }
           />
 
         {/* Gradient Orbs *
@@ -120,10 +116,10 @@ className='absolute inset-0''
       {/* Content */}
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
+          <div className="absolute inset-0" style={
             backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`,
             backgroundSize: '50px 50px'
-          }} />
+          } />
         </div>
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8 text-center'>'
@@ -131,10 +127,10 @@ className='absolute inset-0''
 }
 
         <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-          animate={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.8 
+          animate={ "opacity": 1, "y": 0 }
+          transition={ "duration": 0.8 
 }
 
 className='mb-8''
@@ -150,16 +146,11 @@ className='mb-8''
               Revolution
             </span>
             <br />
-<<<<<<< HEAD
             <span className="bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
               Revolution
-=======
             <span className='bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 bg-clip-text text-transparent' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Revolution;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </span>
-<<<<<<< HEAD
           </h1>
           <p className='text-xl "md":text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>'
             Experience the future of technology with Zion Tech Group's'
@@ -167,20 +158,16 @@ className='mb-8''
 quantum space mining, we're building tomorrow's solutions today.'
           </p>
         </motion.div>
-<<<<<<< HEAD
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         {/* Main Heading */}<motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}className='mb-8';
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }className='mb-8';
 className='mb-8';
         >;
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>;
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>;
-=======
-<<<<<<< HEAD
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>;
-=======
           </h1>'
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>'
             Experience the future of technology with Zion Tech Group's;
@@ -191,7 +178,6 @@ className='mb-8';
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.
         </motion.div>'
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>;
               2029;
             </span>;
@@ -231,9 +217,9 @@ className='mb-8';
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.;'
         </motion && motion.div>;{/* CTA Buttons */}
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }>;
           <Link;
             href='/services';'
@@ -246,30 +232,29 @@ className='mb-8';
             href="/services";"
         {/* Features Grid */}
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }>;
           {features.map((feature, index) => (<motion.div;
                 }
                 "coordinate_x": [0, Math.random () * 1000];
                 "coordinate_y": [0, Math.random () * 1000];
-                "opacity": [0.2, 0.8, 0.2]}}
-              transition={{"duration": Math.random () * 10 + 10,"repeat": Infinity,"ease": "linear";"
-              }}
-              style={{"left": Math.random () * 100 + '%',"top": Math.random () * 100 + '%'}}' />)
+                "opacity": [0.2, 0.8, 0.2]}
+              transition={"duration": Math.random () * 10 + 10,"repeat": Infinity,"ease": "linear";"
+              }
+              style={"left": Math.random () * 100 + '%',"top": Math.random () * 100 + '%'}' />)
 }
         </div>;
         {/* Grid Pattern */}
         <div className='absolute inset - 0 opacity - 10'>;'
           <div;
             className='absolute inset - 0';'
-            style={{"background_image": `radial - gradient (circle at 1px 1px, rgba (6, 182, 212, 0.3) 1px, transparent 0)`,"background_size": '50px 50px'}}' />;        </div>;
+            style={"background_image": `radial - gradient (circle at 1px 1px, rgba (6, 182, 212, 0.3) 1px, transparent 0)`,"background_size": '50px 50px'}' />;        </div>;
         {/* Gradient Orbs */}
         <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - full blur - 3xl animate - pulse' />;'
         <div className='absolute bottom - 1/4 right - 1/4 w - 96 h - 96 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000' />;'
       </div>;
-<<<<<<< HEAD
       {/* Content */}'
       <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>        {/* Main Heading */}        </div>;
         {/* Gradient Orbs */}"
@@ -278,7 +263,6 @@ className='mb-8';
       </div>;
       {/* Content */}"
       <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-=======
       {/* Content */}
       <div className='relative z - 10 max - w-7xl mx - auto px - 4 "sm": px - 6 "lg":px - 8 text - center'>        {/* Main Heading *,'
 }        </div>;
@@ -286,15 +270,14 @@ className='mb-8';
         <div className="absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - full blur - 3xl animate - pulse" />;"
         <div className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000" />;"
       </div>;
-<<<<<<< HEAD
       {/* Content */}
       <div className="relative z - 10 max - w-7xl mx - auto px - 4 "sm":px - 6 "lg":px - 8 text - center">;"
         {/* Main Heading */}
         <motion.div;
-          initial={{ "opacity": 0, "coordinate_y": 30 
+          initial={ "opacity": 0, "coordinate_y": 30 
 }
-          animate={{ "opacity": 1, "coordinate_y": 0 }}
-          transition={{ "duration": 0.8 
+          animate={ "opacity": 1, "coordinate_y": 0 }
+          transition={ "duration": 0.8 
 }
           className='mb - 8';'
           <h1 className='text - 5xl "md":text - 7xl "lg":text - 8xl font - bold mb - 6'>;'
@@ -318,13 +301,12 @@ className='mb-8';
         </motion.div>;
 
         {/* CTA Buttons */}
-<<<<<<< HEAD
         <motion.div
-          initial={{ opacity: 0, y: 30}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={ opacity: 0, y: 30}
+          animate={ opacity: 1, y: 0}
+          transition={ duration: 0.8, delay: 0.2 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               2029
@@ -335,7 +317,6 @@ className='mb-8';
             <span className='bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 bg-clip-text text-transparent'>
               Revolution
             </span>
-<<<<<<< HEAD
           </h1>
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
             Experience the future of technology with Zion Tech Group's
@@ -343,7 +324,6 @@ className='mb-8';
             quantum space mining, we're building tomorrow's solutions today.          </p>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services.
-=======
           </h1>;'
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;'
             Experience the future of technology with Zion Tech Group's
@@ -355,27 +335,26 @@ className='mb-8';
         </motion && motion.div>
         {/* CTA Buttons */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-=======
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
         <motion.div;
-          initial={{ "opacity": 0, "coordinate_y": 30 
+          initial={ "opacity": 0, "coordinate_y": 30 
 }
-          animate={{ "opacity": 1, "coordinate_y": 0 
+          animate={ "opacity": 1, "coordinate_y": 0 
 }
-          transition={{ "duration": 0.8, "delay": 0.2 }}
+          transition={ "duration": 0.8, "delay": 0.2 }
           className='flex flex - col "sm":flex - row gap - 4 justify - center mb - 16'>'
 
         {/* Main Heading */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center'>        {/* Main Heading */}{/* Main Heading *,'
 }<motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
 
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
 
-          transition={{ "duration": 0.8, "delay": 0.2 }}
+          transition={ "duration": 0.8, "delay": 0.2 }
 className='flex flex-col "sm":flex-row gap-4 justify-center mb-16''
         >
           <Link,
@@ -397,12 +376,12 @@ href='/contact''
         {/* Features Grid *
 }
         <motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
 
-          transition={{ "duration": 0.8, "delay": 0.4 
+          transition={ "duration": 0.8, "delay": 0.4 
 }
 
 className='grid grid-cols-2 "md":grid-cols-3 "lg":grid-cols-6 gap-4 mb-16''
@@ -411,11 +390,11 @@ className='grid grid-cols-2 "md":grid-cols-3 "lg":grid-cols-6 gap-4 mb-16''
             <motion.div
 }
 key={feature.text}
-              initial={{ "opacity": 0, "scale": 0.8 
+              initial={ "opacity": 0, "scale": 0.8 
 }
-              animate={{ "opacity": 1, "scale": 1 
+              animate={ "opacity": 1, "scale": 1 
 }
-              transition={{ "duration": 0.5, "delay": 0.6 + index * 0.1 }}
+              transition={ "duration": 0.5, "delay": 0.6 + index * 0.1 }
 
 className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 "hover":border-cyan-500/50 transition-all duration-300 "hover":bg-gray-800/50''
             >
@@ -429,28 +408,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Features Grid *}
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
 
 className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'
 
 
         {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={ opacity: 0, y: 30}
+          animate={ opacity: 1, y: 0}
+          transition={ duration: 0.8, delay: 0.4 }
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
         >
           {features.map((feature, index) => (
             <motion.div
               key={feature.text}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1}}
-              transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1}
+              transition={ duration: 0.5, delay: 0.6 + index * 0.1 }
               className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/50'
 
 
@@ -473,18 +451,17 @@ className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'
           ))}
         {/* Stats */}
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
 
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
 
-          transition={{ "duration": 0.8, "delay": 0.6 
+          transition={ "duration": 0.8, "delay": 0.6 
 }
 className='grid grid-cols-2 "md":grid-cols-4 gap-8''
         >
           {stats.map((stat, index) => (
-<<<<<<< HEAD
             <motion.div
 }
 className='group p - 4 rounded - xl bg - gray - 800 / 30 backdrop - blur - sm border border - gray - 700 / 50 "hover":border - cyan - 500 / 50 transition - all duration - 300 "hover":bg - gray - 800 / 50'>'
@@ -508,21 +485,21 @@ className='group p - 4 rounded - xl bg - gray - 800 / 30 backdrop - blur - sm bo
         </motion.div>;
         {/* Stats */}
         <motion.div;
-          initial={{ "opacity": 0, "coordinate_y": 30 
+          initial={ "opacity": 0, "coordinate_y": 30 
 }
-          animate={{ "opacity": 1, "coordinate_y": 0 
+          animate={ "opacity": 1, "coordinate_y": 0 
 }
-          transition={{ "duration": 0.8, "delay": 0.6 }}
+          transition={ "duration": 0.8, "delay": 0.6 }
           className='grid grid - cols - 2 "md":grid - cols - 4 gap - 8'        >          className="grid grid - cols - 2 "md":grid - cols - 4 gap - 8">"
 
               key={stat.labe
 }
-              initial={{ "opacity": 0, "scale": 0.8 
+              initial={ "opacity": 0, "scale": 0.8 
 }
-              animate={{ "opacity": 1, "scale": 1 
+              animate={ "opacity": 1, "scale": 1 
 }
 
-              transition={{ "duration": 0.5, "delay": 0.8 + index * 0.1 }}
+              transition={ "duration": 0.5, "delay": 0.8 + index * 0.1 }
 
 className='text-center group''
             >
@@ -532,10 +509,7 @@ className='text-center group''
               <div className='text-3xl "md":text-4xl font-bold text-white mb-2 group-"hover":text-cyan-400 transition-colors'>'
                 {stat.number}
               </div>
-<<<<<<< HEAD
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>                {stat.label}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>                {stat.label}
 
               <div className='text-sm text-gray-400 group-"hover":text-gray-300 transition-colors'>'
@@ -558,17 +532,17 @@ className='text-center group''
 
         {/* Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 30}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={ opacity: 0, y: 30}
+          animate={ opacity: 1, y: 0}
+          transition={ duration: 0.8, delay: 0.6 }
           className="grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1}}
-              transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1}
+              transition={ duration: 0.5, delay: 0.8 + index * 0.1 }
               className="text-center group"
             >
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform">
@@ -585,35 +559,32 @@ className='text-center group''
         </motion.div>
 
         {/* Scroll Indicator */}
-<<<<<<< HEAD
-=======
         <motion&& motion.div;
-          initial={{ "opacity": 0 }}
+          initial={ "opacity": 0 }
 
-          animate={{ "opacity": 1 
+          animate={ "opacity": 1 
 }
 
-          transition={{ "duration": 1, "delay": 1.2 
+          transition={ "duration": 1, "delay": 1.2 
 }
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2''
         >
           <motion.div,
-animate={{ "y": [0, 10, 0] }}
-            transition={{ "duration": 2, "repeat": Infinity 
+animate={ "y": [0, 10, 0] }
+            transition={ "duration": 2, "repeat": Infinity 
 }
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
          />
           <motion.div;
-animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }
+animate={ y: [0, 10, 0] }
+            transition={ duration: 2, repeat: Infinity }
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center''
           >
             <motion.div,
-animate={{ "y": [0, 12, 0] }}
-              transition={{ "duration": 2, "repeat": Infinity }}
+animate={ "y": [0, 12, 0] }
+              transition={ "duration": 2, "repeat": Infinity }
 className='w-1 h-3 bg-cyan-400 rounded-full mt-2'' />
           </motion.div>
         </motion.div>
@@ -626,38 +597,36 @@ className='w-1 h-3 bg-cyan-400 rounded-full mt-2'' />
 }
       <motion&& motion.div;
               </div />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </motion.div>))}
         </motion.div>;
         {/* Scroll Indicator */}
         <motion.div;
-          initial={{ "opacity": 0 }}
-          animate={{ "opacity": 1 
+          initial={ "opacity": 0 }
+          animate={ "opacity": 1 
 }
-          transition={{ "duration": 1, "delay": 1.2 
+          transition={ "duration": 1, "delay": 1.2 
 }
           className='absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2'        >;'
           <motion.div;
-            animate={{ "coordinate_y": [0, 10, 0] }}
-            transition={{ "duration": 2, "repeat": Infinity 
+            animate={ "coordinate_y": [0, 10, 0] }
+            transition={ "duration": 2, "repeat": Infinity 
 }
             className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'          >;'
             <motion.div;
-              animate={{ "coordinate_y": [0, 12, 0] }}
-              transition={{ "duration": 2, "repeat": Infinity 
+              animate={ "coordinate_y": [0, 12, 0] }
+              transition={ "duration": 2, "repeat": Infinity 
 }
               className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2' />          className="absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2">"
 
           <motion.div;
-            animate={{ "coordinate_y": [0, 10, 0] }}
-            transition={{ "duration": 2, "repeat": Infinity 
+            animate={ "coordinate_y": [0, 10, 0] }
+            transition={ "duration": 2, "repeat": Infinity 
 }
             className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            className="w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center">"
 
             <motion.div;
-              animate={{ "coordinate_y": [0, 12, 0] }}
-              transition={{ "duration": 2, "repeat": Infinity 
+              animate={ "coordinate_y": [0, 12, 0] }
+              transition={ "duration": 2, "repeat": Infinity 
 }
               className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'              className="w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2";" />;
           </motion.div>;
@@ -665,72 +634,60 @@ className='w-1 h-3 bg-cyan-400 rounded-full mt-2'' />
       </div>;
       {/* Floating Elements */}
       <motion.div;
-<<<<<<< HEAD
-=======
       <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-        animate={{ rotate: 360 }}
+        animate={ rotate: 360 }
 
-        animate={{ "rotate": 360 
+        animate={ "rotate": 360 
 }
-        animate={{ rotate: -360 }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        animate={ rotate: -360 }
+        transition={ duration: 25, repeat: Infinity, ease: "linear" }
         className="absolute bottom-20 left-20 w-24 h-24 border border-purple-500/20 rounded-full";
         className='absolute top - 20 right - 20 w - 32 h - 32 border border - cyan - 500 / 20 rounded - full';
       />;
       <motion.div;
-        animate={{ rotate: -360 }}
-        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+        animate={ rotate: -360 }
+        transition={ duration: 25, repeat: Infinity, ease: 'linear' }
         className='absolute bottom - 20 left - 20 w - 24 h - 24 border border - purple - 500 / 20 rounded - full';
       />;
     </section>)/>;
       <motion.div;
-        animate={{ rotate: -360 }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-=======
+        animate={ rotate: -360 }
+        transition={ duration: 25, repeat: Infinity, ease: "linear" }
 
-transition={{ "duration": 20, "repeat": Infinity, "ease": 'linear' }}'
+transition={ "duration": 20, "repeat": Infinity, "ease": 'linear' }'
         className='absolute top-20 right-20 w-32 h-32 border border-cyan-500/20 rounded-full'' />
       <motion.div,
-animate={{ "rotate": -360 
+animate={ "rotate": -360 
 }
-        transition={{ "duration": 25, "repeat": Infinity, "ease": 'linear' ,'
+        transition={ "duration": 25, "repeat": Infinity, "ease": 'linear' ,'
 }
         className='absolute bottom-20 left-20 w-24 h-24 border border-purple-500/20 rounded-full'' />
     </section>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 }
   );
-    </section>)}}/>;
+    </section>)}/>;
     </section>;
   )
       {/* Floating Elements */}
       <motion.div
-        animate={{ rotate: 360}}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        animate={ rotate: 360}
+        transition={ duration: 20, repeat: Infinity, ease: "linear" }
         className="absolute top-20 right-20 w-32 h-32 border border-cyan-500/20 rounded-full"
       />
       <motion.div
-        animate={{ rotate: -360 }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        animate={ rotate: -360 }
+        transition={ duration: 25, repeat: Infinity, ease: "linear" }
         className="absolute bottom-20 left-20 w-24 h-24 border border-purple-500/20 rounded-full"
       />
     </section>
-<<<<<<< HEAD
   )
 }
-=======
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 '"`
-=======
 
 "
-<<<<<<< HEAD
-=======
 />) ) 
 }</div> > <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent" > 2029 </span> <br /> <span className="text-white" > Future Technology </span> <br /> <span className="bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 bg-clip-text text-transparent" > Revolution </span> </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Experience the future of technology with Zion Tech Group's revolutionary 2029 services. From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today. </p> </motion.div> {
   /* CTA Buttons */ 
@@ -752,12 +709,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   /* Floating Elements */ 
 }<motion.div /> </section>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

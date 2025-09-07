@@ -10,19 +10,19 @@ declare module '@tanstack/react-query';'
   // TypeScript compiler can understand the imports without requiring the real;
   // type definitions.;
   // eslint - disable - next - line @typescript - eslint / no - explicit - any;
-  export const "DayPicker": any;
+  export const 'DayPicker': any;
 }
-declare module "cmdk","
-declare module "@radix-ui/react-context-menu","
-declare module "vaul","
-declare module "@radix-ui/react-hover-card","
-declare module "input-otp","
-declare module "react-markdown","
-declare module "@radix-ui/react-menubar","
-declare module "@radix-ui/react-navigation-menu","
-declare module "react-resizable-panels","
-declare module "@radix-ui/react-toggle-group","
-declare module "@radix-ui/react-toggle","
+declare module 'cmdk','
+declare module '@radix-ui/react-context-menu','
+declare module 'vaul','
+declare module '@radix-ui/react-hover-card','
+declare module 'input-otp','
+declare module 'react-markdown','
+declare module '@radix-ui/react-menubar','
+declare module '@radix-ui/react-navigation-menu','
+declare module 'react-resizable-panels','
+declare module '@radix-ui/react-toggle-group','
+declare module '@radix-ui/react-toggle','
 declare module '@tanstack/react-query','
 declare module 'react-day-picker' {'
 }
@@ -32,17 +32,17 @@ declare module 'react-day-picker' {'
 declare module '@tanstack/react-query','
 declare module 'react-day-picker' {'
 }
-declare module "cmdk",;"
-declare module "@radix-ui/react-context-menu",;"
-declare module "vaul",;"
-declare module "@radix-ui/react-hover-card",;"
-declare module "input-otp",;"
-declare module "react-markdown",;"
-declare module "@radix-ui/react-menubar",;"
-declare module "@radix-ui/react-navigation-menu",;"
-declare module "react-resizable-panels",;"
-declare module "@radix-ui/react-toggle-group",;"
-declare module "@radix-ui/react-toggle",;"
+declare module 'cmdk',;'
+declare module '@radix-ui/react-context-menu',;'
+declare module 'vaul',;'
+declare module '@radix-ui/react-hover-card',;'
+declare module 'input-otp',;'
+declare module 'react-markdown',;'
+declare module '@radix-ui/react-menubar',;'
+declare module '@radix-ui/react-navigation-menu',;'
+declare module 'react-resizable-panels',;'
+declare module '@radix-ui/react-toggle-group',;'
+declare module '@radix-ui/react-toggle',;'
 declare module '@tanstack/react-query',;'
 declare module 'react-day-picker' {;'
   }
@@ -71,7 +71,7 @@ declare module 'child_process';'
 declare module 'date - fns';'
 declare module 'jspdf' {'
   }
-  export const "jsPDF": any,
+  export const 'jsPDF': any,
   export default jsPDF;
 }
 declare module '@hookform / resolvers / zod';'
@@ -99,13 +99,13 @@ declare module '@radix - ui / react - tooltip';'
 declare module '@supabase / supabase - js';'
 declare module 'class - variance - authority' {'
   }
-  export function cva (..."inputs": any[]): any;
-  export type VariantProps < T extends (..."args": any) => any> = any;
+  export function cva (...'inputs': any[]): any;
+  export type VariantProps < T extends (...'args': any) => any> = any;
 }
 declare module 'clsx' {'
   }
   export type ClassValue = any;
-  export default function clsx (..."classes": ClassValue[]): string;
+  export default function clsx (...'classes': ClassValue[]): string;
 }
 declare module 'embla - carousel - react';  export interface UseFormReturn<'
   export interface UseFormReturn<;
@@ -114,40 +114,40 @@ declare module 'embla - carousel - react';  export interface UseFormReturn<'
   export type Control<TFieldValues extends FieldValues = $2;
   > {
     }
-    "control": Control<TFieldValues>
-    "handleSubmit": any;
-    "register": any,
-"formState": any
-    ["key": string]: any
+    'control': Control<TFieldValues>
+    'handleSubmit': any;
+    'register': any,
+'formState': any
+    ['key': string]: any
   }
   export function useForm<
     TFieldValues extends FieldValues = $2;
   >(options?: any): UseFormReturn<TFieldValues>
   export function useFieldArray<
     TFieldValues extends FieldValues = FieldValues;
-  >("options": any): any,
+  >('options': any): any,
 export interface ControllerProps<  > {
     }
-    "name": TName;
+    'name': TName;
     control?: Control < TFieldValues>;
     rules?: any;
     default_value?: any;
-    "render": ("props": any) => ReactElement;
+    'render': ('props': any) => ReactElement;
   }
-  export const "Controller": ComponentType < ControllerProps < any, any>>;
+  export const 'Controller': ComponentType < ControllerProps < any, any>>;
   export interface FormProviderProps<;
-  export const "Controller": ComponentType<ControllerProps<any, any>>
+  export const 'Controller': ComponentType<ControllerProps<any, any>>
   export interface FormProviderProps<;
 
     TFieldValues extends FieldValues = FieldValues;
   > {
     }
     children?: ReactNode;
-    ["key": string]: any;
+    ['key': string]: any;
   }
 }
 declare module 'react - i18next';'
-declare module 'react-dom / client';  export const "FormProvider": ComponentType < FormProviderProps < any>>;'
+declare module 'react-dom / client';  export const 'FormProvider': ComponentType < FormProviderProps < any>>;'
   export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn < TFieldValues>;

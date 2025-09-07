@@ -254,12 +254,12 @@ export default function ClientHirePage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-        defaultContext={{ actionType: 'listing_publish', metadata: { talentSlug } }  } catch (error) {
+        defaultContext={ actionType: 'listing_publish', metadata: { talentSlug } }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-        userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }  } catch (error) {
+        userHeaders={ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }

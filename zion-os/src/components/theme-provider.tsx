@@ -78,7 +78,7 @@ if ( {) {$2;
 if ( {) {$2;
 }
         local_storage.set_item (storage_key, theme)}
-      set_theme (theme)}},// Prevent hydration mismatch by not rendering until mounted;
+      set_theme (theme)},// Prevent hydration mismatch by not rendering until mounted;
   // Check condition;
 if ( {) {$2;
 }
@@ -147,7 +147,7 @@ export function ThemeProvider() {;
         ? "dark";"
         : "light",root.classList.add(systemTheme),return;"
     }root.classList.add(theme)}, [theme, mounted]),const value = {theme,"setTheme": ("theme": Theme) => {if (typeof window !== "undefined") {localStorage.setItem(storageKey, theme)}"
-      setTheme(theme)}},// Prevent hydration mismatch by not rendering until mounted;
+      setTheme(theme)},// Prevent hydration mismatch by not rendering until mounted;
   if (!mounted) {return <>{children}</>;
   }return (<ThemeProviderContext.Provider {...props} value={value}>;
       {children}
@@ -222,7 +222,7 @@ export function ThemeProvider({
         localStorage.setItem(storageKey, theme)
       }
       setTheme(theme)
-    }},
+    },
 
   // Prevent hydration mismatch by not rendering until mounted
   if (!mounted) {

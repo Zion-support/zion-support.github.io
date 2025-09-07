@@ -3,7 +3,7 @@
 import React from 'react';'
 import Link from 'next/link';'
 import { Brain, ArrowRight, CheckCircle, DollarSign, Clock  } from 'lucide-react';'
-export default function AICopilots() {const benefits = ['Accelerate employee productivity by 25-40% with task automation','Reduce support response times with context-aware assistance','Integrate securely with your tools (Google, Microsoft 365, Slack, Jira)','On-prem or VPC deployment options to keep data private',class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+export default function AICopilots() {const benefits = ['Accelerate employee productivity by 25-40% with task automation','Reduce support response times with context-aware assistance','Integrate securely with your tools (Google, Microsoft 365, Slack, Jira)','On-prem or VPC deployment options to keep data private',class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }

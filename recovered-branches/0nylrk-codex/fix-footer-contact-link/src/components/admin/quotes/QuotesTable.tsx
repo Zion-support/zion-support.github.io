@@ -146,8 +146,8 @@ variant="ghost";"
                               }
                               deleteQuote(quote && quote.id);
                             }
-                          }}
-                            }}
+                          }
+                            }
                             className="text-red-500""
                           >
                             <Trash2 className="h-4 w-4 mr-2" />"
@@ -230,7 +230,7 @@ variant="ghost";"
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                               deleteQuote(quote.id)
                             }
-                          }}
+                          }
                         >
                           <Trash2 className="h-4 w-4" />
                           <span className="sr-only">Delete</span>

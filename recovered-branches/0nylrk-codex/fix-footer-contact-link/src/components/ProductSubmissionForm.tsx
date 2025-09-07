@@ -368,13 +368,13 @@ src={imagePreview}
       <TabsContent value="ai">
         <AIListingGenerator
           onApplyGenerated={handleApplyGenerated}
-          initialValues={{
+          initialValues={
             title: form.getValues($2);
             category: form.getValues("category")
-          }}
+          }
         />
       </TabsContent>
     </Tabs>
   )
-              )}}
+              )}
 }

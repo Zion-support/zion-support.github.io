@@ -93,7 +93,6 @@ key={b.id}
 
 <span className='ml-2 text-xs text-green-600' />
 }
-<<<<<<< HEAD
   );
 '
         <span className='ml - 2 text - xs text - green - 600'>;
@@ -101,18 +100,14 @@ key={b.id}
 '
         <span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
-<<<<<<< HEAD
         </span>)}
     </div>);        <span className="ml - 2 text - xs text-green-600">Current: {active.label}</span>)}
     </div>);
-=======
           Current: {active.labe;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <span className='ml-2 text-xs text-green-600'>
           Current: {active.label;}
         </span>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         </span>;
       )}
       )}
@@ -186,22 +181,16 @@ export default function Badges({ balance }: { balance: number }) {
   )
       {active && (
   );
-<<<<<<< HEAD
 
 }
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
         </span>)}"
     </div>);        <span className="ml - 2 text - xs text - green - 600">Current: {active.label}</span>)}
     </div>);
 }
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-<<<<<<< HEAD
         <span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
 
@@ -218,11 +207,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
   )
 }
-=======
-<<<<<<< HEAD
 
 "
-=======
 export type Badge = {
   id: string
 label: string
@@ -249,12 +235,5 @@ return (<div className="flex gap-2 items-center flex-wrap" > BADGES.map ( (b) =>
 }) 
 }</div>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

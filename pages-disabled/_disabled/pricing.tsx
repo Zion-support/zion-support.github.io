@@ -167,7 +167,7 @@ export default function PricingPage() {
                   className={`relative bg-white rounded-2xl shadow-lg overflow-hidden ${
                     plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
                   }`}
-                  whileHover={{ y: -5 }}
+                  whileHover={ y: -5 }
                 >
                   {plan.popular && (
                     <div className="absolute top-0 left-0 right-0 bg-blue-600 text-white text-center py-2 text-sm font-semibold">
@@ -240,7 +240,7 @@ export default function PricingPage() {
                 <motion.div
                   key={index}
                   className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
-                  whileHover={{ y: -2 }}
+                  whileHover={ y: -2 }
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {addOn.name}
@@ -274,9 +274,9 @@ export default function PricingPage() {
                 <motion.div
                   key={index}
                   className="bg-white rounded-lg p-6 shadow-md"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ delay: index * 0.1 }
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {faq.question}

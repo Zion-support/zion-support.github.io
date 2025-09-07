@@ -101,7 +101,7 @@ export default function Dashboard() {
                     <span className="text-zion-cyan font-medium">65%</span>
                   </div>
                   <div className="w-full bg-zion-blue rounded-full h-2">
-                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={ width: "65%" }></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Community Points</span>
@@ -139,7 +139,7 @@ export default function Dashboard() {
                           title: "Onboarding notification sent"
                           description: "Check your notification center"
                         })
-                      }}
+                      }
                     >
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
@@ -154,7 +154,7 @@ export default function Dashboard() {
 
                           description: "Check your notification center"
                         })
-                      }}
+                      }
                     >
                       <Bell size={16} className="text-yellow-500" />
                       Send System Alert

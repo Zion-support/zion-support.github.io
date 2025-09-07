@@ -19,9 +19,9 @@ export function ProjectActions({
   onAddMilestone
 }: ProjectActionsProps) {
   return (
-    <div className="flex gap-2">
+    <div className='flex gap-2'>
       {isUnderDispute && disputeId ? (
-        <Button variant="outline" asChild>
+        <Button variant='outline' asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
 
             View Active Dispute

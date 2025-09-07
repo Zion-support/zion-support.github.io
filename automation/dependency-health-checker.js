@@ -120,8 +120,8 @@ const {
         'dependency-health.json'
       );
       // Ensure directories exist
-      fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
-      fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
+      fs.mkdirSync(path.dirname(this.logFile), { 'recursive': true });
+      fs.mkdirSync(path.dirname(this.reportFile), { 'recursive': true });
     }
     log(message, level = 'INFO') {
       const timestamp = new Date().toISOString();
@@ -132,17 +132,17 @@ const {
     async checkDependencies() {
       this.log('Checking dependency health...');
       const results = {
-        "timestamp": new Date().toISOString(),
-        "outdated": [],
-        "vulnerable": [],
-        "missing": [],
-        "healthScore": 100};
+        'timestamp': new Date().toISOString(),
+        'outdated': [],
+        'vulnerable': [],
+        'missing': [],
+        'healthScore': 100};
       try {
         // Check for outdated packages
         const outdatedResult = execSync('yarn outdated --json', {
-          "stdio": 'pipe',
-          "encoding": 'utf8',
-          "cwd": process.cwd()});
+          'stdio': 'pipe',
+          'encoding': 'utf8',
+          'cwd': process.cwd()});
         if (outdatedResult) {
           results.outdated = JSON.parse(outdatedResult);
           this.log(`Found ${results.outdated.length} outdated packages`);
@@ -153,9 +153,9 @@ const {
       try {
         // Security audit
         const auditResult = execSync('yarn audit --json', {
-          "stdio": 'pipe',
-          "encoding": 'utf8',
-          "cwd": process.cwd()});
+          'stdio': 'pipe',
+          'encoding': 'utf8',
+          'cwd': process.cwd()});
         const auditLines = auditResult.split('\n').filter(line => line.trim());
         results.vulnerable = auditLines
           .map(line => {
@@ -174,7 +174,7 @@ const {
       results.healthScore = this.calculateHealthScore(results);
       // Generate report
       fs.writeFileSync(this.reportFile, JSON.stringify(results, null, 2));
-      this.log(`Dependency health report "generated": ${this.reportFile}`);
+      this.log(`Dependency health report 'generated': ${this.reportFile}`);
       return results;
     }
     calculateHealthScore(results) {
@@ -194,7 +194,7 @@ const {
       try {
         const results = await this.checkDependencies();
         this.log(
-          `Dependency health check completed. Health "score": ${results.healthScore}/100`
+          `Dependency health check completed. Health 'score': ${results.healthScore}/100`
         );
         if (results.healthScore < 70) {
           this.log(
@@ -204,7 +204,7 @@ const {
         }
       } catch (error) {
         this.log(
-          `Error in dependency health "checker": ${error.message}`,
+          `Error in dependency health 'checker': ${error.message}`,
           'ERROR'
         );
       }

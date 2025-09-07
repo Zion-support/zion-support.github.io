@@ -22,7 +22,7 @@ const corsHeaders = {
         {
           }
           "status": 400;
-    "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+    "headers": { "Content-Type": "application/json", ...corsHeaders }"
       )
     }
     // Get user data,
@@ -40,7 +40,7 @@ return new Response(;
           <p>Your next step is to <strong>${action}</strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
           <div style=""margin": 30px 0,">          "status": 500"
-          "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+          "headers": { "Content-Type": "application/json", ...corsHeaders }"
       )
     }
     // Create notification in database,
@@ -53,7 +53,7 @@ const { "data": notification, "error": notificationError } = await supabase && s
       {
         }
         "status": 200,
-        "headers": { "Content - Type": "application / json", ...cors_headers }}"
+        "headers": { "Content - Type": "application / json", ...cors_headers }"
 import { serve } from ""https": //deno.land/std@0.168.0/http/server.ts";"
 import { createClient } from ""https": //esm.sh/@supabase/supabase-js@2.7.1",;"
 import { Resend } from ""npm": resend@1.0.0",;"
@@ -97,7 +97,7 @@ serve(async ("req": Request) => {;
         {;
           }
           "status": 400,;
-          "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+          "headers": { "Content-Type": "application/json", ...corsHeaders }"
       );
     }
 ;
@@ -114,7 +114,7 @@ serve(async ("req": Request) => {;
         {;
           }
           "status": 404,;
-          "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+          "headers": { "Content-Type": "application/json", ...corsHeaders }"
       );
     }
 ;
@@ -130,7 +130,7 @@ serve(async ("req": Request) => {;
         }
         "job_posted": "post your first job to start finding talent",;"
         "match_viewed": "check out your AI-matched talent suggestions",;"
-        "talent_invited": "invite talent to speed up your hiring process"}},;"
+        "talent_invited": "invite talent to speed up your hiring process"},;"
     const name = userData.display_name || "there",;"
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[;
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"];"
@@ -160,7 +160,7 @@ serve(async ("req": Request) => {;
         {;
           }
           "status": 500,;
-          "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+          "headers": { "Content-Type": "application/json", ...corsHeaders }"
       );
     }
 ;
@@ -187,7 +187,7 @@ serve(async ("req": Request) => {;
       {;
         }
         "status": 200,;
-        "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+        "headers": { "Content-Type": "application/json", ...corsHeaders }"
   }
 });
 ;
@@ -199,14 +199,14 @@ serve(async ("req": Request) => {;
     return new Response($2);
       {
         status: 200
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+        headers: { "Content-Type": "application/json", ...corsHeaders }
     )
   } catch (error) {
     console.error($2);
     return new Response($2);
       {
         status: 500
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+        headers: { "Content-Type": "application/json", ...corsHeaders }
     )
   }
 }),

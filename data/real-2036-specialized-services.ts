@@ -1066,7 +1066,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];}
 ];
   }
-];;
+];
 export type Real2036SpecializedService = {id: string,name: string,tagline: string,description: string,category: string,price: string,period?: string,features: string[],link: string,launchDate?: string,rating?: number,marketSize?: string,targetAudience?: string,competitiveAdvantage?: string,integration?: string[],useCases?: string[],technology?: string[];
 },export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   // Neuromorphic Computing Platform;
@@ -1126,7 +1126,7 @@ export type Real2036SpecializedService = {id: string,name: string,tagline: strin
     use_cases: ['Space tourism_training programs_safety management_customer experience'],technology: ['Space systems_safety protocols_training technology_customer management'];
 export type Real2036SpecializedService = {ursor/fix-website-loading-errors-and-merge-6662;
   }
-];;
+];
 export type Real2036SpecializedService = {id: string,name: string,tagline: string,description: string,category: string,price: string,period?: string,features: string[],link: string,launchDate?: string,rating?: number,marketSize?: string,targetAudience?: string,competitiveAdvantage?: string,integration?: string[],useCases?: string[],technology?: string[];
 },export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   // Neuromorphic Computing Platform;
@@ -1170,7 +1170,7 @@ export type Real2036SpecializedService = {id: string,name: string,tagline: strin
       'Tourism management systemSafety protocolsTraining programsFlight operationsCustomer managementCompliance toolsCustom developmentExpert consultation';
     ],link: 'https://ziontechgroup.com/services/space-tourism-platform',launchDate: '2036-05-15',rating: 4.6,marketSize: '$1.2B',targetAudience: 'Space tourism companies, Aerospace firms, Travel agencies',competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management',integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'],useCases: ['Space tourismTraining programsSafety managementCustomer experience'],technology: ['Space systemsSafety protocolsTraining technologyCustomer management'];
   }
-];;
+];
 export type Real2036SpecializedService = {id: string,name: string,tagline: string,description: string,category: string,price: string,period?: string,features: string[],link: string,launchDate?: string,rating?: number,marketSize?: string,targetAudience?: string,competitiveAdvantage?: string,integration?: string[],useCases?: string[],technology?: string[];
 },export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   // Neuromorphic Computing Platform;

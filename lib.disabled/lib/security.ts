@@ -1,6 +1,4 @@
 
-=======
-=======
 // Security headers configuration;
 }
 }

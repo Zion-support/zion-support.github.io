@@ -5,37 +5,30 @@ import React, { useEffect, useRef } from 'react';'
 import { motion  } from 'framer-motion';'
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface EnhancedFuturisticBackgroundProps {
   }
-  "children": React.ReactNode;
+  'children': React.ReactNode;
   className?: string;
   intensity?: 'low' | 'medium' | 'high';'
   colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';'
   particleCount?: number;
-<<<<<<< HEAD
   animationSpeed?: number;
 }const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({children;
-=======
   animationSpeed?: number
 }
 
-const "EnhancedFuturisticBackground": React.FC<EnhancedFuturisticBackgroundProps> = ({children;
+const 'EnhancedFuturisticBackground': React.FC<EnhancedFuturisticBackgroundProps> = ({children;
   }
   className;
 
-const colorSchemes = {"quantum": {resizeCanvas ()window.addEventListener ('resize', resizeCanvas)// Wrap around edges if (this.x < 0) this.x = canvas.width;'
+const colorSchemes = {'quantum': {resizeCanvas ()window.addEventListener ('resize', resizeCanvas)// Wrap around edges if (this.x < 0) this.x = canvas.width;'
 }
 if (this.x > canvas.width) this.x = 0;
 if (this.y < 0) this.y = canvas.height;
 if (this.y > canvas.height) this.y = 0;
 
-<<<<<<< HEAD
-=======
-=======
 const colorSchemes = {
   quantum: {
   resizeCanvas ()
@@ -44,19 +37,18 @@ window.addEventListener ('resize', resizeCanvas)
 if (this.x > canvas.width) this.x = 0
 if (this.y < 0) this.y = canvas.height
 if (this.y > canvas.height) this.y = 0
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 // Fade out near end of life if (this.life < 20) {
   
 
-}let "particles": Particle[] = [];
-let "connections": Connection[] = [];
+}let 'particles': Particle[] = [];
+let 'connections': Connection[] = [];
 // Initialize particles ctx.fill_style = colors.primary;
 ctx.font = `$ {`
   }
 
   fontSize 
 }px monospace`;`
-const "EnhancedFuturisticBackground": React.FC<;
+const 'EnhancedFuturisticBackground': React.FC<;
   EnhancedFuturisticBackgroundProps
 > = ({ children
   }
@@ -75,15 +67,15 @@ const animationRef = useRef<number | undefined />(undefined);
 
 const colorSchemes = {
     }
-    "quantum": {
+    'quantum': {
       
       }
       
-      "primary": '#00ffff','
-      "secondary": '#ff00ff','
-      "accent": '#ffff00','
-      "background": 'rgba(0, 0, 0, 0.85)','
-      "particles": [
+      'primary': '#00ffff','
+      'secondary': '#ff00ff','
+      'accent': '#ffff00','
+      'background': 'rgba(0, 0, 0, 0.85)','
+      'particles': [
         '#00ffff','
         '#ff00ff','
         '#ffff00','
@@ -91,15 +83,15 @@ const colorSchemes = {
         '#ff0080','
         '#8000ff','
       ],
-      "glow": '#00ffff','
+      'glow': '#00ffff','
     },
-    "cyberpunk": {
+    'cyberpunk': {
       }
-      "primary": '#ff0080','
-      "secondary": '#00ffff','
-      "accent": '#ffff00','
-      "background": 'rgba(20, 0, 40, 0.9)','
-"particles": [
+      'primary': '#ff0080','
+      'secondary': '#00ffff','
+      'accent': '#ffff00','
+      'background': 'rgba(20, 0, 40, 0.9)','
+'particles': [
         '#ff0080','
         '#00ffff','
         '#ffff00','
@@ -107,15 +99,15 @@ const colorSchemes = {
         '#8000ff','
         '#00ff80','
       ],
-      "glow": '#ff0080','
+      'glow': '#ff0080','
     },
-    "holographic": {
+    'holographic': {
       }
-      "primary": '#00ffff','
-      "secondary": '#ff00ff','
-      "accent": '#ffff00','
-      "background": 'rgba(0, 20, 40, 0.85)','
-"particles": [
+      'primary': '#00ffff','
+      'secondary': '#ff00ff','
+      'accent': '#ffff00','
+      'background': 'rgba(0, 20, 40, 0.85)','
+'particles': [
         '#00ffff','
         '#ff00ff','
         '#ffff00','
@@ -123,15 +115,15 @@ const colorSchemes = {
         '#ff8000','
         '#8000ff','
       ],
-      "glow": '#00ffff','
+      'glow': '#00ffff','
     },
-    "neural": {
+    'neural': {
       }
-      "primary": '#00ff80','
-      "secondary": '#ff0080','
-      "accent": '#ffff00','
-      "background": 'rgba(0, 40, 20, 0.9)','
-"particles": [
+      'primary': '#00ff80','
+      'secondary': '#ff0080','
+      'accent': '#ffff00','
+      'background': 'rgba(0, 40, 20, 0.9)','
+'particles': [
         '#00ff80','
         '#ff0080','
         '#ffff00','
@@ -139,15 +131,15 @@ const colorSchemes = {
         '#ff8000','
         '#8000ff','
       ],
-      "glow": '#00ff80','
+      'glow': '#00ff80','
     },
-    "cosmic": {
+    'cosmic': {
       }
-      "primary": '#ff6b6b','
-      "secondary": '#4ecdc4','
-      "accent": '#45b7d1','
-      "background": 'rgba(10, 10, 30, 0.9)','
-"particles": [
+      'primary': '#ff6b6b','
+      'secondary': '#4ecdc4','
+      'accent': '#45b7d1','
+      'background': 'rgba(10, 10, 30, 0.9)','
+'particles': [
         '#ff6b6b','
         '#4ecdc4','
         '#45b7d1','
@@ -155,17 +147,17 @@ const colorSchemes = {
         '#feca57','
         '#ff9ff3','
       ],
-      "glow": '#4ecdc4','
+      'glow': '#4ecdc4','
     }
   };
 
 const intensitySettings = {
     }
-    "low": { "particleCount": 40, "speed": 0.45, "size": 2, "opacity": 0.25
+    'low': { 'particleCount': 40, 'speed': 0.45, 'size': 2, 'opacity': 0.25
 },
-    "medium": { "particleCount": 90, "speed": 0.9, "size": 3, "opacity": 0.45
+    'medium': { 'particleCount': 90, 'speed': 0.9, 'size': 3, 'opacity': 0.45
 },
-"high": { "particleCount": 160, "speed": 1.25, "size": 3.5, "opacity": 0.6
+'high': { 'particleCount': 160, 'speed': 1.25, 'size': 3.5, 'opacity': 0.6
 }
   };
 
@@ -190,18 +182,18 @@ const settings = intensitySettings[intensity];
     // Enhanced particle system,
 class Particle {
 }
-"x": number;
-      "y": number;
-      "vx": number;
+'x': number;
+      'y': number;
+      'vx': number;
 
-      "vy": number;
-      "size": number;
-      "color": string;
-      "opacity": number;
+      'vy': number;
+      'size': number;
+      'color': string;
+      'opacity': number;
 
-      "life": number;
+      'life': number;
 
-      "maxLife": number;
+      'maxLife': number;
       constructor() {
         }
         this.x = Math.random() * canvas.width;
@@ -277,7 +269,6 @@ this.opacity *= 0.95;
         this.y += this.vy,
         this.life--,
 
-=======
   background: 'rgba(10, 10, 30, 0.9)',
 particles: [
         '#ff6b6b',
@@ -288,7 +279,7 @@ particles: [
         '#ff9ff3',
       ],}
       glow: '#4ecdc4',}
-    }}
+    }
 
 const intensitySettings = {}
     low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25,}
@@ -296,7 +287,7 @@ const intensitySettings = {}
     medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45,}
 },
 high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6,}
-}}
+}
 
   useEffect(() => {
 
@@ -337,7 +328,6 @@ this.color =
         this.x += this.vx
         this.y += this.vy
         this.life--
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         // Wrap around edges
         if (this.x < 0) this.x = $2;
         if (this.x > canvas.width) this.x = $2;
@@ -369,7 +359,6 @@ this.size
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-<<<<<<< HEAD
         ctx.save($2);
         ctx.globalAlpha = $2;
         // Create gradient for particle
@@ -392,11 +381,11 @@ this.size
     // Connection lines between particles,
 class Connection {
 }
-"p1": Particle;
+'p1': Particle;
 
-      "p2": Particle;
-      "opacity": number;
-      constructor("p1": Particle, "p2": Particle) {this.p1 = p1;
+      'p2': Particle;
+      'opacity': number;
+      constructor('p1': Particle, 'p2': Particle) {this.p1 = p1;
         }
         this.p2 = p2;
         this.opacity = 0.1;
@@ -464,8 +453,8 @@ if ( {) {
         }
       }
     }
-    let "particles": Particle[] = [];
-    let "connections": Connection[] = [];
+    let 'particles': Particle[] = [];
+    let 'connections': Connection[] = [];
 
 // Initialize particles,
 for (let i = 0; i < settings.particleCount; i++) {
@@ -482,7 +471,7 @@ const fontSize = 12;
 
 const columns = canvas.width / fontSize;
 
-const "drops": number[] = [];
+const 'drops': number[] = [];
 
 for (let i = 0; i < columns; i++) {
         }
@@ -514,7 +503,6 @@ const text =;
           }
           drops[i]++;
         }
-=======
         ctx.restore();
       }
       isDead() {
@@ -584,10 +572,8 @@ particles.push(new Particle());
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
 
-<<<<<<< HEAD
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
-=======
 particles.push(new Particle());}
 
       // Create connections between nearby particles,
@@ -651,7 +637,7 @@ if ( {) {$2;
       const drops: number[]  = [];for (let i = 0; i < columns; i++) {drops[i] = 1;}
       const drawMatrix = () => {ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
         ctx.fillRect(0, 0, canvas.width, canvas.height)ctx.fillStyle = colors.primary;
-        ctx.font = `${fontSize}px monospace`;;
+        ctx.font = `${fontSize}px monospace`;
     // Initialize particles;
     for (let index = 0; i < settings.particle_count; i++) {particles.push (new Particle ())}
     // Matrix rain effect;
@@ -788,14 +774,14 @@ ctx.stroke();
       }
       // Respect reduced motion,
 const prefersReduced = window.matchMedia(;
-        '(prefers-reduced-"motion": reduce)''
+        '(prefers-reduced-'motion': reduce)''
 
       // Respect reduced motion
         ctx.lineWidth = 1;if (Math.random() < 0.5) {// Draw triangle;
           ctx.beginPath()ctx.moveTo(x, y - size)ctx.lineTo(x - size, y + size)ctx.lineTo(x + size, y + size)ctx.closePath()ctx.stroke()} else {// Draw square;
-          ctx.stroke_rect (x - size, y - size, size * 2, size * 2)}}ctx && ctx.restore()}
+          ctx.stroke_rect (x - size, y - size, size * 2, size * 2)}ctx && ctx.restore()}
       }
-      window && window.removeEventListener('resize', resizeCanvas)}}, [colorScheme, intensity, particleCount, animationSpeed])cancelAnimationFrame(animationRef && animationRef.current)}
+      window && window.removeEventListener('resize', resizeCanvas)}, [colorScheme, intensity, particleCount, animationSpeed])cancelAnimationFrame(animationRef && animationRef.current)}
       window && window.removeEventListener('resize', resizeCanvas)}ctx.restore()}
       // Respect reduced motion;
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)';
@@ -841,18 +827,18 @@ ref={canvasRef}
 
 className='fixed inset-0 w-full h-full pointer-events-none z-0''
 
-        style={{ "background": 'transparent' ,'
+        style={ 'background': 'transparent' ,'
 } />;
       {/* Overlay gradient */}
       <div;
         className='fixed inset - 0 pointer - events - none z - 0';'
 
-        style={{
+        style={
 
           }
 
-          "background": `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,`
-        }} />
+          'background': `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,`
+        } />
 
       {/* Content */}
       <div className='relative z-10'>{children}</div>'

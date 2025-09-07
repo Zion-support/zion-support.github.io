@@ -107,8 +107,8 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
                 </div>;
                 <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>;"
               </div>;
-            ))}}{entries && entries.length === 0 && (<p className="text-center text-gray-400 py-4">No changelog entries yet</p>;"
-            )}}</div>;
+            ))}{entries && entries.length === 0 && (<p className="text-center text-gray-400 py-4">No changelog entries yet</p>;"
+            )}</div>;
         </div>;
       </CardContent>;
     </Card>;
@@ -172,7 +172,7 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
           </div>;
         </div>;
       </CardContent>;
-    </Card>)}}import React, { useState } from 'react';'
+    </Card>)}import React, { useState } from 'react';'
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components/ui/card';'
 import { Button  } from '@/components/ui/button';'
 import { Input  } from '@/components/ui/input';'

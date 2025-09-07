@@ -1,6 +1,6 @@
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
-}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { 'hasError': false }static getDerivedStateFromError(error) {return { 'hasError': true 
+}componentDidCatch(error, errorInfo) {console.error('Error caught by 'boundary':', error, errorInfo)}'
   render() {if (this.state.hasError) ;
   }
   return <div>Something went wrong.</div>;
@@ -39,10 +39,10 @@ const [comment, setComment] = useState('');'
   },
 
   return (
-    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
-      <div className="text-sm font-medium mb-2">Was this answer useful?</div>
+    <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>
       {submitted ? (
-        <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>
+        <div className='text-sm text-emerald-700 dark:text-emerald-300'>Thanks for your feedback!</div>
       ) : (
     }
     setError(null)setSubmitting(true)try {const res = await fetch('/api/feedback/submit', {method: 'POST';
@@ -66,11 +66,10 @@ const [comment, setComment] = useState('');'
         </div>;
       ) : (<div className='space-y-3'>;
           <div className='flex items-center gap-2'>;
-=======
   return (
 
-    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">"
-      <div className="text-sm font-medium mb-2">Was this answer useful?</div>
+    <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>'
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>
       {submitted ? (
     }
   }
@@ -103,17 +102,17 @@ const submit = async () => {
 return;
 
     }
-    setError(null)setSubmitting(true)try {const res = await fetch('/api/feedback/submit', {"method": 'POST';'
+    setError(null)setSubmitting(true)try {const res = await fetch('/api/feedback/submit', {'method': 'POST';'
         }
-        "headers": { 'Content-Type': 'application/json','
+        'headers': { 'Content-Type': 'application/json','
 }
 
-        "body": JSON.stringify({
+        'body': JSON.stringify({
           }
-          "responseId": effectiveResponseId,
+          'responseId': effectiveResponseId,
 rating,
-          "comment": comment.trim(),
-          "pagePath": typeof window !== 'undefined''
+          'comment': comment.trim(),
+          'pagePath': typeof window !== 'undefined''
               ? window.location.pathname
               : undefined,
 aiModel
@@ -122,7 +121,7 @@ aiModel
 });
       if (!res.ok) throw new Error('Failed to submit feedback');'
       setSubmitted(true);
-    } catch ("e": any) {
+    } catch ('e': any) {
       }
       setError(e?.message |'Something went wrong');'
     } finally {
@@ -131,10 +130,10 @@ aiModel
     }
   }
 return (;
-<div className='mt-6 rounded-lg border p-4 bg-white/60 "dark":bg-neutral-900/60'>'
+<div className='mt-6 rounded-lg border p-4 bg-white/60 'dark':bg-neutral-900/60'>'
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>'
       {submitted ? (
-        <div className='text-sm text-emerald-700 "dark":text-emerald-300'>'
+        <div className='text-sm text-emerald-700 'dark':text-emerald-300'>'
           }
           Thanks for your feedback!
         </div>
@@ -143,7 +142,7 @@ return (;
           <div className='flex items-center gap-2'>'
 
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>;'
-      {submitted ? (<div className='text-sm text-emerald-700 "dark":text-emerald-300'>;'
+      {submitted ? (<div className='text-sm text-emerald-700 'dark':text-emerald-300'>;'
           }
           Thanks for your feedback!;
         </div>;
@@ -163,10 +162,7 @@ type='button''
             </button>;
           </div>;
           <textarea;
-<<<<<<< HEAD
             </button>;
-=======
-<<<<<<< HEAD
             </button>;
           </div>;
         </div>;
@@ -249,18 +245,15 @@ if ( {) {}
         </div>) : ('
         <div className='space - y-3'>;'
           <div className='flex items - center gap - 2'>;
-<<<<<<< HEAD
             <button;
               type='button'              on_click={() => set_rating (rating === 'up' ? null : 'up')}      {submitted ? (
-        <div className="text - sm text - emerald - 700 dark:text-emerald-300">Thanks for your feedback!</div>) : (
-        <div className="space-y-3">;
-          <div className="flex items-center gap-2">;
+        <div className='text - sm text - emerald - 700 dark:text-emerald-300'>Thanks for your feedback!</div>) : (
+        <div className='space-y-3'>;
+          <div className='flex items-center gap-2'>;
             <button;
-              type="button";
+              type='button';
               on_click={() => set_rating (rating === 'up' ? null : 'up')}
-=======
             </button />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </div>;
         </div>;
       )}export type FeedbackWidgetProps = {response_id?: string;
@@ -284,42 +277,41 @@ if ( {) {$2;
 }
       set_error ('Please choose 👍 or 👎')return;      return;'
     }
-    set_error (null)set_submitting (true)try {const res = await fetch ('/api / feedback / submit', {"method": 'POST',"headers": { 'Content - Type': 'application / json','
-},"body": JSON.stringify ({"response_id": effectiveResponseId,rating,"comment": comment.trim (),"page_path":;
+    set_error (null)set_submitting (true)try {const res = await fetch ('/api / feedback / submit', {'method': 'POST','headers': { 'Content - Type': 'application / json','
+},'body': JSON.stringify ({'response_id': effectiveResponseId,rating,'comment': comment.trim (),'page_path':;
             }
             typeof window !== 'undefined';'
               ? window.location.pathname;
               : undefined,ai_model})})if (throw new Error ('Failed to submit feedback')) {$2;'
 }
-      set_submitted (true)} catch ("e": any) {set_error (e?.message || 'Something went wrong')} finally {set_submitting (false)}'
+      set_submitted (true)} catch ('e': any) {set_error (e?.message || 'Something went wrong')} finally {set_submitting (false)}'
  
-}return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 "dark":bg - neutral - 900 / 60'>;'
-      <div className='text - sm font - medium mb - 2'>Was this answer useful?</div>          "comment": comment.trim (),"page_path": typeof window !== 'undefined' ? window.location.pathname : undefined,ai_model})})if (throw new Error ('Failed to submit feedback')) {$2;'
+}return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 'dark':bg - neutral - 900 / 60'>;'
+      <div className='text - sm font - medium mb - 2'>Was this answer useful?</div>          'comment': comment.trim (),'page_path': typeof window !== 'undefined' ? window.location.pathname : undefined,ai_model})})if (throw new Error ('Failed to submit feedback')) {$2;'
 }
-      set_submitted (true)} catch ("e": any) {set_error (e?.message || 'Something went wrong')} finally {set_submitting (false)}'
+      set_submitted (true)} catch ('e': any) {set_error (e?.message || 'Something went wrong')} finally {set_submitting (false)}'
  
-}return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 "dark":bg - neutral - 900 / 60'>;'
+}return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 'dark':bg - neutral - 900 / 60'>;'
       <div className='text - sm font - medium mb - 2'>Was this answer useful?</div>;'
-      {submitted ? (<div className='text - sm text - emerald - 700 "dark":text - emerald - 300'>;'
+      {submitted ? (<div className='text - sm text - emerald - 700 'dark':text - emerald - 300'>;'
           }
           Thanks for your feedback!;
         </div>) : (<div className='space - y-3'>;'
           <div className='flex items - center gap - 2'>;'
             <button;
-              type='button'              on_click={() => set_rating (rating === 'up' ? null : 'up')}      {submitted ? (<div className="text - sm text - emerald - 700 "dark":text-emerald-300">Thanks for your feedback!</div>) : (<div className="space-y-3">;"
-          <div className="flex items-center gap-2">;"
+              type='button'              on_click={() => set_rating (rating === 'up' ? null : 'up')}      {submitted ? (<div className='text - sm text - emerald - 700 'dark':text-emerald-300'>Thanks for your feedback!</div>) : (<div className='space-y-3'>;'
+          <div className='flex items-center gap-2'>;'
             <button;
               }
-              type="button";"
+              type='button';'
               on_click={() => set_rating (rating === 'up' ? null : 'up')}'
               className={`inline - flex items - center gap - 1 rounded - md border px - 2 py - 1 text - sm ${rating === 'up' ? 'bg - emerald - 600 text - white border - emerald - 600' : ''}`}`              aria - pressed={rating === 'up'}'
             >;
               <span>👍</span>;
               <span > Yes</span>;
             </button>;
-<<<<<<< HEAD
             <button;
-              type='button'              on_click={() => set_rating (rating === 'down' ? null : 'down')}              type="button";"
+              type='button'              on_click={() => set_rating (rating === 'down' ? null : 'down')}              type='button';'
               on_click={() => set_rating (rating === 'down' ? null : 'down')}'
               className={`inline - flex items - center gap - 1 rounded - md border px - 2 py - 1 text - sm ${rating === 'down' ? 'bg - red - 600 text - white border - red - 600' : ''}`}`              aria - pressed={rating === 'down'}'
             >;
@@ -339,15 +331,15 @@ if ( {) {$2;
             <button;
               on_click={submit}
               disabled={submitting}
-              className='rounded - md bg - black text - white "dark":bg - white "dark":text - black px - 3 py - 1.5 text - sm';'
+              className='rounded - md bg - black text - white 'dark':bg - white 'dark':text - black px - 3 py - 1.5 text - sm';'
             >              {submitting ? 'Submitting…' : 'Submit feedback'}            value={comment}'
             on_change={(e) => set_comment (e.target.value.slice (0, 2000))}
-            className="w - full rounded - md border px - 3 py-2 text-sm";"
+            className='w - full rounded - md border px - 3 py-2 text-sm';'
             rows={3}
           />;
-          {error && <div className="text - xs text-red-600">{error}</div>}"
+          {error && <div className='text - xs text-red-600'>{error}</div>}'
           <div>;
-            <button on_click={submit} disabled={submitting} className="rounded - md bg - black text - white "dark":bg - white "dark":text - black px - 3 py-1.5 text-sm">;"
+            <button on_click={submit} disabled={submitting} className='rounded - md bg - black text - white 'dark':bg - white 'dark':text - black px - 3 py-1.5 text-sm'>;'
               {submitting ? 'Submitting…' : 'Submit feedback'}'
             </button>;
           </div>
@@ -358,15 +350,15 @@ if ( {) {$2;
   }
   return;
     }
-    setError(null),setSubmitting(true),try {const res = await fetch('/api/feedback/submit', {"method": 'POST',"headers": { 'Content-Type': 'application/json','
-},"body": JSON.stringify({"responseId": effectiveResponseId,rating,"comment": comment.trim(),"pagePath": typeof window !== 'undefined' ? window.location.pathname : undefined,aiModel})}),if (!res.ok) throw new Error('Failed to submit feedback'),setSubmitted(true)} catch ("e": any) {setError(e?.message || 'Something went wrong')} finally {setSubmitting(false)}'
+    setError(null),setSubmitting(true),try {const res = await fetch('/api/feedback/submit', {'method': 'POST','headers': { 'Content-Type': 'application/json','
+},'body': JSON.stringify({'responseId': effectiveResponseId,rating,'comment': comment.trim(),'pagePath': typeof window !== 'undefined' ? window.location.pathname : undefined,aiModel})}),if (!res.ok) throw new Error('Failed to submit feedback'),setSubmitted(true)} catch ('e': any) {setError(e?.message || 'Something went wrong')} finally {setSubmitting(false)}'
  
 };
-  return (<div className="mt-6 rounded-lg border p-4 bg-white/60 "dark":bg-neutral-900/60">;"
-      <div className="text-sm font-medium mb-2">Was this answer useful?</div>;"
-      {_submitted ? (<div className="text-sm text-emerald-700 "dark":text-emerald-300">Thanks for your feedback!</div>;"
-      ) : (_<div className="space-y-3">;"
-          <div className="flex items-center gap-2">;"
+  return (<div className='mt-6 rounded-lg border p-4 bg-white/60 'dark':bg-neutral-900/60'>;'
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>;'
+      {_submitted ? (<div className='text-sm text-emerald-700 'dark':text-emerald-300'>Thanks for your feedback!</div>;'
+      ) : (_<div className='space-y-3'>;'
+          <div className='flex items-center gap-2'>;'
             <button;
               }
               type=&quot;button&quot;
@@ -402,7 +394,7 @@ if ( {) {$2;
     try {'
       const res = await fetch('/api/feedback/submit', {'
         method: 'POST','
-        headers: { "Content-Type": "application/json" },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({}
           responseId: effectiveResponseId,
           rating,
@@ -418,25 +410,24 @@ if ( {) {$2;
 
   },
 
-  return ("
-    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">"
-      <div className="text-sm font-medium mb-2">Was this answer useful?</div>
-      {_submitted ? ("
-        <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>"
-      ) : (_<div className="space-y-3">"
-          <div className="flex items-center gap-2">
+  return ('
+    <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>'
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>
+      {_submitted ? ('
+        <div className='text-sm text-emerald-700 dark:text-emerald-300'>Thanks for your feedback!</div>'
+      ) : (_<div className='space-y-3'>'
+          <div className='flex items-center gap-2'>
 
             <button
               type=&quot;button&quot;'
               onClick={() => setRating(rating === 'up' ? null : 'up')}'`
               className={_`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}'
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               aria-pressed={_rating === 'up'}
-        <div className="space-y-3">
-          <div className="flex items-center gap-2">
+        <div className='space-y-3'>
+          <div className='flex items-center gap-2'>
             <button
-              type="button"
+              type='button'
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={rating === 'up'}
@@ -467,39 +458,32 @@ placeholder='Optional feedback (what worked, what didn’t)''
             <button;
               onClick={submit}
               disabled={submitting}
-<<<<<<< HEAD
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm';
             >;
-            placeholder="Optional feedback (what worked, what didn’t)"
+            placeholder='Optional feedback (what worked, what didn’t)'
             value={comment}
             onChange={(e) => setComment(e.target.value.slice(0, 2000))}
-            className="w-full rounded-md border px-3 py-2 text-sm"
+            className='w-full rounded-md border px-3 py-2 text-sm'
             rows={3}
           />
-          {error && <div className="text-xs text-red-600">{error}</div>}
+          {error && <div className='text-xs text-red-600'>{error}</div>}
           <div>
-            <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm">
+            <button onClick={submit} disabled={submitting} className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm'>
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>
           </div>
         </div>
       )}
-=======
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm'
             >
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           <textarea'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
-              className='rounded-md bg-black text-white "dark": bg-white "dark":text-black px-3 py-1.5 text-sm''
+              className='rounded-md bg-black text-white 'dark': bg-white 'dark':text-black px-3 py-1.5 text-sm''
             >
 
               {submitting ? 'Submitting…' : 'Submit feedback,'
@@ -507,7 +491,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </button>;
           </div>;
         </div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       )}
     </div>
 }
@@ -515,9 +498,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 
   );
     </div>;
@@ -527,13 +508,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 }
-=======
-<<<<<<< HEAD
-})}"
-=======
+})}'
 const submit = async () => {
   if (!rating) {
-  <button type="button" onClick= {
+  <button type='button' onClick= {
   () => setRating (rating === 'up' ? null : 'up') 
 }className= {
   `inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm $ {
@@ -544,14 +522,5 @@ const submit = async () => {
 }> <span>👍</span> <span>Yes</span> </button> <button > <span>👎</span> <span>No</span> </button> </div> <textarea </button> </div> </div>) 
 }</div>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-'"`
-=======
-})}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+''`
+})}'

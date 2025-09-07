@@ -65,25 +65,25 @@ const AdvancedModal: React.FC<AdvancedModalProps> = ({,
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
+          exit={ opacity: 0 }
+          transition={ duration: 0.3 }
           className={`fixed inset-0 z-50 flex items-center justify-center p-4 ${overlayClassName}`}`
         >
           {/* Backdrop */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm""
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
+            className='absolute inset-0 bg-black/50 backdrop-blur-sm''
             onClick={onClose}
           />
           {/* Modal */}
           <motion.div
             ref={modalRef}
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{
+            initial={ opacity: 0, scale: 0.9, y: 20 }
+            animate={
               opacity: 1,
               scale: isMaximized ? 1 : 0.95,
               y: 0,
@@ -91,20 +91,20 @@ const AdvancedModal: React.FC<AdvancedModalProps> = ({,
           >
             {/* Header */}
             {(title || showCloseButton ||,  showMaximizeButton) && (
-              <div className="flex items-center justify-between p-6 border-b border-gray-700/50">"
-                <div className="flex items-center space-x-3">"
+              <div className='flex items-center justify-between p-6 border-b border-gray-700/50'>'
+                <div className='flex items-center space-x-3'>'
                   {title && (
 
                   {showMaximizeButton && (
                     <button
                       onClick={() => setIsMaximized(!isMaximized)}
-                      className="p-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-gray-800"",
+                      className='p-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-gray-800'',
                       title={isMaximized ? 'Minimize' : 'Maximize'}'
                     >
                       {isMaximized ? (
-                        <Minimize2 className="w-4 h-4" />"
+                        <Minimize2 className='w-4 h-4' />'
                       ) : (
-                        <Maximize2 className="w-4 h-4" />"
+                        <Maximize2 className='w-4 h-4' />'
                       )}
                     </button>
                   )}
@@ -112,10 +112,10 @@ const AdvancedModal: React.FC<AdvancedModalProps> = ({,
                   {showCloseButton && (
                     <button
                       onClick={onClose}
-                      className="p-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-gray-800"",
-                      title="Close""
+                      className='p-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-gray-800'',
+                      title='Close''
                     >
-                      <X className="w-4 h-4" />"
+                      <X className='w-4 h-4' />'
                     </button>
                   )}
                 </div>

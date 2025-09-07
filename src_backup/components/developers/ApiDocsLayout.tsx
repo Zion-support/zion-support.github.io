@@ -20,19 +20,17 @@ class ErrorBoundary extends React.Component {}
     return this.props.children;
 
 ;
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
 import React from 'react';
   const currentPath = router && router.pathname;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 export default ApiDocsLayout;
 
 
 import { SearchSuggestion } from '@/types/search';
 import React, { useState } from 'react';
-<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default ApiDocsLayout;import { SearchSuggestion  } from '@/types/search';
 import React, { useState } from 'react';
@@ -48,7 +46,6 @@ import { EnhancedSearchInput   } from '@/components / search / EnhancedSearchInp
 import { cn   } from '@/lib / utils';
 import { getDocsSearchPath;
 docsSearchSuggestions;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 } from '@/data / docsSearchData';
   }
 }'
@@ -107,7 +104,6 @@ interface ApiDocsLayoutProps {
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
 
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
-<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 
     const path = getDocsSearchPath(suggestion.text),
     if (path) {}
@@ -211,7 +207,6 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
        {navigationItems && navigationItems.map((item,) => (<Link;
          key={item && item.path}
          href={item && item.path}
-<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
          className={cn(
 
           currentPath === item && item.path
@@ -250,7 +245,6 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
          )}>;
          {item && item.title}
         </Link>;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 
           "block px-3 py-2 rounded-md text-sm",
           currentPath === item.path"
@@ -258,7 +252,6 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
            : "text-zinc-400 hover:text-white hover:bg-zinc-900"
          )}
         >;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 
 
        ))}
@@ -282,7 +275,6 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
      <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">;
       {children}</div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
   );
 
       </nav>

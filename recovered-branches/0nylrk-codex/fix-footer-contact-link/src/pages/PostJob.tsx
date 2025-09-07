@@ -83,7 +83,7 @@ export default function PostJob() {;
     ),;
   }
   ;
-  return (;;
+  return (;
       {is_mobile && <div className="h-16"></div>}"
     </>);
 }

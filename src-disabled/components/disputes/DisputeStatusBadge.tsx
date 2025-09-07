@@ -1,16 +1,13 @@
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import {
   Tooltip
   TooltipContent
   TooltipTrigger
 } from '@/components/ui/tooltip'
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive";
+  let variant: 'default' | 'destructive' | 'secondary' | 'outline' = 'destructive';
   let message = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -24,16 +21,16 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <Badge variant={variant} className="flex items-center gap-1">
-          <ShieldAlert className="h-3 w-3" />
+        <Badge variant={variant} className='flex items-center gap-1'>
+          <ShieldAlert className='h-3 w-3' />
           <span>Under Dispute</span>
         </Badge>
       </TooltipTrigger>
       <TooltipContent>
         <p>{message}</p>
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from '@/components/ui/badge',;
 import { ShieldAlert } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip',;
 interface DisputeStatusBadgeProps {;
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 }
@@ -45,15 +42,14 @@ import { Tooltip;
   TooltipTrigger;
  } from '@/components/ui/tooltip';
 interface DisputeStatusBadgeProps  {status: 'open' | 'under_review' | 'resolved' | 'closed';
-export function DisputeStatusBadge() {let variant: "default" | "destructive" | "secondary" | "outline" = "destructive";
+export function DisputeStatusBadge() {let variant: 'default' | 'destructive' | 'secondary' | 'outline' = 'destructive';
   let message  = null;default:;
       break;
   }return (<Tooltip>;
       <TooltipTrigger asChild>;
-        <Badge variant={variant} className="flex items-center gap-1">;
-          <ShieldAlert className="h-3 w-3" />;
+        <Badge variant={variant} className='flex items-center gap-1'>;
+          <ShieldAlert className='h-3 w-3' />;
           <span>Under Dispute</span>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
 status: 'open' | 'under_review' | 'resolved' | 'closed';
 
 export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
@@ -62,19 +58,19 @@ export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) 
       </TooltipTrigger>;
       <TooltipContent>;
         <p>{message}</p>;
-import { Badge } from "@/components/ui/badge",import { ShieldAlert  } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",interface DisputeStatusBadgeProps  {status: 'open' | 'under_review' | 'resolved' | 'closed';
-}export function DisputeStatusBadge() {let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",let message = "This item has an open dispute",switch (status) {case 'under_review':;
-      variant = "secondary",message = "This dispute is under review by our team",break,case 'resolved':;
-      variant = "outline",message = "This dispute has been resolved",break,case 'closed':;
-      variant = "outline",message = "This dispute has been closed";
+import { Badge } from '@/components/ui/badge',import { ShieldAlert  } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip',interface DisputeStatusBadgeProps  {status: 'open' | 'under_review' | 'resolved' | 'closed';
+}export function DisputeStatusBadge() {let variant: 'default' | 'destructive' | 'secondary' | 'outline' = 'destructive',let message = 'This item has an open dispute',switch (status) {case 'under_review':;
+      variant = 'secondary',message = 'This dispute is under review by our team',break,case 'resolved':;
+      variant = 'outline',message = 'This dispute has been resolved',break,case 'closed':;
+      variant = 'outline',message = 'This dispute has been closed';
       break;
     default:;
       break;
   }return (<Tooltip>;
       <TooltipTrigger asChild>;
-        <Badge variant={variant} className="flex items-center gap-1">;
-          <ShieldAlert className="h-3 w-3" />;
+        <Badge variant={variant} className='flex items-center gap-1'>;
+          <ShieldAlert className='h-3 w-3' />;
           <span>Under Dispute</span>;status: 'open' | 'under_review' | 'resolved' | 'closed';export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
     'destructive';
   let message  = 'This item has an open dispute';import { Badge  } from '@/components / ui / badge';
@@ -86,7 +82,6 @@ export /**;
 function DisputeStatusBadge() {let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
     'destructive';
   let message = 'This item has an open dispute';
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
   switch (status) {case 'under_review':;
 
 import { Badge } from '@/components / ui / badge';
@@ -134,13 +129,12 @@ pr-12325
       variant = 'outline';
       message = 'This dispute has been closed';
       break;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
     default:;
       break;interface DisputeStatusBadgeProps  {status: 'open' | 'under_review' | 'resolved' | 'closed';
-}export function DisputeStatusBadge() {let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",let message = "This item has an open dispute",switch (status) {case 'under_review':;
-      variant = "secondary",message = "This dispute is under review by our team",break,case 'resolved':;
-      variant = "outline",message = "This dispute has been resolved",break,case 'closed':;
-      variant = "outline",message = "This dispute has been closed",break,default:;
+}export function DisputeStatusBadge() {let variant: 'default' | 'destructive' | 'secondary' | 'outline' = 'destructive',let message = 'This item has an open dispute',switch (status) {case 'under_review':;
+      variant = 'secondary',message = 'This dispute is under review by our team',break,case 'resolved':;
+      variant = 'outline',message = 'This dispute has been resolved',break,case 'closed':;
+      variant = 'outline',message = 'This dispute has been closed',break,default:;
       break;
   }
   return (<Tooltip>;
@@ -153,7 +147,6 @@ pr-12325
       <TooltipTrigger as_child>;
         <Badge variant={variant} className='flex items - center gap - 1'>;
           <ShieldAlert className='h - 3 w - 3' />;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
           <span > Under Dispute</span>;
     default:;,
       break;
@@ -163,20 +156,20 @@ interface DisputeStatusBadgeProps {
 }
 
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
-  let message = "This item has an open dispute",
+  let variant: 'default' | 'destructive' | 'secondary' | 'outline' = 'destructive',
+  let message = 'This item has an open dispute',
   switch (status) {
     case 'under_review':
-      variant = "secondary",
-      message = "This dispute is under review by our team",
+      variant = 'secondary',
+      message = 'This dispute is under review by our team',
       break,
     case 'resolved':
-      variant = "outline",
-      message = "This dispute has been resolved",
+      variant = 'outline',
+      message = 'This dispute has been resolved',
       break,
     case 'closed':
-      variant = "outline",
-      message = "This dispute has been closed",
+      variant = 'outline',
+      message = 'This dispute has been closed',
     case 'closed':;
       message = 'This dispute has been closed';
     default:;
@@ -185,18 +178,18 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   status: 'open' | 'under_review' | 'resolved' | 'closed
 
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",""
-  let message = "This item has an open dispute","
-  switch (status) {"
+  let variant: 'default' | 'destructive' | 'secondary' | 'outline' = 'destructive',''
+  let message = 'This item has an open dispute','
+  switch (status) {'
     case 'under_review':
-      variant = "secondary",""
-      message = "This dispute is under review by our team","
-      break,"
+      variant = 'secondary',''
+      message = 'This dispute is under review by our team','
+      break,'
     case 'resolved':
-      variant = "outline",""
-      message = "This dispute has been resolved","
+      variant = 'outline',''
+      message = 'This dispute has been resolved','
     case 'closed':
-      message = "This dispute has been closed","
+      message = 'This dispute has been closed','
 pr-12325
       break,
 
@@ -208,36 +201,36 @@ pr-12325
 
     <Tooltip>
       <TooltipTrigger asChild>
-        <Badge variant={variant} className="flex items-center gap-1">
-          <ShieldAlert className="h-3 w-3" />
+        <Badge variant={variant} className='flex items-center gap-1'>
+          <ShieldAlert className='h-3 w-3' />
           <span>Under Dispute</span>
         </Badge>
       </TooltipTrigger>
       <TooltipContent>
         <p>{message}</p>
 
-import { Badge } from "@/components/ui/badge",;
+import { Badge } from '@/components/ui/badge',;
 import { ShieldAlert } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip',;
 interface DisputeStatusBadgeProps {;
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 }
 ;
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
-  let message = "This item has an open dispute",;
+  let variant: 'default' | 'destructive' | 'secondary' | 'outline' = 'destructive',;
+  let message = 'This item has an open dispute',;
   switch (status) {;
     case 'under_review':;
-      variant = "secondary",;
-      message = "This dispute is under review by our team",;
+      variant = 'secondary',;
+      message = 'This dispute is under review by our team',;
       break,;
     case 'resolved':;
-      variant = "outline",;
-      message = "This dispute has been resolved",;
+      variant = 'outline',;
+      message = 'This dispute has been resolved',;
       break,;
     case 'closed':;
-      variant = "outline",;
-      message = "This dispute has been closed";
+      variant = 'outline',;
+      message = 'This dispute has been closed';
       break;
     default:;
       break;
@@ -247,8 +240,8 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 
     <Tooltip>;
       <TooltipTrigger asChild>;
-        <Badge variant={variant} className="flex items-center gap-1">;
-          <ShieldAlert className="h-3 w-3" />;
+        <Badge variant={variant} className='flex items-center gap-1'>;
+          <ShieldAlert className='h-3 w-3' />;
 
 
         </Badge>;
@@ -258,7 +251,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
         <p>{message}</p>;
       </TooltipContent>;
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
 
 
 

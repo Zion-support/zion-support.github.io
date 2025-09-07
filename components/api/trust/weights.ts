@@ -21,7 +21,7 @@ export default async function handler() {
    ;
   }
   const current = await getTrustWeights();
-return res.status(200).json({ current, "defaults": getDefaultWeights(),;
+return res.status(200).json({ current, 'defaults': getDefaultWeights(),;
 });
   }
   if (req.method = == 'PUT') {'
@@ -32,8 +32,8 @@ return res.status(200).json({ current, "defaults": getDefaultWeights(),;
 return res.status(200).json({ updated });
   }
   res.setHeader('Allow', 'GET, PUT');'
-return res.status(405).json({ "error": 'Method not allowed',;'
+return res.status(405).json({ 'error': 'Method not allowed',;'
 });
-return res.status(405).json({ "error": 'Method not allowed' }),;'
+return res.status(405).json({ 'error': 'Method not allowed' }),;'
 }
 

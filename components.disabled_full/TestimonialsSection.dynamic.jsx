@@ -1,11 +1,11 @@
-const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default TestimonialsSection\' ,const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{"; "loading": () => <p>Loading.</p,>}) "export": "default TestimonialsSection" ,""";"
-const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,';'
+const TestimonialsSection = dynamic(() => import(\'./TestimonialsSection\'),{\'; \'loading\': () => <p>Loading...</p,>}) \'export\': \'default TestimonialsSection\' ,const TestimonialsSection = dynamic(() => import('./TestimonialsSection'),{'; 'loading': () => <p>Loading.</p,>}) 'export': 'default TestimonialsSection' ,''';'
+const TestimonialsSection = dynamic(() => import('./TestimonialsSection'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default TestimonialsSection' ,';'
 </p>';'
 </p>';'
 </p>';'
 </p>';'
 ursor/automate-test-improve-and-merge-code-646c;
-const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,';'
+const TestimonialsSection = dynamic(() => import('./TestimonialsSection'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default TestimonialsSection' ,';'
 </p>';'
 </p>';'
 </p>';'
@@ -27,7 +27,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';'
-const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,';'
+const TestimonialsSection = dynamic(() => import('./TestimonialsSection'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default TestimonialsSection' ,';'
 </p>';'
 </p>';'
 </p>';'
@@ -36,9 +36,9 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';'
 </p>';'
 </p>';'
-const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,';'
+const TestimonialsSection = dynamic(() => import('./TestimonialsSection'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default TestimonialsSection' ,';'
 </p>'</p>';'
-const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,''
+const TestimonialsSection = dynamic(() => import('./TestimonialsSection'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default TestimonialsSection' ,''
 </p>''
 </p>''
 </p>''
@@ -63,10 +63,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 ursor/integrate-build-improve-and-re-verify-8f7d
 </p>''
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 </p>''
 </p>''

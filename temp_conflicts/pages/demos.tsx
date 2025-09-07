@@ -92,7 +92,7 @@ export default function DemosPage() {
                 href="#demos"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
-                style={{ animationDelay: '0.2s' }}
+                style={ animationDelay: '0.2s' }
               >
                 Start Testing
                 <Play className="w-5 h-5 ml-2" />
@@ -102,7 +102,7 @@ export default function DemosPage() {
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-                style={{ animationDelay: '0.4s' }}
+                style={ animationDelay: '0.4s' }
               >
                 <Code className="w-5 h-5 mr-2" />
                 View All Services
@@ -111,7 +111,7 @@ export default function DemosPage() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={ animationDelay: '0.6s' }>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
                 4

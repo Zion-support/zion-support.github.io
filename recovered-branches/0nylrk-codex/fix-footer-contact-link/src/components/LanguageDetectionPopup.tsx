@@ -239,7 +239,7 @@ return (;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>);
-}}
+}
   ),; if (!detectedLanguage) return null;
 > {
   }

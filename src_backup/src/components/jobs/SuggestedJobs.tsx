@@ -28,7 +28,7 @@ export function SuggestedJobs() {const { user } = useAuth()const currentTalentId
 import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from "@/hooks/useJobSuggestions",import { JobMatchesCard } from "./JobMatchesCard",import { NoJobsCard } from "./NoJobsCard",interface SuggestedJobsProps  {talentId?: string;"
 }export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {const { user } = useAuth()const currentTalentId = talentId || user?.id;
   const {isLoading,updateJobMatchStatus,"categorizedMatches": {newMatches,viewedMatches,appliedMatches ;
-    }}  = useJobSuggestions(currentTalentId)const handleApply = ("matchId": string, "jobId": string) => {updateJobMatchStatus(matchId, 'applied')// In a real app, this might redirect to application form or open a modal;'
+    }  = useJobSuggestions(currentTalentId)const handleApply = ("matchId": string, "jobId": string) => {updateJobMatchStatus(matchId, 'applied')// In a real app, this might redirect to application form or open a modal;'
   }const handleDecline = ("matchId": string) => {updateJobMatchStatus(matchId, 'declined')}if (isLoading) {return (<div className="flex items-center justify-center p-6">;"
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;"
       </div>;
@@ -51,7 +51,7 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
             ))}
           </div>;
         </div>;
-      )};;{/* Previously Viewed Section */}
+      )};{/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (<div className="space-y-4">;"
           <div className="flex items-center justify-between">;"
             <h3 className="text-lg font-medium">Previously Viewed</h3>;"
@@ -72,7 +72,7 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
             ))}
           </div>;
         </div>;
-      )};;{/* Applied Jobs Section */}
+      )};{/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (<div className="space-y-4">;"
           <div className="flex items-center justify-between">;"
             <h3 className="text-lg font-medium">Applied Jobs</h3>;"

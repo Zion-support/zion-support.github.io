@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 
 interface TextAnalysisResult {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 export default async function handler(
@@ -16,38 +15,38 @@ export default async function handler(
 }
 
 
-"text": string;
-  "statistics": {"characters": number;
+'text': string;
+  'statistics': {'characters': number;
     }
-    "charactersNoSpaces": number;
-    "words": number;
-    "sentences": number;
-    "paragraphs": number;
-    "syllables": number;
-    "readingTime": number;
-    "speakingTime": number;
-  },"readability": {"fleschReadingEase": number;
+    'charactersNoSpaces': number;
+    'words': number;
+    'sentences': number;
+    'paragraphs': number;
+    'syllables': number;
+    'readingTime': number;
+    'speakingTime': number;
+  },'readability': {'fleschReadingEase': number;
     }
-    "fleschKincaidGrade": number;
-    "gunningFog": number;
-    "smog": number;
-    "colemanLiau": number;
-    "automatedReadability": number;
-    "averageGrade": number;
-  },"sentiment": {"score": number;
+    'fleschKincaidGrade': number;
+    'gunningFog': number;
+    'smog': number;
+    'colemanLiau': number;
+    'automatedReadability': number;
+    'averageGrade': number;
+  },'sentiment': {'score': number;
     }
-    "label": 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive';'
-    "positiveWords": string[];
-    "negativeWords": string[];
-  },"language": {"detectedLanguage": string;
+    'label': 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive';'
+    'positiveWords': string[];
+    'negativeWords': string[];
+  },'language': {'detectedLanguage': string;
     }
-    "confidence": number;
-    "isEnglish": boolean;
-  },"keywords": {"topWords": Array<{ "word": string; "count": number; "frequency": number
+    'confidence': number;
+    'isEnglish': boolean;
+  },'keywords': {'topWords': Array<{ 'word': string; 'count': number; 'frequency': number
 }>;
-    "bigrams": Array<{ "phrase": string; "count": number
+    'bigrams': Array<{ 'phrase': string; 'count': number
 }>;
-    "trigrams": Array<{ "phrase": string; "count": number }>
+    'trigrams': Array<{ 'phrase': string; 'count': number }>
 };
 
 
@@ -55,24 +54,23 @@ export default async function handler() {
   }
   if (req.method !== 'POST') {'
 }
-return res.status(405).json({ "error": 'Method not allowed',;'
+return res.status(405).json({ 'error': 'Method not allowed',;'
 });
   }
-<<<<<<< HEAD
 
   try {
     }
     const { text } = req.body;
     if (!text || typeof text !== 'string') {'
 }
-return res.status(400).json({ "error": 'Text is required',;'
+return res.status(400).json({ 'error': 'Text is required',;'
 });
     }
     if (text.length > 10000) {
 }
 return res;
         .status(400)
-        .json({ "error": 'Text too long (max 10,000 characters)' });'
+        .json({ 'error': 'Text too long (max 10,000 characters)' });'
     }
 
     // Basic statistics,
@@ -90,13 +88,10 @@ const paragraphs = text;
 
       .filter(para => { return para.trim().length > 0).length; }
 
-<<<<<<< HEAD
 
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     // Syllable counting (simplified)
-    const syllableCount = ("word": string): (number) => {
+    const syllableCount = ('word': string): (number) => {
       }
       word = word.toLowerCase();
       if (word.length <= 3) return 1,
@@ -112,7 +107,6 @@ return matches ? matches.length : 1;
     const readingTime = Math.ceil($2);
     const speakingTime = Math.ceil($2);
     // Readability scores
-=======
       if (word.length <= 3) return 1'
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');'
       word = word.replace(/^y/, '');
@@ -126,7 +120,7 @@ const syllables = text.split(/\s+/).reduce((total, word) => {
   return total + syllableCount(word);
     }, 0);
 
-    // Reading and speaking time ("average": 200 words/min reading, 150 words/min speaking)
+    // Reading and speaking time ('average': 200 words/min reading, 150 words/min speaking)
     const readingTime = Math.ceil(words / 200);
 
 const speakingTime = Math.ceil(words / 150);
@@ -198,7 +192,7 @@ const negativeWords = [;
       negativeWords && negativeWords.includes(word)).length;
 
 const sentimentScore = positiveCount - negativeCount;
-    let "sentimentLabel": TextAnalysisResult['sentiment']['label'];'
+    let 'sentimentLabel': TextAnalysisResult['sentiment']['label'];'
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';'
     else if (sentimentScore <= -1) sentimentLabel = 'negative';'
     else if (sentimentScore <= 1) sentimentLabel = 'neutral';'
@@ -234,12 +228,11 @@ const topWords = Array.from(wordCounts.entries());
 }
 word,
         count,
-        "frequency": Math.round((count / words) * 1000) / 10
+        'frequency': Math.round((count / words) * 1000) / 10
       }));
     // Bigrams and trigrams,
 const wordsArray = text && text.toLowerCase().split(/\s+/);
 
-<<<<<<< HEAD
         frequency: Math.round((count / words) * 1000) / 10
       })),
 
@@ -281,7 +274,6 @@ const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;`      bigramCounts && bi
       trigramCounts && trigramCounts.set(trigram, (trigramCounts && trigramCounts.get(trigram) || 0) + 1)
     }
     const bigrams = Array && Array.from(bigramCounts && bigramCounts.entries())
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count })),
@@ -295,16 +287,16 @@ const bigrams = Array && Array.from(bigramCounts && bigramCounts.entries());
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
 
-const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);"
+const isEnglish = /^[a-zA-Z\s.,!?;:''()-]+$/.test(text);'
 
 const detectedLanguage = isEnglish ? 'en' : 'unknown';'
 
 const confidence = isEnglish ? 0.95 : 0.5;
 
-const "result": TextAnalysisResult = {
+const 'result': TextAnalysisResult = {
 }
 text,
-      "statistics": {
+      'statistics': {
         }
         characters,
         charactersNoSpaces,
@@ -315,34 +307,34 @@ text,
         readingTime,
         speakingTime
       },
-      "readability": {
+      'readability': {
         }
-        "fleschReadingEase": Math.round(fleschReadingEase * 100) / 100,
-"fleschKincaidGrade": Math.round(fleschKincaidGrade * 100) / 100,
-"gunningFog": Math.round(gunningFog * 100) / 100,
-"smog": Math.round(smog * 100) / 100,
-"colemanLiau": Math.round(colemanLiau * 100) / 100,
-"automatedReadability": Math.round(automatedReadability * 100) / 100,
+        'fleschReadingEase': Math.round(fleschReadingEase * 100) / 100,
+'fleschKincaidGrade': Math.round(fleschKincaidGrade * 100) / 100,
+'gunningFog': Math.round(gunningFog * 100) / 100,
+'smog': Math.round(smog * 100) / 100,
+'colemanLiau': Math.round(colemanLiau * 100) / 100,
+'automatedReadability': Math.round(automatedReadability * 100) / 100,
 averageGrade
       }
-      "sentiment": {
+      'sentiment': {
         }
-        "score": sentimentScore,
-"label": sentimentLabel,
-"positiveWords": textWords.filter(word => positiveWords.includes(word))
-        "negativeWords": textWords.filter(word => negativeWords.includes(word))
+        'score': sentimentScore,
+'label': sentimentLabel,
+'positiveWords': textWords.filter(word => positiveWords.includes(word))
+        'negativeWords': textWords.filter(word => negativeWords.includes(word))
       }
-      "language": {
+      'language': {
  
 } catch (error) {
 
     }
 
-    console.error('Text analysis "error":', error);'
-    res.status(500).json({ "error": 'Internal server error','
+    console.error('Text analysis 'error':', error);'
+    res.status(500).json({ 'error': 'Internal server error','
 });
   }
-    res.status(500).json({ "error": 'Internal server error' })'
+    res.status(500).json({ 'error': 'Internal server error' })'
   }
 }
 
@@ -350,23 +342,14 @@ averageGrade
 
 
 
-<<<<<<< HEAD
     console.error('Text analysis error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     res.status(500).json({ error: 'Internal server error' })
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+'

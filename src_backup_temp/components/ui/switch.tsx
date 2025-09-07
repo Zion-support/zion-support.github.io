@@ -46,7 +46,7 @@ import { cn } from "@/lib/utils""
       id={id}
       {...props}<span;
         className = {cn('pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform',checked ? 'translate-x-5' : 'translate-x-0';'
-        );;} />;
+        );} />;
       {...props}
 ;
       <span;
@@ -64,12 +64,12 @@ import { cn } from "@/lib/utils""
 }; />;
     </button>;
   );
-}}}
+}}
 ;
 export default switch;
 </span>
 export default switch;';'
-</span>;';;';'
+</span>;';';'
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>

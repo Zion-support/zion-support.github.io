@@ -20,7 +20,7 @@ const jobOpenings = [;
   {"id": 1,"title": "Senior AI/ML Engineer","department": "AI Services","location": "Remote","type": "Full-time","experience": "5+ years","description": "Lead the development of cutting-edge AI solutions and machine learning models for our clients.","requirements": [;"
       "Master's degree in Computer Science or related field","5+ years experience in AI/ML development","Proficiency in Python, TensorFlow, PyTorch","Experience with cloud platforms (AWS, Azure, GCP)",ursor/automate-test-improve-and-merge-code-646c;"
 }
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }ursor/automate-test-improve-and-merge-code-646c;
@@ -488,10 +488,6 @@ const benefits = [;
     "title": "Professional Growth","
     "description": "Learning opportunities and career development support","
     "icon": ArrowRight
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 ];
 const values = [;
@@ -616,10 +612,7 @@ return (;
               {jobOpenings.map((job, index) => (<motion.div;
                   }
                   key={job.id}
-<<<<<<< HEAD
     <Layout 
-<<<<<<< HEAD
-=======
     <Layout;
       title="Careers - Zion Tech Group";"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group.";"
@@ -629,13 +622,13 @@ return (;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;"
           <div className="container mx-auto px-4">;"
-            <motion.div,initial={{ "opacity": 0, "y": 30 }}"
-              animate={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0.8 }}"
+            <motion.div,initial={ "opacity": 0, "y": 30 }"
+              animate={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0.8 }"
             <motion.div;
-              initial={{ "opacity": 0, "y": 30 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}ursor/automate-test-improve-and-merge-code-646c;
+              initial={ "opacity": 0, "y": 30 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }ursor/automate-test-improve-and-merge-code-646c;
     <Layout,
 title="Careers - Zion Tech Group""
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group.""
@@ -646,13 +639,13 @@ title="Careers - Zion Tech Group""
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
           <div className="container mx-auto px-4">"
             <motion.div,
-    initial={{ "opacity": 0, "y": 30 }}"
-              animate={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0.8 }}"
+    initial={ "opacity": 0, "y": 30 }"
+              animate={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0.8 }"
             <motion.div,
-initial={{ "opacity": 0, "y": 30 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "y": 30 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
     <div className="min-h-screen bg-gray-50">;"
       <Head>;
         <title>Join Our Team - Zion Tech Group</title>;
@@ -708,13 +701,13 @@ title="Careers - Zion Tech Group""
       <div className="min-h-screen bg-gray-50">;"
         {/* Hero Section */}
             <motion.div,
-    initial={{ "opacity": 0, "y": 30 }}"
-              animate={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0 && 0.8 }}"
+    initial={ "opacity": 0, "y": 30 }"
+              animate={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0 && 0.8 }"
             <motion && motion.div;
-              initial={{ "opacity": 0, "y": 30 }}
-              animate={{ "opacity": 1, "y": 0 }}transition={{ "duration": 0.8 }}ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ "duration": 0.8 }}
+              initial={ "opacity": 0, "y": 30 }
+              animate={ "opacity": 1, "y": 0 }transition={ "duration": 0.8 }ursor/automate-test-improve-and-merge-code-646c;
+              transition={ "duration": 0.8 }
               className="text-center max-w-4xl mx-auto";"
             >;
               <h1 className="text-4xl "md":text-6xl font-bold mb-6">;"
@@ -741,8 +734,8 @@ title="Careers - Zion Tech Group""
         <section className="py-20 bg-white">;"
           <div className="container mx-auto px-4">;"
             <motion.div,className="text-center mb-16";"
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
               className="text-center max-w-4xl mx-auto""
             >
               <h1 className="text-4xl "md":text-6xl font-bold mb-6">"
@@ -768,31 +761,31 @@ title="Careers - Zion Tech Group""
           <div className="container mx-auto px-4">"
             <motion.div,
     className="text-center mb-16""
-              initial={{ "opacity": 0, "y": 30 }}"
-              whileInView={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0.8 }}"
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }"
+              whileInView={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0.8 }"
+              viewport={ "once": true }"
             <motion.div;
               className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}{/* Benefits Section */}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }{/* Benefits Section */}
         <section className="py-20 bg-white">;"
           <div className="container mx-auto px-4">;"
 ursor/automate-test-improve-and-merge-code-646c;
-            <motion.div,transition={{ "duration": 0 && 0.8 }}
+            <motion.div,transition={ "duration": 0 && 0.8 }
             <motion.div,
 className="text-center mb-16""
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
         {/* Benefits Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">"
             <motion.div,
-              transition={{ "duration": 0 && 0.8 }}
+              transition={ "duration": 0 && 0.8 }
               className="text-center max-w-4xl mx-auto">;"
               <h1 className="text-4xl "md":text-6xl font-bold mb-6">;"
                 Join Our Team;
@@ -815,14 +808,14 @@ className="text-center mb-16""
         <section className="py-20 bg-white">;"
           <div className="container mx-auto px-4">;"
             <motion&& motion.div,className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 }}"
-              whileInView={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0 && 0.8 }}"
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }"
+              whileInView={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0 && 0.8 }"
+              viewport={ "once": true }"
             <motion && motion.div;
               className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}>;
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }>;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
                 Why Work With Us?;
               </h2>;
@@ -835,16 +828,16 @@ className="text-center mb-16""
                 }
                 return (<motion.div,key={index}
                     className="text-center p-6";"
-                    initial={{ "opacity": 0, "y": 30 }}
-                    whileInView={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                    viewport={{ "once": true }}>;
-                    viewport={{ "once": true }}                  >;
+                    initial={ "opacity": 0, "y": 30 }
+                    whileInView={ "opacity": 1, "y": 0 }
+                    transition={ "duration": 0.8, "delay": index * 0.1 }
+                    viewport={ "once": true }>;
+                    viewport={ "once": true }                  >;
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;"
                       <IconComponent className="w-8 h-8" />;"
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900 mb-3">;"
-                    viewport={{ "once": true }}
+                    viewport={ "once": true }
                   >
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">"
                       <IconComponent className="w-8 h-8" />"
@@ -868,20 +861,20 @@ className="text-center mb-16""
           <div className="container mx-auto px-4">"
             <motion.div,
     className="text-center mb-16""
-              initial={{ "opacity": 0, "y": 30 }}"
-              whileInView={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0.8 }}"
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }"
+              whileInView={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0.8 }"
+              viewport={ "once": true }"
             <motion.div;
               className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }transition={ "duration": 0.8 }
+              viewport={ "once": true }ursor/automate-test-improve-and-merge-code-646c;
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
             >;
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}            >;
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }            >;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
                 Why Work With Us?;
               </h2>;
@@ -898,10 +891,10 @@ className="text-center mb-16""
             <motion.div
 }
 className="text-center mb-16""
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
             >
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">"
                 Why Work With Us?
@@ -927,8 +920,8 @@ className="text-center mb-16""
                     </p>;
                   </motion.div>;
 ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}>;
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true }>;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
                 Why Work With Us?;
               </h2>;
@@ -941,10 +934,10 @@ ursor/automate-test-improve-and-merge-code-646c;
                 }
                 return (<motion&& motion.div,key={index}
                     className="text-center p-6";"
-                    initial={{ "opacity": 0, "y": 30 }}
-                    whileInView={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
-                    viewport={{ "once": true }}>;
+                    initial={ "opacity": 0, "y": 30 }
+                    whileInView={ "opacity": 1, "y": 0 }
+                    transition={ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }
+                    viewport={ "once": true }>;
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;"
                       <IconComponent className="w-8 h-8" />;"
                     </div>;
@@ -959,15 +952,10 @@ ursor/automate-test-improve-and-merge-code-646c;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Values Section */}
             <motion.div,
     className="text-center mb-16"
-=======
         {/* Values Section */}    className="text-center mb-16"
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         {/* Values Section */}ursor/automate-test-improve-and-merge-code-646c;
         <section className="py-20 bg-gray-50">;"
           <div className="container mx-auto px-4">;"
@@ -977,14 +965,14 @@ ursor/automate-test-improve-and-merge-code-646c;
         {/* Values Section */}
             <motion.div,
     className="text-center mb-16""
-              initial={{ "opacity": 0, "y": 30 }}"
-              whileInView={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0 && 0.8 }}"
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }"
+              whileInView={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0 && 0.8 }"
+              viewport={ "once": true }"
             <motion && motion.div;
               className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}>;
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }>;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
                 Our Values;
               </h2>;
@@ -993,8 +981,8 @@ ursor/automate-test-improve-and-merge-code-646c;
               </p>;
             </motion.div>;
             <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-6">;"
-              {values.map((value, index) => (<motion.div,transition={{ "duration": 0 && 0.8 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
+              {values.map((value, index) => (<motion.div,transition={ "duration": 0 && 0.8 }
+              whileInView={ "opacity": 1, "y": 0 }
             >
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">"
                 Our Values
@@ -1009,10 +997,10 @@ ursor/automate-test-improve-and-merge-code-646c;
     }
     key={index}
                   className="bg-white p-6 rounded-lg shadow-lg""
-                  initial={{ "opacity": 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  initial={ "opacity": 0, "y": 30 }
+                  whileInView={ "opacity": 1, "y": 0 }
+                  transition={ "duration": 0.8, "delay": index * 0.1 }
+                  viewport={ "once": true }
                   className="bg-white rounded-lg shadow-lg p-6 "hover":shadow-xl transition-shadow""
                 >
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">"
@@ -1073,16 +1061,16 @@ key={index}
           <div className="container mx-auto px-4">"
             <motion.div,
     className="text-center mb-16""
-              initial={{ "opacity": 0, "y": 30 }}"
-              whileInView={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0.8 }}"
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }"
+              whileInView={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0.8 }"
+              viewport={ "once": true }"
             <motion.div,
 className="text-center mb-16""
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
             >
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">"
                 Our Values
@@ -1095,8 +1083,8 @@ className="text-center mb-16""
               {values.map((value, index) => (
                 <motion.div
               }
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}>;
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true }>;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
                 Our Values;
               </h2>;
@@ -1107,10 +1095,10 @@ className="text-center mb-16""
             <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-6">;"
               {values && values.map((value, index) => (<motion&& motion.div,key={index}
                   className="bg-white p-6 rounded-lg shadow-lg";"
-                  initial={{ "opacity": 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  initial={ "opacity": 0, "y": 30 }
+                  whileInView={ "opacity": 1, "y": 0 }
+                  transition={ "duration": 0.8, "delay": index * 0.1 }
+                  viewport={ "once": true }
                   className="bg-white rounded-lg shadow-lg p-6 "hover":shadow-xl transition-shadow";"
                 >;
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">;"
@@ -1165,20 +1153,20 @@ className="text-center mb-16""
         <section id="openings" className="py-20 bg-white">;"
           <div className="container mx-auto px-4">;"
             <motion.div,className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 }}"
-              whileInView={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0.8 }}"
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }"
+              whileInView={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0.8 }"
+              viewport={ "once": true }"
             <motion.div;
               className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }transition={ "duration": 0.8 }
+              viewport={ "once": true }ursor/automate-test-improve-and-merge-code-646c;
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
             >;
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}            >;
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }            >;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
                 Our Values;
               </h2>;
@@ -1187,8 +1175,8 @@ className="text-center mb-16""
               </p>;
             </motion.div>;
             <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-6">;"
-              {values.map((value, index) => (<motion.div,transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}>;
+              {values.map((value, index) => (<motion.div,transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true }>;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
                 Our Values;
               </h2>;
@@ -1199,11 +1187,11 @@ className="text-center mb-16""
             <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-6">;"
               {values && values.map((value, index) => (<motion&& motion.div,key={index}
                   className="bg-white p-6 rounded-lg shadow-lg";"
-                  initial={{ "opacity": 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
+                  initial={ "opacity": 0, "y": 30 }
+                  whileInView={ "opacity": 1, "y": 0 }
 ursor/automate-test-improve-and-merge-code-646c;
-                  transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
-                  viewport={{ "once": true }}
+                  transition={ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }
+                  viewport={ "once": true }
                   className="bg-white rounded-lg shadow-lg p-6 "hover":shadow-xl transition-shadow">;"
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">;"
                     {job && job.title}
@@ -1253,15 +1241,10 @@ ursor/automate-test-improve-and-merge-code-646c;
                   }
                   key={index}
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Job Openings Section */}
             <motion.div,
     className="text-center mb-16"
-=======
         {/* Job Openings Section */}    className="text-center mb-16"
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         {/* Job Openings Section */}ursor/automate-test-improve-and-merge-code-646c;
         <section id="openings" className="py-20 bg-white">;"
           <div className="container mx-auto px-4">;"
@@ -1271,14 +1254,14 @@ ursor/automate-test-improve-and-merge-code-646c;
         {/* Job Openings Section */}
             <motion.div,
     className="text-center mb-16""
-              initial={{ "opacity": 0, "y": 30 }}"
-              whileInView={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0 && 0.8 }}"
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }"
+              whileInView={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0 && 0.8 }"
+              viewport={ "once": true }"
             <motion && motion.div;
               className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}ursor/automate-test-improve-and-merge-code-646c;
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }ursor/automate-test-improve-and-merge-code-646c;
             >;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
                 Open Positions;
@@ -1290,10 +1273,10 @@ ursor/automate-test-improve-and-merge-code-646c;
             <div className="space-y-8">;"
               {jobOpenings.map((job, index) => (<motion.div,key={job.id}
                   className="bg-white border border-gray-200 rounded-lg p-8 "hover":shadow-lg transition-shadow duration-300";"
-                  initial={{ "opacity": 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  initial={ "opacity": 0, "y": 30 }
+                  whileInView={ "opacity": 1, "y": 0 }
+                  transition={ "duration": 0.8, "delay": index * 0.1 }
+                  viewport={ "once": true }
                   className="bg-white rounded-lg shadow-lg p-6 text-center";"
                 >;
                   <benefit.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />;"
@@ -1385,15 +1368,15 @@ ursor/automate-test-improve-and-merge-code-646c;
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;"
           <div className="container mx-auto px-4 text-center">;"
-            <motion.div,initial={{ "opacity": 0, "y": 30 }}"
-              whileInView={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0.8 }}"
-              viewport={{ "once": true }}"
+            <motion.div,initial={ "opacity": 0, "y": 30 }"
+              whileInView={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0.8 }"
+              viewport={ "once": true }"
             <motion.div;
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }transition={ "duration": 0.8 }
+              viewport={ "once": true }transition={ "duration": 0.8 }
+              viewport={ "once": true }
             >;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
                 Open Positions;
@@ -1405,21 +1388,21 @@ ursor/automate-test-improve-and-merge-code-646c;
             <div className="space-y-8">;"
               {jobOpenings.map((job, index) => (<motion.div,key={job.id}
 ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ "duration": 0 && 0.8 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}              transition={{ "duration": 0 && 0.8 }}
+              transition={ "duration": 0 && 0.8 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }              transition={ "duration": 0 && 0.8 }
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">"
             <motion.div,
-    initial={{ "opacity": 0, "y": 30 }}"
-              whileInView={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0.8 }}"
-              viewport={{ "once": true }}"
+    initial={ "opacity": 0, "y": 30 }"
+              whileInView={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0.8 }"
+              viewport={ "once": true }"
             <motion.div,
-initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
             >
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">"
                 Open Positions
@@ -1433,8 +1416,8 @@ initial={{ "opacity": 0, "y": 30 }}
                 <motion.div
     }
     key={job.id}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}>;
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true }>;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
                 Open Positions;
               </h2>;
@@ -1445,10 +1428,10 @@ initial={{ "opacity": 0, "y": 30 }}
             <div className="space-y-8">;"
               {jobOpenings && jobOpenings.map((job, index) => (<motion&& motion.div,key={job && job.id}
                   className="bg-white border border-gray-200 rounded-lg p-8 "hover":shadow-lg transition-shadow duration-300";"
-                  initial={{ "opacity": 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
-                  viewport={{ "once": true }}
+                  initial={ "opacity": 0, "y": 30 }
+                  whileInView={ "opacity": 1, "y": 0 }
+                  transition={ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }
+                  viewport={ "once": true }
                   className="bg-white rounded-lg shadow-lg p-6 text-center">;"
                   <benefit && benefit.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />;"
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">;"
@@ -1536,35 +1519,30 @@ initial={{ "opacity": 0, "y": 30 }}
       </section>;
     </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* CTA Section */}
             <motion.div,
-    initial={{ "opacity": 0, "y": 30 }}
-=======
-        {/* CTA Section */}    initial={{ "opacity": 0, "y": 30 }}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
+    initial={ "opacity": 0, "y": 30 }
+        {/* CTA Section */}    initial={ "opacity": 0, "y": 30 }
         {/* CTA Section */}ursor/automate-test-improve-and-merge-code-646c;
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;"
           <div className="container mx-auto px-4 text-center">;"
             <motion&& motion.div,<motion.div,ursor/automate-test-improve-and-merge-code-646c;
-            <motion.div,initial={{ "opacity": 0, "y": 30 }}"
-        {/* CTA Section */}    initial={{ "opacity": 0, "y": 30 }}"
+            <motion.div,initial={ "opacity": 0, "y": 30 }"
+        {/* CTA Section */}    initial={ "opacity": 0, "y": 30 }"
         {/* CTA Section */}
             <motion.div,
-    initial={{ "opacity": 0, "y": 30 }}"
-              whileInView={{ "opacity": 1, "y": 0 }}"
-              transition={{ "duration": 0 && 0.8 }}"
-              viewport={{ "once": true }}"
+    initial={ "opacity": 0, "y": 30 }"
+              whileInView={ "opacity": 1, "y": 0 }"
+              transition={ "duration": 0 && 0.8 }"
+              viewport={ "once": true }"
             <motion && motion.div;
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }transition={ "duration": 0.8 }
+              viewport={ "once": true }ursor/automate-test-improve-and-merge-code-646c;
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
             >;
-              viewport={{ "once": true }}            >;
+              viewport={ "once": true }            >;
               <h2 className="text-3xl "md":text-4xl font-bold mb-6">;"
                 Don't See the Right Role?;'
               </h2>;
@@ -1581,8 +1559,8 @@ initial={{ "opacity": 0, "y": 30 }}
     </MainLayout>;
   )}
 ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}>;
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true }>;
               <h2 className="text-3xl "md": text-4xl font-bold mb-6">;"
                 Don't See the Right Role?;'
               </h2>;
@@ -1599,9 +1577,9 @@ ursor/automate-test-improve-and-merge-code-646c;
     </MainLayout>;
   ),ursor/automate-test-improve-and-merge-code-646c;
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
             >
               <h2 className="text-3xl "md":text-4xl font-bold mb-6">"
                 Don't See the Right Role?'
@@ -1618,12 +1596,6 @@ ursor/automate-test-improve-and-merge-code-646c;
       </div>
     </MainLayout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

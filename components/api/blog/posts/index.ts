@@ -22,7 +22,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
   }
   const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
-<<<<<<< HEAD
     if (status && typeof status === 'string') posts = posts.filter((p) => p.status === status);
     if (topic && typeof topic === 'string') posts = posts.filter((p) => (p.topics || []).includes(topic));
     if (tag && typeof tag === 'string') posts = posts.filter((p) => (p.tags || []).includes(tag));
@@ -58,12 +57,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || ''};
       body: body.body || '';
       status: body.status || 'draft';
-      metrics: { views: 0, likes: 0, shares: 0 }};
+      metrics: { views: 0, likes: 0, shares: 0 };
     posts.unshift(post);
     writePosts(posts);
     return res.status(201).json(post)
   }
-=======
 
       posts = posts && posts.filter(p => { return (p && p.topics || []).includes(topic)); }
     if (tag && typeof tag === 'string')'
@@ -117,7 +115,7 @@ return res.status(409).json({ "error": 'Slug already exists' },;'
 }
 ;
   const "post": BlogPost = {"id": uuidv4(), "title": body.title!,"slug": body.slug!, "coverImageUrl": body.coverImageUrl || '',"author": body.author!, "publishDate": body.publishDate!,"tags": body.tags || [], "topics": body.topics || [],"seo": {"metaTitle": body.seo?.metaTitle || body.title!, "metaDescription": body.seo?.metaDescription || '',"ogImageUrl": body.seo?.ogImageUrl || body.coverImageUrl || '';'
-    },"body": body.body || '', "status": body.status || 'draft',"metrics": { "views": 0, "likes": 0, "shares": 0 }}posts.unshift(post)writePosts(posts)return res.status(201).json(post)}'
+    },"body": body.body || '', "status": body.status || 'draft',"metrics": { "views": 0, "likes": 0, "shares": 0 }posts.unshift(post)writePosts(posts)return res.status(201).json(post)}'
 return res.status(405).end(,;
 }
       "id": uuidv4(),"title": body && body.title!,"slug": body && body.slug!,"coverImageUrl": body && body.coverImageUrl || '',"author": body && body.author!,"publishDate": body && body.publishDate!,"tags": body && body.tags || [],"topics": body && body.topics || [],"seo": {"metaTitle": body && body.seo?.metaTitle || body && body.title!,"metaDescription": body && body.seo?.metaDescription || '',"ogImageUrl": body && body.seo?.ogImageUrl || body && body.coverImageUrl || '';'
@@ -214,28 +212,19 @@ function handler() {
 }
 if ( {) {
   $2
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 pr-12243
-=======
 
 
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
-=======
 
 
 '
 import { v4 as uuidv4 } from 'uuid';'
 import { BlogPost } from '@/utils / types / blog';'
 import { read_posts, write_posts } from '@/utils / data / blog_store';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { require_admin } from '@/utils / api / auth';
 export default /**;
  * handler - Function description;
@@ -244,12 +233,10 @@ function handler() {}
   // Check condition;
 if ( {) {}
   $2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
     const { status, topic, tag, author, limit, offset } = req.query;
     let posts = read_posts ();
     if (
-<<<<<<< HEAD
       posts = posts.filter (p => p.status === status)) {
   $2
 }
@@ -264,7 +251,6 @@ if ( {) {}
     if (
       posts = posts.filter (p => p.author === author)) {
   $2
-=======
       posts = posts.filter (p => p.status === status)) {}
   $2;
 }
@@ -279,7 +265,6 @@ if ( {) {}
     if (
       posts = posts.filter (p => p.author === author)) {}
   $2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
     posts = posts.sort (
       (a, b) =>;
@@ -298,7 +283,6 @@ if ( {) {}
 }
     if (posts = posts.filter ((p) => p.author === author)) {
   $2
-=======
       .json ({ items: posts.slice (o, o + l), total: posts.length });    if (posts = posts.filter ((p) => p.status === status)) {}
   $2;
 }
@@ -315,7 +299,6 @@ if ( {) {$2;
 }
     if (posts = posts.filter ((p) => p.author === author)) {}
   $2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 return res.status (400).json ({ "error": 'Missing required fields',;'
 })const posts = read_posts ()if () {) {$2;
@@ -333,7 +316,6 @@ const "post": BlogPost = {"id": uuidv4 (),"title": body.title!,"slug": body.slug
       },"body": body.body || '',"status": body.status || 'draft',"metrics": { "views": 0, "likes": 0, "shares": 0 }'
     }
     const post: BlogPost = {
-=======
   // Check condition;
 if ( {) {}
   $2;
@@ -482,7 +464,7 @@ return res.status(405).end(,;
 }
         "metaTitle": body.seo?.metaTitle || body.title!,"metaDescription": body.seo?.metaDescription || '',"ogImageUrl": body.seo?.ogImageUrl || body.coverImageUrl || '';'
       },"body": body.body || '',"status": body.status || 'draft',"metrics": { "views": 0, "likes": 0, "shares": 0 }'
-    }posts.unshift(post)writePosts(posts)return res.status(201).json(post)}return res.status(405).end()return res.status(405).end()}}
+    }posts.unshift(post)writePosts(posts)return res.status(201).json(post)}return res.status(405).end()return res.status(405).end()}
 }
 return res.status(405).end(,;
 }return res.status(405).end()

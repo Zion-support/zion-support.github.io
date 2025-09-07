@@ -393,46 +393,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-    <UltraFuturisticBackground variant="holographic" intensity="high">
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
+    <UltraFuturisticBackground variant='holographic' intensity='high'>
+      <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
         <Head>
           <title>Enhanced 2026 Pricing - Zion Tech Group</title>
-          <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions." />
-          <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />
-          <link rel="icon" href="/favicon.svg" />
-          <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
-          <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-          <meta name="twitter:card" content="summary_large_image" />;
-          <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />;
-          <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />;
-          <meta name="twitter:image" content="https://ziontechgroup.com / og - image.svg" />;
+          <meta name='description' content='Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions.' />
+          <meta name='keywords' content='2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee' />
+          <link rel='icon' href='/favicon.svg' />
+          <meta property='og:title' content='Enhanced 2026 Pricing - Zion Tech Group' />
+          <meta property='og:description' content='Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services.' />
+          <meta property='og:type' content='website' />
+          <meta property='og:url' content='https://ziontechgroup.com/pricing-enhanced-2026' />
+          <meta property='og:image' content='https://ziontechgroup.com/og-image.svg' />
+          <meta name='twitter:card' content='summary_large_image' />;
+          <meta name='twitter:title' content='Enhanced 2026 Pricing - Zion Tech Group' />;
+          <meta name='twitter:description' content='Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services.' />;
+          <meta name='twitter:image' content='https://ziontechgroup.com / og - image.svg' />;
         </Head>;
         {/* Enhanced Header Section */}
 
-        <div className="relative z - 10 pt - 20 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
+        <div className='relative z - 10 pt - 20 pb - 16 px - 4 sm:px - 6 lg:px - 8'>;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
 
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
-          <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
-          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+          <meta name='twitter:card' content='summary_large_image' />
+          <meta name='twitter:title' content='Enhanced 2026 Pricing - Zion Tech Group' />
+          <meta name='twitter:description' content='Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services.' />
+          <meta name='twitter:image' content='https://ziontechgroup.com/og-image.svg' />
         </Head>
         {/* Enhanced Header Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-        <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
 className='max-w-7xl mx-auto text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -507,20 +507,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
 className='relative'
                 >
                   <UltraFuturisticCard
                     variant={tier.variant  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                     className={`h-full ${tier.popular ? 'ring-2 ring-cyan-500 ring-opacity-50' : ''}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   >
@@ -584,7 +584,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               '_blank'
                             );
                           }
-                        }}
+                        }
                       >
                         {tier.cta}
                       </Button>
@@ -599,10 +599,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 className='text-center mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -618,23 +618,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
               {serviceCategories.map((category, index) => (
                 <motion.div
-              className="text - center mb - 12";
+              className='text - center mb - 12';
             >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
+              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 4'>;
                 Service Categories & Pricing;
               </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
                 Explore our comprehensive service categories with transparent pricing and competitive advantages;
               </p>;
             </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
               {service_categories.map ((category, index) => (
                 <motion.div;
                   key={category.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
 <UltraFuturisticCard
                     variant='quantum-advanced'
@@ -698,10 +698,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 className='text-center mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -717,23 +717,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
               {featuredServices.map((service, index) => (
                 <motion.div
-              className="text - center mb - 12";
+              className='text - center mb - 12';
             >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
+              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 4'>;
                 Featured Services;
               </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
                 Discover our most popular and innovative services that are transforming businesses worldwide;
               </p>;
             </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+            <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 6'>;
               {featured_services.map ((service, index) => (
                 <motion.div;
                   key={service.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
 <UltraFuturisticCard variant='holographic' className='h-full'>
                     <div className='p-6'>
@@ -802,10 +802,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='relative z-10 px-4 sm:px-6 lg:px-8 pb-20'>
           <div className='max-w-4xl mx-auto'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 className='bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >

@@ -45,13 +45,13 @@ export default function SEOLandingPage() {
         setPayload(JSON.parse(decodeURIComponent(dataParam)));
         return;
       } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     // Fallback: render a basic placeholder until a generated page is deployed
@@ -59,11 +59,11 @@ export default function SEOLandingPage() {
   }, [router.isReady, slug]),
   if (!payload) return null,
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto py-8">
-        <h1 className="text-2xl font-bold mb-6">Page</h1>
-        <div className="bg-white rounded-lg shadow p-6">
-          <p className="text-gray-600">Content coming soon.</p>
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto py-8'>
+        <h1 className='text-2xl font-bold mb-6'>Page</h1>
+        <div className='bg-white rounded-lg shadow p-6'>
+          <p className='text-gray-600'>Content coming soon.</p>
         </div>
       </div>
       <FAQ items={payload.faq} />

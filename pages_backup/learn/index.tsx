@@ -61,8 +61,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     load()
   }, [filters]);
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     load()
@@ -70,8 +70,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-end justify-between gap-4">
+    <div className='space-y-6'>
+      <div className='flex items-end justify-between gap-4'>
         <div>
           <h1 className='text-2xl font-semibold'>Zion Academy</h1>
           <div className='text-gray-500 text-sm'>

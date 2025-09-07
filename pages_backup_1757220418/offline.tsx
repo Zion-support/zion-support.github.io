@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages_backup_1757220418/offline.tsx
 import Head from 'next/head';
 import {motion} from 'framer-motion';
 import {WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search,} from 'lucide-react';
@@ -68,29 +67,29 @@ export default function OfflinePage() {
     <>
       <Head>
         <title>You're Offline - Zion Tech Marketplace</title>
-        <meta name="description" content="You're currently offline. Some features may not be available." />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name='description' content='You're currently offline. Some features may not be available.' />
+        <meta name='robots' content='noindex, nofollow' />
       </Head>
       <div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900'>
         <div className='container mx-auto px-4 py-8'>
           <motion.div
-            initial={{ opacity: 0, y: 20}}
-            animate={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8"
+            initial={ opacity: 0, y: 20}
+            animate={ opacity: 1, y: 0}
+            transition={ duration: 0.6 }
+            className='text-center mb-8'
           >
             {/* Connection Status */}
-            <div className="mb-6">
+            <div className='mb-6'>
               <motion.div
                 animate={
                   isOnline
                     ? { scale: [1, 1.1, 1] }
                     : { rotate: [0, -10, 10, -10, 0] }
                 }
-                transition={{
+                transition={
                   duration: isOnline ? 0.6 : 2
                   repeat: isOnline ? 1 : Infinity
-                }}
+                }
                 className={`mx-auto w-24 h-24 rounded-full flex items-center justify-center mb-4 ${
                   isOnline
                     ? 'bg-green-100 dark:bg-green-900/20'
@@ -102,30 +101,30 @@ export default function OfflinePage() {
                 }`} />
               </motion.div>
               <Badge
-                variant={isOnline ? "default" : "secondary"  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                variant={isOnline ? 'default' : 'secondary'  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                className="text-sm px-3 py-1"
+                className='text-sm px-3 py-1'
               >
                 {isOnline ? 'Connection Restored' : 'Offline Mode'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               </Badge>
             </div>
             <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
-              {isOnline ? "You're Back Online!" : "You're Offline"}
+              {isOnline ? 'You're Back Online!' : 'You're Offline'}
             </h1>
             <p className='text-lg text-muted-foreground max-w-2xl mx-auto mb-6'>
               {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
                 : 'No internet connection detected. Don\'t worry - you can still access cached content and use offline features.'
                 } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             </p>
@@ -144,10 +143,10 @@ export default function OfflinePage() {
               className='flex items-center gap-2'
               disabled={isOnline}
             >
-              <RefreshCw className="w-5 h-5" />
+              <RefreshCw className='w-5 h-5' />
               {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             </Button>
@@ -176,9 +175,9 @@ export default function OfflinePage() {
           </div>
           {/* Quick Actions */}
           <motion.div
-            initial={{ opacity: 0, y: 40}}
-            animate={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={ opacity: 0, y: 40}
+            animate={ opacity: 1, y: 0}
+            transition={ duration: 0.6, delay: 0.3 }
           >
             <h2 className='text-2xl font-bold text-center mb-8'>
               Available Offline Features
@@ -187,16 +186,16 @@ export default function OfflinePage() {
               {quickActions.map((action, index) => (
                 <motion.div
                   key={action.title}
-                  initial={{ opacity: 0, y: 20}}
-                  animate={{ opacity: 1, y: 0}}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  initial={ opacity: 0, y: 20}
+                  animate={ opacity: 1, y: 0}
+                  transition={ duration: 0.6, delay: 0.4 + index * 0.1 }
                 >
                   <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
                     action.available
                       ? 'hover:scale-105 cursor-pointer'
                       : 'opacity-60 cursor-not-allowed'
                   }`}>
-                    <CardHeader className="text-center">
+                    <CardHeader className='text-center'>
                       <div className={`mx-auto w-12 h-12 rounded-full flex items-center justify-center mb-3 ${
                         action.available
                           ? 'bg-blue-100 dark:bg-blue-900/20'
@@ -208,18 +207,18 @@ export default function OfflinePage() {
                             : 'text-gray-400'
                         }`} />
                       </div>
-                      <CardTitle className="text-lg">{action.title}</CardTitle>
+                      <CardTitle className='text-lg'>{action.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="text-center">
-                      <p className="text-muted-foreground mb-4">{action.description}</p>
+                    <CardContent className='text-center'>
+                      <p className='text-muted-foreground mb-4'>{action.description}</p>
                       {action.available ? (
-                        <Button asChild variant="outline" size="sm" className="w-full">
+                        <Button asChild variant='outline' size='sm' className='w-full'>
                           <Link href={action.href}>
                             Access
                           </Link>
                         </Button>
                       ) : (
-                        <Button disabled size="sm" className="w-full">
+                        <Button disabled size='sm' className='w-full'>
                           Requires Internet
                         </Button>
                       )}
@@ -231,31 +230,31 @@ export default function OfflinePage() {
           </motion.div>
           {/* Tips Section */}
           <motion.div
-            initial={{ opacity: 0}}
-            animate={{ opacity: 1}}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            initial={ opacity: 0}
+            animate={ opacity: 1}
+            transition={ duration: 0.6, delay: 0.8 }
             className='mt-16'
           >
-            <Card className="max-w-2xl mx-auto">
+            <Card className='max-w-2xl mx-auto'>
               <CardHeader>
-                <CardTitle className="text-center">💡 Offline Tips</CardTitle>
+                <CardTitle className='text-center'>💡 Offline Tips</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-start gap-2">
-                    <span className="text-blue-600 font-semibold">•</span>
+                <div className='space-y-3 text-sm'>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
                     <span>Recently viewed pages are cached and available offline</span>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-blue-600 font-semibold">•</span>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
                     <span>Your bookmarks and saved items can be accessed anytime</span>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-blue-600 font-semibold">•</span>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
                     <span>Form submissions will be synced when you reconnect</span>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-blue-600 font-semibold">•</span>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
                     <span>Check your internet connection and try refreshing the page</span>
                   </div>
                 </div>
@@ -265,25 +264,25 @@ export default function OfflinePage() {
           {/* Auto-refresh when online */}
           {isOnline && (
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1}}
-              className="fixed bottom-6 right-6 z-50"
+              initial={ opacity: 0, scale: 0.9 }
+              animate={ opacity: 1, scale: 1}
+              className='fixed bottom-6 right-6 z-50'
             >
-              <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800">
-                <CardContent className="p-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-sm font-medium text-green-700 dark:text-green-300">
+              <Card className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800'>
+                <CardContent className='p-4'>
+                  <div className='flex items-center gap-3'>
+                    <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse' />
+                    <span className='text-sm font-medium text-green-700 dark:text-green-300'>
                       Connection restored
                     </span>
                     <Button
-                      size="sm"
+                      size='sm'
                       onClick={() => window.location.reload()  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                      className="bg-green-600 hover:bg-green-700"
+                      className='bg-green-600 hover:bg-green-700'
                     >
                       Refresh
                     </Button>
@@ -296,7 +295,6 @@ export default function OfflinePage() {
       </div>
     </>
   );
-=======
 import Head from 'next/head' import Link from 'next/link' export default function OfflinePage () {
   const [isOnline, setIsOnline] = useState (false) const [lastUpdate, setLastUpdate] = useState<string> ('') const [retryCount, setRetryCount] = useState (0) useEffect ( () => {
   //Check online status const updateOnlineStatus = () => {
@@ -323,7 +321,7 @@ import Head from 'next/head' import Link from 'next/link' export default functio
 }
 {
   title: 'Go to Homepage', description: 'Return to the main page', icon: Home, href: '/', available: true 
-}] return (<> <Head> <title>You're Offline - Zion Tech Marketplace</title> <meta name="description" content="You're currently offline. Some features may not be available." /> <meta name="robots" content="noindex, nofollow" /> </Head> <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900" > <div className="container mx-auto px-4 py-8" > <motion.div <motion.div animate= {
+}] return (<> <Head> <title>You're Offline - Zion Tech Marketplace</title> <meta name='description' content='You're currently offline. Some features may not be available.' /> <meta name='robots' content='noindex, nofollow' /> </Head> <div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900' > <div className='container mx-auto px-4 py-8' > <motion.div <motion.div animate= {
   isOnline ? {
   scale: [1, 1.1, 1] 
 }: {
@@ -347,7 +345,7 @@ import Head from 'next/head' import Link from 'next/link' export default functio
 }</p> Last updated: {
   lastUpdate 
 }</p>) 
-}</motion.div> </Button> <Button asChild variant="outline" size="lg" className="flex items-center gap-2" > <Link href="/" > <Home className="w-5 h-5" /> Go to Homepage </Link> </Button> <Button asChild variant="outline" size="lg" className="flex items-center gap-2" > <Link href="/marketplace" > <ShoppingCart className="w-5 h-5" /> Go to Marketplace </Link> </Button> </div> {
+}</motion.div> </Button> <Button asChild variant='outline' size='lg' className='flex items-center gap-2' > <Link href='/' > <Home className='w-5 h-5' /> Go to Homepage </Link> </Button> <Button asChild variant='outline' size='lg' className='flex items-center gap-2' > <Link href='/marketplace' > <ShoppingCart className='w-5 h-5' /> Go to Marketplace </Link> </Button> </div> {
   /* Quick Actions */ 
 }<motion.div initial= {
   {
@@ -361,7 +359,7 @@ import Head from 'next/head' import Link from 'next/link' export default functio
   {
   duration: 0.6, delay: 0.3 
 }
-}> <h2 className="text-2xl font-bold text-center mb-8" >Available Offline Features</h2> <motion.div key= {
+}> <h2 className='text-2xl font-bold text-center mb-8' >Available Offline Features</h2> <motion.div key= {
   action.title 
 }initial= {
   {
@@ -385,11 +383,10 @@ import Head from 'next/head' import Link from 'next/link' export default functio
 }` 
 }/> </div> <Link href= {
   action.href 
-}> Access </Link> </Button>) : (<Button disabled size="sm" className="w-full" > Requires Internet </Button>) 
+}> Access </Link> </Button>) : (<Button disabled size='sm' className='w-full' > Requires Internet </Button>) 
 }</CardContent> </Card> </motion.div>) ) 
 }</div> </motion.div> {
   /* Tips Section */ 
-}<motion.div > <Card className="max-w-2xl mx-auto" > <CardHeader> <CardTitle className="text-center" >💡 Offline Tips</CardTitle> </CardHeader> <CardContent> <div className="space-y-3 text-sm" > <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" >•</span> <span>Recently viewed pages are cached and available offline</span> </div> <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" >•</span> <span>Your bookmarks and saved items can be accessed anytime</span> </div> <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" >•</span> <span>Form submissions will be synced when you reconnect</span> </div> <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" >•</span> <span>Check your internet connection and try refreshing the page</span> </div> </div> </CardContent> </Card> </motion.div> > <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800" > <CardContent className="p-4" > <div className="flex items-center gap-3" > <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" /> <span className="text-sm font-medium text-green-700 dark:text-green-300" > Connection restored </span> <Button > Refresh </Button> </div> </CardContent> </Card> </motion.div>) 
+}<motion.div > <Card className='max-w-2xl mx-auto' > <CardHeader> <CardTitle className='text-center' >💡 Offline Tips</CardTitle> </CardHeader> <CardContent> <div className='space-y-3 text-sm' > <div className='flex items-start gap-2' > <span className='text-blue-600 font-semibold' >•</span> <span>Recently viewed pages are cached and available offline</span> </div> <div className='flex items-start gap-2' > <span className='text-blue-600 font-semibold' >•</span> <span>Your bookmarks and saved items can be accessed anytime</span> </div> <div className='flex items-start gap-2' > <span className='text-blue-600 font-semibold' >•</span> <span>Form submissions will be synced when you reconnect</span> </div> <div className='flex items-start gap-2' > <span className='text-blue-600 font-semibold' >•</span> <span>Check your internet connection and try refreshing the page</span> </div> </div> </CardContent> </Card> </motion.div> > <Card className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' > <CardContent className='p-4' > <div className='flex items-center gap-3' > <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse' /> <span className='text-sm font-medium text-green-700 dark:text-green-300' > Connection restored </span> <Button > Refresh </Button> </div> </CardContent> </Card> </motion.div>) 
 }</div> </div> </>) 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/offline.tsx

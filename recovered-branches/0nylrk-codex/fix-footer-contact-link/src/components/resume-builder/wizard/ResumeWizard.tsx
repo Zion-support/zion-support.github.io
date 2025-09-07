@@ -44,7 +44,7 @@ import {useResumeProgress} from './useResumeProgress';'
 import {ResumeVersionSelector} from './ResumeVersionSelector';'
 import {RESUME_STEPS} from './constants';  // Use the extracted hook for progress calculation'
   }
-  const handleResumeChange = ("resumeId": string) => {
+  const handleResumeChange = ('resumeId': string) => {
     }
     fetchResume(resumeId)
   }
@@ -82,8 +82,8 @@ export function ResumeWizard() {;
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;  if (error) {
 }
 return (;
-      <Alert variant="destructive" className="mb-6">"
-        <AlertCircle className="h-4 w-4" />"
+      <Alert variant='destructive' className='mb-6'>'
+        <AlertCircle className='h-4 w-4' />'
         <AlertTitle>Error</AlertTitle>
         <AlertDescription>{error}</AlertDescription>
       </Alert>
@@ -96,12 +96,12 @@ return (;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
   if (showNewResumeForm) {;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;"
+        <Loader2 className='h-8 w-8 animate-spin text-primary' />;'
       </div>;
     );
   }
-      <Alert variant="destructive" className="mb-6">;"
-        <AlertCircle className="h-4 w-4" />;"
+      <Alert variant='destructive' className='mb-6'>;'
+        <AlertCircle className='h-4 w-4' />;'
         <AlertTitle>Error</AlertTitle>;
         <AlertDescription>{error}</AlertDescription>;
       </Alert>;
@@ -145,9 +145,9 @@ if ( {) {
     }
   }, [user, fetch_resume]);
 ;
-  const handleCreateNewResume = async ("title": string) => {
+  const handleCreateNewResume = async ('title': string) => {
 }
-const resume_id = await create_resume ({ "title": title.trim () }),;
+const resume_id = await create_resume ({ 'title': title.trim () }),;
     // Check condition,
 if ( {) {
   $2
@@ -179,7 +179,7 @@ if ( {) {
     }
   }
 ;
-  const handleResumeChange = ("resume_id": string) =>: any {
+  const handleResumeChange = ('resume_id': string) =>: any {
     }
     fetch_resume (resume_id);
   }
@@ -189,8 +189,8 @@ if ( {) {
   $2
 }
 return (;
-      <div className="flex justify - center items - center h-64">;"
-        <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;"
+      <div className='flex justify - center items - center h-64'>;'
+        <Loader2 className='h - 8 w - 8 animate - spin text-primary' />;'
       </div>);
   }
   // Check condition,
@@ -198,8 +198,8 @@ if ( {) {
   $2
 }
 return (;
-      <Alert variant="destructive" className="mb-6">;"
-        <AlertCircle className="h - 4 w-4" />;"
+      <Alert variant='destructive' className='mb-6'>;'
+        <AlertCircle className='h - 4 w-4' />;'
         <AlertTitle > Error</AlertTitle>;
         <AlertDescription>{error}</AlertDescription>;
       </Alert>);
@@ -222,26 +222,26 @@ return (;
       />);
   }
 return (;
-    <div className="space-y-6">;"
-      <div className="flex flex - col "sm":flex - row justify - between items - start "sm":items - center gap-4">;"
-        <h1 className="text - 2xl font-bold">Resume Builder</h1>;"
-        <div className="flex gap - 4 flex - wrap items-center">;"
+    <div className='space-y-6'>;'
+      <div className='flex flex - col 'sm':flex - row justify - between items - start 'sm':items - center gap-4'>;'
+        <h1 className='text - 2xl font-bold'>Resume Builder</h1>;'
+        <div className='flex gap - 4 flex - wrap items-center'>;'
           {resume && <ResumeVersionSelector current_resume={resume} onResumeChange={handleResumeChange} />}
           <Button;
             on_click={() => setShowNewResumeForm (true)}
-            variant="outline";"
-            size="sm";"
-            className="gap-2";"
+            variant='outline';'
+            size='sm';'
+            className='gap-2';'
           >;
-            <FilePlus className="h - 4 w-4" />;"
+            <FilePlus className='h - 4 w-4' />;'
             Create New;
           </Button>;
         </div>;
       </div>;
       <Card>;
-        <CardContent className="pt-6">;"
-          <div className="flex flex - col "sm":flex - row justify - between items - start "sm":items - center gap - 4 mb-6">;"
-            <h2 className="text - xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;'
+        <CardContent className='pt-6'>;'
+          <div className='flex flex - col 'sm':flex - row justify - between items - start 'sm':items - center gap - 4 mb-6'>;'
+            <h2 className='text - xl font-semibold'>{resume?.basic_info?.title || 'My Resume'}</h2>;'
             <ResumeProgress resume={resume} progress={progress} />;
           </div>;
           <Tabs value={active_tab} onValueChange={setActiveTab}>;
@@ -278,7 +278,7 @@ const [showNewResumeForm, setShowNewResumeForm] = useState (false);
   }
   isLoading 
 }/>) 
-}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {"
+}> <FilePlus className='h-4 w-4' /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {'
   }
   activeTab 
 }onValueChange= {
@@ -331,26 +331,26 @@ function ResumeWizard() {
     )
   }
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <h1 className="text-2xl font-bold">Resume Builder</h1>
-        <div className="flex gap-4 flex-wrap items-center">
+    <div className='space-y-6'>
+      <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4'>
+        <h1 className='text-2xl font-bold'>Resume Builder</h1>
+        <div className='flex gap-4 flex-wrap items-center'>
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
           <Button
             onClick={() => setShowNewResumeForm(true)}
-            variant="outline"
-            size="sm"
-            className="gap-2"
+            variant='outline'
+            size='sm'
+            className='gap-2'
           >
-            <FilePlus className="h-4 w-4" />
+            <FilePlus className='h-4 w-4' />
             Create New
           </Button>
         </div>
       </div>
       <Card>
-        <CardContent className="pt-6">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-            <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
+        <CardContent className='pt-6'>
+          <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6'>
+            <h2 className='text-xl font-semibold'>{resume?.basic_info?.title |'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
           <Tabs value={activeTab} onValueChange={setActiveTab}>

@@ -39,21 +39,21 @@ print(response.json())`
 
 export default function APIDocumentationPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className='min-h-screen bg-white'>
       <Head>
         <title>API Documentation - Zion Tech Group</title>
       </Head>
-      <main className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-8">API Documentation</h1>
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <main className='container mx-auto px-4 py-12'>
+        <h1 className='text-3xl font-bold mb-8'>API Documentation</h1>
+        <section className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           {codeExamples.map((ex, i) => (
-            <div key={i} className="border rounded-lg overflow-hidden">
-              <div className="px-4 py-3 bg-gray-100 flex items-center justify-between">
-                <span className="font-medium">{ex.language}</span>
+            <div key={i} className='border rounded-lg overflow-hidden'>
+              <div className='px-4 py-3 bg-gray-100 flex items-center justify-between'>
+                <span className='font-medium'>{ex.language}</span>
               </div>
-              <div className="p-4">
-                <h3 className="font-semibold mb-2">{ex.title}</h3>
-                <pre className="bg-gray-50 p-3 rounded text-sm overflow-x-auto">
+              <div className='p-4'>
+                <h3 className='font-semibold mb-2'>{ex.title}</h3>
+                <pre className='bg-gray-50 p-3 rounded text-sm overflow-x-auto'>
                   <code>{ex.code}</code>
                 </pre>
               </div>

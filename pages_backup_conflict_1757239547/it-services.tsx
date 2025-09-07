@@ -566,44 +566,44 @@ const supportLevels = [{
 ];
 export default function ITServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
                   <Head>
                   <title>IT Services - Zion Tech Group</title>
-                  <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration." />
-                  <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />
+                  <meta name='description' content='Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration.' />
+                  <meta name='keywords' content='IT services, cloud infrastructure, cybersecurity, network management, system administration' />
                   </Head>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
-<div className="absolute inset-0">
-                  <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+      <section className='relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden'>
+<div className='absolute inset-0'>
+                  <div className='absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse'>
                   </div>
-                  <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+                  <div className='absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000'>
                   </div>
                   </div>
-                  <div className="container mx-auto px-4 relative z-10">
+                  <div className='container mx-auto px-4 relative z-10'>
                   <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            className='text-center'
           >
-<div className="flex items-center justify-center mb-6">
-                  <Server className="h-16 w-16 text-green-400 mr-4" />
-                  <h1 className="text-4xl md:text-6xl font-bold">
+<div className='flex items-center justify-center mb-6'>
+                  <Server className='h-16 w-16 text-green-400 mr-4' />
+                  <h1 className='text-4xl md:text-6xl font-bold'>
                 IT{' '}
-                <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>
                   Services
                 </span>
 </h1>
                   </div>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
+                  <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
               Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we&apos;ve got you covered.
             </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <Link href='/contact' className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold'>
                 Get IT Consultation
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  <Link href='/services' className='px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold'>
                 View All Services
               </Link>
                   </div>
@@ -611,29 +611,29 @@ export default function ITServicesPage() {
                   </div>
                   </section>
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
-                  <div className="container mx-auto px-4">
+      <section className='py-20 bg-gray-50'>
+                  <div className='container mx-auto px-4'>
                   <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
-<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+<h2 className='text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
               Our IT Solutions
             </h2>
-                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                  <p className='text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed'>
               End-to-end IT services designed to optimize your infrastructure and ensure business continuity.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {itServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
-className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
+className='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1068,7 +1068,7 @@ export default function ITServices() {
                 {filteredServices.map((service, index) => (
                   <div                    key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    style={ transitionDelay: `${index * 100}ms` }
                   >
                     {service.popular && (
                       <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
@@ -1290,7 +1290,7 @@ export default function ITServices() {
                   className='px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'
                 >
                   Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className='ml-2 w-4 h-4' />
                 </Link>
                 <a
                   href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
@@ -1308,64 +1308,64 @@ export default function ITServices() {
           </div>
         </section>
         {/* Services Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className='py-16 px-4'>
+          <div className='max-w-7xl mx-auto'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
+              className='text-center mb-12'
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our IT Services</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <h2 className='text-3xl md:text-4xl font-bold mb-4'>Our IT Services</h2>
+              <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
                 Comprehensive IT solutions designed to enhance your business operations and security.
               </p>
             </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {itServices.map((service, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-whileHover={{ y: -5 }} ">
-                  <div className="flex items-center justify-between mb-4">
-                  <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
-                  <IconComponent className="w-10 h-10" />
+                  className='bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow'
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
+whileHover={ y: -5 } '>
+                  <div className='flex items-center justify-between mb-4'>
+                  <div className='text-green-600 group-hover:text-emerald-600 transition-colors'>
+                  <IconComponent className='w-10 h-10' />
                   </div>
-                  <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
+                  <span className='text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full'>
                       {service.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className='text-xl font-bold text-gray-900 mb-3'>
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className='text-gray-600 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
-                  <div className="mb-4">
-<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">
+                  <div className='mb-4'>
+<h4 className='font-semibold text-gray-900 mb-2 text-sm'>Key 'Features': </h4>
+                  <ul className='space-y-1'>
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-<CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                        <li key={featureIndex} className='flex items-center text-xs text-gray-600'>
+<CheckCircle className='w-3 h-3 text-green-500 mr-2 flex-shrink-0' />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className="mb-4">
-                  <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
+                  <div className='mb-4'>
+                  <span className='text-sm font-semibold text-green-600'>{service.pricing}</span>
                   </div>
                   <Link
-                    href="/contact"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    href='/contact'
+                    className='w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm'
                   >
                     <span>Get Quote</span>
-                  <ArrowRight className="w-3 h-3 ml-1" />
+                  <ArrowRight className='w-3 h-3 ml-1' />
                   </Link>
                   </motion.div>
               );
@@ -1374,36 +1374,36 @@ whileHover={{ y: -5 }} ">
                   </div>
                   </section>
       {/* Technologies Section */}
-      <section className="py-20 bg-white">
-                  <div className="container mx-auto px-4">
+      <section className='py-20 bg-white'>
+                  <div className='container mx-auto px-4'>
                   <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Technologies We Work With</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>Technologies We Work With</h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
               We leverage cutting-edge technologies to deliver robust IT solutions.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {technologies.map((tech, index) => {
               const IconComponent = tech.icon;
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">
-                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-green-600" />
+className='text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 } transition={ duration: 0.8, delay: index * 0.1 } viewport={ once: true }'>
+                  <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <IconComponent className='w-8 h-8 text-green-600' />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className='text-xl font-bold text-gray-900 mb-2'>
                     {tech.name}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className='text-gray-600'>
                     {tech.description}
                   </p>
                   </motion.div>
@@ -1413,42 +1413,42 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </div>
                   </section>
       {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">
-                  <div className="container mx-auto px-4">
+      <section className='py-20 bg-gray-50'>
+                  <div className='container mx-auto px-4'>
                   <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>Why Choose Our IT Services?</h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
               Proven expertise and measurable results for your technology infrastructure.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
                 <motion.div
                   key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className='text-center'
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
-                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-green-600" />
+                  <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <IconComponent className='w-8 h-8 text-green-600' />
                   </div>
-                  <div className="text-3xl font-bold text-green-600 mb-2">
+                  <div className='text-3xl font-bold text-green-600 mb-2'>
                     {benefit.stat}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className='text-xl font-bold text-gray-900 mb-2'>
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className='text-gray-600'>
                     {benefit.description}
                   </p>
                   </motion.div>
@@ -1458,52 +1458,52 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </div>
                   </section>
       {/* Support Levels Section */}
-      <section className="py-20 bg-white">
-                  <div className="container mx-auto px-4">
+      <section className='py-20 bg-white'>
+                  <div className='container mx-auto px-4'>
                   <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Support Levels</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>Support Levels</h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
               Choose the support level that best fits your business needs.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {supportLevels.map((level, index) => (
               <motion.div
                 key={index}
                 className={`p-8 rounded-xl shadow-lg ${
                   index === 1 ? 'bg-green-50 border-2 border-green-200' : 'bg-white'
                 }`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
+                viewport={ once: true }
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className='text-2xl font-bold text-gray-900 mb-2'>
                   {level.name}
                 </h3>
-                  <p className="text-gray-600 mb-6">
+                  <p className='text-gray-600 mb-6'>
                   {level.description}
                 </p>
-                  <div className="text-3xl font-bold text-green-600 mb-6">
+                  <div className='text-3xl font-bold text-green-600 mb-6'>
                   {level.pricing}
                 </div>
-                  <ul className="space-y-3 mb-8">
+                  <ul className='space-y-3 mb-8'>
                   {level.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className='flex items-center text-gray-600'>
+                  <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />
                       {feature}
                     </li>
                   ))}
                 </ul>
                   <Link
-                  href="/contact"
+                  href='/contact'
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
 ? 'bg-green-600 hover: bg-green-700 text-white'
@@ -1511,7 +1511,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   }`}
                 >
                   <span>Choose Plan</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className='w-4 h-4 ml-2' />
                   </Link>
                   </motion.div>
             ))}
@@ -1519,23 +1519,23 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </div>
                   </section>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-<div className="container mx-auto px-4 text-center">
+      <section className='py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white'>
+<div className='container mx-auto px-4 text-center'>
                   <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+<h2 className='text-3xl md:text-4xl font-bold mb-6'>Ready to Optimize Your IT Infrastructure?</h2>
+            <p className='text-xl mb-8 max-w-2xl mx-auto'>
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <Link href='/contact' className='px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold'>
                 Get IT Assessment
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                  <Link href='/services' className='px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold'>
                 View All Services
               </Link>
                   </div>
@@ -1543,89 +1543,89 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </div>
                   </section>
       {/* Contact Information Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className='py-20 bg-gray-50'>
+        <div className='container mx-auto px-4'>
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
               Get Started with IT Services Today
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className='text-lg text-gray-600 max-w-3xl mx-auto mb-8'>
               Ready to transform your IT infrastructure? Our expert team is here to help you build, secure, and optimize your technology environment. Contact us for a free consultation and discover how we can accelerate your digital transformation.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
             <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              className='text-center p-6 bg-white rounded-lg shadow-lg'
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.1 }
+              viewport={ once: true }
             >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageSquare className="w-8 h-8 text-green-600" />
+              <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <MessageSquare className='w-8 h-8 text-green-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Free IT Consultation</h3>
-              <p className="text-gray-600 mb-4">Get expert advice on your IT project with our complimentary 30-minute consultation.</p>
-              <a href="tel:+13024640950" className="text-green-600 font-semibold hover:text-green-700">
+              <h3 className='text-xl font-bold text-gray-900 mb-2'>Free IT Consultation</h3>
+              <p className='text-gray-600 mb-4'>Get expert advice on your IT project with our complimentary 30-minute consultation.</p>
+              <a href='tel:+13024640950' className='text-green-600 font-semibold hover:text-green-700'>
                 Call Now: +1 302 464 0950
               </a>
             </motion.div>
             <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              className='text-center p-6 bg-white rounded-lg shadow-lg'
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }
             >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-green-600" />
+              <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <Mail className='w-8 h-8 text-green-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-gray-600 mb-4">Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700">
+              <h3 className='text-xl font-bold text-gray-900 mb-2'>Email Us</h3>
+              <p className='text-gray-600 mb-4'>Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>
+              <a href='mailto:kleber@ziontechgroup.com' className='text-green-600 font-semibold hover:text-green-700'>
                 kleber@ziontechgroup.com
               </a>
             </motion.div>
             <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              className='text-center p-6 bg-white rounded-lg shadow-lg'
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.3 }
+              viewport={ once: true }
             >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building className="w-8 h-8 text-green-600" />
+              <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <Building className='w-8 h-8 text-green-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
-              <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
-              <address className="text-green-600 font-semibold not-italic">
+              <h3 className='text-xl font-bold text-gray-900 mb-2'>Visit Our Office</h3>
+              <p className='text-gray-600 mb-4'>Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
+              <address className='text-green-600 font-semibold not-italic'>
                 364 E Main St STE 1008<br />
                 Middletown, DE 19709
               </address>
             </motion.div>
           </div>
           <motion.div
-            className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className='bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center'
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
-            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-            <p className="text-lg mb-6">
+            <h3 className='text-2xl font-bold mb-4'>Ready to Get Started?</h3>
+            <p className='text-lg mb-6'>
               Join 500+ successful businesses that trust Zion Tech Group for their IT infrastructure needs. Let&apos;s build the perfect technology solution for your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link href='/contact' className='px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold'>
                 Start Building
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+              <Link href='/services' className='px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold'>
                 View All Services
               </Link>
             </div>
@@ -1661,7 +1661,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   <div
                     key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    style={ transitionDelay: `${index * 100}ms` }
                   >
                     {service.popular && (
                       <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
@@ -1751,16 +1751,16 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                     AWS, Azure, GCP, and hybrid cloud solutions
                   </p>
                 </div>
-                  <ul className="space-y-3 mb-8">
+                  <ul className='space-y-3 mb-8'>
                   {level.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className='flex items-center text-gray-600'>
+                  <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />
                       {feature}
                     </li>
                   ))}
                 </ul>
                   <Link
-                  href="/contact"
+                  href='/contact'
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
 ? 'bg-green-600 hover: bg-green-700 text-white'
@@ -1768,7 +1768,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   }`}
                 >
                   <span>Choose Plan</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className='w-4 h-4 ml-2' />
                   </Link>
                   </motion.div>
             ))}
@@ -1776,23 +1776,23 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </div>
                   </section>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-<div className="container mx-auto px-4 text-center">
+      <section className='py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white'>
+<div className='container mx-auto px-4 text-center'>
                   <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+<h2 className='text-3xl md:text-4xl font-bold mb-6'>Ready to Optimize Your IT Infrastructure?</h2>
+            <p className='text-xl mb-8 max-w-2xl mx-auto'>
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <Link href='/contact' className='px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold'>
                 Get IT Assessment
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                  <Link href='/services' className='px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold'>
                 View All Services
               </Link>
                   </div>
@@ -1800,89 +1800,89 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   </div>
                   </section>
       {/* Contact Information Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className='py-20 bg-gray-50'>
+        <div className='container mx-auto px-4'>
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
               Get Started with IT Services Today
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className='text-lg text-gray-600 max-w-3xl mx-auto mb-8'>
               Ready to transform your IT infrastructure? Our expert team is here to help you build, secure, and optimize your technology environment. Contact us for a free consultation and discover how we can accelerate your digital transformation.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
             <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              className='text-center p-6 bg-white rounded-lg shadow-lg'
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.1 }
+              viewport={ once: true }
             >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageSquare className="w-8 h-8 text-green-600" />
+              <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <MessageSquare className='w-8 h-8 text-green-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Free IT Consultation</h3>
-              <p className="text-gray-600 mb-4">Get expert advice on your IT project with our complimentary 30-minute consultation.</p>
-              <a href="tel:+13024640950" className="text-green-600 font-semibold hover:text-green-700">
+              <h3 className='text-xl font-bold text-gray-900 mb-2'>Free IT Consultation</h3>
+              <p className='text-gray-600 mb-4'>Get expert advice on your IT project with our complimentary 30-minute consultation.</p>
+              <a href='tel:+13024640950' className='text-green-600 font-semibold hover:text-green-700'>
                 Call Now: +1 302 464 0950
               </a>
             </motion.div>
             <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              className='text-center p-6 bg-white rounded-lg shadow-lg'
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }
             >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-green-600" />
+              <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <Mail className='w-8 h-8 text-green-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-gray-600 mb-4">Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700">
+              <h3 className='text-xl font-bold text-gray-900 mb-2'>Email Us</h3>
+              <p className='text-gray-600 mb-4'>Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>
+              <a href='mailto:kleber@ziontechgroup.com' className='text-green-600 font-semibold hover:text-green-700'>
                 kleber@ziontechgroup.com
               </a>
             </motion.div>
             <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              className='text-center p-6 bg-white rounded-lg shadow-lg'
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.3 }
+              viewport={ once: true }
             >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building className="w-8 h-8 text-green-600" />
+              <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <Building className='w-8 h-8 text-green-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
-              <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
-              <address className="text-green-600 font-semibold not-italic">
+              <h3 className='text-xl font-bold text-gray-900 mb-2'>Visit Our Office</h3>
+              <p className='text-gray-600 mb-4'>Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
+              <address className='text-green-600 font-semibold not-italic'>
                 364 E Main St STE 1008<br />
                 Middletown, DE 19709
               </address>
             </motion.div>
           </div>
           <motion.div
-            className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className='bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center'
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
-            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-            <p className="text-lg mb-6">
+            <h3 className='text-2xl font-bold mb-4'>Ready to Get Started?</h3>
+            <p className='text-lg mb-6'>
               Join 500+ successful businesses that trust Zion Tech Group for their IT infrastructure needs. Let&apos;s build the perfect technology solution for your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link href='/contact' className='px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold'>
                 Start Building
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+              <Link href='/services' className='px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold'>
                 View All Services
               </Link>
             </div>

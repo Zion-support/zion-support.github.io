@@ -77,7 +77,7 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    "resolver": zodR
       "niche": "",;"
       "audience_size": "",;"
       "payout_method": "paypal",;"
-      "bio": ""}}),;"
+      "bio": ""}),;"
   const checkExistingPartner = async () => {;
     }
     const { "data": existingPartner } = await supabase;

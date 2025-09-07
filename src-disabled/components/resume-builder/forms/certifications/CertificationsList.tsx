@@ -60,16 +60,16 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
   }
 
   return (
-    <div className="space-y-4">
-      <h3 className="text-md font-medium">Added Certifications</h3>
+    <div className='space-y-4'>
+      <h3 className='text-md font-medium'>Added Certifications</h3>
       {certifications.map((cert) => (
-        <Card key={cert.id} className="bg-muted/40">
-          <CardContent className="pt-6">
-            <div className="flex justify-between">
+        <Card key={cert.id} className='bg-muted/40'>
+          <CardContent className='pt-6'>
+            <div className='flex justify-between'>
               <div>
-                <h4 className="font-medium">{cert.name}</h4>
-                <p className="text-sm text-muted-foreground">{cert.issuing_organization}</p>
-                <p className="text-xs text-muted-foreground mt-1">
+                <h4 className='font-medium'>{cert.name}</h4>
+                <p className='text-sm text-muted-foreground'>{cert.issuing_organization}</p>
+                <p className='text-xs text-muted-foreground mt-1'>
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
                     ? cert.issue_date 
                     : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
@@ -81,14 +81,14 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   )}
                 </p>
               </div>
-              <div className="flex gap-2">
+              <div className='flex gap-2'>
                 <Button
-                  variant="ghost"
-                  size="icon"
+                  variant='ghost'
+                  size='icon'
                   onClick={() => onEdit(cert)}
-                  aria-label="Edit certification"
+                  aria-label='Edit certification'
                 >
-                  <Edit className="h-4 w-4" />
+                  <Edit className='h-4 w-4' />
                 </Button>
                 <Button
 
@@ -98,24 +98,24 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   size='icon'
                   onClick={() => onEdit(cert)}
 '
-                  className='text-primary hover:underline'>              <p className="text-xs mt-2">;
+                  className='text-primary hover:underline'>              <p className='text-xs mt-2'>;
                 <a;
                   href = {cert && cert.credential_url,}
 
-                  aria-label="Delete certification"
-                >"
-                  <Trash2 className="h-4 w-4" />
+                  aria-label='Delete certification'
+                >'
+                  <Trash2 className='h-4 w-4' />
 
                 </Button>
               </div>
             </div>
 
-              <p className="text-xs mt-2">
+              <p className='text-xs mt-2'>
                 <a;
-                  href={cert.credential_url} "
-                  target="_blank" "
-                  rel="noopener noreferrer""
-                  className="text-primary hover:underline"
+                  href={cert.credential_url} '
+                  target='_blank' '
+                  rel='noopener noreferrer''
+                  className='text-primary hover:underline'
 
 <p className='text-xs mt-2'>
                 <a
@@ -149,11 +149,11 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                 <Button;'
                   variant='ghost';'
                   size='icon';
-                  on_click={() => on_edit (cert)}'"
-                  aria - label='Edit certification'                  variant="ghost";"
-                  size="icon";
-                  on_click = {() => on_edit (cert), }"
-                  aria - label="Edit certification";
+                  on_click={() => on_edit (cert)}''
+                  aria - label='Edit certification'                  variant='ghost';'
+                  size='icon';
+                  on_click = {() => on_edit (cert), }'
+                  aria - label='Edit certification';
                 >;'
                   <Edit className='h - 4 w - 4' />;
                 </Button>;
@@ -174,8 +174,8 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
 
                 <a;
                   href = {cert.credential_url, }
-                  target="_blank";
-                  rel="noopener noreferrer";
+                  target='_blank';
+                  rel='noopener noreferrer';
 
                   View credential;
                 </a>;

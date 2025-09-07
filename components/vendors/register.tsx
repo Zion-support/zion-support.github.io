@@ -6,7 +6,6 @@ export default function VendorRegisterPage() {
   }
   const [loading, setLoading] = useState(false);
 import { FormEvent, useState } from 'react';
-=======
 
 const [message, setMessage] = useState<string | null>(null),;
 
@@ -15,19 +14,19 @@ const [message, setMessage] = useState<string | null>(null),;
     e.preventDefault();
     setLoading(true);
     setMessage(null);
-          "slug": String(payload.slug),
-          "name": String(payload.name),
-          "servicesOffered": String(payload.servicesOffered || '')'
+          'slug': String(payload.slug),
+          'name': String(payload.name),
+          'servicesOffered': String(payload.servicesOffered || '')'
 .split(',')'
             .map(s => { return s.trim())
             .filter(Boolean)
-          "teamSize": Number(payload.teamSize |0)
-          "about": String(payload.about |'')'
-          "verificationDocs": String(payload.verificationDocs |'')'
+          'teamSize': Number(payload.teamSize |0)
+          'about': String(payload.about |'')'
+          'verificationDocs': String(payload.verificationDocs |'')'
             .split(',')'
             .map(s => s.trim())
             .filter(Boolean)
-          "caseStudies": []
+          'caseStudies': []
         })
      
 }); }
@@ -36,27 +35,23 @@ const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed to submit');'
       setMessage('Application submitted. Await approval.');'
       form.reset();
-    } catch ("err": any) {
+    } catch ('err': any) {
       }
       setMessage(err.message);
     } finally {
       }
       setLoading(false);
       form.reset()
-    } catch ("err": any) {
+    } catch ('err': any) {
       }
       setMessage(err.message)
     } finally {
       }
       setLoading(false)
-<<<<<<< HEAD
-=======
       setLoading(false);
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       form.reset()
     } catch (err: any) {}
       setMessage(err.message)
@@ -68,7 +63,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setMessage(err.message)}
     } finally {}
       setLoading(false)}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
   }
 
@@ -92,7 +86,7 @@ name='slug''
             required,
 pattern='[a-z0-9-]+''
             className='w-full border rounded px-3 py-2 bg-transparent'' />
-          <p className='text-xs text-gray-500'>"Example": acme-ai</p>'
+          <p className='text-xs text-gray-500'>'Example': acme-ai</p>'
         </div>
         <div>
           <label className='block text-sm mb-1'>Services Offered</label>'
@@ -126,7 +120,7 @@ name='verificationDocs''
         </div>
         <button,
 disabled={loading}
-          className='px-4 py-2 rounded bg-black text-white "dark": bg-white "dark":text-black''
+          className='px-4 py-2 rounded bg-black text-white 'dark': bg-white 'dark':text-black''
         >
           {loading ? 'Submitting...' : 'Submit Application'}'
         </button>

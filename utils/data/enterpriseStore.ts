@@ -55,8 +55,8 @@ import { CompanyRecord,CompanyMember,EnterpriseRole,InvoiceRecord;
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise',const generateId = () => Math.random().toString(36).slice(2, 10)const seedCompany: CompanyRecord = {id: 'cmp_acme',name: 'Acme Corporation',import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord  } from '../types/enterprise';
 const generateId  = () => Math.random().toString(36).slice(2, 10)members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },{ id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },{ id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],activity: [;
-    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },{ id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],invoices: [;}}
-  }}
+    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },{ id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],invoices: [;}
+  }
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
   InvoiceRecord;
@@ -144,7 +144,7 @@ const "seedCompany": CompanyRecord = {"id": 'cmp_acme';'
     "usageLimits": {;
       }
       "monthlyJobPosts": 50;
-      "budgetCapUsd": 10000}}
+      "budgetCapUsd": 10000}
   "members": [;
     { "id": 'mem_1', "email": 'admin@acme.com', "name": 'Avery Admin', "role": 'admin' }'
     { "id": 'mem_2', "email": 'maria@acme.com', "name": 'Maria Manager', "role": 'manager' }'
@@ -174,7 +174,7 @@ export const store = {getCompanyBySlug("slug": string) {;
         "tier": 'teams';'
         "seatsPurchased": 10;
         "seatsUsed": 0;
-        "usageLimits": { "monthlyJobPosts": 10, "budgetCapUsd": 1000 }}
+        "usageLimits": { "monthlyJobPosts": 10, "budgetCapUsd": 1000 }
       "members": [];
       "activity": [];
       "invoices": []}
@@ -238,7 +238,7 @@ const "seed_company": CompanyRecord = {
     "usage_limits": {
       }
       "monthlyJobPosts": 50,
-      "budgetCapUsd": 10000}},
+      "budgetCapUsd": 10000},
   "slug": 'acme',;'
   "logoUrl": '/logo-acme.svg',;'
   "brandColor": '#4F46E5',;'
@@ -250,7 +250,7 @@ const "seed_company": CompanyRecord = {
     "usageLimits": {;
       }
       "monthlyJobPosts": 50,;
-      "budgetCapUsd": 10000}},;
+      "budgetCapUsd": 10000},;
   "members": [;
     { "id": 'mem_1', "email": 'admin@acme.com', "name": 'Avery Admin', "role": 'admin' },'
     { "id": 'mem_2', "email": 'maria@acme.com', "name": 'Maria Manager', "role": 'manager' },'
@@ -270,7 +270,7 @@ const "seed_company": CompanyRecord = {
         "tier": 'teams',;'
         "seatsPurchased": 10,;
         "seatsUsed": 0,;
-        "usageLimits": { "monthlyJobPosts": 10, "budgetCapUsd": 1000 }},;
+        "usageLimits": { "monthlyJobPosts": 10, "budgetCapUsd": 1000 },;
       "members": [],;
       "activity": [],;
       "invoices": []},;
@@ -311,7 +311,7 @@ const "seed_company": CompanyRecord = {
     }
     const company = companiesById[company_id];
     return company ? company.invoices : [];
-  }}
+  }
 const "companiesById": Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
 const "companiesBySlug": Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
 export const store = {;
@@ -338,7 +338,7 @@ export const store = {;
         "tier": 'teams',;'
         "seatsPurchased": 10,;
         "seatsUsed": 0,;
-        "usageLimits": { "monthlyJobPosts": 10, "budgetCapUsd": 1000 }},;
+        "usageLimits": { "monthlyJobPosts": 10, "budgetCapUsd": 1000 },;
       "members": [],;
       "activity": [],;
       "invoices": []},;
@@ -395,8 +395,8 @@ export const store = {;
     }
     const company = companiesById[company_id];
     return company ? company.invoices : [];
-  }};
-  }}
+  };
+  }
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
 const generateId = () => Math.random().toString(36).slice($2);
 const seedCompany: CompanyRecord = $2;
@@ -410,7 +410,7 @@ const seedCompany: CompanyRecord = $2;
     seatsUsed: 3,
     usageLimits: {
       monthlyJobPosts: 50,
-      budgetCapUsd: 10000}},
+      budgetCapUsd: 10000},
   members: [
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
@@ -441,7 +441,7 @@ export const store = $2;
         tier: 'teams',
         seatsPurchased: 10,
         seatsUsed: 0,
-        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000}},
+        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000},
       members: [],
       activity: [],
       invoices: []},
@@ -489,4 +489,4 @@ export const store = $2;
   listInvoices(companyId: string): InvoiceRecord[] {
     const company = $2;
     return company ? company.invoices : []
-  }},
+  },

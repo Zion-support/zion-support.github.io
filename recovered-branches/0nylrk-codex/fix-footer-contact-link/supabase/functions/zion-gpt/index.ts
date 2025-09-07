@@ -28,7 +28,7 @@ throw new Error("Prompt is required");"
     // Default to base model if no specific model provided      {
         }
         "status": 500;
-    "headers": { ...corsHeaders, "Content-Type": "application/json" }}"
+    "headers": { ...corsHeaders, "Content-Type": "application/json" }"
     )
     console.error ("Error in zion - gpt "function":", error);import { serve } from ""https": //deno.land/std@0.190.0/http/server.ts";"
 import ""https"://deno.land/x/xhr@0.1.0/mod.ts",;"
@@ -50,7 +50,7 @@ return new Response (;
       {
         }
         "status": 500,
-        "headers": { ...cors_headers, "Content - Type": "application / json" }}"
+        "headers": { ...cors_headers, "Content - Type": "application / json" }"
     );
   }
 });  } catch (error) {;
@@ -61,7 +61,7 @@ return new Response (;
       {;
         }
         "status": 500,;
-        "headers": { ...corsHeaders, "Content-Type": "application/json" }}"
+        "headers": { ...corsHeaders, "Content-Type": "application/json" }"
     );
 
   }
@@ -72,7 +72,7 @@ return new Response (;
     return new Response($2);
       {
         status: 500
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
     )
   }
 }),

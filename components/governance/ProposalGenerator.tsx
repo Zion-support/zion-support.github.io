@@ -1,12 +1,11 @@
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
-}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { 'hasError': false }static getDerivedStateFromError(error) {return { 'hasError': true 
+}componentDidCatch(error, errorInfo) {console.error('Error caught by 'boundary':', error, errorInfo)}'
   render() {if (this.state.hasError) ;
   }
   return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
-<<<<<<< HEAD
 }
 import React, { useState } from 'react';'
 
@@ -24,16 +23,16 @@ export type ProposalType =;
 
 export type ProposalForm = {
   }
-  "targetInstitution": string;
+  'targetInstitution': string;
 ;
 export type ProposalForm = {
   }
-  "target_institution": string;
+  'target_institution': string;
 
-  "type": ProposalType;
-  "regionalScope": string;
-  "budgetOrGoals": string;
-  "supportingMultiverses": string;
+  'type': ProposalType;
+  'regionalScope': string;
+  'budgetOrGoals': string;
+  'supportingMultiverses': string;
 
   language?: string;
   targetInstitution: string,
@@ -42,7 +41,6 @@ export type ProposalForm = {
   budgetOrGoals: string,
   supportingMultiverses: string,;
   language?: string;
-<<<<<<< HEAD
   customPrompt?: string
 }
   customPrompt?: string}
@@ -51,13 +49,13 @@ export default function ProposalGenerator() {
   }
   const [form, setForm] = useState<ProposalForm>({
     }
-    "targetInstitution": 'UNDP''
-    "type": 'Workforce Dev''
-    "regionalScope": 'Global''
-    "budgetOrGoals": '''
-    "supportingMultiverses": '''
-    "language": 'English''
-    "customPrompt":
+    'targetInstitution': 'UNDP''
+    'type': 'Workforce Dev''
+    'regionalScope': 'Global''
+    'budgetOrGoals': '''
+    'supportingMultiverses': '''
+    'language': 'English''
+    'customPrompt':
 
 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.','
   });
@@ -75,12 +73,11 @@ const [draftJson, setDraftJson] = useState<any>(null);
 const [statusMessage, setStatusMessage] = useState('');'
 
   function handleChange<K extends keyof ProposalForm>(
-    "key": K,
-"value": ProposalForm[K]
+    'key': K,
+'value': ProposalForm[K]
   ) {
     }
     setForm(prev => ({ ...prev, [key]: value }));
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
   async function handleGenerate() {
     }
@@ -90,17 +87,17 @@ const [statusMessage, setStatusMessage] = useState('');'
       }
       const res = await fetch('/api/proposals/generate', {'
         }
-        "method": 'POST','
-        "headers": { 'Content-Type': 'application/json','
+        'method': 'POST','
+        'headers': { 'Content-Type': 'application/json','
 },
-"body": JSON.stringify(form)
+'body': JSON.stringify(form)
       });
 
 const data = await res.json();
       setDraftMarkdown(data.markdown |'');'
       setDraftJson(data.json |null);
       setStatusMessage('Draft ready. You can edit and export.');'
-    } catch ("e": any) {
+    } catch ('e': any) {
       }
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');'
@@ -114,7 +111,6 @@ const data = await res.json();
       }
 
       setIsGenerating(false);    }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     }
 
@@ -140,14 +136,14 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
   } | null>(null)const [statusMessage, setStatusMessage]  = useState('')const [draftMarkdown, setDraftMarkdown] = useState('')const [draftJson, setDraftJson] = useState<any>(null)const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null)const [statusMessage, setStatusMessage] = useState('')setStatusMessage('Draft ready. You can edit and export.')} catch (e: any) {console.error(e)setStatusMessage('Failed to generate. You can edit manually and export.')} finally {function handleChange<K extends keyof ProposalForm>() {setForm(prev => ({ ...prev, [key]: value }))}
   async function handleGenerate() {setIsGenerating(true)setStatusMessage('Generating draft...')try {const res = await fetch('/api/proposals/generate', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify(form),})const data = await res.json()setDraftMarkdown(data.markdown |'')setDraftJson(data.json |null)setStatusMessage('Draft ready. You can edit and export.')} catch (e: any) {console.error(e)setStatusMessage('Failed to generate. You can edit manually and export.')} finally {setIsGenerating(false)}
   }
-    } finally {setIsGenerating(false)}}
+    } finally {setIsGenerating(false)}
   }async function handleExport() {setStatusMessage('Exporting to PDF/Markdown/JSON...')try {const res = await fetch('/api/proposals/export', {method: 'POST';
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({setStatusMessage('Exported. Files saved.')} catch (e) {console.error(e)setStatusMessage('Export failed')markdown: draftMarkdown,json: draftJson,meta: form,}),})const data = await res.json()setExportLinks({pdfUrl: data.pdfUrl;
         jsonUrl: data.jsonUrl;
         mdUrl: data.mdUrl;
       })setStatusMessage('Exported. Files saved.')} catch (e) {console.error(e)setStatusMessage('Export failed')}
-      setStatusMessage('Export failed')}}}}
+      setStatusMessage('Export failed')}}
   async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {}
   }async function handleExport() {setStatusMessage('Exporting to PDF/Markdown/JSON...')try {const res = await fetch('/api/proposals/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),})const data = await res && res.json()setExportLinks({pdfUrl: data && data.pdfUrl,jsonUrl: data && data.jsonUrl,mdUrl: data && data.mdUrl,})setStatusMessage('Exported. Files saved.')} catch (e) {console && console.error(e)setStatusMessage('Export failed')}      const data = await res && res.json()setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl }),setStatusMessage('Exported. Files saved.')} catch (e) {console && console.error(e)setStatusMessage('Export failed')}
   }
@@ -158,7 +154,6 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
     }
   }
 
-<<<<<<< HEAD
   async function handleExport() {
     setStatusMessage($2);
     try {
@@ -188,7 +183,6 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
         pdfUrl: data && data.pdfUrl,;
         jsonUrl: data && data.jsonUrl,;
         mdUrl: data && data.mdUrl,;
-=======
       setIsGenerating(false)
     }
   }
@@ -199,24 +193,24 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
       }
       const res = await fetch('/api/proposals/export', {'
         }
-        "method": 'POST''
-        "headers": { 'Content-Type': 'application/json','
+        'method': 'POST''
+        'headers': { 'Content-Type': 'application/json','
 }
-        "body": JSON.stringify({
+        'body': JSON.stringify({
 
           }
 
-          "markdown": draftMarkdown,
-          "json": draftJson,
-"meta": form
+          'markdown': draftMarkdown,
+          'json': draftJson,
+'meta': form
         })
       });
       const data = await res.json();
       setExportLinks({
         }
-        "pdfUrl": data.pdfUrl,
-"jsonUrl": data.jsonUrl,
-"mdUrl": data.mdUrl
+        'pdfUrl': data.pdfUrl,
+'jsonUrl': data.jsonUrl,
+'mdUrl': data.mdUrl
      
 });
       setStatusMessage('Exported. Files saved.');'
@@ -230,9 +224,9 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
     }
 
   }
-  async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {"method": 'POST',"headers": { 'Content-Type': 'application/json','
-},"body": JSON && JSON.stringify({"markdown": draftMarkdown,"json": draftJson,"meta": form})};
-const data = await res && res.json()setStatusMessage(`Submitted. "Status": ${data && data.status || 'queued'}. "IPFS": ${data && data.ipfsCid || 'N/A,;'}`;`      )} catch (e) {console && console.error(e)setStatusMessage('Submission failed')}'
+  async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {'method': 'POST','headers': { 'Content-Type': 'application/json','
+},'body': JSON && JSON.stringify({'markdown': draftMarkdown,'json': draftJson,'meta': form})};
+const data = await res && res.json()setStatusMessage(`Submitted. 'Status': ${data && data.status || 'queued'}. 'IPFS': ${data && data.ipfsCid || 'N/A,;'}`;`      )} catch (e) {console && console.error(e)setStatusMessage('Submission failed')}'
   }
 
   async function handleSubmitBridge() {
@@ -244,23 +238,23 @@ const data = await res && res.json()setStatusMessage(`Submitted. "Status": ${dat
 
         }
 
-        "method": 'POST','
-        "headers": { 'Content-Type': 'application/json','
+        'method': 'POST','
+        'headers': { 'Content-Type': 'application/json','
 },
-"body": JSON.stringify({
+'body': JSON.stringify({
           }
-          "markdown": draftMarkdown,
-          "json": draftJson,
-          "meta": form
+          'markdown': draftMarkdown,
+          'json': draftJson,
+          'meta': form
         })
       });
 
 const data = await res && res.json();
       setExportLinks({;
         }
-        "pdfUrl": data && data.pdfUrl,;
-        "jsonUrl": data && data.jsonUrl,;
-        "mdUrl": data && data.mdUrl,;
+        'pdfUrl': data && data.pdfUrl,;
+        'jsonUrl': data && data.jsonUrl,;
+        'mdUrl': data && data.mdUrl,;
       });
       setStatusMessage('Exported. Files saved.');'
     } catch (e) {;
@@ -269,7 +263,7 @@ const data = await res && res.json();
       setStatusMessage('Export failed');    }'
 
 const data = await res && res.json();
-      setExportLinks({ "pdfUrl": data && data.pdfUrl, "jsonUrl": data && data.jsonUrl, "mdUrl": data && data.mdUrl
+      setExportLinks({ 'pdfUrl': data && data.pdfUrl, 'jsonUrl': data && data.jsonUrl, 'mdUrl': data && data.mdUrl
 }),;
       setStatusMessage('Exported. Files saved.');'
     } catch (e) {;
@@ -282,27 +276,24 @@ const data = await res && res.json();
     }
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');'
     try {;
-<<<<<<< HEAD
       const res = await fetch('/api/proposals/submit', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
-=======
 
 }
 
 const res = await fetch('/api/proposals/submit', {;'
         }
-        "method": 'POST',;'
-        "headers": { 'Content-Type': 'application/json','
+        'method': 'POST',;'
+        'headers': { 'Content-Type': 'application/json','
 },;
-        "body": JSON && JSON.stringify({;
+        'body': JSON && JSON.stringify({;
           }
-          "markdown": draftMarkdown,;
-          "json": draftJson,;
-          "meta": form,;
+          'markdown': draftMarkdown,;
+          'json': draftJson,;
+          'meta': form,;
         }),;
       });
-<<<<<<< HEAD
       const data = await res && res.json();
       setStatusMessage(;
         `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
@@ -316,16 +307,13 @@ const res = await fetch('/api/proposals/submit', {;'
       setStatusMessage('Export failed')
     }
   }
-=======
-<<<<<<< HEAD
       const data = await res && res.json();
       setStatusMessage(;'
         `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
-=======
 
 const data = await res && res.json();
       setStatusMessage(;
-        `Submitted. "Status": ${data && data.status || 'queued'}. "IPFS": ${data && data.ipfsCid || 'N/A,'
+        `Submitted. 'Status': ${data && data.status || 'queued'}. 'IPFS': ${data && data.ipfsCid || 'N/A,'
 }`;`
       );
     } catch (e) {;
@@ -374,7 +362,7 @@ const data = await res && res.json();
       setStatusMessage('Submission failed');    }
   }
   return (<div className='space-y-6'>;'
-      <div className='grid grid-cols-1 "md":grid-cols-2 gap-4'>;'
+      <div className='grid grid-cols-1 'md':grid-cols-2 gap-4'>;'
         <div className='space-y-4'>;'
           <div>;
             <label className='block text-sm font-medium'>;'
@@ -396,8 +384,6 @@ className='w-full border rounded px-3 py-2''
             <select;
 className='w-full border rounded px-3 py-2'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               value={form.type}
               onChange={e =>
                 }
@@ -428,7 +414,7 @@ className='w-full border rounded px-3 py-2''
               className='w-full border rounded px-3 py-2 min-h-[80px]';'
               value={form && form.budgetOrGoals}
               onChange={e => { return handleChange('budgetOrGoals', e && e.target.value)}'
-              placeholder='$5M for pilot; } "goals": 10k workers onboarded, 70% female youth, etc.';'
+              placeholder='$5M for pilot; } 'goals': 10k workers onboarded, 70% female youth, etc.';'
             />;
           </div>;
           <div>;
@@ -443,7 +429,7 @@ className='w-full border rounded px-3 py-2''
               placeholder='Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work';'
             />;
           </div>;
-          <div className='grid grid-cols-1 "md":grid-cols-2 gap-4'>;'
+          <div className='grid grid-cols-1 'md':grid-cols-2 gap-4'>;'
             <div>;
               <label className='block text-sm font-medium'>Language</label>;'
               <input;
@@ -467,7 +453,7 @@ className='w-full border rounded px-3 py-2''
           <div className='flex gap-2'>;'
 
             <button,
-className='px-4 py-2 bg-blue-600 text-white rounded "disabled": opacity-50''
+className='px-4 py-2 bg-blue-600 text-white rounded 'disabled': opacity-50''
 
               onClick={handleGenerate}
               disabled={isGeneratin
@@ -489,14 +475,12 @@ className='px-4 py-2 bg-purple-600 text-white rounded''
               Submit Bridge
             </button>
           </div>
-<<<<<<< HEAD
             <button;
 className='px-4 py-2 bg-emerald-600 text-white rounded';
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD)</button>;
             <button;
-=======
 {statusMessage && (
             <p className='text-sm text-gray-600'>{statusMessage}</p>'
 
@@ -536,14 +520,12 @@ className='px-4 py-2 bg-emerald-600 text-white rounded';
                     }
                     className='text-blue-600 underline';'
                     href={exportLinks && exportLinks.pdfUrl}
-          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
+          {statusMessage && <p className='text-sm text-gray-600'>{statusMessage}</p>}
           {exportLinks && (
-            <div className="text-sm space-y-1">
+            <div className='text-sm space-y-1'>
               {exportLinks.pdfUrl && (
                 <div>
-                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
-=======
-<<<<<<< HEAD
+                  <a className='text-blue-600 underline' href={exportLinks.pdfUrl} target='_blank' rel='noreferrer'>PDF</a>
           {exportLinks && (;'
             <div className='text-sm space-y-1'>;
               {exportLinks && exportLinks.pdfUrl && (;
@@ -552,7 +534,6 @@ className='px-4 py-2 bg-emerald-600 text-white rounded';
                     className='text-blue-600 underline'
                     href={exportLinks && exportLinks.pdfUrl}'
                     target='_blank''
-=======
           {exportLinks && (<div className='text-sm space-y-1' />;
               {exportLinks && exportLinks.pdfUrl && (<div />;
                   <a;}
@@ -565,14 +546,11 @@ className='px-4 py-2 bg-emerald-600 text-white rounded';
                   >
                     PDF
                   </a>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>
               )}
               {exportLinks.mdUrl && (
                 <div>
-<<<<<<< HEAD
-                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
-=======
+                  <a className='text-blue-600 underline' href={exportLinks.mdUrl} target='_blank' rel='noreferrer'>Markdown</a>
 <a
 }
 className='text-blue-600 underline''
@@ -583,7 +561,6 @@ className='text-blue-600 underline''
                   >
                     Markdown
                   </a>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>
               )}
               {exportLinks.jsonUrl && (
@@ -603,19 +580,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </div>;
           )}
-<<<<<<< HEAD
         </div>;'
         <div className='space-y-2'>;'
-=======
         </div>;
         <div className='space-y-2'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <label className='block text-sm font-medium'>Draft (Markdown)</label>;
           <textarea'
             className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}
-            onChange={e => setDraftMarkdown(e && e.target.value)}          />          <textarea"
-            className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
+            onChange={e => setDraftMarkdown(e && e.target.value)}          />          <textarea'
+            className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}
 
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
@@ -624,13 +598,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>;
             onChange={(e) => setDraftMarkdown(e.target.value)}
-<<<<<<< HEAD
-=======
               )}
             </div>;
           )}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
 <div className='space-y-2'>'
           <label className='block text-sm font-medium'>Draft (Markdown)</label>'

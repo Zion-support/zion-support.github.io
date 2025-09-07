@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default /**
  * GovernancePrivacy - Function description
  */
@@ -15,11 +14,8 @@ function GovernancePrivacy() {
     </div>);
 
 }
-=======
-<<<<<<< HEAD
 Vote anonymously using zero-knowledge proofs (Semaphore) . Your vote is verified on-chain without revealing your identity. Weighted voting with ZION$ stake is supported. </p> <a href="/dao/zkvote" className="inline-block px-4 py-2 rounded bg-black text-white" >Open ZK Vote</a> </div>) 
 }
-=======
 export default function GovernancePrivacy() {
   return (
     <div className=&quot;max-w-2xl mx-auto p-6 space-y-4&quot;>
@@ -32,5 +28,3 @@ export default function GovernancePrivacy() {
     </div>
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

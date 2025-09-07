@@ -114,7 +114,7 @@ export const useProfileManagement = ("setIsLoading":("loading":boolean) => void)
           }
           "display_name":data.displayName,;
           "user_type":data.userType,;
-          "headline":data.headline}}),;
+          "headline":data.headline}),;
 ;
       if (authError) {;
         }

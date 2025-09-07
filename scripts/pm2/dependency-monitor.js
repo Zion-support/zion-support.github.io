@@ -3,17 +3,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')class DependencyMonitor {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
   }
-  const logMessage  = `[${timestamp}] ${message}\n`;try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async checkNpmAudit() {try {this.log('🔒 Running npm audit...')const audit = JSON.parse(auditResult;
+  const logMessage  = `[${timestamp}] ${message}\n`;try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}async checkNpmAudit() {try {this.log('🔒 Running npm audit...')const audit = JSON.parse(auditResult;
   return audit} catch (error) {// npm audit might fail if there are vulnerabilities; try {const output = error.stdout?.toString() || error.stderr?.toString() || ''; if (output.includes('npm ERR!')) {// Try to parse the error output for vulnerability info;'
 
 }
 
 const lines = output.split('\n';'
   const vulnerabilities  = [];lines.forEach(line = > {if (line.includes('│')) {const parts = line.split('│').map(p = > p.trim()).filter(Boolean)if (parts.length > = 4) {vulnerabilities.push({"package": parts[0], "severity": parts[1], "title": parts[2],"path": parts[3]})},'
-})return { vulnerabilities, "error": true }}} catch (parseError) {this.log(`Error parsing npm audit "output": ${parseError.messag,`}`);`return { "error": true, "message": error.message },;
+})return { vulnerabilities, "error": true }} catch (parseError) {this.log(`Error parsing npm audit "output": ${parseError.messag,`}`);`return { "error": true, "message": error.message },;
 }async checkOutdatedPackages() {try {this.log('📦 Checking for outdated packages...')const outdated = JSON.parse(outdatedResult)return outdated} catch (error) {// npm outdated;
   }
-  returns non-zero exit code if there are outdated packages; try {const output = error.stdout?.toString() || ''; if (output) {return JSON.parse(output)}} catch (parseError) {this.log(`Error parsing npm outdated "output": ${parseError.message}`)}return {},`}async checkPackageLock() {try {const packageLockPath = path.join(this.projectRoot, 'package-lock.json')if (!fs.existsSync(packageLockPath)) ;'
+  returns non-zero exit code if there are outdated packages; try {const output = error.stdout?.toString() || ''; if (output) {return JSON.parse(output)} catch (parseError) {this.log(`Error parsing npm outdated "output": ${parseError.message}`)}return {},`}async checkPackageLock() {try {const packageLockPath = path.join(this.projectRoot, 'package-lock.json')if (!fs.existsSync(packageLockPath)) ;'
   }
   return { "exists": false, "message": 'No package-lock.json found' ;'
 }
@@ -27,7 +27,7 @@ const lockfileVersion  = packageLock.lockfileVersion;return {"exists": true, loc
 }
 
 const npmVersion = execSync('npm --version', {"cwd": this.projectRoot,"encoding": 'utf8,;'
-}).trim()return { nodeVersion, npmVersion }} catch (error) {return { "error": error.message }
+}).trim()return { nodeVersion, npmVersion } catch (error) {return { "error": error.message }
 }async checkGitHooks() {try {const hooksDir  = path.join(this.projectRoot, '.git/hooks')if (!fs.existsSync(hooksDir)) ;'
   }
   return { "exists": false, "message": 'No git hooks directory found' ;'
@@ -55,7 +55,7 @@ const severity = vuln.severity?.toLowerCase() |'unknown'; if (severity = = = 'cr
 }if (report.summary.outdatedPackages > 10) {report.recommendations.push({"priority": 'medium', "message": 'Many outdated packages detected', "action": 'Consider updating packages in batches'},'
 }if (!packageLockInfo.exists) {report.recommendations.push({"priority": 'medium', "message": 'No package-lock.json found', "action": 'Run npm install to generate package-lock.json'})}return repor,'
 }async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { "recursive": true }
-}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}}async run() {this.log('🔍 Starting Dependency Monitor...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
+}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}async run() {this.log('🔍 Starting Dependency Monitor...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
 
 }
 
@@ -400,7 +400,7 @@ return {,"exist": "s": true,lockfileVersion,"dependencie": "s": Object.keys(pack
   const monitor = new DependencyMonitor(),monitor.run().catch((error) => {,process.exit(1)}),, "vulnerabilities": {, "total": 0, "critical": 0, "high": 0, "moderate": 0,"low": 0;
     },class DependencyMonitor {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
   }
-  const logMessage  = `[${timestamp}] ${message}\n`;try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file":', error.message)}}async checkNpmAudit() {try {this.log('🔒 Running npm audit...')const auditResult = execSync('npm audit --json', {"cwd": this.projectRoot, "encoding": 'utf8',"stdio": 'pipe';'      })const audit = JSON.parse(auditResult;
+  const logMessage  = `[${timestamp}] ${message}\n`;try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file":', error.message)}async checkNpmAudit() {try {this.log('🔒 Running npm audit...')const auditResult = execSync('npm audit --json', {"cwd": this.projectRoot, "encoding": 'utf8',"stdio": 'pipe';'      })const audit = JSON.parse(auditResult;
   return audit;
     } catch (error) {// npm audit might fail if there are vulnerabilities;
       }
@@ -414,16 +414,16 @@ const lines = output.split('\n';'
   const vulnerabilities  = [];lines.forEach(line = > {if (line.includes('│')) ;'
   }
   const parts = line.split('│').map(p => p.trim()).filter(Boolean)if (parts.length >= 4) {vulnerabilities.push({"package": parts[0], "severity": parts[1],"title": parts[2], "path": parts[3];'
-                })}}})return { vulnerabilities, "error": true;
-        }} catch (parseError) {this.log(`Error parsing npm audit "output": ${parseError.message}`,`}return { "error": true, "message": error.message;
-}}async checkOutdatedPackages() {try {this.log('📦 Checking for outdated packages...')const outdatedResult = execSync('npm outdated --json', {"cwd": this.projectRoot, "encoding": 'utf8',"stdio": 'pipe';'
+                })}})return { vulnerabilities, "error": true;
+        } catch (parseError) {this.log(`Error parsing npm audit "output": ${parseError.message}`,`}return { "error": true, "message": error.message;
+}async checkOutdatedPackages() {try {this.log('📦 Checking for outdated packages...')const outdatedResult = execSync('npm outdated --json', {"cwd": this.projectRoot, "encoding": 'utf8',"stdio": 'pipe';'
       })const outdated = JSON.parse(outdatedResult;
   return outdated;
     } catch (error) {// npm outdated returns non-zero exit code if there are outdated packages;
       }
       try {const output = error.stdout?.toString() || '';'
         }
-        if (output) {return JSON.parse(output)}} catch (parseError) {this.log(`Error parsing npm outdated "output": ${parseError.message}`)}return {},`}async checkPackageLock() {try {const packageLockPath = path.join(this.projectRoot, 'package-lock.json')if (!fs.existsSync(packageLockPath)) ;'
+        if (output) {return JSON.parse(output)} catch (parseError) {this.log(`Error parsing npm outdated "output": ${parseError.message}`)}return {},`}async checkPackageLock() {try {const packageLockPath = path.join(this.projectRoot, 'package-lock.json')if (!fs.existsSync(packageLockPath)) ;'
   }
   return { "exists": false, "message": 'No package-lock.json found';'
       }
@@ -725,14 +725,14 @@ const lockfileVersion = packageLock.lockfileVersion;
 }).length;
         "devDependencies": Object.keys(packageLock.devDependencies || 
 }).length;
-      }} catch (error) {return { "exists": false, "error": error.message;
-}}async checkNodeVersion() {try {const nodeVersion = process.version;
+      } catch (error) {return { "exists": false, "error": error.message;
+}async checkNodeVersion() {try {const nodeVersion = process.version;
 
 }
 
 const npmVersion = execSync('npm --version', {"cwd": this.projectRoot, "encoding": 'utf8';'
-      }).trim()return { nodeVersion, npmVersion }} catch (error) {return { "error": error.message;
-}}async checkGitHooks() {try {const hooksDir = path.join(this.projectRoot, '.git/hooks')if (!fs.existsSync(hooksDir)) ;'
+      }).trim()return { nodeVersion, npmVersion } catch (error) {return { "error": error.message;
+}async checkGitHooks() {try {const hooksDir = path.join(this.projectRoot, '.git/hooks')if (!fs.existsSync(hooksDir)) ;'
   }
   return { "exists": false, "message": 'No git hooks directory found';'
       }
@@ -742,7 +742,7 @@ const hooks = fs.readdirSync(hooksDir)const activeHooks = hooks.filter((hook) =>
   const stats = fs.statSync(hookPath)return stats.isFile() && (hook.endsWith('.sample') || stats.mode & 0o111)};'
   return { "exists": true, "hooks": activeHooks;
     } catch (error) {return { "error": error.message;
-}}async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {const report = {"timestamp": new Date().toISOString(), "summary": {,"vulnerabilities": {, "total": 0,"critical": 0, "high": 0,"moderate": 0, "low": 0,"outdatedPackages": Object.keys(outdatedResult).length, "packageLockStatus": packageLockInfo.exists ? 'healthy' : 'missing',"nodeVersion": nodeInfo.nodeVersion, "npmVersion": nodeInfo.npmVersion,"details": {, "audit": auditResult,"outdated": outdatedResult, "packageLock": packageLockInfo,"node": nodeInfo, "gitHooks": gitHooksInfo,"recommendations": [], ,// Count vulnerabilities by severity;'
+}async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {const report = {"timestamp": new Date().toISOString(), "summary": {,"vulnerabilities": {, "total": 0,"critical": 0, "high": 0,"moderate": 0, "low": 0,"outdatedPackages": Object.keys(outdatedResult).length, "packageLockStatus": packageLockInfo.exists ? 'healthy' : 'missing',"nodeVersion": nodeInfo.nodeVersion, "npmVersion": nodeInfo.npmVersion,"details": {, "audit": auditResult,"outdated": outdatedResult, "packageLock": packageLockInfo,"node": nodeInfo, "gitHooks": gitHooksInfo,"recommendations": [], ,// Count vulnerabilities by severity;'
     }
     if (auditResult.vulnerabilities) {Object.values(auditResult.vulnerabilities).forEach((vuln) => {report.summary.vulnerabilities.total++;
 
@@ -760,7 +760,7 @@ const severity = vuln.severity?.toLowerCase() || 'unknown';'
       })}if (!packageLockInfo.exists) {report.recommendations.push({"priority": 'medium', "message": 'No package-lock.json found',"action": 'Run npm install to generate package-lock.json';'
       })}return report;
 }async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { "recursive": true }
-}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}}async run() {this.log('🔍 Starting Dependency Monitor...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
+}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}async run() {this.log('🔍 Starting Dependency Monitor...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
 
 }
 
@@ -806,7 +806,7 @@ if ( {) {$2;
 } report.recommendations.push ({ "priority": 'medium', "message": 'No package - lock.json found', "action": 'Run npm install to generate package - lock.json'})}return repor,'
 }async save_report (report) { try { const report_dir = path.dirname (this.report_file)if () {) {$2;
 } fs.mkdir_sync (report_dir, { "recursive": true }
-}fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2))this.log (`Report saved "to": ${this.report_file}`)} catch (error) { this.log (`Error saving "report": ${error.message}`)}}async run () { this.log ('🔍 Starting Dependency Monitor...')this.log (`Project "root": ${this.project_roo,`}`)try { // Create logs directory if it doesn't exist;'
+}fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2))this.log (`Report saved "to": ${this.report_file}`)} catch (error) { this.log (`Error saving "report": ${error.message}`)}async run () { this.log ('🔍 Starting Dependency Monitor...')this.log (`Project "root": ${this.project_roo,`}`)try { // Create logs directory if it doesn't exist;'
 
 }
 
@@ -949,7 +949,7 @@ if ( {) {
 if ( {) {
   $2
 } this.log ('\n🚨 "CRITICAL": Security vulnerabilities detected!'); this.log ('Consider "running": npm audit fix')}'
-} catch (error) { this.log (`❌ Error running dependency "monitor": ${error.messag,`}`); process.exit (1)}}}`
+} catch (error) { this.log (`❌ Error running dependency "monitor": ${error.messag,`}`); process.exit (1)}}`
 ;
 // Run the dependency monitor;
 

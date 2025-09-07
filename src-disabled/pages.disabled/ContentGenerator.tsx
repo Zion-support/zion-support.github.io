@@ -301,7 +301,6 @@ export default function ContentGenerator() {
         </div>
       </div>
     </>
-<<<<<<< HEAD:src_backup/pages/ContentGenerator.tsx
   );
 
 }, [user, isLoading, router]);
@@ -362,7 +361,4 @@ testEmail ;
 origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/main

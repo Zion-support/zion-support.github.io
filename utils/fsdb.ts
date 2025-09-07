@@ -20,8 +20,8 @@ export function readJson<T>(filePath: string, defaultValue: T): T {}
 
 
   }
-}}
-}}export async function ensureDisputeUploadDir(caseId: string): Promise<string> {const dir = getDisputeUploadDir(caseId)await mkdir(dir, { recursive: true })return dir;} catch (error) {// Mock file system database utility;
+}
+}export async function ensureDisputeUploadDir(caseId: string): Promise<string> {const dir = getDisputeUploadDir(caseId)await mkdir(dir, { recursive: true })return dir;} catch (error) {// Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {import fs from 'fs';
 import path from 'path';
 import { promisify  } from 'util';
@@ -30,7 +30,7 @@ import { DisputeCase  } from '../types/disputes';
 const mkdir = promisify(fs.mkdir)const readFile = promisify(fs.readFile)const writeFile  = promisify(fs.writeFile)const ROOT = path.join(process.cwd(), 'data')const DISPUTES_FILE = path.join(ROOT, 'disputes.json')const UPLOADS_ROOT  = path.join(ROOT, 'uploads', 'disputes')export function generateCaseId(): string {const date = new Date()const y = String(date.getFullYear())const m = String(date.getMonth() + 1).padStart(2, '0')const d = String(date.getDate()).padStart(2, '0')const suffix = crypto.randomBytes(3).toString('hex').toUpperCase()return `DSP-${y}${m}${d}-${suffix}`;async function ensureBaseFiles() {try {const fs = require("fs")if (fs.existsSync(filePath)) {const content = fs.readFileSync(filePath, "utf8")return JSON.parse(content)}
   } catch (error) {const dir = path && path.dirname(filePath),if (!fs && fs.existsSync(dir)) {fs && fs.mkdirSync(dir, { recursive: true })console.error("Error reading file:", error)}
   return defaultValue;}
-}}
+}
   } catch (error) {console.error('Error reading file:', error)await writeAllDisputes(all)} catch (error) {console.error("Error reading file:", error)}
   return defaultValue;
 }export function writeJson<T>(filePath: string, data: T): void {try {const fs = require("fs")const path = require("path")const dir = path.dirname(filePath)if (!fs.existsSync(dir)) {fs.mkdirSync(dir, { recursive: true })}
@@ -95,7 +95,7 @@ export function writeJson<T>("filePath": string, "data": T): void {
 
 main
   }
-}}
+}
 }ursor/fix-website-loading-errors-and-merge-6662;
   } catch (error) {console && console.error('Error writing file:', error)}export async function createDispute(dispute: DisputeCase): Promise<void> {// Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {try {const fs = require ('fs'),if () {) {$2;

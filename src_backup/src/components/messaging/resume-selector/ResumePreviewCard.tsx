@@ -82,7 +82,7 @@ interface ResumePreviewCardProps  {"resume": Resume;
         )}
       </CardContent>;
     </Card>;
-  )}}<div className="flex items-start justify-between mb-3">;"
+  )}<div className="flex items-start justify-between mb-3">;"
           <div className="flex-1">;"
             <h3 className="font-semibold text-gray-900 mb-1">;"
               {resume.title}
@@ -104,7 +104,7 @@ interface ResumePreviewCardProps  {"resume": Resume;
           <Button;
             variant="outline";"
             size="sm";"
-            onClick={(e) => {e.stopPropagation()onDownload(resume)}}
+            onClick={(e) => {e.stopPropagation()onDownload(resume)}
             className="flex-1";"
           >;
             <Download className="h-4 w-4 mr-2" />;"
@@ -113,7 +113,7 @@ interface ResumePreviewCardProps  {"resume": Resume;
           <Button;
             variant={isSelected ? 'default' : 'outline'}'
             size="sm";"
-            onClick={(e) => {e.stopPropagation()onSelect(resume)}}
+            onClick={(e) => {e.stopPropagation()onSelect(resume)}
             className="flex-1";"
           >;
             {isSelected ? 'Selected' : 'Select'}'
@@ -121,4 +121,4 @@ interface ResumePreviewCardProps  {"resume": Resume;
         </div>;
       </CardContent>;
     </Card>;
-  )}}
+  )}

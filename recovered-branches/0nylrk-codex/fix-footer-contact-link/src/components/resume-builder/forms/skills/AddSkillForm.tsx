@@ -35,7 +35,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
               <SelectItem value="DevOps">DevOps</SelectItem>;"
               <SelectItem value="Data Science">Data Science</SelectItem>;"
               <SelectItem value="AI / ML">AI / ML</SelectItem>;}"
-}};
+};
 },
               on_change={(e) => set_proficiency (Number (e.target.value))}
               className="w-20";"
@@ -46,5 +46,5 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       </div>;
 
     </form>);}
-}};
+};
 },

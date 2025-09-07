@@ -102,7 +102,7 @@ const finalStructuredData = structuredData || defaultStructuredData;
       {/* Structured Data */}{' '}'
       <script;
         type="application/ld+json";"
-        dangerouslySetInnerHTML={{"__html": JSON.stringify(finalStructuredData)}} />;
+        dangerouslySetInnerHTML={"__html": JSON.stringify(finalStructuredData)} />;
       {/* Additional Performance Hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />;"
       <meta name="format-detection" content="telephone=no" />;"

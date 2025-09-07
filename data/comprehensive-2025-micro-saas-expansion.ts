@@ -645,7 +645,7 @@ const contact = {mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',ad
 ];benefits: ['Operational efficiency_safety improvements', 'Cost reduction_scalability'];
 capabilities: ['Multi - system coordinationAI optimization', 'Safety monitoring_performance analytics'];
 market_advantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
-}];;ursor/fix-website-loading-errors-and-merge-6662;
+}];ursor/fix-website-loading-errors-and-merge-6662;
 competitors: ['Waymo, Cruise, Argo AI, Aurora'];
 
 

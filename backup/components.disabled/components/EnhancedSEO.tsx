@@ -46,33 +46,33 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
+      <meta name='description' content={description} />
+      <meta name='keywords' content={keywords.join(', ')} />
+      <meta name='author' content={author} />
 
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImageUrl} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={description} />
+      <meta property='og:image' content={fullImageUrl} />
+      <meta property='og:url' content={currentUrl} />
+      <meta property='og:type' content={type} />
+      <meta property='og:site_name' content='Zion Tech Group' />
 
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImageUrl} />
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:title' content={title} />
+      <meta name='twitter:description' content={description} />
+      <meta name='twitter:image' content={fullImageUrl} />
 
       {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="canonical" href={currentUrl} />
+      <meta name='robots' content='index, follow' />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <link rel='canonical' href={currentUrl} />
 
       {/* Structured Data */}
       <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
+        type='application/ld+json'
+        dangerouslySetInnerHTML={
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
@@ -96,7 +96,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
               addressCountry: 'US',
             },
           }),
-        }}
+        }
       />
     </Head>
   );
@@ -153,33 +153,33 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
+      <meta name='description' content={description} />
+      <meta name='keywords' content={keywords.join(', ')} />
+      <meta name='author' content={author} />
 
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImageUrl} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={description} />
+      <meta property='og:image' content={fullImageUrl} />
+      <meta property='og:url' content={currentUrl} />
+      <meta property='og:type' content={type} />
+      <meta property='og:site_name' content='Zion Tech Group' />
 
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImageUrl} />
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:title' content={title} />
+      <meta name='twitter:description' content={description} />
+      <meta name='twitter:image' content={fullImageUrl} />
 
       {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="canonical" href={currentUrl} />
+      <meta name='robots' content='index, follow' />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <link rel='canonical' href={currentUrl} />
 
       {/* Structured Data */}
       <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
+        type='application/ld+json'
+        dangerouslySetInnerHTML={
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
@@ -203,7 +203,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
               addressCountry: 'US',
             },
           }),
-        }}
+        }
       />
     </Head>
   );
@@ -211,4 +211,3 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 
 export default EnhancedSEO;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

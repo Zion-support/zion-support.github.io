@@ -704,7 +704,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 };
 }
 ;
-}})))
+})))
 }
 ;
 

@@ -345,7 +345,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
 }
 
 ;
-}}}}}})))
+}}})))
                 <Label className="block mb-2 text-zion-slate-light">Start Date</Label>;
                 <Popover>;
                   <PopoverTrigger asChild>;

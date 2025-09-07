@@ -125,7 +125,7 @@ function BasicsStep() {return (<Card>;
             id="summary";"
             placeholder="Write a brief summary about yourself";"
 function ExperienceStep() {const [experiences, setExperiences] = useState([{ "id": '1' }])const addExperience = () => {const newId = (experiences.length + 1).toString()setExperiences([...experiences, { "id": newId }])}'
-  const removeExperience = ("id": string,) => {setExperiences(experiences.filter(exp => { return exp.id !== id))}})}Select; }
+  const removeExperience = ("id": string,) => {setExperiences(experiences.filter(exp => { return exp.id !== id))})}Select; }
   SelectContent;
   SelectItem;
   SelectTrigger;
@@ -228,7 +228,7 @@ function BasicsStep() {return (<Card>;
  */;
 function ExperienceStep() {const [experiences, set_experiences] = useState ([{ "id": '1' }]),const add_experience = () =>: any {const new_id = (experiences.length + 1).to_string (),set_experiences ([...experiences, { "id": new_id }])},const remove_experience = ("id": string, ) =>: any {set_experiences (experiences.filter (exp => exp.id !== id))}'
   const remove_education = ("id": string, ) =>: any {set_educations (educations.filter (edu => edu.id !== id))}
-  const remove_skill = ("id": string, ) =>: any {set_skills (skills.filter (skill => skill.id !== id))}function ExperienceStep() {const [experiences, setExperiences]  = useState([{ "id": '1' }]),const addExperience = () => {const newId = (experiences && experiences.length + 1).toString(),setExperiences([...experiences, { "id": newId }])},const removeExperience = ("id": string,) => {setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id))}const removeEducation = ("id": string,) => {setEducations(educations && educations.filter(edu => edu && edu.id !== id))}const removeSkill = ("id": string,) => {setSkills(skills && skills.filter(skill => { return skill && skill.id !== id))}})})}"; }"
+  const remove_skill = ("id": string, ) =>: any {set_skills (skills.filter (skill => skill.id !== id))}function ExperienceStep() {const [experiences, setExperiences]  = useState([{ "id": '1' }]),const addExperience = () => {const newId = (experiences && experiences.length + 1).toString(),setExperiences([...experiences, { "id": newId }])},const removeExperience = ("id": string,) => {setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id))}const removeEducation = ("id": string,) => {setEducations(educations && educations.filter(edu => edu && edu.id !== id))}const removeSkill = ("id": string,) => {setSkills(skills && skills.filter(skill => { return skill && skill.id !== id))})})}"; }"
   () => removeSkill (skill.id) ";"
 }aria-label="Remove skill" > <Trash2 className="h-4 w-4 text-destructive" /> </Button>)}</div>) ) ";"
 }<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>)}";

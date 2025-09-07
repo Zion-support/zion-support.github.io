@@ -82,7 +82,7 @@ description: 'Successfully deployed and running',}
         </title>
         <meta;
 name='description'
-          content="Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems."
+          content='Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems.'
         />
         <meta;
 property='og:title'
@@ -200,17 +200,17 @@ href={`/blog/${trend.id}`}
             </div>;
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
-                      Read More <span className='ml-1' />→</span>                    </Link>                {automationTrends && automationTrends.map((trend, index) => (<div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300" />;
-                    <div className="flex items-center justify-between mb-4" />;
-                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full" />{trend && trend.category}</span>;
-                      <span className="text-white/60 text-sm" />{trend && trend.readTime}</span>;
+                      Read More <span className='ml-1' />→</span>                    </Link>                {automationTrends && automationTrends.map((trend, index) => (<div key={index} className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300' />;
+                    <div className='flex items-center justify-between mb-4' />;
+                      <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full' />{trend && trend.category}</span>;
+                      <span className='text-white/60 text-sm' />{trend && trend.readTime}</span>;
                     </div>;
-                    <h3 className="text-xl font-bold mb-3 text-white" />{trend && trend.title}</h3>;
-                    <p className="text-white/70 mb-4" />{trend && trend.description}</p>;
+                    <h3 className='text-xl font-bold mb-3 text-white' />{trend && trend.title}</h3>;
+                    <p className='text-white/70 mb-4' />{trend && trend.description}</p>;
                     <Link;
                       href={`/blog/${trend && trend.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors" />;
-                      Read More <span className="ml-1" />→</span>;
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors' />;
+                      Read More <span className='ml-1' />→</span>;
                     </Link>;
                   </div>;
                 ))}
@@ -235,13 +235,13 @@ href={`/blog/${trend.id}`}
                       </span>;
                       <span className='px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full' />;
                         {tool && tool.complexity}
-                      </span>                    </div>                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center" />;
-                    <div className="text-4xl mb-4" />🔧</div>;
-                    <h3 className="text-xl font-bold mb-3 text-white" />{tool && tool.title}</h3>;
-                    <p className="text-white/70 mb-4" />{tool && tool.description}</p>;
-                    <div className="flex justify-center gap-2" />;
-                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full" />{tool && tool.type}</span>;
-                      <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full" />{tool && tool.complexity}</span>;
+                      </span>                    </div>                  <div key={index} className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center' />;
+                    <div className='text-4xl mb-4' />🔧</div>;
+                    <h3 className='text-xl font-bold mb-3 text-white' />{tool && tool.title}</h3>;
+                    <p className='text-white/70 mb-4' />{tool && tool.description}</p>;
+                    <div className='flex justify-center gap-2' />;
+                      <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full' />{tool && tool.type}</span>;
+                      <span className='px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full' />{tool && tool.complexity}</span>;
                   </div>;
                 ))}
             {/* Call to Action */}

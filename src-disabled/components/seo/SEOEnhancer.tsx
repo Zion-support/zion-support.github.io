@@ -60,7 +60,7 @@ useEffect(() => {}"
       {/* Structured Data */}"
       <script "";"
         type="application/ld+json";
-        dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData || defaultStructuredData) }
+        dangerouslySetInnerHTML={__html: JSON.stringify(structuredData || defaultStructuredData) }
 }"
       /"  />";
       {/* Performance hints */}"

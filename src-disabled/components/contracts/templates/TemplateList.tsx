@@ -6,8 +6,6 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -43,13 +41,10 @@ import {
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 
 
 
 // use_router replaces the old use_location hook from react - router;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 import { use_router } from 'next / router';
 
 // use_router replaces the old use_location hook from react - router;
@@ -70,8 +65,6 @@ import {
 import { useAuth } from '@/hooks/useAuth';
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router';
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 import { use_router } from 'next/router';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -84,8 +77,6 @@ import {
   AlertDialogDescription;
   AlertDialogFooter;
   AlertDialogHeader;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
   AlertDialogTitle } from '@/components / ui / alert - dialog';
 import { ContractTemplate  } from '@/types / contracts';
 import { Button  } from '@/components / ui / button';
@@ -106,8 +97,6 @@ import { use_auth  } from '@/hooks/ use_auth';
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 import { useState } from "react"
 interface TemplateListProps {
   templates: ContractTemplate[]
@@ -120,7 +109,6 @@ interface TemplateListProps {
   onSelect: (template: ContractTemplate) => void;
   onEdit: (template: ContractTemplate) => void
 
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react";
 interface TemplateListProps {
@@ -208,10 +196,8 @@ export function TemplateList(): any ({;
   templates;
   isLoading;
   onSelect;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
   onEdit
 }: TemplateListProps) {
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
   AlertDialogTitle} from "@/components / ui / alert - dialog",
   AlertDialogTitle} from "@/components/ui/ alert - dialog",
 import { useState  } from './react';
@@ -279,7 +265,6 @@ import { Separator  } from '@/components/ui/separator';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
 import { useAuth  } from '@/hooks/useAuth';
 // useRouter replaces the old useLocation hook from react-router;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 import { useRouter } from 'next/router';
 
 
@@ -325,7 +310,6 @@ import { useRouter } from 'next/router';
       </div>;
     );
   }
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 import { useState } from "react",
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -351,7 +335,6 @@ import {;
   AlertDialogFooter,;
   AlertDialogHeader,;
   AlertDialogTitle} from "@/components/ui/alert-dialog",;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
   const { user } = useAuth();
@@ -491,7 +474,6 @@ export function TemplateList({;
                 <Button
                   variant="ghost"
                   size="icon"
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
                   onClick={() => onEdit(template)}
                   aria-label="Edit template"
                 >
@@ -521,7 +503,6 @@ export function TemplateList({;
                   <Button variant="ghost" size="icon" disabled aria-label="Default template">
                     <StarOff className="h-4 w-4" />
                   </Button>
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 
 import { useState } from "react";
 interface TemplateListProps {;
@@ -649,8 +630,6 @@ import {AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,Alert
                 ) : (<Button variant="ghost" size="icon" disabled aria-label="Default template">;
                     <StarOff className="h-4 w-4" />;
                   </Button>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 
                 )}
                 <Button
@@ -662,7 +641,6 @@ import {AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,Alert
             
             <Separator className="my-3" />
             
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 
 
 
@@ -675,7 +653,6 @@ import {AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,Alert
                 </Button>
               </div>
             </div>
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
             
             <Separator className="my-3" />
             
@@ -691,9 +668,7 @@ import {AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,Alert
           </CardContent>
         </Card>
       ))}
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 
 
       
@@ -720,8 +695,6 @@ import {AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,Alert
         </AlertDialogContent>
       </AlertDialog>
     </div>
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 
 
 return;
@@ -830,7 +803,6 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
               </div>;
             </div>;
             <Separator className="my-3" />;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
             <Button;
               onClick={() => onSelect(template)}variant="outline";
             <Button
@@ -841,10 +813,7 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
               Use This Template;
             </Button>;
           </CardContent>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
         </Card>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
       ))}
 
 
@@ -876,9 +845,6 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
           </AlertDialogHeader>;
           <AlertDialogFooter>;
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
             <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
               onClick = {handleDeleteConfirm,}>;
@@ -892,7 +858,6 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
               onClick={handleDeleteConfirm}
             >;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 
             <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"",
@@ -905,10 +870,7 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
         </AlertDialogContent>;
       </AlertDialog>;
     </div>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
   );
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 
 
 
@@ -918,7 +880,6 @@ if ( {) {
 }
     return (
       <div className="flex justify - center items - center py - 8">;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
   )}
 const handleSetDefault = async (templateId: string) => {if (!user) {const currentPath = router.asPath;
 router.push (`/auth/login?returnTo=$ {encodeURIComponent (currentPath)}`)return;
@@ -946,7 +907,7 @@ router.push (`/auth/login?returnTo=$ {encodeURIComponent (currentPath)}`)return;
             >;
               Use This Template;
             </Button>;
-          </CardContent>;;</Card>;
+          </CardContent>;</Card>;
       ))}handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)}'"};
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
@@ -1005,7 +966,6 @@ if ( {) {
               <div className="space - y-1">;
                 <div className="flex items - center gap - 2">;
                   <h3 className="font - medium">{template.title}</h3>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
                   {template.is_default && (<span className="bg - zion - purple / 10 text - zion - purple text - xs px - 2 py - 0.5 rounded - full">Default</span>)}
                   {template.is_default && (
                     <span className="bg - zion - purple / 10 text - zion - purple text - xs px - 2 py - 0.5 rounded - full">Default</span>)}"
@@ -1018,14 +978,12 @@ if ( {) {
                 <Button;
                   variant="ghost";
                   size="icon";
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
                   on_click = {() => on_edit (template) }
                   on_click = {() => on_edit (template), }
                   aria - label="Edit template";
                 >;
                   <Edit className="h - 4 w - 4" />;
                 </Button>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
                 {!template.is_default ? (<TooltipProvider>;
                 {!template.is_default ? (
                   <TooltipProvider>;
@@ -1034,7 +992,6 @@ if ( {) {
                         <Button;
                           variant="ghost";
                           size="icon";
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
                           on_click = {(, ) => handleSetDefault (template.id) }
                           on_click = {(, ) => handleSetDefault (template.id), }
                           aria - label="Set as default";
@@ -1042,7 +999,6 @@ if ( {) {
                           <Star className="h - 4 w - 4" />;
                         </Button>;
                       </TooltipTrigger>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
                       {!user && (<TooltipContent>Please log in to use this feature;
                         </TooltipContent>)}
                     </Tooltip>;
@@ -1059,7 +1015,6 @@ if ( {) {
                 <Button;
                   variant="ghost";
                   size="icon";
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
                   on_click = {() => handleDeleteClick (template.id) }
                   on_click = {() => handleDeleteClick (template.id), }
                   aria - label="Delete template";
@@ -1070,7 +1025,6 @@ if ( {) {
             </div>;
             <Separator className="my - 3" />;
             <Button;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
               on_click = {() => on_select (template) }
               on_click = {() => on_select (template), }
               variant="outline";
@@ -1084,7 +1038,6 @@ if ( {) {
         <AlertDialogContent>;
           <AlertDialogHeader>;
             <AlertDialogTitle > Delete Template</AlertDialogTitle>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
             <AlertDialogDescription>Are you sure you want to delete this template? This action cannot be undone.;
             <AlertDialogDescription>;
               Are you sure you want to delete this template? This action cannot be undone.;
@@ -1093,7 +1046,6 @@ if ( {) {
           <AlertDialogFooter>;
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
               className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
               on_click = {handleDeleteConfirm }
               className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";",
@@ -1104,7 +1056,6 @@ if ( {) {
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
     </div>)}
 const handleSetDefault = async (template_id: string) => {// Check condition;
 if ( {) {$2;
@@ -1120,7 +1071,6 @@ router.push (`/auth / login?return_to=$ {encodeURIComponent (current_path)}`)ret
   !template.is default ? (<TooltipProvider> <Tooltip> <TooltipTrigger as_child> <Button variant="ghost" size="icon" on_click={() => handleSetDefault (template.id) ";
 }aria - label="Set as default" > <Star className="h - 4 w - 4" /> </Button> </TooltipTrigger> {!user && (<TooltipContent> Please log in to use this feature </TooltipContent>) ";
 }</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria - label="Default template"> <StarOff className="h - 4 w - 4" /> </Button>) ";
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
     </div>);
 }
 const handleSetDefault = async (template_id:,  string) => {
@@ -1152,7 +1102,6 @@ return;
   !!templateToDelete;
 }onOpenChange= {
   () => setTemplateToDelete (null) ";
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction className="bg - destructive text - destructive - foreground hover:bg - destructive / 90" on_click={
   handleDeleteConfirm;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);
@@ -1195,7 +1144,6 @@ router.push (`/auth/login?returnTo=$ {encodeURIComponent (currentPath)}`)return 
   !template.is default ? (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button variant="ghost" size="icon" onClick={() => handleSetDefault (template.id) ";
 }aria-label="Set as default" > <Star className="h-4 w-4" /> </Button> </TooltipTrigger> {!user && (<TooltipContent> Please log in to use this feature </TooltipContent>) ";
 }</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) ";
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 }<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) ) ;
 }<AlertDialog open= {;
   !!templateToDelete ;
@@ -1204,9 +1152,7 @@ router.push (`/auth/login?returnTo=$ {encodeURIComponent (currentPath)}`)return 
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={;
   handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 }'"
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) )}<AlertDialog open= {!!templateToDelete ;
 }onOpenChange= {() => setTemplateToDelete (null) ";

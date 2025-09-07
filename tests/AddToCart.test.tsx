@@ -5,7 +5,7 @@ import AddToCart from '@/components/AddToCart';
 
 // Mock the AddToCart component if it doesn't exist
 const MockAddToCart = ({ productId, onAddToCart }: { productId: string; onAddToCart: () => void }) => (
-  <button onClick={onAddToCart} data-testid="add-to-cart">
+  <button onClick={onAddToCart} data-testid='add-to-cart'>
     Add to Cart
   </button>
 );
@@ -18,7 +18,7 @@ describe('AddToCart Component', () => {
   });
 
   it('renders add to cart button', () => {
-    render(<MockAddToCart productId="test-product" onAddToCart={mockOnAddToCart} />);
+    render(<MockAddToCart productId='test-product' onAddToCart={mockOnAddToCart} />);
     
     const button = screen.getByTestId('add-to-cart');
     expect(button).toBeInTheDocument();
@@ -26,7 +26,7 @@ describe('AddToCart Component', () => {
   });
 
   it('calls onAddToCart when button is clicked', () => {
-    render(<MockAddToCart productId="test-product" onAddToCart={mockOnAddToCart} />);
+    render(<MockAddToCart productId='test-product' onAddToCart={mockOnAddToCart} />);
     
     const button = screen.getByTestId('add-to-cart');
     fireEvent.click(button);
@@ -35,7 +35,7 @@ describe('AddToCart Component', () => {
   });
 
   it('handles multiple clicks correctly', async () => {
-    render(<MockAddToCart productId="test-product" onAddToCart={mockOnAddToCart} />);
+    render(<MockAddToCart productId='test-product' onAddToCart={mockOnAddToCart} />);
     
     const button = screen.getByTestId('add-to-cart');
     

@@ -98,7 +98,7 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityServic
     ],integrations["Applications", "Systems", "Networks", "Cloud platforms","IoT devices", "Blockchain networks";"
     ],support["Post-quantum expertise","Migration assistance","Security consultation","Training programs","Ongoing support";"
     ],"link": ""https"://ziontechgroup.com/quantum-resistant-crypto","badge": "Advanced","icon": "🔐","image": ""https"://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500","innovationLevel": "Advanced","marketSize": "$2.4B by 2027",competitors["NIST", "Cloudflare", "Google"],"securityFeatures": {"threatDetection": "Quantum threat assessment","encryption": "Post-quantum encryption",compliance["NIST standards", "Post-quantum requirements", "Industry standards"],"monitoring": "Quantum threat monitoring","response": "Quantum-resistant response";"
-    },"roi": "400-800%","estimatedDelivery": "16-20 weeks","contactInfo": {"phone": "+1 302 464 0950","email": "kleber@ziontechgroup.com","website": ""https"://ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709"}}];"
+    },"roi": "400-800%","estimatedDelivery": "16-20 weeks","contactInfo": {"phone": "+1 302 464 0950","email": "kleber@ziontechgroup.com","website": ""https"://ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709"}];"
 
 export interface AdvancedCybersecurityService2027 { "id": string; "title": string; "description": string; "category": string; "subcategory": string; "pricing": { "monthly": number; "yearly": number; "custom": string; "currency": string; "pricingModel": strin
 }"features": string[]; "benefits": string[]; "useCases": string[]; "targetAudience": string[]; "technologies": string[]; "integrations": string[]; "support": string[]; "link": string; "badge": string; "icon": string; "image": string; "innovationLevel": string; "marketSize": string; "competitors": string[]; "securityFeatures": { "threatDetection": string; "encryption": string; "compliance": string[]; "monitoring": string; "response": strin
@@ -658,7 +658,7 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityServic
       "phone": "+1 302 464 0950","
       "email": "kleber@ziontechgroup.com","
       "website": ""https"://ziontechgroup.com","
-      "address": "364 E Main St STE 1008 Middletown DE 19709"}}];"
+      "address": "364 E Main St STE 1008 Middletown DE 19709"}];"
 
 export interface AdvancedCybersecurityService2027 { "id": string; "title": string; "description": string; "category": string; "subcategory": string; "pricing": { "monthly": number; "yearly": number; "custom": string; "currency": string; "pricingModel": strin
 }; "features": string[]; "benefits": string[]; "useCases": string[]; "targetAudience": string[]; "technologies": string[]; "integrations": string[]; "support": string[]; "link": string; "badge": string; "icon": string; "image": string; "innovationLevel": string; "marketSize": string; "competitors": string[]; "securityFeatures": { "threatDetection": string; "encryption": string; "compliance": string[]; "monitoring": string; "response": strin
@@ -867,7 +867,7 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityServic
     ],integrations["Applications", "Systems", "Networks", "Cloud platforms","IoT devices", "Blockchain networks";"
     ],support["Post-quantum expertise","Migration assistance","Security consultation","Training programs","Ongoing support";"
     ],"link": ""https"://ziontechgroup.com/quantum-resistant-crypto","badge": "Advanced","icon": "🔐","image": ""https"://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500","innovationLevel": "Advanced","marketSize": "$2.4B by 2027",competitors["NIST", "Cloudflare", "Google"],"securityFeatures": {"threatDetection": "Quantum threat assessment","encryption": "Post-quantum encryption",compliance["NIST standards", "Post-quantum requirements", "Industry standards"],"monitoring": "Quantum threat monitoring","response": "Quantum-resistant response";"
-    },"roi": "400-800%","estimatedDelivery": "16-20 weeks","contactInfo": {"phone": "+1 302 464 0950","email": "kleber@ziontechgroup.com","website": ""https"://ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709"}}];"
+    },"roi": "400-800%","estimatedDelivery": "16-20 weeks","contactInfo": {"phone": "+1 302 464 0950","email": "kleber@ziontechgroup.com","website": ""https"://ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709"}];"
 
 export interface AdvancedCybersecurityService2027 { "id": string; "title": string; "description": string; "category": string; "subcategory": string; "pricing": { "monthly": number; "yearly": number; "custom": string; "currency": string; "pricingModel": strin
 }"features": string[]; "benefits": string[]; "useCases": string[]; "targetAudience": string[]; "technologies": string[]; "integrations": string[]; "support": string[]; "link": string; "badge": string; "icon": string; "image": string; "innovationLevel": string; "marketSize": string; "competitors": string[]; "securityFeatures": { "threatDetection": string; "encryption": string; "compliance": string[]; "monitoring": string; "response": strin
@@ -1229,7 +1229,7 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityServic
     ],integrations["Applications", "Systems", "Networks", "Cloud platforms","IoT devices", "Blockchain networks";"
     ],support["Post-quantum expertise","Migration assistance","Security consultation","Training programs","Ongoing support";"
     ],"link": ""https"://ziontechgroup.com/quantum-resistant-crypto","badge": "Advanced","icon": "🔐","image": ""https"://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500","innovationLevel": "Advanced","marketSize": "$2.4B by 2027",competitors["NIST", "Cloudflare", "Google"],"securityFeatures": {"threatDetection": "Quantum threat assessment","encryption": "Post-quantum encryption",compliance["NIST standards", "Post-quantum requirements", "Industry standards"],"monitoring": "Quantum threat monitoring","response": "Quantum-resistant response";"
-    },"roi": "400-800%","estimatedDelivery": "16-20 weeks","contactInfo": {"phone": "+1 302 464 0950","email": "kleber@ziontechgroup.com","website": ""https"://ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709"}}];ursor/automate-test-improve-and-merge-code-646c;"
+    },"roi": "400-800%","estimatedDelivery": "16-20 weeks","contactInfo": {"phone": "+1 302 464 0950","email": "kleber@ziontechgroup.com","website": ""https"://ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709"}];ursor/automate-test-improve-and-merge-code-646c;"
 
 export interface AdvancedCybersecurityService2027 { "id": string; "title": string; "description": string; "category": string; "subcategory": string; "pricing": { "monthly": number; "yearly": number; "custom": string; "currency": string; "pricingModel": strin
 }"features": string[]; "benefits": string[]; "useCases": string[]; "targetAudience": string[]; "technologies": string[]; "integrations": string[]; "support": string[]; "link": string; "badge": string; "icon": string; "image": string; "innovationLevel": string; "marketSize": string; "competitors": string[]; "securityFeatures": { "threatDetection": string; "encryption": string; "compliance": string[]; "monitoring": string; "response": strin
@@ -1719,7 +1719,7 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_2027": AdvancedCybersecurityServic
       "phone": "+1 302 464 0950","
       "email": "kleber@ziontechgroup.com","
       "website": ""https"://ziontechgroup.com","
-      "address": "364 E Main St STE 1008 Middletown DE 19709"}}];"
+      "address": "364 E Main St STE 1008 Middletown DE 19709"}];"
 
 export interface AdvancedCybersecurityService2027 { "id": string; "title": string; "description": string; "category": string; "subcategory": string; "pricing": { "monthly": number; "yearly": number; "custom": string; "currency": string; "pricingModel": strin
 }; "features": string[]; "benefits": string[]; "useCases": string[]; "targetAudience": string[]; "technologies": string[]; "integrations": string[]; "support": string[]; "link": string; "badge": string; "icon": string; "image": string; "innovationLevel": string; "marketSize": string; "competitors": string[]; "securityFeatures": { "threatDetection": string; "encryption": string; "compliance": string[]; "monitoring": string; "response": strin

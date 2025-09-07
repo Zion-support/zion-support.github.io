@@ -65,11 +65,11 @@ export function ComprehensiveServicesShowcase() {}
           className='text-center mb-16''';
           initial = {}
   { opacity: 0, y: 30;
-}}
+}
           animate = {}
   { opacity: 1, y: 0;
-}}
-          transition={{ duration: 0.6 }}'''';
+}
+          transition={ duration: 0.6 }'''';
         >'''';
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
             Revolutionary 2027 Services'''';
@@ -111,13 +111,13 @@ export function ComprehensiveServicesShowcase() {}
           className='flex flex-wrap justify-center gap-4 mb-12''';
           initial = {}
   { opacity: 0, y: 20;
-}}
+}
           animate = {}
   { opacity: 1, y: 0;
-}}
+}
           transition = {}
   { duration: 0.6, delay: 0.2;
-}}
+}
         >;
           {serviceCategories.map ( (category) => (<button;
               key={category.id}
@@ -157,7 +157,7 @@ export function ComprehensiveServicesShowcase() {}
                   y: -8, '''';
                   boxShadow: '0 20px 40px rgba(0, 0, 0,''''';
   0.3)'';
-}}
+}
               >'''';
                 {/* Service Header */}'''';
                 <div className='flex items-start justify-between mb-4'>'''';
@@ -238,13 +238,13 @@ export function ComprehensiveServicesShowcase() {}
           className='text-center mt-16''';
           initial = {}
   { opacity: 0, y: 30;
-}}
+}
           animate = {}
   { opacity: 1, y: 0;
-}}
+}
           transition = {}
   { duration: 0.6, delay: 0.4;
-}}'''';
+}'''';
         >'''';
           <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>'''';
             <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -274,22 +274,22 @@ export function ComprehensiveServicesShowcase() {}
         {selectedService && ('''';
           <motion.div'''';
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4''';
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
             onClick={ () => setSelectedService (null) }
           >'''';
             <motion.div'''';
               className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto''';
               initial = {}
   { scale: 0.9, opacity: 0;
-}}
+}
               animate = {}
   { scale: 1, opacity: 1;
-}}
+}
               exit = {}
   { scale: 0.9, opacity: 0;
-}}
+}
               onClick={(e) => e.stopPropagation()}'''';
             >'''';
               <div className='flex items-start justify-between mb-6'>'''';
@@ -368,4 +368,4 @@ export function ComprehensiveServicesShowcase() {}
       </AnimatePresence>;
     </section>;
   )}''`;
-''`'"`'";
+''`''`'';

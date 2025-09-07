@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
-=======
   const values = [{
       title: \'Innovation\',
       \"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',
@@ -62,13 +59,6 @@
   ];
 
 
-=======
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const \"About\": NextPage = () => {
 const \"About\": NextPage = () => {
 const \"About\": NextPage = () => {
@@ -102,16 +92,11 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Users, Target, Award, Globe, Shield, Zap } from 'lucide-react';
 const "About": NextPage = () => {
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
 const \"About\": NextPage = () => {ursor/automate-test-improve-and-merge-code-646c;
-const \"About\": NextPage = () => {const \"About\": NextPage = () => {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+const \"About\": NextPage = () => {const \"About\": NextPage = () => {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -133,17 +118,11 @@ const "About": NextPage = () => {ursor/automate-test-improve-and-merge-code-646c
     }
   ];const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },{ \"number\": \'50+\', \"label\": \'Happy Clients\' },{ \"number\": \'5+\', \"label\": \'Years Experience\' },{ \"number\": \'24/7\', \"label\": \'Support Available\' }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export default function AboutPage() {return (const stats = [{ "number": '150+', "label": 'Projects Completed' },{ "number": '50+', "label": 'Happy Clients' },{ "number": '5+', "label": 'Years Experience' },{ "number": '24/7', "label": 'Support Available' }
   ];
 export default function AboutPage() {return (<main>;
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
     { \"number\": \'24/7\', \"label\": \'Support Available\' }
@@ -188,7 +167,6 @@ export default function AboutPage() {
               <div key={v.title} className="bg-white rounded-lg p-8 shadow text-center">
                 <h3 className="text-xl font-semibold mb-3">{v.title}</h3>
                 <p className="text-gray-600">{v.desc}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     <MainLayout
       title=\"About Us - Zion Tech Group\"
       description=\"Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\"
@@ -241,13 +219,9 @@ export default function AboutPage() {
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">
             {stats.map((stat) => (
-<<<<<<< HEAD
 
 
-=======
-=======
               </div>
-=======
 import {Users,, Target,, Award,, Globe,, Shield,, Zap} from 'lucide-react';
 const "About": NextPage = () => {;
   const values = [{;
@@ -305,17 +279,11 @@ const "About": NextPage = () => {;
       \"bio\": \'Full-stack developer with expertise in modern web technologies and frameworks.\',;
       \"image\": \'/team/david && david.jpg\';
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ];
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
-=======
   ];  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   ];
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' };
@@ -459,14 +427,8 @@ export default function AboutPage() {return (<main>;
               { "title": 'Innovation', "desc": 'We embrace modern technologies to solve problems.' },;
               { "title": 'Collaboration', "desc": 'We partner closely with clients for success.' }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             ].map((v) => (;
               <div key={v && v.title} className="bg-white rounded-lg p-8 shadow text-center">;
                 <h3 className="text-xl font-semibold mb-3">{v && v.title}</h3>;
@@ -590,29 +552,18 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <div className=\"text-gray-600\">{stat.label}</div>
               <div key={stat.label} className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="text-gray-600">{stat.label}</div>
               </div>
-=======
                 <div className="text-gray-600">{stat.label}</div>              </div>
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                 <div className="text-gray-600">{stat.label}</div>
               </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
 
-=======
-=======
       {/* Values Section */}
-=======
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
@@ -629,21 +580,11 @@ ursor/automate-test-improve-and-merge-code-646c;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     </main>
 
 
       {/* Values Section */}
-<<<<<<< HEAD
-=======
     </main>      {/* Values Section */}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -652,10 +593,8 @@ ursor/automate-test-improve-and-merge-code-646c;
               The principles that guide everything we do and shape our company culture
             </p>
           </div>
-<<<<<<< HEAD
 
 
-=======
             {values.map((value) => (
 
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
@@ -673,11 +612,6 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value) => (
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
@@ -685,23 +619,16 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value) => (
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               <div key={value.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
                   <value.icon className=\"h-8 w-8\" />
                 </div>
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
                   {value.title}
-<<<<<<< HEAD
                 </h3>
                 <p className=\"text-gray-600\">
                   {value.description}
@@ -713,7 +640,6 @@ ursor/automate-test-improve-and-merge-code-646c;
         </div>
       </section>
       {/* Team Section */}
-=======
                 </h3>;
                 <p className=\"text-gray-600\">;
                   {value.description}
@@ -740,7 +666,6 @@ ursor/automate-test-improve-and-merge-code-646c;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">;
             {stats && stats.map((stat) => (<div key={stat && stat.label} className=\"text-center\">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       <section className=\"py-20 bg-gray-50\" id=\"team\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -750,15 +675,8 @@ ursor/automate-test-improve-and-merge-code-646c;
               technology solutions
             </p>
           </div>
-<<<<<<< HEAD
 
 
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className=\"py-20 bg-gray-50\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">;
@@ -823,32 +741,20 @@ ursor/automate-test-improve-and-merge-code-646c;
         </div>;
       </section>;
       {/* Team Section */}
-<<<<<<< HEAD
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
             {team.map((member) => (
               <div key={member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">
@@ -864,13 +770,11 @@ ursor/automate-test-improve-and-merge-code-646c;
                   </p>
                 </div>
               </div>
-<<<<<<< HEAD
 
             ))}
           </div>
         </div>
       </section>
-=======
             ))}
           </div>;
         </div>;
@@ -961,7 +865,6 @@ ursor/automate-test-improve-and-merge-code-646c;
           </div>;
         </div>;
       </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Story Section */}
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
@@ -1027,16 +930,8 @@ ursor/automate-test-improve-and-merge-code-646c;
         <meta name=\"keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />
         <link rel=\"canonical\" href=\""https\": //ziontechgroup.com/about\" />
       </Helmet>
-<<<<<<< HEAD
 
 
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -1168,12 +1063,10 @@ ursor/automate-test-improve-and-merge-code-646c;
       </div>
     </>
   );
-<<<<<<< HEAD
 
 
 }
 }
-=======
 }
 }
       <section className=\"py-20 bg-gray-50\" id=\"team\">;
@@ -1432,7 +1325,7 @@ ursor/automate-test-improve-and-merge-code-646c;
       </div>;
     </>;
   )}
-}}}
+}}
 ursor/automate-test-improve-and-merge-code-646c;
 }
       <section className=\"py-20 bg-gray-50\" id=\"team\">;
@@ -1531,11 +1424,6 @@ ursor/automate-test-improve-and-merge-code-646c;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
 }
     <>;
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <Helmet>;
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
         <meta name=\"description\" content=\"Learn about Zion Tech Group, a leading provider of AI, cybersecurity, cloud infrastructure, and emerging technology solutions. Discover our mission, values, and team.\" />;
@@ -1548,13 +1436,8 @@ ursor/automate-test-improve-and-merge-code-646c;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     <>;
       <Helmet>;
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
@@ -1567,7 +1450,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 ursor/automate-test-improve-and-merge-code-646c;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -1695,30 +1577,20 @@ ursor/automate-test-improve-and-merge-code-646c;
         </section>;
       </div>;
     </>;
-  )}}origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+  )}origin/cursor/integrate-build-improve-and-re-verify-c7b5;
   );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
-<<<<<<< HEAD
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
-}}}ursor/automate-test-improve-and-merge-code-646c;
+}}ursor/automate-test-improve-and-merge-code-646c;
 }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

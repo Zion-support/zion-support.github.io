@@ -24,7 +24,7 @@ import { toast  } from '@/hooks/use-toast';'
 import { FontFamily } from '@/utils/pdf/fontConfig';'
 interface PdfExportButtonProps {
   }
-  "resume": Resume
+  'resume': Resume
 }
 export function PdfExportButton() {;
   }
@@ -53,7 +53,7 @@ import {toast} from '@/hooks/use-toast';'
 import {FontFamily} from '@/utils/pdf/fontConfig';'
 interface PdfExportButtonProps {;
   }
-  "resume": Resume;
+  'resume': Resume;
 }
   const [isExporting, setIsExporting] = useState(false);
 const [theme, setTheme] = useState<'light' | 'dark'>('light'),;'
@@ -66,11 +66,11 @@ const [fontFamily, setFontFamily] = useState<FontFamily>('default'),;'
     setIsExporting(true);
     try {
       }
-      const "options": ExportOptions = {
+      const 'options': ExportOptions = {
         }
         theme;
         includePortfolio;
-    "maxProjects": 3,
+    'maxProjects': 3,
 fontFamily
       }
       const pdfBlob = await exportResumeToPDF(resume, options);
@@ -87,11 +87,11 @@ document.body.removeChild(link);
     setIsExporting(true),
     try {
       }
-      const "options": ExportOptions = {
+      const 'options': ExportOptions = {
         }
         theme,
         includePortfolio,
-        "maxProjects": 3,
+        'maxProjects': 3,
         fontFamily
       },
 const pdfBlob = await exportResumeToPDF(resume, options),;
@@ -106,27 +106,27 @@ document.body.removeChild(link),
       URL.revokeObjectURL(url),
       toast({
         }
-        "title": "title","
-    "description": "Your resume has been downloaded as a PDF."})"
+        'title': 'title','
+    'description': 'Your resume has been downloaded as a PDF.'})'
     } catch (error) {
       }
-      console.error('Error exporting "PDF":', error),'
+      console.error('Error exporting 'PDF':', error),'
       toast({
         }
-        "title": "Export failed""
-        "description": "There was an error exporting your resume to PDF.""
-"variant": "destructive";"
+        'title': 'Export failed''
+        'description': 'There was an error exporting your resume to PDF.''
+'variant': 'destructive';'
       })
     } finally {
       }
       setIsExporting(false)
 return (;
-          className="gap-2""
+          className='gap-2''
           disabled={isExporting}>;
           {isExporting ? (;
-            <Loader2 className="h-4 w-4 animate-spin" />;"
+            <Loader2 className='h-4 w-4 animate-spin' />;'
           ) : (;
-            <FileText className="h-4 w-4" />;"
+            <FileText className='h-4 w-4' />;'
           )}
 ;
 export function PdfExportButton() {;
@@ -141,11 +141,11 @@ export function PdfExportButton() {;
     setIsExporting(true),;
     try {;
       }
-      const "options": ExportOptions = {;
+      const 'options': ExportOptions = {;
         }
         theme,;
         includePortfolio,;
-        "maxProjects": 3,;
+        'maxProjects': 3,;
         fontFamily;
       },;
       const pdfBlob = await exportResumeToPDF(resume, options),;
@@ -161,16 +161,16 @@ export function PdfExportButton() {;
       URL.revokeObjectURL(url),;
       toast({;
         }
-        "title": "Success!",,"
-  "description": "Your resume has been downloaded as a PDF."});"
+        'title': 'Success!',,'
+  'description': 'Your resume has been downloaded as a PDF.'});'
     } catch (error) {;
       }
-      console.error('Error exporting "PDF":', error),;'
+      console.error('Error exporting 'PDF':', error),;'
       toast({;
         }
-        "title": "Export failed",,"
-  "description": "There was an error exporting your resume to PDF.";"
-        "variant": "destructive";"
+        'title': 'Export failed',,'
+  'description': 'There was an error exporting your resume to PDF.';'
+        'variant': 'destructive';'
       });
     } finally {;
       }
@@ -181,38 +181,38 @@ export function PdfExportButton() {;
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
         <Button;
-          variant="outline";"
-          className="gap-2";"
+          variant='outline';'
+          className='gap-2';'
           disabled={isExporting}
         >;
           {isExporting ? (;
-            <Loader2 className="h-4 w-4 animate-spin" />;"
+            <Loader2 className='h-4 w-4 animate-spin' />;'
           ) : (;
-            <FileText className="h-4 w-4" />;"
+            <FileText className='h-4 w-4' />;'
           )}
           Export PDF;
-          <ChevronDown className="h-4 w-4" />;"
+          <ChevronDown className='h-4 w-4' />;'
         </Button>;
       </DropdownMenuTrigger>;
-      <DropdownMenuContent align="end" className="w-56">;"
+      <DropdownMenuContent align='end' className='w-56'>;'
         <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel>;
         <DropdownMenuSeparator />;
-        <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Theme</DropdownMenuLabel>;"
+        <DropdownMenuLabel className='text-xs font-normal text-muted-foreground'>Theme</DropdownMenuLabel>;'
         <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>;'
-          <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>;"
-          <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>;"
+          <DropdownMenuRadioItem value='light'>Light</DropdownMenuRadioItem>;'
+          <DropdownMenuRadioItem value='dark'>Dark</DropdownMenuRadioItem>;'
         </DropdownMenuRadioGroup>;
         <DropdownMenuSeparator />;
-        <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Font</DropdownMenuLabel>;"
+        <DropdownMenuLabel className='text-xs font-normal text-muted-foreground'>Font</DropdownMenuLabel>;'
         <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) => setFontFamily(value as FontFamily)}>;
-          <DropdownMenuRadioItem value="default">Default</DropdownMenuRadioItem>;"
-          <DropdownMenuRadioItem value="montserrat">Montserrat</DropdownMenuRadioItem>;"
-          <DropdownMenuRadioItem value="open-sans">Open Sans</DropdownMenuRadioItem>;"
-          <DropdownMenuRadioItem value="roboto">Roboto</DropdownMenuRadioItem>;"
+          <DropdownMenuRadioItem value='default'>Default</DropdownMenuRadioItem>;'
+          <DropdownMenuRadioItem value='montserrat'>Montserrat</DropdownMenuRadioItem>;'
+          <DropdownMenuRadioItem value='open-sans'>Open Sans</DropdownMenuRadioItem>;'
+          <DropdownMenuRadioItem value='roboto'>Roboto</DropdownMenuRadioItem>;'
         </DropdownMenuRadioGroup>;
         <DropdownMenuSeparator />;
         <DropdownMenuItem onClick={handleExport}>;
-          <Download className="h-4 w-4 mr-2" />;"
+          <Download className='h-4 w-4 mr-2' />;'
           Download PDF;
         </DropdownMenuItem>;
       </DropdownMenuContent>;
@@ -230,7 +230,7 @@ import {toast} from '@/hooks / use - toast';'
 import {FontFamily} from '@/utils / pdf / font_config';'
 interface PdfExportButtonProps {
   }
-  "resume": Resume;
+  'resume': Resume;
 }
 export /**
  * PdfExportButton - Function description

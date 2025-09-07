@@ -225,4 +225,4 @@ function ContractTypeCards() {return (<div className="grid "md":grid - cols - 2 
           </Button>;
         </CardFooter>;
       </Card>;</div>;
-  )}})}</div>)})}
+  )})}</div>)})}

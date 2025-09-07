@@ -22,9 +22,9 @@ const thumbSizeClasses = {sm: 'w-3 h-3'}
   }
 
 const translateClasses = {sm: checked ? 'translate-x-4' : 'translate-x-0',md: checked ? 'translate-x-6' : 'translate-x-0',lg: checked ? 'translate-x-8' : 'translate-x-0';}
-  }return (<div className="flex items-center space-x-3" />;
-      <button;"
-        type="button";
+  }return (<div className='flex items-center space-x-3' />;
+      <button;'
+        type='button';
         className={`;}
           ${sizeClasses[size]} relative inline-flex flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent;
           transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
@@ -39,12 +39,12 @@ const translateClasses = {sm: checked ? 'translate-x-4' : 'translate-x-0',md: ch
             ${thumbSizeClasses[size]} ${translateClasses[size]} pointer-events-none inline-block rounded-full bg-white shadow transform ring-0 transition duration-200 ease-in-out;
           `}
         />;
-      </button>;"
-      {label && (<label className="text-sm font-medium text-gray-700" />;}
+      </button>;'
+      {label && (<label className='text-sm font-medium text-gray-700' />;}
           {label}
         </label>;
       )}
     </div>;
   )}
 
-export default Switch;"
+export default Switch;'

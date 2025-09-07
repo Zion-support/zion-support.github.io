@@ -78,7 +78,7 @@ return (;
 ref={inputRef}
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md "focus":outline-none "focus":ring-2 "focus":ring-zion-purple "focus":border-transparent resize-none text-white "placeholder":text-zion-slate-light""
         placeholder="Type your message...""
-        value={message}});
+        value={message});
   )
 }
   )

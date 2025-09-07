@@ -232,7 +232,7 @@ const Icon = item.icon`;
             {/* Mobile Contact */}'''';
             <div className='px-3 py-2 border-t border-zion-blue-light/30' />'''';
               <a href='tel: +13024640950' className='flex items-center space-x-2 px-3 py-2 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium' />'''';
-                <Phone className='w-5 h-5"/>'";
+                <Phone className='w-5 h-5'/>'';
                 <span />Call +1 302 464 0950</span>;
               </a>;
             </div>;

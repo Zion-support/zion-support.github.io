@@ -12,11 +12,9 @@ import { X, ChevronRight, Home, Star, Users;
   TrendingUp, Award, CheckCircle, Clock;
   ArrowRight, Search, Menu, X as CloseIcon;
   Target, BookOpen, Truck, BarChart3;
-<<<<<<< HEAD
 ] 
  ] 
 
-=======
   Sparkles, Eye, Lightbulb, Palette, Code
  } from 'lucide-react';'
 
@@ -25,7 +23,6 @@ interface SidebarItem {
   "name": string;
   "href": string;
   icon?: React.ReactNode;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 interface SidebarItem {
   name: string,
@@ -38,12 +35,8 @@ interface SidebarItem  {name: string;
   children?: SidebarItem[];
   badge?: string;
   isNew?: boolean;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
   isHot?: boolean
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useState, useEffect               } from 'react'
   'react.ts'
 import Link from 'next/link' from 'next/link.ts';{ motion, AnimatePresence               } from
@@ -61,7 +54,6 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, Ma
    isHot?: boolean
    isPremium?: boolean
    category?: string
-<<<<<<< HEAD
 }
 
 const contactInfo = {
@@ -430,7 +422,6 @@ const "sidebar_items": SidebarItem[] = [;
 },{ "name": 'Status Page', "href": '/status', "description": 'Service status','
 }
 
-<<<<<<< HEAD
 const contactInfo = {'
   mobile: '+1 302 464 0950','
   email: 'kleber@ziontechgroup.com','
@@ -507,19 +498,16 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     return this.props.children;
   }
   };
-<<<<<<< HEAD
   {;
     name: 'AI & Consciousness',;
     href: '/ai-services',;
     icon: <Brain className="w-5 h-5" />,,
   description: 'Revolutionary AI consciousness and emotional intelligence',;
-=======
   {;'
     name: 'AI & Consciousness',;'
     href: '/ai-services',;"
     icon: <Brain className="w-5 h-5" />,;'
     description: 'Revolutionary AI consciousness and emotional intelligence',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     badge: 'New',;
     isNew: true,;
     children: [;'
@@ -537,7 +525,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' },;'
       { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },;'
       { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' }
-<<<<<<< HEAD
     ]
 };
   {;
@@ -545,7 +532,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     href: '/quantum-services',;
     icon: <Atom className="w-5 h-5" />,,
   description: 'Quantum computing and breakthrough technologies',;
-=======
     ];
   };
   {;'
@@ -553,7 +539,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     href: '/quantum-services',;"
     icon: <Atom className="w-5 h-5" />,;'
     description: 'Quantum computing and breakthrough technologies',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     badge: 'Hot',;
     isHot: true,;
     children: [;'
@@ -570,21 +555,18 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       { name: 'Quantum Metaverse', href: '/quantum-metaverse', description: 'Quantum-enhanced virtual worlds' },;'
       { name: 'Quantum IoT Platform', href: '/quantum-iot', description: 'Quantum-secured IoT' },;'
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading', description: 'Quantum trading algorithms' }
-<<<<<<< HEAD
     ]
 };
   {;
     name: 'Enterprise IT',;
     href: '/enterprise-it',;
     icon: <Shield className="w-5 h-5" />,;
-=======
     ];
   };
   {;'
     name: 'Enterprise IT',;'
     href: '/enterprise-it',;"
     icon: <Shield className="w-5 h-5" />,;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'text-blue-400',;
     items: [;'
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', badge: 'New' },;'
@@ -598,7 +580,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       { name: 'Quantum Data Center', href: '/quantum-data-center' },;'
       { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },;'
       { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }
-<<<<<<< HEAD
     ]
 };
   {;
@@ -606,7 +587,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     href: '/micro-saas',;
     icon: <Rocket className="w-5 h-5" />,,
   description: 'Innovative business solutions for modern enterprises',;
-=======
     ];
   };
   {;'
@@ -614,7 +594,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     href: '/micro-saas',;"
     icon: <Rocket className="w-5 h-5" />,;'
     description: 'Innovative business solutions for modern enterprises',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     badge: 'Popular',;
     children: [;'
       { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite', description: 'Data-driven insights' },;'
@@ -627,7 +606,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       { name: 'AI HR Management', href: '/ai-hr-management-platform', description: 'HR operations automation' },;'
       { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', description: 'Supply chain optimization' },;'
       { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis', description: 'Legal document processing' }
-<<<<<<< HEAD
     ]
 };
   {;
@@ -722,7 +700,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   filtered_services.length - 5;
 }more results </div>);
 }</div>) : (<div className="text - sm text - gray - 500 text-center py-2" > No services found </div>);
-=======
     ];
   };
   {;'
@@ -817,7 +794,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   filtered_services.length - 5;
 }more results </div>);"
 }</div>) : (<div className="text - sm text - gray - 500 text - center py - 2" > No services found </div>);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }</div>);
 }</div> </div> </div> </div> </motion.div>) );
 }</div> </div> </span> </a>) );
@@ -833,7 +809,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }</span>);
 }</a>) );
 }</motion.div>);
-<<<<<<< HEAD
 }</AnimatePresence> </div>) );
 }</div> </div> <span > Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition-colors duration-200" > Contact Us </div> <div className="text - xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition-colors duration-200" > View Pricing </div> <div className="text - xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition-colors duration-200" > About Us </div> <div className="text - xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text - center p - 3 bg - gray-800 / 50 rounded-lg" > <div className="text - lg font - bold text-blue-400" >1000+</div> <div className="text - xs text-gray-400" >Clients</div> </div> <div className="text - center p - 3 bg - gray-800 / 50 rounded-lg" > <div className="text - lg font - bold text-purple-400" >24 / 7</div> <div className="text - xs text-gray-400" >Support</div> </div> <div className="text - center p - 3 bg - gray-800 / 50 rounded-lg" > <div className="text - lg font - bold text-green-400" >99.9%</div> <div className="text - xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w - full text - center px - 4 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium rounded - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow-cyan-500 / 25" > <span > Get Started Today</span> <ArrowRight className="w - 4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>);
 }export default EnhancedSidebar2025;
@@ -843,7 +818,6 @@ const sidebar_items: SidebarItem[] = [;
     href: '/comprehensive - services - showcase - 2025',
     icon: <Globe className="w-5 h-5" />,
     description: 'Complete portfolio of all technology services',
-=======
 }</AnimatePresence> </div>) );"
 }</div> </div> <span > Quick Links</span> </h3> <div className="space - y-2" > <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition - colors duration - 200" > Contact Us </div> <div className="text - xs text - gray - 500" >Get in touch with our team</div> </a> <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition - colors duration - 200" > View Pricing </div> <div className="text - xs text - gray - 500" >Explore our pricing plans</div> </a> <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition - colors duration - 200" > About Us </div> <div className="text - xs text - gray - 500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text - center p - 3 bg - gray - 800 / 50 rounded - lg" > <div className="text - lg font - bold text - blue - 400" >1000+</div> <div className="text - xs text - gray - 400" >Clients</div> </div> <div className="text - center p - 3 bg - gray - 800 / 50 rounded - lg" > <div className="text - lg font - bold text - purple - 400" >24 / 7</div> <div className="text - xs text - gray - 400" >Support</div> </div> <div className="text - center p - 3 bg - gray - 800 / 50 rounded - lg" > <div className="text - lg font - bold text - green - 400" >99.9%</div> <div className="text - xs text - gray - 400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w - full text - center px - 4 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium rounded - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25" > <span > Get Started Today</span> <ArrowRight className="w - 4 h - 4 ml - 2 inline" /> </a> </div> </div> </motion.aside>);
 }export default EnhancedSidebar2025;
@@ -853,7 +827,6 @@ const sidebar_items: SidebarItem[] = [;
     href: '/comprehensive - services - showcase - 2025',"
     icon: <Globe className="w - 5 h - 5" />,'
     description: 'Complete portfolio of all technology services','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     badge: 'Showcase',
     children: [;'
       { name: 'View All Services', href: '/comprehensive - services - showcase - 2025', description: 'Complete services portfolio' },'
@@ -866,19 +839,16 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'Ultimate 2026', href: '/ultimate - 2026 - services - showcase', description: 'Premium service collection' }
     ];
   }
-<<<<<<< HEAD
   {
     name: 'AI & Consciousness',
     href: '/ai - services',
     icon: <Brain className="w-5 h-5" />,
     description: 'Revolutionary AI consciousness and emotional intelligence',
-=======
   {'
     name: 'AI & Consciousness','
     href: '/ai - services',"
     icon: <Brain className="w - 5 h - 5" />,'
     description: 'Revolutionary AI consciousness and emotional intelligence','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     badge: 'New',
     is_new: true,
     children: [;'
@@ -898,19 +868,16 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'AI Legal Contract Analyzer', href: '/ai - legal - contract - analyzer', description: 'Legal document analysis' }
     ];
   }
-<<<<<<< HEAD
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum - services',
     icon: <Atom className="w-5 h-5" />,
     description: 'Quantum computing and breakthrough technologies',
-=======
   {'
     name: 'Quantum & Emerging Tech','
     href: '/quantum - services',"
     icon: <Atom className="w - 5 h - 5" />,'
     description: 'Quantum computing and breakthrough technologies','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     badge: 'Hot',
     is_hot: true,
     children: [;'
@@ -929,17 +896,14 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'Quantum Financial Trading', href: '/quantum - financial - trading', description: 'Quantum trading algorithms' }
     ];
   }
-<<<<<<< HEAD
   {
     name: 'Enterprise IT',
     href: '/enterprise - it',
     icon: <Shield className="w-5 h-5" />,
-=======
   {'
     name: 'Enterprise IT','
     href: '/enterprise - it',"
     icon: <Shield className="w - 5 h - 5" />,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'text - blue - 400',
     items: [;'
       { name: 'Quantum - Secure Cloud', href: '/quantum - secure - cloud - infrastructure', badge: 'New' },'
@@ -955,19 +919,16 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'Quantum Cloud Migration', href: '/quantum - cloud - migration' }
     ];
   }
-<<<<<<< HEAD
   {
     name: 'Micro SAAS',
     href: '/micro - saas',
     icon: <Rocket className="w-5 h-5" />,
     description: 'Innovative business solutions for modern enterprises',
-=======
   {'
     name: 'Micro SAAS','
     href: '/micro - saas',"
     icon: <Rocket className="w - 5 h - 5" />,'
     description: 'Innovative business solutions for modern enterprises','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     badge: 'Popular',
     children: [;'
       { name: 'AI Business Intelligence', href: '/ai - business - intelligence - suite', description: 'Data - driven insights' },'
@@ -982,17 +943,14 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'AI Legal Analysis', href: '/ai - legal - document - analysis', description: 'Legal document processing' }
     ];
   }
-<<<<<<< HEAD
   {
     name: 'Creative & Design',
     href: '/creative - services',
     icon: <Palette className="w-5 h-5" />,
-=======
   {'
     name: 'Creative & Design','
     href: '/creative - services',"
     icon: <Palette className="w - 5 h - 5" />,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'AI - powered creative and design solutions',
     children: [;'
       { name: 'AI Creativity Studio', href: '/ai - creativity - studio', description: 'AI - powered creative content' },'
@@ -1003,17 +961,14 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'AI Music Composition', href: '/ai - music - composition', description: 'AI - generated music' }
     ];
   }
-<<<<<<< HEAD
   {
     name: 'Research & Development',
     href: '/research - development',
     icon: <BookOpen className="w-5 h-5" />,
-=======
   {'
     name: 'Research & Development','
     href: '/research - development',"
     icon: <BookOpen className="w - 5 h - 5" />,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Cutting - edge research and development services',
     children: [;'
       { name: 'AI Autonomous Research', href: '/ai - autonomous - research - assistant', description: 'Self - directed research' },'
@@ -1024,17 +979,14 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'Climate Research AI', href: '/climate - research - ai', description: 'Environmental research automation' }
     ];
   }
-<<<<<<< HEAD
   {
     name: 'Industry Solutions',
     href: '/industry - solutions',
     icon: <Truck className="w-5 h-5" />,
-=======
   {'
     name: 'Industry Solutions','
     href: '/industry - solutions',"
     icon: <Truck className="w - 5 h - 5" />,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Specialized solutions for specific industries',
     children: [;'
       { name: 'Healthcare AI', href: '/healthcare - ai - solutions', description: 'Medical AI applications' },'
@@ -1045,17 +997,14 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'Transportation AI', href: '/transportation - ai - solutions', description: 'Smart transportation' }
     ];
   }
-<<<<<<< HEAD
   {
     name: 'Pricing & Plans',
     href: '/pricing',
     icon: <DollarSign className="w-5 h-5" />,
-=======
   {'
     name: 'Pricing & Plans','
     href: '/pricing',"
     icon: <DollarSign className="w - 5 h - 5" />,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Flexible pricing options for all services',
     children: [;'
       { name: '2025 Pricing', href: '/pricing - 2025', description: 'Current year pricing' },'
@@ -1066,17 +1015,14 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'ROI Calculator', href: '/roi - calculator', description: 'Calculate your return on investment' }
     ];
   }
-<<<<<<< HEAD
   {
     name: 'Resources',
     href: '/resources',
     icon: <BookOpen className="w-5 h-5" />,
-=======
   {'
     name: 'Resources','
     href: '/resources',"
     icon: <BookOpen className="w - 5 h - 5" />,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Educational resources and documentation',
     children: [;'
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },'
@@ -1087,17 +1033,14 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'Research Papers', href: '/research - papers', description: 'Academic publications' }
     ];
   }
-<<<<<<< HEAD
   {
     name: 'Support',
     href: '/support',
     icon: <Settings className="w-5 h-5" />,
-=======
   {'
     name: 'Support','
     href: '/support',"
     icon: <Settings className="w - 5 h - 5" />,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Technical support and customer service',
     children: [;'
       { name: 'Help Center', href: '/help', description: 'Self - service support' },'
@@ -1106,7 +1049,6 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'Training Programs', href: '/training', description: 'Skill development' },'
       { name: 'Community Forum', href: '/community', description: 'User community' },'
       { name: 'Status Page', href: '/status', description: 'Service status' }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ];
   }
 ];'
@@ -1120,9 +1062,9 @@ const toggleSection = ("title": string) => ;
   const newExpanded = new Set(expandedSections)if (newExpanded.has(title)) {newExpanded.delete(title)} else {new_expanded.add (title)}
   ;
   return (<motion&& motion.aside;
-      initial={{ "x": -300, "opacity": 0 
+      initial={ "x": -300, "opacity": 0 
 }
-      animate={{ "x": 0, "opacity": 1 
+      animate={ "x": 0, "opacity": 1 
 }
             <AnimatePresence>;
               {expandedSections.has(section.title) && (<motion.div;
@@ -1133,11 +1075,11 @@ const filtered_services = sidebar_items.flat_map (item =>;
     item.children?.filter (child =>;
       child.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
       child.description?.toLowerCase ().includes (search_query.toLowerCase ())) || [])return (<motion.aside;
-      initial={{ "coordinate_x": -300, "opacity": 0 
+      initial={ "coordinate_x": -300, "opacity": 0 
 }
-      animate={{ "coordinate_x": 0, "opacity": 1 
+      animate={ "coordinate_x": 0, "opacity": 1 
 }
-      transition={{ "duration": 0.5, "ease": "ease_out" }}"
+      transition={ "duration": 0.5, "ease": "ease_out" }"
       className="fixed left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - r border - cyan - 500 / 20 shadow - 2xl shadow - cyan - 500 / 20 z - 40 overflow - y-auto scrollbar - thin scrollbar - thumb - cyan - 500 / 50 scrollbar-track-transparent">"
 
       {/* Header *
@@ -1173,7 +1115,6 @@ const filtered_services = sidebar_items.flat_map (item =>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
       {/* Navigation Sections */}
       <div className="p-4 space-y-2">;"
         {sidebar_sections.map ((section) => (<div key={section.title} className="space-y-1">;"
@@ -1712,9 +1653,9 @@ const toggleSection = ("title": string) => ;
   const newExpanded = new Set(expandedSections)if (newExpanded.has(title)) {newExpanded.delete(title)} else {newExpanded.add(title)}
     setExpandedSections(newExpanded;
   return (<motion.aside;
-      initial={{ "x": -300, "opacity": 0 
+      initial={ "x": -300, "opacity": 0 
 }
-      animate={{ "x": 0, "opacity": 1 }}
+      animate={ "x": 0, "opacity": 1 }
             <span>{contactInfo.websit
 }</span>;
           </div>;
@@ -1727,12 +1668,12 @@ const toggleSection = ("title": string) => ;
               {expandedSections.has(section.title) ? (<AnimatePresence>;
               {expandedSections.has(section.title) && (<motion.div;
                   }
-                  initial={{ "opacity": 0, "height": 0 
+                  initial={ "opacity": 0, "height": 0 
 }
-                  animate={{ "opacity": 1, "height": 'auto' ,'
+                  animate={ "opacity": 1, "height": 'auto' ,'
 }
-                  exit={{ "opacity": 0, "height": 0 }}
-                  transition={{ "duration": 0.2 }}
+                  exit={ "opacity": 0, "height": 0 }
+                  transition={ "duration": 0.2 }
               {/* Search Bar *
 }
               <div className="relative">;"
@@ -1754,7 +1695,6 @@ const toggleSection = ("title": string) => ;
                     <div className="space-y-1">
                       {filteredServices.slice(0, 5).map((service) => (
                         <Link
-<<<<<<< HEAD
                           key={service.name}
                           href={service.href}
                           onClick={onClose}
@@ -1765,7 +1705,6 @@ const toggleSection = ("title": string) => ;
                           </div>
                           <div className="text-xs text-gray-500">
                             {service.description}
-=======
                           key={service && service.name}
                           href={service && service.href}
                           onClick={onClose}
@@ -1786,11 +1725,9 @@ const toggleSection = ("title": string) => ;
                   ) : (<div className="text-sm text-gray-500 text-center py-2">;"
                       No services found;
                     </div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   )}
                 </div>
               )}
-<<<<<<< HEAD
             </div>
 
             {/* Contact Information */}
@@ -1828,11 +1765,11 @@ const toggleSection = ("title": string) => ;
                 {stats && stats.map((stat, index) => (<motion&& motion.div;
                     }
                     key={stat && stat.label}
-                    initial={{ "opacity": 0, "scale": 0 && 0.8 
+                    initial={ "opacity": 0, "scale": 0 && 0.8 
 }
-                    animate={{ "opacity": 1, "scale": 1 
+                    animate={ "opacity": 1, "scale": 1 
 }
-                    transition={{ "duration": 0 && 0.3, "delay": index * 0 && 0.1 
+                    transition={ "duration": 0 && 0.3, "delay": index * 0 && 0.1 
 }
                     className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">;"
                     <div className="text-2xl font-bold text-white mb-1">{stat && stat.value}</div>;"
@@ -1928,11 +1865,11 @@ const toggleSection = ("title": string) => ;
                 {stats.map((stat, index) => (<motion.div;
                     }
                     key={stat.label}
-                    initial={{ "opacity": 0, "scale": 0.8 
+                    initial={ "opacity": 0, "scale": 0.8 
 }
-                    animate={{ "opacity": 1, "scale": 1 
+                    animate={ "opacity": 1, "scale": 1 
 }
-                    transition={{ "duration": 0.3, "delay": index * 0.1 
+                    transition={ "duration": 0.3, "delay": index * 0.1 
 }
                   >;
                     <div className="text - 2xl font - bold text-white mb-1">{stat.value}</div>;"
@@ -1951,7 +1888,6 @@ const toggleSection = ("title": string) => ;
                     }
                     key={link.name}
                     href={link.href}
-<<<<<<< HEAD
                     on_click={on_close}
                     className="flex items - center space - x-3 p - 3 rounded - lg "hover":bg - gray - 800 / 50 transition-colors duration-200 group">"
 
@@ -1965,7 +1901,6 @@ const toggleSection = ("title": string) => ;
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
 
             {/* Service Categories */}
             <div className="p-6 border-b border-cyan-500/30">
@@ -1986,8 +1921,6 @@ const toggleSection = ("title": string) => ;
                         </div>
                         <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
                           {item.name}
-<<<<<<< HEAD
-=======
                     <AnimatePresence    />
                       {expandedCategory === item.name && (<motion.div;}
                       onClick={() =    /> toggleCategory(item && item.name)}"
@@ -1999,8 +1932,6 @@ const toggleSection = ("title": string) => ;
                           {item && item.icon}
                         </div>;"
                         <span className=\"text-gray-300 group-hover:text-white transition-colors duration-200\"    />
-=======
-<<<<<<< HEAD
             {/* Service Categories */}
             <div className="p - 6 border - b border-cyan-500 / 30">;"
               <h3 className="text - lg font - semibold text - white mb - 4 flex items-center space-x-2">;"
@@ -2084,7 +2015,6 @@ const toggleSection = ("title": string) => ;
                         <span className="text-gray-300 group-"hover":text-white transition-colors duration-200">;"
                           {item.name}
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                         </span>
                       </div>
                       <ChevronRight,
@@ -2095,10 +2025,10 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
                     <AnimatePresence>;
                       {expandedCategory === item && item.name && (;
                         <motion&& motion.div;
-                          initial={{ opacity: 0, height: 0 }}'
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0 && 0.2 }}"
+                          initial={ opacity: 0, height: 0 }'
+                          animate={ opacity: 1, height: 'auto' }
+                          exit={ opacity: 0, height: 0 }
+                          transition={ duration: 0 && 0.2 }"
                           className="ml-8 mt-2 space-y-1">;
                           {item && item.children?.map((child) => (;
                             <Link;
@@ -2111,7 +2041,6 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
                               </span>;
                               {child && child.badge && (;"
                                 <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                                   {child && child.badge}
                                 </span>;
                               )}
@@ -2122,7 +2051,6 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
                     </AnimatePresence>;
                   </div>;
                 ))}
-<<<<<<< HEAD
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">;
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;
@@ -2162,8 +2090,7 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
                         }`}
                     <AnimatePresence>;
                       {expandedCategory === item.name && (<motion.div;
-                          initial={{ opacity: 0, height: 0 }}
-=======
+                          initial={ opacity: 0, height: 0 }
             {/* Quick Links */}"
             <div className="p-6 border-b border-cyan-500/30">;"
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;"
@@ -2205,11 +2132,10 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div;
-                          initial={{ opacity: 0, height: 0 }}'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2 }}
+                          initial={ opacity: 0, height: 0 }'
+                          animate={ opacity: 1, height: 'auto' }
+                          exit={ opacity: 0, height: 0 }
+                          transition={ duration: 0.2 }
                                 </span>)}
                             </Link>))}
                         </motion.div>)}
@@ -2217,10 +2143,6 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
                   </div>))}
               </div>;
             </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             {/* Quick Links */}
             <div className="p - 6 border - b border-cyan-500 / 30">;
               <h3 className="text - lg font - semibold text - white mb - 4 flex items-center space-x-2">;
@@ -2237,12 +2159,9 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
                     Contact Us;
                   </div>;
                   <div className="text - xs text-gray-500">Get in touch with our team</div>;
-<<<<<<< HEAD
                 </Link>;
                 <Link;
                   href="/pricing";
-=======
-=======
             {/* Quick Links */}"
             <div className="p - 6 border - b border - cyan - 500 / 30">;"
               <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;"
@@ -2259,12 +2178,9 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
                     Contact Us;
                   </div>;"
                   <div className="text - xs text - gray - 500">Get in touch with our team</div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Link>;
                 <Link;"
                   href="/pricing";
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   on_click={on_close}
                   className="block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition-colors duration-200 group";
                 >;
@@ -2272,12 +2188,9 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
                     View Pricing;
                   </div>;
                   <div className="text - xs text-gray-500">Explore our pricing plans</div>;
-<<<<<<< HEAD
                 </Link>;
                 <Link;
                   href="/about";
-=======
-=======
                   on_click={on_close}"
                   className="block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors duration - 200 group";
                 >;"
@@ -2285,12 +2198,9 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
                     View Pricing;
                   </div>;"
                   <div className="text - xs text - gray - 500">Explore our pricing plans</div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Link>;
                 <Link;"
                   href="/about";
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   on_click={on_close}
                   className="block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition-colors duration-200 group";
                 >;
@@ -2323,7 +2233,6 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
           >;
             <span > Get Started Today</span>;
             <ArrowRight className="w - 4 h-4 ml-2 inline" />;
-<<<<<<< HEAD
           </Link>;
         </div>;
       </div>;
@@ -2331,8 +2240,6 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown,'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
 } from 'lucide-react && react.ts;
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
-=======
-=======
                   on_click={on_close}"
                   className="block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors duration - 200 group";
                 >;"
@@ -2365,7 +2272,6 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, Ma
           >;
             <span > Get Started Today</span>;"
             <ArrowRight className="w - 4 h - 4 ml - 2 inline" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </Link>;
         </div>;
       </div>;
@@ -2373,7 +2279,6 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, Ma
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown,'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;'
 } from 'lucide-react && react.ts;'
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 } from 'lucide-react.ts;
 interface SidebarItem {name: string;
   badge?: string;
@@ -2381,7 +2286,6 @@ interface SidebarItem {name: string;
   isNew?: boolean;
   isHot?: boolean;
   isPremium?: boolean;
-<<<<<<< HEAD
 category?: string}
 const sidebarSections = []"      } {";
   badge?: string,color?: string,is_new?: boolean,is_hot?: boolean,is_premium?: boolean,category?: string}
@@ -2437,7 +2341,6 @@ name: "About Us, href: "/about",", "        icon: Users, description:, ";
     color: "from - cyan - 500: to - blue - 600, ", ";
 category?: string;
         icon: Atom,",description: "Next-generation quantum computing solutions",";
-=======
 category?: string}"
 const sidebarSections = []"      } {";
   badge?: string,
@@ -2500,11 +2403,9 @@ name: "About Us, href: "/about","
     title: anyanyanyanyanyanyanyanyanyanyanyanyany"Revolutionary: Services, ", ";"
     icon: Za, p, ";"
     color: "from - cyan - 500: to - blue - 600, ", ";
-<<<<<<< HEAD
 category?: string;
         icon: Atom,",
   description: "Next-generation quantum computing solutions",";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "Quantum Cloud Infrastructure", href: "/quantum-cloud-infrastructure" } { name: "Quantum Bio-Computing", href: "/quantum-bio-computing" } { name: "Quantum Energy Platform", href: "/quantum-energy-platform" } { name: "Quantum Materials Discovery", href: "/quantum-materials-discovery" } { name: "Quantum Robotics", href: "/quantum-robotics" } { name: "Quantum Internet Security", href: "/quantum-internet-security" } { name: "Quantum Logistics", href: "/quantum-logistics-optimization" } { name: "Quantum Cybersecurity", href: "/quantum-cybersecurity-platform" }
         subItems[";
           { name: "Quantum Cloud Infrastructure", href: "/quantum-cloud-infrastructure" },";
@@ -2516,12 +2417,9 @@ category?: string;
           { name: "Quantum Logistics", href: "/quantum-logistics-optimization" },";
           { name: "Quantum Cybersecurity", href: "/quantum-cybersecurity-platform" }
         ];
-<<<<<<< HEAD
         icon: Shield,",description: "Enterprise-grade IT infrastructure and security",";
-=======
         icon: Shield,",
   description: "Enterprise-grade IT infrastructure and security",";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "Edge Computing Orchestrator", href: "/edge-computing-orchestration" } { name: "Zero Trust Security Platform", href: "/zero-trust-network-architecture" } { name: "Blockchain Enterprise Platform", href: "/blockchain-infrastructure-platform" } { name: "AI-Powered DevOps", href: "/ai-powered-devops" } { name: "Quantum Networking", href: "/quantum-networking" } { name: "Autonomous IT Operations", href: "/autonomous-it-operations" } { name: "Quantum Data Center", href: "/quantum-data-center" } { name: "Quantum Cloud Migration", href: "/quantum-cloud-migration" }
         subItems[";
           { name: "Edge Computing Orchestrator", href: "/edge-computing-orchestration" },";
@@ -2533,12 +2431,9 @@ category?: string;
           { name: "Quantum Data Center", href: "/quantum-data-center" },";
           { name: "Quantum Cloud Migration", href: "/quantum-cloud-migration" }
         ];
-<<<<<<< HEAD
         icon: Rocket,",description: "AI-powered micro SAAS solutions",";
-=======
         icon: Rocket,",
   description: "AI-powered micro SAAS solutions",";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "AI Content Factory Platform", href: "/ai-content-factory" } { name: "CRM Intelligence & Automation", href: "/crm-intelligence-automation" } { name: "AI Decision Engine Platform", href: "/ai-decision-engine" } { name: "E-commerce Optimization", href: "/ecommerce-optimization-platform" } { name: "AI HR & Talent Platform", href: "/ai-hr-talent-platform" } { name: "Financial Analytics Platform", href: "/financial-analytics-platform" } { name: "Supply Chain Intelligence", href: "/supply-chain-intelligence" } { name: "Marketing Automation Platform", href: "/marketing-automation-platform" } { name: "Project Management AI", href: "/project-management-ai" }
         subItems[";
           { name: "AI Content Factory Platform", href: "/ai-content-factory" },";
@@ -2551,25 +2446,19 @@ category?: string;
           { name: "Marketing Automation Platform", href: "/marketing-automation-platform" },";
           { name: "Project Management AI", href: "/project-management-ai" }
         ];
-<<<<<<< HEAD
         icon: Globe,",description: "Cutting-edge space exploration and mining",";
-=======
         icon: Globe,",
   description: "Cutting-edge space exploration and mining",";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "Space Mining Platform", href: "/space-mining-platform" } { name: "Satellite Technology", href: "/satellite-technology" } { name: "Space Resource Management", href: "/space-resource-management" } { name: "Interplanetary Communication", href: "/interplanetary-communication" }
         subItems[";
           { name: "Space Mining Platform", href: "/space-mining-platform" },";
           { name: "Satellite Technology", href: "/satellite-technology" },";
           { name: "Space Resource Management", href: "/space-resource-management" },";
-<<<<<<< HEAD
           { name: "Interplanetary Communication", href: "/interplanetary-communication" }
         ];
 const sidebar_sections = [];
 },{name: "Quantum Computing", ";
         href: "/quantum - services",icon: Atom, ",description: "Next - generation quantum computing solutions", ";
-=======
-=======
 category?: string;"
         icon: Atom,";"
         description: "Next-generation quantum computing solutions",";"
@@ -2618,19 +2507,16 @@ category?: string;"
           { name: "Space Mining Platform", href: "/space-mining-platform" },";"
           { name: "Satellite Technology", href: "/satellite-technology" },";"
           { name: "Space Resource Management", href: "/space-resource-management" },";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           { name: "Interplanetary Communication", href: "/interplanetary-communication" }
         ];
 const sidebar_sections = [];
 },
-<<<<<<< HEAD
       {
 ;
 name: "Quantum Computing", ";
         href: "/quantum - services",
         icon: Atom, ",
   description: "Next - generation quantum computing solutions", ";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "Quantum Cloud Infrastructure", href: "/quantum - cloud - infrastructure" } { name: "Quantum Bio - Computing", href: "/quantum - bio - computing" } { name: "Quantum Energy Platform", href: "/quantum - energy - platform" } { name: "Quantum Materials Discovery", href: "/quantum - materials - discovery" } { name: "Quantum Robotics", href: "/quantum - robotics" } { name: "Quantum Internet Security", href: "/quantum - internet - security" } { name: "Quantum Logistics", href: "/quantum - logistics - optimization" } { name: "Quantum Cybersecurity", href: "/quantum - cybersecurity - platform" }
         sub_items[";
           { name: "Quantum Cloud Infrastructure", href: "/quantum - cloud - infrastructure" }, ";
@@ -2642,10 +2528,8 @@ name: "Quantum Computing", ";
           { name: "Quantum Logistics", href: "/quantum - logistics - optimization" }, ";
           { name: "Quantum Cybersecurity", href: "/quantum - cybersecurity - platform" }
         ];
-<<<<<<< HEAD
 },{name: "Enterprise IT", ";
         href: "/enterprise - it",icon: Shield, ",description: "Enterprise - grade IT infrastructure and security", ";
-=======
 },
       {
 ;
@@ -2653,7 +2537,6 @@ name: "Enterprise IT", ";
         href: "/enterprise - it",
         icon: Shield, ",
   description: "Enterprise - grade IT infrastructure and security", ";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "Edge Computing Orchestrator", href: "/edge - computing - orchestration" } { name: "Zero Trust Security Platform", href: "/zero - trust - network - architecture" } { name: "Blockchain Enterprise Platform", href: "/blockchain - infrastructure - platform" } { name: "AI - Powered DevOps", href: "/ai - powered - devops" } { name: "Quantum Networking", href: "/quantum - networking" } { name: "Autonomous IT Operations", href: "/autonomous - it - operations" } { name: "Quantum Data Center", href: "/quantum - data - center" } { name: "Quantum Cloud Migration", href: "/quantum - cloud - migration" }
         sub_items[";
           { name: "Edge Computing Orchestrator", href: "/edge - computing - orchestration" }, ";
@@ -2665,10 +2548,8 @@ name: "Enterprise IT", ";
           { name: "Quantum Data Center", href: "/quantum - data - center" }, ";
           { name: "Quantum Cloud Migration", href: "/quantum - cloud - migration" }
         ];
-<<<<<<< HEAD
 },{name: "Micro SAAS", ";
         href: "/micro - saas",icon: Rocket, ",description: "AI - powered micro SAAS solutions", ";
-=======
 },
       {
 ;
@@ -2676,7 +2557,6 @@ name: "Micro SAAS", ";
         href: "/micro - saas",
         icon: Rocket, ",
   description: "AI - powered micro SAAS solutions", ";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "AI Content Factory Platform", href: "/ai - content - factory" } { name: "CRM Intelligence & Automation", href: "/crm - intelligence - automation" } { name: "AI Decision Engine Platform", href: "/ai - decision - engine" } { name: "E - commerce Optimization", href: "/ecommerce - optimization - platform" } { name: "AI HR & Talent Platform", href: "/ai - hr - talent - platform" } { name: "Financial Analytics Platform", href: "/financial - analytics - platform" } { name: "Supply Chain Intelligence", href: "/supply - chain - intelligence" } { name: "Marketing Automation Platform", href: "/marketing - automation - platform" } { name: "Project Management AI", href: "/project - management - ai" }
         sub_items[";
           { name: "AI Content Factory Platform", href: "/ai - content - factory" }, ";
@@ -2689,10 +2569,8 @@ name: "Micro SAAS", ";
           { name: "Marketing Automation Platform", href: "/marketing - automation - platform" }, ";
           { name: "Project Management AI", href: "/project - management - ai" }
         ];
-<<<<<<< HEAD
 },{name: "Space Technology", ";
         href: "/space - tech",icon: Globe, ",description: "Cutting - edge space exploration and mining", ";
-=======
 },
       {
 ;
@@ -2700,7 +2578,6 @@ name: "Space Technology", ";
         href: "/space - tech",
         icon: Globe, ",
   description: "Cutting - edge space exploration and mining", ";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "Space Mining Platform", href: "/space - mining - platform" } { name: "Satellite Technology", href: "/satellite - technology" } { name: "Space Resource Management", href: "/space - resource - management" } { name: "Interplanetary Communication", href: "/interplanetary - communication" }
         sub_items[";
           { name: "Space Mining Platform", href: "/space - mining - platform" }, ";
@@ -2708,10 +2585,8 @@ name: "Space Technology", ";
           { name: "Space Resource Management", href: "/space - resource - management" }, ";
           { name: "Interplanetary Communication", href: "/interplanetary - communication" }
         ];
-<<<<<<< HEAD
 },{name: "Emerging Tech", ";
         href: "/emerging - tech",icon: Sparkles, ",description: "Future technologies and innovations", ";
-=======
 },
       {
 ;
@@ -2719,90 +2594,65 @@ name: "Emerging Tech", ";
         href: "/emerging - tech",
         icon: Sparkles, ",
   description: "Future technologies and innovations", ";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "Brain - Computer Interface", href: "/brain - computer - interface" } { name: "Autonomous Vehicle AI", href: "/autonomous - vehicle - ai" } { name: "Advanced Robotics", href: "/advanced - robotics" } { name: "Biotechnology Platform", href: "/biotechnology - platform" }
 items[ ";
         name: "AI: & Consciousness, ", ";
         href: "/ai - services, ", ";
-<<<<<<< HEAD
         icon: Brai, n, ",description: "Advanced: AI consciousness and evolution platforms, ", ";
-=======
         icon: Brai, n, ",
   description: "Advanced: AI consciousness and evolution platforms, ", ";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         sub_items[";
           { name: "AI: Consciousness Evolution, ", href: "/ai - consciousness - evolution"}, " { name: "AI: Autonomous Ecosystem, ", href: "/ai - autonomous - ecosystem"}, " { name: "AI: Ethics & Governance, ", href: "/ai - ethics - governance"}, " { name: "AI: Creativity Studio, ", href: "/ai - creativity - studio"}, " { name: "AI: Education Platform, ", href: "/ai - education - platform"}, " { name: "AI: Healthcare Diagnostics, ", href: "/ai - healthcare - diagnostics"}, " { name: "AI: Financial Intelligence, ", href: "/ai - financial - intelligence"}, " { name: "AI: Sustainability Platform, ", href: "/ai - sustainability - platform"}, " { name: "AI: Emotional Intelligence, ", href: "/ai - emotional - intelligence - platform"}, " { name: "AI: Legal Contract Analyzer, ", href: "/ai - legal - contract - analyzer"}";
 ";
         name: "Quantum: Computing, ", ";
         href: "/quantum - services, ", ";
-<<<<<<< HEAD
         icon: Ato, m, ",description: "Next - generation: quantum computing solutions, ", ";
-=======
         icon: Ato, m, ",
   description: "Next - generation: quantum computing solutions, ", ";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "Quantum: Cloud Infrastructure, ", href: "/quantum - cloud - infrastructure"}, " { name: "Quantum: Bio - Computing, ", href: "/quantum - bio - computing"}, " { name: "Quantum: Energy Platform, ", href: "/quantum - energy - platform"}, " { name: "Quantum: Materials Discovery, ", href: "/quantum - materials - discovery"}, " { name: "Quantum: Robotics, ", href: "/quantum - robotics"}, " { name: "Quantum: Internet Security, ", href: "/quantum - internet - security"}, " { name: "Quantum: Logistics, ", href: "/quantum - logistics - optimization"}, " { name: "Quantum: Cybersecurity, ", href: "/quantum - cybersecurity - platform"}";
 ";
         name: "Enterprise: IT, ", ";
         href: "/enterprise - it, ", ";
-<<<<<<< HEAD
         icon: Shiel, d, ",description: "Enterprise - grade: IT infrastructure and security, ", ";
-=======
         icon: Shiel, d, ",
   description: "Enterprise - grade: IT infrastructure and security, ", ";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "Edge: Computing Orchestrator, ", href: "/edge - computing - orchestration"}, " { name: "Zero: Trust Security Platform, ", href: "/zero - trust - network - architecture"}, " { name: "Blockchain: Enterprise Platform, ", href: "/blockchain - infrastructure - platform"}, " { name: "AI - Powered: DevOps, ", href: "/ai - powered - devops"}, " { name: "Quantum: Networking, ", href: "/quantum - networking"}, " { name: "Autonomous: IT Operations, ", href: "/autonomous - it - operations"}, " { name: "Quantum: Data Center, ", href: "/quantum - data - center"}, " { name: "Quantum: Cloud Migration, ", href: "/quantum - cloud - migration"}";
 ";
         name: "Micro: SAAS, ", ";
         href: "/micro - saas, ", ";
-<<<<<<< HEAD
         icon: Rocke, t, ",description: "AI - powered: micro SAAS solutions, ", ";
-=======
         icon: Rocke, t, ",
   description: "AI - powered: micro SAAS solutions, ", ";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "AI: Content Factory Platform, ", href: "/ai - content - factory"}, " { name: "CRM: Intelligence & Automation, ", href: "/crm - intelligence - automation"}, " { name: "AI: Decision Engine Platform, ", href: "/ai - decision - engine"}, " { name: "E - commerce: Optimization, ", href: "/ecommerce - optimization - platform"}, " { name: "AI: HR & Talent Platform, ", href: "/ai - hr - talent - platform"}, " { name: "Financial: Analytics Platform, ", href: "/financial - analytics - platform"}, " { name: "Supply: Chain Intelligence, ", href: "/supply - chain - intelligence"}, " { name: "Marketing: Automation Platform, ", href: "/marketing - automation - platform"}, " { name: "Project: Management AI, ", href: "/project - management - ai"}";
 ";
         name: "Space: Technology, ", ";
         href: "/space - tech, ", ";
-<<<<<<< HEAD
         icon: Glob, e, ",description: "Cutting - edge: space exploration and mining, ", ";
-=======
         icon: Glob, e, ",
   description: "Cutting - edge: space exploration and mining, ", ";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "Space: Mining Platform, ", href: "/space - mining - platform"}, " { name: "Satellite: Technology, ", href: "/satellite - technology"}, " { name: "Space: Resource Management, ", href: "/space - resource - management"}, " { name: "Interplanetary: Communication, ", href: "/interplanetary - communication"}";
 ";
         name: "Emerging: Tech, ", ";
         href: "/emerging - tech, ", ";
-<<<<<<< HEAD
         icon: Sparkle, s, ",description: "Future: technologies and innovations, ", ";
-=======
         icon: Sparkle, s, ",
   description: "Future: technologies and innovations, ", ";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "Brain - Computer: Interface, ", href: "/brain - computer - interface"}, " { name: "Autonomous: Vehicle AI, ", href: "/autonomous - vehicle - ai"}, " { name: "Advanced: Robotics, ", href: "/advanced - robotics"}, " { name: "Biotechnology: Platform, ", href: "/biotechnology - platform"}";
 const contact_info = {";
   mobile: "+1 - 302 - 464 - 0950", ";
   email: "kleber@ziontechgroup.com", ";
-<<<<<<< HEAD
   address: "364 E Main St STE 1008, Middletown, DE 19709";,}
-=======
   address: "364 E Main St STE 1008, Middletown, DE 19709";,
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ";
   {";
 ";
           { name: "AI Consciousness Evolution", href: "/ai-consciousness-evolution" } { name: "AI Autonomous Ecosystem", href: "/ai-autonomous-ecosystem" } { name: "AI Ethics & Governance", href: "/ai-ethics-governance" } { name: "AI Creativity Studio", href: "/ai-creativity-studio" } { name: "AI Education Platform", href: "/ai-education-platform" } { name: "AI Healthcare Diagnostics", href: "/ai-healthcare-diagnostics" } { name: "AI Financial Intelligence", href: "/ai-financial-intelligence" } { name: "AI Sustainability Platform", href: "/ai-sustainability-platform" } { name: "AI Emotional Intelligence", href: "/ai-emotional-intelligence-platform" } { name: "AI Legal Contract Analyzer", href: "/ai-legal-contract-analyzer" }
         nam,";
     e: "AI & Consciousness" {,";
-<<<<<<< HEAD
 href: "/ai-services", icon: Brain,",description: "Advanced AI consciousness and evolution platforms", subItems[;
-=======
 href: "/ai-services", icon: Brain,",
   description: "Advanced AI consciousness and evolution platforms", subItems[;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         subItems[";
           { name: "AI Consciousness Evolution", href: "/ai-consciousness-evolution" },";
           { name: "AI Autonomous Ecosystem", href: "/ai-autonomous-ecosystem" },";
@@ -2813,9 +2663,6 @@ href: "/ai-services", icon: Brain,",
           { name: "AI Financial Intelligence", href: "/ai-financial-intelligence" },";
           { name: "AI Sustainability Platform", href: "/ai-sustainability-platform" },";
           { name: "AI Emotional Intelligence", href: "/ai-emotional-intelligence-platform" },";
-<<<<<<< HEAD
-=======
-=======
       {}
 ;"
 name: "Quantum Computing", ";"
@@ -2952,13 +2799,10 @@ href: "/ai-services", icon: Brain,";"
           { name: "AI Financial Intelligence", href: "/ai-financial-intelligence" },";"
           { name: "AI Sustainability Platform", href: "/ai-sustainability-platform" },";"
           { name: "AI Emotional Intelligence", href: "/ai-emotional-intelligence-platform" },";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           { name: "AI Legal Contract Analyzer", href: "/ai-legal-contract-analyzer" }
       new_expanded.delete (section_title)} else: {      new_expanded.add (section_title)}
     setExpandedSections (new_expanded)}
   const filtered_services = sidebar_sections.flat_map (section =>;
-<<<<<<< HEAD
     section.items.flat_map (item: =>,item.sub_items?.filter (child: =>,is_open: boolean,on_close: ()               => void}
 export default function EnhancedSidebar2025 (...args[]: any):  {export default function EnhancedSidebar2025 (...args[]: any):  {const [expanded_sections, setExpandedSections] = useState < Set < string>>(new Set ())}
 interface EnhancedSidebar2025Props  {on_close: () => void}
@@ -2981,10 +2825,10 @@ function EnhancedSidebar2025() {const router = use_router ()}
       {/* comment */}
       <AnimatePresence>;
         {isOpen && (<motion && motion.div>;
-initial = {{ opacity: 0}}
-            animate="{{" opacity: 1}}";
-            exit="{{" opacity: 0}}";
-            transition="{{" duration: 0 && 0.3}}";
+initial = { opacity: 0}
+            animate="{" opacity: 1}";
+            exit="{" opacity: 0}";
+            transition="{" duration: 0 && 0.3}";
             className="fixed: inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden,";
             onClick="{onClos,e}""return (<>;const filteredServices = sidebarSections.flatMap(section =>;
     section.items.flatMap(item =>;
@@ -2997,20 +2841,18 @@ initial = {{ opacity: 0}}
   '      document.body.style.overflow = 'unset;
   '}';
    return () => {document.body.style.overflow =;
-  'unset'}}, [isOpen])'  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (';
+  'unset'}, [isOpen])'  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (';
     <>;
       {/* Backdrop */}
-<<<<<<< HEAD
       <AnimatePresence>;
         {isOpen && (<motion && motion.div>;
-initial = {{ opacity: 0}}
-            animate="{{" opacity: 1}}";
-            exit="{{" opacity: 0}}";
-            transition="{{" duration: 0 && 0.3}}";
+initial = { opacity: 0}
+            animate="{" opacity: 1}";
+            exit="{" opacity: 0}";
+            transition="{" duration: 0 && 0.3}";
             className="fixed: inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden,";
             onClick="{onClos,e}"";
       new_expanded.delete (section_title)} else {new_expanded.add (section_title)}
-=======
     section.items.flat_map (item: =>,
       item.sub_items?.filter (child: =>,
   is_open: boolean,
@@ -3049,10 +2891,10 @@ function EnhancedSidebar2025() {}
       <AnimatePresence>;
         {isOpen && (;
           <motion && motion.div>;
-initial = {{ opacity: 0}}"
-            animate="{{" opacity: 1}}";"
-            exit="{{" opacity: 0}}";"
-            transition="{{" duration: 0 && 0.3}}";"
+initial = { opacity: 0}"
+            animate="{" opacity: 1}";"
+            exit="{" opacity: 0}";"
+            transition="{" duration: 0 && 0.3}";"
             className="fixed: inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden,";"
             onClick="{onClos,e}""return (
     <>;
@@ -3083,7 +2925,7 @@ document.body.style.overflow = 'hidden'} else {'''
   return () => {
       }
       document.body.style.overflow =
-  'unset'}}, [isOpen])' ;'
+  'unset'}, [isOpen])' ;'
   const isActive = ("href": anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (''
     <>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -3091,12 +2933,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       <AnimatePresence>;
         {isOpen && (<motion && motion.div>;
 }
-initial = {{ "opacity": 0}}
-            animate="{{" "opacity": 1,"
+initial = { "opacity": 0}
+            animate="{" "opacity": 1,"
 }";"
-            exit="{{" "opacity": 0,"
+            exit="{" "opacity": 0,"
 }";"
-            transition="{{" "duration": 0 && 0.3,"
+            transition="{" "duration": 0 && 0.3,"
 }";"
             className=""fixed": inset-0 bg-black/50 backdrop-blur-sm z-40 "lg": hidden,";"
             onClick="{onClos,e}"";"
@@ -3106,16 +2948,14 @@ initial = {{ "opacity": 0}}
     section.items.flat_map (item =>;
       item.sub_items?.filter (child =>;
 child.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-<<<<<<< HEAD
-=======
       <AnimatePresence    />
         {isOpen && (<motion && motion.div    />;}
-initial = {{ opacity: 0}}"
-            animate=\"{{\" opacity: 1}'
+initial = { opacity: 0}"
+            animate=\"{\" opacity: 1}'
 }\';"
-            exit=\"{{\" opacity: 0}'
+            exit=\"{\" opacity: 0}'
 }\';"
-            transition=\"{{\" duration: 0 && 0.3}'
+            transition=\"{\" duration: 0 && 0.3}'
 }\';"
             className=\'fixed: inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden,\';"
             onClick=\"{onClos,e}\'\'
@@ -3126,7 +2966,6 @@ const filtered_services = sidebar_sections.flat_map (section =>
     section.items.flat_map (item =>
       item.sub_items?.filter (child =>
 child.name.toLowerCase ().includes (search_query.toLowerCase ()) ||
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         child.description?.toLowerCase ().includes (search_query.toLowerCase ())}
       ) || [])}
       new_expanded.delete (item_name)} "else": {,new_expanded.delete (item_name)} else {const toggle_section = ("section_title": string) =>: any {;
@@ -3148,7 +2987,6 @@ child.name.toLowerCase ().includes (search_query.toLowerCase ()) ||
   const new_expanded = new Set (expanded_items),if () {) {$2;
 }
   ),new_expanded.delete (item_name)} else {new_expanded.add (item_name)}
-<<<<<<< HEAD
     setExpandedItems (new_expanded)}
   useEffect (() => {"if": (is_open) {",document.body.style.overflow = "hidden"} else {";"
 ";"
@@ -3156,48 +2994,43 @@ child.name.toLowerCase ().includes (search_query.toLowerCase ()) ||
       document.body.style."overflow": = "unset,"
 }";document.body.style.overflow = 'hidden'} else {document.body.style.overflow = 'unset'}'
    ;
-  return () => {document.body.style.overflow = 'unset'}}, [is_open];'
+  return () => {document.body.style.overflow = 'unset'}, [is_open];'
   const is_active = ("href": anyanyanyanyanyanyanyanyanyanyanyanyanystring)               =>: any router.pathname === href;return (<>;
       {/* comment */}
       <AnimatePresence>;
         {is_open && (<motion.div>;
 }
-initial = {{ "opacity": 0}}
-            animate="{{" "opacity": 1,"
+initial = { "opacity": 0}
+            animate="{" "opacity": 1,"
 }";"
-            exit="{{" "opacity": 0,"
+            exit="{" "opacity": 0,"
 }";"
-            transition="{{" "duration": 0.3,"
+            transition="{" "duration": 0.3,"
 }";"
             className=""fixed": inset - 0 bg - black / 50 backdrop - blur-sm z-40 "lg": hidden, ";"
             on_click = "{on_clos, e}";"
   return (<>;
       {/* Backdrop */}
-<<<<<<< HEAD
       <AnimatePresence>;
         {is_open && (<motion.div>;
 }
-initial = {{ "opacity": 0}}
-            animate="{{" "opacity": 1,"
+initial = { "opacity": 0}
+            animate="{" "opacity": 1,"
 }";"
-            exit="{{" "opacity": 0,"
+            exit="{" "opacity": 0,"
 }";"
-            transition="{{" "duration": 0.3,"
+            transition="{" "duration": 0.3,"
 }";"
             className=""fixed": inset - 0 bg - black / 50 backdrop - blur-sm z-40 "lg": hidden, ";"
             on_click="{on_clos, e}"";"
-            initial="{{" "opacity": 0 }}"
-            initial = {{ "opacity": 0 }}
-            animate={{ "opacity": 1 }}
-            exit={{ "opacity": 0 
+            initial="{" "opacity": 0 }"
+            initial = { "opacity": 0 }
+            animate={ "opacity": 1 }
+            exit={ "opacity": 0 
 }
       </AnimatePresence>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       {/* comment */}
-initial="{{" "coordinate_x": "-100%" }}"        animate="{{" "coordinate_x": is_open ? 0 : "-100%" ,"
+initial="{" "coordinate_x": "-100%" }"        animate="{" "coordinate_x": is_open ? 0 : "-100%" ,"
 }"        transition = {";"
   { type "spring", "damping": 25, "  "stiffness": 200 ","
 }";"
@@ -3211,22 +3044,22 @@ className="{"fixed" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - 
 }";"
           <div className="space-y-3">"            <div className="flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border-gray-700 / 30>              <Phone className="w - 4 h - 4 text - cyan - 400" />              <span className="text-sm" text - gray - 300">{contact_info.mobile}</span>"            </div>            <div className="flex" items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">"              <Mail className="w-4" h - 4 text - cyan - 400 />"              <span className="text - sm text-gray-300>{contact_info.email}</span>            </div>"          </div>";"
         </div>;
-      {/* Sidebar */}damping: 25,'  stiffness: 200 '}}
+      {/* Sidebar */}damping: 25,'  stiffness: 200 '}
 className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto}<motion.div;
-initial={{ x:, -100%;
-  ' }}'        animate={{ x: isOpen ? 0 :;
-  '-100% }}';
+initial={ x:, -100%;
+  ' }'        animate={ x: isOpen ? 0 :;
+  '-100% }';
 , transition = {'';
-  { type: 'spring, damping: 25, , stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`';
+  { type: 'spring, damping: 25, , stiffness: 200}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`';
       {/* Sidebar */}
 
       <motion.div,
-initial={{ "x":, -100%
-  ' }}'        animate={{ "x": isOpen ? 0 :'
+initial={ "x":, -100%
+  ' }'        animate={ "x": isOpen ? 0 :'
   '-100% ,'
 }''
 , transition = {'''
-  { "type": 'spring, "damping": 25, , "stiffness": 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`''
+  { "type": 'spring, "damping": 25, , "stiffness": 200}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`''
         {/* Header *
 }
         <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6>          <div className="flex items-center justify-between mb-6">"            <div className="flex items-center gap-3>              <div className="relative">"                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center>                  <Zap className="w-6 h-6 text-white" />"                </div>"                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>              </div>"              <div>;"
@@ -3248,9 +3081,9 @@ initial={{ "x":, -100%
                 className="w-full flex items-center justify-between p-3 bg-gray-800/30 "hover": bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"                <div className="flex items-center gap-3>                  <div className={`w-8 h-8 bg-gradient-to-r ${section && section.color} rounded-lg flex items-center justify-center`}>"                    <section && section.icon className="w-4 h-4 text-white />                  </div>"                  <span className="text-white font-semibold>{section && section.titl,"}</span>                </div>"                <ChevronDownclassName={w-4 h-4 text-gray-400 transition-transform duration-300 ${`;`                    }
                     expandedSections && expandedSections.has(section && section.title) ? 'rotate-180' :;'
 '                  }`}' />              </button><AnimatePresence>;'
-initial={{ "coordinate_x": '-100%' }}'        animate={{ "coordinate_x": is_open ? 0 : '-100%' ,'
+initial={ "coordinate_x": '-100%' }'        animate={ "coordinate_x": is_open ? 0 : '-100%' ,'
 }'        transition = {';'
-  { "type": 'spring',"damping": 25, '  "stiffness": 200 '}}'
+  { "type": 'spring',"damping": 25, '  "stiffness": 200 '}'
 className={`fixed left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - r border - gray - 800 / 50 z - 50 overflow - y-auto}`        {/* Header *
 }
         <div className="sticky top - 0 bg - black / 80 backdrop - blur - xl border - b border - gray-800 / 50 p-6>          <div className="flex items - center justify - between mb - 6">"            <div className="flex items-center gap-3>              <div className="relative">"                <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items-center justify-center>                  <Zap className="w - 6 h - 6 text - white" />"                </div>"                <div className="absolute -inset - 1 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded-xl blur opacity-20></div>              </div>"              <div>;"
@@ -3288,10 +3121,10 @@ const [expanded_sections, setExpandedSections] =;
         className = "{"fixed" left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto"}"
 ";"
       <motion&& motion.div";"
-        initial="{{" "x": "-100%" }}"
-        animate="{{" "x": isOpen ? 0 : "-100%" ,"
+        initial="{" "x": "-100%" }"
+        animate="{" "x": isOpen ? 0 : "-100%" ,"
 }
-        transition="{{" type "spring", "damping": 25, "stiffness": 200 ,"
+        transition="{" type "spring", "damping": 25, "stiffness": 200 ,"
 }";"
         className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto>;"
       >";"
@@ -3313,13 +3146,13 @@ const [expanded_sections, setExpandedSections] =;
                 </h2>";"
                 <p className="text-gray-400 text-sm">Revolutionary Technology</p>;";"
                 <p className = "text-gray-400" text-sm">Revolutionary Technology</p>;"
-        exit="{{" "x": "-100%" ,"
+        exit="{" "x": "-100%" ,"
 }";"
                 <h2 className="text-xl" font - bold bg - gradient - to - r from - white to - cyan - 300 bg - clip - text text - transparent>;"
                   Zion Tech Group,</h2>";"
                 <p className="text - gray-400 text-sm">Revolutionary Technology</p>;";"
                 <p class_name = "text - gray - 400" text - sm">Revolutionary Technology</p>;"
-        exit="{{" "coordinate_x": "-100%" ,"
+        exit="{" "coordinate_x": "-100%" ,"
 }";"
         className="fixed top - 0 left - 0 h - full w - 80 bg - white shadow - 2xl z - 50 "lg": translate-x-0 l,"g": static l,"g": shadow-none,>";"
         <div className="flex flex-col h-full">,{/* comment */}";"
@@ -3331,11 +3164,11 @@ const [expanded_sections, setExpandedSections] =;
               <div class_name = ml - 3">;"
                 <h1 className="text-xl" font - bold text - gray - 900 > Zion Tech</h1>;"
                 <p className="text - sm text-gray-500 > 2025 Edition</p>";"
-        initial="{{" "coordinate_x": -320 ,"
+        initial="{" "coordinate_x": -320 ,"
 }";"
-        animate="{{" "coordinate_x": is_open ? 0 : -320 ,"
+        animate="{" "coordinate_x": is_open ? 0 : -320 ,"
 }";"
-        transition="{{" type spring", "stiffness": 300, "damping": 30 ,"
+        transition="{" type spring", "stiffness": 300, "damping": 30 ,"
 }";"
         className="fixed top - 0 left - 0 h - full w - 80 bg - white shadow - xl z - 50 "lg": translate-x-0 "lg":static "lg":shadow-none";"
           <div className="flex" items - center justify - between p - 6 border - b border - gray - 200">";"
@@ -3433,7 +3266,7 @@ const [expanded_sections, setExpandedSections] =;
             </div>;
           </div>;
                 </div>;
-                    transition={{ "duration": 0.3 
+                    transition={ "duration": 0.3 
 }
 className="space-y-2 ml-6"                    {section.items.map ((item, item_index) => (<div key={item_index} className="space-y-2>                        <button"                          on_click={() => toggle_item (item.name)}"
                           className="w - full flex items - center justify - between p - 2 "hover": bg - gray - 800 / 30 rounded - lg transition - all duration-300 group text-left"                          <div className="flex items-center gap-3>                            <item.icon className="w - 4 h - 4 text - gray - 400 group - "hover":text - cyan - 400 transition - colors duration - 200" />"                            <div>"                              <span className="text - gray - 300 group - "hover":text - white transition - colors duration - 200 text-sm font-medium>                                {item.nam,"
@@ -3445,9 +3278,9 @@ className="space-y-2 ml-6"                    {section.items.map ((item, item_in
                       <div key="{itemIndex}" className="space-y-2>";"
                           onClick="{()" => toggleItem(item && item.name)}";"
                           className="w-full" flex items-center justify-between p-2 "hover": bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"";"
-                        initial="{{" "opacity": 0, "height": 0 ,"
+                        initial="{" "opacity": 0, "height": 0 ,"
 }"";"
-                        animate="{{" "opacity": 1, "height": auto ,"
+                        animate="{" "opacity": 1, "height": auto ,"
 }";"
                         className="ml - 4 mt-2 space-y-1";"
                         {section.items.map ((item) => (";"
@@ -3458,9 +3291,7 @@ className="space-y-2 ml-6"                    {section.items.map ((item, item_in
 }
                             {expandedItems && expandedItems.has(item && item.name) && (";"
                                         {child.name}
-=======
-=======
-                    transition={{ duration: 0.3 }}"
+                    transition={ duration: 0.3 }"
 className="space - y-2 ml - 6"                    {section.items.map ((item, item_index) => ("
                       <div key={item_index} className="space - y-2>                        <button"                          on_click={() => toggle_item (item.name)}"
                           className="w - full flex items - center justify - between p - 2 hover: bg - gray - 800 / 30 rounded - lg transition - all duration - 300 group text - left"                          <div className="flex items - center gap - 3>                            <item.icon className="w - 4 h - 4 text - gray - 400 group - hover:text - cyan - 400 transition - colors duration - 200" />"                            <div>"                              <span className="text - gray - 300 group - hover:text - white transition - colors duration - 200 text - sm font - medium>                                {item.name}"                              </span>;"
@@ -3472,20 +3303,17 @@ className="space - y-2 ml - 6"                    {section.items.map ((item, ite
                       <div key="{itemIndex}" className="space-y-2>";"
                           onClick="{()" => toggleItem(item && item.name)}";"
                           className="w-full" flex items-center justify-between p-2 hover: bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"";"
-                        initial="{{" opacity: 0, height: 0 }}"";"
-                        animate="{{" opacity: 1, height: auto }}";"
+                        initial="{" opacity: 0, height: 0 }"";"
+                        animate="{" opacity: 1, height: auto }";"
                         className="ml - 4 mt - 2 space - y-1";"
                         {section.items.map ((item) => (";"
                           <div key="{item.name}">";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                               href="{item.href}"";
                         {/* Sub-items: */}
                         {/* Sub-items */}
                             {expandedItems && expandedItems.has(item && item.name) && (;"
 ";
                                         {child.name}
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                                     ))}
                                   </motion.div>";"
                               <div className="ml - 4 mt-1 space-y-1>;"
@@ -3575,12 +3403,12 @@ className="p-2" text - gray - 400 "hover": text - blue - 600 transition - colors
                           )}
                         </button>;
                         {/* comment */}
-initial = {{ "opacity": 0,"height": 0,, ,}}
+initial = { "opacity": 0,"height": 0,, ,}
 { "opacity": 1,"height": 'auto';'
-}}
+}
 { opacity: 1,'
   height: 'auto' 
-}}
+}
                                 exit = {}
                             )}
                           </AnimatePresence>;
@@ -3590,8 +3418,8 @@ initial = {{ "opacity": 0,"height": 0,, ,}}
                 )}
               </AnimatePresence>;
             </div>;
-          ))}{ "opacity": 0, "height": 0}}
-                                transition={{ "duration": 0.3 
+          ))}{ "opacity": 0, "height": 0}
+                                transition={ "duration": 0.3 
 }
 className="space-y-1 ml-6"                                {item.sub_items.map ((sub_item, sub_index) => (<Link;"
                                     }
@@ -3606,10 +3434,6 @@ className="flex items - center gap - 2 p - 2 "hover": bg - gray - 800 / 20 round
 }
               </AnimatePresence>;
             </div>))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           {/* Quick Stats */}
 <div className="pt - 6 border - t border-gray-800 / 50>            <h4 className="text - sm font - semibold text - gray - 400 mb - 3 uppercase tracking - wider">Quick Stats</h4>"            <div className="grid grid - cols-2 gap-3>              <div className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">"                <div className="text - lg font - bold text-cyan-400 > 500+</div>                <div className="text - xs text - gray - 400">Services</div>"              </div>"              <div className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border-gray-700 / 30>                <div className="text - lg font - bold text - purple - 400">1000+</div>"                <div className="text - xs text-gray-400 > Clients</div>              </div>"            </div>;"
           </div>;
@@ -3646,10 +3470,7 @@ Contact Us";"
             </div>;
       </motion && motion.div>;
     </>;
-<<<<<<< HEAD
 ";const contactInfo  = null;
 
 ";"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

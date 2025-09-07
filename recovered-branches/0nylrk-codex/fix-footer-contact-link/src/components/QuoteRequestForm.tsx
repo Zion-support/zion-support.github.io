@@ -274,7 +274,7 @@ onClick={handleSubmit}
 }
 ;
     </div>);
-}}
+}
     </div>);
     </div>;
   ),; export function QuoteRequestForm() {

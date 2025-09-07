@@ -20,7 +20,7 @@ type PageProps = {
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
-      docs: content as DocsContent}}
+      docs: content as DocsContent}
 },
 
 export default function PrintDocs({ docs }: PageProps) {
@@ -36,7 +36,7 @@ export default function PrintDocs({ docs }: PageProps) {
         {docs.sections.map((s) => (
           <section key={s.id}>
             <h2 className="text-2xl font-semibold mb-2">{s.title}</h2>
-            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
+            {s.html && <div dangerouslySetInnerHTML={ __html: s.html } />}
             {s.code && s.code.map((c, i) => (
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
             ))}

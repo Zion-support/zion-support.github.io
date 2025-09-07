@@ -25,13 +25,13 @@ export const useNotifications = () => {
   }, []);,
   return (
     <NotificationContext.Provider
-      value={{
+      value={
         notifications,
         addNotification,
         markAsRead,
         dismiss,
         clearAll,
-      }}
+      }
     >
       {children}
     </NotificationContext.Provider>

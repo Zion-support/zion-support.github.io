@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';"";
+import { motion } from 'framer-motion';'';
 import { Link  } from 'react-router-dom';
 import { Brain, Shield,Cloud, Database,Globe, Zap,ArrowRight, Star,TrendingUp, Users,Clock, CheckCircle,Search } from 'lucide-react';
 import { motion  } from 'framer-motion';
@@ -48,4 +48,4 @@ const containerVariants = {hidden: { opacity: 0}
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
 
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All');}
-  const [hoveredService, setHoveredService] = useState<string | null />(null)}"
+  const [hoveredService, setHoveredService] = useState<string | null />(null)}'

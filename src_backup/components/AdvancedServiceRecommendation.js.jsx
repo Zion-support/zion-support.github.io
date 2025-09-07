@@ -157,7 +157,7 @@ const AdvancedServiceRecommendation = () => {}
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months';
                 return {}
                     service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue;
-                }}) .sort((a, b) => b.matchScore - a.matchScore)setRecommendations(recs)setIsAnalyzing(false)setShowResults(true) }, 2000) }
+                }) .sort((a, b) => b.matchScore - a.matchScore)setRecommendations(recs)setIsAnalyzing(false)setShowResults(true) }, 2000) }
     const getPriorityColor = (priority) => {}
         switch (priority) {}
 '';
@@ -186,10 +186,10 @@ const AdvancedServiceRecommendation = () => {}
       {/* Header */}
       <motion.div initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} className='text-center mb-8'>'''';
+} className='text-center mb-8'>'''';
         <h1 className='text-4xl font-bold text-zion-blue-dark mb-4'>;
           AI-Powered Service Recommendation Engine'''';
         </h1>'''';
@@ -199,10 +199,10 @@ const AdvancedServiceRecommendation = () => {}
       {/* Client Profile Form */}
       <motion.div initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>'''';
+} transition={ delay: 0.1 } className='bg-white rounded-lg shadow-lg p-6 mb-8'>'''';
         <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2'>'''';
           <Brain className='w-6 h-6 text-zion-cyan'/>;
           Tell Us About Your Business;
@@ -277,7 +277,7 @@ const AdvancedServiceRecommendation = () => {}
                 else {}
 '''';
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}'''';
-            }} className='rounded text-zion-cyan'/>'''';
+            } className='rounded text-zion-cyan'/>'''';
                 <span className='text-sm text-zion-slate-light'>{goal}</span>;
               </label>))}
           </div>;
@@ -295,7 +295,7 @@ const AdvancedServiceRecommendation = () => {}
                 else {}
 '''';
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}'''';
-            }} className='rounded text-zion-cyan'/>'''';
+            } className='rounded text-zion-cyan'/>'''';
                 <span className='text-sm text-zion-slate-light'>{challenge}</span>;
               </label>))}
           </div>;
@@ -316,9 +316,9 @@ const AdvancedServiceRecommendation = () => {}
       {/* Recommendations Results */}
       {showResults && (<motion.div initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0';';
-}} transition={{ delay: 0.2 }}>'''';
+} transition={ delay: 0.2 }>'''';
           <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center'>;
             Your Personalized Service Recommendations;
           </h2>'''';
@@ -326,9 +326,9 @@ const AdvancedServiceRecommendation = () => {}
           <div className='space-y-6'>;
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}
   { opacity: 0, x: -20;
-}} animate = {}
+} animate = {}
   { opacity: 1, x: 0';';
-}} transition={{ delay: 0.1 * index }}>'''';
+} transition={ delay: 0.1 * index }>'''';
                 <Card className='hover:shadow-lg transition-shadow'>'''';
                   <CardHeader>'''';
                     <div className='flex items-start justify-between'>'''';
@@ -419,10 +419,10 @@ const AdvancedServiceRecommendation = () => {}
           {/* CTA Section */}
           <motion.div initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} transition={{ delay: 0.4 }} className='mt-12 text-center'>'''';
+} transition={ delay: 0.4 } className='mt-12 text-center'>'''';
             <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';
               <h3 className='text-3xl font-bold mb-4'>Ready to Get Started?</h3>'''';
               <p className='text-xl mb-6 max-w-2xl mx-auto'>;
@@ -443,7 +443,7 @@ const AdvancedServiceRecommendation = () => {}
   () => window.open('tel: +13024640950', _blank')';
 '''';
 }>'''';
-                  <Zap className='w-5 h-5 mr-2"/>'";
+                  <Zap className='w-5 h-5 mr-2'/>'';
                   Call Now;
                 </Button>;
               </div>;

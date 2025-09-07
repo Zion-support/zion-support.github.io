@@ -82,7 +82,7 @@ function main() {try {// Check if we're in a git repository;
   try {// Ensure clean working directory;
     const status = exec_sync ('git status --porcelain', { encoding: 'utf8' }),if () {) {$2;
 }
-      console.log ('⚠️  Working directory has changes. Stashing...'),exec_sync ('git stash push -m "Auto - stash before merge process"')}
+      console.log ('⚠️  Working directory has changes. Stashing...'),exec_sync ('git stash push -m 'Auto - stash before merge process'')}
     // Fetch latest changes;
     console.log ('📥 Fetching latest changes...'),exec_sync ('git fetch --all --prune'),// Switch to main branch;
     console.log ('🔄 Switching to main branch...'),exec_sync ('git checkout main'),// Pull latest changes;
@@ -132,7 +132,7 @@ async function main() {
     const status = execSync($2);
     if (status.trim()) {
       console.log($2);
-      execSync('git stash push -m "Auto-stash before merge process"')
+      execSync('git stash push -m 'Auto-stash before merge process'')
     }
 
     // Fetch latest changes
@@ -158,16 +158,16 @@ async function main() {
           if (file.trim()) {
             console.log($2);
             try {
-              execSync(`git checkout --ours "${file}"`)
+              execSync(`git checkout --ours '${file}'`)
             } catch (e) {
-              execSync(`git checkout --theirs "${file}"`)
+              execSync(`git checkout --theirs '${file}'`)
             }
-            execSync(`git add "${file}"`)
+            execSync(`git add '${file}'`)
           }
         }
         
         // Commit the merge
-        execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
+        execSync('git commit -m 'feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved'')
       }
     }
     let fixedCount = 0;
@@ -187,7 +187,7 @@ async function main() {
     if (fixedCount > 0) {
       console.log($2);
       execSync($2);
-      execSync('git commit -m "fix: resolve remaining merge conflicts in files\n\n- Fixed merge conflict markers in source files\n- Ensured clean codebase without conflicts"')
+      execSync('git commit -m 'fix: resolve remaining merge conflicts in files\n\n- Fixed merge conflict markers in source files\n- Ensured clean codebase without conflicts'')
     }
 
     // Get all branches

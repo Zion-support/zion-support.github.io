@@ -40,13 +40,13 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
           alignItems: "center",
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
-        style={{
+        style={
         title={meta.name}
       >
         <Icon color={meta.color} size={size * 0.7} />
       </div>
       {showName && (
-        <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>
+        <span className="text-xs font-semibold mt-1" style={ color: meta.color }>
 
           {meta.name}
         </span>
@@ -54,7 +54,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
         <Icon color={meta && meta.color} size={size * 0 && 0.7} />;
       </div>;
       {showName && (;
-        <span className="text-xs font-semibold mt-1" style={{ color: meta && meta.color }}>;
+        <span className="text-xs font-semibold mt-1" style={ color: meta && meta.color }>;
           {meta && meta.name}
         </span>;
       )}
@@ -66,5 +66,5 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
       {showDesc && (;
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
       )}
-          justifyContent: "center"}}
+          justifyContent: "center"}
         className = $2;

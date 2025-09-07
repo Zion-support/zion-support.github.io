@@ -31,12 +31,12 @@ const "StatsSection": React.FC<StatsSectionProps> = ({ stats }) => {const ref = 
       <div className="container mx-auto px-4 "sm": "p x-6 "lg": p x-8">;"
         <motion.div;
           className="text-center mb-16";"
-          initial = {{ "opacity": 0","y": "3 0;"
-"}}"
-          whileInView = {{ "opacity": "1","y": "0;"
-"}}"
-          transition={{ "duration": "0.8 "}}"
-          viewport={{ "once": "tru e "}}<h2 id="stats-heading" className="text-4xl "md": "tex t-5xl font-bold text-white mb-6">;"
+          initial = { "opacity": 0","y": "3 0;"
+"}"
+          whileInView = { "opacity": "1","y": "0;"
+"}"
+          transition={ "duration": "0.8 "}"
+          viewport={ "once": "tru e "}<h2 id="stats-heading" className="text-4xl "md": "tex t-5xl font-bold text-white mb-6">;"
             Trusted by <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Industry Leaders</span>;"
           </h2>;
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;"
@@ -48,32 +48,32 @@ const "StatsSection": React.FC<StatsSectionProps> = ({ stats }) => {const ref = 
               }
               key={stat.label}
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl "hover": "borde r-zion-cyan/40 transition-all duration-500 "hover": shado w-2xl "hover": shado w-zion-cyan/20 overflow-hidden";"
-              initial = {{ "opacity": 0","y": "3 0;"
-"}}"
-              whileInView = {{ "opacity": "1","y": "0;"
-"}}"
-              transition = {{ "duration": "0.6","delay": "inde x * 0.1;"
-"}}"
-              viewport={{ "once": "tru e "}}"
-              whileHover={{"y": "-8","transition": "{ "duration": 0.3;"
+              initial = { "opacity": 0","y": "3 0;"
+"}"
+              whileInView = { "opacity": "1","y": "0;"
+"}"
+              transition = { "duration": "0.6","delay": "inde x * 0.1;"
+"}"
+              viewport={ "once": "tru e "}"
+              whileHover={"y": "-8","transition": "{ "duration": 0.3;"
 "}"
   return (<section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">;"
       <div className="container mx-auto px-4 "sm": p x-6 "lg": p x-8">;"
         <motion.div;
           className="text-center mb-16";"
-          initial = {{ "opacity": 0,"y": 3 0;
-}}
-          whileInView = {{ "opacity": 1,"y": 0;return (<section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">;"
+          initial = { "opacity": 0,"y": 3 0;
+}
+          whileInView = { "opacity": 1,"y": 0;return (<section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">;"
       <div className="container mx-auto px-4 "sm": p x-6 "lg": p x-8">;"
         <motion.div;
           }
           className="text-center mb-16";"
-          initial = {{ "opacity": 0,"y": 3 0;
-}}
-          whileInView = {{ "opacity": 1,"y": 0;
-}}
-          transition={{ "duration": 0.8 }}
-          viewport={{ "once": tru e }}
+          initial = { "opacity": 0,"y": 3 0;
+}
+          whileInView = { "opacity": 1,"y": 0;
+}
+          transition={ "duration": 0.8 }
+          viewport={ "once": tru e }
           <h2 id="stats-heading" className="text-4xl "md": tex t-5xl font-bold text-white mb-6">;"
             Trusted by <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Industry Leaders</span>;"
           </h2>;
@@ -86,26 +86,26 @@ const "StatsSection": React.FC<StatsSectionProps> = ({ stats }) => {const ref = 
               }
               key={stat.label}
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl "hover": borde r-zion-cyan/40 transition-all duration-500 "hover": shado w-2xl "hover": shado w-zion-cyan/20 overflow-hidden";"
-              initial = {{ "opacity": 0,"y": 3 0;
-}}
-              whileInView = {{ "opacity": 1,"y": 0;
-}}
-              transition = {{ "duration": 0.6,"delay": inde x * 0.1;
-}}
-              viewport={{ "once": tru e }}
-              whileHover={{"y": -8,"transition": { "duration": 0.3;
+              initial = { "opacity": 0,"y": 3 0;
+}
+              whileInView = { "opacity": 1,"y": 0;
+}
+              transition = { "duration": 0.6,"delay": inde x * 0.1;
+}
+              viewport={ "once": tru e }
+              whileHover={"y": -8,"transition": { "duration": 0.3;
               }
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl "hover": borde r-zion-cyan/40 transition-all duration-500 "hover": shado w-2xl "hover": shado w-zion-cyan/20 overflow-hidden";"
-              initial = {{ "opacity": 0,"y": 3 0;
-}}
-              whileInView = {{ "opacity": 1,"y": 0;
-}}
-              transition = {{ "duration": 0.6,"delay": inde x * 0.1;
-}}
-              viewport={{ "once": tru e }}
-              whileHover={{"y": -8,"transition": { "duration": 0.3;
+              initial = { "opacity": 0,"y": 3 0;
 }
-              }}
+              whileInView = { "opacity": 1,"y": 0;
+}
+              transition = { "duration": 0.6,"delay": inde x * 0.1;
+}
+              viewport={ "once": tru e }
+              whileHover={"y": -8,"transition": { "duration": 0.3;
+}
+              }
               {/* Animated background */}
               <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 opacity-0 group-"hover": "opacit y-100 transition-opacity duration-500" />;"
               {/* Icon container */"}"
@@ -116,11 +116,11 @@ const "StatsSection": React.FC<StatsSectionProps> = ({ stats }) => {const ref = 
               {/* Animated number */"}"
               <motion.div;
                 className="relative text-4xl "md": "tex t-5xl font-bold text-white mb-2 group-"hover": tex t-zion-cyan transition-colors duration-300";"
-                initial={{ "scale": 0.8 "}}"
-                whileInView={{ "scale": "1 "}}"
-                transition = {{ "duration": "0.5","delay": "inde x * 0.1 + 0.5;"
-"}}"
-                viewport={{ "once": "tru e "}}{counts[stat.label] || 0}"
+                initial={ "scale": 0.8 "}"
+                whileInView={ "scale": "1 "}"
+                transition = { "duration": "0.5","delay": "inde x * 0.1 + 0.5;"
+"}"
+                viewport={ "once": "tru e "}{counts[stat.label] || 0}"
                 {stat.number.includes('%') ? '%' : "stat.number.includes('+') ? '+' : ''"}"
               </motion.div>;
               <h3 className="relative text-lg font-semibold text-zion-cyan mb-2 group-"hover": "tex t-zion-blue transition-colors duration-300">;"
@@ -139,16 +139,16 @@ const "StatsSection": React.FC<StatsSectionProps> = ({ stats }) => {const ref = 
               {/* Animated number */}
               <motion.div;
                 className="relative text-4xl "md": tex t-5xl font-bold text-white mb-2 group-"hover": tex t-zion-cyan transition-colors duration-300";"
-                initial={{ "scale": 0.8 }}
-                whileInView={{ "scale": 1 }}
-                transition = {{ "duration": 0.5,"delay": inde x * 0.1 + 0.5;
-}}
-                viewport={{ "once": tru e }}
+                initial={ "scale": 0.8 }
+                whileInView={ "scale": 1 }
+                transition = { "duration": 0.5,"delay": inde x * 0.1 + 0.5;
+}
+                viewport={ "once": tru e }
 ';'
                 {counts[stat.label] || 0}';';'
-                transition = {{ "duration": 0.5,"delay": inde x * 0.1 + 0.5;
-}}
-                viewport={{ "once": tru e }}{counts[stat.label] || 0}
+                transition = { "duration": 0.5,"delay": inde x * 0.1 + 0.5;
+}
+                viewport={ "once": tru e }{counts[stat.label] || 0}
                 {counts[stat.label] || 0}
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}'
               </motion.div>;
@@ -163,7 +163,7 @@ const "StatsSection": React.FC<StatsSectionProps> = ({ stats }) => {const ref = 
           ))"}</div>;"
       </div>;
     </section>;
-  )}export default StatsSection;}}}}}</motion>;
+  )}export default StatsSection;}}}</motion>;
 </any>';'
 </StatsSectionProps>;';';'
 </motion>;

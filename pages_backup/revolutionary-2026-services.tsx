@@ -138,8 +138,8 @@ function Revolutionary2026ServicesPage() {
         />;
         {/* Structured Data */}
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
+          type='application/ld+json'
+          dangerouslySetInnerHTML={
             __html: JSON.stringify({
               '@context': 'https://schema.org'
               '@type': 'Organization'
@@ -172,7 +172,7 @@ function Revolutionary2026ServicesPage() {
               },
               sameAs: ['https://github.com/Zion-Holdings'],
             }),
-          }}
+          }
         />
       </Head>
 
@@ -188,38 +188,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Revolutionary2026UltimateServicesShowcase />
         
         {/* Additional Content Sections */}
-      <main className="min-h-screen bg-gray-900">
+      <main className='min-h-screen bg-gray-900'>
         {/* Navigation */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         <Revolutionary2026UltimateNavigation />;
         {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         <Revolutionary2026UltimateHero />;
         {/* Services Showcase */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         <Revolutionary2026UltimateServicesShowcase />;
         {/* Additional Content Sections */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>
           
-          <div className="max-w-7xl mx-auto relative z-10">
+          <div className='max-w-7xl mx-auto relative z-10'>
             {/* Why Choose Zion Tech Group */}
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <div className='text-center mb-16'>
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Why Choose Zion Tech Group?
                 </span>
               </h2>
@@ -266,8 +266,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }
 origin/cursor/automate-test-improve-and-merge-code-2533
               ].map((feature, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">
+                <div key={index} className='group'>
+                  <div className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105'>
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-4'>
@@ -287,19 +287,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Ready to Experience the Future?
                 </h3>
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
                   Join thousands of forward-thinking companies already using our revolutionary services 
                   to gain competitive advantages and accelerate innovation.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <a 
-                    href="tel:+13024640950"
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2"
+                    href='tel:+13024640950'
+                    className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2'
                   >
-                    <Phone className="w-5 h-5" />
+                    <Phone className='w-5 h-5' />
                     Call +1 302 464 0950
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                    href='mailto:kleber@ziontechgroup.com'
+                    className='border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'
                   >
                     <Mail className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533

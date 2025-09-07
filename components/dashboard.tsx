@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function Dashboard() {
 
   }
@@ -11,7 +10,7 @@ const tenantId = params.get('tenantId') |'';'
 
 const [branding, setBranding] = useState<{
     }
-    "name": string;
+    'name': string;
     primaryColor?: string;
     logoUrl?: string;
 import { useEffect, useMemo, useState } from 'react';
@@ -32,12 +31,12 @@ export default function Dashboard() {
 
 const data = await resp.json();
 
-const t = (data.tenants || []).find(("x": any) => x.id === tenantId);
-        setBranding(t?.branding || { "name": 'Zion Hire AI','
+const t = (data.tenants || []).find(('x': any) => x.id === tenantId);
+        setBranding(t?.branding || { 'name': 'Zion Hire AI','
 });
       } catch {
         }
-        setBranding({ "name": 'Zion Hire AI','
+        setBranding({ 'name': 'Zion Hire AI','
 });
       }
     }
@@ -64,13 +63,13 @@ return (;
               className='border rounded px-3 py-2';'
               placeholder='Primary Color (hex)';' />;
             <input;
-              className='border rounded px-3 py-2 "md":col-span-2';'
+              className='border rounded px-3 py-2 'md':col-span-2';'
               placeholder='Hiring Needs (e && e.g., 3 engineers, 1 PM)';' />;
 
             <button,
 type='button''
 
-              className='bg-gray-900 text-white rounded px-3 py-2 "md":col-span-2''
+              className='bg-gray-900 text-white rounded px-3 py-2 'md':col-span-2''
             >
               Save
             </button>
@@ -96,9 +95,9 @@ type='button''
             </button>
           </form>
         </section>
-        <section className='col-span-1 "md":col-span-3 bg-white border rounded p-4'>'
+        <section className='col-span-1 'md':col-span-3 bg-white border rounded p-4'>'
           <h2 className='font-semibold mb-3'>Candidate Flow</h2>'
-          <div className='grid grid-cols-1 "md":grid-cols-4 gap-4 text-sm'>'
+          <div className='grid grid-cols-1 'md':grid-cols-4 gap-4 text-sm'>'
             <div className='border rounded p-3'>'
               <div className='font-medium'>Applied</div>'
               <div className='text-gray-500'>0</div>'
@@ -141,7 +140,7 @@ function fetch_branding() {try {const resp = await fetch ('/api / tenants')const
     fetch_branding ()}, [tenant_id])const accent  = branding?.primary_color || '#111827';return (<div className='min - h-screen bg - gray - 50'>;
       <header className='px - 6 py - 4 bg - white border - b flex items - center gap - 3'>;
         {branding?.logo_url && (<img src={branding.logo_url} alt='logo' className='h - 8 w - 8 rounded' />)}
-        <h1 className='text - lg font - semibold' style={{ color: accent }}>;
+        <h1 className='text - lg font - semibold' style={ color: accent }>;
           {branding?.name || 'Zion Hire AI'}
         </h1>;
         <span className='ml - auto text - xs text - gray - 400'>;
@@ -172,12 +171,12 @@ function fetch_branding() {try {const resp = await fetch ('/api / tenants')const
             </button>;
           </form>;
         </section>;
-          <h2 className="font-semibold mb-3">Candidate Flow</h2>;
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">;
-            <div className="border rounded p-3"><div className="font-medium">Applied</div><div className="text-gray-500">0</div></div>;
-            <div className="border rounded p-3"><div className="font-medium">Screen</div><div className="text-gray-500">0</div></div>;
-            <div className="border rounded p-3"><div className="font-medium">Interview</div><div className="text-gray-500">0</div></div>;
-            <div className="border rounded p-3"><div className="font-medium">Offer</div><div className="text-gray-500">0</div></div>;
+          <h2 className='font-semibold mb-3'>Candidate Flow</h2>;
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-4 text-sm'>;
+            <div className='border rounded p-3'><div className='font-medium'>Applied</div><div className='text-gray-500'>0</div></div>;
+            <div className='border rounded p-3'><div className='font-medium'>Screen</div><div className='text-gray-500'>0</div></div>;
+            <div className='border rounded p-3'><div className='font-medium'>Interview</div><div className='text-gray-500'>0</div></div>;
+            <div className='border rounded p-3'><div className='font-medium'>Offer</div><div className='text-gray-500'>0</div></div>;
               Generate JD with AI;
             </button>;
           </form>;
@@ -199,17 +198,17 @@ function fetch_branding() {try {const resp = await fetch ('/api / tenants')const
             <div className='border rounded p-3'>;
               <div className='font-medium'>Offer</div>;
               <div className='text-gray-500'>0</div>;
-            </div>          </div>        <section className="col-span-1 md:col-span-3 bg-white border rounded p-4">;
-          <h2 className="font-semibold mb-3">Candidate Flow</h2>;
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">;
-            <div className="border rounded p-3"><div className="font-medium">Applied</div><div className="text-gray-500">0</div></div>;
-            <div className="border rounded p-3"><div className="font-medium">Screen</div><div className="text-gray-500">0</div></div>;
-            <div className="border rounded p-3"><div className="font-medium">Interview</div><div className="text-gray-500">0</div></div>;
-            <div className="border rounded p-3"><div className="font-medium">Offer</div><div className="text-gray-500">0</div></div>;
+            </div>          </div>        <section className='col-span-1 md:col-span-3 bg-white border rounded p-4'>;
+          <h2 className='font-semibold mb-3'>Candidate Flow</h2>;
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-4 text-sm'>;
+            <div className='border rounded p-3'><div className='font-medium'>Applied</div><div className='text-gray-500'>0</div></div>;
+            <div className='border rounded p-3'><div className='font-medium'>Screen</div><div className='text-gray-500'>0</div></div>;
+            <div className='border rounded p-3'><div className='font-medium'>Interview</div><div className='text-gray-500'>0</div></div>;
+            <div className='border rounded p-3'><div className='font-medium'>Offer</div><div className='text-gray-500'>0</div></div>;
         </section>;
       </main>;
     </div>;
-  )}fetchBranding ()}, [tenantId])</header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) }className='bg-gray-900 text-white rounded px-3 py-2 md:col-span-2';
+  )}fetchBranding ()}, [tenantId])</header> </form> </section> <section className='bg-white border rounded p-4' > <h2 className='font-semibold mb-3' >Post a Job</h2> <form className='space-y-2' > <input className='border rounded px-3 py-2 w-full' placeholder='Title' /> <input className='border rounded px-3 py-2 w-full' placeholder='Location' /> <input className='border rounded px-3 py-2 w-full' placeholder='Level' /> <button type='button' className='bg-gray-900 text-white rounded px-3 py-2 w-full' >Generate JD with AI</button> </form> </section> <section className='col-span-1 md:col-span-3 bg-white border rounded p-4' > <h2 className='font-semibold mb-3' >Candidate Flow</h2> <div className='grid grid-cols-1 md:grid-cols-4 gap-4 text-sm' > <div className='border rounded p-3' ><div className='font-medium' >Applied</div><div className='text-gray-500' >0</div></div> <div className='border rounded p-3' ><div className='font-medium' >Screen</div><div className='text-gray-500' >0</div></div> <div className='border rounded p-3' ><div className='font-medium' >Interview</div><div className='text-gray-500' >0</div></div> <div className='border rounded p-3' ><div className='font-medium' >Offer</div><div className='text-gray-500' >0</div></div> </div> </section> </main> </div>) }className='bg-gray-900 text-white rounded px-3 py-2 md:col-span-2';
             >;
               Save;
             </button>;
@@ -264,8 +263,6 @@ function fetch_branding() {try {const resp = await fetch ('/api / tenants')const
 
 }fetchBranding () 
 }, [tenantId]);
-</header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 "md":col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 "md":grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>)"
+</header> </form> </section> <section className='bg-white border rounded p-4' > <h2 className='font-semibold mb-3' >Post a Job</h2> <form className='space-y-2' > <input className='border rounded px-3 py-2 w-full' placeholder='Title' /> <input className='border rounded px-3 py-2 w-full' placeholder='Location' /> <input className='border rounded px-3 py-2 w-full' placeholder='Level' /> <button type='button' className='bg-gray-900 text-white rounded px-3 py-2 w-full' >Generate JD with AI</button> </form> </section> <section className='col-span-1 'md':col-span-3 bg-white border rounded p-4' > <h2 className='font-semibold mb-3' >Candidate Flow</h2> <div className='grid grid-cols-1 'md':grid-cols-4 gap-4 text-sm' > <div className='border rounded p-3' ><div className='font-medium' >Applied</div><div className='text-gray-500' >0</div></div> <div className='border rounded p-3' ><div className='font-medium' >Screen</div><div className='text-gray-500' >0</div></div> <div className='border rounded p-3' ><div className='font-medium' >Interview</div><div className='text-gray-500' >0</div></div> <div className='border rounded p-3' ><div className='font-medium' >Offer</div><div className='text-gray-500' >0</div></div> </div> </section> </main> </div>)'
 
   const params =
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

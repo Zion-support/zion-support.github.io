@@ -2,7 +2,7 @@
 ;
 export const real2027Q3Additions = [;
   {}
-];;
+];
   }
 ];export const real2027Q3Additions = [;
   {id: 'it-asset-discovery-agent';
@@ -248,13 +248,13 @@ id: 'it-asset-discovery-agent',name: 'IT Asset Discovery Agent',tagline: 'Agentl
       'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts';
     ],category: 'Security & Identity',link: '/api-security-scanner',realService: true,roi: 'Prevent high-severity API incidents and cut MTTR.';
   }
-];;
+];
   }
 ];}
-];;
+];
 ursor/fix-website-loading-errors-and-merge-6662;
   }
-];;
+];
 export const real2027Q3Additions = [;
   {id: 'it-asset-discovery-agent',name: 'IT Asset Discovery Agent',tagline: 'Agentless network-wide discovery and enrichment',price: '$149',period: '/month',description: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',features: [;
       'Agentless subnet scanning and SaaS discoveryOS, version, and CVE enrichmentCMDB, ServiceNow, and Jira exportChange detection and drift alerts';

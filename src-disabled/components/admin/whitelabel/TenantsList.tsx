@@ -127,21 +127,21 @@ export function TenantsList() {;
   },
 
   return (
-    <div className="space-y-4">
-      <div className="flex justify-between items-center">
-        <h2 className="text-xl font-semibold">White-Label Tenants</h2>
-        <Button onClick={loadTenants} variant="outline" size="sm">
-          <RefreshCcw className="mr-2 h-4 w-4" />
+    <div className='space-y-4'>
+      <div className='flex justify-between items-center'>
+        <h2 className='text-xl font-semibold'>White-Label Tenants</h2>
+        <Button onClick={loadTenants} variant='outline' size='sm'>
+          <RefreshCcw className='mr-2 h-4 w-4' />
           Refresh
         </Button>
       </div>
 
       {isLoading ? (
-        <div className="flex justify-center p-8">
-          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>
+        <div className='flex justify-center p-8'>
+          <div className='animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary'></div>
         </div>
       ) : (
-        <div className="rounded-md border">
+        <div className='rounded-md border'>
           <Table>
             <TableHeader>
               <TableRow>
@@ -150,96 +150,96 @@ export function TenantsList() {;
                 <TableHead>Custom Domain</TableHead>
                 <TableHead>Status</TableHead>
                 <TableHead>Created At</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
+                <TableHead className='text-right'>Actions</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {tenants.length === 0 ? (
                 <TableRow>
-                  <TableCell colSpan={6} className="text-center py-8 text-muted-foreground">
+                  <TableCell colSpan={6} className='text-center py-8 text-muted-foreground'>
                     No tenants found. Create a new white-label instance to get started.
                   </TableCell>
                 </TableRow>
               ) : (
                 tenants.map((tenant) => (
                   <TableRow key={tenant.id}>
-                    <TableCell className="font-medium">{tenant.brand_name}</TableCell>
+                    <TableCell className='font-medium'>{tenant.brand_name}</TableCell>
                     <TableCell>
                       <a 
                         href={`https://${tenant.subdomain}.ziontechmarketplace.com`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center hover:underline"
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='flex items-center hover:underline'
                       >
                         {tenant.subdomain}
-                        <ExternalLink className="ml-1 h-3 w-3" />
+                        <ExternalLink className='ml-1 h-3 w-3' />
                       </Link>
                     </TableCell>
                     <TableCell>
                       {tenant.custom_domain ? (
-                        <div className="flex items-center">
+                        <div className='flex items-center'>
                           <a
                             href={`https://${tenant.custom_domain}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline flex items-center"
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='hover:underline flex items-center'
                           >
                             {tenant.custom_domain}
-                            <ExternalLink className="ml-1 h-3 w-3" />
+                            <ExternalLink className='ml-1 h-3 w-3' />
                           </Link>
                           <Badge 
-                            variant={tenant.dns_verified ? "default" : "outline"} 
+                            variant={tenant.dns_verified ? 'default' : 'outline'} 
                           >
-                            {tenant.dns_verified ? "Verified" : "Pending"}
+                            {tenant.dns_verified ? 'Verified' : 'Pending'}
                           </Badge>
                           {!tenant.dns_verified && (
                             <Button 
-                              variant="ghost" 
-                              size="sm" 
+                              variant='ghost' 
+                              size='sm' 
                               onClick={() => verifyDns(tenant)}
-                              className="ml-1 h-6 w-6 p-0"
+                              className='ml-1 h-6 w-6 p-0'
                             >
-                              <RefreshCcw className="h-3 w-3" />
-                              <span className="sr-only">Verify DNS</span>
+                              <RefreshCcw className='h-3 w-3' />
+                              <span className='sr-only'>Verify DNS</span>
                             </Button>
                           )}
                         </div>
                       ) : (
-                        <span className="text-muted-foreground text-sm">None</span>
+                        <span className='text-muted-foreground text-sm'>None</span>
                       )}
                     </TableCell>
                     <TableCell>
-                      <Badge variant={tenant.is_active ? "default" : "destructive"}>
-                        {tenant.is_active ? "Active" : "Inactive"}
+                      <Badge variant={tenant.is_active ? 'default' : 'destructive'}>
+                        {tenant.is_active ? 'Active' : 'Inactive'}
                       </Badge>
                     </TableCell>
                     <TableCell>{format(new Date(tenant.created_at), 'MMM d, yyyy')}</TableCell>
-                    <TableCell className="text-right">
+                    <TableCell className='text-right'>
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                          <Button variant="ghost" size="sm">
-                            <MoreHorizontal className="h-4 w-4" />
-                            <span className="sr-only">Actions</span>
+                          <Button variant='ghost' size='sm'>
+                            <MoreHorizontal className='h-4 w-4' />
+                            <span className='sr-only'>Actions</span>
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end">
+                        <DropdownMenuContent align='end'>
                           <DropdownMenuItem>
-                            <Edit className="mr-2 h-4 w-4" />
+                            <Edit className='mr-2 h-4 w-4' />
                             Edit Tenant
                           </DropdownMenuItem>
                           <DropdownMenuItem>
-                            <Users className="mr-2 h-4 w-4" />
+                            <Users className='mr-2 h-4 w-4' />
                             Manage Admins
                           </DropdownMenuItem>
                           <DropdownMenuItem onClick={() => toggleTenantStatus(tenant)}>
                             {tenant.is_active ? (
                               <>
-                                <PowerOff className="mr-2 h-4 w-4" />
+                                <PowerOff className='mr-2 h-4 w-4' />
                                 Disable Tenant
                               </>
                             ) : (
                               <>
-                                <Power className="mr-2 h-4 w-4" />
+                                <Power className='mr-2 h-4 w-4' />
                                 Enable Tenant
                               </>
                             )}

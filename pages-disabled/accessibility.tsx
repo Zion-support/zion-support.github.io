@@ -60,9 +60,9 @@ title="Accessibility - Zion Tech Group""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
         <div className="container mx-auto px-4 py-16">"
           <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.6 }}
+initial={ "opacity": 0, "y": 20 }
+            animate={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.6 }
             className="text-center mb-16""
           >
             <h1 className="text-5xl font-bold text-white mb-6">"
@@ -79,9 +79,9 @@ with inclusivity at their core, ensuring equal access for all users.
               <motion.div
 }
 key={index}
-                initial={{ "opacity": 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.6, "delay": index * 0.1 }
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20""
               >
                 <div className="flex items-center mb-4">"
@@ -102,9 +102,9 @@ key={index}
           </div>
 
           <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.6, "delay": 0.8 }}
+initial={ "opacity": 0, "y": 20 }
+            animate={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.6, "delay": 0.8 }
             className="bg-blue-600 rounded-xl p-8 text-center""
           >
             <h2 className="text-3xl font-bold text-white mb-4">"

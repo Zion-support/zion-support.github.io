@@ -1,16 +1,10 @@
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 Dialog,
 
-=======
   Dialog,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-=======
 
 ;
   Dialog,Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,Table;
@@ -25,10 +19,7 @@ import {Dialog;
   DialogFooter;
   DialogHeader;DialogTitle} from "@/components/ui/dialog",DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from "@/components/ui/dropdown-menu",import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps  {reviews: Review[],isLoading: boolean,onRefresh: () => void;
 }export function ReviewsModerationTable() {const [selectedReview, setSelectedReview] = useState<Review | null>(null),const [viewDetailsOpen, setViewDetailsOpen] = useState(false),const { mutate: updateReviewStatus, isPending } = useMutation({mutationFn: async ({reviewId,status}: {reviewId: string,reviewId: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
   Table;
   TableBody;
   TableCell;
@@ -41,11 +32,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'; im
   DialogDescription;
   DialogFooter;
   DialogHeader;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
   DialogTitle} from "@/components/ui/dialog",
 import {
   DropdownMenu,
@@ -71,7 +58,6 @@ export function ReviewsModerationTable({
     mutationFn: async ({
       reviewId,
       status}: {
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
       reviewId: string;
   Table
   TableBody
@@ -137,9 +123,7 @@ export function ReviewsModerationTable({
     }: {
       reviewId: string
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       reviewId: string,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
       status: ReviewStatus
     }) => {
       const { error } = await supabase
@@ -149,7 +133,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       if (error) throw error,
       return { reviewId, status }
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
     };
     onSuccess: (data) => {
       toast({
@@ -157,30 +140,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         description: `Review has been ${data.status}.`});
       onRefresh();
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     },
     onSuccess: (data) => {
       toast({
         title: "Review updated",
         description: `Review has been ${data.status}.`}),
       onRefresh(),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
       setViewDetailsOpen(false)
     }
     onError: (error: Error,) => {
       toast({
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
         title: "Error";
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         title: "Error",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
         description: `Failed to update review: ${error.message}`,
         variant: "destructive"})
-    }}),
+    }),
 
 
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
 
       setViewDetailsOpen(false)
@@ -195,7 +172,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     return (
       <div className='space - y-4'>;
-=======
   DialogTitle;
  } from '@/components/ui/dialog';
   DropdownMenu;
@@ -222,9 +198,9 @@ export function ReviewsModerationTable() {const [selectedReview, setSelectedRevi
     }: {reviewId: string;
       status: ReviewStatus;
     }) => {const { error } = await supabase;
-        .from("reviews").update({ status }).eq("id", reviewId),if (error) throw error,return { reviewId, status }},onSuccess: (data) => {toast({title: "Review updated",description: `Review has been ${data.status}.`}),onRefresh()}onSuccess: (data) => {toast({title: "Review updated";
+        .from("reviews").update({ status }).eq("id", reviewId),if (error) throw error,return { reviewId, status },onSuccess: (data) => {toast({title: "Review updated",description: `Review has been ${data.status}.`}),onRefresh()}onSuccess: (data) => {toast({title: "Review updated";
         description: `Review has been ${data.status}.`})onRefresh()setViewDetailsOpen(false)}
-    onError: (error: Error,) => {toast({title: "Error",title: "Error";description: `Failed to update review: ${error.message}`,variant: "destructive"})}}),const getInitials = (name: string) => {return name;
+    onError: (error: Error,) => {toast({title: "Error",title: "Error";description: `Failed to update review: ${error.message}`,variant: "destructive"})}),const getInitials = (name: string) => {return name;
       .split(" ").map((n) => n[0]).join("").toUpperCase()},if (isLoading) {return (<div className="space-y-4">;
         <div className="h-12 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
@@ -233,7 +209,6 @@ export function ReviewsModerationTable() {const [selectedReview, setSelectedRevi
       </div>;
     )}
   if (reviews.length === 0) {setViewDetailsOpen(false)},onError: (error: Error) => {toast({title: "Error",description: `Failed to update review: ${error.message}`,if (isLoading) {return (<div className='space - y-4'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
         <div className='h - 12 w - full bg - muted rounded animate - pulse' />;
         <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
         <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
@@ -268,7 +243,7 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
       status: ReviewStatus;
     }) => {      const { error } = await supabase;
         .from('reviews').update({ status }).eq('id', reviewId)if (error) throw error;
-      return { reviewId, status }},onSuccess: data => {      toast({title: 'Review updated',description: `Review has been ${data && data.status}.`})onRefresh()setViewDetailsOpen(false)},onError: (error: Error,) => {toast({title: 'Error',description: `Failed to update review: ${error && error.message}`,variant: 'destructive'})}})const getInitials = (name: string,) => {return name;
+      return { reviewId, status },onSuccess: data => {      toast({title: 'Review updated',description: `Review has been ${data && data.status}.`})onRefresh()setViewDetailsOpen(false)},onError: (error: Error,) => {toast({title: 'Error',description: `Failed to update review: ${error && error.message}`,variant: 'destructive'})})const getInitials = (name: string,) => {return name;
       .split(' ').map(n => n[0]).join('').toUpperCase()}if (isLoading) {return (<div className='space-y-4'>;
         <div className='h-12 w-full bg-muted rounded animate-pulse' />;
         <div className='h-16 w-full bg-muted rounded animate-pulse' />;
@@ -313,10 +288,8 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
       <Table>;
         <TableHeader>;
           <TableRow>;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
 
-=======
   const getInitials = (name: string) => {
     return name
       .split(" ")
@@ -336,7 +309,6 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
     )
   }
   if (reviews.length === 0) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
     return (
       <div className="py-10 text-center">
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>
@@ -345,7 +317,6 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
         </p>
       </div>
     )
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
 
 
@@ -373,7 +344,6 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |''}                      />
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     updateReviewStatus({ reviewId, status: 'approved' })
   }
   const handleReject = (reviewId: string) => {
@@ -407,14 +377,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setViewDetailsOpen(true)
   },
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
                     ) : (
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name ? (
                           getInitials(review.reviewer_profile.display_name)
                         ) : (
                           <User className='h-4 w-4' />
-=======
             <TableHead>Reviewer</TableHead>;
             <TableHead>Rating</TableHead>;
             <TableHead>Date</TableHead>;
@@ -433,7 +401,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         alt={review.reviewer_profile.display_name |''}                      />;
                     ) : (<AvatarFallback>;
                         {review.reviewer_profile?.display_name ? (getInitials(review.reviewer_profile.display_name)) : (<User className='h-4 w-4' />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
                         src={review && review.reviewer_profile.avatar_url}
                         alt={review && review.reviewer_profile.display_name || ''}                      />;
                     ) : (<AvatarFallback>;
@@ -447,27 +414,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {review && review.is_anonymous ? (<span className='text-sm font-medium'>Anonymous</span>;
                     ) : (<span className='text-sm font-medium'>;
                         {review && review.reviewer_profile?.display_name || 'User'}
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                       </span>;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
                     )}
                   </div>;
                 </div>;
               </TableCell>;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
               <TableCell>{renderStars(review && review.rating)}</TableCell>;
               <TableCell>;
                 {format(new Date(review && review.created_at), 'MMM d, yyyy')}
-=======
                       </span>;)}
                   </div>;
                 </div>;
               </TableCell>;updateReviewStatus({ reviewId, status: "approved" })},<TableCell>{renderStars(review && review.rating)}</TableCell>;
               <TableCell>{format(new Date(review && review.created_at), 'MMM d, yyyy')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
               </TableCell>;
               <TableCell>;
                 <Badge variant='outline'>;
@@ -476,17 +436,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Badge>;
               </TableCell>;
               <TableCell>;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                 {review && review.report_count > 0 ? (;
                   <Badge variant='destructive'>{review && review.report_count}</Badge>;
                 ) : (;
                   'None';
                 )}
 
-=======
     updateReviewStatus({ reviewId, status: "approved" })
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
 
                           onClick={() =>;
                             updateReviewStatus({;
@@ -495,12 +452,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             });
 
                           }
-=======
                 {review && review.report_count > 0 ? (<Badge variant='destructive'>{review && review.report_count}</Badge>;
                 ) : ('None';
                 )}onClick={() =>;
                             updateReviewStatus({reviewId: review && review.id,status: 'rejected'})}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
                         >;
                           Mark as rejected;
                         </DropdownMenuItem>;
@@ -519,16 +474,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <TableHead className='text - right'>Actions</TableHead>;
           </TableRow>;
         </TableHeader>;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
         <TableBody>;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
           {reviews.map (review => (            <TableRow key={review.id}>;
-=======
         <TableBody>;{reviews.map((review) => (<TableRow key={review.id}>;
-=======
           {reviews.map((review) => (;
             <TableRow key={review.id}>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
               <TableCell>;
                 <div className="flex items-center gap-2">;
                   <Avatar className="h-8 w-8">;
@@ -560,14 +510,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant="outline";
                 >;
                   {review.status.charAt(0).toUpperCase() + review.status.slice(1)}
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                 </Badge>;
               </TableCell>;
               <TableCell>;
                 {review.report_count > 0 ? (<Badge variant="destructive">{review.report_count}</Badge>;
                 ) : ("None";
                 )}{reviews.map (review => (            <TableRow key={review.id}>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
               <TableCell>;
                 <div className='flex items - center gap - 2'>;
                   <Avatar className='h - 8 w - 8'>;
@@ -642,11 +590,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
               </TableCell>;
 
 
-=======
                 </Badge>
               </TableCell>
               <TableCell>
@@ -655,22 +601,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ) : (
                   "None"
                 )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
               </TableCell>
               <TableCell className="text-right">
                 <div className="flex justify-end gap-2">
                   {review.status === "pending" && (
                     <>
                       <Button
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
 
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
-=======
               </TableCell>;</TableCell>;
               <TableCell className="text-right">;
                 <div className="flex justify-end gap-2">;
@@ -679,7 +620,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         size="sm";
                         variant="outline";
                         className="h-8 w-8 p-0";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
                         onClick={() => handleApprove(review.id)}
                         disabled={isPending}
                       >;
@@ -691,7 +631,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className="h-8 w-8 p-0";
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                       >
                         <X className="h-4 w-4 text-red-500" />
 
@@ -714,16 +653,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>
                         View details
                       </DropdownMenuItem>
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
                       {review.status === "approved" && (
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
                           Mark as rejected
                         </DropdownMenuItem>
-=======
                       >;
                         <X className="h-4 w-4 text-red-500" />;
                       </Button>;
@@ -746,13 +681,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {review.status === "approved" && (<DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>;
                           Mark as rejected;
                         </DropdownMenuItem>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
                       )}
                       {review.status === "rejected" && (<DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>;
                           Mark as approved;
                         </DropdownMenuItem>;
                       )}
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
@@ -772,15 +705,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
 
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
 
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
                     ) : (
                       <AvatarFallback>
                         {selectedReview.reviewer_profile?.display_name ? (
@@ -789,8 +719,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           )
                         ) : (
                           <User className='h-4 w-4' />
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-=======
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
@@ -805,10 +733,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ) : (<AvatarFallback>;
                         {selectedReview.reviewer_profile?.display_name ? (getInitials(selectedReview.reviewer_profile.display_name;
                           )) : (<User className='h-4 w-4' />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
         </TableBody>;
       </Table>;{selectedReview && (<Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
           <DialogContent className='max-w-lg'>;
@@ -828,18 +753,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {selectedReview && selectedReview.reviewer_profile?.display_name ? (getInitials(selectedReview && selectedReview.reviewer_profile.display_name;
                           )) : (<User className='h-4 w-4' />;
                         )}
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                       </AvatarFallback>;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
 
 
 
 
                     )}
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
 
                         ? "Anonymous"
@@ -847,12 +767,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-=======
                   </Avatar>
                   <div>
                     <div className="font-medium">
                       {selectedReview.is_anonymous
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
                     </div>
                     <Badge variant='outline'>{selectedReview.status}</Badge>
                   </div>
@@ -861,10 +779,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
 
 
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
 
               <div className="border rounded-md p-3 bg-muted/20">
                 <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
@@ -875,16 +790,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="flex flex-wrap gap-2">
 
 
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
                   {selectedReview.communication_rating && (
                     <Badge variant='outline'>
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-=======
                       </AvatarFallback>;)}</Avatar>;
                   <div>;
                     <div className="font-medium">;
@@ -927,7 +837,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <DialogFooter>;
               {selectedReview.status === "pending" && (<>;
                   <Button;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
                   </Avatar>;
                   <div>;
                     <div className='font-medium'>;
@@ -997,7 +906,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {selectedReview && selectedReview.status === 'approved' && (<Button;
                   variant='destructive';
                   onClick={() =>;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                     updateReviewStatus({;
                       reviewId: selectedReview && selectedReview.id,;
                       status: 'rejected',;
@@ -1006,7 +914,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   }
                   disabled={isPending}                >;
 
-=======
                     </Badge>
                   )}
                   {selectedReview.timeliness_rating && (
@@ -1033,12 +940,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {selectedReview.status === "pending" && (
                 <>
                   <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
                   Mark as Rejected;
-=======
                     updateReviewStatus({reviewId: selectedReview && selectedReview.id,status: 'rejected'})}
                   disabled={isPending}                >;Mark as Rejected;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
                 </Button>;
               )}
               {selectedReview && selectedReview.status === 'rejected' && (<Button;
@@ -1046,38 +950,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     updateReviewStatus({reviewId: selectedReview && selectedReview.id,status: 'approved'})}
                   disabled={isPending}                >;
                   Mark as Approved;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                 </Button>;
 
 
 
 
               )}
-=======
                 </Button>;)}
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
-      )}}
+      )}
 })return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {";
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>;
 }
   return (<div className="flex"> {[1, 2, 3,  4, 5].map ( (star) => (<Star key= {</>;
-  )}})return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {";
+  )})return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {";
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div> ;
 }return (<div className="flex"> {[1, 2, 3,  4, 5].map ( (star) => (<Star key= {star ;
 }/>) )}</div>))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       )}
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
 
 
-=======
 
 }
 })
@@ -1087,7 +985,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (<div className="flex"> {
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
     </>
   );
 
@@ -1098,25 +995,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div> ;
 };
   return (<div className="flex"> {;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
   star ;
 }/>) ) ;
 }</div>) ;
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
 
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
             </TableRow>))}
-=======
 }";
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {}";
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {</TableRow>))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
         </TableBody>;
       </Table>;
       {selected_review && (<Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
@@ -1224,7 +1115,6 @@ if ( {") {$2;
 }
   return (<div className="py - 10 text - center"> <h3 className="text - lg font - medium mb - 2">No reviews to moderate</h3> <p className="text - muted - foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>;
 }
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
   return (<div className="flex"> {
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {
   star;
@@ -1233,7 +1123,6 @@ if ( {") {$2;
 }";
 return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <TableHead > Rating</TableHead> <TableHead > Date</TableHead> <TableHead > Status</TableHead> <TableHead > Reports</TableHead> <TableHead className="text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
 
-=======
               )}
             </DialogFooter>
           </DialogContent>
@@ -1241,14 +1130,11 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
       )}
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
   reviews.map ( (review) => (<TableRow key= {
   review.id ";
 }> <TableCell> <div className="flex items - center gap - 2"> <Avatar className="h - 8 w - 8"> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
-=======
   return (<div className="flex"> {[1, 2, 3,  4, 5].map ( (star) => (<Star key= {star;
 }/>) )}</div>)}";
 return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <TableHead > Rating</TableHead> <TableHead > Date</TableHead> <TableHead > Status</TableHead> <TableHead > Reports</TableHead> <TableHead className="text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {reviews.map ( (review) => (<TableRow key= {review.id ";
@@ -1271,7 +1157,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
   selectedReview.reviewer profile.display name |"";
 }/>) : (<AvatarFallback> {";
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
   review.reviewer profile.avatar url;
 }alt= {";
   review.reviewer profile.display name || "";
@@ -1280,7 +1165,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</AvatarFallback>) ";
 }</Avatar> <div>) : (<span className=" text - sm font - medium"> {";
   review.reviewer profile?.display name || " User";
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 }</span>);
 
 }</div> </div> </TableCell> <TableCell> {
@@ -1292,7 +1176,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 
 
 
-=======
   review.reviewer profile.avatar url
 }alt= {"
   review.reviewer profile.display name |""
@@ -1321,7 +1204,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
   selectedReview.reviewer profile.display name |""
 }/>) : (<AvatarFallback> {"
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
 }</Avatar> <div> </Badge> </div> </div> <div> {
   renderStars (selectedReview.rating) "
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
@@ -1351,17 +1233,13 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</DialogFooter> </DialogContent> </Dialog>)
 }</>)
 }"}
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx
     </>;
   );
 
 
 
   review.status.char_at (0) .toUpperCase () + review.status.slice (1) ";
-=======
 }</span>)}</div> </div> </TableCell> <TableCell> {render_stars (review.rating) ";
 }</TableCell> <TableCell> </TableCell> <TableCell> <Badge variant=" outline"> {}</AvatarFallback>)}</Avatar> <div> </Badge> </div> </div> <div> {renderStars (selectedReview.rating) ";
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {selectedReview.review text ";
@@ -1375,7 +1253,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }> Reject </Button> <Button onClick={() => handleApprove (selectedReview.id)}disabled= {isPending;
 }> Approve </Button> </>)}> Mark as Rejected </Button>)}> Mark as Approved </Button>)}</DialogFooter> </DialogContent> </Dialog>)}</>)}"}</>;
   )review.status.char_at (0) .toUpperCase () + review.status.slice (1) ";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
 }</Badge> </TableCell> <TableCell>) : (" None") ";
 }</TableCell> <Button size=" sm"variant=" outline"className=" h - 8 w - 8 p - 0"on_click={() => handle_approve (review.id)}disabled= {is_pending ";
 }> <Check className=" h - 4 w - 4 text - green - 500"/> </Button> <Button > <X className=" h - 4 w - 4 text - red - 500"/> </Button> </>) ";
@@ -1393,7 +1270,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }> </Badge>)}</div> </div> {";
   selected_review.report count > 0 && (<div className="bg - red - 50 border border - red - 200 rounded - md p - 3"> <h4 className="text - sm font - medium text - red - 800">Reports: {selected_review.report count ";
 }</h4> <p className="text - sm text - red - 700"> This review has been reported by users and may need investigation. </p> </div>) ";
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 }</div> <DialogFooter> <Button variant=" destructive" on_click={
   () => handle_reject (selected_review.id);
 }disabled= {
@@ -1409,7 +1285,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</>);
 }"}
 }
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
 };";
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
@@ -1418,14 +1293,12 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {;
   review.reviewer profile?.avatar url ? (<AvatarImage src= {;
   review.reviewer profile.avatar url ;
-=======
 }</div> <DialogFooter> <Button variant=" destructive" on_click={() => handle_reject (selected_review.id)}disabled= {is_pending;
 }> Reject </Button> <Button on_click={() => handle_approve (selected_review.id)}disabled= {is_pending;
 }> Approve </Button> </>)}> Mark as Rejected </Button>)}> Mark as Approved </Button>)}</DialogFooter> </DialogContent> </Dialog>)}</>)}"}
-}}";
+}";
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {reviews.map ( (review) => (<TableRow key= {review.id ";
 }> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {review.reviewer profile?.avatar url ? (<AvatarImage src= {review.reviewer profile.avatar url ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
 }alt= {";
   review.reviewer profile.display name || "" ;
 }/>) : (<AvatarFallback> {";
@@ -1452,7 +1325,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }> </Badge>)}</div> </div> {";
   selectedReview.report count > 0 && (<div className="bg-red-50 border border-red-200 rounded-md p-3"> <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report count ";
 }</h4> <p className="text-sm text-red-700"> This review has been reported by users and may need investigation. </p> </div>) ";
-<<<<<<< HEAD:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 }</div> <DialogFooter> <Button variant=" destructive" onClick={;
   () => handleReject (selectedReview.id) ;
 }disabled= {;
@@ -1468,10 +1340,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</>) ;
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 }</div> <DialogFooter> <Button variant=" destructive" onClick={() => handleReject (selectedReview.id)}disabled= {isPending ;
 }> Reject </Button> <Button onClick={() => handleApprove (selectedReview.id)}disabled= {isPending ;
 }> Approve </Button> </>)}> Mark as Rejected </Button>)}> Mark as Approved </Button>)}</DialogFooter> </DialogContent> </Dialog>)}</>)}";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/reviews/ReviewsModerationTable.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/reviews/ReviewsModerationTable.tsx

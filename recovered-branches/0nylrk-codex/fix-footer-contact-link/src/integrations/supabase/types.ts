@@ -732,7 +732,7 @@ export const Constants = {
       }
       "api_key_scope": [
 ;        "archived"],"
-      "referral_status": ["pending", "completed", "expired"]}}} as const;"
+      "referral_status": ["pending", "completed", "expired"]}} as const;"
 ;
       "referral_status":"pending" | "completed" | "expired";"
     }
@@ -880,4 +880,4 @@ export const Constants = {;
         "responded",;"
         "closed",;"
         "archived"];"
-      "referral_status": ["pending", "completed", "expired"]}}} as const;
+      "referral_status": ["pending", "completed", "expired"]}} as const;

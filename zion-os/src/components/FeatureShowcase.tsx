@@ -180,9 +180,9 @@ function FeatureShowcase() {
                 }
                 key={feature.id}
                     ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;`                    : '"hover":bg-white/10';'
-                } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}`                style={{ "transitionDelay": `${index * 100}ms` }}`                onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
+                } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}`                style={ "transitionDelay": `${index * 100}ms` }`                onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
                 className={`card cursor-pointer transform transition-all duration-300 "hover":scale-105 ${activeFeature === feature.id;`                    ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;`                    : '"hover":bg-white/10';'
-                } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}`                style={{ "transitionDelay": `${index * 100}ms` }}`                onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}>;
+                } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}`                style={ "transitionDelay": `${index * 100}ms` }`                onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}>;
                 <div className="flex items - start space - x-4">;"
                   <div className={`w - 12 h - 12 bg - gradient - to - r ${getColorClasses (feature.color)} rounded - lg flex items - center justify - center text - white flex - shrink - 0`}>;`                    {feature.icon}
                   </div>;
@@ -384,7 +384,7 @@ export function FeatureShowcase() {
                     ? `ring-2 ring-${feature.color}-500/50 bg-white/10` 
                     : 'hover:bg-white/10'
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                style={ transitionDelay: `${index * 100}ms` }
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
               >
                 <div className="flex items-start space-x-4">

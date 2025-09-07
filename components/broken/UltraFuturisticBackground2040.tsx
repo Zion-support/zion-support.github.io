@@ -47,12 +47,10 @@ const "particles": Array<{"coordinate_x": number;
       "opacity": number;
 
     }> = [];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       vx: number,
       vy: number,
       size: number,
       color: string,
-<<<<<<< HEAD
       opacity: number}> = [],
 
     // Initialize particles,
@@ -76,7 +74,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const animate = () => {
       }
       time += 0.01;
-<<<<<<< HEAD
 
       // Clear canvas with fade effect,
 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';'
@@ -89,7 +86,6 @@ ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';'
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-<<<<<<< HEAD
         ctx.restore()
       });
       // Draw connecting lines between nearby particles
@@ -140,7 +136,6 @@ const distance = Math.sqrt(dx * dx + dy * dy);
             ctx.lineTo(particles[j].x, particles[j].y);
 ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           }
         }
       }
@@ -163,7 +158,6 @@ const shapes = [;
           "rotation": time * -0.3;
         }
         { x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }
-=======
       // Draw animated grid'
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
@@ -209,7 +203,6 @@ const gridSize = 50;
         ctx.save();
         ctx.translate(shape.x, shape.y);
         ctx.rotate(shape.rotation);
-<<<<<<< HEAD
 
 ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;`        ctx.lineWidth = 2;
         if (index === 0) {
@@ -236,7 +229,6 @@ shape.size
           ctx && ctx.lineTo(-shape && shape.size / 2, shape && shape.size / 2);
           ctx && ctx.closePath();
           ctx && ctx.stroke();
-<<<<<<< HEAD
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)',
       ctx.lineWidth = $2;
       const gridSize = $2;
@@ -264,7 +256,6 @@ for (let i = 0; i < waveCount; i++) {
         const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;
         ctx.strokeStyle = `rgba(236, 72, 153, ${0.1 + Math.sin(time + i) * 0.05})`;`        ctx.lineWidth = 3;
         ctx.beginPath();
-<<<<<<< HEAD
         {x: canvas.width * 0.6,y: canvas.height * 0.2,size: 50,rotation: time * 0.7,},];
       shapes.forEach((shape, index) => {ctx.save()ctx.translate(shape.x, shape.y)ctx.rotate(shape.rotation)ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
         ctx.lineWidth = 2;
@@ -288,7 +279,7 @@ for (let i = 0; i < waveCount; i++) {const waveOffset  = (time * 100 + i * 200) 
         }
         ctx.stroke()}animationFrameId = requestAnimationFrame(animate)}animate()const handleResize = () => {canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-    }window.addEventListener('resize', handleResize)return () => {window.removeEventListener('resize', handleResize)cancelAnimationFrame(animationFrameId)}}, [])return (<div className='fixed inset-0 pointer-events-none overflow-hidden'>;
+    }window.addEventListener('resize', handleResize)return () => {window.removeEventListener('resize', handleResize)cancelAnimationFrame(animationFrameId)}, [])return (<div className='fixed inset-0 pointer-events-none overflow-hidden'>;
       // Draw energy waves
       const waveCount = $2;
       for (let i = 0, i < waveCount, i++) {
@@ -303,7 +294,6 @@ canvas.height = window.innerHeight;
             ctx.moveTo(x, y)
           } else {
             ctx.lineTo(x, y)
-=======
         for (let x = -100, x < canvas.width + 100, x += 5) {}
           const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20;
           if (x === -100) {}
@@ -319,7 +309,6 @@ canvas.height = window.innerHeight;
             ctx && ctx.lineTo(x, y);
           }
         }
-<<<<<<< HEAD
         for (let x = -100; x < canvas.width + 100; x += 5) {
           }
           const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20;
@@ -329,13 +318,11 @@ canvas.height = window.innerHeight;
           } else {
             }
             ctx.lineTo(x, y);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           }
         }
         ctx.stroke()
       }
 
-<<<<<<< HEAD
       animationFrameId = $2;
     animate($2);
     const handleResize = $2;
@@ -353,12 +340,12 @@ const handleResize = () => {
       }
       canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-    }window.addEventListener('resize', handleResize)return () => {window.removeEventListener('resize', handleResize)cancelAnimationFrame(animationFrameId)}}, [])return (<div className='fixed inset-0 pointer-events-none overflow-hidden'>;'
+    }window.addEventListener('resize', handleResize)return () => {window.removeEventListener('resize', handleResize)cancelAnimationFrame(animationFrameId)}, [])return (<div className='fixed inset-0 pointer-events-none overflow-hidden'>;'
       {/* Canvas Background */}
       <canvas;
         ref={canvasRef}
         className='absolute inset-0 w-full h-full';'
-        style={{ "zIndex": -1 
+        style={ "zIndex": -1 
 } />;
       {/* Overlay Gradients */}
 
@@ -371,96 +358,94 @@ canvas.height = window.innerHeight;
 
           <div,
 className='absolute top-0 left-0 w-full h-full''
-            style={{
+            style={
               }
               "backgroundImage": ``            `,`              "background_size": '50px 50px','
               "animation": 'grid_move 20s linear infinite','
-            }} />
+            } />
         </div>
         
         {/* Floating Geometric Elements */}
         <motion.div,
 className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg''
-          animate={{
+          animate={
             }
             "rotate": [0, 360],
             "scale": [1, 1.1, 1],
             "opacity": [0.2, 0.4, 0.2]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 8,
             "repeat": Infinity,
 "ease": 'linear','
-          }} />
+          } />
         <motion.div,
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full''
-          animate={{
+          animate={
             }
             "rotate": [360, 0],
             "scale": [1, 1.2, 1],
             "opacity": [0.2, 0.5, 0.2]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 10,
             "repeat": Infinity,
 "ease": 'linear','
-          }} />
+          } />
         <motion.div,
 className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45''
-          animate={{
+          animate={
             }
             "rotate": [45, 405],
             "scale": [1, 1.15, 1],
             "opacity": [0.2, 0.3, 0.2]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 12,
             "repeat": Infinity,
 "ease": 'linear','
-          }} />
+          } />
         {/* Additional Floating Elements */}
         <motion.div,
 className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12''
-          animate={{
+          animate={
             rotate: [12, 372]
             scale: [1, 1.1, 1]
-            opacity: [0.15, 0.25, 0.15],          }}
-          transition={{
+            opacity: [0.15, 0.25, 0.15],          }
+          transition={
             duration: 15
             repeat: Infinity
-            ease: 'linear',          }}
+            ease: 'linear',          }
         />
         {/* Additional Floating Elements */}
         <motion.div
           className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
-          animate={{
-=======
+          animate={
             duration: 12,
             repeat: Infinity,
 ease: 'linear',
 origin/cursor/automate-test-improve-and-merge-code-2533
-          }}
+          }
         />
         {/* Additional Floating Elements */}
         <motion.div'
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
-          animate={{}
+          animate={}
             rotate: [12, 372]
             scale: [1, 1.1, 1]
-            opacity: [0.15, 0.25, 0.15],          }}
-          transition={{}
+            opacity: [0.15, 0.25, 0.15],          }
+          transition={}
             duration: 15;
             repeat: Infinity'
-            ease: 'linear',          }}
+            ease: 'linear',          }
         />
         {/* Additional Floating Elements */}
         <motion.div"
           className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
-          animate={{}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+          animate={}
             rotate: [12, 372];
             scale: [1, 1.1, 1];
             opacity: [0.15, 0.25, 0.15]
@@ -470,70 +455,69 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             "rotate": [12, 372],
             "scale": [1, 1.1, 1],
             "opacity": [0.15, 0.25, 0.15]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 15,
             "repeat": Infinity,
 "ease": 'linear','
-          }} />
+          } />
         <motion.div,
 className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full''
-          animate={{
+          animate={
             }
             "rotate": [0, 360],
             "scale": [1, 1.2, 1],
             "opacity": [0.15, 0.3, 0.15]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 18,
             "repeat": Infinity,
 "ease": 'linear','
-          }}
+          }
         {/* Particle Effects */}
         <motion&& motion.div,
 className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full''
-          animate={{
+          animate={
 
             }
 
             "y": [0, -20, 0],
             "opacity": [0.4, 0.8, 0.4]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 3,
             "repeat": Infinity,
 "ease": 'easeInOut','
-          }} />;
+          } />;
 
         <motion&& motion.div,
 className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full''
-          animate={{
+          animate={
             }
             "y": [0, -15, 0],
 
             "opacity": [0.4, 0.7, 0.4]
 
-          }} />;
+          } />;
       </div>;
-            "transform": translate(0, 0)"opacity": [0.4, 0.7, 0.4]}}
-          transition={{"duration": 4,"repeat": Infinity,"ease": 'easeInOut',"delay": 1}}'
+            "transform": translate(0, 0)"opacity": [0.4, 0.7, 0.4]}
+          transition={"duration": 4,"repeat": Infinity,"ease": 'easeInOut',"delay": 1}'
         />;
         <motion.div;
           className='absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-pink-400/40 rounded-full';'
-          animate={{"y": [0, -25, 0],"opacity": [0.4, 0.9, 0.4]}}
-          transition={{"duration": 5,"repeat": Infinity,"ease": 'easeInOut',"delay": 2}}' />;
+          animate={"y": [0, -25, 0],"opacity": [0.4, 0.9, 0.4]}
+          transition={"duration": 5,"repeat": Infinity,"ease": 'easeInOut',"delay": 2}' />;
       </div>;
       {/* CSS Animations */}
             transform: translate(0, 0);
-=======
         <motion&& motion.div'
           className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
-          animate={{}
+          animate={}
             y: [0, -15, 0],
-            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }}
+            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }
 
       <style jsx>{``        @keyframes gridMove {
           }
@@ -549,7 +533,6 @@ className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full''
         @keyframes pulse {
           }
           0%
-<<<<<<< HEAD
           100% {
             }
             "opacity": 0.2;
@@ -581,7 +564,6 @@ className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full''
           }
           50% {
             opacity: 0.5
-=======
           100% {}
             opacity: 0.2;
       
@@ -612,7 +594,6 @@ export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 ;
-<<<<<<< HEAD
           50% {
             }
             "opacity": 0.5;

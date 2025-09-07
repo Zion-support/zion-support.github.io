@@ -196,7 +196,7 @@ function ProgressIndicator() {
       <div className="w - full bg-[var (--border)] rounded - full h - 2">;"
         <div;
           className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";"
-          style={{ "width": `${percentage}%` }}`          role="progressbar";"
+          style={ "width": `${percentage}%` }`          role="progressbar";"
           aria - valuenow={value}
           aria - valuemin={0}
           aria - valuemax={max}

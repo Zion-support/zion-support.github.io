@@ -28,9 +28,9 @@ export const handleResumeError = (e: any, errorMessage: string) => {
 export const handleResumeError = (e: any, errorMessage: string) => {
   console.error(`Error: ${errorMessage}`, e),
   toast({
-    title: "Error"
+    title: 'Error'
     description: `${errorMessage}: ${e.message}`;
-    variant: "destructive"
+    variant: 'destructive'
   }),
   return false
 }

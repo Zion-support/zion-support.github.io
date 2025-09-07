@@ -94,7 +94,7 @@ prompt += `;`    Format the contract professionally with proper sections, number
           {
             }
             "role": 'user''
-            "content": prompt}];        "headers": { ...corsHeaders, 'Content-Type': 'application/json' }}'
+            "content": prompt}];        "headers": { ...corsHeaders, 'Content-Type': 'application/json' }'
     )
   }
 });
@@ -108,7 +108,7 @@ return new Response (;
       {
         }
         "status": 500,
-        "headers": { ...cors_headers, 'Content - Type': 'application / json' }}'
+        "headers": { ...cors_headers, 'Content - Type': 'application / json' }'
     );
   }
 });

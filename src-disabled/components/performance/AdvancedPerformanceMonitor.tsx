@@ -11,4 +11,4 @@ const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics]
   useState<PerformanceMetrics | null"  />(null);
   const [isVisible, setIsVisible] = useState(false) useEffect(() => {}"
 ''";}
-}}"
+}"

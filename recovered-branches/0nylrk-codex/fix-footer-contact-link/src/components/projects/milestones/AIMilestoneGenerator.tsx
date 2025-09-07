@@ -204,7 +204,7 @@ import React, { useState } from 'react';  },
                       onClick={(e) => {
                         e.stopPropagation($2);
                         handleAddSingleMilestone(milestone)
-                      }}
+                      }
                       className="mr-2"
                     >
                       <Plus className="h-4 w-4" />

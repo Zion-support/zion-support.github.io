@@ -3,7 +3,7 @@ import { toast as sonnerToast } from 'sonner';
 import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils/globalToastManager';
 const variantStyles = {
   info: { background: '#1e3a8a', color: '#fff' },
-  error: { background: '#7f1d1d', color: '#fff' }},
+  error: { background: '#7f1d1d', color: '#fff' },
 
 // Deduplication settings
 const DEDUPE_DELAY = 3000, // 3 seconds

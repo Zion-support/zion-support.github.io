@@ -132,8 +132,8 @@ export default function VerifyStatus() {
       } else {;
         setError(data.message || 'Failed to resend verification email');
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
@@ -141,8 +141,8 @@ export default function VerifyStatus() {
     } finally {;
       setIsResending(false);
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   },;
@@ -151,8 +151,8 @@ export default function VerifyStatus() {
       setError('Please enter your email address');
       return;
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -167,8 +167,8 @@ export default function VerifyStatus() {
         // as user might not have a session yet or it might be invalid.;
         logWarn('Error during session refresh:', { data: refreshError.message });
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -179,8 +179,8 @@ export default function VerifyStatus() {
         setIsCheckingStatus(false);
         return;
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -201,8 +201,8 @@ export default function VerifyStatus() {
         setMessage('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.');
         setError('');
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
@@ -211,8 +211,8 @@ export default function VerifyStatus() {
     } finally {;
       setIsCheckingStatus(false);
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   },
@@ -224,85 +224,85 @@ export default function VerifyStatus() {
   },
   return (
     <AuthLayout>
-      <div className="flex min-h-screen items-center justify-center p-4">
-        <div className="w-full max-w-md space-y-6">
+      <div className='flex min-h-screen items-center justify-center p-4'>
+        <div className='w-full max-w-md space-y-6'>
           {/* Header */}
-          <div className="text-center">
-            <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <Mail className="h-6 w-6 text-blue-600" />
+          <div className='text-center'>
+            <div className='mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4'>
+              <Mail className='h-6 w-6 text-blue-600' />
             </div>
-            <h1 className="text-2xl font-bold text-gray-900">Email Verification</h1>
-            <p className="text-sm text-gray-600 mt-2">
+            <h1 className='text-2xl font-bold text-gray-900'>Email Verification</h1>
+            <p className='text-sm text-gray-600 mt-2'>
               Check and manage your email verification status
             </p>
           </div>
           {/* Success Message */}
           {message && (
-            <Alert className="border-green-500 bg-green-50 text-green-900">
-              <CheckCircle className="h-4 w-4" />
+            <Alert className='border-green-500 bg-green-50 text-green-900'>
+              <CheckCircle className='h-4 w-4' />
               <AlertDescription>{message}</AlertDescription>
             </Alert>
           )}
           {/* Error Message */}
           {error && (
-            <Alert variant="destructive">
-              <AlertCircle className="h-4 w-4" />
+            <Alert variant='destructive'>
+              <AlertCircle className='h-4 w-4' />
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           )}
           {/* Email Input */}
-          <div className="space-y-2">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+          <div className='space-y-2'>
+            <label htmlFor='email' className='block text-sm font-medium text-gray-700'>
               Email Address
             </label>
             <Input
-              id="email"
-              type="email"
+              id='email'
+              type='email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address"
-              className="w-full"
+              placeholder='Enter your email address'
+              className='w-full'
             />
             {email && (
-              <p className="text-xs text-gray-500">
+              <p className='text-xs text-gray-500'>
                 We'll check the verification status for this email address
               </p>
             )}
           </div>
           {/* Status Info */}
           {email && (
-            <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
-              <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
-              <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
+            <div className='bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4'>
+              <h3 className='text-sm font-medium text-slate-900 dark:text-slate-100 mb-2'>Verification Status</h3>
+              <div className='text-sm text-slate-700 dark:text-slate-300 space-y-1'>
                 <p>• Check your email inbox for a verification link</p>
                 <p>• Click the link in the email to verify your account</p>
                 <p>• Return here or try logging in after verification</p>
               </div>
               {lastSentTime && (
-                <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
-                  <Clock className="h-3 w-3 mr-1" />
+                <p className='text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center'>
+                  <Clock className='h-3 w-3 mr-1' />
                   Last email sent: {lastSentTime.toLocaleTimeString()}
                 </p>
               )}
             </div>
           )}
           {/* Action Buttons */}
-          <div className="space-y-3">
+          <div className='space-y-3'>
             {/* Check Status Button */}
             <Button
               onClick={handleCheckStatus}
               disabled={!email |isCheckingStatus}
-              className="w-full"
-              variant="outline"
+              className='w-full'
+              variant='outline'
             >
               {isCheckingStatus ? (
                 <>
-                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
+                  <RefreshCw className='h-4 w-4 mr-2 animate-spin' />
                   Checking Status...
                 </>
               ) : (
                 <>
-                  <Eye className="h-4 w-4 mr-2" />
+                  <Eye className='h-4 w-4 mr-2' />
                   Check Verification Status
                 </>
               )}
@@ -311,22 +311,22 @@ export default function VerifyStatus() {
             <Button
               onClick={handleResendEmail}
               disabled={!email |isResending |countdown > 0}
-              className="w-full"
-              variant="secondary"
+              className='w-full'
+              variant='secondary'
             >
               {isResending ? (
                 <>
-                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
+                  <RefreshCw className='h-4 w-4 mr-2 animate-spin' />
                   Sending Email...
                 </>
               ) : countdown > 0 ? (
                 <>
-                  <Clock className="h-4 w-4 mr-2" />
+                  <Clock className='h-4 w-4 mr-2' />
                   Resend in {countdown}s
                 </>
               ) : (
                 <>
-                  <Mail className="h-4 w-4 mr-2" />
+                  <Mail className='h-4 w-4 mr-2' />
                   Resend Verification Email
                 </>
               )}
@@ -335,39 +335,39 @@ export default function VerifyStatus() {
             <Button
               onClick={handleTryLogin}
               disabled={!email}
-              className="w-full"
+              className='w-full'
             >
               Try Login
             </Button>
           </div>
           {/* Help Text */}
-          <div className="text-center text-sm text-gray-500 space-y-2">
+          <div className='text-center text-sm text-gray-500 space-y-2'>
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
             </p>
             <Button
               onClick={handleGoBack}
-              variant="ghost"
-              size="sm"
-              className="text-blue-600 hover:text-blue-500"
+              variant='ghost'
+              size='sm'
+              className='text-blue-600 hover:text-blue-500'
             >
-              <ArrowLeft className="h-4 w-4 mr-1" />
+              <ArrowLeft className='h-4 w-4 mr-1' />
               Go Back
             </Button>
           </div>
           {/* Additional Options */}
-          <div className="border-t pt-4 space-y-2">
+          <div className='border-t pt-4 space-y-2'>
             <Button
               onClick={() => router.push('/signup')}
-              variant="ghost"
-              className="w-full text-sm"
+              variant='ghost'
+              className='w-full text-sm'
             >
               Use Different Email Address
             </Button>
             <Button
               onClick={() => router.push('/contact')}
-              variant="ghost"
-              className="w-full text-sm"
+              variant='ghost'
+              className='w-full text-sm'
             >
               Contact Support
             </Button>

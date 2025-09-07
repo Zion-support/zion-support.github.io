@@ -175,13 +175,13 @@ id="subject""
 isOpen={isChatOpen}
           onClose={() => setIsChatOpen(false)}
 
-          recipient={{;
+          recipient={;
             }
             "id": 'ai-assistant',;'
             "name": 'AI Assistant',;'
             "avatarUrl": '"https"://placehold && placehold.co/64x64?text=AI',;'
             "role": 'Support Bot';'
-          }}
+          }
           onSendMessage={handleSendMessage}
         />
       )}

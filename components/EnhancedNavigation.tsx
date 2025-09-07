@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Link from 'next/link'
 useEffect ( () => {
   const handleScroll = () => {
@@ -12,10 +9,8 @@ return (<nav className= {
   `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
   isScrolled ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' <div className="max-w-7xl mx-auto px-6"> <div className="flex items-center justify-between h-20"> <Link href="/" className="flex items-center space-x-3"> <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center"> <Brain className="w-6 h-6 text-white" /> </div> <span className="text-xl font-bold text-white">Zion Tech Group</span> </Link> <div className="hidden md:flex items-center space-x-8"> <Link href="/services" className="text-white hover:text-cyan-400 transition-colors"> Services </Link> <Link href="/about" className="text-white hover:text-cyan-400 transition-colors"> About </Link> <Link href="/contact" className="text-white hover:text-cyan-400 transition-colors"> Contact </Link> </div> </div> 
 }
-=======
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 import Link from 'next/link';'
 import { motion } from 'framer-motion';'
@@ -98,9 +93,9 @@ const toggleDropdown = ("dropdown": string) => {setActiveDropdown(activeDropdown
                 <span>Services</span>;
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;`              </button>;{activeDropdown === 'services' && (<motion&& motion.div;'
                   }
-                  initial={{ "opacity": 0, "y": 10 }}
-                  animate={{ "opacity": 1, "y": 0 }}
-                  exit={{ "opacity": 0, "y": 10 }}
+                  initial={ "opacity": 0, "y": 10 }
+                  animate={ "opacity": 1, "y": 0 }
+                  exit={ "opacity": 0, "y": 10 }
                   className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6";"
                 >;
                 className="flex items-center space-x-1 text-white "hover":text-blue-300 transition-colors">"
@@ -108,11 +103,11 @@ const toggleDropdown = ("dropdown": string) => {setActiveDropdown(activeDropdown
                 <span>Services</span>;
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;`              </button>;{activeDropdown === 'services' && (<motion&& motion.div;'
                   }
-                  initial={{ "opacity": 0, "y": 10 
+                  initial={ "opacity": 0, "y": 10 
 }
-                  animate={{ "opacity": 1, "y": 0 
+                  animate={ "opacity": 1, "y": 0 
 }
-                  exit={{ "opacity": 0, "y": 10 
+                  exit={ "opacity": 0, "y": 10 
 }
                   className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">"
 
@@ -156,19 +151,19 @@ const toggleDropdown = ("dropdown": string) => {setActiveDropdown(activeDropdown
                 <span>Services</span>;
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;`              </button>;{activeDropdown === 'services' && (<motion&& motion.div;'
                   }
-                  initial={{ "opacity": 0, "y": 10 }}
-                  animate={{ "opacity": 1, "y": 0 }}
-                  exit={{ "opacity": 0, "y": 10 }}
+                  initial={ "opacity": 0, "y": 10 }
+                  animate={ "opacity": 1, "y": 0 }
+                  exit={ "opacity": 0, "y": 10 }
                 className="flex items-center space-x-1 text-white "hover":text-blue-300 transition-colors">"
 
                 <span>Services</span>;
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;`              </button>;{activeDropdown === 'services' && (<motion&& motion.div;'
                   }
-                  initial={{ "opacity": 0, "y": 10 
+                  initial={ "opacity": 0, "y": 10 
 }
-                  animate={{ "opacity": 1, "y": 0 
+                  animate={ "opacity": 1, "y": 0 
 }
-                  exit={{ "opacity": 0, "y": 10 
+                  exit={ "opacity": 0, "y": 10 
 }
                   className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;"
                   <div className="grid grid-cols-2 gap-4 px-6">;"
@@ -196,11 +191,11 @@ const toggleDropdown = ("dropdown": string) => {setActiveDropdown(activeDropdown
             <div className="relative">;"
               <button;
                 onClick={() => toggleDropdown('company')}'
-                  initial={{ "opacity": 0, "y": 10 
+                  initial={ "opacity": 0, "y": 10 
 }
-                  animate={{ "opacity": 1, "y": 0 
+                  animate={ "opacity": 1, "y": 0 
 }
-                  exit={{ "opacity": 0, "y": 10 
+                  exit={ "opacity": 0, "y": 10 
 }
                   className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;"
                   <div className="space-y-2 px-6">;"
@@ -231,18 +226,18 @@ const toggleDropdown = ("dropdown": string) => {setActiveDropdown(activeDropdown
         {/* Mobile Menu */}
         {isOpen && (<motion&& motion.div;
             }
-            initial={{ "opacity": 0, "height": 0 }}
-            animate={{ "opacity": 1, "height": 'auto' }}'
-            exit={{ "opacity": 0, "height": 0 }}
+            initial={ "opacity": 0, "height": 0 }
+            animate={ "opacity": 1, "height": 'auto' }'
+            exit={ "opacity": 0, "height": 0 }
         {/* Mobile Menu *
 }
         {isOpen && (<motion&& motion.div;
             }
-            initial={{ "opacity": 0, "height": 0 
+            initial={ "opacity": 0, "height": 0 
 }
-            animate={{ "opacity": 1, "height": 'auto' ,'
+            animate={ "opacity": 1, "height": 'auto' ,'
 }
-            exit={{ "opacity": 0, "height": 0 
+            exit={ "opacity": 0, "height": 0 
 }
             className=""lg":hidden bg-white rounded-xl shadow-2xl border border-gray-200 mt-2 py-6">;"
             <div className="px-6 space-y-6">;"
@@ -346,16 +341,16 @@ const toggle_dropdown = ("dropdown": string) =>: any {setActiveDropdown (active_
                 <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === 'services' ? 'rotate - 180' : ''}`} />;`              </button>;
               {active_dropdown === 'services' && (<motion.div;'
                   }
-                  initial={{ "opacity": 0, "coordinate_y": 10 }}
-                  animate={{ "opacity": 1, "coordinate_y": 0 }}
-                  exit={{ "opacity": 0, "coordinate_y": 10 }}
+                  initial={ "opacity": 0, "coordinate_y": 10 }
+                  animate={ "opacity": 1, "coordinate_y": 0 }
+                  exit={ "opacity": 0, "coordinate_y": 10 }
                   className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6";"
                 >;
-                  initial={{ "opacity": 0, "coordinate_y": 10 
+                  initial={ "opacity": 0, "coordinate_y": 10 
 }
-                  animate={{ "opacity": 1, "coordinate_y": 0 
+                  animate={ "opacity": 1, "coordinate_y": 0 
 }
-                  exit={{ "opacity": 0, "coordinate_y": 10 
+                  exit={ "opacity": 0, "coordinate_y": 10 
 }
                   className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6">"
 
@@ -391,16 +386,16 @@ const toggle_dropdown = ("dropdown": string) =>: any {setActiveDropdown (active_
               </button>;
               {active_dropdown === 'company' && (<motion.div;'
                   }
-                  initial={{ "opacity": 0, "coordinate_y": 10 }}
-                  animate={{ "opacity": 1, "coordinate_y": 0 }}
-                  exit={{ "opacity": 0, "coordinate_y": 10 }}
+                  initial={ "opacity": 0, "coordinate_y": 10 }
+                  animate={ "opacity": 1, "coordinate_y": 0 }
+                  exit={ "opacity": 0, "coordinate_y": 10 }
                   className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6";"
                 >;
-                  initial={{ "opacity": 0, "coordinate_y": 10 
+                  initial={ "opacity": 0, "coordinate_y": 10 
 }
-                  animate={{ "opacity": 1, "coordinate_y": 0 
+                  animate={ "opacity": 1, "coordinate_y": 0 
 }
-                  exit={{ "opacity": 0, "coordinate_y": 10 
+                  exit={ "opacity": 0, "coordinate_y": 10 
 }
                   className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6">"
 
@@ -443,16 +438,16 @@ const toggle_dropdown = ("dropdown": string) =>: any {setActiveDropdown (active_
         {/* Mobile Menu */}
         {is_open && (<motion.div;
             }
-            initial={{ "opacity": 0, "height": 0 }}
-            animate={{ "opacity": 1, "height": 'auto' }}'
-            exit={{ "opacity": 0, "height": 0 }}
+            initial={ "opacity": 0, "height": 0 }
+            animate={ "opacity": 1, "height": 'auto' }'
+            exit={ "opacity": 0, "height": 0 }
             className=""lg":hidden bg - white rounded - xl shadow - 2xl border border - gray - 200 mt-2 py-6";"
           >;
-            initial={{ "opacity": 0, "height": 0 
+            initial={ "opacity": 0, "height": 0 
 }
-            animate={{ "opacity": 1, "height": 'auto' ,'
+            animate={ "opacity": 1, "height": 'auto' ,'
 }
-            exit={{ "opacity": 0, "height": 0 
+            exit={ "opacity": 0, "height": 0 
 }
             className=""lg":hidden bg - white rounded - xl shadow - 2xl border border - gray - 200 mt-2 py-6">"
 

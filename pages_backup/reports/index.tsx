@@ -104,10 +104,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const lastUptime = uptime[uptime.length - 1];
 
   return (
-    <div className="space-y-6">
+    <div className='space-y-6'>
       <div>
-        <h1 className="text-2xl font-semibold">Automation Reports</h1>
-        <div className="text-sm text-gray-500">Autonomously generated and synced</div>
+        <h1 className='text-2xl font-semibold'>Automation Reports</h1>
+        <div className='text-sm text-gray-500'>Autonomously generated and synced</div>
       </div>
 
         <div className='border rounded p-4'>;
@@ -229,9 +229,9 @@ function Reports() {
           </div>;
         </div>;
       </section>;
-        <div className="border rounded p-4">
-          <div className="font-medium mb-1">Changelog (weekly)</div>
-          <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
+        <div className='border rounded p-4'>
+          <div className='font-medium mb-1'>Changelog (weekly)</div>
+          <div className='text-sm text-gray-600'>Commits: {changelog?.totalCommits || 0}</div>
         </div>
         <div className='border rounded p-4'>
           <div className='font-medium mb-1'>SEO (weekly)</div>

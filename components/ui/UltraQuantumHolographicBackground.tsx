@@ -6,7 +6,7 @@ import { motion  } from 'framer-motion';'
 
 interface UltraQuantumHolographicBackgroundProps {
   }
-  "children": React.ReactNode;
+  'children': React.ReactNode;
   intensity?: 'low' | 'medium' | 'high' | 'ultra';'
   colorScheme?: 'quantum' | 'holographic' | 'cyberpunk' | 'neon';'
   particleCount?: number;
@@ -17,9 +17,8 @@ interface UltraQuantumHolographicBackgroundProps {
 export default function UltraQuantumHolographicBackground({children;
   }
   intensity;
-<<<<<<< HEAD
 
-            "ease": "easeInOut""
+            'ease': 'easeInOut''
 useEffect ( () => {
   }
   const updateDimensions = () => {
@@ -32,12 +31,12 @@ useEffect ( () => {
   setDimensions ({;
   }
   updateDimensions ();
-"vx": number;
+'vx': number;
 
-"vy": number;
-"size": number;
-"color": string;
-"life": number;
+'vy': number;
+'size': number;
+'color': string;
+'life': number;
 
   children,
 intensity = 'high''
@@ -61,20 +60,20 @@ className = '''
 
 const canvasRef = useRef<HTMLCanvasElement>(null);
 
-const [dimensions, setDimensions] = useState({ "width": 0, "height": 0,;
+const [dimensions, setDimensions] = useState({ 'width': 0, 'height': 0,;
 });
 
 const [isVisible, setIsVisible] = useState(false);
   // Color schemes,
 const colors = colorSchemes[colorScheme];
 
-const intensityMultiplier = { "low": 0.5, "medium": 1, "high": 1.5, "ultra": 2.5,;
+const intensityMultiplier = { 'low': 0.5, 'medium': 1, 'high': 1.5, 'ultra': 2.5,;
 }[
     intensity
   ];
   useEffect(() => {
 }
-const updateDimensions = () => {setDimensions({"width": window.innerWidth,"height": window.innerHeight})}updateDimensions()window.addEventListener('resize', updateDimensions)setIsVisible(true;'
+const updateDimensions = () => {setDimensions({'width': window.innerWidth,'height': window.innerHeight})}updateDimensions()window.addEventListener('resize', updateDimensions)setIsVisible(true;'
   return () => window.removeEventListener('resize', updateDimensions)}, [];'
   useEffect(() => {
 }
@@ -88,24 +87,23 @@ const ctx = canvas.getContext('2d')if (!ctx);'
     // Particle system,
 class Particle {
 }
-"x": number;
-      "y": number;
-      "vx": number;
-      "vy": number;
-      "size": number;
-      "color": string;
-      "life": number;
+'x': number;
+      'y': number;
+      'vx': number;
+      'vy': number;
+      'size': number;
+      'color': string;
+      'life': number;
 
-      "maxLife": number;
+      'maxLife': number;
 
-      "type": 'quantum' | 'holographic' | 'energy' | 'matrix';'
+      'type': 'quantum' | 'holographic' | 'energy' | 'matrix';'
       constructor() {this.x = Math.random() * dimensions.width;
         }
         this.y = Math.random() * dimensions.height;
         this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
         this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
         this.size = Math.random() * 3 * intensityMultiplier + 1;
-<<<<<<< HEAD
 this.color = [;
           colors.primary,colors.secondary,colors.tertiary,colors.accent][Math.floor(Math.random() * 4)];
         this.life = Math.random() * 100;
@@ -113,7 +111,6 @@ this.color = [;
     updateDimensions($2);
     window.addEventListener($2);
     setIsVisible($2);
->>>>>>> origin/main
     return () => window.removeEventListener('resize', updateDimensions)
   }, []);
 
@@ -126,7 +123,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       update() {
         }
         this.x += this.vx;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         this.y += this.vy;
         this.life--;
         // Bounce off edges;
@@ -146,7 +142,7 @@ if (Math.random() < 0.001 * intensityMultiplier) {
 this.y = Math.random() * dimensions.height;}
 }
         }
-      }this.vy = Math.random() * 2 + 1;          }}
+      }this.vy = Math.random() * 2 + 1;          }
         }
 
         // Energy pulse;
@@ -161,7 +157,6 @@ this.vy = Math.random() * 2 + 1;}
         }
         // Matrix rain effect
         if (this.type === 'matrix') {
-=======
         // Quantum tunneling effect;
         if (Math.random() < 0.001 * intensityMultiplier) {}
           this.x = Math.random() * dimensions.width;
@@ -186,19 +181,13 @@ if (this.type === 'matrix') {'
           if (this.y > dimensions.height) {
             }
             this.y = -10;
-<<<<<<< HEAD
             this.vy = Math.random() * 2 + 1
 
-=======
-<<<<<<< HEAD
             this.vy = Math.random() * 2 + 1
 
 this.vy = Math.random() * 2 + 1;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
             this.vy = Math.random() * 2 + 1;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           }
         }
       }
@@ -232,12 +221,11 @@ for (let i = 1; i <= 3; i++) {
               ctx.strokeStyle = this.color;
               ctx.lineWidth = 0.5;
               ctx.globalAlpha = alpha * (0.3 / i);
-<<<<<<< HEAD
 
 ctx.stroke();
             }
         }
-      }this.vy = Math.random() * 2 + 1;          }}
+      }this.vy = Math.random() * 2 + 1;          }
         }
       }draw() {if (this.life <= 0) return;
         const alpha = this.life / this.maxLife;
@@ -260,15 +248,12 @@ ctx.stroke();
             ctx.lineTo(this.x - this.size, this.y);
             ctx.fillStyle = this.color;
             ctx.fill();
-<<<<<<< HEAD
 
             // Holographic grid
             ctx.strokeStyle = this.color;
             ctx.lineWidth = 0.5;
             ctx.globalAlpha = alpha * 0.5;
-<<<<<<< HEAD
 
-=======
 ctx.strokeRect(
               this.x - this.size,
               this.y - this.size,
@@ -287,15 +272,12 @@ const gradient = ctx.createRadialGradient(;
               this.size
             );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             gradient.addColorStop(0, this.color);
-=======
             // Holographic grid;
             ctx.strokeStyle = this.color;
             ctx.lineWidth = 0.5;
             ctx.globalAlpha = alpha * 0.5;
             gradient.addColorStop(0, this.color);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             gradient.addColorStop(1, 'transparent');
             ctx.fillStyle = gradient;
             ctx.beginPath();
@@ -303,20 +285,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ctx.fill();
             break;'
           case 'matrix':
-<<<<<<< HEAD
             // Matrix digital rain
             ctx.fillStyle = this.color;
             ctx.font = `${this.size * 2}px monospace`;
             ctx.fillText('01', this.x, this.y);
       maxLife: number,
       type: 'quantum' | 'holographic' | 'energy' | 'matrix',
-=======
             // Matrix digital rain;
             ctx.fillStyle = this.color;
             ctx.font = `${this.size * 2}px monospace`;'
             ctx.fillText('01', this.x, this.y);
             ctx.stroke();          }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       constructor() {
         this.x = Math.random() * dimensions.width;
@@ -329,7 +308,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         this.maxLife = 100;
         this.type = ['quantumholographicenergymatrix'][Math.floor(Math.random() * 4)] as any
       }
-<<<<<<< HEAD
 
       update() {
         this.x += this.vx;
@@ -445,10 +423,10 @@ const gradient = ctx.createRadialGradient(this.x,this.y,0,this.x,this.y,this.siz
     }
     // Create particles;
 
-const "particles": Particle[] = [];
+const 'particles': Particle[] = [];
 for (let i = 0; i < particleCount; i++) {particles.push(new Particle())}
     // Animation loop;
-    let "animationId": number;
+    let 'animationId': number;
 
 const animate = () => {ctx.clearRect(0, 0, dimensions.width, dimensions.height)// Draw quantum field background;
 
@@ -481,7 +459,6 @@ const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
 ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
           }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       }
 
@@ -495,7 +472,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx && ctx.moveTo(x, 0);
         ctx && ctx.lineTo(x, dimensions && dimensions.height);
         ctx && ctx.stroke();
-<<<<<<< HEAD
     }
 
     // Create particles
@@ -571,7 +547,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.moveTo(0, y);
         ctx.lineTo(dimensions.width, y);
         ctx.stroke()
-=======
 const gridSize = 50;
       for (let x = 0; x < dimensions.width; x += gridSize) {
         }
@@ -587,7 +562,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx && ctx.moveTo(0, y);
         ctx && ctx.lineTo(dimensions && dimensions.width, y);
         ctx && ctx.stroke();
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       }
       animationId = requestAnimationFrame(animate);    };      const gridSize = 50;
       for (let x = 0, x < dimensions && dimensions.width, x += gridSize) {;
@@ -631,72 +605,72 @@ return (;
 ref={canvasRef}
 
 className='fixed inset-0 w-full h-full pointer-events-none z-0''
-        style={{
+        style={
           }
-          "background": colors.background,
-          "filter": `blur(${intensity === 'ultra' ? '0.5px' : '0px,'
-})`,`        }} />
+          'background': colors.background,
+          'filter': `blur(${intensity === 'ultra' ? '0.5px' : '0px,'
+})`,`        } />
       {/* Holographic Overlay Effects */}
 <div className='fixed inset-0 z-10 pointer-events-none'>'
         {/* Quantum Field Lines */}
         <motion.div,
 className='absolute inset-0''
-          animate={{
+          animate={
             }
-            "background": [
+            'background': [
 
               `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`,`              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`,`              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`,`              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`,`            ]
-          }}
-          transition={{
+          }
+          transition={
             }
-            "duration": 8,
-            "repeat": Infinity,
-"ease": 'easeInOut','
-          }} />;
+            'duration': 8,
+            'repeat': Infinity,
+'ease': 'easeInOut','
+          } />;
         {/* Holographic Scan Lines */}
         {/* Quantum Fluctuations */}
-        <motion && motion.div        <div className="absolute inset-0 opacity-20">;
+        <motion && motion.div        <div className='absolute inset-0 opacity-20'>;
           {Array && Array.from({ length: Math && Math.ceil(dimensions && dimensions.height / 4) }).map((_, i) => (;
             <motion&& motion.div
               />))}        </div>;
         {/* Quantum Fluctuations */}
-        <motion.div        <div className="absolute inset - 0 opacity - 20">;
+        <motion.div        <div className='absolute inset - 0 opacity - 20'>;
           {Array.from ({ length: Math.ceil (dimensions.height / 4) }).map ((_, i) => (
             <motion.div;
               key={i}
-              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
-              style={{
-              }}
-              animate={{
+              className='absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent';
+              style={
+              }
+              animate={
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
                 top: i * 4,
                 color: colors.primary;
-              }}
-              animate={{
+              }
+              animate={
                 opacity: [0, 1, 0];
                 scale_x: [0, 1, 0];
           className='absolute inset-0'
-          animate={{
+          animate={
             boxShadow: [
               `inset 0 0 100px ${colors.primary}20`
               `inset 0 0 200px ${colors.secondary}20`
               `inset 0 0 150px ${colors.tertiary}20`
               `inset 0 0 100px ${colors.primary}20`
-                ease: "easeInOut"
-              }}
+                ease: 'easeInOut'
+              }
             />;
           ))}
         {/* Quantum Fluctuations */}
         <motion&& motion.div
           className='absolute inset-0'
-          animate={{
+          animate={
             boxShadow: [
-            ],          }}
-          transition={{
+            ],          }
+          transition={
             duration: 6
             repeat: Infinity
-            ease: 'easeInOut',          }}              `inset 0 0 100px ${colors.primary}20`;
+            ease: 'easeInOut',          }              `inset 0 0 100px ${colors.primary}20`;
               `inset 0 0 200px ${colors.secondary}20`;
               `inset 0 0 150px ${colors.tertiary}20`;
             ]
@@ -705,55 +679,54 @@ className='absolute inset-0''
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
 
-=======
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
-          }}
+          }
         />;
         {/* Holographic Scan Lines */}
-        {/* Quantum Fluctuations */}"
-        <motion && motion.div        <div className="absolute inset-0 opacity-20">;
+        {/* Quantum Fluctuations */}'
+        <motion && motion.div        <div className='absolute inset-0 opacity-20'>;
           {Array && Array.from({ length: Math && Math.ceil(dimensions && dimensions.height / 4) }).map((_, i) => (;
             <motion&& motion.div;
               />))}        </div>;
-        {/* Quantum Fluctuations */}"
-        <motion.div        <div className="absolute inset - 0 opacity - 20">;
+        {/* Quantum Fluctuations */}'
+        <motion.div        <div className='absolute inset - 0 opacity - 20'>;
           {Array.from ({ length: Math.ceil (dimensions.height / 4) }).map ((_, i) => (
             <motion.div;
-              key={i}"
-              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
-              style={{}
-              }}
-              animate={{}
+              key={i}'
+              className='absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent';
+              style={}
+              }
+              animate={}
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
                 top: i * 4,
                 color: colors.primary;
-              }}
-              animate={{}
+              }
+              animate={}
                 opacity: [0, 1, 0];
                 scale_x: [0, 1, 0];'
           className='absolute inset-0'
-          animate={{}
+          animate={}
             boxShadow: []`
               `inset 0 0 100px ${colors.primary}20``
               `inset 0 0 200px ${colors.secondary}20``
               `inset 0 0 150px ${colors.tertiary}20``
-              `inset 0 0 100px ${colors.primary}20`"
-                ease: "easeInOut"
-              }}
+              `inset 0 0 100px ${colors.primary}20`'
+                ease: 'easeInOut'
+              }
             />;
           ))}
         {/* Quantum Fluctuations */}
         <motion&& motion.div'
           className='absolute inset-0'
-          animate={{}
+          animate={}
             boxShadow: []
-            ],          }}
-          transition={{}
+            ],          }
+          transition={}
             duration: 6;
             repeat: Infinity'`
-            ease: 'easeInOut',          }}              `inset 0 0 100px ${colors.primary}20`;`
+            ease: 'easeInOut',          }              `inset 0 0 100px ${colors.primary}20`;`
               `inset 0 0 200px ${colors.secondary}20`;`
               `inset 0 0 150px ${colors.tertiary}20`;
             ]
@@ -763,47 +736,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 repeat: Infinity,
 
 <div className='absolute inset-0 opacity-20'>'
-          {Array.from({ "length": Math.ceil(dimensions.height / 4)
+          {Array.from({ 'length': Math.ceil(dimensions.height / 4)
 }).map(
             (_, i) => (
               <motion.div,
 key={i}
                 className='absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent';'
-                style={{"top": i * 4;
+                style={'top': i * 4;
                   }
-                  "color": colors.primary;
-                }}
-                animate={{"opacity": [0, 1, 0];
+                  'color': colors.primary;
+                }
+                animate={'opacity': [0, 1, 0];
                   }
-                  "scaleX": [0, 1, 0];
-                }}
-                transition={{"duration": 2;
+                  'scaleX': [0, 1, 0];
+                }
+                transition={'duration': 2;
                   }
-                  "delay": i * 0.1;
-                  "repeat": Infinity;
-                  "ease": 'easeInOut';'
-                }} />;
+                  'delay': i * 0.1;
+                  'repeat': Infinity;
+                  'ease': 'easeInOut';'
+                } />;
             ))}
         </div>;
         {/* Quantum Fluctuations */}
 
         <motion.div,
 className='absolute inset-0''
-          animate={{
+          animate={
             }
-            "boxShadow": [
+            'boxShadow': [
               `inset 0 0 100px ${colors.primar,`}20`,`              `inset 0 0 200px ${colors.secondary}20`,`              `inset 0 0 150px ${colors.tertiary}20`,`              `inset 0 0 100px ${colors.primary}20`,`            ]
-          }}
-          transition={{
+          }
+          transition={
             }
-            "duration": 6,
-            "repeat": Infinity,
-"ease": 'easeInOut','
-          }} />
+            'duration': 6,
+            'repeat': Infinity,
+'ease': 'easeInOut','
+          } />
       </div>
         />;
       </div>;
-<<<<<<< HEAD
       {/* Content Layer */}
 
 <div className='relative z-20'>{children}</div>'
@@ -814,172 +786,158 @@ className='absolute inset-0''
         <motion.div;
           className='absolute inset - 0';'
 
-          animate={{
+          animate={
             background: [;
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
-            ],          }}
-          transition={{
+              `url ('data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E')`,
+              `url ('data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E')`,
+            ],          }
+          transition={
             duration: 4
             repeat: Infinity
-            ease: 'easeInOut',          }}
+            ease: 'easeInOut',          }
         />
       </div>
     </div>
-  );              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
+  );              `url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`;
+              `url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`
             ]
-          }}
-          transition={{
+          }
+          transition={
 
-=======
       {/* Content Layer */}'
       <div className='relative z - 20'>{children}</div>;
-<<<<<<< HEAD
 <div className='relative z-20'>{children}</div>
 
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Quantum Noise Effect */}
-=======
       {/* Quantum Noise Effect */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
         <motion.div;'
           className='absolute inset - 0';
-          animate={{}
-            background: [;'"`
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,'"`
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
-            ],          }}
-          transition={{}
+          animate={}
+            background: [;''`
+              `url ('data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E')`,''`
+              `url ('data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E')`,
+            ],          }
+          transition={}
             duration: 4;
             repeat: Infinity'
-            ease: 'easeInOut',          }}
+            ease: 'easeInOut',          }
         />
       </div>
-    </div>'"`
-  );              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;'"`
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
+    </div>''`
+  );              `url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`;''`
+              `url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`
             ]
-          }}
-<<<<<<< HEAD
-          transition={{
+          }
+          transition={
 
             }
 
-            "background": [
-              `url(""data":image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='"http"://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,`              `url(""data":image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='"http"://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,`
+            'background': [
+              `url(''data':image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns=''http'://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`,`              `url(''data':image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns=''http'://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`,`
             ]
-          }}
-          transition={{
+          }
+          transition={
             }
-            "duration": 4,
-            "repeat": Infinity,
-"ease": 'easeInOut','
-          }} />
+            'duration': 4,
+            'repeat': Infinity,
+'ease': 'easeInOut','
+          } />
       </div>
     </div>
-<<<<<<< HEAD
-          animate={{background: [;
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,`url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,],          }}
-          transition={{duration: 4;
+          animate={background: [;
+              `url ('data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E')`,`url ('data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E')`,],          }
+          transition={duration: 4;
             repeat: Infinity;
-            ease: 'easeInOut',          }}
+            ease: 'easeInOut',          }
         />;
       </div>;
     </div>;
-  )`url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;
+  )`url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`;
+              `url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`;
             ];
-          }}
-          transition={{background: [;
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,`url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,],}}
-          transition={{duration: 4,repeat: Infinity,ease: 'easeInOut',}}
+          }
+          transition={background: [;
+              `url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`,`url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`,],}
+          transition={duration: 4,repeat: Infinity,ease: 'easeInOut',}
         />;
       </div>;
     </div>;
 ))}
     </div>;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 );  )
 }
     </div>
 
-<<<<<<< HEAD
 )
-        <div className="absolute inset-0 opacity-20">
+        <div className='absolute inset-0 opacity-20'>
           {Array.from({ length: Math.ceil(dimensions.height / 4) }).map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent"
-              style={{
+              className='absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent'
+              style={
                 top: i * 4,
                 color: colors.primary
-              }}
-              animate={{
+              }
+              animate={
                 opacity: [0, 1, 0];
                 scaleX: [0, 1, 0]
-              }}
-              transition={{
+              }
+              transition={
                 duration: 2,
                 delay: i * 0.1,
                 repeat: Infinity,
-                ease: "easeInOut"
-              }}
+                ease: 'easeInOut'
+              }
             />
           ))}
         </div>
 
         {/* Quantum Fluctuations */}
         <motion.div
-          className="absolute inset-0"
-          animate={{
+          className='absolute inset-0'
+          animate={
             boxShadow: [
               `inset 0 0 100px ${colors.primary}20`;
               `inset 0 0 200px ${colors.secondary}20`;
               `inset 0 0 150px ${colors.tertiary}20`;
               `inset 0 0 100px ${colors.primary}20`
             ]
-          }}
-<<<<<<< HEAD
-          transition={{
+          }
+          transition={
             duration: 6,
-=======
-<<<<<<< HEAD
           transition = $2;
->>>>>>> origin/main
             repeat: Infinity,
-            ease: "easeInOut"
-          }}
+            ease: 'easeInOut'
+          }
         />
       </div>
 
       {/* Content Layer */}
-      <div className="relative z-20">
+      <div className='relative z-20'>
         {children}
       </div>
 
       {/* Quantum Noise Effect */}
-      <div className="fixed inset-0 z-30 pointer-events-none opacity-5">
+      <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
         <motion.div
-          className="absolute inset-0"
-          animate={{
+          className='absolute inset-0'
+          animate={
             background: [
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
+              `url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`;
+              `url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`
             ]
-          }}
-          transition={{
+          }
+          transition={
             duration: 4,
             repeat: Infinity,
-            ease: "easeInOut"
-=======
-          transition={{
+            ease: 'easeInOut'
+          transition={
             duration: 6
             repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
+            ease: 'easeInOut',            ease: 'easeInOut'
+          }
         />
       </div>
         />
@@ -989,54 +947,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>
         <motion.div;'
           className='absolute inset - 0'
-          animate={{}
-            background: [;'"`
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,'"`
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
-            ],          }}
-          transition={{}
+          animate={}
+            background: [;''`
+              `url ('data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E')`,''`
+              `url ('data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E')`,
+            ],          }
+          transition={}
             duration: 4
             repeat: Infinity'
-            ease: 'easeInOut',          }}
+            ease: 'easeInOut',          }
         />
       </div>
-    </div>'"`
-  );              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;'"`
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
+    </div>''`
+  );              `url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`;''`
+              `url('data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E')`
             ]
-          }}
-          transition={{
+          }
+          transition={
             duration: 4
             repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-          }}
+            ease: 'easeInOut',            ease: 'easeInOut'
+          }
         />
       </div>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+''`
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 );
 
-"
-<<<<<<< HEAD
-=======
+'
 useEffect ( () => {
   const updateDimensions = () => {
   setDimensions ({
@@ -1124,12 +1069,5 @@ return (<div className= {
 }
 }/> </div> </div>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 );  )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

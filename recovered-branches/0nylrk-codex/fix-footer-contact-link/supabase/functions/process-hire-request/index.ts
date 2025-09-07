@@ -317,7 +317,7 @@ return new Response(;
         "headers": { ...corsHeaders, "Content-Type": "application/json" },"
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>;
             <p>Best regards,<br>The Zion AI Marketplace Team</p>;
-          `}}),;`
+          `}),;`
       // // // console.log("Email sending "result":", emailResponse);"
     }
 ;

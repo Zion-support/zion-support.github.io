@@ -44,7 +44,7 @@ export function ClientDashboard() {
                   <span className="font-medium">60%</span>"
                 </div>
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">"
-                  <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>'
+                  <div className="h-full bg-primary rounded-full" style={width: '60%'}></div>'
                 </div>
               </div>
               <div className="flex justify-between items-center">"
@@ -102,7 +102,7 @@ export function ClientDashboard() {
                   <span className="font-medium">60%</span>
                 </div>
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">
-                  <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>
+                  <div className="h-full bg-primary rounded-full" style={width: '60%'}></div>
                 </div>
               </div>
               <div className='flex justify-between items-center'>
@@ -161,7 +161,7 @@ pr-12325
                   <span className="font-medium">60%</span>
                 </div>"
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">"
-                  <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>
+                  <div className="h-full bg-primary rounded-full" style={width: '60%'}></div>
                 </div>
               </div>
 
@@ -465,7 +465,7 @@ import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 
 import Link from "next/link";
 export function ClientDashboard() { return null; }
-                  <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>;
+                  <div className="h-full bg-primary rounded-full" style={width: '60%'}></div>;
                 </div>;
               </div>;"
               <div className="flex justify-between items-center">;"
@@ -514,7 +514,7 @@ function ClientDashboard() {}
                 <div className='h - 2 bg - primary / 20 rounded - full overflow - hidden'>;
                   <div;'
                     className='h - full bg - primary rounded - full';'
-                    style={{ width: '60%' }}
+                    style={ width: '60%' }
                   ></div>;
                 </div>;
               </div>;'

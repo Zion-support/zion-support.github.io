@@ -169,7 +169,6 @@ export async function executeProviderAction<T>(
 
 export const notificationConnector = {
   async sendNotification(connection: ProviderConnection, notification: any) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     return executeProviderAction(connection, 'sendNotification', { notification });
   }
 };
@@ -194,5 +193,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 };
 
-  }},
->>>>>>> origin/main
+  },

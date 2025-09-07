@@ -12,5 +12,5 @@ const SearchComponent: React.FC<SearchComponentProps /> = ({ placeholder = 'Sear
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement />(null);}
-  const resultsRef = useRef<HTMLDivElement />(null)"";}
-}"
+  const resultsRef = useRef<HTMLDivElement />(null)'';}
+}'

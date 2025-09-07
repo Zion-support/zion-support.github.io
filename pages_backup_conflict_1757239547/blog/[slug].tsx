@@ -75,8 +75,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const slug = path.basename(filePath).replace(/\.md$/, '');
   return { ...meta, id: slug, slug, content } as BlogPost;
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -86,8 +86,8 @@ interface BlogPostPageProps {;
    */;
   initialPost: BlogPost | null;
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -116,8 +116,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
         // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null);
         setError('Article not found');
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
   const articleLd = {
     author: post.author.name
@@ -130,45 +130,45 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
         title={post.title}
         description={post.excerpt}
         image={post.featuredImage}
-        type="article"
+        type='article'
         article={articleLd}
       />
-      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
+      <main className='prose dark:prose-invert max-w-3xl mx-auto py-8'>
         <h1>{post.title}</h1>
-        {post.excerpt && <p className="lead">{post.excerpt}</p>}
-        <div className="flex items-center gap-3 mb-6">
+        {post.excerpt && <p className='lead'>{post.excerpt}</p>}
+        <div className='flex items-center gap-3 mb-6'>
           <img
             src={post.author.avatarUrl}
             alt={post.author.name}
-            className="w-10 h-10 rounded-full"
+            className='w-10 h-10 rounded-full'
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
               target.src = '/images/blog-placeholder.svg'
             }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           />
           <div>
-            <p className="m-0 font-medium">{post.author.name}</p>
+            <p className='m-0 font-medium'>{post.author.name}</p>
             {post.author.title && (
-              <p className="m-0 text-sm text-zion-slate-light">
+              <p className='m-0 text-sm text-zion-slate-light'>
                 {post.author.title}
               </p>
             )}
           </div>
         </div>
         {post.featuredImage && (
-          <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
+          <div className='aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6'>
             <img
               src={post.featuredImage}
               alt={post.title}
-              className="object-cover w-full h-full"
+              className='object-cover w-full h-full'
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
-              }}
+              }
             />
           </div>
         )}
@@ -185,7 +185,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const dir = path.join(process.cwd(), 'contentblog')
   const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'))
   const paths = files.map((f) => ({
-    params: { slug: f.replace(/\.md$/, '') }}))
+    params: { slug: f.replace(/\.md$/, '') }))
   // Use `blocking` so new posts added after build can be generated on demand
   return { paths, fallback: 'blocking' }
 }
@@ -219,19 +219,19 @@ export const getStaticPaths: GetStaticPaths = async () => {;
   const dir = path.join(process.cwd(), 'contentblog'),;
   const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'));
   const paths = files.map((f) => ({;
-    params: { slug: f.replace(/\.md$/, '') }})),;
+    params: { slug: f.replace(/\.md$/, '') })),;
   // Use `blocking` so new posts added after build can be generated on demand;
   return { paths, fallback: 'blocking'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 },;
 export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
   params}: {;
   params?: { slug?: string   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 }) => {;
@@ -239,31 +239,31 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
   // Validate slug to prevent malformed paths;
   if (!/^[a-z0-9-]+$/.test(slug)) {;
     return { notFound: true   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   const filePath = path.join(process.cwd(), 'contentblog', `${slug}.md`),;
   const post = parseMarkdown(filePath);
   if (!post) {;
     return { notFound: true   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   return { props: { initialPost: post }, revalidate: 60   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 };

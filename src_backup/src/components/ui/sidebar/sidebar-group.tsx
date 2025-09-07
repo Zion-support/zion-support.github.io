@@ -25,7 +25,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(({title;
         {title && (<button;
             }
             type='button';'
-            className='flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground "hover":bg-secondary/30';'
+            className='flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground 'hover':bg-secondary/30';'
             onClick={() => setExpanded(!expanded)}          >;
             <div className='flex items-center gap-2'>;onClick={() => setExpanded(!expanded)}          >;'
             <div className='flex items-center gap-2'>;{icon}'
@@ -54,7 +54,7 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(({title,ic
         {title && (<button;
             }
             type='button';'
-            className='flex w - full items - center justify - between rounded - md px - 2 py - 1 text - sm font - medium text - muted - foreground "hover":bg - secondary / 30';'
+            className='flex w - full items - center justify - between rounded - md px - 2 py - 1 text - sm font - medium text - muted - foreground 'hover':bg - secondary / 30';'
             on_click={() => set_expanded (!expanded)}          >;
             <div className='flex items - center gap - 2'>;'
               {icon}
@@ -62,22 +62,22 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(({title,ic
             </div>;
             {showChevron && (<ChevronDown;
                 }
-                className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}" />;
+                className={cn('h-4 w-4 transition-transform', expanded ? 'rotate-0' : '-rotate-90')}' />;
             )}
           </button>;
         )}
 export { SidebarGroup }SidebarGroup.displayName = 'SidebarGroup';'
-export { SidebarGroup }}
+export { SidebarGroup }
             )}
           </button>;
         )}
-        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;"
+        <div className={cn('mt-1', !expanded && 'hidden')}>{children}</div>;'
       </div>;
     )}
-),SidebarGroup.displayName = "SidebarGroup",export { SidebarGroup },<div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;"
+),SidebarGroup.displayName = 'SidebarGroup',export { SidebarGroup },<div className={cn('mt-1', !expanded && 'hidden')}>{children}</div>;'
       </div>;
     )}
-),SidebarGroup.displayName = "SidebarGroup",export { SidebarGroup }className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}"
+),SidebarGroup.displayName = 'SidebarGroup',export { SidebarGroup }className={cn('h-4 w-4 transition-transform', expanded ? 'rotate-0' : '-rotate-90')}'
               />;
             )}
           </button>;

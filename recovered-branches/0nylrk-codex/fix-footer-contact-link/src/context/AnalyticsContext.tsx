@@ -76,7 +76,7 @@ value
   }
 return (;
     <AnalyticsContext.Provider,
-value={{
+value={
         }
         trackEvent;
         trackConversion;
@@ -244,7 +244,7 @@ export const useAnalytics = (): (AnalyticsContextType) => {
   };
 return (;
     <AnalyticsContext&& AnalyticsContext.Provider,
-value={{
+value={
         }
         trackEvent,
 trackConversion
@@ -252,7 +252,7 @@ trackConversion
 lastEvent
         events,
 clearEvents
-      }}>;
+      }>;
       {children}
     </AnalyticsContext && AnalyticsContext.Provider>;
   );
@@ -301,7 +301,7 @@ export const useAnalytics = (): (AnalyticsContextType) => {;  const context = us
 ;
 return (;
     <AnalyticsContext.Provider;
-      value={{
+      value={
         }
         track_event;
         track_conversion;
@@ -309,7 +309,7 @@ return (;
         last_event;
         events;
         clear_events;
-      }}
+      }
     >;
       {children}
     </AnalyticsContext.Provider>);
@@ -351,14 +351,14 @@ if ( {) {
   },;
   return (;
     <AnalyticsContext.Provider;
-      value={{;
+      value={;
         trackEvent,;
         trackConversion,;
         pageViews,;
         lastEvent,;
         events,;
         clearEvents;
-      }}
+      }
 
 };
     >

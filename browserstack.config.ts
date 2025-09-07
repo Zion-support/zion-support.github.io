@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import { defineConfig, devices } from '@playwright/test';
@@ -8,7 +7,6 @@ export default defineConfig({testDir:'tests/e2e';
 
 
 
-=======
 import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: 'tests/e2e';
@@ -26,8 +24,6 @@ export default defineConfig({
       name: 'Desktop Firefox';
 import { defineConfig, devices } from '@playwright/test';
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 ;
 import { defineConfig, devices  } from '@playwright/test';'
 export default defineConfig({"testDir":'tests/e2e';'
@@ -190,26 +186,26 @@ export default define_config ({
     }
       }    },ursor/fix-lint-push-and-merge-to-main-ae4e;
       }
-    }}    },ursor/fix-lint-push-and-merge-to-main-ae4e;
+    }    },ursor/fix-lint-push-and-merge-to-main-ae4e;
     {"name": "Desktop Firefox","use": {"browserName": 'firefox';'
       }
     }
       }    },ursor/fix-lint-push-and-merge-to-main-ae4e;
       }
-    }}    },ursor/fix-lint-push-and-merge-to-main-ae4e;
+    }    },ursor/fix-lint-push-and-merge-to-main-ae4e;
     {"name": "Desktop Safari","use": {"browserName": 'webkit';'
       }
     }
       }    }
       }    },ursor/fix-lint-push-and-merge-to-main-ae4e;
       }
-    }}    }}    },ursor/fix-lint-push-and-merge-to-main-ae4e;
+    }    }    },ursor/fix-lint-push-and-merge-to-main-ae4e;
     {"name": "Mobile Chrome","use": {"browserName": 'chromium',...devices['Pixel 5'];'
       }
     }
       }    },ursor/fix-lint-push-and-merge-to-main-ae4e;
       }
-    }}    },ursor/fix-lint-push-and-merge-to-main-ae4e;
+    }    },ursor/fix-lint-push-and-merge-to-main-ae4e;
     {"name": "Mobile Safari","use": {"browserName": 'webkit',...devices['iPhone 12'];'
       }
     }
@@ -243,7 +239,7 @@ export default define_config ({
   ];
   ];
         }
-        "browserName": "webkit",...devices["iPhone 12"]}}],"reporter": [;"
+        "browserName": "webkit",...devices["iPhone 12"]}],"reporter": [;"
     ['list'],['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }]]})"browserName": 'chromium';'
         "channel": 'chrome'}'
     }{"name": 'Desktop Firefox';'
@@ -383,27 +379,27 @@ import { define_config, devices } from '@playwright / test',export default defin
       "name": "Desktop Firefox","
       "use": {
         }
-        "browserName": 'firefox'}},'
+        "browserName": 'firefox'},'
     {
       }
       "name": "Desktop Safari","
       "use": {
         }
-        "browserName": 'webkit'}},'
+        "browserName": 'webkit'},'
     {
       }
       "name": "Mobile Chrome","
       "use": {
         }
         "browserName": 'chromium','
-        ...devices['Pixel 5']}},'
+        ...devices['Pixel 5']},'
     {
       }
       "name": "Mobile Safari","
       "use": {
         }
         "browserName": 'webkit','
-        ...devices['iPhone 12']}}],'
+        ...devices['iPhone 12']}],'
   "reporter": [
     ['list'],'
     ['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }]],'
@@ -533,7 +529,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     {"name": "Mobile Safari";"
       }
-      "use": {"browser_name": 'webkit',...devices['i_phone 12'];}}['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }]];'
+      "use": {"browser_name": 'webkit',...devices['i_phone 12'];}['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }]];'
 })['list'];['html', { "outputFolder": 'playwright-logs/html-report', "open": 'never' }]];'
 })ursor/fix-website-loading-errors-and-merge-6662;
 ursor/fix-website-loading-errors-and-merge-6662;
@@ -541,7 +537,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
     ['list'],['html', { "output_folder": 'playwright - logs / html - report', "open": 'never' }];'
 ];"browserName": 'webkit';'
         ...devices['iPhone 12'];'
-      }}
+      }
   ];
   "reporter": [;
     ['list'];'
@@ -573,5 +569,3 @@ ursor/fix-website-loading-errors-and-merge-6662;
 ursor/fix-lint-push-and-merge-to-main-ae4e
 import { defineConfig, devices } from '@playwright/test';
 export default defineConfig($2);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

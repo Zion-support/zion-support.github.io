@@ -1,17 +1,16 @@
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
   return (
     <MainLayout
-      title="Search - Zion Tech Group"
-      description="Search our services and solutions"
+      title='Search - Zion Tech Group'
+      description='Search our services and solutions'
     >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Search</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
+      <div className='min-h-screen bg-gray-50'>
+        <div className='container mx-auto px-4 py-16'>
+          <h1 className='text-4xl font-bold text-gray-900 mb-6'>Search</h1>
+          <p className='text-xl text-gray-600'>Coming soon...</p>
         </div>
       </div>
     </MainLayout>
@@ -19,10 +18,6 @@ const Page = () => {
 };
 
 export default Page;
-<<<<<<< HEAD:pages_backup/search.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -375,9 +370,9 @@ technology: 'all',
     setSortBy('relevance');
   const getIconForType = (type: string) => {
     switch (type) {
-      case 'service': return <Zap className="w-5 h-5 text-blue-600" />;
-      case 'page': return <FileText className="w-5 h-5 text-green-600" />;
-      default: return <Globe className="w-5 h-5 text-gray-600" />;
+      case 'service': return <Zap className='w-5 h-5 text-blue-600' />;
+      case 'page': return <FileText className='w-5 h-5 text-green-600' />;
+      default: return <Globe className='w-5 h-5 text-gray-600' />;
     }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   };
@@ -392,9 +387,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
 <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
               Search Our Services
@@ -439,27 +434,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex items-center gap-2'>
         <title>Search - Zion Tech Group</title>
         <meta
-          name="description"
-          content="Search through Zion Tech Group&apos;s services, solutions, and content."'
+          name='description'
+          content='Search through Zion Tech Group&apos;s services, solutions, and content.''
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
 
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+      <div className='min-h-screen bg-gray-50'>
+        <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>
           {/* Search Header */}
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Search</h1>
-            <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
-              <div className="relative">
+          <div className='text-center mb-8'>
+            <h1 className='text-3xl font-bold text-gray-900 mb-4'>Search</h1>
+            <form onSubmit={handleSearch} className='max-w-2xl mx-auto'>
+              <div className='relative'>
                 <input
-                  type="text"
-                  placeholder="Search our services, solutions, and content..."
+                  type='text'
+                  placeholder='Search our services, solutions, and content...'
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
-                  className="w-full px-6 py-4 pl-14 text-lg border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className='w-full px-6 py-4 pl-14 text-lg border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 />
-                <Search className="absolute left-5 top-4 h-6 w-6 text-gray-400" />
+                <Search className='absolute left-5 top-4 h-6 w-6 text-gray-400' />
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 <button
                   onClick={() => setViewMode('grid')}
@@ -527,9 +522,9 @@ className='flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 t
             {/* Expanded Filters */}
             {showFilters && (
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={ opacity: 0, height: 0 }
+                animate={ opacity: 1, height: 'auto' }
+                exit={ opacity: 0, height: 0 }
 className='mt-6 pt-6 border-t border-white/20'
               >
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
@@ -654,7 +649,7 @@ className='mt-6 pt-6 border-t border-white/20'
           <div className='mb-8'>
             <h2 className='text-3xl font-bold text-white mb-2'>
               {searchTerm
-                ? `Search Results for "${searchTerm}"`
+                ? `Search Results for '${searchTerm}'`
                 : 'All Services'}
             </h2>
             <p className='text-white/60'>
@@ -773,7 +768,7 @@ className='mt-6 pt-6 border-t border-white/20'
                     onClick={() => {
                       setSearchTerm(term);
 performSearch();
-                    }}
+                    }
                     className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
@@ -784,7 +779,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <SmartFooter />
     </div>
 );
-            <div className="flex flex-wrap gap-3 justify-center">
+            <div className='flex flex-wrap gap-3 justify-center'>
               {[
                 'AI Development'
                 'Cloud Services'
@@ -798,10 +793,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.button
                   key={term}
                   onClick={() => setSearchQuery(term)}
-                  className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-blue-100 hover:text-blue-700 transition-colors"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className='px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-blue-100 hover:text-blue-700 transition-colors'
+                  initial={ opacity: 0, scale: 0.8 }
+                  whileInView={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                 >
                   {term}
                 </motion.button>
@@ -819,68 +814,68 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {/* Initial State - Show all services when no search */}
           {!isSearching && !searchTerm && (
-            <div className="text-center py-20">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                <Search className="w-12 h-12 text-white/40" />
+            <div className='text-center py-20'>
+              <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
+                <Search className='w-12 h-12 text-white/40' />
               </div>
-              <h3 className="text-2xl font-semibold text-white mb-2">Start Your Search</h3>
-              <p className="text-white/60 mb-6">
+              <h3 className='text-2xl font-semibold text-white mb-2'>Start Your Search</h3>
+              <p className='text-white/60 mb-6'>
                 Enter keywords above to find the perfect technology solutions for your business
               </p>
-              <div className="flex flex-wrap justify-center gap-2">
-                <span className="text-sm text-white/40">Popular searches:</span>
+              <div className='flex flex-wrap justify-center gap-2'>
+                <span className='text-sm text-white/40'>Popular searches:</span>
                 {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
                   <button
                     key={term}
                     onClick={() => {
                       setSearchTerm(term);
                       performSearch()
-                    }}
-                    className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
+                    }
+                    className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'
                   >
                     {term}
                   </button>
                 ))}
           {/* Search Results */}
           {router.query.q && (
-            <div className="mb-6">
-              <p className="text-gray-600">
+            <div className='mb-6'>
+              <p className='text-gray-600'>
                 {isLoading
                   ? 'Searching...'
-                  : `Found ${searchResults.length} results for "${router.query.q}"`}
+                  : `Found ${searchResults.length} results for '${router.query.q}'`}
               </p>
             </div>
           )}
 
           {isLoading ? (
-            <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-              <p className="mt-4 text-gray-600">Searching...</p>
+            <div className='text-center py-12'>
+              <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto'></div>
+              <p className='mt-4 text-gray-600'>Searching...</p>
             </div>
           ) : searchResults.length > 0 ? (
-            <div className="space-y-6">
+            <div className='space-y-6'>
               {searchResults.map((result, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg p-6 shadow-sm hover: shadow-md transition-shadow"
+                  className='bg-white rounded-lg p-6 shadow-sm hover: shadow-md transition-shadow'
                 >
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 mt-1">
+                  <div className='flex items-start space-x-4'>
+                    <div className='flex-shrink-0 mt-1'>
                       {getIconForType(result.type)}
                     </div>
-                    <div className="flex-1">
-                      <Link href={result.url} className="group">
-                        <h3 className="text-xl font-semibold text-gray-900 group-hover: text-blue-600 transition-colors mb-2">
+                    <div className='flex-1'>
+                      <Link href={result.url} className='group'>
+                        <h3 className='text-xl font-semibold text-gray-900 group-hover: text-blue-600 transition-colors mb-2'>
                           {result.title}
                         </h3>
                       </Link>
-                      <p className="text-gray-600 mb-3">{result.description}</p>
+                      <p className='text-gray-600 mb-3'>{result.description}</p>
                       <Link
                         href={result.url}
-                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                        className='inline-flex items-center text-blue-600 hover:text-blue-700 font-medium'
                       >
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <ArrowRight className='w-4 h-4 ml-1' />
                       </Link>
                     </div>
                   </div>
@@ -888,63 +883,63 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>
           ) : router.query.q && !isLoading ? (
-            <div className="text-center py-12">
-              <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+            <div className='text-center py-12'>
+              <Search className='w-16 h-16 text-gray-400 mx-auto mb-4' />
+              <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 No results found
               </h3>
-              <p className="text-gray-600 mb-6">
-                We couldn&apos;t find any results for "{router.query.q}". Try
+              <p className='text-gray-600 mb-6'>
+                We couldn&apos;t find any results for '{router.query.q}'. Try
                 different keywords or browse our services.''
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className='flex flex-col sm: flex-row gap-4 justify-center'>
                 <Link
-                  href="/services"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  href='/services'
+                  className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
                 >
                   Browse Services
                 </Link>
                 <Link
-                  href="/solutions"
-                  className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+                  href='/solutions'
+                  className='border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors'
                 >
                   View Solutions
                 </Link>
               </div>
             </div>
           ) : (
-            <div className="text-center py-12">
-              <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+            <div className='text-center py-12'>
+              <Search className='w-16 h-16 text-gray-400 mx-auto mb-4' />
+              <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 Search our content
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className='text-gray-600 mb-6'>
                 Find information about our services, solutions, and company
                 resources.
               </p>
-              <div className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-2xl mx-auto">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <Zap className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                  <h4 className="font-semibold text-gray-900 mb-2">Services</h4>
-                  <p className="text-sm text-gray-600">
+              <div className='grid grid-cols-1 md: grid-cols-3 gap-6 max-w-2xl mx-auto'>
+                <div className='bg-white p-6 rounded-lg shadow-sm'>
+                  <Zap className='w-8 h-8 text-blue-600 mx-auto mb-3' />
+                  <h4 className='font-semibold text-gray-900 mb-2'>Services</h4>
+                  <p className='text-sm text-gray-600'>
                     AI, IT, and SaaS solutions
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <Users className="w-8 h-8 text-green-600 mx-auto mb-3" />
-                  <h4 className="font-semibold text-gray-900 mb-2">
+                <div className='bg-white p-6 rounded-lg shadow-sm'>
+                  <Users className='w-8 h-8 text-green-600 mx-auto mb-3' />
+                  <h4 className='font-semibold text-gray-900 mb-2'>
                     Solutions
                   </h4>
-                  <p className="text-sm text-gray-600">
+                  <p className='text-sm text-gray-600'>
                     Industry-specific solutions
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <FileText className="w-8 h-8 text-purple-600 mx-auto mb-3" />
-                  <h4 className="font-semibold text-gray-900 mb-2">
+                <div className='bg-white p-6 rounded-lg shadow-sm'>
+                  <FileText className='w-8 h-8 text-purple-600 mx-auto mb-3' />
+                  <h4 className='font-semibold text-gray-900 mb-2'>
                     Resources
                   </h4>
-                  <p className="text-sm text-gray-600">
+                  <p className='text-sm text-gray-600'>
                     Blog, help, and documentation
                   </p>
                 </div>
@@ -960,10 +955,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/search.tsx
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

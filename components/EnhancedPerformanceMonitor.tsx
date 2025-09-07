@@ -101,7 +101,7 @@ updateMetrics()const interval = setInterval(updateMetrics, 30000)// Update every
                 : metrics.score >= 50;
                   ? 'bg-yellow-500';'
                   : 'bg-red-500';'
-            }`}`            style={{ "width": `${metrics.score}%` ,`
+            }`}`            style={ "width": `${metrics.score}%` ,`
 }
           ></div>;
         </div>;
@@ -109,11 +109,11 @@ updateMetrics()const interval = setInterval(updateMetrics, 30000)// Update every
       <AnimatePresence>;
         {alerts.length > 0 ? (<motion.div;
             }
-            initial={{ "opacity": 0, "height": 0 
+            initial={ "opacity": 0, "height": 0 
 }
-            animate={{ "opacity": 1, "height": 'auto' ,'
+            animate={ "opacity": 1, "height": 'auto' ,'
 }
-            exit={{ "opacity": 0, "height": 0 
+            exit={ "opacity": 0, "height": 0 
 }
             className="space-y-2">"
 
@@ -124,9 +124,9 @@ updateMetrics()const interval = setInterval(updateMetrics, 30000)// Update every
             {alerts.map((alert, index) => (<motion.div;
                 }
                 key={index}
-                initial={{ "opacity": 0, "x": -20 
+                initial={ "opacity": 0, "x": -20 
 }
-                animate={{ "opacity": 1, "x": 0 
+                animate={ "opacity": 1, "x": 0 
 }
                 className="flex items-center text-sm text-red-600 "dark":text-red-400 bg-red-50 "dark":bg-red-900/20 p-2 rounded">"
 
@@ -136,11 +136,11 @@ updateMetrics()const interval = setInterval(updateMetrics, 30000)// Update every
             ))}
           </motion.div>;
         ) : (<motion.div;
-            initial={{ "opacity": 0, "height": 0 
+            initial={ "opacity": 0, "height": 0 
 }
-            animate={{ "opacity": 1, "height": 'auto' ,'
+            animate={ "opacity": 1, "height": 'auto' ,'
 }
-            exit={{ "opacity": 0, "height": 0 
+            exit={ "opacity": 0, "height": 0 
 }
             className="flex items-center justify-center text-green-600 "dark":text-green-400 bg-green-50 "dark":bg-green-900/20 p-3 rounded">"
 

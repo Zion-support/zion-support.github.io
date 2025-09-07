@@ -256,14 +256,14 @@ id="autoPublish""
                                 <p className="text-zion-slate-light">{previewContent && previewContent.metaDescription}</p>;"
                                 <div,
 className="prose prose-invert max-w-none""
-                                  dangerouslySetInnerHTML={{ 
+                                  dangerouslySetInnerHTML={ 
                                     }
                                     "__html": previewContent && previewContent.body                                      .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>");"
                                       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");"
                                       .replace(/\*(.+?)\*/g, "<em>$1</em>");"
                                       .replace(/^-\s+(.+)$/gm, "<li>$1</li>");"
                                       .replace(/\n\n/g, "<br><br>");"
-                                  }}
+                                  }
                                 />;
                               </div>;
                             </ScrollArea>;
@@ -316,7 +316,7 @@ key={index}
                               <div className="border-t border-gray-200 my-4"></div>;"
                               <div,
 className="prose max-w-none""
-                                dangerouslySetInnerHTML={{ "__html": previewContent && previewContent.body }} />;
+                                dangerouslySetInnerHTML={ "__html": previewContent && previewContent.body } />;
                               <div className="mt-6">;"
                                 <Button className="bg-zion-purple "hover":bg-zion-purple-dark text-white">;"
                                   {previewContent && previewContent.cta || "Visit Zion Marketplace"}"

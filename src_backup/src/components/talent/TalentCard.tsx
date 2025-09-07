@@ -22,7 +22,7 @@ const TalentCardComponent = ({talent;
   isAuthenticated;
 }: TalentCardProps,) => {const router = useRouter()const handleViewProfile = () => {// Navigate directly to the talent profile;
     }
-    router.push(`/talent/${talent.id}`)// Also call the onViewProfile callback if provided;`    if (onViewProfile) {onViewProfile(talent.id)}const handleRequestHire = ("e": React.MouseEvent,) => {e.preventDefault()e.stopPropagation()if (onRequestHire) {onRequestHire(talent)}},// Extract skills - limit to 5 for display;
+    router.push(`/talent/${talent.id}`)// Also call the onViewProfile callback if provided;`    if (onViewProfile) {onViewProfile(talent.id)}const handleRequestHire = ("e": React.MouseEvent,) => {e.preventDefault()e.stopPropagation()if (onRequestHire) {onRequestHire(talent)},// Extract skills - limit to 5 for display;
   const skills = talent.skills?.slice(0, 5) |[];
 export interface TalentCardProps  {"talent": TalentProfile,"onViewProfile": ("id": string,) => void,"onRequestHire": ("talent": TalentProfile,) => void,"isAuthenticated": boolean;
 }const TalentCardComponent = ({talent,onViewProfile,onRequestHire,isAuthenticated;
@@ -101,7 +101,7 @@ export interface TalentCardProps  {"talent": TalentProfile,"onViewProfile": ("id
             <Button;
               size="sm";"
               variant="ghost";"
-              onClick={(e) => {onClick={(e) => {e.stopPropagation(),handleViewProfile()}}
+              onClick={(e) => {onClick={(e) => {e.stopPropagation(),handleViewProfile()}
               className="text-zion-cyan "hover": text-white "hover":bg-zion-blue-light";"
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;"
@@ -110,7 +110,7 @@ export interface TalentCardProps  {"talent": TalentProfile,"onViewProfile": ("id
         </div>;
       </div>;
     </Card>;
-  )onClick={(e,) => {e && e.stopPropagation(),handleViewProfile()}}
+  )onClick={(e,) => {e && e.stopPropagation(),handleViewProfile()}
               className="text-zion-cyan "hover": text-white "hover":bg-zion-blue-light";"
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;"
@@ -219,7 +219,7 @@ if ( {) {$2;
             <Button;
               size="sm";"
               variant="ghost";"
-              on_click={(e, ) => {e.stop_propagation (),handleViewProfile ()}}
+              on_click={(e, ) => {e.stop_propagation (),handleViewProfile ()}
               className="text - zion - cyan "hover": text - white "hover":bg - zion - blue - light";"
             >;
               View <ArrowRight className="ml - 1 h - 4 w - 4" />;</Button>;"

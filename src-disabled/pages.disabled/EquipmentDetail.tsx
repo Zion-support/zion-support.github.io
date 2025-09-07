@@ -1,11 +1,11 @@
 :src/pages/EquipmentDetail.tsx
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import { useRouter  } from 'next/router';
 import { NextSeo  } from '@/components/NextSeo';
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import { AspectRatio } from '@/components/ui/aspect-ratio',
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { NextSeo } from '@/components/NextSeo'
@@ -26,25 +26,25 @@ import {
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { getStripe } from '@/utils/getStripe'; import { useRouter } from 'next/router'
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
 
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import { useRouter  } from 'next/router';
 import { NextSeo  } from '@/components/NextSeo';
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { Badge } from '@/components/ui/badge',;
+import { Button } from '@/components/ui/button',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { AspectRatio } from '@/components/ui/aspect-ratio',;
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
 :src/pages/EquipmentDetail.tsx
-import { toast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { getStripe } from "@/utils/getStripe";
+import { toast } from '@/hooks/use-toast',
+import { useAuth } from '@/hooks/useAuth',
+import { getStripe } from '@/utils/getStripe';
 import { useCart  } from '@/context/CartContext';
 import { ImageWithRetry  } from '@/components/ui/ImageWithRetry';
 import { equipmentListings  } from '@/data/equipmentData';
@@ -188,9 +188,9 @@ export default function EquipmentDetail() {
     }
     loadEquipment()
   }, [id])
-import { toast } from "@/hooks/use-toast",;
-import { useAuth } from "@/hooks/useAuth",;
-import { getStripe } from "@/utils/getStripe",;
+import { toast } from '@/hooks/use-toast',;
+import { useAuth } from '@/hooks/useAuth',;
+import { getStripe } from '@/utils/getStripe',;
 import { useCart } from '@/context/CartContext',;
 import { ImageWithRetry } from '@/components/ui/ImageWithRetry',;
 import { equipmentListings } from '@/data/equipmentData',;
@@ -201,17 +201,17 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 interface EquipmentSpecification {
   name: string,
   value: string
-import { useState, useEffect } from "react",;
+import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { NextSeo } from '@/components/NextSeo',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { Badge } from '@/components/ui/badge',;
+import { Button } from '@/components/ui/button',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { AspectRatio } from '@/components/ui/aspect-ratio',;
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
-import { toast } from "@/hooks/use-toast",;
-import { useAuth } from "@/hooks/useAuth",;
-import { getStripe } from "@/utils/getStripe",;
+import { toast } from '@/hooks/use-toast',;
+import { useAuth } from '@/hooks/useAuth',;
+import { getStripe } from '@/utils/getStripe',;
 import { useCart } from '@/context/CartContext',;
 import { ImageWithRetry } from '@/components/ui/ImageWithRetry',;
 import { equipmentListings } from '@/data/equipmentData',;
@@ -396,9 +396,9 @@ if ( {) {
     }
   }
   const inCart = items.some(item => item.id === equipment?.id)
-          quantity}}),
+          quantity}),
       toast({
-        title: "Added to Cart","
+        title: 'Added to Cart','
         description: `${equipment.name} has been added to your cart.`})`
     } catch (error) {
       toast ({
@@ -416,12 +416,12 @@ if ( {) {
   if (loading) {
     return (
       <>
-        <NextSeo title="Loading Equipment..." />"
-        <div className="min-h-screen bg-zion-blue py-12 px-4">"
-          <div className="container mx-auto">"
-            <div className="text-center py-20">"
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>"
-              <p className="text-zion-slate-light">Loading equipment details...</p>"
+        <NextSeo title='Loading Equipment...' />'
+        <div className='min-h-screen bg-zion-blue py-12 px-4'>'
+          <div className='container mx-auto'>'
+            <div className='text-center py-20'>'
+              <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>'
+              <p className='text-zion-slate-light'>Loading equipment details...</p>'
             </div>
           </div>
         </div>
@@ -524,20 +524,20 @@ if ( {) {
     return (
       <>;
         <NextSeo
-          title="Equipment Not Found""
-          description="The equipment you're looking for doesn't exist or has been removed.""
+          title='Equipment Not Found''
+          description='The equipment you're looking for doesn't exist or has been removed.''
         />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">"
-          <div className="container mx-auto">"
+        <div className='min-h-screen bg-zion-blue py-12 px-4'>'
+          <div className='container mx-auto'>'
             <motion.div
-              className="text-center py-20""
-              initial={{ opacity: 0, y: 20 }}
+              className='text-center py-20''
+              initial={ opacity: 0, y: 20 }
               </h1>;
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>;
                 {error === 'Equipment not found';
-                  ? "The equipment you're looking for doesn't exist or has been removed.";
+                  ? 'The equipment you're looking for doesn't exist or has been removed.';
                   : error ||;
-                    "We couldn't load the equipment details. Please try again."}"
+                    'We couldn't load the equipment details. Please try again.'}'
               </p>;
               <div className='space-x-4'>;
                 <Button
@@ -548,10 +548,10 @@ if ( {) {
                   Go Back;
                 </Button>;
                 <Button
-              animate={{ opacity: 1, y: 0 }}
+              animate={ opacity: 1, y: 0 }
             >
-              <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />"
-              <h1 className="text-3xl font-bold text-white mb-4">"
+              <AlertTriangle className='mx-auto h-16 w-16 text-red-500 mb-6' />'
+              <h1 className='text-3xl font-bold text-white mb-4'>'
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}'
               </h1>
                   Browse Equipment
@@ -578,7 +578,7 @@ if ( {) {
       <NextSeo
         title={`${equipment.name} - Zion Marketplace`}`
         description = {equipment.description,}
-        openGraph={{
+        openGraph={
           title: `${equipment && equipment.name} - Zion Marketplace`,`
           description: equipment && equipment.description,
           images:,
@@ -592,9 +592,9 @@ if ( {) {
   const handleAddToCart = async () => {;
     if (!equipment || !isAuthenticated) {;
       toast({;
-        title: "Authentication Required",;
-        description: "Please log in to add items to cart",;
-        variant: "destructive"}),;
+        title: 'Authentication Required',;
+        description: 'Please log in to add items to cart',;
+        variant: 'destructive'}),;
       return;
     }
 ;
@@ -606,15 +606,15 @@ if ( {) {
           id: equipment.id,;
           name: equipment.name,;
           price: equipment.price,;
-          quantity}}),;
+          quantity}),;
       toast({;
-        title: "Added to Cart",;
+        title: 'Added to Cart',;
         description: `${equipment.name} has been added to your cart.`});`
     } catch (error) {;
       toast({;
-        title: "Error",;
-        description: "Failed to add item to cart. Please try again.",;
-        variant: "destructive"});
+        title: 'Error',;
+        description: 'Failed to add item to cart. Please try again.',;
+        variant: 'destructive'});
     } finally {;
       setIsAdding(false);
     }
@@ -624,12 +624,12 @@ if ( {) {
   if (loading) {;
     return (;
       <>;
-        <NextSeo title="Loading Equipment..." />;
-        <div className="min-h-screen bg-zion-blue py-12 px-4">;
-          <div className="container mx-auto">;
-            <div className="text-center py-20">;
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>;
-              <p className="text-zion-slate-light">Loading equipment details...</p>;
+        <NextSeo title='Loading Equipment...' />;
+        <div className='min-h-screen bg-zion-blue py-12 px-4'>;
+          <div className='container mx-auto'>;
+            <div className='text-center py-20'>;
+              <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>;
+              <p className='text-zion-slate-light'>Loading equipment details...</p>;
             </div>;
           </div>;
         </div>;
@@ -642,38 +642,38 @@ if ( {) {
     return (;
       <>;
         <NextSeo;
-          title="Equipment Not Found";
-          description="The equipment you're looking for doesn't exist or has been removed.";
+          title='Equipment Not Found';
+          description='The equipment you're looking for doesn't exist or has been removed.';
         />;
-        <div className="min-h-screen bg-zion-blue py-12 px-4">;
-          <div className="container mx-auto">;
+        <div className='min-h-screen bg-zion-blue py-12 px-4'>;
+          <div className='container mx-auto'>;
             <motion.div;
-              className="text-center py-20";
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              className='text-center py-20';
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
             >;
-              <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />;
-              <h1 className="text-3xl font-bold text-white mb-4">;
+              <AlertTriangle className='mx-auto h-16 w-16 text-red-500 mb-6' />;
+              <h1 className='text-3xl font-bold text-white mb-4'>;
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}'
               </h1>;
-              <p className="text-zion-slate-light mb-8 max-w-md mx-auto">;
+              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>;
                 {error === 'Equipment not found';
-                  ? "The equipment you're looking for doesn't exist or has been removed.";
-                  : error || "We couldn't load the equipment details. Please try again.";
+                  ? 'The equipment you're looking for doesn't exist or has been removed.';
+                  : error || 'We couldn't load the equipment details. Please try again.';
                 }
               </p>;
-              <div className="space-x-4">;
+              <div className='space-x-4'>;
                 <Button;
                   onClick={() => router.back()} ;
-                  variant="outline";
-                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue";
+                  variant='outline';
+                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue';
                 >;
-                  <ArrowLeft className="h-4 w-4 mr-2" />;
+                  <ArrowLeft className='h-4 w-4 mr-2' />;
                   Go Back;
                 </Button>;
                 <Button;
                   onClick={() => router.push('/equipment')}'
-                  className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue";
+                  className='bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue';
                 >;
                   Browse Equipment;
                 </Button>;
@@ -690,28 +690,28 @@ if ( {) {
       <NextSeo;
         title={`${equipment.name} - Zion Marketplace`}`
         description={equipment.description}
-        openGraph={{;
+        openGraph={;
           title: `${equipment.name} - Zion Marketplace`;`
           description: equipment.description;,
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined;,
-        }}
+        }
       />
-      <div className="min-h-screen bg-zion-blue py-8 px-4">"
-        <div className="container mx-auto">"
+      <div className='min-h-screen bg-zion-blue py-8 px-4'>'
+        <div className='container mx-auto'>'
           {/* Breadcrumb */}
           <motion.nav
-            className="flex mb-8""
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            className='flex mb-8''
+            initial={ opacity: 0, y: -20 }
+            animate={ opacity: 1, y: 0 }
           >;
             <button;
               onClick={() => router.push('/equipment')}'
-              className="text-zion-cyan hover:text-white transition-colors""
+              className='text-zion-cyan hover:text-white transition-colors''
             >
               Equipment
             </button>
-            <span className="mx-2 text-zion-slate-light">/</span>"
-            <span className="text-zion-slate-light">{equipment.name}</span>"
+            <span className='mx-2 text-zion-slate-light'>/</span>'
+            <span className='text-zion-slate-light'>{equipment.name}</span>'
           </motion.nav>
               onClick={() => router && router.push('/equipment')}'
               className='text-zion-cyan hover:text-white transition-colors'            >;',
@@ -721,15 +721,15 @@ if ( {) {
             <span className='text-zion-slate-light'>{equipment && equipment.name}</span>;
           </motion && motion.nav>;
           <div className='grid lg:grid-cols-2 gap-12'>;
-          <div className="grid lg:grid-cols-2 gap-12">"
+          <div className='grid lg:grid-cols-2 gap-12'>'
             {/* Images */}
             <motion.div
-              className="space-y-4""
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
+              className='space-y-4''
+              initial={ opacity: 0, x: -20 }
+              animate={ opacity: 1, x: 0 }
+              transition={ delay: 0.2 }
             >
-              <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">"
+              <AspectRatio ratio={1} className='bg-zion-blue-light rounded-lg overflow-hidden'>'
                 <ImageWithRetry,
                     equipment && equipment.images[selectedImageIndex] ||,
                     equipment && equipment.images[0] ||
@@ -745,11 +745,11 @@ if ( {) {
                       onClick = {(,) => setSelectedImageIndex(index),},
                   src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}',
                   alt={equipment.name}
-                  className="object-cover""
+                  className='object-cover''
                 />
               </AspectRatio>
               {equipment.images.length > 1 && (
-                <div className="grid grid-cols-4 gap-2">"
+                <div className='grid grid-cols-4 gap-2'>'
                   {equipment.images.map((image, index) => (
                     <button
                       key={index}
@@ -763,7 +763,7 @@ if ( {) {
                       <ImageWithRetry;
                         src={image}
                         alt={`${equipment.name} view ${index + 1}`}`
-                        className="object-cover""
+                        className='object-cover''
                       />
                     </button>
                   ))}
@@ -772,10 +772,10 @@ if ( {) {
             </motion && motion.div>;
             {/* Product Details */}
             <motion.div
-              className="space-y-6""
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              className='space-y-6''
+              initial={ opacity: 0, x: 20 }
+              animate={ opacity: 1, x: 0 }
+              transition={ delay: 0.4 }
             >
               {/* Header */}
                     className='border-zion-slate-light text-zion-slate-light'>;
@@ -794,19 +794,19 @@ if ( {) {
                             i < Math.floor(equipment.rating!)
                               ? 'text-yellow-400 fill-current''
                               : 'text-zion-slate-light''
-              <div className="space-y-2">"
-                <div className="flex items-center gap-2 mb-2">"
-                  <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">"
+              <div className='space-y-2'>'
+                <div className='flex items-center gap-2 mb-2'>'
+                  <Badge variant='secondary' className='bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20'>'
                     {equipment.category}
                   </Badge>
-                  <Badge variant="outline" className="border-zion-slate-light text-zion-slate-light">"
+                  <Badge variant='outline' className='border-zion-slate-light text-zion-slate-light'>'
                     {equipment.brand}
                   </Badge>
                 </div>
-                <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>"
+                <h1 className='text-3xl font-bold text-white'>{equipment.name}</h1>'
                 {equipment.rating && (
-                  <div className="flex items-center gap-2">"
-                    <div className="flex items-center">"
+                  <div className='flex items-center gap-2'>'
+                    <div className='flex items-center'>'
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
@@ -830,18 +830,18 @@ if ( {) {
 ;
                 {/* Return Policy */}
                 {equipment.returnPolicy && (
-                  <div className="flex gap-3 text-zion-slate-light">"
-                    <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />"
+                  <div className='flex gap-3 text-zion-slate-light'>'
+                    <RotateCcw className='h-5 w-5 text-zion-cyan flex-shrink-0' />'
                     <div>
-                      <p className="text-white text-sm font-medium">Returns</p>"
-                      <p className="text-xs">{equipment.returnPolicy}</p>"
+                      <p className='text-white text-sm font-medium'>Returns</p>'
+                      <p className='text-xs'>{equipment.returnPolicy}</p>'
                     </div>
                   </div>
                 )}
   equipment.returnPolicy
 }</p> </div> </div>)
 }</div> </motion.div> </div> </div> </div> </>)
-}'"};
+}''};
 ;
               </div>;
             </motion && motion.div>;
@@ -879,7 +879,7 @@ if ( {) {
 ;
 }
 ;
-}}}}}}))
+}}}))
 
     loadEquipment()
   }, [id]),
@@ -926,10 +926,10 @@ if ( {) {
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
-          quantity}}),
+          quantity}),
 
       toast({
-        title: "Added to Cart",
+        title: 'Added to Cart',
         description: `${equipment.name} has been added to your cart.`})
 
     setIsAdding(true),
@@ -971,16 +971,16 @@ if ( {) {
 :src/pages/EquipmentDetail.tsx
   }
   const inCart = items.some(item => item.id === equipment?.id)
-          quantity}}),
+          quantity}),
 
       toast({
-        title: "Added to Cart",
+        title: 'Added to Cart',
         description: `${equipment.name} has been added to your cart.`})
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to add item to cart. Please try again.",
-        variant: "destructive"})
+        title: 'Error',
+        description: 'Failed to add item to cart. Please try again.',
+        variant: 'destructive'})
     } finally {
       setIsAdding(false)
     }
@@ -993,7 +993,7 @@ if ( {) {
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
-          quantity}}),
+          quantity}),
 
   const inCart = items.some(item => item.id === equipment?.id),
 
@@ -1001,12 +1001,12 @@ if ( {) {
   if (loading) {
     return (
       <>
-        <NextSeo title="Loading Equipment..." />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <div className="text-center py-20">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
-              <p className="text-zion-slate-light">Loading equipment details...</p>
+        <NextSeo title='Loading Equipment...' />
+        <div className='min-h-screen bg-zion-blue py-12 px-4'>
+          <div className='container mx-auto'>
+            <div className='text-center py-20'>
+              <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>
+              <p className='text-zion-slate-light'>Loading equipment details...</p>
             </div>
           </div>
         </div>
@@ -1019,24 +1019,24 @@ if ( {) {
     return (
       <>
         <NextSeo
-          title="Equipment Not Found"
-          description="The equipment you're looking for doesn't exist or has been removed."
+          title='Equipment Not Found'
+          description='The equipment you're looking for doesn't exist or has been removed.'
         />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
+        <div className='min-h-screen bg-zion-blue py-12 px-4'>
+          <div className='container mx-auto'>
             <motion.div 
-              className="text-center py-20"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              className='text-center py-20'
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
             >
-              <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
-              <h1 className="text-3xl font-bold text-white mb-4">
+              <AlertTriangle className='mx-auto h-16 w-16 text-red-500 mb-6' />
+              <h1 className='text-3xl font-bold text-white mb-4'>
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
               </h1>
-              <p className="text-zion-slate-light mb-8 max-w-md mx-auto">
+              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
                 {error === 'Equipment not found' 
-                  ? "The equipment you're looking for doesn't exist or has been removed." 
-                  : error || "We couldn't load the equipment details. Please try again."
+                  ? 'The equipment you're looking for doesn't exist or has been removed.' 
+                  : error || 'We couldn't load the equipment details. Please try again.'
                 }
               </p>
               <div className='space-x-4'>
@@ -1050,18 +1050,18 @@ if ( {) {
                 <Button
                   onClick={() => router.push('/equipment')}
                   className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >
-              <div className="space-x-4">
+              <div className='space-x-4'>
                 <Button 
                   onClick={() => router.back()} 
-                  variant="outline"
-                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
+                  variant='outline'
+                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue'
                 >
-                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  <ArrowLeft className='h-4 w-4 mr-2' />
                   Go Back
                 </Button>
                 <Button 
                   onClick={() => router.push('/equipment')}
-                  className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
+                  className='bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue'
                 >
                   Browse Equipment
                 </Button>
@@ -1085,38 +1085,38 @@ if ( {) {
               ? [{ url: equipment.images[0] }]
 
 
-        }}
+        }
       />
-      <div className="min-h-screen bg-zion-blue py-8 px-4">
-        <div className="container mx-auto">
+      <div className='min-h-screen bg-zion-blue py-8 px-4'>
+        <div className='container mx-auto'>
           {/* Breadcrumb */}
 :src/pages/EquipmentDetail.tsx
           <motion.nav
             className='flex mb-8'
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={ opacity: 0, y: -20 }
+            animate={ opacity: 1, y: 0 }
           >
             <button
               onClick={() => router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
           <motion.nav 
-            className="flex mb-8"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            className='flex mb-8'
+            initial={ opacity: 0, y: -20 }
+            animate={ opacity: 1, y: 0 }
           >;
             <button;
               onClick={() => router.push('/equipment')}
-              className="text-zion-cyan hover:text-white transition-colors"
+              className='text-zion-cyan hover:text-white transition-colors'
             >
               Equipment
             </button>
-            <span className="mx-2 text-zion-slate-light">/</span>
-            <span className="text-zion-slate-light">{equipment.name}</span>
+            <span className='mx-2 text-zion-slate-light'>/</span>
+            <span className='text-zion-slate-light'>{equipment.name}</span>
           </motion.nav>
 :src/pages/EquipmentDetail.tsx
           <div className='grid lg:grid-cols-2 gap-12'>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className='grid lg:grid-cols-2 gap-12'>
 
 
 import {
@@ -1132,14 +1132,14 @@ import {
 import { toast } from '@/hooks/use-toast'
 import { useAuth } from '@/hooks/useAuth'
 import { getStripe } from '@/utils/getStripe'; import { useRouter } from 'next/router'
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",;
-import { useAuth } from "@/hooks/useAuth",;
-import { getStripe } from "@/utils/getStripe";
+import { toast } from '@/hooks/use-toast',;
+import { useAuth } from '@/hooks/useAuth',;
+import { getStripe } from '@/utils/getStripe';
 import { useCart  } from '@/context/CartContext';
 import { ImageWithRetry  } from '@/components/ui/ImageWithRetry';
 import { equipmentListings  } from '@/data/equipmentData';
@@ -1188,7 +1188,7 @@ function convertProductListingToEquipmentDetails(
     images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto;
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
 
-        }}
+        }
       />;
       <div className='min-h-screen bg-zion-blue py-8 px-4'>;
         <div className='container mx-auto'>;
@@ -1214,12 +1214,12 @@ function convertProductListingToEquipmentDetails(
 
             {/* Images */}
             <motion.div 
-              className="space-y-4"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
+              className='space-y-4'
+              initial={ opacity: 0, x: -20 }
+              animate={ opacity: 1, x: 0 }
+              transition={ delay: 0.2 }
             >
-              <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
+              <AspectRatio ratio={1} className='bg-zion-blue-light rounded-lg overflow-hidden'>
                 <ImageWithRetry
 :src/pages/EquipmentDetail.tsx
                   src={
@@ -1247,11 +1247,11 @@ function convertProductListingToEquipmentDetails(
                         className='object-cover'
                   src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
                   alt={equipment.name}
-                  className="object-cover"
+                  className='object-cover'
                 />
               </AspectRatio>
               {equipment.images.length > 1 && (
-                <div className="grid grid-cols-4 gap-2">
+                <div className='grid grid-cols-4 gap-2'>
                   {equipment.images.map((image, index) => (
                     <button
                       key={index}
@@ -1265,7 +1265,7 @@ function convertProductListingToEquipmentDetails(
                       <ImageWithRetry;
                         src={image}
                         alt={`${equipment.name} view ${index + 1}`}
-                        className="object-cover"
+                        className='object-cover'
                       />
                     </button>
                   ))}
@@ -1277,10 +1277,10 @@ function convertProductListingToEquipmentDetails(
             <motion.div
               className='space-y-6'
             <motion.div 
-              className="space-y-6"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              className='space-y-6'
+              initial={ opacity: 0, x: 20 }
+              animate={ opacity: 1, x: 0 }
+              transition={ delay: 0.4 }
             >;
               {/* Header */}
 :src/pages/EquipmentDetail.tsx
@@ -1290,9 +1290,9 @@ function convertProductListingToEquipmentDetails(
                     variant='secondary'
                     className='bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20'
                   >
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 mb-2">
-                  <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
+              <div className='space-y-2'>
+                <div className='flex items-center gap-2 mb-2'>
+                  <Badge variant='secondary' className='bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20'>
                       />
                     </button>
                   ))}
@@ -1300,14 +1300,14 @@ function convertProductListingToEquipmentDetails(
               )}
 
 
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0 && 0.4 }}>;
+              initial={ opacity: 0, x: 20 }
+              animate={ opacity: 1, x: 0 }
+              transition={ delay: 0 && 0.4 }>;
               {/* Header */}
 
                     {equipment.category}
                   </Badge>
-                  <Badge variant="outline" className="border-zion-slate-light text-zion-slate-light">
+                  <Badge variant='outline' className='border-zion-slate-light text-zion-slate-light'>
                     {equipment.brand}
                   </Badge>
                 </div>
@@ -1324,10 +1324,10 @@ function convertProductListingToEquipmentDetails(
                             i < Math.floor(equipment.rating!)
                               ? 'text-yellow-400 fill-current'
                               : 'text-zion-slate-light'
-                <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
+                <h1 className='text-3xl font-bold text-white'>{equipment.name}</h1>
                 {equipment.rating && (
-                  <div className="flex items-center gap-2">
-                    <div className="flex items-center">
+                  <div className='flex items-center gap-2'>
+                    <div className='flex items-center'>
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
@@ -1342,7 +1342,7 @@ function convertProductListingToEquipmentDetails(
                         />
                       ))}
                     </div>
-                    <span className="text-sm text-zion-slate-light">
+                    <span className='text-sm text-zion-slate-light'>
                       {equipment.rating?.toFixed(1)} ({equipment.reviewCount} reviews)
                     </span>
                   </div>
@@ -1361,12 +1361,12 @@ function convertProductListingToEquipmentDetails(
                       equipment.inStock ? 'text-green-400' : 'text-yellow-400'
                     }
                   >
-              <div className="bg-zion-blue-light rounded-lg p-4">
-                <div className="text-3xl font-bold text-zion-cyan mb-2">
+              <div className='bg-zion-blue-light rounded-lg p-4'>
+                <div className='text-3xl font-bold text-zion-cyan mb-2'>
                   {formatPrice(equipment.price)}
                 </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Clock className="h-4 w-4 text-zion-cyan" />
+                <div className='flex items-center gap-2 text-sm'>
+                  <Clock className='h-4 w-4 text-zion-cyan' />
                   <span className={equipment.inStock ? 'text-green-400' : 'text-yellow-400'}>
                     {equipment.expectedShipping}
                   </span>;
@@ -1381,9 +1381,9 @@ function convertProductListingToEquipmentDetails(
                 <p className='text-zion-slate-light leading-relaxed'>
                   {equipment.description}
                 </p>
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white">Description</h3>
-                <p className="text-zion-slate-light leading-relaxed">{equipment.description}</p>
+              <div className='space-y-4'>
+                <h3 className='text-lg font-semibold text-white'>Description</h3>
+                <p className='text-zion-slate-light leading-relaxed'>{equipment.description}</p>
               </div>
 
               {/* Specifications */}
@@ -1405,13 +1405,13 @@ function convertProductListingToEquipmentDetails(
                         <span className='text-white'>
                           {spec.value |'Enterprise Grade'}
                         </span>                      </div>
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-white">Specifications</h3>
-                  <div className="grid gap-2">
+                <div className='space-y-4'>
+                  <h3 className='text-lg font-semibold text-white'>Specifications</h3>
+                  <div className='grid gap-2'>
                     {equipment.specifications.map((spec, index) => (
-                      <div key={index} className="flex justify-between py-2 border-b border-zion-blue-light">
-                        <span className="text-zion-slate-light">{spec.name}</span>
-                        <span className="text-white">{spec.value || 'Enterprise Grade'}</span>
+                      <div key={index} className='flex justify-between py-2 border-b border-zion-blue-light'>
+                        <span className='text-zion-slate-light'>{spec.name}</span>
+                        <span className='text-white'>{spec.value || 'Enterprise Grade'}</span>
                       </div>
                     ))}
                   </div>;
@@ -1429,15 +1429,15 @@ function convertProductListingToEquipmentDetails(
                       size='sm'
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
                       className='h-8 w-8 p-0'                    >
-              <div className="space-y-4 pt-6 border-t border-zion-blue-light">
-                <div className="flex items-center gap-4">
-                  <label className="text-white font-medium">Quantity:</label>
-                  <div className="flex items-center gap-2">
+              <div className='space-y-4 pt-6 border-t border-zion-blue-light'>
+                <div className='flex items-center gap-4'>
+                  <label className='text-white font-medium'>Quantity:</label>
+                  <div className='flex items-center gap-2'>
                     <Button
-                      variant="outline"
-                      size="sm"
+                      variant='outline'
+                      size='sm'
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className="h-8 w-8 p-0"
+                      className='h-8 w-8 p-0'
                     >
               </div>
               {/* Price */}
@@ -1456,17 +1456,17 @@ function convertProductListingToEquipmentDetails(
               {/* Add to Cart */}
                       -
                     </Button>
-                    <span className="text-white w-8 text-center">{quantity}</span>
+                    <span className='text-white w-8 text-center'>{quantity}</span>
                     <Button
 :src/pages/EquipmentDetail.tsx
                       variant='outline'
                       size='sm'
                       onClick={() => setQuantity(quantity + 1)}
                       className='h-8 w-8 p-0'                    >
-                      variant="outline"
-                      size="sm"
+                      variant='outline'
+                      size='sm'
                       onClick={() => setQuantity(quantity + 1)}
-                      className="h-8 w-8 p-0"
+                      className='h-8 w-8 p-0'
                     >
                       +
                     </Button>
@@ -1490,32 +1490,32 @@ function convertProductListingToEquipmentDetails(
                 <Button
                   onClick={handleAddToCart}
                   disabled={isAdding || !equipment.inStock}
-                  size="lg"
-                  variant="outline"
-                  className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-                  data-testid="add-to-cart-button"
+                  size='lg'
+                  variant='outline'
+                  className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
+                  data-testid='add-to-cart-button'
                 >
-                  <ShoppingCart className="h-4 w-4 mr-2" />
+                  <ShoppingCart className='h-4 w-4 mr-2' />
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
                 </Button>;
               </div>;
               {/* Additional Info */}
-              <div className="space-y-4 border-t border-zion-blue-light pt-4">
+              <div className='space-y-4 border-t border-zion-blue-light pt-4'>
                 {/* Shipping */}
-                <div className="flex gap-3 text-zion-slate-light">
-                  <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                <div className='flex gap-3 text-zion-slate-light'>
+                  <Truck className='h-5 w-5 text-zion-cyan flex-shrink-0' />
                   <div>
-                    <p className="text-white text-sm font-medium">Free Shipping</p>
-                    <p className="text-xs">For orders over $100 within the US</p>
+                    <p className='text-white text-sm font-medium'>Free Shipping</p>
+                    <p className='text-xs'>For orders over $100 within the US</p>
                   </div>
                 </div>
                 {/* Warranty */}
                 {equipment.warranty && (
-                  <div className="flex gap-3 text-zion-slate-light">
-                    <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                  <div className='flex gap-3 text-zion-slate-light'>
+                    <Shield className='h-5 w-5 text-zion-cyan flex-shrink-0' />
                     <div>
-                      <p className="text-white text-sm font-medium">Warranty</p>
-                      <p className="text-xs">{equipment.warranty}</p>
+                      <p className='text-white text-sm font-medium'>Warranty</p>
+                      <p className='text-xs'>{equipment.warranty}</p>
                     </div>
                   </div>
                 )}
@@ -1524,11 +1524,11 @@ function convertProductListingToEquipmentDetails(
 ;
                 {/* Return Policy */}
                 {equipment.returnPolicy && (
-                  <div className="flex gap-3 text-zion-slate-light">
-                    <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                  <div className='flex gap-3 text-zion-slate-light'>
+                    <RotateCcw className='h-5 w-5 text-zion-cyan flex-shrink-0' />
                     <div>
-                      <p className="text-white text-sm font-medium">Returns</p>
-                      <p className="text-xs">{equipment.returnPolicy}</p>
+                      <p className='text-white text-sm font-medium'>Returns</p>
+                      <p className='text-xs'>{equipment.returnPolicy}</p>
                     </div>
                   </div>
                 )}
@@ -1538,7 +1538,7 @@ function convertProductListingToEquipmentDetails(
   equipment.returnPolicy 
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
-}'"};
+}''};
 ;
 
 
@@ -1589,8 +1589,8 @@ function convertProductListingToEquipmentDetails(
   setIsAdding (false)
 }
 const inCart = items.some (item => item.id === equipment?.id)
-return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error |!equipment) {'"
-  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button
+return (<> <NextSeo title='Loading Equipment...' /> <div className='min-h-screen bg-zion-blue py-12 px-4' > <div className='container mx-auto' > <div className='text-center py-20' > <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4' ></div> <p className='text-zion-slate-light' >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error |!equipment) {''
+  return (<> <NextSeo title='Equipment Not Found' description='The equipment you're looking for doesn't exist or has been removed.' /> <div className='min-h-screen bg-zion-blue py-12 px-4' > <div className='container mx-auto' > <motion.div </p> <div className='space-x-4' > <Button > <ArrowLeft className='h-4 w-4 mr-2' /> Go Back </Button> <Button
 }return (<> <NextSeo title= {
   `$ {
   equipment.name
@@ -1625,15 +1625,15 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }/>) )
 }</div> </span> </div>)
 }</div> </span> </div> </div> </div>) )
-}</div> </div>) "
-}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {
+}</div> </div>) '
+}> + </Button> </div> </div> <Button <div> <p className='text-white text-sm font-medium' >Free Shipping</p> <p className='text-xs' >For orders over $100 within the US</p> </div> </div> <div> <p className='text-white text-sm font-medium' >Warranty</p> <p className='text-xs' > {
   equipment.warranty
-}</p> </div> </div>) "
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {
+}</p> </div> </div>) '
+}<div> <p className='text-white text-sm font-medium' >Returns</p> <p className='text-xs' > {
   equipment.returnPolicy
 }</p> </div> </div>)
 }</div> </motion.div> </div> </div> </div> </>)
-}'"}
+}''}
   );
 
 
@@ -1642,8 +1642,8 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 
 };
 const inCart = items.some (item => item.id === equipment?.id);
-return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error || !equipment) {'";
-  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button ;
+return (<> <NextSeo title='Loading Equipment...' /> <div className='min-h-screen bg-zion-blue py-12 px-4' > <div className='container mx-auto' > <div className='text-center py-20' > <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4' ></div> <p className='text-zion-slate-light' >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error || !equipment) {'';
+  return (<> <NextSeo title='Equipment Not Found' description='The equipment you're looking for doesn't exist or has been removed.' /> <div className='min-h-screen bg-zion-blue py-12 px-4' > <div className='container mx-auto' > <motion.div </p> <div className='space-x-4' > <Button > <ArrowLeft className='h-4 w-4 mr-2' /> Go Back </Button> <Button ;
 }return (<> <NextSeo title= {;
   `$ {;
   equipment.name ;
@@ -1679,13 +1679,13 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }/>) ) ;
 }</div> </span> </div>) ;
 }</div> </span> </div> </div> </div>) ) ;
-}</div> </div>) ";
-}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {;
+}</div> </div>) ';
+}> + </Button> </div> </div> <Button <div> <p className='text-white text-sm font-medium' >Free Shipping</p> <p className='text-xs' >For orders over $100 within the US</p> </div> </div> <div> <p className='text-white text-sm font-medium' >Warranty</p> <p className='text-xs' > {;
   equipment.warranty ;
-}</p> </div> </div>) ";
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {;
+}</p> </div> </div>) ';
+}<div> <p className='text-white text-sm font-medium' >Returns</p> <p className='text-xs' > {;
   equipment.returnPolicy ;
 }</p> </div> </div>) ;
 }</div> </motion.div> </div> </div> </div> </>) ;
-}'"
+}''
 origin/cursor/automate-test-improve-and-merge-code-2533

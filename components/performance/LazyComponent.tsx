@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 
 interface LazyComponentProps {
@@ -15,7 +12,6 @@ export const LazyComponent: React.FC<LazyComponentProps> = ({
   ...props
 }) => {
   const LazyLoadedComponent = lazy(component);
-=======
 import React, { Suspense } from 'react';
 ursor/automate-test-improve-and-merge-code-646c;
 import React from 'react';
@@ -41,7 +37,7 @@ interface LazyComponentProps {
 }
 
 const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  fallback = <div className="flex items-center justify-center p-4">Loading...</div>, 
+  fallback = <div className='flex items-center justify-center p-4'>Loading...</div>, 
   children 
 }) => {
   return (
@@ -49,13 +45,9 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
       {children}
     </Suspense>
   );
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 }
-=======
 import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 };
 
 export default LazyComponent;
@@ -65,7 +57,6 @@ import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
 
-<<<<<<< HEAD
 
 import React from 'react'
 }
@@ -75,7 +66,6 @@ interface LazyComponentProps {
   children: ReactNode;
   fallback?: ReactNode;
 }
->>>>>>> origin/main
 
   return (
     <Suspense fallback={fallback}>
@@ -84,21 +74,11 @@ interface LazyComponentProps {
   );
 };
 
-<<<<<<< HEAD
 export default LazyComponent;
-=======
 import React from 'react';
 };
->>>>>>> pr-11992
-=======
 import React from 'react';
 },
->>>>>>> origin/merge-automation-changes
-=======
 
   return (
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

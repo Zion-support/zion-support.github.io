@@ -7,7 +7,7 @@ interface Toast  {id: string;"";
   addToast: (toast: Omit<Toast, 'id'>) => void;
   removeToast: (id: string) => void}const ToastContext  = createContext<ToastContextType | undefined>(undefined)export function ToastProvider() {const [toasts, setToasts]  = useState<Toast[]>([])const addToast = useCallback((toast: Omit<Toast, 'id'>) => {const id = Math.random().toString(36).substr(2, 9)const newToast = { ...toast, id }setToasts(prev => [...prev, newToast])// Auto remove after duration;
     const duration = toast.duration || 5000;
-    setTimeout(() => {setToasts(prev => prev.filter(t => t.id !== id))}, duration)}, [])const removeToast = useCallback((id: string) => {setToasts(prev => prev.filter(t => t.id !== id))}, [])return (<ToastContext .Provider value={{ toasts, addToast, removeToast }}" >";
+    setTimeout(() => {setToasts(prev => prev.filter(t => t.id !== id))}, duration)}, [])const removeToast = useCallback((id: string) => {setToasts(prev => prev.filter(t => t.id !== id))}, [])return (<ToastContext .Provider value={ toasts, addToast, removeToast }" >";
       {children}
       <ToastContainer toasts={toasts} removeToast={removeToast} /" >";
     </ToastContext.Provider>;

@@ -34,7 +34,7 @@ import AnimatedCounter from '../components/AnimatedCounter';
                   onClick={() => {
                     setModalSize(size);
                     setModalOpen(true);
-                  }}
+                  }
                   className="bg-gray-800/50 hover:bg-gray-800/70 text-white p-4 rounded-lg transition-all duration-300 hover:scale-105""
                 >
                   <Settings className="w-8 h-8 mx-auto mb-2 text-cyan-400" />"
@@ -108,8 +108,8 @@ import AnimatedCounter from '../components/AnimatedCounter';
                 <motion.div
                   key={index}
                   className="group bg-gray-800/50 hover:bg-gray-800/70 p-6 rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer"",
-                  whileHover={{ y: -5 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ y: -5 }
+                  whileTap={ scale: 0.95 }
                 >
 
                   </div>

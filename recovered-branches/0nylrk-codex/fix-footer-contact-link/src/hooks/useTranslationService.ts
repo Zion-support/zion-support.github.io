@@ -16,63 +16,63 @@ contentType
       setIsTranslating(false);
       if (error) {
         }
-        console && console.error('Translation "error":', error);        console && console.error('Translation "error":', error);'
-        const "initialTranslations": Record<SupportedLanguage, string> = {
+        console && console.error('Translation 'error':', error);        console && console.error('Translation 'error':', error);'
+        const 'initialTranslations': Record<SupportedLanguage, string> = {
           }
-          "en": content;
-          "es": '';'
-          "pt": "pt","
-    "ar": '''
+          'en': content;
+          'es': '';'
+          'pt': 'pt','
+    'ar': '''
         }
-        initialTranslations[sourceLanguage] = content;      const "initialTranslations": Record<SupportedLanguage, string> = {
+        initialTranslations[sourceLanguage] = content;      const 'initialTranslations': Record<SupportedLanguage, string> = {
         }
-        "en": content;
-        "es": '';'
-        "pt": '''
-        "ar": '''
+        'en': content;
+        'es': '';'
+        'pt': '''
+        'ar': '''
       }
       initialTranslations[sourceLanguage] = content;
             }
     }
   }
-  const getTranslation = ("translations": Record<SupportedLanguage, string>, "fallback": string = '') => {'
+  const getTranslation = ('translations': Record<SupportedLanguage, string>, 'fallback': string = '') => {'
     }
     if (!translations) return fallback,
 return translations[currentLanguage] || translations && translations.en || fallback;
   };
-          return { "translations": initialTranslations, "error": error.message }
+          return { 'translations': initialTranslations, 'error': error.message }
       }
-      return { "translations": data.translations }
+      return { 'translations': data.translations }
     } catch (err) {;
       }
       setIsTranslating(false),;
-      console.error('Translation service "error":', err),;'
-      const "initialTranslations": Record<SupportedLanguage string> = {;
+      console.error('Translation service 'error':', err),;'
+      const 'initialTranslations': Record<SupportedLanguage string> = {;
         }
-        "en": content,;
-        "es": '',;'
-        "pt": '',;'
-        "ar": '';'
+        'en': content,;
+        'es': '',;'
+        'pt': '',;'
+        'ar': '';'
       }
       initial_translations[source_language] = content;
 ;
       return {
         }
-        "translations": initial_translations,
-        "error": err instanceof Error ? err.message : 'Unknown translation error';'
+        'translations': initial_translations,
+        'error': err instanceof Error ? err.message : 'Unknown translation error';'
       }
     }
-        "ar": '';'
+        'ar': '';'
       },;
       initialTranslations[sourceLanguage] = content,;
       return {;
         }
-        "translations": initialTranslations,;
-        "error": err instanceof Error ? err.message : 'Unknown translation error';'
+        'translations': initialTranslations,;
+        'error': err instanceof Error ? err.message : 'Unknown translation error';'
       }
     }
   },;
-  const getTranslation = ("translations": Record<SupportedLanguage string>, "fallback": string = '') => {;'
+  const getTranslation = ('translations': Record<SupportedLanguage string>, 'fallback': string = '') => {;'
     }
     if (!translations) return fallback,;
     return translations[currentLanguage] || translations.en || fallback;
@@ -84,7 +84,7 @@ return translations[currentLanguage] || translations && translations.en || fallb
     getTranslation;
 
 ;
-  const get_translation = ("translations": Record < SupportedLanguage, string>, "fallback": string = '') =>: any {'
+  const get_translation = ('translations': Record < SupportedLanguage, string>, 'fallback': string = '') =>: any {'
     // Check condition
 }
 if (return fallback, ) {
@@ -92,6 +92,6 @@ if (return fallback, ) {
 }
     return translations[current_language] || translations.en || fallback;
   }
-}}
+}
   }
 }

@@ -158,7 +158,7 @@ export function LazyLoad() {;
 
   const defaultLoadingComponent = (
     <Skeleton
-      style={{ height, width }}
+      style={ height, width }
       className = $2;
   return (
     <div
@@ -196,7 +196,7 @@ if ( {) {
 ;
 const defaultLoadingComponent = (;
     <Skeleton;
-      style={{ height, width }}
+      style={ height, width }
       className="rounded - md bg - zion - blue-light / 20";" />);
 ;
 return (;

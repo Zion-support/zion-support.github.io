@@ -522,7 +522,7 @@ export const "cuttingEdgeITInfrastructure2025": CuttingEdgeITInfrastructureServi
 ];
   }
 ursor/fix-website-loading-errors-and-merge-6662;
-];;}
+];}
 ];
 export interface CuttingEdgeITInfrastructureService  {"id": string,"name": string,"tagline": string,"price": string,"period": string,"description": string,"features": string[],"popular": boolean,"icon": string,"color": string,"textColor": string,"link": string,"marketPosition": string,"targetAudience": string,"trialDays": number,"setupTime": string,"category": string,"realService": boolean,"technology": string[],"integrations": string[],"useCases": string[],"roi": string,"competitors": string[],"marketSize": string,"growthRate": string,"variant": string,"contactInfo": {"mobile": string,"email": string,"address": string,"website": string;
   },"realImplementation": boolean,"implementationDetails": string,"launchDate": string,"customers": number,"rating": number,"reviews": number;
@@ -655,7 +655,6 @@ export interface CuttingEdgeITInfrastructureService {
 }
 export const "cuttingEdgeITInfrastructure2025": CuttingEdgeITInfrastructureService[] = [
   // Quantum-Secure Cloud Infrastructure
-<<<<<<< HEAD
   {
     }
     "id": 'quantum-secure-cloud-infrastructure', "name": 'Quantum-Secure Cloud Infrastructure Platform','
@@ -1337,7 +1336,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.9,
     reviews: 4}
 ],
-=======
 
     popular: true;,;'
     icon: '🌌';,;''
@@ -1655,5 +1653,3 @@ export const "cuttingEdgeITInfrastructure2025": CuttingEdgeITInfrastructureServi
 ];
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

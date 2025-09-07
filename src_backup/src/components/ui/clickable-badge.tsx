@@ -23,7 +23,7 @@ export function ClickableBadge() {return (<div;
       {onRemove && (<button;
           }
           type="button";"
-          onClick={(e) => {e.stopPropagation(),onRemove()}}
+          onClick={(e) => {e.stopPropagation(),onRemove()}
           className="ml-1 rounded-full p-0.5 "hover":bg-background/20";"
           aria-label="Remove";"
         >;
@@ -41,7 +41,7 @@ import { cn } from "@/lib/utils",import { badgeVariants } from "@/components/ui/
         className;
       )}</div>;
   ))}
-            e.stopPropagation()onRemove()}}className="ml-1 rounded-full p-0.5 "hover":bg-background/20";aria-label="Remove";"
+            e.stopPropagation()onRemove()}className="ml-1 rounded-full p-0.5 "hover":bg-background/20";aria-label="Remove";"
         >;
           <X className="h-3 w-3" />;"
         </button>;
@@ -80,17 +80,17 @@ function ClickableBadge() {return (<div;
       {on_remove && (<button;
           }
           type='button';'
-          on_click={(e) => {e.stop_propagation ()on_remove () }}
+          on_click={(e) => {e.stop_propagation ()on_remove () }
           className='ml - 1 rounded - full p - 0.5 "hover":bg - background / 20';'
           aria - label='Remove';'
         >;
           <X className='h - 3 w - 3' />;'
         </button>)}
     </div>))}
-            e.stop_propagation ()on_remove ()}}
+            e.stop_propagation ()on_remove ()}
           className="ml - 1 rounded - full p - 0.5 "hover":bg - background / 20";"
           aria - label="Remove";"
         >;
           <X className="h - 3 w - 3" />;"
         </button>)}
-    </div>)}}
+    </div>)}

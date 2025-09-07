@@ -297,8 +297,8 @@ const features = [;
     icon: Zap,;
     color: 'from-yellow-500 to-orange-500';
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ],;
@@ -336,8 +336,8 @@ const pricingPlans = [;
     popular: false,;
     color: 'from-purple-500 to-pink-600';
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ],;
@@ -366,8 +366,8 @@ const useCases = [;
     icon: ShoppingCart,;
     color: 'from-orange-500 to-red-500';
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ],
@@ -379,18 +379,18 @@ export default function AIContentIntelligencePlatform() {
     <Layout>
       <Head>
         <title>AI Content Intelligence Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling." />
-        <meta name="keywords" content="AI content intelligence, content optimization, content analytics, AI content marketing, content performance, SEO optimization" />
-        <meta property="og:title" content="AI Content Intelligence Platform | Zion Tech Group" />
-        <meta property="og:description" content="Transform your content creation with AI-powered intelligence and analytics." />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-content-intelligence-platform" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-content-intelligence-platform" />
+        <meta name='description' content='Transform your content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling.' />
+        <meta name='keywords' content='AI content intelligence, content optimization, content analytics, AI content marketing, content performance, SEO optimization' />
+        <meta property='og:title' content='AI Content Intelligence Platform | Zion Tech Group' />
+        <meta property='og:description' content='Transform your content creation with AI-powered intelligence and analytics.' />
+        <meta property='og:url' content='https://ziontechgroup.com/ai-content-intelligence-platform' />
+        <meta property='og:type' content='website' />
+        <link rel='canonical' href='https://ziontechgroup.com/ai-content-intelligence-platform' />
       </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">AI Content Intelligence Platform</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      <main className='max-w-7xl mx-auto px-4 py-8'>
+        <div className='text-center mb-12'>
+          <h1 className='text-4xl font-bold mb-4'>AI Content Intelligence Platform</h1>
+          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
             Create, optimize, and manage content intelligently with our AI-powered content platform.
           </p>
         </div>
@@ -399,29 +399,29 @@ export default function AIContentIntelligencePlatform() {
         <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, x: -30 }
+              animate={ opacity: 1, x: 0 }
+              transition={ duration: 0.8 }
             >
-              <div className="flex items-center space-x-2 mb-6">
-                <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+              <div className='flex items-center space-x-2 mb-6'>
+                <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full'>
                   NEW SERVICE
                 </span>
-                <span className="text-gray-400 text-sm">Launch Date: January 15, 2025</span>
+                <span className='text-gray-400 text-sm'>Launch Date: January 15, 2025</span>
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              <h1 className='text-4xl lg:text-6xl font-bold text-white mb-6'>
                 AI Content Intelligence Platform
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 mb-8">
+              <p className='text-xl lg:text-2xl text-gray-300 mb-8'>
                 Transform content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className='flex flex-col sm:flex-row gap-4'>
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+                  href='/contact'
+                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'
                 >
                   Get Started Today
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className='w-5 h-5 ml-2' />
                 </Link>
                 <button className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>
                   <Play className='w-5 h-5 mr-2' />                  Watch Demo
@@ -429,33 +429,33 @@ export default function AIContentIntelligencePlatform() {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              initial={ opacity: 0, x: 30 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              animate={{ opacity: 1, x: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              animate={ opacity: 1, x: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              transition={ duration: 0.8, delay: 0.2 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              className="relative"
+              className='relative'
             >
-              <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
-                <div className="text-6xl mb-4">🧠</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Key Benefits</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center text-green-400">
-                    <CheckCircle className="w-5 h-5 mr-3" />
+              <div className='bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8'>
+                <div className='text-6xl mb-4'>🧠</div>
+                <h3 className='text-2xl font-bold text-white mb-4'>Key Benefits</h3>
+                <div className='space-y-3'>
+                  <div className='flex items-center text-green-400'>
+                    <CheckCircle className='w-5 h-5 mr-3' />
                     <span>300%+ ROI improvement</span>
                   </div>
-                  <div className="flex items-center text-green-400">
-                    <CheckCircle className="w-5 h-5 mr-3" />
+                  <div className='flex items-center text-green-400'>
+                    <CheckCircle className='w-5 h-5 mr-3' />
                     <span>80% faster content optimization</span>
                   </div>
                   <div className='flex items-center text-green-400'>
@@ -469,31 +469,31 @@ export default function AIContentIntelligencePlatform() {
       {/* Features Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
               Powerful Features for Content Success
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI Content Intelligence Platform provides everything you need to create, optimize, and scale your content strategy.
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className='group relative'
               >
-                <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
+                <div className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300'>
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="w-6 h-6 text-white" />
+                    <feature.icon className='w-6 h-6 text-white' />
                   </div>
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {feature.title}
@@ -507,31 +507,31 @@ export default function AIContentIntelligencePlatform() {
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
               Perfect For Every Content Need
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Whether you're a content creator, marketing team, or enterprise organization, our platform adapts to your specific requirements.
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, x: index % 2 === 0 ? -30 : 30 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0.8, delay: index * 0.2 }
+                viewport={ once: true }
                 className='group'
               >
-                <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
+                <div className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300'>
                   <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <useCase.icon className="w-8 h-8 text-white" />
+                    <useCase.icon className='w-8 h-8 text-white' />
                   </div>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {useCase.title}
@@ -545,26 +545,26 @@ export default function AIContentIntelligencePlatform() {
       {/* Pricing Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
               Flexible Pricing Plans
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose the plan that best fits your content needs and scale as you grow.
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.2 }
+                viewport={ once: true }
                 className={`relative ${plan.popular ? 'scale-105' : ''}`}
               >
                 {plan.popular && (
@@ -573,18 +573,18 @@ export default function AIContentIntelligencePlatform() {
                     </span>
                   </div>
                 )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 <div className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border ${plan.popular ? 'border-blue-500' : 'border-gray-700'} rounded-2xl p-8 h-full`}>
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
-                    <div className="text-gray-400 mb-4">{plan.period}</div>
-                    <p className="text-gray-300">{plan.description}</p>
+                  <div className='text-center mb-8'>
+                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>
+                    <div className='text-4xl font-bold text-blue-400 mb-2'>{plan.price}</div>
+                    <div className='text-gray-400 mb-4'>{plan.period}</div>
+                    <p className='text-gray-300'>{plan.description}</p>
                   </div>
-                  <ul className="space-y-4 mb-8">
+                  <ul className='space-y-4 mb-8'>
                     {plan.features.map((feature, featureIndex) => (
                       <li
                         key={featureIndex}
@@ -595,10 +595,10 @@ export default function AIContentIntelligencePlatform() {
                     ))}
                   </ul>
                   <Link
-                    href="/contact"
+                    href='/contact'
                     className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   >
@@ -613,26 +613,26 @@ export default function AIContentIntelligencePlatform() {
       {/* Integrations Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
               Seamless Integrations
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Connect with your existing tools and platforms for a unified content management experience.
             </p>
           </motion.div>
           <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>            {integrations.map((integration, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, scale: 0.8 }
+                whileInView={ opacity: 1, scale: 1 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className='bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 text-center hover:bg-white/20 transition-colors duration-300'
               >
                 <span className='text-white font-medium'>{integration}</span>              </motion.div>
@@ -643,53 +643,53 @@ export default function AIContentIntelligencePlatform() {
       {/* Contact Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Content Strategy?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Get in touch with our team to discuss how our AI Content Intelligence Platform can revolutionize your content creation and optimization.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="flex flex-col items-center space-y-3">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-blue-400" />
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
+              <div className='flex flex-col items-center space-y-3'>
+                <div className='w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center'>
+                  <Phone className='w-6 h-6 text-blue-400' />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">Call Us</h3>
-                  <p className="text-gray-400">{contactInfo.mobile}</p>
+                  <h3 className='text-white font-semibold'>Call Us</h3>
+                  <p className='text-gray-400'>{contactInfo.mobile}</p>
                 </div>
               </div>
-              <div className="flex flex-col items-center space-y-3">
-                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-green-400" />
+              <div className='flex flex-col items-center space-y-3'>
+                <div className='w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center'>
+                  <Mail className='w-6 h-6 text-green-400' />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">Email Us</h3>
-                  <p className="text-gray-400">{contactInfo.email}</p>
+                  <h3 className='text-white font-semibold'>Email Us</h3>
+                  <p className='text-gray-400'>{contactInfo.email}</p>
                 </div>
               </div>
-              <div className="flex flex-col items-center space-y-3">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-purple-400" />
+              <div className='flex flex-col items-center space-y-3'>
+                <div className='w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center'>
+                  <MapPin className='w-6 h-6 text-purple-400' />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">Visit Us</h3>
-                  <p className="text-gray-400">{contactInfo.address}</p>
+                  <h3 className='text-white font-semibold'>Visit Us</h3>
+                  <p className='text-gray-400'>{contactInfo.address}</p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>
               <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+                href='/contact'
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'
               >
                 Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className='w-5 h-5 ml-2' />
               </Link>
               <Link
                 href='/2025-innovative-new-services-showcase'
@@ -704,52 +704,52 @@ export default function AIContentIntelligencePlatform() {
 );
   )
           >;
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
               Ready to Transform Your Content Strategy?;
             </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
               Get in touch with our team to discuss how our AI Content Intelligence Platform can revolutionize your content creation and optimization.;
             </p>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
-              <div className="flex flex-col items-center space-y-3">;
-                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">;
-                  <Phone className="w-6 h-6 text-blue-400" />;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>;
+              <div className='flex flex-col items-center space-y-3'>;
+                <div className='w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center'>;
+                  <Phone className='w-6 h-6 text-blue-400' />;
                 </div>;
                 <div>;
-                  <h3 className="text-white font-semibold">Call Us</h3>;
-                  <p className="text-gray-400">{contactInfo.mobile}</p>;
+                  <h3 className='text-white font-semibold'>Call Us</h3>;
+                  <p className='text-gray-400'>{contactInfo.mobile}</p>;
                 </div>;
               </div>;
-              <div className="flex flex-col items-center space-y-3">;
-                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">;
-                  <Mail className="w-6 h-6 text-green-400" />;
+              <div className='flex flex-col items-center space-y-3'>;
+                <div className='w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center'>;
+                  <Mail className='w-6 h-6 text-green-400' />;
                 </div>;
                 <div>;
-                  <h3 className="text-white font-semibold">Email Us</h3>;
-                  <p className="text-gray-400">{contactInfo.email}</p>;
+                  <h3 className='text-white font-semibold'>Email Us</h3>;
+                  <p className='text-gray-400'>{contactInfo.email}</p>;
                 </div>;
               </div>;
-              <div className="flex flex-col items-center space-y-3">;
-                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">;
-                  <MapPin className="w-6 h-6 text-purple-400" />;
+              <div className='flex flex-col items-center space-y-3'>;
+                <div className='w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center'>;
+                  <MapPin className='w-6 h-6 text-purple-400' />;
                 </div>;
                 <div>;
-                  <h3 className="text-white font-semibold">Visit Us</h3>;
-                  <p className="text-gray-400">{contactInfo.address}</p>;
+                  <h3 className='text-white font-semibold'>Visit Us</h3>;
+                  <p className='text-gray-400'>{contactInfo.address}</p>;
                 </div>;
               </div>;
             </div>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>;
               <Link;
-                href="/contact";
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105";
+                href='/contact';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105';
               >;
                 Start Your Free Trial;
-                <ArrowRight className="w-5 h-5 ml-2" />;
+                <ArrowRight className='w-5 h-5 ml-2' />;
               </Link>;
               <Link;
-                href="/2025-innovative-new-services-showcase";
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200";
+                href='/2025-innovative-new-services-showcase';
+                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200';
               >;
                 View All Services;
               </Link>;
@@ -760,7 +760,7 @@ export default function AIContentIntelligencePlatform() {
     </Layout>;
   );
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

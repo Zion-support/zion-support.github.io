@@ -5,12 +5,12 @@
 </div>"; <div className = "absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>""; <div className = "absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>""; <div className = "absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-pulse"></div>""; <div className = "absolute bottom-40 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-pulse"></div>"; </div>;
 "; <div className = "relative">";
 </div>"; <div className = "container mx-auto px-4 py-16">";
-</div>; <motion.div,"; className = "grid grid-cols-2 md:grid-cols-4 gap-8 mb-16""; initial = {{ opacity: 0, y: 20 }}; whileInView = {{ opacity: 1, y: 0 }}; viewport = {{ once: true }}; transition = {{ duration: 0.6, staggerChildren: 0.1 }}>;
-</motion>; <motion.div; key = {stat.label}"; className = "text-center""; initial = {{ opacity: 0, y: 20 }}; whileInView = {{ opacity: 1, y: 0 }}; viewport = {{ once: true }}; transition = {{ duration: 0.6, delay: index * 0.1 }}>;
+</div>; <motion.div,"; className = "grid grid-cols-2 md:grid-cols-4 gap-8 mb-16""; initial = { opacity: 0, y: 20 }; whileInView = { opacity: 1, y: 0 }; viewport = { once: true }; transition = { duration: 0.6, staggerChildren: 0.1 }>;
+</motion>; <motion.div; key = {stat.label}"; className = "text-center""; initial = { opacity: 0, y: 20 }; whileInView = { opacity: 1, y: 0 }; viewport = { once: true }; transition = { duration: 0.6, delay: index * 0.1 }>;
 </motion>"; <div className = "flex justify-center mb-3">";
 </div>"; <div className = "w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center border border-cyan-400/30">";
 </div>"; <stat.icon className = "w-6 h-6 text-cyan-400" />";
-</stat>; </div>; {/* Main Footer Content */}"; <div className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">", </div>", <div className = "lg: col-span-2">", </div>, <motion.div; initial = {{ opacity: 0, y: 20 }}; whileInView = {{ opacity: 1, y: 0 }}; transition = {{ duration: 0.6 }}"; className = "flex items-center space-x-3 mb-6"">;
+</stat>; </div>; {/* Main Footer Content */}"; <div className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">", </div>", <div className = "lg: col-span-2">", </div>, <motion.div; initial = { opacity: 0, y: 20 }; whileInView = { opacity: 1, y: 0 }; transition = { duration: 0.6 }"; className = "flex items-center space-x-3 mb-6"">;
 </motion>"; <div className = "relative">";
 </div>"; <div className = "w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">";
 </div>"; <Zap className = "w-6 h-6 text-white" />";
@@ -38,19 +38,19 @@
 </Shield>; </span>"; <span className = "flex items-center">";
 </span>"; <Award className = "w-4 h-4 text-yellow-400 mr-2" />";
 </Award>; </span>; </div>; </div>; </div>; </div>; </div>; </footer>";
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }};
-            viewport={{ once: true }};
-            transition={{ duration: 0.6, staggerChildren: 0.1 }};
+            initial={ opacity: 0, y: 20 };
+            whileInView={ opacity: 1, y: 0 };
+            viewport={ once: true };
+            transition={ duration: 0.6, staggerChildren: 0.1 };
 >;
 </motion>;
               <motion.div;
                 key={stat.label}";
                 className="text-center"";
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                viewport={{ once: true }};
-                transition={{ duration: 0.6, delay: index * 0.1 }};
+                initial={ opacity: 0, y: 20 };
+                whileInView={ opacity: 1, y: 0 };
+                viewport={ once: true };
+                transition={ duration: 0.6, delay: index * 0.1 };
 >;
 </motion>";
                 <div className="flex justify-center mb-3">";
@@ -64,9 +64,9 @@
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">", </div>",
             <div className="lg: col-span-2">", </div>,
               <motion.div;
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.6 }}";
+                initial={ opacity: 0, y: 20 };
+                whileInView={ opacity: 1, y: 0 };
+                transition={ duration: 0.6 }";
                 className="flex items-center space-x-3 mb-6"";
               >;
 </motion>";
@@ -195,16 +195,16 @@ export default function FuturisticFooter() {}
 
             className="grid grid-cols-2: md: grid-cols-4 gap-8 mb-16"",
 
-            initial={{ opacit: y: 0, y: 20 }},
-            whileInView={{ opacit: y: 1, y: 0 }},
-            viewport={{ onc: e: true }},
-            transition={{ duratio: n: 0.6, staggerChildre: n: 0.1 }},
+            initial={ opacit: y: 0, y: 20 },
+            whileInView={ opacit: y: 1, y: 0 },
+            viewport={ onc: e: true },
+            transition={ duratio: n: 0.6, staggerChildre: n: 0.1 },
 
             className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"",
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }};
-            viewport={{ once: true }};
-            transition={{ duration: 0.6, staggerChildren: 0.1 }};
+            initial={ opacity: 0, y: 20 };
+            whileInView={ opacity: 1, y: 0 };
+            viewport={ once: true };
+            transition={ duration: 0.6, staggerChildren: 0.1 };
 
           >,
 </motion>,
@@ -212,10 +212,10 @@ export default function FuturisticFooter() {}
                 key={stat.label}","
                 className="text-center"",
 
-                initial={{ opacit: y: 0, y: 20 }},
-                whileInView={{ opacit: y: 1, y: 0 }},
-                viewport={{ onc: e: true }},
-                transition={{ duratio: n: 0.6, dela: y: index * 0.1 }},
+                initial={ opacit: y: 0, y: 20 },
+                whileInView={ opacit: y: 1, y: 0 },
+                viewport={ onc: e: true },
+                transition={ duratio: n: 0.6, dela: y: index * 0.1 },
 
               >,
 </motion>",
@@ -233,14 +233,14 @@ export default function FuturisticFooter() {}
             <div className="l: g: col-span-2">",
 </div>,
               <motion.div,
-                initial={{ opacit: y: 0, y: 20 }},
-                whileInView={{ opacit: y: 1, y: 0 }},
-                transition={{ duratio: n: 0.6 }}",
+                initial={ opacit: y: 0, y: 20 },
+                whileInView={ opacit: y: 1, y: 0 },
+                transition={ duratio: n: 0.6 }",
 
             <div className="lg: col-span-2">",
 </div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 }};
+                initial={ opacity: 0, y: 20 };
 
                 className="flex items-center space-x-3 mb-6"",
               >,"
@@ -377,23 +377,23 @@ export default function FuturisticFooter() {}
           <motion.div,",;"
 
             className="grid grid-cols-2: md: grid-cols-4 gap-8 mb-16"",;
-            initial={{ opacit: y: 0, y: 20 }},;
-            whileInView={{ opacit: y: 1, y: 0 }},;
-            viewport={{ onc: e: true }},;
-            transition={{ duratio: n: 0.6, staggerChildre: n: 0.1 }},;
+            initial={ opacit: y: 0, y: 20 },;
+            whileInView={ opacit: y: 1, y: 0 },;
+            viewport={ onc: e: true },;
+            transition={ duratio: n: 0.6, staggerChildre: n: 0.1 },;
           >,;
 </motion>,;
 
                 className="text-center"",;
-                initial={{ opacit: y: 0, y: 20 }},;
-                whileInView={{ opacit: y: 1, y: 0 }},;
-                viewport={{ onc: e: true }},;
-                transition={{ duratio: n: 0.6, dela: y: index * 0.1 }},;
+                initial={ opacit: y: 0, y: 20 },;
+                whileInView={ opacit: y: 1, y: 0 },;
+                viewport={ onc: e: true },;
+                transition={ duratio: n: 0.6, dela: y: index * 0.1 },;
 
             <div className="l: g: col-span-2">",;
 </div>,;
               <motion.div,;
-                initial={{ opacit: y: 0, y: 20 }},;
+                initial={ opacit: y: 0, y: 20 },;
 
                   <MapPin className="w-4 h-4 text-cyan-400" />",;
 </MapPin>,;

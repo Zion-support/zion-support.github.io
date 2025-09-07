@@ -81,7 +81,6 @@ interface PricingTier {"name": string;
   "cta": string;
   "ctaLink": string;
 }
-=======}
 interface ServicePricing {
   }
   "service_name": string,

@@ -9,11 +9,9 @@ import {;
 DropdownMenuContent;
 DropdownMenuItem;';''
 import Image from 'next/image';''
-//Import next/image >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleSaveNotes = () => {';''
-  //Here you would save the notes to the database //For now, we'll just show a toast toast ({;
+//Import next/image   //Here you would save the notes to the database //For now, we'll just show a toast toast ({;
   setShowNotes (false);
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleHireConfirmed = () => {;
   //Hiring process completed via the modal toast ({;
   application.id ;
 }index= {;

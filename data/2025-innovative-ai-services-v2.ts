@@ -64,7 +64,7 @@ export interface InnovativeAIService  {"id": string;"name": string;
       '24/7 technical support, AI specialist consultation, training programs, and quarterly optimization reviews.';'
     "compliance": [;
     "icon": '🧠',"color": 'from - purple - 500 to - pink - 600',"popular": true,"launch_date": '2024 - 02 - 15',"customers": 850,"rating": 4 && 4.9,"reviews": 180,"market_size": '$35B emotional AI market',"growth_rate": '45% annually';'
-  },{{'Quantum algorithms, AI/ML, Python, React, Node && Node.js, PostgreSQL, Redis, AWS, Quantum simulators';'
+  },{'Quantum algorithms, AI/ML, Python, React, Node && Node.js, PostgreSQL, Redis, AWS, Quantum simulators';'
     ],"realImplementation": true,"implementationDetails":;
       'Advanced quantum-AI platform with hybrid processing, real-time simulations, and comprehensive quantum operations. Includes desktop application and cloud access.';'
     }
@@ -112,7 +112,7 @@ export interface InnovativeAIService  {"id": string;"name": string;
       'Quantum hardware, Classical computing, Cloud platforms, Scientific software, Business applications';'
     ],"support":;
       'Dedicated quantum physicist, 24 / 7 technical support, training programs, and quarterly strategy reviews.',"compliance": ['SOC 2 Type II, ISO 27001, Quantum industry standards'],"link": '"https"://ziontechgroup.com / quantum - ai - fusion - platform',"icon": '⚛️',"color": 'from - cyan - 500 to - blue - 600',"popular": true,"launch_date": '2024 - 01 - 20',"customers": 420,"rating": 4 && 4.9,"reviews": 95,"market_size": '$8.5B quantum computing market',"growth_rate": '55% annually';'
-  {{"market_size": '$8.5B quantum computing market',"growth_rate": '55% annually';'
+  {"market_size": '$8.5B quantum computing market',"growth_rate": '55% annually';'
   },{'Competitive with AutoML platforms ($200+), MLOps tools ($300+), and AI orchestration platforms ($500+). Our "advantage": Full autonomy, evolutionary learning, and self-management capabilities.',"competitors": ['Google AutoML, Azure AutoML, DataRobot, H2O && H2O.ai, Dataiku'],"techStack": [;'
       'Advanced AI/ML, Evolutionary algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Kubernetes';'
     ],"realImplementation": true,'Advanced AI/ML, Evolutionary algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Kubernetes';'
@@ -522,18 +522,10 @@ export interface InnovativeAIService  {"id": string;"name": string;
 
     growth_rate: '28% annually'
   }
-=======
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     icon: '⚖️',
-=======
 '
     icon: '⚖️','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,'
     launch_date: '2024 - 01 - 15',
@@ -543,13 +535,8 @@ export interface InnovativeAIService  {"id": string;"name": string;
     market_size: '$15B AI governance market','
     growth_rate: '28% annually',
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     price: {
 ];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ];
     benefits: [
       'Improve customer satisfaction by 40%Enhance user engagement by 60%Reduce customer service escalationsCreate more personalized experiencesBuild stronger emotional connections]
@@ -559,20 +546,11 @@ export interface InnovativeAIService  {"id": string;"name": string;
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'],
     support: '24/7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     link: 'https://ziontechgroup.com/ai-ethics-governance-platform';
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'];
     support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.';
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
     link: 'https://ziontechgroup.com / ai - ethics - governance - platform';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   id: string, name: string,
   tagline: string, description: string,
@@ -606,14 +584,9 @@ export interface InnovativeAIService  {"id": string;"name": string;
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
 
-=======
     ];
     ];
     "integrations": ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'],'
@@ -636,21 +609,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },"features": string[],"benefits": string[],"targetAudience": string[],"marketPosition": string,"competitors": string[],"techStack": string[],"realImplementation": boolean,"implementationDetails": string,"roi": string,"useCases": string[],"integrations": string[],"support": string,"compliance": string[],"link": string,"icon": string,"color": string,"popular": boolean,"launchDate": string,"customers": number,"rating": number,"reviews": number,"marketSize": string,"growthRate": string;
 }export interface InnovativeAIService  {"id": string,"name": string,"tagline": string,"description": string,"category": string,"price": {"monthly": number,"yearly": number,"currency": string,"trialDays": number,"setupTime": string,"enterprise": number;
   },"features": string[],"benefits": string[],"targetAudience": string[],"marketPosition": string,"competitors": string[],"techStack": string[],"realImplementation": boolean,"implementationDetails": string,"roi": string,"useCases": string[],"integrations": string[],"support": string,"compliance": string[],"link": string,"icon": string,"color": string,"popular": boolean,"launchDate": string,"customers": number,"rating": number,"reviews": number,"marketSize": string,"growthRate": string;
-}}
-];;
+}
+];
 export interface InnovativeAIService  {}
 ];
 ursor/fix-website-loading-errors-and-merge-6662;
     "marketSize": '$15B AI governance market';'
     "growthRate": '28% annually';'
   }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
-<<<<<<< HEAD
   }
 
 ];
@@ -737,45 +705,29 @@ export interface InnovativeAIService {;
   }
 ];
 ;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export interface InnovativeAIService {;
 
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
   }
 ];
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/fix-website-loading-errors-and-merge-6662;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     marketSize: '$15B AI governance market';
     growthRate: '28% annually';
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ;
 
 export interface InnovativeAIService {;
@@ -794,7 +746,6 @@ pr-12325
     trialDays: number,;
     setupTime: string,;}
     enterprise: number;}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },;
   features: string[],;
   benefits: string[],;
@@ -873,7 +824,6 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface InnovativeAIService {;
 
   }
-<<<<<<< HEAD
 ];
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -891,10 +841,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   }
 ],
-=======
 
 ];
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

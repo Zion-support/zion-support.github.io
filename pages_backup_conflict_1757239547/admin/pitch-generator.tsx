@@ -205,24 +205,24 @@ export default function PitchGenerator() {
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
     return (
-      <div className="mt-3">
-        <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
-        <div className="flex gap-2 items-end h-24 mt-2">
+      <div className='mt-3'>
+        <div className='text-xs text-gray-500 dark:text-gray-400'>Chart preview: {type}</div>
+        <div className='flex gap-2 items-end h-24 mt-2'>
           {type === 'bar' && data.map((d) => (
-            <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
+            <div key={d.label} className='bg-blue-500 w-6' style={ height: `${Math.max(4, d.value)}px` } title={`${d.label}: ${d.value}`} />
           ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           {type === 'funnel' && (
-            <div className="w-full">
-              <div className="flex flex-col gap-1">
+            <div className='w-full'>
+              <div className='flex flex-col gap-1'>
                 {data.map((d, idx) => (
                   <div
                     key={d.label}
                     className='bg-purple-500 text-white text-xs px-2 py-1'
-                    style={{ width: `${100 - idx * 12}%` }}
+                    style={ width: `${100 - idx * 12}%` }
                   >
                     {d.label}: {d.value}
                   </div>                ))}
@@ -341,11 +341,11 @@ export default function PitchGenerator() {
                 <option>Series A</option>
                 <option>Token Sale</option>
               </select>
-              <label className="block text-sm mt-3 mb-1">Target raise amount</label>
-              <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
-              <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+              <label className='block text-sm mt-3 mb-1'>Target raise amount</label>
+              <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className='w-full border rounded px-2 py-1 bg-transparent' />
+              <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>
                 Drag & drop logos, photos here
-                <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
+                <div className='text-xs mt-1'>{builder.assets.length} file(s) added</div>
               </div>
             </div>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>

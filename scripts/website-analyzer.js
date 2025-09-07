@@ -34,7 +34,7 @@ const stat = fs.statSync(fullPath); if (stat.isDirectory()) {' scanDirectory(ful
   }
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ if (!hasPage) {; missingPages.push(route)} })  missingPages.forEach("page": => );
 
-const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')';; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')';; "if": (content.length < 5000) { missingPages.forEach(page => { return ); }'
+const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')'; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')'; "if": (content.length < 5000) { missingPages.forEach(page => { return ); }'
 
 }
 
@@ -790,7 +790,7 @@ const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) {' sca
   const hasPage = existingPages && existingPages.some(page =>; page && page.includes(routePath) ||; page && page.includes(route && route.replace(/\ page && page.includes(route && route.replace(/\ "if": (!hasPage) { '*') return const routePath = route && route.replace(/^\;'
   }
   const hasPage = existingPages && existingPages.some(page =>; page && page.includes(routePath) ||; page && page.includes(route && route.replace(/\ page && page.includes(route && route.replace(/\ if (!hasPage) {; missingPages && missingPages.push(route)} }) console && console.log(`\n❌ Found ${missingPages && missingPages.length} missing "pages": `); missingPages && missingPages.forEach("page": => console && console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages && existingPages.forEach("pagePath": => { const fullPath = path && path.join(pagesDir,pagePath +';.tsx')';; "if": (fs && fs.existsSync(fullPath)) { const content = fs && fs.readFileSync(fullPath 'utf8')';; "if": (content && content.length < 5000) { missingPages && missingPages.forEach(page => console && console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages && existingPages.forEach("pagePath": => { const fullPath = path && path.join(pagesDir,pagePath +';.tsx')'; "if": (fs && fs.existsSync(fullPath)) { const content = fs && fs.readFileSync(fullPath 'utf8')'; "if": (content && content.length < 5000) { missingPages && missingPages.forEach(page => console && console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages && existingPages.forEach(pagePath = > {;
   }
   const fullPath = path && path.join(pagesDir,pagePath +;` '.tsx'); if (fs && fs.existsSync(fullPath)) {;'
@@ -826,7 +826,7 @@ const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) {' sca
   const hasPage = existingPages && existingPages.some(page =>; page && page.includes(routePath) ||; page && page.includes(route && route.replace(/\ page && page.includes(route && route.replace(/\ "if": (!hasPage) { '*') return const routePath = route && route.replace(/^\;'
   }
   const hasPage = existingPages && existingPages.some(page =>; page && page.includes(routePath) ||; page && page.includes(route && route.replace(/\ page && page.includes(route && route.replace(/\ if (!hasPage) {; missingPages && missingPages.push(route)} }) console && console.log(`\n❌ Found ${missingPages && missingPages.length} missing "pages": `); missingPages && missingPages.forEach("page": => console && console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages && existingPages.forEach("pagePath": => { const fullPath = path && path.join(pagesDir,pagePath +';.tsx')';; "if": (fs && fs.existsSync(fullPath)) { const content = fs && fs.readFileSync(fullPath 'utf8')';; "if": (content && content.length < 5000) { missingPages && missingPages.forEach(page => console && console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages && existingPages.forEach("pagePath": => { const fullPath = path && path.join(pagesDir,pagePath +';.tsx')'; "if": (fs && fs.existsSync(fullPath)) { const content = fs && fs.readFileSync(fullPath 'utf8')'; "if": (content && content.length < 5000) { missingPages && missingPages.forEach(page => console && console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages && existingPages.forEach(pagePath = > {;
   }
   const fullPath = path && path.join(pagesDir,pagePath +;` '.tsx'); if (fs && fs.existsSync(fullPath)) {;'
@@ -862,7 +862,7 @@ const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) {' sca
   const hasPage = existingPages && existingPages.some(page =>; page && page.includes(routePath) ||; page && page.includes(route && route.replace(/\ page && page.includes(route && route.replace(/\ "if": (!hasPage) { '*') return const routePath = route && route.replace(/^\;'
   }
   const hasPage = existingPages && existingPages.some(page =>; page && page.includes(routePath) ||; page && page.includes(route && route.replace(/\ page && page.includes(route && route.replace(/\ if (!hasPage) {; missingPages && missingPages.push(route)} }) console && console.log(`\n❌ Found ${missingPages && missingPages.length} missing "pages": `); missingPages && missingPages.forEach("page": => console && console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages && existingPages.forEach("pagePath": => { const fullPath = path && path.join(pagesDir,pagePath +';.tsx')';; "if": (fs && fs.existsSync(fullPath)) { const content = fs && fs.readFileSync(fullPath 'utf8')';; "if": (content && content.length < 5000) { missingPages && missingPages.forEach(page => console && console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages && existingPages.forEach("pagePath": => { const fullPath = path && path.join(pagesDir,pagePath +';.tsx')'; "if": (fs && fs.existsSync(fullPath)) { const content = fs && fs.readFileSync(fullPath 'utf8')'; "if": (content && content.length < 5000) { missingPages && missingPages.forEach(page => console && console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages && existingPages.forEach(pagePath = > {;
   }
   const fullPath = path && path.join(pagesDir,pagePath +;` '.tsx'); if (fs && fs.existsSync(fullPath)) {;'
@@ -899,7 +899,7 @@ const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) {' sca
   const hasPage = existingPages && existingPages.some(page => { return , page && page.includes(routePath) ||; } page && page.includes(route && route.replace(/\ page && page.includes(route && route.replace(/\ "if": (!hasPage) { '*') return const routePath = route && route.replace(/^\;'
   }
   const hasPage = existingPages && existingPages.some(page =>, page && page.includes(routePath) ||, page && page.includes(route && route.replace(/\ page && page.includes(route && route.replace(/\ if (!hasPage) {; missingPages && missingPages.push(route)} }) console && console.log(`\n❌ Found ${missingPages && missingPages.length} missing "pages": `); missingPages && missingPages.forEach("page": => console && console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages && existingPages.forEach("pagePath": => { const fullPath = path && path.join(pagesDir,pagePath +';.tsx')';; "if": (fs && fs.existsSync(fullPath)) { const content = fs && fs.readFileSync(fullPath 'utf8')', , "if": (content && content.length < 5000) { missingPages && missingPages.forEach(page => console && console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages && existingPages.forEach("pagePath": => { const fullPath = path && path.join(pagesDir,pagePath +';.tsx')'; "if": (fs && fs.existsSync(fullPath)) { const content = fs && fs.readFileSync(fullPath 'utf8')', , "if": (content && content.length < 5000) { missingPages && missingPages.forEach(page => console && console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages && existingPages.forEach(pagePath = > {;
   }
   const fullPath = path && path.join(pagesDir,pagePath +;` '.tsx'); if (fs && fs.existsSync(fullPath)) {;'
@@ -936,7 +936,7 @@ const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) {' sca
   const hasPage = existingPages && existingPages.some(page => { return , page && page.includes(routePath) ||; } page && page.includes(route && route.replace(/\ page && page.includes(route && route.replace(/\ "if": (!hasPage) { '*') return const routePath = route && route.replace(/^\;'
   }
   const hasPage = existingPages && existingPages.some(page =>, page && page.includes(routePath) ||, page && page.includes(route && route.replace(/\ page && page.includes(route && route.replace(/\ if (!hasPage) {; missingPages && missingPages.push(route)} }) console && console.log(`\n❌ Found ${missingPages && missingPages.length} missing "pages": `); missingPages && missingPages.forEach("page": => console && console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages && existingPages.forEach("pagePath": => { const fullPath = path && path.join(pagesDir,pagePath +';.tsx')';; "if": (fs && fs.existsSync(fullPath)) { const content = fs && fs.readFileSync(fullPath 'utf8')', , "if": (content && content.length < 5000) { missingPages && missingPages.forEach(page => console && console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages && existingPages.forEach("pagePath": => { const fullPath = path && path.join(pagesDir,pagePath +';.tsx')'; "if": (fs && fs.existsSync(fullPath)) { const content = fs && fs.readFileSync(fullPath 'utf8')', , "if": (content && content.length < 5000) { missingPages && missingPages.forEach(page => console && console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages && existingPages.forEach(pagePath = > {;
   }
   const fullPath = path && path.join(pagesDir,pagePath +;` '.tsx'); if (fs && fs.existsSync(fullPath)) {;'
@@ -972,7 +972,7 @@ const stat = fs.statSync(fullPath); if (stat.isDirectory()) {' scanDirectory(ful
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ "if": (!hasPage) { '*') return const routePath = route.replace(/^\;'
   }
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ if (!hasPage) {; missingPages.push(route)} }) console.log(`\n❌ Found ${missingPages.length} missing "pages": `); missingPages.forEach("page": => console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')';; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')';; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')'; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')'; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages.forEach(pagePath = > {;
   }
   const fullPath = path.join(pagesDir,pagePath +;` '.tsx'); if (fs.existsSync(fullPath)) {;'
@@ -1008,7 +1008,7 @@ const stat = fs.statSync(fullPath); if (stat.isDirectory()) {' scanDirectory(ful
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ "if": (!hasPage) { '*') return const routePath = route.replace(/^\;'
   }
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ if (!hasPage) {; missingPages.push(route)} }) console.log(`\n❌ Found ${missingPages.length} missing "pages": `); missingPages.forEach("page": => console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')';; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')';; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')'; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')'; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages.forEach(pagePath = > {;
   }
   const fullPath = path.join(pagesDir,pagePath +;` '.tsx'); if (fs.existsSync(fullPath)) {;'
@@ -1044,7 +1044,7 @@ const stat = fs.statSync(fullPath); if (stat.isDirectory()) {' scanDirectory(ful
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ "if": (!hasPage) { '*') return const routePath = route.replace(/^\;'
   }
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ if (!hasPage) {; missingPages.push(route)} }) console.log(`\n❌ Found ${missingPages.length} missing "pages": `); missingPages.forEach("page": => console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')';; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')';; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')'; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')'; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages.forEach(pagePath = > {;
   }
   const fullPath = path.join(pagesDir,pagePath +;` '.tsx'); if (fs.existsSync(fullPath)) {;'
@@ -1080,7 +1080,7 @@ const stat = fs.statSync(fullPath); if (stat.isDirectory()) {' scanDirectory(ful
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ "if": (!hasPage) { '*') return const routePath = route.replace(/^\;'
   }
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ if (!hasPage) {; missingPages.push(route)} }) console.log(`\n❌ Found ${missingPages.length} missing "pages": `); missingPages.forEach("page": => console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')';; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')';; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')'; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')'; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages.forEach(pagePath = > {;
   }
   const fullPath = path.join(pagesDir,pagePath +;` '.tsx'); if (fs.existsSync(fullPath)) {;'
@@ -1118,7 +1118,7 @@ const stat = fs.statSync(fullPath); if (stat.isDirectory()) {' scanDirectory(ful
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ "if": (!hasPage) { '*') return const routePath = route.replace(/^\;'
   }
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ if (!hasPage) {; missingPages.push(route)} }) console.log(`\n❌ Found ${missingPages.length} missing "pages": `); missingPages.forEach("page": => console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')';; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')';; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')'; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')'; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages.forEach(pagePath = > {;
   }
   const fullPath = path.join(pagesDir,pagePath +;` '.tsx'); if (fs.existsSync(fullPath)) {;'
@@ -1154,7 +1154,7 @@ const stat = fs.statSync(fullPath); if (stat.isDirectory()) {' scanDirectory(ful
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ "if": (!hasPage) { '*') return const routePath = route.replace(/^\;'
   }
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ if (!hasPage) {; missingPages.push(route)} }) console.log(`\n❌ Found ${missingPages.length} missing "pages": `); missingPages.forEach("page": => console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')';; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')';; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')'; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')'; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages.forEach(pagePath = > {;
   }
   const fullPath = path.join(pagesDir,pagePath +;` '.tsx'); if (fs.existsSync(fullPath)) {;'
@@ -1191,7 +1191,7 @@ const stat = fs.statSync(fullPath); if (stat.isDirectory()) {' scanDirectory(ful
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ "if": (!hasPage) { '*') return const routePath = route.replace(/^\;'
   }
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ if (!hasPage) {; missingPages.push(route)} }) console.log(`\n❌ Found ${missingPages.length} missing "pages": `); missingPages.forEach("page": => console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')';; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')';; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')'; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')'; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages.forEach(pagePath = > {;
   }
   const fullPath = path.join(pagesDir,pagePath +;` '.tsx'); if (fs.existsSync(fullPath)) {;'
@@ -1227,7 +1227,7 @@ const stat = fs.statSync(fullPath); if (stat.isDirectory()) {' scanDirectory(ful
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ "if": (!hasPage) { '*') return const routePath = route.replace(/^\;'
   }
   const hasPage = existingPages.some(page =>; page.includes(routePath) ||; page.includes(route.replace(/\ page.includes(route.replace(/\ if (!hasPage) {; missingPages.push(route)} }) console.log(`\n❌ Found ${missingPages.length} missing "pages": `); missingPages.forEach("page": => console.log(` - ${pag,e}`));`
-const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')';; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')';; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
+const placeholderPages = []; existingPages.forEach("pagePath": => { const fullPath = path.join(pagesDir,pagePath +';.tsx')'; "if": (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath 'utf8')'; "if": (content.length < 5000) { missingPages.forEach(page => console.log(` - ${pag,`}`));`
 const placeholderPages = []; existingPages.forEach(pagePath = > {;
   }
   const fullPath = path.join(pagesDir,pagePath +;` '.tsx'); if (fs.existsSync(fullPath)) {;'

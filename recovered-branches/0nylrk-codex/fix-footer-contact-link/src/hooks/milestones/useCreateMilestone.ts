@@ -4,12 +4,12 @@ import {use_auth} from '@/hooks / use_auth';        .select()'
       if (error) throw error;
       // Create activity record,
 await recordMilestoneActivity(data && data.id, 'created', null, 'pendingMilestone created');'
-      toast && toast.success("Milestone created successfully");"
+      toast && toast.success('Milestone created successfully');'
 return data;
-    } catch ("err": any) {
+    } catch ('err': any) {
       }
-      console && console.error("Error creating "milestone":", err);"
-      toast && toast.error("Failed to create "milestone": " + err && err.message),"
+      console && console.error('Error creating 'milestone':', err);'
+      toast && toast.error('Failed to create 'milestone': ' + err && err.message),'
 return null      return null;
 export const useCreateMilestone = (project_id?: string) =>: any {
   }
@@ -17,7 +17,7 @@ export const useCreateMilestone = (project_id?: string) =>: any {
   const [is_submitting, setIsSubmitting] = useState (false);
   const { recordMilestoneActivity } = useRecordActivity ();
 ;
-  const create_milestone = async ("milestone_data": Omit < Milestone, 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {'
+  const create_milestone = async ('milestone_data': Omit < Milestone, 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {'
     // Check condition
 }
 if (return null) {
@@ -36,7 +36,7 @@ export const useCreateMilestone = (projectId?: string) => {
 const { user } = useAuth(),;
 const [isSubmitting, setIsSubmitting] = useState(false),;
 const { recordMilestoneActivity } = useRecordActivity(),;
-  const createMilestone = async ("milestoneData": Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {'
+  const createMilestone = async ('milestoneData': Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {'
     }
     if (!user || !projectId) return null,
     
@@ -48,19 +48,19 @@ const { data, error } = await supabase;
         .insert({
           ...milestoneData
           }
-          "project_id": projectId,
-          "created_by": user.id})
+          'project_id': projectId,
+          'created_by': user.id})
         .select()
         .single(),
       if (error) throw error,
       // Create activity record,
 await recordMilestoneActivity(data.id, 'created', null, 'pendingMilestone created'),'
-      toast.success("Milestone created successfully"),"
+      toast.success('Milestone created successfully'),'
 return data;
-    } catch ("err": any) {
+    } catch ('err': any) {
       }
-      console.error("Error creating "milestone":", err),"
-      toast.error("Failed to create "milestone": " + err.message),"
+      console.error('Error creating 'milestone':', err),'
+      toast.error('Failed to create 'milestone': ' + err.message),'
 return null;
     } finally {
       }
@@ -76,7 +76,7 @@ export const useCreateMilestone = (projectId?: string) => {;
   const { user } = useAuth(),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const { recordMilestoneActivity } = useRecordActivity(),;
-  const createMilestone = async ("milestoneData": Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {;'
+  const createMilestone = async ('milestoneData': Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {;'
     }
     if (!user || !projectId) return null,;
     try {;
@@ -87,19 +87,19 @@ export const useCreateMilestone = (projectId?: string) => {;
         .insert({;
           ...milestoneData,;
           }
-          "project_id": projectId,;
-          "created_by": user.id});
+          'project_id': projectId,;
+          'created_by': user.id});
         .select();
         .single(),;
       if (error) throw error,;
       // Create activity record;
       await recordMilestoneActivity(data.id, 'created', null, 'pendingMilestone created'),;'
-      toast.success("Milestone created successfully"),;"
+      toast.success('Milestone created successfully'),;'
       return data;
-    } catch ("err": any) {;
+    } catch ('err': any) {;
       }
-      console.error("Error creating "milestone":", err),;"
-      toast.error("Failed to create "milestone": " + err.message),;"
+      console.error('Error creating 'milestone':', err),;'
+      toast.error('Failed to create 'milestone': ' + err.message),;'
       return null;
     } finally {;
       }

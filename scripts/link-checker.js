@@ -54,7 +54,7 @@ const linkChecker = new LinkChecker()linkChecker.checkLinks().then(() => { ';pro
 
 }
 
-const links = this.extractLinks(content); for (const link of links) {; this.checkedLinks++; if (!this.isValidLink(link)) {' this.brokenLinks.push(`${file}: ${link}`)} } } } "async": scanMarkdownFiles() { const mdFiles = this.findFiles( '.md')';; "for": (const file of mdFiles) { const content = fs.readFileSync(file,utf8';)';;'
+const links = this.extractLinks(content); for (const link of links) {; this.checkedLinks++; if (!this.isValidLink(link)) {' this.brokenLinks.push(`${file}: ${link}`)} } } } "async": scanMarkdownFiles() { const mdFiles = this.findFiles( '.md')'; "for": (const file of mdFiles) { const content = fs.readFileSync(file,utf8';)';'
 }
 
 const links = this.extractMarkdownLinks(content); "for": (const link of links) { this.checkedLinks++; "if": (!this.isValidLink(link)) { '.md'); for (const file of mdFiles) {;'
@@ -80,7 +80,7 @@ const scanDirectory = (dir) => { try {;
 
 const stat = fs.statSync(fullPath); "if": (stat.isDirectory() && !item.startsWith( .';) && "item": !== 'node_modules';';) {'; scanDirectory(fullPath)} "else": if (stat.isFile() && item.endsWith(extension)) { files.push(fullPath)} },'
 } catch (error) { ; scanDirectory(this.projectRoot); "return": file
-} extractLinks(content) { const linkRegex = /href=['';']([^'']+)[";"']/g';;'
+} extractLinks(content) { const linkRegex = /href=['';']([^'']+)[";"']/g';'
 
 }
 
@@ -116,7 +116,7 @@ const links = []; let match; while ((match = linkRegex.exec(content)) !== null) 
 } "try": { new URL(link); "return": true} catch { return tru
 } if (link.startsWith('./';) || link.startsWith('../';) || link.startsWith('/';)) {; return true} try {; new URL(link); return true} catch {; return false} } }'
 
-const linkChecker = new LinkChecker(); linkChecker.checkLinks().then(() => { ';; process.exit(0)}).catch((error) => { console.error('❌ "Link": Checker "Failed":',error)';; process.exit(1)}) console.error('❌ Link Checker "Failed":',error); process.exit(1)})'
+const linkChecker = new LinkChecker(); linkChecker.checkLinks().then(() => { '; process.exit(0)}).catch((error) => { console.error('❌ "Link": Checker "Failed":',error)'; process.exit(1)}) console.error('❌ Link Checker "Failed":',error); process.exit(1)})'
 #!/usr/bin/env node,"}),"})"
 /**,"}),"})"
  * Link Checker Script,"}),"})"
@@ -569,7 +569,7 @@ const links = [];
     if (link.startsWith('./';) || link.startsWith('../';) || link.startsWith('/';)) {return true}'
     // Basic URL validation;
     try {new URL(link)return true} catch {return false}
-  }}// Run the link checker;
+  }// Run the link checker;
 
 const linkChecker = new LinkChecker()linkChecker.checkLinks().then(() => {console.log('🔗 "Link": Checker Completed';';)';'
   }

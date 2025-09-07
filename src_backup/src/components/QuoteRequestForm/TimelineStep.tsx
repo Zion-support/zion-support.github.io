@@ -178,7 +178,7 @@ function TimelineStep() {return (<div className='space - y-6'>;'
         </div>;
       </div>;
     </div>;
-  )}}"w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light "hover":bg-zion-blue-dark",!formData.endDate && "text-zion-slate-light";"
+  )}"w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light "hover":bg-zion-blue-dark",!formData.endDate && "text-zion-slate-light";"
                       )}
                     </Button>;
                   </PopoverTrigger>;
@@ -257,6 +257,6 @@ interface TimelineStepProps  {"formData": QuoteFormData,"updateFormData": ("data
       </div>;
     </div>)}selected={formData.endDate}
                       onSelect={date => updateFormData({ "endDate": date })}
-                      initialFocus;;
+                      initialFocus;
     </div>;
   )

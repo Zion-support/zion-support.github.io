@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
 export const SitemapPage: React.FC = () => {
@@ -24,8 +22,8 @@ export const SitemapPage: React.FC = () => {;
         
 
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        canonical="https://app && app.ziontechgroup.com/content/sitemap-page"
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        canonical='https://app && app.ziontechgroup.com/content/sitemap-page'
 // Map sitemap paths to their actual routes in the application;
 // Note: This pathMap might need to be updated based on Next.js page structure;
 const pathMap: Record<string, string> = {const resolve_path = (path: string): string => path_map[path] ?? path, import React from 'react';
@@ -41,62 +39,61 @@ const resolve_path = (path: string): string => path_map[path] ?? path,import Rea
 // Note: This pathMap might need to be updated based on Next.js page structure;
 const pathMap: Record<string string> = {'/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'},const resolvePath = (path: string): string => pathMap[path] ?? path,export const SitemapPage: React.FC = () => {return (<>;
       <SEO;
-        title="Sitemap | Zion AI Marketplace";
-        description="Complete sitemap of the Zion AI Marketplace";
-        keywords="sitemap, zion, ai marketplace, navigation";
-        canonical="https://app.ziontechgroup.com/content/sitemap-page";
+        title='Sitemap | Zion AI Marketplace';
+        description='Complete sitemap of the Zion AI Marketplace';
+        keywords='sitemap, zion, ai marketplace, navigation';
+        canonical='https://app.ziontechgroup.com/content/sitemap-page';
       />;
-      <div className="container mx-auto px-4 py-12">;
-        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>;
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+      <div className='container mx-auto px-4 py-12'>;
+        <h1 className='text-3xl font-bold mb-8'>Sitemap</h1>;
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {/* Public Pages */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>;
-            <ul className="space-y-2">;
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>;
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Public Pages</h2>;
+            <ul className='space-y-2'>;
               {completeSitemap;
                 .filter(route => !route.requiredAuth).map(route => (<li key={route.path}>;
                     <Link;
                       href={resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple";
+                      className='flex items-center hover:text-zion-purple';
                     >;
-                      <ChevronRight className="h-4 w-4 mr-2" />;
+                      <ChevronRight className='h-4 w-4 mr-2' />;
 const resolvePath = (path: string): string => pathMap[path] ?? path,export const SitemapPage: React.FC = () => {import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
 import Link from 'next/link';
 // Map sitemap paths to their actual routes in the application;
 // Note: This pathMap might need to be updated based on Next && Next.js page structure;
-const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}const resolvePath = (path: string): string => pathMap[path] ?? path,export const SitemapPage: React.FC = () => {return (<>;<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-        canonical="https://app && app.ziontechgroup.com/content/sitemap-page";
+const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}const resolvePath = (path: string): string => pathMap[path] ?? path,export const SitemapPage: React.FC = () => {return (<>;<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+        canonical='https://app && app.ziontechgroup.com/content/sitemap-page';
       />;
-      <div className="container mx-auto px-4 py-12">;
-        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>;<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+      <div className='container mx-auto px-4 py-12'>;
+        <h1 className='text-3xl font-bold mb-8'>Sitemap</h1>;<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {/* Public Pages */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>;
-            <ul className="space-y-2">;
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>;
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Public Pages</h2>;
+            <ul className='space-y-2'>;
               {completeSitemap;
                 .filter(route => !route && route.requiredAuth).map(route => (<li key={route && route.path}>;
                     <Link;
       <SEO;
-        title="Sitemap | Zion AI Marketplace";
-        description="Complete sitemap of the Zion AI Marketplace";
-        keywords="sitemap, zion, ai marketplace, navigation";
-        canonical="https://app.ziontechgroup.com / content / sitemap - page";
+        title='Sitemap | Zion AI Marketplace';
+        description='Complete sitemap of the Zion AI Marketplace';
+        keywords='sitemap, zion, ai marketplace, navigation';
+        canonical='https://app.ziontechgroup.com / content / sitemap - page';
       />;
-      <div className="container mx - auto px - 4 py - 12">;
-        <h1 className="text - 3xl font - bold mb - 8">Sitemap</h1>;
-        <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+      <div className='container mx - auto px - 4 py - 12'>;
+        <h1 className='text - 3xl font - bold mb - 8'>Sitemap</h1>;
+        <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
           {/* Public Pages */}
-          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
-            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Public Pages</h2>;
-            <ul className="space - y-2">;
+          <div className='bg - zion - blue - dark p - 6 rounded - lg'>;
+            <h2 className='text - xl font - bold mb - 4 text - zion - cyan'>Public Pages</h2>;
+            <ul className='space - y-2'>;
               {complete_sitemap;
                 .filter (route => !route.required_auth).map (route => (<li key={route.path}>;
                     <Link;
                       href = {resolve_path (route.path) }
-                      className="flex items - center hover:text - zion - purple";
+                      className='flex items - center hover:text - zion - purple';
                     >;
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
-                      <ChevronRight className="h - 4 w - 4 mr - 2" />;
+                      <ChevronRight className='h - 4 w - 4 mr - 2' />;
 
 
 // Map sitemap paths to their actual routes in the application
@@ -129,20 +126,20 @@ const pathMap: Record<string string> = {
 
     <>;
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {/* Public Pages */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>
-            <ul className="space-y-2">
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Public Pages</h2>
+            <ul className='space-y-2'>
               {completeSitemap
                 .filter(route => !route.requiredAuth)
                 .map(route => (
                   <li key={route.path}>
                     <Link
                       href={resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple"
+                      className='flex items-center hover:text-zion-purple'
                     >
-                      <ChevronRight className="h-4 w-4 mr-2" />                      {route.label}
+                      <ChevronRight className='h-4 w-4 mr-2' />                      {route.label}
 
                       {route.label}
 
@@ -152,10 +149,10 @@ const pathMap: Record<string string> = {
           </div>;
 
           {/* Talent Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>
-            <ul className="space-y-2">
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Talent Pages</h2>
+            <p className='text-sm text-zion-slate mb-4'>Requires talent or creator account</p>
+            <ul className='space-y-2'>
               {completeSitemap
                 .filter(route =>
                   route.requiredRoles?.includes('jobSeeker') |
@@ -165,38 +162,37 @@ const pathMap: Record<string string> = {
                   <li key={route.path}>
                     <Link
                       href = {resolvePath(route.path),}
-                      className="flex items-center hover:text-zion-purple"
+                      className='flex items-center hover:text-zion-purple'
                     >
-                      <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
+                      <ChevronRight className='h-4 w-4 mr-2' />
             </ul>;
           </div>;
 
           {/* Talent Routes */}
-                      <ChevronRight className="h - 4 w - 4 mr - 2" />;{route.label}
+                      <ChevronRight className='h - 4 w - 4 mr - 2' />;{route.label}
                     </Link>;
                   </li>))}</ul>;
           </div>;{/* Talent Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>;
-            <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>;
-            <ul className="space-y-2">;
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>;
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Talent Pages</h2>;
+            <p className='text-sm text-zion-slate mb-4'>Requires talent or creator account</p>;
+            <ul className='space-y-2'>;
               {completeSitemap;
                 .filter(route =>;
                   route.requiredRoles?.includes('jobSeeker') |;
                   route.requiredRoles?.includes('creator')).map(route => (<li key={route.path}>;
                     <Link;
                       href = {resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple";
+                      className='flex items-center hover:text-zion-purple';
                     >;
-                      <ChevronRight className="h-4 w-4 mr-2" />;
+                      <ChevronRight className='h-4 w-4 mr-2' />;
             </ul>;
           </div>;{/* Talent Routes */}
-          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
-            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Talent Pages</h2>;
-            <p className="text - sm text - zion - slate mb - 4">Requires talent or creator account</p>;
+          <div className='bg - zion - blue - dark p - 6 rounded - lg'>;
+            <h2 className='text - xl font - bold mb - 4 text - zion - cyan'>Talent Pages</h2>;
+            <p className='text - sm text - zion - slate mb - 4'>Requires talent or creator account</p>;
 
-            <ul className="space - y-2">;
+            <ul className='space - y-2'>;
 
               {complete_sitemap;
                 .filter (route =>;'
@@ -208,16 +204,14 @@ const pathMap: Record<string string> = {
 
                       {route.label}
                     </Link>;
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
                   </li>));
               }
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
           {/* Client Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>
-            <ul className="space-y-2">
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Client Pages</h2>
+            <p className='text-sm text-zion-slate mb-4'>Requires employer or buyer account</p>
+            <ul className='space-y-2'>
               {completeSitemap
                 .filter(route =>
                   route.requiredRoles?.includes('employer') |
@@ -227,35 +221,34 @@ const pathMap: Record<string string> = {
                   <li key={route.path}>
                     <Link
                       href = {resolvePath(route.path),}
-                      className="flex items-center hover:text-zion-purple"
+                      className='flex items-center hover:text-zion-purple'
                     >
-                      <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
+                      <ChevronRight className='h-4 w-4 mr-2' />
             </ul>;
           </div>;
 
           {/* Client Routes */}
                   </li>))}</ul>;
           </div>;{/* Client Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>;
-            <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>;
-            <ul className="space-y-2">;
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>;
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Client Pages</h2>;
+            <p className='text-sm text-zion-slate mb-4'>Requires employer or buyer account</p>;
+            <ul className='space-y-2'>;
               {completeSitemap;
                 .filter(route =>;
                   route.requiredRoles?.includes('employer') |;
                   route.requiredRoles?.includes('buyer')).map(route => (<li key={route.path}>;
                     <Link;
                       href = {resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple";
+                      className='flex items-center hover:text-zion-purple';
                     >;
-                      <ChevronRight className="h-4 w-4 mr-2" />;
+                      <ChevronRight className='h-4 w-4 mr-2' />;
             </ul>;
           </div>;{/* Client Routes */}
-          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
-            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Client Pages</h2>;
-            <p className="text - sm text - zion - slate mb - 4">Requires employer or buyer account</p>;
-            <ul className="space - y-2">;
+          <div className='bg - zion - blue - dark p - 6 rounded - lg'>;
+            <h2 className='text - xl font - bold mb - 4 text - zion - cyan'>Client Pages</h2>;
+            <p className='text - sm text - zion - slate mb - 4'>Requires employer or buyer account</p>;
+            <ul className='space - y-2'>;
 
               {complete_sitemap;
                 .filter (route =>;'
@@ -267,16 +260,14 @@ const pathMap: Record<string string> = {
 
                       {route.label}
                     </Link>;
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
                   </li>));
               }
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
           {/* Shared Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires any account type</p>
-            <ul className="space-y-2">
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Authenticated User Pages</h2>
+            <p className='text-sm text-zion-slate mb-4'>Requires any account type</p>
+            <ul className='space-y-2'>
               {completeSitemap
                 .filter(route =>
                   route.requiredAuth &&
@@ -286,35 +277,34 @@ const pathMap: Record<string string> = {
                   <li key={route.path}>
                     <Link
                       href = {resolvePath(route.path),}
-                      className="flex items-center hover:text-zion-purple"
+                      className='flex items-center hover:text-zion-purple'
                     >
-                      <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
+                      <ChevronRight className='h-4 w-4 mr-2' />
             </ul>;
           </div>;
 
           {/* Shared Routes */}
                   </li>))}</ul>;
           </div>;{/* Shared Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>;
-            <p className="text-sm text-zion-slate mb-4">Requires any account type</p>;
-            <ul className="space-y-2">;
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>;
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Authenticated User Pages</h2>;
+            <p className='text-sm text-zion-slate mb-4'>Requires any account type</p>;
+            <ul className='space-y-2'>;
               {completeSitemap;
                 .filter(route =>;
                   route.requiredAuth &&;
                   (!route.requiredRoles |route.requiredRoles.length === 0)).map(route => (<li key={route.path}>;
                     <Link;
                       href = {resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple";
+                      className='flex items-center hover:text-zion-purple';
                     >;
-                      <ChevronRight className="h-4 w-4 mr-2" />;
+                      <ChevronRight className='h-4 w-4 mr-2' />;
             </ul>;
           </div>;{/* Shared Routes */}
-          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
-            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Authenticated User Pages</h2>;
-            <p className="text - sm text - zion - slate mb - 4">Requires any account type</p>;
-            <ul className="space - y-2">;
+          <div className='bg - zion - blue - dark p - 6 rounded - lg'>;
+            <h2 className='text - xl font - bold mb - 4 text - zion - cyan'>Authenticated User Pages</h2>;
+            <p className='text - sm text - zion - slate mb - 4'>Requires any account type</p>;
+            <ul className='space - y-2'>;
 
               {complete_sitemap;
                 .filter (route =>;
@@ -330,11 +320,11 @@ const pathMap: Record<string string> = {
 
           {/* Admin Routes */}
 
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires admin account</p>
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Admin Pages</h2>
+            <p className='text-sm text-zion-slate mb-4'>Requires admin account</p>
 
-            <ul className="space-y-2">
+            <ul className='space-y-2'>
               {completeSitemap;
                 .filter(route =>'
                   route.requiredRoles?.includes('admin')
@@ -342,50 +332,50 @@ const pathMap: Record<string string> = {
                 .map(route => (
                   <li key={route.path}>
                     <Link;
-                      href = {resolvePath(route.path),}"
-                      className="flex items-center hover:text-zion-purple"
-                    >"
-                      <ChevronRight className="h-4 w-4 mr-2" />
+                      href = {resolvePath(route.path),}'
+                      className='flex items-center hover:text-zion-purple'
+                    >'
+                      <ChevronRight className='h-4 w-4 mr-2' />
                       {route.label}</Link>;
                   </li>;
                 ))}</Link>;
                   </li>))}</ul>;
           </div>;{/* Admin Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>;
-            <p className="text-sm text-zion-slate mb-4">Requires admin account</p>;
-            <ul className="space-y-2">;
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>;
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Admin Pages</h2>;
+            <p className='text-sm text-zion-slate mb-4'>Requires admin account</p>;
+            <ul className='space-y-2'>;
               {completeSitemap;
                 .filter(route =>;
                   route.requiredRoles?.includes('admin')).map(route => (<li key={route.path}>;
                     <Link;
                       href = {resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple";
+                      className='flex items-center hover:text-zion-purple';
                     >;
-                      <ChevronRight className="h-4 w-4 mr-2" />;
+                      <ChevronRight className='h-4 w-4 mr-2' />;
 
             </ul>;
           </div>;
-          {/* Admin Routes */}"
-          <div className="bg - zion - blue - dark p - 6 rounded - lg">;"
-            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Admin Pages</h2>;"
-            <p className="text - sm text - zion - slate mb - 4">Requires admin account</p>;"
-            <ul className="space - y-2">;
+          {/* Admin Routes */}'
+          <div className='bg - zion - blue - dark p - 6 rounded - lg'>;'
+            <h2 className='text - xl font - bold mb - 4 text - zion - cyan'>Admin Pages</h2>;'
+            <p className='text - sm text - zion - slate mb - 4'>Requires admin account</p>;'
+            <ul className='space - y-2'>;
               {complete_sitemap;
                 .filter (route =>;'
                   route.required_roles?.includes ('admin'));
                 .map (route => (
                   <li key={route.path}>;
                     <Link;
-                      href = {resolve_path (route.path), }"
-                      className="flex items - center hover:text - zion - purple";
-                    >;"
-                      <ChevronRight className="h - 4 w - 4 mr - 2" />;
+                      href = {resolve_path (route.path), }'
+                      className='flex items - center hover:text - zion - purple';
+                    >;'
+                      <ChevronRight className='h - 4 w - 4 mr - 2' />;
                       {route.label}
 
-                      href = {resolvePath(route && route.path),}"
-                      className="flex items-center hover:text-zion-purple">;"
-                      <ChevronRight className="h-4 w-4 mr-2" />;
+                      href = {resolvePath(route && route.path),}'
+                      className='flex items-center hover:text-zion-purple'>;'
+                      <ChevronRight className='h-4 w-4 mr-2' />;
                       {route && route.label}
 
                     </Link>;
@@ -409,7 +399,7 @@ const pathMap: Record<string string> = {
     {
       title: 'Resources'
     </>)}
-'"},const sitemap_data = [{title: 'Main Pages',links: [;
+''},const sitemap_data = [{title: 'Main Pages',links: [;
         { name: 'Home', url: '/' },{ name: 'About', url: '/about' },{ name: 'Services', url: '/services' },{ name: 'Contact', url: '/contact' },{ name: 'Blog', url: '/blog' },{ name: 'Careers', url: '/careers' }];
 },{title: 'Services',links: [{ name: 'AI Services', url: '/services / ai' },{ name: 'IT Services', url: '/services / it' },{ name: 'Cloud Solutions', url: '/services / cloud' },{ name: 'Cybersecurity', url: '/services / cybersecurity' },{ name: 'Digital Transformation', url: '/services / digital - transformation' }];
 },{title: 'Solutions',links: [{ name: 'Enterprise', url: '/solutions / enterprise' },{ name: 'Healthcare', url: '/solutions / healthcare' },{ name: 'Financial Services', url: '/solutions / financial' },{ name: 'Manufacturing', url: '/solutions / manufacturing' }];
@@ -418,9 +408,7 @@ const pathMap: Record<string string> = {
         { name: 'White Papers', url: '/white - papers' },        { name: 'Webinars', url: '/webinars' }
         { name: 'Documentation', url: '/docs' }
         { name: 'API Reference', url: '/api' }
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
       ]}
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
 
         { name: 'Case Studies', url: '/case - studies' }, ';
@@ -429,63 +417,61 @@ const pathMap: Record<string string> = {
         { name: 'Webinars', url: '/webinars' }, ';
         { name: 'Documentation', url: '/docs' }, '        { name: 'API Reference', url: '/api' }]}
   ];
-  return (<div className="min - h - screen bg - slate - 900 text - white py - 16">;
+  return (<div className='min - h - screen bg - slate - 900 text - white py - 16'>;
       <SEO;
-        title="Sitemap - Zion Tech Group";
-        description="Complete sitemap of Zion Tech Group website with all pages and services organized by category.";
+        title='Sitemap - Zion Tech Group';
+        description='Complete sitemap of Zion Tech Group website with all pages and services organized by category.';
       />;
-      <div className="container mx - auto px - 4 max - w - 6xl">;
-        <div className="text - center mb - 16">;
-          <h1 className="text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">            Sitemap;
-          </h1>";
-          <p className="text - xl text - zinc - 300 max - w-3xl mx - auto">;
+      <div className='container mx - auto px - 4 max - w - 6xl'>;
+        <div className='text - center mb - 16'>;
+          <h1 className='text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>            Sitemap;
+          </h1>';
+          <p className='text - xl text - zinc - 300 max - w-3xl mx - auto'>;
             Navigate through our comprehensive website structure to find the information and services you need.</p>;
         </div>;
-";
-        <div className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 4 gap - 8">;
-          {sitemap_data.map ((section, section_index)  => (";
-            <div key={section_index} className="bg - slate - 800 / 50 rounded - lg p - 6 border border - slate - 700">";
-              <h2 className="text - xl font - semibold mb - 4 text - cyan - 400">;
+';
+        <div className='grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 4 gap - 8'>;
+          {sitemap_data.map ((section, section_index)  => (';
+            <div key={section_index} className='bg - slate - 800 / 50 rounded - lg p - 6 border border - slate - 700'>';
+              <h2 className='text - xl font - semibold mb - 4 text - cyan - 400'>;
                 {section.title}
               </h2>;
-              <ul className="space - y - 2">;
+              <ul className='space - y - 2'>;
                 {section.links.map ((link, link_index) => (<li key={link_index}>;
                     <a;
                       href={link.url}
-                      className="text - zinc - 300 hover:text - cyan - 400 transition - colors duration - 200 block py - 1">;
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
+                      className='text - zinc - 300 hover:text - cyan - 400 transition - colors duration - 200 block py - 1'>;
                       {link.name}
 
 
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
           {/* Dynamic Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Dynamic Pages</h2>
+            <p className='text-sm text-zion-slate mb-4'>Pages with dynamic parameters</p>
 
-            <ul className="space-y-2">
+            <ul className='space-y-2'>
 
                 <li key={key}>
 
-                  <div className="flex items-center text-zion-slate">
-                    <ChevronRight className="h-4 w-4 mr-2" />
+                  <div className='flex items-center text-zion-slate'>
+                    <ChevronRight className='h-4 w-4 mr-2' />
 
-                    {path} <span className="ml-2 text-xs italic">({key})</span>
+                    {path} <span className='ml-2 text-xs italic'>({key})</span>
                   </div>
                 </li>
               ))}
 
             </ul>;
                       {link.name}{/* Dynamic Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>;
-            <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>;
-            <ul className="space-y-2">;
+          <div className='bg-zion-blue-dark p-6 rounded-lg'>;
+            <h2 className='text-xl font-bold mb-4 text-zion-cyan'>Dynamic Pages</h2>;
+            <p className='text-sm text-zion-slate mb-4'>Pages with dynamic parameters</p>;
+            <ul className='space-y-2'>;
               {Object.entries(dynamicPaths).map(([key, path]) => (<li key={key}>;
-                  <div className="flex items-center text-zion-slate">;
-                    <ChevronRight className="h-4 w-4 mr-2" />;
-                    {path} <span className="ml-2 text-xs italic">({key})</span>;
+                  <div className='flex items-center text-zion-slate'>;
+                    <ChevronRight className='h-4 w-4 mr-2' />;
+                    {path} <span className='ml-2 text-xs italic'>({key})</span>;
                   </div>;
                 </li>;
               ))}</ul>;
@@ -509,8 +495,8 @@ const pathMap: Record<string string> = {
           </p>;
         </div>;
       </div>;
-    </div>) }'"
-'";
+    </div>) }''
+'';
 
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
@@ -525,7 +511,7 @@ import { ChevronRight } from 'lucide-react'
 import { SEO  } from './SEO';
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
-'";}import { completeSitemap, dynamicPaths   } from '@/config/sitemap';
+'';}import { completeSitemap, dynamicPaths   } from '@/config/sitemap';
 import { SEO   } from './SEO';
 // Map sitemap paths to their actual routes in the application;
 // Note: This pathMap might need to be updated based on Next.js page structure;

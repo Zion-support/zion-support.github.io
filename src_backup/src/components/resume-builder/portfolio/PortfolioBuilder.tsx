@@ -23,7 +23,7 @@
               {editingProject ? 'Edit Project' : 'Add New Project'}'
             </h2>;
             <ProjectForm              project={editingProject || undefined}onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {setShowAddProject(false)setEditingProject(null) }}import { useState, useEffect  } from 'react';'
+              onCancel={() => {setShowAddProject(false)setEditingProject(null) }import { useState, useEffect  } from 'react';'
 import { Card, CardContent  } from '@/components/ui/card';'
 import { Button  } from '@/components/ui/button';'
 import { FilePlus, Loader2  } from 'lucide-react';'
@@ -48,9 +48,9 @@ export function PortfolioBuilder() {<ProjectForm;
               {editingProject ? 'Edit Project' : 'Add New Project'}'
             </h2>;<ProjectForm              project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {setShowAddProject(false)setEditingProject(null)}}<ProjectForm;
+              onCancel={() => {setShowAddProject(false)setEditingProject(null)}<ProjectForm;
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {setShowAddProject(false)setEditingProject(null)setEditingProject(null)setEditingProject(null)}}
+              onCancel={() => {setShowAddProject(false)setEditingProject(null)setEditingProject(null)setEditingProject(null)}
             />;
           </CardContent>;
         </Card>;
@@ -81,7 +81,7 @@ export function PortfolioBuilder() {<ProjectForm;
       {(showAddProject || editingProject) && (<Card>;
           <CardContent className="pt-6">;"
             <h2 className="text-xl font-semibold mb-6">;"
-              {editingProject ? 'Edit Project' : 'Add New Project'}setShowAddProject(false)setEditingProject(null)}})}{/* Projects List */}'
+              {editingProject ? 'Edit Project' : 'Add New Project'}setShowAddProject(false)setEditingProject(null)})}{/* Projects List */}'
       {projects.length > 0 ? (<div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-6">;"
           {projects.map((project) => (<ProjectCard;
               }
@@ -187,7 +187,7 @@ export function PortfolioBuilder() {<ProjectForm;
                 </Button>;
               </div>;
             </CardContent>;)}</Card>))}
-    </div>)}}
+    </div>)}
 }
 }</div>;
   )}</div>;

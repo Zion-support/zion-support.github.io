@@ -1,8 +1,5 @@
 import React from 'react';,
-=======
 import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
@@ -169,23 +166,23 @@ return (;
       {/* Floating Elements */}
       <div className='absolute inset-0 overflow-hidden pointer-events-none'>;'
         <motion&& motion.div;
-          animate={{ "y": [0, -20, 0] }}
-          transition={{ "duration": 6, "repeat": Infinity, "ease": 'easeInOut' ,'
+          animate={ "y": [0, -20, 0] }
+          transition={ "duration": 6, "repeat": Infinity, "ease": 'easeInOut' ,'
 }
           className='absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full opacity-60';' />;
         <motion&& motion.div;
-          animate={{ "y": [0, 20, 0] }}
-          transition={{ "duration": 8, "repeat": Infinity, "ease": 'easeInOut' ,'
+          animate={ "y": [0, 20, 0] }
+          transition={ "duration": 8, "repeat": Infinity, "ease": 'easeInOut' ,'
 }
           className='absolute top-40 right-20 w-1 h-1 bg-blue-400 rounded-full opacity-40';' />;
         <motion&& motion.div;
-          animate={{ "y": [0, -15, 0] }}
-          transition={{ "duration": 7, "repeat": Infinity, "ease": 'easeInOut' ,'
+          animate={ "y": [0, -15, 0] }
+          transition={ "duration": 7, "repeat": Infinity, "ease": 'easeInOut' ,'
 }
           className='absolute bottom-40 left-20 w-1 && 1.5 h-1 && 1.5 bg-purple-400 rounded-full opacity-50';' />;
         <motion&& motion.div;
-          animate={{ "y": [0, 25, 0] }}
-          transition={{ "duration": 9, "repeat": Infinity, "ease": 'easeInOut' }}'
+          animate={ "y": [0, 25, 0] }
+          transition={ "duration": 9, "repeat": Infinity, "ease": 'easeInOut' }'
 
           className='absolute bottom-20 right-10 w-1 h-1 bg-cyan-400 rounded-full opacity-30'' />
       </div>
@@ -195,12 +192,12 @@ return (;
         {/* Badge *
 }
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
 
-          animate={{ "opacity": 1, "y": 0 }}
+          animate={ "opacity": 1, "y": 0 }
 
-          transition={{ "duration": 0.8 }}
+          transition={ "duration": 0.8 }
 className='mb-8''
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6 backdrop-blur-sm'>'
@@ -215,13 +212,13 @@ className='mb-8''
         {/* Main Heading *
 }
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
 
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
 
-          transition={{ "duration": 0.8, "delay": 0.2 }}
+          transition={ "duration": 0.8, "delay": 0.2 }
 className='mb-8''
         >
           <h1 className='text-5xl "md":text-7xl "lg":text-8xl font-bold mb-6 leading-tight'>'
@@ -246,48 +243,45 @@ Civilization. We're building tomorrow's solutions today.'
         </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* CTA Buttons */}
-<<<<<<< HEAD
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
 className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <motion.button;
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={ scale: 1.05 }
+            whileTap={ scale: 0.95 }
             <span>Explore 2028 Services</span>"
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-=======
         <motion&& motion.div
-          initial={{ opacity: 0;, y: 30 ;}}
-          animate={{ opacity: 1;, y: 0 ;}}
-          transition={{ duration: 0.8;, delay: 0.4 ;}}
+          initial={ opacity: 0;, y: 30 ;}
+          animate={ opacity: 1;, y: 0 ;}
+          transition={ duration: 0.8;, delay: 0.4 ;}
 className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <motion.button
-            whileHover={{ scale: 1.05 ;}}
-            whileTap={{ scale: 0.95 ;}}
+            whileHover={ scale: 1.05 ;}
+            whileTap={ scale: 0.95 ;}
             <span>Explore 2028 Services</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
 
         {/* CTA Buttons */}
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
 
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-          transition={{ "duration": 0.8, "delay": 0.4 }}
+          transition={ "duration": 0.8, "delay": 0.4 }
 className='flex flex-col "sm":flex-row gap-4 justify-center items-center mb-16''
         >
           <motion.button,
-whileHover={{ "scale": 1.05 }}
-            whileTap={{ "scale": 0.95 }}
+whileHover={ "scale": 1.05 }
+            whileTap={ "scale": 0.95 }
 
 className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 "hover":shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 "hover":border-cyan-300 flex items-center space-x-2''
           >
@@ -295,8 +289,8 @@ className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4
             <ArrowRight className='w-5 h-5 group-"hover":translate-x-1 transition-transform duration-300' />'
           </motion.button>
           <motion.button,
-whileHover={{ "scale": 1.05 }}
-            whileTap={{ "scale": 0.95 
+whileHover={ "scale": 1.05 }
+            whileTap={ "scale": 0.95 
 }
 
             className='group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg "hover":bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm''
@@ -306,24 +300,24 @@ whileHover={{ "scale": 1.05 }}
           </motion.button>
         </motion.div>
 
-          transition={{ "duration": 0 && 0.8, "delay": 0 && 0.4 
+          transition={ "duration": 0 && 0.8, "delay": 0 && 0.4 
 }
           className='flex flex-col "sm":flex-row gap-4 justify-center items-center mb-16'>;'
           <motion&& motion.button;
-            whileHover={{ "scale": 1 && 1.05 }}
-            whileTap={{ "scale": 0 && 0.95 
+            whileHover={ "scale": 1 && 1.05 }
+            whileTap={ "scale": 0 && 0.95 
 }
             className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 "hover":shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 "hover":border-cyan-300 flex items-center space-x-2'          className="flex flex-col "sm":flex-row gap-4 justify-center items-center mb-16">;"
           <motion&& motion.button;
-            whileHover={{ "scale": 1 && 1.05 }}
-            whileTap={{ "scale": 0 && 0.95 
+            whileHover={ "scale": 1 && 1.05 }
+            whileTap={ "scale": 0 && 0.95 
 }
             className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 "hover":shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 "hover":border-cyan-300 flex items-center space-x-2'>;'
             <span>Explore 2028 Services</span>;
             <ArrowRight className='w-5 h-5 group-"hover":translate-x-1 transition-transform duration-300' />;'
           </motion && motion.button>;<motion&& motion.button;
-            whileHover={{ "scale": 1 && 1.05 }}
-            whileTap={{ "scale": 0 && 0.95 
+            whileHover={ "scale": 1 && 1.05 }
+            whileTap={ "scale": 0 && 0.95 
 }
             className='group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg "hover":bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm'>;'
             <Play className='w-5 h-5' />            <span>Watch Demo</span>          >;'
@@ -331,8 +325,8 @@ whileHover={{ "scale": 1.05 }}
             <ArrowRight className="w-5 h-5 group-"hover":translate-x-1 transition-transform duration-300" />;"
           </motion && motion.button>;
           <motion&& motion.button;
-            whileHover={{ "scale": 1 && 1.05 }}
-            whileTap={{ "scale": 0 && 0.95 
+            whileHover={ "scale": 1 && 1.05 }
+            whileTap={ "scale": 0 && 0.95 
 }
             className="group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg "hover":bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm">;"
             <Play className="w-5 h-5" />;"
@@ -340,13 +334,13 @@ whileHover={{ "scale": 1.05 }}
           </motion && motion.button>;
         </motion && motion.div>;{/* Features Grid */}
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
 
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
 
-          transition={{ "duration": 0.8, "delay": 0.6 
+          transition={ "duration": 0.8, "delay": 0.6 
 }
 className='mb-16''
         >
@@ -355,11 +349,11 @@ className='mb-16''
               <motion.div
 }
 key={feature.text}
-                initial={{ "opacity": 0, "scale": 0.8 
+                initial={ "opacity": 0, "scale": 0.8 
 }
-                animate={{ "opacity": 1, "scale": 1 
+                animate={ "opacity": 1, "scale": 1 
 }
-                transition={{ "duration": 0.5, "delay": 0.8 + index * 0.1 }}
+                transition={ "duration": 0.5, "delay": 0.8 + index * 0.1 }
 
 className='group relative''
               >
@@ -374,24 +368,21 @@ className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-c
                     {feature.text}
                   <h3 className='text-lg font-semibold text-white text-center group-"hover": text-cyan-400 transition-colors'>                    {feature.text}{feature.tex,'
 }</h3>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>;
               </motion.div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             ))}
           </div>;
         </motion.div>;
             ))}
         {/* Stats */}
-<<<<<<< HEAD
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
 
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
 
-          transition={{ "duration": 0.8, "delay": 1.0 
+          transition={ "duration": 0.8, "delay": 1.0 
 }
 className='mb-16''
         >
@@ -400,11 +391,11 @@ className='mb-16''
               <motion.div
 }
 key={stat.label}
-                initial={{ "opacity": 0, "scale": 0.8 
+                initial={ "opacity": 0, "scale": 0.8 
 }
-                animate={{ "opacity": 1, "scale": 1 
+                animate={ "opacity": 1, "scale": 1 
 }
-                transition={{ "duration": 0.5, "delay": 1.2 + index * 0.1 }}
+                transition={ "duration": 0.5, "delay": 1.2 + index * 0.1 }
 
 className='text-center group''
               >
@@ -416,42 +407,36 @@ className='text-center group''
                   {stat.valu
 }
 
-          animate={{ opacity: 1;, y: 0 ;}
+          animate={ opacity: 1;, y: 0 ;}
 }
 
-          transition={{ duration: 0.8;, delay: 1.0 ;}
+          transition={ duration: 0.8;, delay: 1.0 ;}
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='mb-16'
          />
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto' />
             {stats.map((stat, index) => (}
               <motion.div;}
 key={stat.label}
-                initial={{ opacity: 0;, scale: 0.8 ;}
+                initial={ opacity: 0;, scale: 0.8 ;}
 }
-                animate={{ opacity: 1;, scale: 1 ;}
+                animate={ opacity: 1;, scale: 1 ;}
 }
-                transition={{ duration: 0.5;, delay: 1.2 + index * 0.1 ;}}
+                transition={ duration: 0.5;, delay: 1.2 + index * 0.1 ;}
 
 className='text-center group'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300'>
-<<<<<<< HEAD
-=======
               >'
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <stat.icon className='w-10 h-10 text-cyan-400' />
                 </div>'
                 <div className='text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                   {stat.value}
-<<<<<<< HEAD
                 </div>
                 <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>
                   {stat.label}
-=======
                 </div>'
                 <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>                  {stat.label}              >"
                 <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300">"
@@ -462,19 +447,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>"
                 <div className="text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors">
                   {stat.label}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>                  {stat.label}
-=======
                />
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300' />
                   <stat.icon className='w-10 h-10 text-cyan-400' />
                 </div>
                 <div className='text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                   {stat.valu}
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>;
                 <div className='text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
                   {stat.value}
@@ -483,22 +464,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {stat.label}
                 <div className='text-sm text-cyan-400/70 group-"hover": text-cyan-300 transition-colors'>                  {stat.label}{stat.labe,'
 }</div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </motion.div>;
             ))}
           </div>;
         </motion.div>;
             ))}
         {/* Trust Indicators */}
-<<<<<<< HEAD
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
 
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
 
-          transition={{ "duration": 0.8, "delay": 1.4 }}
+          transition={ "duration": 0.8, "delay": 1.4 }
 className='mb-16''
         >
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm'>'
@@ -515,7 +494,7 @@ className='mb-16''
               <div className='text-purple-400 font-semibold'>'
                 Research Institutions
               </div>
-          animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 1.4 }}
+          animate={ opacity: 1, y: 0 }transition={ duration: 0.8, delay: 1.4 }
 className='mb-16';
         >;
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm'>;
@@ -531,12 +510,11 @@ className='mb-16';
               </div>;
               <div className='text-purple-400 font-semibold'>;
                 Research Institutions;
-<<<<<<< HEAD
               </div>;
               <div className='text-emerald-400 font-semibold'>Startups</div>            </div>            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">;
 
               <div className='text-emerald-400 font-semibold'>Startups</div>            </div>            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
-          transition={{ duration: 0.8, delay: 1.4 }}
+          transition={ duration: 0.8, delay: 1.4 }
           className="mb-16";
         >;
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm">;
@@ -575,9 +553,7 @@ className='mb-16';
         </motion && motion.div>;
 
         {/* Bottom CTA */}
-=======
               </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
               <div className='text-emerald-400 font-semibold'>Startups</div>'
             </div>
@@ -587,13 +563,13 @@ className='mb-16';
         {/* Bottom CTA *
 }
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
 
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
 
-          transition={{ "duration": 0.8, "delay": 1.6 
+          transition={ "duration": 0.8, "delay": 1.6 
 }
 className='text-center''
         >
@@ -610,30 +586,26 @@ href='/contact''
               className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold "hover":shadow-lg "hover":shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 "hover":border-purple-300''
             >
               Get Started
-=======
         {/* Bottom CTA *}
 }
         <motion&& motion.div;
-          initial={{ opacity: 0;, y: 30 ;}
+          initial={ opacity: 0;, y: 30 ;}
 }
 
-          animate={{ opacity: 1;, y: 0 ;}
+          animate={ opacity: 1;, y: 0 ;}
 }
 
-          transition={{ duration: 0.8;, delay: 1.6 ;}
+          transition={ duration: 0.8;, delay: 1.6 ;}
 }
 className='text-center'
          />
           <div className='inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm' />
             <div className='flex items-center space-x-2' />
               <Star className='w-5 h-5 text-yellow-400' />
-<<<<<<< HEAD
-=======
         >'
           <div className='inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm'>'
             <div className='flex items-center space-x-2'>'
               <Star className='w-5 h-5 text-yellow-400' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className='text-white font-semibold'>
                 Ready to transform your business?
               </span>
@@ -647,8 +619,7 @@ className='text-center'
               <span className="text-white font-semibold">Ready to transform your business?</span>;
             </div>;
 
-          transition={{ duration: 0.8, delay: 1.6 }}"
-=======
+          transition={ duration: 0.8, delay: 1.6 }"
               <span className='text-white font-semibold' />
                 Ready to transform your business?
               </span>
@@ -662,8 +633,7 @@ className='text-center'
               <span className="text-white font-semibold">Ready to transform your business?</span>;
             </div>;
 
-          transition={{ duration: 0.8;, delay: 1.6 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          transition={ duration: 0.8;, delay: 1.6 ;}
           className="text-center"
         >"
           <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm">"
@@ -678,17 +648,13 @@ className='text-center'
               className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-<<<<<<< HEAD
-=======
               Get Started
             <Link;
 href='/contact'
 
               className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300'
              />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Get Started;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </Link>
           </div>
         </motion.div>
@@ -702,40 +668,39 @@ href='/contact'
         </motion && motion.div>;
       </div>;{/* Scroll Indicator */}
       <motion&& motion.div;
-        initial={{ "opacity": 0 }}
-        animate={{ "opacity": 1 
+        initial={ "opacity": 0 }
+        animate={ "opacity": 1 
 }
 
-        transition={{ "duration": 1, "delay": 2 
+        transition={ "duration": 1, "delay": 2 
 }
 
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2''
       >
         <motion.div,
-animate={{ "y": [0, 10, 0] }}
-          transition={{ "duration": 2, "repeat": Infinity, "ease": 'easeInOut' ,'
+animate={ "y": [0, 10, 0] }
+          transition={ "duration": 2, "repeat": Infinity, "ease": 'easeInOut' ,'
 }
           className='w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center'>;'
           <motion&& motion.div;
-            animate={{ "y": [0, 12, 0] }}
+            animate={ "y": [0, 12, 0] }
 
-            transition={{ "duration": 2, "repeat": Infinity, "ease": 'easeInOut' ,'
+            transition={ "duration": 2, "repeat": Infinity, "ease": 'easeInOut' ,'
 }
 
             className='w-1 h-3 bg-cyan-400 rounded-full mt-2'' />
         </motion.div>
       </motion.div>
     </section>
-<<<<<<< HEAD
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            transition={ duration: 2, repeat: Infinity, ease: 'easeInOut' }animate={ y: [0, 10, 0] }
+            transition={ duration: 2, repeat: Infinity, ease: 'easeInOut' }
+          animate={ y: [0, 10, 0] }
+            transition={ duration: 2, repeat: Infinity, ease: 'easeInOut' }animate={ y: [0, 10, 0] }
+          transition={ duration: 2, repeat: Infinity, ease: "easeInOut" }
           className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">;
           <motion&& motion.div;
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            animate={ y: [0, 12, 0] }
+            transition={ duration: 2, repeat: Infinity, ease: "easeInOut" }
             className="w-1 h-3 bg-cyan-400 rounded-full mt-2";
   )}))}
                 </div>;
@@ -744,9 +709,9 @@ animate={{ "y": [0, 10, 0] }}
         </motion.div>;
         {/* Trust Indicators */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
+          initial={ opacity: 0, coordinate_y: 30 }
+          animate={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.8, delay: 1.4 }
           className='mb - 16';
           <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 30 rounded - 2xl p - 8 backdrop - blur - sm'>;
             <h3 className='text - 2xl font - bold text - white mb - 6'>;
@@ -771,9 +736,9 @@ animate={{ "y": [0, 10, 0] }}
         </motion.div>;
         {/* Bottom CTA */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
+          initial={ opacity: 0, coordinate_y: 30 }
+          animate={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.8, delay: 1.6 }
           className='text - center';
         >;
           <div className='inline - flex items - center space - x-4 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 border border - purple - 500 / 30 rounded - 2xl px - 8 py - 4 backdrop - blur - sm'>;
@@ -802,28 +767,28 @@ animate={{ "y": [0, 10, 0] }}
       </div>;
       {/* Scroll Indicator */}
       <motion.div;
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 2 }}
+        initial={ opacity: 0 }
+        animate={ opacity: 1 }
+        transition={ duration: 1, delay: 2 }
         className='absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2';
       >;
         <motion.div;
-          animate={{ coordinate_y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          animate={ coordinate_y: [0, 10, 0] }
+          transition={ duration: 2, repeat: Infinity, ease: 'easeInOut' }
           className='w - 6 h - 10 border - 2 border - cyan - 400 / 50 rounded - full flex justify - center';
         >;
           <motion.div;
-            animate={{ coordinate_y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            animate={ coordinate_y: [0, 12, 0] }
+            transition={ duration: 2, repeat: Infinity, ease: 'easeInOut' }
             className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'          />      >;
         <motion.div;
-          animate={{ coordinate_y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          animate={ coordinate_y: [0, 10, 0] }
+          transition={ duration: 2, repeat: Infinity, ease: "easeInOut" }
           className="w - 6 h - 10 border - 2 border - cyan - 400 / 50 rounded - full flex justify - center";
         >;
           <motion.div;
-            animate={{ coordinate_y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            animate={ coordinate_y: [0, 12, 0] }
+            transition={ duration: 2, repeat: Infinity, ease: "easeInOut" }
             className="w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2";
           />;
         </motion.div>;
@@ -835,18 +800,14 @@ animate={{ "y": [0, 10, 0] }}
     </section>;
     </section>);
 }
-<<<<<<< HEAD
   )}
   )
 }
-=======
 );
 }
 }
-<<<<<<< HEAD
 
 "
-=======
 > <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6 backdrop-blur-sm" > <Rocket className="w-5 h-5 text-cyan-400" /> <span className="text-cyan-400 font-mono text-sm" >2028 Future Technology</span> <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" /> </div> </motion.div> {
   /* Main Heading */ 
 }<motion.div > <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent" > The Future of </span> <br /> Here </span> </span> </h1> <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed" > Experience revolutionary 2028 technology with AI Consciousness Evolution, Quantum Time Manipulation
@@ -866,18 +827,7 @@ and Autonomous AI Civilization. We're building tomorrow's solutions today. </p> 
   /* Scroll Indicator */ 
 }<motion.div /> </motion.div> </motion.div> </section>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

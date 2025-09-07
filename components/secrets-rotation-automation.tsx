@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
-=======
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,7 +32,6 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
->>>>>>> origin/main
 
 import React from './react';
 import SEO from "../components / SEO";
@@ -56,13 +52,9 @@ export default function SecretsRotationAutomationPage() {;
     "CI/CD integration (GitHub Actions, CircleCI)",;
     "Cloud KMS and Vault support",;
   ];
-=======
-<<<<<<< HEAD
 </div>) ) 
 }</div> </a> <a href="https://cloud.google.com/kms" target="blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300" > <ExternalLink className="w-4 h-4" /> Google Cloud KMS </a> </div> </section> </main> </>) 
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
@@ -95,8 +87,6 @@ export default function SecretsRotationAutomationPage() {
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
 	];
 
-<<<<<<< HEAD
-=======
   const features = [
     "Automated key and secret rotation"
     "JIT credentials with expirations"
@@ -309,7 +299,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 	const features = null;
 
->>>>>>> origin/main
 	return (
 		<>
 			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs." />
@@ -321,12 +310,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />
-<<<<<<< HEAD
 								<p className="text-gray-200">{f}</p>
-=======
 <p className="text-gray-200">{f}</p>
 
->>>>>>> origin/main
 							</div>
 						))}
 					</div>
@@ -336,21 +322,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 						<a href="https://developer.hashicorp.com/vault" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
 							<ExternalLink className="w-4 h-4" /> HashiCorp Vault Docs
 							</a>
-<<<<<<< HEAD
 						<a href="https://cloud.google.com/kms" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-=======
 <a href="https://cloud.google.com/kms" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
->>>>>>> origin/main
 							<ExternalLink className="w-4 h-4" /> Google Cloud KMS
 							</a>
 					</div>
 				</section>
 			</main>
 		</>
-<<<<<<< HEAD
 	)
 }
-=======
 );
 }
     </>);
@@ -527,7 +508,6 @@ return (
     </>
   );
 }
-<<<<<<< HEAD
 
 
 
@@ -606,7 +586,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

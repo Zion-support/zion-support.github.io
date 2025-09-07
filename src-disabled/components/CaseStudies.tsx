@@ -1,4 +1,4 @@
-import { motion     } from 'framer-motion';"";
+import { motion     } from 'framer-motion';'';
 import { CheckCircle, TrendingUp, Users, DollarSign      } from 'lucide-react';
 import { motion      } from 'framer-motion';
 
@@ -48,35 +48,35 @@ export default function CaseStudies() {return (<section className='py-24 sm: py-
         <div className='mx-auto max-w-2xl lg:text-center mb-16' />;
           <motion.h2;
             className='text-base font-semibold leading-7 text-blue-600';
-            initial={{ opacity: 0, y: 20 }
+            initial={ opacity: 0, y: 20 }
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true  }}
-            transition={{ duration: 0.6  }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true  }
+            transition={ duration: 0.6  }
 }
            />;
             Success Stories;
           </motion.h2>;
           <motion.p;
             className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl';
-            initial={{ opacity: 0, y: 20 }
+            initial={ opacity: 0, y: 20 }
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true  }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true  }
 }
-            transition={{ duration: 0.6, delay: 0.1 }
+            transition={ duration: 0.6, delay: 0.1 }
 }
            />;
             Real results from real clients;
           </motion.p>;
           <motion.p;
             className='mt-6 text-lg leading-8 text-gray-600';
-            initial={{ opacity: 0, y: 20 }
+            initial={ opacity: 0, y: 20 }
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true  }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true  }
 }
-            transition={{ duration: 0.6, delay: 0.2 }
+            transition={ duration: 0.6, delay: 0.2 }
 }
            />;
             See how our AI, cloud, and cybersecurity solutions have transformed businesses across industries.</motion.p>;
@@ -86,12 +86,12 @@ export default function CaseStudies() {return (<section className='py-24 sm: py-
           {caseStudies.map((study, index) => (<motion.div;}
               key={study.id}
               className='bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover: shadow-xl transition-all duration-300';
-              initial={{ opacity: 0, y: 30 }
+              initial={ opacity: 0, y: 30 }
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true  }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true  }
 }
-              transition={{ duration: 0.6, delay: index * 0.1 }
+              transition={ duration: 0.6, delay: index * 0.1 }
 }
              />;
               <div className='p-8' />;
@@ -150,12 +150,12 @@ export default function CaseStudies() {return (<section className='py-24 sm: py-
         {/* CTA */}
         <motion.div;
           className='text-center mt-12';
-          initial={{ opacity: 0, y: 20 }
+          initial={ opacity: 0, y: 20 }
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true  }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true  }
 }
-          transition={{ duration: 0.6, delay: 0.4 }
+          transition={ duration: 0.6, delay: 0.4 }
 }
          />;
           <p className='text-lg text-gray-600 mb-6' />;
@@ -170,4 +170,4 @@ export default function CaseStudies() {return (<section className='py-24 sm: py-
         </motion.div>;
       </div>;
     </section>;
-  )}"
+  )}'

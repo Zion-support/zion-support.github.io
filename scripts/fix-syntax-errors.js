@@ -8,7 +8,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -28,7 +28,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -49,7 +49,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -70,7 +70,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs && fs.readFileSync(filePath,'utf8');'
 
@@ -101,7 +101,7 @@ const fixes = [// Fix numeric literals in object properties;
 
 const fixed = content;
         .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g, '$"1": "$2$3"').replace(/(\w+):\s*([^}]+)(?=\s*[}])/g, (m, prop, value) => {if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) {if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) {return "${prop}: "${value}""}"
-          return m})return "style={{ ${fixed} }}`}`  },// Fix unterminated strings;
+          return m})return "style={ ${fixed} }`}`  },// Fix unterminated strings;
   {"pattern": /"([^"]*)\n/g,"replacement": '"$1"';'
   },// Fix malformed template literals;
   {"pattern": /\$\{([^}]+)\}/g,"replacement": '${$1}';'
@@ -115,7 +115,7 @@ function fixFile() {try {let content = fs.readFileSync(filePath, 'utf8';'
     let content = fs && fs.readFileSync(filePath, 'utf8';'
   const originalContent = content;
     // Apply fixes;
-    fixes && fixes.forEach((fix) => {if (typeof fix && fix.replacement === 'function') {content = content && content.replace(fix && fix.pattern, fix && fix.replacement)} else {content = content && content.replace(fix && fix.pattern, fix && fix.replacement)}})// Additional specific fixes for common issues;'
+    fixes && fixes.forEach((fix) => {if (typeof fix && fix.replacement === 'function') {content = content && content.replace(fix && fix.pattern, fix && fix.replacement)} else {content = content && content.replace(fix && fix.pattern, fix && fix.replacement)})// Additional specific fixes for common issues;'
     content = content;
       // Fix numeric literals in style objects;
       .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g, '$"1": "$2$3"')// Fix missing quotes in object properties;'
@@ -144,7 +144,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -163,7 +163,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -182,7 +182,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -201,7 +201,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -220,7 +220,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -239,7 +239,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -258,7 +258,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -277,7 +277,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -296,7 +296,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -315,7 +315,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -334,7 +334,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -353,7 +353,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -374,7 +374,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -393,7 +393,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -412,7 +412,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -431,7 +431,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -450,7 +450,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -470,7 +470,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -489,7 +489,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -508,7 +508,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -527,7 +527,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -546,7 +546,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -565,7 +565,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -584,7 +584,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -603,7 +603,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -622,7 +622,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -643,7 +643,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -662,7 +662,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -681,7 +681,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -700,7 +700,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -719,7 +719,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -742,7 +742,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -761,7 +761,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -782,7 +782,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -801,7 +801,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m};`return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8';'
   }
@@ -838,7 +838,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -858,7 +858,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -878,7 +878,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -898,7 +898,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -918,7 +918,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -938,7 +938,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -960,7 +960,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -980,7 +980,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -1000,7 +1000,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -1020,7 +1020,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -1040,7 +1040,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -1072,7 +1072,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs && fs.readFileSync(filePath,'utf8');'
 
@@ -1092,7 +1092,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs && fs.readFileSync(filePath,'utf8');'
 
@@ -1112,7 +1112,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs && fs.readFileSync(filePath,'utf8');'
 
@@ -1132,7 +1132,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs && fs.readFileSync(filePath,'utf8');'
 
@@ -1152,7 +1152,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs && fs.readFileSync(filePath,'utf8');'
 
@@ -1172,7 +1172,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs && fs.readFileSync(filePath,'utf8');'
 
@@ -1193,7 +1193,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 
@@ -1213,7 +1213,7 @@ const fixes = [ { "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,"replacement": '$"1": 
 }/g,"replacement": (match,content) => {;
 }
 const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$"1": "$2$3"') .replace(/(\w+):\s*([^}]+)(?=\s*,;'
-}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={{ ${fixed} }}`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
+}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`};`return m}); return `style={ ${fixed} }`} },{ "pattern": /"([^"]*)\n/g,"replacement": '"$1"',;'},{ "pattern": /\$\{([^}]+)
 }/g,"replacement": '${$1}','
 } ]; function fixFile() { try { let content = fs.readFileSync(filePath,'utf8');'
 

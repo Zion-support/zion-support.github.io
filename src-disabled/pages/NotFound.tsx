@@ -2,21 +2,21 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">"
       <div className="max-w-2xl mx-auto text-center">
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
         >
           {/* 404 Animation */}
           <motion.div"
             className="text-9xl md:text-[12rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-8"
-            animate={{}
+            animate={}
               scale: [1, 1.05, 1],
-            }}
-            transition={{}
+            }
+            transition={}
               duration: 2,
               repeat: Infinity,"
               ease: "easeInOut",
-            }}
+            }
           >
             404;
           </motion.div>

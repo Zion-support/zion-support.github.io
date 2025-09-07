@@ -1,7 +1,7 @@
 export default function AiToolsPage () {
   const aiTools = [ {
-  return (<> <Head> <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title> <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." /> <meta property="og:title" content="AI Tools & Services | Zion Tech Group" /> <meta property="og:description" content="Real AI tools with pricing and direct links to help boost your productivity and creativity." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" /> AI Tools & Services </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > Real AI Tools for Real Results </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed" > Curated AI tools and services that actually work. Each tool has been tested and verified to provide real value for professionals and businesses. No hype - just results. </p> </div> </section> AI Market Insights </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Understanding the AI landscape helps you make informed decisions about which tools to invest in. </p> </div> </div> </Card>) ) 
-}</div> </div> </section> Curated AI Tools & Services </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Each tool has been carefully selected based on performance, reliability, and real-world value. </p> </div> <Card key= {
+  return (<> <Head> <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title> <meta name='description' content='Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links.' /> <meta property='og:title' content='AI Tools & Services | Zion Tech Group' /> <meta property='og:description' content='Real AI tools with pricing and direct links to help boost your productivity and creativity.' /> <meta name='twitter:card' content='summary large image' /> </Head> <div className='relative z-10 container-cursor text-center' > <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6' > <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' /> AI Tools & Services </div> <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg' > Real AI Tools for Real Results </h1> <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed' > Curated AI tools and services that actually work. Each tool has been tested and verified to provide real value for professionals and businesses. No hype - just results. </p> </div> </section> AI Market Insights </h2> <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' > Understanding the AI landscape helps you make informed decisions about which tools to invest in. </p> </div> </div> </Card>) ) 
+}</div> </div> </section> Curated AI Tools & Services </h2> <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' > Each tool has been carefully selected based on performance, reliability, and real-world value. </p> </div> <Card key= {
   index 
 }className= {
   `card-hover group border-gradient-blue relative $ {
@@ -260,7 +260,7 @@ property='og:description'
             {aiMarketStats.map((stat, index) => (<Card;}
                 key={index}
                 className='card-hover border-gradient-blue text-center';
-                style={{ animationDelay: `${index * 0.1}s` ,
+                style={ animationDelay: `${index * 0.1}s` ,
 }
                />;
                 <div className='p-6' />;
@@ -306,11 +306,11 @@ reliability, and real-world value.
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow' />;
               Curated AI Tools & Services;
             </h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" />;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
               Each tool has been carefully selected based on performance, reliability, and real-world value.;
             </p>;
           </div>;
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" />;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8' />;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
               Each tool has been carefully selected based on performance;
               reliability, and real-world value.;
@@ -330,7 +330,7 @@ reliability, and real-world value.
           </div>;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8' />            {aiTools && aiTools.map((tool, index) => (              Curated AI Tools & Services;
             </h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" />;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
               Each tool has been carefully selected based on performance, reliability, and real-world value.;
             </p>;
           </div>;}
@@ -341,7 +341,7 @@ reliability, and real-world value.
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''}
                 }`}
 
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
                />
                 {tool.popular && (
 <div className='absolute -top-3 left-1/2 transform -translate-x-1/2' />
@@ -456,7 +456,7 @@ comprehensive toolkit for your needs.
               <Card;}
 key={index}
                 className='card-hover border-gradient-blue';
-                style={{ animationDelay: `${index * 0.1}s` ,
+                style={ animationDelay: `${index * 0.1}s` ,
 }
                />;
                 <div className='p-6' />;
@@ -489,7 +489,7 @@ key={index}
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow' />;
               Getting Started with AI Tools;
             </h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" />;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
               Practical advice for implementing AI tools in your workflow and maximizing their value.;
             </p>;
           </div>;

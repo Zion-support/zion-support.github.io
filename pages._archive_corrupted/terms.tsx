@@ -25,7 +25,7 @@ export default function Terms() {export default function Terms() {return (<div>;
       <h1>Terms</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  )}}ursor/fix-syntax-push-and-merge-to-main-40de;
-}}ursor/automate-test-improve-and-merge-code-646c;
+  )}ursor/fix-syntax-push-and-merge-to-main-40de;
+}ursor/automate-test-improve-and-merge-code-646c;
 }
 }

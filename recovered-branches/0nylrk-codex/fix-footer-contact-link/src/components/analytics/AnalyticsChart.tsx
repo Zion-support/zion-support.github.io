@@ -105,13 +105,13 @@ function AnalyticsChart() {
                 </SelectContent>;                  height={50}
 
                 />;
-                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />;
+                <YAxis tick={ fill: '#b1b9c6', fontSize: 12 } />;
                 <Tooltip
-                  contentStyle={{ 
+                  contentStyle={ 
                     backgroundColor: '#1a2332', 
                     borderColor: '#293445',
                     color: '#fff'
-                  }} 
+                  } 
                 />;
                 <Legend />;
                 {dataKeys && dataKeys.map((key, index) => (;
@@ -155,21 +155,21 @@ function AnalyticsChart() {
         <div className="h-72 w-full p-4">
           <ResponsiveContainer width="100%" height="100%">
             {chartType === 'line' ? (
-              <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25}}>
+              <LineChart data={data} margin={ top: 5, right: 30, left: 20, bottom: 25}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
                 <XAxis 
                   dataKey="date" 
-                  tick={{ fill: '#b1b9c6', fontSize: 12}}
+                  tick={ fill: '#b1b9c6', fontSize: 12}
                   angle={-30}
                   textAnchor="end"
                   height={50}
                 />
-                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12}} />
+                <YAxis tick={ fill: '#b1b9c6', fontSize: 12} />
                 <Tooltip 
                   contentStyle = $2;
                     borderColor: '#293445',
                     color: '#fff'
-                  }}
+                  }
                 />
                 <Legend />
                 {dataKeys.map((key, index) => (
@@ -178,27 +178,27 @@ function AnalyticsChart() {
                     type="monotone"
                     dataKey={key}
                     stroke={colors[index % colors.length]}
-                    activeDot={{ r: 8}}
+                    activeDot={ r: 8}
                     strokeWidth={2}
                   />
                 ))}
               </LineChart>
             ) : (
-              <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25}}>
+              <BarChart data={data} margin={ top: 5, right: 30, left: 20, bottom: 25}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
                 <XAxis 
                   dataKey="date" 
-                  tick={{ fill: '#b1b9c6', fontSize: 12}} 
+                  tick={ fill: '#b1b9c6', fontSize: 12} 
                   angle={-30}
                   textAnchor="end"
                   height={50}
                 />
-                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12}} />
+                <YAxis tick={ fill: '#b1b9c6', fontSize: 12} />
                 <Tooltip 
                   contentStyle = $2;
                     borderColor: '#293445',
                     color: '#fff'
-                  }}
+                  }
                 />
                 <Legend />
                 {dataKeys.map((key, index) => (
@@ -217,7 +217,7 @@ function AnalyticsChart() {
     </Card>
   )
 }
-                  tick={{ fill: '#b1b9c6', fontSize: 12 }}
+                  tick={ fill: '#b1b9c6', fontSize: 12 }
                   angle={-30}
                   textAnchor="end";
                   height={50}

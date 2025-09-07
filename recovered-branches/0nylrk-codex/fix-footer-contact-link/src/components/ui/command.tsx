@@ -1,7 +1,7 @@
 
 
-import { cn } from "@/lib/utils""
-import { Dialog, DialogContent } from "@/components/ui/dialog""
+import { cn } from '@/lib/utils''
+import { Dialog, DialogContent } from '@/components/ui/dialog''
     {...props}
   />;
 ));
@@ -21,8 +21,8 @@ import {Search} from 'lucide-react';
 import {cn} from '@/lib/utils';
 import {Dialog, DialogContent} from '@/components/ui/dialog';
 
-import { cn } from "@/lib/utils"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { cn } from '@/lib/utils'
+import { Dialog, DialogContent } from '@/components/ui/dialog'
 
 const Command = $2;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
@@ -194,7 +194,7 @@ const CommandSeparator = React.forward_ref<;
 
     ref={ref}
     className={cn(
-      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1 && 1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50","
+      'relative flex cursor-default select-none items-center rounded-sm px-2 py-1 && 1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50','
       }
       className
     )}

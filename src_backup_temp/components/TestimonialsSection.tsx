@@ -65,8 +65,8 @@ export const "TestimonialsSection": React.FC  = () => {export default function P
     "company": "Healthcare Innovations",";"
     "content": "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.","rating": 5,";"
     "industry": "Healthcare",";"
-    "project": "Cloud Migration & Optimization"}];;"
-export const "TestimonialsSection": "React.FC = props {const [currentTestimonial", setCurrentTestimonial] = useState<typeof 0>(0)export const "TestimonialsSection": React.FC = props {const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0)const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true)const [currentTestimonial, setCurrentTestimonial] = useState<any>(0)const [isAutoPlaying, setIsAutoPlaying]  = useState<any>(true) }}}// Auto - play functionality;"
+    "project": "Cloud Migration & Optimization"}];"
+export const "TestimonialsSection": "React.FC = props {const [currentTestimonial", setCurrentTestimonial] = useState<typeof 0>(0)export const "TestimonialsSection": React.FC = props {const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0)const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true)const [currentTestimonial, setCurrentTestimonial] = useState<any>(0)const [isAutoPlaying, setIsAutoPlaying]  = useState<any>(true) }}// Auto - play functionality;"
   React.useEffect(() => {// "TODO": "Add dependencies if needed;"
   }
   return () => {// Cleanup function;
@@ -74,7 +74,7 @@ export const "TestimonialsSection": "React.FC = props {const [currentTestimonial
   React.useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
-  }}, []), [])if(!isAutoPlaying) return}, 5000)return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial])return (";"
+  }, []), [])if(!isAutoPlaying) return}, 5000)return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial])return (";"
     <section className="py-20 bg-zion-blue-dark">";"
       <div className="container mx-auto px-4">";"
         <div className="text-center mb-16">"          <h2 className="text-3xl "md": "tex t-4xl font-bold text-white mb-4">;"
@@ -156,10 +156,10 @@ export const "TestimonialsSection": "React.FC = props {const [currentTestimonial
         {/* Stats Section */}
         <motion.div";"
           className="text-center mb-16";"
-          initial={{ "opacity": "0", "y": "3 0 "}}"
-          whileInView={{ "opacity": "1", "y": "0 "}}"
-          viewport={{ "once": "tru e "}}"
-          transition={{ "duration": "0.8 "}}"
+          initial={ "opacity": "0", "y": "3 0 "}"
+          whileInView={ "opacity": "1", "y": "0 "}"
+          viewport={ "once": "tru e "}"
+          transition={ "duration": "0.8 "}"
         >";"
           <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-6">;"
             Trusted by Industry Leaders;
@@ -171,10 +171,10 @@ export const "TestimonialsSection": "React.FC = props {const [currentTestimonial
         {/* Stats Section */"}"
         <motion.div";"
           className="grid grid-cols-2 "md": "gri d-cols-4 gap-8 mb-20";"
-          initial={{ "opacity": 0", "y": "3 0 "}}"
-          whileInView={{ "opacity": "1", "y": "0 "}}"
-          viewport={{ "once": "tru e "}}"
-          transition={{ "duration": "0.8", "delay": "0.2 "}}"
+          initial={ "opacity": 0", "y": "3 0 "}"
+          whileInView={ "opacity": "1", "y": "0 "}"
+          viewport={ "once": "tru e "}"
+          transition={ "duration": "0.8", "delay": "0.2 "}"
         >;
           {stats.map((stat, index) => (";"
             <div key={index} className="text-center">";"
@@ -187,10 +187,10 @@ export const "TestimonialsSection": "React.FC = props {const [currentTestimonial
             </div>;
         <motion.div";"
           className="text-center mb-16";"
-          initial={{ "opacity": 0, "y": 3 0 }}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          viewport={{ "once": tru e }}
-          transition={{ "duration": 0.8 }}
+          initial={ "opacity": 0, "y": 3 0 }
+          whileInView={ "opacity": 1, "y": 0 }
+          viewport={ "once": tru e }
+          transition={ "duration": 0.8 }
         >";"
           <h2 className="text-4xl "md": tex t-5xl font-bold text-white mb-6">;"
             Trusted by Industry Leaders;
@@ -202,10 +202,10 @@ export const "TestimonialsSection": "React.FC = props {const [currentTestimonial
         {/* Stats Section */}
         <motion.div";"
           className="grid grid-cols-2 "md": gri d-cols-4 gap-8 mb-20";"
-          initial={{ "opacity": 0, "y": 3 0 }}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          viewport={{ "once": tru e }}
-          transition={{ "duration": 0.8, "delay": 0.2 }}
+          initial={ "opacity": 0, "y": 3 0 }
+          whileInView={ "opacity": 1, "y": 0 }
+          viewport={ "once": tru e }
+          transition={ "duration": 0.8, "delay": 0.2 }
         >;
           {stats.map((stat, index) => (";"
             <div key={index} className="text-center">";"
@@ -223,10 +223,10 @@ export const "TestimonialsSection": "React.FC = props {const [currentTestimonial
           <AnimatePresence mode="wait">;"
             <motion.div;
               key={currentTestimonial}
-              initial={{ "opacity": "0", "x": "5 0 "}}"
-              animate={{ "opacity": "1", "x": "0 "}}"
-              exit={{ "opacity": "0", "x": "-50 "}}"
-              transition={{ "duration": "0.5 "}}";"
+              initial={ "opacity": "0", "x": "5 0 "}"
+              animate={ "opacity": "1", "x": "0 "}"
+              exit={ "opacity": "0", "x": "-50 "}"
+              transition={ "duration": "0.5 "}";"
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 "md": "p-12";"
             >";"
               <div className="flex flex-col "lg": fle x-row items-start gap-8">;"
@@ -255,10 +255,10 @@ export const "TestimonialsSection": "React.FC = props {const [currentTestimonial
                       <CheckCircle className="w-5 h-5 text-green-400" />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>;"
                     </div>;
               }
-              initial={{ "opacity": 0, "x": 5 0 }}
-              animate={{ "opacity": 1, "x": 0 }}
-              exit={{ "opacity": 0, "x": -50 }}
-              transition={{ "duration": 0.5 }}";"
+              initial={ "opacity": 0, "x": 5 0 }
+              animate={ "opacity": 1, "x": 0 }
+              exit={ "opacity": 0, "x": -50 }
+              transition={ "duration": 0.5 }";"
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 "md":p-12";"
             >";"
               <div className="flex flex-col "lg": fle x-row items-start gap-8">;"
@@ -407,10 +407,10 @@ export const "TestimonialsSection": "React.FC = props {const [currentTestimonial
         {/* Trust Indicators */}
         <motion.div";"
           className="mt-20 text-center";"
-          initial={{ "opacity": "0", "y": "3 0 "}}"
-          whileInView={{ "opacity": "1", "y": "0 "}}"
-          viewport={{ "once": "tru e "}}"
-          transition={{ "duration": "0.8", "delay": "0.4 "}}"
+          initial={ "opacity": "0", "y": "3 0 "}"
+          whileInView={ "opacity": "1", "y": "0 "}"
+          viewport={ "once": "tru e "}"
+          transition={ "duration": "0.8", "delay": "0.4 "}"
         >";"
           <h3 className="text-2xl font-semibold text-white mb-8">Trusted by Leading Organizations";"
           <div className="flex flex-wrap justify-center items-center gap-8 "md": "ga p-16 opacity-60">;"
@@ -461,10 +461,10 @@ export const "TestimonialsSection": "React.FC = props {const [currentTestimonial
         {/* Trust Indicators */}
         <motion.div";"
           className="mt-20 text-center";"
-          initial={{ "opacity": 0, "y": 3 0 }}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          viewport={{ "once": tru e }}
-          transition={{ "duration": 0.8, "delay": 0.4 }}
+          initial={ "opacity": 0, "y": 3 0 }
+          whileInView={ "opacity": 1, "y": 0 }
+          viewport={ "once": tru e }
+          transition={ "duration": 0.8, "delay": 0.4 }
         >";"
           <h3 className="text-2xl font-semibold text-white mb-8">Trusted by Leading Organizations";"
           <div className="flex flex-wrap justify-center items-center gap-8 "md": ga p-16 opacity-60">;"

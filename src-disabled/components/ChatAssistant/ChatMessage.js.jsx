@@ -4,4 +4,4 @@ import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'' import { Avatar,
   children: message }),
 }), _jsx('p', {className: 'text-xs text-zion-slate-light mt-1'}
   children: timestamp.toLocaleTimeString() })] })] }),
-}';'';'"'";
+}';'';'''';

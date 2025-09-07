@@ -52,7 +52,7 @@ const byAuthor = {}
 ;
   const messages = [];
     for (const c of commits) {} catch (e) {return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }
-  }}} catch (e) {})}
+  }} catch (e) {})}
 
 const byAuthor = ,;
 }
@@ -81,7 +81,7 @@ const commits = await fetchJson(commitsUrl, token)const byAuthor = {},const mess
       "content": JSON.stringify(summary, null, 2)"message": 'chore(automation): weekly changelog summary';'
       token;
     })return {"status_code": 200,"body": JSON.stringify ({ "ok": true, "commits": commits.length }
-}return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }}
+}return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }
 }await upsertFile({ owner, repo, "path": 'data/reports/changelog/weekly-changelog.json', "content": JSON.stringify(summary, null, 2), "message": 'chore(automation): weekly changelog summary', token }),return { "statusCode": 200, "body": JSON.stringify({ "ok": true, "commits": commits.length }),'
 }
 ursor/fix-website-loading-errors-and-merge-6662;

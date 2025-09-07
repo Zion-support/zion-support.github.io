@@ -78,7 +78,7 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";"
       <NewsletterSection />;
       <Footer />;
     </div>);
-}}
+}
 ;
 
   )

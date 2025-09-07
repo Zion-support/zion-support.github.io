@@ -1095,7 +1095,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards';
       'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards';
     ],link: 'https://ziontechgroup.com / ai - healthcare - diagnostic',icon: '🏥',color: 'from - blue - 500 to - indigo - 600',popular: true,launch_date: '2025 - 02 - 15',customers: 350,rating: 4 && 4.9,reviews: 189;
-  }}
+  }
 ];reviews: 189,reviews: 189;
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research';
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research';
@@ -1114,7 +1114,7 @@ export interface InnovativeAIService  {rating: 4.9,reviews: 189;
     rating: 4.9,reviews: 189;
   }rating: 4 && 4.9,reviews: 189;
     rating: 4.9,reviews: 189;
-  }export interface InnovativeAIService  {}];;}
+  }export interface InnovativeAIService  {}];}
 ];
 export interface InnovativeAIService  {id: string,name: string,tagline: string,description: string,category: string,price: {monthly: number,yearly: number,currency: string,trialDays: number,setupTime: string;
   },features: string[],benefits: string[],targetAudience: string[],marketPosition: string,competitors: string[],techStack: string[],realImplementation: boolean,implementationDetails: string,roi: string,useCases: string[],integrations: string[],support: string,compliance: string[],link: string,icon: string,color: string,popular: boolean,launchDate: string,customers: number,rating: number,reviews: number;

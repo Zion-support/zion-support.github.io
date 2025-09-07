@@ -19,7 +19,7 @@ export const Link: React.FC<LinkProps> = ({ to, href, children, className, onCli
 export function useLocation() {const router = useRouter()const asPath = router.asPath || router.pathname || '/';
   const [path, query = ''] = asPath.split('?')const hashIndex = asPath.indexOf('#')const hash = hashIndex >= 0 ? asPath.substring(hashIndex) : '';
   return {pathname: path, search: query ? `?${query}` : '',hash, state: undefined as unknown,key: 'next';
-  }}
+  }
 export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>;
 export const MemoryRouter = BrowserRouter;
 export const HashRouter = BrowserRouter;
@@ -72,7 +72,7 @@ export function useLocation() {
     pathname: path, search: query ? `?${query}` : '',
     hash, state: undefined as unknown,
     key: 'next'
-  }}
+  }
 export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>
 export const MemoryRouter = BrowserRouter;
 export const HashRouter = BrowserRouter;

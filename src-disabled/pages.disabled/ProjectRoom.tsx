@@ -24,7 +24,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>
       </div>
     </>
-<<<<<<< HEAD:src_backup/pages/ProjectRoom.tsx
   );
 
 };
@@ -48,6 +47,5 @@ return (<> End Call </Button>) ;
 }'"
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD:src_backup/pages/ProjectRoom.tsx
 }
 }

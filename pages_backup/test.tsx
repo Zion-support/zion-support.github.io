@@ -1,28 +1,18 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/test.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/test.tsx
 import MainLayout from '../components/layout/MainLayout';
 
 export default function TestPage() {
   return (
-    <MainLayout title="Test Page - Zion Tech Group">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Test Page</h1>
-        <p className="text-lg text-gray-700">
+    <MainLayout title='Test Page - Zion Tech Group'>
+      <div className='container mx-auto px-4 py-16'>
+        <h1 className='text-4xl font-bold mb-8'>Test Page</h1>
+        <p className='text-lg text-gray-700'>
           This is a test page.
         </p>
       </div>
     </MainLayout>
   );
 }
-<<<<<<< HEAD:pages_backup/test.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 import Head from 'next/head';
@@ -37,9 +27,9 @@ export default function TestPage() {
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-    <Layout title="Test Page">
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
+    <Layout title='Test Page'>
+      <div className='min-h-screen bg-gray-100 flex items-center justify-center'>
+        <h1 className='text-4xl font-bold text-gray-900'>Test Page</h1>
       </div>
     <>
       <Head>
@@ -88,25 +78,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 );
 origin/main
 );
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
+      <div className='min-h-screen bg-black text-white flex items-center justify-center'>
+        <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
     </>
   )
 
 
 }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/test.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

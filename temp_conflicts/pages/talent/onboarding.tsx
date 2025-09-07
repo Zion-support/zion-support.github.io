@@ -34,7 +34,7 @@ type StepKey = typeof steps[number],
 const containerVariants = {
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -16 }},
+  exit: { opacity: 0, y: -16 },
 
 function useInitialFormState(): OnboardingFormData {
   return {
@@ -153,7 +153,7 @@ export default function TalentOnboardingPage() {
         </div>
 
         <div className="w-full h-2 bg-[var(--border-secondary)] rounded-full overflow-hidden mb-6">
-          <div className="h-full bg-[var(--text-accent)] transition-all duration-500" style={{ width: `${progressPercent}%` }} />
+          <div className="h-full bg-[var(--text-accent)] transition-all duration-500" style={ width: `${progressPercent}%` } />
         </div>
 
         {errorMessage && (
@@ -165,7 +165,7 @@ export default function TalentOnboardingPage() {
         <div className="bg-glass/60 rounded-2xl p-6 md:p-8 shadow-xl border border-[var(--border-primary)]">
           <AnimatePresence mode="wait">
             {currentStep === 'Basic Info' && (
-              <motion.div key="step-basic" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+              <motion.div key="step-basic" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={ duration: 0.3 }>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <FloatingInput
                     id="fullName"
@@ -196,7 +196,7 @@ export default function TalentOnboardingPage() {
             )}
 
             {currentStep === 'Experience' && (
-              <motion.div key="step-experience" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+              <motion.div key="step-experience" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={ duration: 0.3 }>
                 <div className="grid grid-cols-1 gap-4 md:gap-6">
                   <FloatingTextarea
                     id="bio"
@@ -226,7 +226,7 @@ export default function TalentOnboardingPage() {
             )}
 
             {currentStep === 'Skills & Tech' && (
-              <motion.div key="step-skills" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+              <motion.div key="step-skills" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={ duration: 0.3 }>
                 <div className="grid grid-cols-1 gap-4 md:gap-6">
                   <FloatingInput
                     id="skills"
@@ -248,7 +248,7 @@ export default function TalentOnboardingPage() {
             )}
 
             {currentStep === 'Availability' && (
-              <motion.div key="step-availability" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+              <motion.div key="step-availability" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={ duration: 0.3 }>
                 <div className="grid grid-cols-1 gap-4 md:gap-6">
                   <div>
                     <label htmlFor="availability" className="block text-sm mb-2 text-high-contrast-secondary">Current Availability</label>
@@ -325,7 +325,7 @@ export default function TalentOnboardingPage() {
                   }
                   setErrorMessage(null),
                   nextStep()
-                }}
+                }
               >
                 Next
               </button>
@@ -436,7 +436,7 @@ function FileUpload(props: {
           } catch (err) {
             setLocalError('Failed to read file.')
           }
-        }}
+        }
       />
       {fileData && (
         <p className="mt-2 text-xs text-high-contrast-muted">Selected: {fileData.name} ({Math.round((fileData.size / 1024) * 10) / 10} KB)</p>

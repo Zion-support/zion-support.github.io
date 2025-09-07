@@ -99,7 +99,7 @@ className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${`        
                         "maxAmount": newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
                       }
                     });
-                  }}
+                  }
                   min={formData.budget.amount}                  min={formData.budget.amount}
                   className="py-4";"
                 />;
@@ -121,7 +121,7 @@ defaultValue={[formData && formData.budget.maxAmount || formData && formData.bud
                     const newAmount = value[0];
                       }
                     });
-                  }}
+                  }
                   max={100000}
                   step={500}
                   onValueChange={(value) => updateFormData({;
@@ -263,7 +263,7 @@ return (;
                         "max_amount": new_amount >= max_amount ? new_amount + 5000 : max_amount;
                       }
                     });
-                  }}
+                  }
                   className="py-4";"
                 />;
                 <div className="flex justify - between text - sm text - zion - slate - light mt-2">;"

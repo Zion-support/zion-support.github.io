@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 import React, { useState, useEffect } from 'react';'
@@ -470,9 +467,9 @@ ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
 return [];
 }export default function AdvancedServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState('all')const [searchTerm, setSearchTerm] = useState('')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const [filteredServices, setFilteredServices]  = useState(allServices)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { "service": any }) => (<motion&& motion.div;'
-      initial={{ "opacity": 0, "y": 20 }}
-      animate={{ "opacity": 1, "y": 0 }}
-      transition={{ "duration": 0 && 0.5 }}
+      initial={ "opacity": 0, "y": 20 }
+      animate={ "opacity": 1, "y": 0 }
+      transition={ "duration": 0 && 0.5 }
       className={`relative bg-white "dark":bg-gray-800 rounded-2xl shadow-lg "hover":shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 "dark":border-gray-700 ${</p>;`        </div>;
 }
 ursor/automate-test-improve-and-merge-code-646c;
@@ -549,9 +546,9 @@ ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
 return [];
 }export default function AdvancedServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState('all')const [searchTerm, setSearchTerm] = useState('')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const [filteredServices, setFilteredServices]  = useState(allServices)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { "service": any }) => (<motion&& motion.div;'
-      initial={{ "opacity": 0, "y": 20 }}
-      animate={{ "opacity": 1, "y": 0 }}
-      transition={{ "duration": 0 && 0.5 }}
+      initial={ "opacity": 0, "y": 20 }
+      animate={ "opacity": 1, "y": 0 }
+      transition={ "duration": 0 && 0.5 }
       className={`relative bg-white "dark":bg-gray-800 rounded-2xl shadow-lg "hover":shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 "dark":border-gray-700 ${</p>;`        </div>;
 }
 ursor/automate-test-improve-and-merge-code-646c;
@@ -624,7 +621,6 @@ const allServices = [;
   ...cuttingEdgeITInfrastructureServices;
 
   return 'Contact for pricing';
->>>>>>> origin/main
 };
 
 const getServiceFeatures = ("service": any) => {
@@ -635,8 +631,6 @@ const getServiceFeatures = ("service": any) => {
 return [];
 };
 
-<<<<<<< HEAD
-=======
 export default function AdvancedServicesShowcase() {
 }
 const allServices = [;
@@ -668,10 +662,10 @@ export default function AdvancedServicesShowcase() {const [selectedCategory, set
   const [searchTerm, setSearchTerm] = useState('');'
 const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const [filteredServices, setFilteredServices]  = useState(allServices)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { "service": any,;'
 }) => (<motion&& motion.div;
-      initial={{ "opacity": 0, "y": 20 
+      initial={ "opacity": 0, "y": 20 
 }
-      animate={{ "opacity": 1, "y": 0 }}
-      transition={{ "duration": 0 && 0.5 
+      animate={ "opacity": 1, "y": 0 }
+      transition={ "duration": 0 && 0.5 
 }
       className={`relative bg-white "dark":bg-gray-800 rounded-2xl shadow-lg "hover":shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 "dark":border-gray-700 ${</p>;`        </div>;
 }
@@ -721,7 +715,6 @@ let filtered  = allServices;// Filter by category;
 export default function AdvancedServicesShowcase() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> origin/main
 
 
 export default function AdvancedServicesShowcase() {
@@ -736,13 +729,12 @@ const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');'
 
   const ServiceCard = ({ service }: { service: any }) => (;
     <motion&& motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0 && 0.5 }}
+      initial={ opacity: 0, y: 20 }
+      animate={ opacity: 1, y: 0 }
+      transition={ duration: 0 && 0.5 }
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
 
 
->>>>>>> origin/main
   useEffect(() => {
 
     }
@@ -786,13 +778,13 @@ if (searchTerm) {
 const ServiceCard = ({ service }: { "service": any,;
 }) => (
     <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-      animate={{ "opacity": 1, "y": 0 }}
-      transition={{ "duration": 0.5 }}
+      animate={ "opacity": 1, "y": 0 }
+      transition={ "duration": 0.5 }
       className={`relative bg-white "dark":bg-gray-800 rounded-2xl shadow-lg "hover":shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 "dark":border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';'
       }`}`    >;
-      transition={{ "duration": 0.5 
+      transition={ "duration": 0.5 
 }
       className={`relative bg-white "dark":bg-gray-800 rounded-2xl shadow-lg "hover":shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 "dark":border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';'
       }`}>`
@@ -952,15 +944,15 @@ initial={{ "opacity": 0, "y": 20
           </p>;
         </div>;
   }, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { "service": any }) => (<motion&& motion.div;
-      initial={{ "opacity": 0, "y": 20 }}
-      animate={{ "opacity": 1, "y": 0 }}
-      transition={{ "duration": 0 && 0.5 }}
+      initial={ "opacity": 0, "y": 20 }
+      animate={ "opacity": 1, "y": 0 }
+      transition={ "duration": 0 && 0.5 }
   }, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { "service": any
 }) => (<motion&& motion.div;
-      initial={{ "opacity": 0, "y": 20 
+      initial={ "opacity": 0, "y": 20 
 }
-      animate={{ "opacity": 1, "y": 0 }}
-      transition={{ "duration": 0 && 0.5 
+      animate={ "opacity": 1, "y": 0 }
+      transition={ "duration": 0 && 0.5 
 }
       className={`relative bg-white "dark":bg-gray-800 rounded-2xl shadow-lg "hover":shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 "dark":border-gray-700 ${</p>;`        </div>;
 }
@@ -1079,8 +1071,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
           <h4 className="font-semibold text-gray-900 "dark":text-white mb-2">ROI & "Benefits":</h4>"
           <p className="text-sm text-gray-600 "dark":text-gray-400">"
             {service.roi}
-<<<<<<< HEAD
-=======
           </p>
         </div>
         
@@ -1091,7 +1081,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {service.roi}
 
->>>>>>> origin/main
           </p>
         </div>
         
@@ -1101,9 +1090,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
             {service.marketPosition}
           </p>
         </div>
-<<<<<<< HEAD
         
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
         
         <div className="flex items-center justify-between">"
@@ -1114,9 +1101,7 @@ href={service.link}
             Learn More
             <ArrowRight className="w-4 h-4" />"
           </a>
-<<<<<<< HEAD
           
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
           
           <a,
@@ -1128,21 +1113,20 @@ href={`"mailto":${contactInfo.email}?subject=Inquiry about ${service.name},`}
         </div>
       </div>
     </motion.div>
-<<<<<<< HEAD
   );
 
 const ServiceList = ({ service }: { "service": any,;
 }) => (
     <motion.div,
-initial={{ "opacity": 0, "x": -20 
+initial={ "opacity": 0, "x": -20 
 }
-      animate={{ "opacity": 1, "x": 0 }}
-      transition={{ "duration": 0.5 }}
+      animate={ "opacity": 1, "x": 0 }
+      transition={ "duration": 0.5 }
       className={`bg-white "dark":bg-gray-800 rounded-xl shadow-lg "hover":shadow-xl transition-all duration-300 border border-gray-200 "dark":border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';'
       }`}`    >;
       <div className="p-6">;"
         <div className="flex items-start gap-6">;"
-          <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>;`      transition={{ "duration": 0.5 
+          <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>;`      transition={ "duration": 0.5 
 }
       className={`bg-white "dark":bg-gray-800 rounded-xl shadow-lg "hover":shadow-xl transition-all duration-300 border border-gray-200 "dark":border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';'
       }`}>`
@@ -1451,34 +1435,34 @@ title="2025 Advanced Services Showcase - Zion Tech Group""
         <div className="relative max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-24">;"
           <div className="text-center">;"
             <motion.h1;
-              initial={{ "opacity": 0, "y": 20 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+              initial={ "opacity": 0, "y": 20 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
               className="text-4xl "md":text-6xl font-bold text-white mb-6";"
             >;
               2025 Advanced Services Showcase;
             </motion.h1>;
             <motion.p;
-              initial={{ "opacity": 0, "y": 20 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8, "delay": 0.2 }}
+              initial={ "opacity": 0, "y": 20 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8, "delay": 0.2 }
               className="text-xl "md":text-2xl text-blue-100 mb-8 max-w-4xl mx-auto";"
             >;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 
 }
               className="text-4xl "md":text-6xl font-bold text-white mb-6">"
 
               2025 Advanced Services Showcase;
             </motion.h1>;
             <motion.p;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              animate={{ "opacity": 1, "y": 0 
+              animate={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0.8, "delay": 0.2 
+              transition={ "duration": 0.8, "delay": 0.2 
 }
               className="text-xl "md":text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">"
 
@@ -1486,16 +1470,16 @@ title="2025 Advanced Services Showcase - Zion Tech Group""
               From AI-powered enterprise services to cutting-edge quantum computing platforms.;
             </motion.p>;
             <motion.div;
-              initial={{ "opacity": 0, "y": 20 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8, "delay": 0.4 }}
+              initial={ "opacity": 0, "y": 20 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8, "delay": 0.4 }
               className="flex flex-col "sm":flex-row gap-4 justify-center items-center";"
             >;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              animate={{ "opacity": 1, "y": 0 
+              animate={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0.8, "delay": 0.4 
+              transition={ "duration": 0.8, "delay": 0.4 
 }
               className="flex flex-col "sm":flex-row gap-4 justify-center items-center">"
 
@@ -2158,17 +2142,17 @@ if ( {) {$2;
         service.tagline.toLowerCase ().includes (search_term.toLowerCase ()) ||;
         getServiceCategory (service).toLowerCase ().includes (search_term.toLowerCase ()))}
     setFilteredServices (filtered)}, [selected_category, search_term])const ServiceCard = ({ service }: { "service": any }) =>: any (<motion.div;
-      initial={{ "opacity": 0, "coordinate_y": 20 }}
-      animate={{ "opacity": 1, "coordinate_y": 0 }}
-      transition={{ "duration": 0.5 }}
+      initial={ "opacity": 0, "coordinate_y": 20 }
+      animate={ "opacity": 1, "coordinate_y": 0 }
+      transition={ "duration": 0.5 }
       className={`relative bg - white "dark":bg - gray - 800 rounded - 2xl shadow - lg "hover":shadow - 2xl transition - all duration - 300 overflow - hidden border border - gray - 200 "dark":border - gray - 700 ${service.popular ? 'ring - 2 ring - blue - 500' : '';'
       }`}`    >;
     setFilteredServices (filtered)}, [selected_category, search_term])const ServiceCard = ({ service }: { "service": any
 }) =>: any (<motion.div;
-      initial={{ "opacity": 0, "coordinate_y": 20 
+      initial={ "opacity": 0, "coordinate_y": 20 
 }
-      animate={{ "opacity": 1, "coordinate_y": 0 }}
-      transition={{ "duration": 0.5 
+      animate={ "opacity": 1, "coordinate_y": 0 }
+      transition={ "duration": 0.5 
 }
       className={`relative bg - white "dark":bg - gray - 800 rounded - 2xl shadow - lg "hover":shadow - 2xl transition - all duration - 300 overflow - hidden border border - gray - 200 "dark":border - gray - 700 ${service.popular ? 'ring - 2 ring - blue - 500' : '';'
       }`}>`
@@ -2359,24 +2343,24 @@ if ( {) {$2;
         <div className='relative max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-24'>;'
           <div className='text-center'>;'
             <motion&& motion.h1;
-              initial={{ "opacity": 0, "y": 20 }}
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 }
+              initial={ "opacity": 0, "y": 20 
 }
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 
 }
               className='text-4xl "md":text-6xl font-bold text-white mb-6'>;'
               2025 Advanced Services Showcase;
             </motion && motion.h1>;
             <motion&& motion.p;
-              initial={{ "opacity": 0, "y": 20 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8, "delay": 0 && 0.2 }}
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8, "delay": 0 && 0.2 }
+              initial={ "opacity": 0, "y": 20 
 }
-              animate={{ "opacity": 1, "y": 0 
+              animate={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0 && 0.8, "delay": 0 && 0.2 
+              transition={ "duration": 0 && 0.8, "delay": 0 && 0.2 
 }
               className='text-xl "md":text-2xl text-blue-100 mb-8 max-w-4xl mx-auto'>;'
               Discover our comprehensive portfolio of real, innovative, and;
@@ -2384,14 +2368,14 @@ if ( {) {$2;
               cutting-edge quantum computing platforms.;
             </motion && motion.p>;
             <motion&& motion.div;
-              initial={{ "opacity": 0, "y": 20 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8, "delay": 0 && 0.4 }}
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8, "delay": 0 && 0.4 }
+              initial={ "opacity": 0, "y": 20 
 }
-              animate={{ "opacity": 1, "y": 0 
+              animate={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0 && 0.8, "delay": 0 && 0.4 
+              transition={ "duration": 0 && 0.8, "delay": 0 && 0.4 
 }
               className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>;'
               <div className='flex items-center gap-2 text-white'>;'
@@ -2466,15 +2450,15 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 const ServiceList = ({ service }: { "service": any,;
 }) => (
     <motion.div,
-initial={{ "opacity": 0, "x": -20 
+initial={ "opacity": 0, "x": -20 
 }
-      animate={{ "opacity": 1, "x": 0 }}
-      transition={{ "duration": 0.5 }}
+      animate={ "opacity": 1, "x": 0 }
+      transition={ "duration": 0.5 }
       className={`bg-white "dark":bg-gray-800 rounded-xl shadow-lg "hover":shadow-xl transition-all duration-300 border border-gray-200 "dark":border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';'
       }`}`    >;
       <div className="p-6">;"
         <div className="flex items-start gap-6">;"
-          <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>;`      transition={{ "duration": 0.5 
+          <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>;`      transition={ "duration": 0.5 
 }
       className={`bg-white "dark":bg-gray-800 rounded-xl shadow-lg "hover":shadow-xl transition-all duration-300 border border-gray-200 "dark":border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';'
       }`}>`
@@ -2587,34 +2571,34 @@ initial={{ "opacity": 0, "x": -20
         <div className="relative max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-24">;"
           <div className="text-center">;"
             <motion.h1;
-              initial={{ "opacity": 0, "y": 20 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+              initial={ "opacity": 0, "y": 20 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
               className="text-4xl "md":text-6xl font-bold text-white mb-6";"
             >;
               2025 Advanced Services Showcase;
             </motion.h1>;
             <motion.p;
-              initial={{ "opacity": 0, "y": 20 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8, "delay": 0.2 }}
+              initial={ "opacity": 0, "y": 20 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8, "delay": 0.2 }
               className="text-xl "md":text-2xl text-blue-100 mb-8 max-w-4xl mx-auto";"
             >;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 
 }
               className="text-4xl "md":text-6xl font-bold text-white mb-6">"
 
               2025 Advanced Services Showcase;
             </motion.h1>;
             <motion.p;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              animate={{ "opacity": 1, "y": 0 
+              animate={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0.8, "delay": 0.2 
+              transition={ "duration": 0.8, "delay": 0.2 
 }
               className="text-xl "md":text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">"
 
@@ -2622,16 +2606,16 @@ initial={{ "opacity": 0, "x": -20
               From AI-powered enterprise services to cutting-edge quantum computing platforms.;
             </motion.p>;
             <motion.div;
-              initial={{ "opacity": 0, "y": 20 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8, "delay": 0.4 }}
+              initial={ "opacity": 0, "y": 20 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8, "delay": 0.4 }
               className="flex flex-col "sm":flex-row gap-4 justify-center items-center";"
             >;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              animate={{ "opacity": 1, "y": 0 
+              animate={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0.8, "delay": 0.4 
+              transition={ "duration": 0.8, "delay": 0.4 
 }
               className="flex flex-col "sm":flex-row gap-4 justify-center items-center">"
 
@@ -2736,16 +2720,13 @@ href={`"mailto":${contactInfo.email}?subject=Services Inquiry`}`                
                 className="inline-flex items-center gap-2 bg-gray-100 "dark": bg-gray-700 text-gray-700 "dark":text-gray-300 px-6 py-3 rounded-lg font-semibold "hover":bg-gray-200 "dark":"hover":bg-gray-600 transition-all duration-300""
               >
                 Visit Website
->>>>>>> origin/main
               </a>
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </motion.div>
   );
-=======
 
       {/* Main Content */}
       {/* Main Content *
@@ -2899,7 +2880,6 @@ ursor/automate-test-improve-and-merge-code-646c;
           </div>
           
 
->>>>>>> origin/main
           {/* Category Filters */}
           <div className="mt-6">"
             <div className="flex flex-wrap gap-3">"
@@ -2970,9 +2950,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                 <p className="text-gray-600 "dark":text-gray-400">"
                   {selectedCategory !== 'all' && `Filtered "by": ${categories.find(c => c.id === selectedCategory)?.name}`}`                  {searchTerm && ` • "Search": "${searchTerm}"`}`                </p>
               </div>
-<<<<<<< HEAD
               
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
               
 main
@@ -3091,7 +3069,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               )}
             </AnimatePresence>
           )}
-<<<<<<< HEAD
         </div>
 
         {/* Call to Action *
@@ -3467,7 +3444,6 @@ href={`"mailto":${contactInfo.email}?subject=Business Transformation Consultatio
     </div>
   )
 }
-=======
 }
 main
 
@@ -3479,11 +3455,6 @@ main
       </div>
     </div>
   );
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

@@ -55,12 +55,12 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
         </div>
       )}
     </main>;
-  )}} catch {}    return { "props": { content, "generatedAt": new Date().toISOString()
+  )} catch {}    return { "props": { content, "generatedAt": new Date().toISOString()
 }, "revalidate": 300 
 } catch {export async function getStaticProps() {try {const file = path && path.join(process && process.cwd(), 'CHANGELOG && CHANGELOG.md';'
 }
 const content = fs && fs.readFileSync(file, 'utf8')return {"props": { content, "generatedAt": new Date().toISOString(),;'
-},"revalidate": 300}} catch {return { "props": { "content": null, "generatedAt": null
+},"revalidate": 300} catch {return { "props": { "content": null, "generatedAt": null
 }, "revalidate": 300 
 }    return { "props": { content, "generatedAt": new Date().toISOString()
 }, "revalidate": 300 }
@@ -81,7 +81,7 @@ export async /**;
  * getStaticProps - Function description;
  */;
 function getStaticProps() {export async function getStaticProps() {try {const file = path.join(process.cwd(), 'CHANGELOG.md')const content = fs.readFileSync(file, 'utf8')return {"props": { content, "generatedAt": new Date().toISOString(),'
-},"revalidate": 300}} catch {}    return { "props": { content, "generatedAt": new Date().toISOString()
+},"revalidate": 300} catch {}    return { "props": { content, "generatedAt": new Date().toISOString()
 }, "revalidate": 300
 }return { "props": { "content": null, "generatedAt": null
 }, "revalidate": 300 }
@@ -106,9 +106,7 @@ const content = fs.readFileSync(file, 'utf8');'
       "revalidate": 300
     };
   } catch {
-<<<<<<< HEAD
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
-=======
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
 }
@@ -124,8 +122,7 @@ return { "props": { "content": null, "generatedAt": null,;
 }
 }
 }
-<<<<<<< HEAD
-}}
+}
   } catch {return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
   } catch {
@@ -133,12 +130,8 @@ return { "props": { "content": null, "generatedAt": null,;
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
 
 
-}}
+}
   } catch {return { props: { content: null, generatedAt: null }, revalidate: 300 }
     return { props: { content: null, generatedAt: null}, revalidate: 300}
->>>>>>> origin/main
   }
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

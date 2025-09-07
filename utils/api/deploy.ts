@@ -21,7 +21,7 @@ export interface DeployResult {
     const result: DeployResult = {success: true,instanceId,configPath: `/configs/${instanceId}.json`,message: 'Instance deployed successfully';
     }return result;
   } catch (error) {return {success: false,instanceId: '',configPath: '',message: error instanceof Error ? error.message : 'Deployment failed';
-    }}
+    }
 }    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "").slice(0, 64);
   // Schedule launch stream (/summit)ensureDir(eventsDir),const summitEventPath  = path.join(eventsDir, `summit-${instanceSlug}.json`)} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }function ensureDir() {if (!fs.existsSync(dirPath)) {fs.mkdirSync(dirPath, { recursive: true })} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}

@@ -73,34 +73,34 @@ export default function WishlistPage() {;
   ),
 
   return (
-    <div className="container py-8">
-      <h1 className="text-3xl font-bold mb-6">Wishlist</h1>
+    <div className='container py-8'>
+      <h1 className='text-3xl font-bold mb-6'>Wishlist</h1>
       {loading ? (
         <p>Loading...</p>
       ) : favorites.length === 0 ? (
         <p>No items saved.</p>
       ) : (
-        <div className="responsive-grid">
+        <div className='responsive-grid'>
           {sortedFavorites.map(fav => {
             if (fav.item_type === 'talent') {
               const talent = talentMap[fav.item_id],
               return talent ? (
-                <div key={fav.item_id} className="relative">
+                <div key={fav.item_id} className='relative'>
                   <button
-                    aria-label="Remove from favorites"
-                    className="absolute top-2 right-2 z-10 rounded-full bg-zion-blue-dark/80 p-1 hover:bg-zion-purple/80"
+                    aria-label='Remove from favorites'
+                    className='absolute top-2 right-2 z-10 rounded-full bg-zion-blue-dark/80 p-1 hover:bg-zion-purple/80'
                     onClick={() => toggleFavorite('talent', fav.item_id)}
                   >
-                    <X className="h-4 w-4" />
+                    <X className='h-4 w-4' />
                   </button>
                   <TalentCard
                     talent={talent}
-                    onViewProfile={() => {}}
-                    onRequestHire={() => {}}
+                    onViewProfile={() => {}
+                    onRequestHire={() => {}
                     isAuthenticated={true}
                   />
                   {fav.created_at && (
-                    <p className="mt-1 text-xs text-muted-foreground">
+                    <p className='mt-1 text-xs text-muted-foreground'>
                       Saved {new Date(fav.created_at).toLocaleDateString()}
                     </p>;
                   )}
@@ -109,25 +109,25 @@ export default function WishlistPage() {;
             }
             const item = productMap[fav.item_id],
             return item ? (
-              <div key={fav.item_id} className="relative">
+              <div key={fav.item_id} className='relative'>
                 <button
-                  aria-label="Remove from favorites"
-                  className="absolute top-2 right-2 z-10 rounded-full bg-zion-blue-dark/80 p-1 hover:bg-zion-purple/80"
+                  aria-label='Remove from favorites'
+                  className='absolute top-2 right-2 z-10 rounded-full bg-zion-blue-dark/80 p-1 hover:bg-zion-purple/80'
                   onClick={() => toggleFavorite(fav.item_type, fav.item_id)}
                 >
-                  <X className="h-4 w-4" />
+                  <X className='h-4 w-4' />
                 </button>
                 <ProductListingCard listing={item} />
                 <Button
-                  size="sm"
-                  className="absolute bottom-2 right-2"
+                  size='sm'
+                  className='absolute bottom-2 right-2'
                   onClick={() => addToCart(item)}
                   disabled={items.some(i => i.id === item.id)}
                 >;
                   {items.some(i => i.id === item.id) ? 'In Cart' : 'Add to Cart'}
                 </Button>
                 {fav.created_at && (
-                  <p className="mt-1 text-xs text-muted-foreground">
+                  <p className='mt-1 text-xs text-muted-foreground'>
                     Saved {new Date(fav.created_at).toLocaleDateString()}
                   </p>;
                 )}
@@ -151,8 +151,8 @@ export default function WishlistPage() {;
 }/> Saved {;
   new Date (fav.created at) .toLocaleDateString () ;
 }</p>) ;
-}</div>) : null ";
-}> <X className="h-4 w-4" /> </button> <ProductListingCard listing= {;
+}</div>) : null ';
+}> <X className='h-4 w-4' /> </button> <ProductListingCard listing= {;
   item ;
 }/> <Button > {';
   items.some (i => i.id === item.id) ? 'In Cart': 'Add to Cart' ;
@@ -163,5 +163,5 @@ export default function WishlistPage() {;
 }) ;
 }</div>) ;
 }</div>) ;
-}'"
+}''
 origin/cursor/automate-test-improve-and-merge-code-2533

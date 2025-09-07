@@ -47,7 +47,7 @@ export const "SmartAppBanner": React.FC<SmartAppBannerProps> = ({const [isVisibl
         </div>;
       </div>;
     </div>;
-  )'";;"
+  )'";"
 },import Link from "next/link",import { useIsMobile } from "@/hooks/use-mobile",interface SmartAppBannerProps  {appName?: string,appIconSrc?: string,appStoreUrl?: string,googlePlayUrl?: string,delay?: number, // Delay in milliseconds before showing the banner;"
 }export const "SmartAppBanner": React.FC<SmartAppBannerProps> = ({appName = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/download",delay = 1500;"
 }) => {const [isVisible, setIsVisible] = useState(false)const isMobile  = useIsMobile()useEffect((,) => {// Only show banner on mobile devices and if it hasn't been dismissed;'
@@ -125,5 +125,5 @@ if ( {) {$2;
           </button>;
         </div>;
       </div>;
-    </div>)}}
+    </div>)}
 export const "SmartAppBanner": React.FC<SmartAppBannerProps> = ({

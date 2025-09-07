@@ -6,5 +6,5 @@ import { useState, useEffect, useCallback, useMemo } from 'react' export const u
 }, sortBy: null, sortOrder: 'asc',
   results: data, isLoading: false, totalResults: data.length,
 });
-  const [debouncedQuery, setDebouncedQuery] = useState('')"";
+  const [debouncedQuery, setDebouncedQuery] = useState('')'';
 }

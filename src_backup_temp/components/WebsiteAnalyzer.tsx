@@ -111,7 +111,7 @@ export default function Page() {catch(error) {`;`          // console.error(`Err
             </div>";"
             <div className="w-full bg-gray-200 rounded-full h-2">;"
               <div ";"
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300"`;`                style="{{{ "width": "`${progress"}}"%` }}` />;            </div>;
+                className="bg-blue-600 h-2 rounded-full transition-all duration-300"`;`                style="{{ "width": "`${progress"}"%` }` />;            </div>;
             {currentPage && (";"
               <p className="text-sm text-gray-600 mt-2">";"
                 "Analyzing": "<span className="font-mono">{currentPage"}</span>;"
@@ -142,7 +142,7 @@ export default function Page() {catch(error) {`;`          // console.error(`Err
             </div>";"
             <div className="w-full bg-gray-200 rounded-full h-2">;"
               <div ";"
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300"`;`                style="{{{ "width": `${progress}}"%` }}` />;            </div>;
+                className="bg-blue-600 h-2 rounded-full transition-all duration-300"`;`                style="{{ "width": `${progress}"%` }` />;            </div>;
             {currentPage && (";"
               <p className="text-sm text-gray-600 mt-2">";"
                 }

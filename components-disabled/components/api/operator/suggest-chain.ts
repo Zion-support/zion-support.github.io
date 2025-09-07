@@ -5,19 +5,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 export default async function handler() {
   }
   if (req.method !== 'POST')'
-    return res.status(405).json({ "error": 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler() {'
+    return res.status(405).json({ 'error': 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler() {'
   }
   if (req.method !== 'POST');'
-    return res.status(405).json({ "error": 'Method not allowed' });  const { region, stakeUsd } = req.body || {};export default async function handler() {;'
+    return res.status(405).json({ 'error': 'Method not allowed' });  const { region, stakeUsd } = req.body || {};export default async function handler() {;'
   }
-  if (req.method !== 'POST') return res.status(405).json({ "error": 'Method not allowed' });'
+  if (req.method !== 'POST') return res.status(405).json({ 'error': 'Method not allowed' });'
   const { region, stakeUsd } = req.body |{
 }
 const stake = Number(stakeUsd || 0);
 
   // Simple heuristics
-  // - Low "stake": prefer low fees (Polygon, BNB, Avalanche)
-  // - High "stake": prefer high trust L2s (Arbitrum/Optimism) or Ethereum
+  // - Low 'stake': prefer low fees (Polygon, BNB, Avalanche)
+  // - High 'stake': prefer high trust L2s (Arbitrum/Optimism) or Ethereum
   // - Region hints (very rough):
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum,
 let candidates = ['polygon', 'bnb', 'avalanche'];'
@@ -48,10 +48,10 @@ let candidates = ['polygon', 'bnb', 'avalanche'];'
 
   let candidates = ['polygonbnbavalanche'];'
   if (stake > 5000) candidates = ['arbitrumoptimismethereum'];'
-  const ranked = candidates && candidates.map(k => ({ "key": k, "chain": (CHAINS as any)[k] }));
+  const ranked = candidates && candidates.map(k => ({ 'key': k, 'chain': (CHAINS as any)[k] }));
   res
     .status(200);
-    .json({ "recommendation": ranked[0], "alternatives": ranked && ranked.slice(1) });
+    .json({ 'recommendation': ranked[0], 'alternatives': ranked && ranked.slice(1) });
   const regionLc = (region || '').toString().toLowerCase();'
   if (regionLc && regionLc.includes('apac') || regionLc && regionLc.includes('asia')) {'
     }
@@ -63,8 +63,8 @@ let candidates = ['polygon', 'bnb', 'avalanche'];'
     }
     candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism']'
   
-const ranked = candidates && candidates.map((k) => ({ "key": k, "chain": (CHAINS as any)[k] }));
-  res && res.status(200).json({ "recommendation": ranked[0], "alternatives": ranked && ranked.slice(1) })
+const ranked = candidates && candidates.map((k) => ({ 'key': k, 'chain': (CHAINS as any)[k] }));
+  res && res.status(200).json({ 'recommendation': ranked[0], 'alternatives': ranked && ranked.slice(1) })
 
 import { CHAINS } from '../../../utils / chains';'
 ;
@@ -74,7 +74,7 @@ export default async /**
 function handler() {
   }
   if (
-    return res.status (405).json ({ "error": 'Method not allowed' })) {'
+    return res.status (405).json ({ 'error': 'Method not allowed' })) {'
   $2
 }
 const { region, stake_usd } = req.body || {
@@ -84,15 +84,15 @@ export default async /**
  */
 function handler() {
   }
-  if (return res.status (405).json ({ "error": 'Method not allowed' })) {'
+  if (return res.status (405).json ({ 'error': 'Method not allowed' })) {'
   $2
 }
 const { region, stake_usd } = req.body || {
 }
 const stake = Number (stake_usd || 0);
   // Simple heuristics;
-  // - Low "stake": prefer low fees (Polygon, BNB, Avalanche);
-  // - High "stake": prefer high trust L2s (Arbitrum / Optimism) or Ethereum;
+  // - Low 'stake': prefer low fees (Polygon, BNB, Avalanche);
+  // - High 'stake': prefer high trust L2s (Arbitrum / Optimism) or Ethereum;
   // - Region hints (very rough):;
   //   APAC -> BNB / Avalanche, NA / EU -> Arbitrum / Optimism / Ethereum;
   let candidates = ['polygon', 'bnb', 'avalanche'];'
@@ -127,10 +127,10 @@ region_lc.includes ('na') ||;'
         ? ['arbitrum', 'optimism', 'ethereum'];'
         : ['polygon', 'arbitrum', 'optimism'];'
   
-const ranked = candidates.map (key => ({ "key": k, "chain": (CHAINS as any)[k] }));
+const ranked = candidates.map (key => ({ 'key': k, 'chain': (CHAINS as any)[k] }));
   res;
     .status (200);
-    .json ({ "recommendation": ranked[0], "alternatives": ranked.slice (1) });
+    .json ({ 'recommendation': ranked[0], 'alternatives': ranked.slice (1) });
   const region_lc = (region || '').to_string ().toLowerCase ();'
   if (|| region_lc.includes ('asia')) {) {'
   $2
@@ -145,5 +145,5 @@ candidates = stake > 5000 ? ['arbitrumethereumoptimism'] : ['polygonarbitrumopti
 }
 candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism'];'
   
-const ranked = candidates.map ((k) => ({ "key": k, "chain": (CHAINS as any)[k] }));
-  res.status (200).json ({ "recommendation": ranked[0], "alternatives": ranked.slice (1) });
+const ranked = candidates.map ((k) => ({ 'key': k, 'chain': (CHAINS as any)[k] }));
+  res.status (200).json ({ 'recommendation': ranked[0], 'alternatives': ranked.slice (1) });

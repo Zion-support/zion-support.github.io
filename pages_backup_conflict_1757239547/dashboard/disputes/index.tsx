@@ -36,8 +36,8 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
     role = user?.role || 'guest';
   } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
   const { data } = useSWR('/api/disputes', fetcher);
   const [statusFilter, setStatusFilter] = useState<
@@ -46,18 +46,18 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
 }
   if (role !== 'admin') {;
     return { redirect: { destination: '/', permanent: false }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   return { props: {}   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 },
@@ -70,20 +70,20 @@ export default function AdminDisputesDashboard() {
     return list.filter((d: any) => d.status === statusFilter);  }, [data, statusFilter]);
   return (
     <EnhancedLayout>
-      <div className="max-w-6xl mx-auto">
-        <div className="flex items-center justify-between mb-4">
-          <h1 className="text-2xl font-semibold">Dispute Resolution Center</h1>
-          <select value={statusFilter} onChange={e => setStatusFilter(e.target.value as any)} className="border rounded px-2 py-1 text-sm">
+      <div className='max-w-6xl mx-auto'>
+        <div className='flex items-center justify-between mb-4'>
+          <h1 className='text-2xl font-semibold'>Dispute Resolution Center</h1>
+          <select value={statusFilter} onChange={e => setStatusFilter(e.target.value as any)} className='border rounded px-2 py-1 text-sm'>
             {(['OpenUnder ReviewResolvedAll'] as const).map(s => (<option key={s} value={s}>{s}</option>))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           </select>
         </div>
-        <div className="overflow-auto border rounded">
-          <table className="min-w-full text-sm">
-            <thead className="bg-gray-50 dark:bg-gray-900">
+        <div className='overflow-auto border rounded'>
+          <table className='min-w-full text-sm'>
+            <thead className='bg-gray-50 dark:bg-gray-900'>
               <tr>
                 <th className='text-left px-3 py-2'>Case ID</th>
                 <th className='text-left px-3 py-2'>Talent</th>
@@ -95,17 +95,17 @@ export default function AdminDisputesDashboard() {
             </thead>
             <tbody>
               {disputes.map((d: any) => (
-                <tr key={d.id} className="border-t">
-                  <td className="px-3 py-2 font-medium">{d.id}</td>
-                  <td className="px-3 py-2">{d.talentUserId}</td>
-                  <td className="px-3 py-2">{d.clientUserId}</td>
-                  <td className="px-3 py-2">{d.projectId}</td>
-                  <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
-                  <td className="px-3 py-2">{d.status}</td>
-                  <td className="px-3 py-2 flex gap-2">
-                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Admin%20Notes`}><a className="text-green-700 hover:underline">Resolve</Link></Link>
-                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Messages`}><a className="text-blue-700 hover:underline">Message Parties</Link></Link>
-                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-700 hover:underline">Download Evidence</Link></Link>
+                <tr key={d.id} className='border-t'>
+                  <td className='px-3 py-2 font-medium'>{d.id}</td>
+                  <td className='px-3 py-2'>{d.talentUserId}</td>
+                  <td className='px-3 py-2'>{d.clientUserId}</td>
+                  <td className='px-3 py-2'>{d.projectId}</td>
+                  <td className='px-3 py-2'>{new Date(d.createdAt).toLocaleString()}</td>
+                  <td className='px-3 py-2'>{d.status}</td>
+                  <td className='px-3 py-2 flex gap-2'>
+                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Admin%20Notes`}><a className='text-green-700 hover:underline'>Resolve</Link></Link>
+                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Messages`}><a className='text-blue-700 hover:underline'>Message Parties</Link></Link>
+                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className='text-gray-700 hover:underline'>Download Evidence</Link></Link>
                   </td>
                   <td className='px-3 py-2'>{d.status}</td>
                   <td className='px-3 py-2 flex gap-2'>

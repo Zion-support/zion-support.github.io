@@ -292,8 +292,8 @@ if (return '') {$2;
   return text;
     .split (/\n\n+/).map ((p) => `<p>${escape_html (p)}</p>`).join ('\n')}
 function escape_html (string: string): string {return s;
-    .replace (/&/g, '&amp, ').replace (/</g, '<').replace (/>/g, '>').replace (/"/g, '"').replace (/'/g, '&#039, ')}} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}}}
-}}
+    .replace (/&/g, '&amp, ').replace (/</g, '<').replace (/>/g, '>').replace (/"/g, '"').replace (/'/g, '&#039, ')} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}}
+}
 }
 import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {

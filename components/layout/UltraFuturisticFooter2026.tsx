@@ -3,7 +3,6 @@ import Link from 'next/link';'
 import { motion } from 'framer-motion';'
 
 import {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   Phone,
   Mail,
   MapPin,
@@ -21,20 +20,13 @@ import {}
   Facebook,
   Twitter,
   Linkedin,
-<<<<<<< HEAD
   Instagram,
   Youtube,;
   Github,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-=======
   Instagram,;
   Youtube,;'
   Github,;} from 'lucide-react';import {};
@@ -47,8 +39,6 @@ const contactInfo = {'
   address: '364 E Main St STE 1008 Middletown DE 19709''
   website: 'https://ziontechgroup.com'
 }
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
   }
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
@@ -57,7 +47,6 @@ import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
 
 const contactInfo = null;
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
-<<<<<<< HEAD
 import {
   Phone
   Mail
@@ -80,7 +69,6 @@ import {
   Youtube
   Github;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 const contactInfo = {
@@ -91,221 +79,221 @@ const contactInfo = {
 }
 {
   }
-  "name": 'AI Predictive Enterprise Analytics', "href": '/ai-predictive-enterprise-analytics''
+  'name': 'AI Predictive Enterprise Analytics', 'href': '/ai-predictive-enterprise-analytics''
 
 }
-{"name": 'AI Autonomous Customer Success', "href": '/ai-autonomous-customer-success';'
+{'name': 'AI Autonomous Customer Success', 'href': '/ai-autonomous-customer-success';'
 }
-{"name": 'AI Autonomous Marketing Orchestrator', "href": '/ai-autonomous-marketing-orchestrator';'
+{'name': 'AI Autonomous Marketing Orchestrator', 'href': '/ai-autonomous-marketing-orchestrator';'
 }
-{"name": 'AI Autonomous Sales Intelligence', "href": '/ai-autonomous-sales-intelligence';'
+{'name': 'AI Autonomous Sales Intelligence', 'href': '/ai-autonomous-sales-intelligence';'
 }];
 }
-{"title": 'Cybersecurity & Quantum', "services": [ {"name": 'Quantum Encryption Platform', "href": '/quantum-encryption-platform';'
+{'title': 'Cybersecurity & Quantum', 'services': [ {'name': 'Quantum Encryption Platform', 'href': '/quantum-encryption-platform';'
 }
-{"name": 'AI Autonomous Threat Hunter', "href": '/ai-autonomous-threat-hunter';'
+{'name': 'AI Autonomous Threat Hunter', 'href': '/ai-autonomous-threat-hunter';'
 }
-{"name": 'Quantum Zero Trust Security', "href": '/quantum-zero-trust-security';'
+{'name': 'Quantum Zero Trust Security', 'href': '/quantum-zero-trust-security';'
 }
-{"name": 'AI Autonomous Vulnerability Scanner', "href": '/ai-autonomous-vulnerability-scanner';'
+{'name': 'AI Autonomous Vulnerability Scanner', 'href': '/ai-autonomous-vulnerability-scanner';'
 }
-{"name": 'Quantum Secure Communication', "href": '/quantum-secure-communication';'
+{'name': 'Quantum Secure Communication', 'href': '/quantum-secure-communication';'
 }];
 }
-{"title": 'Fintech & Blockchain', "services": [ {"name": 'Quantum Financial Trading Platform', "href": '/quantum-financial-trading-platform';'
+{'title': 'Fintech & Blockchain', 'services': [ {'name': 'Quantum Financial Trading Platform', 'href': '/quantum-financial-trading-platform';'
 }
-{"name": 'AI Autonomous Wealth Management', "href": '/ai-autonomous-wealth-management';'
+{'name': 'AI Autonomous Wealth Management', 'href': '/ai-autonomous-wealth-management';'
 }
-{"name": 'Quantum Blockchain Finance', "href": '/quantum-blockchain-finance';'
+{'name': 'Quantum Blockchain Finance', 'href': '/quantum-blockchain-finance';'
 }
-{"name": 'AI Autonomous Insurance Platform', "href": '/ai-autonomous-insurance-platform';'
+{'name': 'AI Autonomous Insurance Platform', 'href': '/ai-autonomous-insurance-platform';'
 }
-{"name": 'Quantum Payment Processing', "href": '/quantum-payment-processing';'
+{'name': 'Quantum Payment Processing', 'href': '/quantum-payment-processing';'
 }];
 }
-{"title": 'Healthcare & Biotech', "services": [ {"name": 'AI Autonomous Medical Diagnostics', "href": '/ai-autonomous-medical-diagnostics';'
+{'title': 'Healthcare & Biotech', 'services': [ {'name': 'AI Autonomous Medical Diagnostics', 'href': '/ai-autonomous-medical-diagnostics';'
 }
-{"name": 'Quantum Drug Discovery Platform', "href": '/quantum-drug-discovery-platform';'
+{'name': 'Quantum Drug Discovery Platform', 'href': '/quantum-drug-discovery-platform';'
 }
-{"name": 'AI Autonomous Patient Care', "href": '/ai-autonomous-patient-care';'
+{'name': 'AI Autonomous Patient Care', 'href': '/ai-autonomous-patient-care';'
 }
-{"name": 'Quantum Genomic Analysis', "href": '/quantum-genomic-analysis';'
+{'name': 'Quantum Genomic Analysis', 'href': '/quantum-genomic-analysis';'
 }
-{"name": 'AI Autonomous Clinical Trials', "href": '/ai-autonomous-clinical-trials';'
+{'name': 'AI Autonomous Clinical Trials', 'href': '/ai-autonomous-clinical-trials';'
 }];
 }];
 {/* Background Effects */;
-}<div className="absolute inset-0 overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {{"title": 'AI & Automation';'
+}<div className='absolute inset-0 overflow-hidden' > <div className='absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]' ></div> <div className='absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]' ></div> </div> <motion.div initial= {'title': 'AI & Automation';'
     }
-    "services": [;
-      {"name": 'AI Autonomous Business Processor';'
+    'services': [;
+      {'name': 'AI Autonomous Business Processor';'
         }
-        "href": '/ai-autonomous-business-processor';'
+        'href': '/ai-autonomous-business-processor';'
       }
-      {"name": 'AI Predictive Enterprise Analytics';'
+      {'name': 'AI Predictive Enterprise Analytics';'
         }
-        "href": '/ai-predictive-enterprise-analytics';'
+        'href': '/ai-predictive-enterprise-analytics';'
       }
-      {"name": 'AI Autonomous Customer Success';'
+      {'name': 'AI Autonomous Customer Success';'
         }
-        "href": '/ai-autonomous-customer-success';'
+        'href': '/ai-autonomous-customer-success';'
       }
-      {"name": 'AI Autonomous Marketing Orchestrator';'
+      {'name': 'AI Autonomous Marketing Orchestrator';'
         }
-        "href": '/ai-autonomous-marketing-orchestrator';'
+        'href': '/ai-autonomous-marketing-orchestrator';'
       }
-      {"name": 'AI Autonomous Sales Intelligence';'
+      {'name': 'AI Autonomous Sales Intelligence';'
         }
-        "href": '/ai-autonomous-sales-intelligence';'
+        'href': '/ai-autonomous-sales-intelligence';'
       }
     ];
   }
-  {"title": 'Cybersecurity & Quantum';'
+  {'title': 'Cybersecurity & Quantum';'
     }
-    "services": [;
-      {"name": 'Quantum Encryption Platform';'
+    'services': [;
+      {'name': 'Quantum Encryption Platform';'
         }
-        "href": '/quantum-encryption-platform';'
+        'href': '/quantum-encryption-platform';'
       }
-      {"name": 'AI Autonomous Threat Hunter';'
+      {'name': 'AI Autonomous Threat Hunter';'
         }
-        "href": '/ai-autonomous-threat-hunter';'
+        'href': '/ai-autonomous-threat-hunter';'
       }
-      {"name": 'Quantum Zero Trust Security';'
+      {'name': 'Quantum Zero Trust Security';'
         }
-        "href": '/quantum-zero-trust-security';'
+        'href': '/quantum-zero-trust-security';'
       }
-      {"name": 'AI Autonomous Vulnerability Scanner';'
+      {'name': 'AI Autonomous Vulnerability Scanner';'
         }
-        "href": '/ai-autonomous-vulnerability-scanner';'
+        'href': '/ai-autonomous-vulnerability-scanner';'
       }
-      {"name": 'Quantum Secure Communication';'
+      {'name': 'Quantum Secure Communication';'
         }
-        "href": '/quantum-secure-communication';'
+        'href': '/quantum-secure-communication';'
       }
     ];
   }
-  {"title": 'Fintech & Blockchain';'
+  {'title': 'Fintech & Blockchain';'
     }
-    "services": [;
-      {"name": 'Quantum Financial Trading Platform';'
+    'services': [;
+      {'name': 'Quantum Financial Trading Platform';'
         }
-        "href": '/quantum-financial-trading-platform';'
+        'href': '/quantum-financial-trading-platform';'
       }
-      {"name": 'AI Autonomous Wealth Management';'
+      {'name': 'AI Autonomous Wealth Management';'
         }
-        "href": '/ai-autonomous-wealth-management';'
+        'href': '/ai-autonomous-wealth-management';'
       }
-      {"name": 'Quantum Blockchain Finance';'
+      {'name': 'Quantum Blockchain Finance';'
         }
-        "href": '/quantum-blockchain-finance';'
+        'href': '/quantum-blockchain-finance';'
       }
-      {"name": 'AI Autonomous Insurance Platform';'
+      {'name': 'AI Autonomous Insurance Platform';'
         }
-        "href": '/ai-autonomous-insurance-platform';'
+        'href': '/ai-autonomous-insurance-platform';'
       }
-      {"name": 'Quantum Payment Processing';'
+      {'name': 'Quantum Payment Processing';'
         }
-        "href": '/quantum-payment-processing';'
+        'href': '/quantum-payment-processing';'
       }
     ];
   }
-  {"title": 'Healthcare & Biotech';'
+  {'title': 'Healthcare & Biotech';'
     }
-    "services": [;
-      {"name": 'AI Autonomous Medical Diagnostics';'
+    'services': [;
+      {'name': 'AI Autonomous Medical Diagnostics';'
         }
-        "href": '/ai-autonomous-medical-diagnostics';'
+        'href': '/ai-autonomous-medical-diagnostics';'
       }
-      {"name": 'Quantum Drug Discovery Platform';'
+      {'name': 'Quantum Drug Discovery Platform';'
         }
-        "href": '/quantum-drug-discovery-platform';'
+        'href': '/quantum-drug-discovery-platform';'
       }
-      {"name": 'AI Autonomous Patient Care';'
+      {'name': 'AI Autonomous Patient Care';'
         }
-        "href": '/ai-autonomous-patient-care';'
+        'href': '/ai-autonomous-patient-care';'
       }
-      { "name": 'Quantum Genomic Analysis', "href": '/quantum-genomic-analysis','
+      { 'name': 'Quantum Genomic Analysis', 'href': '/quantum-genomic-analysis','
 }
 
       {
 
         }
 
-        "name": 'AI Autonomous Clinical Trials','
-        "href": '/ai-autonomous-clinical-trials','
+        'name': 'AI Autonomous Clinical Trials','
+        'href': '/ai-autonomous-clinical-trials','
       }
     ]
   }
 ];
 
 const companyLinks = [;
-    { "name": 'About Us', "href": '/about','
+    { 'name': 'About Us', 'href': '/about','
 },
 
-    { "name": 'Leadership Team', "href": '/leadership','
+    { 'name': 'Leadership Team', 'href': '/leadership','
 },
 
-    { "name": 'Careers', "href": '/careers','
+    { 'name': 'Careers', 'href': '/careers','
 },
 
-    { "name": 'News & Press', "href": '/news','
+    { 'name': 'News & Press', 'href': '/news','
 },
 
-    { "name": 'Partners', "href": '/partners','
+    { 'name': 'Partners', 'href': '/partners','
 },
 
-    { "name": 'Investors', "href": '/investors','
+    { 'name': 'Investors', 'href': '/investors','
 },
 
-    { "name": 'Contact Us', "href": '/contact','
+    { 'name': 'Contact Us', 'href': '/contact','
 },
 
 
-  { "name": 'Locations', "href": '/locations','
+  { 'name': 'Locations', 'href': '/locations','
 }
 
 ];
 
 const resourceLinks = [;
-    { "name": 'Documentation', "href": '/docs','
+    { 'name': 'Documentation', 'href': '/docs','
 },
 
-    { "name": 'API Reference', "href": '/api-documentation','
+    { 'name': 'API Reference', 'href': '/api-documentation','
 },
 
-    { "name": 'Case Studies', "href": '/case-studies','
+    { 'name': 'Case Studies', 'href': '/case-studies','
 },
 
-    { "name": 'Blog & News', "href": '/blog','
+    { 'name': 'Blog & News', 'href': '/blog','
 },
 
-    { "name": 'Support Center', "href": '/support','
+    { 'name': 'Support Center', 'href': '/support','
 },
 
-    { "name": 'Training & Certification', "href": '/training','
+    { 'name': 'Training & Certification', 'href': '/training','
 },
 
-    { "name": 'Community Forum', "href": '/community','
+    { 'name': 'Community Forum', 'href': '/community','
 },
 
-  { "name": 'Developer Resources', "href": '/developer-resources','
+  { 'name': 'Developer Resources', 'href': '/developer-resources','
 }
 
 ];
 
 const socialLinks = [;
-  { "name": 'Facebook', "href": '#', "icon": Facebook,'
+  { 'name': 'Facebook', 'href': '#', 'icon': Facebook,'
 },
-  { "name": 'Twitter', "href": '#', "icon": Twitter,'
+  { 'name': 'Twitter', 'href': '#', 'icon': Twitter,'
 },
-  { "name": 'LinkedIn', "href": '#', "icon": Linkedin,'
+  { 'name': 'LinkedIn', 'href': '#', 'icon': Linkedin,'
 },
-  { "name": 'Instagram', "href": '#', "icon": Instagram,'
+  { 'name': 'Instagram', 'href': '#', 'icon': Instagram,'
 },
-  { "name": 'YouTube', "href": '#', "icon": Youtube,'
+  { 'name': 'YouTube', 'href': '#', 'icon': Youtube,'
 },
-{ "name": 'GitHub', "href": '#', "icon": Github,'
+{ 'name': 'GitHub', 'href': '#', 'icon': Github,'
 }
 ];
 
@@ -318,19 +306,18 @@ return (;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]'></div>'
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]'></div>'
       </div>
-      <div className='relative z-10 max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8 py-16'>'
+      <div className='relative z-10 max-w-7xl mx-auto px-4 'sm': px-6 'lg':px-8 py-16'>'
         {/* Main Footer Content *
 }
-        <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-6 gap-8 mb-12">;"
+        <div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-6 gap-8 mb-12'>;'
           {/* Company Info */}
-<<<<<<< HEAD
 
-          <div className='"lg":col-span-2'>'
+          <div className=''lg':col-span-2'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ 'opacity': 0, 'y': 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.6 
+              whileInView={ 'opacity': 1, 'y': 0 }
+              transition={ 'duration': 0.6 
 }
             >
 <div className='flex items-center mb-6'>'
@@ -358,16 +345,13 @@ solutions. Transforming businesses with cutting-edge technology.
                 <div className='flex items-center text-gray-300'>'
                   <MapPin className='w-4 h-4 mr-3 text-cyan-400' />
                   <span>{contactInfo.address}</span>
-<<<<<<< HEAD
                 </div>
                 <div className='flex items-center text-gray-300'>
                   <Globe className='w-4 h-4 mr-3 text-cyan-400' />
-=======
                 </div>'
-                <div className='flex items-center text-gray-300'>'"
-                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.website}</span>                <div className="flex items-center text-gray-300">"
-                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                <div className='flex items-center text-gray-300'>''
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.website}</span>                <div className='flex items-center text-gray-300'>'
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />
                   <span>{contactInfo.website}</span>
                 </div>
               </div>
@@ -396,7 +380,7 @@ solutions. Transforming businesses with cutting-edge technology.
           </div>;
               </p>;
               {/* Contact Info */}
-                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />;"
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />;'
                   <span>{contactInfo.website}</span>;
                 </div>;
               </div>;
@@ -415,8 +399,8 @@ solutions. Transforming businesses with cutting-edge technology.
                   <span>{contactInfo && contactInfo.address}</span>;
                 </div>;
                 <div className='flex items-center text-gray-300'>;'
-                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.website}</span>                <div className="flex items-center text-gray-300">;"
-                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />;"
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.website}</span>                <div className='flex items-center text-gray-300'>;'
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />;'
                   <span>{contactInfo && contactInfo.website}</span>;
                 </div>;
               </div>;
@@ -425,13 +409,13 @@ solutions. Transforming businesses with cutting-edge technology.
           {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;
               }
               key={index}
-              initial={{ "opacity": 0, "y": 20 
+              initial={ 'opacity': 0, 'y': 20 
 }
 
-              whileInView={{ "opacity": 1, "y": 0 
+              whileInView={ 'opacity': 1, 'y': 0 
 }
 
-              transition={{ "duration": 0.6, "delay": index * 0.1 }}
+              transition={ 'duration': 0.6, 'delay': index * 0.1 }
             >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>'
                 {category.title === 'AI & Automation' && ('
@@ -451,41 +435,38 @@ solutions. Transforming businesses with cutting-edge technology.
                 {category.services.map((service, serviceIndex) => (<li key={serviceIndex}>;
                     <Link;
                       href={service.href}
-<<<<<<< HEAD
                       className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group';
                     >;
                       <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />;
-              whileInView={{ opacity: 1, y: 0 }}
+              whileInView={ opacity: 1, y: 0 }
                       href={service.href}
-                      className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group";
+                      className='text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group';
                     >;
-                      <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+                      <ArrowRight className='w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition - transform duration - 300' />;
+              initial={ opacity: 0, y: 20}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.6, delay: index * 0.1 }
             >
-              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                {category.title === 'AI & Automation' && <Brain className="w-5 h-5 mr-2 text-cyan-400" />}
-                {category.title === 'Cybersecurity & Quantum' && <Shield className="w-5 h-5 mr-2 text-red-400" />}
-                {category.title === 'Fintech & Blockchain' && <DollarSign className="w-5 h-5 mr-2 text-green-400" />}
-                {category.title === 'Healthcare & Biotech' && <Dna className="w-5 h-5 mr-2 text-blue-400" />}
+              <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+                {category.title === 'AI & Automation' && <Brain className='w-5 h-5 mr-2 text-cyan-400' />}
+                {category.title === 'Cybersecurity & Quantum' && <Shield className='w-5 h-5 mr-2 text-red-400' />}
+                {category.title === 'Fintech & Blockchain' && <DollarSign className='w-5 h-5 mr-2 text-green-400' />}
+                {category.title === 'Healthcare & Biotech' && <Dna className='w-5 h-5 mr-2 text-blue-400' />}
                 {category.title}
               </h4>
-              <ul className="space-y-2">
+              <ul className='space-y-2'>
                 {category.services.map((service, serviceIndex) => (
                   <li key={serviceIndex}>
                     <Link 
                       href={service.href}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"
+                      className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group'
                     >
-                      <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-=======
+                      <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />
 
-                      className='text-gray-400 "hover": text-cyan-400 transition-colors duration-300 text-sm flex items-center group''
+                      className='text-gray-400 'hover': text-cyan-400 transition-colors duration-300 text-sm flex items-center group''
                     >
-                      <ArrowRight className='w-3 h-3 mr-2 group-"hover":translate-x-1 transition-transform duration-300' />'
+                      <ArrowRight className='w-3 h-3 mr-2 group-'hover':translate-x-1 transition-transform duration-300' />'
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       {service.name}
                 )
 }
@@ -495,20 +476,20 @@ solutions. Transforming businesses with cutting-edge technology.
         {/* Additional Links */}<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>;
         {/* Additional Links */}
 
-<div className='grid grid-cols-1 "md": grid-cols-3 gap-8 mb-12'>'
+<div className='grid grid-cols-1 'md': grid-cols-3 gap-8 mb-12'>'
 
           {/* Company Links *
 }
           <motion&& motion.div;
-        <div className='grid grid-cols-1 "md": grid-cols-3 gap-8 mb-12'>          {/* Company Links */}{/* Company Links *,'
+        <div className='grid grid-cols-1 'md': grid-cols-3 gap-8 mb-12'>          {/* Company Links */}{/* Company Links *,'
 }<motion.div;
           {/* Company Links */}
           <motion&& motion.div;
-            initial={{ "opacity": 0, "y": 20 
+            initial={ 'opacity': 0, 'y': 20 
 }
-            whileInView={{ "opacity": 1, "y": 0 
+            whileInView={ 'opacity': 1, 'y': 0 
 }
-            transition={{ "duration": 0.6, "delay": 0.2 
+            transition={ 'duration': 0.6, 'delay': 0.2 
 }
 
           {/* Company Links */}
@@ -516,10 +497,9 @@ solutions. Transforming businesses with cutting-edge technology.
           <motion.div;
           {/* Company Links */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.2 }
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>'
               <Users className='w-5 h-5 mr-2 text-purple-400' />'
@@ -530,20 +510,20 @@ solutions. Transforming businesses with cutting-edge technology.
                 <li key={index}>
                   <Link,
 href={link.href}
-                    className='text-gray-400 "hover": text-cyan-400 transition-colors duration-300 text-sm''
+                    className='text-gray-400 'hover': text-cyan-400 transition-colors duration-300 text-sm''
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {link.name}
           {/* Resources *
 }
           <motion&& motion.div;
-            initial={{ "opacity": 0, "y": 20 
+            initial={ 'opacity': 0, 'y': 20 
 }
 
-            whileInView={{ "opacity": 1, "y": 0 
+            whileInView={ 'opacity': 1, 'y': 0 
 }
 
-            transition={{ "duration": 0.6, "delay": 0.3 
+            transition={ 'duration': 0.6, 'delay': 0.3 
 }
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>'
@@ -555,42 +535,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li key={index}>
                   <Link,
 href={link.href}
-                    className='text-gray-400 "hover": text-cyan-400 transition-colors duration-300 text-sm''
+                    className='text-gray-400 'hover': text-cyan-400 transition-colors duration-300 text-sm''
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {link.name}
           {/* Social Media *
 }
           <motion&& motion.div;
-            initial={{ "opacity": 0, "y": 20 
+            initial={ 'opacity': 0, 'y': 20 
 }
 
-            whileInView={{ "opacity": 1, "y": 0 
+            whileInView={ 'opacity': 1, 'y': 0 
 }
 
-            transition={{ "duration": 0.6, "delay": 0.4 
+            transition={ 'duration': 0.6, 'delay': 0.4 
 }
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>'
               <Rocket className='w-5 h-5 mr-2 text-pink-400' />'
               Follow Us
-=======
           {/* Social Media *}
 }
           <motion&& motion.div;
-            initial={{ opacity: 0;, y: 20 ;}
+            initial={ opacity: 0;, y: 20 ;}
 }
 
-            whileInView={{ opacity: 1;, y: 0 ;}
+            whileInView={ opacity: 1;, y: 0 ;}
 }
 
-            transition={{ duration: 0.6;, delay: 0.4 ;}
+            transition={ duration: 0.6;, delay: 0.4 ;}
 }
            />
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
               <Rocket className='w-5 h-5 mr-2 text-pink-400' />
               Follow Us;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </h4>
             <div className='grid grid-cols-3 gap-4'>'
               {socialLinks.map((social, index) => (
@@ -598,12 +576,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 key={index}
                   href={social.href}
-className='w-12 h-12 bg-gray-800 "hover": bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group''
+className='w-12 h-12 bg-gray-800 'hover': bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group''
                 >
-                  <social.icon className='w-5 h-5 text-gray-400 group-"hover":text-white transition-colors duration-300' />'
+                  <social.icon className='w-5 h-5 text-gray-400 group-'hover':text-white transition-colors duration-300' />'
                 </Link>
-<<<<<<< HEAD
-            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.4 }}
+            whileInView={ opacity: 1, y: 0 }transition={ duration: 0.6, delay: 0.4 }
           >;
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
               <Rocket className='w-5 h-5 mr-2 text-pink-400' />;
@@ -618,9 +595,7 @@ className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />;
                 </Link>;
 
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               ))}
             </div>
           </motion.div>
@@ -636,13 +611,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;))}
         {/* Newsletter Signup */}
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 20 
+          initial={ 'opacity': 0, 'y': 20 
 }
 
-          whileInView={{ "opacity": 1, "y": 0 
+          whileInView={ 'opacity': 1, 'y': 0 
 }
 
-          transition={{ "duration": 0.6, "delay": 0.5 
+          transition={ 'duration': 0.6, 'delay': 0.5 
 }
 className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12''
         >
@@ -655,25 +630,20 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
 emerging technology insights. Be the first to know about,
 breakthrough solutions and industry trends.
             </p>
-            <div className='flex flex-col "sm":flex-row gap-4 max-w-md mx-auto'>'
+            <div className='flex flex-col 'sm':flex-row gap-4 max-w-md mx-auto'>'
               <input,
 type='email''
                 placeholder='Enter your email''
-                className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 "focus":outline-none "focus":border-cyan-500 "focus":ring-2 "focus":ring-cyan-500/20'' />
-              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl "hover":shadow-2xl "hover":shadow-cyan-500/25 transition-all duration-300'>'
+                className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 'focus':outline-none 'focus':border-cyan-500 'focus':ring-2 'focus':ring-cyan-500/20'' />
+              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl 'hover':shadow-2xl 'hover':shadow-cyan-500/25 transition-all duration-300'>'
                 Subscribe
-<<<<<<< HEAD
-=======
                 Subscribe;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto' />
               <input;
 type='email'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 placeholder='Enter your email'
                 className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
-          whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.5 }}
+          whileInView={ opacity: 1, y: 0 }transition={ duration: 0.6, delay: 0.5 }
 className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12';
         >;
           <div className='text-center'>;
@@ -690,41 +660,40 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
                 type='email';
                 placeholder='Enter your email';
                 className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20';
-          <div className="text-center">;
-            <h3 className="text-2xl font-bold text-white mb-4">;
+          <div className='text-center'>;
+            <h3 className='text-2xl font-bold text-white mb-4'>;
               Stay Updated with Latest Innovations;
             </h3>;
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>;
               Get exclusive access to our latest AI, quantum computing, and emerging technology insights.;
               Be the first to know about breakthrough solutions and industry trends.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>;
+          <div className='text-center'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
               Stay Updated with Latest Innovations
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
               />;
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>                Subscribe        >;
-          <div className="text-center">;
-            <h3 className="text-2xl font-bold text-white mb-4">;
+          <div className='text-center'>;
+            <h3 className='text-2xl font-bold text-white mb-4'>;
               Stay Updated with Latest Innovations;
             </h3>;
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>;
               Get exclusive access to our latest AI, quantum computing, and emerging technology insights. ;
               Be the first to know about breakthrough solutions and industry trends.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>;
               <input;
-                type="email";
-                placeholder="Enter your email";
-                className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20";
+                type='email';
+                placeholder='Enter your email';
+                className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20';
               />;
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">;
+              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>;
               />;
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>;
                 Subscribe;
-<<<<<<< HEAD
               </button>;
             </div>;
           </div>;
@@ -732,17 +701,14 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
               Get exclusive access to our latest AI, quantum computing, and emerging technology insights. 
               Be the first to know about breakthrough solutions and industry trends.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
               <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                type='email'
+                placeholder='Enter your email'
+                className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
+              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>
                 Subscribe
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </button>
             </div>
           </div>
@@ -754,29 +720,25 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
           </div>;
         {/* Bottom Bar */}
         <motion&& motion.div;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         </motion.div>;
         {/* Bottom Bar */}
         <motion.div;
-          initial={{ "opacity": 0 }}
+          initial={ 'opacity': 0 }
 
-          whileInView={{ "opacity": 1 
+          whileInView={ 'opacity': 1 
 }
 
-          transition={{ "duration": 0.6, "delay": 0.6 
+          transition={ 'duration': 0.6, 'delay': 0.6 
 }
 className='border-t border-gray-800 pt-8''
         >
-          <div className='flex flex-col "md":flex-row justify-between items-center'>'
-            <div className='text-gray-400 text-sm mb-4 "md":mb-0'>'
+          <div className='flex flex-col 'md':flex-row justify-between items-center'>'
+            <div className='text-gray-400 text-sm mb-4 'md':mb-0'>'
               © 2026 Zion Tech Group. All rights reserved.
               <Link,
 href='/privacy''
 
-                className='"hover":text-cyan-400 transition-colors duration-300 ml-2'>;'
+                className=''hover':text-cyan-400 transition-colors duration-300 ml-2'>;'
                 Privacy Policy;
               </Link>;
               <span className='mx-2'>|</span>;'
@@ -784,20 +746,17 @@ href='/privacy''
               <Link,
 href='/terms''
 
-                className='"hover":text-cyan-400 transition-colors duration-300''
+                className=''hover':text-cyan-400 transition-colors duration-300''
               >
                 Terms of Service
-=======
               <span className='mx-2' />|</span>;
 
               <Link;
 href='/terms'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='hover:text-cyan-400 transition-colors duration-300'
                />
                 Terms of Service;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </Link>
             </div>
             <div className='flex items-center space-x-2'>'
@@ -808,24 +767,15 @@ href='/terms'
               <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse'></div>'
               <div className='text-cyan-400 text-sm font-semibold'>'
                 99.9% Uptime
-<<<<<<< HEAD
-=======
                 99.9% Uptime;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse' /></div>
               <div className='text-cyan-400 text-sm font-semibold' />
                 99.9% Uptime;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
             </div>
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     </footer>;
   );
 }
@@ -855,43 +805,42 @@ href='/terms'
                 Trusted by 2500+ Companies;
               </div>;'
               <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse'></div>;'
-              <div className='text - cyan - 400 text - sm font - semibold'>                99.9% Uptime        >;"
-          <div className="flex flex - col md: flex - row justify - between items - center">;"
-            <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">;
-              © 2026 Zion Tech Group. All rights reserved. |;"
-              <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration - 300 ml - 2">;
+              <div className='text - cyan - 400 text - sm font - semibold'>                99.9% Uptime        >;'
+          <div className='flex flex - col md: flex - row justify - between items - center'>;'
+            <div className='text - gray - 400 text - sm mb - 4 md:mb - 0'>;
+              © 2026 Zion Tech Group. All rights reserved. |;'
+              <Link href='/privacy' className='hover:text - cyan - 400 transition - colors duration - 300 ml - 2'>;
                 Privacy Policy;
-              </Link>;"
-              <span className="mx - 2">|</span>;"
-              <Link href="/terms" className="hover:text - cyan - 400 transition - colors duration - 300">;
+              </Link>;'
+              <span className='mx - 2'>|</span>;'
+              <Link href='/terms' className='hover:text - cyan - 400 transition - colors duration - 300'>;
                 Terms of Service;
               </Link>;
-            </div>;"
-            <div className="flex items - center space - x-2">;"
-              <div className="flex items - center text - gray - 400 text - sm">;"
-                <Star className="w - 4 h - 4 text - yellow - 400 mr - 1" />;
+            </div>;'
+            <div className='flex items - center space - x-2'>;'
+              <div className='flex items - center text - gray - 400 text - sm'>;'
+                <Star className='w - 4 h - 4 text - yellow - 400 mr - 1' />;
                 Trusted by 2500+ Companies;
-              </div>;"
-              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;"
-              <div className="text - cyan - 400 text - sm font - semibold">;
-=======
+              </div>;'
+              <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse'></div>;'
+              <div className='text - cyan - 400 text - sm font - semibold'>;
 
     </footer>;
   )}className='border - t border - gray - 800 pt - 8'>'
 
-          <div className='flex flex - col "md":flex - row justify - between items - center'>;'
-            <div className='text - gray - 400 text - sm mb - 4 "md":mb - 0'>;'
+          <div className='flex flex - col 'md':flex - row justify - between items - center'>;'
+            <div className='text - gray - 400 text - sm mb - 4 'md':mb - 0'>;'
               © 2026 Zion Tech Group. All rights reserved. |;
               <Link;
                 href='/privacy';'
-                className='"hover":text - cyan - 400 transition - colors duration - 300 ml - 2'>'
+                className=''hover':text - cyan - 400 transition - colors duration - 300 ml - 2'>'
 
                 Privacy Policy;
               </Link>;
               <span className='mx - 2'>|</span>;'
               <Link;
                 href='/terms';'
-                className='"hover":text - cyan - 400 transition - colors duration - 300'>'
+                className=''hover':text - cyan - 400 transition - colors duration - 300'>'
 
                 Terms of Service;
               </Link>;
@@ -903,24 +852,24 @@ href='/terms'
               </div>;
               <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse'></div>;'
               <div className='text - cyan - 400 text - sm font - semibold'>                99.9% Uptime        >;'
-          <div className="flex flex - col "md": flex - row justify - between items - center">;"
-            <div className="text - gray - 400 text - sm mb - 4 "md":mb - 0">;"
+          <div className='flex flex - col 'md': flex - row justify - between items - center'>;'
+            <div className='text - gray - 400 text - sm mb - 4 'md':mb - 0'>;'
               © 2026 Zion Tech Group. All rights reserved. |;
-              <Link href="/privacy" className=""hover":text - cyan - 400 transition - colors duration - 300 ml - 2">;"
+              <Link href='/privacy' className=''hover':text - cyan - 400 transition - colors duration - 300 ml - 2'>;'
                 Privacy Policy;
               </Link>;
-              <span className="mx - 2">|</span>;"
-              <Link href="/terms" className=""hover":text - cyan - 400 transition - colors duration - 300">;"
+              <span className='mx - 2'>|</span>;'
+              <Link href='/terms' className=''hover':text - cyan - 400 transition - colors duration - 300'>;'
                 Terms of Service;
               </Link>;
             </div>;
-            <div className="flex items - center space - x-2">;"
-              <div className="flex items - center text - gray - 400 text - sm">;"
-                <Star className="w - 4 h - 4 text - yellow - 400 mr - 1" />;"
+            <div className='flex items - center space - x-2'>;'
+              <div className='flex items - center text - gray - 400 text - sm'>;'
+                <Star className='w - 4 h - 4 text - yellow - 400 mr - 1' />;'
                 Trusted by 2500+ Companies;
               </div>;
-              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;"
-              <div className="text - cyan - 400 text - sm font - semibold">;"
+              <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse'></div>;'
+              <div className='text - cyan - 400 text - sm font - semibold'>;'
                 99.9% Uptime;
               </div>;
             </div>;
@@ -928,10 +877,10 @@ href='/terms'
         </motion.div>;
       </div>;
   )</footer>;
-  )}}
+  )}
 
     </footer>
   );
 }
 
-"
+'

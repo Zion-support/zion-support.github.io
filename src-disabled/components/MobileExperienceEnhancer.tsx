@@ -45,7 +45,7 @@ const handleResize = (checkDevice()) => {
   return $3;}
 } else {setDeviceOrientation('landscape')}
       }, 100)}checkDevice()window.addEventListener('resize', handleResize)window.addEventListener('orientationchange', handleOrientationChange;
-  return () => {window.removeEventListener('resize', handleResize)window.removeEventListener('orientationchange', handleOrientationChange)}}, [])// Touch gesture handling;
+  return () => {window.removeEventListener('resize', handleResize)window.removeEventListener('orientationchange', handleOrientationChange)}, [])// Touch gesture handling;
   useEffect(() => {
 if (!enabled || !enableSwipeNavigation) return;
 
@@ -97,7 +97,7 @@ const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY)// Minimum distance
       }setTouchStart(null)setTouchEnd(null)}document.addEventListener('touchstart', handleTouchStart, { passive: false}
 })document.addEventListener('touchmove', handleTouchMove, { passive: false}
 })document.addEventListener('touchend', handleTouchEnd, { passive: false}
-})return () => {document.removeEventListener('touchstart', handleTouchStart)document.removeEventListener('touchmove', handleTouchMove)document.removeEventListener('touchend', handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart])// Enhanced mobile navigation;
+})return () => {document.removeEventListener('touchstart', handleTouchStart)document.removeEventListener('touchmove', handleTouchMove)document.removeEventListener('touchend', handleTouchEnd)}, [enabled, enableSwipeNavigation, touchStart])// Enhanced mobile navigation;
 
 const handleMobileNavigation = useCallback((action: string) => {switch (action) {case 'home': window.location.href = '/';
         break;
@@ -135,8 +135,8 @@ const style = document.createElement('style')style.textContent = `;
   return (<>;
       {/* Mobile Navigation Bar */}
       {isMobile && (<motion .div;}
-          initial={{ y: -100 }}
-          animate={{ y: 0 }"
+          initial={ y: -100 }
+          animate={ y: 0 }"
 }"";"
           className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 shadow-lg""  />";"
           <div className="flex items-center justify-between px-4 py-3" />"";"
@@ -178,11 +178,11 @@ const style = document.createElement('style')style.textContent = `;
       )}{/* Mobile Menu */}
       <AnimatePresence />;"
         {showMobileMenu && isMobile && (<motion .div"";}
-            initial={{ opacity: 0, x: '100%' }
+            initial={ opacity: 0, x: '100%' }
 }
-            animate={{ opacity: 1, x: 0 }"
+            animate={ opacity: 1, x: 0 }"
 }"";
-            exit={{ opacity: 0, x: '100%' }"
+            exit={ opacity: 0, x: '100%' }"
 }"";"
             className="fixed top-0 right-0 bottom-0 w-80 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50""  />";"
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700" />"";"
@@ -230,11 +230,11 @@ const style = document.createElement('style')style.textContent = `;
       </AnimatePresence>;
       {/* Floating Action Button for Mobile */}
       {isMobile && (<motion .button;}
-          initial={{ opacity: 0, scale: 0.8 }
+          initial={ opacity: 0, scale: 0.8 }
 }
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          animate={ opacity: 1, scale: 1 }
+          whileHover={ scale: 1.1 }
+          whileTap={ scale: 0.9 }
           onClick={() = /> setShowGestureGuide(!showGestureGuide}
 }"
           className="fixed bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover: bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2";"
@@ -246,18 +246,18 @@ const style = document.createElement('style')style.textContent = `;
       )}{/* Gesture Guide */}
       <AnimatePresence />;
         {showGestureGuide && isMobile && (<motion .div;}
-            initial={{ opacity: 0, scale: 0.9 }
+            initial={ opacity: 0, scale: 0.9 }
 }
-            animate={{ opacity: 1, scale: 1 }
+            animate={ opacity: 1, scale: 1 }
 }
-            exit={{ opacity: 0, scale: 0.9 }"
+            exit={ opacity: 0, scale: 0.9 }"
 }"";"
             className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4";"
             onClick={() ="  /> setShowGestureGuide(false)}">
 
             <motion .div;
-              initial={{ y: 20 }}
-              animate={{ y: 0 }"
+              initial={ y: 20 }
+              animate={ y: 0 }"
 }"";"
               className="bg-white dark:bg-slate-800 rounded-lg p-6 max-w-sm w-full";
               onClick={(e) = /> e.stopPropagation()}
@@ -321,9 +321,9 @@ const style = document.createElement('style')style.textContent = `;
       </AnimatePresence>;"
       {/* Device Info Indicator (Development Only) */}"";
       {process.env.NODE_ENV === 'development' && (isMobile || isTablet) && (<motion .div;}
-          initial={{ opacity: 0, x: -100 }
+          initial={ opacity: 0, x: -100 }
 }
-          animate={{ opacity: 1, x: 0 }"
+          animate={ opacity: 1, x: 0 }"
 }"";"
           className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg""  />";"
           <div className="flex items-center space-x-2" />"";"
@@ -334,9 +334,9 @@ const style = document.createElement('style')style.textContent = `;
         </motion.div>;"
       )}{/* Gesture History (Development Only) */}"";
       {process.env.NODE_ENV === 'development' && showGestures && gestureHistory.length > 0 && (<motion .div;}
-          initial={{ opacity: 0, y: 100 }
+          initial={ opacity: 0, y: 100 }
 }
-          animate={{ opacity: 1, y: 0 }"
+          animate={ opacity: 1, y: 0 }"
 }"";"
           className="fixed bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs""  />";"
           <div className="font-medium mb-2" />Recent Gestures</div>"";"

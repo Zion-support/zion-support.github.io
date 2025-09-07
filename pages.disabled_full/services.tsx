@@ -1,6 +1,6 @@
 
 ;
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { 'hasError': false }static getDerivedStateFromError(error) {return { 'hasError': true }componentDidCatch(error, errorInfo) {console.error('Error caught by 'boundary':', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }ursor/integrate-build-improve-and-re-verify-8f7d;
@@ -63,14 +63,14 @@ return (;
 		<Layout>;
 			<PageTransition>;
 			{/* Hero Section */}
-			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 "sm":py-32'>;'
-				<div className='mx-auto max-w-7xl px-6 "lg":px-8'>;'
+			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 'sm':py-32'>;'
+				<div className='mx-auto max-w-7xl px-6 'lg':px-8'>;'
 					<div className='mx-auto max-w-2xl text-center'>;'
 						<div className='flex items-center justify-center mb-4'>;'
 							<Award className='h-6 w-6 text-blue-600 mr-2' />;'
 							<span className='text-base font-semibold leading-7 text-blue-600'>Our Services</span>;'
 						</div>;
-						<h1 className='text-3xl font-bold tracking-tight text-gray-900 "sm":text-4xl'>;'
+						<h1 className='text-3xl font-bold tracking-tight text-gray-900 'sm':text-4xl'>;'
 							Our Services;
 						</h1>;
 						<p className='mt-6 text-lg leading-8 text-gray-600'>;'
@@ -80,13 +80,13 @@ return (;
 				</div>;
 			</section>;
 			{/* Services Grid */}
-			<section className='py-16 "sm":py-24'>;'
-				<div className='mx-auto max-w-7xl px-6 "lg":px-8'>;'
-					<div className='grid gap-6 "lg":grid-cols-2'>;'
+			<section className='py-16 'sm':py-24'>;'
+				<div className='mx-auto max-w-7xl px-6 'lg':px-8'>;'
+					<div className='grid gap-6 'lg':grid-cols-2'>;'
 						{/* AI Autonomous Systems */}
-						<div id='ai' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover":shadow-lg transition-all duration-300 "hover":border-blue-300'>;'
+						<div id='ai' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm 'hover':shadow-lg transition-all duration-300 'hover':border-blue-300'>;'
 							<div className='flex items-center gap-x-3 mb-6'>;'
-								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-"hover":bg-blue-700 transition-colors'>;'
+								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-'hover':bg-blue-700 transition-colors'>;'
 									<Brain className='h-7 w-7 text-white' />;'
 								</div>;
 								<div>;
@@ -122,20 +122,20 @@ return (;
 								</div>;
 								<Link;
 									href='/contact';'
-									className='inline-flex items-center text-sm font-semibold text-blue-600 "hover":text-blue-500 transition-colors group';'
+									className='inline-flex items-center text-sm font-semibold text-blue-600 'hover':text-blue-500 transition-colors group';'
 								<Link,
 href='/contact''
-									className='inline-flex items-center text-sm font-semibold text-blue-600 "hover":text-blue-500 transition-colors group''
+									className='inline-flex items-center text-sm font-semibold text-blue-600 'hover':text-blue-500 transition-colors group''
 									aria-label='Get started with AI services'>;'
 									Get started with AI;
-									<ArrowRight className='ml-2 h-4 w-4 group-"hover":translate-x-1 transition-transform' />;'
+									<ArrowRight className='ml-2 h-4 w-4 group-'hover':translate-x-1 transition-transform' />;'
 								</Link>;
 							</div>;
 						</div>;
 						{/* Cloud Platforms */}
-						<div id='cloud' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover":shadow-lg transition-all duration-300 "hover":border-green-300'>;'
+						<div id='cloud' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm 'hover':shadow-lg transition-all duration-300 'hover':border-green-300'>;'
 							<div className='flex items-center gap-x-3 mb-6'>;'
-								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-"hover":bg-green-700 transition-colors'>;'
+								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-'hover':bg-green-700 transition-colors'>;'
 									<Cloud className='h-7 w-7 text-white' />;'
 								</div>;
 								<div>;
@@ -171,20 +171,20 @@ href='/contact''
 								</div>;
 								<Link;
 									href='/contact';'
-									className='inline-flex items-center text-sm font-semibold text-green-600 "hover":text-green-500 transition-colors group';'
+									className='inline-flex items-center text-sm font-semibold text-green-600 'hover':text-green-500 transition-colors group';'
 								<Link,
 href='/contact''
-									className='inline-flex items-center text-sm font-semibold text-green-600 "hover":text-green-500 transition-colors group''
+									className='inline-flex items-center text-sm font-semibold text-green-600 'hover':text-green-500 transition-colors group''
 									aria-label='Get started with cloud services'>;'
 									Get started with Cloud;
-									<ArrowRight className='ml-2 h-4 w-4 group-"hover":translate-x-1 transition-transform' />;'
+									<ArrowRight className='ml-2 h-4 w-4 group-'hover':translate-x-1 transition-transform' />;'
 								</Link>;
 							</div>;
 						</div>;
 						{/* Cybersecurity */}
-						<div id='cybersecurity' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover":shadow-lg transition-all duration-300 "hover":border-purple-300'>;'
+						<div id='cybersecurity' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm 'hover':shadow-lg transition-all duration-300 'hover':border-purple-300'>;'
 							<div className='flex items-center gap-x-3 mb-6'>;'
-								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-"hover":bg-purple-700 transition-colors'>;'
+								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-'hover':bg-purple-700 transition-colors'>;'
 									<Shield className='h-7 w-7 text-white' />;'
 								</div>;
 								<div>;
@@ -220,20 +220,20 @@ href='/contact''
 								</div>;
 								<Link;
 									href='/contact';'
-									className='inline-flex items-center text-sm font-semibold text-purple-600 "hover":text-purple-500 transition-colors group';'
+									className='inline-flex items-center text-sm font-semibold text-purple-600 'hover':text-purple-500 transition-colors group';'
 								<Link,
 href='/contact''
-									className='inline-flex items-center text-sm font-semibold text-purple-600 "hover":text-purple-500 transition-colors group''
+									className='inline-flex items-center text-sm font-semibold text-purple-600 'hover':text-purple-500 transition-colors group''
 									aria-label='Get started with cybersecurity services'>;'
 									Get started with Security;
-									<ArrowRight className='ml-2 h-4 w-4 group-"hover":translate-x-1 transition-transform' />;'
+									<ArrowRight className='ml-2 h-4 w-4 group-'hover':translate-x-1 transition-transform' />;'
 								</Link>;
 							</div>;
 						</div>;
 						{/* Micro SaaS */}
-						<div id='saas' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover":shadow-lg transition-all duration-300 "hover":border-orange-300'>;'
+						<div id='saas' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm 'hover':shadow-lg transition-all duration-300 'hover':border-orange-300'>;'
 							<div className='flex items-center gap-x-3 mb-6'>;'
-								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-"hover":bg-orange-700 transition-colors'>;'
+								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-'hover':bg-orange-700 transition-colors'>;'
 									<Code className='h-7 w-7 text-white' />;'
 								</div>;
 								<div>;
@@ -269,51 +269,51 @@ href='/contact''
 								</div>;
 								<Link;
 									href='/contact';'
-									className='inline-flex items-center text-sm font-semibold text-orange-600 "hover":text-orange-500 transition-colors group';'
+									className='inline-flex items-center text-sm font-semibold text-orange-600 'hover':text-orange-500 transition-colors group';'
 ursor/automate-test-improve-and-merge-code-646c;
 									aria-label='Get started with custom software services';'
 								>;
 									Get started with SaaS;
-									<ArrowRight className='ml-2 h-4 w-4 group-"hover":translate-x-1 transition-transform' />;'
+									<ArrowRight className='ml-2 h-4 w-4 group-'hover':translate-x-1 transition-transform' />;'
 								</Link>;
 							</div>;
 								<Link,
 href='/contact''
-									className='inline-flex items-center text-sm font-semibold text-orange-600 "hover":text-orange-500 transition-colors group''
+									className='inline-flex items-center text-sm font-semibold text-orange-600 'hover':text-orange-500 transition-colors group''
 						</div>;
 					</div>;
 				</div>;
 			</section>;
 			{/* Expanded Service Catalog */}
-			<section className='py-16 "sm":py-24 bg-white'>;'
-				<div className='mx-auto max-w-7xl px-6 "lg":px-8'>;'
+			<section className='py-16 'sm':py-24 bg-white'>;'
+				<div className='mx-auto max-w-7xl px-6 'lg':px-8'>;'
 					<div className='mx-auto max-w-4xl text-center mb-14'>;'
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 "sm":text-4xl'>Comprehensive Technology Solutions</h2>;'
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 'sm':text-4xl'>Comprehensive Technology Solutions</h2>;'
 						<p className='mt-6 text-lg leading-8 text-gray-600'>;'
 							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms.;
 							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes.;
 							Explore our full capabilities at{' '}'
-							<a href='"https"://ziontechgroup.com' className='text-blue-600 "hover":text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.{' '}'
+							<a href=''https'://ziontechgroup.com' className='text-blue-600 'hover':text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.{' '}'
 							Check our latest additions in the{' '}'
-							<Link href='/additional-services' className='text-blue-600 "hover":text-blue-500 underline font-semibold'>Expanded Services Catalog</Link>.;'
+							<Link href='/additional-services' className='text-blue-600 'hover':text-blue-500 underline font-semibold'>Expanded Services Catalog</Link>.;'
 						</p>;
 						<div className='mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6'>;'
 							<h3 className='text-lg font-semibold text-blue-900 mb-3'>Ready to Get Started?</h3>;'
-							<div className='grid grid-cols-1 "md":grid-cols-2 gap-4'>;'
+							<div className='grid grid-cols-1 'md':grid-cols-2 gap-4'>;'
 								<div>;
-									<p className='text-blue-800 text-sm mb-2'>Contact us for a free "consultation":</p>;'
+									<p className='text-blue-800 text-sm mb-2'>Contact us for a free 'consultation':</p>;'
 									<div className='space-y-1 text-sm'>;'
-										<p className='text-blue-700'><strong>"Phone":</strong> <a href='"tel":+13024640950' className='"hover":underline'>+1 302 464 0950</a></p>;'
-										<p className='text-blue-700'><strong>"Email":</strong> <a href='"mailto":kleber@ziontechgroup.com' className='"hover":underline'>kleber@ziontechgroup.com</a></p>;'
+										<p className='text-blue-700'><strong>'Phone':</strong> <a href=''tel':+13024640950' className=''hover':underline'>+1 302 464 0950</a></p>;'
+										<p className='text-blue-700'><strong>'Email':</strong> <a href=''mailto':kleber@ziontechgroup.com' className=''hover':underline'>kleber@ziontechgroup.com</a></p>;'
 									</div>;
 								</div>;
 								<div>;
-									<p className='text-blue-800 text-sm mb-2'>Our office "location":</p>;'
+									<p className='text-blue-800 text-sm mb-2'>Our office 'location':</p>;'
 									<p className='text-blue-700 text-sm'>364 E Main St STE 1008<br />Middletown DE 19709</p>;'
 								</div>;
 							</div>;
 						</div>;
-						<div className='mt-6 grid grid-cols-1 "md":grid-cols-3 gap-4 text-sm'>;'
+						<div className='mt-6 grid grid-cols-1 'md':grid-cols-3 gap-4 text-sm'>;'
 							<div className='bg-blue-50 p-4 rounded-lg'>;'
 								<h3 className='font-semibold text-blue-900 mb-2'>AI & Machine Learning</h3>;'
 								<p className='text-blue-700'>Advanced AI solutions from computer vision to generative content creation</p>;'
@@ -330,12 +330,12 @@ href='/contact''
 						<p className='mt-6 text-sm text-gray-500'>;'
 							Pricing based on market research from leading technology consultancies and enterprise software vendors.;
 							For custom enterprise solutions and volume discounts, see our{' '}'
-							<Link href='/pricing' className='text-blue-600 "hover":text-blue-500 underline'>Enterprise Pricing Guide</Link>.;'
+							<Link href='/pricing' className='text-blue-600 'hover':text-blue-500 underline'>Enterprise Pricing Guide</Link>.;'
 						</p>;
 					</div>;
-					<div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>;'
+					<div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-3 gap-8'>;'
 						{/* AI Services */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Brain className='h-5 w-5 text-blue-600' />;'
 								<h3 className='font-semibold text-gray-900'>Revenue AI Agents (Sales/CS)</h3>;'
@@ -347,10 +347,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-blue-600'>Starting $8k–$25k</span>;'
-								<Link href='/contact' className='text-blue-600 "hover":text-blue-500'>Talk to us →</Link>;'
+								<Link href='/contact' className='text-blue-600 'hover':text-blue-500'>Talk to us →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Database className='h-5 w-5 text-indigo-600' />;'
 								<h3 className='font-semibold text-gray-900'>Data Engineering as a Service</h3>;'
@@ -362,10 +362,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-indigo-600'>Starting $10k–$40k</span>;'
-								<Link href='/contact' className='text-indigo-600 "hover":text-indigo-500'>Get estimate →</Link>;'
+								<Link href='/contact' className='text-indigo-600 'hover':text-indigo-500'>Get estimate →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Server className='h-5 w-5 text-emerald-600' />;'
 								<h3 className='font-semibold text-gray-900'>MLOps Platform Setup</h3>;'
@@ -377,11 +377,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-emerald-600'>Starting $15k–$60k</span>;'
-								<Link href='/contact' className='text-emerald-600 "hover":text-emerald-500'>Learn more →</Link>;'
+								<Link href='/contact' className='text-emerald-600 'hover':text-emerald-500'>Learn more →</Link>;'
 							</div>;
 						</div>;
 						{/* IT & Cloud */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Cloud className='h-5 w-5 text-green-600' />;'
 								<h3 className='font-semibold text-gray-900'>FinOps & Cloud Cost Optimization</h3>;'
@@ -393,10 +393,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-green-600'>Assessments $4k–$12k</span>;'
-								<Link href='/contact' className='text-green-600 "hover":text-green-500'>Start now →</Link>;'
+								<Link href='/contact' className='text-green-600 'hover':text-green-500'>Start now →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Shield className='h-5 w-5 text-purple-600' />;'
 								<h3 className='font-semibold text-gray-900'>SOC-as-a-Service</h3>;'
@@ -408,10 +408,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-purple-600'>From $3k/mo</span>;'
-								<Link href='/contact' className='text-purple-600 "hover":text-purple-500'>Request details →</Link>;'
+								<Link href='/contact' className='text-purple-600 'hover':text-purple-500'>Request details →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Globe className='h-5 w-5 text-orange-600' />;'
 								<h3 className='font-semibold text-gray-900'>Fractional CTO/Architecture Advisory</h3>;'
@@ -423,11 +423,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-orange-600'>From $4k/mo</span>;'
-								<Link href='/contact' className='text-orange-600 "hover":text-orange-500'>Book intro →</Link>;'
+								<Link href='/contact' className='text-orange-600 'hover':text-orange-500'>Book intro →</Link>;'
 							</div>;
 						</div>;
 						{/* AI Services - Additional */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Brain className='h-5 w-5 text-violet-600' />;'
 								<h3 className='font-semibold text-gray-900'>AI-Powered Business Intelligence</h3>;'
@@ -440,10 +440,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-violet-600'>From $399/mo</span>;'
-								<Link href='/contact' className='text-violet-600 "hover":text-violet-500'>Schedule demo →</Link>;'
+								<Link href='/contact' className='text-violet-600 'hover':text-violet-500'>Schedule demo →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Database className='h-5 w-5 text-cyan-600' />;'
 								<h3 className='font-semibold text-gray-900'>Intelligent Document Processing</h3>;'
@@ -456,10 +456,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-cyan-600'>From $299/mo</span>;'
-								<Link href='/contact' className='text-cyan-600 "hover":text-cyan-500'>Try free trial →</Link>;'
+								<Link href='/contact' className='text-cyan-600 'hover':text-cyan-500'>Try free trial →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Zap className='h-5 w-5 text-yellow-600' />;'
 								<h3 className='font-semibold text-gray-900'>AI Test Automation Platform</h3>;'
@@ -472,11 +472,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-yellow-600'>From $199/mo</span>;'
-								<Link href='/contact' className='text-yellow-600 "hover":text-yellow-500'>Start testing →</Link>;'
+								<Link href='/contact' className='text-yellow-600 'hover':text-yellow-500'>Start testing →</Link>;'
 							</div>;
 						</div>;
 						{/* Micro SaaS */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Code className='h-5 w-5 text-rose-600' />;'
 								<h3 className='font-semibold text-gray-900'>AI Content Localization SaaS</h3>;'
@@ -488,10 +488,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-rose-600'>From $199/mo</span>;'
-								<Link href='/contact' className='text-rose-600 "hover":text-rose-500'>Request demo →</Link>;'
+								<Link href='/contact' className='text-rose-600 'hover':text-rose-500'>Request demo →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<BarChart3 className='h-5 w-5 text-sky-600' />;'
 								<h3 className='font-semibold text-gray-900'>Predictive Maintenance Toolkit</h3>;'
@@ -503,10 +503,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-sky-600'>From $299/mo</span>;'
-								<Link href='/contact' className='text-sky-600 "hover":text-sky-500'>See live demo →</Link>;'
+								<Link href='/contact' className='text-sky-600 'hover':text-sky-500'>See live demo →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Lock className='h-5 w-5 text-teal-600' />;'
 								<h3 className='font-semibold text-gray-900'>Compliance Copilot (SOC2/HIPAA/GDPR)</h3>;'
@@ -518,11 +518,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-teal-600'>From $249/mo</span>;'
-								<Link href='/contact' className='text-teal-600 "hover":text-teal-500'>Book a walkthrough →</Link>;'
+								<Link href='/contact' className='text-teal-600 'hover':text-teal-500'>Book a walkthrough →</Link>;'
 							</div>;
 						</div>;
 						{/* Additional IT Services */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Server className='h-5 w-5 text-lime-600' />;'
 								<h3 className='font-semibold text-gray-900'>DevOps Automation Platform</h3>;'
@@ -535,10 +535,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-lime-600'>From $599/mo</span>;'
-								<Link href='/contact' className='text-lime-600 "hover":text-lime-500'>Get started →</Link>;'
+								<Link href='/contact' className='text-lime-600 'hover':text-lime-500'>Get started →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Globe className='h-5 w-5 text-pink-600' />;'
 								<h3 className='font-semibold text-gray-900'>Digital Transformation Consulting</h3>;'
@@ -551,10 +551,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-pink-600'>From $8k–$50k</span>;'
-								<Link href='/contact' className='text-pink-600 "hover":text-pink-500'>Schedule consultation →</Link>;'
+								<Link href='/contact' className='text-pink-600 'hover':text-pink-500'>Schedule consultation →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<BarChart3 className='h-5 w-5 text-amber-600' />;'
 								<h3 className='font-semibold text-gray-900'>Infrastructure Monitoring & Observability</h3>;'
@@ -567,11 +567,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-amber-600'>From $199/mo</span>;'
-								<Link href='/contact' className='text-amber-600 "hover":text-amber-500'>Monitor now →</Link>;'
+								<Link href='/contact' className='text-amber-600 'hover':text-amber-500'>Monitor now →</Link>;'
 							</div>;
 						</div>;
 						{/* Advanced AI Services */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Eye className='h-5 w-5 text-blue-600' />;'
 								<h3 className='font-semibold text-gray-900'>Computer Vision & Image Recognition</h3>;'
@@ -585,10 +585,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-blue-600'>From $2,500/mo</span>;'
-								<Link href='/contact' className='text-blue-600 "hover":text-blue-500'>Schedule demo →</Link>;'
+								<Link href='/contact' className='text-blue-600 'hover':text-blue-500'>Schedule demo →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<MessageSquare className='h-5 w-5 text-green-600' />;'
 								<h3 className='font-semibold text-gray-900'>Natural Language Processing (NLP) Platform</h3>;'
@@ -602,10 +602,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-green-600'>From $1,800/mo</span>;'
-								<Link href='/contact' className='text-green-600 "hover":text-green-500'>Try API →</Link>;'
+								<Link href='/contact' className='text-green-600 'hover':text-green-500'>Try API →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Palette className='h-5 w-5 text-purple-600' />;'
 								<h3 className='font-semibold text-gray-900'>Generative AI Content Studio</h3>;'
@@ -619,10 +619,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-purple-600'>From $3,200/mo</span>;'
-								<Link href='/contact' className='text-purple-600 "hover":text-purple-500'>Create content →</Link>;'
+								<Link href='/contact' className='text-purple-600 'hover':text-purple-500'>Create content →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Bot className='h-5 w-5 text-orange-600' />;'
 								<h3 className='font-semibold text-gray-900'>Conversational AI & Chatbots</h3>;'
@@ -636,10 +636,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-orange-600'>From $1,200/mo</span>;'
-								<Link href='/contact' className='text-orange-600 "hover":text-orange-500'>Build chatbot →</Link>;'
+								<Link href='/contact' className='text-orange-600 'hover':text-orange-500'>Build chatbot →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<TrendingUp className='h-5 w-5 text-red-600' />;'
 								<h3 className='font-semibold text-gray-900'>Predictive Analytics & Forecasting</h3>;'
@@ -653,10 +653,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-red-600'>From $2,800/mo</span>;'
-								<Link href='/contact' className='text-red-600 "hover":text-red-500'>Predict trends →</Link>;'
+								<Link href='/contact' className='text-red-600 'hover':text-red-500'>Predict trends →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Users className='h-5 w-5 text-emerald-600' />;'
 								<h3 className='font-semibold text-gray-900'>Smart Project Management Suite</h3>;'
@@ -669,11 +669,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-emerald-600'>From $149/mo</span>;'
-								<Link href='/contact' className='text-emerald-600 "hover":text-emerald-500'>Start free trial →</Link>;'
+								<Link href='/contact' className='text-emerald-600 'hover':text-emerald-500'>Start free trial →</Link>;'
 							</div>;
 						</div>;
 						{/* Advanced IT Services */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Cpu className='h-5 w-5 text-blue-600' />;'
 								<h3 className='font-semibold text-gray-900'>Edge Computing & IoT Solutions</h3>;'
@@ -687,10 +687,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-blue-600'>From $4,500/mo</span>;'
-								<Link href='/contact' className='text-blue-600 "hover":text-blue-500'>Deploy edge →</Link>;'
+								<Link href='/contact' className='text-blue-600 'hover':text-blue-500'>Deploy edge →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Link2 className='h-5 w-5 text-green-600' />;'
 								<h3 className='font-semibold text-gray-900'>Blockchain & Web3 Solutions</h3>;'
@@ -704,10 +704,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-green-600'>From $8,000/mo</span>;'
-								<Link href='/contact' className='text-green-600 "hover":text-green-500'>Build Web3 →</Link>;'
+								<Link href='/contact' className='text-green-600 'hover':text-green-500'>Build Web3 →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Wifi className='h-5 w-5 text-purple-600' />;'
 								<h3 className='font-semibold text-gray-900'>5G & Network Infrastructure</h3>;'
@@ -721,10 +721,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-purple-600'>From $12,000/mo</span>;'
-								<Link href='/contact' className='text-purple-600 "hover":text-purple-500'>Upgrade network →</Link>;'
+								<Link href='/contact' className='text-purple-600 'hover':text-purple-500'>Upgrade network →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<HardDrive className='h-5 w-5 text-orange-600' />;'
 								<h3 className='font-semibold text-gray-900'>Quantum Computing Readiness</h3>;'
@@ -738,10 +738,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-orange-600'>From $15,000/mo</span>;'
-								<Link href='/contact' className='text-orange-600 "hover":text-orange-500'>Go quantum →</Link>;'
+								<Link href='/contact' className='text-orange-600 'hover':text-orange-500'>Go quantum →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Monitor className='h-5 w-5 text-red-600' />;'
 								<h3 className='font-semibold text-gray-900'>Extended Reality (XR) Solutions</h3>;'
@@ -755,10 +755,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-red-600'>From $6,500/mo</span>;'
-								<Link href='/contact' className='text-red-600 "hover":text-red-500'>Enter XR →</Link>;'
+								<Link href='/contact' className='text-red-600 'hover':text-red-500'>Enter XR →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Star className='h-5 w-5 text-indigo-600' />;'
 								<h3 className='font-semibold text-gray-900'>Customer Feedback Intelligence Platform</h3>;'
@@ -771,11 +771,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-indigo-600'>From $99/mo</span>;'
-								<Link href='/contact' className='text-indigo-600 "hover":text-indigo-500'>Analyze feedback →</Link>;'
+								<Link href='/contact' className='text-indigo-600 'hover':text-indigo-500'>Analyze feedback →</Link>;'
 							</div>;
 						</div>;
 						{/* Innovative Micro SaaS Services */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Activity className='h-5 w-5 text-blue-600' />;'
 								<h3 className='font-semibold text-gray-900'>Real-Time Analytics Dashboard</h3>;'
@@ -789,10 +789,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-blue-600'>From $299/mo</span>;'
-								<Link href='/contact' className='text-blue-600 "hover":text-blue-500'>View demo →</Link>;'
+								<Link href='/contact' className='text-blue-600 'hover':text-blue-500'>View demo →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Settings className='h-5 w-5 text-green-600' />;'
 								<h3 className='font-semibold text-gray-900'>API Management & Gateway</h3>;'
@@ -806,10 +806,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-green-600'>From $499/mo</span>;'
-								<Link href='/contact' className='text-green-600 "hover":text-green-500'>Manage APIs →</Link>;'
+								<Link href='/contact' className='text-green-600 'hover':text-green-500'>Manage APIs →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Terminal className='h-5 w-5 text-purple-600' />;'
 								<h3 className='font-semibold text-gray-900'>Developer Tools & IDE Extensions</h3>;'
@@ -823,10 +823,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-purple-600'>From $199/mo</span>;'
-								<Link href='/contact' className='text-purple-600 "hover":text-purple-500'>Boost productivity →</Link>;'
+								<Link href='/contact' className='text-purple-600 'hover':text-purple-500'>Boost productivity →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<CreditCard className='h-5 w-5 text-orange-600' />;'
 								<h3 className='font-semibold text-gray-900'>Fintech & Payment Solutions</h3>;'
@@ -840,10 +840,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-orange-600'>From $799/mo</span>;'
-								<Link href='/contact' className='text-orange-600 "hover":text-orange-500'>Process payments →</Link>;'
+								<Link href='/contact' className='text-orange-600 'hover':text-orange-500'>Process payments →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Smartphone className='h-5 w-5 text-red-600' />;'
 								<h3 className='font-semibold text-gray-900'>Mobile App Development Platform</h3>;'
@@ -857,10 +857,10 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-red-600'>From $1,299/mo</span>;'
-								<Link href='/contact' className='text-red-600 "hover":text-red-500'>Build apps →</Link>;'
+								<Link href='/contact' className='text-red-600 'hover':text-red-500'>Build apps →</Link>;'
 							</div>;
 						</div>;
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Zap className='h-5 w-5 text-red-600' />;'
 								<h3 className='font-semibold text-gray-900'>Workflow Automation Engine</h3>;'
@@ -873,34 +873,34 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-red-600'>From $79/mo</span>;'
-								<Link href='/contact' className='text-red-600 "hover":text-red-500'>Automate workflows →</Link>;'
+								<Link href='/contact' className='text-red-600 'hover':text-red-500'>Automate workflows →</Link>;'
 							</div>;
 						</div>;
 					</div>;
 					<div className='mt-10 text-center text-sm text-gray-500'>;'
 						Need something custom? Visit our website at{' '}'
-						<a href='"https"://ziontechgroup.com' className='text-blue-600 "hover":text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a>{' '}'
-						or contact us "directly": Email{' '}'
-						<a href='"mailto":kleber@ziontechgroup.com' className='text-blue-600 "hover":text-blue-500'>kleber@ziontechgroup.com</a>{' '}'
+						<a href=''https'://ziontechgroup.com' className='text-blue-600 'hover':text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a>{' '}'
+						or contact us 'directly': Email{' '}'
+						<a href=''mailto':kleber@ziontechgroup.com' className='text-blue-600 'hover':text-blue-500'>kleber@ziontechgroup.com</a>{' '}'
 						| Phone{' '}'
-						<a href='"tel":+13024640950' className='text-blue-600 "hover":text-blue-500'>+1 302 464 0950</a>{' '}'
-						| "Address": 364 E Main St STE 1008, Middletown DE 19709;
+						<a href=''tel':+13024640950' className='text-blue-600 'hover':text-blue-500'>+1 302 464 0950</a>{' '}'
+						| 'Address': 364 E Main St STE 1008, Middletown DE 19709;
 					</div>;
 				</div>;
 			</section>;
 			{/* New Innovative Services Section */}
-			<section className='py-24 "sm":py-32 bg-gradient-to-br from-blue-50 to-indigo-50'>;'
-				<div className='mx-auto max-w-7xl px-6 "lg":px-8'>;'
+			<section className='py-24 'sm':py-32 bg-gradient-to-br from-blue-50 to-indigo-50'>;'
+				<div className='mx-auto max-w-7xl px-6 'lg':px-8'>;'
 					<div className='mx-auto max-w-3xl text-center mb-16'>;'
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 "sm":text-4xl'>Innovative AI & Automation Services</h2>;'
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 'sm':text-4xl'>Innovative AI & Automation Services</h2>;'
 						<p className='mt-6 text-lg leading-8 text-gray-600'>;'
 							Cutting-edge AI solutions and automation tools that transform how businesses operate.;
-							Visit <a href='"https"://ziontechgroup.com' className='text-blue-600 "hover":text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a> for live demos.;'
+							Visit <a href=''https'://ziontechgroup.com' className='text-blue-600 'hover':text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a> for live demos.;'
 						</p>;
 					</div>;
-					<div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>;'
+					<div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-3 gap-8'>;'
 						{/* AI Content Creation Tools */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Brain className='h-5 w-5 text-blue-600' />;'
 								<h3 className='font-semibold text-gray-900'>AI Content Creation Suite</h3>;'
@@ -914,11 +914,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-blue-600'>From $199/mo</span>;'
-								<Link href='/contact' className='text-blue-600 "hover":text-blue-500'>Start free trial →</Link>;'
+								<Link href='/contact' className='text-blue-600 'hover':text-blue-500'>Start free trial →</Link>;'
 							</div>;
 						</div>;
 						{/* Email Automation Platform */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Mail className='h-5 w-5 text-green-600' />;'
 								<h3 className='font-semibold text-gray-900'>Smart Email Automation</h3>;'
@@ -932,11 +932,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-green-600'>From $149/mo</span>;'
-								<Link href='/contact' className='text-green-600 "hover":text-green-500'>Automate now →</Link>;'
+								<Link href='/contact' className='text-green-600 'hover':text-green-500'>Automate now →</Link>;'
 							</div>;
 						</div>;
 						{/* AI Email Responder */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Zap className='h-5 w-5 text-purple-600' />;'
 								<h3 className='font-semibold text-gray-900'>AI Email Assistant</h3>;'
@@ -950,11 +950,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-purple-600'>From $99/mo</span>;'
-								<Link href='/contact' className='text-purple-600 "hover":text-purple-500'>Try demo →</Link>;'
+								<Link href='/contact' className='text-purple-600 'hover':text-purple-500'>Try demo →</Link>;'
 							</div>;
 						</div>;
 						{/* Customer Support Platform */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Users className='h-5 w-5 text-orange-600' />;'
 								<h3 className='font-semibold text-gray-900'>AI Customer Support Hub</h3>;'
@@ -968,11 +968,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-orange-600'>From $299/mo</span>;'
-								<Link href='/contact' className='text-orange-600 "hover":text-orange-500'>Setup support →</Link>;'
+								<Link href='/contact' className='text-orange-600 'hover':text-orange-500'>Setup support →</Link>;'
 							</div>;
 						</div>;
 						{/* Event Management Dashboard */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Calendar className='h-5 w-5 text-red-600' />;'
 								<h3 className='font-semibold text-gray-900'>Smart Event Management</h3>;'
@@ -986,11 +986,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-red-600'>From $179/mo</span>;'
-								<Link href='/contact' className='text-red-600 "hover":text-red-500'>Plan events →</Link>;'
+								<Link href='/contact' className='text-red-600 'hover':text-red-500'>Plan events →</Link>;'
 							</div>;
 						</div>;
 						{/* Workflow Automation Engine */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Settings className='h-5 w-5 text-indigo-600' />;'
 								<h3 className='font-semibold text-gray-900'>Business Process Automation</h3>;'
@@ -1004,7 +1004,7 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-indigo-600'>From $79/mo</span>;'
-								<Link href='/contact' className='text-indigo-600 "hover":text-indigo-500'>Automate workflows →</Link>;'
+								<Link href='/contact' className='text-indigo-600 'hover':text-indigo-500'>Automate workflows →</Link>;'
 							</div>;
 						</div>;
 					</div>;
@@ -1012,19 +1012,19 @@ href='/contact''
 						<p className='text-sm text-gray-600 mb-4'>;'
 							All services include 30-day free trial, setup assistance, and 24/7 support.;
 						</p>;
-						<div className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>;'
+						<div className='flex flex-col 'sm':flex-row gap-4 justify-center items-center'>;'
 							<Link;
 								href='/contact';'
-								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 "hover":bg-blue-700 transition-colors';'
+								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 'hover':bg-blue-700 transition-colors';'
 							>;
 								Get Started Today;
 								<ArrowRight className='ml-2 h-4 w-4' />;'
 							</Link>;
 							<Link;
-								href='"https"://ziontechgroup.com';'
+								href=''https'://ziontechgroup.com';'
 								target='_blank';'
 								rel='noreferrer';'
-								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white "hover":bg-gray-50 transition-colors';'
+								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white 'hover':bg-gray-50 transition-colors';'
 							>;
 								Visit Live Demo;
 								<Globe className='ml-2 h-4 w-4' />;'
@@ -1034,18 +1034,18 @@ href='/contact''
 				</div>;
 			</section>;
 			{/* Advanced IT Services Section */}
-			<section className='py-24 "sm":py-32 bg-white'>;'
-				<div className='mx-auto max-w-7xl px-6 "lg":px-8'>;'
+			<section className='py-24 'sm':py-32 bg-white'>;'
+				<div className='mx-auto max-w-7xl px-6 'lg':px-8'>;'
 					<div className='mx-auto max-w-3xl text-center mb-16'>;'
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 "sm":text-4xl'>Advanced IT & Infrastructure Services</h2>;'
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 'sm':text-4xl'>Advanced IT & Infrastructure Services</h2>;'
 						<p className='mt-6 text-lg leading-8 text-gray-600'>;'
 							Enterprise-grade IT solutions and infrastructure management services.;
 							Professional implementation with 99.9% uptime guarantee.;
 						</p>;
 					</div>;
-					<div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>;'
+					<div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-3 gap-8'>;'
 						{/* DevOps Automation Platform */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Server className='h-5 w-5 text-blue-600' />;'
 								<h3 className='font-semibold text-gray-900'>DevOps Automation Suite</h3>;'
@@ -1059,11 +1059,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-blue-600'>From $599/mo</span>;'
-								<Link href='/contact' className='text-blue-600 "hover":text-blue-500'>Get started →</Link>;'
+								<Link href='/contact' className='text-blue-600 'hover':text-blue-500'>Get started →</Link>;'
 							</div>;
 						</div>;
 						{/* Infrastructure Monitoring */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<BarChart3 className='h-5 w-5 text-green-600' />;'
 								<h3 className='font-semibold text-gray-900'>Infrastructure Monitoring & Observability</h3>;'
@@ -1077,11 +1077,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-green-600'>From $199/mo</span>;'
-								<Link href='/contact' className='text-green-600 "hover":text-green-500'>Monitor now →</Link>;'
+								<Link href='/contact' className='text-green-600 'hover':text-green-500'>Monitor now →</Link>;'
 							</div>;
 						</div>;
 						{/* API Management */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Globe className='h-5 w-5 text-purple-600' />;'
 								<h3 className='font-semibold text-gray-900'>API Management & Gateway</h3>;'
@@ -1095,11 +1095,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-purple-600'>From $299/mo</span>;'
-								<Link href='/contact' className='text-purple-600 "hover":text-purple-500'>Manage APIs →</Link>;'
+								<Link href='/contact' className='text-purple-600 'hover':text-purple-500'>Manage APIs →</Link>;'
 							</div>;
 						</div>;
 						{/* Database Optimization */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Database className='h-5 w-5 text-orange-600' />;'
 								<h3 className='font-semibold text-gray-900'>Database Performance Optimization</h3>;'
@@ -1113,11 +1113,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-orange-600'>From $399/mo</span>;'
-								<Link href='/contact' className='text-orange-600 "hover":text-orange-500'>Optimize DB →</Link>;'
+								<Link href='/contact' className='text-orange-600 'hover':text-orange-500'>Optimize DB →</Link>;'
 							</div>;
 						</div>;
 						{/* Security Assessment */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Shield className='h-5 w-5 text-red-600' />;'
 								<h3 className='font-semibold text-gray-900'>Security Assessment & Penetration Testing</h3>;'
@@ -1131,11 +1131,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-red-600'>From $2,500/project</span>;'
-								<Link href='/contact' className='text-red-600 "hover":text-red-500'>Secure now →</Link>;'
+								<Link href='/contact' className='text-red-600 'hover':text-red-500'>Secure now →</Link>;'
 							</div>;
 						</div>;
 						{/* Cloud Migration */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Cloud className='h-5 w-5 text-indigo-600' />;'
 								<h3 className='font-semibold text-gray-900'>Cloud Migration & Modernization</h3>;'
@@ -1149,7 +1149,7 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-indigo-600'>From $15k–$100k</span>;'
-								<Link href='/contact' className='text-indigo-600 "hover":text-indigo-500'>Migrate to cloud →</Link>;'
+								<Link href='/contact' className='text-indigo-600 'hover':text-indigo-500'>Migrate to cloud →</Link>;'
 							</div>;
 						</div>;
 					</div>;
@@ -1157,19 +1157,19 @@ href='/contact''
 						<p className='text-sm text-gray-600 mb-4'>;'
 							All IT services include 24/7 monitoring, regular maintenance, and expert support.;
 						</p>;
-						<div className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>;'
+						<div className='flex flex-col 'sm':flex-row gap-4 justify-center items-center'>;'
 							<Link;
 								href='/contact';'
-								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 "hover":bg-green-700 transition-colors';'
+								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 'hover':bg-green-700 transition-colors';'
 							>;
 								Get IT Consultation;
 								<ArrowRight className='ml-2 h-4 w-4' />;'
 							</Link>;
 							<Link;
-								href='"https"://ziontechgroup.com';'
+								href=''https'://ziontechgroup.com';'
 								target='_blank';'
 								rel='noreferrer';'
-								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white "hover":bg-gray-50 transition-colors';'
+								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white 'hover':bg-gray-50 transition-colors';'
 							>;
 								View Case Studies;
 								<Globe className='ml-2 h-4 w-4' />;'
@@ -1179,18 +1179,18 @@ href='/contact''
 				</div>;
 			</section>;
 			{/* Micro SaaS Solutions Section */}
-			<section className='py-24 "sm":py-32 bg-gradient-to-br from-purple-50 to-pink-50'>;'
-				<div className='mx-auto max-w-7xl px-6 "lg":px-8'>;'
+			<section className='py-24 'sm':py-32 bg-gradient-to-br from-purple-50 to-pink-50'>;'
+				<div className='mx-auto max-w-7xl px-6 'lg':px-8'>;'
 					<div className='mx-auto max-w-3xl text-center mb-16'>;'
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 "sm":text-4xl'>Micro SaaS Solutions</h2>;'
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 'sm':text-4xl'>Micro SaaS Solutions</h2>;'
 						<p className='mt-6 text-lg leading-8 text-gray-600'>;'
 							Specialized software solutions designed to solve specific business challenges.;
 							Ready-to-deploy tools with customizable features and integrations.;
 						</p>;
 					</div>;
-					<div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>;'
+					<div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-3 gap-8'>;'
 						{/* Project Management Suite */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Users className='h-5 w-5 text-blue-600' />;'
 								<h3 className='font-semibold text-gray-900'>Smart Project Management Suite</h3>;'
@@ -1204,11 +1204,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-blue-600'>From $149/mo</span>;'
-								<Link href='/contact' className='text-blue-600 "hover":text-blue-500'>Start free trial →</Link>;'
+								<Link href='/contact' className='text-blue-600 'hover':text-blue-500'>Start free trial →</Link>;'
 							</div>;
 						</div>;
 						{/* Analytics Platform */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<BarChart3 className='h-5 w-5 text-green-600' />;'
 								<h3 className='font-semibold text-gray-900'>Business Analytics Dashboard</h3>;'
@@ -1222,11 +1222,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-green-600'>From $199/mo</span>;'
-								<Link href='/contact' className='text-green-600 "hover":text-green-500'>Analyze data →</Link>;'
+								<Link href='/contact' className='text-green-600 'hover':text-green-500'>Analyze data →</Link>;'
 							</div>;
 						</div>;
 						{/* Customer Feedback Platform */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Star className='h-5 w-5 text-purple-600' />;'
 								<h3 className='font-semibold text-gray-900'>Customer Feedback Intelligence</h3>;'
@@ -1240,11 +1240,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-purple-600'>From $99/mo</span>;'
-								<Link href='/contact' className='text-purple-600 "hover":text-purple-500'>Analyze feedback →</Link>;'
+								<Link href='/contact' className='text-purple-600 'hover':text-purple-500'>Analyze feedback →</Link>;'
 							</div>;
 						</div>;
 						{/* Inventory Management */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Database className='h-5 w-5 text-orange-600' />;'
 								<h3 className='font-semibold text-gray-900'>Smart Inventory Management</h3>;'
@@ -1258,11 +1258,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-orange-600'>From $179/mo</span>;'
-								<Link href='/contact' className='text-orange-600 "hover":text-orange-500'>Manage inventory →</Link>;'
+								<Link href='/contact' className='text-orange-600 'hover':text-orange-500'>Manage inventory →</Link>;'
 							</div>;
 						</div>;
 						{/* HR Management System */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<Users className='h-5 w-5 text-red-600' />;'
 								<h3 className='font-semibold text-gray-900'>HR Management Platform</h3>;'
@@ -1276,11 +1276,11 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-red-600'>From $249/mo</span>;'
-								<Link href='/contact' className='text-red-600 "hover":text-red-500'>Manage HR →</Link>;'
+								<Link href='/contact' className='text-red-600 'hover':text-red-500'>Manage HR →</Link>;'
 							</div>;
 						</div>;
 						{/* Financial Management */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm "hover":shadow-md transition bg-white'>;'
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm 'hover':shadow-md transition bg-white'>;'
 							<div className='flex items-center gap-3 mb-3'>;'
 								<TrendingUp className='h-5 w-5 text-indigo-600' />;'
 								<h3 className='font-semibold text-gray-900'>Financial Management Suite</h3>;'
@@ -1294,7 +1294,7 @@ href='/contact''
 							</ul>;
 							<div className='flex items-center justify-between text-sm'>;'
 								<span className='font-semibold text-indigo-600'>From $199/mo</span>;'
-								<Link href='/contact' className='text-indigo-600 "hover":text-indigo-500'>Manage finances →</Link>;'
+								<Link href='/contact' className='text-indigo-600 'hover':text-indigo-500'>Manage finances →</Link>;'
 							</div>;
 						</div>;
 					</div>;
@@ -1302,19 +1302,19 @@ href='/contact''
 						<p className='text-sm text-gray-600 mb-4'>;'
 							All Micro SaaS solutions include free setup, training, and 30-day money-back guarantee.;
 						</p>;
-						<div className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>;'
+						<div className='flex flex-col 'sm':flex-row gap-4 justify-center items-center'>;'
 							<Link;
 								href='/contact';'
-								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 "hover":bg-purple-700 transition-colors';'
+								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 'hover':bg-purple-700 transition-colors';'
 							>;
 								Get Custom Solution;
 								<ArrowRight className='ml-2 h-4 w-4' />;'
 							</Link>;
 							<Link;
-								href='"https"://ziontechgroup.com';'
+								href=''https'://ziontechgroup.com';'
 								target='_blank';'
 								rel='noreferrer';'
-								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white "hover":bg-gray-50 transition-colors';'
+								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white 'hover':bg-gray-50 transition-colors';'
 							>;
 								View Live Demos;
 								<Globe className='ml-2 h-4 w-4' />;'
@@ -1324,40 +1324,40 @@ href='/contact''
 				</div>;
 			</section>;
 			{/* Process Section */}
-			<section className='py-24 "sm":py-32 bg-gray-50'>;'
-				<div className='mx-auto max-w-7xl px-6 "lg":px-8'>;'
-					<div className='mx-auto max-w-2xl "lg":text-center mb-16'>;'
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 "sm":text-4xl'>;'
+			<section className='py-24 'sm':py-32 bg-gray-50'>;'
+				<div className='mx-auto max-w-7xl px-6 'lg':px-8'>;'
+					<div className='mx-auto max-w-2xl 'lg':text-center mb-16'>;'
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 'sm':text-4xl'>;'
 							Our Delivery Process;
 						</h2>;
 						<p className='mt-6 text-lg leading-8 text-gray-600'>;'
 							We follow a proven methodology that ensures quality, speed, and successful outcomes.;
 						</p>;
 					</div>;
-					<div className='grid grid-cols-1 "md":grid-cols-4 gap-8'>;'
+					<div className='grid grid-cols-1 'md':grid-cols-4 gap-8'>;'
 						<div className='text-center group'>;'
-							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-"hover":bg-blue-200 transition-colors mb-4'>;'
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-'hover':bg-blue-200 transition-colors mb-4'>;'
 								<span className='text-2xl font-bold text-blue-600'>1</span>;'
 							</div>;
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Discovery</h3>;'
 							<p className='text-gray-600'>Understand your needs and requirements</p>;'
 						</div>;
 						<div className='text-center group'>;'
-							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-"hover":bg-green-200 transition-colors mb-4'>;'
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-'hover':bg-green-200 transition-colors mb-4'>;'
 								<span className='text-2xl font-bold text-green-600'>2</span>;'
 							</div>;
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Strategy</h3>;'
 							<p className='text-gray-600'>Plan the solution architecture</p>;'
 						</div>;
 						<div className='text-center group'>;'
-							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-"hover":bg-purple-200 transition-colors mb-4'>;'
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-'hover':bg-purple-200 transition-colors mb-4'>;'
 								<span className='text-2xl font-bold text-purple-600'>3</span>;'
 							</div>;
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Development</h3>;'
 							<p className='text-gray-600'>Build and test the solution</p>;'
 						</div>;
 						<div className='text-center group'>;'
-							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-"hover":bg-orange-200 transition-colors mb-4'>;'
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-'hover':bg-orange-200 transition-colors mb-4'>;'
 								<span className='text-2xl font-bold text-orange-600'>4</span>;'
 							</div>;
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Deployment</h3>;'
@@ -1367,10 +1367,10 @@ href='/contact''
 				</div>;
 			</section>;
 			{/* Pricing & Market Positioning Section */}
-			<section className='py-24 "sm":py-32 bg-gray-50'>;'
-				<div className='mx-auto max-w-7xl px-6 "lg":px-8'>;'
+			<section className='py-24 'sm':py-32 bg-gray-50'>;'
+				<div className='mx-auto max-w-7xl px-6 'lg':px-8'>;'
 					<div className='mx-auto max-w-2xl text-center mb-16'>;'
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 "sm":text-4xl'>;'
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 'sm':text-4xl'>;'
 							Competitive Pricing & Market Leadership;
 						</h2>;
 						<p className='mt-6 text-lg leading-8 text-gray-600'>;'
@@ -1378,8 +1378,8 @@ href='/contact''
 						</p>;
 					</div>;
 					{/* Pricing Tiers */}
-					<div className='grid grid-cols-1 "lg":grid-cols-3 gap-8 mb-16'>;'
-						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm "hover":shadow-lg transition-all duration-300'>;'
+					<div className='grid grid-cols-1 'lg':grid-cols-3 gap-8 mb-16'>;'
+						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm 'hover':shadow-lg transition-all duration-300'>;'
 							<div className='text-center mb-6'>;'
 								<h3 className='text-xl font-semibold text-gray-900 mb-2'>Micro SaaS Solutions</h3>;'
 								<div className='text-3xl font-bold text-blue-600 mb-2'>$300 - $8,000</div>;'
@@ -1403,11 +1403,11 @@ href='/contact''
 								</li>;
 							</ul>;
 							<div className='text-center'>;'
-								<div className='text-xs text-gray-500 mb-2'>Market "Average": $1,200 - $15,000/month</div>;'
+								<div className='text-xs text-gray-500 mb-2'>Market 'Average': $1,200 - $15,000/month</div>;'
 								<div className='text-sm font-medium text-green-600'>Save up to 60%</div>;'
 							</div>;
 						</div>;
-						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm "hover":shadow-lg transition-all duration-300 ring-2 ring-blue-500'>;'
+						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm 'hover':shadow-lg transition-all duration-300 ring-2 ring-blue-500'>;'
 							<div className='text-center mb-6'>;'
 								<div className='inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mb-2'>;'
 									Most Popular;
@@ -1435,11 +1435,11 @@ href='/contact''
 								</li>;
 							</ul>;
 							<div className='text-center'>;'
-								<div className='text-xs text-gray-500 mb-2'>Market "Average": $5,000 - $100,000/month</div>;'
+								<div className='text-xs text-gray-500 mb-2'>Market 'Average': $5,000 - $100,000/month</div>;'
 								<div className='text-sm font-medium text-green-600'>Save up to 40%</div>;'
 							</div>;
 						</div>;
-						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm "hover":shadow-lg transition-all duration-300'>;'
+						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm 'hover':shadow-lg transition-all duration-300'>;'
 							<div className='text-center mb-6'>;'
 								<h3 className='text-xl font-semibold text-gray-900 mb-2'>IT Services</h3>;'
 								<div className='text-3xl font-bold text-blue-600 mb-2'>$4,000 - $150,000</div>;'
@@ -1464,7 +1464,7 @@ href='/contact''
 								</li>;
 							</ul>;
 							<div className='text-center'>;'
-								<div className='text-xs text-gray-500 mb-2'>Market "Average": $8,000 - $200,000/month</div>;'
+								<div className='text-xs text-gray-500 mb-2'>Market 'Average': $8,000 - $200,000/month</div>;'
 								<div className='text-sm font-medium text-green-600'>Save up to 50%</div>;'
 							</div>;
 						</div>;
@@ -1477,7 +1477,7 @@ href='/contact''
 								We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.;
 							</p>;
 						</div>;
-						<div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-6'>;'
+						<div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-4 gap-6'>;'
 							<div className='text-center'>;'
 								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4'>;'
 									<Award className='h-6 w-6 text-blue-600' />;'
@@ -1510,10 +1510,10 @@ href='/contact''
 					</div>;
 				</div>;
 			</section>;
-			{/* CTA Section */}<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 "sm": py-32'>;'
-				<div className='mx-auto max-w-7xl px-6 "lg":px-8'>;'
+			{/* CTA Section */}<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 'sm': py-32'>;'
+				<div className='mx-auto max-w-7xl px-6 'lg':px-8'>;'
 					<div className='mx-auto max-w-2xl text-center'>;'
-						<h2 className='text-3xl font-bold tracking-tight text-white "sm":text-4xl'>;'
+						<h2 className='text-3xl font-bold tracking-tight text-white 'sm':text-4xl'>;'
 							Ready to get started?;
 						</h2>;
 						<p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>;'
@@ -1521,17 +1521,17 @@ href='/contact''
 						</p>;
 						<div className='mt-10 flex items-center justify-center gap-x-6'>;<Link;'
 								href='/contact';'
-								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm "hover":bg-gray-50 transition-all duration-200 "hover":scale-105';'
+								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm 'hover':bg-gray-50 transition-all duration-200 'hover':scale-105';'
 								aria-label='Contact us to get started';'
 							>;
 								Contact Us;
-								<ArrowRight className='ml-2 h-4 w-4 inline group-"hover":translate-x-1 transition-transform' />;'
+								<ArrowRight className='ml-2 h-4 w-4 inline group-'hover':translate-x-1 transition-transform' />;'
 							</Link>;
 							<Link;
 								href='/';'
-								className='text-sm font-semibold leading-6 text-white "hover":text-blue-100 transition-colors group';'
+								className='text-sm font-semibold leading-6 text-white 'hover':text-blue-100 transition-colors group';'
 								aria-label='Back to homepage'>;'
-								Back to Home <span aria-hidden='true' className='group-"hover":translate-x-1 transition-transform inline-block'>→</span>;'
+								Back to Home <span aria-hidden='true' className='group-'hover':translate-x-1 transition-transform inline-block'>→</span>;'
 							</Link>;ursor/automate-test-improve-and-merge-code-646c;
 						</div>;
 					</div>;
@@ -1539,7 +1539,7 @@ href='/contact''
 			</section>;ursor/automate-test-improve-and-merge-code-646c;
 		</PageTransition>;
 		</Layout>;
-	)}}ursor/integrate-build-improve-and-re-verify-8f7d;
+	)}ursor/integrate-build-improve-and-re-verify-8f7d;
 ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
 }

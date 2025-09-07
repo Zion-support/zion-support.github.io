@@ -1,7 +1,7 @@
 
 
-    "isRoleBased": boolean;
-    "isFreeProvider": boolean
+    'isRoleBased': boolean;
+    'isFreeProvider': boolean
   }
 }
 
@@ -9,7 +9,7 @@ export default async function handler() {
   }
   if (req.method !== 'POST') {'
 }
-return res.status(405).json({ "error": 'Method not allowed',;'
+return res.status(405).json({ 'error': 'Method not allowed',;'
 });
   }
   try {
@@ -17,7 +17,7 @@ return res.status(405).json({ "error": 'Method not allowed',;'
     const { email } = req.body;
     if (!email || typeof email !== 'string') {'
 }
-return res.status(400).json({ "error": 'Email is required',;'
+return res.status(400).json({ 'error': 'Email is required',;'
 });
     }
     // Basic email format validation
@@ -64,13 +64,11 @@ const freeProviders = [;
 const isFreeProvider = freeProviders.some(provider => { return domain === provider); }
     // Calculate score (0-100)
     let score = 100;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     if (!hasValidFormat) score -= 50;
     if (!hasValidDomain) score -= 20;
     if (isDisposable) score -= 30;
     if (isRoleBased) score -= 15;
     if (isFreeProvider) score -= 10;
-<<<<<<< HEAD
 
   try {
     const { email } = req.body,
@@ -103,7 +101,7 @@ const isFreeProvider = freeProviders.some(provider => { return domain === provid
     if (isFreeProvider) score -= 10,
 
     // Generate suggestions,
-const "suggestions": string[] = [];
+const 'suggestions': string[] = [];
     if (!hasValidFormat) {
       suggestions.push('Check email format (should be user@domain.com)')
     }
@@ -134,17 +132,17 @@ suggestions.push('Check email format (should be user@domain.com)');'
       suggestions.push('This email may not be suitable for business use');'
     }
 
-const "result": EmailValidationResult = {
+const 'result': EmailValidationResult = {
       }
       email,
-"isValid": score >= 70,
-"score": Math.max(0, score)
+'isValid': score >= 70,
+'score': Math.max(0, score)
       suggestions,
-"details": {
+'details': {
         }
         hasValidFormat,
 hasValidDomain
-        "hasValidMX": true, // Simplified for demo,
+        'hasValidMX': true, // Simplified for demo,
 isDisposable
         isRoleBased,
 isFreeProvider
@@ -153,11 +151,11 @@ isFreeProvider
     res.status(200).json(result);
   } catch (error) {
     }
-    console.error('Email validation "error":', error);'
-    res.status(500).json({ "error": 'Internal server error','
+    console.error('Email validation 'error':', error);'
+    res.status(500).json({ 'error': 'Internal server error','
 });
   }
-    res.status(500).json({ "error": 'Internal server error' })'
+    res.status(500).json({ 'error': 'Internal server error' })'
   }
 }
 

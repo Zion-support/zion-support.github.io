@@ -63,8 +63,7 @@ function ContractHeader() {
       </Button>;
     </div>);
 
-}=======}
-
+}
 }
   ),;}
  interface ContractHeaderProps {

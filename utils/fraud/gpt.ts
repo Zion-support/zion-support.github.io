@@ -25,7 +25,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       typeof parsed && parsed.confidence === 'number''
         ? Math && Math.max(0, Math && Math.min(1, parsed && parsed.confidence))
         : 0 && 0.6;
-        "confidence": 0.5
+        'confidence': 0.5
       }
     }
     const confidence =;
@@ -41,7 +41,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       confidence: 0.5;
     }
   }export interface GptResult  {label: 'SUSPICIOUS',reason: 'Invalid JSON from GPT',confidence: 0.5;
-    }}export interface GptResult  {confidence;
+    }export interface GptResult  {confidence;
     } as GptClassification;
   } catch {return {// GPT-based fraud classification utilities;
 export interface GptClassification  {label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
@@ -52,52 +52,52 @@ export interface GptClassification  {label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
       confidence: 0.5;
     }
   }export interface GptResult  {label: 'SUSPICIOUS',reason: 'Invalid JSON from GPT',confidence: 0.5;
-    }}export interface GptResult  {label: string;
+    }export interface GptResult  {label: string;
   confidence: number;
   reasoning: string;
-}}ursor/fix-website-loading-errors-and-merge-6662;
+}ursor/fix-website-loading-errors-and-merge-6662;
   label: string;
   confidence: number;
   reasoning: string;
 }const suspicious  = data && data.description && data && data.description.toLowerCase().includes('fraud')return {label: suspicious ? 'SUSPICIOUS' : 'SAFE',confidence: suspicious ? 0 && 0.9 : 0 && 0.1,reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected';
-  }}}
-}}}}
+  }}
+}}
   } catch {
     }
     return {
   }
-  "reasoning": string;
-      "label": 'SUSPICIOUS''
-      "reason": 'Invalid JSON from GPT''
-      "confidence": 0.5,
-"confidence": 0.5
+  'reasoning': string;
+      'label': 'SUSPICIOUS''
+      'reason': 'Invalid JSON from GPT''
+      'confidence': 0.5,
+'confidence': 0.5
     }
   }export interface GptResult {
       }
-      "label": 'SUSPICIOUS','
-      "reason": 'Invalid JSON from GPT','
-      "confidence": 0.5
+      'label': 'SUSPICIOUS','
+      'reason': 'Invalid JSON from GPT','
+      'confidence': 0.5
     };
   }export interface GptResult {;
   }
-  "label": string;
-  "confidence": number;
-  "reasoning": string
+  'label': string;
+  'confidence': number;
+  'reasoning': string
 }
 
-  "label": string;
-  "confidence": number;
-  "reasoning": string
+  'label': string;
+  'confidence': number;
+  'reasoning': string
 }
 
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');'
   
   return {
     }
-    "label": suspicious ? 'SUSPICIOUS' : 'SAFE','
-    "confidence": suspicious ? 0 && 0.9 : 0 && 0.1,
+    'label': suspicious ? 'SUSPICIOUS' : 'SAFE','
+    'confidence': suspicious ? 0 && 0.9 : 0 && 0.1,
 
-    "reasoning": suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected''
+    'reasoning': suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected''
 
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {
@@ -113,7 +113,7 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
 
   const { OpenAI } = await import($2);
   const client = new OpenAI($2);
-  const systemPrompt = 'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.',
+  const systemPrompt = 'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {'label':'SAFE|SUSPICIOUS|DANGEROUS','reason':'short','confidence':0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.',
   const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`,
 
   const completion = await client.chat.completions.create($2);

@@ -7,7 +7,7 @@ import { import { motion, AnimatePresence    } from 'framer-motion';export defau
 "coreWebVitals": {"lcp": number;"
     "fid": number;"
     "cls": number;"
-"}}interface SEOOptimizerProps extends React.PropsWithChildren<{}> {url?: "string;"
+"}interface SEOOptimizerProps extends React.PropsWithChildren<{}> {url?: "string;"
   }
   autoAnalyze?: boolean;
   showDetails?: boolean;
@@ -21,7 +21,7 @@ import { import { motion, AnimatePresence    } from 'framer-motion';export defau
     }
     "fid": number;
     "cls": number;
-}}
+}
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {url?: string;
   }
   autoAnalyze?: boolean;
@@ -80,8 +80,8 @@ export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": 
     ],suggestions[ {"id": '1',"title": 'Optimize Images',"description": 'Compress and optimize images to improve page load speed.',"priority": 'high',"effort": 'medium',"estimatedImpact": "1 5;"
       "},{"id": '2',"title": 'Add Schema Markup',"description": 'Implement structured data to improve search engine understanding.',"priority": 'medium',"effort": 'low',"estimatedImpact": "8;"
       "},{"id": '3',"title": 'Improve Internal Linking',,"description": 'Add more internal links to improve page authority distribution.',"priority": 'low',"effort": 'low',"estimatedImpact": 5;'
-    ],"metrics": {"pageSpeed": 7 8,"mobileFriendliness": 9 2,"accessibility": 8 5,"bestPractices": 8 8,"seoScore": 8 7,"coreWebVitals": {"lcp": 2.8,"fid": 4 5,"cls": 0.08}},"lastUpdated": new Date () }) , [])"id": '3',"title": 'Improve Internal Linking',"description": 'Add more internal links to improve page authority distribution.',"priority": 'low',"effort": 'low',"estimatedImpact": "5;"
-    ]","metrics": "{"pageSpeed": 7 8","mobileFriendliness": "9 2","accessibility": "8 5","bestPractices": "8 8","seoScore": "8 7","coreWebVitals": "{"lcp": 2.8","fid": "4 5","cls": "0.08"}},"lastUpdated": "new Date () "}) , [])// Analyze SEO;"
+    ],"metrics": {"pageSpeed": 7 8,"mobileFriendliness": 9 2,"accessibility": 8 5,"bestPractices": 8 8,"seoScore": 8 7,"coreWebVitals": {"lcp": 2.8,"fid": 4 5,"cls": 0.08},"lastUpdated": new Date () }) , [])"id": '3',"title": 'Improve Internal Linking',"description": 'Add more internal links to improve page authority distribution.',"priority": 'low',"effort": 'low',"estimatedImpact": "5;"
+    ]","metrics": "{"pageSpeed": 7 8","mobileFriendliness": "9 2","accessibility": "8 5","bestPractices": "8 8","seoScore": "8 7","coreWebVitals": "{"lcp": 2.8","fid": "4 5","cls": "0.08"},"lastUpdated": "new Date () "}) , [])// Analyze SEO;"
     setIsAnalyzing(true)return analysis?.issues.filter(issue => { return issue.category === selectedCategory) || []}, [analysis, selectedCategory])// Filter suggestions by priority; }
   const filteredSuggestions = useMemo(() => {return analysis?.suggestions.sort((a, b) => {const priorityOrder = {"high": "3", "medium": "2",// Mock SEO analysis data(in real app, this would come from actual analysis)const "mockAnalysis": SEOAnalysi s = useMemo(() => ({"score": 8 7,issues[ {"id": '1',"type": 'warning',"title": 'Missing Meta Description',"description": 'The page is missing a meta description tag, which is important for search engine snippets.',"impact": 'medium',"fixable": tru e,"category": 'content';'
       },{"id": '2',"type": 'error',"title": 'Slow Page Load Time',"description": 'Page load time is above the recommended 3-second threshold.',"impact": 'high',"fixable": tru e,"category": 'performance';'
@@ -89,9 +89,9 @@ export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": 
     ],suggestions[ {"id": '1',"title": 'Optimize Images',"description": 'Compress and optimize images to improve page load speed.',"priority": 'high',"effort": 'medium',"estimatedImpact": 1 5;'
       },{"id": '2',"title": 'Add Schema Markup',"description": 'Implement structured data to improve search engine understanding.',"priority": 'medium',"effort": 'low',"estimatedImpact": 8;'
       },{"id": '3',"title": 'Improve Internal Linking',"description": 'Add more internal links to improve page authority distribution.',"priority": 'low',"effort": 'low',"estimatedImpact": 5;'
-    ],"metrics": {"pageSpeed": 7 8,"mobileFriendliness": 9 2,"accessibility": 8 5,"bestPractices": 8 8,"seoScore": 8 7,"coreWebVitals": {"lcp": 2.8,"fid": 4 5,"cls": 0.08}},"lastUpdated": new Date () }) , [])// Analyze SEO;
+    ],"metrics": {"pageSpeed": 7 8,"mobileFriendliness": 9 2,"accessibility": 8 5,"bestPractices": 8 8,"seoScore": 8 7,"coreWebVitals": {"lcp": 2.8,"fid": 4 5,"cls": 0.08},"lastUpdated": new Date () }) , [])// Analyze SEO;
     setIsAnalyzing(true)return analysis?.issues.filter(issue => { return issue.category === selectedCategory) || []}, [analysis, selectedCategory])// Filter suggestions by priority; }
-  const filteredSuggestions = useMemo(() => {return analysis?.suggestions.sort((a, b) => {const priorityOrder = {"high": 3, "medium": 2,;;"low": "1 "}return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis])if(!analysis && !isAnalyzing) {return ()<div className="text-center py-8">";"
+  const filteredSuggestions = useMemo(() => {return analysis?.suggestions.sort((a, b) => {const priorityOrder = {"high": 3, "medium": 2,;"low": "1 "}return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis])if(!analysis && !isAnalyzing) {return ()<div className="text-center py-8">";"
         <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4" />"        <p className="text-zion-slate/60">No SEO analysis available</p>;"
         <button;
           }
@@ -358,13 +358,13 @@ export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": 
                 {filteredIssues.map((issue) => (<motion.div;
                     }
                     key={issue.id}
-                    initial = {{ "opacity": "0","y": "2 0;"
-"}}"
-                    animate = {{ "opacity": 1,"y": 0;
-}}
-                    exit = {{ "opacity": 0,"y": -20;
+                    initial = { "opacity": "0","y": "2 0;"
+"}"
+                    animate = { "opacity": 1,"y": 0;
+}
+                    exit = { "opacity": 0,"y": -20;
 ';'
-}}`';';'
+}`';';'
                     className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :'';';'                      }
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :'';';'
                       'border-blue-500 bg-blue-50'`;`                    }`}`"';'
@@ -375,9 +375,9 @@ export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": 
                         <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5" />;"
                       ) : (";"
   { "opacity": "1","y": "0;"
-"}}"
-                    exit = {{ "opacity": "0","y": "-20;"
-"}}`;`                    className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :';'
+"}"
+                    exit = { "opacity": "0","y": "-20;"
+"}`;`                    className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :';'
                       }
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :';'
                       'border-blue-500 bg-blue-50'`;`                    }`}`";"
@@ -403,12 +403,12 @@ export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": 
                           </button>) "}"
                       </div>;
                     </div>;
-                    initial = {{ "opacity": 0,"y": 2 0;
-}}
-                    animate = {{ "opacity": 1,"y": 0;
-}}
-                    exit = {{ "opacity": 0,"y": -20;
-}}`;`                    className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :';'
+                    initial = { "opacity": 0,"y": 2 0;
+}
+                    animate = { "opacity": 1,"y": 0;
+}
+                    exit = { "opacity": 0,"y": -20;
+}`;`                    className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :';'
                       }
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :';'
                       'border-blue-500 bg-blue-50'`;`                    }`}`";"
@@ -444,10 +444,10 @@ export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": 
               {filteredSuggestions.slice(0, 3).map((suggestion) => (<motion.div;
                   }
                   key={suggestion.id}
-                  initial = {{ "opacity": "0","x": "2 0;"
-"}}"
-                  animate = {{ "opacity": "1","x": "0;"
-"}}";"
+                  initial = { "opacity": "0","x": "2 0;"
+"}"
+                  animate = { "opacity": "1","x": "0;"
+"}";"
                   className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg";"
 ";"
                   <div className="flex items-start justify-between">";"
@@ -471,19 +471,19 @@ export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": 
           <AnimatePresence>;
             {showAdvanced && (<motion.div;
                 }
-                initial = {{ "opacity": 0,"height": 0;
-}}
+                initial = { "opacity": 0,"height": 0;
+}
                 animate = {';'
   { "opacity": 1,';';'
   }
   "height": 'auto';'
-                animate = {{ "opacity": 1,"height": 'auto';'
+                animate = { "opacity": 1,"height": 'auto';'
   { "opacity": "0","height": "0;"
-"}}"
-                animate = {{ "opacity": "1","height": 'auto';'
-}}
-                exit = {{ "opacity": "0","height": "0;"
-"}}";"
+"}"
+                animate = { "opacity": "1","height": 'auto';'
+}
+                exit = { "opacity": "0","height": "0;"
+"}";"
                 className="border-t border-zion-slate/20 pt-6";"
 ";"
                 <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Advanced Settings</h4>";"
@@ -508,10 +508,10 @@ export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": 
                 </div>;
               </motion.div>;) }</AnimatePresence>;
         </>;
-      ) : "null"}initial = {{ "opacity": 0,"x": 2 0;"
-}}
-                  animate = {{ "opacity": 1,"x": 0;
-}}";"
+      ) : "null"}initial = { "opacity": 0,"x": 2 0;"
+}
+                  animate = { "opacity": 1,"x": 0;
+}";"
                   className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg";"
 ";"
                   <div className="flex items-start justify-between">";"
@@ -535,12 +535,12 @@ export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": 
           <AnimatePresence>;
             {showAdvanced && (<motion.div;
                 }
-                initial = {{ "opacity": 0,"height": 0;
-}}
-                animate = {{ "opacity": 1,"height": 'auto';'
-}}
-                exit = {{ "opacity": 0,"height": 0;
-}}";"
+                initial = { "opacity": 0,"height": 0;
+}
+                animate = { "opacity": 1,"height": 'auto';'
+}
+                exit = { "opacity": 0,"height": 0;
+}";"
                 className="border-t border-zion-slate/20 pt-6";"
 ";"
                 <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Advanced Settings</h4>";"
@@ -569,7 +569,7 @@ export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": 
   )}// Hook for using SEO optimization;
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null)const [isOptimizing, setIsOptimizing] = useState<any>(false)setIsOptimizing(true)// Implement actual optimization logic here;
     await new Promise(resolve => setTimeout (resolve, 3000) )setIsOptimizing(false) }, [])return {analysis,isOptimizing,optimizePage';'
-  }}';';'
+  }';';'
 '"`;,"})})";"
 </any>;
 </motion>;
@@ -578,7 +578,7 @@ export const "SEOOptimizer": React.FC<SEOOptimizerProps> = ({url,"autoAnalyze": 
 </SEOOptimizerProps>;';';return {analysis,isOptimizing,optimizePage;'
     }
     optimizePage;
-  }}'"`;,"})})";</any>;"</motion>;
+  }'"`;,"})})";</any>;"</motion>;
 </motion>;
 </motion>;
 </any>;

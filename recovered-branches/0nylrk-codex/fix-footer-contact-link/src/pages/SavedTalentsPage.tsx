@@ -180,7 +180,7 @@ const talent_profiles = data.map (;
     console.log("Request to "hire":", talent);    toast({"
       }
       "title": "title","
-    "description": `A hire request has been sent to ${talent.full_name}.`})`  }} catch (error) {;
+    "description": `A hire request has been sent to ${talent.full_name}.`})`  } catch (error) {;
         }
         console.error("Error fetching saved "talents":", error),;"
         toast({;

@@ -24,10 +24,10 @@ const views =;
     });
   } catch (e) {
       }
-      "topTags": [
-        { "label": 'react', "value": 2 }'
-        { "label": 'node', "value": 1 }'
-        { "label": 'ai', "value": 1 }'
+      'topTags': [
+        { 'label': 'react', 'value': 2 }'
+        { 'label': 'node', 'value': 1 }'
+        { 'label': 'ai', 'value': 1 }'
       ]
 
 
@@ -85,10 +85,10 @@ const talent_id = (req.query.talent_id as string) || null,;
         Math.max (job_applications, 1)) *;
       100;
 ;
-    const "tag_counts": Record < string, number> = {}
+    const 'tag_counts': Record < string, number> = {}
     (tags.length;
       ? tags;
-      : [{ "tag": 'react' }, { "tag": 'node' }, { "tag": 'ai' }, { "tag": 'react' }]).for_each ((t) => {'
+      : [{ 'tag': 'react' }, { 'tag': 'node' }, { 'tag': 'ai' }, { 'tag': 'react' }]).for_each ((t) => {'
       }
       tag_counts[t.tag] = (tag_counts[t.tag] || 0) + 1;
     res.status (200).json ({
@@ -97,7 +97,7 @@ const talent_id = (req.query.talent_id as string) || null,;
       quote_invites,
       job_applications,
       success_rate,
-      "top_tags": Object.entries (tag_counts);
+      'top_tags': Object.entries (tag_counts);
         .sort ((a, b) => b[1] - a[1]);
         .slice (0, 5);
         .map (([label, value]) => ({ label, value }))
@@ -106,14 +106,14 @@ const talent_id = (req.query.talent_id as string) || null,;
     }
     res.status (200).json ({
       }
-      "profile_views": 27,
-      "quote_invites": 6,
-      "job_applications": 9,
-      "success_rate": 33.3,
-      "top_tags": [;
-        { "label": 'react', "value": 2 },'
-        { "label": 'node', "value": 1 },'
-        { "label": 'ai', "value": 1 },'
+      'profile_views': 27,
+      'quote_invites': 6,
+      'job_applications': 9,
+      'success_rate': 33.3,
+      'top_tags': [;
+        { 'label': 'react', 'value': 2 },'
+        { 'label': 'node', 'value': 1 },'
+        { 'label': 'ai', 'value': 1 },'
       ]
     });
 

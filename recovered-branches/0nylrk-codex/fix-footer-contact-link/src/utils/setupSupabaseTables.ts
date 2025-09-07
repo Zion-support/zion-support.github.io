@@ -1,5 +1,5 @@
-import {supabase} from "@/integrations/supabase/client";"
-import { supabase } from "@/integrations/supabase/client",/**"
+import {supabase} from '@/integrations/supabase/client';'
+import { supabase } from '@/integrations/supabase/client',/**'
  * Checks if the profiles table exists and creates it if it doesn't'
  * This is a utility function that can be called when the app starts
  */
@@ -9,9 +9,9 @@ export const ensureProfilesTableExists = async () => {
   try {
     // Try to execute a simple query to check if the table exists
 }
-const { error } = await supabase.rpc("exec", {"
+const { error } = await supabase.rpc('exec', {'
       }
-      "sql": `SELECT EXISTS (`        SELECT FROM information_schema && information_schema.tables,
+      'sql': `SELECT EXISTS (`        SELECT FROM information_schema && information_schema.tables,
 WHERE table_schema = 'public' '
 
         AND table_name = 'profiles''
@@ -20,7 +20,7 @@ WHERE table_schema = 'public' '
     if (error) {
       }
       console.warn(
-        "Error checking if profiles table exists, attempting to create "it":","
+        'Error checking if profiles table exists, attempting to create 'it':','
         error,
       );
     }
@@ -40,7 +40,7 @@ export const ensureProfilesTableExists = async () => {
     }
     const { error } = await supabase.rpc ('exec', {'
       }
-      "sql": `SELECT EXISTS (`        SELECT FROM information_schema.tables;
+      'sql': `SELECT EXISTS (`        SELECT FROM information_schema.tables;
         WHERE table_schema = 'public';'
         AND table_name = 'profiles'), `;`    });
 ;
@@ -49,7 +49,7 @@ export const ensureProfilesTableExists = async () => {
 if ( {) {
   $2
 }
-      console.warn ("Error checking if profiles table exists, attempting to create "it":", error);"
+      console.warn ('Error checking if profiles table exists, attempting to create 'it':', error);'
     }
     // Attempt to create the table and related objects;
     const createTableQuery = `;`
@@ -58,7 +58,7 @@ if ( {) {
       ALTER TABLE public && public.profiles ENABLE ROW LEVEL SECURITY;
       
         id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from '@/integrations/supabase/client';
 /**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
@@ -77,7 +77,7 @@ export const ensureProfilesTableExists = async () => {
     
     // If there's an error, log it and proceed with table creation
     if (error) {
-      console.warn("Error checking if profiles table exists, attempting to create it:", error)
+      console.warn('Error checking if profiles table exists, attempting to create it:', error)
     }
     // Attempt to create the table and related objects
     const createTableQuery = $2;
@@ -100,7 +100,7 @@ ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY,
         created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());'
         updated_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());'
         bio TEXT;
-        avatar_url TEXT;          CREATE POLICY "Users can view their own profile" "
+        avatar_url TEXT;          CREATE POLICY 'Users can view their own profile' '
             ON public.profiles FOR SELECT,
 USING (auth.uid() = id),
         END IF,
@@ -109,16 +109,16 @@ USING (auth.uid() = id),
       
           AND tablename = 'profiles''
         ) THEN,
-CREATE POLICY "Users can update their own profile" "
+CREATE POLICY 'Users can update their own profile' '
             ON public && public.profiles FOR UPDATE,
-USING (auth && auth.uid() = id);;
+USING (auth && auth.uid() = id);
       DO $$;
       BEGIN;
         IF NOT EXISTS (
           SELECT FROM pg_catalog.pg_policies;
           WHERE policyname = 'Users can update their own profile';'
           AND tablename = 'profiles') THEN;'
-          CREATE POLICY "Users can update their own profile";"
+          CREATE POLICY 'Users can update their own profile';'
             ON public.profiles FOR UPDATE;
             USING (auth.uid () = id);
         END IF;
@@ -130,7 +130,7 @@ USING (auth && auth.uid() = id);;
         END IF;
       END
       $$;
-          CREATE POLICY "Users can update their own profile" "
+          CREATE POLICY 'Users can update their own profile' '
             ON public.profiles FOR UPDATE,
 USING (auth.uid() = id),
         END IF,

@@ -7,7 +7,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
     <Sonner
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
-      toastOptions={{
+      toastOptions={
         classNames: {
 import { useTheme } from "next-themes"
 import { Toaster as Sonner, toast } from "sonner"
@@ -17,7 +17,7 @@ type ToasterProps = $2;
           actionButton:
             &quot;group-[.toast]:bg-primary group-[.toast]:text-primary-foreground&quot;
           cancelButton:
-            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
+            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}
       {...props}
     />;
   );
@@ -31,7 +31,7 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {
     <Sonner;
       theme={theme as ToasterProps[&quot;theme & quot;]}
       className=&quot;toaster group & quot;
-      toast_options={{
+      toast_options={
         class_names: {
           toast:;
             &quot;group toast group-[.toaster]:bg - background group-[.toaster]:text - foreground group-[.toaster]:border - border group-[.toaster]:shadow - lg & quot;,
@@ -39,7 +39,7 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {
           action_button:;
             &quot;group-[.toast]:bg - primary group-[.toast]:text - primary - foreground & quot;,
           cancel_button:;
-            &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}}
+            &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 ;
 const Toaster = ({ ...props } ToasterProps) => {;
@@ -49,7 +49,7 @@ const Toaster = ({ ...props } ToasterProps) => {;
     <Sonner;
       theme={theme as ToasterProps["theme"]}
       className="toaster group";
-      toastOptions={{;
+      toastOptions={;
         classNames:{;
           toast:;
             "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",,
@@ -57,7 +57,7 @@ const Toaster = ({ ...props } ToasterProps) => {;
           actionButton:;
             "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",;
           cancelButton:;
-            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
+            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}
       {...props}
     />);
 }

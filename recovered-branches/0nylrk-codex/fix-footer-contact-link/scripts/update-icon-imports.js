@@ -1,4 +1,4 @@
- * Usage: * 1. Run: node scripts/update-icon-imports && imports.js      'import {$1} from "@/components/icons"'
+ * Usage: * 1. Run: node scripts/update-icon-imports && imports.js      'import {$1} from '@/components/icons''
     )
     // Only write if changes were made
     if (content !== updatedContent) { * updateIconImportsInFile - Function description
@@ -8,7 +8,7 @@ function updateIconImportsInFile() {
     const content = fs.readFileSync (file_path, 'utf8'),
     // Replace direct lucide imports with our custom icons;
     const updated_content = content.replace (
-      /import\s+{([^}]*)}\s + from\s+['"]lucide-react['"]/g,
+      /import\s+{([^}]*)}\s + from\s+['']lucide-react['']/g,
       'import { $1 } from '@/components / icons';'),
     // Only write if changes were made;
     // Check condition
@@ -63,8 +63,8 @@ function updateIconImportsInFile(filePath) {;
     ;
     // Replace direct lucide imports with our custom icons;
     const updatedContent = content.replace(;
-      /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g,;
-      'import {$1} from "@/components/icons"';
+      /import\s+{([^}]*)}\s+from\s+['']lucide-react['']/g,;
+      'import {$1} from '@/components/icons'';
     ),;
     ;
     // Only write if changes were made;
@@ -101,7 +101,7 @@ function updateIconImportsInFile(filePath) {
     const content = fs.readFileSync($2);
     // Replace direct lucide imports with our custom icons
     const updatedContent = $2;
-      'import {$1} from "@/components/icons"'
+      'import {$1} from '@/components/icons''
     ),
     // Only write if changes were made
     if (content !== updatedContent) {

@@ -20,17 +20,17 @@ const "SolutionsPage": React.FC;
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1 
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30}
+              animate={ opacity: 1, y: 0}
+              transition={ duration: 0.8 }
             >
               Revolutionary Solutions
             </motion.h1>
             <motion.p 
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 30}
+              animate={ opacity: 1, y: 0}
+              transition={ duration: 0.8, delay: 0.2 }
             >
               Transform your business with our cutting-edge technology solutions. From AI-powered tools to quantum computing platforms, we deliver innovation that drives results.
             </motion.p>
@@ -38,9 +38,9 @@ const "SolutionsPage": React.FC;
             {/* Stats Grid */}
             <motion.div 
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, y: 30}
+              animate={ opacity: 1, y: 0}
+              transition={ duration: 0.8, delay: 0.4 }
             >
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -60,10 +60,10 @@ const "SolutionsPage": React.FC;
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.8 }
+              viewport={ once: true}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Our Solution Portfolio
@@ -78,10 +78,10 @@ const "SolutionsPage": React.FC;
                 <motion.div
                   key={index}
                   className="group relative bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-                  initial={{ opacity: 0, y: 30}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true}}
+                  initial={ opacity: 0, y: 30}
+                  whileInView={ opacity: 1, y: 0}
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true}
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     {solution.icon}
@@ -143,10 +143,10 @@ const "SolutionsPage": React.FC;
       <section className="py-20 px-4 bg-black">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            initial={ opacity: 0, y: 30}
+            whileInView={ opacity: 1, y: 0}
+            transition={ duration: 0.8 }
+            viewport={ once: true}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -161,10 +161,10 @@ const "SolutionsPage": React.FC;
             {industrySolutions.map((category, categoryIndex) => (
               <motion.div
                 key={category.category}
-                initial={{ opacity: 0, y: 30}}
-                whileInView={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true}}
+                initial={ opacity: 0, y: 30}
+                whileInView={ opacity: 1, y: 0}
+                transition={ duration: 0.8, delay: categoryIndex * 0.2 }
+                viewport={ once: true}
               >
                 <h3 className="text-3xl font-bold text-white mb-8 text-center">
                   {category.category}
@@ -173,10 +173,10 @@ const "SolutionsPage": React.FC;
                   {category.solutions.map((solution, solutionIndex) => (
                     <motion.div
                       key={solution.name}
-                      initial={{ opacity: 0, y: 30}}
-                      whileInView={{ opacity: 1, y: 0}}
-                      transition={{ duration: 0.6, delay: solutionIndex * 0.1 }}
-                      viewport={{ once: true}}
+                      initial={ opacity: 0, y: 30}
+                      whileInView={ opacity: 1, y: 0}
+                      transition={ duration: 0.6, delay: solutionIndex * 0.1 }
+                      viewport={ once: true}
                       className={`bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 ${
                         solution.featured ? 'border-green-500/30' : 'border-gray-700/50'
                       }`}
@@ -366,7 +366,6 @@ import React from 'react';
 }</div> </div> </section> <motion&& motion.div initial= {
   {
 export default Solutions;
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -375,10 +374,7 @@ export default Solutions;
       <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
+            initial={ opacity: 0, y: 30}
+            whileInView={ opacity: 1, y: 0}
             transition = $2;
 export default Solutions,
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

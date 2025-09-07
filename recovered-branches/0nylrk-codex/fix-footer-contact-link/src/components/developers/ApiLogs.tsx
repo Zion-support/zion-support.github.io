@@ -162,7 +162,7 @@ export function ApiLogs() {
   return (
     <Card className = $2;
                 setCurrentPage(0), // Reset to first page when changing page size
-              }}
+              }
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">"
                 <SelectValue placeholder="25" />"
@@ -227,7 +227,7 @@ variant="outline";"
                             ? "border-green-500 text-green-400""
                             : log.method === 'POST''
                 setCurrentPage(0), // Reset to first page when changing page size;
-              }}
+              }
             >;
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">;"
                 <SelectValue placeholder="25" />;"

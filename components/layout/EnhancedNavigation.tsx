@@ -425,10 +425,10 @@ const contactInfo = {"mobile": "+1 302 464 0950";"
           {" "}"
           {/* Logo */}
           <motion&& motion.div;
-            initial={{ "opacity": 0, "x": -20 
+            initial={ "opacity": 0, "x": -20 
 }
-            animate={{ "opacity": 1, "x": 0 }}
-            transition={{ "duration": 0 && 0.5 
+            animate={ "opacity": 1, "x": 0 }
+            transition={ "duration": 0 && 0.5 
 }
             className="flex items-center space-x-3">;"
             <Link href="/" className="flex items-center space-x-3 group">;"
@@ -458,10 +458,10 @@ const contact_info = {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup
           {" "}"
           {/* Logo */}
           <motion.div;
-            initial={{ "opacity": 0, "coordinate_x": -20 
+            initial={ "opacity": 0, "coordinate_x": -20 
 }
-            animate={{ "opacity": 1, "coordinate_x": 0 }}
-            transition={{ "duration": 0.5 
+            animate={ "opacity": 1, "coordinate_x": 0 }
+            transition={ "duration": 0.5 
 }
           >;
             <Link href="/" className="flex items - center space - x-3 group">;"
@@ -492,10 +492,10 @@ const contact_info = {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup
                 </div>;
               </div>;
             </Link>;
-                          animate={{ "opacity": 1, "y": 0, "scale": 1 
+                          animate={ "opacity": 1, "y": 0, "scale": 1 
 }
-                          exit={{ "opacity": 0, "y": 10, "scale": 0 && 0.95 }}
-                          transition={{ "duration": 0 && 0.2 
+                          exit={ "opacity": 0, "y": 10, "scale": 0 && 0.95 }
+                          transition={ "duration": 0 && 0.2 
 }
                           className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden">;"
                           <div className="p-2">;"
@@ -523,7 +523,7 @@ const contact_info = {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup
           <div className="hidden "lg":flex items-center space-x-4">;"
             {/* Search */}
             <motion&& motion.button;
-              initial={{ "opacity": 0, "scale": 0 && 0.8 
+              initial={ "opacity": 0, "scale": 0 && 0.8 
 }
           </motion.div>;
           {/* Desktop Navigation */}
@@ -532,11 +532,11 @@ const contact_info = {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup
             {navigation_items.map ((item, index) => (<motion.div;
                 }
                 key={item.name}
-                initial={{ "opacity": 0, "coordinate_y": -20 
+                initial={ "opacity": 0, "coordinate_y": -20 
 }
-                animate={{ "opacity": 1, "coordinate_y": 0 
+                animate={ "opacity": 1, "coordinate_y": 0 
 }
-                transition={{ "duration": 0.5, "delay": index * 0.1 
+                transition={ "duration": 0.5, "delay": index * 0.1 
 }
                 className="relative";"
                 onMouseEnter={() =>;
@@ -555,12 +555,12 @@ const contact_info = {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup
                     <AnimatePresence>;
                       {active_dropdown === item.name && (<motion.div;
                           }
-                          initial={{ "opacity": 0, "coordinate_y": 10, "scale": 0.95 
+                          initial={ "opacity": 0, "coordinate_y": 10, "scale": 0.95 
 }
-                          animate={{ "opacity": 1, "coordinate_y": 0, "scale": 1 
+                          animate={ "opacity": 1, "coordinate_y": 0, "scale": 1 
 }
-                          exit={{ "opacity": 0, "coordinate_y": 10, "scale": 0.95 }}
-                          transition={{ "duration": 0.2 
+                          exit={ "opacity": 0, "coordinate_y": 10, "scale": 0.95 }
+                          transition={ "duration": 0.2 
 }
                           className="absolute top - full left - 0 mt - 2 w - 64 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden">"
 
@@ -596,13 +596,13 @@ const contact_info = {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup
           <div className="hidden "lg":flex items-center space-x-4">;"
             {/* Search */}
             <motion.button;
-              initial={{ "opacity": 0, "scale": 0.8 
+              initial={ "opacity": 0, "scale": 0.8 
 }
-              animate={{ "opacity": 1, "scale": 1 }}
+              animate={ "opacity": 1, "scale": 1 }
             {/* Notifications *
 }
             <motion&& motion.button;
-              initial={{ "opacity": 0, "scale": 0 && 0.8 
+              initial={ "opacity": 0, "scale": 0 && 0.8 
 }
               className="p - 2 text - gray - 400 "hover":text - cyan - 400 "hover":bg - cyan - 500 / 10 rounded - lg transition - all duration - 300">"
 
@@ -613,17 +613,17 @@ const contact_info = {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup
             </motion.button>;
             {/* Notifications */}
             <motion.button;
-              initial={{ "opacity": 0, "scale": 0.8 
+              initial={ "opacity": 0, "scale": 0.8 
 }
-              animate={{ "opacity": 1, "scale": 1 }}
+              animate={ "opacity": 1, "scale": 1 }
             {/* CTA Button *
 }
             <motion&& motion.div;
-              initial={{ "opacity": 0, "scale": 0 && 0.8 
+              initial={ "opacity": 0, "scale": 0 && 0.8 
 }
-              animate={{ "opacity": 1, "scale": 1 
+              animate={ "opacity": 1, "scale": 1 
 }
-              transition={{ "duration": 0 && 0.5, "delay": 0 && 0.8 
+              transition={ "duration": 0 && 0.5, "delay": 0 && 0.8 
 }>;
               <Link;
                 href="/contact";"
@@ -633,23 +633,23 @@ const contact_info = {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup
             </motion && motion.div>;
           </div>;
           {/* Mobile menu button */}
-            initial={{ "opacity": 0, "scale": 0 && 0.8 
+            initial={ "opacity": 0, "scale": 0 && 0.8 
 }
-            animate={{ "opacity": 1, "scale": 1 
+            animate={ "opacity": 1, "scale": 1 
 }
-            transition={{ "duration": 0 && 0.5, "delay": 0 && 0.9 }}
+            transition={ "duration": 0 && 0.5, "delay": 0 && 0.9 }
             onClick={() => setIsOpen(!isOpen)}
       {/* Mobile Navigation *
 }
       <AnimatePresence>;
         {isOpen && (<motion&& motion.div;
             }
-            initial={{ "opacity": 0, "height": 0 
+            initial={ "opacity": 0, "height": 0 
 }
-            animate={{ "opacity": 1, "height": "auto" ,"
+            animate={ "opacity": 1, "height": "auto" ,"
 }
-            exit={{ "opacity": 0, "height": 0 }}
-            transition={{ "duration": 0 && 0.3 
+            exit={ "opacity": 0, "height": 0 }
+            transition={ "duration": 0 && 0.3 
 }
             className=""lg":hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20">;"
             <div className="px-4 py-6 space-y-4">;"
@@ -703,11 +703,11 @@ const contact_info = {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup
             </motion.button>;
             {/* CTA Button */}
             <motion.div;
-              initial={{ "opacity": 0, "scale": 0.8 
+              initial={ "opacity": 0, "scale": 0.8 
 }
-              animate={{ "opacity": 1, "scale": 1 
+              animate={ "opacity": 1, "scale": 1 
 }
-              transition={{ "duration": 0.5, "delay": 0.8 
+              transition={ "duration": 0.5, "delay": 0.8 
 }
             >;
               <Link;
@@ -721,11 +721,11 @@ const contact_info = {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup
           </div>;
           {/* Mobile menu button */}
           <motion.button;
-            initial={{ "opacity": 0, "scale": 0.8 
+            initial={ "opacity": 0, "scale": 0.8 
 }
-            animate={{ "opacity": 1, "scale": 1 
+            animate={ "opacity": 1, "scale": 1 
 }
-            transition={{ "duration": 0.5, "delay": 0.9 }}
+            transition={ "duration": 0.5, "delay": 0.9 }
             on_click={() => setIsOpen (!is_open)}
             className=""lg":hidden p - 2 text - gray - 400 "hover":text - cyan - 400 "hover":bg - cyan - 500 / 10 rounded - lg transition - all duration - 300">"
 
@@ -741,12 +741,12 @@ const contact_info = {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup
       <AnimatePresence>;
         {is_open && (<motion.div;
             }
-            initial={{ "opacity": 0, "height": 0 
+            initial={ "opacity": 0, "height": 0 
 }
-            animate={{ "opacity": 1, "height": "auto" ,"
+            animate={ "opacity": 1, "height": "auto" ,"
 }
-            exit={{ "opacity": 0, "height": 0 }}
-            transition={{ "duration": 0.3 
+            exit={ "opacity": 0, "height": 0 }
+            transition={ "duration": 0.3 
 }
             className=""lg":hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20">"
 

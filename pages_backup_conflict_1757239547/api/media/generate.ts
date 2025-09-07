@@ -6,24 +6,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({ ok: true, text, fallback: true })
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Unknown error' })
-import type { NextApiRequest, NextApiResponse } from "next";
-import { buildPressRelease } from "../../../utils/mediaKit";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { buildPressRelease } from '../../../utils/mediaKit';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   try {
     const {
-      type = "launch"
-      companyName = "Zion"
+      type = 'launch'
+      companyName = 'Zion'
       date = new Date().toISOString().substring(0, 10)
       raiseAmount
-      description = "Innovative technology company"
-      contactEmail = "press@zion.com"
+      description = 'Innovative technology company'
+      contactEmail = 'press@zion.com'
     } = req.body |{}
-    if (req.method !== "POST") {
-      res.setHeader("Allow", "POST");
-      return res.status(405).json({ error: "Method not allowed" });
+    if (req.method !== 'POST') {
+      res.setHeader('Allow', 'POST');
+      return res.status(405).json({ error: 'Method not allowed' });
     }
     const pressRelease = await buildPressRelease({
       type
@@ -39,10 +39,10 @@ export default async function handler(
       downloadUrl: `/api/media/download/${pressRelease.id}`
     });
   } catch (error: any) {
-    console.error("Press release generation error:", error);
+    console.error('Press release generation error:', error);
     return res.status(500).json({
       ok: false
-      error: "Failed to generate press release"
+      error: 'Failed to generate press release'
     });
 
 import type { NextApiRequest, NextApiResponse } from 'next';

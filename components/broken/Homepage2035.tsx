@@ -32,12 +32,11 @@ return { "hasError": true,;
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
-=======
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;}
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette}
  } from 'lucide-react';
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';;
+import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -53,7 +52,6 @@ class ErrorBoundary extends React.Component {
 
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary: ';, error, errorInfo);}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 
   render() {
@@ -61,11 +59,8 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       }
       return <div>Something went wrong.</div>;
-=======
     if (this.state.hasError) {}
       return <div />Something went wrong.</div>;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
 
     return this.props.children;
@@ -73,7 +68,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
 import { import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette;
   } from 'lucide-react';
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -89,10 +84,10 @@ import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-servic
 // Loading fallback component,
 const LoadingFallback = null;
     <motion.div;
-      initial={{ "opacity": 0, "scale": 0.5 
+      initial={ "opacity": 0, "scale": 0.5 
 }
-      animate={{ "opacity": 1, "scale": 1 }}
-      transition={{ "duration": 0.5 
+      animate={ "opacity": 1, "scale": 1 }
+      transition={ "duration": 0.5 
 }
 className='text-center'>'
 
@@ -116,14 +111,14 @@ const timer = setTimeout(() => {setIsLoading(false)setIsVisible(true)}, 800;
   return () => clearTimeout(timer)}, [])const fadeInUp = {"initial": { "opacity": 0, "y": 60
 },"animate": { "opacity": 1, "y": 0
 },"transition": { "duration": 0.6, "ease": 'easeOut','
-}}
+}
 
-const staggerContainer = {"animate": {"transition": {"staggerChildren": 0.1,"delayChildren": 0.2}};
+const staggerContainer = {"animate": {"transition": {"staggerChildren": 0.1,"delayChildren": 0.2};
 }
 
 const backgroundVariants = {"initial": { "opacity": 0, "scale": 0.8,;
 },"animate": {"opacity": 1,"scale": 1,"transition": { "duration": 1.5, "ease": 'easeOut' as const,'
-}}}
+}}
 ;
 const categories = [;
   { "id": 'all', "name": 'All Services', "icon": <Globe className='w-5 h-5' />,'
@@ -232,7 +227,7 @@ const background_variants = {
 
 const background_variants = {"initial": { "opacity": 0, "scale": 0.8,;
 },"animate": {"opacity": 1,"scale": 1,"transition": { "duration": 1.5, "ease": 'ease_out' as const,'
-}}}
+}}
 ;
 const categories = [;
   { "id": 'all', "name": 'All Services', "icon": <Globe className='w - 5 h - 5' />,'
@@ -287,9 +282,9 @@ import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-servic
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={ opacity: 0, scale: 0.5 }
+      animate={ opacity: 1, scale: 1 }
+      transition={ duration: 0.5 }
       className="text-center"
     >
       <div className="relative">
@@ -382,10 +377,10 @@ return (;
 <section className='relative min-h-screen flex items-center justify-center px-4 "sm":px-6 "lg":px-8'>'
           <div className='max-w-7xl mx-auto text-center'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 
 }
 
 className='mb-8''
@@ -401,16 +396,16 @@ and Space Technology solutions
               </p>
               <div className='flex flex-col "sm": flex-row gap-4 justify-center items-center'>'
                 <motion.button,
-whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
+whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 }
                   className='bg-gradient-to-r from-cyan-500 to-blue-500 "hover":from-cyan-400 "hover":to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2''
                 >
                   <span>Explore Services</span>
                   <ArrowRight className='w-5 h-5' />'
                 </motion.button>
                 <motion.button,
-whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
+whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 }
 
 className='border border-cyan-400 text-cyan-400 "hover":bg-cyan-400 "hover":text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2''
                 >
@@ -420,7 +415,7 @@ className='border border-cyan-400 text-cyan-400 "hover":bg-cyan-400 "hover":text
               </div>
             </motion.div>
 
-              transition={{ "duration": 0 && 0.8 
+              transition={ "duration": 0 && 0.8 
 }
               className='mb-8'>;'
               <h1 className='text-4xl "sm":text-5xl "lg":text-7xl font-bold text-white mb-6 leading-tight'>;'
@@ -433,22 +428,22 @@ className='border border-cyan-400 text-cyan-400 "hover":bg-cyan-400 "hover":text
               </p>;
               <div className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>;'
                 <motion&& motion.button;
-                  whileHover={{ "scale": 1 && 1.05 }}
-                  whileTap={{ "scale": 0 && 0.95 
+                  whileHover={ "scale": 1 && 1.05 }
+                  whileTap={ "scale": 0 && 0.95 
 }
                   className='bg-gradient-to-r from-cyan-500 to-blue-500 "hover":from-cyan-400 "hover":to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'>;'
                   <span>Explore Services</span>;
                   <ArrowRight className='w-5 h-5' />                </motion && motion.button>                <motion&& motion.button;'
-                  whileHover={{ "scale": 1 && 1.05 }}
-                  whileTap={{ "scale": 0 && 0.95 
+                  whileHover={ "scale": 1 && 1.05 }
+                  whileTap={ "scale": 0 && 0.95 
 }
                   className='border border-cyan-400 text-cyan-400 "hover":bg-cyan-400 "hover":text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'>;'
                   <Play className='w-5 h-5' />                  <span>Watch Demo</span>                  <span>Explore Services</span>;'
                   <ArrowRight className="w-5 h-5" />;"
                 </motion && motion.button>;
                 <motion&& motion.button;
-                  whileHover={{ "scale": 1 && 1.05 }}
-                  whileTap={{ "scale": 0 && 0.95 
+                  whileHover={ "scale": 1 && 1.05 }
+                  whileTap={ "scale": 0 && 0.95 
 }
                   className='border border-cyan-400 text-cyan-400 "hover":bg-cyan-400 "hover":text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'>;'
                   <Play className='w-5 h-5' />                  className="border border-cyan-400 text-cyan-400 "hover":bg-cyan-400 "hover":text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2">"
@@ -459,13 +454,13 @@ className='border border-cyan-400 text-cyan-400 "hover":bg-cyan-400 "hover":text
               </div>;
             </motion && motion.div>;{/* Stats */}
             <motion&& motion.div;
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
 
-              animate={{ "opacity": 1, "y": 0 
+              animate={ "opacity": 1, "y": 0 
 }
 
-              transition={{ "duration": 0.8, "delay": 0.2 }}
+              transition={ "duration": 0.8, "delay": 0.2 }
 className='grid grid-cols-2 "md":grid-cols-4 gap-8 max-w-4xl mx-auto''
             >
               {[
@@ -497,11 +492,11 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-8 max-w-4xl mx-auto''
               ].map((stat, index) => (
                 <motion.div,
 key={index}
-                  initial={{ "opacity": 0, "scale": 0.5 
+                  initial={ "opacity": 0, "scale": 0.5 
 }
-                  animate={{ "opacity": 1, "scale": 1 
+                  animate={ "opacity": 1, "scale": 1 
 }
-                  transition={{ "duration": 0.5, "delay": 0.3 + index * 0.1 }}
+                  transition={ "duration": 0.5, "delay": 0.3 + index * 0.1 }
 
 className='text-center''
                 >
@@ -524,11 +519,11 @@ className='text-center''
 <section className='py-20 px-4 "sm":px-6 "lg":px-8'>'
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true 
 }
 
 className='text-center mb-16''
@@ -557,13 +552,13 @@ designed to transform your business
               </p>;
             </motion && motion.div>;{/* Category Filter */}
             <motion&& motion.div;
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 
+              whileInView={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0 && 0.8, "delay": 0 && 0.2 }}
+              transition={ "duration": 0 && 0.8, "delay": 0 && 0.2 }
 
-              viewport={{ "once": true }}
+              viewport={ "once": true }
 
 className='flex flex-wrap justify-center gap-4 mb-12''
             >
@@ -571,8 +566,8 @@ className='flex flex-wrap justify-center gap-4 mb-12''
                 <motion.button
 }
 key={category.id}
-                  whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
+                  whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 }
                   onClick={() => setActiveCategory(category.id
 }
                   className={`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 ${activeCategory === category.id;`                      ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400';'
@@ -587,7 +582,7 @@ key={category.id}
 
 initial='initial''
               whileInView='animate''
-              viewport={{ "once": true 
+              viewport={ "once": true 
 }
 
               className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8''
@@ -603,14 +598,14 @@ className='w-full''
                 </motion.div>
 initial='initial';
               whileInView='animate';
-              viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              initial="initial";
+              viewport={ once: true }className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              initial="initial";
               whileInView="animate";
-              viewport={{ once: true }}
+              viewport={ once: true }
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
               {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              initial="initial";
               whileInView="animate";
-              viewport={{ once: true }}
+              viewport={ once: true }
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
@@ -632,19 +627,19 @@ className='w-full';
               ))}
             {/* View All Services Button */}
             <motion&& motion.div;
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 
+              whileInView={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0 && 0.8, "delay": 0 && 0.4 }}
+              transition={ "duration": 0 && 0.8, "delay": 0 && 0.4 }
 
-              viewport={{ "once": true }}
+              viewport={ "once": true }
 
 className='text-center mt-16''
             >
               <motion.button,
-whileHover={{ "scale": 1.05 }}
-                whileTap={{ "scale": 0.95 }}
+whileHover={ "scale": 1.05 }
+                whileTap={ "scale": 0.95 }
 
 className='bg-gradient-to-r from-purple-500 to-pink-500 "hover":from-purple-400 "hover":to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto''
               >
@@ -660,11 +655,11 @@ className='bg-gradient-to-r from-purple-500 to-pink-500 "hover":from-purple-400 
 <section className='py-20 px-4 "sm":px-6 "lg":px-8 bg-gray-900/50'>'
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true 
 }
 
 className='text-center mb-16''
@@ -741,13 +736,13 @@ deliver exceptional results
               ].map((feature, index) => (
                 <motion.div,
 key={index}
-                  initial={{ "opacity": 0, "y": 30 
+                  initial={ "opacity": 0, "y": 30 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
+                  transition={ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }
 
-                  viewport={{ "once": true }}
+                  viewport={ "once": true }
 
 className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 "hover":border-cyan-400/50 transition-all duration-300 group''
                 >
@@ -773,7 +768,6 @@ className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 "sm":px-6 "lg":px-8">;"
           <div className="max-w-4xl mx-auto text-center">;"
             <motion&& motion.div;
-=======
                   </h3>
                   <p className='text-gray-300'>{feature.description}</p>                </motion.div>                >
                   <div className="text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
@@ -786,19 +780,18 @@ className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         {/* CTA Section */}
 <section className='py-20 px-4 "sm":px-6 "lg":px-8'>;'
           <div className='max-w-4xl mx-auto text-center'>;'
             <motion.div;
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
 
-              whileInView={{ "opacity": 1, "y": 0 }}
+              whileInView={ "opacity": 1, "y": 0 }
 
-              transition={{ "duration": 0.8 }}
+              transition={ "duration": 0.8 }
 
-              viewport={{ "once": true 
+              viewport={ "once": true 
 }
             >;
 <h2 className='text-4xl "sm":text-5xl font-bold text-white mb-6'>;'
@@ -810,8 +803,8 @@ className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 
               </p>;
               <div className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>;'
                 <motion.button;
-                  whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 
+                  whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 
 }
                   className='bg-gradient-to-r from-cyan-500 to-blue-500 "hover":from-cyan-400 "hover":to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'>'
 
@@ -819,8 +812,8 @@ className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 
                   <ArrowRight className='w-5 h-5' />;'
                 </motion.button>;
                 <motion.button;
-                  whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
+                  whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 }
 
 className='border border-cyan-400 text-cyan-400 "hover":bg-cyan-400 "hover":text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300''
                 >
@@ -835,7 +828,6 @@ className='border border-cyan-400 text-cyan-400 "hover":bg-cyan-400 "hover":text
 )
 };
 
-=======
 > <div className="relative" > <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" /> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse" ></div> </div> <p className="text-xl text-gray-300 mb-2" >Loading Zion Tech Group...</p> <p className="text-sm text-gray-500" >Preparing your digital transformation journey</p> </motion.div> </div>)
 return () => clearTimeout (timer) 
 }, [])
@@ -850,18 +842,16 @@ return () => clearTimeout (timer)
 }
 }
 }
-<<<<<<< HEAD
 ];
 ...innovative2025ITEnterpriseBatch;
 ...innovative2025AIServicesBatch ];
-<<<<<<< HEAD
 
 const filteredServices = activeCategory === 'all' ? allServices;'
   return (<Layout> <UltraFuturisticBackground2035> > <h1 className="text-4xl "sm":text-5xl "lg":text-7xl font-bold text-white mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Zion Tech Group </span> </h1> </p> <div className="flex flex-col "sm":flex-row gap-4 justify-center items-center" > <motion.button > <span>Explore Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button > <Play className="w-5 h-5" /> <span>Watch Demo</span> </motion.button> </div> </motion.div> {/* Stats */;"
 }<motion.div </motion.div>) )}</motion.div> </div> </section> > <h2 className="text-4xl "sm":text-5xl font-bold text-white mb-6" > Revolutionary Technology Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of cutting-edge services designed to transform your business </p> </motion.div> {/* Category Filter */;"
 }<motion.div > {categories.map ( (category) => (<motion.button key= {category.id;
-}whileHover= {{"scale": 1.05;
-}whileTap= {{"scale": 0.95;
+}whileHover= {"scale": 1.05;
+}whileTap= {"scale": 0.95;
 }onClick= {() => setActiveCategory (category.id)}className= {`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 $ {activeCategory === category.id ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400' : 'border-gray-600 text-gray-300 "hover":border-cyan-400 "hover":text-cyan-400';'
 }`;`}> {category.icon;
 }<span> {category.name;
@@ -869,9 +859,9 @@ const filteredServices = activeCategory === 'all' ? allServices;'
 }<motion.div > {filteredServices.map ( (service, index) => (<motion.div key= {service.id;
 }> <UltraFuturisticServiceCard2035 service= {service;
 } /> </motion.div>) )}</motion.div> {/* View All Services Button */;
-}<motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> </motion.div> </div> </section> > <h2 className="text-4xl "sm":text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion.div> </motion.div>) )}</div> </div> </section> <motion.div initial= {{"opacity": 0, "y": 30;"
-}whileInView= {{"opacity": 1, "y": 0;
-}transition= {{}> <h2 className="text-4xl "sm":text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col "sm":flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;"
+}<motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> </motion.div> </div> </section> > <h2 className="text-4xl "sm":text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion.div> </motion.div>) )}</div> </div> </section> <motion.div initial= {"opacity": 0, "y": 30;"
+}whileInView= {"opacity": 1, "y": 0;
+}transition= {}> <h2 className="text-4xl "sm":text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col "sm":flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;"
 }
 
 export default Homepage2035;className='text - center'>'
@@ -895,11 +885,11 @@ export default Homepage2035;className='text - center'>'
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 20 px - 4 "sm":px - 6 "lg":px - 8">;"
           <div className="max - w-7xl mx - auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 30 
+              initial={ "opacity": 0, "coordinate_y": 30 
 }
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "coordinate_y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
               className='text - center mb - 16'>'
 
@@ -918,12 +908,12 @@ export default Homepage2035;className='text - center'>'
             </motion.div>;
             {/* Category Filter */}
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 30 
+              initial={ "opacity": 0, "coordinate_y": 30 
 }
-              whileInView={{ "opacity": 1, "coordinate_y": 0 
+              whileInView={ "opacity": 1, "coordinate_y": 0 
 }
-              transition={{ "duration": 0.8, "delay": 0.2 }}
-              viewport={{ "once": true 
+              transition={ "duration": 0.8, "delay": 0.2 }
+              viewport={ "once": true 
 }
               className='flex flex - wrap justify - center gap - 4 mb - 12'>'
 
@@ -932,8 +922,8 @@ export default Homepage2035;className='text - center'>'
               {categories.map ((category) => (<motion.button;
                   }
                   key={category.id}
-                  while_hover={{ "scale": 1.05 }}
-                  while_tap={{ "scale": 0.95 }}
+                  while_hover={ "scale": 1.05 }
+                  while_tap={ "scale": 0.95 }
                   on_click={() => setActiveCategory (category.id
 }
                   className={`flex items - center space - x-2 px - 6 py - 3 rounded - full border transition - all duration - 300 ${active_category === category.id;`                      ? 'border - cyan - 400 bg - cyan - 400 / 10 text - cyan - 400';'
@@ -948,11 +938,11 @@ export default Homepage2035;className='text - center'>'
               variants={stagger_container}
               initial='initial';'
               whileInView='animate';'
-              viewport={{ "once": true 
+              viewport={ "once": true 
 }
               className='grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8'            >              initial="initial";"
               whileInView="animate";"
-              viewport={{ "once": true 
+              viewport={ "once": true 
 }
               className="grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8";"
               {filtered_services.map ((service, index) => (<motion.div;
@@ -966,17 +956,17 @@ export default Homepage2035;className='text - center'>'
             </motion.div>;
             {/* View All Services Button */}
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 30 
+              initial={ "opacity": 0, "coordinate_y": 30 
 }
-              whileInView={{ "opacity": 1, "coordinate_y": 0 
+              whileInView={ "opacity": 1, "coordinate_y": 0 
 }
-              transition={{ "duration": 0.8, "delay": 0.4 }}
-              viewport={{ "once": true 
+              transition={ "duration": 0.8, "delay": 0.4 }
+              viewport={ "once": true 
 }
               className='text - center mt - 16'            >;'
               <motion.button;
-                while_hover={{ "scale": 1.05 }}
-                while_tap={{ "scale": 0.95 
+                while_hover={ "scale": 1.05 }
+                while_tap={ "scale": 0.95 
 }
                 className='bg - gradient - to - r from - purple - 500 to - pink - 500 "hover":from - purple - 400 "hover":to - pink - 400 text - white font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300 flex items - center space - x-2 mx - auto'>'
 
@@ -984,8 +974,8 @@ export default Homepage2035;className='text - center'>'
                 <ArrowRight className='w - 5 h - 5' />              </motion.button>              className="text - center mt - 16">"
 
               <motion.button;
-                while_hover={{ "scale": 1.05 }}
-                while_tap={{ "scale": 0.95 
+                while_hover={ "scale": 1.05 }
+                while_tap={ "scale": 0.95 
 }
                 className='bg - gradient - to - r from - purple - 500 to - pink - 500 "hover":from - purple - 400 "hover":to - pink - 400 text - white font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300 flex items - center space - x-2 mx - auto'>'
 
@@ -1002,11 +992,11 @@ export default Homepage2035;className='text - center'>'
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 20 px - 4 "sm":px - 6 "lg":px - 8 bg - gray - 900 / 50">;"
           <div className="max - w-7xl mx - auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 30 
+              initial={ "opacity": 0, "coordinate_y": 30 
 }
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "coordinate_y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
               className='text - center mb - 16'>'
 
@@ -1050,12 +1040,12 @@ export default Homepage2035;className='text - center'>'
                 }
               ].map ((feature, index) => (<motion.div;
                   key={index}
-                  initial={{ "opacity": 0, "coordinate_y": 30 
+                  initial={ "opacity": 0, "coordinate_y": 30 
 }
-                  whileInView={{ "opacity": 1, "coordinate_y": 0 
+                  whileInView={ "opacity": 1, "coordinate_y": 0 
 }
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0.8, "delay": index * 0.1 }
+                  viewport={ "once": true 
 }
                   className='text - center p - 6 rounded - 2xl bg - gray - 800 / 50 border border - gray - 700 / 30 "hover":border - cyan - 400 / 50 transition - all duration - 300 group'>'
 
@@ -1080,11 +1070,11 @@ export default Homepage2035;className='text - center'>'
           <div className='max - w-4xl mx - auto text - center'>            <motion.div        <section className="py - 20 px - 4 "sm":px - 6 "lg":px - 8">;"
           <div className="max - w-4xl mx - auto text - center">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 30 
+              initial={ "opacity": 0, "coordinate_y": 30 
 }
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "coordinate_y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
             >;
               <h2 className='text - 4xl "sm":text - 5xl font - bold text - white mb - 6'>;'
@@ -1096,16 +1086,16 @@ export default Homepage2035;className='text - center'>'
               </p>;
               <div className='flex flex - col "sm":flex - row gap - 4 justify - center items - center'>;'
                 <motion.button;
-                  while_hover={{ "scale": 1.05 }}
-                  while_tap={{ "scale": 0.95 
+                  while_hover={ "scale": 1.05 }
+                  while_tap={ "scale": 0.95 
 }
                   className='bg - gradient - to - r from - cyan - 500 to - blue - 500 "hover":from - cyan - 400 "hover":to - blue - 400 text - white font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300 flex items - center space - x-2'>'
 
                   <span > Get Started Today</span>;
                   <ArrowRight className='w - 5 h - 5' />                </motion.button>;'
                 <motion.button;
-                  while_hover={{ "scale": 1.05 }}
-                  while_tap={{ "scale": 0.95 
+                  while_hover={ "scale": 1.05 }
+                  while_tap={ "scale": 0.95 
 }
                   className='border border - cyan - 400 text - cyan - 400 "hover":bg - cyan - 400 "hover":text - black font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300'                >                Ready to Transform Your Business?;'
               </h2>;
@@ -1114,8 +1104,8 @@ export default Homepage2035;className='text - center'>'
               </p>;
               <div className="flex flex - col "sm":flex - row gap - 4 justify - center items - center">;"
                 <motion.button;
-                  while_hover={{ "scale": 1.05 }}
-                  while_tap={{ "scale": 0.95 
+                  while_hover={ "scale": 1.05 }
+                  while_tap={ "scale": 0.95 
 }
                   className="bg - gradient - to - r from - cyan - 500 to - blue - 500 "hover":from - cyan - 400 "hover":to - blue - 400 text - white font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300 flex items - center space - x-2">"
 
@@ -1123,8 +1113,8 @@ export default Homepage2035;className='text - center'>'
                   <ArrowRight className="w - 5 h - 5" />;"
                 </motion.button>;
                 <motion.button;
-                  while_hover={{ "scale": 1.05 }}
-                  while_tap={{ "scale": 0.95 
+                  while_hover={ "scale": 1.05 }
+                  while_tap={ "scale": 0.95 
 }
                   className='border border - cyan - 400 text - cyan - 400 "hover":bg - cyan - 400 "hover":text - black font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300'                  className="border border - cyan - 400 text - cyan - 400 "hover": bg - cyan - 400 "hover":text - black font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300">"
 
@@ -1136,7 +1126,7 @@ export default Homepage2035;className='text - center'>'
         </section>;
       </UltraFuturisticBackground2035>;
     </Layout>)"transition": {"stagger_children": 0.1, "delay_children": 0.2;
-}}
+}
 ];
 ...innovative2025ITEnterpriseBatch;
 ...innovative2025AIServicesBatch ];
@@ -1145,8 +1135,8 @@ const filtered_services = active_category === 'all' ? all_services;'
   return (<Layout> <UltraFuturisticBackground2035> > <h1 className="text - 4xl "sm":text - 5xl "lg":text - 7xl font - bold text - white mb - 6 leading - tight" > <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent" > Zion Tech Group </span> </h1> </p> <div className="flex flex - col "sm":flex - row gap - 4 justify - center items - center" > <motion.button > <span > Explore Services</span> <ArrowRight className="w - 5 h - 5" /> </motion.button> <motion.button > <Play className="w - 5 h - 5" /> <span > Watch Demo</span> </motion.button> </div> </motion.div> {/* Stats */;"
 }<motion.div </motion.div>) )}</motion.div> </div> </section> > <h2 className="text - 4xl "sm":text - 5xl font - bold text - white mb - 6" > Revolutionary Technology Solutions </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Discover our comprehensive portfolio of cutting - edge services designed to transform your business </p> </motion.div> {/* Category Filter */;"
 }<motion.div > {categories.map ( (category) => (<motion.button key= {category.id;
-}while_hover= {{"scale": 1.05;
-}while_tap= {{"scale": 0.95;
+}while_hover= {"scale": 1.05;
+}while_tap= {"scale": 0.95;
 }on_click= {() => setActiveCategory (category.id)}className= {`flex items - center space - x-2 px - 6 py - 3 rounded - full border transition - all duration - 300 $ {active_category === category.id ? 'border - cyan - 400 bg - cyan - 400 / 10 text - cyan - 400' : 'border - gray - 600 text - gray - 300 "hover":border - cyan - 400 "hover":text - cyan - 400';'
 }`;`
 
@@ -1189,14 +1179,11 @@ const filtered_services = active_category === 'all' ? all_services;'
 export default Homepage2035)
 };
 export default Homepage2035;
-=======
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
               transition = $2;
 export default Homepage2035,
-=======
 "
-=======
 }viewport= {
   {
   once: true 
@@ -1204,12 +1191,6 @@ export default Homepage2035,
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button 
 }
 export default Homepage2035
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 export default Homepage2035;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
 
 "

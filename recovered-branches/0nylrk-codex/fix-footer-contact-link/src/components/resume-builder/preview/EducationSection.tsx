@@ -8,14 +8,14 @@ import {Education} from '@/types/resume';'
 import {format} from 'date-fns';'
 interface EducationSectionProps {
   }
-  "education": Education[]
+  'education': Education[]
 }
 export function EducationSection() {
   // Sort education by date (newest first)
 }
 interface EducationSectionProps {
   }
-  "education": Education[];
+  'education': Education[];
 }
   const sortedEducation = [...education].sort((a, b) => {;
     }
@@ -23,7 +23,7 @@ interface EducationSectionProps {
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
 return dateB.getTime() - dateA.getTime();
   });
-  const formatDate = ("date": Date | string | undefined) => {
+  const formatDate = ('date': Date | string | undefined) => {
     }
     if (!date) return '''
     if (typeof date === 'string') {'
@@ -32,7 +32,7 @@ return dateB.getTime() - dateA.getTime();
 import { format } from 'date-fns';'
 interface EducationSectionProps {;
   }
-  "education": Education[];
+  'education': Education[];
 }
 ;
 export function EducationSection() {;
@@ -45,7 +45,7 @@ export function EducationSection() {;
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
     return dateB.getTime() - dateA.getTime();
   }),;
-  const formatDate = ("date": Date | string | undefined) => {;
+  const formatDate = ('date': Date | string | undefined) => {;
     }
     if (!date) return '',;'
     if (typeof date === 'string') {;'

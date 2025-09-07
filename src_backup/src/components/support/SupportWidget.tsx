@@ -26,7 +26,7 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
           className={cn("fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",theme === "dark";"
               ? "bg-zion-blue-dark border border-zion-blue-light";"
               : "bg-white border border-gray-200",)}"
-          style={{ "height": "600px", "maxHeight": "80vh" }}"
+          style={ "height": "600px", "maxHeight": "80vh" }"
         >;
           <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;"
             <div className="flex items-center">;"
@@ -56,7 +56,7 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
               ? "bg-zion-blue-dark border border-zion-blue-light";"
               : "bg-white border border-gray-200";"
           )}
-          style={{ "height": '600px', "maxHeight": '80vh' }}        >;'
+          style={ "height": '600px', "maxHeight": '80vh' }        >;'
           <div className='flex items-center justify-between p-4 border-b border-zion-purple/20'>;'
             <div className='flex items-center'>;'
               <MessageSquare className='h-5 w-5 text-zion-cyan mr-2' />;'
@@ -86,7 +86,7 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false),con
               ? "bg-zion-blue-dark border border-zion-blue-light";"
               : "bg-white border border-gray-200";"
           )}
-          style={{ "height": "600px", "maxHeight": "80vh" }}"
+          style={ "height": "600px", "maxHeight": "80vh" }"
         >;
           <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;"
             <div className="flex items-center">;"

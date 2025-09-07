@@ -30,21 +30,19 @@ const stats = [;
         <motion.div;
           className='absolute top - 20 left - 20 w - 72 h - 72 bg - blue - 500 / 20 rounded - full blur - 3xl';'
 
-          animate={{
-          }}
-          transition={{
+          animate={
+          }
+          transition={
             }
             "duration": 8,
 "repeat": Infinity,
 "ease": 'easeInOut''
-          }}
-          transition={{}
+          }
+          transition={}
             duration: 8;
             repeat: Infinity'
             ease: 'easeInOut'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+          }
 
         {/* Grid Pattern *
 }
@@ -57,35 +55,35 @@ const stats = [;
         {/* Main Content *
 }
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
-          animate={{ "opacity": 1, "y": 0 }}{/* Badge *
+          animate={ "opacity": 1, "y": 0 }{/* Badge *
 }
           <motion&& motion.div;
-            initial={{ "opacity": 0, "scale": 0 && 0.8 
+            initial={ "opacity": 0, "scale": 0 && 0.8 
 }
             "duration": 10,"repeat": Infinity,"ease": "easeInOut";"
-          }} />;
+          } />;
         {/* Grid Pattern */}
         <div className="absolute inset - 0 bg-[linear - gradient (rgba (255, 255, 255, 0.02)_1px, transparent_1px), linear - gradient (90deg, rgba (255, 255, 255, 0.02)_1px, transparent_1px)] bg-["size":50px_50px]" />;"
       </div>;
       <div className="relative container mx - auto px - 4 text - center z - 10">;"
         {/* Main Content */}
         <motion.div;
-          initial={{ "opacity": 0, "coordinate_y": 30 
+          initial={ "opacity": 0, "coordinate_y": 30 
 }
-          animate={{ "opacity": 1, "coordinate_y": 0 }}
-          transition={{ "duration": 0.8 }}
+          animate={ "opacity": 1, "coordinate_y": 0 }
+          transition={ "duration": 0.8 }
 className='max-w-6xl mx-auto'>'
 
           {/* Badge *
 }
           <motion.div;
-            initial={{ "opacity": 0, "scale": 0.8 
+            initial={ "opacity": 0, "scale": 0.8 
 }
-            animate={{ "opacity": 1, "scale": 1 
+            animate={ "opacity": 1, "scale": 1 
 }
-            transition={{ "duration": 0.6, "delay": 0.2 }}
+            transition={ "duration": 0.6, "delay": 0.2 }
 
 className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8''
           >
@@ -98,9 +96,9 @@ className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm borde
           {/* Main Heading *}
 }
           <motion.h1;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.3 }
 
 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
            />
@@ -113,12 +111,12 @@ className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
           {/* Subtitle *}
 }
           <motion.p;
-            initial={{ opacity: 0, y: 30 }
+            initial={ opacity: 0, y: 30 }
 }
-            animate={{ opacity: 1, y: 0 }
+            animate={ opacity: 1, y: 0 }
 }
 
-            transition={{ duration: 0.8, delay: 0.4 }
+            transition={ duration: 0.8, delay: 0.4 }
 }
 
 className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'
@@ -130,12 +128,12 @@ in the modern technology landscape.
 
           {/* CTA Buttons */}
           <motion.div;
-            initial={{ opacity: 0, y: 30 }
+            initial={ opacity: 0, y: 30 }
 }
-            animate={{ opacity: 1, y: 0 }
+            animate={ opacity: 1, y: 0 }
 }
 
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={ duration: 0.8, delay: 0.5 }
 
 className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
            />
@@ -156,9 +154,9 @@ href='/contact'
 
           {/* Main Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 30}}
-            animate={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={ opacity: 0, y: 30}
+            animate={ opacity: 1, y: 0}
+            transition={ duration: 0.8, delay: 0.3 }
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
             Transform Your Business with
@@ -166,7 +164,7 @@ href='/contact'
               Cutting-Edge Technology
             </span>
           </motion.h1>
-            transition={{ duration: 0.8, delay: 0.3 }}className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight';
+            transition={ duration: 0.8, delay: 0.3 }className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight';
           >;
             Transform Your Business with;
             <span className='block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -174,8 +172,7 @@ href='/contact'
             </span>;
           </motion.h1>;
 
-=======
-            transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}'
+            transition={ duration: 0 && 0.6, delay: 0 && 0.2 }'
             className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8'>;'
             <Star className='w-5 h-5 text-yellow-400 fill-current' />;'
             <span className='text-white font-medium'>;
@@ -187,9 +184,9 @@ href='/contact'
 
           {/* Main Heading */}
           <motion&& motion.h1;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}'
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8, delay: 0 && 0.3 }'
             className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>;
             Transform Your Business with;'"
             <span className='block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>              Cutting-Edge Technology            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight";
@@ -201,19 +198,19 @@ href='/contact'
 
           {/* Subtitle */}
           <motion&& motion.p;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
 
           {/* CTA Buttons */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
 
           >
             <Link'
               href='/contact'
 
-            transition={{ duration: 0.8, delay: 0.5 }}"
+            transition={ duration: 0.8, delay: 0.5 }"
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
 
@@ -256,8 +253,8 @@ href='/contact'
 
           {/* Stats */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
             </span>
           </motion.div>
 
@@ -265,12 +262,12 @@ href='/contact'
           {/* Main Heading *
 }
           <motion.h1;
-            initial={{ "opacity": 0, "y": 30 
+            initial={ "opacity": 0, "y": 30 
 }
-            animate={{ "opacity": 1, "y": 0 
+            animate={ "opacity": 1, "y": 0 
 }
 
-            transition={{ "duration": 0.8, "delay": 0.3 }}
+            transition={ "duration": 0.8, "delay": 0.3 }
 
 className='text-5xl "md":text-7xl font-bold text-white mb-6 leading-tight''
           >
@@ -283,12 +280,12 @@ className='text-5xl "md":text-7xl font-bold text-white mb-6 leading-tight''
           {/* Subtitle *
 }
           <motion.p;
-            initial={{ "opacity": 0, "y": 30 
+            initial={ "opacity": 0, "y": 30 
 }
-            animate={{ "opacity": 1, "y": 0 
+            animate={ "opacity": 1, "y": 0 
 }
 
-            transition={{ "duration": 0.8, "delay": 0.4 
+            transition={ "duration": 0.8, "delay": 0.4 
 }
 
 className='text-xl "md":text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed''
@@ -299,15 +296,14 @@ in the modern technology landscape.
           </motion.p>
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           {/* CTA Buttons */}
           <motion.div;
-            initial={{ "opacity": 0, "y": 30 
+            initial={ "opacity": 0, "y": 30 
 }
-            animate={{ "opacity": 1, "y": 0 
+            animate={ "opacity": 1, "y": 0 
 }
 
-            transition={{ "duration": 0.8, "delay": 0.5 }}
+            transition={ "duration": 0.8, "delay": 0.5 }
 
 className='flex flex-col "sm":flex-row gap-6 justify-center items-center mb-16''
           >
@@ -329,12 +325,12 @@ href='/contact''
           {/* Stats *
 }
           <motion.div;
-            initial={{ "opacity": 0, "y": 30 
+            initial={ "opacity": 0, "y": 30 
 }
-            animate={{ "opacity": 1, "y": 0 
+            animate={ "opacity": 1, "y": 0 
 }
 
-            transition={{ "duration": 0.8, "delay": 0.6 
+            transition={ "duration": 0.8, "delay": 0.6 
 }
 
 className='grid grid-cols-2 "md":grid-cols-4 gap-8 max-w-4xl mx-auto''
@@ -343,11 +339,11 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-8 max-w-4xl mx-auto''
               <motion.div
 }
 key={stat.label}
-                initial={{ "opacity": 0, "scale": 0.8 
+                initial={ "opacity": 0, "scale": 0.8 
 }
-                animate={{ "opacity": 1, "scale": 1 
+                animate={ "opacity": 1, "scale": 1 
 }
-                transition={{ "duration": 0.6, "delay": 0.7 + index * 0.1 }}
+                transition={ "duration": 0.6, "delay": 0.7 + index * 0.1 }
 
 className='text-center group''
               >
@@ -378,35 +374,34 @@ className='text-center group''
             ))}
       {/* Scroll Indicator */}
       <motion&& motion.div;
-        initial={{ "opacity": 0 }}
-        animate={{ "opacity": 1 
+        initial={ "opacity": 0 }
+        animate={ "opacity": 1 
 }
 
-        transition={{ "duration": 1, "delay": 1 
+        transition={ "duration": 1, "delay": 1 
 }
 
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2''
       >
         <motion.div,
-animate={{ "y": [0, 10, 0] }}
+animate={ "y": [0, 10, 0] }
 ;
-=======
-        transition={{ duration: 1, delay: 1 }}"
+        transition={ duration: 1, delay: 1 }"
 export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
 export default HeroSection;
 
 export default HeroSection;        className="absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2">"
 
         <motion.div;
-          animate={{ "coordinate_y": [0, 10, 0] }}
-          transition={{ "duration": 2, "repeat": Infinity 
+          animate={ "coordinate_y": [0, 10, 0] }
+          transition={ "duration": 2, "repeat": Infinity 
 }
 
 className='w-6 h-10 border-2 border-white/30 rounded-full flex justify-center''
         >
           <motion.div,
-animate={{ "y": [0, 12, 0] }}
-            transition={{ "duration": 2, "repeat": Infinity }}
+animate={ "y": [0, 12, 0] }
+            transition={ "duration": 2, "repeat": Infinity }
 className='w-1 h-3 bg-white/60 rounded-full mt-2'' />
         </motion.div>
       </motion.div>
@@ -416,10 +411,8 @@ className='w-1 h-3 bg-white/60 rounded-full mt-2'' />
 
 
 export default HeroSection;
-<<<<<<< HEAD
 
 "
-=======
 'use client'
 > {
   /* Badge */ 
@@ -440,18 +433,8 @@ export default HeroSection;
 }<motion.div /> </motion.div> </motion.div> </section>) 
 }
 export default HeroSection
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 );
 };
 export default HeroSection;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

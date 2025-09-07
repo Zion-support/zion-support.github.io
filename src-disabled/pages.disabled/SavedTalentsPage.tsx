@@ -24,7 +24,7 @@
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
-              action={{ text: 'Browse Talent', href: '/talent' }}
+              action={ text: 'Browse Talent', href: '/talent' }
               className="border-none bg-transparent text-center"
             />
           </div>
@@ -97,7 +97,7 @@
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents";
               description="You haven't saved any talents yet.";
-              action={{ text: 'Browse Talent', href: '/talent' }}
+              action={ text: 'Browse Talent', href: '/talent' }
               className="border-none bg-transparent text-center";
             />;
           </div>;

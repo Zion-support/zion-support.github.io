@@ -16,7 +16,7 @@ interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
       const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)const isTabletDevice = /iPad|Android(?=.*\\bMobile\\b)(?=.*\\bSafari\\b)/i.test(userAgent)setIsMobile(isMobileDevice)setIsTablet(isTabletDevice)// Set orientation;
       if (window.innerHeight > window.innerWidth) {setDeviceOrientation('portrait')} else {setDeviceOrientation('landscape')}
     }const handleResize = () => {checkDevice()}const handleOrientationChange = () => {setTimeout(() => {if (window.innerHeight > window.innerWidth) {setDeviceOrientation('portrait')} else {setDeviceOrientation('landscape')}
-      }, 100)}checkDevice()window.addEventListener('resize', handleResize)window.addEventListener('orientationchange', handleOrientationChange)return () => {window.removeEventListener('resize', handleResize)window.removeEventListener('orientationchange', handleOrientationChange)}}, [])// Touch gesture handling;
+      }, 100)}checkDevice()window.addEventListener('resize', handleResize)window.addEventListener('orientationchange', handleOrientationChange)return () => {window.removeEventListener('resize', handleResize)window.removeEventListener('orientationchange', handleOrientationChange)}, [])// Touch gesture handling;
   useEffect(() => {if (!enabled || !enableSwipeNavigation) return;
     const handleTouchStart = (e: TouchEvent) => {const touch = e.touches[0];
       setTouchStart({x: touch.clientX, y: touch.clientY,time: Date.now()})}const handleTouchMove = (e: TouchEvent) => {e.preventDefault()}const handleTouchEnd = (e: TouchEvent) => {if (!touchStart) return;
@@ -43,7 +43,7 @@ interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
         }// Add to gesture history;
         setGestureHistory(prev => [gesture, ...prev.slice(0, 9)])// Log gesture for debugging;
-      }setTouchStart(null)setTouchEnd(null)}document.addEventListener('touchstart', handleTouchStart, { passive: false })document.addEventListener('touchmove', handleTouchMove, { passive: false })document.addEventListener('touchend', handleTouchEnd, { passive: false })return () => {document.removeEventListener('touchstart', handleTouchStart)document.removeEventListener('touchmove', handleTouchMove)document.removeEventListener('touchend', handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart])// Enhanced mobile navigation;
+      }setTouchStart(null)setTouchEnd(null)}document.addEventListener('touchstart', handleTouchStart, { passive: false })document.addEventListener('touchmove', handleTouchMove, { passive: false })document.addEventListener('touchend', handleTouchEnd, { passive: false })return () => {document.removeEventListener('touchstart', handleTouchStart)document.removeEventListener('touchmove', handleTouchMove)document.removeEventListener('touchend', handleTouchEnd)}, [enabled, enableSwipeNavigation, touchStart])// Enhanced mobile navigation;
   const handleMobileNavigation = useCallback((action: string) => {switch (action) {case 'home': window.location.href = '/';
         break;
       case 'search': // Trigger search functionality;
@@ -73,8 +73,8 @@ interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
   return (<>;
       {/* Mobile Navigation Bar */}
       {isMobile && (<motion .div;
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}"";
+          initial={ y: -100 }
+          animate={ y: 0 }"";
           className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 shadow-lg"" >";
           <div className="flex items-center justify-between px-4 py-3">"";
             <div className="flex items-center space-x-3">;
@@ -115,9 +115,9 @@ interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
       )}{/* Mobile Menu */}
       <AnimatePresence>;
         {showMobileMenu && isMobile && (<motion .div"";
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}"";
-            exit={{ opacity: 0, x: '100%' }}"";
+            initial={ opacity: 0, x: '100%' }
+            animate={ opacity: 1, x: 0 }"";
+            exit={ opacity: 0, x: '100%' }"";
             className="fixed top-0 right-0 bottom-0 w-80 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50"" >";
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">"";
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Menu</h3>;
@@ -164,10 +164,10 @@ interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
       </AnimatePresence>;
       {/* Floating Action Button for Mobile */}
       {isMobile && (<motion .button;
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          initial={ opacity: 0, scale: 0.8 }
+          animate={ opacity: 1, scale: 1 }
+          whileHover={ scale: 1.1 }
+          whileTap={ scale: 0.9 }
           onClick={() => setShowGestureGuide(!showGestureGuide)}
           className="fixed bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover: bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2";
           aria-label="Show gesture guide";
@@ -178,15 +178,15 @@ interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
       )}{/* Gesture Guide */}
       <AnimatePresence>;
         {showGestureGuide && isMobile && (<motion .div;
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}"";
+            initial={ opacity: 0, scale: 0.9 }
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0.9 }"";
             className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4";
             onClick={() =" > setShowGestureGuide(false)}";
           >;
             <motion .div;
-              initial={{ y: 20 }}
-              animate={{ y: 0 }}"";
+              initial={ y: 20 }
+              animate={ y: 0 }"";
               className="bg-white dark:bg-slate-800 rounded-lg p-6 max-w-sm w-full";
               onClick={(e) => e.stopPropagation()}
             >;
@@ -249,8 +249,8 @@ interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
       </AnimatePresence>;
       {/* Device Info Indicator (Development Only) */}"";
       {process.env.NODE_ENV === 'development' && (isMobile || isTablet) && (<motion .div;
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}"";
+          initial={ opacity: 0, x: -100 }
+          animate={ opacity: 1, x: 0 }"";
           className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg"" >";
           <div className="flex items-center space-x-2">"";
             {isMobile ? <Smartphone className="w-4 h-4" /" > : <Tablet className="w-4 h-4" /" >}"";
@@ -260,8 +260,8 @@ interface TouchGesture  {type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
         </motion.div>;
       )}{/* Gesture History (Development Only) */}"";
       {process.env.NODE_ENV === 'development' && showGestures && gestureHistory.length > 0 && (<motion .div;
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}"";
+          initial={ opacity: 0, y: 100 }
+          animate={ opacity: 1, y: 0 }"";
           className="fixed bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs"" >";
           <div className="font-medium mb-2">Recent Gestures</div>"";
           <div className="space-y-1">;

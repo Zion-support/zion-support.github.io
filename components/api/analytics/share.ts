@@ -3,7 +3,7 @@ import fs from 'fs';'
 import path from 'path';'
 
 const DATA_DIR = null;
-  res.status(200).json({ "ok": true })
+  res.status(200).json({ 'ok': true })
 }
 
   if (req && req.method !== 'POST') return res && res.status(405).end();

@@ -310,8 +310,8 @@ export default function ExplorePage(req, res) {
       serviceCount: 17,;
       featured: false;
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -381,8 +381,8 @@ import React, { useState } from 'react';
       price: '$2,499/month',;
       icon: Rocket,;
       } catch (error) {}
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -401,12 +401,12 @@ import React, { useState } from 'react';
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
         <title>Explore Technology Categories | Zion Tech Group</title>
 
@@ -414,47 +414,47 @@ import React, { useState } from 'react';
 
         />;'
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/explore' />      </Head>;
-"
-        <meta name="description" content="Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business." />"
-        <meta property="og:title" content="Explore Technology Categories | Zion Tech Group" />"
-        <meta property="og:description" content="Comprehensive technology categories and innovative solutions." />"
-        <link rel="canonical" href="https://ziontechgroup.com/explore" />
+'
+        <meta name='description' content='Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business.' />'
+        <meta property='og:title' content='Explore Technology Categories | Zion Tech Group' />'
+        <meta property='og:description' content='Comprehensive technology categories and innovative solutions.' />'
+        <link rel='canonical' href='https://ziontechgroup.com/explore' />
       </Head>
 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
 
-            initial={{ opacity: 0, y: 30 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+            initial={ opacity: 0, y: 30 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            animate={{ opacity: 1, y: 0 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+            animate={ opacity: 1, y: 0 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+            transition={ duration: 0.8 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
           >
-"
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+'
+            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
 
               Explore Technology Categories
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
               Discover our comprehensive range of cutting-edge technology solutions across AI,
               quantum computing, cybersecurity, space technology, and more;
-            </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-                Start Exploring"
-                <ArrowRight className="w-5 h-5 ml-2" />
+            </p>'
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
+              <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
+                Start Exploring'
+                <ArrowRight className='w-5 h-5 ml-2' />
               </button>
 :pages/explore.tsx
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                View All Services
@@ -467,10 +467,10 @@ import React, { useState } from 'react';
         </div>
       </section>
 
-      <section className="px-6 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
-            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+      <section className='px-6 pb-12'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6'>
+            <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
 
       {/* Search and Filters */}
 <section className='px-6 pb-12'>
@@ -494,12 +494,12 @@ import React, { useState } from 'react';
               <div className='flex items-center gap-4'>
 
                   <input
-                    type="text"
+                    type='text'
 
-                    placeholder="Search categories..."
+                    placeholder='Search categories...'
                     value={searchTerm}
 
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'
                   />
 
                 </div>
@@ -512,17 +512,17 @@ import React, { useState } from 'react';
 
               {/* Sort Options */}
 
-              {/* Sort Options */  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              {/* Sort Options */  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
-}"
-              <div className="flex items-center gap-4">
+}'
+              <div className='flex items-center gap-4'>
 
                 <select;
                   value={sortBy}
-"
-              <div className="flex items-center gap-4">
+'
+              <div className='flex items-center gap-4'>
                 <select;
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
@@ -541,30 +541,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <select
                   value={sortBy}
 
-              <div className="flex items-center gap-4">
+              <div className='flex items-center gap-4'>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
 
                 <select
                   value={sortBy  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   onChange={(e) => setSortBy(e.target.value)  } catch (error) {
 
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                  className='px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'
                 >
 :pages/explore.tsx
                   <option value='popularity'>Sort by Popularity</option>
                   <option value='name'>Sort by Name</option>
                   <option value='featured'>Sort by Featured</option>                </select>
 
-                  <option value="popularity">Sort by Popularity</option>
-                  <option value="name">Sort by Name</option>
+                  <option value='popularity'>Sort by Popularity</option>
+                  <option value='name'>Sort by Name</option>
 
-                  <option value="featured">Sort by Featured</option>
+                  <option value='featured'>Sort by Featured</option>
                 </select>
 
                   <option value='popularity'>Sort by Popularity</option>
@@ -578,8 +578,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -588,20 +588,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto'>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
 :pages/explore.tsx
             className='mb-12'
 
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className='text-3xl font-bold text-white mb-4'>
               Featured Services
             </h2>
 :pages/explore.tsx
             <p className='text-white/60'>              Explore our most innovative and cutting-edge technology solutions
 
-            <p className="text-white/60">
+            <p className='text-white/60'>
               Explore our most innovative and cutting-edge technology solutions;
             </p>
           </motion.div>
@@ -609,7 +609,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
               <motion.div;
-            transition={{ duration: 0 && 0.6 }}'
+            transition={ duration: 0 && 0.6 }'
             className='mb-12'>;'
             <h2 className='text-3xl font-bold text-white mb-4'>;
               Featured Services;
@@ -631,9 +631,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {featuredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
 :pages/explore.tsx
                 className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
 className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -663,10 +663,10 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
                       {service.category}
 
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                <div className="relative z-10">
+                <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+                <div className='relative z-10'>
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-4 flex items-center justify-center`}>
-                    <service.icon className="w-8 h-8 text-white" />
+                    <service.icon className='w-8 h-8 text-white' />
                   </div>
 :pages/explore.tsx
                   <div className='flex items-center justify-between mb-3'>
@@ -684,7 +684,7 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
                     <span className='text-xs text-white/40'>
                       {service.category}
                     </span>
-                    <span className="text-xs text-white/40">{service.category}</span>
+                    <span className='text-xs text-white/40'>{service.category}</span>
                   </div>
                   <h3 className='text-lg font-bold mb-2 text-white'>
                     {service.title}
@@ -697,7 +697,7 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
                       {service.price}
                     </span>
 
-                  <div className="flex items-center justify-between mb-3">
+                  <div className='flex items-center justify-between mb-3'>
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                       service.status === 'active' ? 'bg-green-500/20 text-green-300' :
                       service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
@@ -705,17 +705,17 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
 
                     }`}>
 
-                      {service.status  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                      {service.status  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-                  <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>
-                  <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>
-                  <div className="mb-4">
+                  <h3 className='text-lg font-bold mb-2 text-white'>{service.title}</h3>
+                  <p className='text-sm text-white/70 mb-4 leading-relaxed'>{service.description}</p>
+                  <div className='mb-4'>
 
-                    <span className="text-xl font-bold text-cyan-400">{service.price}</span>
+                    <span className='text-xl font-bold text-cyan-400'>{service.price}</span>
 
                   </div>
                   
@@ -724,24 +724,24 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
 
                   </div>
                   <a;`
-                    href={`/services#${service.id}`  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                    href={`/services#${service.id}`  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-"
-                    className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
+'
+                    className='inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'
                   >
-                    Learn More"
-                    <ChevronRight className="w-4 h-4 ml-1" />
+                    Learn More'
+                    <ChevronRight className='w-4 h-4 ml-1' />
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 :pages/explore.tsx
-                    className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
+                    className='inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'
                   >
                     Learn More
                     <ChevronRight className='w-4 h-4 ml-1' />                  </a>
@@ -759,13 +759,13 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
 :pages/explore.tsx
       <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
             className='mb-12'
 
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className='text-3xl font-bold text-white mb-4'>
               Technology Categories
             </h2>
 :pages/explore.tsx
@@ -774,7 +774,7 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
           </motion.div>
           <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
 
-            <p className="text-white/60">
+            <p className='text-white/60'>
               {sortedCategories.length} categories available for exploration;
             </p>
           </motion.div>
@@ -788,7 +788,7 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
             {sortedCategories.length === 0 ? (
 
               <motion.div
-            transition={{ duration: 0 && 0.6 }}
+            transition={ duration: 0 && 0.6 }
             className='mb-12'>;
 
             <h2 className='text-3xl font-bold text-white mb-4'>;
@@ -800,9 +800,9 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
 '
           <AnimatePresence mode='wait'>            {sortedCategories && sortedCategories.length === 0 ? (;
 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                exit={ opacity: 0 }
 
                   </p>;'
                   <div className='mb - 4'>;'
@@ -824,9 +824,9 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
       {/* Categories Grid */}'
       <section className='px - 6 pb - 20'>;'
         <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}'
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.6 }'
             className='mb - 12';
           >;'
             <h2 className='text - 3xl font - bold text - white mb - 4'>;
@@ -837,9 +837,9 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
           </motion.div>;'
           <AnimatePresence mode='wait'>            {sorted_categories.length === 0 ? (
               <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}'
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                exit={ opacity: 0 }'
                 className='text - center py - 20';
               >;'
                 <div className='w - 24 h - 24 mx - auto mb - 6 rounded - full bg - white / 10 flex items - center justify - center'>;'
@@ -899,28 +899,28 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
                   </motion && motion.div>;
 
               <motion.div
-                initial={{ opacity: 0 }  } catch (error) {
-    console.error("Error:", error);
+                initial={ opacity: 0 }  } catch (error) {
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                animate={{ opacity: 1 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                animate={ opacity: 1 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                exit={{ opacity: 0 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                exit={ opacity: 0 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-                className="text-center py-20"
+                className='text-center py-20'
 
               >
-                <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                  <Search className="w-12 h-12 text-white/40" />
+                <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
+                  <Search className='w-12 h-12 text-white/40' />
                 </div>
 :pages/explore.tsx
                 <h3 className='text-2xl font-semibold text-white mb-2'>
@@ -937,9 +937,9 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
             ) : (
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {sortedCategories.map((category, index) => (
 
-                <h3 className="text-2xl font-semibold text-white mb-2">No categories found</h3>
+                <h3 className='text-2xl font-semibold text-white mb-2'>No categories found</h3>
 
-                <p className="text-white/60 mb-6">
+                <p className='text-white/60 mb-6'>
                   Try adjusting your search terms;
                 </p>
 
@@ -964,18 +964,18 @@ className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                 {sortedCategories.map((category, index) => (
                   <motion.div
                     key={category.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0.5, delay: index * 0.1 }
 
                 {sortedCategories.map((category, index) => (
                   <motion.div
 
                 {sortedCategories.map((category, index) => (
                   <motion.div;
-                  >"
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />"
-                    <div className="relative z-10">
+                  >'
+                    <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />'
+                    <div className='relative z-10'>
                       {/* Featured Badge */}
 
                     className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
@@ -985,43 +985,43 @@ className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 :pages/explore.tsx
 
                     key={category.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                    initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                    initial={ opacity: 0, y: 20 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                    animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                    animate={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                    transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                    transition={ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                    className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
+                    className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
                     onClick={() => window.location.href = `/category/${category.id}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                    <div className="relative z-10">
+                    <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+                    <div className='relative z-10'>
                       {/* Featured Badge */}
 
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                    <div className="relative z-10">
+                    <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+                    <div className='relative z-10'>
                       {/* Featured Badge */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -1031,15 +1031,15 @@ className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                           <span className='px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white'>                            ⭐ Featured
 
                       )  } catch (error) {
-    console.error("Error:", error);
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
-                      {/* Category Icon */  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                      {/* Category Icon */  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -1073,40 +1073,40 @@ className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 :pages/explore.tsx
 
                       )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
                       {/* Category Icon */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                       <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                        <category.icon className="w-10 h-10 text-white" />
+                        <category.icon className='w-10 h-10 text-white' />
                       </div>
 
                       {/* Category Info */}
 
-                      <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300">
+                      <h3 className='text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300'>
                         {category.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                       </h3>
-                      <p className="text-white/70 leading-relaxed mb-6">
+                      <p className='text-white/70 leading-relaxed mb-6'>
 
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
+                      <div className='flex items-center justify-between mb-6'>
+                        <div className='text-center'>
+                          <div className='text-2xl font-bold text-cyan-400'>{category.serviceCount}</div>
 
-                          <div className="text-xs text-white/60">Services</div>
+                          <div className='text-xs text-white/60'>Services</div>
 
                         </div>
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-purple-400">
+                        <div className='text-center'>
+                          <div className='text-2xl font-bold text-purple-400'>
                             {category.featured ? '⭐' : '🚀'}
                           </div>
 :pages/explore.tsx
@@ -1118,9 +1118,9 @@ className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                       <div className='flex items-center justify-between'>
                         <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>
 
-    console.error("Error:", error);
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -1139,10 +1139,10 @@ className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
       {/* Technology Trends */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className='text-center mb-16'
 
                           <div className='text-xs text-white/60'>
@@ -1161,7 +1161,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </motion.div>
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               </div>;
@@ -1169,21 +1169,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Technology Trends */}
 
       {/* Technology Trends */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
 
           >
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Emerging Technology Trends;
-            </h2>"
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            </h2>'
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>
               Stay ahead of the curve with our insights into the latest technology developments;
             </p>
           </motion.div>
@@ -1352,10 +1352,10 @@ description:
               <motion&& motion.div;
                 key={trend && trend.title}
 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
 :pages/explore.tsx
                 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
 
@@ -1402,38 +1402,38 @@ description:
 :pages/explore.tsx
                 color: 'from-emerald-500 to-green-500'
                 } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             ].map((trend, index) => (;
               <motion.div;
                 key={trend.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                initial={ opacity: 0, y: 20 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                whileInView={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                transition={ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                viewport={ once: true }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
+                className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
 
                   'Self-improving AI systems and autonomous business operations',
                 trend: 'Growing',
@@ -1443,14 +1443,14 @@ description:
 origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
                 key={trend.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
 
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
-                  <trend.icon className="w-8 h-8 text-white" />
+                  <trend.icon className='w-8 h-8 text-white' />
                 </div>
 
                 <div className='flex items-center justify-between mb-3'>
@@ -1474,8 +1474,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
 
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-white">{trend.title}</h3>
+                <div className='flex items-center justify-between mb-3'>
+                  <h3 className='text-xl font-bold text-white'>{trend.title}</h3>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                     trend.trend === 'Rising' ? 'bg-green-500/20 text-green-300' :
                     trend.trend === 'Breakthrough' ? 'bg-blue-500/20 text-blue-300' :
@@ -1488,7 +1488,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>
                 </div>
                 
-                <p className="text-white/70 leading-relaxed">{trend.description}</p>
+                <p className='text-white/70 leading-relaxed'>{trend.description}</p>
               </motion.div>
             ))}
           </div>
@@ -1518,10 +1518,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
 :pages/explore.tsx
           >
 
@@ -1530,26 +1530,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <ArrowRight className='w-5 h-5 ml-2' />;
               </a>;
 
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className='text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Ready to Explore?
-            </h2>"
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+            </h2>'
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
               Dive deep into our technology categories and discover the perfect solutions for your business needs.
-            </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a"
-                href="/services""
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            </p>'
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <a'
+                href='/services''
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
               >
-                View All Services"
-                <ArrowRight className="w-5 h-5 ml-2" />
+                View All Services'
+                <ArrowRight className='w-5 h-5 ml-2' />
 
               <a
 :pages/explore.tsx
                 href='mailto:kleber@ziontechgroup.com'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'              >
-                href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+                href='mailto:kleber@ziontechgroup.com'
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
               >
 
                 Get Expert Guidance
@@ -1599,10 +1599,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* CTA Section */}'
       <section className='py - 20 px - 6'>;'
         <div className='max - w-4xl mx - auto text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;'
             <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
               Ready to Explore?;
@@ -1633,8 +1633,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     </div>;
   );
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

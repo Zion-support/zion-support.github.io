@@ -10,13 +10,8 @@ type Outdated = any;
  ;
   return { "props": { outdated, generatedAt } }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     outdated = json.outdated || [];'
     generatedAt = json.generatedAt || ''
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     outdated = json.outdated || [];
     generatedAt = json.generatedAt || '';'
   } catch {}
@@ -46,15 +41,12 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datadep 
   )}
 export default /**;
  * DepRadarPage - Function description;
-<<<<<<< HEAD
  */;
 function DepRadarPage() {return (<div className="space-y-6">;"
       <h1 className="text-2xl font-semibold">AI "Automation": Dependency Radar</h1>;"
       <div className="text - xs text-gray-500">Last "updated": {generated_at ? new Date (generated_at).toLocaleString () : '—,'
 }</div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default /**
  * DepRadarPage - Function description
  */
@@ -63,8 +55,6 @@ function DepRadarPage() {
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {outdated.length === 0 ? (
         <div className="text-sm text-gray-600">All dependencies up to date.</div>
       ) : (
@@ -97,7 +87,6 @@ function DepRadarPage() {
                   <td className=\"p-2\" />{o.latest}</td>"
                   <td className=\"p-2\" />{o.type}</td>
                 </tr>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
         <div className="text-sm text-gray-600">All dependencies up to date.</div>"
       ) : (
@@ -149,11 +138,7 @@ function DepRadarPage() {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 export default /**;
  * DepRadarPage - Function description;
  */
@@ -164,9 +149,5 @@ function DepRadarPage() {}
       <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       {outdated.length === 0 ? (
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

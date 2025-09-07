@@ -12,7 +12,7 @@ import {Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
   CheckCircle, Sparkles, Infinity, Zap as Lightning;{/* Company Badge */}
               <motion&& motion.div;
-                initial={{ opacity: 0, scale: 0 && 0.8 }}
+                initial={ opacity: 0, scale: 0 && 0.8 }
 import { ArrowRight,Star,Brain,Atom,Shield,Zap,TrendingUp,Globe,Rocket,Target,Cpu,Cloud,Lock,Users,Award,CheckCircle,Sparkles,Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
   CheckCircle, Sparkles, Infinity, Zap as Lightning;
@@ -63,13 +63,11 @@ return (;
   return (
     <Layout>;
       {/* Main Content */}
-<<<<<<< HEAD
 
 <main className='relative z-10'>'
 
 
 
-<<<<<<< HEAD
             <motion.div
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>;'
@@ -82,26 +80,25 @@ return (;
             <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-1500'></div>'
             <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500'></div>'
           </div>
-<<<<<<< HEAD
 
           <div className='text-center max-w-5xl mx-auto relative z-10'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
 className='space-y-8'>'
 
               {/* Company Badge *
 }
               <motion.div;
-                initial={{ "opacity": 0, "scale": 0.8 
+                initial={ "opacity": 0, "scale": 0.8 
 }
 
-                animate={{ "opacity": 1, "scale": 1 
+                animate={ "opacity": 1, "scale": 1 
 }
 
-                transition={{ "duration": 0.6, "delay": 0.2 
+                transition={ "duration": 0.6, "delay": 0.2 
 }
 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm''
               >
@@ -117,9 +114,9 @@ className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
 quantum computing, and consciousness evolution solutions
               </p>
 
-                animate={{ "opacity": 1, "scale": 1 
+                animate={ "opacity": 1, "scale": 1 
 }
-                transition={{ "duration": 0 && 0.6, "delay": 0 && 0.2 
+                transition={ "duration": 0 && 0.6, "delay": 0 && 0.2 
 }
                 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm'>;'
                 <Star className='w-4 h-4' />;'
@@ -139,8 +136,8 @@ quantum computing, and consciousness evolution solutions
                   <motion&& motion.button,
 className='group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl "hover": from-cyan-600 "hover":to-blue-700 transition-all duration-300 transform "hover":scale-105 shadow-lg shadow-cyan-500/25 text-lg''
 
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ "scale": 0.95 }}
+                    whileHover={ "scale": 1.05 }
+                    whileTap={ "scale": 0.95 }
                   >
                     <span className='flex items-center gap-3'>'
                       Get Started
@@ -151,38 +148,31 @@ className='group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-whit
                 <Link href='/services'>'
                   <motion.button,
 className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl "hover":bg-cyan-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg backdrop-blur-sm''
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ "scale": 0.95 }}
+                    whileHover={ "scale": 1.05 }
+                    whileTap={ "scale": 0.95 }
                   >
                     Explore Services
-=======
                     Explore Services;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   </motion.button>
 
 
 
                 </Link>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
               {/* Trust Indicators *
 }
               <motion&& motion.div;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
 
-                animate={{ "opacity": 1, "y": 0 
+                animate={ "opacity": 1, "y": 0 
 }
 
 
-                transition={{ "duration": 0.8, "delay": 0.4 
+                transition={ "duration": 0.8, "delay": 0.4 
 }
 className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400'>'
 
@@ -212,18 +202,18 @@ className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-40
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>'
           <div className='max-w-7xl mx-auto relative z-10'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true }
 
 className='grid grid-cols-2 "md":grid-cols-4 gap-8 text-center''
             >
               <motion.div,
 className='p-8 group "hover":bg-white/5 rounded-2xl transition-all duration-300''
 
-                whileHover={{ "scale": 1.05 
+                whileHover={ "scale": 1.05 
 }
               >;
                 <div className='text-5xl font-bold text-cyan-400 mb-3 group-"hover":text-cyan-300 transition-colors'>;'
@@ -236,7 +226,7 @@ className='p-8 group "hover":bg-white/5 rounded-2xl transition-all duration-300'
               </motion.div>;
               <motion.div;
                 className='p-8 group "hover":bg-white/5 rounded-2xl transition-all duration-300';'
-                whileHover={{ "scale": 1.05 
+                whileHover={ "scale": 1.05 
 }
               >;
                 <div className='text-5xl font-bold text-blue-400 mb-3 group-"hover":text-blue-300 transition-colors'>;'
@@ -249,13 +239,13 @@ className='p-8 group "hover":bg-white/5 rounded-2xl transition-all duration-300'
               </motion.div>;
               <motion.div;
                 className='p-8 group "hover":bg-white/5 rounded-2xl transition-all duration-300';'
-                whileHover={{ "scale": 1.05 }}
+                whileHover={ "scale": 1.05 }
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
             >
               <motion.div 
@@ -267,29 +257,19 @@ className='p-8 group "hover":bg-white/5 rounded-2xl transition-all duration-300'
         {/* Featured AI Services */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
-=======
-initial={{ opacity: 0, y: 20 }
+initial={ opacity: 0, y: 20 }
 }
-<<<<<<< HEAD
-=======
               {/* Trust Indicators */}
               <motion.div
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
         {/* Company Stats */}"
         <section className="py-24 px-4 bg-black/30 relative">"
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>"
           <div className="max-w-7xl mx-auto relative z-10">
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
-<<<<<<< HEAD
-                transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, y: 20 }
+                transition={ duration: 0.8, delay: 0.4 }
 className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400'
               >
                 <div className='text-5xl font-bold text-purple-400 mb-3 group-"hover":text-purple-300 transition-colors'>'
@@ -305,7 +285,7 @@ className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-40
               <motion.div,
 className='p-8 group "hover":bg-white/5 rounded-2xl transition-all duration-300''
 
-                whileHover={{ "scale": 1.05 }}
+                whileHover={ "scale": 1.05 }
               >
                 <div className='text-5xl font-bold text-green-400 mb-3 group-"hover":text-green-300 transition-colors'>'
                   ∞
@@ -327,11 +307,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-24 px-4'>'
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true 
 }
 
 className='text-center mb-20''
@@ -369,7 +349,6 @@ key={service.id}
                 Experience the next evolution of artificial intelligence with;
                 our consciousness evolution and quantum AI platforms;
               </p>;
-<<<<<<< HEAD
             </motion && motion.div>;
             <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-16'>              {featuredAI && featuredAI.map((service, index) => (            >;'
               <h2 className="text-5xl "md":text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">;"
@@ -384,12 +363,12 @@ key={service.id}
               {featuredAI && featuredAI.map((service, index) => (<motion&& motion.div;
                   }
                   key={service && service.id}
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
+                  viewport={ "once": true 
 }>;
 
                   <UltraFuturisticServiceCard2038,
@@ -414,10 +393,10 @@ variant='consciousness';' />
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center mb-20"
             >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -432,12 +411,11 @@ variant='consciousness';' />
               {featuredAI.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
-=======
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'    />
               {featuredAI.map((service, index) => (}
@@ -460,30 +438,27 @@ key={service.id}
                 Experience the next evolution of artificial intelligence with our consciousness evolution and quantum AI platforms
               </p>
             </motion && motion.div>;"
-<<<<<<< HEAD
             <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16\"    />;}
               {featuredAI && featuredAI.map((service, index) => (<motion&& motion.div;}
                   key={service && service.id}
-                  initial={{ opacity: 0, y: 20 }
+                  initial={ opacity: 0, y: 20 }
 
-                  whileInView={{ opacity: 1, y: 0 }
+                  whileInView={ opacity: 1, y: 0 }
 
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
 }    />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   <UltraFuturisticServiceCard2038
                     service={service}
                     variant="consciousness"
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
               {featuredAI && featuredAI.map((service, index) => (;
                 <motion&& motion.div;
                   key={service && service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}>;
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                  viewport={ once: true }>;
                   <UltraFuturisticServiceCard2038;
                     service={service}
 
@@ -492,25 +467,22 @@ key={service.id}
                     variant="consciousness"
 variant='consciousness'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   />
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
 
 
 <div className='text-center'>'
               <Link href='/ai-services'>'
                 <motion.button,
 className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl "hover": bg-purple-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg''
-                  whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 
+                  whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 
 }
                 >
                   View All AI Services
                 </motion.button>
-<<<<<<< HEAD
                   <UltraFuturisticServiceCard2038;
                     service={service}))}variant="consciousness";
 variant='consciousness';
@@ -523,7 +495,7 @@ variant='consciousness';
               <Link href='/ai-services'>;'
                 <motion.button;
                   className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl "hover":bg-purple-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg';'
-                  whileHover={{ "scale": 1.05 }}whileTap={{ "scale": 0.95 
+                  whileHover={ "scale": 1.05 }whileTap={ "scale": 0.95 
 }
                 >;
                   View All AI Services;
@@ -531,12 +503,12 @@ variant='consciousness';
             </div>;<div className='text-center'>;'
               <Link href='/ai-services'>;'
                 <motion&& motion.button;
-                  className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl "hover": bg-purple-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg'                  whileHover={{ "scale": 1 && 1.05 ,'
+                  className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl "hover": bg-purple-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg'                  whileHover={ "scale": 1 && 1.05 ,'
 }            <div className="text-center">;"
               <Link href="/ai-services">;"
                 <motion&& motion.button;
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl "hover":bg-purple-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg";"
-                  whileTap={{ "scale": 0 && 0.95 
+                  whileTap={ "scale": 0 && 0.95 
 }>;
                   View All AI Services;
                 </motion && motion.button>;
@@ -557,8 +529,8 @@ variant='consciousness';
                 <Link href='/get - started'>;'
                   <motion.button;
                     className='group px - 10 py - 5 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - xl "hover":from - cyan - 600 "hover":to - blue - 700 transition - all duration - 300 transform "hover":scale - 105 shadow - lg shadow - cyan - 500 / 25 text - lg';'
-                    while_hover={{ "scale": 1.05 }}
-                    while_tap={{ "scale": 0.95 
+                    while_hover={ "scale": 1.05 }
+                    while_tap={ "scale": 0.95 
 }
                   >;
                     <span className='flex items - center gap - 3'>;'
@@ -569,7 +541,7 @@ variant='consciousness';
                 </Link>;
                 <Link href='/services'>;'
                   <motion.button;
-                    className='px - 10 py - 5 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - xl "hover": bg - cyan - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg backdrop - blur - sm'                    while_hover={{ "scale": 1.05 ,'
+                    className='px - 10 py - 5 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - xl "hover": bg - cyan - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg backdrop - blur - sm'                    while_hover={ "scale": 1.05 ,'
 }              >;
                 <Star className="w - 4 h - 4" />;"
                 <span > Innovation Leader 2038</span>;
@@ -586,8 +558,8 @@ variant='consciousness';
                 <Link href="/get - started">;"
                   <motion.button;
                     className="group px - 10 py - 5 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - xl "hover":from - cyan - 600 "hover":to - blue - 700 transition - all duration - 300 transform "hover":scale - 105 shadow - lg shadow - cyan - 500 / 25 text - lg";"
-                    while_hover={{ "scale": 1.05 }}
-                    while_tap={{ "scale": 0.95 
+                    while_hover={ "scale": 1.05 }
+                    while_tap={ "scale": 0.95 
 }
                   >;
                     <span className="flex items - center gap - 3">;"
@@ -599,8 +571,8 @@ variant='consciousness';
                 <Link href="/services">;"
                   <motion.button;
                     className="px - 10 py - 5 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - xl "hover":bg - cyan - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg backdrop - blur - sm";"
-                    while_hover={{ "scale": 1.05 }}
-                    while_tap={{ "scale": 0.95 
+                    while_hover={ "scale": 1.05 }
+                    while_tap={ "scale": 0.95 
 }
                   >;
                     Explore Services;
@@ -608,13 +580,12 @@ variant='consciousness';
                 </Link>;
               </div>;
               {/* Trust Indicators */}
-<<<<<<< HEAD
               <motion.div;
-                initial={{ "opacity": 0, "coordinate_y": 20 
+                initial={ "opacity": 0, "coordinate_y": 20 
 }
-                animate={{ "opacity": 1, "coordinate_y": 0 
+                animate={ "opacity": 1, "coordinate_y": 0 
 }
-                transition={{ "duration": 0.8, "delay": 0.4 
+                transition={ "duration": 0.8, "delay": 0.4 
 }
                 className='flex flex - wrap items - center justify - center gap - 8 text - sm text - gray - 400';'
               >              >;
@@ -651,7 +622,6 @@ variant='consciousness';
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
         {/* Company Stats */}
         <section className='py - 24 px - 4 bg - black / 30 relative'>;'
           <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to - purple - 500 / 5'></div>;'
@@ -659,15 +629,15 @@ variant='consciousness';
           <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to - purple - 500 / 5"></div>;"
           <div className="max - w-7xl mx - auto relative z - 10">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 20 
+              initial={ "opacity": 0, "coordinate_y": 20 
 }
-              whileInView={{ "opacity": 1, "coordinate_y": 0 
+              whileInView={ "opacity": 1, "coordinate_y": 0 
 }
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
               className='grid grid - cols - 2 "md":grid - cols - 4 gap - 8 text - center'>'
 
@@ -675,7 +645,7 @@ variant='consciousness';
 
               <motion.div
                 className='p - 8 group hover:bg - white / 5 rounded - 2xl transition - all duration - 300'
-                while_hover={{ scale: 1.05 }
+                while_hover={ scale: 1.05 }
 
                   />
                 <div className='text - 5xl font - bold text - cyan - 400 mb - 3 group - hover:text - cyan - 300 transition - colors'    />
@@ -688,7 +658,7 @@ variant='consciousness';
               </motion.div>
               <motion.div
                 className='p - 8 group hover:bg - white / 5 rounded - 2xl transition - all duration - 300'
-                while_hover={{ scale: 1.05 }
+                while_hover={ scale: 1.05 }
 
                   />
                 <div className='text - 5xl font - bold text - blue - 400 mb - 3 group - hover:text - blue - 300 transition - colors'    />
@@ -701,7 +671,7 @@ variant='consciousness';
               </motion.div>
               <motion.div
                 className='p - 8 group hover:bg - white / 5 rounded - 2xl transition - all duration - 300'
-                while_hover={{ scale: 1.05 }
+                while_hover={ scale: 1.05 }
 
                   />
                 <div className='text - 5xl font - bold text - purple - 400 mb - 3 group - hover:text - purple - 300 transition - colors'    />
@@ -716,7 +686,7 @@ variant='consciousness';
               </motion.div>
               <motion.div
                 className='p - 8 group hover:bg - white / 5 rounded - 2xl transition - all duration - 300'
-                while_hover={{ scale: 1.05 }
+                while_hover={ scale: 1.05 }
 
                   />
                 <div className='text - 5xl font - bold text - green - 400 mb - 3 group - hover:text - green - 300 transition - colors'    />
@@ -730,7 +700,7 @@ variant='consciousness';
                 </div>              </motion.div>            >
               <motion.div;"
                 className=\'p - 8 group hover:bg - white / 5 rounded - 2xl transition - all duration - 300\'
-                while_hover={{ scale: 1.05 }
+                while_hover={ scale: 1.05 }
 
                   />;"
                 <div className=\"text - 5xl font - bold text - cyan - 400 mb - 3 group - hover:text - cyan - 300 transition - colors\"    />100+</div>;"
@@ -739,7 +709,7 @@ variant='consciousness';
               </motion.div>
               <motion.div;"
                 className=\'p - 8 group hover:bg - white / 5 rounded - 2xl transition - all duration - 300\'
-                while_hover={{ scale: 1.05 }
+                while_hover={ scale: 1.05 }
 
                   />;"
                 <div className=\"text - 5xl font - bold text - blue - 400 mb - 3 group - hover:text - blue - 300 transition - colors\"    />200+</div>;"
@@ -748,7 +718,7 @@ variant='consciousness';
               </motion.div>
               <motion.div;"
                 className=\'p - 8 group hover:bg - white / 5 rounded - 2xl transition - all duration - 300\'
-                while_hover={{ scale: 1.05 }
+                while_hover={ scale: 1.05 }
 
                   />;"
                 <div className=\"text - 5xl font - bold text - purple - 400 mb - 3 group - hover:text - purple - 300 transition - colors\"    />24 / 7</div>;"
@@ -757,7 +727,7 @@ variant='consciousness';
               </motion.div>
               <motion.div;"
                 className=\'p - 8 group hover:bg - white / 5 rounded - 2xl transition - all duration - 300\'
-                while_hover={{ scale: 1.05 }
+                while_hover={ scale: 1.05 }
 
                   />;"
                 <div className=\"text - 5xl font - bold text - green - 400 mb - 3 group - hover:text - green - 300 transition - colors\"    />∞</div>;"
@@ -772,17 +742,15 @@ variant='consciousness';
           <div className='max - w-7xl mx - auto'    />            <motion.div        <section className=\"py - 24 px - 4\"    />;"
           <div className=\"max - w-7xl mx - auto\"    />
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-<<<<<<< HEAD
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 text - center';
             >;
               <motion.div;
                 className='p - 8 group "hover":bg - white / 5 rounded - 2xl transition - all duration - 300';'
-                while_hover={{ "scale": 1.05 
+                while_hover={ "scale": 1.05 
 }
               >;
                 <div className='text - 5xl font - bold text - cyan - 400 mb - 3 group - "hover":text - cyan - 300 transition - colors'>;'
@@ -795,7 +763,7 @@ variant='consciousness';
               </motion.div>;
               <motion.div;
                 className='p - 8 group "hover":bg - white / 5 rounded - 2xl transition - all duration - 300';'
-                while_hover={{ "scale": 1.05 
+                while_hover={ "scale": 1.05 
 }
               >;
                 <div className='text - 5xl font - bold text - blue - 400 mb - 3 group - "hover":text - blue - 300 transition - colors'>;'
@@ -808,7 +776,7 @@ variant='consciousness';
               </motion.div>;
               <motion.div;
                 className='p - 8 group "hover":bg - white / 5 rounded - 2xl transition - all duration - 300';'
-                while_hover={{ "scale": 1.05 
+                while_hover={ "scale": 1.05 
 }
               >;
                 <div className='text - 5xl font - bold text - purple - 400 mb - 3 group - "hover":text - purple - 300 transition - colors'>;'
@@ -823,7 +791,7 @@ variant='consciousness';
               </motion.div>;
               <motion.div;
                 className='p - 8 group "hover":bg - white / 5 rounded - 2xl transition - all duration - 300';'
-                while_hover={{ "scale": 1.05 
+                while_hover={ "scale": 1.05 
 }
               >;
                 <div className='text - 5xl font - bold text - green - 400 mb - 3 group - "hover":text - green - 300 transition - colors'>;'
@@ -837,7 +805,7 @@ variant='consciousness';
                 </div>              </motion.div>            >;
               <motion.div;
                 className="p - 8 group "hover":bg - white / 5 rounded - 2xl transition - all duration - 300";"
-                while_hover={{ "scale": 1.05 
+                while_hover={ "scale": 1.05 
 }
               >;
                 <div className="text - 5xl font - bold text - cyan - 400 mb - 3 group - "hover":text - cyan - 300 transition - colors">100+</div>;"
@@ -846,7 +814,7 @@ variant='consciousness';
               </motion.div>;
               <motion.div;
                 className="p - 8 group "hover":bg - white / 5 rounded - 2xl transition - all duration - 300";"
-                while_hover={{ "scale": 1.05 
+                while_hover={ "scale": 1.05 
 }
               >;
                 <div className="text - 5xl font - bold text - blue - 400 mb - 3 group - "hover":text - blue - 300 transition - colors">200+</div>;"
@@ -855,7 +823,7 @@ variant='consciousness';
               </motion.div>;
               <motion.div;
                 className="p - 8 group "hover":bg - white / 5 rounded - 2xl transition - all duration - 300";"
-                while_hover={{ "scale": 1.05 
+                while_hover={ "scale": 1.05 
 }
               >;
                 <div className="text - 5xl font - bold text - purple - 400 mb - 3 group - "hover":text - purple - 300 transition - colors">24 / 7</div>;"
@@ -864,7 +832,7 @@ variant='consciousness';
               </motion.div>;
               <motion.div;
                 className="p - 8 group "hover":bg - white / 5 rounded - 2xl transition - all duration - 300";"
-                while_hover={{ "scale": 1.05 
+                while_hover={ "scale": 1.05 
 }
               >;
                 <div className="text - 5xl font - bold text - green - 400 mb - 3 group - "hover":text - green - 300 transition - colors">∞</div>;"
@@ -874,17 +842,16 @@ variant='consciousness';
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
         {/* Featured AI Services */}
         <section className='py - 24 px - 4'>;'
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 24 px - 4">;"
           <div className="max - w-7xl mx - auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 20 
+              initial={ "opacity": 0, "coordinate_y": 20 
 }
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "coordinate_y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
               className='text - center mb - 20'>'
 
@@ -895,7 +862,6 @@ variant='consciousness';
                 Experience the next evolution of artificial intelligence with;
                 our consciousness evolution and quantum AI platforms;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className='grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8 mb - 16'>              {featuredAI.map ((service, index) => (            >;'
               <h2 className="text - 5xl "md":text - 6xl font - bold mb - 8 bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;"
@@ -910,12 +876,12 @@ variant='consciousness';
               {featuredAI.map ((service, index) => (<motion.div;
                   }
                   key={service.id}
-                  initial={{ "opacity": 0, "coordinate_y": 20 
+                  initial={ "opacity": 0, "coordinate_y": 20 
 }
-                  whileInView={{ "opacity": 1, "coordinate_y": 0 
+                  whileInView={ "opacity": 1, "coordinate_y": 0 
 }
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0.6, "delay": index * 0.1 }
+                  viewport={ "once": true 
 }
                 >;
                   <UltraFuturisticServiceCard2038;
@@ -927,12 +893,12 @@ variant='consciousness';
             <div className='text - center'>;'
               <Link href='/ai - services'>;'
                 <motion.button;
-                  className='px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - xl "hover": bg - purple - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg'                  while_hover={{ "scale": 1.05 ,'
+                  className='px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - xl "hover": bg - purple - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg'                  while_hover={ "scale": 1.05 ,'
 }            <div className="text - center">;"
               <Link href="/ai - services">;"
                 <motion.button;
                   className="px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - xl "hover":bg - purple - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg";"
-                  while_tap={{ "scale": 0.95 
+                  while_tap={ "scale": 0.95 
 }
                 >;
                   View All AI Services;
@@ -942,8 +908,6 @@ variant='consciousness';
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
@@ -954,12 +918,12 @@ variant='consciousness';
             <div className='text - center'    />
               <Link href='/ai - services'    />
                 <motion.button
-                  className='px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - xl hover: bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 text - lg'                  while_hover={{ scale: 1.05 }"
+                  className='px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - xl hover: bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 text - lg'                  while_hover={ scale: 1.05 }"
 }            <div className=\"text - center\"    />;"
               <Link href=\"/ai - services\"    />
                 <motion.button;"
                   className=\'px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 text - lg\'
-                  while_tap={{ scale: 0.95 }
+                  while_tap={ scale: 0.95 }
 
                     />
                   View All AI Services
@@ -971,23 +935,20 @@ variant='consciousness';
             </div>
           </div>
         </section>
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </Link>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Featured Micro SAAS Services */}
 <section className='py-24 px-4 bg-black/20'>;'
           <div className='max-w-7xl mx-auto'>;'
             <motion.div;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
 
-              viewport={{ "once": true 
+              viewport={ "once": true 
 }
 
 className='text-center mb-20''
@@ -1029,12 +990,12 @@ key={service.id}
               {featuredMicroSaas && featuredMicroSaas.map((service, index) => (<motion&& motion.div;
                   }
                   key={service && service.id}
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
+                  viewport={ "once": true 
 }>;
 
                   <UltraFuturisticServiceCard2038,
@@ -1050,8 +1011,8 @@ variant='automation';' />
               <Link href='/services'>'
                 <motion.button,
 className='px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl "hover": bg-emerald-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg''
-                  whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 
+                  whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 
 }
                 >
                   Explore All Services
@@ -1068,7 +1029,7 @@ variant='automation';
               <Link href='/services'>;'
                 <motion.button;
                   className='px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl "hover":bg-emerald-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg';'
-                  whileHover={{ "scale": 1.05 }}whileTap={{ "scale": 0.95 
+                  whileHover={ "scale": 1.05 }whileTap={ "scale": 0.95 
 }
                 >;
                   Explore All Services;
@@ -1076,12 +1037,12 @@ variant='automation';
             </div>;<div className='text-center'>;'
               <Link href='/services'>;'
                 <motion&& motion.button;
-                  className='px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl "hover": bg-emerald-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg'                  whileHover={{ "scale": 1 && 1.05 ,'
+                  className='px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl "hover": bg-emerald-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg'                  whileHover={ "scale": 1 && 1.05 ,'
 }            <div className="text-center">;"
               <Link href="/services">;"
                 <motion&& motion.button;
                   className="px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl "hover":bg-emerald-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg";"
-                  whileTap={{ "scale": 0 && 0.95 
+                  whileTap={ "scale": 0 && 0.95 
 }>;
                   Explore All Services;
                 </motion && motion.button>;
@@ -1090,15 +1051,15 @@ variant='automation';
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 24 px - 4 bg - black / 20">;"
           <div className="max - w-7xl mx - auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 20 
+              initial={ "opacity": 0, "coordinate_y": 20 
 }
-              whileInView={{ "opacity": 1, "coordinate_y": 0 
+              whileInView={ "opacity": 1, "coordinate_y": 0 
 }
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
               className='text - center mb - 20'>'
 
@@ -1109,7 +1070,6 @@ variant='automation';
                 Transform your business with our cutting - edge micro SAAS;
                 solutions designed for the future;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className='grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8 mb - 16'>              {featuredMicroSaas.map ((service, index) => (            >;'
               <h2 className="text - 5xl "md":text - 6xl font - bold mb - 8 bg - gradient - to - r from - emerald - 400 to - cyan - 500 bg - clip - text text - transparent">;"
@@ -1124,16 +1084,15 @@ variant='automation';
               {featuredMicroSaas.map ((service, index) => (<motion.div;
                   }
                   key={service.id}
-                  initial={{ "opacity": 0, "coordinate_y": 20 
+                  initial={ "opacity": 0, "coordinate_y": 20 
 }
-                  whileInView={{ "opacity": 1, "coordinate_y": 0 
+                  whileInView={ "opacity": 1, "coordinate_y": 0 
 }
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0.6, "delay": index * 0.1 }
+                  viewport={ "once": true 
 }
                 >;
                   <UltraFuturisticServiceCard2038;
-<<<<<<< HEAD
                     service={service}
                     variant='automation' />                    variant="automation";"
                   />;
@@ -1142,12 +1101,12 @@ variant='automation';
             <div className='text - center'>;'
               <Link href='/services'>;'
                 <motion.button;
-                  className='px - 8 py - 4 border - 2 border - emerald - 400 text - emerald - 400 font - semibold rounded - xl "hover": bg - emerald - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg'                  while_hover={{ "scale": 1.05 ,'
+                  className='px - 8 py - 4 border - 2 border - emerald - 400 text - emerald - 400 font - semibold rounded - xl "hover": bg - emerald - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg'                  while_hover={ "scale": 1.05 ,'
 }            <div className="text - center">;"
               <Link href="/services">;"
                 <motion.button;
                   className="px - 8 py - 4 border - 2 border - emerald - 400 text - emerald - 400 font - semibold rounded - xl "hover":bg - emerald - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg";"
-                  while_tap={{ "scale": 0.95 
+                  while_tap={ "scale": 0.95 
 }
                 >;
                   Explore All Services;
@@ -1161,18 +1120,17 @@ variant='automation';
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Featured IT Services */}
 <section className='py-24 px-4'>;'
           <div className='max-w-7xl mx-auto'>;'
             <motion.div;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
 
-              viewport={{ "once": true 
+              viewport={ "once": true 
 }
 
 className='text-center mb-20''
@@ -1219,13 +1177,10 @@ key={service.id}
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>;
                 Advanced IT Infrastructure;
               </h2>;
-=======
 className='text-center mb-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-=======
             >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>
                 Advanced IT Infrastructure;
               </h2>'
@@ -1255,12 +1210,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>;
                 Advanced IT Infrastructure;
               </h2>;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               <p className='text-xl text-gray-300 max-w-4xl mx-auto'>;
                 Build the future with our quantum cloud infrastructure and;
                 AI-powered DevOps automation;
               </p>;
-<<<<<<< HEAD
             </motion && motion.div>;
             <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-16'>              {featuredIT && featuredIT.map((service, index) => (            >;'
               <h2 className="text-5xl "md":text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">;"
@@ -1275,12 +1228,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {featuredIT && featuredIT.map((service, index) => (<motion&& motion.div;
                   }
                   key={service && service.id}
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
+                  viewport={ "once": true 
 }>;
 
                   <UltraFuturisticServiceCard2038,
@@ -1295,15 +1248,14 @@ variant='quantum';' />
               {featuredIT.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
                     variant="quantum"
-=======
                   <UltraFuturisticServiceCard2038;
                     service={service}
 
@@ -1312,20 +1264,18 @@ variant='quantum';' />
                     variant="quantum"
 variant='quantum'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   />
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
 
 
 <div className='text-center'>'
               <Link href='/it-services'>'
                 <motion.button,
 className='px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl "hover": bg-blue-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg''
-                  whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 
+                  whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 
 }
                 >
                   View All IT Services
@@ -1342,7 +1292,7 @@ variant='quantum';
               <Link href='/it-services'>;'
                 <motion.button;
                   className='px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl "hover":bg-blue-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg';'
-                  whileHover={{ "scale": 1.05 }}whileTap={{ "scale": 0.95 
+                  whileHover={ "scale": 1.05 }whileTap={ "scale": 0.95 
 }
                 >;
                   View All IT Services;
@@ -1350,12 +1300,12 @@ variant='quantum';
             </div>;<div className='text-center'>;'
               <Link href='/it-services'>;'
                 <motion&& motion.button;
-                  className='px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl "hover": bg-blue-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg'                  whileHover={{ "scale": 1 && 1.05 ,'
+                  className='px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl "hover": bg-blue-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg'                  whileHover={ "scale": 1 && 1.05 ,'
 }            <div className="text-center">;"
               <Link href="/it-services">;"
                 <motion&& motion.button;
                   className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl "hover":bg-blue-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg";"
-                  whileTap={{ "scale": 0 && 0.95 
+                  whileTap={ "scale": 0 && 0.95 
 }>;
                   View All IT Services;
                 </motion && motion.button>;
@@ -1364,15 +1314,15 @@ variant='quantum';
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 24 px - 4">;"
           <div className="max - w-7xl mx - auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 20 
+              initial={ "opacity": 0, "coordinate_y": 20 
 }
-              whileInView={{ "opacity": 1, "coordinate_y": 0 
+              whileInView={ "opacity": 1, "coordinate_y": 0 
 }
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
               className='text - center mb - 20'>'
 
@@ -1383,7 +1333,6 @@ variant='quantum';
                 Build the future with our quantum cloud infrastructure and;
                 AI - powered DevOps automation;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className='grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8 mb - 16'>              {featuredIT.map ((service, index) => (            >;'
               <h2 className="text - 5xl "md":text - 6xl font - bold mb - 8 bg - gradient - to - r from - blue - 400 to - indigo - 500 bg - clip - text text - transparent">;"
@@ -1398,16 +1347,15 @@ variant='quantum';
               {featuredIT.map ((service, index) => (<motion.div;
                   }
                   key={service.id}
-                  initial={{ "opacity": 0, "coordinate_y": 20 
+                  initial={ "opacity": 0, "coordinate_y": 20 
 }
-                  whileInView={{ "opacity": 1, "coordinate_y": 0 
+                  whileInView={ "opacity": 1, "coordinate_y": 0 
 }
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0.6, "delay": index * 0.1 }
+                  viewport={ "once": true 
 }
                 >;
                   <UltraFuturisticServiceCard2038;
-<<<<<<< HEAD
                     service={service}
                     variant='quantum' />                    variant="quantum";"
                   />;
@@ -1416,12 +1364,12 @@ variant='quantum';
             <div className='text - center'>;'
               <Link href='/it - services'>;'
                 <motion.button;
-                  className='px - 8 py - 4 border - 2 border - blue - 400 text - blue - 400 font - semibold rounded - xl "hover": bg - blue - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg'                  while_hover={{ "scale": 1.05 ,'
+                  className='px - 8 py - 4 border - 2 border - blue - 400 text - blue - 400 font - semibold rounded - xl "hover": bg - blue - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg'                  while_hover={ "scale": 1.05 ,'
 }            <div className="text - center">;"
               <Link href="/it - services">;"
                 <motion.button;
                   className="px - 8 py - 4 border - 2 border - blue - 400 text - blue - 400 font - semibold rounded - xl "hover":bg - blue - 400 "hover":text - black transition - all duration - 300 transform "hover":scale - 105 text - lg";"
-                  while_tap={{ "scale": 0.95 
+                  while_tap={ "scale": 0.95 
 }
                 >;
                   View All IT Services;
@@ -1431,7 +1379,6 @@ variant='quantum';
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
         {/* Why Choose Us */}
         <section className="py-24 px-4 bg-black/30">;"
               </Link>;
@@ -1442,12 +1389,12 @@ variant='quantum';
 <section className='py-24 px-4 bg-black/30'>;'
           <div className='max-w-7xl mx-auto'>;'
             <motion.div;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
 
-              viewport={{ "once": true 
+              viewport={ "once": true 
 }
 
 className='text-center mb-20''
@@ -1502,11 +1449,9 @@ className='text-center mb-20''
                     'World-class team with experience across cutting-edge technologies','
                   "color": 'from-indigo-500 to-purple-500','
                 },
-=======
                     'Leading the development of artificial consciousness and emotional intelligence'
                   color: 'from-purple-500 to-pink-500'
                 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 {
                   }
                   "icon": <Award className='w-12 h-12' />,'
@@ -1550,16 +1495,16 @@ className='text-center mb-20''
               ].map((feature, index) => (
                 <motion.div,
 key={index}
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  transition={ "duration": 0.6, "delay": index * 0.1 }
+                  viewport={ "once": true }
 
 className='text-center p-8 group "hover":bg-white/5 rounded-2xl transition-all duration-300''
 
-                  whileHover={{ "scale": 1.05 
+                  whileHover={ "scale": 1.05 
 }
                 >;
                   <div;
@@ -1577,10 +1522,9 @@ className='text-center p-8 group "hover":bg-white/5 rounded-2xl transition-all d
                     {feature.description}
                   </p>                </motion.div>
 
-=======
 className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={ scale: 1.05 }
                 >
                   <div;
                     className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}
@@ -1596,24 +1540,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {feature.description}
                   </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </motion.div>
 
               ))}
-<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
                   key={index}
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
+                  viewport={ "once": true 
 }
                   className='text-center p-8 group "hover":bg-white/5 rounded-2xl transition-all duration-300';'
-                  whileHover={{ "scale": 1 && 1.05 
+                  whileHover={ "scale": 1 && 1.05 
 }>;
                   <div;
                     className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${feature && feature.color} mb-6 group-"hover": scale-110 transition-transform duration-300`}>`
@@ -1625,7 +1567,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h3>;
                   <p className='text-gray-300 leading-relaxed'>;'
                     {feature && feature.description}
-                  </p>                </motion && motion.div>                  whileHover={{ "scale": 1 && 1.05 
+                  </p>                </motion && motion.div>                  whileHover={ "scale": 1 && 1.05 
 }
                 >;
                   <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${feature && feature.color} mb-6 group-"hover": scale-110 transition-transform duration-300,`
@@ -1654,11 +1596,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-24 px-4'>'
           <div className='max-w-4xl mx-auto text-center'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 20 
+initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0 && 0.8 }
+              viewport={ "once": true 
 }
 
 className='space-y-8''
@@ -1674,8 +1616,8 @@ next-generation technology. Let's build the future together.'
                 <Link href='/contact'>'
                   <motion.button,
 className='px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-blue-700 transition-all duration-300 transform "hover":scale-105 shadow-lg shadow-cyan-500/25 text-lg''
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ "scale": 0.95 }}
+                    whileHover={ "scale": 1.05 }
+                    whileTap={ "scale": 0.95 }
                   >
                     <span className='flex items-center gap-3'>'
                       Get Started Today
@@ -1686,8 +1628,8 @@ className='px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font
                 <Link href='/services'>'
                   <motion.button,
 className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl "hover":bg-cyan-400 "hover":text-black transition-all duration-300 transform "hover":scale-105 text-lg''
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ "scale": 0.95 }}
+                    whileHover={ "scale": 1.05 }
+                    whileTap={ "scale": 0.95 }
                   >
                     Explore Our Services
                   </motion.button>
@@ -1702,9 +1644,4 @@ className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold round
 };
 export default Homepage2038;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

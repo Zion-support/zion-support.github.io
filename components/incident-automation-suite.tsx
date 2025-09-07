@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React from 'react','
@@ -66,7 +65,6 @@ export default function IncidentAutomationSuitePage() {const service  = null;ret
     </UltraAdvancedFuturisticBackground>
   )
 }
-<<<<<<< HEAD
                 {service && service.features.slice(0, 12).map((feat, i) => (<li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0 && 0.5" /><span>{feat}</span></li>;
                 ))}</ul>;
               </ul>;
@@ -147,6 +145,3 @@ if (return null) {
 ;
   )}
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

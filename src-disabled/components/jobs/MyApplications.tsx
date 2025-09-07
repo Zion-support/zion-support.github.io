@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 default:
 
       default:
@@ -8,7 +5,6 @@ default:
     }
 
 import {ApplicationStatus} from "@/types/jobs";
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 :src/components/jobs/MyApplications.tsx
 return <Badge variant="outline">{status}</Badge>
 
@@ -73,8 +69,6 @@ export function MyApplications() {
   const getStatusBadge = null;
 
   if (isLoading) {
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
     return (
@@ -142,24 +136,19 @@ export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications(),;
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
       case "new": return <Badge variant="secondary">New</Badge>;
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 
 ;
       default:;
 default:;
         return <Badge variant="outline">{status}</Badge>;
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
     }
   },;
 
   if (isLoading) {;
 
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
       <div className="flex justify-center items-center p-8">;
     }import { ApplicationStatus } from '@/types/jobs';
 import { useState  } from 'react';
@@ -206,7 +195,6 @@ import { useState } from "react",import { useJobApplications } from "@/hooks/use
           </Button>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
     )}
   return (<div className="grid gap-4 md:grid-cols-2">;
       {applications.map((application) => (<Card key={application.id}>;
@@ -265,7 +253,6 @@ import Link from "next/link",import { ApplicationStatus } from "@/types/jobs",ex
           </CardHeader>;
           <CardContent>;"
             <div className="space-y-3">;
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
               {application.cover_letter && (<p className="text-sm text-muted-foreground line-clamp-2 mb-2">;{application.cover_letter}
                 </p>;
               )}<div className="flex justify-between items-center">;
@@ -273,7 +260,6 @@ import Link from "next/link",import { ApplicationStatus } from "@/types/jobs",ex
                   variant="outline";
                   size="sm";
                   {application.cover_letter}
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
                 </p>
               {application.cover_letter && (;"
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
@@ -291,8 +277,6 @@ import Link from "next/link",import { ApplicationStatus } from "@/types/jobs",ex
                   variant="outline" "
                   size="sm" 
 
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 
                   className="text-xs"
                   asChild
@@ -305,7 +289,6 @@ import Link from "next/link",import { ApplicationStatus } from "@/types/jobs",ex
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 
 
   return (
@@ -339,7 +322,6 @@ import Link from "next/link",import { ApplicationStatus } from "@/types/jobs",ex
               Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
             </p>;
           </CardHeader>;
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
           <CardContent>;
             <div className="space-y-3">;
               {application && application.cover_letter && (<p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
@@ -368,7 +350,6 @@ import Link from "next/link",import { ApplicationStatus } from "@/types/jobs",ex
             </div>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
       ))}
 ;
 
@@ -461,9 +442,8 @@ if ( {) {}
 };
 <p> {;
   error ;
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
       ))}</div>;
-  )}},// Check condition;
+  )},// Check condition;
 if ( {) {$2;
 }
     return (<div className="flex justify - center items - center p - 8">;
@@ -538,10 +518,8 @@ if ( {) {$2;
 }</p> </div>) ";
 }You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href="/jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {getStatusBadge (application.status)}</div> {application.cover letter ;
 }</p>) ";
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 }<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
 }</div>) ;
 }'"
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) )}</div>)}'";

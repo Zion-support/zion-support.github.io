@@ -7,8 +7,8 @@ import { translateTextViaAI } from '../utils/translation';'
 };
 
 export function useAutoTranslate(
-  "text": string,
-  "targets": string[],
+  'text': string,
+  'targets': string[],
   debounceMs = 600
 ): UseAutoTranslateResult {
   }
@@ -40,7 +40,7 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
         setError(undefined);
         const res = await translateTextViaAI(text, targets);
 if (!cancelled) setTranslations(res);
-      } catch ("e": any) {
+      } catch ('e': any) {
         }
         if (set_error (e?.message || 'Translation failed')) {'
   $2
@@ -88,10 +88,10 @@ return;}
 }
       } finally {if (set_loading (false)) {$2;
 }
-      }}
+      }
   }, [key, debounce_ms])if (!cancelled) setLoading(false)}
     }, debounceMs)return () => {cancelled = true;
-clearTimeout(timer)}}, [key, debounceMs])return { translations, loading, error }return { translations, loading, error }
+clearTimeout(timer)}, [key, debounceMs])return { translations, loading, error }return { translations, loading, error }
     }
   }, [key, debounceMs])return { translations, loading, error }
 }

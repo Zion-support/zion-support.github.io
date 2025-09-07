@@ -58,7 +58,6 @@ const DATA_DIR = path.join(process.cwd(), "data");"
 const TRANSACTIONS_FILE = path.join(DATA_DIR, "token-transactions.json");"
 const CONFIG_FILE = path.join(DATA_DIR, "token-config.json");"
 
-=======function ensureDataDir() {
 function ensureDataDir() {
   }
   if (!fs && fs.existsSync(DATA_DIR)) {
@@ -74,7 +73,7 @@ function load_config (): TokenConfig {try {ensureDataDir ()if () {) {$2;
 function getDefaultConfig (): TokenConfig {function getDefaultConfig (): TokenConfig {export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {function save_config (config: TokenConfig): void {ensureDataDir ()fs.writeFileSync (CONFIG_FILE, JSON.stringify (config, null, 2))}
 function getDefaultConfig (): TokenConfig {return {return {name: "ZION Token",symbol: "ZION$",totalSupply: 1000000000,circulatingSupply: 250000000,exchangeRate: 0.05,stakingEnabled: true,stakingRewardRate: 12.5;
     stakingRewardRate: 12.5;
-  }}export function getAllTransactions(): TokenTransaction[] {return loadTransactions()}export function addTransaction(transaction: Omit<TokenTransaction, "id" | "timestamp">,): TokenTransaction {const transactions = loadTransactions()const newTransaction: TokenTransaction = {...transaction,id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,timestamp: new Date().toISOString()}transactions.push(newTransaction)id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,timestamp: new Date().toISOString()}transactions.push(newTransaction)saveTransactions(transactions)return newTransaction;
+  }export function getAllTransactions(): TokenTransaction[] {return loadTransactions()}export function addTransaction(transaction: Omit<TokenTransaction, "id" | "timestamp">,): TokenTransaction {const transactions = loadTransactions()const newTransaction: TokenTransaction = {...transaction,id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,timestamp: new Date().toISOString()}transactions.push(newTransaction)id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,timestamp: new Date().toISOString()}transactions.push(newTransaction)saveTransactions(transactions)return newTransaction;
 }
   return loadConfig()}
 export function setConfig(config: TokenConfig): void {saveConfig(config)}export function getConfig(): TokenConfig {return loadConfig()}export function setConfig(config: TokenConfig): void {saveConfig(config)}export function getUserBalance(userId: string): number {const transactions = loadTransactions()let balance  = 0;for (const tx of transactions) {ursor/automate-test-improve-and-merge-code-646c;

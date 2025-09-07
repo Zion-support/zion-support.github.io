@@ -91,17 +91,17 @@ const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
   }return (<section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">;"
       <div className="container mx-auto px-4">;"
         <motion.div;
-          initial={{ "opacity": 0, "y": 30 }}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.6 }}
-          viewport={{ "once": true }}
+          initial={ "opacity": 0, "y": 30 }
+          whileInView={ "opacity": 1, "y": 0 }
+          transition={ "duration": 0.6 }
+          viewport={ "once": true }
           className="text-center mb-16";"
         >;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.6 }}
-          viewport={{ "once": true 
+          whileInView={ "opacity": 1, "y": 0 }
+          transition={ "duration": 0.6 }
+          viewport={ "once": true 
 }
           className="text-center mb-16">"
 
@@ -114,18 +114,18 @@ const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
         </motion.div>;
         {/* Time Range Selector */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 20 }}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.6, "delay": 0.2 }}
-          viewport={{ "once": true }}
+          initial={ "opacity": 0, "y": 20 }
+          whileInView={ "opacity": 1, "y": 0 }
+          transition={ "duration": 0.6, "delay": 0.2 }
+          viewport={ "once": true }
           className="flex justify-center mb-12";"
         >;
-          initial={{ "opacity": 0, "y": 20 
+          initial={ "opacity": 0, "y": 20 
 }
-          whileInView={{ "opacity": 1, "y": 0 
+          whileInView={ "opacity": 1, "y": 0 
 }
-          transition={{ "duration": 0.6, "delay": 0.2 }}
-          viewport={{ "once": true 
+          transition={ "duration": 0.6, "delay": 0.2 }
+          viewport={ "once": true 
 }
           className="flex justify-center mb-12">"
 
@@ -148,7 +148,7 @@ const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
           variants={containerVariants}
           initial="hidden";"
           whileInView="visible";"
-          viewport={{ "once": true }}
+          viewport={ "once": true }
           className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-16";"
         >;
           {metrics.map((metric) => {const IconComponent = metric.icon;
@@ -156,8 +156,8 @@ const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
             const ChangeIcon  = getChangeIcon(metric.changeType)return (<motion.div;
                 key={metric.id}
                 variants={itemVariants}
-                whileHover={{ "scale": 1.02, "y": -5 }}
-          viewport={{ "once": true 
+                whileHover={ "scale": 1.02, "y": -5 }
+          viewport={ "once": true 
 }
           className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-16">"
 
@@ -169,7 +169,7 @@ const ChangeIcon = getChangeIcon(metric.changeType;
   return (<motion.div;
                 key={metric.id}
                 variants={itemVariants}
-                whileHover={{ "scale": 1.02, "y": -5 
+                whileHover={ "scale": 1.02, "y": -5 
 }
                 className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 "hover":shadow-xl transition-all duration-300 cursor-pointer";"
                 onClick={() => setSelectedMetric(selectedMetric === metric.id ? null : metric.id)}
@@ -217,25 +217,25 @@ const ChangeIcon = getChangeIcon(metric.changeType;
                           : metric.value / metric.target > 0.7;
                           ? 'bg-yellow-500';'
                           : 'bg-green-500';'
-                      }`}`                      style={{ "width": `${Math.min((metric.value / metric.target) * 100, 100)}%` }}`                    />;
+                      }`}`                      style={ "width": `${Math.min((metric.value / metric.target) * 100, 100)}%` }`                    />;
                   </div>;
                 </div>;
                 {/* Expanded View */}
                 <AnimatePresence>;
                   {selectedMetric === metric.id && (<motion.div;
                       }
-                      initial={{ "opacity": 0, "height": 0 }}
-                      animate={{ "opacity": 1, "height": 'auto' }}'
-                      exit={{ "opacity": 0, "height": 0 }}
-                      transition={{ "duration": 0.3 }}
+                      initial={ "opacity": 0, "height": 0 }
+                      animate={ "opacity": 1, "height": 'auto' }'
+                      exit={ "opacity": 0, "height": 0 }
+                      transition={ "duration": 0.3 }
                       className="mt-4 pt-4 border-t border-gray-200";"
                     >;
-                      initial={{ "opacity": 0, "height": 0 
+                      initial={ "opacity": 0, "height": 0 
 }
-                      animate={{ "opacity": 1, "height": 'auto' ,'
+                      animate={ "opacity": 1, "height": 'auto' ,'
 }
-                      exit={{ "opacity": 0, "height": 0 }}
-                      transition={{ "duration": 0.3 
+                      exit={ "opacity": 0, "height": 0 }
+                      transition={ "duration": 0.3 
 }
                       className="mt-4 pt-4 border-t border-gray-200">"
 
@@ -264,18 +264,18 @@ const ChangeIcon = getChangeIcon(metric.changeType;
         </motion.div>;
         {/* Summary Stats */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 30 }}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.6, "delay": 0.4 }}
-          viewport={{ "once": true }}
+          initial={ "opacity": 0, "y": 30 }
+          whileInView={ "opacity": 1, "y": 0 }
+          transition={ "duration": 0.6, "delay": 0.4 }
+          viewport={ "once": true }
           className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-white text-center";"
         >;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
-          whileInView={{ "opacity": 1, "y": 0 
+          whileInView={ "opacity": 1, "y": 0 
 }
-          transition={{ "duration": 0.6, "delay": 0.4 }}
-          viewport={{ "once": true 
+          transition={ "duration": 0.6, "delay": 0.4 }
+          viewport={ "once": true 
 }
           className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-white text-center">"
 

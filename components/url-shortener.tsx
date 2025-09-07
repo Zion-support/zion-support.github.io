@@ -22,19 +22,19 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     }
     super(props);
-    this.state = { "hasError": false
+    this.state = { 'hasError': false
 };
   }
   
   static getDerivedStateFromError(error) {
 }
-return { "hasError": true,;
+return { 'hasError': true,;
 };
   }
   
   componentDidCatch(error, errorInfo) {
     }
-    console.error('Error caught by "boundary":', error, errorInfo);'
+    console.error('Error caught by 'boundary':', error, errorInfo);'
   }
   
   render() {
@@ -78,16 +78,16 @@ await new Promise(resolve => { return setTimeout(resolve, 1000)); }
 
 const alias = customAlias.trim() |generateRandomAlias();
 
-const shortUrl = `"https": //zion.tech/${alia,;`}`;`
+const shortUrl = `'https': //zion.tech/${alia,;`}`;`
 const newShortUrl = {
       }
-      "id": Date.now()
-      "longUrl": longUrl.trim()
+      'id': Date.now()
+      'longUrl': longUrl.trim()
       shortUrl,
 alias
-      "clicks": 0,
-"createdAt": new Date().toISOString()
-      "qrCode": `"https"://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}``
+      'clicks': 0,
+'createdAt': new Date().toISOString()
+      'qrCode': `'https'://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}``
    
 }
     setShortenedUrls(prev => { return [newShortUrl, ...prev]); }
@@ -120,16 +120,16 @@ alias
     return result
   },
 
-const copyToClipboard = ("text": string) => {
+const copyToClipboard = ('text': string) => {
     }
     navigator.clipboard.writeText(text);
   }
 
-const incrementClicks = ("id": number) => {
+const incrementClicks = ('id': number) => {
     }
     setShortenedUrls(prev =>
       prev.map(url =>
-        url.id === id ? { ...url, "clicks": url.clicks + 1
+        url.id === id ? { ...url, 'clicks': url.clicks + 1
 } : url
       )
 
@@ -146,11 +146,11 @@ const incrementClicks = ("id": number) => {
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2  } from 'lucide-react';
 import React, { useState } from 'react',import Head from 'next/head',import Card from '../components/ui/Card',import Button from '../components/ui/Button';
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2  } from 'lucide-react';
-export default function URLShortenerPage() {Link,Copy,BarChart3,ArrowRight,RefreshCw,CheckCircle,ExternalLink,QrCode,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+export default function URLShortenerPage() {Link,Copy,BarChart3,ArrowRight,RefreshCw,CheckCircle,ExternalLink,QrCode,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 
-const deleteUrl = ("id": number) => {
+const deleteUrl = ('id': number) => {
     }
     setShortenedUrls(prev => { return prev.filter(url => url.id !== id)); }
   }
@@ -173,9 +173,9 @@ const getTotalUrls = () => {
 <meta;
           name='description';'
           content='Create short, memorable URLs with our professional URL shortening service. Track clicks, generate QR codes, and manage your links efficiently.';' />;
-        <meta property='"og":title' content='URL Shortener - Zion Tech Group' />;'
+        <meta property=''og':title' content='URL Shortener - Zion Tech Group' />;'
         <meta;
-          property='"og":description';'
+          property=''og':description';'
           content='Professional URL shortening service with analytics and QR code generation.';' />;
       </Head>;
       {/* Hero Section */}
@@ -189,14 +189,14 @@ const getTotalUrls = () => {
     }
 
       <section className='pt-32 pb-20 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900'>'
-        <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center'>'
+        <div className='max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8 text-center'>'
           <div className='mb-8'>'
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-orange-500/20 border border-orange-400/30 text-orange-300 text-sm font-medium mb-6'>'
               <Link className='w-4 h-4 mr-2' />'
               Professional URL Shortening
             </div>
           </div>
-          <h1 className='text-4xl "sm":text-5xl "lg":text-6xl font-bold text-white mb-8 leading-tight'>'
+          <h1 className='text-4xl 'sm':text-5xl 'lg':text-6xl font-bold text-white mb-8 leading-tight'>'
             URL Shortener
           </h1>
           <p className='text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed'>'
@@ -208,9 +208,9 @@ professional shortening service. Track clicks, generate QR codes,
       </section>
 
 <section className='py-20 bg-gray-900'>'
-        <div className='max-w-6xl mx-auto px-4 "sm":px-6 "lg":px-8'>'
+        <div className='max-w-6xl mx-auto px-4 'sm':px-6 'lg':px-8'>'
           <div className='text-center mb-16'>'
-            <h2 className='text-3xl "sm":text-4xl font-bold text-white mb-6'>'
+            <h2 className='text-3xl 'sm':text-4xl font-bold text-white mb-6'>'
               Create Short URLs Instantly
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>'
@@ -218,7 +218,7 @@ professional shortening service. Track clicks, generate QR codes,
 links in seconds.
             </p>
           </div>
-          <div className='grid grid-cols-1 "lg": grid-cols-2 gap-8'>'
+          <div className='grid grid-cols-1 'lg': grid-cols-2 gap-8'>'
 
             {/* Input Form *
 }
@@ -237,8 +237,8 @@ links in seconds.
                     type='url';'
                     value={longUrl}
                     onChange={e => { return setLongUrl(e.target.value)}
-                    placeholder='"https"://example.com/very-long-url-that-needs-shortening'; }'
-                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 "focus":outline-none "focus":ring-2 "focus":ring-orange-500 "focus":border-transparent';'
+                    placeholder=''https'://example.com/very-long-url-that-needs-shortening'; }'
+                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 'focus':outline-none 'focus':ring-2 'focus':ring-orange-500 'focus':border-transparent';'
                   />;
                 </div>;
                 {/* Custom Alias */}
@@ -254,7 +254,7 @@ links in seconds.
                       value={customAlias}
                       onChange={e => { return setCustomAlias(e.target.value)}
                       placeholder='my-custom-link'; }'
-                      className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-r-lg text-white placeholder-gray-400 "focus":outline-none "focus":ring-2 "focus":ring-orange-500 "focus":border-transparent';'
+                      className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-r-lg text-white placeholder-gray-400 'focus':outline-none 'focus':ring-2 'focus':ring-orange-500 'focus':border-transparent';'
                     />;
                   </div>;
                   <p className='text-xs text-gray-400 mt-1'>;'
@@ -265,12 +265,12 @@ links in seconds.
                   onClick={generateShortUrl}
                   disabled={!longUrl.trim() || isShortening}
                     onChange={(e) => setLongUrl(e.target.value)}
-                    placeholder="https://example.com/very-long-url-that-needs-shortening"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    placeholder='https://example.com/very-long-url-that-needs-shortening'
+                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   />
                 </div>
 
-className='w-full bg-gradient-to-r from-orange-600 to-red-600 "hover": from-orange-700 "hover":to-red-700 text-white py-4 text-lg font-semibold "disabled":opacity-50 "disabled":cursor-not-allowed''
+className='w-full bg-gradient-to-r from-orange-600 to-red-600 'hover': from-orange-700 'hover':to-red-700 text-white py-4 text-lg font-semibold 'disabled':opacity-50 'disabled':cursor-not-allowed''
                 >
                   {isShortening ? (
                     <>
@@ -319,19 +319,19 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-
                       <RefreshCw className='w-5 h-5 mr-2 animate-spin' />                      Creating Short URL...;
                     </>;
                   ) : (<>;
-                      <Link className='w-5 h-5 mr-2' />                      Create Short URL                  className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed";
+                      <Link className='w-5 h-5 mr-2' />                      Create Short URL                  className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed';
                 >;
                   {isShortening ? (<>;
-                      <RefreshCw className="w-5 h-5 mr-2 animate-spin" />;
+                      <RefreshCw className='w-5 h-5 mr-2 animate-spin' />;
                       Creating Short URL...;
                     </>;
                   ) : (<>;
-                      <Link className='w-5 h-5 mr-2' />                      <Link className="w-5 h-5 mr-2" />;
+                      <Link className='w-5 h-5 mr-2' />                      <Link className='w-5 h-5 mr-2' />;
                       Create Short URL;
                     </>;
                   )}
                 </Button>;
-                <div className='text-sm text-gray-400'>                  <p>• Professional, branded short URLs</p>                <div className="text-sm text-gray-400">;
+                <div className='text-sm text-gray-400'>                  <p>• Professional, branded short URLs</p>                <div className='text-sm text-gray-400'>;
                   <p>• Professional, branded short URLs</p>;
                   <p>• Click tracking and analytics</p>;
                   <p>• QR code generation</p>;
@@ -385,28 +385,28 @@ short URL to get started.
                             <div className='text-xs text-gray-400 truncate'>;'
                               {url.longUrl}
                     </div>
-                    <div className="text-sm text-gray-400">Total Clicks</div>
+                    <div className='text-sm text-gray-400'>Total Clicks</div>
                   </div>
                 </div>
 
                 {shortenedUrls.length === 0 ? (
-                  <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
-                    <div className="text-6xl mb-4">📊</div>
-                    <p className="text-gray-400">
+                  <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
+                    <div className='text-6xl mb-4'>📊</div>
+                    <p className='text-gray-400'>
                       Your URL statistics will appear here. Create your first short URL to get started.
                     </p>
                   </div>
                 ) : (
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white mb-3">Recent URLs</h4>
+                  <div className='space-y-3'>
+                    <h4 className='text-lg font-semibold text-white mb-3'>Recent URLs</h4>
                     {shortenedUrls.slice(0, 3).map((url) => (
-                      <div key={url.id} className="p-3 bg-gray-700 rounded-lg">
-                        <div className="flex items-center justify-between">
-                          <div className="flex-1 min-w-0">
-                            <div className="text-sm text-orange-400 font-medium truncate">
+                      <div key={url.id} className='p-3 bg-gray-700 rounded-lg'>
+                        <div className='flex items-center justify-between'>
+                          <div className='flex-1 min-w-0'>
+                            <div className='text-sm text-orange-400 font-medium truncate'>
                               {url.shortUrl}
                             </div>
-                            <div className="text-xs text-gray-400 truncate">
+                            <div className='text-xs text-gray-400 truncate'>
                               {url.longUrl}
                             </div>
                           </div>
@@ -423,9 +423,9 @@ short URL to get started.
       {shortenedUrls.length > 0 && (
 
 <section className='py-20 bg-gray-800'>'
-          <div className='max-w-6xl mx-auto px-4 "sm": px-6 "lg":px-8'>'
+          <div className='max-w-6xl mx-auto px-4 'sm': px-6 'lg':px-8'>'
             <div className='text-center mb-16'>'
-              <h2 className='text-3xl "sm":text-4xl font-bold text-white mb-6'>'
+              <h2 className='text-3xl 'sm':text-4xl font-bold text-white mb-6'>'
                 }
                 Your Shortened URLs
               </h2>
@@ -441,12 +441,12 @@ short URL to get started.
 key={url && url.i
 }
                   className='p-6 bg-gray-700 border border-gray-600'>;'
-                  <div className='grid grid-cols-1 "lg":grid-cols-3 gap-6'>;'
-            <div className="space-y-4">;"
-              {shortenedUrls.map((url) => (<Card key={url.id} className="p-6 bg-gray-700 border border-gray-600">;"
-                  <div className="grid grid-cols-1 "lg":grid-cols-3 gap-6">;"
+                  <div className='grid grid-cols-1 'lg':grid-cols-3 gap-6'>;'
+            <div className='space-y-4'>;'
+              {shortenedUrls.map((url) => (<Card key={url.id} className='p-6 bg-gray-700 border border-gray-600'>;'
+                  <div className='grid grid-cols-1 'lg':grid-cols-3 gap-6'>;'
                     {/* URL Info */}
-                    <div className='"lg":col-span-2'>;'
+                    <div className=''lg':col-span-2'>;'
                       <div className='flex items-start justify-between mb-4'>;'
                         <div className='flex-1'>;'
                           <div className='flex items-center space-x-3 mb-2'>;'
@@ -464,22 +464,22 @@ key={url && url.i
                             <span>;
                               Created:{' '}{url.clicks}
                         </div>;
-                        <div className="text-xs text-gray-400">Total Clicks</div>;
+                        <div className='text-xs text-gray-400'>Total Clicks</div>;
                       </div>;
-                      <div className="flex space-x-2">;
+                      <div className='flex space-x-2'>;
                         <Button;
                               Created:{' '}
                 Manage and track all your shortened URLs in one place.
               </p>
             </div>
 
-                              "Created": {' '}'
+                              'Created': {' '}'
 
 
                               {new Date(url.createdAt).toLocaleDateString(
 }
                             </span>;
-                            <span>"Alias": {url.alia
+                            <span>'Alias': {url.alia
 }</span>;
                           </div>;
                         </div>;
@@ -501,7 +501,7 @@ key={url && url.i
 
 variant='outline';'
                           size='sm''
-                          className='flex-1 border-gray-600 text-gray-300 "hover": bg-gray-600''
+                          className='flex-1 border-gray-600 text-gray-300 'hover': bg-gray-600''
                         >
                           <Copy className='w-4 h-4 mr-2' />'
                           Copy
@@ -511,7 +511,7 @@ onClick={() => incrementClicks(url.id
 }
 variant='outline';'
                           size='sm''
-                          className='flex-1 border-gray-600 text-gray-300 "hover":bg-gray-600''
+                          className='flex-1 border-gray-600 text-gray-300 'hover':bg-gray-600''
                         >
                           <ExternalLink className='w-4 h-4 mr-2' />'
                           Visit
@@ -527,7 +527,7 @@ onClick={() =>;
 
 variant='outline';'
                           size='sm''
-                          className='flex-1 border-gray-600 text-gray-300 "hover": bg-gray-600''
+                          className='flex-1 border-gray-600 text-gray-300 'hover': bg-gray-600''
                         >
                           <QrCode className='w-4 h-4 mr-2' />'
                           QR Code
@@ -537,7 +537,7 @@ onClick={() => deleteUrl(url.id
 }
 variant='outline';'
                           size='sm';'
-                          className='border-red-600 text-red-400 "hover":bg-red-600 "hover":text-white'>'
+                          className='border-red-600 text-red-400 'hover':bg-red-600 'hover':text-white'>'
 
                           <Trash2 className='w-4 h-4' />;'
                         </Button>;
@@ -576,16 +576,16 @@ variant='outline';'
       {/* Features */}
 
 <section className='py-20 bg-gray-900'>'
-        <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>'
+        <div className='max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8'>'
           <div className='text-center mb-16'>'
-            <h2 className='text-3xl "sm":text-4xl font-bold text-white mb-6'>'
+            <h2 className='text-3xl 'sm':text-4xl font-bold text-white mb-6'>'
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>'
               Everything you need to create, manage, and track your shortened,
 URLs effectively.
             </p>
           </div>
-          <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
+          <div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-3 gap-8'>'
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>'
               <div className='text-4xl mb-4'>🔗</div>'
               <h3 className='text-xl font-bold text-white mb-4'>'
@@ -652,9 +652,9 @@ as needed.
 
       {/* Use Cases */}
 <section className='py-20 bg-gray-800'>'
-        <div className='max-w-6xl mx-auto px-4 "sm":px-6 "lg":px-8'>'
+        <div className='max-w-6xl mx-auto px-4 'sm':px-6 'lg':px-8'>'
           <div className='text-center mb-16'>'
-            <h2 className='text-3xl "sm":text-4xl font-bold text-white mb-6'>'
+            <h2 className='text-3xl 'sm':text-4xl font-bold text-white mb-6'>'
               Perfect For Every Business Need
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>'
@@ -662,7 +662,7 @@ as needed.
 all your link management needs.
             </p>
           </div>
-          <div className='grid grid-cols-1 "md":grid-cols-2 gap-8'>'
+          <div className='grid grid-cols-1 'md':grid-cols-2 gap-8'>'
             <Card className='p-8 bg-gray-700 border border-gray-600'>'
               <div className='text-4xl mb-4'>📢</div>'
               <h3 className='text-2xl font-bold text-white mb-4'>'
@@ -733,18 +733,18 @@ materials for easy access and tracking.
 
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-orange-600 to-red-600'>'
-        <div className='max-w-4xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center'>'
-          <h2 className='text-3xl "sm":text-4xl font-bold text-white mb-6'>'
+        <div className='max-w-4xl mx-auto px-4 'sm':px-6 'lg':px-8 text-center'>'
+          <h2 className='text-3xl 'sm':text-4xl font-bold text-white mb-6'>'
           </h2>
           <p className='text-xl text-orange-100 mb-8'>'
             Join thousands of businesses using our professional URL shortening,
 service to improve their link management.
           </p>
-          <div className='flex flex-col "sm":flex-row gap-4 justify-center'>'
+          <div className='flex flex-col 'sm':flex-row gap-4 justify-center'>'
             <Button,
 href='/contact''
               size='lg''
-              className='bg-white text-orange-600 "hover":bg-gray-100''
+              className='bg-white text-orange-600 'hover':bg-gray-100''
             >
               Get Started Today
               <ArrowRight className='w-5 h-5 ml-2' />'
@@ -753,7 +753,7 @@ href='/contact''
 href='/pricing''
 variant='outline';'
               size='lg''
-              className='border-white text-white "hover":bg-white "hover":text-orange-600''
+              className='border-white text-white 'hover':bg-white 'hover':text-orange-600''
             >
               View Pricing
             </Button>
@@ -835,18 +835,18 @@ variant='outline';'
           </div>;
         </div>;
       </section>;
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
               From marketing campaigns to social media, our URL shortener serves all your link management needs.;
             </p>;
           </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📢</div>;
-              <h3 className="text-2xl font-bold text-white mb-4">Marketing Campaigns</h3>;
-              <p className="text-gray-400 mb-6">;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+            <Card className='p-8 bg-gray-700 border border-gray-600'>;
+              <div className='text-4xl mb-4'>📢</div>;
+              <h3 className='text-2xl font-bold text-white mb-4'>Marketing Campaigns</h3>;
+              <p className='text-gray-400 mb-6'>;
                 Create trackable links for email marketing, social media campaigns, and advertising to measure ROI and engagement.;
               </p>;
-              <ul className="space-y-2 text-gray-300">;
+              <ul className='space-y-2 text-gray-300'>;
       {/* Use Cases */}
 <section className='py-20 bg-gray-800'>;
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -875,21 +875,21 @@ variant='outline';'
                 <li>• Optimize marketing strategies</li>;
               </ul>;
             </Card>;
-              <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>;
-              <p className="text-gray-400 mb-6">;
+              <h3 className='text-2xl font-bold text-white mb-4'>Social Media</h3>;
+              <p className='text-gray-400 mb-6'>;
                 Share concise, professional links on social platforms with built-in analytics to understand audience engagement.;
               </p>;
-              <ul className="space-y-2 text-gray-300">;
-              <h3 className="text-2xl font-bold text-white mb-4">Email Marketing</h3>;
-              <p className="text-gray-400 mb-6">;
+              <ul className='space-y-2 text-gray-300'>;
+              <h3 className='text-2xl font-bold text-white mb-4'>Email Marketing</h3>;
+              <p className='text-gray-400 mb-6'>;
                 Include short, trackable URLs in newsletters and promotional emails to monitor subscriber engagement.;
               </p>;
-              <ul className="space-y-2 text-gray-300">;
-              <h3 className="text-2xl font-bold text-white mb-4">Business Presentations</h3>;
-              <p className="text-gray-400 mb-6">;
+              <ul className='space-y-2 text-gray-300'>;
+              <h3 className='text-2xl font-bold text-white mb-4'>Business Presentations</h3>;
+              <p className='text-gray-400 mb-6'>;
                 Use short URLs in presentations, business cards, and printed materials for easy access and tracking.;
               </p>;
-              <ul className="space-y-2 text-gray-300">;
+              <ul className='space-y-2 text-gray-300'>;
 <Card className='p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>📱</div>;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1006,10 +1006,10 @@ variant='outline';'
               </h3>;
               <p className='text-gray-400'>;
                 Simple dashboard to manage, edit, and delete your shortened URLs;
-                as needed.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🔧</div>;
-              <h3 className="text-xl font-bold text-white mb-4">Easy Management</h3>;
-              <p className="text-gray-400">;
+                as needed.              </p>            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
+              <div className='text-4xl mb-4'>🔧</div>;
+              <h3 className='text-xl font-bold text-white mb-4'>Easy Management</h3>;
+              <p className='text-gray-400'>;
                 Simple dashboard to manage, edit, and delete your shortened URLs as needed.;
             </Card>;
           </div>;
@@ -1070,4 +1070,3 @@ variant='outline';'
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

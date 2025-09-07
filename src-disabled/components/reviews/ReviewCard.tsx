@@ -642,7 +642,7 @@ return (<div className="border rounded - lg p - 4 bg - card"> <div className="fl
   !report_reason.trim () || is_reporting;
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);
 }"}
-}}}
+}}
                   {review.reviewer_profile?.display_name ? 
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;

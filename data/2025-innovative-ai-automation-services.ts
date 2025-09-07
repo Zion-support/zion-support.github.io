@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import { ServiceVariant  } from '../types/service-variants';'
 export interface InnovativeAIAutomationService  {"id": string;
@@ -179,11 +175,11 @@ ursor/fix-website-loading-errors-and-merge-6662;
     "customers": 234;
     "rating": 4.8;
     "reviews": 167;}
-];;
+];
   }
 ];ursor/fix-website-loading-errors-and-merge-6662;
   }
-];;
+];
 import { ServiceVariant } from '../types/service-variants',export interface InnovativeAIAutomationService  {"id": string,"name": string,"tagline": string,"price": string,"period": string,"description": string,"features": string[],"popular": boolean,"icon": string,"color": string,"textColor": string,"link": string,"marketPosition": string,"targetAudience": string,"trialDays": number,"setupTime": string,"category": string,"realService": boolean,"technology": string[],"integrations": string[],"useCases": string[],"roi": string,"competitors": string[],"marketSize": string,"growthRate": string,"variant": ServiceVariant,"contactInfo": {"mobile": string,"email": string,"address": string,"website": string;'
   },"realImplementation": boolean,"implementationDetails": string,"launchDate": string,"customers": number,"rating": number,"reviews": number;
 }const contact = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
@@ -514,7 +510,7 @@ export const "innovativeAIAutomationServices": InnovativeAIAutomationService[] =
     rating: 4.8;,
   reviews: 167;
   }
-];;
+];
 export interface InnovativeAIAutomationService  {"id": string,"name": string,"tagline": string,"price": string,"period": string,"description": string,"features": string[],"popular": boolean,"icon": string,"color": string,"textColor": string,"link": string,"marketPosition": string,"targetAudience": string,"trialDays": number,"setupTime": string,"category": string,"realService": boolean,"technology": string[],"integrations": string[],"useCases": string[],"roi": string,"competitors": string[],"marketSize": string,"growthRate": string,"variant": ServiceVariant,"contactInfo": {"mobile": string,"email": string,"address": string,"website": string;
   },"realImplementation": boolean,"implementationDetails": string,"launchDate": string,"customers": number,"rating": number,"reviews": number;
 }const contact = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
@@ -710,17 +706,12 @@ export const "innovativeAIAutomationServices": InnovativeAIAutomationService[] =
 ];
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 rating: 4.8;
 reviews: 167 
 }];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
   }
 ];
 
@@ -728,16 +719,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   }
 ];
-=======
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
   }
 ];
-<<<<<<< HEAD
   // Autonomous Data Analytics Platform
   {
     id: 'autonomous-data-analytics',
@@ -813,23 +798,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.8,
     reviews: 167}
 ],
-=======
 
 
-<<<<<<< HEAD
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 rating: 4.8;
 reviews: 167 
 }];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -62,7 +62,7 @@ ref={ref}
     <ProgressPrimitive.Indicator,
 export { Progress };
 
-      style={{ "transform": `translateX(-${100 - (value || 0)}%)` }}` />;  </ProgressPrimitive && ProgressPrimitive.Root>;
+      style={ "transform": `translateX(-${100 - (value || 0)}%)` }` />;  </ProgressPrimitive && ProgressPrimitive.Root>;
 ));
 Progress && Progress.displayName = ProgressPrimitive && ProgressPrimitive.Root.displayName;
 
@@ -96,7 +96,7 @@ const Progress = React.forward_ref<;
   >;
     <ProgressPrimitive.Indicator;
       className='h - full w - full flex - 1 bg - primary transition - all';'
-      style={{ "transform": `translate_x (-${100 - (value || 0)}%)` }}` />;
+      style={ "transform": `translate_x (-${100 - (value || 0)}%)` }` />;
   </ProgressPrimitive.Root>));
 Progress.display_name = ProgressPrimitive.Root.display_name;
 ;
@@ -104,7 +104,7 @@ export { Progress }
 ;
 
       className='h-full w-full flex-1 bg-primary transition-all'
-      style={{ transform: `translateX(-${100 - (value |0)}%)` }}
+      style={ transform: `translateX(-${100 - (value |0)}%)` }
     />
   </ProgressPrimitive.Root>
 ));

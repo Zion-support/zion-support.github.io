@@ -105,8 +105,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   }, [projectId]),
@@ -220,10 +220,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 
-        {error && <div className="text-red-600">{error}</div>}
+        {error && <div className='text-red-600'>{error}</div>}
 
         {!loading && !error && (
-          <div className="space-y-4">
+          <div className='space-y-4'>
             {milestones.length === 0 && (
               <div className='text-gray-600'>
                 No milestones yet.{' '}

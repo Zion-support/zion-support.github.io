@@ -45,7 +45,7 @@ export default function WhitelabelManager() {;
   const [activeTab, setActiveTab] = useState("tenants"),;"
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";"
-  if (!isAdmin) {;;
+  if (!isAdmin) {;
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;"
             <TabsList className="mb-8">;"
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;"

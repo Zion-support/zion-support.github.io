@@ -1,109 +1,109 @@
 import { IntegrationProviderMeta } from './types';'
 
-export const "PROVIDERS": IntegrationProviderMeta[] = [
+export const 'PROVIDERS': IntegrationProviderMeta[] = [
   {
     }
-    "id": 'salesforce','
-    "name": 'Salesforce','
-    "category": 'crm','
-    "description": 'Enterprise CRM platform','
-    "icon": 'salesforce','
-    "isActive": true,
-    "configSchema": {
+    'id': 'salesforce','
+    'name': 'Salesforce','
+    'category': 'crm','
+    'description': 'Enterprise CRM platform','
+    'icon': 'salesforce','
+    'isActive': true,
+    'configSchema': {
       }
-      "type": 'object','
-      "properties": {
+      'type': 'object','
+      'properties': {
         }
-        "apiKey": { "type": 'string' },'
-        "instanceUrl": { "type": 'string' }'
+        'apiKey': { 'type': 'string' },'
+        'instanceUrl': { 'type': 'string' }'
       },
-      "required": ['apiKey', 'instanceUrl']'
+      'required': ['apiKey', 'instanceUrl']'
     }
   },
   {
     }
-    "id": 'hubspot','
-    "name": 'HubSpot','
-    "category": 'crm','
-    "description": 'Inbound marketing and sales platform','
-    "icon": 'hubspot','
-    "isActive": true,
-    "configSchema": {
+    'id': 'hubspot','
+    'name': 'HubSpot','
+    'category': 'crm','
+    'description': 'Inbound marketing and sales platform','
+    'icon': 'hubspot','
+    'isActive': true,
+    'configSchema': {
       }
-      "type": 'object','
-      "properties": {
+      'type': 'object','
+      'properties': {
         }
-        "apiKey": { "type": 'string' },'
-        "portalId": { "type": 'string' }'
+        'apiKey': { 'type': 'string' },'
+        'portalId': { 'type': 'string' }'
       },
-      "required": ['apiKey', 'portalId']'
+      'required': ['apiKey', 'portalId']'
     }
   },
   {
     }
-    "id": 'slack','
-    "name": 'Slack','
-    "category": 'communication','
-    "description": 'Team communication platform','
-    "icon": 'slack','
-    "isActive": true,
-    "configSchema": {
+    'id': 'slack','
+    'name': 'Slack','
+    'category': 'communication','
+    'description': 'Team communication platform','
+    'icon': 'slack','
+    'isActive': true,
+    'configSchema': {
       }
-      "type": 'object','
-      "properties": {
+      'type': 'object','
+      'properties': {
         }
-        "token": { "type": 'string' },'
-        "channel": { "type": 'string' }'
+        'token': { 'type': 'string' },'
+        'channel': { 'type': 'string' }'
       },
-      "required": ['token', 'channel']'
+      'required': ['token', 'channel']'
     }
   },
   {
     }
-    "id": 'discord','
-    "name": 'Discord','
-    "category": 'communication','
-    "description": 'Voice and text communication platform','
-    "icon": 'discord','
-    "isActive": true,
-    "configSchema": {
+    'id': 'discord','
+    'name': 'Discord','
+    'category': 'communication','
+    'description': 'Voice and text communication platform','
+    'icon': 'discord','
+    'isActive': true,
+    'configSchema': {
       }
-      "type": 'object','
-      "properties": {
+      'type': 'object','
+      'properties': {
         }
-        "token": { "type": 'string' },'
-        "channelId": { "type": 'string' }'
+        'token': { 'type': 'string' },'
+        'channelId': { 'type': 'string' }'
       },
-      "required": ['token', 'channelId']'
+      'required': ['token', 'channelId']'
     }
   },
   {
     }
-    "id": 'github','
-    "name": 'GitHub','
-    "category": 'development','
-    "description": 'Code repository and collaboration platform','
-    "icon": 'github','
-    "isActive": true,
-    "configSchema": {
+    'id': 'github','
+    'name': 'GitHub','
+    'category': 'development','
+    'description': 'Code repository and collaboration platform','
+    'icon': 'github','
+    'isActive': true,
+    'configSchema': {
       }
-      "type": 'object','
-      "properties": {
+      'type': 'object','
+      'properties': {
         }
-        "token": { "type": 'string' },'
-        "repository": { "type": 'string' }'
+        'token': { 'type': 'string' },'
+        'repository': { 'type': 'string' }'
       },
-      "required": ['token', 'repository']'
+      'required': ['token', 'repository']'
     }
   }
 ];
 
-export function getProviderById("id": string): IntegrationProviderMeta | undefined {
+export function getProviderById('id': string): IntegrationProviderMeta | undefined {
   }
   return PROVIDERS.find(provider => { return provider.id === id); }
 }
 
-export function getProvidersByCategory("category": string): IntegrationProviderMeta[] {
+export function getProvidersByCategory('category': string): IntegrationProviderMeta[] {
   }
   return PROVIDERS.filter(provider => { return provider.category === category); }
 }

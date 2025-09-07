@@ -48,7 +48,7 @@ title="AI Services - Zion Tech Group""
           <div className="text-center">;"
             <p className="text-gray-600">;"
 import React from './react';'
-import Layout from "../components / Layout";;"
+import Layout from "../components / Layout";"
 export default /**
  * AIServices - Function description
  */
@@ -164,9 +164,9 @@ title="AI Services - Zion Tech Group""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
         <div className="container mx-auto px-4 py-16">"
           <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.6 }}
+initial={ "opacity": 0, "y": 20 }
+            animate={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.6 }
             className="text-center mb-16""
           >
             <h1 className="text-5xl font-bold text-white mb-6">"
@@ -183,9 +183,9 @@ initial={{ "opacity": 0, "y": 20 }}
               <motion.div
 }
 key={index}
-                initial={{ "opacity": 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.6, "delay": index * 0.1 }
                 className="text-center""
               >
                 <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>"
@@ -199,9 +199,9 @@ key={index}
               <motion.div
 }
 key={index}
-                initial={{ "opacity": 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.6, "delay": index * 0.1 }
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20""
               >
                 <div className="flex items-center mb-4">"
@@ -250,9 +250,9 @@ href="/contact""
           </div>
 
           <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.6, "delay": 0.8 }}
+initial={ "opacity": 0, "y": 20 }
+            animate={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.6, "delay": 0.8 }
             className="bg-blue-600 rounded-xl p-8 text-center""
           >
             <h2 className="text-3xl font-bold text-white mb-4">"
@@ -311,7 +311,7 @@ title="AI Services - Zion Tech Group""
         <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">"
           <div className="container mx-auto px-6 text-center">"
             <motion.div,
-initial={{ "opacity": 0, "y": 30 }  } catch (error) {
+initial={ "opacity": 0, "y": 30 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
@@ -323,7 +323,7 @@ initial={{ "opacity": 0, "y": 30 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
-              animate={{ "opacity": 1, "y": 0 }  } catch (error) {
+              animate={ "opacity": 1, "y": 0 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
@@ -335,7 +335,7 @@ initial={{ "opacity": 0, "y": 30 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
-              transition={{ "duration": 0.8 }  } catch (error) {
+              transition={ "duration": 0.8 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
@@ -356,7 +356,7 @@ initial={{ "opacity": 0, "y": 30 }  } catch (error) {
               </p>
               <div className="flex flex-col "sm":flex-row gap-4 justify-center">"
                 <motion.button,
-whileHover={{ "scale": 1.05 }  } catch (error) {
+whileHover={ "scale": 1.05 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
@@ -368,7 +368,7 @@ whileHover={{ "scale": 1.05 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
-                  whileTap={{ "scale": 0.95 }  } catch (error) {
+                  whileTap={ "scale": 0.95 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
@@ -390,7 +390,7 @@ AI Services That Transform Businesses
               </p>
               <div className="flex flex-wrap justify-center gap-4">"
                 <motion.button,
-whileHover={{ "scale": 1.05 }  } catch (error) {
+whileHover={ "scale": 1.05 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
@@ -402,7 +402,7 @@ whileHover={{ "scale": 1.05 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
-                  whileTap={{ "scale": 0.95 }  } catch (error) {
+                  whileTap={ "scale": 0.95 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
@@ -419,7 +419,7 @@ whileHover={{ "scale": 1.05 }  } catch (error) {
                   Get AI Consultation
                 </motion.button>
                 <motion.button,
-whileHover={{ "scale": 1.05 }  } catch (error) {
+whileHover={ "scale": 1.05 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
@@ -431,7 +431,7 @@ whileHover={{ "scale": 1.05 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
-                  whileTap={{ "scale": 0.95 }  } catch (error) {
+                  whileTap={ "scale": 0.95 }  } catch (error) {
     }
     console.error(""Error":", error);"
     return res.status(500).json({ "error": "Internal server error" });"
@@ -472,7 +472,7 @@ title="AI Services - Zion Tech Group""
             </p>;
           </div>;
           <div className="text-center">;"
-            <p className="text-gray-600">;;"
+            <p className="text-gray-600">;"
 export default /**
  * AIServices - Function description
  */
@@ -570,9 +570,9 @@ export default function AIServices() {
         <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">"
           <div className="container mx-auto px-6 text-center">"
             <motion.div,
-initial={{ "opacity": 0, "y": 30 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "y": 30 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
             >
               <h1 className="text-5xl "md":text-6xl font-bold mb-6 text-white">"
                 AI Services
@@ -582,15 +582,15 @@ initial={{ "opacity": 0, "y": 30 }}
               </p>
               <div className="flex flex-col "sm":flex-row gap-4 justify-center">"
                 <motion.button,
-whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
+whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 }
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold "hover":bg-gray-100 transition-colors""
                 >
                   Get Started
                 </motion.button>
                 <motion.button,
-whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
+whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 }
                   className="border-2 border-white text-white "hover":bg-white "hover":text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors""
                 >
                   Schedule Demo

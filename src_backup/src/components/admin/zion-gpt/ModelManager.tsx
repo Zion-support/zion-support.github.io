@@ -26,14 +26,14 @@ interface ModelVersionData extends ModelConfig  {"trainingStatus": 'queued' | 'r
       // Update this model;
       await supabase;
         .from('model_versions').update({ "active": !currentActive }).eq('id', modelId)// Refresh the model list;'
-      fetchModels()} catch (error) {logErrorToProduction('Error toggling model active "state":', { "data": error })}} catch (error) {logErrorToProduction ('Error toggling model active "state":', { "data": error })}.order('createdAt', { "ascending": false }),const toggleModelActive = async ("modelId": string, "currentActive": boolean, "purpose": string,) => {try {// If activating, deactivate all other models with the same purpose;'
+      fetchModels()} catch (error) {logErrorToProduction('Error toggling model active "state":', { "data": error })} catch (error) {logErrorToProduction ('Error toggling model active "state":', { "data": error })}.order('createdAt', { "ascending": false }),const toggleModelActive = async ("modelId": string, "currentActive": boolean, "purpose": string,) => {try {// If activating, deactivate all other models with the same purpose;'
       }
       if (!currentActive) {await supabase;
           .from('model_versions').update({ "active": false }).eq('purpose', purpose)}// Update this model;'
       await supabase;
         .from('model_versions').update({ "active": !currentActive }).eq('id', modelId),// Refresh the model list;'
       fetchModels()} catch (error) {logErrorToProduction('Error toggling model active "state":', { "data": error })}'
-  }},export function ZionGPTModelManager() {const [models, setModels] = useState<ModelVersionData[]>([]),const [isLoading, setIsLoading] = useState(true)const [activeJobs, setActiveJobs] = useState<{["key": string]: boolean}>({}),// Fetch model data on component mount;
+  },export function ZionGPTModelManager() {const [models, setModels] = useState<ModelVersionData[]>([]),const [isLoading, setIsLoading] = useState(true)const [activeJobs, setActiveJobs] = useState<{["key": string]: boolean}>({}),// Fetch model data on component mount;
   useEffect(() => {fetchModels()}, []),const fetchModels  = null;return (<Card className="w-full">;"
       <CardHeader className="flex flex-row items-center justify-between">;"
         <div>;
@@ -124,7 +124,7 @@ interface ModelVersionData extends ModelConfig  {"trainingStatus": 'queued' | 'r
           </Table>;
         )}</CardContent>;
     </Card>;
-  )}}},return (<Card className="w - full">;"
+  )}},return (<Card className="w - full">;"
       <CardHeader className="flex flex - row items - center justify - between">;"
         <div>;
           <CardTitle > ZionGPT Models</CardTitle>;
@@ -194,7 +194,7 @@ interface ModelVersionData extends ModelConfig  {"trainingStatus": 'queued' | 'r
             </TableBody>;
           </Table>)}
       </CardContent>;
-    </Card>)}}</CardContent>;
+    </Card>)}</CardContent>;
     </Card>;
   )}return (<Card className="w-full" > <CardHeader className="flex flex-row items-center justify-between" > <div> <CardTitle>ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead>Model ID</TableHead> <TableHead>Version</TableHead> <TableHead>Purpose</TableHead> <TableHead>Base Model</TableHead> <TableHead>Status</TableHead> <TableHead>Created</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {models.map ( (model) => (<TableRow key= {model.id '";"
 }>) : model.trainingStatus === 'failed' ? (<Badge className="bg-red-500" >Failed</Badge>) : model.trainingStatus === 'running' ? (<Badge className="bg-blue-500" >Training</Badge>) : (<Badge className="bg-yellow-500" >Queued</Badge>)}onClick={() => checkTrainingStatus (model.id)}disabled= {activeJobs[model.id] ";"

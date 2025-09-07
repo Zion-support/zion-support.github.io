@@ -127,7 +127,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",;export function PaymentM
         </Button>;
       </CardFooter>;
 }
-}}
+}
   )
 }
   );

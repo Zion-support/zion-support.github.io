@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/support/requests.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/support/requests.ts
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb'
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -49,11 +39,11 @@ export default async function handler(req, res) {
     const requests = readJson<any[]>('support/requests.json', []),;
     return res.status(200).json({ requests });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   return res.status(405).json({ error: 'Method not allowed' })
 };
 

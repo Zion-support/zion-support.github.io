@@ -50,7 +50,7 @@ export function getGitStatus(): { connected: boolean, branch?: string } {
   }
   const adminToken  = process && process.env.ADMIN_TOKEN;if (token && adminToken && token === adminToken) {}
   return { isAuthenticated: false, roles: [] }
-}export function requireRoles() {return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }}
+}export function requireRoles() {return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
   return { isAuthenticated: false, roles: [] }
 }
 

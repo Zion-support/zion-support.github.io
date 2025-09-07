@@ -39,9 +39,9 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Get In Touch
@@ -59,9 +59,9 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, x: -30 }
+              animate={ opacity: 1, x: 0 }
+              transition={ duration: 0.8 }
               className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 p-8 backdrop-blur-xl"
             >
               <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>
@@ -140,9 +140,9 @@ export default function ContactPage() {
 
             {/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, x: 30 }
+              animate={ opacity: 1, x: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className="space-y-8"
             >
               <div>

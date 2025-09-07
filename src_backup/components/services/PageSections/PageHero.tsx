@@ -42,8 +42,6 @@ export function PageHero() {
           <h3 className="text-xl font-bold text-white mb-2">Rapid Response</h3>
           <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import { GradientHeading } from "@/components/GradientHeading";
@@ -268,9 +266,6 @@ function PageHero() {
       </div>;
     </div>);
 }
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>
           <div className='bg-zion-purple/20 p-3 rounded-full mb-4'>
             <DollarSign className='h-8 w-8 text-zion-cyan' />

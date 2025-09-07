@@ -626,7 +626,7 @@ const "Products": NextPage = () => {;"
           </div>;
         </div>;
       </section>;
-      {/* Products Grid */}}`}`              >;
+      {/* Products Grid */}`}`              >;
                 {category}
               </button>;
             ))}

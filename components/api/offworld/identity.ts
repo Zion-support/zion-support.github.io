@@ -19,13 +19,13 @@ const { address } = req.query as { address?: string,;
 
 const profile = await buildIdentityProfile(address);
     return res && res.status(200).json(profile);
-  } catch ("e": any) {
+  } catch ('e': any) {
     }
     const profile = await buildIdentityProfile(address);
     return res && res.status(200).json(profile);
-  } catch ("e": any) {
+  } catch ('e': any) {
 }
-return res && res.status(500).json({ "error": e && e.message,;
+return res && res.status(500).json({ 'error': e && e.message,;
 });
 import type { NextApiRequest, NextApiResponse } from './next';'
 import { buildIdentityProfile  } from '@/utils / offworld / identity';'
@@ -34,7 +34,6 @@ import { buildIdentityProfile  } from '@/utils / offworld / identity';'
   }
     const profile = await buildIdentityProfile(address)return res.status(200).json(profile)} catch (e: any) {return res.status(500).json({ error: e.message })}
     return res.status(500).json({ error: e.message })
-=======
     const profile = await buildIdentityProfile(address)
     return res && res.status(200).json(profile)
   } catch (e: any) {}
@@ -55,9 +54,9 @@ function handler() {
 
 const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
-  } catch ("e": any) {
+  } catch ('e': any) {
 }
-return res.status (500).json ({ "error": e.message,;
+return res.status (500).json ({ 'error': e.message,;
 });
   }
   try {
@@ -66,10 +65,10 @@ return res.status (500).json ({ "error": e.message,;
 
 const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
-  } catch ("e": any) {
+  } catch ('e': any) {
 
 }
 
-return res.status(500).json({ "error": e.message,;
+return res.status(500).json({ 'error': e.message,;
 });
   }

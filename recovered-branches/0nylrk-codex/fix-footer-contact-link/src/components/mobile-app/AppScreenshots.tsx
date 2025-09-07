@@ -18,7 +18,7 @@ export const "AppScreenshots": React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null),;
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory""
-            style={{ "scrollbarWidth": "none", "msOverflowStyle": "none" }}"
+            style={ "scrollbarWidth": "none", "msOverflowStyle": "none" }"
           >
             {mockScreenshots.map((screenshot) => (
               <div
@@ -131,7 +131,7 @@ return (;
           <div;
             ref={scrollContainerRef}
             className="flex overflow - x-auto gap - 4 py - 8 px - 4 scrollbar - hide snap - x snap-mandatory";"
-            style={{ "scrollbar_width": "none", "msOverflowStyle": "none" }}"
+            style={ "scrollbar_width": "none", "msOverflowStyle": "none" }"
           >;
             {mock_screenshots.map ((screenshot) => (
               <div;
@@ -189,7 +189,7 @@ export const AppScreenshots: React.FC = $2;
           <div
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            style={ scrollbarWidth: "none", msOverflowStyle: "none" }
           >
             {mockScreenshots.map((screenshot) => (
               <div 

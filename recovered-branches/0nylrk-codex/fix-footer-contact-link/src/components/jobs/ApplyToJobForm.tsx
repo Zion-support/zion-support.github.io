@@ -278,7 +278,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           disabled={isSubmitting}
           onClick={() => {
             if (onSuccess) onSuccess()
-          }}
+          }
         >
           Cancel
         </Button>

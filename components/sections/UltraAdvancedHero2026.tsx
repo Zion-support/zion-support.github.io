@@ -33,7 +33,6 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
 export default function UltraAdvancedHero2026() {
   }
   const totalServices = null;
-<<<<<<< HEAD
 import {
   }
   ArrowRight,
@@ -188,7 +187,6 @@ variants={containerVariant,;
             variants={itemVariants}
           {/* Main Heading */}
           <motion&& motion.h1;
-<<<<<<< HEAD
             variants={itemVariants}
             className='text-5xl "md":text-7xl "lg":text-8xl font-black leading-tight'>'
 
@@ -248,7 +246,6 @@ variants={itemVariants}
               <div className='text-gray-300 text-sm'>Possibilities</div>;'
             </div>;
           </motion.div>;
-=======
       }
     }
   }
@@ -400,7 +397,6 @@ href='/contact''
               Get Started Today
             </Link>
           </motion.div>
-<<<<<<< HEAD
 
 
             className="flex flex-col "sm":flex-row items-center justify-center space-y-4 "sm":space-y-0 "sm":space-x-6">"
@@ -529,7 +525,6 @@ variants={itemVariants}
                 <div>
                   <div className="text-white font-semibold">Visit Us</div>
                   <div className="text-purple-300 text-sm">{contactInfo.address}</div>
-=======
           {/* Contact Information */}
 
 <motion.div
@@ -565,7 +560,6 @@ variants={itemVariants}
                 <div    />
                   <div className='text-white font-semibold'    />Visit Us</div>
                   <div className='text-purple-300 text-sm'    />
-=======
             className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'
           >
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl'>
@@ -583,11 +577,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
-=======
             </div>'
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>'
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className='text-gray-200 font-medium'>
                 24/7 Autonomous Operation;
               </span>            </div>
@@ -622,7 +614,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >"
               <Zap className="w-6 h-6 mr-3" />
-<<<<<<< HEAD
               </span>
             </div>
           </motion.div>
@@ -646,9 +637,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Zap className='w-6 h-6 mr-3' />
 origin/cursor/automate-test-improve-and-merge-code-2533
               Get Started Today
-=======
               Get Started Today;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Link>
           </motion.div>
 "
@@ -733,11 +722,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>
                   <div className='text-white font-semibold'>Visit Us</div>
                   <div className='text-purple-300 text-sm'>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     {contactInfo.address}
                   </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 </div>
               </div>
             </div>
@@ -803,7 +789,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
             </div>;
-=======
 
             className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-6'    />
@@ -833,7 +818,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div    />
                   <div className='text-white font-semibold'    />Visit Us</div>
                   <div className='text-purple-300 text-sm'    />
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
@@ -871,7 +855,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>;'
                   <div className='text-white font-semibold'>Visit Us</div>;'
                   <div className='text-purple-300 text-sm'>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     {contactInfo && contactInfo.address}
                   </div>                </div>            variants={itemVariants}"
             className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto";
@@ -888,7 +871,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
 "
-<<<<<<< HEAD
             <h3 className=\"text-2xl font-bold text-white mb-6\"    />Ready to Transform Your Business?</h3>;"
             <div className=\"grid grid-cols-1 md:grid-cols-3 gap-6\"    />;"
               <div className=\"flex items-center space-x-3\"    />;"
@@ -919,7 +901,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </motion && motion.div>
           {/* Trust Indicators */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
           {/* Trust Indicators */}
           <motion.div 
@@ -937,7 +918,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Zap className="w-5 h-5 text-purple-400" />
             <div className="flex items-center space-x-2">
               <Zap className="w-5 h-5 text-purple-400" />
-=======
               <div className="flex items-center space-x-3">;"
                 <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">;"
                   <Mail className="w-6 h-6 text-white" />;
@@ -978,18 +958,17 @@ variants={itemVariants}
           </motion.div>
         </motion.div>
       </div>
-<<<<<<< HEAD
 
       {/* Floating Elements *
 }
 <div className='absolute inset-0 pointer-events-none'>'
         <motion.div,
-animate={{
+animate={
             }
             "coordinate_y": [0, 20, 0],
             "rotate": [0, -5, 0]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 8,
 "repeat": Infinity,
@@ -1002,31 +981,31 @@ animate={{
           ⚛️;
         </motion.div>;
         <motion.div;
-          animate={{"coordinate_y": [0, -15, 0],"rotate": [0, 3, 0]}}
-          transition={{"duration": 7;
+          animate={"coordinate_y": [0, -15, 0],"rotate": [0, 3, 0]}
+          transition={"duration": 7;
             }
             "repeat": Infinity;
             "ease": 'easeInOut';'
-          }}
+          }
           className='absolute top - 1/3 left - 10 text - 5xl opacity - 20'>'
 
           🧠;
         </motion.div>;
         <motion.div;
-          animate={{"coordinate_y": [0, 15, 0],"rotate": [0, -3, 0]}}
-          transition={{"duration": 9;
+          animate={"coordinate_y": [0, 15, 0],"rotate": [0, -3, 0]}
+          transition={"duration": 9;
             }
             "repeat": Infinity;
             "ease": 'easeInOut';'
-          }}
-          animate={{ 
+          }
+          animate={ 
             y: [0, -20, 0],
             rotate: [0, 5, 0]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
-          }}
+          }
           className="absolute top-20 right-20 text-6xl opacity-20"
         >
           🚀
@@ -1034,20 +1013,20 @@ animate={{
         
         <motion.div
             ease: "easeInOut"
-          }}
+          }
             rotate: [0, -5, 0]
-          }}
-          transition={{
+          }
+          transition={
             duration: 8
             repeat: Infinity
-          animate={{ 
+          animate={ 
             y: [0, 20, 0],
             rotate: [0, -5, 0]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
-          }}
+          }
           className="absolute bottom-20 left-20 text-6xl opacity-20"
         >
           ⚛️
@@ -1055,20 +1034,20 @@ animate={{
         
         <motion.div
             ease: "easeInOut"
-          }}
+          }
             rotate: [0, 3, 0]
-          }}
-          transition={{
+          }
+          transition={
             duration: 7
             repeat: Infinity
-          animate={{ 
+          animate={ 
             y: [0, -15, 0],
             rotate: [0, 3, 0]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
-          }}
+          }
           className="absolute top-1/3 left-10 text-5xl opacity-20"
         >
           🧠
@@ -1076,11 +1055,10 @@ animate={{
         
         <motion.div
             ease: "easeInOut"
-          }}
-<<<<<<< HEAD
+          }
             rotate: [0, -3, 0]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 9,
 "repeat": Infinity,
@@ -1088,12 +1066,12 @@ animate={{
           
 }
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div'
-          animate={{ 
+          animate={ 
             }
             "y": [0, -20, 0]
             "rotate": [0, 5, 0]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 6,
 "repeat": Infinity,
@@ -1105,12 +1083,12 @@ animate={{
           🚀
         </motion.div>
         <motion.div,
-animate={{
+animate={
             }
             "y": [0, 20, 0]
             "rotate": [0, -5, 0]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 8,
 "repeat": Infinity,
@@ -1122,12 +1100,12 @@ animate={{
           ⚛️
         </motion.div>
         <motion.div,
-animate={{
+animate={
             }
             "y": [0, -15, 0]
             "rotate": [0, 3, 0]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 7,
 "repeat": Infinity,
@@ -1139,12 +1117,12 @@ animate={{
           🧠
         </motion.div>
         <motion.div,
-animate={{
+animate={
             }
             "y": [0, 15, 0]
             "rotate": [0, -3, 0]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 9,
 "repeat": Infinity,
@@ -1154,54 +1132,54 @@ animate={{
 }
           className='absolute bottom-1/3 right-10 text-5xl opacity-20';'
             "ease": "easeInOut";"
-          }}
-          transition={{}
+          }
+          transition={}
             duration: 6,
             repeat: Infinity,"
             ease: "easeInOut";
-          }}"
+          }"
           className="absolute top - 20 right - 20 text - 6xl opacity - 20";
         >;
           🚀;
         </motion.div>;
         <motion.div;
-          animate={{}
+          animate={}
             coordinate_y: [0, 20, 0];
             rotate: [0, -5, 0];
-          }}
-          transition={{}
+          }
+          transition={}
             duration: 8,
             repeat: Infinity,"
             ease: "easeInOut";
-          }}"
+          }"
           className="absolute bottom - 20 left - 20 text - 6xl opacity - 20";
         >;
           ⚛️;
         </motion.div>;
         <motion.div;
-          animate={{}
+          animate={}
             coordinate_y: [0, -15, 0];
             rotate: [0, 3, 0];
-          }}
-          transition={{}
+          }
+          transition={}
             duration: 7,
             repeat: Infinity,"
             ease: "easeInOut";
-          }}"
+          }"
           className="absolute top - 1/3 left - 10 text - 5xl opacity - 20";
         >;
           🧠;
         </motion.div>;
         <motion.div;
-          animate={{}
+          animate={}
             coordinate_y: [0, 15, 0];
             rotate: [0, -3, 0];
-          }}
-          transition={{}
+          }
+          transition={}
             duration: 9,
             repeat: Infinity,"
             ease: "easeInOut";
-          }}"
+          }"
           className="absolute bottom - 1/3 right - 10 text - 5xl opacity - 20";
         >;
           🌐;
@@ -1212,15 +1190,11 @@ animate={{
 
           className="absolute bottom-1/3 right-10 text-5xl opacity-20""
         >
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           🌐
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
           className="absolute bottom-1/3 right-10 text-5xl opacity-20";
         >;
           🌐;
@@ -1235,19 +1209,11 @@ animate={{
 )
   )
 }
-=======
-<<<<<<< HEAD
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
-<<<<<<< HEAD
-=======
 }
 return (</div> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div </motion.div> {
   /* Main Heading */ 
@@ -1265,12 +1231,5 @@ return (</div> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:p
   /* Trust Indicators */ 
 }<motion.div > <div className="flex items-center space-x-2" > <Star className="w-5 h-5 text-yellow-400 fill-current" /> <span>4.9/5 Rating</span> </div> <div className="flex items-center space-x-2" > <TrendingUp className="w-5 h-5 text-green-400" /> <span>1000% ROI Guaranteed</span> </div> <div className="flex items-center space-x-2" > <Zap className="w-5 h-5 text-purple-400" /> <span>24/7 Support</span> </div> </motion.div> </motion.div> </div> > 🚀 </motion.div> <motion.div > ⚛️ </motion.div> <motion.div > 🧠 </motion.div> <motion.div > 🌐 </motion.div> </div> </section>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 );  )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

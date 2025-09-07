@@ -40,34 +40,34 @@ const AdminPitchGeneratorPage: React.FC = () => {
     <>
       <Head>
         <title>Pitch Generator - Admin</title>
-        <meta name="description" content="Generate pitch decks and presentations" />
+        <meta name='description' content='Generate pitch decks and presentations' />
       </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Pitch Generator</h1>
+      <main className='max-w-7xl mx-auto px-4 py-8'>
+        <h1 className='text-3xl font-bold mb-6'>Pitch Generator</h1>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           {/* Builder Panel */}
-          <div className="space-y-4">
-            <div className="border rounded-md p-4 bg-white">
-              <h2 className="font-medium mb-3">Project Details</h2>
+          <div className='space-y-4'>
+            <div className='border rounded-md p-4 bg-white'>
+              <h2 className='font-medium mb-3'>Project Details</h2>
               
-              <div className="space-y-3">
+              <div className='space-y-3'>
                 <div>
-                  <label className="block text-sm mb-1">Company Name</label>
+                  <label className='block text-sm mb-1'>Company Name</label>
                   <input
                     value={builder.companyName}
                     onChange={(e) => setBuilder({ ...builder, companyName: e.target.value })}
-                    className="w-full border rounded px-2 py-1"
-                    placeholder="Enter company name"
+                    className='w-full border rounded px-2 py-1'
+                    placeholder='Enter company name'
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm mb-1">Stage</label>
+                  <label className='block text-sm mb-1'>Stage</label>
                   <select
                     value={builder.stage}
                     onChange={(e) => setBuilder({ ...builder, stage: e.target.value })}
-                    className="w-full border rounded px-2 py-1"
+                    className='w-full border rounded px-2 py-1'
                   >
                     {d.label}: {d.value}
                   </div>                ))}
@@ -186,11 +186,11 @@ const AdminPitchGeneratorPage: React.FC = () => {
                 <option>Series A</option>
                 <option>Token Sale</option>
               </select>
-              <label className="block text-sm mt-3 mb-1">Target raise amount</label>
-              <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
-              <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+              <label className='block text-sm mt-3 mb-1'>Target raise amount</label>
+              <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className='w-full border rounded px-2 py-1 bg-transparent' />
+              <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>
                 Drag & drop logos, photos here
-                <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
+                <div className='text-xs mt-1'>{builder.assets.length} file(s) added</div>
               </div>
             </div>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>

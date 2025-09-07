@@ -113,9 +113,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
 <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent'>
               2025 Comprehensive Services Showcase
@@ -178,9 +178,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
 className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
           >
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -315,12 +315,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setSearchTerm('');
                     setSelectedCategory('all');
 setPriceRange('all');
-                  }}
+                  }
                   className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300'
                     setPriceRange('all')
-                  }}
+                  }
 origin/cursor/automate-test-improve-and-merge-code-2533
-                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
+                  className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300'
                 >
                   Clear Filters
                 </button>
@@ -468,10 +468,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='px-6 pb-20'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
 className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >

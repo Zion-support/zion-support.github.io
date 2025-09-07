@@ -1,7 +1,7 @@
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { 'hasError': false }static getDerivedStateFromError(error) {return { 'hasError': true 
 }
-  componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
+  componentDidCatch(error, errorInfo) {console.error('Error caught by 'boundary':', error, errorInfo)}'
   render() {if (this.state.hasError) ;
   }
   return <div>Something went wrong.</div>;
@@ -16,9 +16,9 @@ import dynamic from 'next/dynamic';'
 
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {'
   }
-  "ssr": false
+  'ssr': false
 });
-async function resolveDisplayName("addr": string): Promise<string | null> {
+async function resolveDisplayName('addr': string): Promise<string | null> {
   }
   try {
 }
@@ -37,8 +37,8 @@ const [open, setOpen] = useState(false);
 
 const [user, setUser] = useState<{;
     }
-    "address": string;
-    "chain": 'evm' | 'sol';'
+    'address': string;
+    'chain': 'evm' | 'sol';'
 
   } | null>(null);
 
@@ -72,7 +72,7 @@ if (user && displayWeb3)
       else setDisplayName(null);
     })();
 
-const onLoggedIn = ("u": { "address": string; "chain": 'evm' | 'sol',;'
+const onLoggedIn = ('u': { 'address': string; 'chain': 'evm' | 'sol',;'
 }) => {
     }
     window.localStorage.setItem('zion-web3-user', JSON.stringify(u));'
@@ -84,7 +84,7 @@ const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user');'
 try {
       }
-      await fetch('/api/auth/logout', { "method": 'POST','
+      await fetch('/api/auth/logout', { 'method': 'POST','
 });
     } catch {}
     setUser(null);
@@ -102,7 +102,7 @@ const base =;
 return (;
       <div className='flex items-center gap-2'>;'
 
-        <span className='hidden "sm":inline text-[10px] rounded bg-emerald-100 text-emerald-700 "dark":bg-emerald-900/30 "dark":text-emerald-300 px-1 && 1.5 py-0 && 0.5'>;'
+        <span className='hidden 'sm':inline text-[10px] rounded bg-emerald-100 text-emerald-700 'dark':bg-emerald-900/30 'dark':text-emerald-300 px-1 && 1.5 py-0 && 0.5'>;'
           Web3 Verified;
         </span>;
         <button;
@@ -120,7 +120,6 @@ return (;
             onClose={() => setOpen(false)}
             onLoggedIn={onLoggedIn}
           />;
-<<<<<<< HEAD
         )}</div>;
     )}
   return (<>    )}
@@ -132,7 +131,6 @@ return (;
 <button;
 
         onClick={() => setOpen(true)}
-=======
         )}
       </div>;
     );  }
@@ -141,7 +139,6 @@ return (;
   }
   return (
     <>;
-<<<<<<< HEAD
       <button
       </div>
     );
@@ -150,34 +147,31 @@ return (;
     <>
 <button,
 onClick={() => setOpen(true)}
-        className='rounded-md bg-black text-white "dark":bg-white "dark":text-black px-3 py-1 && 1.5 text-xs'>'
+        className='rounded-md bg-black text-white 'dark':bg-white 'dark':text-black px-3 py-1 && 1.5 text-xs'>'
 
         Connect Wallet;
       </button>;
-<<<<<<< HEAD
       {open && (<Web3LoginModal;
           }
           isOpen={open}
           onClose={() => setOpen(false)}
           onLoggedIn={onLoggedIn}
         />;
-<<<<<<< HEAD
       )}</>;
-  )<button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
+  )<button onClick={() => setOpen(true)} className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs'>Connect Wallet</button>;const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON.parse(saved))const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
     setDisplayWeb3(pref === 'true')}, [])useEffect(() => {(async () => {if (user && displayWeb3) setDisplayName(await resolveDisplayName(user.address))else setDisplayName(null)})()}, [user, displayWeb3])const onLoggedIn = (u: { address: string, chain: 'evm' | 'sol' }) => {window.localStorage.setItem('zion-web3-user', JSON.stringify(u))setUser(u)}const disconnect = async () => {window.localStorage.removeItem('zion-web3-user')try { await fetch('/api/auth/logout', { method: 'POST' }) } catch {}
     setUser(null)}if (user) {const base = displayName || `${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
-    return (<div className="flex items-center gap-2">;
-        <span className="hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5">Web3 Verified</span>;
-        <button className="rounded-md border px-2 py-1 text-xs" onClick={() => setOpen(true)}>{base}</button>;
-        <button className="text-xs text-red-600" onClick={disconnect}>Logout</button>;
+    return (<div className='flex items-center gap-2'>;
+        <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5'>Web3 Verified</span>;
+        <button className='rounded-md border px-2 py-1 text-xs' onClick={() => setOpen(true)}>{base}</button>;
+        <button className='text-xs text-red-600' onClick={disconnect}>Logout</button>;
       )}
     </>;
-  );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;
-=======
+  );      <button onClick={() => setOpen(true)} className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs'>Connect Wallet</button>;
       )}
     </>;
-  );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;
+  );      <button onClick={() => setOpen(true)} className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs'>Connect Wallet</button>;
 '
     const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON.parse(saved));'
@@ -201,43 +195,38 @@ onClick={() => setOpen(true)}
   };
   if (user) {}`
     const base = displayName || `${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
-    return ("
-      <div className="flex items-center gap-2">"
-        <span className="hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5">Web3 Verified</span>"
-        <button className="rounded-md border px-2 py-1 text-xs" onClick={() => setOpen(true)}>{base}</button>"
-=======
+    return ('
+      <div className='flex items-center gap-2'>'
+        <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5'>Web3 Verified</span>'
+        <button className='rounded-md border px-2 py-1 text-xs' onClick={() => setOpen(true)}>{base}</button>'
 
     return (
-      <div className="flex items-center gap-2">
-        <span className="hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5">Web3 Verified</span>
-        <button className="rounded-md border px-2 py-1 text-xs" onClick={() => setOpen(true)}>{base}</button>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        <button className="text-xs text-red-600" onClick={disconnect}>Logout</button>
+      <div className='flex items-center gap-2'>
+        <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5'>Web3 Verified</span>
+        <button className='rounded-md border px-2 py-1 text-xs' onClick={() => setOpen(true)}>{base}</button>
+        <button className='text-xs text-red-600' onClick={disconnect}>Logout</button>
         {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
       </div>
     )
   }
   return (
-    <>"
-      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
+    <>'
+      <button onClick={() => setOpen(true)} className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs'>Connect Wallet</button>
 
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}'
 import dynamic from 'next / dynamic';
-<<<<<<< HEAD
 ;'
 const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), {}
   ssr: false,';
 });const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), { ssr: false }),
 async function resolveDisplayName (addr: string): Promise < string | null> {}
   try {};`
-=======
 ;
 const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), {
   ssr: false;,
 });const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), { ssr: false ;});
 async function resolveDisplayName (addr: string): Promise < string | null> {
   try {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const r = await fetch (`/api / did / get?address=${encodeURIComponent (addr)}`);
     const { data } = await r.json ();
     const did = data?.payload || {}
@@ -262,15 +251,12 @@ function Web3LoginButton() {}
 export default /**;
  * Web3LoginButton - Function description;
  */
-<<<<<<< HEAD
 function Web3LoginButton() {}
   const [open, set_open] = useState (false);'
   const [user, set_user] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
-=======
 function Web3LoginButton() {
   const [open, set_open] = useState (false);
   const [user, set_user] = useState<{ address: string;, chain: 'evm' | 'sol' ;} | null>(null),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [display_name, setDisplayName] = useState < string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState < boolean>(false);
 ;
@@ -303,13 +289,10 @@ function Web3LoginButton() {
 }
       else setDisplayName (null);
     })();
-<<<<<<< HEAD
 ;'
   const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) =>: any {'
-=======
 ;
   const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' ;}) =>: any {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     window.local_storage.set_item ('zion - web3 - user', JSON.stringify (u));
     set_user (u);  }
 ;
@@ -319,13 +302,10 @@ function Web3LoginButton() {
 ;
   const disconnect = async () => {'
     window.local_storage.remove_item ('zion - web3 - user');
-<<<<<<< HEAD
     try {'
       await fetch ('/api / auth / logout', { method: 'POST' });
-=======
     try {
       await fetch ('/api / auth / logout', { method: 'POST' ;});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch {}
     set_user (null);
 ;
@@ -372,9 +352,8 @@ if ( {) {}
           is_open={open}
           on_close={() => set_open (false)}
           onLoggedIn={onLoggedIn}
-<<<<<<< HEAD
         />)}
-    </>);      <button on_click={() => set_open (true)} className="rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py-1.5 text-xs">Connect Wallet</button>;
+    </>);      <button on_click={() => set_open (true)} className='rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py-1.5 text-xs'>Connect Wallet</button>;
       {open && <Web3LoginModal is_open={open} on_close={() => set_open (false)} onLoggedIn={onLoggedIn} />}
     </>);
     </>

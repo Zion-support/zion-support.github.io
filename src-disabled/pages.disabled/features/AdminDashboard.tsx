@@ -7,7 +7,7 @@
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -25,7 +25,7 @@
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-        dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(schema) }}></script>;
+        dangerouslySetInnerHTML={ __html: JSON && JSON.stringify(schema) }></script>;
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md:px-6">;
@@ -43,7 +43,7 @@
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
         type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className='bg-background text-white py-12'>
@@ -156,7 +156,7 @@ export default function AdminDashboard() {;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
         type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>;
       <Header />;
       <main className="bg-background text-white py-12">;
@@ -202,7 +202,7 @@ export default function AdminDashboard() {;
       {/* Use a normal script tag so JSON - LD is correctly parsed */}
       <script;
         type='application / ld + json';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify (schema) }
       ></script>;
       <Header />;
       <main className='bg - background text - white py - 12'>;
@@ -230,7 +230,7 @@ export default function AdminDashboard() {;
       {/* Use a normal script tag so JSON - LD is correctly parsed */}
       <script;
         type="application / ld + json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify (schema) }
       ></script>;
       <Header />;
       <main className="bg - background text - white py - 12">;

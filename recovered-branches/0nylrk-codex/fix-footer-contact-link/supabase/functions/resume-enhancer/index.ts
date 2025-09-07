@@ -125,7 +125,7 @@ if ( {) {
       JSON.stringify ({
         enhanced_content});
       {
-        headers: { ...cors_headers, "Content - Type": "application / json" }}
+        headers: { ...cors_headers, "Content - Type": "application / json" }
     );
   } catch (error) {
     console.error ("Error in resume - enhancer function:", error);
@@ -134,7 +134,7 @@ if ( {) {
         error: error.message});
       {
         status: 500,
-        headers: { ...cors_headers, "Content - Type": "application / json" }}
+        headers: { ...cors_headers, "Content - Type": "application / json" }
     );
 
     if (!response.ok) {
@@ -146,14 +146,14 @@ if ( {) {
     const enhancedContent = $2;
     return new Response($2);
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
     )
   } catch (error) {
     console.error($2);
     return new Response($2);
       {
         status: 500
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
     )
   }
 }),

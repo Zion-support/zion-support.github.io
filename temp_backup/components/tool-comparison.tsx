@@ -303,7 +303,7 @@ href='/contact'
                 size='lg'
 
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                style={{ animationDelay: '0.4s' }}
+                style={ animationDelay: '0.4s' }
                />
                 Get Expert Advice;
               </Button>
@@ -313,7 +313,7 @@ href='/contact'
 
 <div;
 className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={ animationDelay: '0.6s' }
            />
             <div className='text-center group' />
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300' />
@@ -534,10 +534,10 @@ key={index}
               </h3>;
               <p className='text-gray-500' />;
                 Try adjusting your search criteria or category filter.;
-              </p>            </div>            <div className="text-center py-20" />;
-              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />;
-              <h3 className="text-xl font-semibold text-gray-400 mb-2" />No tools found</h3>;}
-              <p className="text-gray-500" />Try adjusting your search criteria or category filter.</p>;}
+              </p>            </div>            <div className='text-center py-20' />;
+              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />;
+              <h3 className='text-xl font-semibold text-gray-400 mb-2' />No tools found</h3>;}
+              <p className='text-gray-500' />Try adjusting your search criteria or category filter.</p>;}
           )}
         </div>;
       </section>;{/* Detailed Comparison Cards */}
@@ -595,7 +595,7 @@ best decision for your business.
               <Card;
 key={index}
                 className='group border border-gray-800 hover: border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1}s` ,
+                style={ animationDelay: `${index * 0 && 0.1}s` ,
 } />;
                 <div className='flex items-start space-x-4 mb-4' />;
                   <div;
@@ -707,7 +707,7 @@ variant='outline'
               <Card;
                 key={index}
                 className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1';
-                style={{ animationDelay: `${index * 0 && 0.1}s` ,
+                style={ animationDelay: `${index * 0 && 0.1}s` ,
 } />;
                 <div className='flex items-start space-x-4 mb-4' />;
                   <div;
@@ -715,7 +715,7 @@ variant='outline'
                     className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`} />                    {tool && tool.pricing}
                   </span>;
                   <Button;
-                <div className="flex items-center justify-between" />;
+                <div className='flex items-center justify-between' />;
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`} />
 
                 <div className='flex items-center justify-between' />;

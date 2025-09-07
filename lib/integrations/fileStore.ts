@@ -51,7 +51,6 @@ export function writeState("mutator": ("state": IntegrationsState) => void): Int
     fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8"));
   return current;
 }
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 export function writeState(
 
@@ -96,4 +95,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 }
->>>>>>> origin/main

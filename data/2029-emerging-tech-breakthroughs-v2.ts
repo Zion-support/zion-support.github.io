@@ -696,7 +696,7 @@ export const "emergingTechBreakthroughServicesV2": EmergingTechBreakthroughServi
 ];
   }
 ursor/fix-website-loading-errors-and-merge-6662;
-];;}
+];}
 ];
 export interface EmergingTechBreakthroughServiceV2  {"id": string,"name": string,"tagline": string,"price": string,"period": string,"description": string,"features": string[],"popular": boolean,"icon": string,"color": string,"textColor": string,"link": string,"marketPosition": string,"targetAudience": string,"trialDays": number,"setupTime": string,"category": string,"realService": boolean,"technology": string[],"integrations": string[],"useCases": string[],"roi": string,"competitors": string[],"marketSize": string,"growthRate": string,"variant": ServiceVariant,"contactInfo": {"mobile": string,"email": string,"address": string,"website": string;
   },"realImplementation": boolean,"implementationDetails": string,"launchDate": string,"customers": number,"rating": number,"reviews": number;
@@ -1718,7 +1718,6 @@ export const "emergingTechBreakthroughServicesV2": EmergingTechBreakthroughServi
 ;
   }
 ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   }
@@ -2061,35 +2060,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 5.0,
     reviews: 2}
 ],
-=======
     realImplementation: true;,;'
     implementationDetails: 'Production consciousness platform with research validation;, ethical compliance, and ongoing support. Includes consciousness research training and certification.',;''
     launchDate: '2025-06-01';,;'
     customers: 3;,;
     rating: 5.0;,
   reviews: 2;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 
 ];
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -119,17 +119,17 @@ export default function AdvancedServicesShowcase2025() {
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
+            initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
+            animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
+            transition={ duration: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -168,9 +168,9 @@ export default function AdvancedServicesShowcase2025() {
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
             className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
           >
             {/* Search Bar */}
@@ -275,9 +275,9 @@ export default function AdvancedServicesShowcase2025() {
         <div className="max-w-7xl mx-auto">
           {/* Results Count */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            transition={ duration: 0.5 }
             className="mb-8"
           >
             <p className="text-white/70">
@@ -421,8 +421,8 @@ export default function AdvancedServicesShowcase2025() {
           {/* No Results */}
           {filteredServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }
               className="text-center py-20"
             >
               <div className="text-6xl mb-4">🔍</div>
@@ -434,7 +434,7 @@ export default function AdvancedServicesShowcase2025() {
                   setSelectedCategory('all')
 
                   setPriceRange([0, 10000])
-                }}
+                }
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Clear Filters
@@ -447,22 +447,22 @@ export default function AdvancedServicesShowcase2025() {
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
+            initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+            whileInView={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
+            transition={ duration: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            viewport={{ once: true }  } catch (error) {
+            viewport={ once: true }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }

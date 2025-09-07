@@ -15,7 +15,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
   return (
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
 import React from 'react';
 import Link from 'next / link';
@@ -42,7 +41,7 @@ import { AlertTriangle, Home, RefreshCw, Settings  } from 'lucide-react';
 import { logErrorToProduction  } from '@/utils/productionLogger';
 import { logInfo, logErrorToProduction as prodLogError  } from '@/utils/productionLogger';
 interface PageErrorFallbackProps extends FallbackProps  {pageName?: string;
-}},return (<div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
+},return (<div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
       <div className='max-w-2xl w-full'>;
         {/* Main Error Card */}
@@ -57,7 +56,6 @@ interface PageErrorFallbackProps extends FallbackProps  {pageName?: string;
             <p className='text-gray-600'>;
               {isAuthConfigError;
                 ? 'This page cannot load due to missing authentication configuration';
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
                 : 'An unexpected error occurred while loading this page'}import { logInfo;
   logErrorToProduction as prodLogError;
  } from '@/utils/productionLogger';
@@ -89,24 +87,23 @@ import {logErrorToProduction} from '@/utils/productionLogger',import { logInfo, 
                            error?.message?.includes('AUTH0') ||;
                            error?.message?.includes('authentication') ||;
                            error?.message?.includes('environment'),const handleRefresh = () => {if (resetErrorBoundary) {resetErrorBoundary()} else {window.location.reload()}
-  },return (<div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">;
-      <div className="max-w-2xl w-full">;
+  },return (<div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
+      <div className='max-w-2xl w-full'>;
   return (
 
         {/* Main Error Card */}
-        <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">;
-          <div className="text-center mb-6">;
-            <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">;
-              <AlertTriangle className="h-8 w-8 text-red-600" />;
+        <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
+          <div className='text-center mb-6'>;
+            <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>;
+              <AlertTriangle className='h-8 w-8 text-red-600' />;
             </div>;
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">;
+            <h1 className='text-3xl font-bold text-gray-900 mb-2'>;
               {pageName ? `${pageName} Unavailable` : 'Page Unavailable'}
           {error?.message && (
-            <details className="bg-gray-50 rounded-lg p-4 mb-6">
-              <summary className="cursor-pointer text-gray-700 font-medium">
+            <details className='bg-gray-50 rounded-lg p-4 mb-6'>
+              <summary className='cursor-pointer text-gray-700 font-medium'>
                 Technical Details
               </summary>
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
 
             <p className='text-gray-600'>;
@@ -115,12 +112,12 @@ import {logErrorToProduction} from '@/utils/productionLogger',import { logInfo, 
                 : 'An unexpected error occurred while loading this page'}
 
           {isAuthConfigError && (
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-              <div className="flex">
-                <Settings className="h-5 w-5 text-yellow-600 mt-0.5 mr-3" />
+            <div className='bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6'>
+              <div className='flex'>
+                <Settings className='h-5 w-5 text-yellow-600 mt-0.5 mr-3' />
                 <div>
-                  <h3 className="font-semibold text-yellow-800 mb-1">Configuration Required</h3>
-                  <p className="text-yellow-700 text-sm">
+                  <h3 className='font-semibold text-yellow-800 mb-1'>Configuration Required</h3>
+                  <p className='text-yellow-700 text-sm'>
                     This application requires Auth0 authentication to be properly configured. 
                     Please contact your system administrator.
                   </p>
@@ -229,59 +226,57 @@ if ( {) {}
             <button;
               onClick={handleRefresh}
 
-              <summary className="cursor-pointer text-gray-700 font-medium">
+              <summary className='cursor-pointer text-gray-700 font-medium'>
                 Technical Details;
               </summary>
 
-              <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
+              <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>
             <button;
-              onClick={handleRefresh}<details className="bg-gray-50 rounded-lg p-4 mb-6">;
-              <summary className="cursor-pointer text-gray-700 font-medium">;
+              onClick={handleRefresh}<details className='bg-gray-50 rounded-lg p-4 mb-6'>;
+              <summary className='cursor-pointer text-gray-700 font-medium'>;
                 Technical Details;
               </summary>;
-              <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">;
+              <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>;
                 {error.message}
               </pre>;
             </details>;
           )}
 
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+          <div className='flex flex-col sm:flex-row gap-3 mb-6'>
             <button;
-              onClick={handleRefresh}"
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
-            >"
-              <RefreshCw className="w-4 h-4 mr-2" />
+              onClick={handleRefresh}'
+              className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
+            >'
+              <RefreshCw className='w-4 h-4 mr-2' />
               Try Again;
             </button>
             
             <Link 
-              href="/"
-              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
+              href='/'
+              className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
 
 
 
             >
-              <Home className="w-4 h-4 mr-2" />
+              <Home className='w-4 h-4 mr-2' />
               Go Home
             </Link>
           </div>
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
+              className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors';
             >;
-              <RefreshCw className="w-4 h-4 mr-2" />;
+              <RefreshCw className='w-4 h-4 mr-2' />;
               Try Again;
             </button>;
             <Link;
-              href="/";
-              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
+              href='/';
+              className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors';
             >;
-              <Home className="w-4 h-4 mr-2" />;
+              <Home className='w-4 h-4 mr-2' />;
               Go Home;
             </Link>;
           </div>;
 
-              className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'             aria-label="Button">;
+              className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'             aria-label='Button'>;
               <RefreshCw className='w-4 h-4 mr-2' />;
               Try Again;
             </button>;<Link;
@@ -300,13 +295,13 @@ if ( {) {}
                 href='/marketplace';
 
             <Link 
-              href="/"
+              href='/'
 
-              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
+              className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
 
             >
 
-              <Home className="w-4 h-4 mr-2" />
+              <Home className='w-4 h-4 mr-2' />
               Go Home;
             </Link>
 
@@ -431,7 +426,7 @@ function PageErrorBoundary() {}
               support@zion && zion.tech;
 '`
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">;
+          <div className='flex flex-col sm:flex-row gap-3 mb-6'>;
 export default /**;
  * PageErrorBoundary - Function description;
  */;
@@ -442,59 +437,58 @@ function PageErrorBoundary() {const handle_error = (error: Error, error_info: Re
     ))onReset={() => {        // Reset any application state if needed;
               href='mailto:support@zion && zion.tech';
               className='text-blue-400 hover:underline'>;
-              support@zion && zion.tech;logInfo(`Resetting error boundary for ${pageName || 'page'}`)<div className="flex flex-col sm:flex-row gap-3 mb-6">;
+              support@zion && zion.tech;logInfo(`Resetting error boundary for ${pageName || 'page'}`)<div className='flex flex-col sm:flex-row gap-3 mb-6'>;
 
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">;
+          <div className='flex flex-col sm:flex-row gap-3 mb-6'>;
 
             <button;
-              onClick={handleRefresh}"
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
-            >;"
-              <RefreshCw className="w-4 h-4 mr-2" />;
+              onClick={handleRefresh}'
+              className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors';
+            >;'
+              <RefreshCw className='w-4 h-4 mr-2' />;
               Try Again;
             </button>;
-            <Link;"
-              href="/";"
-              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
-            >;"
-              <Home className="w-4 h-4 mr-2" />;
+            <Link;'
+              href='/';'
+              className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors';
+            >;'
+              <Home className='w-4 h-4 mr-2' />;
               Go Home;
             </Link>;
           </div>;
-          {/* Navigation Options */}"
-          <div className="border-t pt-6">;"
-            <h3 className="font-semibold text-gray-900 mb-3">You can also visit:</h3>;"
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">;"
-              <Link href="/marketplace" className="text-blue-600 hover:underline">;
+          {/* Navigation Options */}'
+          <div className='border-t pt-6'>;'
+            <h3 className='font-semibold text-gray-900 mb-3'>You can also visit:</h3>;'
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-3 text-sm'>;'
+              <Link href='/marketplace' className='text-blue-600 hover:underline'>;
                 Marketplace;
-              </Link>;"
-              <Link href="/talent" className="text-blue-600 hover:underline">;
+              </Link>;'
+              <Link href='/talent' className='text-blue-600 hover:underline'>;
                 Talent;
-              </Link>;"
-              <Link href="/services" className="text-blue-600 hover:underline">;
+              </Link>;'
+              <Link href='/services' className='text-blue-600 hover:underline'>;
                 Services;
-              </Link>;"
-              <Link href="/about" className="text-blue-600 hover:underline">;
+              </Link>;'
+              <Link href='/about' className='text-blue-600 hover:underline'>;
                 About;
               </Link>;
             </div>;
           </div>;
         </div>;
-        {/* Support Information */}"
-        <div className="bg-gray-800 text-white rounded-lg p-6 text-center">;"
-          <p className="mb-3">Need help? Contact our support team</p>;"
-          <div className="flex flex-col sm: flex-row gap-3 justify-center">;
-            <a;"
-              href="mailto:support@zion.tech";"
-              className="text-blue-400 hover:underline";
+        {/* Support Information */}'
+        <div className='bg-gray-800 text-white rounded-lg p-6 text-center'>;'
+          <p className='mb-3'>Need help? Contact our support team</p>;'
+          <div className='flex flex-col sm: flex-row gap-3 justify-center'>;
+            <a;'
+              href='mailto:support@zion.tech';'
+              className='text-blue-400 hover:underline';
             >;
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
               support@zion.tech;
             </a>;
-            <Link href="/status" className="text-blue-400 hover:underline">;
+            <Link href='/status' className='text-blue-400 hover:underline'>;
               Service Status;
               support@zion.tech;</a>;
-            <Link href="/status" className="text-blue-400 hover:underline">;</a>;
+            <Link href='/status' className='text-blue-400 hover:underline'>;</a>;
             <Link href='/status' className='text-blue-400 hover:underline'>;Service Status;
 
               Service Status;
@@ -504,7 +498,6 @@ function PageErrorBoundary() {const handle_error = (error: Error, error_info: Re
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
   );
   )}interface PageErrorBoundaryProps  {children: React.ReactNode,pageName?: string,fallback?: React.ComponentType<FallbackProps>;
 }export default function PageErrorBoundary() {const handleError = (error: Error, errorInfo: React.ErrorInfo) => {prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error),logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {page: pageName || 'unknown',componentStack: errorInfo.componentStack || undefined,errorBoundary: 'PageErrorBoundary',timestamp: new Date().toISOString()})}const FallbackComponent = fallback || ((props: FallbackProps) => (<PageErrorFallback {...props} pageName={pageName} />;
@@ -517,7 +510,6 @@ function PageErrorBoundary() {const handle_error = (error: Error, error_info: Re
     )logErrorToProduction(error instanceof Error ? error && error.message : String(error),error instanceof Error ? error : undefined,{page: pageName || 'unknown',componentStack: errorInfo && errorInfo.componentStack || undefined,errorBoundary: 'PageErrorBoundary',timestamp: new Date().toISOString()}
     )}const FallbackComponent =;
     fallback ||;
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
     ((props: FallbackProps) => (;
       <PageErrorFallback {...props} pageName={pageName} />;
     ));
@@ -572,24 +564,23 @@ export default function PageErrorBoundary({;
       onReset={() => {
         // Reset any application state if needed
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
-      }}
+      }
     >;
       {children}
 
 
 
-      }}
+      }
     >
       {children}
 } ;
 } ;
         // Reset any application state if needed;        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
 
-      }}
+      }
     >
-      {children}} ;
+      {children} ;
 } 
 };
 }
@@ -604,9 +595,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       FallbackComponent={FallbackComponent}
       onError={handleError}
       onReset={() => {// Reset any application state if needed;
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`)}}>;
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)}>;
       {children}>;
-      {children}}}}}</ErrorBoundary>;
+      {children}}}</ErrorBoundary>;
   )}const FallbackComponent =;
     fallback ||;
   );}
@@ -619,10 +610,9 @@ interface PageErrorBoundaryProps {;
 
     </ErrorBoundary>
   );
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
     </ErrorBoundary>))}interface PageErrorBoundaryProps  {children:React.ReactNode,pageName?:string,fallback?:React.ComponentType<FallbackProps>;
-}}
+}
 }
 }</ErrorBoundary>;
   )
@@ -630,7 +620,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <PageErrorFallback {...props} page_name={page_name} />));
       on_reset={() => {        // Reset any application state if needed;'`
         log_info (`Resetting error boundary for ${page_name || 'page'}`);
-      }}
+      }
     >;
       {children}
     </ErrorBoundary>);

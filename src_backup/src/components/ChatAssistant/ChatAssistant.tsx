@@ -149,7 +149,7 @@ if ( {) {$2;
 if ( {) {$2;
 }
         setDisplayGuestMessages (initial_messages),setStoredGuestMessages (initial_messages), // Persist if initial_messages are provided;} else {setDisplayGuestMessages (storedGuestMessages)}
-    }}, [;
+    }, [;
     isGuest;
     initialMessages;
     storedGuestMessages;
@@ -499,9 +499,9 @@ if (return null, ) {$2;
           </div>;
         </div>;
       )}</div>;
-  )}}</div>)}
+  )}</div>)}
     </div>)}
-}}</div>;
+}</div>;
   )}, [ isGuest;
 initialMessages;
 storedGuestMessages;

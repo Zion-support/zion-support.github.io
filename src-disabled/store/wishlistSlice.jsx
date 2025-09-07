@@ -19,4 +19,4 @@ export const loadWishlistFromDB = createAsyncThunk('wishlist/loadFromDB', async 
 
 export { wishlistSlice }
 
-export default wishlistSlice.reducer;"`";
+export default wishlistSlice.reducer;'`';

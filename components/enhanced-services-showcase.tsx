@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React, { useState } from 'react','
@@ -231,7 +230,6 @@ const container_variants = {
 }</a>)
 }
 }> {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   children
 }</button>)
 }
@@ -275,7 +273,6 @@ if ( {) {$2;
     </button>)}children;
 }</button>)}
   const contactInfo = $2;
->>>>>>> origin/main
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
@@ -286,8 +283,4 @@ if ( {) {$2;
   children 
 }</button>) 
 };
-=======
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

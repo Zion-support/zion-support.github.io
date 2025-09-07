@@ -162,12 +162,12 @@ const [activeTab, setActiveTab] = useState('overview');
 '''''';
           {activeTab === 'contracts' && (<motion.div key='contracts' initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;}
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';}
 '''';}
-}} className='space-y-4' />'''';
+} className='space-y-4' />'''';
               <div className='flex items-center justify-between' />'''';
                 <h3 className='text-lg font-semibold text-gray-900 dark:text-white' />Smart Contracts</h3>;
                 <button onClick = {}
@@ -229,12 +229,12 @@ const [activeTab, setActiveTab] = useState('overview');
 '''''';
           {activeTab === 'nfts' && (<motion.div key='nfts' initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;}
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';}
 '''';}
-}} className='space-y-4' />'''';
+} className='space-y-4' />'''';
               <div className='flex items-center justify-between' />'''';
                 <h3 className='text-lg font-semibold text-gray-900 dark:text-white' />NFT Collection</h3>'''';
                 <button onClick={() = /> setShowMintNFT(true)} className='px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700'>'''';
@@ -287,12 +287,12 @@ const [activeTab, setActiveTab] = useState('overview');
 '''''';
           {activeTab === 'defi' && (<motion.div key='defi' initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;}
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';}
 '''';}
-}} className='space-y-4' />'''';
+} className='space-y-4' />'''';
               <div className='flex items-center justify-between' />'''';
                 <h3 className='text-lg font-semibold text-gray-900 dark:text-white' />DeFi Positions</h3>;
                 <button onClick = {}
@@ -360,12 +360,12 @@ const [activeTab, setActiveTab] = useState('overview');
 '''''';
           {activeTab === 'transactions' && (<motion.div key='transactions' initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;}
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';}
 '''';}
-}} className='space-y-4' />'''';
+} className='space-y-4' />'''';
               <div className='flex items-center justify-between' />'''';
                 <h3 className='text-lg font-semibold text-gray-900 dark:text-white' />Transaction History</h3>'''';
                 <button onClick={() = /> setShowSendTransaction(true)} className='px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700'>'''';
@@ -447,16 +447,16 @@ const [activeTab, setActiveTab] = useState('overview');
       </div>;
       {/* Mint NFT Modal */}'''';
       <AnimatePresence />'''';
-        {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{opacity: 0 }
+        {showMintNFT && (<motion.div initial={ opacity: 0 } animate={ opacity: 1 } exit={opacity: 0 }
 } className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50' />;
             <motion.div initial = {}
   { scale: 0.9, opacity: 0;}
-}} animate = {}
+} animate = {}
   { scale: 1, opacity: 1;}
-}} exit = {}
+} exit = {}
   { scale: 0.9, opacity: 0 '''';}
 '''';}
-}} className='bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4' />'''';
+} className='bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4' />'''';
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4' />Mint New NFT</h3>'''';
               '''';
               <div className='space-y-4' />'''';
@@ -506,16 +506,16 @@ const [activeTab, setActiveTab] = useState('overview');
       </AnimatePresence>;
       {/* Send Transaction Modal */}'''';
       <AnimatePresence />'''';
-        {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{opacity: 0 }
+        {showSendTransaction && (<motion.div initial={ opacity: 0 } animate={ opacity: 1 } exit={opacity: 0 }
 } className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50' />;
             <motion.div initial = {}
   { scale: 0.9, opacity: 0;}
-}} animate = {}
+} animate = {}
   { scale: 1, opacity: 1;}
-}} exit = {}
+} exit = {}
   { scale: 0.9, opacity: 0 '''';}
 '''';}
-}} className='bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4' />'''';
+} className='bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4' />'''';
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4' />Send Transaction</h3>'''';
               '''';
               <div className='space-y-4' />'''';

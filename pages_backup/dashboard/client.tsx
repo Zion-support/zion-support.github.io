@@ -49,7 +49,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='mt-3 h-2 w-full bg-gray-100 dark:bg-gray-800 rounded'>;
           <div
             className='h-2 rounded bg-blue-600'
-            style={{ width: `${progress}%` }}
+            style={ width: `${progress}%` }
           />
         </div>
       </EnhancedCard>
@@ -68,23 +68,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               {completed[s.key] ? (
-                <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
+                <button onClick={() => toggle(s.key)} className='text-xs text-gray-500 hover:underline'>Undo</button>
               ) : (
 
 
 }
 
 
-                <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
+                <EnhancedButton onClick={() => toggle(s.key)} variant='secondary' className='text-xs py-1 px-2'>{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             </li>;
           ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         </ul>;
@@ -152,7 +152,7 @@ function ClientDashboard() {
         <div className='mt - 3 h - 2 w - full bg - gray - 100 dark:bg - gray - 800 rounded'>;
           <div;
             className='h - 2 rounded bg - blue - 600';
-            style={{ width: `${progress}%` }}
+            style={ width: `${progress}%` }
           />        </div>;
       </EnhancedCard>;
       <EnhancedCard>;

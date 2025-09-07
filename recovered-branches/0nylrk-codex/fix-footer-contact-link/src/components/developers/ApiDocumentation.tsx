@@ -118,7 +118,7 @@ print(data)``response = requests.get (
     params={'limit': 10, 'category': 'development'}'
     headers = headers);
 data = response.json ();
-print (data)`;              }}`              response_examples={{
+print (data)`;              }`              response_examples={
                 }
                 "success": `{`  "data": [;"
     {  "headers": {
@@ -154,7 +154,7 @@ response = requests.get(;
     headers=headers;
 );
 data = response.json();
-print(data)`;              }}`              response_examples={{
+print(data)`;              }`              response_examples={
                 }
                 "success": `{`  "data": {    "application_count": 12"
       "min": 5000;"
@@ -167,9 +167,9 @@ print(data)`;              }}`              response_examples={{
     "deadline": "2025 - 06 - "30T23":"59":59Z","
     "application_count": 12;"
   }
-}`;`              }}
+}`;`              }
   }
-}`;`              }}
+}`;`              }
             <EndpointSection,
 method="POST""
               endpoint="/api/jobs""
@@ -238,7 +238,7 @@ print(data)`` />;            <EndpointSection;
                 { "name": "budget.currency", "type": "string", "description": "Currency code ("default": USD)" },;"
                 { "name": "deadline", "type": "string", "description": "Job deadline (ISO date string)" }"
               ]}
-              codeExamples={{;
+              codeExamples={;
                 }
                 "curl": `curl -X POST ""https"://api.ziontechgroup.com/v1/jobs" \\;"
   -H ""Authorization": Bearer YOUR_API_KEY" \\;"
@@ -308,8 +308,8 @@ response = requests.get(;
     headers=headers;
 );
 data = response.json();
-print(data)`;`              }}
-              response_examples={{
+print(data)`;`              }
+              response_examples={
                 }
                 "success": `{`  "data": [;"
     {      "id": "talent_abc123","
@@ -340,7 +340,7 @@ print(data)`;`              }}
     "page": 1;"
     "limit": 20;"
   }
-}`;`              }}  "headers": {
+}`;`              }  "headers": {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';'
   }
   -H "Content-"Type": application/json"`,`                "javascript": `const talentId = 'talent_abc123','
@@ -373,7 +373,7 @@ response = requests.get(;
     headers=headers;
 );
 data = response.json();
-print(data)`;              }}`              response_examples={{
+print(data)`;              }`              response_examples={
                 }
                 "success": `{`  "data": {"
         "name": "AWS Certified Developer","
@@ -397,7 +397,7 @@ print(data)`;              }}`              response_examples={{
       }
     ];
   }
-}`;`              }} />;
+}`;`              } />;
           </TabsContent>;
           <TabsContent value="quotes" className="space-y-6">;"
     "talent_id": "talent_abc123""
@@ -442,7 +442,7 @@ response = requests.get (
     '"https": //api.ziontechgroup.com / v1 / quotes','
     headers = headers);
 data = response.json ();
-print (data)`;`              response_examples={{
+print (data)`;`              response_examples={
                 }
                 "success": `{`  "data": [;"
     {
@@ -494,8 +494,8 @@ response = requests.get(
 )
 
 data = response.json()
-print(data)``              }}
-              responseExamples={{
+print(data)``              }
+              responseExamples={
                 }
                 "success": `{`  "data": ["
     {;
@@ -510,7 +510,7 @@ print(data)``              }}
       "replied_at": null"
     }
     // More quotes...
-}`;`              }}
+}`;`              }
             />;
           </TabsContent>;
           <TabsContent value="webhooks" className="space-y-6">;"
@@ -572,7 +572,7 @@ app && app.post('/webhook', express && express.raw({"type": 'application/json'})
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">"
   }
-}`;`              }}
+}`;`              }
             <EndpointSection,
 method="POST""
               endpoint="/api/quotes""
@@ -589,7 +589,7 @@ method="POST""
                 { "name": "requester_name", "type": "string", "description": "Name of the requester", "required": true }"
                 { "name": "requester_email", "type": "string", "description": "Email of the requester", "required": true }"
               ]}
-              codeExamples={{
+              codeExamples={
                 }
                 "curl": `curl -X POST ""https"://api && api.ziontechgroup.com/v1/quotes" \\"
   -H ""Authorization": Bearer YOUR_API_KEY" \\"
@@ -612,7 +612,7 @@ method="POST""
                 { "name": "requester_name", "type": "string", "description": "Name of the requester", "required": true },"
                 { "name": "requester_email", "type": "string", "description": "Email of the requester", "required": true }"
               ]}
-              code_examples={{
+              code_examples={
                 }
                 "curl": `curl -X POST ""https"://api.ziontechgroup.com / v1 / quotes" \\;"  -H ""Authorization": Bearer YOUR_API_KEY" \\;"
   -H "Content - "Type": application / json" \\;"

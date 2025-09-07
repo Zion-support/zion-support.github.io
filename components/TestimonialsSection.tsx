@@ -42,10 +42,10 @@ const testimonials = [;
   return (<section className="py-20 bg-white">;"
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8">;"
         <motion.div;
-          initial={{ "opacity": 0, "y": 20 
+          initial={ "opacity": 0, "y": 20 
 }
-          animate={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.8 
+          animate={ "opacity": 1, "y": 0 }
+          transition={ "duration": 0.8 
 }
           className="text-center mb-16">"
 
@@ -61,11 +61,11 @@ const testimonials = [;
           {testimonials.map((testimonial, index) => (<motion.div;
               }
               key={testimonial.name}
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              animate={{ "opacity": 1, "y": 0 
+              animate={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0.6, "delay": index * 0.1 
+              transition={ "duration": 0.6, "delay": index * 0.1 
 }
             >;
               <Card className="h-full "hover":shadow-lg transition-shadow duration-300">;"

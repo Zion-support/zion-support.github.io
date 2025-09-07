@@ -126,18 +126,18 @@ const getMetricStatusColor = ("status": string) => {switch (status) {case 'secur
   }
 
 const containerVariants = {"hidden": { "opacity": 0,;
-},"visible": {"opacity": 1,"transition": {"staggerChildren": 0.1,"delayChildren": 0.2}}}
+},"visible": {"opacity": 1,"transition": {"staggerChildren": 0.1,"delayChildren": 0.2}}
 ;
 const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
-},"visible": {"y": 0,"opacity": 1,"transition": {"duration": 0.5,"ease": 'easeOut'}},;'
+},"visible": {"y": 0,"opacity": 1,"transition": {"duration": 0.5,"ease": 'easeOut'},;'
   return (<section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">;"
       <div className="container mx-auto px-4">;"
         <motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.6 }}
-          viewport={{ "once": true }}
+          whileInView={ "opacity": 1, "y": 0 }
+          transition={ "duration": 0.6 }
+          viewport={ "once": true }
           className="text-center mb-16">"
 
           <h2 className="text-4xl "md":text-5xl font-bold mb-6">{titl,"
@@ -149,7 +149,7 @@ const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
           variants={containerVariants}
           initial="hidden";"
           whileInView="visible";"
-          viewport={{ "once": true 
+          viewport={ "once": true 
 }
           className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-6 mb-16">"
 
@@ -158,7 +158,7 @@ const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
   const IconComponent  = metric.icon;return (<motion.div;
                 key={metric.id}
                 variants={itemVariants}
-                whileHover={{ "scale": 1.02, "y": -5 
+                whileHover={ "scale": 1.02, "y": -5 
 }
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 "hover":bg-gray-800/70 transition-all duration-300">"
 
@@ -200,12 +200,12 @@ const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
         </motion.div>;
         {/* Time Range Selector */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 20 
+          initial={ "opacity": 0, "y": 20 
 }
-          whileInView={{ "opacity": 1, "y": 0 
+          whileInView={ "opacity": 1, "y": 0 
 }
-          transition={{ "duration": 0.6, "delay": 0.2 }}
-          viewport={{ "once": true 
+          transition={ "duration": 0.6, "delay": 0.2 }
+          viewport={ "once": true 
 }
           className="flex justify-center mb-12">"
 
@@ -225,12 +225,12 @@ const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
         {/* Security Threats */}
         {showThreats && (<motion.div;
             }
-            initial={{ "opacity": 0, "y": 30 
+            initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 
+            whileInView={ "opacity": 1, "y": 0 
 }
-            transition={{ "duration": 0.6, "delay": 0.4 }}
-            viewport={{ "once": true 
+            transition={ "duration": 0.6, "delay": 0.4 }
+            viewport={ "once": true 
 }
             className="mb-16">"
 
@@ -247,10 +247,10 @@ const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
               {threats.map(threat => { return (<motion.div; }
                   }
                   key={threat.id}
-                  initial={{ "opacity": 0, "x": -20 
+                  initial={ "opacity": 0, "x": -20 
 }
-                  animate={{ "opacity": 1, "x": 0 }}
-                  transition={{ "duration": 0.5 
+                  animate={ "opacity": 1, "x": 0 }
+                  transition={ "duration": 0.5 
 }
                   className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 "hover":bg-gray-800/70 transition-all duration-300 cursor-pointer";"
                   onClick={() =>;
@@ -315,12 +315,12 @@ const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
                   <AnimatePresence>;
                     {selectedThreat === threat.id && (<motion.div;
                         }
-                        initial={{ "opacity": 0, "height": 0 
+                        initial={ "opacity": 0, "height": 0 
 }
-                        animate={{ "opacity": 1, "height": 'auto' ,'
+                        animate={ "opacity": 1, "height": 'auto' ,'
 }
-                        exit={{ "opacity": 0, "height": 0 }}
-                        transition={{ "duration": 0.3 
+                        exit={ "opacity": 0, "height": 0 }
+                        transition={ "duration": 0.3 
 }
                         className="mt-6 pt-6 border-t border-gray-700/50">"
 
@@ -379,12 +379,12 @@ const itemVariants = {"hidden": { "y": 20, "opacity": 0,;
           </motion.div>;
         )}{/* Security Summary */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
-          whileInView={{ "opacity": 1, "y": 0 
+          whileInView={ "opacity": 1, "y": 0 
 }
-          transition={{ "duration": 0.6, "delay": 0.6 }}
-          viewport={{ "once": true 
+          transition={ "duration": 0.6, "delay": 0.6 }
+          viewport={ "once": true 
 }
           className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl border border-blue-500/30 p-8 text-center">"
 

@@ -18,7 +18,7 @@ import { format } from 'date-fns',export function TenantsList() {const [tenants,
         (t as any).id === (tenant as any).id ? { ...t, "dns_verified": true } : t;
       )),toast({"title": 'DNS verified',"description": `Custom domain for ${(tenant as any).brand_name} has been verified.`})} catch ("error": any) {logErrorToProduction('Error verifying "DNS":', { "data": error }),toast({"variant": 'destructive',"title": 'Failed to verify DNS';'        }
         "description": error.message})}
-  }}.order('created_at', { "ascending": false })}.order ('created_at', { "ascending": false })}'
+  }.order('created_at', { "ascending": false })}.order ('created_at', { "ascending": false })}'
 }import React, { useState, useEffect } from 'react';'
 import { supabase   } from '@/integrations/supabase/client';'
 import { logErrorToProduction } from '@/utils/productionLogger';'
@@ -43,7 +43,7 @@ import { format   } from 'date-fns';'
 export function TenantsList() {const [tenants, setTenants] = useState<WhitelabelTenant[]>([])const [isLoading, setIsLoading] = useState(true)useEffect(() => {loadTenants()}, []),)}const verifyDns = async ("tenant": WhitelabelTenant) => {try {';'
   //In a real implementation,  this would verify DNS records //For now, we'll just mark it as verified const {error ';'
 }= await supabase .from ('whitelabel tenants') if (error) throw error;'
-//Update local state setTenants (tenants.map (t => { return  ; }}return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" > <Table> <TableHeader> <TableRow> <TableHead>Brand</TableHead> <TableHead>Subdomain</TableHead> <TableHead>Custom Domain</TableHead> <TableHead>Status</TableHead> <TableHead>Created At</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {tenants.length === 0 ? (<TableRow> <TableCell colSpan= {6 ";"
+//Update local state setTenants (tenants.map (t => { return  ; }return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" > <Table> <TableHeader> <TableRow> <TableHead>Brand</TableHead> <TableHead>Subdomain</TableHead> <TableHead>Custom Domain</TableHead> <TableHead>Status</TableHead> <TableHead>Created At</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {tenants.length === 0 ? (<TableRow> <TableCell colSpan= {6 ";"
 }className="text-center py-8 text-muted-foreground" > No tenants found. Create a new white-label instance to get started. </TableCell> </TableRow> <a href= {`"https"://$ {tenant.custom domain ;`}` ";"
 }target="blank" rel="noopener noreferrer" className=""hover":underline flex items-center" > </Badge> {";"
   !tenant.dns verified && (<Button variant="ghost" size="sm" onClick={() => verifyDns (tenant) ";"

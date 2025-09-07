@@ -368,7 +368,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
     ];"popular": true, "icon": '🚛';'
     ];"popular": false, "icon": '⛓️';'
     ];"popular": true, "icon": '🏭';'
-];;"marketSize": '$28B warehouse automation market', "growthRate": '38% annual growth';'
+];"marketSize": '$28B warehouse automation market', "growthRate": '38% annual growth';'
     }
     "variant": 'ai-supply-chain-enterprise';'
     "contactInfo": {"popular": true;
@@ -567,7 +567,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
 ];}
 ];
   }
-];;
+];
     "roi": 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.''
     "competitors": ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];'
     "marketSize": '$45B supply chain management market', "growthRate": '28% annual growth''

@@ -34,7 +34,7 @@ import {}
   buildMarkdownFromWiki,
   buildWikitextFromWiki,
 
-      }}";
+      }";
       className="px - 3 py - 1 rounded border text - xs hover:bg - gray - 50 dark:hover:bg - gray - 900";
     >;'
       {copied ? 'Copied' : label}

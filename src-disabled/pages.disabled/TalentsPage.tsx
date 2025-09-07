@@ -792,8 +792,8 @@ export default function TalentsPage() {;
     return (
       <div className="container py-8" data-testid="talents-loading">"
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
           className="text-center mb-8""
         >
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">"
@@ -838,8 +838,8 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     return (
       <div className="container py-8" data-testid="talents-loading">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
           className="text-center mb-8"
         >
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
@@ -861,9 +861,9 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 ;
       {/* Filter Controls */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
+        initial={ opacity: 0, y: 20 }
+        animate={ opacity: 1, y: 0 }
+        transition={ delay: 0.3 }
       >;
         <TalentFilterControls;
           sortBy={sortBy}
@@ -881,20 +881,20 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       {/* Talent Grid */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"",
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
+        initial={ opacity: 0 }
+        animate={ opacity: 1 }
+        transition={ delay: 0.4 }
       >
         <AnimatePresence mode="popLayout">"
           {talents.map((talent, index) => (
             <motion.div
               key={talent.id}
               ref={index === talents.length - 1 ? lastElementRef : null}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ delay: Math.min(index * 0.03, 0.5) }}
-              whileHover={{ scale: 1.02 }}
+              initial={ opacity: 0, scale: 0.9 }
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0.9 }
+              transition={ delay: Math.min(index * 0.03, 0.5) }
+              whileHover={ scale: 1.02 }
             >;
               <TalentCard;
                 talent={talent}
@@ -908,8 +908,8 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       {(isFetching ||,  loading) && (
         <motion.div
           className="mt-8""
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
         >;
           <TalentLoadingGrid count={4} />;
         </motion.div>;
@@ -933,8 +933,8 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       {!hasMore && talents.length > 0 && (
         <motion.div
           className="text-center mt-12 py-8 border-t""
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
         >
           <div className="text-muted-foreground text-lg mb-2">"
             🎉 You've explored all available talents!'
@@ -951,11 +951,11 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
           <motion.button;
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"",
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            initial={ opacity: 0, scale: 0 }
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0 }
+            whileHover={ scale: 1.1 }
+            whileTap={ scale: 0.9 }
           >
             <ArrowUp className="h-5 w-5 text-primary-foreground" />"
           </motion.button>
@@ -982,8 +982,8 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       {/* Header */}
       <motion.div
         className="text-center mb-8""
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={ opacity: 0, y: -20 }
+        animate={ opacity: 1, y: 0 }
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">",
           AI & IT Talent Directory
@@ -995,9 +995,9 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       {/* Market Insights */}
       {marketStats && (;
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ delay: 0.2 }
         >;
           <TalentMarketInsights stats={marketStats} />;
         </motion.div>;
@@ -1005,9 +1005,9 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 ;
       {/* Filter Controls */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
+        initial={ opacity: 0, y: 20 }
+        animate={ opacity: 1, y: 0 }
+        transition={ delay: 0.3 }
       >;
         <TalentFilterControls;
           sortBy={sortBy}
@@ -1025,20 +1025,20 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       {/* Talent Grid */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"",
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
+        initial={ opacity: 0 }
+        animate={ opacity: 1 }
+        transition={ delay: 0.4 }
       >
         <AnimatePresence mode="popLayout">"
           {talents.map((talent, index) => (
             <motion.div
               key={talent.id}
               ref={index === talents.length - 1 ? lastElementRef : null}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ delay: Math.min(index * 0.03, 0.5) }}
-              whileHover={{ scale: 1.02 }}
+              initial={ opacity: 0, scale: 0.9 }
+              animate={ opacity: 1, scale: 1 }
+              exit={ opacity: 0, scale: 0.9 }
+              transition={ delay: Math.min(index * 0.03, 0.5) }
+              whileHover={ scale: 1.02 }
             >;
               <TalentCard;
                 talent={talent}
@@ -1052,8 +1052,8 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       {(isFetching ||,  loading) && (
         <motion.div
           className="mt-8""
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
         >;
           <TalentLoadingGrid count={4} />;
         </motion.div>;
@@ -1077,8 +1077,8 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       {!hasMore && talents.length > 0 && (
         <motion.div
           className="text-center mt-12 py-8 border-t""
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={ opacity: 0 }
+          animate={ opacity: 1 }
         >
           <div className="text-muted-foreground text-lg mb-2">"
             🎉 You've explored all available talents!'
@@ -1095,11 +1095,11 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
           <motion.button;
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"",
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            initial={ opacity: 0, scale: 0 }
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0 }
+            whileHover={ scale: 1.1 }
+            whileTap={ scale: 0.9 }
           >
             <ArrowUp className="h-5 w-5 text-primary-foreground" />"
           </motion.button>

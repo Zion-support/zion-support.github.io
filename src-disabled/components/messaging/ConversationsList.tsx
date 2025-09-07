@@ -89,7 +89,7 @@ export function ConversationsList({;
           onClick={() => {;
             setActiveConversation(conversation);
             markAsRead(conversation.id);
-          }}
+          }
         />
       </div>
     )

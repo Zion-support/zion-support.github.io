@@ -230,7 +230,7 @@ globalReach: '150+ countries',
           </title>
           <meta
             name='description'
-            content="Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950"
+            content='Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950'
           />
           <meta
             name='keywords'
@@ -264,15 +264,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
 <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Revolutionary 2025 Pricing
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                 Experience the future of technology at competitive prices. Our revolutionary services
                 deliver 10x better performance at 50% lower costs than traditional solutions.
               </p>
@@ -298,23 +298,23 @@ billingCycle === 'yearly'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     }`}
               {/* Billing Toggle */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              <div className="flex items-center justify-center gap-4 mb-12">
-                <span className="text-gray-400">Monthly</span>
+              <div className='flex items-center justify-center gap-4 mb-12'>
+                <span className='text-gray-400'>Monthly</span>
                 <button
                   onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${;
                     billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600';
                   }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 >;
@@ -322,65 +322,65 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${;
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1';
                     }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   />
                 </button>
-                <span className="text-gray-400">Yearly (Save 20%)</span>
+                <span className='text-gray-400'>Yearly (Save 20%)</span>
               </div>
               <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12'>
               {/* Market Analysis */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+              <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12'>
 
 
                 <motion.div
-                  transition={{ duration: 0.6, delay: 0.1 }} className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30">
-                  <div className="text-2xl font-bold text-blue-400">{marketAnalysis.totalMarketSize}</div>
-                  <div className="text-xs text-gray-400">Market Size</div>
+                  transition={ duration: 0.6, delay: 0.1 } className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30'>
+                  <div className='text-2xl font-bold text-blue-400'>{marketAnalysis.totalMarketSize}</div>
+                  <div className='text-xs text-gray-400'>Market Size</div>
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.2 }} className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-4 border border-green-500/30">
-                  <div className="text-2xl font-bold text-green-400">{marketAnalysis.growthRate}</div>
-                  <div className="text-xs text-gray-400">Growth Rate</div>
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.2 } className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-4 border border-green-500/30'>
+                  <div className='text-2xl font-bold text-green-400'>{marketAnalysis.growthRate}</div>
+                  <div className='text-xs text-gray-400'>Growth Rate</div>
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.3 }} className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/30">
-                  <div className="text-2xl font-bold text-purple-400">{marketAnalysis.customerSatisfaction}</div>
-                  <div className="text-xs text-gray-400">Satisfaction</div>
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.3 } className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/30'>
+                  <div className='text-2xl font-bold text-purple-400'>{marketAnalysis.customerSatisfaction}</div>
+                  <div className='text-xs text-gray-400'>Satisfaction</div>
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.4 }} className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30">
-                  <div className="text-2xl font-bold text-orange-400">{marketAnalysis.averageROI}</div>
-                  <div className="text-xs text-gray-400">Average ROI</div>
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.4 } className='bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30'>
+                  <div className='text-2xl font-bold text-orange-400'>{marketAnalysis.averageROI}</div>
+                  <div className='text-xs text-gray-400'>Average ROI</div>
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.5 }} className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-4 border border-cyan-500/30">
-                  <div className="text-2xl font-bold text-cyan-400">{marketAnalysis.timeToValue}</div>
-                  <div className="text-xs text-gray-400">Time to Value</div>
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.5 } className='bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-4 border border-cyan-500/30'>
+                  <div className='text-2xl font-bold text-cyan-400'>{marketAnalysis.timeToValue}</div>
+                  <div className='text-xs text-gray-400'>Time to Value</div>
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.6 }
                   className='bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30'
                 >
                   <div className='text-2xl font-bold text-pink-400'>
@@ -397,17 +397,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Choose Your Transformation Plan
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Start with our starter plan and scale up as you grow. All plans include 
                 our revolutionary AI and quantum computing services.
               </p>
@@ -417,16 +417,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.2 }
+                  viewport={ once: true }
                   className={`relative ${
 tier.popular
                       ? 'scale-105 border-2 border-blue-500'
                       : 'border border-gray-700'
                   } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
               {pricingTiers.map((tier, index) => (
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -437,10 +437,10 @@ tier.popular
                 include our revolutionary AI and quantum computing services.;
               </p>;
             </motion && motion.div>;
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.2 }
+                  viewport={ once: true }
                   className={`relative ${
                 >
                   {tier.popular && (
@@ -501,8 +501,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>                    {tier && tier.cta}
                     {tier.cta  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   </button>;
@@ -517,10 +517,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -557,10 +557,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices.map(service => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: 0.1 }
+viewport={ once: true }
                   className='group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -569,21 +569,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items-center gap-3'>
                       <div className='text-3xl'>{service.icon}</div>
             {/* Category Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>
               {serviceCategories.map((category) => (
                 <button
                   key={category.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   onClick={() => setSelectedCategory(category.id)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${;
@@ -591,68 +591,68 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white';
                       : 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400';
                   }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 >
-                  <category.icon className="w-5 h-5" />
+                  <category.icon className='w-5 h-5' />
                   {category.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
+                  <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>
                     {category.count  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   </span>;
                 </button>;
               ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             </div>;
             {/* Services Grid */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {filteredServices.map((service) => (
                 <motion.div
                   key={service.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  initial={ opacity: 0, y: 20 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  whileInView={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  transition={{ duration: 0.5, delay: 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  transition={ duration: 0.5, delay: 0.1 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
+                  viewport={ once: true } className='group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'>
                   {/* Service Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="text-3xl">{service.icon}</div>
+                  <div className='flex items-start justify-between mb-4'>
+                    <div className='flex items-center gap-3'>
+                      <div className='text-3xl'>{service.icon}</div>
                   <div className='flex items-start justify-between mb-4'>;
                     <div className='flex items-center gap-3'>;
                       <div className='text-3xl'>{service && service.icon}</div>;
@@ -673,10 +673,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     )}
 
                       <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                        <h3 className='text-xl font-bold text-white group-hover:text-blue-400 transition-colors'>
                           {service.name}
                         </h3>
-                        <p className="text-gray-400 text-sm">{service.tagline}</p>
+                        <p className='text-gray-400 text-sm'>{service.tagline}</p>
                       </div>
                     </div>
                     {service.popular && (
@@ -697,7 +697,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ${getPrice(service)}
 origin/cursor/automate-test-improve-and-merge-code-2533
                       </span>
-                      <span className="text-gray-400">{service.period}</span>
+                      <span className='text-gray-400'>{service.period}</span>
                     </div>
                     <div className='flex items-center gap-1'>
                       <Star className='w-4 h-4 text-yellow-400 fill-current' />
@@ -724,27 +724,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       ))}
                   {/* Key Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
-                    <div className="grid grid-cols-1 gap-1">
+                  <div className='mb-4'>
+                    <h4 className='text-sm font-semibold text-gray-300 mb-2'>Key Features:</h4>
+                    <div className='grid grid-cols-1 gap-1'>
                       {service.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
-                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                        <div key={idx} className='flex items-center gap-2 text-sm text-gray-400'>
+                          <div className='w-1.5 h-1.5 bg-blue-500 rounded-full'></div>
 
                           {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                         </div>;
                       ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                       {service.features.length > 3 && (
@@ -753,15 +753,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           +{service.features.length - 3} more features
                         </div>
                       )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                     </div>;
                   </div>;
                   {/* Market Position */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   </div>
@@ -799,16 +799,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className='text-xl text-gray-300 mb-8'>
                 Contact our team to discuss your specific needs and get a custom quote. 
                 We offer flexible pricing and payment options to fit your budget.
               </p>

@@ -872,9 +872,9 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
   return (<footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">;"
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">';'
-        <div className="absolute inset-0" style="{{{';';'
+        <div className="absolute inset-0" style="{{';';'
       <div className="absolute inset-0 opacity-5">;"
-        <div className="absolute inset-0" style="{{{"backgroundImage": `url("data; %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='"http": //www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}"} />;"      </div>;
+        <div className="absolute inset-0" style="{{"backgroundImage": `url("data; %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='"http": //www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}"} />;"      </div>;
       <div className="relative z-10">;"
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-16">;"
@@ -883,10 +883,10 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
             {/* Company Info */}
             <div className=""lg":col-span-2">;"
               <motion.div;
-                initial={{ "opacity": 0, "y": 20 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                viewport={{ "once": true }}
-                transition={{ "duration": 0.6 }}
+                initial={ "opacity": 0, "y": 20 }
+                whileInView={ "opacity": 1, "y": 0 }
+                viewport={ "once": true }
+                transition={ "duration": 0.6 }
               >;
                 <div className="flex items-center gap-3 mb-6">;"
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">;"
@@ -919,10 +919,10 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
             {footerSections.map((section, index) => (<motion.div;
                 }
                 key={section.title}
-                initial={{ "opacity": 0, "y": 20 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                viewport={{ "once": true }}
-                transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                whileInView={ "opacity": 1, "y": 0 }
+                viewport={ "once": true }
+                transition={ "duration": 0.6, "delay": index * 0.1 }
                 className="space-y-4";"
               >;
                 {/* Mobile Section Header */}
@@ -942,9 +942,9 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
                   }`}>;`                    {section.links.map((link) => (<motion.div;
                         }
                         key={link.name}
-                        initial={{ "opacity": 0, "x": -10 }}
-                        animate={{ "opacity": 1, "x": 0 }}
-                        transition={{ "duration": 0.3 }}
+                        initial={ "opacity": 0, "x": -10 }
+                        animate={ "opacity": 1, "x": 0 }
+                        transition={ "duration": 0.3 }
                       >;
                         <button;
                           onClick={() => handleLinkClick(link)}
@@ -968,10 +968,10 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
           <div className="grid grid-cols-1 "md":grid-cols-2 gap-8 items-center">;"
             {/* Copyright and Legal */}
             <motion.div;
-              initial={{ "opacity": 0, "x": -20 }}
-              whileInView={{ "opacity": 1, "x": 0 }}
-              viewport={{ "once": true }}
-              transition={{ "duration": 0.6 }}
+              initial={ "opacity": 0, "x": -20 }
+              whileInView={ "opacity": 1, "x": 0 }
+              viewport={ "once": true }
+              transition={ "duration": 0.6 }
               className="space-y-4";"
             >;
               <div className="flex items-center gap-2 text-slate-400">;"
@@ -993,10 +993,10 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
             </motion.div>;
             {/* Social Links */}
             <motion.div;
-              initial={{ "opacity": 0, "x": 20 }}
-              whileInView={{ "opacity": 1, "x": 0 }}
-              viewport={{ "once": true }}
-              transition={{ "duration": 0.6 }}
+              initial={ "opacity": 0, "x": 20 }
+              whileInView={ "opacity": 1, "x": 0 }
+              viewport={ "once": true }
+              transition={ "duration": 0.6 }
               className="flex flex-col space-y-4";"
             >;
               <h3 className="text-lg font-semibold text-white">Follow Us</h3>;"
@@ -1008,8 +1008,8 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
                     href={link.href}
                     target="_blank";"
                     rel="noopener noreferrer";"
-                    whileHover={{ "scale": 1.1, "y": -2 }}
-                    whileTap={{ "scale": 0.95 }}
+                    whileHover={ "scale": 1.1, "y": -2 }
+                    whileTap={ "scale": 0.95 }
                     className={`w-10 h-10 bg-slate-700 "hover":bg-slate-600 rounded-lg flex items-center justify-center text-slate-300 ${link.color} transition-all duration-200`}`                  >;
           <div>;
             <h4 className="text-lg font-semibold mb-6">Company</h4>;"
@@ -1044,10 +1044,10 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
         </div>;
         {/* Newsletter Signup */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 20 }}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          viewport={{ "once": true }}
-          transition={{ "duration": 0.6 }}
+          initial={ "opacity": 0, "y": 20 }
+          whileInView={ "opacity": 1, "y": 0 }
+          viewport={ "once": true }
+          transition={ "duration": 0.6 }
           className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-t border-slate-700";"
         >;
           <div className="max-w-4xl mx-auto px-4 "sm":px-6 "lg":px-8 py-12 text-center">;"
@@ -1103,9 +1103,9 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
       <AnimatePresence>;
         {showScrollTop && (<motion.button;
             }
-            initial={{ "opacity": 0, "scale": 0.8 }}
-            animate={{ "opacity": 1, "scale": 1 }}
-            exit={{ "opacity": 0, "scale": 0.8 }}
+            initial={ "opacity": 0, "scale": 0.8 }
+            animate={ "opacity": 1, "scale": 1 }
+            exit={ "opacity": 0, "scale": 0.8 }
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 z-50 p-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg "hover":shadow-xl transition-all duration-200 "hover":scale-110";"
             title="Scroll to top";"
@@ -1773,10 +1773,10 @@ export function Footer() {const scrollToTop = ("props": any) => {window.scrollTo
                 }
                 key={stat.label}
                 className="text-center";"
-                initial={{ "opacity": 0, "y": 20 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.6, "delay": index * 0.1 }}
-                viewport={{ "once": true }}
+                initial={ "opacity": 0, "y": 20 }
+                whileInView={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.6, "delay": index * 0.1 }
+                viewport={ "once": true }
               >;
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">;"
                   <stat.icon className="w-8 h-8 text-white" />;"

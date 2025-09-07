@@ -1,5 +1,5 @@
 import { MetadataRoute  } from 'next';'
-export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = '"https": //ziontechgroup.com';'
+export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = ''https': //ziontechgroup.com';'
   }
   const routes = [;
     '','/about/services/ai-services/quantum-services/cybersecurity/enterprise-it/research-development/space-tech','/case-studies/news/events/webinars/white-papers/docs/contact/privacy','/terms/cookies/accessibility/multiverse/launch/admin/instances/admin/os-deploy'];'
@@ -9,7 +9,7 @@ import { MetadataRoute } from 'next';'
 
 export default function sitemap(): MetadataRoute.Sitemap {;
   }
-  const baseUrl = '"https": //ziontechgroup.com';'
+  const baseUrl = ''https': //ziontechgroup.com';'
   const routes = [;
     '',;'
     '/about/services/ai-services/quantum-services/cybersecurity/enterprise-it/research-development/space-tech',;'
@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {;
   const complianceServices = [;
     '/soc2-compliance-automation'];'
   const allRoutes  = [;...routes,...aiServices,...quantumServices,...networkServices,...complianceServices];
-  return allRoutes.map((route) => ({"url": `${baseUrl}${route}`,"lastModified": new Date()"changeFrequency": 'weekly';const base_url = '"https": //ziontechgroup.com';'  const allRoutes = [;
+  return allRoutes.map((route) => ({'url': `${baseUrl}${route}`,'lastModified': new Date()'changeFrequency': 'weekly';const base_url = ''https': //ziontechgroup.com';'  const allRoutes = [;
 
     ...routes,;
     ...aiServices,;
@@ -44,12 +44,12 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     ...complianceServices];
   return allRoutes.map((route) => ({;
     }
-    "url": `${baseUrl}${route}`,;`
-    "lastModified": new Date();
-    "changeFrequency": 'weekly';'
+    'url': `${baseUrl}${route}`,;`
+    'lastModified': new Date();
+    'changeFrequency': 'weekly';'
 export default function sitemap (): MetadataRoute.Sitemap {
   }
-  const base_url = '"https": //ziontechgroup.com';'
+  const base_url = ''https': //ziontechgroup.com';'
   const routes = [;
     '','/about / services / ai - services / quantum - services / cybersecurity / enterprise - it / research - development / space - tech','/case - studies / news / events / webinars / white - papers / docs / contact / privacy','/terms / cookies / accessibility / multiverse / launch / admin / instances / admin / os - deploy'];'
   const ai_services = [;
@@ -78,16 +78,16 @@ export default function sitemap (): MetadataRoute.Sitemap {
     '/soc2 - compliance - automation'];'
   const all_routes = [;
     ...routes,...ai_services,...quantum_services,...network_services,...compliance_services];
-  return all_routes.map ((route) => ( {"url": `${base_url}${route}`,"last_modified": new Date ()"change_frequency": 'weekly';'    ...routes,
+  return all_routes.map ((route) => ( {'url': `${base_url}${route}`,'last_modified': new Date ()'change_frequency': 'weekly';'    ...routes,
     ...ai_services,
     ...quantum_services,
     ...network_services,
     ...compliance_services];
   return all_routes.map ((route) => ({
     }
-    "url": `${base_url}${route}`,`    "last_modified": new Date ();
-    "change_frequency": 'weekly';'
-export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = '"https": //ziontechgroup.com';'
+    'url': `${base_url}${route}`,`    'last_modified': new Date ();
+    'change_frequency': 'weekly';'
+export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = ''https': //ziontechgroup.com';'
   }
   const routes = [;
     '';'
@@ -118,13 +118,13 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = '"http
     ...quantumServices;
     ...networkServices;
     ...complianceServices];
-  return allRoutes.map((route) => ({"url": `${baseUrl}${route}`;    "lastModified": new Date()"changeFrequency": 'weekly';'    "priority": route === '' ? 1 : 0.8}))}'
+  return allRoutes.map((route) => ({'url': `${baseUrl}${route}`;    'lastModified': new Date()'changeFrequency': 'weekly';'    'priority': route === '' ? 1 : 0.8}))}'
   return allRoutes.map((route) => ({;
     }
-    "url": `${baseUrl}${route}`;`
-    "lastModified": new Date();
-    "changeFrequency": 'weekly';'
-    "priority": route === '' ? 1 : 0.8}));'
+    'url': `${baseUrl}${route}`;`
+    'lastModified': new Date();
+    'changeFrequency': 'weekly';'
+    'priority': route === '' ? 1 : 0.8}));'
 }
 import { MetadataRoute } from 'next'
 

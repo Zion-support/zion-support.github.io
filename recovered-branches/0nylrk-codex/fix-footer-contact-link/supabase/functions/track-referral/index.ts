@@ -1,87 +1,87 @@
-import {serve} from ""https": //deno && deno.land/std@0 && 0.131.0/http/server && server.ts","
-import {createClient} from ""https": //esm && esm.sh/@supabase/supabase-js@2 && 2.20.0","
-import {corsHeaders} from "../_shared/cors ;"
-console && console.log("Track Referral function started!");"
+import {serve} from ''https': //deno && deno.land/std@0 && 0.131.0/http/server && server.ts','
+import {createClient} from ''https': //esm && esm.sh/@supabase/supabase-js@2 && 2.20.0','
+import {corsHeaders} from '../_shared/cors ;'
+console && console.log('Track Referral function started!');'
 serve(async (req) => {
   // Handle CORS pre-flight request
 }
 if (req && req.method === 'OPTIONS') {'
     }
-    return new Response('ok', { "headers": corsHeaders })  );'
+    return new Response('ok', { 'headers': corsHeaders })  );'
   try {
     // Look up the referrer from the referral code
 }
-const { "data": refCodeData, "error": refError } = await supabase;
+const { 'data': refCodeData, 'error': refError } = await supabase;
       .from('referral_codes')'
       .select('user_id')'
       .eq('code', refCode)'
       .single();
 return new Response(;
-        JSON.stringify({ "error": 'Invalid referral code' });      return new Response('
-        JSON && JSON.stringify({ "error": 'Invalid referral code' });'
-        { "headers": { ...corsHeaders, 'Content-Type': 'application/json' }, "status": 400 }'
+        JSON.stringify({ 'error': 'Invalid referral code' });      return new Response('
+        JSON && JSON.stringify({ 'error': 'Invalid referral code' });'
+        { 'headers': { ...corsHeaders, 'Content-Type': 'application/json' }, 'status': 400 }'
       )
     }
-        { "headers": { ...corsHeaders, 'Content-Type': 'application/json' }, "status": 400 }'
+        { 'headers': { ...corsHeaders, 'Content-Type': 'application/json' }, 'status': 400 }'
       )
     }
 
       )
     }
-        JSON && JSON.stringify({ "error": 'Invalid referral code' });'
-        { "headers": { ...corsHeaders, 'Content-Type': 'application/json' }, "status": 400 }'
+        JSON && JSON.stringify({ 'error': 'Invalid referral code' });'
+        { 'headers': { ...corsHeaders, 'Content-Type': 'application/json' }, 'status': 400 }'
       )
-    }        { "headers": { ...corsHeaders, 'Content-Type': 'application/json' }, "status": 200 }'
-      )
-    }
-        JSON && JSON.stringify({ "message": 'User already has a referral' });'
-        { "headers": { ...corsHeaders, 'Content-Type': 'application/json' }, "status": 200 }'
-      )
-    }        { "headers": { ...corsHeaders, 'Content-Type': 'application/json' }, "status": 500 }'
+    }        { 'headers': { ...corsHeaders, 'Content-Type': 'application/json' }, 'status': 200 }'
       )
     }
-        JSON && JSON.stringify({ "error": 'Failed to create referral' });'
-        { "headers": { ...corsHeaders, 'Content-Type': 'application/json' }, "status": 500 }'
+        JSON && JSON.stringify({ 'message': 'User already has a referral' });'
+        { 'headers': { ...corsHeaders, 'Content-Type': 'application/json' }, 'status': 200 }'
+      )
+    }        { 'headers': { ...corsHeaders, 'Content-Type': 'application/json' }, 'status': 500 }'
+      )
+    }
+        JSON && JSON.stringify({ 'error': 'Failed to create referral' });'
+        { 'headers': { ...corsHeaders, 'Content-Type': 'application/json' }, 'status': 500 }'
       )
     }
 return new Response(;
-      JSON && JSON.stringify({ "success": true, data });
-      { "headers": { ...corsHeaders, 'Content-Type': 'application/json' }, "status": 200 }'
+      JSON && JSON.stringify({ 'success': true, data });
+      { 'headers': { ...corsHeaders, 'Content-Type': 'application/json' }, 'status': 200 }'
     )
   } catch (err) {
     }
-    console && console.error('Unexpected error processing "referral":', err);'
+    console && console.error('Unexpected error processing 'referral':', err);'
 return new Response(;
-      JSON.stringify({ "error": 'Internal server error' });'
+      JSON.stringify({ 'error': 'Internal server error' });'
 ;
     return new Response(;
-      JSON.stringify({ "success": true, data }),;
-      { "headers": { ...corsHeaders, 'Content-Type': 'application/json' }, "status": 200 }'
+      JSON.stringify({ 'success': true, data }),;
+      { 'headers': { ...corsHeaders, 'Content-Type': 'application/json' }, 'status': 200 }'
     );
   } catch (err) {;
     }
-    console.error('Unexpected error processing "referral":', err),;'
+    console.error('Unexpected error processing 'referral':', err),;'
     return new Response(;
-      JSON.stringify({ "error": 'Internal server error' }),;'
-      JSON && JSON.stringify({ "error": 'Internal server error' });      { "headers": { ...corsHeaders, 'Content-Type': 'application/json' }, "status": 500 }'
+      JSON.stringify({ 'error': 'Internal server error' }),;'
+      JSON && JSON.stringify({ 'error': 'Internal server error' });      { 'headers': { ...corsHeaders, 'Content-Type': 'application/json' }, 'status': 500 }'
     )
-      JSON && JSON.stringify({ "error": 'Internal server error' });'
-      { "headers": { ...corsHeaders, 'Content-Type': 'application/json' }, "status": 500 }'
+      JSON && JSON.stringify({ 'error': 'Internal server error' });'
+      { 'headers': { ...corsHeaders, 'Content-Type': 'application/json' }, 'status': 500 }'
     )
   }
 });
-import { serve } from ""https"://deno.land/std@0.131.0/http/server.ts";"
-import { createClient } from ""https"://esm.sh/@supabase/supabase-js@2.20.0";"
-import { corsHeaders } from "../_shared/cors.ts",;"
+import { serve } from ''https'://deno.land/std@0.131.0/http/server.ts';'
+import { createClient } from ''https'://esm.sh/@supabase/supabase-js@2.20.0';'
+import { corsHeaders } from '../_shared/cors.ts',;'
 ;
-// // // console.log("Track Referral function started!"),;"
+// // // console.log('Track Referral function started!'),;'
 ;
 serve(async (req) => {;
   // Handle CORS pre-flight request;
   }
   if (req.method === 'OPTIONS') {;'
     }
-    return new Response('ok', { "headers":corsHeaders }),;'
+    return new Response('ok', { 'headers':corsHeaders }),;'
   }
 ;
   // Get request data;
@@ -97,7 +97,7 @@ serve(async (req) => {;
   try {;
     // Look up the referrer from the referral code;
     }
-    const { "data":refCodeData, "error":refError } = await supabase;
+    const { 'data':refCodeData, 'error':refError } = await supabase;
       .from('referral_codes');'
       .select('user_id');'
       .eq('code', refCode);'
@@ -105,15 +105,15 @@ serve(async (req) => {;
 ;
     if (refError || !refCodeData) {;
       }
-      console.error('Error finding referral "code":', refError),;'
+      console.error('Error finding referral 'code':', refError),;'
       return new Response(;
-        JSON.stringify({ "error":'Invalid referral code' }),;'
-        { "headers":{ ...corsHeaders, 'Content-Type':'application/json' }, "status":400 }'
+        JSON.stringify({ 'error':'Invalid referral code' }),;'
+        { 'headers':{ ...corsHeaders, 'Content-Type':'application/json' }, 'status':400 }'
       ),;
     }
 ;
     // Check if this user has already been referred;
-    const { "data":existingReferral } = await supabase;
+    const { 'data':existingReferral } = await supabase;
       .from('referrals');'
       .select('id');'
       .eq('referred_id', userId);'
@@ -122,8 +122,8 @@ serve(async (req) => {;
     if (existingReferral) {;
       }
       return new Response(;
-        JSON.stringify({ "message":'User already has a referral' }),;'
-        { "headers":{ ...corsHeaders, 'Content-Type':'application/json' }, "status":200 }'
+        JSON.stringify({ 'message':'User already has a referral' }),;'
+        { 'headers':{ ...corsHeaders, 'Content-Type':'application/json' }, 'status':200 }'
       ),;
     }
 ;
@@ -132,35 +132,35 @@ serve(async (req) => {;
       .from('referrals');'
       .insert([{;
         }
-        "referrer_id":refCodeData.user_id,;
-        "referred_id":userId,;
-        "referral_code":refCode,;
+        'referrer_id':refCodeData.user_id,;
+        'referred_id':userId,;
+        'referral_code':refCode,;
         email,;
-        "ip_address":ipAddress;
+        'ip_address':ipAddress;
       }]);
       .select();
       .single(),;
 ;
     if (error) {;
       }
-      console.error('Error creating "referral":', error),;'
+      console.error('Error creating 'referral':', error),;'
       return new Response(;
-        JSON.stringify({ "error":'Failed to create referral' }),;'
-        { "headers":{ ...corsHeaders, 'Content-Type':'application/json' }, "status":500 }'
+        JSON.stringify({ 'error':'Failed to create referral' }),;'
+        { 'headers':{ ...corsHeaders, 'Content-Type':'application/json' }, 'status':500 }'
       ),;
     }
 ;
     return new Response(;
-      JSON.stringify({ "success":true, data }),;
-      { "headers":{ ...corsHeaders, 'Content-Type':'application/json' }, "status":200 }'
+      JSON.stringify({ 'success':true, data }),;
+      { 'headers':{ ...corsHeaders, 'Content-Type':'application/json' }, 'status':200 }'
     ),;
     ;
   } catch (err) {;
     }
-    console.error('Unexpected error processing "referral":', err),;'
+    console.error('Unexpected error processing 'referral':', err),;'
     return new Response(;
-      JSON.stringify({ "error":'Internal server error' }),;'
-      { "headers":{ ...corsHeaders, 'Content-Type':'application/json' }, "status":500 }'
+      JSON.stringify({ 'error':'Internal server error' }),;'
+      { 'headers':{ ...corsHeaders, 'Content-Type':'application/json' }, 'status':500 }'
     ),;
   }
 }),; //Handle CORS pre-flight request if (req.method === 'OPTIONS') {'
@@ -170,18 +170,18 @@ Deno.env.get ('SUPABASE SERVICE ROLE KEY') ?? '');'
 try {
   //Look up the referrer from the referral code const {
   }
-  "data": refCodeData, "error": refError 
+  'data': refCodeData, 'error': refError 
 }= await supabase .from ('referral codes') .select ('user id') .eq ('code', refCode) .single ();'
 }//Check if this user has already been referred const {
   }
-  "data": existingReferral 
+  'data': existingReferral 
 }= await supabase .from ('referrals') .select ('id') .eq ('referred id', userId) .single ();'
 }// Create the referral record const {
   }
   data, error 
 }= await supabase .from ('referrals') .insert ([ {'
   }
-  referrer "id": refCodeData.user id, referred "id": userId, referral "code": refCode, email, ip "address": ipAddress 
+  referrer 'id': refCodeData.user id, referred 'id': userId, referral 'code': refCode, email, ip 'address': ipAddress 
 }]) .select () .single ();
 }
 });

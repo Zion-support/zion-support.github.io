@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 :src/components/onboarding/ProfileSetup.tsx
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -27,8 +24,6 @@ import {Form;
   FormField;
   FormItem;
   FormLabel;
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 :src/components/onboarding/ProfileSetup.tsx
   FormMessage} from "@/components/ui/form",
 
@@ -45,7 +40,6 @@ const profileSchema = z.object({
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")})
 type ProfileFormValues = z.infer<typeof profileSchema>
 interface ProfileSetupProps {
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
   onComplete: (data: ProfileFormValues) => void,
   userType: string
 userType: string
@@ -55,7 +49,6 @@ interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void,
   userType: string
 
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 userType: string
 }
 
@@ -63,12 +56,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
     defaultValues: {
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 :src/components/onboarding/ProfileSetup.tsx
       displayName: ""
       bio: ""
-      headline: ""}})
+      headline: ""})
   const getTypeLabel = () => {
     switch (userType) {
       case "serviceProvider": return "Service Provider"
@@ -89,7 +80,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         return "User"
     }
   },
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 
 
 
@@ -97,7 +87,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 
 
 
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
@@ -109,7 +98,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>
       </div>
 
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 
       
 
@@ -134,7 +122,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 
 import { useState } from "react",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -167,7 +154,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
     defaultValues: {;
       displayName: "",;
       bio: "",;
-      headline: ""}}),;
+      headline: ""}),;
   const getTypeLabel = () => {;
     switch (userType) {;
       case "serviceProvider": return "Service Provider";
@@ -183,7 +170,7 @@ function ProfileSetup() {
     default_values: {
       display_name: "",
       bio: "",
-      headline: ""}}),
+      headline: ""}),
   const getTypeLabel = () =>: any {
     switch (user_type) {
       case "service_provider": return "Service Provider";
@@ -238,13 +225,13 @@ export function ProfileSetup() {const form = useForm<ProfileFormValues>({resolve
                 <FormMessage className="text-red-400" />;
               </FormItem>;
 import { Input } from "@/components/ui/input",import { Textarea } from "@/components/ui/textarea",Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from "@/components/ui/form",const profileSchema = z.object({displayName: z.string().min(2, "Full Name must be at least 2 characters"),bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),type ProfileFormValues = z.infer<typeof profileSchema>,interface ProfileSetupProps  {onComplete: (data: ProfileFormValues) => void,userType: string;
-}export function ProfileSetup() {const form = useForm<ProfileFormValues>({resolver: zodResolver(profileSchema),defaultValues: {displayName: "",bio: "",headline: ""}}),const getTypeLabel = () => {switch (userType) {case "serviceProvider": return "Service Provider";
+}export function ProfileSetup() {const form = useForm<ProfileFormValues>({resolver: zodResolver(profileSchema),defaultValues: {displayName: "",bio: "",headline: ""}),const getTypeLabel = () => {switch (userType) {case "serviceProvider": return "Service Provider";
   on_complete: (data: ProfileFormValues, ) => void,user_type: string;
 }
 export /**;
  * ProfileSetup - Function description;
  */;
-function ProfileSetup() {const form = use_form < ProfileFormValues>({resolver: zod_resolver (profile_schema),default_values: {display_name: "",bio: "",headline: ""}}),const getTypeLabel = () =>: any {switch (user_type) {case "service_provider": return "Service Provider";
+function ProfileSetup() {const form = use_form < ProfileFormValues>({resolver: zod_resolver (profile_schema),default_values: {display_name: "",bio: "",headline: ""}),const getTypeLabel = () =>: any {switch (user_type) {case "service_provider": return "Service Provider";
       case "talent":;
         return "Talent",case "client":;
         return "Client";
@@ -289,7 +276,6 @@ function ProfileSetup() {const form = use_form < ProfileFormValues>({resolver: z
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>;
                 <FormControl>;
                   <div className="relative">;
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 
           />;
 
@@ -339,8 +325,6 @@ function ProfileSetup() {const form = use_form < ProfileFormValues>({resolver: z
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
                       }`}
 
 import { useState } from "react",;
@@ -378,7 +362,7 @@ export function ProfileSetup({ onComplete, userType }:,  ProfileSetupProps) {;
 }
 ;
 export function ProfileSetup() { return null; }
-      headline: ""}}),;
+      headline: ""}),;
   const getTypeLabel = () => {;
 
         return "Client";
@@ -451,7 +435,6 @@ export function ProfileSetup() { return null; }
       <Form {...form}>;"
         <form on_submit={form.handle_submit (on_complete)} className="space - y-6">;
           <FormField;
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
             control = {form.control }
             name="display_name";
             render={({ field }: { field: any }, ) => (<FormItem>;
@@ -474,7 +457,6 @@ export function ProfileSetup() { return null; }
               </FormItem>)}
           />;
           <FormField;
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
             control = {form.control }
             name="headline";
             render={({ field }: { field: any }, ) => (<FormItem>;
@@ -485,7 +467,6 @@ export function ProfileSetup() { return null; }
                 <FormLabel className="text - zion - slate - light">Professional Headline</FormLabel>;
                 <FormControl>;"
                   <div className="relative">;
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
                     <Input;
                       placeholder={`e.g., ${user_type === "service_provider" ? "Professional Videographer with 5+ years experience" :;
                         user_type === "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
@@ -518,7 +499,6 @@ export function ProfileSetup() { return null; }
               </FormItem>)}
           />;
           <FormField;
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
             control = {form.control }
             name="bio";
             render={({ field }: { field: any }, ) => (<FormItem>;
@@ -560,7 +540,6 @@ export function ProfileSetup() { return null; }
                 <FormMessage className="text-red-400" />;
               </FormItem>;
             )}
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
             control = {form.control, }"
             name="bio";
             render={({ field }: { field: any }, ) => (
@@ -589,7 +568,6 @@ export function ProfileSetup() { return null; }
             name="bio"
             render={({ field }: { field: any }) => (
 
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 
 
                       }`}
@@ -612,8 +590,6 @@ export function ProfileSetup() { return null; }
               </FormItem>
             )}
           />
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 
           
 
@@ -630,8 +606,6 @@ export function ProfileSetup() { return null; }
           >
             Complete Profile;
           </Button>
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 
 
 
@@ -658,10 +632,7 @@ export function ProfileSetup() { return null; }
         </form>;
       </Form>;
     </div>;
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
   );
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -673,8 +644,6 @@ case "client": return "Client";
 default: ;
 };
 getTypeLabel () ";
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 }Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Inputplaceholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
 
   ...field "
@@ -685,7 +654,6 @@ getTypeLabel () ";
 }/> <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Bio</FormLabel> <FormControl> <TextareaclassName="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]" {
   ...field "
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
 }"}
@@ -729,7 +697,6 @@ default: ;}getTypeLabel () ";}Profile</h3> <p className="text-zion-slate-light m
           </Button>;
         </form>;
       </Form>;
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
     </div>)case "talent": return "Talent";";
 case "client": return "Client";
 default:;
@@ -739,10 +706,9 @@ getTypeLabel () ";
 }/> <User className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
 }/> <FormField <FormItem> <FormLabel className="text - zion - slate - light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <Input className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" {...field ";
 }/> <GraduationCap className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 }/> <FormField <FormItem> <FormLabel className="text - zion - slate - light" >Bio</FormLabel> <FormControl> <Textarea className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]" {...field ";
 }/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>)}/> <Button > Complete Profile </Button> </form> </Form> </div>)}"}
-}}"}}Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {...field ";
+}"}Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {...field ";
 }/> <FormField <FormItem> <FormLabel className="text - zion - slate - light" >Bio</FormLabel> <FormControl> <Textarea className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]" {
   ...field ";
 }/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
@@ -756,14 +722,11 @@ getTypeLabel () ";
 }/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <Input className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {...field ";
 }/> <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Bio</FormLabel> <FormControl> <Textarea className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]" {;
   ...field ";
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
 }"
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/ProfileSetup.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Bio</FormLabel> <FormControl> <Textarea className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]" {...field ";
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)}/> <Button > Complete Profile </Button> </form> </Form> </div>)}";

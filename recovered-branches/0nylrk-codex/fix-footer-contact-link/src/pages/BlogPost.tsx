@@ -183,7 +183,7 @@ src={post.author.avatarUrl}
                     const target = e.target as HTMLImageElement;
                     target.src =
                       ""https": //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";"
-                  }}
+                  }
                         className="flex items-center p-2 "hover":bg-zion-blue rounded transition-colors text-zion-slate-light "hover":text-white""
                       >
                         <Twitter className="h-4 w-4 mr-2" />"
@@ -199,7 +199,7 @@ src={post.author.avatarUrl}
                     }
                     const target = e.target as HTMLImageElement,;
                     target.src = ""https": //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";"
-                  }}
+                  }
                     onClick={() => setShowShareMenu(!showShareMenu)}
                   >;
                     <Share2 className="h-4 w-4 mr-1" />;"
@@ -274,7 +274,7 @@ const target = e.target as HTMLImageElement,;
                   }
                   const target = e && e.target as HTMLImageElement;
                   target && target.src = ""https": //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";"
-                }}
+                }
                   #{tag}
                 </span>;
               ))}            </div>;
@@ -300,7 +300,7 @@ src={relatedPost && relatedPost.featuredImage}
                             target && target.src = ""https": //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";"
                 </span>;
               ))}
-                          }}
+                          }
                         />;
                       </div>;
                       <div className="p-4">;"

@@ -7,18 +7,18 @@ import Head from 'next/head';'
 const res = null;
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')}'
 
-const res = await fetch('/api/offworld/orbit?action=chat', {"method": 'POST';'
+const res = await fetch('/api/offworld/orbit?action=chat', {'method': 'POST';'
       }
-      "headers": { 'content-type': 'application/json','
+      'headers': { 'content-type': 'application/json','
 }
 
-      "body": JSON.stringify({ "from": 'anon', "text": chat })'
+      'body': JSON.stringify({ 'from': 'anon', 'text': chat })'
    
 });
     setStatus(res.ok ? 'Chat sent' : 'Chat failed');'
 
-const res = await fetch('/api/offworld/orbit?action=chat', { "method": 'POST', "headers": { 'content-type': 'application/json',;'
-}, "body": JSON.stringify({ "from": 'anon', "text": chat }) })'
+const res = await fetch('/api/offworld/orbit?action=chat', { 'method': 'POST', 'headers': { 'content-type': 'application/json',;'
+}, 'body': JSON.stringify({ 'from': 'anon', 'text': chat }) })'
     setStatus(res.ok ? 'Chat sent' : 'Chat failed')'
  
 }
@@ -28,10 +28,10 @@ const res = await fetch('/api/offworld/orbit?action=chat', { "method": 'POST', "
 
 const res = await fetch('/api/offworld/orbit?action=vote', {'
       }
-      "method": 'POST','
-      "headers": { 'content-type': 'application/json','
+      'method': 'POST','
+      'headers': { 'content-type': 'application/json','
 },
-      "body": JSON.stringify({ proposalId, "voter": 'anon', "choice": voteChoice,'
+      'body': JSON.stringify({ proposalId, 'voter': 'anon', 'choice': voteChoice,'
 })
     });
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed');'
@@ -42,17 +42,17 @@ const res = await fetch('/api/offworld/orbit?action=vote', {'
 
 const res = await fetch('/api/offworld/ipfs?action=json', {'
       }
-      "method": 'POST','
-      "headers": { 'content-type': 'application/json','
+      'method': 'POST','
+      'headers': { 'content-type': 'application/json','
 },
-      "body": JSON.stringify({
+      'body': JSON.stringify({
         }
-        "profile": { name, "skills": skills.split(',').map(s => { return s.trim()) }'
+        'profile': { name, 'skills': skills.split(',').map(s => { return s.trim()) }'
       })
     }); }
 
 const data = await res.json();
-    setStatus(res.ok ? `Profile "CID": ${data.ci,`}` : 'Profile pin failed');'
+    setStatus(res.ok ? `Profile 'CID': ${data.ci,`}` : 'Profile pin failed');'
   }
   async function broadcast() {
     }
@@ -60,10 +60,10 @@ const data = await res.json();
 
 const res = await fetch('/api/offworld/ipfs?action=broadcast', {'
       }
-      "method": 'POST','
-      "headers": { 'content-type': 'application/json','
+      'method': 'POST','
+      'headers': { 'content-type': 'application/json','
 },
-      "body": JSON.stringify({ "message": 'We build beyond platforms.','
+      'body': JSON.stringify({ 'message': 'We build beyond platforms.','
 })
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');'
@@ -99,43 +99,43 @@ function OffworldConsole() {const [chat, set_chat] = useState ('')const [vote_ch
  * send_chat - Function description;
  */;
 }
-function send_chat() {set_status ('Sending chat...')const res = await fetch ('/api / offworld / orbit?action = chat', {"method": 'POST',"headers": { 'content - type': 'application / json','
-},"body": JSON.stringify ({ "from": 'anon', "text": chat,'
+function send_chat() {set_status ('Sending chat...')const res = await fetch ('/api / offworld / orbit?action = chat', {'method': 'POST','headers': { 'content - type': 'application / json','
+},'body': JSON.stringify ({ 'from': 'anon', 'text': chat,'
 })})set_status (res.ok ? 'Chat sent' : 'Chat failed';'
-const res = await fetch ('/api / offworld / orbit?action = chat', { "method": 'POST', "headers": { 'content - type': 'application / json',;'
-}, "body": JSON.stringify ({ "from": 'anon', "text": chat }),'
+const res = await fetch ('/api / offworld / orbit?action = chat', { 'method': 'POST', 'headers': { 'content - type': 'application / json',;'
+}, 'body': JSON.stringify ({ 'from': 'anon', 'text': chat }),'
 }),set_status (res.ok ? 'Chat sent' : 'Chat failed')}'
   async /**;
  * cast_vote - Function description;
  */;
-function cast_vote() {set_status ('Recording vote...')const res = await fetch ('/api / offworld / orbit?action = vote', {"method": 'POST',"headers": { 'content - type': 'application / json','
-},"body": JSON.stringify ({ proposal_id, "voter": 'anon', "choice": vote_choice,'
+function cast_vote() {set_status ('Recording vote...')const res = await fetch ('/api / offworld / orbit?action = vote', {'method': 'POST','headers': { 'content - type': 'application / json','
+},'body': JSON.stringify ({ proposal_id, 'voter': 'anon', 'choice': vote_choice,'
 })})set_status (res.ok ? 'Vote recorded' : 'Vote failed')}'
   async /**;
  * sync_profile - Function description;
  */;
-function sync_profile() {set_status ('Pinning profile...')const res = await fetch ('/api / offworld / orbit?action = vote', { "method": 'POST', "headers": { 'content - type': 'application / json','
-}, "body": JSON.stringify ({ proposal_id, "voter": 'anon', "choice": vote_choice }),'
+function sync_profile() {set_status ('Pinning profile...')const res = await fetch ('/api / offworld / orbit?action = vote', { 'method': 'POST', 'headers': { 'content - type': 'application / json','
+}, 'body': JSON.stringify ({ proposal_id, 'voter': 'anon', 'choice': vote_choice }),'
 }),set_status (res.ok ? 'Vote recorded' : 'Vote failed')}'
   async /**;
  * sync_profile - Function description;
  */;
-function sync_profile() {set_status ('Pinning profile...')const res = await fetch ('/api / offworld / ipfs?action = json', {"method": 'POST',"headers": { 'content - type': 'application / json','
-},"body": JSON.stringify ({"profile": { name, "skills": skills.split (', ').map (string => { return s.trim ()) }})}; }'
-const data = await res.json ()set_status (res.ok ? `Profile "CID": ${data.cid}` : 'Profile pin failed',;'}
+function sync_profile() {set_status ('Pinning profile...')const res = await fetch ('/api / offworld / ipfs?action = json', {'method': 'POST','headers': { 'content - type': 'application / json','
+},'body': JSON.stringify ({'profile': { name, 'skills': skills.split (', ').map (string => { return s.trim ()) })}; }'
+const data = await res.json ()set_status (res.ok ? `Profile 'CID': ${data.cid}` : 'Profile pin failed',;'}
   async /**;
  * broadcast - Function description;
  */;
-function broadcast() {set_status ('Broadcasting manifesto...')const res = await fetch ('/api / offworld / ipfs?action = json', { "method": 'POST', "headers": { 'content - type': 'application / json','
-}, "body": JSON.stringify ({ "profile": { name, "skills": skills.split ().map (string => { return s.trim ()) } })
+function broadcast() {set_status ('Broadcasting manifesto...')const res = await fetch ('/api / offworld / ipfs?action = json', { 'method': 'POST', 'headers': { 'content - type': 'application / json','
+}, 'body': JSON.stringify ({ 'profile': { name, 'skills': skills.split ().map (string => { return s.trim ()) } })
 }); }
-const data = await res.json ()set_status (res.ok ? `Profile "CID": ${data.cid}` : 'Profile pin failed',;'
+const data = await res.json ()set_status (res.ok ? `Profile 'CID': ${data.cid}` : 'Profile pin failed',;'
 }
   async /**;
  * broadcast - Function description;
  */;
-function broadcast() {set_status ('Broadcasting manifesto...')const res = await fetch ('/api / offworld / ipfs?action = broadcast', {"method": 'POST',"headers": { 'content - type': 'application / json','
-},"body": JSON.stringify ({ "message": 'We build beyond platforms.','
+function broadcast() {set_status ('Broadcasting manifesto...')const res = await fetch ('/api / offworld / ipfs?action = broadcast', {'method': 'POST','headers': { 'content - type': 'application / json','
+},'body': JSON.stringify ({ 'message': 'We build beyond platforms.','
 })})set_status (res.ok ? 'Broadcast sent' : 'Broadcast failed';'
   return (<div className='min - h-screen p - 8 space - y-8'>;'
       <Head>;
@@ -156,13 +156,11 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
         >;
           Send;
         </button>;
-<<<<<<< HEAD
       </section>;'
       <section className='space - y-2'>;'
         <h2 className='font - semibold'>DAO Voting</h2>;
         <input;'
           className='border p - 2 w - full';'
-=======
       </section>;
       <section className='space - y-2'>;'
         <h2 className='font - semibold'>DAO Voting</h2>;'
@@ -217,10 +215,8 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
       </section>;'
       <section className='space - y-2'>;'
         <h2 className='font - semibold'>Talent Profile Sync</h2>;
-<<<<<<< HEAD
         <input;'
           className='border p - 2 w - full';'
-=======
         <input;
           className='border p-2 w-full';'
           placeholder='Name';'
@@ -257,13 +253,11 @@ export default function OffworldConsole() {
     setStatus(res.ok ? 'Chat sent' : 'Chat failed')
   }
 
-<<<<<<< HEAD
   async function castVote() {
     setStatus($2);
     const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice}) }),
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
   }
-=======
       </section>;
 
       {status && <p className='text-sm text-gray-700'>{status}</p>}'
@@ -271,7 +265,6 @@ export default function OffworldConsole() {
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   async function syncProfile() {
     setStatus($2);
@@ -287,44 +280,43 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   return (
-    <div className="min-h-screen p-8 space-y-8">
+    <div className='min-h-screen p-8 space-y-8'>
       <Head>
         <title>Zion Offworld Console</title>
       </Head>
-      <h1 className="text-2xl font-bold">Offworld Console</h1>
+      <h1 className='text-2xl font-bold'>Offworld Console</h1>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold">Chat</h2>
-        <input className="border p-2 w-full" placeholder="Type message" value={chat} onChange={e => setChat(e.target.value)} />
-        <button className="px-3 py-2 bg-black text-white rounded" onClick={sendChat}>Send</button>
+      <section className='space-y-2'>
+        <h2 className='font-semibold'>Chat</h2>
+        <input className='border p-2 w-full' placeholder='Type message' value={chat} onChange={e => setChat(e.target.value)} />
+        <button className='px-3 py-2 bg-black text-white rounded' onClick={sendChat}>Send</button>
       </section>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold">DAO Voting</h2>
-        <input className="border p-2 w-full" placeholder="Proposal ID" value={proposalId} onChange={e => setProposalId(e.target.value)} />
-        <select className="border p-2" value={voteChoice} onChange={e => setVoteChoice(e.target.value)}>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-          <option value="abstain">Abstain</option>
+      <section className='space-y-2'>
+        <h2 className='font-semibold'>DAO Voting</h2>
+        <input className='border p-2 w-full' placeholder='Proposal ID' value={proposalId} onChange={e => setProposalId(e.target.value)} />
+        <select className='border p-2' value={voteChoice} onChange={e => setVoteChoice(e.target.value)}>
+          <option value='yes'>Yes</option>
+          <option value='no'>No</option>
+          <option value='abstain'>Abstain</option>
         </select>
-        <button className="px-3 py-2 bg-black text-white rounded" onClick={castVote}>Vote</button>
+        <button className='px-3 py-2 bg-black text-white rounded' onClick={castVote}>Vote</button>
       </section>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold">Talent Profile Sync</h2>
-        <input className="border p-2 w-full" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
-        <input className="border p-2 w-full" placeholder="Skills (comma separated)" value={skills} onChange={e => setSkills(e.target.value)} />
-        <button className="px-3 py-2 bg-black text-white rounded" onClick={syncProfile}>Pin Profile to IPFS</button>
+      <section className='space-y-2'>
+        <h2 className='font-semibold'>Talent Profile Sync</h2>
+        <input className='border p-2 w-full' placeholder='Name' value={name} onChange={e => setName(e.target.value)} />
+        <input className='border p-2 w-full' placeholder='Skills (comma separated)' value={skills} onChange={e => setSkills(e.target.value)} />
+        <button className='px-3 py-2 bg-black text-white rounded' onClick={syncProfile}>Pin Profile to IPFS</button>
       </section>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold">Broadcast Manifesto</h2>
-        <button className="px-3 py-2 bg-indigo-600 text-white rounded" onClick={broadcast}>Broadcast</button>
+      <section className='space-y-2'>
+        <h2 className='font-semibold'>Broadcast Manifesto</h2>
+        <button className='px-3 py-2 bg-indigo-600 text-white rounded' onClick={broadcast}>Broadcast</button>
       </section>
 
-      {status && <p className="text-sm text-gray-700">{status}</p>}
+      {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
-<<<<<<< HEAD
       </section>;{status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>;
 )}
@@ -375,7 +367,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>))
   )
 }
-=======
-<<<<<<< HEAD
 
   );

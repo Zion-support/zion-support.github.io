@@ -1,7 +1,7 @@
 import { Loader2 } from 'lucide-react'
-import { TalentProfile } from "@/types/talent","
-import { PersonalInfoFields } from "./PersonalInfoFields","
-import { ProjectDetailsField } from "./ProjectDetailsField",
+import { TalentProfile } from '@/types/talent','
+import { PersonalInfoFields } from './PersonalInfoFields','
+import { ProjectDetailsField } from './ProjectDetailsField',
 
 import React from 'react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
@@ -27,12 +27,12 @@ pr-12325
   userDetails?: {;
     name?: string;
     email?: string;
-import { TimelineField } from "./TimelineField","
-import { BudgetFields } from "./BudgetFields","
+import { TimelineField } from './TimelineField','
+import { BudgetFields } from './BudgetFields','
 
-import { TimelineField } from "./TimelineField",
+import { TimelineField } from './TimelineField',
 
-import { BudgetFields } from "./BudgetFields",
+import { BudgetFields } from './BudgetFields',
 
 export interface HireRequestFormProps {
   talent: TalentProfile,
@@ -72,7 +72,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
               <>;'
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void;
 
-import { BudgetFields } from "./BudgetFields";
+import { BudgetFields } from './BudgetFields';
 export interface HireRequestFormProps {}
   talent: TalentProfile,
   onClose: () => void, initialJobTitle?: string,
@@ -102,26 +102,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
-        "
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        '
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <BudgetFields form={form} talent={talent} />
         </div>
-        "
+        '
 
-        <DialogFooter className="pt-4">
+        <DialogFooter className='pt-4'>
 
-            type="button" 
+            type='button' 
 
-            variant="outline" 
-            onClick={onClose}"
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+            variant='outline' 
+            onClick={onClose}'
+            className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
             disabled={isSubmitting}
 
             disabled={isSubmitting}
             disabled = {isSubmitting,}>;
             {isSubmitting ? (;
-              <>;'"
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+              <>;''
+                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
                 Submitting...;
               </>;
             ) : (;'
@@ -130,14 +130,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Cancel;
           </Button>
-          <Button "
-            type="submit""
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+          <Button '
+            type='submit''
+            className='bg-zion-purple hover:bg-zion-purple-dark text-white'
             disabled={isSubmitting}
           >
             {isSubmitting ? (
 
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                <Loader2 className='mr-2 h-4 w-4 animate-spin' />
 
           </Button>;
         </DialogFooter>;
@@ -194,10 +194,10 @@ function HireRequestForm() {}
   return (
 
             disabled={is_submitting}
-        <DialogFooter className="pt-4">;
+        <DialogFooter className='pt-4'>;
           <Button;
-            type="button";
-            variant="outline";
+            type='button';
+            variant='outline';
             on_click = {on_close, }
 
             disabled = {is_submitting, }

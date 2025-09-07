@@ -42,7 +42,6 @@ export interface EmptyStateProps  {type: 'products' | 'categories' | 'talent' | 
   action?: {label: string;
     onClick: () => void;
   }
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
   icon?: React.ReactNode
   icon?: React.ReactNode;
 import React from 'react';
@@ -59,7 +58,6 @@ export interface EmptyStateProps  {type:;
     | 'search';
     | 'error';
     | 'network';
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
     | 'loading';
 
 
@@ -125,36 +123,36 @@ export interface EmptyStateProps {;'
 
 const defaultContent = {
   products: {
-    icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
+    icon: <ShoppingCart className='w-16 h-16 text-gray-400' />,
     title: 'No Products Available',
 
     description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!'},
-  categories: {"
-    icon: <Lightbulb className="w-16 h-16 text-gray-400" />,'
+  categories: {'
+    icon: <Lightbulb className='w-16 h-16 text-gray-400' />,'
     title: 'No Categories Found','
     description: 'Categories are being organized. Please try refreshing the page or come back later.'},
-  talent: {"
-    icon: <Users className="w-16 h-16 text-gray-400" />,'
+  talent: {'
+    icon: <Users className='w-16 h-16 text-gray-400' />,'
     title: 'No Talent Profiles','
     description: 'No talent profiles match your criteria. Try adjusting your filters or search terms.'},
-  equipment: {"
-    icon: <Wrench className="w-16 h-16 text-gray-400" />,'
+  equipment: {'
+    icon: <Wrench className='w-16 h-16 text-gray-400' />,'
     title: 'No Equipment Available','
     description: 'Equipment listings are being updated. Please check back soon for the latest hardware offerings.'},
-  search: {"
-    icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,'
+  search: {'
+    icon: <ShoppingCart className='w-16 h-16 text-gray-400' />,'
     title: 'No Results Found','
     description: 'Try adjusting your search terms or browse our categories to discover what we have available.'},
-  error: {"
-    icon: <Server className="w-16 h-16 text-red-400" />,'
+  error: {'
+    icon: <Server className='w-16 h-16 text-red-400' />,'
     title: 'Unable to Load Data','
     description: 'We\'re experiencing technical difficulties. Our team has been notified and is working on a fix.'},
-  network: {"
-    icon: <Wifi className="w-16 h-16 text-orange-400" />,'
+  network: {'
+    icon: <Wifi className='w-16 h-16 text-orange-400' />,'
     title: 'Connection Issue','
     description: 'Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.'},
-  loading: {"
-    icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,'
+  loading: {'
+    icon: <RefreshCw className='w-16 h-16 text-blue-400 animate-spin' />,'
     title: 'Loading...',
 
   const { t } = useTranslation();
@@ -170,7 +168,7 @@ return (
 origin/cursor/automate-test-improve-and-merge-code-2533
     | 'loading';import * as React from 'react',import { Button } from '@/components/ui/button',import Link from 'next/link',import { useTranslation } from 'react-i18next',export interface EmptyStateProps  {type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading',title?: string,description?: string,action?: {label: string,onClick: () => void;
   },icon?: React.ReactNode;
-}const defaultContent = {products: {icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,title: 'No Products Available',description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!'},categories: {icon: <Lightbulb className="w-16 h-16 text-gray-400" />,title: 'No Categories Found',description: 'Categories are being organized. Please try refreshing the page or come back later.'},talent: {icon: <Users className="w-16 h-16 text-gray-400" />,title: 'No Talent Profiles',description: 'No talent profiles match your criteria. Try adjusting your filters or search terms.'},equipment: {icon: <Wrench className="w-16 h-16 text-gray-400" />,title: 'No Equipment Available',description: 'Equipment listings are being updated. Please check back soon for the latest hardware offerings.'},search: {icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,title: 'No Results Found',description: 'Try adjusting your search terms or browse our categories to discover what we have available.'},error: {icon: <Server className="w-16 h-16 text-red-400" />,title: 'Unable to Load Data',description: 'We\'re experiencing technical difficulties. Our team has been notified and is working on a fix.'},network: {icon: <Wifi className="w-16 h-16 text-orange-400" />,title: 'Connection Issue',description: 'Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.'},loading: {icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,title: 'Loading...',<h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;
+}const defaultContent = {products: {icon: <ShoppingCart className='w-16 h-16 text-gray-400' />,title: 'No Products Available',description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!'},categories: {icon: <Lightbulb className='w-16 h-16 text-gray-400' />,title: 'No Categories Found',description: 'Categories are being organized. Please try refreshing the page or come back later.'},talent: {icon: <Users className='w-16 h-16 text-gray-400' />,title: 'No Talent Profiles',description: 'No talent profiles match your criteria. Try adjusting your filters or search terms.'},equipment: {icon: <Wrench className='w-16 h-16 text-gray-400' />,title: 'No Equipment Available',description: 'Equipment listings are being updated. Please check back soon for the latest hardware offerings.'},search: {icon: <ShoppingCart className='w-16 h-16 text-gray-400' />,title: 'No Results Found',description: 'Try adjusting your search terms or browse our categories to discover what we have available.'},error: {icon: <Server className='w-16 h-16 text-red-400' />,title: 'Unable to Load Data',description: 'We\'re experiencing technical difficulties. Our team has been notified and is working on a fix.'},network: {icon: <Wifi className='w-16 h-16 text-orange-400' />,title: 'Connection Issue',description: 'Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.'},loading: {icon: <RefreshCw className='w-16 h-16 text-blue-400 animate-spin' />,title: 'Loading...',<h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
   const { t } = useTranslation()const content = defaultContent[type];
   const displayTitle = title || content.title;
   const displayDescription = description || content.description;
@@ -179,24 +177,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
         {displayTitle}
       </h3>;
-      <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">;
+      <p className='text-gray-600 dark:text-gray-400 max-w-md mb-6'>;
         {displayDescription}
       </p>;
       {action && (<Button;
           onClick={action.onClick}
-          variant="outline";
-          className="flex items-center gap-2";
+          variant='outline';
+          className='flex items-center gap-2';
         >;
-          <RefreshCw className="w-4 h-4" />;
+          <RefreshCw className='w-4 h-4' />;
           {action.label}
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
         </Button>
       )}
           {action.label}
         </Button>;
       )}
 
-        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
@@ -204,10 +201,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>;
       )}{action.label}
         </Button>;
-      )}{type === 'error' && (<div className="mt-4 text-sm text-gray-500 dark:text-gray-400">;
+      )}{type === 'error' && (<div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
           <p>If this issue continues, please contact our support team.</p>;
         </div>;
-      )}{type === 'network' && (<div className="mt-4 text-sm text-gray-500 dark:text-gray-400">;
+      )}{type === 'network' && (<div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
           <p>;
   title?: string;
   description?: string;
@@ -216,14 +213,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   icon?: React.ReactNode;
 const default_content = {products: {icon: <ShoppingCart className='w - 16 h - 16 text - gray - 400' />,title: 'No Products Available',description:;
-      "We're loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!"},categories: {icon: <Lightbulb className='w - 16 h - 16 text - gray - 400' />,title: 'No Categories Found',description:;
+      'We're loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!'},categories: {icon: <Lightbulb className='w - 16 h - 16 text - gray - 400' />,title: 'No Categories Found',description:;
       'Categories are being organized. Please try refreshing the page or come back later.'},talent: {icon: <Users className='w - 16 h - 16 text - gray - 400' />,title: 'No Talent Profiles',description:;
       'No talent profiles match your criteria. Try adjusting your filters or search terms.'},equipment: {icon: <Wrench className='w - 16 h - 16 text - gray - 400' />,title: 'No Equipment Available',description:;
       'Equipment listings are being updated. Please check back soon for the latest hardware offerings.'},search: {icon: <ShoppingCart className='w - 16 h - 16 text - gray - 400' />,title: 'No Results Found',description:;
       'Try adjusting your search terms or browse our categories to discover what we have available.'},error: {icon: <Server className='w - 16 h - 16 text - red - 400' />,title: 'Unable to Load Data',description:;
-      "We're experiencing technical difficulties. Our team has been notified and is working on a fix."},network: {icon: <Wifi className='w - 16 h - 16 text - orange - 400' />,title: 'Connection Issue',description:;
+      'We're experiencing technical difficulties. Our team has been notified and is working on a fix.'},network: {icon: <Wifi className='w - 16 h - 16 text - orange - 400' />,title: 'Connection Issue',description:;
       'Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.'},loading: {icon: <RefreshCw className='w - 16 h - 16 text - blue - 400 animate - spin' />,title: 'Loading...',description:;
-      "We're fetching the latest data for you. This should only take a moment."}}
+      'We're fetching the latest data for you. This should only take a moment.'}
 export /**;
  * EmptyState - Function description;
  */;
@@ -259,7 +256,6 @@ function EmptyState() {const { t } = use_translation ()const content = default_c
             .;
           </p>;
         </div>)}
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
     </div>);
 // Specific empty state variants for quick use;
 export function ProductsEmptyState ({
@@ -278,7 +274,7 @@ export function ProductsEmptyState ({
 export function ProductsEmptyState ({on_retry,onAddProduct,is_authenticated = false}: {onRetry?: () => void;
   onAddProduct?: () => void;
   isAuthenticated?: boolean }) {const action = onAddProduct;
-    ? {{type === 'error' && (<div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
+    ? {type === 'error' && (<div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
           <p>If this issue continues, please contact our support team.</p>;
         </div>;
       )}{type === 'network' && (<div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
@@ -290,7 +286,6 @@ export function ProductsEmptyState ({on_retry,onAddProduct,is_authenticated = fa
       }
     : onRetry;
       ? { label: 'Try Again', onClick: onRetry }
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
 
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
           <p>If this issue continues, please contact our support team.</p>;
@@ -311,8 +306,8 @@ export function ProductsEmptyState ({on_retry,onAddProduct,is_authenticated = fa
       ? { label: 'Try Again', onClick: onRetry }
       : undefined
   const customDescription = isAuthenticated
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
+    ? 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!'
+    : 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!'
       />
 origin/cursor/automate-test-improve-and-merge-code-2533
   )
@@ -372,8 +367,8 @@ export function ProductsEmptyState({;
       }
 
   const customDescription = isAuthenticated 
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!",
+    ? 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!'
+    : 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!',
 
   );
 }
@@ -389,8 +384,8 @@ export function ProductsEmptyState({;
 }
 
   return (
-    <EmptyState"
-      type="talent"'
+    <EmptyState'
+      type='talent''
       action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined};
     />;
   );
@@ -401,8 +396,8 @@ export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
       : undefined;
   const customDescription = isAuthenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
+    ? 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!';
+    : 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!';
       />;
   )export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {/>;
   )export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {/>;
@@ -410,15 +405,15 @@ export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
   )export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {/>;
   )export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {/>;
   )export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {/>;
-  )}}}
+  )}}
 }
 }
 }
 }
 }
 }{t('general.check_status_page')}
-            {" "}
-            <Link href="https://status.zion.ai" className="underline">;
+            {' '}
+            <Link href='https://status.zion.ai' className='underline'>;
               {t('general.status_page')}</Link>;
             .;
           </p>;
@@ -432,38 +427,38 @@ export function ProductsEmptyState({onRetry,onAddProduct,isAuthenticated = false
     ? {label: isAuthenticated ? 'Add Product' : 'Login to Add Product',onClick: onAddProduct}
     : onRetry;
       ? { label: 'Try Again', onClick: onRetry }: undefined;return (<EmptyState;
-      type="categories";
+      type='categories';
       action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
     />;
   )}const customDescription = isAuthenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
+    ? 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!';
+    : 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!';
   return (<EmptyState;
-      type="products";
+      type='products';
       action={action}
       description={customDescription}const customDescription = isAuthenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";/>;
+    ? 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!';
+    : 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!';/>;
   )}export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {return (<EmptyState;
-      type="talent";
+      type='talent';
       action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}/>;
   )}export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {return (<EmptyState;
-      type="equipment";
+      type='equipment';
       action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}
     />;
   )}export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {return (<EmptyState;
-      type="search";
+      type='search';
       action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}
     />;
   )}export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {return (<EmptyState;
-      type="network";
+      type='network';
       action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
     />;
   )}export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {return (<EmptyState;
-      type="error";
+      type='error';
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
-    <EmptyState"
-      type="equipment"'
+    <EmptyState'
+      type='equipment''
       action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined};
     />;
   );
@@ -471,8 +466,8 @@ export function ProductsEmptyState({onRetry,onAddProduct,isAuthenticated = false
 
 export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {}
   return (
-    <EmptyState"
-      type="search"'
+    <EmptyState'
+      type='search''
       action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined};
     />;
   );
@@ -480,8 +475,8 @@ export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {}
 
 export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {}
   return (
-    <EmptyState"
-      type="network"'
+    <EmptyState'
+      type='network''
       action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined};
     />;
   );
@@ -489,11 +484,10 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {}
 
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {}
   return (
-    <EmptyState"
-      type="error"'
+    <EmptyState'
+      type='error''
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined};
     />;
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
   );
 
 
@@ -505,10 +499,9 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {}
     : on_retry;'
       ? { label: 'Try Again', on_click: on_retry }
       : undefined;
-  const custom_description = is_authenticated;'"
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";'"
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
+  const custom_description = is_authenticated;''
+    ? 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!';''
+    : 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!';
       />);
 export function CategoriesEmptyState ({ on_retry }: { on_retry?: () => void }) {};
       />);
@@ -522,6 +515,6 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {};
       />);
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {};
       />);
-      />)export function CategoriesEmptyState ({ on_retry }: { on_retry?: () => void }) {/>)export function TalentEmptyState ({ on_retry }: { on_retry?: () => void }) {/>)export function EquipmentEmptyState ({ on_retry }: { on_retry?: () => void }) {/>)export function SearchEmptyState ({ on_retry }: { on_retry?: () => void }) {/>)export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {/>)export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {/>)}}/>;
+      />)export function CategoriesEmptyState ({ on_retry }: { on_retry?: () => void }) {/>)export function TalentEmptyState ({ on_retry }: { on_retry?: () => void }) {/>)export function EquipmentEmptyState ({ on_retry }: { on_retry?: () => void }) {/>)export function SearchEmptyState ({ on_retry }: { on_retry?: () => void }) {/>)export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {/>)export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {/>)}/>;
   )
 }

@@ -27,7 +27,7 @@ export function ProfileSetup() {
       }
       "displayName": "displayName","
     "bio": """
-      "headline": ""}})"
+      "headline": ""})"
   const getTypeLabel = () => {      case "talent":;"
         }
         return "Talent";"

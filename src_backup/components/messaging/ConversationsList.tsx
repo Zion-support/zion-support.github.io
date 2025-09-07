@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/messaging/ConversationsList.tsx
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
 
@@ -23,7 +22,7 @@ import { Conversation } from '@/types/messaging',import { ConversationItem } fro
           onClick={() => {;
             setActiveConversation(conversation);
             markAsRead(conversation.id);
-          }}
+          }
         />
       </div>
     )
@@ -70,7 +69,7 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
           height={listHeight}
           itemCount={conversations && conversations.length}
           itemSize={itemSize}
-          width="100%";
+          width='100%';
         >;
           {Row}
         </List>;
@@ -96,8 +95,8 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
     </div>)}{Row}
         </List>;
       )}</div>;
-  )}}
-          width="100%";
+  )}
+          width='100%';
         >;
           {Row}
         </List>;
@@ -116,30 +115,29 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
           onClick={() => onConversationSelect(conversation)}
         />;
       </div>;
-    )}if (loading) {return (<div className="flex items-center justify-center h-full">;
-        <div className="text-center">;
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>;
-          <p className="mt-2 text-sm text-gray-500">Loading conversations...</p>;
+    )}if (loading) {return (<div className='flex items-center justify-center h-full'>;
+        <div className='text-center'>;
+          <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto'></div>;
+          <p className='mt-2 text-sm text-gray-500'>Loading conversations...</p>;
         </div>;
       </div>;
-    )}if (conversations.length === 0) {return (<div className="flex items-center justify-center h-full">;
-        <div className="text-center">;
-          <User className="mx-auto h-12 w-12 text-gray-400" />;
-          <h3 className="mt-2 text-sm font-medium text-gray-900">No conversations</h3>;
-          <p className="mt-1 text-sm text-gray-500">;
+    )}if (conversations.length === 0) {return (<div className='flex items-center justify-center h-full'>;
+        <div className='text-center'>;
+          <User className='mx-auto h-12 w-12 text-gray-400' />;
+          <h3 className='mt-2 text-sm font-medium text-gray-900'>No conversations</h3>;
+          <p className='mt-1 text-sm text-gray-500'>;
             Start a conversation to see it here.;
           </p>;
         </div>;
       </div>;
-    )}return (<div className="h-full">;
+    )}return (<div className='h-full'>;
       <List;
         height={600}
         itemCount={sortedConversations.length}
         itemSize={80}
-        width="100%";
+        width='100%';
       >;
         {ConversationRow}
-<<<<<<< HEAD:src_backup/components/messaging/ConversationsList.tsx
       </List>
     </div>
   );

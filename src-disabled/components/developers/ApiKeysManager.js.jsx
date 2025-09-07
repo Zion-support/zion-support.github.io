@@ -24,6 +24,6 @@ const handleScopeToggle = ( setSelectedScopes(prev => prev.includes(scope) ? pre
 }
 ;
   const getExampleCode = ( ';
-  return `curl -X GET 'https:'''`"'";) => {
+  return `curl -X GET 'https:'''`''';) => {
   return $3;}
 }

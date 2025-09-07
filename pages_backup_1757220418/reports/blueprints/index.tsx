@@ -136,8 +136,8 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'high',
           lastUpdated: '2025-01-15'
           } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       ]
@@ -169,8 +169,8 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'medium',
           lastUpdated: '2025-01-12'
           } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       ]
@@ -202,14 +202,14 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'low',
           lastUpdated: '2025-01-09'
           } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       ]
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ];
@@ -235,8 +235,8 @@ const BlueprintsIndexPage: React.FC = () => {
       date: '2025-01-17',
       status: 'research'
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ];
@@ -259,94 +259,94 @@ const BlueprintsIndexPage: React.FC = () => {
     }
   }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
+    <div className='min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white'>
       <Head>
         <title>System Blueprints - bolt.new.zion.app</title>
-        <meta name="description" content="System architecture blueprints and deployment patterns" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='description' content='System architecture blueprints and deployment patterns' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <div className="container mx-auto px-4 py-8">
+      <div className='container mx-auto px-4 py-8'>
         {/* Header */}
-        <div className="mb-8">
-          <Link href="/reports" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+        <div className='mb-8'>
+          <Link href='/reports' className='text-cyan-400 hover:text-cyan-300 transition-colors'>
             ← Back to Reports
           </Link>
-          <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
+          <h1 className='text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent'>
             System Blueprints
           </h1>
-          <p className="text-gray-300 text-lg">
+          <p className='text-gray-300 text-lg'>
             Architectural patterns and deployment strategies for scalable systems
           </p>
         </div>
         {/* Blueprint Overview */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-indigo-400">Total Blueprints</h3>
-            <div className="text-4xl font-bold text-blue-400">27</div>
-            <p className="text-gray-300 text-sm mt-2">Available patterns</p>
+        <div className='grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8'>
+          <div className='bg-white/10 rounded-xl p-6 border border-white/20'>
+            <h3 className='text-xl font-semibold mb-4 text-indigo-400'>Total Blueprints</h3>
+            <div className='text-4xl font-bold text-blue-400'>27</div>
+            <p className='text-gray-300 text-sm mt-2'>Available patterns</p>
           </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-indigo-400">Active</h3>
-            <div className="text-2xl font-bold text-green-400">18</div>
-            <p className="text-gray-300 text-sm mt-2">Currently deployed</p>
+          <div className='bg-white/10 rounded-xl p-6 border border-white/20'>
+            <h3 className='text-xl font-semibold mb-4 text-indigo-400'>Active</h3>
+            <div className='text-2xl font-bold text-green-400'>18</div>
+            <p className='text-gray-300 text-sm mt-2'>Currently deployed</p>
           </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-indigo-400">In Development</h3>
-            <div className="text-2xl font-bold text-yellow-400">6</div>
-            <p className="text-gray-300 text-sm mt-2">Under construction</p>
+          <div className='bg-white/10 rounded-xl p-6 border border-white/20'>
+            <h3 className='text-xl font-semibold mb-4 text-indigo-400'>In Development</h3>
+            <div className='text-2xl font-bold text-yellow-400'>6</div>
+            <p className='text-gray-300 text-sm mt-2'>Under construction</p>
           </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-indigo-400">Research</h3>
-            <div className="text-2xl font-bold text-purple-400">3</div>
-            <p className="text-gray-300 text-sm mt-2">Conceptual phase</p>
+          <div className='bg-white/10 rounded-xl p-6 border border-white/20'>
+            <h3 className='text-xl font-semibold mb-4 text-indigo-400'>Research</h3>
+            <div className='text-2xl font-bold text-purple-400'>3</div>
+            <p className='text-gray-300 text-sm mt-2'>Conceptual phase</p>
           </div>
         </div>
         {/* Blueprint Categories */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Categories</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className='mb-8'>
+          <h2 className='text-2xl font-bold mb-6 text-white'>Blueprint Categories</h2>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
             {blueprintCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-semibold mb-4 text-indigo-400">{category.category}</h3>
-                <div className="space-y-4">
+              <div key={categoryIndex} className='bg-white/10 rounded-xl p-6 border border-white/20'>
+                <h3 className='text-xl font-semibold mb-4 text-indigo-400'>{category.category}</h3>
+                <div className='space-y-4'>
                   {category.blueprints.map((blueprint, blueprintIndex) => (
-                    <div key={blueprintIndex} className="border-l-2 border-indigo-400/30 pl-4">
-                      <div className="flex justify-between items-start mb-2">
+                    <div key={blueprintIndex} className='border-l-2 border-indigo-400/30 pl-4'>
+                      <div className='flex justify-between items-start mb-2'>
                         <Link
                           href={`/reports/blueprints/${blueprint.id}`}
-                          className="text-white font-medium hover:text-indigo-300 transition-colors"
+                          className='text-white font-medium hover:text-indigo-300 transition-colors'
                         >
                           {blueprint.name}
                         </Link>
                         <span className={`px-2 py-1 text-xs rounded-full ${getComplexityColor(blueprint.complexity)}`}>
                           {blueprint.complexity}
                           href={`/reports/blueprints/${blueprint.id}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                          className="text-white font-medium hover:text-indigo-300 transition-colors"
+                          className='text-white font-medium hover:text-indigo-300 transition-colors'
                         >
                           {blueprint.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                         </Link>
                         <span className={`px-2 py-1 text-xs rounded-full ${getComplexityColor(blueprint.complexity)}`}>
                           {blueprint.complexity  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                         </span>
                       </div>
-                      <p className="text-gray-300 text-sm mb-2">{blueprint.description}</p>
-                      <div className="flex justify-between items-center text-xs">
+                      <p className='text-gray-300 text-sm mb-2'>{blueprint.description}</p>
+                      <div className='flex justify-between items-center text-xs'>
                         <span className={`${getStatusColor(blueprint.status)}`}>
                           ● {blueprint.status}
                         </span>
-                        <span className="text-gray-400">{blueprint.lastUpdated}</span>
+                        <span className='text-gray-400'>{blueprint.lastUpdated}</span>
                       </div>
                     </div>
                   ))}
@@ -356,23 +356,23 @@ const BlueprintsIndexPage: React.FC = () => {
           </div>
         </div>
         {/* Recent Blueprints */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Recent Blueprints</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className='mb-8'>
+          <h2 className='text-2xl font-bold mb-6 text-white'>Recent Blueprints</h2>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {recentBlueprints.map((blueprint) => (
-              <div key={blueprint.id} className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{blueprint.name}</h3>
+              <div key={blueprint.id} className='bg-white/10 rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300'>
+                <div className='flex justify-between items-start mb-4'>
+                  <h3 className='text-lg font-semibold text-white'>{blueprint.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(blueprint.status)}`}>
                     {blueprint.status}
                   </span>
                 </div>
-                <p className="text-gray-300 text-sm mb-4">{blueprint.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">{blueprint.date}</span>
+                <p className='text-gray-300 text-sm mb-4'>{blueprint.description}</p>
+                <div className='flex justify-between items-center'>
+                  <span className='text-gray-400 text-sm'>{blueprint.date}</span>
                   <Link
                     href={`/reports/blueprints/${blueprint.id}`}
-                    className="text-indigo-400 hover:text-indigo-300 text-sm transition-colors"
+                    className='text-indigo-400 hover:text-indigo-300 text-sm transition-colors'
                   >
                     View Blueprint →
                   </Link>
@@ -382,54 +382,54 @@ const BlueprintsIndexPage: React.FC = () => {
           </div>
         </div>
         {/* Blueprint Benefits */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Benefits</h2>
-          <div className="bg-white/10 rounded-xl p-8 border border-white/20">
-            <div className="text-center">
-              <div className="text-6xl font-bold text-indigo-400 mb-4">🏗️</div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Proven Architecture</h3>
-              <p className="text-gray-300 mb-6">
+        <div className='mb-8'>
+          <h2 className='text-2xl font-bold mb-6 text-white'>Blueprint Benefits</h2>
+          <div className='bg-white/10 rounded-xl p-8 border border-white/20'>
+            <div className='text-center'>
+              <div className='text-6xl font-bold text-indigo-400 mb-4'>🏗️</div>
+              <h3 className='text-xl font-semibold mb-2 text-white'>Proven Architecture</h3>
+              <p className='text-gray-300 mb-6'>
                 Our blueprints provide battle-tested architectural patterns that ensure
                 scalability, reliability, and maintainability for your systems.
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-center'>
                 <div>
-                  <div className="text-2xl font-bold text-green-400">99.9%</div>
-                  <div className="text-gray-400 text-sm">Uptime</div>
+                  <div className='text-2xl font-bold text-green-400'>99.9%</div>
+                  <div className='text-gray-400 text-sm'>Uptime</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-400">10x</div>
-                  <div className="text-gray-400 text-sm">Faster Deployment</div>
+                  <div className='text-2xl font-bold text-blue-400'>10x</div>
+                  <div className='text-gray-400 text-sm'>Faster Deployment</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-purple-400">50%</div>
-                  <div className="text-gray-400 text-sm">Cost Reduction</div>
+                  <div className='text-2xl font-bold text-purple-400'>50%</div>
+                  <div className='text-gray-400 text-sm'>Cost Reduction</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-cyan-400">24/7</div>
-                  <div className="text-gray-400 text-sm">Monitoring</div>
+                  <div className='text-2xl font-bold text-cyan-400'>24/7</div>
+                  <div className='text-gray-400 text-sm'>Monitoring</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         {/* Navigation */}
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className='flex flex-wrap gap-4 justify-center'>
           <Link
-            href="/reports"
-            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
+            href='/reports'
+            className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50'
           >
             All Reports
           </Link>
           <Link
-            href="/reports/performance"
-            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
+            href='/reports/performance'
+            className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50'
           >
             Performance
           </Link>
           <Link
-            href="/reports/innovation"
-            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
+            href='/reports/innovation'
+            className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50'
           >
             Innovation
           </Link>

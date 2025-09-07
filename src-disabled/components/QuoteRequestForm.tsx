@@ -282,7 +282,7 @@ export type QuoteRequestSteps = any;
           ? { id: itemId, title: "AI Selected Item", category }
           : formData.specificItem,;
         timeline: timeline || formData.timeline,;
-        budget: { ...formData.budget, ...(budget || {}) }}),;
+        budget: { ...formData.budget, ...(budget || {}) }),;
       setCurrentStep("summary"),;
       setAutoFillOpen(false);
     } catch (err) {;

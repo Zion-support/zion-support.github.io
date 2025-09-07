@@ -109,7 +109,7 @@ type="number"                  value={maxBudget || rest.value}"
                     }
                     setMaxBudget (e.target.value);
                     on_change (e);
-                  }}
+                  }
                   {...rest}
       <Card>
         <CardContent className="pt-4">"

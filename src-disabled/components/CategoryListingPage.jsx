@@ -23,5 +23,5 @@
  localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]) useEffect(() => {
  setIsLoading(true);}
   const timeout = setTimeout(() => setIsLoading(false), 300);}
-  return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter])"";
+  return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter])'';
 }

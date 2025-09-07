@@ -19,11 +19,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {private retryCount 
       "error": null;"
       "errorInfo": null;"
       "errorId": '';'
-    "}}"
+    "}"
   static getDerivedStateFromError("error": "Error): Partial<State> {return {"hasError": true;"
       }
       error;
-      "errorId": `error_${Date.now()"}_${Math.random().toString(36).substr(2, 9)}`;`}}
+      "errorId": `error_${Date.now()"}_${Math.random().toString(36).substr(2, 9)}`;`}
   componentDidCatch("error": "Error", "errorInfo": "ErrorInfo) {this.setState({error;"
       }
       errorInfo;
@@ -34,7 +34,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {private retryCount 
     if (this.props.onError) {import React from 'react';'
 }
 import { import { motion   } from 'framer-motion';'
-export default function Page() {-${Math.random().toString(36).substr(2, 9)}`}}`  componentDidCatch("error": Erro r, "errorInfo": ErrorInf o) {';'
+export default function Page() {-${Math.random().toString(36).substr(2, 9)}`}`  componentDidCatch("error": Erro r, "errorInfo": ErrorInf o) {';'
     // Log error to console in development';';'
     }
     if (process.env.NODE_ENV === 'development') {';';'
@@ -57,8 +57,8 @@ interface State  {"hasError": boolean;
 class EnhancedErrorBoundary extends Component<Props, State> {private retryCount = 0;
   }
   private maxRetries = 3;
-  constructor("props": Props) {super(props)this.state = {"hasError": false,"error": null,"errorInfo": null,"errorId": ''}}'
-  static getDerivedStateFromError("error": Error): Partial<State> {return {"hasError": true,error,"errorId": `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}}`  componentDidCatch("error": Error, "errorInfo": ErrorInfo) {this.setState({error,errorInfo})// Log error to console in development;
+  constructor("props": Props) {super(props)this.state = {"hasError": false,"error": null,"errorInfo": null,"errorId": ''}'
+  static getDerivedStateFromError("error": Error): Partial<State> {return {"hasError": true,error,"errorId": `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}`  componentDidCatch("error": Error, "errorInfo": ErrorInfo) {this.setState({error,errorInfo})// Log error to console in development;
     if (process.env.NODE_ENV === 'development') {console.error('ErrorBoundary caught an "error":', error, errorInfo)// Log error to console in development;'
     }
     if (process.env.NODE_ENV === 'development') {console.group('🚨 Error Boundary Caught Error')console.error('"Error":', error)console.error('Error "Info":', errorInfo)console.groupEnd()}'
@@ -119,7 +119,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {private retryCount 
   private reportError = ("error": Error, "errorInfo": ErrorInfo) => {if (!this.props.enableReporting) return;
     }
     const errorReport = {"errorId": this.state.errorId,"message": error.message,"stack": error.stack,"componentStack": errorInfo.componentStack,"timestamp": new Date().toISOString(),"userAgent": navigator.userAgent,"url": window.location.href,"retryCount": this.retryCount}// Send to error reporting service;
-    if (typeof window !== 'undefined' && 'gtag' in window) {(window as any).gtag('event', 'exception', {"description": error.message,"fatal": false,"custom_map": {"error_id": this.state.errorId,"component_stack": errorInfo.componentStack}})}'
+    if (typeof window !== 'undefined' && 'gtag' in window) {(window as any).gtag('event', 'exception', {"description": error.message,"fatal": false,"custom_map": {"error_id": this.state.errorId,"component_stack": errorInfo.componentStack})}'
     // Store locally for debugging;
     try {const existingErrors = JSON.parse(localStorage.getItem('error_reports') || '[]')existingErrors.push(errorReport)localStorage.setItem('error_reports', JSON.stringify(existingErrors.slice(-10)))// Keep last 10;'
     } catch (e) {}
@@ -225,41 +225,41 @@ export const useErrorReporting = () => {const reportError = React.useCallback(("
 }export default EnhancedErrorBoundary;
         return this.props.fallback}
       return ()<motion.div;
-          initial={{ "opacity": 0, "y": 2 0 }}
-          animate={{ "opacity": 1, "y": 0 }}
+          initial={ "opacity": 0, "y": 2 0 }
+          animate={ "opacity": 1, "y": 0 }
           className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4";"
         >";"
           <div className="max-w-2xl w-full bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 text-center">;"
             {/* Error Icon */}
             <motion.div;
-              initial={{ "scale": 0 }}
-              animate={{ "scale": 1 }}
-              transition={{ "delay": 0.2, "type": 'spring' }}";"
+              initial={ "scale": 0 }
+              animate={ "scale": 1 }
+              transition={ "delay": 0.2, "type": 'spring' }";"
               className="mx-auto w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mb-6";"
             >";"
               <AlertTriangle className="w-10 h-10 text-red-400" />            </motion.div>;"
             {/* Error Message */}
             <motion.h1;
-              initial={{ "opacity": 0, "y": 2 0 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "delay": 0.3 }}";"
+              initial={ "opacity": 0, "y": 2 0 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "delay": 0.3 }";"
               className="text-3xl font-bold text-white mb-4";"
             >;
               Oops ! Something went wrong;
             </motion.h1>;
             <motion.p;
-              initial={{ "opacity": 0, "y": 2 0 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "delay": 0.4 }}";"
+              initial={ "opacity": 0, "y": 2 0 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "delay": 0.4 }";"
               className="text-gray-300 mb-6 text-lg";"
             >;
               We're sorry, but something unexpected happened.Our team has been;'
               notified and is working to fix this issue.</motion.p>;
             {/* Error Details(Collapsible) */}
             <motion.details;
-              initial={{ "opacity": 0 }}
-              animate={{ "opacity": 1 }}
-              transition={{ "delay": 0.5 }}";"
+              initial={ "opacity": 0 }
+              animate={ "opacity": 1 }
+              transition={ "delay": 0.5 }";"
               className="mb-6 text-left";"
             >";"
               <summary className="cursor-pointer text-cyan-400 "hover": tex t-cyan-300 mb-2">;"
@@ -285,9 +285,9 @@ export const useErrorReporting = () => {const reportError = React.useCallback(("
             </motion.details>;
             {/* Action Buttons */}
             <motion.div;
-              initial={{ "opacity": 0, "y": 2 0 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "delay": 0.6 }}";"
+              initial={ "opacity": 0, "y": 2 0 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "delay": 0.6 }";"
               className="flex flex-col "sm": fle x-row gap-4 justify-center items-center";"
             >;
               <button;
@@ -312,9 +312,9 @@ export const useErrorReporting = () => {const reportError = React.useCallback(("
             {/* Error Reporting */}
             {this.props.showReportButton && (<motion.div;
                 }
-                initial={{ "opacity": 0 }}
-                animate={{ "opacity": 1 }}
-                transition={{ "delay": 0.7 }}";"
+                initial={ "opacity": 0 }
+                animate={ "opacity": 1 }
+                transition={ "delay": 0.7 }";"
                 className="mt-6 pt-6 border-t border-gray-600";"
               >";"
                 <p className="text-gray-400 mb-4">;"
@@ -344,9 +344,9 @@ export const useErrorReporting = () => {const reportError = React.useCallback(("
             )}
             {/* Contact Information */}
             <motion.div;
-              initial={{ "opacity": 0 }}
-              animate={{ "opacity": 1 }}
-              transition={{ "delay": 0.8 }}";"
+              initial={ "opacity": 0 }
+              animate={ "opacity": 1 }
+              transition={ "delay": 0.8 }";"
               className="mt-6 pt-6 border-t border-gray-600";"
             >";"
               <p className="text-gray-400 text-sm">;"
@@ -466,7 +466,7 @@ export const withErrorBoundary = <P extends object>("Component": React.Component
   return WrappedComponent;
 }// Hook for error reporting;
 export const useErrorReporting = () => {const reportError = React.useCallback(("error": Error, context?: string) => {const errorReport = {"message": error.message,"stack": error.stack,context,"timestamp": new Date().toISOString(),"url": window.location.href}// Send to analytics;
-    if (typeof window !== 'undefined' && 'gtag' in window) {(window as any).gtag('event', 'exception', {"description": error.message,"fatal": false,"custom_map": {"context": context || 'unknown'}})}'
+    if (typeof window !== 'undefined' && 'gtag' in window) {(window as any).gtag('event', 'exception', {"description": error.message,"fatal": false,"custom_map": {"context": context || 'unknown'})}'
     console.error('Error "reported":', errorReport)}, [])return { reportError }'
 }export default EnhancedErrorBoundary;
 </motion>;

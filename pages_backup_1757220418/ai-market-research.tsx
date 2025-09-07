@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages_backup_1757220418/ai-market-research.tsx
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react';
@@ -72,7 +71,6 @@ export default function AIMarketResearchPage() {
             </div>
           </div>
         </div>
-=======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
@@ -132,18 +130,14 @@ const AIMarketResearch: React.FC = () => {
           </div>
         </div>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/ai-market-research.tsx
         <div className="bg-indigo-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Understand Your Market</h2>
           <p className="text-lg text-gray-700 mb-6">
             Get comprehensive market insights with our AI-powered research and analysis platform.
           </p>
           <div className="flex justify-center gap-4">
-<<<<<<< HEAD:pages_backup_1757220418/ai-market-research.tsx
             <a href="/contact" className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover: bg-indigo-700">
-=======
             <a href="/contact" className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/ai-market-research.tsx
               Get Started
             </a>
             <a href="/about" className="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50">
@@ -154,9 +148,6 @@ const AIMarketResearch: React.FC = () => {
       </main>
     </Layout>
   )
-<<<<<<< HEAD:pages_backup_1757220418/ai-market-research.tsx
 }
-=======
 }
 export default AIMarketResearch
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/ai-market-research.tsx

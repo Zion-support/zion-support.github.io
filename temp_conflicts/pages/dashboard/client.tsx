@@ -287,10 +287,10 @@ export default function ClientDashboardSuggestedTalents() {
                 {group.suggestions.map((s) => (
                   <motion.div
                     key={s.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
+                    initial={ opacity: 0, y: 10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: 10 }
+                    transition={ duration: 0.2 }
                     className="relative min-w-[18rem] max-w-xs flex-1 rounded-2xl border border-indigo-100 bg-white p-4 shadow-sm ring-1 ring-transparent hover:shadow-md"
                   >
                     <div className="absolute right-3 top-3">{badge}</div>
@@ -343,7 +343,7 @@ export default function ClientDashboardSuggestedTalents() {
                           setInviteTalent(s),
                           setInviteJobTitle(group.jobTitle),
                           setInviteOpen(true)
-                        }}
+                        }
                         className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700"
                       >
                         Invite to Apply

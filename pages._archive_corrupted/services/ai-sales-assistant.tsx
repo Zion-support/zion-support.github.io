@@ -15,7 +15,7 @@ interface AisalesassistantProps  {// Add props here as needed;
 }
 export default function Aisalesassistant() {ursor/automate-test-improve-and-merge-code-646c;
 }
-export default function Aisalesassistant() {export default function Aisalesassistant() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+export default function Aisalesassistant() {export default function Aisalesassistant() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }
@@ -32,7 +32,7 @@ export default function Aisalesassistant(): any ({}: AisalesassistantProps) {ret
       <h1>Aisalesassistant</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  )}}ursor/fix-syntax-push-and-merge-to-main-40de;
-}}ursor/automate-test-improve-and-merge-code-646c;
+  )}ursor/fix-syntax-push-and-merge-to-main-40de;
+}ursor/automate-test-improve-and-merge-code-646c;
 }
 }

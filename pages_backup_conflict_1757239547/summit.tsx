@@ -74,7 +74,7 @@ export default function SummitPage() {
       name: 'Jordan Lee'
       title: 'Zion Alumni | AI Fellow'
       avatarUrl: '/favicon.svg'
-      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.'
+      bio: 'Part of the 'Powered by Zion' alumni network advancing AI governance.'
       twitter: 'https://twitter.com'
     }
   ];
@@ -122,7 +122,7 @@ export default function SummitPage() {
       name: 'Jordan Lee',
       title: 'Zion Alumni | AI Fellow',
       avatarUrl: '/favicon.svg',
-      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
+      bio: 'Part of the 'Powered by Zion' alumni network advancing AI governance.',
       twitter: 'https://twitter.com'}],
   const partners: Partner[] = [
     { name: 'Gov Partner' },
@@ -146,8 +146,8 @@ export default function SummitPage() {
     } finally {
       setSubmitting(false)
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   },
@@ -155,20 +155,20 @@ export default function SummitPage() {
     if (platform === 'youtube') {
       return (
         <iframe
-          className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+          className='w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800'
           src={`https://www.youtube.com/embed/${embedId}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-          title="YouTube livestream"
-          allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
+          title='YouTube livestream'
+          allow='accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture'
           allowFullScreen
         />
       )
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     if (platform === 'twitch') {
@@ -181,7 +181,7 @@ export default function SummitPage() {
     <>
       <Head>
         <title>Zion Global Summit 2025 — AI, Talent, Trust</title>
-        <meta name="description" content="Zion Global Summit: AI, Talent, Trust — Globalized" />
+        <meta name='description' content='Zion Global Summit: AI, Talent, Trust — Globalized' />
       </Head>
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
         <div className='max-w-4xl'>
@@ -266,8 +266,8 @@ export default function SummitPage() {
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
                 />
                 <div>
-                  <div className="font-semibold">{s.name}</div>
-                  <div className="text-sm opacity-70">{s.title}</div>
+                  <div className='font-semibold'>{s.name}</div>
+                  <div className='text-sm opacity-70'>{s.title}</div>
                 </div>
               </div>
               <p className='mt-3 text-sm'>{s.bio}</p>
@@ -294,8 +294,8 @@ export default function SummitPage() {
                 )}              </div>
             </div>
           ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         </div>
@@ -335,57 +335,57 @@ export default function SummitPage() {
           <h2 className='text-2xl font-bold'>Livestream</h2>
           <div className='flex flex-wrap items-center gap-2'>
             <select
-              aria-label="Platform"
-              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              aria-label='Platform'
+              className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={platform  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               onChange={(e) => setPlatform(e.target.value as any)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             >
-              <option value="youtube">YouTube</option>
-              <option value="twitch">Twitch</option>
-              <option value="twitter">Twitter</option>
+              <option value='youtube'>YouTube</option>
+              <option value='twitch'>Twitch</option>
+              <option value='twitter'>Twitter</option>
             </select>
             <input
-              aria-label="Embed ID"
-              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              aria-label='Embed ID'
+              className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               placeholder={platform === 'youtube' ? 'YouTube Video ID' : platform === 'twitch' ? 'Twitch Channel' : 'Twitter Broadcast ID'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               value={embedId  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               onChange={(e) => setEmbedId(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             />
             {isPast ? (
-              <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
+              <span className='px-3 py-2 rounded bg-green-600 text-white'>Watch Replay</span>
             ) : (
-              <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
+              <span className='px-3 py-2 rounded bg-blue-600 text-white'>Live in {days}d {hours}h {minutes}m {seconds}s</span>
             )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           </div>
         </div>
-        <div className="mt-4">
+        <div className='mt-4'>
           {livestreamEmbed()  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         </div>
@@ -397,87 +397,87 @@ export default function SummitPage() {
         <h2 className='text-2xl font-bold mb-4'>Register</h2>
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>
           <div>
-            <label className="block text-sm mb-1">Name</label>
+            <label className='block text-sm mb-1'>Name</label>
             <input
               required
-              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               onChange={(e) => setForm({ ...form, name: e.target.value })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             />
           </div>
           <div>
-            <label className="block text-sm mb-1">Email</label>
+            <label className='block text-sm mb-1'>Email</label>
             <input
-              type="email"
+              type='email'
               required
-              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form.email  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               onChange={(e) => setForm({ ...form, email: e.target.value })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             />
           </div>
           <div>
-            <label className="block text-sm mb-1">Role</label>
+            <label className='block text-sm mb-1'>Role</label>
             <input
               required
-              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form.role  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               onChange={(e) => setForm({ ...form, role: e.target.value })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             />
           </div>
           <div>
-            <label className="block text-sm mb-1">Country</label>
+            <label className='block text-sm mb-1'>Country</label>
             <input
               required
-              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form.country  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               onChange={(e) => setForm({ ...form, country: e.target.value })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             />
           </div>
-          <div className="md:col-span-2 flex items-center gap-3">
+          <div className='md:col-span-2 flex items-center gap-3'>
             <button
-              type="submit"
+              type='submit'
               disabled={submitting  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50"
+              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50'
             >
               {submitting ? 'Submitting...' : 'Submit Registration'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             </button>

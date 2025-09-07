@@ -277,4 +277,4 @@ export function performBasicSkillMatching ("job_details": any, "talents": Talent
   .sort((a, b) => b.score - a.score) // Sort by score (highest first)
   .slice(0, 5), // Get top 5 matches
 }
-}}
+}

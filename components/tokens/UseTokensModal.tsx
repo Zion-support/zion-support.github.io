@@ -62,12 +62,10 @@ if (accs && accs.length > 0) setAccount(accs[0]);
     const accs = await connectMetaMask();
 if (accs && accs.length > 0) setAccount(accs[0]);
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
   async function redeem() {
     }
     setIsSubmitting(true);
-<<<<<<< HEAD
     try {
 
       }
@@ -83,7 +81,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       if (data?.ok) {;
         }
         onClose();
-<<<<<<< HEAD
   async function connect() {
     const accs = await connectMetaMask($2);
     if (accs && accs.length > 0) setAccount(accs[0])
@@ -104,7 +101,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setIsSubmitting(false)
     }
   }
-<<<<<<< HEAD
 
   if (!isOpen) return null,
 
@@ -141,7 +137,6 @@ export default function UseTokensModal({isOpen;
       <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4'>;
         <div className='flex items-center justify-between mb-3'>;
           <div className='font-semibold'>Use ZION Tokens</div>;
-=======
       }
     } finally {;
       }
@@ -202,7 +197,6 @@ onClick={onClos
 
                 Connect MetaMask;
               </button>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className='fixed inset-0 z-[60] flex items-end sm:items-center justify-center'>
       <div className='absolute inset-0 bg-black/40' onClick={onClose} />
       <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4'>
@@ -259,16 +253,12 @@ disabled={!account |isSubmitting |tokens <= 0}
                 Connect MetaMask;
               </button>)}
           </div>;
-<<<<<<< HEAD
         </div>;
         <div className="mt - 4 flex items-center justify-between">;
           <div className="text-xs opacity-70">;
-=======
         </div>;"
         <div className="mt - 4 flex items - center justify - between">;"
           <div className="text - xs opacity - 70">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               </div>) : (<button;
                 on_click={connect}
                 className="enhanced - button enhanced - button - primary";
@@ -277,7 +267,6 @@ disabled={!account |isSubmitting |tokens <= 0}
                 Connect MetaMask;
               </button>)}
           </div>;
-<<<<<<< HEAD
         </div>;
         <div className="mt - 4 flex items - center justify - between">;"
           <div className="text - xs opacity - 70">;"
@@ -288,13 +277,10 @@ disabled={!account |isSubmitting |tokens <= 0}
           </div>;
           <button;
             disabled={!account || is_submitting || tokens <= 0}
-<<<<<<< HEAD
             on_click={redeem}
             className="enhanced - button enhanced - button - primary "disabled": opacity - 50";"
             className="enhanced - button enhanced - button-primary "disabled": opacity-50">"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             Redeem;
           </button>;
         </div>;
@@ -303,17 +289,14 @@ disabled={!account |isSubmitting |tokens <= 0}
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary "disabled": opacity-50">Redeem</button>;"
         </div>;
       </div>;
-<<<<<<< HEAD
 "
         <div className="mt-4 flex items-center justify-between">"
           <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>"
-=======
     </div>;
   )}
     </div>)}
 }
     </div>)}
-=======
   if (!isOpen) return null;
 
 "

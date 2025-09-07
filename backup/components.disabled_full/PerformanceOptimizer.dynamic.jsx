@@ -1,4 +1,4 @@
-const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceOptimizer' ,'
+const PerformanceOptimizer = dynamic(() => import('./PerformanceOptimizer'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default PerformanceOptimizer' ,'
 </p>'
 </p>'
 </p>'
@@ -14,7 +14,7 @@ const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; 
 
 </p>'
 
-const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceOptimizer' ,'
+const PerformanceOptimizer = dynamic(() => import('./PerformanceOptimizer'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default PerformanceOptimizer' ,'
 
 </p>'
 
@@ -24,14 +24,14 @@ const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; 
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default PerformanceOptimizer\' ,const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default PerformanceOptimizer\" ,\"\"\";
-const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceOptimizer' ,';
+const PerformanceOptimizer = dynamic(() => import(\'./PerformanceOptimizer\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default PerformanceOptimizer\' ,const PerformanceOptimizer = dynamic(() => import(\'./PerformanceOptimizer\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default PerformanceOptimizer\' ,\'\'\';
+const PerformanceOptimizer = dynamic(() => import(\'./PerformanceOptimizer\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceOptimizer' ,';
 </p>';
 </p>';
 </p>';
 </p>';
 ;
-const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceOptimizer' ,';
+const PerformanceOptimizer = dynamic(() => import(\'./PerformanceOptimizer\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceOptimizer' ,';
 </p>';
 </p>';
 </p>';
@@ -53,7 +53,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
-const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceOptimizer' ,';
+const PerformanceOptimizer = dynamic(() => import(\'./PerformanceOptimizer\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceOptimizer' ,';
 </p>';
 </p>';
 </p>';
@@ -62,9 +62,9 @@ const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{'
 </p>';
 </p>';
 </p>';
-const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceOptimizer' ,';
+const PerformanceOptimizer = dynamic(() => import(\'./PerformanceOptimizer\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceOptimizer' ,';
 </p>'</p>';
-const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceOptimizer' ,'
+const PerformanceOptimizer = dynamic(() => import(\'./PerformanceOptimizer\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceOptimizer' ,'
 </p>'
 </p>'
 </p>'
@@ -89,7 +89,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 </p>'
 
 </p>'
-const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceOptimizer' ,'
+const PerformanceOptimizer = dynamic(() => import('./PerformanceOptimizer'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default PerformanceOptimizer' ,'
 </p>'
 </p>'
 </p>'

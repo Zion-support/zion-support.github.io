@@ -76,8 +76,8 @@ export default function ServiceDescriptionGeneratorPage() {
         const data = await response.json().catch(() => ({}));
         throw new Error(data.error || 'Failed to generate');
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -88,21 +88,21 @@ export default function ServiceDescriptionGeneratorPage() {
     } finally {;
       setLoading(false);
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
   function handleAccept() {;
     setAccepted(true);
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -110,14 +110,14 @@ export default function ServiceDescriptionGeneratorPage() {
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   return (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
-      <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
+    <div className='max-w-3xl mx-auto'>
+      <h1 className='text-2xl font-semibold mb-4'>Service Description Generator</h1>
+      <p className='text-sm text-gray-600 dark:text-gray-300 mb-6'>
         Enter your service details. We will generate a polished description using GPT-4. You can edit it on the page and accept when ready.
       </p>
       <form
@@ -125,7 +125,7 @@ export default function ServiceDescriptionGeneratorPage() {
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'
       >
         <div>
-          <label className="block text-sm font-medium mb-1">Service Title</label>
+          <label className='block text-sm font-medium mb-1'>Service Title</label>
           <input
             type='text'
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -135,7 +135,7 @@ export default function ServiceDescriptionGeneratorPage() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Target Audience</label>
+          <label className='block text-sm font-medium mb-1'>Target Audience</label>
           <input
             type='text'
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -145,7 +145,7 @@ export default function ServiceDescriptionGeneratorPage() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Key Features (one per line)</label>
+          <label className='block text-sm font-medium mb-1'>Key Features (one per line)</label>
           <textarea
             className='w-full min-h-[120px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder={
@@ -156,17 +156,17 @@ export default function ServiceDescriptionGeneratorPage() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Tone</label>
+          <label className='block text-sm font-medium mb-1'>Tone</label>
           <select
-            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             value={tone  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             onChange={(e) => setTone(e.target.value as any)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           >
@@ -176,45 +176,45 @@ export default function ServiceDescriptionGeneratorPage() {
             <option value='technical'>Technical</option>          </select>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Additional Notes (optional)</label>
+          <label className='block text-sm font-medium mb-1'>Additional Notes (optional)</label>
           <textarea
-            className="w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Constraints, deliverables, timeline, pricing preferences, compliance, etc."
+            className='w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.'
             value={additionalNotes  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             onChange={(e) => setAdditionalNotes(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           />
         </div>
         <div className='flex items-center gap-3'>
           <button
-            type="submit"
+            type='submit'
             disabled={loading  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
+            className='inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60'
           >
             {loading ? 'Generating…' : 'Generate Description'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           </button>
           {error && <span className='text-red-600 text-sm'>{error}</span>}        </div>
       </form>
       {generated && (
-        <div className="mt-8 space-y-3">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold">Generated Description</h2>
-            <div className="flex items-center gap-2">
+        <div className='mt-8 space-y-3'>
+          <div className='flex items-center justify-between'>
+            <h2 className='text-xl font-semibold'>Generated Description</h2>
+            <div className='flex items-center gap-2'>
               <button
                 onClick={handleCopy}
                 className='rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'              >
@@ -228,15 +228,15 @@ export default function ServiceDescriptionGeneratorPage() {
             </div>
           </div>
           <textarea
-            className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className='w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             value={generated  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             onChange={(e) => setGenerated(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           />

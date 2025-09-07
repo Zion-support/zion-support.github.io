@@ -10,8 +10,8 @@ function Skeleton() {>;
       <style jsx global>{`;
         @keyframes shimmer {100% {transform: translate_x (100%)}        }
       `}</style>;
-    </div>)class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {}
+    </div>)class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }
+  static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {}
 export type SkeletonProps = {className?: string;
 }export const Skeleton: React.FC<SkeletonProps> = ({ ",className = ",width,height,rounded = false}) => {const style: React && React.CSSProperties = {}
 export const Skeleton: React.FC<SkeletonProps> = ({ ";

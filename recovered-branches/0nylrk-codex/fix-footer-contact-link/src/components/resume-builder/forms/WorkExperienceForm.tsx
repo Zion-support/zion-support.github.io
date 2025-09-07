@@ -76,7 +76,7 @@ const formatDateValue = ("dateValue": string | Date | undefined): (string) => {
       "start_date": format(new Date(), 'yyyy-MM-dd');'
       "is_current": false,
 "description": '''
-      "location": ''}})'
+      "location": ''})'
   const handleAddOrUpdate = async ("data": WorkExperienceFormValues) => {
     }
     try {
@@ -326,7 +326,7 @@ variant="outline";"
                     }
                     setEditingId(null);
                   }
-                }}
+                }
               >;
                 {editingId ? 'Cancel' : 'Back'}'
               </div>;

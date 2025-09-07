@@ -13,7 +13,6 @@ import { Card;
   CardTitle;
  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
 
@@ -53,12 +52,11 @@ interface PerformanceMetrics  {buildSize: string;
   pageCount: number;
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error';
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
 interface Improvement {;
 
   id: string;
-interface Improvement  {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+interface Improvement  {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -76,7 +74,6 @@ interface PerformanceMetrics  {buildSize: string;
   description: string;
   status: 'completed' | 'in-progress' | 'planned';
   impact: 'high' | 'medium' | 'low';
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
   category: 'performance' | 'security' | 'ux' | 'build'
 
 import React, { useState } from 'react';
@@ -339,7 +336,6 @@ const PerformanceDashboard: React.FC = () => {
             <p className='text-xs text-gray-500'>Average page load</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
 
 
@@ -353,21 +349,18 @@ const PerformanceDashboard: React.FC = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
             <div className='flex items-center space-x-2'>
               <CheckCircle className='h-5 w-5 text-green-500' />
               <span className='text-sm font-semibold text-green-600'>
                 Healthy
               </span>
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
             </div>
           </CardContent>
         </Card>
       </div>
 
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
 const PerformanceDashboard: React.FC = () => {;
   const [metrics] = useState<PerformanceMetrics>({;
@@ -407,7 +400,6 @@ interface Improvement {;
     {;
       id: '1',;
       title: 'Fixed Search Bar Issues',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',;
       status: 'completed',;
@@ -422,7 +414,6 @@ interface Improvement {;
     {;
       id: '2',;
       title: 'Environment Validation System',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Added comprehensive pre-build checks to prevent deployment with missing environment variables',;
       status: 'completed',;
@@ -437,7 +428,6 @@ interface Improvement {;
     {;
       id: '3',;
       title: 'NextAuth Configuration Fix',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',;
       status: 'completed',;
@@ -452,7 +442,6 @@ interface Improvement {;
     {;
       id: '4',;
       title: 'API Client Error Handling',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Improved global error handling with better retry logic and user feedback',;
       status: 'completed',;
@@ -467,7 +456,6 @@ interface Improvement {;
     {;
       id: '5',;
       title: 'Bundle Analyzer Integration',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Added bundle analysis tools to identify and optimize large dependencies',;
       status: 'completed',;
@@ -482,8 +470,7 @@ interface Improvement {;
     {;
       id: '6',;
       title: 'Health Check Endpoint',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
-    }},const completedImprovements = improvements.filter(imp => imp.status === 'completed'),return (<Card>;
+    },const completedImprovements = improvements.filter(imp => imp.status === 'completed'),return (<Card>;
           <CardHeader className='pb-2'>;
             <CardTitle className='text-sm font-medium text-gray-600'>;
               Page Count;
@@ -534,12 +521,12 @@ interface Improvement {;
         'Improved global error handling with better retry logic and user feedback',status: 'completed',impact: 'medium',category: 'ux'},{id: '5',title: 'Bundle Analyzer Integration',description: 'Added bundle analysis tools to identify and optimize large dependencies',status: 'completed',impact: 'medium',category: 'performance';description:;
         'Added bundle analysis tools to identify and optimize large dependencies',status: 'completed',impact: 'medium',category: 'performance'},{id: '6',title: 'Health Check Endpoint',description: 'Created production monitoring endpoint for environment and service health',status: 'completed',impact: 'medium',category: 'security';
     }
-  ],const getStatusIcon = (status: string) => {switch (status) {case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,default: return <AlertCircle className="h-4 w-4 text-gray-500" />;
-  ],const getStatusIcon = (status: string) => {switch (status) {case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,default: return <AlertCircle className="h-4 w-4 text-gray-500" />;
+  ],const getStatusIcon = (status: string) => {switch (status) {case 'completed': return <CheckCircle className='h-4 w-4 text-green-500' />,case 'in-progress': return <AlertCircle className='h-4 w-4 text-yellow-500' />,case 'planned': return <TrendingUp className='h-4 w-4 text-blue-500' />,default: return <AlertCircle className='h-4 w-4 text-gray-500' />;
+  ],const getStatusIcon = (status: string) => {switch (status) {case 'completed': return <CheckCircle className='h-4 w-4 text-green-500' />,case 'in-progress': return <AlertCircle className='h-4 w-4 text-yellow-500' />,case 'planned': return <TrendingUp className='h-4 w-4 text-blue-500' />,default: return <AlertCircle className='h-4 w-4 text-gray-500' />;
     }
   },const getImpactColor = (impact: string) => {switch (impact) {case 'high': return 'bg-red-100 text-red-800',case 'medium': return 'bg-yellow-100 text-yellow-800',case 'low': return 'bg-green-100 text-green-800',default: return 'bg-gray-100 text-gray-800';
     }
-  },const getCategoryIcon = (category: string) => {switch (category) {case 'performance': return <Zap className="h-4 w-4" />,case 'security': return <Shield className="h-4 w-4" />,case 'ux': return <Search className="h-4 w-4" />,case 'build': return <TrendingUp className="h-4 w-4" />,default: return <CheckCircle className="h-4 w-4" />;
+  },const getCategoryIcon = (category: string) => {switch (category) {case 'performance': return <Zap className='h-4 w-4' />,case 'security': return <Shield className='h-4 w-4' />,case 'ux': return <Search className='h-4 w-4' />,case 'build': return <TrendingUp className='h-4 w-4' />,default: return <CheckCircle className='h-4 w-4' />;
     }
   },const completedImprovements = improvements.filter(imp => imp.status === 'completed'),return (<Card>;
           <CardHeader className='pb-2'>;
@@ -565,18 +552,18 @@ interface Improvement {;
             </CardTitle>;
           </CardHeader>;
           <CardContent>;
-            <div className="text-2xl font-bold">{metrics.loadTime}s</div>;
-            <p className="text-xs text-gray-500">Average page load</p>;
+            <div className='text-2xl font-bold'>{metrics.loadTime}s</div>;
+            <p className='text-xs text-gray-500'>Average page load</p>;
           </CardContent>;
         </Card>;
         <Card>;
-          <CardHeader className="pb-2">;
-            <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>;
+          <CardHeader className='pb-2'>;
+            <CardTitle className='text-sm font-medium text-gray-600'>Health Status</CardTitle>;
           </CardHeader>;
           <CardContent>;
-            <div className="flex items-center space-x-2">;
-              <CheckCircle className="h-5 w-5 text-green-500" />;
-              <span className="text-sm font-semibold text-green-600">Healthy</span>;
+            <div className='flex items-center space-x-2'>;
+              <CheckCircle className='h-5 w-5 text-green-500' />;
+              <span className='text-sm font-semibold text-green-600'>Healthy</span>;
             </div>;
           </CardContent>;
         </Card>;
@@ -589,7 +576,6 @@ interface Improvement {;
       case 'planned':;
         return <TrendingUp className='h-4 w-4 text-blue-500' />;
       default:;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
 
       description: 'Created production monitoring endpoint for environment and service health',;
@@ -601,17 +587,17 @@ interface Improvement {;
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,
-      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,
-      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,
-      default: return <AlertCircle className="h-4 w-4 text-gray-500" />
+      case 'completed': return <CheckCircle className='h-4 w-4 text-green-500' />,
+      case 'in-progress': return <AlertCircle className='h-4 w-4 text-yellow-500' />,
+      case 'planned': return <TrendingUp className='h-4 w-4 text-blue-500' />,
+      default: return <AlertCircle className='h-4 w-4 text-gray-500' />
   ],;
   const getStatusIcon = (status: string) => {;
     switch (status) {;
-      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,;
-      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,;
-      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,;
-      default: return <AlertCircle className="h-4 w-4 text-gray-500" />;
+      case 'completed': return <CheckCircle className='h-4 w-4 text-green-500' />,;
+      case 'in-progress': return <AlertCircle className='h-4 w-4 text-yellow-500' />,;
+      case 'planned': return <TrendingUp className='h-4 w-4 text-blue-500' />,;
+      default: return <AlertCircle className='h-4 w-4 text-gray-500' />;
     }
   },;
   const getImpactColor = (impact: string) => {;
@@ -625,32 +611,32 @@ interface Improvement {;
   },
 
     switch (category) {
-      case 'performance': return <Zap className="h-4 w-4" />,
-      case 'security': return <Shield className="h-4 w-4" />,
-      case 'ux': return <Search className="h-4 w-4" />,
-      case 'build': return <TrendingUp className="h-4 w-4" />,
-      default: return <CheckCircle className="h-4 w-4" />
+      case 'performance': return <Zap className='h-4 w-4' />,
+      case 'security': return <Shield className='h-4 w-4' />,
+      case 'ux': return <Search className='h-4 w-4' />,
+      case 'build': return <TrendingUp className='h-4 w-4' />,
+      default: return <CheckCircle className='h-4 w-4' />
     }
   },
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
   return (
-    <div className="space-y-6 p-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-gray-900">Performance Dashboard</h1>
-        <Badge className="bg-green-100 text-green-800">
+    <div className='space-y-6 p-6'>
+      <div className='flex items-center justify-between'>
+        <h1 className='text-3xl font-bold text-gray-900'>Performance Dashboard</h1>
+        <Badge className='bg-green-100 text-green-800'>
           {completedImprovements.length} Improvements Completed
         </Badge>
       </div>
 
         <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>
+          <CardHeader className='pb-2'>
+            <CardTitle className='text-sm font-medium text-gray-600'>Build Size</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{metrics.buildSize}</div>
-            <p className="text-xs text-gray-500">Total build output</p>
+            <div className='text-2xl font-bold'>{metrics.buildSize}</div>
+            <p className='text-xs text-gray-500'>Total build output</p>
           </CardContent>
 
         <Card>
@@ -680,24 +666,24 @@ interface Improvement {;
       </div>
 
         <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
+          <CardHeader className='pb-2'>
+            <CardTitle className='text-sm font-medium text-gray-600'>Load Time</CardTitle>
           </CardHeader>
           <CardContent>
 
-            <div className="text-2xl font-bold">{metrics.loadTime}s</div>
-            <p className="text-xs text-gray-500">Average page load</p>
+            <div className='text-2xl font-bold'>{metrics.loadTime}s</div>
+            <p className='text-xs text-gray-500'>Average page load</p>
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
+          <CardHeader className='pb-2'>
+            <CardTitle className='text-sm font-medium text-gray-600'>Health Status</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="text-sm font-semibold text-green-600">Healthy</span>
+            <div className='flex items-center space-x-2'>
+              <CheckCircle className='h-5 w-5 text-green-500' />
+              <span className='text-sm font-semibold text-green-600'>Healthy</span>
 
             </div>
           </CardContent>
@@ -708,8 +694,8 @@ interface Improvement {;
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center space-x-2">
-            <CheckCircle className="h-5 w-5 text-green-500" />
+          <CardTitle className='flex items-center space-x-2'>
+            <CheckCircle className='h-5 w-5 text-green-500' />
             <span>Completed Improvements</span>
           </CardTitle>
           <CardDescription>
@@ -717,61 +703,60 @@ interface Improvement {;
           </CardDescription>
         </CardHeader>
 
-          <div className="space-y-4">
+          <div className='space-y-4'>
             {completedImprovements.map((improvement) => (
-              <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
-                <div className="flex-shrink-0 mt-1">
+              <div key={improvement.id} className='flex items-start space-x-3 p-3 border rounded-lg'>
+                <div className='flex-shrink-0 mt-1'>
                   {getCategoryIcon(improvement.category)}
 
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-medium text-gray-900">
+                <div className='flex-1 min-w-0'>
+                  <div className='flex items-center justify-between'>
+                    <h3 className='text-sm font-medium text-gray-900'>
         return <AlertCircle className='h-4 w-4 text-gray-500' />;{/* Completed Improvements */}
       <Card>;
         <CardHeader>;
-          <CardTitle className="flex items-center space-x-2">;
-            <CheckCircle className="h-5 w-5 text-green-500" />;
+          <CardTitle className='flex items-center space-x-2'>;
+            <CheckCircle className='h-5 w-5 text-green-500' />;
             <span>Completed Improvements</span>;
           </CardTitle>;
           <CardDescription>Recent performance and functionality improvements that have been implemented;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-          <div className="space-y-4">;
-            {completedImprovements.map((improvement) => (<div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">;
-                <div className="flex-shrink-0 mt-1">;
+          <div className='space-y-4'>;
+            {completedImprovements.map((improvement) => (<div key={improvement.id} className='flex items-start space-x-3 p-3 border rounded-lg'>;
+                <div className='flex-shrink-0 mt-1'>;
                   {getCategoryIcon(improvement.category)}</div>;
-                <div className="flex-1 min-w-0">;
-                  <div className="flex items-center justify-between">;
-                    <h3 className="text-sm font-medium text-gray-900">;
+                <div className='flex-1 min-w-0'>;
+                  <div className='flex items-center justify-between'>;
+                    <h3 className='text-sm font-medium text-gray-900'>;
                       {improvement.title}
                     </h3>;
-                    <div className="flex items-center space-x-2">;
+                    <div className='flex items-center space-x-2'>;
                       <Badge className={getImpactColor(improvement.impact)}>;
                         {improvement.impact} impact;
                       </Badge>;
                       {getStatusIcon(improvement.status)}
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
                     </div>
                   </div>
 
-                  <p className="text-sm text-gray-600 mt-1">
+                  <p className='text-sm text-gray-600 mt-1'>
 
   },;
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
-      case 'performance': return <Zap className="h-4 w-4" />,;
-      case 'security': return <Shield className="h-4 w-4" />,;
-      case 'ux': return <Search className="h-4 w-4" />,;
-      case 'build': return <TrendingUp className="h-4 w-4" />,;
-      default: return <CheckCircle className="h-4 w-4" />;
+      case 'performance': return <Zap className='h-4 w-4' />,;
+      case 'security': return <Shield className='h-4 w-4' />,;
+      case 'ux': return <Search className='h-4 w-4' />,;
+      case 'build': return <TrendingUp className='h-4 w-4' />,;
+      default: return <CheckCircle className='h-4 w-4' />;
     }
                     </div>;
                   </div>;
-                  <p className="text-sm text-gray-600 mt-1">;
-  },const getCategoryIcon = (category: string) => {switch (category) {case 'performance': return <Zap className="h-4 w-4" />,case 'security': return <Shield className="h-4 w-4" />,case 'ux': return <Search className="h-4 w-4" />,case 'build': return <TrendingUp className="h-4 w-4" />,default: return <CheckCircle className="h-4 w-4" />;
-    }}const getImpactColor = (impact: string,) => {switch (impact) {case 'high':;
+                  <p className='text-sm text-gray-600 mt-1'>;
+  },const getCategoryIcon = (category: string) => {switch (category) {case 'performance': return <Zap className='h-4 w-4' />,case 'security': return <Shield className='h-4 w-4' />,case 'ux': return <Search className='h-4 w-4' />,case 'build': return <TrendingUp className='h-4 w-4' />,default: return <CheckCircle className='h-4 w-4' />;
+    }const getImpactColor = (impact: string,) => {switch (impact) {case 'high':;
         return 'bg-red-100 text-red-800';
       case 'medium':;
         return 'bg-yellow-100 text-yellow-800';
@@ -851,7 +836,6 @@ interface Improvement {;
           </CardHeader>;
           <CardContent>;<div className='flex items - center space - x-2'>;
               <CheckCircle className='h - 5 w - 5 text - green - 500' />;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
               <span className='text - sm font - semibold text - green - 600'>;
 
                 Healthy;
@@ -880,8 +864,8 @@ interface Improvement {;
                       {improvement.title}
                     </h3>;
                     <div className='flex items-center space-x-2'>;
-          <CardTitle className="flex items-center space-x-2">;
-            <CheckCircle className="h-5 w-5 text-green-500" />;
+          <CardTitle className='flex items-center space-x-2'>;
+            <CheckCircle className='h-5 w-5 text-green-500' />;
             <span>Completed Improvements</span>;
           </CardTitle>;
           <CardDescription>;
@@ -892,12 +876,12 @@ interface Improvement {;
 
                   {getCategoryIcon(improvement.category)}
                 </div>;
-                <div className="flex-1 min-w-0">;
-                  <div className="flex items-center justify-between">;
-                    <h3 className="text-sm font-medium text-gray-900">;
+                <div className='flex-1 min-w-0'>;
+                  <div className='flex items-center justify-between'>;
+                    <h3 className='text-sm font-medium text-gray-900'>;
                       {improvement.title}
                     </h3>;
-                    <div className="flex items-center space-x-2">;
+                    <div className='flex items-center space-x-2'>;
                       <Badge className={getImpactColor(improvement.impact)}>;
                         {improvement.impact} impact;
                       </Badge>;
@@ -920,15 +904,15 @@ interface Improvement {;
       {/* Action Buttons */}
       {/* Action Buttons */}
 
-      <div className="flex space-x-4">
-        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
-          <Shield className="h-4 w-4 mr-2" />
+      <div className='flex space-x-4'>
+        <Button onClick={() => window.open('/api/health/environment_blank')} variant='outline'>
+          <Shield className='h-4 w-4 mr-2' />
 
           Check Health Status
 
         </Button>
-        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
-          <TrendingUp className="h-4 w-4 mr-2" />
+        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant='outline'>
+          <TrendingUp className='h-4 w-4 mr-2' />
           Bundle Analysis
         </Button>
       </div>
@@ -937,7 +921,7 @@ interface Improvement {;
 },
 
 export default PerformanceDashboard, 
-      <div className="flex space-x-4">;
+      <div className='flex space-x-4'>;
                     </div>;
                   </div>;
                   <p className='text-sm text-gray-600 mt-1'>;
@@ -950,9 +934,9 @@ export default PerformanceDashboard,
       </Card>;
       {/* Action Buttons */}</div>;
         </CardContent>;
-      </Card>;{/* Action Buttons */}<div className="flex space-x-4">;
-        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
-          <Shield className="h-4 w-4 mr-2" />;
+      </Card>;{/* Action Buttons */}<div className='flex space-x-4'>;
+        <Button onClick={() => window.open('/api/health/environment_blank')} variant='outline'>;
+          <Shield className='h-4 w-4 mr-2' />;
 
 
 
@@ -960,9 +944,7 @@ export default PerformanceDashboard,
         </Button>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
   );
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 };
 
 export default PerformanceDashboard;
@@ -975,13 +957,13 @@ export default PerformanceDashboard;
         >;
           <TrendingUp className='h-4 w-4 mr-2' />;export default PerformanceDashboard;
 export default PerformanceDashboard,export default PerformanceDashboard;
-}},export default PerformanceDashboard,<div className="flex space-x-4">;
-        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
-          <Shield className="h-4 w-4 mr-2" />;
+},export default PerformanceDashboard,<div className='flex space-x-4'>;
+        <Button onClick={() => window.open('/api/health/environment_blank')} variant='outline'>;
+          <Shield className='h-4 w-4 mr-2' />;
           Check Health Status;
         </Button>;
-        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
-          <TrendingUp className="h-4 w-4 mr-2" />;Bundle Analysis;
+        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant='outline'>;
+          <TrendingUp className='h-4 w-4 mr-2' />;Bundle Analysis;
         </Button>;
       </div>;
     </div>;
@@ -1022,8 +1004,8 @@ export default PerformanceDashboard,export default PerformanceDashboard;
 
           Check Health Status;
         </Button>;
-        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
-          <TrendingUp className="h-4 w-4 mr-2" />;
+        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant='outline'>;
+          <TrendingUp className='h-4 w-4 mr-2' />;
           Bundle Analysis;
         </Button>;
       </div>;

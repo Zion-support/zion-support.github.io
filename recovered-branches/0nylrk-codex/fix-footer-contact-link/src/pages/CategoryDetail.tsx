@@ -226,7 +226,7 @@ export default function CategoryDetail() {;
         }
       });
     }
-  }};
+  };
   },
 return (;
   }
@@ -257,7 +257,7 @@ return (;
       })
     }
   }
-  }};
+  };
   },
 return (;
                 <ProductListingCard,

@@ -84,7 +84,7 @@ export default function ProductsIndexPage() {return (<div className='container m
   )ursor/fix-website-loading-errors-and-merge-6662;
     </div>;}
   )</div>;}
-  )}}
+  )}
     </div>;
   )}
 }</div>;

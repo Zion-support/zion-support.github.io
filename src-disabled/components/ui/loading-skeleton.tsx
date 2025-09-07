@@ -2,7 +2,7 @@ interface SkeletonProps {
   className?: string;
    variant?: 'text' | 'title' | 'paragraph' | 'avatar' | 'card' | 'button';
    lines?: number;
-   height?: string;"";}
+   height?: string;'';}
    width?: string}
 }
 
@@ -12,9 +12,9 @@ export function LoadingSkeleton({ className = '', variant = 'text', lines = 1, h
   button: 'h-10 w-24 rounded-lg';}
 }
 
-const variantClasses = variants[variant] const customHeight = height ? `h-[${height}]` : '';"
-  const customWidth = width ? `w-[${width}]` : '' if (variant === 'paragraph' && lines > 1) { return ( <div className={`space-y-2 ${className}`}"  /> {Array.from({ length: lines}"
-}).map((_, index) => ( <motion .div key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }} /"  /> ))} </div> )
-};"
-  return ( <motion .div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} /"  /> ),"
-}''`"`;"
+const variantClasses = variants[variant] const customHeight = height ? `h-[${height}]` : '';'
+  const customWidth = width ? `w-[${width}]` : '' if (variant === 'paragraph' && lines > 1) { return ( <div className={`space-y-2 ${className}`}'  /> {Array.from({ length: lines}'
+}).map((_, index) => ( <motion .div key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={ opacity: 0 } animate={ opacity: 1 } transition={ delay: index * 0.1 } /'  /> ))} </div> )
+};'
+  return ( <motion .div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={ opacity: 0 } animate={ opacity: 1 } /'  /> ),'
+}''`'`;'

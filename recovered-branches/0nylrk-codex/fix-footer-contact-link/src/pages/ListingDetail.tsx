@@ -57,7 +57,7 @@ src={listing.images[selectedImageIndex]}
 }
 const target = e.target as HTMLImageElement,;
                         target.src = "/placeholder.svg""
-                      }}
+                      }
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">"
@@ -176,7 +176,7 @@ src={listing && listing.images[selectedImageIndex]}
                             }
                             const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg",;"
-                          }}
+                          }
                         />;
                       </div>;                    ))}
                   </div>;
@@ -350,9 +350,9 @@ amount={listing.price}
                           "title": "Payment Processing","
   "description": "Redirecting to secure checkout...";"
                         });
-                      }}
+                      }
                     />
-                  ) : (                      }}
+                  ) : (                      }
                     />
                   ) : (                      onPaymentInitiated={() => {;
                         }
@@ -361,7 +361,7 @@ amount={listing.price}
                           "title": "Payment Processing",,"
   "description": "Redirecting to secure checkout...";"
                         });
-                      }}
+                      }
                     />;
                   ) : (;
                     <Button,
@@ -376,7 +376,7 @@ const target = e.target as HTMLImageElement,;
 variant="outline";"
                     onClick={handleContact}
                     disabled={isLoading}
-                    className="w-full border-zion-purple text-zion-cyan "hover":bg-zion-purple/10">;                        }}"
+                    className="w-full border-zion-purple text-zion-cyan "hover":bg-zion-purple/10">;                        }"
                       />;
                     ) : (;
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;"
@@ -422,7 +422,7 @@ variant="outline";"
                           }
                           const target = e.target as HTMLImageElement;
                           target.src = ""https": //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);"
-                        }}
+                        }
                       />;
                     ) : (;
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;"

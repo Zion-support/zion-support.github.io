@@ -46,13 +46,13 @@ interface Talent {;
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>,;
   testimonial?: { quote: string, author: string   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
@@ -84,7 +84,7 @@ const TalentDirectory: NextPage = () => {
                 ))}
               </div>
             </div>
-            <div className="text-sm opacity-80">{t.title}</div>
+            <div className='text-sm opacity-80'>{t.title}</div>
             {t.testimonial && (
               <MicroTestimonial
                 quote={t.testimonial.quote}

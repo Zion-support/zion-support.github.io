@@ -16,7 +16,7 @@ const mainNavLinks = [;
 const "EnhancedNavigation": React.FC = () => {ursor/automate-test-improve-and-merge-code-646c;
   { "href": '/contact', "label": 'Contact' }'
 ];
-const "EnhancedNavigation": React.FC = () => {{ "href": '/contact', "label": 'Contact' }'
+const "EnhancedNavigation": React.FC = () => { "href": '/contact', "label": 'Contact' }'
 ];
 const "EnhancedNavigation": React.FC = () => {const mainNavLinks = [{ "href": '/', "label": 'Home' },{ "href": '/services', "label": 'Services' },{ "href": '/products', "label": 'Products' },{ "href": '/blog', "label": 'Blog' },{ "href": '/about', "label": 'About' },{ "href": '/contact', "label": 'Contact' }'
   { "href": '/contact', "label": 'Contact' }'
@@ -150,30 +150,24 @@ href="/solutions/enterprise""
 href="/solutions/small-business""
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 "hover":text-blue-600""
                 >
-<<<<<<< HEAD
                   Small Business
                 </Link>{' '}'
                 <Link,
 href="/solutions/startups""
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 "hover":text-blue-600""
                 >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   Startups
                 </Link>{' '}'
                 <Link,
 href="/solutions/healthcare""
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 "hover":text-blue-600""
                 >
-<<<<<<< HEAD
                   Healthcare
                 </Link>{' '}'
                 <Link,
 href="/solutions/finance""
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 "hover":text-blue-600""
                 >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   Finance
                 </Link>{' '}'
               </div>{' '}'
@@ -182,45 +176,36 @@ href="/solutions/finance""
 href="/products""
               className="text-gray-600 "hover": text-blue-600 transition-colors""
             >
-<<<<<<< HEAD
               Products
             </Link>{' '}'
             <Link,
 href="/solutions""
               className="text-gray-600 "hover": text-blue-600 transition-colors""
             >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Solutions
             </Link>{' '}'
             <Link,
 href="/about""
               className="text-gray-600 "hover": text-blue-600 transition-colors""
             >
-<<<<<<< HEAD
               About
             </Link>{' '}'
             <Link,
 href="/blog""
               className="text-gray-600 "hover": text-blue-600 transition-colors""
             >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Blog
             </Link>{' '}'
             <Link,
 href="/careers""
               className="text-gray-600 "hover": text-blue-600 transition-colors""
             >
-<<<<<<< HEAD
               Careers
             </Link>{' '}'
             <Link,
 href="/contact""
               className="text-gray-600 "hover": text-blue-600 transition-colors""
             >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Contact
             </Link>{' '}'
           </div>{' '}'
@@ -293,30 +278,24 @@ href="/services/web-development""
 href="/services/mobile-development""
                     className="block py-1 text-gray-500 "hover": text-blue-600""
                   >
-<<<<<<< HEAD
                     Mobile Development
                   </Link>{' '}'
                   <Link,
 href="/services/blockchain-solutions""
                     className="block py-1 text-gray-500 "hover": text-blue-600""
                   >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     Blockchain Solutions
                   </Link>{' '}'
                   <Link,
 href="/services/iot-platforms""
                     className="block py-1 text-gray-500 "hover": text-blue-600""
                   >
-<<<<<<< HEAD
                     IoT Platforms
                   </Link>{' '}'
                   <Link,
 href="/services/cybersecurity""
                     className="block py-1 text-gray-500 "hover": text-blue-600""
                   >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     Cybersecurity
                   </Link>{' '}'
                 </div>{' '}'
@@ -674,30 +653,24 @@ ursor/automate-test-improve-and-merge-code-646c;
 href="/solutions/enterprise""
                     className="block py-1 text-gray-500 "hover": text-blue-600""
                   >
-<<<<<<< HEAD
                     Enterprise Solutions
                   </Link>{' '}'
                   <Link,
 href="/solutions/small-business""
                     className="block py-1 text-gray-500 "hover": text-blue-600""
                   >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     Small Business
                   </Link>{' '}'
                   <Link,
 href="/solutions/startups""
                     className="block py-1 text-gray-500 "hover": text-blue-600""
                   >
-<<<<<<< HEAD
                     Startups
                   </Link>{' '}'
                   <Link,
 href="/solutions/healthcare""
                     className="block py-1 text-gray-500 "hover": text-blue-600""
                   >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     Healthcare
                   </Link>{' '}'
                   <Link,
@@ -718,30 +691,24 @@ href="/products""
 href="/about""
                 className="block py-2 text-gray-600 "hover": text-blue-600""
               >
-<<<<<<< HEAD
                 About
               </Link>{' '}'
               <Link,
 href="/blog""
                 className="block py-2 text-gray-600 "hover": text-blue-600""
               >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 Blog
               </Link>{' '}'
               <Link,
 href="/careers""
                 className="block py-2 text-gray-600 "hover": text-blue-600""
               >
-<<<<<<< HEAD
                 Careers
               </Link>{' '}'
               <Link,
 href="/contact""
                 className="block py-2 text-gray-600 "hover": text-blue-600""
               >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 Contact
               </Link>{' '}'
               <div className="pt-4">"

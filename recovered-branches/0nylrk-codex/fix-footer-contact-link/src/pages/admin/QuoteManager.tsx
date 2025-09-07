@@ -307,7 +307,7 @@ quote={selectedQuote}
 
             setShowDetails($2);
             setSelectedQuote(null)
-          }}
+          }
         />
         <Footer />
       </div>
@@ -315,7 +315,7 @@ quote={selectedQuote}
   )
             setShowDetails(false),;
             setSelectedQuote(null),;
-          }}
+          }
         />;
         ;
         <Footer />;

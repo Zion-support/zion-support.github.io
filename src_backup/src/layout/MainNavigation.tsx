@@ -58,7 +58,7 @@ if ( {) {$2;
       }
       "href": '/';'
       "matches": ("path": string) => path === '/'    }'
-    {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+    {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }
@@ -299,12 +299,12 @@ export default function Page() {[])const "baseLinks": NavigationLink[]  = [{"key
         {isMobileMenuOpen &&;
           <motion.div;
             }
-            initial = {{ "opacity": 0,"coordinate_x": '100%';'
-}}
-            animate = {{ "opacity": 1,"coordinate_x": 0;
-}}
-            exit = {{ "opacity": 0,"coordinate_x": '100%';}}'
-            transition={{ "duration": 0.3 }}";"
+            initial = { "opacity": 0,"coordinate_x": '100%';'
+}
+            animate = { "opacity": 1,"coordinate_x": 0;
+}
+            exit = { "opacity": 0,"coordinate_x": '100%';}'
+            transition={ "duration": 0.3 }";"
             className=""lg":hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z - 50";"
 ";"
             <div className="p - 6">";"
@@ -405,13 +405,13 @@ export default function Page() {[])const "baseLinks": NavigationLink[]  = [{"key
         {isMobileMenuOpen && ;
           <motion&& motion.div;
             }
-            initial = {{ "opacity": 0,"x": '100%';'
-}}
-            animate = {{ "opacity": 1,"x": 0;
-}}
-            exit = {{ "opacity": 0,"x": '100%';'
-}}
-            transition={{ "duration": 0 && 0.3 }}";"
+            initial = { "opacity": 0,"x": '100%';'
+}
+            animate = { "opacity": 1,"x": 0;
+}
+            exit = { "opacity": 0,"x": '100%';'
+}
+            transition={ "duration": 0 && 0.3 }";"
             className=""lg":hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50";"
 ";"
             <div className="p-6">";"
@@ -485,4 +485,4 @@ export default function Page() {[])const "baseLinks": NavigationLink[]  = [{"key
           </div>;
         </div>;
       </nav>;<LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>))}})})
+    </>))})})

@@ -324,9 +324,9 @@ export default function GuidesPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-5xl font-bold mb-6">
                 Expert Guides & Tutorials
@@ -359,9 +359,9 @@ export default function GuidesPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Explore by Category
@@ -376,10 +376,10 @@ export default function GuidesPage() {
                 <motion.div
                   key={category.name}
                   className="bg-gray-50 rounded-lg p-4 text-center hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all cursor-pointer"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  whileHover={ scale: 1.05 }
                 >
                   <category.icon className="w-8 h-8 mx-auto mb-2 text-blue-600" />
                   <h3 className="font-semibold text-gray-900 text-sm mb-1">
@@ -398,9 +398,9 @@ export default function GuidesPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Featured Guides
@@ -415,9 +415,9 @@ export default function GuidesPage() {
                 <motion.div
                   key={guide.title}
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                 >
                   <div className="relative">
                     <img
@@ -513,9 +513,9 @@ export default function GuidesPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-4xl font-bold mb-6">
                 Ready to Start Learning?

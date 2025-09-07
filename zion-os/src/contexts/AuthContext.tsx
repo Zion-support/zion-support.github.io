@@ -114,7 +114,7 @@ if ( {) {
         }
         "method": "POST","
         "headers": {
-          "Content - Type": "application / json"}}),"
+          "Content - Type": "application / json"}),"
       // Check condition,
 if ( {) {
   $2
@@ -186,7 +186,7 @@ if ( {) {$2;
       // Auto - login after successful registration;
       await login (email, password)} catch (error) {throw error;
     }
-  },const complete_onboarding = async () => {try {const response = await fetch ("/api / user / onboarding", {"method": "POST","headers": {"Content - Type": "application / json"}}),// Check condition;"
+  },const complete_onboarding = async () => {try {const response = await fetch ("/api / user / onboarding", {"method": "POST","headers": {"Content - Type": "application / json"}),// Check condition;"
 if ( {) {$2;
 }
         throw new Error ("Failed to complete onboarding")}"
@@ -216,7 +216,7 @@ if ( {) {$2;
   },const logout = async () => {await signOut({ "redirect": false }),router.push("/")},const register = async ("name": string, "email": string, "password": string) => {try {const response = await fetch("/api/auth/register", {"method": "POST","headers": {"Content-Type": "application/json"},"body": JSON.stringify({ name, email, password })}),if (!response.ok) {const error = await response.json(),throw new Error(error.message)}// Auto-login after successful registration;"
       await login(email, password)} catch (error) {throw error;
     }
-  },const completeOnboarding = async () => {try {const response = await fetch("/api/user/onboarding", {"method": "POST","headers": {"Content-Type": "application/json"}}),if (!response.ok) {throw new Error("Failed to complete onboarding")}if (user) {setUser({ ...user, "onboardingCompleted": true })}"
+  },const completeOnboarding = async () => {try {const response = await fetch("/api/user/onboarding", {"method": "POST","headers": {"Content-Type": "application/json"}),if (!response.ok) {throw new Error("Failed to complete onboarding")}if (user) {setUser({ ...user, "onboardingCompleted": true })}"
     } catch (error) {throw error;
     }
   },const "value": AuthContextType = {user,isLoading,"isAuthenticated": !!user,login,logout,register,completeOnboarding}return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
@@ -337,7 +337,7 @@ export function AuthProvider() {;
         }
         "method": "POST",;"
         "headers": {;
-          "Content-Type": "application/json"}}),;"
+          "Content-Type": "application/json"}),;"
       if (!response.ok) {;
         }
         throw new Error("Failed to complete onboarding");"

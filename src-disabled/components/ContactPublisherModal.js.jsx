@@ -31,7 +31,7 @@ const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current
 '';
 '';
 '''';
-            document.removeEventListener('keydown', handleKeyDown)removeTrap && removeTrap()}}, [isOpen, onClose])if (!isOpen) {}
+            document.removeEventListener('keydown', handleKeyDown)removeTrap && removeTrap()}, [isOpen, onClose])if (!isOpen) {}
         return null}
 
 const handleSubmit = async(e) => {}
@@ -91,7 +91,7 @@ const handleSubmit = async(e) => {}
       </div>
     </div>
   );
-}'"""'";
+}'''''';
           </button>;
         </form>;
       </div>

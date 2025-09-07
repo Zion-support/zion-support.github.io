@@ -112,7 +112,7 @@ import {
       jobs: { variant: "default" }
       candidates: { variant: "outline" }
       team: { variant: "secondary" }
-      billing: { variant: "destructive" }}
+      billing: { variant: "destructive" }
     const style = categoryStyles[category] |{ variant: "default" as const }
     return <Badge variant={style.variant}>{category}</Badge>
   }
@@ -124,7 +124,7 @@ import {
 
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
-      billing: { variant: "destructive" }},
+      billing: { variant: "destructive" },
 
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
@@ -205,7 +205,7 @@ import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from "@/compon
     } else if (diffHrs < 24) {return `${diffHrs} hours ago`;
     } else if (diffDays < 7) {return `${diffDays} days ago`;
     } else {return date.toLocaleDateString()}
-  },const getCategoryBadge = (category: string) => {const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {jobs: { variant: "default" },jobs: { variant: "default" },candidates: { variant: "outline" },team: { variant: "secondary" },billing: { variant: "destructive" }},return <Badge variant={style && style.variant}>{category}</Badge>;
+  },const getCategoryBadge = (category: string) => {const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {jobs: { variant: "default" },jobs: { variant: "default" },candidates: { variant: "outline" },team: { variant: "secondary" },billing: { variant: "destructive" },return <Badge variant={style && style.variant}>{category}</Badge>;
   }import {TableRow} from '@/components/ui/table';
   TableBody;
   TableCell;
@@ -218,7 +218,7 @@ import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from "@/compon
     } else if (diffHrs < 24) {return `${diffHrs} hours ago`;
     } else if (diffDays < 7) {return `${diffDays} days ago`;
     } else {return date && date.toLocaleDateString()}
-  }const getCategoryBadge = (category: string,) => {const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {jobs: { variant: "default" },candidates: { variant: "outline" },team: { variant: "secondary" },billing: { variant: "destructive" }},const style = categoryStyles[category] || { variant: "default" as const },return <Badge variant={style && style.variant}>{category}</Badge>;
+  }const getCategoryBadge = (category: string,) => {const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {jobs: { variant: "default" },candidates: { variant: "outline" },team: { variant: "secondary" },billing: { variant: "destructive" },const style = categoryStyles[category] || { variant: "default" as const },return <Badge variant={style && style.variant}>{category}</Badge>;
   }const style = categoryStyles[category] || { variant: "default" as const },return <Badge variant={style.variant}>{category}</Badge>;
   TableRow} from "@/components/ui/table",export function TeamActivity() {// Mock activity data;
   const activities  = null;return (<div className="space - y-6">;
@@ -231,7 +231,7 @@ import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from "@/compon
     } else if (diffHrs < 24) {return `${diffHrs} hours ago`;
     } else if (diffDays < 7) {return `${diffDays} days ago`;
     } else {return date.toLocaleDateString()}
-  },const getCategoryBadge = (category: string) => {const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {jobs: { variant: "default" },candidates: { variant: "outline" },team: { variant: "secondary" },billing: { variant: "destructive" }},const style = categoryStyles[category] || { variant: "default" as const }return <Badge variant={style.variant}>{category}</Badge>;
+  },const getCategoryBadge = (category: string) => {const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {jobs: { variant: "default" },candidates: { variant: "outline" },team: { variant: "secondary" },billing: { variant: "destructive" },const style = categoryStyles[category] || { variant: "default" as const }return <Badge variant={style.variant}>{category}</Badge>;
   }return (<div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h3 className="text-xl font-medium">Recent Team Activity</h3>;
@@ -412,7 +412,7 @@ export function TeamActivity() {;
       jobs: { variant: "default" },;
       candidates: { variant: "outline" },;
       team: { variant: "secondary" },;
-      billing: { variant: "destructive" }},;
+      billing: { variant: "destructive" },;
     const style = categoryStyles[category] || { variant: "default" as const };
     return <Badge variant={style.variant}>{category}</Badge>
 };
@@ -458,7 +458,6 @@ export function TeamActivity() {;
                 <TableCell className="text-muted-foreground">;
 
             ))}
-<<<<<<< HEAD:src_backup/components/enterprise/admin/TeamActivity.tsx
           </TableBody>
         </Table>
       </div>

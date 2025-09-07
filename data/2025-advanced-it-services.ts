@@ -1,12 +1,12 @@
 
 ;
 export const advancedITServices2025 = [;
-  {}"marketSize": '$15 && 15.7B',export const advancedITServices2025 = [;'
-  {}"marketSize": '$15 && 15.7B',"targetAudience":;'
+  {}'marketSize': '$15 && 15.7B',export const advancedITServices2025 = [;'
+  {}'marketSize': '$15 && 15.7B','targetAudience':;'
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
-    "competitiveAdvantage":;
+    'competitiveAdvantage':;
 export const advancedITServices2025 = [;
-  {}"marketSize": '$15 && 15.7B',"id": 'quantum-cloud-infrastructure-platform',"name": 'QuantumCloud Infrastructure',"description":;'
+  {}'marketSize': '$15 && 15.7B','id': 'quantum-cloud-infrastructure-platform','name': 'QuantumCloud Infrastructure','description':;'
       'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.';'
       'Quantum-enhanced computing resources';'
       'Advanced security with quantum encryption';'
@@ -17,29 +17,29 @@ export const advancedITServices2025 = [;
       'Custom quantum algorithms';'
       '24/7 technical support';'
     ];
-    "pricing": {"starter": {"price": 299;
+    'pricing': {'starter': {'price': 299;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 100 vCPUs';'
           'Basic quantum features';'
           'Standard support';'
         ];
       }
-      "professional": {"price": 799;
+      'professional': {'price': 799;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 500 vCPUs';'
           'Advanced quantum features';'
           'Priority support';'
           'Custom algorithms';'
         ];
       }
-      "enterprise": {"price": 1999;
+      'enterprise': {'price': 1999;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Unlimited resources';'
           'Custom quantum solutions';'
           'White-label platform';'
@@ -47,30 +47,30 @@ export const advancedITServices2025 = [;
         ];
       }
     }
-    "category": 'Cloud Infrastructure';'
-    "tags": [;
+    'category': 'Cloud Infrastructure';'
+    'tags': [;
       'Quantum Computing';'
       'Cloud Infrastructure';'
       'Security';'
       'Scalability';'
     ];
-    "website": '"https"://ziontechgroup.com/quantum-cloud-infrastructure';'
-    "contact": {"phone": '+1 302 464 0950';'
+    'website': ''https'://ziontechgroup.com/quantum-cloud-infrastructure';'
+    'contact': {'phone': '+1 302 464 0950';'
       }
-      "email": 'kleber@ziontechgroup.com';'
+      'email': 'kleber@ziontechgroup.com';'
     }
-    "marketSize": '$178.9B';'
-    "targetAudience":;
+    'marketSize': '$178.9B';'
+    'targetAudience':;
       'Enterprise businesses, cloud providers, research institutions, government agencies';'
-    "competitiveAdvantage":;
+    'competitiveAdvantage':;
       'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network';'
   }
-  {"id": 'intelligent-edge-computing-orchestrator';'
+  {'id': 'intelligent-edge-computing-orchestrator';'
     }
-    "name": 'EdgeComputing AI';'
-    "description":;
+    'name': 'EdgeComputing AI';'
+    'description':;
       'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.';'
-    "features": [;
+    'features': [;
       'AI-powered resource optimization';'
       'Real-time edge processing';'
       'Distributed computing orchestration';'
@@ -80,29 +80,29 @@ export const advancedITServices2025 = [;
       'Custom edge algorithms';'
       'Global edge network management';'
     ];
-    "pricing": {"starter": {"price": 199;
+    'pricing': {'starter': {'price': 199;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 10 edge nodes';'
           'Basic AI optimization';'
           'Standard monitoring';'
         ];
       }
-      "professional": {"price": 599;
+      'professional': {'price': 599;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 100 edge nodes';'
           'Advanced AI';'
           'Custom algorithms';'
           'Priority support';'
         ];
       }
-      "enterprise": {"price": 1499;
+      'enterprise': {'price': 1499;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Unlimited edge nodes';'
           'Custom AI training';'
           'White-label solution';'
@@ -110,25 +110,25 @@ export const advancedITServices2025 = [;
         ];
       }
     }
-    "category": 'Edge Computing';'
-    "tags": ['AI', 'Edge Computing', 'IoT', 'Distributed Computing'];'
-    "website": '"https"://ziontechgroup.com/edge-computing-ai';'
-    "contact": {"phone": '+1 302 464 0950';'
+    'category': 'Edge Computing';'
+    'tags': ['AI', 'Edge Computing', 'IoT', 'Distributed Computing'];'
+    'website': ''https'://ziontechgroup.com/edge-computing-ai';'
+    'contact': {'phone': '+1 302 464 0950';'
       }
-      "email": 'kleber@ziontechgroup.com';'
+      'email': 'kleber@ziontechgroup.com';'
     }
-    "marketSize": '$43.4B';'
-    "targetAudience":;
+    'marketSize': '$43.4B';'
+    'targetAudience':;
       'IoT companies, telecommunications, manufacturing, smart cities';'
-    "competitiveAdvantage":;
+    'competitiveAdvantage':;
       'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration';'
   }
-  {"id": 'zero-trust-security-platform';'
+  {'id': 'zero-trust-security-platform';'
     }
-    "name": 'ZeroTrust Security Pro';'
-    "description":;
+    'name': 'ZeroTrust Security Pro';'
+    'description':;
       'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.';'
-    "features": [;
+    'features': [;
       'Continuous identity verification';'
       'Micro-segmentation and access control';'
       'Advanced threat detection';'
@@ -138,29 +138,29 @@ export const advancedITServices2025 = [;
       'Custom security policies';'
       '24/7 security operations center';'
     ];
-    "pricing": {"starter": {"price": 149;
+    'pricing': {'starter': {'price': 149;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 100 users';'
           'Basic zero-trust';'
           'Standard monitoring';'
         ];
       }
-      "professional": {"price": 399;
+      'professional': {'price': 399;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 1,000 users';'
           'Advanced security';'
           'Custom policies';'
           'Priority support';'
         ];
       }
-      "enterprise": {"price": 999;
+      'enterprise': {'price': 999;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Unlimited users';'
           'Custom security rules';'
           'White-label solution';'
@@ -168,30 +168,30 @@ export const advancedITServices2025 = [;
         ];
       }
     }
-    "category": 'Cybersecurity';'
-    "tags": [;
+    'category': 'Cybersecurity';'
+    'tags': [;
       'Zero Trust';'
       'Cybersecurity';'
       'Identity Management';'
       'Threat Detection';'
     ];
-    "website": '"https"://ziontechgroup.com/zero-trust-security-pro';'
-    "contact": {"phone": '+1 302 464 0950';'
+    'website': ''https'://ziontechgroup.com/zero-trust-security-pro';'
+    'contact': {'phone': '+1 302 464 0950';'
       }
-      "email": 'kleber@ziontechgroup.com';'
+      'email': 'kleber@ziontechgroup.com';'
     }
-    "marketSize": '$173.5B';'
-    "targetAudience":;
+    'marketSize': '$173.5B';'
+    'targetAudience':;
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies';'
-    "competitiveAdvantage":;
+    'competitiveAdvantage':;
       'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration';'
   }
-  {"id": 'blockchain-enterprise-platform';'
+  {'id': 'blockchain-enterprise-platform';'
     }
-    "name": 'EnterpriseBlockchain Pro';'
-    "description":;
+    'name': 'EnterpriseBlockchain Pro';'
+    'description':;
       'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.';'
-    "features": [;
+    'features': [;
       'Enterprise blockchain infrastructure';'
       'Smart contract development';'
       'Advanced consensus mechanisms';'
@@ -201,29 +201,29 @@ export const advancedITServices2025 = [;
       'Custom blockchain solutions';'
       '24/7 platform support';'
     ];
-    "pricing": {"starter": {"price": 199;
+    'pricing': {'starter': {'price': 199;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 1,000 transactions/sec';'
           'Basic blockchain';'
           'Standard support';'
         ];
       }
-      "professional": {"price": 599;
+      'professional': {'price': 599;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 10,000 transactions/sec';'
           'Advanced features';'
           'Custom solutions';'
           'Priority support';'
         ];
       }
-      "enterprise": {"price": 1499;
+      'enterprise': {'price': 1499;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Unlimited transactions';'
           'Custom blockchain';'
           'White-label solution';'
@@ -231,25 +231,25 @@ export const advancedITServices2025 = [;
         ];
       }
     }
-    "category": 'Blockchain';'
-    "tags": ['Blockchain', 'Smart Contracts', 'Enterprise', 'Compliance'];'
-    "website": '"https"://ziontechgroup.com/enterprise-blockchain-pro';'
-    "contact": {"phone": '+1 302 464 0950';'
+    'category': 'Blockchain';'
+    'tags': ['Blockchain', 'Smart Contracts', 'Enterprise', 'Compliance'];'
+    'website': ''https'://ziontechgroup.com/enterprise-blockchain-pro';'
+    'contact': {'phone': '+1 302 464 0950';'
       }
-      "email": 'kleber@ziontechgroup.com';'
+      'email': 'kleber@ziontechgroup.com';'
     }
-    "marketSize": '$19.9B';'
-    "targetAudience":;
+    'marketSize': '$19.9B';'
+    'targetAudience':;
       'Financial institutions, supply chain companies, healthcare providers, government agencies';'
-    "competitiveAdvantage":;
+    'competitiveAdvantage':;
       'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration';'
   }
-  {"id": 'ai-powered-devops-platform';'
+  {'id': 'ai-powered-devops-platform';'
     }
-    "name": 'DevOps AI Pro';'
-    "description":;
+    'name': 'DevOps AI Pro';'
+    'description':;
       'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery performance.';'
-    "features": [;
+    'features': [;
       'AI-powered CI/CD automation';'
       'Intelligent deployment optimization';'
       'Automated testing and quality assurance';'
@@ -259,29 +259,29 @@ export const advancedITServices2025 = [;
       'Custom automation workflows';'
       '24/7 platform monitoring';'
     ];
-    "pricing": {"starter": {"price": 99;
+    'pricing': {'starter': {'price': 99;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 10 developers';'
           'Basic AI automation';'
           'Standard CI/CD';'
         ];
       }
-      "professional": {"price": 299;
+      'professional': {'price': 299;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 50 developers';'
           'Advanced AI';'
           'Custom workflows';'
           'Priority support';'
         ];
       }
-      "enterprise": {"price": 799;
+      'enterprise': {'price': 799;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Unlimited developers';'
           'Custom AI training';'
           'White-label solution';'
@@ -289,25 +289,25 @@ export const advancedITServices2025 = [;
         ];
       }
     }
-    "category": 'DevOps';'
-    "tags": ['AI', 'DevOps', 'CI/CD', 'Automation'];'
-    "website": '"https"://ziontechgroup.com/devops-ai-pro';'
-    "contact": {"phone": '+1 302 464 0950';'
+    'category': 'DevOps';'
+    'tags': ['AI', 'DevOps', 'CI/CD', 'Automation'];'
+    'website': ''https'://ziontechgroup.com/devops-ai-pro';'
+    'contact': {'phone': '+1 302 464 0950';'
       }
-      "email": 'kleber@ziontechgroup.com';'
+      'email': 'kleber@ziontechgroup.com';'
     }
-    "marketSize": '$8.2B';'
-    "targetAudience":;
+    'marketSize': '$8.2B';'
+    'targetAudience':;
       'Development teams, DevOps engineers, software companies, enterprise businesses';'
-    "competitiveAdvantage":;
+    'competitiveAdvantage':;
       'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration';'
   }
-  {"id": 'quantum-networking-platform';'
+  {'id': 'quantum-networking-platform';'
     }
-    "name": 'QuantumNet Pro';'
-    "description":;
+    'name': 'QuantumNet Pro';'
+    'description':;
       'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.';'
-    "features": [;
+    'features': [;
       'Quantum entanglement communication';'
       'Ultra-secure quantum encryption';'
       'High-speed quantum networking';'
@@ -317,25 +317,25 @@ export const advancedITServices2025 = [;
       'Custom quantum protocols';'
       '24/7 network support';'
     ];
-    "pricing": {"starter": {"price": 399;
+    'pricing': {'starter': {'price': 399;
         }
-        "period": 'month';'
-        "features": ['Up to 1Gbps', 'Basic quantum features', 'Standard support'];'
+        'period': 'month';'
+        'features': ['Up to 1Gbps', 'Basic quantum features', 'Standard support'];'
       }
-      "professional": {"price": 999;
+      'professional': {'price': 999;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 10Gbps';'
           'Advanced quantum features';'
           'Custom protocols';'
           'Priority support';'
         ];
       }
-      "enterprise": {"price": 2499;
+      'enterprise': {'price': 2499;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Unlimited bandwidth';'
           'Custom quantum solutions';'
           'White-label platform';'
@@ -343,30 +343,30 @@ export const advancedITServices2025 = [;
         ];
       }
     }
-    "category": 'Quantum Networking';'
-    "tags": [;
+    'category': 'Quantum Networking';'
+    'tags': [;
       'Quantum Computing';'
       'Networking';'
       'Security';'
       'High-Speed Communication';'
     ];
-    "website": '"https"://ziontechgroup.com/quantum-net-pro';'
-    "contact": {"phone": '+1 302 464 0950';'
+    'website': ''https'://ziontechgroup.com/quantum-net-pro';'
+    'contact': {'phone': '+1 302 464 0950';'
       }
-      "email": 'kleber@ziontechgroup.com';'
+      'email': 'kleber@ziontechgroup.com';'
     }
-    "marketSize": '$12.8B';'
-    "targetAudience":;
+    'marketSize': '$12.8B';'
+    'targetAudience':;
       'Telecommunications, financial institutions, government agencies, research institutions';'
-    "competitiveAdvantage":;
+    'competitiveAdvantage':;
       'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms';'
   }
-  {"id": 'autonomous-it-operations-platform';'
+  {'id': 'autonomous-it-operations-platform';'
     }
-    "name": 'AutonomousIT Pro';'
-    "description":;
+    'name': 'AutonomousIT Pro';'
+    'description':;
       'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.';'
-    "features": [;
+    'features': [;
       'Self-managing infrastructure';'
       'AI-powered issue prediction';'
       'Automated performance optimization';'
@@ -376,50 +376,50 @@ export const advancedITServices2025 = [;
       'Custom automation rules';'
       '24/7 autonomous operations';'
     ];
-    "pricing": {"starter": {"price": 199;
+    'pricing': {'starter': {'price': 199;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 100 servers';'
           'Basic autonomy';'
           'Standard monitoring';'
         ];
       }
-      "professional": {"price": 599;
+      'professional': {'price': 599;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 1,000 servers';'
           'Advanced AI';'
           'Custom automation';'
           'Priority support';'
         ];
       }
-      "enterprise": {"price": 1499;
+      'enterprise': {'price': 1499;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Unlimited servers';'
           'Custom AI training';'
           'White-label solution';'
           'Dedicated support';'
         ];
-      }}
-    "category": 'IT Operations';'
-    "tags": [;
+      }
+    'category': 'IT Operations';'
+    'tags': [;
       'AI','Autonomous Operations','Infrastructure Management','Automation';'
-    ],"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com';'
-    },"targetAudience":;
+    ],'contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup && ziontechgroup.com';'
+    },'targetAudience':;
       'IT operations teams, system administrators, enterprise businesses, managed service providers';'
-    "competitiveAdvantage":;
+    'competitiveAdvantage':;
       'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration';'
   }
-  {"id": 'quantum-data-center-platform';'
+  {'id': 'quantum-data-center-platform';'
     }
-    "name": 'QuantumDataCenter Pro';'
-    "description":;
+    'name': 'QuantumDataCenter Pro';'
+    'description':;
       'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.';'
-    "features": [;
+    'features': [;
       'Quantum-enhanced computing';'
       'Advanced cooling and power management';'
       'Ultra-secure quantum storage';'
@@ -429,29 +429,29 @@ export const advancedITServices2025 = [;
       'Custom quantum solutions';'
       '24/7 data center support';'
     ];
-    "pricing": {"starter": {"price": 499;
+    'pricing': {'starter': {'price': 499;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 100 racks';'
           'Basic quantum features';'
           'Standard support';'
         ];
       }
-      "professional": {"price": 1299;
+      'professional': {'price': 1299;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 500 racks';'
           'Advanced quantum features';'
           'Custom solutions';'
           'Priority support';'
         ];
       }
-      "enterprise": {"price": 2999;
+      'enterprise': {'price': 2999;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Unlimited racks';'
           'Custom quantum solutions';'
           'White-label platform';'
@@ -459,21 +459,21 @@ export const advancedITServices2025 = [;
         ];
       }
     }
-    "category": 'Data Center';'
-    "tags": [;
+    'category': 'Data Center';'
+    'tags': [;
       'Quantum Computing','Data Center','Infrastructure','Energy Efficiency';'
-    ],"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com';'
-    },"targetAudience":;
+    ],'contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup && ziontechgroup.com';'
+    },'targetAudience':;
       'Data center operators, cloud providers, enterprise businesses, government agencies';'
-    "competitiveAdvantage":;
+    'competitiveAdvantage':;
       'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration';'
   }
-  {"id": 'quantum-cybersecurity-platform';'
+  {'id': 'quantum-cybersecurity-platform';'
     }
-    "name": 'QuantumCyber Pro';'
-    "description":;
+    'name': 'QuantumCyber Pro';'
+    'description':;
       'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.';'
-    "features": [;
+    'features': [;
       'Quantum-resistant encryption';'
       'Advanced threat detection';'
       'Quantum key distribution';'
@@ -483,29 +483,29 @@ export const advancedITServices2025 = [;
       'Custom security solutions';'
       '24/7 quantum security operations';'
     ];
-    "pricing": {"starter": {"price": 299;
+    'pricing': {'starter': {'price': 299;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 100 endpoints';'
           'Basic quantum security';'
           'Standard monitoring';'
         ];
       }
-      "professional": {"price": 799;
+      'professional': {'price': 799;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 1,000 endpoints';'
           'Advanced quantum features';'
           'Custom solutions';'
           'Priority support';'
         ];
       }
-      "enterprise": {"price": 1999;
+      'enterprise': {'price': 1999;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Unlimited endpoints';'
           'Custom quantum security';'
           'White-label solution';'
@@ -513,21 +513,21 @@ export const advancedITServices2025 = [;
         ];
       }
     }
-    "category": 'Quantum Cybersecurity';'
-    "tags": [;
+    'category': 'Quantum Cybersecurity';'
+    'tags': [;
       'Quantum Computing','Cybersecurity','Encryption','Threat Detection';'
-    ],"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com';'
-    },"targetAudience":;
+    ],'contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup && ziontechgroup.com';'
+    },'targetAudience':;
       'IT security teams, cybersecurity firms, government agencies, financial institutions';'
-    "competitiveAdvantage":;
+    'competitiveAdvantage':;
       'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection';'
   }
-  {"id": 'quantum-cloud-migration-platform';'
+  {'id': 'quantum-cloud-migration-platform';'
     }
-    "name": 'QuantumMigration Pro';'
-    "description":;
+    'name': 'QuantumMigration Pro';'
+    'description':;
       'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.';'
-    "features": [;
+    'features': [;
       'AI-powered migration planning';'
       'Quantum-enhanced migration tools';'
       'Zero-downtime migration';'
@@ -537,171 +537,171 @@ export const advancedITServices2025 = [;
       'Custom migration strategies';'
       '24/7 migration support';'
     ];
-    "pricing": {"starter": {"price": 199;
+    'pricing': {'starter': {'price': 199;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 100 workloads';'
           'Basic migration tools';'
           'Standard support';'
         ];
       }
-      "professional": {"price": 599;
+      'professional': {'price': 599;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Up to 1,000 workloads';'
           'Advanced quantum features';'
           'Custom strategies';'
           'Priority support';'
         ];
       }
-      "enterprise": {"price": 1499;
+      'enterprise': {'price': 1499;
         }
-        "period": 'month';'
-        "features": [;
+        'period': 'month';'
+        'features': [;
           'Unlimited workloads','Custom quantum solutions','White - label platform','Dedicated support';'
         ];
       }
-    },"category": 'Cloud Migration',"tags": ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com';'
-    },"phone": '+1 302 464 0950';'
-      "email": 'kleber@ziontechgroup.com';'
+    },'category': 'Cloud Migration','tags': ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],'contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup && ziontechgroup.com';'
+    },'phone': '+1 302 464 0950';'
+      'email': 'kleber@ziontechgroup.com';'
     }
-    "marketSize": '$15.7B';'
-    "targetAudience":;
+    'marketSize': '$15.7B';'
+    'targetAudience':;
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
-    "competitiveAdvantage":;
+    'competitiveAdvantage':;
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
   }
-];      "phone": '+1 302 464 0950';'
-    }"marketSize": '$15 && 15.7B',"targetAudience": 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
-    "competitiveAdvantage": 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
+];      'phone': '+1 302 464 0950';'
+    }'marketSize': '$15 && 15.7B','targetAudience': 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
+    'competitiveAdvantage': 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
   }
 ];
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
-  }];      "phone": '+1 302 464 0950';'
-      "email": 'kleber@ziontechgroup.com';'
+  }];      'phone': '+1 302 464 0950';'
+      'email': 'kleber@ziontechgroup.com';'
     }
-    "marketSize": '$15.7B';'
-    "targetAudience": 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
-    "competitiveAdvantage": 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
+    'marketSize': '$15.7B';'
+    'targetAudience': 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
+    'competitiveAdvantage': 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
 ursor/fix-website-loading-errors-and-merge-6662;
-    "market_size": '$15.7B',"target_audience":;'
-      'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',"competitive_advantage":;'
+    'market_size': '$15.7B','target_audience':;'
+      'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms','competitive_advantage':;'
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration';'
   }
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration';'
   }
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration';'
   }
-];      "phone": '+1 302 464 0950';'
-      "email": 'kleber@ziontechgroup.com';},"marketSize": '$178.9B',"targetAudience": 'Enterprise businesses, cloud providers, research institutions, government agencies',"competitiveAdvantage": 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network';'
-  },{"id": 'intelligent-edge-computing-orchestrator',"name": 'EdgeComputing AI',"description": 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.',"features": [;'
+];      'phone': '+1 302 464 0950';'
+      'email': 'kleber@ziontechgroup.com';},'marketSize': '$178.9B','targetAudience': 'Enterprise businesses, cloud providers, research institutions, government agencies','competitiveAdvantage': 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network';'
+  },{'id': 'intelligent-edge-computing-orchestrator','name': 'EdgeComputing AI','description': 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.','features': [;'
       'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management';'
-    ],"pricing": {"starter": { "price": 199, "period": 'month', "features": ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] },"professional": { "price": 599, "period": 'month', "features": ['Up to 100 edge nodesAdvanced AICustom algorithmsPriority support'] },"enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited edge nodesCustom AI trainingWhite-label solutionDedicated support'] }'
-    },"category": 'Edge Computing',"tags": ['AIEdge ComputingIoTDistributed Computing'],"website": '"https"://ziontechgroup.com/edge-computing-ai',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$43.4B',"targetAudience": 'IoT companies, telecommunications, manufacturing, smart cities',"competitiveAdvantage": 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration';'
-  },{"id": 'zero-trust-security-platform',"name": 'ZeroTrust Security Pro',"description": 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.',"features": [;'
+    ],'pricing': {'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] },'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 100 edge nodesAdvanced AICustom algorithmsPriority support'] },'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited edge nodesCustom AI trainingWhite-label solutionDedicated support'] }'
+    },'category': 'Edge Computing','tags': ['AIEdge ComputingIoTDistributed Computing'],'website': ''https'://ziontechgroup.com/edge-computing-ai','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$43.4B','targetAudience': 'IoT companies, telecommunications, manufacturing, smart cities','competitiveAdvantage': 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration';'
+  },{'id': 'zero-trust-security-platform','name': 'ZeroTrust Security Pro','description': 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.','features': [;'
       'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center';'
-    ],"pricing": {"starter": { "price": 149, "period": 'month', "features": ['Up to 100 usersBasic zero-trustStandard monitoring'] },"professional": { "price": 399, "period": 'month', "features": ['Up to 1,000 usersAdvanced securityCustom policiesPriority support'] },"enterprise": { "price": 999, "period": 'month', "features": ['Unlimited usersCustom security rulesWhite-label solutionDedicated SOC team'] }'
-    },"category": 'Cybersecurity',"tags": ['Zero TrustCybersecurityIdentity ManagementThreat Detection'],"website": '"https"://ziontechgroup.com/zero-trust-security-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$173.5B',"targetAudience": 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',"competitiveAdvantage": 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration';'
-  },{"id": 'blockchain-enterprise-platform',"name": 'EnterpriseBlockchain Pro',"description": 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.',"features": [;'
+    ],'pricing': {'starter': { 'price': 149, 'period': 'month', 'features': ['Up to 100 usersBasic zero-trustStandard monitoring'] },'professional': { 'price': 399, 'period': 'month', 'features': ['Up to 1,000 usersAdvanced securityCustom policiesPriority support'] },'enterprise': { 'price': 999, 'period': 'month', 'features': ['Unlimited usersCustom security rulesWhite-label solutionDedicated SOC team'] }'
+    },'category': 'Cybersecurity','tags': ['Zero TrustCybersecurityIdentity ManagementThreat Detection'],'website': ''https'://ziontechgroup.com/zero-trust-security-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$173.5B','targetAudience': 'IT security teams, cybersecurity firms, enterprise businesses, government agencies','competitiveAdvantage': 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration';'
+  },{'id': 'blockchain-enterprise-platform','name': 'EnterpriseBlockchain Pro','description': 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.','features': [;'
       'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support';'
-    ],"pricing": {"starter": { "price": 199, "period": 'month', "features": ['Up to 1,000 transactions/secBasic blockchainStandard support'] },"professional": { "price": 599, "period": 'month', "features": ['Up to 10,000 transactions/secAdvanced featuresCustom solutionsPriority support'] },"enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited transactionsCustom blockchainWhite-label solutionDedicated support'] }'
-    },"category": 'Blockchain',"tags": ['BlockchainSmart ContractsEnterpriseCompliance'],"website": '"https"://ziontechgroup.com/enterprise-blockchain-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$19.9B',"targetAudience": 'Financial institutions, supply chain companies, healthcare providers, government agencies',"competitiveAdvantage": 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration';'
-  },{"id": 'ai-powered-devops-platform',"name": 'DevOps AI Pro',"description": 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.',"features": [;'
+    ],'pricing': {'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 1,000 transactions/secBasic blockchainStandard support'] },'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 10,000 transactions/secAdvanced featuresCustom solutionsPriority support'] },'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited transactionsCustom blockchainWhite-label solutionDedicated support'] }'
+    },'category': 'Blockchain','tags': ['BlockchainSmart ContractsEnterpriseCompliance'],'website': ''https'://ziontechgroup.com/enterprise-blockchain-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$19.9B','targetAudience': 'Financial institutions, supply chain companies, healthcare providers, government agencies','competitiveAdvantage': 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration';'
+  },{'id': 'ai-powered-devops-platform','name': 'DevOps AI Pro','description': 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.','features': [;'
       'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring';'
-    ],"pricing": {"starter": { "price": 99, "period": 'month', "features": ['Up to 10 developersBasic AI automationStandard CI/CD'] },"professional": { "price": 299, "period": 'month', "features": ['Up to 50 developersAdvanced AICustom workflowsPriority support'] },"enterprise": { "price": 799, "period": 'month', "features": ['Unlimited developersCustom AI trainingWhite-label solutionDedicated support'] }'
-    },"category": 'DevOps',"tags": ['AIDevOpsCI/CDAutomation'],"website": '"https"://ziontechgroup.com/devops-ai-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$8.2B',"targetAudience": 'Development teams, DevOps engineers, software companies, enterprise businesses',"competitiveAdvantage": 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration';'
-  },{"id": 'quantum-networking-platform',"name": 'QuantumNet Pro',"description": 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.',"features": [;'
+    ],'pricing': {'starter': { 'price': 99, 'period': 'month', 'features': ['Up to 10 developersBasic AI automationStandard CI/CD'] },'professional': { 'price': 299, 'period': 'month', 'features': ['Up to 50 developersAdvanced AICustom workflowsPriority support'] },'enterprise': { 'price': 799, 'period': 'month', 'features': ['Unlimited developersCustom AI trainingWhite-label solutionDedicated support'] }'
+    },'category': 'DevOps','tags': ['AIDevOpsCI/CDAutomation'],'website': ''https'://ziontechgroup.com/devops-ai-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$8.2B','targetAudience': 'Development teams, DevOps engineers, software companies, enterprise businesses','competitiveAdvantage': 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration';'
+  },{'id': 'quantum-networking-platform','name': 'QuantumNet Pro','description': 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.','features': [;'
       'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support';'
-    ],"pricing": {"starter": { "price": 399, "period": 'month', "features": ['Up to 1GbpsBasic quantum featuresStandard support'] },"professional": { "price": 999, "period": 'month', "features": ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] },"enterprise": { "price": 2499, "period": 'month', "features": ['Unlimited bandwidthCustom quantum solutionsWhite-label platformDedicated support'] }'
-    },"category": 'Quantum Networking',"tags": ['Quantum ComputingNetworkingSecurityHigh-Speed Communication'],"website": '"https"://ziontechgroup.com/quantum-net-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$12.8B',"targetAudience": 'Telecommunications, financial institutions, government agencies, research institutions',"competitiveAdvantage": 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms';'
-  },{"id": 'autonomous-it-operations-platform',"name": 'AutonomousIT Pro',"description": 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.',"features": [;'
+    ],'pricing': {'starter': { 'price': 399, 'period': 'month', 'features': ['Up to 1GbpsBasic quantum featuresStandard support'] },'professional': { 'price': 999, 'period': 'month', 'features': ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] },'enterprise': { 'price': 2499, 'period': 'month', 'features': ['Unlimited bandwidthCustom quantum solutionsWhite-label platformDedicated support'] }'
+    },'category': 'Quantum Networking','tags': ['Quantum ComputingNetworkingSecurityHigh-Speed Communication'],'website': ''https'://ziontechgroup.com/quantum-net-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$12.8B','targetAudience': 'Telecommunications, financial institutions, government agencies, research institutions','competitiveAdvantage': 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms';'
+  },{'id': 'autonomous-it-operations-platform','name': 'AutonomousIT Pro','description': 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.','features': [;'
       'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations';'
-    ],"pricing": {"starter": { "price": 199, "period": 'month', "features": ['Up to 100 serversBasic autonomyStandard monitoring'] },"professional": { "price": 599, "period": 'month', "features": ['Up to 1,000 serversAdvanced AICustom automationPriority support'] },"enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited serversCustom AI trainingWhite-label solutionDedicated support'] }'
-    },"category": 'IT Operations',"tags": ['AIAutonomous OperationsInfrastructure ManagementAutomation'],"website": '"https"://ziontechgroup.com/autonomous-it-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$28.7B',"targetAudience": 'IT operations teams, system administrators, enterprise businesses, managed service providers',"competitiveAdvantage": 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration';'
-  },{"id": 'quantum-data-center-platform',"name": 'QuantumDataCenter Pro',"description": 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.',"features": [;'
+    ],'pricing': {'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 100 serversBasic autonomyStandard monitoring'] },'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 1,000 serversAdvanced AICustom automationPriority support'] },'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited serversCustom AI trainingWhite-label solutionDedicated support'] }'
+    },'category': 'IT Operations','tags': ['AIAutonomous OperationsInfrastructure ManagementAutomation'],'website': ''https'://ziontechgroup.com/autonomous-it-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$28.7B','targetAudience': 'IT operations teams, system administrators, enterprise businesses, managed service providers','competitiveAdvantage': 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration';'
+  },{'id': 'quantum-data-center-platform','name': 'QuantumDataCenter Pro','description': 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.','features': [;'
       'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support';'
-    ],"pricing": {"starter": { "price": 499, "period": 'month', "features": ['Up to 100 racksBasic quantum featuresStandard support'] },"professional": { "price": 1299, "period": 'month', "features": ['Up to 500 racksAdvanced quantum featuresCustom solutionsPriority support'] },"enterprise": { "price": 2999, "period": 'month', "features": ['Unlimited racksCustom quantum solutionsWhite-label platformDedicated support'] }'
-    },"category": 'Data Center',"tags": ['Quantum ComputingData CenterInfrastructureEnergy Efficiency'],"website": '"https"://ziontechgroup.com/quantum-data-center-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$89.3B',"targetAudience": 'Data center operators, cloud providers, enterprise businesses, government agencies',"competitiveAdvantage": 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration';'
-  },{"id": 'quantum-cybersecurity-platform',"name": 'QuantumCyber Pro',"description": 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.',"features": [;'
+    ],'pricing': {'starter': { 'price': 499, 'period': 'month', 'features': ['Up to 100 racksBasic quantum featuresStandard support'] },'professional': { 'price': 1299, 'period': 'month', 'features': ['Up to 500 racksAdvanced quantum featuresCustom solutionsPriority support'] },'enterprise': { 'price': 2999, 'period': 'month', 'features': ['Unlimited racksCustom quantum solutionsWhite-label platformDedicated support'] }'
+    },'category': 'Data Center','tags': ['Quantum ComputingData CenterInfrastructureEnergy Efficiency'],'website': ''https'://ziontechgroup.com/quantum-data-center-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$89.3B','targetAudience': 'Data center operators, cloud providers, enterprise businesses, government agencies','competitiveAdvantage': 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration';'
+  },{'id': 'quantum-cybersecurity-platform','name': 'QuantumCyber Pro','description': 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.','features': [;'
       'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations';'
-    ],"pricing": {"starter": { "price": 299, "period": 'month', "features": ['Up to 100 endpointsBasic quantum securityStandard monitoring'] },"professional": { "price": 799, "period": 'month', "features": ['Up to 1,000 endpointsAdvanced quantum featuresCustom solutionsPriority support'] },"enterprise": { "price": 1999, "period": 'month', "features": ['Unlimited endpointsCustom quantum securityWhite-label solutionDedicated support'] }'
-    },"category": 'Quantum Cybersecurity',"tags": ['Quantum ComputingCybersecurityEncryptionThreat Detection'],"website": '"https"://ziontechgroup.com/quantum-cyber-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$173.5B',"targetAudience": 'IT security teams, cybersecurity firms, government agencies, financial institutions',"competitiveAdvantage": 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection';'
-  },{"id": 'quantum-cloud-migration-platform',"name": 'QuantumMigration Pro',"description": 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.',"features": [;'
+    ],'pricing': {'starter': { 'price': 299, 'period': 'month', 'features': ['Up to 100 endpointsBasic quantum securityStandard monitoring'] },'professional': { 'price': 799, 'period': 'month', 'features': ['Up to 1,000 endpointsAdvanced quantum featuresCustom solutionsPriority support'] },'enterprise': { 'price': 1999, 'period': 'month', 'features': ['Unlimited endpointsCustom quantum securityWhite-label solutionDedicated support'] }'
+    },'category': 'Quantum Cybersecurity','tags': ['Quantum ComputingCybersecurityEncryptionThreat Detection'],'website': ''https'://ziontechgroup.com/quantum-cyber-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$173.5B','targetAudience': 'IT security teams, cybersecurity firms, government agencies, financial institutions','competitiveAdvantage': 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection';'
+  },{'id': 'quantum-cloud-migration-platform','name': 'QuantumMigration Pro','description': 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.','features': [;'
       'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support';'
-    ],"pricing": {"starter": { "price": 199, "period": 'month', "features": ['Up to 100 workloadsBasic migration toolsStandard support'] },"professional": { "price": 599, "period": 'month', "features": ['Up to 1,000 workloadsAdvanced quantum featuresCustom strategiesPriority support'] },"enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited workloadsCustom quantum solutionsWhite-label platformDedicated support'] }'
-    },"category": 'Cloud Migration',"tags": ['Quantum ComputingCloud MigrationAIZero Downtime'],"website": '"https"://ziontechgroup.com/quantum-migration-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$15.7B',"targetAudience": 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',"competitiveAdvantage": 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';}'
-];;
+    ],'pricing': {'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 100 workloadsBasic migration toolsStandard support'] },'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 1,000 workloadsAdvanced quantum featuresCustom strategiesPriority support'] },'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited workloadsCustom quantum solutionsWhite-label platformDedicated support'] }'
+    },'category': 'Cloud Migration','tags': ['Quantum ComputingCloud MigrationAIZero Downtime'],'website': ''https'://ziontechgroup.com/quantum-migration-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$15.7B','targetAudience': 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms','competitiveAdvantage': 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';}'
+];
   }
 ];}
-    "market_size": '$15.7B',"target_audience": 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
-    "competitive_advantage": 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration';'
+    'market_size': '$15.7B','target_audience': 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
+    'competitive_advantage': 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration';'
   }
-];;
+];
 ursor/fix-website-loading-errors-and-merge-6662;
   }
-];;
+];
 export const advancedITServices2025 = [;
-  {"id": 'quantum-cloud-infrastructure-platform',"name": 'QuantumCloud Infrastructure',"description": 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.',"features": [;'
+  {'id': 'quantum-cloud-infrastructure-platform','name': 'QuantumCloud Infrastructure','description': 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.','features': [;'
       'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support';'
-    ],"pricing": {"starter": { "price": 299, "period": 'month', "features": ['Up to 100 vCPUsBasic quantum featuresStandard support'] },"professional": { "price": 799, "period": 'month', "features": ['Up to 500 vCPUsAdvanced quantum featuresPriority supportCustom algorithms'] },"enterprise": { "price": 1999, "period": 'month', "features": ['Unlimited resourcesCustom quantum solutionsWhite-label platformDedicated support team'] }'
-    },"category": 'Cloud Infrastructure',"tags": ['Quantum ComputingCloud InfrastructureSecurityScalability'],"website": '"https"://ziontechgroup.com/quantum-cloud-infrastructure',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$178.9B',"targetAudience": 'Enterprise businesses, cloud providers, research institutions, government agencies',"competitiveAdvantage": 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network';'
-  },{"id": 'intelligent-edge-computing-orchestrator',"name": 'EdgeComputing AI',"description": 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.',"features": [;'
+    ],'pricing': {'starter': { 'price': 299, 'period': 'month', 'features': ['Up to 100 vCPUsBasic quantum featuresStandard support'] },'professional': { 'price': 799, 'period': 'month', 'features': ['Up to 500 vCPUsAdvanced quantum featuresPriority supportCustom algorithms'] },'enterprise': { 'price': 1999, 'period': 'month', 'features': ['Unlimited resourcesCustom quantum solutionsWhite-label platformDedicated support team'] }'
+    },'category': 'Cloud Infrastructure','tags': ['Quantum ComputingCloud InfrastructureSecurityScalability'],'website': ''https'://ziontechgroup.com/quantum-cloud-infrastructure','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$178.9B','targetAudience': 'Enterprise businesses, cloud providers, research institutions, government agencies','competitiveAdvantage': 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network';'
+  },{'id': 'intelligent-edge-computing-orchestrator','name': 'EdgeComputing AI','description': 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.','features': [;'
       'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management';'
-    ],"pricing": {"starter": { "price": 199, "period": 'month', "features": ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] },"professional": { "price": 599, "period": 'month', "features": ['Up to 100 edge nodesAdvanced AICustom algorithmsPriority support'] },"enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited edge nodesCustom AI trainingWhite-label solutionDedicated support'] }'
-    },"category": 'Edge Computing',"tags": ['AIEdge ComputingIoTDistributed Computing'],"website": '"https"://ziontechgroup.com/edge-computing-ai',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$43.4B',"targetAudience": 'IoT companies, telecommunications, manufacturing, smart cities',"competitiveAdvantage": 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration';'
-  },{"id": 'zero-trust-security-platform',"name": 'ZeroTrust Security Pro',"description": 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.',"features": [;'
+    ],'pricing': {'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] },'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 100 edge nodesAdvanced AICustom algorithmsPriority support'] },'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited edge nodesCustom AI trainingWhite-label solutionDedicated support'] }'
+    },'category': 'Edge Computing','tags': ['AIEdge ComputingIoTDistributed Computing'],'website': ''https'://ziontechgroup.com/edge-computing-ai','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$43.4B','targetAudience': 'IoT companies, telecommunications, manufacturing, smart cities','competitiveAdvantage': 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration';'
+  },{'id': 'zero-trust-security-platform','name': 'ZeroTrust Security Pro','description': 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.','features': [;'
       'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center';'
-    ],"pricing": {"starter": { "price": 149, "period": 'month', "features": ['Up to 100 usersBasic zero-trustStandard monitoring'] },"professional": { "price": 399, "period": 'month', "features": ['Up to 1,000 usersAdvanced securityCustom policiesPriority support'] },"enterprise": { "price": 999, "period": 'month', "features": ['Unlimited usersCustom security rulesWhite-label solutionDedicated SOC team'] }'
-    },"category": 'Cybersecurity',"tags": ['Zero TrustCybersecurityIdentity ManagementThreat Detection'],"website": '"https"://ziontechgroup.com/zero-trust-security-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$173.5B',"targetAudience": 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',"competitiveAdvantage": 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration';'
-  },{"id": 'blockchain-enterprise-platform',"name": 'EnterpriseBlockchain Pro',"description": 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.',"features": [;'
+    ],'pricing': {'starter': { 'price': 149, 'period': 'month', 'features': ['Up to 100 usersBasic zero-trustStandard monitoring'] },'professional': { 'price': 399, 'period': 'month', 'features': ['Up to 1,000 usersAdvanced securityCustom policiesPriority support'] },'enterprise': { 'price': 999, 'period': 'month', 'features': ['Unlimited usersCustom security rulesWhite-label solutionDedicated SOC team'] }'
+    },'category': 'Cybersecurity','tags': ['Zero TrustCybersecurityIdentity ManagementThreat Detection'],'website': ''https'://ziontechgroup.com/zero-trust-security-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$173.5B','targetAudience': 'IT security teams, cybersecurity firms, enterprise businesses, government agencies','competitiveAdvantage': 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration';'
+  },{'id': 'blockchain-enterprise-platform','name': 'EnterpriseBlockchain Pro','description': 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.','features': [;'
       'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support';'
-    ],"pricing": {"starter": { "price": 199, "period": 'month', "features": ['Up to 1,000 transactions/secBasic blockchainStandard support'] },"professional": { "price": 599, "period": 'month', "features": ['Up to 10,000 transactions/secAdvanced featuresCustom solutionsPriority support'] },"enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited transactionsCustom blockchainWhite-label solutionDedicated support'] }'
-    },"category": 'Blockchain',"tags": ['BlockchainSmart ContractsEnterpriseCompliance'],"website": '"https"://ziontechgroup.com/enterprise-blockchain-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$19.9B',"targetAudience": 'Financial institutions, supply chain companies, healthcare providers, government agencies',"competitiveAdvantage": 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration';'
-  },{"id": 'ai-powered-devops-platform',"name": 'DevOps AI Pro',"description": 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.',"features": [;'
+    ],'pricing': {'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 1,000 transactions/secBasic blockchainStandard support'] },'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 10,000 transactions/secAdvanced featuresCustom solutionsPriority support'] },'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited transactionsCustom blockchainWhite-label solutionDedicated support'] }'
+    },'category': 'Blockchain','tags': ['BlockchainSmart ContractsEnterpriseCompliance'],'website': ''https'://ziontechgroup.com/enterprise-blockchain-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$19.9B','targetAudience': 'Financial institutions, supply chain companies, healthcare providers, government agencies','competitiveAdvantage': 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration';'
+  },{'id': 'ai-powered-devops-platform','name': 'DevOps AI Pro','description': 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.','features': [;'
       'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring';'
-    ],"pricing": {"starter": { "price": 99, "period": 'month', "features": ['Up to 10 developersBasic AI automationStandard CI/CD'] },"professional": { "price": 299, "period": 'month', "features": ['Up to 50 developersAdvanced AICustom workflowsPriority support'] },"enterprise": { "price": 799, "period": 'month', "features": ['Unlimited developersCustom AI trainingWhite-label solutionDedicated support'] }'
-    },"category": 'DevOps',"tags": ['AIDevOpsCI/CDAutomation'],"website": '"https"://ziontechgroup.com/devops-ai-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$8.2B',"targetAudience": 'Development teams, DevOps engineers, software companies, enterprise businesses',"competitiveAdvantage": 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration';'
-  },{"id": 'quantum-networking-platform',"name": 'QuantumNet Pro',"description": 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.',"features": [;'
+    ],'pricing': {'starter': { 'price': 99, 'period': 'month', 'features': ['Up to 10 developersBasic AI automationStandard CI/CD'] },'professional': { 'price': 299, 'period': 'month', 'features': ['Up to 50 developersAdvanced AICustom workflowsPriority support'] },'enterprise': { 'price': 799, 'period': 'month', 'features': ['Unlimited developersCustom AI trainingWhite-label solutionDedicated support'] }'
+    },'category': 'DevOps','tags': ['AIDevOpsCI/CDAutomation'],'website': ''https'://ziontechgroup.com/devops-ai-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$8.2B','targetAudience': 'Development teams, DevOps engineers, software companies, enterprise businesses','competitiveAdvantage': 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration';'
+  },{'id': 'quantum-networking-platform','name': 'QuantumNet Pro','description': 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.','features': [;'
       'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support';'
-    ],"pricing": {"starter": { "price": 399, "period": 'month', "features": ['Up to 1GbpsBasic quantum featuresStandard support'] },"professional": { "price": 999, "period": 'month', "features": ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] },"enterprise": { "price": 2499, "period": 'month', "features": ['Unlimited bandwidthCustom quantum solutionsWhite-label platformDedicated support'] }'
-    },"category": 'Quantum Networking',"tags": ['Quantum ComputingNetworkingSecurityHigh-Speed Communication'],"website": '"https"://ziontechgroup.com/quantum-net-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$12.8B',"targetAudience": 'Telecommunications, financial institutions, government agencies, research institutions',"competitiveAdvantage": 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms';'
-  },{"id": 'autonomous-it-operations-platform',"name": 'AutonomousIT Pro',"description": 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.',"features": [;'
+    ],'pricing': {'starter': { 'price': 399, 'period': 'month', 'features': ['Up to 1GbpsBasic quantum featuresStandard support'] },'professional': { 'price': 999, 'period': 'month', 'features': ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] },'enterprise': { 'price': 2499, 'period': 'month', 'features': ['Unlimited bandwidthCustom quantum solutionsWhite-label platformDedicated support'] }'
+    },'category': 'Quantum Networking','tags': ['Quantum ComputingNetworkingSecurityHigh-Speed Communication'],'website': ''https'://ziontechgroup.com/quantum-net-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$12.8B','targetAudience': 'Telecommunications, financial institutions, government agencies, research institutions','competitiveAdvantage': 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms';'
+  },{'id': 'autonomous-it-operations-platform','name': 'AutonomousIT Pro','description': 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.','features': [;'
       'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations';'
-    ],"pricing": {"starter": { "price": 199, "period": 'month', "features": ['Up to 100 serversBasic autonomyStandard monitoring'] },"professional": { "price": 599, "period": 'month', "features": ['Up to 1,000 serversAdvanced AICustom automationPriority support'] },"enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited serversCustom AI trainingWhite-label solutionDedicated support'] }'
-    },"category": 'IT Operations',"tags": ['AIAutonomous OperationsInfrastructure ManagementAutomation'],"website": '"https"://ziontechgroup.com/autonomous-it-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$28.7B',"targetAudience": 'IT operations teams, system administrators, enterprise businesses, managed service providers',"competitiveAdvantage": 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration';'
-  },{"id": 'quantum-data-center-platform',"name": 'QuantumDataCenter Pro',"description": 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.',"features": [;'
+    ],'pricing': {'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 100 serversBasic autonomyStandard monitoring'] },'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 1,000 serversAdvanced AICustom automationPriority support'] },'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited serversCustom AI trainingWhite-label solutionDedicated support'] }'
+    },'category': 'IT Operations','tags': ['AIAutonomous OperationsInfrastructure ManagementAutomation'],'website': ''https'://ziontechgroup.com/autonomous-it-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$28.7B','targetAudience': 'IT operations teams, system administrators, enterprise businesses, managed service providers','competitiveAdvantage': 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration';'
+  },{'id': 'quantum-data-center-platform','name': 'QuantumDataCenter Pro','description': 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.','features': [;'
       'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support';'
-    ],"pricing": {"starter": { "price": 499, "period": 'month', "features": ['Up to 100 racksBasic quantum featuresStandard support'] },"professional": { "price": 1299, "period": 'month', "features": ['Up to 500 racksAdvanced quantum featuresCustom solutionsPriority support'] },"enterprise": { "price": 2999, "period": 'month', "features": ['Unlimited racksCustom quantum solutionsWhite-label platformDedicated support'] }'
-    },"category": 'Data Center',"tags": ['Quantum ComputingData CenterInfrastructureEnergy Efficiency'],"website": '"https"://ziontechgroup.com/quantum-data-center-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$89.3B',"targetAudience": 'Data center operators, cloud providers, enterprise businesses, government agencies',"competitiveAdvantage": 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration';'
-  },{"id": 'quantum-cybersecurity-platform',"name": 'QuantumCyber Pro',"description": 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.',"features": [;'
+    ],'pricing': {'starter': { 'price': 499, 'period': 'month', 'features': ['Up to 100 racksBasic quantum featuresStandard support'] },'professional': { 'price': 1299, 'period': 'month', 'features': ['Up to 500 racksAdvanced quantum featuresCustom solutionsPriority support'] },'enterprise': { 'price': 2999, 'period': 'month', 'features': ['Unlimited racksCustom quantum solutionsWhite-label platformDedicated support'] }'
+    },'category': 'Data Center','tags': ['Quantum ComputingData CenterInfrastructureEnergy Efficiency'],'website': ''https'://ziontechgroup.com/quantum-data-center-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$89.3B','targetAudience': 'Data center operators, cloud providers, enterprise businesses, government agencies','competitiveAdvantage': 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration';'
+  },{'id': 'quantum-cybersecurity-platform','name': 'QuantumCyber Pro','description': 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.','features': [;'
       'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations';'
-    ],"pricing": {"starter": { "price": 299, "period": 'month', "features": ['Up to 100 endpointsBasic quantum securityStandard monitoring'] },"professional": { "price": 799, "period": 'month', "features": ['Up to 1,000 endpointsAdvanced quantum featuresCustom solutionsPriority support'] },"enterprise": { "price": 1999, "period": 'month', "features": ['Unlimited endpointsCustom quantum securityWhite-label solutionDedicated support'] }'
-    },"category": 'Quantum Cybersecurity',"tags": ['Quantum ComputingCybersecurityEncryptionThreat Detection'],"website": '"https"://ziontechgroup.com/quantum-cyber-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$173.5B',"targetAudience": 'IT security teams, cybersecurity firms, government agencies, financial institutions',"competitiveAdvantage": 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection';'
-  },{"id": 'quantum-cloud-migration-platform',"name": 'QuantumMigration Pro',"description": 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.',"features": [;'
+    ],'pricing': {'starter': { 'price': 299, 'period': 'month', 'features': ['Up to 100 endpointsBasic quantum securityStandard monitoring'] },'professional': { 'price': 799, 'period': 'month', 'features': ['Up to 1,000 endpointsAdvanced quantum featuresCustom solutionsPriority support'] },'enterprise': { 'price': 1999, 'period': 'month', 'features': ['Unlimited endpointsCustom quantum securityWhite-label solutionDedicated support'] }'
+    },'category': 'Quantum Cybersecurity','tags': ['Quantum ComputingCybersecurityEncryptionThreat Detection'],'website': ''https'://ziontechgroup.com/quantum-cyber-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$173.5B','targetAudience': 'IT security teams, cybersecurity firms, government agencies, financial institutions','competitiveAdvantage': 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection';'
+  },{'id': 'quantum-cloud-migration-platform','name': 'QuantumMigration Pro','description': 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.','features': [;'
       'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support';'
-    ],"pricing": {"starter": { "price": 199, "period": 'month', "features": ['Up to 100 workloadsBasic migration toolsStandard support'] },"professional": { "price": 599, "period": 'month', "features": ['Up to 1,000 workloadsAdvanced quantum featuresCustom strategiesPriority support'] },"enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited workloadsCustom quantum solutionsWhite-label platformDedicated support'] }'
-    },"category": 'Cloud Migration',"tags": ['Quantum ComputingCloud MigrationAIZero Downtime'],"website": '"https"://ziontechgroup.com/quantum-migration-pro',"contact": {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com';'
-    },"marketSize": '$15.7B',"targetAudience": 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',"competitiveAdvantage": 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
+    ],'pricing': {'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 100 workloadsBasic migration toolsStandard support'] },'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 1,000 workloadsAdvanced quantum featuresCustom strategiesPriority support'] },'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited workloadsCustom quantum solutionsWhite-label platformDedicated support'] }'
+    },'category': 'Cloud Migration','tags': ['Quantum ComputingCloud MigrationAIZero Downtime'],'website': ''https'://ziontechgroup.com/quantum-migration-pro','contact': {'phone': '+1 302 464 0950','email': 'kleber@ziontechgroup.com';'
+    },'marketSize': '$15.7B','targetAudience': 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms','competitiveAdvantage': 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
   }
 ];
   }
@@ -710,32 +710,32 @@ export const advancedITServices2025 = [;
 ];
 export const advancedITServices2025 = [
   {};
-    "marketSize": '$15 && 15.7B''
+    'marketSize': '$15 && 15.7B''
     }
-    "category": "category","
-    "tags": [
+    'category': 'category','
+    'tags': [
       'AI','
       'Autonomous Operations','
       'Infrastructure Management','
       'Automation''
     ],
-    "contact": {
+    'contact': {
       }
-      "phone": '+1 302 464 0950','
-      "email": 'kleber@ziontechgroup && ziontechgroup.com''
+      'phone': '+1 302 464 0950','
+      'email': 'kleber@ziontechgroup && ziontechgroup.com''
     },
-    "targetAudience":
+    'targetAudience':
       'IT operations teams, system administrators, enterprise businesses, managed service providers''
-    "competitiveAdvantage":
+    'competitiveAdvantage':
       'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration''
   }
   {
     }
-    "id": 'quantum-data-center-platform''
-    "name": 'QuantumDataCenter Pro''
-    "description":
+    'id': 'quantum-data-center-platform''
+    'name': 'QuantumDataCenter Pro''
+    'description':
       'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.''
-    "features": [
+    'features': [
       'Quantum-enhanced computing''
       'Advanced cooling and power management''
       'Ultra-secure quantum storage''
@@ -745,34 +745,34 @@ export const advancedITServices2025 = [
       'Custom quantum solutions''
       '24/7 data center support''
     ]
-    "pricing": {
+    'pricing': {
       }
-      "starter": {
+      'starter': {
         }
-        "price": 499;
-    "period": 'month''
-        "features": [
+        'price': 499;
+    'period': 'month''
+        'features': [
           'Up to 100 racks''
           'Basic quantum features''
           'Standard support''
         ]
       }
-      "professional": {
+      'professional': {
         }
-        "price": 1299,
-"period": 'month''
-        "features": [
+        'price': 1299,
+'period': 'month''
+        'features': [
           'Up to 500 racks''
           'Advanced quantum features''
           'Custom solutions''
           'Priority support''
         ]
       }
-      "enterprise": {
+      'enterprise': {
         }
-        "price": 2999,
-"period": 'month''
-        "features": [
+        'price': 2999,
+'period': 'month''
+        'features': [
           'Unlimited racks''
           'Custom quantum solutions''
           'White-label platform''
@@ -780,30 +780,30 @@ export const advancedITServices2025 = [
         ]
       }
     }
-    "category": 'Data Center''
-    "tags": [
+    'category': 'Data Center''
+    'tags': [
       'Quantum Computing','
       'Data Center','
       'Infrastructure','
       'Energy Efficiency''
     ],
-    "contact": {
+    'contact': {
       }
-      "phone": '+1 302 464 0950','
-      "email": 'kleber@ziontechgroup && ziontechgroup.com''
+      'phone': '+1 302 464 0950','
+      'email': 'kleber@ziontechgroup && ziontechgroup.com''
     },
-    "targetAudience":
+    'targetAudience':
       'Data center operators, cloud providers, enterprise businesses, government agencies''
-    "competitiveAdvantage":
+    'competitiveAdvantage':
       'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration''
   }
   {
     }
-    "id": 'quantum-cybersecurity-platform''
-    "name": 'QuantumCyber Pro''
-    "description":
+    'id': 'quantum-cybersecurity-platform''
+    'name': 'QuantumCyber Pro''
+    'description':
       'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.''
-    "features": [
+    'features': [
       'Quantum-resistant encryption''
       'Advanced threat detection''
       'Quantum key distribution''
@@ -813,34 +813,34 @@ export const advancedITServices2025 = [
       'Custom security solutions''
       '24/7 quantum security operations''
     ]
-    "pricing": {
+    'pricing': {
       }
-      "starter": {
+      'starter': {
         }
-        "price": 299,
-"period": 'month''
-        "features": [
+        'price': 299,
+'period': 'month''
+        'features': [
           'Up to 100 endpoints''
           'Basic quantum security''
           'Standard monitoring''
         ]
       }
-      "professional": {
+      'professional': {
         }
-        "price": 799,
-"period": 'month''
-        "features": [
+        'price': 799,
+'period': 'month''
+        'features': [
           'Up to 1,000 endpoints''
           'Advanced quantum features''
           'Custom solutions''
           'Priority support''
         ]
       }
-      "enterprise": {
+      'enterprise': {
         }
-        "price": 1999,
-"period": 'month''
-        "features": [
+        'price': 1999,
+'period': 'month''
+        'features': [
           'Unlimited endpoints''
           'Custom quantum security''
           'White-label solution''
@@ -848,30 +848,30 @@ export const advancedITServices2025 = [
         ]
       }
     }
-    "category": 'Quantum Cybersecurity''
-    "tags": [
+    'category': 'Quantum Cybersecurity''
+    'tags': [
       'Quantum Computing','
       'Cybersecurity','
       'Encryption','
       'Threat Detection''
     ],
-    "contact": {
+    'contact': {
       }
-      "phone": '+1 302 464 0950','
-      "email": 'kleber@ziontechgroup && ziontechgroup.com''
+      'phone': '+1 302 464 0950','
+      'email': 'kleber@ziontechgroup && ziontechgroup.com''
     },
-    "targetAudience":
+    'targetAudience':
       'IT security teams, cybersecurity firms, government agencies, financial institutions''
-    "competitiveAdvantage":
+    'competitiveAdvantage':
       'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection''
   }
   {
     }
-    "id": 'quantum-cloud-migration-platform''
-    "name": 'QuantumMigration Pro''
-    "description":
+    'id': 'quantum-cloud-migration-platform''
+    'name': 'QuantumMigration Pro''
+    'description':
       'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.''
-    "features": [
+    'features': [
       'AI-powered migration planning''
       'Quantum-enhanced migration tools''
       'Zero-downtime migration''
@@ -881,34 +881,34 @@ export const advancedITServices2025 = [
       'Custom migration strategies''
       '24/7 migration support''
     ]
-    "pricing": {
+    'pricing': {
       }
-      "starter": {
+      'starter': {
         }
-        "price": 199,
-"period": 'month''
-        "features": [
+        'price': 199,
+'period': 'month''
+        'features': [
           'Up to 100 workloads''
           'Basic migration tools''
           'Standard support''
         ]
       }
-      "professional": {
+      'professional': {
         }
-        "price": 599,
-"period": 'month''
-        "features": [
+        'price': 599,
+'period': 'month''
+        'features': [
           'Up to 1,000 workloads''
           'Advanced quantum features''
           'Custom strategies''
           'Priority support''
         ]
       }
-      "enterprise": {
+      'enterprise': {
         }
-        "price": 1499,
-"period": 'month''
-        "features": [
+        'price': 1499,
+'period': 'month''
+        'features': [
           'Unlimited workloads','
           'Custom quantum solutions','
           'White - label platform','
@@ -916,282 +916,282 @@ export const advancedITServices2025 = [
         ]
       }
     },
-    "category": 'Cloud Migration','
-    "tags": ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],'
-    "contact": {
+    'category': 'Cloud Migration','
+    'tags': ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],'
+    'contact': {
       }
-      "phone": '+1 302 464 0950','
-      "email": 'kleber@ziontechgroup && ziontechgroup.com''
+      'phone': '+1 302 464 0950','
+      'email': 'kleber@ziontechgroup && ziontechgroup.com''
     },
-    "targetAudience":
+    'targetAudience':
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms''
-    "competitiveAdvantage":
+    'competitiveAdvantage':
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration''
   }
-];      "phone": '+1 302 464 0950';'
+];      'phone': '+1 302 464 0950';'
     };
-    "marketSize": '$15 && 15.7B','
-    "targetAudience": 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
-    "competitiveAdvantage": 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration''
+    'marketSize': '$15 && 15.7B','
+    'targetAudience': 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
+    'competitiveAdvantage': 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration''
   }
 ];
-];      "phone": '+1 302 464 0950';'
-      "email": 'kleber@ziontechgroup.com''
+];      'phone': '+1 302 464 0950';'
+      'email': 'kleber@ziontechgroup.com''
     }
-    "marketSize": '$15.7B''
-    "targetAudience": 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
-    "competitiveAdvantage": 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration''
-    "market_size": '$15.7B','
-    "target_audience":;
+    'marketSize': '$15.7B''
+    'targetAudience': 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
+    'competitiveAdvantage': 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration''
+    'market_size': '$15.7B','
+    'target_audience':;
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms','
-    "competitive_advantage":;
+    'competitive_advantage':;
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration''
   }
-];      "phone": '+1 302 464 0950';'
-      "email": 'kleber@ziontechgroup.com';'
+];      'phone': '+1 302 464 0950';'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$178.9B',;'
-    "targetAudience": 'Enterprise businesses, cloud providers, research institutions, government agencies',;'
-    "competitiveAdvantage": 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network';'
+    'marketSize': '$178.9B',;'
+    'targetAudience': 'Enterprise businesses, cloud providers, research institutions, government agencies',;'
+    'competitiveAdvantage': 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network';'
   },;
 pr-12325
   {;
     }
-    "id": 'intelligent-edge-computing-orchestrator',;'
-    "name": 'EdgeComputing AI',;'
-    "description": 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.',;'
-    "features": [;
+    'id': 'intelligent-edge-computing-orchestrator',;'
+    'name': 'EdgeComputing AI',;'
+    'description': 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.',;'
+    'features': [;
       'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 199, "period": 'month', "features": ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] },;'
-      "professional": { "price": 599, "period": 'month', "features": ['Up to 100 edge nodesAdvanced AICustom algorithmsPriority support'] },;'
-      "enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited edge nodesCustom AI trainingWhite-label solutionDedicated support'] }'
+      'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] },;'
+      'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 100 edge nodesAdvanced AICustom algorithmsPriority support'] },;'
+      'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited edge nodesCustom AI trainingWhite-label solutionDedicated support'] }'
     },;
-    "category": 'Edge Computing',;'
-    "tags": ['AIEdge ComputingIoTDistributed Computing'],;'
-    "website": '"https"://ziontechgroup.com/edge-computing-ai',;'
-    "contact": {;
+    'category': 'Edge Computing',;'
+    'tags': ['AIEdge ComputingIoTDistributed Computing'],;'
+    'website': ''https'://ziontechgroup.com/edge-computing-ai',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$43.4B',;'
-    "targetAudience": 'IoT companies, telecommunications, manufacturing, smart cities',;'
-    "competitiveAdvantage": 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration';'
+    'marketSize': '$43.4B',;'
+    'targetAudience': 'IoT companies, telecommunications, manufacturing, smart cities',;'
+    'competitiveAdvantage': 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration';'
   },;
   {;
     }
-    "id": 'zero-trust-security-platform',;'
-    "name": 'ZeroTrust Security Pro',;'
-    "description": 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.',;'
-    "features": [;
+    'id': 'zero-trust-security-platform',;'
+    'name': 'ZeroTrust Security Pro',;'
+    'description': 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.',;'
+    'features': [;
       'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 149, "period": 'month', "features": ['Up to 100 usersBasic zero-trustStandard monitoring'] },;'
-      "professional": { "price": 399, "period": 'month', "features": ['Up to 1,000 usersAdvanced securityCustom policiesPriority support'] },;'
-      "enterprise": { "price": 999, "period": 'month', "features": ['Unlimited usersCustom security rulesWhite-label solutionDedicated SOC team'] }'
+      'starter': { 'price': 149, 'period': 'month', 'features': ['Up to 100 usersBasic zero-trustStandard monitoring'] },;'
+      'professional': { 'price': 399, 'period': 'month', 'features': ['Up to 1,000 usersAdvanced securityCustom policiesPriority support'] },;'
+      'enterprise': { 'price': 999, 'period': 'month', 'features': ['Unlimited usersCustom security rulesWhite-label solutionDedicated SOC team'] }'
     },;
-    "category": 'Cybersecurity',;'
-    "tags": ['Zero TrustCybersecurityIdentity ManagementThreat Detection'],;'
-    "website": '"https"://ziontechgroup.com/zero-trust-security-pro',;'
-    "contact": {;
+    'category': 'Cybersecurity',;'
+    'tags': ['Zero TrustCybersecurityIdentity ManagementThreat Detection'],;'
+    'website': ''https'://ziontechgroup.com/zero-trust-security-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$173.5B',;'
-    "targetAudience": 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;'
-    "competitiveAdvantage": 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration';'
+    'marketSize': '$173.5B',;'
+    'targetAudience': 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;'
+    'competitiveAdvantage': 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration';'
   },;
   {;
     }
-    "id": 'blockchain-enterprise-platform',;'
-    "name": 'EnterpriseBlockchain Pro',;'
-    "description": 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.',;'
-    "features": [;
+    'id': 'blockchain-enterprise-platform',;'
+    'name': 'EnterpriseBlockchain Pro',;'
+    'description': 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.',;'
+    'features': [;
       'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 199, "period": 'month', "features": ['Up to 1,000 transactions/secBasic blockchainStandard support'] },;'
-      "professional": { "price": 599, "period": 'month', "features": ['Up to 10,000 transactions/secAdvanced featuresCustom solutionsPriority support'] },;'
-      "enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited transactionsCustom blockchainWhite-label solutionDedicated support'] }'
+      'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 1,000 transactions/secBasic blockchainStandard support'] },;'
+      'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 10,000 transactions/secAdvanced featuresCustom solutionsPriority support'] },;'
+      'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited transactionsCustom blockchainWhite-label solutionDedicated support'] }'
     },;
-    "category": 'Blockchain',;'
-    "tags": ['BlockchainSmart ContractsEnterpriseCompliance'],;'
-    "website": '"https"://ziontechgroup.com/enterprise-blockchain-pro',;'
-    "contact": {;
+    'category': 'Blockchain',;'
+    'tags': ['BlockchainSmart ContractsEnterpriseCompliance'],;'
+    'website': ''https'://ziontechgroup.com/enterprise-blockchain-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$19.9B',;'
-    "targetAudience": 'Financial institutions, supply chain companies, healthcare providers, government agencies',;'
-    "competitiveAdvantage": 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration';'
+    'marketSize': '$19.9B',;'
+    'targetAudience': 'Financial institutions, supply chain companies, healthcare providers, government agencies',;'
+    'competitiveAdvantage': 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration';'
   },;
   {;
     }
-    "id": 'ai-powered-devops-platform',;'
-    "name": 'DevOps AI Pro',;'
-    "description": 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.',;'
-    "features": [;
+    'id': 'ai-powered-devops-platform',;'
+    'name': 'DevOps AI Pro',;'
+    'description': 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.',;'
+    'features': [;
       'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 99, "period": 'month', "features": ['Up to 10 developersBasic AI automationStandard CI/CD'] },;'
-      "professional": { "price": 299, "period": 'month', "features": ['Up to 50 developersAdvanced AICustom workflowsPriority support'] },;'
-      "enterprise": { "price": 799, "period": 'month', "features": ['Unlimited developersCustom AI trainingWhite-label solutionDedicated support'] }'
+      'starter': { 'price': 99, 'period': 'month', 'features': ['Up to 10 developersBasic AI automationStandard CI/CD'] },;'
+      'professional': { 'price': 299, 'period': 'month', 'features': ['Up to 50 developersAdvanced AICustom workflowsPriority support'] },;'
+      'enterprise': { 'price': 799, 'period': 'month', 'features': ['Unlimited developersCustom AI trainingWhite-label solutionDedicated support'] }'
     },;
-    "category": 'DevOps',;'
-    "tags": ['AIDevOpsCI/CDAutomation'],;'
-    "website": '"https"://ziontechgroup.com/devops-ai-pro',;'
-    "contact": {;
+    'category': 'DevOps',;'
+    'tags': ['AIDevOpsCI/CDAutomation'],;'
+    'website': ''https'://ziontechgroup.com/devops-ai-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$8.2B',;'
-    "targetAudience": 'Development teams, DevOps engineers, software companies, enterprise businesses',;'
-    "competitiveAdvantage": 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration';'
+    'marketSize': '$8.2B',;'
+    'targetAudience': 'Development teams, DevOps engineers, software companies, enterprise businesses',;'
+    'competitiveAdvantage': 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration';'
   },;
   {;
     }
-    "id": 'quantum-networking-platform',;'
-    "name": 'QuantumNet Pro',;'
-    "description": 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.',;'
-    "features": [;
+    'id': 'quantum-networking-platform',;'
+    'name': 'QuantumNet Pro',;'
+    'description': 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.',;'
+    'features': [;
       'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 399, "period": 'month', "features": ['Up to 1GbpsBasic quantum featuresStandard support'] },;'
-      "professional": { "price": 999, "period": 'month', "features": ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] },;'
-      "enterprise": { "price": 2499, "period": 'month', "features": ['Unlimited bandwidthCustom quantum solutionsWhite-label platformDedicated support'] }'
+      'starter': { 'price': 399, 'period': 'month', 'features': ['Up to 1GbpsBasic quantum featuresStandard support'] },;'
+      'professional': { 'price': 999, 'period': 'month', 'features': ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] },;'
+      'enterprise': { 'price': 2499, 'period': 'month', 'features': ['Unlimited bandwidthCustom quantum solutionsWhite-label platformDedicated support'] }'
     },;
-    "category": 'Quantum Networking',;'
-    "tags": ['Quantum ComputingNetworkingSecurityHigh-Speed Communication'],;'
-    "website": '"https"://ziontechgroup.com/quantum-net-pro',;'
-    "contact": {;
+    'category': 'Quantum Networking',;'
+    'tags': ['Quantum ComputingNetworkingSecurityHigh-Speed Communication'],;'
+    'website': ''https'://ziontechgroup.com/quantum-net-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$12.8B',;'
-    "targetAudience": 'Telecommunications, financial institutions, government agencies, research institutions',;'
-    "competitiveAdvantage": 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms';'
+    'marketSize': '$12.8B',;'
+    'targetAudience': 'Telecommunications, financial institutions, government agencies, research institutions',;'
+    'competitiveAdvantage': 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms';'
   },;
   {;
     }
-    "id": 'autonomous-it-operations-platform',;'
-    "name": 'AutonomousIT Pro',;'
-    "description": 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.',;'
-    "features": [;
+    'id': 'autonomous-it-operations-platform',;'
+    'name': 'AutonomousIT Pro',;'
+    'description': 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.',;'
+    'features': [;
       'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 199, "period": 'month', "features": ['Up to 100 serversBasic autonomyStandard monitoring'] },;'
-      "professional": { "price": 599, "period": 'month', "features": ['Up to 1,000 serversAdvanced AICustom automationPriority support'] },;'
-      "enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited serversCustom AI trainingWhite-label solutionDedicated support'] }'
+      'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 100 serversBasic autonomyStandard monitoring'] },;'
+      'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 1,000 serversAdvanced AICustom automationPriority support'] },;'
+      'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited serversCustom AI trainingWhite-label solutionDedicated support'] }'
     },;
-    "category": 'IT Operations',;'
-    "tags": ['AIAutonomous OperationsInfrastructure ManagementAutomation'],;'
-    "website": '"https"://ziontechgroup.com/autonomous-it-pro',;'
-    "contact": {;
+    'category': 'IT Operations',;'
+    'tags': ['AIAutonomous OperationsInfrastructure ManagementAutomation'],;'
+    'website': ''https'://ziontechgroup.com/autonomous-it-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$28.7B',;'
-    "targetAudience": 'IT operations teams, system administrators, enterprise businesses, managed service providers',;'
-    "competitiveAdvantage": 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration';'
+    'marketSize': '$28.7B',;'
+    'targetAudience': 'IT operations teams, system administrators, enterprise businesses, managed service providers',;'
+    'competitiveAdvantage': 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration';'
   },;
   {;
     }
-    "id": 'quantum-data-center-platform',;'
-    "name": 'QuantumDataCenter Pro',;'
-    "description": 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.',;'
-    "features": [;
+    'id': 'quantum-data-center-platform',;'
+    'name': 'QuantumDataCenter Pro',;'
+    'description': 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.',;'
+    'features': [;
       'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 499, "period": 'month', "features": ['Up to 100 racksBasic quantum featuresStandard support'] },;'
-      "professional": { "price": 1299, "period": 'month', "features": ['Up to 500 racksAdvanced quantum featuresCustom solutionsPriority support'] },;'
-      "enterprise": { "price": 2999, "period": 'month', "features": ['Unlimited racksCustom quantum solutionsWhite-label platformDedicated support'] }'
+      'starter': { 'price': 499, 'period': 'month', 'features': ['Up to 100 racksBasic quantum featuresStandard support'] },;'
+      'professional': { 'price': 1299, 'period': 'month', 'features': ['Up to 500 racksAdvanced quantum featuresCustom solutionsPriority support'] },;'
+      'enterprise': { 'price': 2999, 'period': 'month', 'features': ['Unlimited racksCustom quantum solutionsWhite-label platformDedicated support'] }'
     },;
-    "category": 'Data Center',;'
-    "tags": ['Quantum ComputingData CenterInfrastructureEnergy Efficiency'],;'
-    "website": '"https"://ziontechgroup.com/quantum-data-center-pro',;'
-    "contact": {;
+    'category': 'Data Center',;'
+    'tags': ['Quantum ComputingData CenterInfrastructureEnergy Efficiency'],;'
+    'website': ''https'://ziontechgroup.com/quantum-data-center-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$89.3B',;'
-    "targetAudience": 'Data center operators, cloud providers, enterprise businesses, government agencies',;'
-    "competitiveAdvantage": 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration';'
+    'marketSize': '$89.3B',;'
+    'targetAudience': 'Data center operators, cloud providers, enterprise businesses, government agencies',;'
+    'competitiveAdvantage': 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration';'
   },;
   {;
     }
-    "id": 'quantum-cybersecurity-platform',;'
-    "name": 'QuantumCyber Pro',;'
-    "description": 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.',;'
-    "features": [;
+    'id': 'quantum-cybersecurity-platform',;'
+    'name': 'QuantumCyber Pro',;'
+    'description': 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.',;'
+    'features': [;
       'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 299, "period": 'month', "features": ['Up to 100 endpointsBasic quantum securityStandard monitoring'] },;'
-      "professional": { "price": 799, "period": 'month', "features": ['Up to 1,000 endpointsAdvanced quantum featuresCustom solutionsPriority support'] },;'
-      "enterprise": { "price": 1999, "period": 'month', "features": ['Unlimited endpointsCustom quantum securityWhite-label solutionDedicated support'] }'
+      'starter': { 'price': 299, 'period': 'month', 'features': ['Up to 100 endpointsBasic quantum securityStandard monitoring'] },;'
+      'professional': { 'price': 799, 'period': 'month', 'features': ['Up to 1,000 endpointsAdvanced quantum featuresCustom solutionsPriority support'] },;'
+      'enterprise': { 'price': 1999, 'period': 'month', 'features': ['Unlimited endpointsCustom quantum securityWhite-label solutionDedicated support'] }'
     },;
-    "category": 'Quantum Cybersecurity',;'
-    "tags": ['Quantum ComputingCybersecurityEncryptionThreat Detection'],;'
-    "website": '"https"://ziontechgroup.com/quantum-cyber-pro',;'
-    "contact": {;
+    'category': 'Quantum Cybersecurity',;'
+    'tags': ['Quantum ComputingCybersecurityEncryptionThreat Detection'],;'
+    'website': ''https'://ziontechgroup.com/quantum-cyber-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$173.5B',;'
-    "targetAudience": 'IT security teams, cybersecurity firms, government agencies, financial institutions',;'
-    "competitiveAdvantage": 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection';'
+    'marketSize': '$173.5B',;'
+    'targetAudience': 'IT security teams, cybersecurity firms, government agencies, financial institutions',;'
+    'competitiveAdvantage': 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection';'
   },;
   {;
     }
-    "id": 'quantum-cloud-migration-platform',;'
-    "name": 'QuantumMigration Pro',;'
-    "description": 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.',;'
-    "features": [;
+    'id': 'quantum-cloud-migration-platform',;'
+    'name': 'QuantumMigration Pro',;'
+    'description': 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.',;'
+    'features': [;
       'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 199, "period": 'month', "features": ['Up to 100 workloadsBasic migration toolsStandard support'] },;'
-      "professional": { "price": 599, "period": 'month', "features": ['Up to 1,000 workloadsAdvanced quantum featuresCustom strategiesPriority support'] },;'
-      "enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited workloadsCustom quantum solutionsWhite-label platformDedicated support'] }'
+      'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 100 workloadsBasic migration toolsStandard support'] },;'
+      'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 1,000 workloadsAdvanced quantum featuresCustom strategiesPriority support'] },;'
+      'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited workloadsCustom quantum solutionsWhite-label platformDedicated support'] }'
     },;
-    "category": 'Cloud Migration',;'
-    "tags": ['Quantum ComputingCloud MigrationAIZero Downtime'],;'
-    "website": '"https"://ziontechgroup.com/quantum-migration-pro',;'
-    "contact": {;
+    'category': 'Cloud Migration',;'
+    'tags': ['Quantum ComputingCloud MigrationAIZero Downtime'],;'
+    'website': ''https'://ziontechgroup.com/quantum-migration-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$15.7B',;'
-    "targetAudience": 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',;'
-    "competitiveAdvantage": 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
+    'marketSize': '$15.7B',;'
+    'targetAudience': 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',;'
+    'competitiveAdvantage': 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
     }
-    "market_size": '$15.7B','
-    "target_audience": 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
-    "competitive_advantage": 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration';'
+    'market_size': '$15.7B','
+    'target_audience': 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
+    'competitive_advantage': 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration';'
   }
 ];
 ;
@@ -1206,263 +1206,263 @@ ursor/fix-website-loading-errors-and-merge-6662
 export const advancedITServices2025 = [;
   {;
     }
-    "id": 'quantum-cloud-infrastructure-platform',;'
-    "name": 'QuantumCloud Infrastructure',;'
-    "description": 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.',;'
-    "features": [;
+    'id': 'quantum-cloud-infrastructure-platform',;'
+    'name': 'QuantumCloud Infrastructure',;'
+    'description': 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.',;'
+    'features': [;
       'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 299, "period": 'month', "features": ['Up to 100 vCPUsBasic quantum featuresStandard support'] },;'
-      "professional": { "price": 799, "period": 'month', "features": ['Up to 500 vCPUsAdvanced quantum featuresPriority supportCustom algorithms'] },;'
-      "enterprise": { "price": 1999, "period": 'month', "features": ['Unlimited resourcesCustom quantum solutionsWhite-label platformDedicated support team'] }'
+      'starter': { 'price': 299, 'period': 'month', 'features': ['Up to 100 vCPUsBasic quantum featuresStandard support'] },;'
+      'professional': { 'price': 799, 'period': 'month', 'features': ['Up to 500 vCPUsAdvanced quantum featuresPriority supportCustom algorithms'] },;'
+      'enterprise': { 'price': 1999, 'period': 'month', 'features': ['Unlimited resourcesCustom quantum solutionsWhite-label platformDedicated support team'] }'
     },;
-    "category": 'Cloud Infrastructure',;'
-    "tags": ['Quantum ComputingCloud InfrastructureSecurityScalability'],;'
-    "website": '"https"://ziontechgroup.com/quantum-cloud-infrastructure',;'
-    "contact": {;
+    'category': 'Cloud Infrastructure',;'
+    'tags': ['Quantum ComputingCloud InfrastructureSecurityScalability'],;'
+    'website': ''https'://ziontechgroup.com/quantum-cloud-infrastructure',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$178.9B',;'
-    "targetAudience": 'Enterprise businesses, cloud providers, research institutions, government agencies',;'
-    "competitiveAdvantage": 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network';'
+    'marketSize': '$178.9B',;'
+    'targetAudience': 'Enterprise businesses, cloud providers, research institutions, government agencies',;'
+    'competitiveAdvantage': 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network';'
   },;
   {;
     }
-    "id": 'intelligent-edge-computing-orchestrator',;'
-    "name": 'EdgeComputing AI',;'
-    "description": 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.',;'
-    "features": [;
+    'id': 'intelligent-edge-computing-orchestrator',;'
+    'name': 'EdgeComputing AI',;'
+    'description': 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.',;'
+    'features': [;
       'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 199, "period": 'month', "features": ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] },;'
-      "professional": { "price": 599, "period": 'month', "features": ['Up to 100 edge nodesAdvanced AICustom algorithmsPriority support'] },;'
-      "enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited edge nodesCustom AI trainingWhite-label solutionDedicated support'] }'
+      'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] },;'
+      'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 100 edge nodesAdvanced AICustom algorithmsPriority support'] },;'
+      'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited edge nodesCustom AI trainingWhite-label solutionDedicated support'] }'
     },;
-    "category": 'Edge Computing',;'
-    "tags": ['AIEdge ComputingIoTDistributed Computing'],;'
-    "website": '"https"://ziontechgroup.com/edge-computing-ai',;'
-    "contact": {;
+    'category': 'Edge Computing',;'
+    'tags': ['AIEdge ComputingIoTDistributed Computing'],;'
+    'website': ''https'://ziontechgroup.com/edge-computing-ai',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$43.4B',;'
-    "targetAudience": 'IoT companies, telecommunications, manufacturing, smart cities',;'
-    "competitiveAdvantage": 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration';'
+    'marketSize': '$43.4B',;'
+    'targetAudience': 'IoT companies, telecommunications, manufacturing, smart cities',;'
+    'competitiveAdvantage': 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration';'
   },;
   {;
     }
-    "id": 'zero-trust-security-platform',;'
-    "name": 'ZeroTrust Security Pro',;'
-    "description": 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.',;'
-    "features": [;
+    'id': 'zero-trust-security-platform',;'
+    'name': 'ZeroTrust Security Pro',;'
+    'description': 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.',;'
+    'features': [;
       'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 149, "period": 'month', "features": ['Up to 100 usersBasic zero-trustStandard monitoring'] },;'
-      "professional": { "price": 399, "period": 'month', "features": ['Up to 1,000 usersAdvanced securityCustom policiesPriority support'] },;'
-      "enterprise": { "price": 999, "period": 'month', "features": ['Unlimited usersCustom security rulesWhite-label solutionDedicated SOC team'] }'
+      'starter': { 'price': 149, 'period': 'month', 'features': ['Up to 100 usersBasic zero-trustStandard monitoring'] },;'
+      'professional': { 'price': 399, 'period': 'month', 'features': ['Up to 1,000 usersAdvanced securityCustom policiesPriority support'] },;'
+      'enterprise': { 'price': 999, 'period': 'month', 'features': ['Unlimited usersCustom security rulesWhite-label solutionDedicated SOC team'] }'
     },;
-    "category": 'Cybersecurity',;'
-    "tags": ['Zero TrustCybersecurityIdentity ManagementThreat Detection'],;'
-    "website": '"https"://ziontechgroup.com/zero-trust-security-pro',;'
-    "contact": {;
+    'category': 'Cybersecurity',;'
+    'tags': ['Zero TrustCybersecurityIdentity ManagementThreat Detection'],;'
+    'website': ''https'://ziontechgroup.com/zero-trust-security-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$173.5B',;'
-    "targetAudience": 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;'
-    "competitiveAdvantage": 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration';'
+    'marketSize': '$173.5B',;'
+    'targetAudience': 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;'
+    'competitiveAdvantage': 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration';'
   },;
   {;
     }
-    "id": 'blockchain-enterprise-platform',;'
-    "name": 'EnterpriseBlockchain Pro',;'
-    "description": 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.',;'
-    "features": [;
+    'id': 'blockchain-enterprise-platform',;'
+    'name': 'EnterpriseBlockchain Pro',;'
+    'description': 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.',;'
+    'features': [;
       'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 199, "period": 'month', "features": ['Up to 1,000 transactions/secBasic blockchainStandard support'] },;'
-      "professional": { "price": 599, "period": 'month', "features": ['Up to 10,000 transactions/secAdvanced featuresCustom solutionsPriority support'] },;'
-      "enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited transactionsCustom blockchainWhite-label solutionDedicated support'] }'
+      'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 1,000 transactions/secBasic blockchainStandard support'] },;'
+      'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 10,000 transactions/secAdvanced featuresCustom solutionsPriority support'] },;'
+      'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited transactionsCustom blockchainWhite-label solutionDedicated support'] }'
     },;
-    "category": 'Blockchain',;'
-    "tags": ['BlockchainSmart ContractsEnterpriseCompliance'],;'
-    "website": '"https"://ziontechgroup.com/enterprise-blockchain-pro',;'
-    "contact": {;
+    'category': 'Blockchain',;'
+    'tags': ['BlockchainSmart ContractsEnterpriseCompliance'],;'
+    'website': ''https'://ziontechgroup.com/enterprise-blockchain-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$19.9B',;'
-    "targetAudience": 'Financial institutions, supply chain companies, healthcare providers, government agencies',;'
-    "competitiveAdvantage": 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration';'
+    'marketSize': '$19.9B',;'
+    'targetAudience': 'Financial institutions, supply chain companies, healthcare providers, government agencies',;'
+    'competitiveAdvantage': 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration';'
   },;
   {;
     }
-    "id": 'ai-powered-devops-platform',;'
-    "name": 'DevOps AI Pro',;'
-    "description": 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.',;'
-    "features": [;
+    'id': 'ai-powered-devops-platform',;'
+    'name': 'DevOps AI Pro',;'
+    'description': 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.',;'
+    'features': [;
       'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 99, "period": 'month', "features": ['Up to 10 developersBasic AI automationStandard CI/CD'] },;'
-      "professional": { "price": 299, "period": 'month', "features": ['Up to 50 developersAdvanced AICustom workflowsPriority support'] },;'
-      "enterprise": { "price": 799, "period": 'month', "features": ['Unlimited developersCustom AI trainingWhite-label solutionDedicated support'] }'
+      'starter': { 'price': 99, 'period': 'month', 'features': ['Up to 10 developersBasic AI automationStandard CI/CD'] },;'
+      'professional': { 'price': 299, 'period': 'month', 'features': ['Up to 50 developersAdvanced AICustom workflowsPriority support'] },;'
+      'enterprise': { 'price': 799, 'period': 'month', 'features': ['Unlimited developersCustom AI trainingWhite-label solutionDedicated support'] }'
     },;
-    "category": 'DevOps',;'
-    "tags": ['AIDevOpsCI/CDAutomation'],;'
-    "website": '"https"://ziontechgroup.com/devops-ai-pro',;'
-    "contact": {;
+    'category': 'DevOps',;'
+    'tags': ['AIDevOpsCI/CDAutomation'],;'
+    'website': ''https'://ziontechgroup.com/devops-ai-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$8.2B',;'
-    "targetAudience": 'Development teams, DevOps engineers, software companies, enterprise businesses',;'
-    "competitiveAdvantage": 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration';'
+    'marketSize': '$8.2B',;'
+    'targetAudience': 'Development teams, DevOps engineers, software companies, enterprise businesses',;'
+    'competitiveAdvantage': 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration';'
   },;
   {;
     }
-    "id": 'quantum-networking-platform',;'
-    "name": 'QuantumNet Pro',;'
-    "description": 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.',;'
-    "features": [;
+    'id': 'quantum-networking-platform',;'
+    'name': 'QuantumNet Pro',;'
+    'description': 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.',;'
+    'features': [;
       'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 399, "period": 'month', "features": ['Up to 1GbpsBasic quantum featuresStandard support'] },;'
-      "professional": { "price": 999, "period": 'month', "features": ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] },;'
-      "enterprise": { "price": 2499, "period": 'month', "features": ['Unlimited bandwidthCustom quantum solutionsWhite-label platformDedicated support'] }'
+      'starter': { 'price': 399, 'period': 'month', 'features': ['Up to 1GbpsBasic quantum featuresStandard support'] },;'
+      'professional': { 'price': 999, 'period': 'month', 'features': ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] },;'
+      'enterprise': { 'price': 2499, 'period': 'month', 'features': ['Unlimited bandwidthCustom quantum solutionsWhite-label platformDedicated support'] }'
     },;
-    "category": 'Quantum Networking',;'
-    "tags": ['Quantum ComputingNetworkingSecurityHigh-Speed Communication'],;'
-    "website": '"https"://ziontechgroup.com/quantum-net-pro',;'
-    "contact": {;
+    'category': 'Quantum Networking',;'
+    'tags': ['Quantum ComputingNetworkingSecurityHigh-Speed Communication'],;'
+    'website': ''https'://ziontechgroup.com/quantum-net-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$12.8B',;'
-    "targetAudience": 'Telecommunications, financial institutions, government agencies, research institutions',;'
-    "competitiveAdvantage": 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms';'
+    'marketSize': '$12.8B',;'
+    'targetAudience': 'Telecommunications, financial institutions, government agencies, research institutions',;'
+    'competitiveAdvantage': 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms';'
   },;
   {;
     }
-    "id": 'autonomous-it-operations-platform',;'
-    "name": 'AutonomousIT Pro',;'
-    "description": 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.',;'
-    "features": [;
+    'id': 'autonomous-it-operations-platform',;'
+    'name': 'AutonomousIT Pro',;'
+    'description': 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.',;'
+    'features': [;
       'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 199, "period": 'month', "features": ['Up to 100 serversBasic autonomyStandard monitoring'] },;'
-      "professional": { "price": 599, "period": 'month', "features": ['Up to 1,000 serversAdvanced AICustom automationPriority support'] },;'
-      "enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited serversCustom AI trainingWhite-label solutionDedicated support'] }'
+      'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 100 serversBasic autonomyStandard monitoring'] },;'
+      'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 1,000 serversAdvanced AICustom automationPriority support'] },;'
+      'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited serversCustom AI trainingWhite-label solutionDedicated support'] }'
     },;
-    "category": 'IT Operations',;'
-    "tags": ['AIAutonomous OperationsInfrastructure ManagementAutomation'],;'
-    "website": '"https"://ziontechgroup.com/autonomous-it-pro',;'
-    "contact": {;
+    'category': 'IT Operations',;'
+    'tags': ['AIAutonomous OperationsInfrastructure ManagementAutomation'],;'
+    'website': ''https'://ziontechgroup.com/autonomous-it-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$28.7B',;'
-    "targetAudience": 'IT operations teams, system administrators, enterprise businesses, managed service providers',;'
-    "competitiveAdvantage": 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration';'
+    'marketSize': '$28.7B',;'
+    'targetAudience': 'IT operations teams, system administrators, enterprise businesses, managed service providers',;'
+    'competitiveAdvantage': 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration';'
   },;
   {;
     }
-    "id": 'quantum-data-center-platform',;'
-    "name": 'QuantumDataCenter Pro',;'
-    "description": 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.',;'
-    "features": [;
+    'id': 'quantum-data-center-platform',;'
+    'name': 'QuantumDataCenter Pro',;'
+    'description': 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.',;'
+    'features': [;
       'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 499, "period": 'month', "features": ['Up to 100 racksBasic quantum featuresStandard support'] },;'
-      "professional": { "price": 1299, "period": 'month', "features": ['Up to 500 racksAdvanced quantum featuresCustom solutionsPriority support'] },;'
-      "enterprise": { "price": 2999, "period": 'month', "features": ['Unlimited racksCustom quantum solutionsWhite-label platformDedicated support'] }'
+      'starter': { 'price': 499, 'period': 'month', 'features': ['Up to 100 racksBasic quantum featuresStandard support'] },;'
+      'professional': { 'price': 1299, 'period': 'month', 'features': ['Up to 500 racksAdvanced quantum featuresCustom solutionsPriority support'] },;'
+      'enterprise': { 'price': 2999, 'period': 'month', 'features': ['Unlimited racksCustom quantum solutionsWhite-label platformDedicated support'] }'
     },;
-    "category": 'Data Center',;'
-    "tags": ['Quantum ComputingData CenterInfrastructureEnergy Efficiency'],;'
-    "website": '"https"://ziontechgroup.com/quantum-data-center-pro',;'
-    "contact": {;
+    'category': 'Data Center',;'
+    'tags': ['Quantum ComputingData CenterInfrastructureEnergy Efficiency'],;'
+    'website': ''https'://ziontechgroup.com/quantum-data-center-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$89.3B',;'
-    "targetAudience": 'Data center operators, cloud providers, enterprise businesses, government agencies',;'
-    "competitiveAdvantage": 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration';'
+    'marketSize': '$89.3B',;'
+    'targetAudience': 'Data center operators, cloud providers, enterprise businesses, government agencies',;'
+    'competitiveAdvantage': 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration';'
   },;
   {;
     }
-    "id": 'quantum-cybersecurity-platform',;'
-    "name": 'QuantumCyber Pro',;'
-    "description": 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.',;'
-    "features": [;
+    'id': 'quantum-cybersecurity-platform',;'
+    'name': 'QuantumCyber Pro',;'
+    'description': 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.',;'
+    'features': [;
       'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 299, "period": 'month', "features": ['Up to 100 endpointsBasic quantum securityStandard monitoring'] },;'
-      "professional": { "price": 799, "period": 'month', "features": ['Up to 1,000 endpointsAdvanced quantum featuresCustom solutionsPriority support'] },;'
-      "enterprise": { "price": 1999, "period": 'month', "features": ['Unlimited endpointsCustom quantum securityWhite-label solutionDedicated support'] }'
+      'starter': { 'price': 299, 'period': 'month', 'features': ['Up to 100 endpointsBasic quantum securityStandard monitoring'] },;'
+      'professional': { 'price': 799, 'period': 'month', 'features': ['Up to 1,000 endpointsAdvanced quantum featuresCustom solutionsPriority support'] },;'
+      'enterprise': { 'price': 1999, 'period': 'month', 'features': ['Unlimited endpointsCustom quantum securityWhite-label solutionDedicated support'] }'
     },;
-    "category": 'Quantum Cybersecurity',;'
-    "tags": ['Quantum ComputingCybersecurityEncryptionThreat Detection'],;'
-    "website": '"https"://ziontechgroup.com/quantum-cyber-pro',;'
-    "contact": {;
+    'category': 'Quantum Cybersecurity',;'
+    'tags': ['Quantum ComputingCybersecurityEncryptionThreat Detection'],;'
+    'website': ''https'://ziontechgroup.com/quantum-cyber-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$173.5B',;'
-    "targetAudience": 'IT security teams, cybersecurity firms, government agencies, financial institutions',;'
-    "competitiveAdvantage": 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection';'
+    'marketSize': '$173.5B',;'
+    'targetAudience': 'IT security teams, cybersecurity firms, government agencies, financial institutions',;'
+    'competitiveAdvantage': 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection';'
   },;
   {;
     }
-    "id": 'quantum-cloud-migration-platform',;'
-    "name": 'QuantumMigration Pro',;'
-    "description": 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.',;'
-    "features": [;
+    'id': 'quantum-cloud-migration-platform',;'
+    'name': 'QuantumMigration Pro',;'
+    'description': 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.',;'
+    'features': [;
       'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support';'
     ],;
-    "pricing": {;
+    'pricing': {;
       }
-      "starter": { "price": 199, "period": 'month', "features": ['Up to 100 workloadsBasic migration toolsStandard support'] },;'
-      "professional": { "price": 599, "period": 'month', "features": ['Up to 1,000 workloadsAdvanced quantum featuresCustom strategiesPriority support'] },;'
-      "enterprise": { "price": 1499, "period": 'month', "features": ['Unlimited workloadsCustom quantum solutionsWhite-label platformDedicated support'] }'
+      'starter': { 'price': 199, 'period': 'month', 'features': ['Up to 100 workloadsBasic migration toolsStandard support'] },;'
+      'professional': { 'price': 599, 'period': 'month', 'features': ['Up to 1,000 workloadsAdvanced quantum featuresCustom strategiesPriority support'] },;'
+      'enterprise': { 'price': 1499, 'period': 'month', 'features': ['Unlimited workloadsCustom quantum solutionsWhite-label platformDedicated support'] }'
     },;
-    "category": 'Cloud Migration',;'
-    "tags": ['Quantum ComputingCloud MigrationAIZero Downtime'],;'
-    "website": '"https"://ziontechgroup.com/quantum-migration-pro',;'
-    "contact": {;
+    'category': 'Cloud Migration',;'
+    'tags': ['Quantum ComputingCloud MigrationAIZero Downtime'],;'
+    'website': ''https'://ziontechgroup.com/quantum-migration-pro',;'
+    'contact': {;
       }
-      "phone": '+1 302 464 0950',;'
-      "email": 'kleber@ziontechgroup.com';'
+      'phone': '+1 302 464 0950',;'
+      'email': 'kleber@ziontechgroup.com';'
     },;
-    "marketSize": '$15.7B',;'
-    "targetAudience": 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',;'
-    "competitiveAdvantage": 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
+    'marketSize': '$15.7B',;'
+    'targetAudience': 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',;'
+    'competitiveAdvantage': 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';'
   }
 ];
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1843,7 +1843,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 market_size: '$15.7B',
   target_audience:;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
     competitive_advantage:;
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'
@@ -2323,14 +2322,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
-<<<<<<< HEAD
 
 
 
   }
 ];
 
-=======
 ;
 export const advancedITServices2025 = [;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -2578,26 +2575,18 @@ pr-12325
 ];
 '
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export const advancedITServices2025 = [
   {
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 export const advancedITServices2025 = []
   {};
     };
     marketSize: '$15 && 15.7B',
-<<<<<<< HEAD
 id: 'quantum-cloud-infrastructure-platform',
     name: 'QuantumCloud Infrastructure',
     description:
@@ -3007,8 +2996,6 @@ id: 'quantum-cloud-infrastructure-platform',
         ]
       }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     }
     category: 'IT Operations'
     tags: [
@@ -3202,7 +3189,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
@@ -3222,23 +3208,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration',
   },;
-<<<<<<< HEAD
 ];      phone: '+1 302 464 0950';
-=======
 
     targetAudience:'
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantage:
 '
 ];      phone: '+1 302 464 0950';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       email: 'kleber@ziontechgroup.com'
     }'
     marketSize: '$15.7B'
-<<<<<<< HEAD
-=======
 
-=======
     targetAudience:
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantage:
@@ -3251,40 +3231,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$15.7B'
-<<<<<<< HEAD
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
-=======
 '
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
 
 
 
 
-<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-<<<<<<< HEAD
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     market_size: '$15.7B',
     target_audience:;'
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
@@ -3505,22 +3470,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketSize: '$15.7B',;'
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',;'
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
     market_size: '$15.7B',
     target_audience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
     competitive_advantage: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration';
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 ];
 ;
 
-=======
     }
     market_size: '$15.7B',
     target_audience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
@@ -3531,19 +3489,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 ;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
-<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
 
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export const advancedITServices2025 = [;
   {;'
     id: 'quantum-cloud-infrastructure-platform',;'
@@ -3774,8 +3728,6 @@ export const advancedITServices2025 = [;
     marketSize: '$15.7B',;'
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',;'
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 ];
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -3783,40 +3735,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
   }
 ];
-<<<<<<< HEAD
     marketSize: '$15.7B',
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ],
-=======
 
 
-<<<<<<< HEAD
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration',
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

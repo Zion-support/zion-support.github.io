@@ -308,7 +308,7 @@ href={solution && solution.href}
           </div>;
         </div>;
       </div>;
-    </footer>)}}
+    </footer>)}
 
 export default Footer;import React from 'react'; import Link from 'next/link'; import { Mail,Phone,MapPin,Linkedin,Twitter,Github,Facebook } from 'lucide-react';'
 

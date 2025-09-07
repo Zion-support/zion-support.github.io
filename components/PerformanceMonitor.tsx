@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Star } from 'lucide-react';
-=======
-<<<<<<< HEAD
 }
     }
 
@@ -235,7 +232,7 @@ interface PerformanceMetrics {fcp?: number;
 }))}
             break;
           case 'navigation': setMetrics(prev => ({ ...prev, "ttfb": entry && entry.responseStart - entry && entry.requestStart,'
-}))'            break;'        }})})// Observe different types of performance entries;'
+}))'            break;'        })})// Observe different types of performance entries;'
 '    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types;'
       }
       observer && observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint'] })'    }';'
@@ -352,7 +349,7 @@ if (typeof window !== 'undefined' && 'performance' in window) {const observer = 
             metrics.fid = fid;
             if (process.env.NODE_ENV === 'production') {// gtag('event', 'web_vitals', {//   "name": 'FID',//   "value": Math.round(fid),//   "event_category": 'Web Vitals';'
               // })}
-          }}
+          }
       })observer.observe({ "entryTypes": ['navigation'],'
 })// Log performance data in development;
       if (process.env.NODE_ENV === 'development') {console.log('Performance "Metrics":', performanceData)}'
@@ -570,7 +567,7 @@ if (return 'Needs Improvement) {$2;'
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}"
           className="text - xs text - gray - 500 "hover": text - gray - 700        >"          Hide</button>;"
       </div>;
-      window.removeEventListener('load', measurePerformance)}}, [onPerformanceData])return () => observer.disconnect()// Monitor Cumulative Layout Shift (CLS)let clsValue = 0;'
+      window.removeEventListener('load', measurePerformance)}, [onPerformanceData])return () => observer.disconnect()// Monitor Cumulative Layout Shift (CLS)let clsValue = 0;'
 
 const clsObserver = new PerformanceObserver((list) => {for ;
   }
@@ -591,7 +588,7 @@ const clsObserver = new PerformanceObserver((list) => {for ;
 } catch (e) {// Fallback for browsers that don't support FCP;'
       }// Monitor Time to First Byte (TTFB)const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'
       if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      }return () => {lcpObserver.disconnect()fidObserver.disconnect()clsObserver.disconnect()fcpObserver.disconnect()}}
+      }return () => {lcpObserver.disconnect()fidObserver.disconnect()clsObserver.disconnect()fcpObserver.disconnect()}
   }, [])if (!metrics) return null;return (<div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">;"
       <div>"Load": {metrics.loadTime.toFixed(2
 }ms</div>;
@@ -612,7 +609,6 @@ interface PerformanceMonitorProps {
   onPerformanceData?: ("data": any) => void;
 
 }
-=======
 
 const "PerformanceMonitor": React.FC<PerformanceMonitorProps> = ({ onPerformanceData   
 }) => {
@@ -716,14 +712,12 @@ if (document.readyState === 'complete') {'
         onPerformanceData(performanceData);
       }
 
-<<<<<<< HEAD
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Metrics:', performanceData);
       }
     };
-=======
 
       return () => observer.disconnect();
 
@@ -748,7 +742,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
     };
   }, [onPerformanceData]);
       return () => observer.disconnect();
->>>>>>> origin/main
 
     // Measure performance after page load
     if (document.readyState === 'complete') {
@@ -757,27 +750,18 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
       window.addEventListener('load', measurePerformance);
     }
 
-<<<<<<< HEAD
     return () => {
       window.removeEventListener('load', measurePerformance);
     };
   }, [onPerformanceData]);
-=======
   if (!metrics) return null;
   return null, // This component doesn't render anything visible
 },
->>>>>>> origin/main
 
   return null;
 };
 
-<<<<<<< HEAD
 export default PerformanceMonitor;
-=======
 export default PerformanceMonitor;
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

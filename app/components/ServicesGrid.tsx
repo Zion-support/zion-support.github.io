@@ -42,30 +42,30 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <div className="py-20">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+    <div className='py-20'>
+      <div className='max-w-6xl mx-auto'>
+        <div className='text-center mb-16'>
+          <h2 className='text-4xl md:text-5xl font-bold mb-6'>
             Our Services
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
             Comprehensive solutions for modern businesses
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {services.map((service, index) => (
             <Link
               key={index}
               href={service.href}
-              className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+              className='group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105'
             >
-              <div className="flex items-center space-x-4">
-                <div className="text-3xl">{service.icon}</div>
+              <div className='flex items-center space-x-4'>
+                <div className='text-3xl'>{service.icon}</div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white group-hover:text-blue-300 transition-colors">
+                  <h3 className='text-xl font-semibold text-white group-hover:text-blue-300 transition-colors'>
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 group-hover:text-gray-200 transition-colors">
+                  <p className='text-gray-300 group-hover:text-gray-200 transition-colors'>
                     {service.description}
                   </p>
                 </div>

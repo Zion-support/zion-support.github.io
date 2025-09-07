@@ -1,15 +1,8 @@
 import type {;
   GrantApplication,;
 pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
-=======
 import type {;
   GrantApplication,;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
@@ -38,7 +31,6 @@ export default function GrantsPage() {const [items, setItems] = useState<GrantAp
     region?: string;
     program?: string;
   }>({});
-<<<<<<< HEAD
 
       .catch(() => setItems([]));  }, [filters]);
   return (
@@ -67,9 +59,6 @@ export default function GrantsPage() {const [items, setItems] = useState<GrantAp
           <Link href='/incubator'>;
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
 pr-12243
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <EnhancedLayout>;
       <div className='flex items - center justify - between mb - 6'>;
         <h1 className='text - 2xl font - semibold'>Zion Grants & Incubator</h1>;
@@ -89,8 +78,6 @@ pr-12243
           onChange={e =>;
             setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import type {;
   }
@@ -103,10 +90,10 @@ pr-12243
 ;
 import type {GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';'
 
-const "categories": GrantCategory[] = [;
+const 'categories': GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];'
 
-const "statuses": GrantStatus[] = [;
+const 'statuses': GrantStatus[] = [;
   'Draft','Submitted','Under Review','Approved','Rejected'];'
 
 export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[]>([])sector?: string;
@@ -160,13 +147,13 @@ return (;
       </div>;value={filters && filters.status || ''}'
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "status": e && e.target.value || undefined
+            setFilters(f => ({ ...f, 'status': e && e.target.value || undefined
 }))GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';'
 
-const "categories": GrantCategory[] = [;
+const 'categories': GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];'
 
-const "statuses": GrantStatus[] = [;
+const 'statuses': GrantStatus[] = [;
   'Draft','Submitted','Under Review','Approved','Rejected',import { useEffect, useState   } from 'react';'
 import Link from 'next/link',import EnhancedLayout from '../../components/layout/EnhancedLayout';'
 import { useEffect, useState } from 'react';'
@@ -174,14 +161,14 @@ import Link from 'next/link';'
   GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';'
 import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';'
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
 
-const "statuses": GrantStatus[]  = ['DraftSubmittedUnder ReviewApprovedRejected'];GrantApplication;'
+const 'statuses': GrantStatus[]  = ['DraftSubmittedUnder ReviewApprovedRejected'];GrantApplication;'
   GrantCategory;
   GrantStatus;
 } from '../../types/grants';'
 
-const "categories": GrantCategory[] = [;
+const 'categories': GrantCategory[] = [;
   'Ecosystem Tools';'
   'Talent Development';'
   'Regional Expansion';'
@@ -189,7 +176,7 @@ const "categories": GrantCategory[] = [;
 ];
 
 
-const "statuses": GrantStatus[] = [;
+const 'statuses': GrantStatus[] = [;
   'Draft';'
   'Submitted';'
   'Under Review';'
@@ -203,13 +190,13 @@ export default function GrantsPage() {export default function GrantsPage() {cons
     status?: string;
     region?: string;
     program?: string;
-  }>({}).catch(() => setItems([]))}, [filters])return (.then((r) => r.json()).then((d) => setItems(d.items || []))const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
+  }>({}).catch(() => setItems([]))}, [filters])return (.then((r) => r.json()).then((d) => setItems(d.items || []))const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
 
-const "statuses": GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];'
+const 'statuses': GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];'
 
-export default function GrantsPage() {const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],const "statuses": GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[]>([])const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({})useEffect(() => {'
+export default function GrantsPage() {const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],const 'statuses': GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[]>([])const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({})useEffect(() => {'
 }
-const params = new URLSearchParams()if (filters.sector) params.set('sector', filters.sector)if (filters.status) params.set('status', filters.status)if (filters.region) params.set('region', filters.region)if (filters.program) params.set('program', filters.program)fetch(`/api/grants?${params.toString()}`)const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],const "statuses": GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[]>([])const [filters, setFilters]  =;'  }
+const params = new URLSearchParams()if (filters.sector) params.set('sector', filters.sector)if (filters.status) params.set('status', filters.status)if (filters.region) params.set('region', filters.region)if (filters.program) params.set('program', filters.program)fetch(`/api/grants?${params.toString()}`)const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],const 'statuses': GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[]>([])const [filters, setFilters]  =;'  }
   useState<{ sector?: string, status?: string, region?: string, program?: string }>({};
   useEffect(() => ;
   const params = new URLSearchParams()if (filters && filters.sector) params && params.set('sector', filters && filters.sector)if (filters && filters.status) params && params.set('status', filters && filters.status)if (filters && filters.region) params && params.set('region', filters && filters.region)if (filters && filters.program) params && params.set('program', filters && filters.program)fetch(`/api/grants?${params && params.toString()}`).then(r => { return r && r.json()).then(d => setItems(d && d.items || [])).catch(() => setItems([]))}, [filters]; }`  return (.catch(() => setItems([]))<EnhancedLayout>      .then((r) => r && r.json()).then((d) => setItems(d && d.items || [])).catch(() => setItems([]))}, [filters])<EnhancedLayout>;
@@ -231,7 +218,6 @@ const params = new URLSearchParams()if (filters.sector) params.set('sector', fil
     if (filters.sector) params.set('sector', filters.sector);
     if (filters.status) params.set('status', filters.status);
     if (filters.region) params.set('region', filters.region);
-<<<<<<< HEAD
     if (filters.program) params.set('program', filters.program);
     fetch(`/api/grants?${params.toString()}`)
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
@@ -248,9 +234,9 @@ export default function GrantsPage() {;
     if (filters.status) params.set('status', filters.status);'
     if (filters.region) params.set('region', filters.region);'
     if (filters.program) params.set('program', filters.program);'
-    fetch(`/api/grants?${params.toString()}`)`const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
+    fetch(`/api/grants?${params.toString()}`)`const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
 
-const "statuses": GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;'
+const 'statuses': GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;'
 
 export default function GrantsPage() {;
 
@@ -295,14 +281,14 @@ return (;
             </a>
           </Link>
       </div>
-      <div className='grid "md": grid-cols-4 gap-4 mb-6'>'
+      <div className='grid 'md': grid-cols-4 gap-4 mb-6'>'
         <select,
 className='border rounded p-2''
           value={filters.sector |','
 }
           onChange={e =>
             }
-            setFilters(f => ({ ...f, "sector": e.target.value |undefined }))
+            setFilters(f => ({ ...f, 'sector': e.target.value |undefined }))
           }
         >
           <option value=''>All Sectors</option>'
@@ -318,10 +304,8 @@ className='border rounded p-2''
 }
           onChange={e =>
             }
-            setFilters(f => ({ ...f, "status": e.target.value |undefined
+            setFilters(f => ({ ...f, 'status': e.target.value |undefined
 }))
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default /**
  * GrantsPage - Function description
  */
@@ -361,38 +345,26 @@ return (;
             </a>;
           </Link>;
       </div>;
-      <div className='grid "md":grid-cols-4 gap-4 mb-6'>;'
+      <div className='grid 'md':grid-cols-4 gap-4 mb-6'>;'
         <select;
           className='border rounded p-2';'
           value={filters.sector |''}'
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "sector": e.target.value |undefined })
+            setFilters(f => ({ ...f, 'sector': e.target.value |undefined })
 }
         >;
           <option value=''>All Sectors</option>;'
           {categories.map(c => (<option key={c} value={c}>;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 pr-12243
-=======
-<<<<<<< HEAD
 
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           }
         >
-=======
 
           }
         >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <option value=''>All Stages</option>
           {statuses.map(s => (
             <option key={s} value={s}>
@@ -403,19 +375,12 @@ pr-12243
         <input'
           className='border rounded p-2''
           placeholder='Region'
-<<<<<<< HEAD
-<<<<<<< HEAD
           value={filters.region |''}
           onChange={e =>
             setFilters(f => ({ ...f, region: e.target.value |undefined }))
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           value={filters.region |''}
-=======
           value={filters.region |''}
           onChange={e =>
             setFilters(f => ({ ...f, region: e.target.value |undefined ;}))
@@ -425,61 +390,35 @@ pr-12243
             setFilters(f => ({ ...f, region: e && e.target.value || undefined ;}));
 
 value={filters.region |''}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           onChange={e =>
             setFilters(f => ({ ...f, region: e.target.value |undefined }))
           value={filters.region |''}
           onChange={e =>
             setFilters(f => ({ ...f, region: e.target.value |undefined ;}))
 pr-12243
-<<<<<<< HEAD
-=======
-=======
-=======
 
           value={filters && filters.region || ''}
           onChange={e =>;
             setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           }
         />
         <select'
           className='border rounded p-2'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
         <select;
           className='border rounded p - 2';
           value={filters.sector || ''}
           on_change={e =>;
             set_filters (function => ({ ...f, sector: e.target.value || undefined }));
-<<<<<<< HEAD
-<<<<<<< HEAD
 pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
         >;'
           <option value=''>All Sectors</option>;
           {categories && categories.map(c => (;
             <option key={c} value={c}>;
-=======
             set_filters (function => ({ ...f, sector: e.target.value || undefined ;}));
 pr-12243
           }
@@ -493,13 +432,10 @@ pr-12243
         >;
           <option value='' />All Sectors</option>;
           {categories.map(c => (<option key={c} value={c} />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               {c}
             </option>;
           ))}
         </select>;
-<<<<<<< HEAD
         <select'
           className='border rounded p-2'
           }
@@ -507,15 +443,13 @@ pr-12243
           <option value=''>All Stages</option>;
           {statuses && statuses.map(s => (;
             <option key={s} value={s}>;
-=======
         <select;
           className='border rounded p-2';'
           value={filters.status |''}'
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "status": e.target.value |undefined
+            setFilters(f => ({ ...f, 'status': e.target.value |undefined
 }))export default /**;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
  * GrantsPage - Function description;
  */;
 function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>([])const [filters, set_filters]  = useState<{ sector?: string, status?: string, region?: string, program?: string }>({})useEffect (() => {const params = new URLSearchParams ()if (params.set ('sector', filters.sector)) {$2;'
@@ -532,49 +466,41 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
       </div>;value={filters && filters.status || ''}'
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "status": e && e.target.value || undefined })
+            setFilters(f => ({ ...f, 'status': e && e.target.value || undefined })
 }
         >;
           <option value=''>All Stages</option>;'
           {statuses.map(s => (<option key={s} value={s}>;
-=======
           onChange={e =>;}
             setFilters(f => ({ ...f, status: e && e.target.value || undefined ;})
 }
         >;
           <option value='' />All Stages</option>;
           {statuses.map(s => (<option key={s} value={s} />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               {s}
             </option>;
           ))}
         </select>;
-<<<<<<< HEAD
         <input'
           className='border rounded p-2''
           placeholder='Region'
           }
         />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         <input;
           className='border rounded p-2';'
           placeholder='Region';'
           value={filters && filters.region || ''}'
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "region": e && e.target.value || undefined }))value={filters.region |','
+            setFilters(f => ({ ...f, 'region': e && e.target.value || undefined }))value={filters.region |','
 }
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "region": e.target.value |undefined })
+            setFilters(f => ({ ...f, 'region': e.target.value |undefined })
 }
           onChange={e =>;}
             setFilters(f => ({ ...f, region: e.target.value |undefined ;})
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         />;
         <select;
           className='border rounded p-2';'
@@ -594,26 +520,24 @@ className='border rounded p-2''
           value={filters && filters.region || ''}'
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "region": e && e.target.value || undefined
+            setFilters(f => ({ ...f, 'region': e && e.target.value || undefined
 }));
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
           }
         />
         <select,
 className='border rounded p-2''
 
-      <div className='grid "md":grid - cols - 4 gap - 4 mb - 6'>;'
+      <div className='grid 'md':grid - cols - 4 gap - 4 mb - 6'>;'
         <select;
           className='border rounded p - 2';'
           value={filters.sector || ''}'
           on_change={e =>;
             }
-            set_filters (function => ({ ...f, "sector": e.target.value || undefined })
+            set_filters (function => ({ ...f, 'sector': e.target.value || undefined })
 }
-            set_filters (function => ({ ...f, "sector": e.target.value || undefined
+            set_filters (function => ({ ...f, 'sector': e.target.value || undefined
 }));
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           }
         >;
           <option value=''>All Sectors</option>;'
@@ -642,9 +566,8 @@ className='border rounded p-2''
           value={filters.program || ''}'
           on_change={e =>;
             }
-            set_filters (function => ({ ...f, "program": e.target.value || undefined })
+            set_filters (function => ({ ...f, 'program': e.target.value || undefined })
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         >;
           <option value=''>All Programs</option>;'
           <option value='grant'>Grant</option>;'
@@ -655,7 +578,7 @@ className='border rounded p-2''
         {items.map (g => { return (<div; }
             }
             key={g.id}
-            className='border rounded p - 4 bg - white / 70 "dark":bg - black / 40'>'
+            className='border rounded p - 4 bg - white / 70 'dark':bg - black / 40'>'
 
             <div className='flex items - center justify - between'>;'
               <div>;
@@ -663,7 +586,7 @@ className='border rounded p-2''
                   <Link href={`/grants/${g.id}`}>;`                    <a>{g.project_name}</a>;
                   </Link>;
                 </h3>;
-                <div className='text - xs text - gray - 600 "dark":text - gray - 400'>;'
+                <div className='text - xs text - gray - 600 'dark':text - gray - 400'>;'
                   {g.sector || 'General'} • {g.region || 'Global'} •{' '}value={filters.program |''}'
                   {g.sector || 'General'} • {g.region || 'Global'} •{' '}'
 
@@ -680,25 +603,23 @@ className='border rounded p-2''
           value={filters && filters.program || ''}'
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "program": e.target.value |undefined })
+            setFilters(f => ({ ...f, 'program': e.target.value |undefined })
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           value={filters && filters.program || ''}
           onChange={e =>;}
             setFilters(f => ({ ...f, program: e.target.value |undefined ;})
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         >;
           <option value=''>All Programs</option>;'
           <option value='grant'>Grant</option>;'
           <option value='incubator'>Incubator</option>;'
         </select>;
       </div>;
-      <div className="flex items-center justify-between mb-6">"
-        <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>"
-        <div className="flex gap-2">"
-          <Link href="/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded">Apply</a></Link>"
-          <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>"
+      <div className='flex items-center justify-between mb-6'>'
+        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>'
+        <div className='flex gap-2'>'
+          <Link href='/grants/apply'><a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a></Link>'
+          <Link href='/incubator'><a className='px-3 py-2 bg-purple-600 text-white rounded'>Incubator</a></Link>'
         </div>
       </div>
 
@@ -713,14 +634,13 @@ className='border rounded p-2''
         {items.map(g => { return (<div; }
             }
             key={g.id}
-            className='border rounded p-4 bg-white/70 "dark":bg-black/40'>'
+            className='border rounded p-4 bg-white/70 'dark':bg-black/40'>'
 
             <div className='flex items-center justify-between'>;'
               <div>;
                 <h3 className='text-lg font-medium'>;'
                   <Link href={`/grants/${g.id}`}>;`                    <a>{g.projectName}</a>;
                   </Link>;
-<<<<<<< HEAD
                 </h3>;'
                 <div className='text-xs text-gray-600 dark:text-gray-400'>;'
                   {g && g.program === 'incubator' ? 'Incubator' : 'Grant'}
@@ -731,14 +651,11 @@ className='border rounded p-2''
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
-<<<<<<< HEAD
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
-<<<<<<< HEAD
-=======
                 </h3>;
-                <div className='text-xs text-gray-600 "dark":text-gray-400'>;'
+                <div className='text-xs text-gray-600 'dark':text-gray-400'>;'
                   {g.sector |'General'} • {g.region |'Global'} •{' '}<select;'
           className='border rounded p-2';'
         <select;
@@ -750,7 +667,7 @@ className='border rounded p-2''
                 {g.program === 'incubator' && (value={filters && filters.program || ''}'
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "program": e && e.target.value || undefined })
+            setFilters(f => ({ ...f, 'program': e && e.target.value || undefined })
 }
         >;
           <option value=''>All Programs</option>;'
@@ -758,18 +675,18 @@ className='border rounded p-2''
           <option value='incubator'>Incubator</option>;'
         </select>;
       </div>;
-      <div className="flex items-center justify-between mb-6">;"
-        <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>;"
-        <div className="flex gap-2">;"
-          <Link href="/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded">Apply</a></Link>;"
-          <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>;"
+      <div className='flex items-center justify-between mb-6'>;'
+        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>;'
+        <div className='flex gap-2'>;'
+          <Link href='/grants/apply'><a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a></Link>;'
+          <Link href='/incubator'><a className='px-3 py-2 bg-purple-600 text-white rounded'>Incubator</a></Link>;'
         </div>;
       </div>;
       <div className='grid gap-4'>;'
         {items && items.map(g => { return (<div; }
             }
             key={g && g.id}
-            className='border rounded p-4 bg-white/70 "dark":bg-black/40'>;'
+            className='border rounded p-4 bg-white/70 'dark':bg-black/40'>;'
             <div className='flex items-center justify-between'>;'
               <div>;
                 <h3 className='text-lg font-medium'>;'
@@ -777,7 +694,7 @@ className='border rounded p-2''
                     <a>{g && g.projectName}</a>;
                   </Link>;
                 </h3>;
-                <div className='text-xs text-gray-600 "dark":text-gray-400'>;'
+                <div className='text-xs text-gray-600 'dark':text-gray-400'>;'
                   {g && g.program === 'incubator' ? 'Incubator' : 'Grant'}'
                 </div>;
               </div>;
@@ -797,7 +714,6 @@ className='border rounded p-2''
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>'
                     Incubated by Zion
                   </span>
-=======
             key={g && g.id}'
             className='border rounded p-4 bg-white/70 dark:bg-black/40'>;'
             <div className='flex items-center justify-between'>
@@ -812,7 +728,6 @@ className='border rounded p-2''
                     <a />{g.projectName}</a>
                   </Link>
 origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
@@ -833,49 +748,38 @@ origin/cursor/automate-test-improve-and-merge-code-382a
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
->>>>>>> origin/main
 
-      <div className="grid gap-4">
+      <div className='grid gap-4'>
         {items.map((g) => (
-          <div key={g.id} className="border rounded p-4 bg-white/70 dark:bg-black/40">
-            <div className="flex items-center justify-between">
+          <div key={g.id} className='border rounded p-4 bg-white/70 dark:bg-black/40'>
+            <div className='flex items-center justify-between'>
               <div>
-                <h3 className="text-lg font-medium"><Link href={`/grants/${g.id}`}><a>{g.projectName}</a></Link></h3>
-                <div className="text-xs text-gray-600 dark:text-gray-400">{g.sector || 'General'} • {g.region || 'Global'} • {g.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
+                <h3 className='text-lg font-medium'><Link href={`/grants/${g.id}`}><a>{g.projectName}</a></Link></h3>
+                <div className='text-xs text-gray-600 dark:text-gray-400'>{g.sector || 'General'} • {g.region || 'Global'} • {g.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
               </div>
-              <div className="flex gap-2 items-center">
-                {g.program === 'incubator' && <span className="px-2 py-1 text-xs rounded bg-purple-100 text-purple-700">Incubated by Zion</span>}
-                {g.status === 'Approved' && <span className="px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700">Grant Winner</span>}
-                <span className="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">{g.status}</span>
+              <div className='flex gap-2 items-center'>
+                {g.program === 'incubator' && <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>Incubated by Zion</span>}
+                {g.status === 'Approved' && <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>Grant Winner</span>}
+                <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>{g.status}</span>
               </div>
             </div>
-            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3">{g.proposalSummary}</p>
-            <div className="mt-3 text-sm text-gray-600 dark:text-gray-400">Budget: {g.budgetAmount} {g.budgetCurrency}</div>
+            <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3'>{g.proposalSummary}</p>
+            <div className='mt-3 text-sm text-gray-600 dark:text-gray-400'>Budget: {g.budgetAmount} {g.budgetCurrency}</div>
           </div>
-=======
 <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-382a
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
 pr-12243
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 )}
                 {g && g.status === 'Approved' && (<span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;'
                     }
@@ -884,22 +788,22 @@ pr-12243
                     Incubated by Zion;
                   </span>;
                 )}
-                <span className='px-2 py-1 text-xs rounded bg-gray-100 "dark":bg-gray-800'>;'
+                <span className='px-2 py-1 text-xs rounded bg-gray-100 'dark':bg-gray-800'>;'
                   {g && g.status}
                 </span>;
               </div>;
             </div>;
-            <p className='mt-2 text-sm text-gray-700 "dark":text-gray-300 line-clamp-3'>;'
+            <p className='mt-2 text-sm text-gray-700 'dark':text-gray-300 line-clamp-3'>;'
               {g && g.proposalSummary}
             </p>;
-            <div className='mt-3 text-sm text-gray-600 "dark":text-gray-400'>;'
-              "Budget": {g && g.budgetAmount} {g && g.budgetCurrenc
+            <div className='mt-3 text-sm text-gray-600 'dark':text-gray-400'>;'
+              'Budget': {g && g.budgetAmount} {g && g.budgetCurrenc
 }
             </div>;
           </div>;
         ))}
         {items && items.length === 0 && (<div className='text-sm text-gray-600'>No grants found.</div>;'
-        )}}</div>;
+        )}</div>;
     </EnhancedLayout>;
 )</div>;
     </EnhancedLayout>;
@@ -915,12 +819,8 @@ pr-12243
         )}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </div>
     </EnhancedLayout>
 );
@@ -940,16 +840,16 @@ return (;
                     }
                     Grant Winner;
                   </span>)}
-                <span className='px - 2 py - 1 text - xs rounded bg - gray - 100 "dark":bg - gray - 800'>;'
+                <span className='px - 2 py - 1 text - xs rounded bg - gray - 100 'dark':bg - gray - 800'>;'
                   {g.status}
                 </span>;
               </div>;
             </div>;
-            <p className='mt - 2 text - sm text - gray - 700 "dark":text - gray - 300 line - clamp - 3'>;'
+            <p className='mt - 2 text - sm text - gray - 700 'dark':text - gray - 300 line - clamp - 3'>;'
               {g.proposal_summary}
             </p>;
-            <div className='mt - 3 text - sm text - gray - 600 "dark":text - gray - 400'>;'
-              "Budget": {g.budget_amount} {g.budget_currenc
+            <div className='mt - 3 text - sm text - gray - 600 'dark':text - gray - 400'>;'
+              'Budget': {g.budget_amount} {g.budget_currenc
 }
             </div>;
           </div>))}
@@ -958,12 +858,10 @@ return (;
     </EnhancedLayout>)})
     </EnhancedLayout>);
 }
-<<<<<<< HEAD
-"
-=======
+'
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
-<option value="">All Sectors</option> {
+<option value=''>All Sectors</option> {
   categories.map ( (c) => (<option key= {
   c 
 }value= {
@@ -971,38 +869,29 @@ const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
 }> {
   c 
 }</option>) ) 
-}</select> </select> </div> <div className="grid gap-4"> {
+}</select> </select> </div> <div className='grid gap-4'> {
   items.map ( (g) => (<div key= {
   g.id 
-}className="border rounded p-4 bg-white/70 dark:bg-black/40"> <div className="flex items-center justify-between"> <div> </div> <div className="flex gap-2 items-center"> {
-  g.program === 'incubator' && <span className="px-2 py-1 text-xs rounded bg-purple-100 text-purple-700">Incubated by Zion</span> 
+}className='border rounded p-4 bg-white/70 dark:bg-black/40'> <div className='flex items-center justify-between'> <div> </div> <div className='flex gap-2 items-center'> {
+  g.program === 'incubator' && <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>Incubated by Zion</span> 
 }{
-  g.status === 'Approved' && <span className="px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700">Grant Winner</span> 
-}<span className="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800"> {
+  g.status === 'Approved' && <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>Grant Winner</span> 
+}<span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'> {
   g.status 
-}</span> </div> </div> <p className="mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3"> {
+}</span> </div> </div> <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3'> {
   g.proposalSummary 
-}</p> <div className="mt-3 text-sm text-gray-600 dark:text-gray-400">Budget: {
+}</p> <div className='mt-3 text-sm text-gray-600 dark:text-gray-400'>Budget: {
   g.budgetAmount 
 }{
   g.budgetCurrency 
 }</div> </div>) ) 
 }{
-  items.length === 0 && <div className="text-sm text-gray-600">No grants found.</div> 
+  items.length === 0 && <div className='text-sm text-gray-600'>No grants found.</div> 
 }</div> </EnhancedLayout>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
-=======
 
       </div>
     </EnhancedLayout>
@@ -1016,21 +905,12 @@ pr-12243
 
 
 
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
+''`
 
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+'

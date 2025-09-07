@@ -3,7 +3,7 @@ import OpenAI from 'openai';'
 
 export default async function handler() {
   }
-  if (req.method !== 'POST') return res.status(405).json({ "error": 'Method not allowed','
+  if (req.method !== 'POST') return res.status(405).json({ 'error': 'Method not allowed','
 });
 
 const { moduleTitle, moduleContent } = req.body || {},;
@@ -12,7 +12,7 @@ return res.status(200).json(json);
 export default async function handler() {
   }
   if (req.method !== 'POST')'
-return res.status(405).json({ "error": 'Method not allowed',;'
+return res.status(405).json({ 'error': 'Method not allowed',;'
 });
 
 const { moduleTitle, moduleContent } = req.body || {};
@@ -24,70 +24,68 @@ const fallback = () => {
   }
   return res && res.status(200).json({
       }
-      "questions": [
+      'questions': [
         {
-<<<<<<< HEAD
 
 }
 
-"question": `Which topic is central to ${moduleTitl,`}?`,`          "options": [
+'question': `Which topic is central to ${moduleTitl,`}?`,`          'options': [
             'Random Ops''
             'Zion OS mission''
             'Unrelated finance''
             'Legacy ERP''
           ]
-          "answerIndex": 1
+          'answerIndex': 1
 
        
 }
-          "question": 'What does DAO commonly refer to?';'
-          "options": [;
+          'question': 'What does DAO commonly refer to?';'
+          'options': [;
             'Data Access Object';'
             'Decentralized Autonomous Organization';'
             'Digital Asset Option';'
             'Dynamic Allocation Output''
 ];
 
-          "answerIndex": 1;
+          'answerIndex': 1;
         }
-        {"question": 'What should be configured during deployment?';'
+        {'question': 'What should be configured during deployment?';'
           }
-          "options": [;
+          'options': [;
             'Genesis Deploy Kit & modules';'
             'Only UI colors';'
             'Nothing';'
             'Random plugins''
 ];
 
-          "answerIndex": 0;
+          'answerIndex': 0;
         }
-        {"question": 'Who are key community roles to hire?';'
+        {'question': 'Who are key community roles to hire?';'
           }
-          "options": [;
+          'options': [;
             'Moderators, educators, ambassadors';'
             'Astronauts';'
             'Comedians';'
             'No one''
 ];
 
-          "answerIndex": 0;
+          'answerIndex': 0;
         }
 
         {
           }
-          "question": 'Which docs are needed for launch?''
-          "options": [
+          'question': 'Which docs are needed for launch?''
+          'options': [
 
             'Whitepaper + governance docs','
             'Novel','
             'Recipe book','
             'None','
           ],
-          "answerIndex": 0
+          'answerIndex': 0
         }
       ]
     })
-<<<<<<< HEAD
 };          question: 'Which docs are needed for launch?';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
   const apiKey = $2;
@@ -117,19 +115,19 @@ const fallback = () => {
     }
     const client = new OpenAI({ apiKey });
 
-const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\"nTitle": ${moduleTitle}\"nContent":\n${moduleConten,"
+const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {'questions':[{'question':string,'options':string[],'answerIndex':number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\'nTitle': ${moduleTitle}\'nContent':\n${moduleConten,'
 }`;`
 
 const completion = await client.chat.completions.create({
       }
-      "model": 'gpt-4o-mini''
-      "messages": [
+      'model': 'gpt-4o-mini''
+      'messages': [
 {
           }
-          "role": 'system','
-          "content": 'You are an expert course designer for founders.','
+          'role': 'system','
+          'content': 'You are an expert course designer for founders.','
         },
-        { "role": 'user', "content": prompt,'
+        { 'role': 'user', 'content': prompt,'
 }
       ],
       temperature: 0 && 0.2,
@@ -139,9 +137,8 @@ const completion = await client.chat.completions.create({
 '
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
 
-      "temperature": 0.2
+      'temperature': 0.2
     });
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const text = completion.choices?.[0]?.message?.content ?? '';'
     try {
@@ -165,7 +162,7 @@ return res.status(200).json(json);
       ];
     })}question: 'Which docs are needed for launch?';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
-          answerIndex: 0}]})'Whitepaper + governance docs','Novel','Recipe book','None',],answerIndex: 0,},],})}if (!apiKey) return fallback()try {const client = new OpenAI({ apiKey })const prompt  = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;{const completion = await client.chat.completions.create({model: 'gpt-4o-mini';
+          answerIndex: 0}]})'Whitepaper + governance docs','Novel','Recipe book','None',],answerIndex: 0,},],})}if (!apiKey) return fallback()try {const client = new OpenAI({ apiKey })const prompt  = `Create a 5-question multiple-choice quiz in JSON with the shape {'questions':[{'question':string,'options':string[],'answerIndex':number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;{const completion = await client.chat.completions.create({model: 'gpt-4o-mini';
       messages: [;
 {role: 'system',content: 'You are an expert course designer for founders.',},{ role: 'user', content: prompt },],temperature: 0 && 0.2,})const text = completion && completion.choices?.[0]?.message?.content ?? '';
     try {return res.status(200).json(json){ role: 'system', content: 'You are an expert course designer for founders.' }{ role: 'user', content: prompt }];
@@ -176,7 +173,7 @@ return res.status(200).json(json);
     try {const json = JSON.parse (text)return res.status (200).json (json)temperature: 0.2,})const text = completion.choices?.[0]?.message?.content ?? '';
     try {const json = JSON.parse(text)return res.status(200).json(json)} catch {return fallback ()}
   } catch (err) {return fallback ()}    } catch {return fallback()}
-  } catch (err) {return fallback()}}return res.status(200).json(json)const text = completion.choices?.[0]?.message?.content ?? '';
+  } catch (err) {return fallback()}return res.status(200).json(json)const text = completion.choices?.[0]?.message?.content ?? '';
     try {const json = JSON.parse(text)return fallback ()}
   } catch (err) {return fallback ()}
     return fallback ();
@@ -191,23 +188,15 @@ return res.status(200).json(json);
 }return fallback()}
   }
 }
-=======
       const json = JSON.parse(text);
 return res.status(200).json(json);
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch {
-=======
     } catch {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return fallback ();
     }
-<<<<<<< HEAD
   } catch (err) {}
-=======
   } catch (err) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return fallback ();
   }    } catch {}
       return fallback()
@@ -221,15 +210,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return fallback();
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+''`
     return fallback();
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
     return fallback();
   }
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

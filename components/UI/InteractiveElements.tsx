@@ -88,23 +88,23 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
       disabled={disabled || loading}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      whileHover={{ "scale": 1.02 }}
-      whileTap={{ "scale": 0.98 
+      whileHover={ "scale": 1.02 }
+      whileTap={ "scale": 0.98 
 }
-      transition={{ "type": 'spring', "stiffness": 400, "damping": 17 ,'
+      transition={ "type": 'spring', "stiffness": 400, "damping": 17 ,'
 }
     >;
       {loading && (<motion.div;
           }
           className="absolute inset-0 flex items-center justify-center";"
-          initial={{ "opacity": 0 }}
-          animate={{ "opacity": 1 
+          initial={ "opacity": 0 }
+          animate={ "opacity": 1 
 }
         >;
           <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />;"
         </motion.div>;
       )}<motion.div;
-        className={`flex items-center gap-2 ${loading ? 'opacity-0' : 'opacity-100'}`}`        animate={{ "opacity": loading ? 0 : 1 
+        className={`flex items-center gap-2 ${loading ? 'opacity-0' : 'opacity-100'}`}`        animate={ "opacity": loading ? 0 : 1 
 }
       >;
         {icon && <span className="flex-shrink-0">{icon}</span>}"
@@ -113,24 +113,24 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
       {variant === 'gradient' && (<motion.div;'
           }
           className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent";"
-          initial={{ "x": '-100%' }}'
-          animate={{ "x": isHovered ? '100%' : '-100%' ,'
+          initial={ "x": '-100%' }'
+          animate={ "x": isHovered ? '100%' : '-100%' ,'
 }
-          transition={{ "duration": 0.6, "ease": 'easeInOut' ,'
+          transition={ "duration": 0.6, "ease": 'easeInOut' ,'
 } />;
       )}
     </motion.button>>
 
       <motion.div;
         className='absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0';'
-        animate={{ "x": isHovered ? [, -100%;
+        animate={ "x": isHovered ? [, -100%;
   ', '100%;'
-  '] as "any": '-100%, "opacity": isHovered ? [0, 0.2, 0] as any : 0 }}        transition={{ "duration": 0.6 ,'
+  '] as "any": '-100%, "opacity": isHovered ? [0, 0.2, 0] as any : 0 }        transition={ "duration": 0.6 ,'
 } />;
       <div className='relative flex items-center gap-2'>;'
-        {loading ? (<motion.div className='w-4 h-4 border-2 border-current border-t-transparent rounded-full' animate={{ "rotate": 360 ,'
-} transition={{ "duration": 1, "repeat": Infinity, "ease": 'linear';'
-  ' }} />        ) : (';'
+        {loading ? (<motion.div className='w-4 h-4 border-2 border-current border-t-transparent rounded-full' animate={ "rotate": 360 ,'
+} transition={ "duration": 1, "repeat": Infinity, "ease": 'linear';'
+  ' } />        ) : (';'
           icon && <span className='flex-shrink-0'>{icon}</span>;'
         )}
         <span>{children}</span>;
@@ -199,8 +199,8 @@ const directionVariants = {"up": { "hidden": { "y": 50, "opacity": 0,;
 }
       initial='hidden';'
       animate={controls}
-      transition={{ "duration": 0.6, delay }}
-      whileHover={{ "y": -5 
+      transition={ "duration": 0.6, delay }
+      whileHover={ "y": -5 
 }
     >;
       {children}
@@ -224,8 +224,8 @@ export const "HoverEffect": React.FC<HoverEffectProps> = ({ children, className 
 
 return (<motion.div;
       className={className}
-      whileHover={{ scale }}
-      transition={{ "type": 'spring', "stiffness": 400, "damping": 17 ,'
+      whileHover={ scale }
+      transition={ "type": 'spring', "stiffness": 400, "damping": 17 ,'
 }
     >;
       {children}
@@ -248,9 +248,9 @@ export const "LoadingSpinner": React.FC<LoadingSpinnerProps> = ({ size = 'md', c
 
 const sizeClasses = {"sm": 'w-4 h-4', "md": 'w-6 h-6',"lg": 'w-8 h-8';'
   }return (<motion.div;
-      className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full ${className}`}`      animate={{ "rotate": 360 
+      className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full ${className}`}`      animate={ "rotate": 360 
 }
-      transition={{ "duration": 1, "repeat": Infinity, "ease": 'linear' ,'
+      transition={ "duration": 1, "repeat": Infinity, "ease": 'linear' ,'
 } />;
   )}
 
@@ -308,21 +308,21 @@ export const "InteractiveStats": React.FC<InteractiveStatsProps> = ({ stats
         }
         key={index}
         className='text-center';'
-        initial={{ "opacity": 0, "y": 20 
+        initial={ "opacity": 0, "y": 20 
 }
-        whileInView={{ "opacity": 1, "y": 0 
+        whileInView={ "opacity": 1, "y": 0 
 }
-        transition={{ "duration": 0.6, "delay": index * 0.1 }}
-        viewport={{ "once": true 
+        transition={ "duration": 0.6, "delay": index * 0.1 }
+        viewport={ "once": true 
 }
       >;
-        <motion.div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4' whileHover={{ "scale": 1.1, "rotate": 5 ,'
-} transition={{ "type":;
+        <motion.div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4' whileHover={ "scale": 1.1, "rotate": 5 ,'
+} transition={ "type":;
   'spring', "damping": 10 ,'
 }>          <stat.icon className='w-8 h-8 text-white' />;'
         </motion.div>;
-        <motion.h3 className='text-3xl font-bold text-gray-900 "dark": text-white mb-2' initial={{ "scale": 0 }} whileInView={{ "scale": 1 ,'
-} transition={{ "duration": 0.5, "delay": index * 0.1 + 0.3 }} viewport={{ "once": true 
+        <motion.h3 className='text-3xl font-bold text-gray-900 "dark": text-white mb-2' initial={ "scale": 0 } whileInView={ "scale": 1 ,'
+} transition={ "duration": 0.5, "delay": index * 0.1 + 0.3 } viewport={ "once": true 
 }>;
           {stat.number}
         </motion.h3>;
@@ -362,19 +362,19 @@ return (<div className={`fixed ${positionClasses[position]} z-50`}>;`
         onClick={onClick}
         onHoverStart={() => setShowTooltip(true)}
         onHoverEnd={() => setShowTooltip(false)}
-        whileHover={{ "scale": 1.1 }}
-        whileTap={{ "scale": 0.9 }}
-        initial={{ "scale": 0 }}
-        animate={{ "scale": 1 
+        whileHover={ "scale": 1.1 }
+        whileTap={ "scale": 0.9 }
+        initial={ "scale": 0 }
+        animate={ "scale": 1 
 }
-        transition={{ "type":;
+        transition={ "type":;
   'spring', "damping": 15, "stiffness": 300 ,'
 }
       >;
         {icon}
       </motion.button>;
-      {tooltip && showTooltip && (<motion.div initial={{ "opacity": 0, "y": 10 
-} animate={{ "opacity": 1, "y": 0 
+      {tooltip && showTooltip && (<motion.div initial={ "opacity": 0, "y": 10 
+} animate={ "opacity": 1, "y": 0 
 } className='absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap'>;'
           {tooltip}
           <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900' />;'

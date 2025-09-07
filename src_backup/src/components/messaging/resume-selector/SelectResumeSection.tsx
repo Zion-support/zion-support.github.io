@@ -47,7 +47,7 @@ export function SelectResumeSection() {return (<div className="space-y-2">;"
           )}
         </>;
       )}
-  )}}}</div>;
+  )}}</div>;
   )}interface ResumeOption  {"id": string;
   }
   "title": string;
@@ -120,4 +120,4 @@ export function SelectResumeSection() {return (<div className="space-y-2">;"
         </div>;
       )}
     </div>;
-  )}}
+  )}

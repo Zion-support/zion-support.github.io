@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
-=======
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,18 +32,13 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
->>>>>>> origin/main
 
-=======
-<<<<<<< HEAD
 </div>) ) 
 }</div> </a> <a href="https://gatling.io/open-source/" target="blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300" > <ExternalLink className="w-4 h-4" /> Gatling OSS </a> </div> </section> </main> </>) 
 }
-=======
 import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function ApiPerformanceTestingPage() {
 
   const features = [
@@ -68,8 +60,6 @@ export default function ApiPerformanceTestingPage() {
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	];
 
-<<<<<<< HEAD
-=======
   const features = [
     "k6/Gatling-compatible test runner"
     "SLO-aware latency reports"
@@ -289,7 +279,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 	const features = null;
 
->>>>>>> origin/main
 	return (
 		<>
 			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
@@ -301,12 +290,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />
-<<<<<<< HEAD
 								<p className="text-gray-200">{f}</p>
-=======
 <p className="text-gray-200">{f}</p>
 
->>>>>>> origin/main
 							</div>
 						))}
 					</div>
@@ -316,21 +302,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 						<a href="https://grafana.com/docs/k6/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
 							<ExternalLink className="w-4 h-4" /> k6 Docs
 							</a>
-<<<<<<< HEAD
 						<a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-=======
 <a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
->>>>>>> origin/main
 							<ExternalLink className="w-4 h-4" /> Gatling OSS
 							</a>
 					</div>
 				</section>
 			</main>
 		</>
-<<<<<<< HEAD
 	)
 }
-=======
 );
 }
     </>);
@@ -507,7 +488,6 @@ return (
     </>
   );
 }
-<<<<<<< HEAD
 
 
 
@@ -586,7 +566,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

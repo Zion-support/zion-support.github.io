@@ -2206,7 +2206,7 @@ if ( {) {$2;
   }async startChatbotSession("customerId": string): Promise<ChatbotSession> {const "session": ChatbotSession = {"id": `chat_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,customerId,"startTime": new Date(),"messages": [],"intent": '',"confidence": 0,"resolved": false,"escalated": false,"satisfaction": 0;'    },this.chatbotSessions.push(session),return session;
   }async addChatbotMessage("sessionId": string, "messageData": Omit<ChatbotMessage 'id' | 'timestamp'>): Promise<ChatbotMessage> {const session = this.chatbotSessions.find(s => s.id === sessionId),if (!session) {throw new Error(`Session ${sessionId} not found`)}const "message": ChatbotMessage = {"id": `chat_msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,...messageData,"timestamp": new Date()},session.messages.push(message),// Simulate AI intent detection;`    if (message.sender === 'customer') {const intent = this.detectIntent(message.content),session.intent = intent.intent,session.confidence = intent.confidence;}'
     return message;
-  }}
+  }
     return message;
   }
   private detectIntent("message": string): { "intent": string, "confidence": number } {const lowerMessage = message.toLowerCase()if (lowerMessage.includes('login') |lowerMessage.includes('password')) {private detectIntent("message": string): { "intent": string, "confidence": number } {const lowerMessage  = message.toLowerCase()if (lowerMessage.includes('login') || lowerMessage.includes('password')) {}async addMessageToTicket("ticketId": string, "messageData": Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {const ticket = this && this.tickets.find(t => { return t && t.id === ticketId)// Update first response time if this is the first agent response; }'
@@ -2523,12 +2523,12 @@ if ( {) {$2;
       "notHelpful": 0;
       "createdBy": 'system';'
       "lastUpdated": new Date()}this && this.knowledgeBase.push(article)return article;}
-  async createKnowledgeBaseArticle("articleData": Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {const "article": KnowledgeBaseArticle = {"id": `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;      "id": `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;`  async endChatbotSession("sessionId": string, "resolved": boolean, "escalated": boolean, "satisfaction": number): Promise<void> {const session = this.chatbotSessions.find(s => s.id === sessionId),if (session) {session.endTime = new Date(),session.resolved = resolved,session.escalated = escalated,session.satisfaction = satisfaction,this.updateAnalytics()}}
+  async createKnowledgeBaseArticle("articleData": Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {const "article": KnowledgeBaseArticle = {"id": `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;      "id": `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;`  async endChatbotSession("sessionId": string, "resolved": boolean, "escalated": boolean, "satisfaction": number): Promise<void> {const session = this.chatbotSessions.find(s => s.id === sessionId),if (session) {session.endTime = new Date(),session.resolved = resolved,session.escalated = escalated,session.satisfaction = satisfaction,this.updateAnalytics()}
     }  }async createKnowledgeBaseArticle("articleData": Omit<KnowledgeBaseArticle 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {const "article": KnowledgeBaseArticle = {"id": `kb_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,...articleData,"views": 0,"helpful": 0,"notHelpful": 0,"createdBy": 'system',"lastUpdated": new Date()},this.knowledgeBase.push(article),return article;}'  async searchKnowledgeBase("query": string): Promise<KnowledgeBaseArticle[]> {const lowerQuery = query.toLowerCase()return this.knowledgeBase.filter(article =>;
       }
       article.title.toLowerCase().includes(lowerQuery) |;
       article.content.toLowerCase().includes(lowerQuery) |;
-      article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))).sort((a, b) => b.views - a.views)}}
+      article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))).sort((a, b) => b.views - a.views)}
   async searchKnowledgeBase("query": string): Promise<KnowledgeBaseArticle[]> {const lowerQuery = query && query.toLowerCase(),return this && this.knowledgeBase.filter(article =>;
       }
       article && article.title.toLowerCase().includes(lowerQuery) ||;
@@ -2757,7 +2757,7 @@ if ( {) {$2;
         }
         "title": 'Underutilized Knowledge Base Articles';'
         "description": 'Several articles have very low view counts';'
-        "impact": 'low';;'
+        "impact": 'low';'
   async getAIRecommendations(): Promise<AIRecommendation[]> {const "recommendations": AIRecommendation[] = [],// Ticket prioritization recommendation;
     }
     const highPriorityOpenTickets = this.tickets.filter(t =>;
@@ -3228,7 +3228,7 @@ export const aiCustomerSupportService = new AICustomerSupportService ();
       ? satisfactionScores.reduce((sum, score) => sum + score, 0) / satisfactionScores.length;
       :0,const chatbotResolved = this.chatbotSessions.filter(s => s.resolved && !s.escalated).length,const chatbotTotal = this.chatbotSessions.filter(s => s.endTime).length,const chatbotResolutionRate  = chatbotTotal > 0 ? (chatbotResolved / chatbotTotal) * 100 :0,const categoryCounts = this.tickets.reduce((acc, ticket) => {acc[ticket.category] = (acc[ticket.category] || 0) + 1,return acc}, {} as Record<string number>),const topCategories = Object.entries(categoryCounts).map(([category, count]) => ({ category, count })).sort((a, b) => b.count - a.count).slice(0, 5),const agentPerformance = this.agents.map(agent => ({"agentId":agent.id,"ticketsResolved":agent.window.window.window.performance.ticketsResolved,"satisfaction":agent.window.window.window.performance.customerSatisfaction;
     })),this.analytics = {totalTickets,openTickets,resolvedTickets,averageResolutionTime,averageFirstResponseTime,customerSatisfaction,chatbotResolutionRate,topCategories,agentPerformance;
-    }}async getTicket("ticketId":string):Promise<SupportTicket | null> {return this.tickets.find(t => { return t.id === ticketId) || null; }
+    }async getTicket("ticketId":string):Promise<SupportTicket | null> {return this.tickets.find(t => { return t.id === ticketId) || null; }
   }async getTickets(status?:SupportTicket['status']):Promise<SupportTicket[]> {if (status) {return this.tickets.filter(t => t.status === status)}'
     return this.tickets}async getCustomer("customerId":string):Promise<Customer | null> {return this.customers.find(c => { return c.id === customerId) || null; }
   }async getCustomers():Promise<Customer[]> {return this.customers}async getAgents():Promise<SupportAgent[]> {return this.agents}async getChatbotSessions():Promise<ChatbotSession[]> {return this.chatbotSessions}async getKnowledgeBase():Promise<KnowledgeBaseArticle[]> {return this.knowledgeBase}async getAnalytics():Promise<SupportAnalytics> {return this.analytics}

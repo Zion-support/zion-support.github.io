@@ -9,7 +9,7 @@ function EducationForm() {
 }
 import {EducationForm, as, EducationFormComponent} from './education';'
 import {EducationFormProps} from './education/types';'
-export function EducationForm(): any ("props": EducationFormProps) {;
+export function EducationForm(): any ('props': EducationFormProps) {;
   }
   return <EducationFormComponent {...props} />;
 }
@@ -26,8 +26,8 @@ export function EducationForm() {;
 ;
 }
 ;
-import { EducationForm, as, EducationFormComponent } from "./education";"
-import { EducationFormProps } from "./education/types";"
+import { EducationForm, as, EducationFormComponent } from './education';'
+import { EducationFormProps } from './education/types';'
 export function EducationForm() {
   }
   return <EducationFormComponent {...props} />;

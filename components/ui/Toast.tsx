@@ -6,9 +6,7 @@ import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';'
 
 export type ToastType = any;
 
-<<<<<<< HEAD
 const getIcon = (
-=======
 export type ToastType = 'success' | 'error' | 'info' | 'warning'
 return () => clearTimeout (timer) 
 }, [toast.id, toast.duration, onRemove])
@@ -19,8 +17,8 @@ const getIcon = () => {
   case 'success':'
 interface ToastProps {
   }
-  "toast": Toast,
-"onRemove": ("id": string) => void
+  'toast': Toast,
+'onRemove': ('id': string) => void
 }
 
 import React from 'react';'
@@ -43,10 +41,10 @@ const getIcon = () => {;
 
 interface ToastProps {;
   }
-  "toast": Toast;
-  "onRemove": ("id": string) => void;
+  'toast': Toast;
+  'onRemove': ('id': string) => void;
 
-const "ToastItem": React.FC<ToastProps> = ({ toast, onRemove    }) => {
+const 'ToastItem': React.FC<ToastProps> = ({ toast, onRemove    }) => {
 
 
 
@@ -62,7 +60,6 @@ const "ToastItem": React.FC<ToastProps> = ({ toast, onRemove    }) => {
     const timer = setTimeout(() => {
       }
       setIsVisible(false);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 setTimeout(() => onRemove(toast.id), 300);
     }, toast.duration || 5000);
       setIsVisible($2);
@@ -86,12 +83,11 @@ const getIcon = () => {
       case 'info':;'
         return <Info className='w-5 h-5 text-blue-400' />;'
 
-      "default":
+      'default':
 
         return <Info className='w-5 h-5 text-blue-400' />;'
     }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 
         return <Info className='w-5 h-5 text-blue-400' />;    }'
@@ -116,7 +112,7 @@ const getBorderColor = () => {
       case 'info':'
         return 'border-blue-500/20';'
 
-"default":
+'default':
         return 'border-blue-500/20';'
     }
 
@@ -129,7 +125,7 @@ const getBorderColor = () => {
       case 'info':'
         return 'bg-blue-500/10';'
 
-"default":
+'default':
 
         return 'bg-blue-500/10';'
     }
@@ -149,11 +145,10 @@ onClick={() => {;
             setIsVisible(false);
 
   return (
-<<<<<<< HEAD
-          }}
+          }
         </div>;
         <button;
-          onClick={() => {setIsVisible(false)return (setTimeout(() => onRemove(toast.id), 300)}}
+          onClick={() => {setIsVisible(false)return (setTimeout(() => onRemove(toast.id), 300)}
         return <AlertCircle className = $2;
       case 'warning':
         return <AlertCircle className = $2;
@@ -184,22 +179,22 @@ onClick={() => {;
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 300, scale: 0.8 }}
-      animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 300, scale: isVisible ? 1 : 0.8 }}
-      exit={{ opacity: 0, x: 300, scale: 0.8 }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
+      initial={ opacity: 0, x: 300, scale: 0.8 }
+      animate={ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 300, scale: isVisible ? 1 : 0.8 }
+      exit={ opacity: 0, x: 300, scale: 0.8 }
+      transition={ duration: 0.3, ease: 'easeInOut' }
       className={`relative p-4 rounded-xl border ${getBorderColor()} ${getBackgroundColor()} backdrop-blur-xl shadow-2xl max-w-sm`}
     >
-      <div className="flex items-start space-x-3">
-        <div className="flex-shrink-0 mt-0.5">
+      <div className='flex items-start space-x-3'>
+        <div className='flex-shrink-0 mt-0.5'>
           {getIcon()}
         </div>
-        <div className="flex-1 min-w-0">
-          <h4 className="text-sm font-semibold text-white">
+        <div className='flex-1 min-w-0'>
+          <h4 className='text-sm font-semibold text-white'>
             {toast.title}
           </h4>
           {toast.message && (
-            <p className="mt-1 text-sm text-white/70">
+            <p className='mt-1 text-sm text-white/70'>
               {toast.message}
             </p>
           )}
@@ -208,9 +203,7 @@ onClick={() => {;
           onClick={() => {
             setIsVisible($2);
             setTimeout(() => onRemove(toast.id), 300)
-          }}
-<<<<<<< HEAD
-=======
+          }
 
 interface ToastContainerProps {
   toasts: Toast[]
@@ -219,19 +212,19 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
   toasts,
   onRemove,
 }) => {
-  return ("
-          className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
-        >"
-          <X className="w-4 h-4 text-white/60 hover:text-white" />
+  return ('
+          className='flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200'
+        >'
+          <X className='w-4 h-4 text-white/60 hover:text-white' />
         </button>
-      </div>"
-          className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
-        >;"
-          <X className="w-4 h-4 text-white/60 hover:text-white" />
+      </div>'
+          className='flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200'
+        >;'
+          <X className='w-4 h-4 text-white/60 hover:text-white' />
         </button>
       </div>
-      {/* Progress bar */}"
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">
+      {/* Progress bar */}'
+      <div className='absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden'>
         <motion&& motion.div;`
           className={`h-full ${'
             toast && toast.type === 'success' ? 'bg-green-400' :'
@@ -239,8 +232,8 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
             toast && toast.type === 'warning' ? 'bg-yellow-400' :'
             'bg-blue-400'`
           }`}'
-          initial={{ width: '100%' }}'
-          animate={{ width: '0%' }}
+          initial={ width: '100%' }'
+          animate={ width: '0%' }
 '
     <div className='fixed top-4 right-4 z-50 space-y-3'>
       <AnimatePresence>
@@ -248,11 +241,10 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
         ))}
       </AnimatePresence>
     </div>
-  );};          }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-          className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
+  );};          }
+          className='flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200'
         >
-          <X className="w-4 h-4 text-white/60 hover:text-white" />
+          <X className='w-4 h-4 text-white/60 hover:text-white' />
         </button>
       </div>
       
@@ -265,39 +257,39 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
                 : toast && toast.type === 'warning';'
                   ? 'bg-yellow-400';'
                   : 'bg-blue-400';'
-          }`}`          initial={{ "width": '100%' }}'
-          animate={{ "width": '0%' }},'
-}) => {transition={{ "duration": toast && toast.duration || 5000, "ease": 'linear' ,'
+          }`}`          initial={ 'width': '100%' }'
+          animate={ 'width': '0%' },'
+}) => {transition={ 'duration': toast && toast.duration || 5000, 'ease': 'linear' ,'
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
 
-          transition={{ duration: toast && toast.duration || 5000, ease: "linear" }}
+          transition={ duration: toast && toast.duration || 5000, ease: 'linear' }
         />;
       </div>;
     </motion && motion.div>;
   )}
 
-interface ToastContainerProps  {"toasts": Toast[];
+interface ToastContainerProps  {'toasts': Toast[];
   }
-  "onRemove": ("id": string) => void;
+  'onRemove': ('id': string) => void;
 
-export const "ToastContainer": React.FC<ToastContainerProps> = ({ toasts,onRemove   }) => {
+export const 'ToastContainer': React.FC<ToastContainerProps> = ({ toasts,onRemove   }) => {
 
 
 }
 
 
-return (className="flex-shrink-0 ml-2 p-1 rounded-lg "hover":bg-white/10 transition-colors duration-200">;"
+return (className='flex-shrink-0 ml-2 p-1 rounded-lg 'hover':bg-white/10 transition-colors duration-200'>;'
 
-          <X className="w-4 h-4 text-white/60 "hover":text-white" />;"
+          <X className='w-4 h-4 text-white/60 'hover':text-white' />;'
         </button>;
       </div>;
-          className="flex-shrink-0 ml-2 p-1 rounded-lg "hover":bg-white/10 transition-colors duration-200">"
+          className='flex-shrink-0 ml-2 p-1 rounded-lg 'hover':bg-white/10 transition-colors duration-200'>'
 
-          <X className="w-4 h-4 text-white/60 "hover":text-white" />;"
+          <X className='w-4 h-4 text-white/60 'hover':text-white' />;'
         </button>;
       </div>;{/* Progress bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">;"
+      <div className='absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden'>;'
         <motion&& motion.div;
           className={`h-full ${toast && toast.type === 'success' ? 'bg-green-400' :;'
             }
@@ -305,9 +297,9 @@ return (className="flex-shrink-0 ml-2 p-1 rounded-lg "hover":bg-white/10 transit
             toast && toast.type === 'warning' ? 'bg-yellow-400' :;'
             'bg-blue-400';'
           }`}`
-          initial={{ "width": '100%' }}'
+          initial={ 'width': '100%' }'
 
-          animate={{ "width": '0%' }}'
+          animate={ 'width': '0%' }'
 
     <div className='fixed top-4 right-4 z-50 space-y-3'>'
       <AnimatePresence>
@@ -316,31 +308,26 @@ return (className="flex-shrink-0 ml-2 p-1 rounded-lg "hover":bg-white/10 transit
       </AnimatePresence>
     </div>
 
-<<<<<<< HEAD
 interface ToastContainerProps {
-=======
 
 interface ToastContainerProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   toasts: Toast[]
   onRemove: (id: string) => void;
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {}
-"
-          transition={{ duration: toast && toast.duration || 5000, ease: "linear" }};
+'
+          transition={ duration: toast && toast.duration || 5000, ease: 'linear' };
         />;
       </div>;
     </motion && motion.div>;
   );
   return (
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
     </div>
-<<<<<<< HEAD
-          transition={{ duration: toast.duration || 5000, ease: "linear" }}
+          transition={ duration: toast.duration || 5000, ease: 'linear' }
         />
       </div>
     </motion.div>
@@ -382,15 +369,14 @@ export const useToast = () => {
     addToast({ type: 'warning', title, message })
   },
 
-=======
 
 interface ToastContainerProps {}
   toasts: Toast[]
   onRemove: (id: string) => void;
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {}
-  return ("
-    <div className="fixed top-4 right-4 z-50 space-y-3">
+  return ('
+    <div className='fixed top-4 right-4 z-50 space-y-3'>
       <AnimatePresence>
         {toasts.map((toast) => (
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
@@ -400,8 +386,8 @@ interface ToastContainerProps {;
   toasts: Toast[],;
   onRemove: (id: string) => void;
 }
-  return ("
-    <div className="fixed top-4 right-4 z-50 space-y-3">;
+  return ('
+    <div className='fixed top-4 right-4 z-50 space-y-3'>;
       <AnimatePresence>;
         {toasts && toasts.map((toast) => (;
           <ToastItem key={toast && toast.id} toast={toast} onRemove={onRemove} />;
@@ -416,15 +402,14 @@ interface ToastContainerProps {;
       <AnimatePresence>;
         {toasts.map (toast => (          <ToastItem key={toast.id} toast={toast} on_remove={on_remove} />))}
       </AnimatePresence>;
-<<<<<<< HEAD
-    </div>);}          }}
-          className="flex - shrink - 0 ml - 2 p - 1 rounded - lg hover:bg - white / 10 transition-colors duration-200";
+    </div>);}          }
+          className='flex - shrink - 0 ml - 2 p - 1 rounded - lg hover:bg - white / 10 transition-colors duration-200';
         >;
-          <X className="w - 4 h - 4 text-white / 60 hover:text-white" />;
+          <X className='w - 4 h - 4 text-white / 60 hover:text-white' />;
         </button>;
       </div>;
       {/* Progress bar */}
-      <div className="absolute bottom - 0 left - 0 right - 0 h - 1 bg - white / 20 rounded-b-xl overflow-hidden">;
+      <div className='absolute bottom - 0 left - 0 right - 0 h - 1 bg - white / 20 rounded-b-xl overflow-hidden'>;
         <motion.div;
           className={`h - full ${
             toast.type === 'success' ? 'bg - green - 400' :;
@@ -432,17 +417,16 @@ interface ToastContainerProps {;
             toast.type === 'warning' ? 'bg - yellow - 400' :;
             'bg - blue - 400';
           }`}
-          initial={{ width: '100%' }}
-          animate={{ width: '0%' }}
-=======
-    </div>);}          }}"
-          className="flex - shrink - 0 ml - 2 p - 1 rounded - lg hover:bg - white / 10 transition - colors duration - 200";
-        >;"
-          <X className="w - 4 h - 4 text - white / 60 hover:text - white" />;
+          initial={ width: '100%' }
+          animate={ width: '0%' }
+    </div>);}          }'
+          className='flex - shrink - 0 ml - 2 p - 1 rounded - lg hover:bg - white / 10 transition - colors duration - 200';
+        >;'
+          <X className='w - 4 h - 4 text - white / 60 hover:text - white' />;
         </button>;
       </div>;
-      {/* Progress bar */}"
-      <div className="absolute bottom - 0 left - 0 right - 0 h - 1 bg - white / 20 rounded - b-xl overflow - hidden">;
+      {/* Progress bar */}'
+      <div className='absolute bottom - 0 left - 0 right - 0 h - 1 bg - white / 20 rounded - b-xl overflow - hidden'>;
         <motion.div;`
           className={`h - full ${'
             toast.type === 'success' ? 'bg - green - 400' :;'
@@ -450,15 +434,13 @@ interface ToastContainerProps {;
             toast.type === 'warning' ? 'bg - yellow - 400' :;'
             'bg - blue - 400';`
           }`}'
-          initial={{ width: '100%' }}'
-          animate={{ width: '0%' }}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          transition={{ duration: toast.duration || 5000, ease: "linear" }}
+          initial={ width: '100%' }'
+          animate={ width: '0%' }'
+          transition={ duration: toast.duration || 5000, ease: 'linear' }
         />;
       </div>;
     </motion.div>);
 }
-<<<<<<< HEAD
         {toasts.map(toast => (
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
@@ -474,7 +456,7 @@ export const useToast = () => {
   }
   const [toasts, setToasts] = useState<Toast[]>([]);
 
-const addToast = ("toast": Omit<Toast, 'id'>) => {'
+const addToast = ('toast': Omit<Toast, 'id'>) => {'
    ;
   }
   const id = Math.random().toString(36).substr(2, 9);
@@ -486,31 +468,30 @@ setToasts(prev => { return [...prev, newToast])
 }; }
 
 
-const removeToast = ("id": string) => {
+const removeToast = ('id': string) => {
     }
     setToasts(prev => { return prev.filter(toast => toast.id !== id)); }
   }
 
-const showSuccess = ("title": string, message?: string) => {
+const showSuccess = ('title': string, message?: string) => {
     }
-    addToast({ "type": 'success', title, message });'
+    addToast({ 'type': 'success', title, message });'
   }
 
-const showError = ("title": string, message?: string) => {
+const showError = ('title': string, message?: string) => {
     }
-    addToast({ "type": 'error', title, message });'
+    addToast({ 'type': 'error', title, message });'
   }
 
-const showInfo = ("title": string, message?: string) => {
+const showInfo = ('title': string, message?: string) => {
     }
-    addToast({ "type": 'info', title, message });'
+    addToast({ 'type': 'info', title, message });'
   }
 
-const showWarning = ("title": string, message?: string) => {
+const showWarning = ('title': string, message?: string) => {
     }
-    addToast({ "type": 'warning', title, message });'
+    addToast({ 'type': 'warning', title, message });'
   }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return {
     }
     toasts,
@@ -540,7 +521,6 @@ const showWarning = ("title": string, message?: string) => {
     showWarning
     removeToast
   }
-<<<<<<< HEAD
 };
 
-"
+'

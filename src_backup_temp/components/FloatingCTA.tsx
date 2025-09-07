@@ -12,7 +12,7 @@ export default function Page() {export default function Page() {from 'lucide-rea
 const "FloatingCTA": React.FC = () : JSX.(Element) => {const [isOpen, setIsOpen] = useState<any>(false)const [isVisible, setIsVisible] = useState<any>(false)useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
-  }}, []), [])// Show CTA after 5 seconds;
+  }, []), [])// Show CTA after 5 seconds;
       setIsVisible(true) }, 5000)return () => clearTimeout(timer) }, []) }];const quickServices = [";"
     { "name": "AI Solutions", "icon": "Brai n", "link": "/ai-services" },";"
     { "name": "Cybersecurity", "icon": "Shiel d", "link": "/cybersecurity" },";"
@@ -90,16 +90,16 @@ const "FloatingCTA": React.FC = () : JSX.(Element) => {const [isOpen, setIsOpen]
         {isExpanded && (<motion.div";"
             }
             className="fixed inset-0 bg-black/20 z-40";"
-            initial={{ "opacity": "0 "}}"
-            animate={{ "opacity": "1 "}}"
-            exit={{ "opacity": "0 "}}"
+            initial={ "opacity": "0 "}"
+            animate={ "opacity": "1 "}"
+            exit={ "opacity": "0 "}"
       <AnimatePresence>;
         {isExpanded && (<motion.div";"
             }
             className="fixed inset-0 bg-black/20 z-40";"
-            initial={{ "opacity": 0 }}
-            animate={{ "opacity": 1 }}
-            exit={{ "opacity": 0 }}
+            initial={ "opacity": 0 }
+            animate={ "opacity": 1 }
+            exit={ "opacity": 0 }
             onClick={ () => setIsExpanded(false) }
           />) }
       </AnimatePresence>;

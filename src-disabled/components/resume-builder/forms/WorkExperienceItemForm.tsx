@@ -383,12 +383,12 @@ interface WorkExperienceItemFormProps {;
                   <FormLabel>Description</FormLabel>;
                   <div className='flex gap-2'>;
                     <AIEnhancementButton
-                      options={{
+                      options={
 
                         enhancementType: 'work-description',
                         content: field && field.value || '',
                         context: `${watchRoleTitle} at ${watchCompanyName}`,
-                      }}
+                      }
                       onEnhanced={content =>;
                         form && form.setValue('description', content, {;
                           shouldDirty: true,;
@@ -426,11 +426,11 @@ interface WorkExperienceItemFormProps {;
                   <FormLabel > Description</FormLabel>;
                   <div className='flex gap - 2'>;
                     <AIEnhancementButton;
-                      options={{
+                      options={
                         enhancement_type: 'work - description',
                         content: field.value || '',
                         context: `${watchRoleTitle} at ${watchCompanyName}`,
-                      }}
+                      }
                       on_enhanced={content =>;
                         form.set_value ('description', content, {
                           should_dirty: true,
@@ -470,7 +470,7 @@ interface WorkExperienceItemFormProps {;
                   <FormLabel>Description</FormLabel>
                   <div className="flex gap-2">
                     <AIEnhancementButton
-                      options={{
+                      options={
 
                       AI Writer
                     </Button>
@@ -551,7 +551,7 @@ interface WorkExperienceItemFormProps {;
           content: form.getValues('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
 
-        }}
+        }
         initialContent={form.getValues('description') |''}      />
 
 import {
@@ -576,7 +576,7 @@ import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementBu
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 // Define form schema
 const formSchema = null;
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+          context: `${watchRoleTitle} at ${watchCompanyName}`}
         initialContent={form.getValues("description") || ""}
       />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -594,11 +594,11 @@ type FormValues = z.infer<typeof formSchema>
         is_open={isEnhancementDialogOpen}
         on_close={() => setIsEnhancementDialogOpen (false)}
         on_apply={handleAIEnhancement}
-        default_options={{
+        default_options={
           enhancement_type: 'work - description',
           content: form.get_values ('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
-        }}
+        }
         initial_content={form.get_values ('description') || ''}      />;
     </>);
 is current: z.boolean () .default (false);
@@ -612,11 +612,11 @@ type FormValues = z.infer < typeof form_schema>;
 
 }
 
-        defaultOptions={{;
+        defaultOptions={;
           enhancementType: 'work-description',;
           content: form && form.getValues('description') || '',;
           context: `${watchRoleTitle} at ${watchCompanyName}`,;
-        }}
+        }
         initialContent={form && form.getValues('description') || ''}      />;
     </>;
   );
@@ -680,7 +680,7 @@ setIsEnhancementDialogOpen (false);
 
           enhancementType: "work-description",
           content: form.getValues("description") || "",
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+          context: `${watchRoleTitle} at ${watchCompanyName}`}
         initialContent={form.getValues("description") || ""}
       />
     </>

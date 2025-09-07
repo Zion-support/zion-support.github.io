@@ -1634,7 +1634,7 @@ export const "innovativeMicroSaasServices2029V2": InnovativeMicroSaasService2029
 ];
       "Talent acquisition optimization","Employee retention strategies","Performance management","Workforce planning";"
     ];
-  }];;ursor/fix-website-loading-errors-and-merge-6662;
+  }];ursor/fix-website-loading-errors-and-merge-6662;
     "use_cases": [;
     ],
     "link": ""https"://ziontechgroup.com/services/intelligent-hr-analytics","

@@ -1,71 +1,71 @@
 
 ;
-}"id": string;
-export interface EmergingTechService2026  {"id": string;"name": string;
+}'id': string;
+export interface EmergingTechService2026  {'id': string;'name': string;
   }
-  "id": string;
-  "name": string;
-  "tagline": string;
-  "price": string;
-  "period": string;
-  "description": string;
-  "features": string[];
-  "popular": boolean;
-  "icon": string;
-  "color": string;
-  "textColor": string;
-  "link": string;
-  "marketPosition": string;
-  "targetAudience": string;
-  "trialDays": number;
-  "setupTime": string;
-  "category": string;
-  "realService": boolean;
-  "technology": string[];
-  "integrations": string[];
-  "useCases": string[];
-  "roi": string;
-  "competitors": string[];
-  "marketSize": string;
-  "growthRate": string;
-  "contactInfo": {"mobile": string;
+  'id': string;
+  'name': string;
+  'tagline': string;
+  'price': string;
+  'period': string;
+  'description': string;
+  'features': string[];
+  'popular': boolean;
+  'icon': string;
+  'color': string;
+  'textColor': string;
+  'link': string;
+  'marketPosition': string;
+  'targetAudience': string;
+  'trialDays': number;
+  'setupTime': string;
+  'category': string;
+  'realService': boolean;
+  'technology': string[];
+  'integrations': string[];
+  'useCases': string[];
+  'roi': string;
+  'competitors': string[];
+  'marketSize': string;
+  'growthRate': string;
+  'contactInfo': {'mobile': string;
   }
-  "contactInfo": {
+  'contactInfo': {
     }
-    "mobile": string;
-    "email": string;
-    "address": string;
-  "text_color": string;
-  "link": string;
-  "market_position": string;
-  "target_audience": string;
-  "trial_days": number;
-  "setup_time": string;
-  "category": string;
-  "real_service": boolean;
-  "technology": string[];
-  "integrations": string[];
-  "use_cases": string[];
-  "roi": string;
-  "competitors": string[];
-  "market_size": string;
-  "growth_rate": string;
-  "contact_info": {"mobile": string;
+    'mobile': string;
+    'email': string;
+    'address': string;
+  'text_color': string;
+  'link': string;
+  'market_position': string;
+  'target_audience': string;
+  'trial_days': number;
+  'setup_time': string;
+  'category': string;
+  'real_service': boolean;
+  'technology': string[];
+  'integrations': string[];
+  'use_cases': string[];
+  'roi': string;
+  'competitors': string[];
+  'market_size': string;
+  'growth_rate': string;
+  'contact_info': {'mobile': string;
     }
-    "email": string;
-    "address": string;}export const "emergingTechServices2026": EmergingTechService2026[] = [;
+    'email': string;
+    'address': string;}export const 'emergingTechServices2026': EmergingTechService2026[] = [;
   // Quantum Computing Services;
-  {{export const "emergingTechServices2026": EmergingTechService2026[] = [;
+  {export const 'emergingTechServices2026': EmergingTechService2026[] = [;
   // Quantum Computing Services;
-  {];return emergingTechServices2026 && emergingTechServices2026.filter(service => { return service && service.popular)}"id": 'ai-digital-twin-platform'; }'
-    "name": 'AI Digital Twin Platform';'
-    "tagline":;
+  {];return emergingTechServices2026 && emergingTechServices2026.filter(service => { return service && service.popular)}'id': 'ai-digital-twin-platform'; }'
+    'name': 'AI Digital Twin Platform';'
+    'tagline':;
       'Intelligent digital twin creation and simulation with AI-powered insights';'
-    "price": '$349';'
-    "period": '/month';'
-    "description":;
+    'price': '$349';'
+    'period': '/month';'
+    'description':;
       'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.';'
-    "features": [;
+    'features': [;
       'AI-powered digital twin creation';'
       'Real-time simulation and modeling';'
       'Predictive analytics and forecasting';'
@@ -77,16 +77,16 @@ export interface EmergingTechService2026  {"id": string;"name": string;
       'API for custom integrations';'
       'Mobile app for monitoring';'
     ];
-    "popular": false;
-    "marketPosition":;
-      'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our "advantage": AI automation reduces digital twin creation time by 60% and improves simulation accuracy.';'
-    "targetAudience":;
+    'popular': false;
+    'marketPosition':;
+      'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our 'advantage': AI automation reduces digital twin creation time by 60% and improves simulation accuracy.';'
+    'targetAudience':;
       'Manufacturing companies, Infrastructure providers, Energy companies, Smart city planners';'
-    "trialDays": 14;
-    "setupTime": '2-3 weeks';'
-    "category": 'Digital Twin & Simulation';'
-    "realService": true;
-    "technology": [;
+    'trialDays': 14;
+    'setupTime': '2-3 weeks';'
+    'category': 'Digital Twin & Simulation';'
+    'realService': true;
+    'technology': [;
       'Python';'
       'TensorFlow';'
       'Unity';'
@@ -94,70 +94,70 @@ export interface EmergingTechService2026  {"id": string;"name": string;
       'PostgreSQL';'
       'Redis';'
     ];
-    "integrations": [;
+    'integrations': [;
       'Siemens';'
       'PTC';'
       'GE Digital';'
       'Autodesk';'
       'IoT platforms';'
     ];
-    "useCases": [;
+    'useCases': [;
       'Manufacturing optimization';'
       'Infrastructure monitoring';'
       'Energy management';'
       'Predictive maintenance';'
       'Urban planning';'
     ];
-    "roi": 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.';'
-    "competitors": [;
+    'roi': 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.';'
+    'competitors': [;
       'Siemens Digital Twin';'
       'PTC ThingWorx';'
       'GE Digital Twin';'
       'Autodesk';'
     ];
-    "marketSize": '$86.1B digital twin market';'
-    "growthRate": '42% annual growth';'
-    "contactInfo": contact;
-    "realImplementation": true;
-    "implementationDetails":;
+    'marketSize': '$86.1B digital twin market';'
+    'growthRate': '42% annual growth';'
+    'contactInfo': contact;
+    'realImplementation': true;
+    'implementationDetails':;
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.';'
-    "launchDate": '2024-06-25';'
-    "customers": 56;
-    "rating": 4.4;
-    "reviews": 29;
+    'launchDate': '2024-06-25';'
+    'customers': 56;
+    'rating': 4.4;
+    'reviews': 29;
   }
 ];
-export const getEmergingTechServices2026ByCategory = ("category": string) => {return emergingTechServices2026.filter(service => { return service.category === category; }
-  )'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',"launchDate": '2024-06-25',"customers": 56,"rating": 4.4,"reviews": 29;'
+export const getEmergingTechServices2026ByCategory = ('category': string) => {return emergingTechServices2026.filter(service => { return service.category === category; }
+  )'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.','launchDate': '2024-06-25','customers': 56,'rating': 4.4,'reviews': 29;'
     }
-    "reviews": 29;
-    "reviews": 29;
+    'reviews': 29;
+    'reviews': 29;
   }];
-export const getEmergingTechServices2026ByCategory = ("category": string) => {return emergingTechServices2026.filter(service => { return service.category === category; }
-  )];return emergingTechServices2026 && emergingTechServices2026.filter(service => { return service && service.popular)}export const "emergingTechServices2026": EmergingTechService2026[] = [; }
+export const getEmergingTechServices2026ByCategory = ('category': string) => {return emergingTechServices2026.filter(service => { return service.category === category; }
+  )];return emergingTechServices2026 && emergingTechServices2026.filter(service => { return service && service.popular)}export const 'emergingTechServices2026': EmergingTechService2026[] = [; }
   // Quantum Computing Services;
-  {"website": string;
-  },"realImplementation": boolean;
-  "implementationDetails": string;
-  "launchDate": string;
-  "customers": number;
-  "rating": number;
-  "reviews": number;
-}const contact  = null;"tagline":;
+  {'website': string;
+  },'realImplementation': boolean;
+  'implementationDetails': string;
+  'launchDate': string;
+  'customers': number;
+  'rating': number;
+  'reviews': number;
+}const contact  = null;'tagline':;
       'Access quantum computing power through the cloud with AI-optimized algorithms';'
-    "price": '$999';'
-    "period": '/month';'
-    "description":;
+    'price': '$999';'
+    'period': '/month';'
+    'description':;
       'Access to multiple quantum processors (IBM, Google, Rigetti)','AI - optimized quantum algorithm library','Quantum error correction and noise mitigation','Hybrid quantum - classical computing workflows','Quantum machine learning algorithms','Real - time quantum circuit visualization','Integration with classical computing frameworks','Custom quantum algorithm development','Quantum performance analytics and benchmarking','API for quantum application development';'
       'API for quantum application development';'
       'API for quantum application development';'
-    ],"popular": true,"icon": '🔮',"targetAudience":;'
+    ],'popular': true,'icon': '🔮','targetAudience':;'
       'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities';'
-    "trialDays": 30;
-    "setupTime": '1-2 weeks';'
-    "category": 'Quantum Computing & AI';'
-    "realService": true;
-    "technology": [;
+    'trialDays': 30;
+    'setupTime': '1-2 weeks';'
+    'category': 'Quantum Computing & AI';'
+    'realService': true;
+    'technology': [;
       'Qiskit';'
       'Cirq';'
       'PennyLane';'
@@ -165,7 +165,7 @@ export const getEmergingTechServices2026ByCategory = ("category": string) => {re
       'React';'
       'PostgreSQL';'
     ];
-    "integrations": [;
+    'integrations': [;
       'IBM Quantum';'
       'Google Quantum AI';'
       'Amazon Braket';'
@@ -173,48 +173,48 @@ export const getEmergingTechServices2026ByCategory = ("category": string) => {re
       'D-Wave';'
       'Jupyter';'
     ];
-    "useCases": [;
+    'useCases': [;
       'Drug discovery';'
       'Financial modeling';'
       'Optimization problems';'
       'Machine learning';'
       'Cryptography research';'
     ];
-    "roi": 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.';'
-    "competitors": [;
+    'roi': 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.';'
+    'competitors': [;
       'IBM Quantum','Amazon Braket','Google Quantum AI','Rigetti';'
-    ],"customers": 23,"rating": 4 && 4.9,"reviews": 18;
+    ],'customers': 23,'rating': 4 && 4.9,'reviews': 18;
       'Rigetti';'
-    ],"customers": 23,"rating": 4 && 4.9,"reviews": 18;
+    ],'customers': 23,'rating': 4 && 4.9,'reviews': 18;
       'Rigetti';'
-    ],"customers": 23,"rating": 4 && 4.9,"reviews": 18;
+    ],'customers': 23,'rating': 4 && 4.9,'reviews': 18;
   },// Blockchain & Web3 Solutions;
-  {"id": 'ai-blockchain-intelligence-platform';'
+  {'id': 'ai-blockchain-intelligence-platform';'
     }
-    "name": 'AI Blockchain Intelligence Platform';'
-    "tagline":;
+    'name': 'AI Blockchain Intelligence Platform';'
+    'tagline':;
       'Intelligent blockchain analytics and DeFi optimization with AI-powered insights';'
-    "price": '$299';'
-    "period": '/month';'
-    "description":;
+    'price': '$299';'
+    'period': '/month';'
+    'description':;
       'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.';'
-    "features": [;
+    'features': [;
       'DeFi strategy optimization and automation','Smart contract security auditing','Cryptocurrency portfolio management','Blockchain transaction monitoring','NFT market analysis and insights','Integration with major blockchains','Custom blockchain analytics dashboards','Real - time alerts and notifications','API for blockchain applications';'
       'API for blockchain applications';'
       'API for blockchain applications';'
-    ],"popular": true,"icon": '⛓️',"marketPosition":;'
-      'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our "advantage": AI automation provides deeper insights and reduces analysis time by 80%.';'
-    "targetAudience":;
+    ],'popular': true,'icon': '⛓️','marketPosition':;'
+      'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our 'advantage': AI automation provides deeper insights and reduces analysis time by 80%.';'
+    'targetAudience':;
       'Cryptocurrency traders, DeFi protocols, Blockchain companies, Financial institutions';'
-    "trialDays": 14;
-    "setupTime": '2-3 hours';'
-    "category": 'Blockchain & Web3';'
-    "realService": true;
-    "technology": [;
+    'trialDays': 14;
+    'setupTime': '2-3 hours';'
+    'category': 'Blockchain & Web3';'
+    'realService': true;
+    'technology': [;
       'Python','TensorFlow','React','Node && Node.js','PostgreSQL','Redis';'
       'Redis';'
       'Redis';'
-    ],"integrations": [;
+    ],'integrations': [;
       'Ethereum';'
       'Bitcoin';'
       'Polygon';'
@@ -222,38 +222,38 @@ export const getEmergingTechServices2026ByCategory = ("category": string) => {re
       'Solana';'
       'Uniswap';'
     ];
-    "useCases": [;
+    'useCases': [;
       'Blockchain analytics','DeFi optimization','Portfolio management','Security auditing','Market analysis';'
       'Market analysis';'
       'Market analysis';'
-    ],"roi": 'Users report 300% ROI through improved trading strategies and DeFi optimization.',"competitors": ['Chainalysis', 'Elliptic', 'CipherTrace', 'Glassnode'],"customers": 156,"rating": 4 && 4.7,"reviews": 89;'
-    "reviews": 89;
-    "reviews": 89;
+    ],'roi': 'Users report 300% ROI through improved trading strategies and DeFi optimization.','competitors': ['Chainalysis', 'Elliptic', 'CipherTrace', 'Glassnode'],'customers': 156,'rating': 4 && 4.7,'reviews': 89;'
+    'reviews': 89;
+    'reviews': 89;
   },// Internet of Things (IoT) Platform;
-  {"id": 'ai-iot-intelligence-platform';'
+  {'id': 'ai-iot-intelligence-platform';'
     }
-    "name": 'AI IoT Intelligence Platform';'
-    "tagline":;
+    'name': 'AI IoT Intelligence Platform';'
+    'tagline':;
       'Intelligent IoT device management and data analytics with AI-powered automation';'
-    "price": '$199';'
-    "period": '/month';'
-    "description":;
+    'price': '$199';'
+    'period': '/month';'
+    'description':;
       'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.';'
-    "features": [;
+    'features': [;
       'Predictive maintenance and monitoring','Smart automation and control','Edge computing optimization','Integration with major IoT platforms','Custom IoT application development','Security and privacy management','Scalable device connectivity','Advanced analytics and reporting';'
       'Advanced analytics and reporting';'
       'Advanced analytics and reporting';'
-    ],"popular": false,"icon": '📡',"targetAudience":;'
+    ],'popular': false,'icon': '📡','targetAudience':;'
       'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies';'
-    "trialDays": 14;
-    "setupTime": '3-4 hours';'
-    "category": 'Internet of Things (IoT)';'
-    "realService": true;
-    "technology": [;
+    'trialDays': 14;
+    'setupTime': '3-4 hours';'
+    'category': 'Internet of Things (IoT)';'
+    'realService': true;
+    'technology': [;
       'Python','TensorFlow','React','Node && Node.js','PostgreSQL','Redis';'
       'Redis';'
       'Redis';'
-    ],"integrations": [;
+    ],'integrations': [;
       'AWS IoT';'
       'Azure IoT';'
       'Google Cloud IoT';'
@@ -261,36 +261,36 @@ export const getEmergingTechServices2026ByCategory = ("category": string) => {re
       'SmartThings';'
       'Hubitat';'
     ];
-    "useCases": [;
+    'useCases': [;
       'Smart home automation','Industrial monitoring','Smart city management','Predictive maintenance','Energy optimization';'
       'Energy optimization';'
       'Energy optimization';'
-    ],"roi": 'Organizations report 250% ROI through improved device management and operational efficiency.',"competitors": ['AWS IoT', 'Azure IoT Hub', 'Google Cloud IoT', 'ThingWorx'],"customers": 89,"rating": 4 && 4.6,"reviews": 45;'
-    "reviews": 45;
-    "reviews": 45;
+    ],'roi': 'Organizations report 250% ROI through improved device management and operational efficiency.','competitors': ['AWS IoT', 'Azure IoT Hub', 'Google Cloud IoT', 'ThingWorx'],'customers': 89,'rating': 4 && 4.6,'reviews': 45;'
+    'reviews': 45;
+    'reviews': 45;
   },// Edge Computing & 5G Services;
-  {"id": 'edge-computing-optimization-platform';'
+  {'id': 'edge-computing-optimization-platform';'
     }
-    "name": 'Edge Computing Optimization Platform';'
-    "tagline":;
+    'name': 'Edge Computing Optimization Platform';'
+    'tagline':;
       'Optimize edge computing performance and 5G network efficiency with AI';'
-    "price": '$399';'
-    "period": '/month';'
-    "description":;
+    'price': '$399';'
+    'period': '/month';'
+    'description':;
       'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.';'
-    "features": [;
+    'features': [;
       '5G network resource management','Edge application deployment automation','Real - time performance monitoring','Edge security and compliance','Integration with major cloud providers','Custom edge computing workflows','Advanced analytics and reporting','Mobile edge computing support','API for edge applications';'
       'API for edge applications';'
       'API for edge applications';'
-    ],"popular": false,"icon": '📶',"marketPosition":;'
-      'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our "advantage": AI optimization improves edge performance by 40% and reduces latency by 60%.';'
-    "targetAudience":;
+    ],'popular': false,'icon': '📶','marketPosition':;'
+      'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our 'advantage': AI optimization improves edge performance by 40% and reduces latency by 60%.';'
+    'targetAudience':;
       'Telecommunications companies, Edge computing providers, 5G network operators, Enterprises';'
-    "trialDays": 14;
-    "setupTime": '4-6 hours';'
-    "category": 'Edge Computing & 5G';'
-    "realService": true;
-    "technology": [;
+    'trialDays': 14;
+    'setupTime': '4-6 hours';'
+    'category': 'Edge Computing & 5G';'
+    'realService': true;
+    'technology': [;
       'Python';'
       'TensorFlow';'
       'Kubernetes';'
@@ -298,7 +298,7 @@ export const getEmergingTechServices2026ByCategory = ("category": string) => {re
       'PostgreSQL';'
       'Redis';'
     ];
-    "integrations": [;
+    'integrations': [;
       'AWS Outposts';'
       'Azure Stack Edge';'
       'Google Anthos';'
@@ -306,43 +306,43 @@ export const getEmergingTechServices2026ByCategory = ("category": string) => {re
       'Kubernetes';'
       'Docker';'
     ];
-    "useCases": [;
+    'useCases': [;
       'Edge computing optimization';'
       '5G network management';'
       'Edge application deployment';'
       'Performance monitoring';'
       'Resource optimization';'
     ];
-    "roi": 'Organizations report 300% ROI through improved edge performance and reduced network costs.';'
-    "competitors": [;
+    'roi': 'Organizations report 300% ROI through improved edge performance and reduced network costs.';'
+    'competitors': [;
       'AWS Outposts','Azure Stack Edge','Google Anthos','VMware Edge';'
-    ],"customers": 45,"rating": 4 && 4.5,"reviews": 23;
+    ],'customers': 45,'rating': 4 && 4.5,'reviews': 23;
       'VMware Edge';'
-    ],"customers": 45,"rating": 4 && 4.5,"reviews": 23;
+    ],'customers': 45,'rating': 4 && 4.5,'reviews': 23;
       'VMware Edge';'
-    ],"customers": 45,"rating": 4 && 4.5,"reviews": 23;
-  },// Augmented Reality (AR) & Virtual Reality (VR){"id": 'ai-ar-vr-development-platform';'
+    ],'customers': 45,'rating': 4 && 4.5,'reviews': 23;
+  },// Augmented Reality (AR) & Virtual Reality (VR){'id': 'ai-ar-vr-development-platform';'
     }
-    "name": 'AI AR/VR Development Platform';'
-    "tagline":;
+    'name': 'AI AR/VR Development Platform';'
+    'tagline':;
       'Intelligent AR/VR application development with AI-powered content creation';'
-    "price": '$249';'
-    "period": '/month';'
-    "description":;
+    'price': '$249';'
+    'period': '/month';'
+    'description':;
       'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.';'
-    "features": [;
+    'features': [;
       'Intelligent user experience optimization','AR / VR application development tools','Content personalization and adaptation','Performance optimization and testing','Integration with major AR / VR platforms','Custom AR / VR workflows','Real - time content analytics','Multi - platform deployment support','API for AR / VR applications';'
       'API for AR / VR applications';'
       'API for AR / VR applications';'
-    ],"popular": false,"icon": '🥽',"marketPosition":;'
-      'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our "advantage": AI automation reduces AR/VR development time by 70% and improves content quality.';'
-    "targetAudience":;
+    ],'popular': false,'icon': '🥽','marketPosition':;'
+      'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our 'advantage': AI automation reduces AR/VR development time by 70% and improves content quality.';'
+    'targetAudience':;
       'AR/VR developers, Gaming companies, Educational institutions, Training providers';'
-    "trialDays": 14;
-    "setupTime": '3-4 hours';'
-    "category": 'AR/VR & Immersive Technology';'
-    "realService": true;
-    "technology": [;
+    'trialDays': 14;
+    'setupTime': '3-4 hours';'
+    'category': 'AR/VR & Immersive Technology';'
+    'realService': true;
+    'technology': [;
       'Unity';'
       'Unreal Engine';'
       'Python';'
@@ -350,7 +350,7 @@ export const getEmergingTechServices2026ByCategory = ("category": string) => {re
       'React';'
       'PostgreSQL';'
     ];
-    "integrations": [;
+    'integrations': [;
       'Oculus';'
       'HTC Vive';'
       'Microsoft HoloLens';'
@@ -358,37 +358,37 @@ export const getEmergingTechServices2026ByCategory = ("category": string) => {re
       'ARKit';'
       'ARCore';'
     ];
-    "useCases": [;
+    'useCases': [;
       '3D content creation','Immersive training','Virtual events','Gaming and entertainment';'
       'Gaming and entertainment';'
       'Gaming and entertainment';'
-    ],"roi": 'Developers report 400% ROI through faster development and improved content quality.',"competitors": ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],"customers": 67,"rating": 4 && 4.4,"reviews": 34;'
-    "reviews": 34;
-    "reviews": 34;
+    ],'roi': 'Developers report 400% ROI through faster development and improved content quality.','competitors': ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],'customers': 67,'rating': 4 && 4.4,'reviews': 34;'
+    'reviews': 34;
+    'reviews': 34;
   },// Robotics & Automation Services;
-  {"id": 'ai-robotics-automation-platform';'
+  {'id': 'ai-robotics-automation-platform';'
     }
-    "name": 'AI Robotics & Automation Platform';'
-    "tagline":;
+    'name': 'AI Robotics & Automation Platform';'
+    'tagline':;
       'Intelligent robotics control and automation with AI-powered optimization';'
-    "price": '$599';'
-    "period": '/month';'
-    "description":;
+    'price': '$599';'
+    'period': '/month';'
+    'description':;
       'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.';'
-    "features": [;
+    'features': [;
       'Automated workflow optimization','Predictive maintenance for robots','Integration with major robotics platforms','Custom automation workflows','Real - time performance monitoring','Safety and compliance management','Advanced analytics and reporting','Mobile app for robot control','API for robotics applications';'
       'API for robotics applications';'
       'API for robotics applications';'
-    ],"popular": false,"icon": '🤖',"marketPosition":;'
-      'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our "advantage": AI automation improves robotic efficiency by 50% and reduces programming time by 80%.';'
-    "targetAudience":;
+    ],'popular': false,'icon': '🤖','marketPosition':;'
+      'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our 'advantage': AI automation improves robotic efficiency by 50% and reduces programming time by 80%.';'
+    'targetAudience':;
       'Manufacturing companies, Logistics providers, Service robotics companies, Research institutions';'
-    "trialDays": 30;
-    "setupTime": '1-2 weeks';'
-    "category": 'Robotics & Automation';'
-    "realService": true;
-    "technology": ['Python', 'TensorFlow', 'ROS', 'React', 'PostgreSQL', 'Redis'];'
-    "integrations": [;
+    'trialDays': 30;
+    'setupTime': '1-2 weeks';'
+    'category': 'Robotics & Automation';'
+    'realService': true;
+    'technology': ['Python', 'TensorFlow', 'ROS', 'React', 'PostgreSQL', 'Redis'];'
+    'integrations': [;
       'ABB';'
       'FANUC';'
       'KUKA';'
@@ -396,44 +396,44 @@ export const getEmergingTechServices2026ByCategory = ("category": string) => {re
       'Boston Dynamics';'
       'iRobot';'
     ];
-    "useCases": [;
+    'useCases': [;
       'Manufacturing automation';'
       'Logistics optimization';'
       'Service robotics';'
       'Research and development';'
       'Quality control';'
     ];
-    "roi": 'Organizations report 400% ROI through improved robotic efficiency and reduced operational costs.';'
-    "competitors": [;
+    'roi': 'Organizations report 400% ROI through improved robotic efficiency and reduced operational costs.';'
+    'competitors': [;
       'ABB RobotStudio','FANUC ROBOGUIDE','KUKA Sim','Universal Robots';'
-    ],"customers": 34,"rating": 4 && 4.3,"reviews": 18;
+    ],'customers': 34,'rating': 4 && 4.3,'reviews': 18;
       'Universal Robots';'
-    ],"customers": 34,"rating": 4 && 4.3,"reviews": 18;
+    ],'customers': 34,'rating': 4 && 4.3,'reviews': 18;
       'Universal Robots';'
-    ],"customers": 34,"rating": 4 && 4.3,"reviews": 18;
+    ],'customers': 34,'rating': 4 && 4.3,'reviews': 18;
   },// Digital Twin & Simulation;
-  {"id": 'ai-digital-twin-platform';'
+  {'id': 'ai-digital-twin-platform';'
     }
-    "name": 'AI Digital Twin Platform';'
-    "tagline":;
+    'name': 'AI Digital Twin Platform';'
+    'tagline':;
       'Intelligent digital twin creation and simulation with AI-powered insights';'
-    "price": '$349';'
-    "period": '/month';'
-    "description":;
+    'price': '$349';'
+    'period': '/month';'
+    'description':;
       'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.';'
-    "features": [;
+    'features': [;
       'Predictive analytics and forecasting','Integration with IoT and sensor data','Custom simulation scenarios','Performance optimization insights','3D visualization and modeling','Advanced analytics and reporting','API for custom integrations','Mobile app for monitoring';'
       'Mobile app for monitoring';'
       'Mobile app for monitoring';'
-    ],"popular": false,"icon": '🔄',"marketPosition":;'
-      'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our "advantage": AI automation reduces digital twin creation time by 60% and improves simulation accuracy.';'
-    "targetAudience":;
+    ],'popular': false,'icon': '🔄','marketPosition':;'
+      'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our 'advantage': AI automation reduces digital twin creation time by 60% and improves simulation accuracy.';'
+    'targetAudience':;
       'Manufacturing companies, Infrastructure providers, Energy companies, Smart city planners';'
-    "trialDays": 14;
-    "setupTime": '2-3 weeks';'
-    "category": 'Digital Twin & Simulation';'
-    "realService": true;
-    "technology": [;
+    'trialDays': 14;
+    'setupTime': '2-3 weeks';'
+    'category': 'Digital Twin & Simulation';'
+    'realService': true;
+    'technology': [;
       'Python';'
       'TensorFlow';'
       'Unity';'
@@ -441,7 +441,7 @@ export const getEmergingTechServices2026ByCategory = ("category": string) => {re
       'PostgreSQL';'
       'Redis';'
     ];
-    "integrations": [;
+    'integrations': [;
       'Siemens';'
       'PTC';'
       'GE Digital';'
@@ -449,130 +449,130 @@ export const getEmergingTechServices2026ByCategory = ("category": string) => {re
       'Dassault Systèmes';'
       'IoT platforms';'
     ];
-    "useCases": [;
+    'useCases': [;
       'Manufacturing optimization';'
       'Infrastructure monitoring';'
       'Energy management';'
       'Predictive maintenance';'
       'Urban planning';'
     ];
-    "roi": 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.';'
-    "competitors": [;
+    'roi': 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.';'
+    'competitors': [;
       'Siemens Digital Twin','PTC ThingWorx','GE Digital Twin','Autodesk';'
     ],'Siemens Digital Twin';'
       'PTC ThingWorx';'
       'GE Digital Twin';'
       'Autodesk';'
     ];
-    "marketSize": '$86.1B digital twin market';'
-    "growthRate": '42% annual growth';'
-    "contactInfo": contact;
-    "realImplementation": true;
-    "implementationDetails":;
-    "customers": 56,"rating": 4 && 4.4,"reviews": 29;
+    'marketSize': '$86.1B digital twin market';'
+    'growthRate': '42% annual growth';'
+    'contactInfo': contact;
+    'realImplementation': true;
+    'implementationDetails':;
+    'customers': 56,'rating': 4 && 4.4,'reviews': 29;
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.';'
-    "launchDate": '2024-06-25';'
-    "customers": 56;
-    "rating": 4.4;
-    "reviews": 29;
+    'launchDate': '2024-06-25';'
+    'customers': 56;
+    'rating': 4.4;
+    'reviews': 29;
   }
-      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',"launchDate": '2024-06-25',"customers": 56,"rating": 4 && 4.4,"reviews": 29;'
+      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.','launchDate': '2024-06-25','customers': 56,'rating': 4 && 4.4,'reviews': 29;'
   }
 ];
   }];
-export const getEmergingTechServices2026ByCategory = ("category": string) => {return emergingTechServices2026.filter(service => { return service.category === category; }
+export const getEmergingTechServices2026ByCategory = ('category': string) => {return emergingTechServices2026.filter(service => { return service.category === category; }
   )}
-export const getPopularEmergingTechServices2026  = () => {}export const getEmergingTechServices2026ByPriceRange = ("minPrice": number;
-  "maxPrice": number;
+export const getPopularEmergingTechServices2026  = () => {}export const getEmergingTechServices2026ByPriceRange = ('minPrice': number;
+  'maxPrice': number;
 ) => {return price >= minPrice && price <= maxPrice;
   })}return price >= minPrice && price <= maxPrice;
   })})}return emergingTechServices2026 && emergingTechServices2026.filter((service) => {const price = parseInt(service && service.price.replace('$', ''))return emergingTechServices2026.filter((service) => {const price  = parseInt(service.price.replace('$', ''))return price >= minPrice && price <= maxPrice;'
   })}return price >= minPrice && price <= maxPrice;
-  })}"id": 'quantum-computing-as-a-service', "name": 'Quantum Computing as a Service (QCaaS)',"tagline": 'Access quantum computing power through the cloud with AI-optimized algorithms', "price": '$999',"period": '/month',"description": 'Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum machine learning capabilities. Features include quantum circuit optimization, quantum error correction, and hybrid quantum-classical computing.',"features": [;'
+  })}'id': 'quantum-computing-as-a-service', 'name': 'Quantum Computing as a Service (QCaaS)','tagline': 'Access quantum computing power through the cloud with AI-optimized algorithms', 'price': '$999','period': '/month','description': 'Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum machine learning capabilities. Features include quantum circuit optimization, quantum error correction, and hybrid quantum-classical computing.','features': [;'
       'Access to multiple quantum processors (IBM, Google, Rigetti)AI-optimized quantum algorithm libraryQuantum error correction and noise mitigationHybrid quantum-classical computing workflowsQuantum machine learning algorithmsReal-time quantum circuit visualizationIntegration with classical computing frameworksCustom quantum algorithm development';'
       'Quantum performance analytics and benchmarkingAPI for quantum application development';'
     ];
-    "popular": true, "icon": '🔮',"color": 'from-purple-600 to-indigo-600', "textColor": 'text-purple-400',"link": '"https"://ziontechgroup.com/quantum-computing-as-a-service',"marketPosition": 'Competes with IBM Quantum ($0.60/credit), Amazon Braket ($0.30/hour), Google Quantum AI (Free). Our "advantage": AI optimization improves quantum algorithm performance by 40% and reduces quantum resource requirements.',"targetAudience": 'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities',"trialDays": 30, "setupTime": '1-2 weeks',"category": 'Quantum Computing & AI', "realService": true,"technology": ['QiskitCirqPennyLanePythonReactPostgreSQL'], "integrations": ['IBM QuantumGoogle Quantum AIAmazon BraketRigettiD-WaveJupyter'],"useCases": ['Drug discoveryFinancial modelingOptimization problemsMachine learningCryptography research'], "roi": 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.',"competitors": ['IBM QuantumAmazon BraketGoogle Quantum AIRigetti'], "marketSize": '$8.5B quantum computing market',"growthRate": '45% annual growth', "contactInfo": contact,"realImplementation": true,"implementationDetails": 'Cloud-native quantum computing platform with AI-optimized algorithms, multi-provider access, and comprehensive quantum development tools.',"launchDate": '2024-12-15', "customers": 23,"rating": 4.9,"reviews": 18;'
+    'popular': true, 'icon': '🔮','color': 'from-purple-600 to-indigo-600', 'textColor': 'text-purple-400','link': ''https'://ziontechgroup.com/quantum-computing-as-a-service','marketPosition': 'Competes with IBM Quantum ($0.60/credit), Amazon Braket ($0.30/hour), Google Quantum AI (Free). Our 'advantage': AI optimization improves quantum algorithm performance by 40% and reduces quantum resource requirements.','targetAudience': 'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities','trialDays': 30, 'setupTime': '1-2 weeks','category': 'Quantum Computing & AI', 'realService': true,'technology': ['QiskitCirqPennyLanePythonReactPostgreSQL'], 'integrations': ['IBM QuantumGoogle Quantum AIAmazon BraketRigettiD-WaveJupyter'],'useCases': ['Drug discoveryFinancial modelingOptimization problemsMachine learningCryptography research'], 'roi': 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.','competitors': ['IBM QuantumAmazon BraketGoogle Quantum AIRigetti'], 'marketSize': '$8.5B quantum computing market','growthRate': '45% annual growth', 'contactInfo': contact,'realImplementation': true,'implementationDetails': 'Cloud-native quantum computing platform with AI-optimized algorithms, multi-provider access, and comprehensive quantum development tools.','launchDate': '2024-12-15', 'customers': 23,'rating': 4.9,'reviews': 18;'
   }// Blockchain & Web3 Solutions;
-  {"id": 'ai-blockchain-intelligence-platform', "name": 'AI Blockchain Intelligence Platform',"tagline": 'Intelligent blockchain analytics and DeFi optimization with AI-powered insights', "price": '$299',"period": '/month',"description": 'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.',"features": [;'
+  {'id': 'ai-blockchain-intelligence-platform', 'name': 'AI Blockchain Intelligence Platform','tagline': 'Intelligent blockchain analytics and DeFi optimization with AI-powered insights', 'price': '$299','period': '/month','description': 'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.','features': [;'
       'AI-powered blockchain data analysisDeFi strategy optimization and automationSmart contract security auditingCryptocurrency portfolio managementBlockchain transaction monitoringNFT market analysis and insightsIntegration with major blockchainsCustom blockchain analytics dashboards';'
       'Real-time alerts and notificationsAPI for blockchain applications';'
     ];
     }
-    "popular": true, "icon": '⛓️',"color": 'from-blue-600 to-cyan-600', "textColor": 'text-blue-400',"link": '"https"://ziontechgroup.com/ai-blockchain-intelligence-platform',"marketPosition": 'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our "advantage": AI automation provides deeper insights and reduces analysis time by 80%.',"targetAudience": 'Cryptocurrency traders, DeFi protocols, Blockchain companies, Financial institutions',"trialDays": 14, "setupTime": '2-3 hours',"category": 'Blockchain & Web3', "realService": true,"technology": ['PythonTensorFlowReactNode.jsPostgreSQLRedis'], "integrations": ['EthereumBitcoinPolygonBinance Smart ChainSolanaUniswap'],"useCases": ['Blockchain analyticsDeFi optimizationPortfolio managementSecurity auditingMarket analysis'], "roi": 'Users report 300% ROI through improved trading strategies and DeFi optimization.',"competitors": ['ChainalysisEllipticCipherTraceGlassnode'], "marketSize": '$19.9B blockchain analytics market',"growthRate": '35% annual growth', "contactInfo": contact,"realImplementation": true,"implementationDetails": 'AI-powered blockchain analytics platform with intelligent data analysis, DeFi optimization, and comprehensive blockchain intelligence.',"launchDate": '2024-11-20', "customers": 156,"rating": 4.7,"reviews": 89;'
+    'popular': true, 'icon': '⛓️','color': 'from-blue-600 to-cyan-600', 'textColor': 'text-blue-400','link': ''https'://ziontechgroup.com/ai-blockchain-intelligence-platform','marketPosition': 'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our 'advantage': AI automation provides deeper insights and reduces analysis time by 80%.','targetAudience': 'Cryptocurrency traders, DeFi protocols, Blockchain companies, Financial institutions','trialDays': 14, 'setupTime': '2-3 hours','category': 'Blockchain & Web3', 'realService': true,'technology': ['PythonTensorFlowReactNode.jsPostgreSQLRedis'], 'integrations': ['EthereumBitcoinPolygonBinance Smart ChainSolanaUniswap'],'useCases': ['Blockchain analyticsDeFi optimizationPortfolio managementSecurity auditingMarket analysis'], 'roi': 'Users report 300% ROI through improved trading strategies and DeFi optimization.','competitors': ['ChainalysisEllipticCipherTraceGlassnode'], 'marketSize': '$19.9B blockchain analytics market','growthRate': '35% annual growth', 'contactInfo': contact,'realImplementation': true,'implementationDetails': 'AI-powered blockchain analytics platform with intelligent data analysis, DeFi optimization, and comprehensive blockchain intelligence.','launchDate': '2024-11-20', 'customers': 156,'rating': 4.7,'reviews': 89;'
   }// Internet of Things (IoT) Platform;
-  {"id": 'ai-iot-intelligence-platform', "name": 'AI IoT Intelligence Platform',"tagline": 'Intelligent IoT device management and data analytics with AI-powered automation', "price": '$199',"period": '/month',"description": 'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.',"features": [;'
+  {'id': 'ai-iot-intelligence-platform', 'name': 'AI IoT Intelligence Platform','tagline': 'Intelligent IoT device management and data analytics with AI-powered automation', 'price': '$199','period': '/month','description': 'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.','features': [;'
       'AI-powered IoT device managementReal-time sensor data analyticsPredictive maintenance and monitoringSmart automation and controlEdge computing optimizationIntegration with major IoT platformsCustom IoT application developmentSecurity and privacy management';'
       'Scalable device connectivityAdvanced analytics and reporting';'
     ];
     }
-    "popular": false, "icon": '📡',"color": 'from-green-600 to-emerald-600', "textColor": 'text-green-400',"link": '"https"://ziontechgroup.com/ai-iot-intelligence-platform',"marketPosition": 'Competes with AWS IoT ($0.08/million messages), Azure IoT Hub ($0.50/million messages), Google Cloud IoT ($0.40/million messages). Our "advantage": AI automation reduces IoT management complexity by 60% and improves device performance.',"targetAudience": 'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies',"trialDays": 14, "setupTime": '3-4 hours',"category": 'Internet of Things (IoT)', "realService": true,"technology": ['PythonTensorFlowReactNode.jsPostgreSQLRedis'], "integrations": ['AWS IoTAzure IoTGoogle Cloud IoTHome AssistantSmartThingsHubitat'],"useCases": ['Smart home automationIndustrial monitoringSmart city managementPredictive maintenanceEnergy optimization'], "roi": 'Organizations report 250% ROI through improved device management and operational efficiency.',"competitors": ['AWS IoTAzure IoT HubGoogle Cloud IoTThingWorx'], "marketSize": '$384.7B IoT market',"growthRate": '28% annual growth', "contactInfo": contact,"realImplementation": true,"implementationDetails": 'AI-powered IoT platform with intelligent device management, real-time analytics, and comprehensive automation capabilities.',"launchDate": '2024-10-25', "customers": 89,"rating": 4.6,"reviews": 45;'
+    'popular': false, 'icon': '📡','color': 'from-green-600 to-emerald-600', 'textColor': 'text-green-400','link': ''https'://ziontechgroup.com/ai-iot-intelligence-platform','marketPosition': 'Competes with AWS IoT ($0.08/million messages), Azure IoT Hub ($0.50/million messages), Google Cloud IoT ($0.40/million messages). Our 'advantage': AI automation reduces IoT management complexity by 60% and improves device performance.','targetAudience': 'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies','trialDays': 14, 'setupTime': '3-4 hours','category': 'Internet of Things (IoT)', 'realService': true,'technology': ['PythonTensorFlowReactNode.jsPostgreSQLRedis'], 'integrations': ['AWS IoTAzure IoTGoogle Cloud IoTHome AssistantSmartThingsHubitat'],'useCases': ['Smart home automationIndustrial monitoringSmart city managementPredictive maintenanceEnergy optimization'], 'roi': 'Organizations report 250% ROI through improved device management and operational efficiency.','competitors': ['AWS IoTAzure IoT HubGoogle Cloud IoTThingWorx'], 'marketSize': '$384.7B IoT market','growthRate': '28% annual growth', 'contactInfo': contact,'realImplementation': true,'implementationDetails': 'AI-powered IoT platform with intelligent device management, real-time analytics, and comprehensive automation capabilities.','launchDate': '2024-10-25', 'customers': 89,'rating': 4.6,'reviews': 45;'
   }// Edge Computing & 5G Services;
-  {"id": 'edge-computing-optimization-platform', "name": 'Edge Computing Optimization Platform',"tagline": 'Optimize edge computing performance and 5G network efficiency with AI', "price": '$399',"period": '/month',"description": 'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.',"features": [;'
+  {'id': 'edge-computing-optimization-platform', 'name': 'Edge Computing Optimization Platform','tagline': 'Optimize edge computing performance and 5G network efficiency with AI', 'price': '$399','period': '/month','description': 'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.','features': [;'
       'AI-powered edge node optimization5G network resource managementEdge application deployment automationReal-time performance monitoringEdge security and complianceIntegration with major cloud providersCustom edge computing workflowsAdvanced analytics and reporting';'
       'Mobile edge computing supportAPI for edge applications';'
     ];
     }
-    "popular": false, "icon": '📶',"color": 'from-indigo-600 to-purple-600', "textColor": 'text-indigo-400',"link": '"https"://ziontechgroup.com/edge-computing-optimization-platform',"marketPosition": 'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our "advantage": AI optimization improves edge performance by 40% and reduces latency by 60%.',"targetAudience": 'Telecommunications companies, Edge computing providers, 5G network operators, Enterprises',"trialDays": 14, "setupTime": '4-6 hours',"category": 'Edge Computing & 5G', "realService": true,"technology": ['PythonTensorFlowKubernetesReactPostgreSQLRedis'], "integrations": ['AWS OutpostsAzure Stack EdgeGoogle AnthosOpenStackKubernetesDocker'],"useCases": ['Edge computing optimization5G network managementEdge application deploymentPerformance monitoringResource optimization'], "roi": 'Organizations report 300% ROI through improved edge performance and reduced network costs.',"competitors": ['AWS OutpostsAzure Stack EdgeGoogle AnthosVMware Edge'], "marketSize": '$67.2B edge computing market',"growthRate": '32% annual growth', "contactInfo": contact,"realImplementation": true,"implementationDetails": 'AI-powered edge computing platform with intelligent optimization, 5G network management, and comprehensive edge application support.',"launchDate": '2024-09-30', "customers": 45,"rating": 4.5,"reviews": 23;'
-  }// Augmented Reality (AR) & Virtual Reality (VR){"id": 'ai-ar-vr-development-platform', "name": 'AI AR/VR Development Platform',"tagline": 'Intelligent AR/VR application development with AI-powered content creation', "price": '$249',"period": '/month',"description": 'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.',"features": [;'
+    'popular': false, 'icon': '📶','color': 'from-indigo-600 to-purple-600', 'textColor': 'text-indigo-400','link': ''https'://ziontechgroup.com/edge-computing-optimization-platform','marketPosition': 'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our 'advantage': AI optimization improves edge performance by 40% and reduces latency by 60%.','targetAudience': 'Telecommunications companies, Edge computing providers, 5G network operators, Enterprises','trialDays': 14, 'setupTime': '4-6 hours','category': 'Edge Computing & 5G', 'realService': true,'technology': ['PythonTensorFlowKubernetesReactPostgreSQLRedis'], 'integrations': ['AWS OutpostsAzure Stack EdgeGoogle AnthosOpenStackKubernetesDocker'],'useCases': ['Edge computing optimization5G network managementEdge application deploymentPerformance monitoringResource optimization'], 'roi': 'Organizations report 300% ROI through improved edge performance and reduced network costs.','competitors': ['AWS OutpostsAzure Stack EdgeGoogle AnthosVMware Edge'], 'marketSize': '$67.2B edge computing market','growthRate': '32% annual growth', 'contactInfo': contact,'realImplementation': true,'implementationDetails': 'AI-powered edge computing platform with intelligent optimization, 5G network management, and comprehensive edge application support.','launchDate': '2024-09-30', 'customers': 45,'rating': 4.5,'reviews': 23;'
+  }// Augmented Reality (AR) & Virtual Reality (VR){'id': 'ai-ar-vr-development-platform', 'name': 'AI AR/VR Development Platform','tagline': 'Intelligent AR/VR application development with AI-powered content creation', 'price': '$249','period': '/month','description': 'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.','features': [;'
       'AI-powered 3D content generationIntelligent user experience optimizationAR/VR application development toolsContent personalization and adaptationPerformance optimization and testingIntegration with major AR/VR platformsCustom AR/VR workflowsReal-time content analytics';'
       'Multi-platform deployment supportAPI for AR/VR applications';'
     ];
     }
-    "popular": false, "icon": '🥽',"color": 'from-pink-600 to-rose-600', "textColor": 'text-pink-400',"link": '"https"://ziontechgroup.com/ai-ar-vr-development-platform',"marketPosition": 'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our "advantage": AI automation reduces AR/VR development time by 70% and improves content quality.',"targetAudience": 'AR/VR developers, Gaming companies, Educational institutions, Training providers',"trialDays": 14, "setupTime": '3-4 hours',"category": 'AR/VR & Immersive Technology', "realService": true,"technology": ['UnityUnreal EnginePythonTensorFlowReactPostgreSQL'], "integrations": ['OculusHTC ViveMicrosoft HoloLensMagic LeapARKitARCore'],"useCases": ['AR/VR application development3D content creationImmersive trainingVirtual eventsGaming and entertainment'], "roi": 'Developers report 400% ROI through faster development and improved content quality.',"competitors": ['UnityUnreal EngineVuforiaARKit'], "marketSize": '$31.1B AR/VR market',"growthRate": '38% annual growth', "contactInfo": contact,"realImplementation": true,"implementationDetails": 'AI-powered AR/VR development platform with intelligent content creation, user experience optimization, and comprehensive development tools.',"launchDate": '2024-08-15', "customers": 67,"rating": 4.4,"reviews": 34;'
+    'popular': false, 'icon': '🥽','color': 'from-pink-600 to-rose-600', 'textColor': 'text-pink-400','link': ''https'://ziontechgroup.com/ai-ar-vr-development-platform','marketPosition': 'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our 'advantage': AI automation reduces AR/VR development time by 70% and improves content quality.','targetAudience': 'AR/VR developers, Gaming companies, Educational institutions, Training providers','trialDays': 14, 'setupTime': '3-4 hours','category': 'AR/VR & Immersive Technology', 'realService': true,'technology': ['UnityUnreal EnginePythonTensorFlowReactPostgreSQL'], 'integrations': ['OculusHTC ViveMicrosoft HoloLensMagic LeapARKitARCore'],'useCases': ['AR/VR application development3D content creationImmersive trainingVirtual eventsGaming and entertainment'], 'roi': 'Developers report 400% ROI through faster development and improved content quality.','competitors': ['UnityUnreal EngineVuforiaARKit'], 'marketSize': '$31.1B AR/VR market','growthRate': '38% annual growth', 'contactInfo': contact,'realImplementation': true,'implementationDetails': 'AI-powered AR/VR development platform with intelligent content creation, user experience optimization, and comprehensive development tools.','launchDate': '2024-08-15', 'customers': 67,'rating': 4.4,'reviews': 34;'
   }// Robotics & Automation Services;
-  {"id": 'ai-robotics-automation-platform', "name": 'AI Robotics & Automation Platform',"tagline": 'Intelligent robotics control and automation with AI-powered optimization', "price": '$599',"period": '/month',"description": 'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.',"features": [;'
+  {'id': 'ai-robotics-automation-platform', 'name': 'AI Robotics & Automation Platform','tagline': 'Intelligent robotics control and automation with AI-powered optimization', 'price': '$599','period': '/month','description': 'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.','features': [;'
       'AI-powered robotic control systemsAutomated workflow optimizationPredictive maintenance for robotsIntegration with major robotics platformsCustom automation workflowsReal-time performance monitoringSafety and compliance managementAdvanced analytics and reporting';'
       'Mobile app for robot controlAPI for robotics applications';'
     ];
     }
-    "popular": false, "icon": '🤖',"color": 'from-slate-600 to-gray-600', "textColor": 'text-slate-400',"link": '"https"://ziontechgroup.com/ai-robotics-automation-platform',"marketPosition": 'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our "advantage": AI automation improves robotic efficiency by 50% and reduces programming time by 80%.',"targetAudience": 'Manufacturing companies, Logistics providers, Service robotics companies, Research institutions',"trialDays": 30, "setupTime": '1-2 weeks',"category": 'Robotics & Automation', "realService": true,"technology": ['PythonTensorFlowROSReactPostgreSQLRedis'], "integrations": ['ABBFANUCKUKAUniversal RobotsBoston DynamicsiRobot'],"useCases": ['Manufacturing automationLogistics optimizationService roboticsResearch and developmentQuality control'], "roi": 'Organizations report 400% ROI through improved robotic efficiency and reduced operational costs.',"competitors": ['ABB RobotStudioFANUC ROBOGUIDEKUKA SimUniversal Robots'], "marketSize": '$43.8B robotics market',"growthRate": '25% annual growth', "contactInfo": contact,"realImplementation": true,"implementationDetails": 'AI-powered robotics platform with intelligent control systems, automation optimization, and comprehensive robotics management.',"launchDate": '2024-07-20', "customers": 34,"rating": 4.3,"reviews": 18;'
+    'popular': false, 'icon': '🤖','color': 'from-slate-600 to-gray-600', 'textColor': 'text-slate-400','link': ''https'://ziontechgroup.com/ai-robotics-automation-platform','marketPosition': 'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our 'advantage': AI automation improves robotic efficiency by 50% and reduces programming time by 80%.','targetAudience': 'Manufacturing companies, Logistics providers, Service robotics companies, Research institutions','trialDays': 30, 'setupTime': '1-2 weeks','category': 'Robotics & Automation', 'realService': true,'technology': ['PythonTensorFlowROSReactPostgreSQLRedis'], 'integrations': ['ABBFANUCKUKAUniversal RobotsBoston DynamicsiRobot'],'useCases': ['Manufacturing automationLogistics optimizationService roboticsResearch and developmentQuality control'], 'roi': 'Organizations report 400% ROI through improved robotic efficiency and reduced operational costs.','competitors': ['ABB RobotStudioFANUC ROBOGUIDEKUKA SimUniversal Robots'], 'marketSize': '$43.8B robotics market','growthRate': '25% annual growth', 'contactInfo': contact,'realImplementation': true,'implementationDetails': 'AI-powered robotics platform with intelligent control systems, automation optimization, and comprehensive robotics management.','launchDate': '2024-07-20', 'customers': 34,'rating': 4.3,'reviews': 18;'
   }// Digital Twin & Simulation;
-  {"id": 'ai-digital-twin-platform', "name": 'AI Digital Twin Platform',"tagline": 'Intelligent digital twin creation and simulation with AI-powered insights', "price": '$349',"period": '/month',"description": 'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.',"features": [;'
+  {'id': 'ai-digital-twin-platform', 'name': 'AI Digital Twin Platform','tagline': 'Intelligent digital twin creation and simulation with AI-powered insights', 'price': '$349','period': '/month','description': 'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.','features': [;'
       'AI-powered digital twin creationReal-time simulation and modelingPredictive analytics and forecastingIntegration with IoT and sensor dataCustom simulation scenariosPerformance optimization insights3D visualization and modelingAdvanced analytics and reporting';'
       'API for custom integrationsMobile app for monitoring';'
     ];
     }
-    "popular": false, "icon": '🔄',"color": 'from-cyan-600 to-teal-600', "textColor": 'text-cyan-400',"link": '"https"://ziontechgroup.com/ai-digital-twin-platform',"marketPosition": 'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our "advantage": AI automation reduces digital twin creation time by 60% and improves simulation accuracy.',"targetAudience": 'Manufacturing companies, Infrastructure providers, Energy companies, Smart city planners',"trialDays": 14, "setupTime": '2-3 weeks',"category": 'Digital Twin & Simulation', "realService": true,"technology": ['PythonTensorFlowUnityReactPostgreSQLRedis'], "integrations": ['SiemensPTCGE DigitalAutodeskDassault SystèmesIoT platforms'],"useCases": ['Manufacturing optimizationInfrastructure monitoringEnergy managementPredictive maintenanceUrban planning'], "roi": 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.',"competitors": ['Siemens Digital TwinPTC ThingWorxGE Digital TwinAutodesk'], "marketSize": '$86.1B digital twin market',"growthRate": '42% annual growth', "contactInfo": contact,"realImplementation": true,"implementationDetails": 'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',"launchDate": '2024-06-25', "customers": 56,"rating": 4.4,"reviews": 29;'
+    'popular': false, 'icon': '🔄','color': 'from-cyan-600 to-teal-600', 'textColor': 'text-cyan-400','link': ''https'://ziontechgroup.com/ai-digital-twin-platform','marketPosition': 'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our 'advantage': AI automation reduces digital twin creation time by 60% and improves simulation accuracy.','targetAudience': 'Manufacturing companies, Infrastructure providers, Energy companies, Smart city planners','trialDays': 14, 'setupTime': '2-3 weeks','category': 'Digital Twin & Simulation', 'realService': true,'technology': ['PythonTensorFlowUnityReactPostgreSQLRedis'], 'integrations': ['SiemensPTCGE DigitalAutodeskDassault SystèmesIoT platforms'],'useCases': ['Manufacturing optimizationInfrastructure monitoringEnergy managementPredictive maintenanceUrban planning'], 'roi': 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.','competitors': ['Siemens Digital TwinPTC ThingWorxGE Digital TwinAutodesk'], 'marketSize': '$86.1B digital twin market','growthRate': '42% annual growth', 'contactInfo': contact,'realImplementation': true,'implementationDetails': 'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.','launchDate': '2024-06-25', 'customers': 56,'rating': 4.4,'reviews': 29;'
   }
 ];
-export const getEmergingTechServices2026ByCategory = ("category": string) => {return emergingTechServices2026.filter(service => service.category === category)}export const getPopularEmergingTechServices2026 = () => {return emergingTechServices2026.filter(service => service.popular)}export const getEmergingTechServices2026ByPriceRange = ("minPrice": number, "maxPrice": number) => {return emergingTechServices2026.filter((service) => {const price = parseInt(service.price.replace('$', ''))return price >= minPrice && price <= maxPrice;'
+export const getEmergingTechServices2026ByCategory = ('category': string) => {return emergingTechServices2026.filter(service => service.category === category)}export const getPopularEmergingTechServices2026 = () => {return emergingTechServices2026.filter(service => service.popular)}export const getEmergingTechServices2026ByPriceRange = ('minPrice': number, 'maxPrice': number) => {return emergingTechServices2026.filter((service) => {const price = parseInt(service.price.replace('$', ''))return price >= minPrice && price <= maxPrice;'
 }
-export interface EmergingTechService2026  {})}})}export const getEmergingTechServices2026ByCategory = ("category": string) =>: any {return emergingTechServices2026.filter (service => service.category === category)}export const getPopularEmergingTechServices2026 = () =>: any {return emergingTechServices2026.filter (service => service.popular)}export const getEmergingTechServices2026ByPriceRange = ("min_price": number,"max_price": number) =>: any {return emergingTechServices2026.filter ((service) => {const price = parse_int (service.price.replace ('$', ''))return price >= min_price && price <= max_price;'
+export interface EmergingTechService2026  {})})}export const getEmergingTechServices2026ByCategory = ('category': string) =>: any {return emergingTechServices2026.filter (service => service.category === category)}export const getPopularEmergingTechServices2026 = () =>: any {return emergingTechServices2026.filter (service => service.popular)}export const getEmergingTechServices2026ByPriceRange = ('min_price': number,'max_price': number) =>: any {return emergingTechServices2026.filter ((service) => {const price = parse_int (service.price.replace ('$', ''))return price >= min_price && price <= max_price;'
   })}    return price >= min_price && price <= max_price;
-  })}export interface EmergingTechService2026  {})}export const getEmergingTechServices2026ByCategory = ("category": string) =>: any {return emergingTechServices2026.filter (service => service.category === category)}export interface EmergingTechService2026  {"id": string,"name": string,"tagline": string,"price": string,"period": string,"description": string,"features": string[],"popular": boolean,"icon": string,"color": string,"textColor": string,"link": string,"marketPosition": string,"targetAudience": string,"trialDays": number,"setupTime": string,"category": string,"realService": boolean,"technology": string[],"integrations": string[],"useCases": string[],"roi": string,"competitors": string[],"marketSize": string,"growthRate": string,"contactInfo": {"mobile": string,"email": string,"address": string,"website": string;
-  },"realImplementation": boolean,"implementationDetails": string,"launchDate": string,"customers": number,"rating": number,"reviews": number;
-}export const getPopularEmergingTechServices2026 = () =>: any {return emergingTechServices2026.filter (service => service.popular)}export const getEmergingTechServices2026ByPriceRange = ("min_price": number,"max_price": number) =>: any {return emergingTechServices2026.filter ((service) => {const price = parse_int (service.price.replace ('$', ''))return price >= min_price && price <= max_price;'
+  })}export interface EmergingTechService2026  {})}export const getEmergingTechServices2026ByCategory = ('category': string) =>: any {return emergingTechServices2026.filter (service => service.category === category)}export interface EmergingTechService2026  {'id': string,'name': string,'tagline': string,'price': string,'period': string,'description': string,'features': string[],'popular': boolean,'icon': string,'color': string,'textColor': string,'link': string,'marketPosition': string,'targetAudience': string,'trialDays': number,'setupTime': string,'category': string,'realService': boolean,'technology': string[],'integrations': string[],'useCases': string[],'roi': string,'competitors': string[],'marketSize': string,'growthRate': string,'contactInfo': {'mobile': string,'email': string,'address': string,'website': string;
+  },'realImplementation': boolean,'implementationDetails': string,'launchDate': string,'customers': number,'rating': number,'reviews': number;
+}export const getPopularEmergingTechServices2026 = () =>: any {return emergingTechServices2026.filter (service => service.popular)}export const getEmergingTechServices2026ByPriceRange = ('min_price': number,'max_price': number) =>: any {return emergingTechServices2026.filter ((service) => {const price = parse_int (service.price.replace ('$', ''))return price >= min_price && price <= max_price;'
   })}    return price >= min_price && price <= max_price;
   })}export interface EmergingTechService2026  {}ursor/fix-website-loading-errors-and-merge-6662;
 }
-  "contact_info": {
+  'contact_info': {
     }
-    "mobile": string;
-    "email": string;
-    "address": string;
+    'mobile': string;
+    'email': string;
+    'address': string;
 };
-export const "emergingTechServices2026": EmergingTechService2026[] = [
+export const 'emergingTechServices2026': EmergingTechService2026[] = [
   // Quantum Computing Services
   {
   {
 }
-export const "emergingTechServices2026": EmergingTechService2026[] = [
+export const 'emergingTechServices2026': EmergingTechService2026[] = [
   // Quantum Computing Services
   {
 ];
   }
   return emergingTechServices2026 && emergingTechServices2026.filter(service => { return service && service.popular); }
 };
-    "id": "id","
-    "name": 'AI Digital Twin Platform''
-    "tagline":
+    'id': 'id','
+    'name': 'AI Digital Twin Platform''
+    'tagline':
       'Intelligent digital twin creation and simulation with AI-powered insights''
-    "price": '$349''
-    "period": '/month''
-    "description":
+    'price': '$349''
+    'period': '/month''
+    'description':
       'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.''
-    "features": [
+    'features': [
       'AI-powered digital twin creation''
       'Real-time simulation and modeling''
       'Predictive analytics and forecasting''
@@ -584,16 +584,16 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'API for custom integrations''
       'Mobile app for monitoring''
     ]
-    "popular": false;
-    "marketPosition":
-      'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our "advantage": AI automation reduces digital twin creation time by 60% and improves simulation accuracy.''
-    "targetAudience":
+    'popular': false;
+    'marketPosition':
+      'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our 'advantage': AI automation reduces digital twin creation time by 60% and improves simulation accuracy.''
+    'targetAudience':
       'Manufacturing companies, Infrastructure providers, Energy companies, Smart city planners''
-    "trialDays": 14,
-"setupTime": '2-3 weeks''
-    "category": 'Digital Twin & Simulation''
-    "realService": true,
-"technology": [
+    'trialDays': 14,
+'setupTime': '2-3 weeks''
+    'category': 'Digital Twin & Simulation''
+    'realService': true,
+'technology': [
       'Python''
       'TensorFlow''
       'Unity''
@@ -601,53 +601,52 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'PostgreSQL''
       'Redis''
     ]
-    "integrations": [
+    'integrations': [
       'Siemens''
       'PTC''
       'GE Digital''
       'Autodesk''
       'IoT platforms''
     ]
-    "useCases": [
+    'useCases': [
       'Manufacturing optimization''
       'Infrastructure monitoring''
       'Energy management''
       'Predictive maintenance''
       'Urban planning''
     ]
-    "roi": 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.''
-    "competitors": [
+    'roi': 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.''
+    'competitors': [
       'Siemens Digital Twin''
       'PTC ThingWorx''
       'GE Digital Twin''
       'Autodesk''
     ]
-    "marketSize": '$86.1B digital twin market''
-    "growthRate": '42% annual growth''
-    "contactInfo": contact,
-"realImplementation": true,
-"implementationDetails":
+    'marketSize': '$86.1B digital twin market''
+    'growthRate': '42% annual growth''
+    'contactInfo': contact,
+'realImplementation': true,
+'implementationDetails':
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.''
-    "launchDate": '2024-06-25''
-    "customers": 56,
-"rating": 4.4,
-"reviews": 29
+    'launchDate': '2024-06-25''
+    'customers': 56,
+'rating': 4.4,
+'reviews': 29
   }
-<<<<<<< HEAD
 ];
-export const getEmergingTechServices2026ByCategory = ("category": string) => {
+export const getEmergingTechServices2026ByCategory = ('category': string) => {
 }
 return emergingTechServices2026.filter(;
     service => { return service.category === category; }
   );
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.','
-    "launchDate": '2024-06-25','
-    "customers": 56,
-    "rating": 4.4,
-    "reviews": 29
+    'launchDate': '2024-06-25','
+    'customers': 56,
+    'rating': 4.4,
+    'reviews': 29
   },;
 ];
-export const getEmergingTechServices2026ByCategory = ("category": string) => {
+export const getEmergingTechServices2026ByCategory = ('category': string) => {
 }
 return emergingTechServices2026.filter(;
     service => { return service.category === category; }
@@ -655,15 +654,15 @@ return emergingTechServices2026.filter(;
 ];
   return emergingTechServices2026 && emergingTechServices2026.filter(service => { return service && service.popular); }
 };
-export const "emergingTechServices2026": EmergingTechService2026[] = [
+export const 'emergingTechServices2026': EmergingTechService2026[] = [
   // Quantum Computing Services
   {
     }
-    "tagline":
+    'tagline':
       'Access quantum computing power through the cloud with AI-optimized algorithms''
-    "price": '$999''
-    "period": '/month''
-    "description":
+    'price': '$999''
+    'period': '/month''
+    'description':
       'Access to multiple quantum processors (IBM, Google, Rigetti)','
       'AI - optimized quantum algorithm library','
       'Quantum error correction and noise mitigation','
@@ -675,15 +674,15 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'Quantum performance analytics and benchmarking','
       'API for quantum application development''
     ],
-    "popular": true,
-    "icon": '🔮','
-    "targetAudience":
+    'popular': true,
+    'icon': '🔮','
+    'targetAudience':
       'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities''
-    "trialDays": 30,
-"setupTime": '1-2 weeks''
-    "category": 'Quantum Computing & AI''
-    "realService": true,
-"technology": [
+    'trialDays': 30,
+'setupTime': '1-2 weeks''
+    'category': 'Quantum Computing & AI''
+    'realService': true,
+'technology': [
       'Qiskit''
       'Cirq''
       'PennyLane''
@@ -691,7 +690,7 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'React''
       'PostgreSQL''
     ]
-    "integrations": [
+    'integrations': [
       'IBM Quantum''
       'Google Quantum AI''
       'Amazon Braket''
@@ -699,36 +698,36 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'D-Wave''
       'Jupyter''
     ]
-    "useCases": [
+    'useCases': [
       'Drug discovery''
       'Financial modeling''
       'Optimization problems''
       'Machine learning''
       'Cryptography research''
     ]
-    "roi": 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.''
-    "competitors": [
+    'roi': 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.''
+    'competitors': [
       'IBM Quantum','
       'Amazon Braket','
       'Google Quantum AI','
       'Rigetti''
     ],
-    "customers": 23,
-    "rating": 4 && 4.9,
-    "reviews": 18
+    'customers': 23,
+    'rating': 4 && 4.9,
+    'reviews': 18
   },
   // Blockchain & Web3 Solutions
   {
     }
-    "id": 'ai-blockchain-intelligence-platform''
-    "name": 'AI Blockchain Intelligence Platform''
-    "tagline":
+    'id': 'ai-blockchain-intelligence-platform''
+    'name': 'AI Blockchain Intelligence Platform''
+    'tagline':
       'Intelligent blockchain analytics and DeFi optimization with AI-powered insights''
-    "price": '$299''
-    "period": '/month''
-    "description":
+    'price': '$299''
+    'period': '/month''
+    'description':
       'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.''
-    "features": [
+    'features': [
       'DeFi strategy optimization and automation','
       'Smart contract security auditing','
       'Cryptocurrency portfolio management','
@@ -739,17 +738,17 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'Real - time alerts and notifications','
       'API for blockchain applications''
     ],
-    "popular": true,
-    "icon": '⛓️','
-    "marketPosition":
-      'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our "advantage": AI automation provides deeper insights and reduces analysis time by 80%.''
-    "targetAudience":
+    'popular': true,
+    'icon': '⛓️','
+    'marketPosition':
+      'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our 'advantage': AI automation provides deeper insights and reduces analysis time by 80%.''
+    'targetAudience':
       'Cryptocurrency traders, DeFi protocols, Blockchain companies, Financial institutions''
-    "trialDays": 14,
-"setupTime": '2-3 hours''
-    "category": 'Blockchain & Web3''
-    "realService": true,
-"technology": [
+    'trialDays': 14,
+'setupTime': '2-3 hours''
+    'category': 'Blockchain & Web3''
+    'realService': true,
+'technology': [
       'Python','
       'TensorFlow','
       'React','
@@ -757,7 +756,7 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'PostgreSQL','
       'Redis''
     ],
-    "integrations": [
+    'integrations': [
       'Ethereum''
       'Bitcoin''
       'Polygon''
@@ -765,31 +764,31 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'Solana''
       'Uniswap''
     ]
-    "useCases": [
+    'useCases': [
       'Blockchain analytics','
       'DeFi optimization','
       'Portfolio management','
       'Security auditing','
       'Market analysis''
     ],
-    "roi": 'Users report 300% ROI through improved trading strategies and DeFi optimization.','
-    "competitors": ['Chainalysis', 'Elliptic', 'CipherTrace', 'Glassnode'],'
-    "customers": 156,
-    "rating": 4 && 4.7,
-    "reviews": 89
+    'roi': 'Users report 300% ROI through improved trading strategies and DeFi optimization.','
+    'competitors': ['Chainalysis', 'Elliptic', 'CipherTrace', 'Glassnode'],'
+    'customers': 156,
+    'rating': 4 && 4.7,
+    'reviews': 89
   },
   // Internet of Things (IoT) Platform
   {
     }
-    "id": 'ai-iot-intelligence-platform''
-    "name": 'AI IoT Intelligence Platform''
-    "tagline":
+    'id': 'ai-iot-intelligence-platform''
+    'name': 'AI IoT Intelligence Platform''
+    'tagline':
       'Intelligent IoT device management and data analytics with AI-powered automation''
-    "price": '$199''
-    "period": '/month''
-    "description":
+    'price': '$199''
+    'period': '/month''
+    'description':
       'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.''
-    "features": [
+    'features': [
       'Predictive maintenance and monitoring','
       'Smart automation and control','
       'Edge computing optimization','
@@ -799,15 +798,15 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'Scalable device connectivity','
       'Advanced analytics and reporting''
     ],
-    "popular": false,
-    "icon": '📡','
-    "targetAudience":
+    'popular': false,
+    'icon': '📡','
+    'targetAudience':
       'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies''
-    "trialDays": 14,
-"setupTime": '3-4 hours''
-    "category": 'Internet of Things (IoT)''
-    "realService": true,
-"technology": [
+    'trialDays': 14,
+'setupTime': '3-4 hours''
+    'category': 'Internet of Things (IoT)''
+    'realService': true,
+'technology': [
       'Python','
       'TensorFlow','
       'React','
@@ -815,7 +814,7 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'PostgreSQL','
       'Redis''
     ],
-    "integrations": [
+    'integrations': [
       'AWS IoT''
       'Azure IoT''
       'Google Cloud IoT''
@@ -823,31 +822,31 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'SmartThings''
       'Hubitat''
     ]
-    "useCases": [
+    'useCases': [
       'Smart home automation','
       'Industrial monitoring','
       'Smart city management','
       'Predictive maintenance','
       'Energy optimization''
     ],
-    "roi": 'Organizations report 250% ROI through improved device management and operational efficiency.','
-    "competitors": ['AWS IoT', 'Azure IoT Hub', 'Google Cloud IoT', 'ThingWorx'],'
-    "customers": 89,
-    "rating": 4 && 4.6,
-    "reviews": 45
+    'roi': 'Organizations report 250% ROI through improved device management and operational efficiency.','
+    'competitors': ['AWS IoT', 'Azure IoT Hub', 'Google Cloud IoT', 'ThingWorx'],'
+    'customers': 89,
+    'rating': 4 && 4.6,
+    'reviews': 45
   },
   // Edge Computing & 5G Services
   {
     }
-    "id": 'edge-computing-optimization-platform''
-    "name": 'Edge Computing Optimization Platform''
-    "tagline":
+    'id': 'edge-computing-optimization-platform''
+    'name': 'Edge Computing Optimization Platform''
+    'tagline':
       'Optimize edge computing performance and 5G network efficiency with AI''
-    "price": '$399''
-    "period": '/month''
-    "description":
+    'price': '$399''
+    'period': '/month''
+    'description':
       'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.''
-    "features": [
+    'features': [
       '5G network resource management','
       'Edge application deployment automation','
       'Real - time performance monitoring','
@@ -858,17 +857,17 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'Mobile edge computing support','
       'API for edge applications''
     ],
-    "popular": false,
-    "icon": '📶','
-    "marketPosition":
-      'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our "advantage": AI optimization improves edge performance by 40% and reduces latency by 60%.''
-    "targetAudience":
+    'popular': false,
+    'icon': '📶','
+    'marketPosition':
+      'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our 'advantage': AI optimization improves edge performance by 40% and reduces latency by 60%.''
+    'targetAudience':
       'Telecommunications companies, Edge computing providers, 5G network operators, Enterprises''
-    "trialDays": 14,
-"setupTime": '4-6 hours''
-    "category": 'Edge Computing & 5G''
-    "realService": true,
-"technology": [
+    'trialDays': 14,
+'setupTime': '4-6 hours''
+    'category': 'Edge Computing & 5G''
+    'realService': true,
+'technology': [
       'Python''
       'TensorFlow''
       'Kubernetes''
@@ -876,7 +875,7 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'PostgreSQL''
       'Redis''
     ]
-    "integrations": [
+    'integrations': [
       'AWS Outposts''
       'Azure Stack Edge''
       'Google Anthos''
@@ -884,36 +883,36 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'Kubernetes''
       'Docker''
     ]
-    "useCases": [
+    'useCases': [
       'Edge computing optimization''
       '5G network management''
       'Edge application deployment''
       'Performance monitoring''
       'Resource optimization''
     ]
-    "roi": 'Organizations report 300% ROI through improved edge performance and reduced network costs.''
-    "competitors": [
+    'roi': 'Organizations report 300% ROI through improved edge performance and reduced network costs.''
+    'competitors': [
       'AWS Outposts','
       'Azure Stack Edge','
       'Google Anthos','
       'VMware Edge''
     ],
-    "customers": 45,
-    "rating": 4 && 4.5,
-    "reviews": 23
+    'customers': 45,
+    'rating': 4 && 4.5,
+    'reviews': 23
   },
   // Augmented Reality (AR) & Virtual Reality (VR)
   {
     }
-    "id": 'ai-ar-vr-development-platform''
-    "name": 'AI AR/VR Development Platform''
-    "tagline":
+    'id': 'ai-ar-vr-development-platform''
+    'name': 'AI AR/VR Development Platform''
+    'tagline':
       'Intelligent AR/VR application development with AI-powered content creation''
-    "price": '$249''
-    "period": '/month''
-    "description":
+    'price': '$249''
+    'period': '/month''
+    'description':
       'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.''
-    "features": [
+    'features': [
       'Intelligent user experience optimization','
       'AR / VR application development tools','
       'Content personalization and adaptation','
@@ -924,17 +923,17 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'Multi - platform deployment support','
       'API for AR / VR applications''
     ],
-    "popular": false,
-    "icon": '🥽','
-    "marketPosition":
-      'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our "advantage": AI automation reduces AR/VR development time by 70% and improves content quality.''
-    "targetAudience":
+    'popular': false,
+    'icon': '🥽','
+    'marketPosition':
+      'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our 'advantage': AI automation reduces AR/VR development time by 70% and improves content quality.''
+    'targetAudience':
       'AR/VR developers, Gaming companies, Educational institutions, Training providers''
-    "trialDays": 14,
-"setupTime": '3-4 hours''
-    "category": 'AR/VR & Immersive Technology''
-    "realService": true,
-"technology": [
+    'trialDays': 14,
+'setupTime': '3-4 hours''
+    'category': 'AR/VR & Immersive Technology''
+    'realService': true,
+'technology': [
       'Unity''
       'Unreal Engine''
       'Python''
@@ -942,7 +941,7 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'React''
       'PostgreSQL''
     ]
-    "integrations": [
+    'integrations': [
       'Oculus''
       'HTC Vive''
       'Microsoft HoloLens''
@@ -950,30 +949,30 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'ARKit''
       'ARCore''
     ]
-    "useCases": [
+    'useCases': [
       '3D content creation','
       'Immersive training','
       'Virtual events','
       'Gaming and entertainment''
     ],
-    "roi": 'Developers report 400% ROI through faster development and improved content quality.','
-    "competitors": ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],'
-    "customers": 67,
-    "rating": 4 && 4.4,
-    "reviews": 34
+    'roi': 'Developers report 400% ROI through faster development and improved content quality.','
+    'competitors': ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],'
+    'customers': 67,
+    'rating': 4 && 4.4,
+    'reviews': 34
   },
   // Robotics & Automation Services
   {
     }
-    "id": 'ai-robotics-automation-platform''
-    "name": 'AI Robotics & Automation Platform''
-    "tagline":
+    'id': 'ai-robotics-automation-platform''
+    'name': 'AI Robotics & Automation Platform''
+    'tagline':
       'Intelligent robotics control and automation with AI-powered optimization''
-    "price": '$599''
-    "period": '/month''
-    "description":
+    'price': '$599''
+    'period': '/month''
+    'description':
       'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.''
-    "features": [
+    'features': [
       'Automated workflow optimization','
       'Predictive maintenance for robots','
       'Integration with major robotics platforms','
@@ -984,18 +983,18 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'Mobile app for robot control','
       'API for robotics applications''
     ],
-    "popular": false,
-    "icon": '🤖','
-    "marketPosition":
-      'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our "advantage": AI automation improves robotic efficiency by 50% and reduces programming time by 80%.''
-    "targetAudience":
+    'popular': false,
+    'icon': '🤖','
+    'marketPosition':
+      'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our 'advantage': AI automation improves robotic efficiency by 50% and reduces programming time by 80%.''
+    'targetAudience':
       'Manufacturing companies, Logistics providers, Service robotics companies, Research institutions''
-    "trialDays": 30,
-"setupTime": '1-2 weeks''
-    "category": 'Robotics & Automation''
-    "realService": true,
-"technology": ['Python', 'TensorFlow', 'ROS', 'React', 'PostgreSQL', 'Redis']'
-    "integrations": [
+    'trialDays': 30,
+'setupTime': '1-2 weeks''
+    'category': 'Robotics & Automation''
+    'realService': true,
+'technology': ['Python', 'TensorFlow', 'ROS', 'React', 'PostgreSQL', 'Redis']'
+    'integrations': [
       'ABB''
       'FANUC''
       'KUKA''
@@ -1003,36 +1002,36 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'Boston Dynamics''
       'iRobot''
     ]
-    "useCases": [
+    'useCases': [
       'Manufacturing automation''
       'Logistics optimization''
       'Service robotics''
       'Research and development''
       'Quality control''
     ]
-    "roi": 'Organizations report 400% ROI through improved robotic efficiency and reduced operational costs.''
-    "competitors": [
+    'roi': 'Organizations report 400% ROI through improved robotic efficiency and reduced operational costs.''
+    'competitors': [
       'ABB RobotStudio','
       'FANUC ROBOGUIDE','
       'KUKA Sim','
       'Universal Robots''
     ],
-    "customers": 34,
-    "rating": 4 && 4.3,
-    "reviews": 18
+    'customers': 34,
+    'rating': 4 && 4.3,
+    'reviews': 18
   },
   // Digital Twin & Simulation
   {
     }
-    "id": 'ai-digital-twin-platform''
-    "name": 'AI Digital Twin Platform''
-    "tagline":
+    'id': 'ai-digital-twin-platform''
+    'name': 'AI Digital Twin Platform''
+    'tagline':
       'Intelligent digital twin creation and simulation with AI-powered insights''
-    "price": '$349''
-    "period": '/month''
-    "description":
+    'price': '$349''
+    'period': '/month''
+    'description':
       'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.''
-    "features": [
+    'features': [
       'Predictive analytics and forecasting','
       'Integration with IoT and sensor data','
       'Custom simulation scenarios','
@@ -1042,17 +1041,17 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'API for custom integrations','
       'Mobile app for monitoring''
     ],
-    "popular": false,
-    "icon": '🔄','
-    "marketPosition":
-      'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our "advantage": AI automation reduces digital twin creation time by 60% and improves simulation accuracy.''
-    "targetAudience":
+    'popular': false,
+    'icon': '🔄','
+    'marketPosition':
+      'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our 'advantage': AI automation reduces digital twin creation time by 60% and improves simulation accuracy.''
+    'targetAudience':
       'Manufacturing companies, Infrastructure providers, Energy companies, Smart city planners''
-    "trialDays": 14,
-"setupTime": '2-3 weeks''
-    "category": 'Digital Twin & Simulation''
-    "realService": true,
-"technology": [
+    'trialDays': 14,
+'setupTime': '2-3 weeks''
+    'category': 'Digital Twin & Simulation''
+    'realService': true,
+'technology': [
       'Python''
       'TensorFlow''
       'Unity''
@@ -1060,7 +1059,7 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'PostgreSQL''
       'Redis''
     ]
-    "integrations": [
+    'integrations': [
       'Siemens''
       'PTC''
       'GE Digital''
@@ -1068,29 +1067,29 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
       'Dassault Systèmes''
       'IoT platforms''
     ]
-    "useCases": [
+    'useCases': [
       'Manufacturing optimization''
       'Infrastructure monitoring''
       'Energy management''
       'Predictive maintenance''
       'Urban planning''
     ]
-    "roi": 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.''
-    "competitors": [
+    'roi': 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.''
+    'competitors': [
       'Siemens Digital Twin','
       'PTC ThingWorx','
       'GE Digital Twin','
       'Autodesk''
     ],
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.''
-    "launchDate": '2024-06-25''
-    "customers": 56,
-"rating": 4.4,
-"reviews": 29
+    'launchDate': '2024-06-25''
+    'customers': 56,
+'rating': 4.4,
+'reviews': 29
   }
-    "customers": 56,
-    "rating": 4 && 4.4,
-    "reviews": 29
+    'customers': 56,
+    'rating': 4 && 4.4,
+    'reviews': 29
   }
 ];
     customers: 56,
@@ -1098,18 +1097,17 @@ export const "emergingTechServices2026": EmergingTechService2026[] = [
     reviews: 29,
   },
 ];
-export const getEmergingTechServices2026ByCategory = ("category": string) => {
+export const getEmergingTechServices2026ByCategory = ('category': string) => {
 }
 return emergingTechServices2026.filter(;
     service => { return service.category === category; }
   );
-<<<<<<< HEAD
 }
 export const getPopularEmergingTechServices2026 = () => {
 }
 export const getEmergingTechServices2026ByPriceRange = (
-  "minPrice": number,
-"maxPrice": number
+  'minPrice': number,
+'maxPrice': number
 ) => {
   }
   return emergingTechServices2026 && emergingTechServices2026.filter((service) => {
@@ -1121,201 +1119,201 @@ export const getEmergingTechServices2026ByPriceRange = (
 
   })
 }
-    "id": 'quantum-computing-as-a-service', "name": 'Quantum Computing as a Service (QCaaS)','
-    "tagline": 'Access quantum computing power through the cloud with AI-optimized algorithms', "price": '$999','
-    "period": '/month','
-    "description": 'Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum machine learning capabilities. Features include quantum circuit optimization, quantum error correction, and hybrid quantum-classical computing.','
-    "features": [
+    'id': 'quantum-computing-as-a-service', 'name': 'Quantum Computing as a Service (QCaaS)','
+    'tagline': 'Access quantum computing power through the cloud with AI-optimized algorithms', 'price': '$999','
+    'period': '/month','
+    'description': 'Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum machine learning capabilities. Features include quantum circuit optimization, quantum error correction, and hybrid quantum-classical computing.','
+    'features': [
       'Access to multiple quantum processors (IBM, Google, Rigetti)AI-optimized quantum algorithm libraryQuantum error correction and noise mitigationHybrid quantum-classical computing workflowsQuantum machine learning algorithmsReal-time quantum circuit visualizationIntegration with classical computing frameworksCustom quantum algorithm development';'
       'Quantum performance analytics and benchmarkingAPI for quantum application development''
     ];
-    "popular": true, "icon": '🔮','
-    "color": 'from-purple-600 to-indigo-600', "textColor": 'text-purple-400','
-    "link": '"https"://ziontechgroup.com/quantum-computing-as-a-service','
-    "marketPosition": 'Competes with IBM Quantum ($0.60/credit), Amazon Braket ($0.30/hour), Google Quantum AI (Free). Our "advantage": AI optimization improves quantum algorithm performance by 40% and reduces quantum resource requirements.','
-    "targetAudience": 'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities','
-    "trialDays": 30, "setupTime": '1-2 weeks','
-    "category": 'Quantum Computing & AI', "realService": true,'
-    "technology": ['QiskitCirqPennyLanePythonReactPostgreSQL'], "integrations": ['IBM QuantumGoogle Quantum AIAmazon BraketRigettiD-WaveJupyter'],'
-    "useCases": ['Drug discoveryFinancial modelingOptimization problemsMachine learningCryptography research'], "roi": 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.','
-    "competitors": ['IBM QuantumAmazon BraketGoogle Quantum AIRigetti'], "marketSize": '$8.5B quantum computing market','
-    "growthRate": '45% annual growth', "contactInfo": contact,'
-    "realImplementation": true,
-    "implementationDetails": 'Cloud-native quantum computing platform with AI-optimized algorithms, multi-provider access, and comprehensive quantum development tools.','
-    "launchDate": '2024-12-15', "customers": 23,'
-    "rating": 4.9,
-    "reviews": 18
+    'popular': true, 'icon': '🔮','
+    'color': 'from-purple-600 to-indigo-600', 'textColor': 'text-purple-400','
+    'link': ''https'://ziontechgroup.com/quantum-computing-as-a-service','
+    'marketPosition': 'Competes with IBM Quantum ($0.60/credit), Amazon Braket ($0.30/hour), Google Quantum AI (Free). Our 'advantage': AI optimization improves quantum algorithm performance by 40% and reduces quantum resource requirements.','
+    'targetAudience': 'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities','
+    'trialDays': 30, 'setupTime': '1-2 weeks','
+    'category': 'Quantum Computing & AI', 'realService': true,'
+    'technology': ['QiskitCirqPennyLanePythonReactPostgreSQL'], 'integrations': ['IBM QuantumGoogle Quantum AIAmazon BraketRigettiD-WaveJupyter'],'
+    'useCases': ['Drug discoveryFinancial modelingOptimization problemsMachine learningCryptography research'], 'roi': 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.','
+    'competitors': ['IBM QuantumAmazon BraketGoogle Quantum AIRigetti'], 'marketSize': '$8.5B quantum computing market','
+    'growthRate': '45% annual growth', 'contactInfo': contact,'
+    'realImplementation': true,
+    'implementationDetails': 'Cloud-native quantum computing platform with AI-optimized algorithms, multi-provider access, and comprehensive quantum development tools.','
+    'launchDate': '2024-12-15', 'customers': 23,'
+    'rating': 4.9,
+    'reviews': 18
   };
   // Blockchain & Web3 Solutions
   {
     }
-    "id": 'ai-blockchain-intelligence-platform', "name": 'AI Blockchain Intelligence Platform','
-    "tagline": 'Intelligent blockchain analytics and DeFi optimization with AI-powered insights', "price": '$299','
-    "period": '/month','
-    "description": 'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.','
-    "features": [
+    'id': 'ai-blockchain-intelligence-platform', 'name': 'AI Blockchain Intelligence Platform','
+    'tagline': 'Intelligent blockchain analytics and DeFi optimization with AI-powered insights', 'price': '$299','
+    'period': '/month','
+    'description': 'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.','
+    'features': [
       'AI-powered blockchain data analysisDeFi strategy optimization and automationSmart contract security auditingCryptocurrency portfolio managementBlockchain transaction monitoringNFT market analysis and insightsIntegration with major blockchainsCustom blockchain analytics dashboards';'
       'Real-time alerts and notificationsAPI for blockchain applications''
     ];
-    "popular": true, "icon": '⛓️','
-    "color": 'from-blue-600 to-cyan-600', "textColor": 'text-blue-400','
-    "link": '"https"://ziontechgroup.com/ai-blockchain-intelligence-platform','
-    "marketPosition": 'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our "advantage": AI automation provides deeper insights and reduces analysis time by 80%.','
-    "targetAudience": 'Cryptocurrency traders, DeFi protocols, Blockchain companies, Financial institutions','
-    "trialDays": 14, "setupTime": '2-3 hours','
-    "category": 'Blockchain & Web3', "realService": true,'
-    "technology": ['PythonTensorFlowReactNode.jsPostgreSQLRedis'], "integrations": ['EthereumBitcoinPolygonBinance Smart ChainSolanaUniswap'],'
-    "useCases": ['Blockchain analyticsDeFi optimizationPortfolio managementSecurity auditingMarket analysis'], "roi": 'Users report 300% ROI through improved trading strategies and DeFi optimization.','
-    "competitors": ['ChainalysisEllipticCipherTraceGlassnode'], "marketSize": '$19.9B blockchain analytics market','
-    "growthRate": '35% annual growth', "contactInfo": contact,'
-    "realImplementation": true,
-    "implementationDetails": 'AI-powered blockchain analytics platform with intelligent data analysis, DeFi optimization, and comprehensive blockchain intelligence.','
-    "launchDate": '2024-11-20', "customers": 156,'
-    "rating": 4.7,
-    "reviews": 89
+    'popular': true, 'icon': '⛓️','
+    'color': 'from-blue-600 to-cyan-600', 'textColor': 'text-blue-400','
+    'link': ''https'://ziontechgroup.com/ai-blockchain-intelligence-platform','
+    'marketPosition': 'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our 'advantage': AI automation provides deeper insights and reduces analysis time by 80%.','
+    'targetAudience': 'Cryptocurrency traders, DeFi protocols, Blockchain companies, Financial institutions','
+    'trialDays': 14, 'setupTime': '2-3 hours','
+    'category': 'Blockchain & Web3', 'realService': true,'
+    'technology': ['PythonTensorFlowReactNode.jsPostgreSQLRedis'], 'integrations': ['EthereumBitcoinPolygonBinance Smart ChainSolanaUniswap'],'
+    'useCases': ['Blockchain analyticsDeFi optimizationPortfolio managementSecurity auditingMarket analysis'], 'roi': 'Users report 300% ROI through improved trading strategies and DeFi optimization.','
+    'competitors': ['ChainalysisEllipticCipherTraceGlassnode'], 'marketSize': '$19.9B blockchain analytics market','
+    'growthRate': '35% annual growth', 'contactInfo': contact,'
+    'realImplementation': true,
+    'implementationDetails': 'AI-powered blockchain analytics platform with intelligent data analysis, DeFi optimization, and comprehensive blockchain intelligence.','
+    'launchDate': '2024-11-20', 'customers': 156,'
+    'rating': 4.7,
+    'reviews': 89
   };
   // Internet of Things (IoT) Platform
   {
     }
-    "id": 'ai-iot-intelligence-platform', "name": 'AI IoT Intelligence Platform','
-    "tagline": 'Intelligent IoT device management and data analytics with AI-powered automation', "price": '$199','
-    "period": '/month','
-    "description": 'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.','
-    "features": [
+    'id': 'ai-iot-intelligence-platform', 'name': 'AI IoT Intelligence Platform','
+    'tagline': 'Intelligent IoT device management and data analytics with AI-powered automation', 'price': '$199','
+    'period': '/month','
+    'description': 'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.','
+    'features': [
       'AI-powered IoT device managementReal-time sensor data analyticsPredictive maintenance and monitoringSmart automation and controlEdge computing optimizationIntegration with major IoT platformsCustom IoT application developmentSecurity and privacy management';'
       'Scalable device connectivityAdvanced analytics and reporting''
     ];
-    "popular": false, "icon": '📡','
-    "color": 'from-green-600 to-emerald-600', "textColor": 'text-green-400','
-    "link": '"https"://ziontechgroup.com/ai-iot-intelligence-platform','
-    "marketPosition": 'Competes with AWS IoT ($0.08/million messages), Azure IoT Hub ($0.50/million messages), Google Cloud IoT ($0.40/million messages). Our "advantage": AI automation reduces IoT management complexity by 60% and improves device performance.','
-    "targetAudience": 'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies','
-    "trialDays": 14, "setupTime": '3-4 hours','
-    "category": 'Internet of Things (IoT)', "realService": true,'
-    "technology": ['PythonTensorFlowReactNode.jsPostgreSQLRedis'], "integrations": ['AWS IoTAzure IoTGoogle Cloud IoTHome AssistantSmartThingsHubitat'],'
-    "useCases": ['Smart home automationIndustrial monitoringSmart city managementPredictive maintenanceEnergy optimization'], "roi": 'Organizations report 250% ROI through improved device management and operational efficiency.','
-    "competitors": ['AWS IoTAzure IoT HubGoogle Cloud IoTThingWorx'], "marketSize": '$384.7B IoT market','
-    "growthRate": '28% annual growth', "contactInfo": contact,'
-    "realImplementation": true,
-    "implementationDetails": 'AI-powered IoT platform with intelligent device management, real-time analytics, and comprehensive automation capabilities.','
-    "launchDate": '2024-10-25', "customers": 89,'
-    "rating": 4.6,
-    "reviews": 45
+    'popular': false, 'icon': '📡','
+    'color': 'from-green-600 to-emerald-600', 'textColor': 'text-green-400','
+    'link': ''https'://ziontechgroup.com/ai-iot-intelligence-platform','
+    'marketPosition': 'Competes with AWS IoT ($0.08/million messages), Azure IoT Hub ($0.50/million messages), Google Cloud IoT ($0.40/million messages). Our 'advantage': AI automation reduces IoT management complexity by 60% and improves device performance.','
+    'targetAudience': 'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies','
+    'trialDays': 14, 'setupTime': '3-4 hours','
+    'category': 'Internet of Things (IoT)', 'realService': true,'
+    'technology': ['PythonTensorFlowReactNode.jsPostgreSQLRedis'], 'integrations': ['AWS IoTAzure IoTGoogle Cloud IoTHome AssistantSmartThingsHubitat'],'
+    'useCases': ['Smart home automationIndustrial monitoringSmart city managementPredictive maintenanceEnergy optimization'], 'roi': 'Organizations report 250% ROI through improved device management and operational efficiency.','
+    'competitors': ['AWS IoTAzure IoT HubGoogle Cloud IoTThingWorx'], 'marketSize': '$384.7B IoT market','
+    'growthRate': '28% annual growth', 'contactInfo': contact,'
+    'realImplementation': true,
+    'implementationDetails': 'AI-powered IoT platform with intelligent device management, real-time analytics, and comprehensive automation capabilities.','
+    'launchDate': '2024-10-25', 'customers': 89,'
+    'rating': 4.6,
+    'reviews': 45
   };
   // Edge Computing & 5G Services
   {
     }
-    "id": 'edge-computing-optimization-platform', "name": 'Edge Computing Optimization Platform','
-    "tagline": 'Optimize edge computing performance and 5G network efficiency with AI', "price": '$399','
-    "period": '/month','
-    "description": 'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.','
-    "features": [
+    'id': 'edge-computing-optimization-platform', 'name': 'Edge Computing Optimization Platform','
+    'tagline': 'Optimize edge computing performance and 5G network efficiency with AI', 'price': '$399','
+    'period': '/month','
+    'description': 'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.','
+    'features': [
       'AI-powered edge node optimization5G network resource managementEdge application deployment automationReal-time performance monitoringEdge security and complianceIntegration with major cloud providersCustom edge computing workflowsAdvanced analytics and reporting';'
       'Mobile edge computing supportAPI for edge applications''
     ];
-    "popular": false, "icon": '📶','
-    "color": 'from-indigo-600 to-purple-600', "textColor": 'text-indigo-400','
-    "link": '"https"://ziontechgroup.com/edge-computing-optimization-platform','
-    "marketPosition": 'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our "advantage": AI optimization improves edge performance by 40% and reduces latency by 60%.','
-    "targetAudience": 'Telecommunications companies, Edge computing providers, 5G network operators, Enterprises','
-    "trialDays": 14, "setupTime": '4-6 hours','
-    "category": 'Edge Computing & 5G', "realService": true,'
-    "technology": ['PythonTensorFlowKubernetesReactPostgreSQLRedis'], "integrations": ['AWS OutpostsAzure Stack EdgeGoogle AnthosOpenStackKubernetesDocker'],'
-    "useCases": ['Edge computing optimization5G network managementEdge application deploymentPerformance monitoringResource optimization'], "roi": 'Organizations report 300% ROI through improved edge performance and reduced network costs.','
-    "competitors": ['AWS OutpostsAzure Stack EdgeGoogle AnthosVMware Edge'], "marketSize": '$67.2B edge computing market','
-    "growthRate": '32% annual growth', "contactInfo": contact,'
-    "realImplementation": true,
-    "implementationDetails": 'AI-powered edge computing platform with intelligent optimization, 5G network management, and comprehensive edge application support.','
-    "launchDate": '2024-09-30', "customers": 45,'
-    "rating": 4.5,
-    "reviews": 23
+    'popular': false, 'icon': '📶','
+    'color': 'from-indigo-600 to-purple-600', 'textColor': 'text-indigo-400','
+    'link': ''https'://ziontechgroup.com/edge-computing-optimization-platform','
+    'marketPosition': 'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our 'advantage': AI optimization improves edge performance by 40% and reduces latency by 60%.','
+    'targetAudience': 'Telecommunications companies, Edge computing providers, 5G network operators, Enterprises','
+    'trialDays': 14, 'setupTime': '4-6 hours','
+    'category': 'Edge Computing & 5G', 'realService': true,'
+    'technology': ['PythonTensorFlowKubernetesReactPostgreSQLRedis'], 'integrations': ['AWS OutpostsAzure Stack EdgeGoogle AnthosOpenStackKubernetesDocker'],'
+    'useCases': ['Edge computing optimization5G network managementEdge application deploymentPerformance monitoringResource optimization'], 'roi': 'Organizations report 300% ROI through improved edge performance and reduced network costs.','
+    'competitors': ['AWS OutpostsAzure Stack EdgeGoogle AnthosVMware Edge'], 'marketSize': '$67.2B edge computing market','
+    'growthRate': '32% annual growth', 'contactInfo': contact,'
+    'realImplementation': true,
+    'implementationDetails': 'AI-powered edge computing platform with intelligent optimization, 5G network management, and comprehensive edge application support.','
+    'launchDate': '2024-09-30', 'customers': 45,'
+    'rating': 4.5,
+    'reviews': 23
   };
   // Augmented Reality (AR) & Virtual Reality (VR)
   {
     }
-    "id": 'ai-ar-vr-development-platform', "name": 'AI AR/VR Development Platform','
-    "tagline": 'Intelligent AR/VR application development with AI-powered content creation', "price": '$249','
-    "period": '/month','
-    "description": 'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.','
-    "features": [
+    'id': 'ai-ar-vr-development-platform', 'name': 'AI AR/VR Development Platform','
+    'tagline': 'Intelligent AR/VR application development with AI-powered content creation', 'price': '$249','
+    'period': '/month','
+    'description': 'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.','
+    'features': [
       'AI-powered 3D content generationIntelligent user experience optimizationAR/VR application development toolsContent personalization and adaptationPerformance optimization and testingIntegration with major AR/VR platformsCustom AR/VR workflowsReal-time content analytics';'
       'Multi-platform deployment supportAPI for AR/VR applications''
     ];
-    "popular": false, "icon": '🥽','
-    "color": 'from-pink-600 to-rose-600', "textColor": 'text-pink-400','
-    "link": '"https"://ziontechgroup.com/ai-ar-vr-development-platform','
-    "marketPosition": 'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our "advantage": AI automation reduces AR/VR development time by 70% and improves content quality.','
-    "targetAudience": 'AR/VR developers, Gaming companies, Educational institutions, Training providers','
-    "trialDays": 14, "setupTime": '3-4 hours','
-    "category": 'AR/VR & Immersive Technology', "realService": true,'
-    "technology": ['UnityUnreal EnginePythonTensorFlowReactPostgreSQL'], "integrations": ['OculusHTC ViveMicrosoft HoloLensMagic LeapARKitARCore'],'
-    "useCases": ['AR/VR application development3D content creationImmersive trainingVirtual eventsGaming and entertainment'], "roi": 'Developers report 400% ROI through faster development and improved content quality.','
-    "competitors": ['UnityUnreal EngineVuforiaARKit'], "marketSize": '$31.1B AR/VR market','
-    "growthRate": '38% annual growth', "contactInfo": contact,'
-    "realImplementation": true,
-    "implementationDetails": 'AI-powered AR/VR development platform with intelligent content creation, user experience optimization, and comprehensive development tools.','
-    "launchDate": '2024-08-15', "customers": 67,'
-    "rating": 4.4,
-    "reviews": 34
+    'popular': false, 'icon': '🥽','
+    'color': 'from-pink-600 to-rose-600', 'textColor': 'text-pink-400','
+    'link': ''https'://ziontechgroup.com/ai-ar-vr-development-platform','
+    'marketPosition': 'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our 'advantage': AI automation reduces AR/VR development time by 70% and improves content quality.','
+    'targetAudience': 'AR/VR developers, Gaming companies, Educational institutions, Training providers','
+    'trialDays': 14, 'setupTime': '3-4 hours','
+    'category': 'AR/VR & Immersive Technology', 'realService': true,'
+    'technology': ['UnityUnreal EnginePythonTensorFlowReactPostgreSQL'], 'integrations': ['OculusHTC ViveMicrosoft HoloLensMagic LeapARKitARCore'],'
+    'useCases': ['AR/VR application development3D content creationImmersive trainingVirtual eventsGaming and entertainment'], 'roi': 'Developers report 400% ROI through faster development and improved content quality.','
+    'competitors': ['UnityUnreal EngineVuforiaARKit'], 'marketSize': '$31.1B AR/VR market','
+    'growthRate': '38% annual growth', 'contactInfo': contact,'
+    'realImplementation': true,
+    'implementationDetails': 'AI-powered AR/VR development platform with intelligent content creation, user experience optimization, and comprehensive development tools.','
+    'launchDate': '2024-08-15', 'customers': 67,'
+    'rating': 4.4,
+    'reviews': 34
   };
   // Robotics & Automation Services
   {
     }
-    "id": 'ai-robotics-automation-platform', "name": 'AI Robotics & Automation Platform','
-    "tagline": 'Intelligent robotics control and automation with AI-powered optimization', "price": '$599','
-    "period": '/month','
-    "description": 'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.','
-    "features": [
+    'id': 'ai-robotics-automation-platform', 'name': 'AI Robotics & Automation Platform','
+    'tagline': 'Intelligent robotics control and automation with AI-powered optimization', 'price': '$599','
+    'period': '/month','
+    'description': 'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.','
+    'features': [
       'AI-powered robotic control systemsAutomated workflow optimizationPredictive maintenance for robotsIntegration with major robotics platformsCustom automation workflowsReal-time performance monitoringSafety and compliance managementAdvanced analytics and reporting';'
       'Mobile app for robot controlAPI for robotics applications''
     ];
-    "popular": false, "icon": '🤖','
-    "color": 'from-slate-600 to-gray-600', "textColor": 'text-slate-400','
-    "link": '"https"://ziontechgroup.com/ai-robotics-automation-platform','
-    "marketPosition": 'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our "advantage": AI automation improves robotic efficiency by 50% and reduces programming time by 80%.','
-    "targetAudience": 'Manufacturing companies, Logistics providers, Service robotics companies, Research institutions','
-    "trialDays": 30, "setupTime": '1-2 weeks','
-    "category": 'Robotics & Automation', "realService": true,'
-    "technology": ['PythonTensorFlowROSReactPostgreSQLRedis'], "integrations": ['ABBFANUCKUKAUniversal RobotsBoston DynamicsiRobot'],'
-    "useCases": ['Manufacturing automationLogistics optimizationService roboticsResearch and developmentQuality control'], "roi": 'Organizations report 400% ROI through improved robotic efficiency and reduced operational costs.','
-    "competitors": ['ABB RobotStudioFANUC ROBOGUIDEKUKA SimUniversal Robots'], "marketSize": '$43.8B robotics market','
-    "growthRate": '25% annual growth', "contactInfo": contact,'
-    "realImplementation": true,
-    "implementationDetails": 'AI-powered robotics platform with intelligent control systems, automation optimization, and comprehensive robotics management.','
-    "launchDate": '2024-07-20', "customers": 34,'
-    "rating": 4.3,
-    "reviews": 18
+    'popular': false, 'icon': '🤖','
+    'color': 'from-slate-600 to-gray-600', 'textColor': 'text-slate-400','
+    'link': ''https'://ziontechgroup.com/ai-robotics-automation-platform','
+    'marketPosition': 'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our 'advantage': AI automation improves robotic efficiency by 50% and reduces programming time by 80%.','
+    'targetAudience': 'Manufacturing companies, Logistics providers, Service robotics companies, Research institutions','
+    'trialDays': 30, 'setupTime': '1-2 weeks','
+    'category': 'Robotics & Automation', 'realService': true,'
+    'technology': ['PythonTensorFlowROSReactPostgreSQLRedis'], 'integrations': ['ABBFANUCKUKAUniversal RobotsBoston DynamicsiRobot'],'
+    'useCases': ['Manufacturing automationLogistics optimizationService roboticsResearch and developmentQuality control'], 'roi': 'Organizations report 400% ROI through improved robotic efficiency and reduced operational costs.','
+    'competitors': ['ABB RobotStudioFANUC ROBOGUIDEKUKA SimUniversal Robots'], 'marketSize': '$43.8B robotics market','
+    'growthRate': '25% annual growth', 'contactInfo': contact,'
+    'realImplementation': true,
+    'implementationDetails': 'AI-powered robotics platform with intelligent control systems, automation optimization, and comprehensive robotics management.','
+    'launchDate': '2024-07-20', 'customers': 34,'
+    'rating': 4.3,
+    'reviews': 18
   };
   // Digital Twin & Simulation
   {
     }
-    "id": 'ai-digital-twin-platform', "name": 'AI Digital Twin Platform','
-    "tagline": 'Intelligent digital twin creation and simulation with AI-powered insights', "price": '$349','
-    "period": '/month','
-    "description": 'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.','
-    "features": [
+    'id': 'ai-digital-twin-platform', 'name': 'AI Digital Twin Platform','
+    'tagline': 'Intelligent digital twin creation and simulation with AI-powered insights', 'price': '$349','
+    'period': '/month','
+    'description': 'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.','
+    'features': [
       'AI-powered digital twin creationReal-time simulation and modelingPredictive analytics and forecastingIntegration with IoT and sensor dataCustom simulation scenariosPerformance optimization insights3D visualization and modelingAdvanced analytics and reporting';'
       'API for custom integrationsMobile app for monitoring''
     ];
-    "popular": false, "icon": '🔄','
-    "color": 'from-cyan-600 to-teal-600', "textColor": 'text-cyan-400','
-    "link": '"https"://ziontechgroup.com/ai-digital-twin-platform','
-    "marketPosition": 'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our "advantage": AI automation reduces digital twin creation time by 60% and improves simulation accuracy.','
-    "targetAudience": 'Manufacturing companies, Infrastructure providers, Energy companies, Smart city planners','
-    "trialDays": 14, "setupTime": '2-3 weeks','
-    "category": 'Digital Twin & Simulation', "realService": true,'
-    "technology": ['PythonTensorFlowUnityReactPostgreSQLRedis'], "integrations": ['SiemensPTCGE DigitalAutodeskDassault SystèmesIoT platforms'],'
-    "useCases": ['Manufacturing optimizationInfrastructure monitoringEnergy managementPredictive maintenanceUrban planning'], "roi": 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.','
-    "competitors": ['Siemens Digital TwinPTC ThingWorxGE Digital TwinAutodesk'], "marketSize": '$86.1B digital twin market','
-    "growthRate": '42% annual growth', "contactInfo": contact,'
-    "realImplementation": true,
-    "implementationDetails": 'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.','
-    "launchDate": '2024-06-25', "customers": 56,'
-    "rating": 4.4,
-    "reviews": 29
+    'popular': false, 'icon': '🔄','
+    'color': 'from-cyan-600 to-teal-600', 'textColor': 'text-cyan-400','
+    'link': ''https'://ziontechgroup.com/ai-digital-twin-platform','
+    'marketPosition': 'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our 'advantage': AI automation reduces digital twin creation time by 60% and improves simulation accuracy.','
+    'targetAudience': 'Manufacturing companies, Infrastructure providers, Energy companies, Smart city planners','
+    'trialDays': 14, 'setupTime': '2-3 weeks','
+    'category': 'Digital Twin & Simulation', 'realService': true,'
+    'technology': ['PythonTensorFlowUnityReactPostgreSQLRedis'], 'integrations': ['SiemensPTCGE DigitalAutodeskDassault SystèmesIoT platforms'],'
+    'useCases': ['Manufacturing optimizationInfrastructure monitoringEnergy managementPredictive maintenanceUrban planning'], 'roi': 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.','
+    'competitors': ['Siemens Digital TwinPTC ThingWorxGE Digital TwinAutodesk'], 'marketSize': '$86.1B digital twin market','
+    'growthRate': '42% annual growth', 'contactInfo': contact,'
+    'realImplementation': true,
+    'implementationDetails': 'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.','
+    'launchDate': '2024-06-25', 'customers': 56,'
+    'rating': 4.4,
+    'reviews': 29
   }
 ];
-export const getEmergingTechServices2026ByPriceRange = ("minPrice": number, "maxPrice": number) => {
+export const getEmergingTechServices2026ByPriceRange = ('minPrice': number, 'maxPrice': number) => {
   }
   return emergingTechServices2026.filter((service) => {
     }
@@ -1323,59 +1321,55 @@ export const getEmergingTechServices2026ByPriceRange = ("minPrice": number, "max
 return price >= minPrice && price <= maxPrice;
 export interface EmergingTechService2026 {;
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   })
 };
 ;
-export const getEmergingTechServices2026ByCategory = ("category": string) =>: any {
+export const getEmergingTechServices2026ByCategory = ('category': string) =>: any {
 }
 return emergingTechServices2026.filter (;
     service => { return service.category === category); }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export interface EmergingTechService2026 {;
   }
-  "id": string,;
-  "name": string,;
-  "tagline": string,;
-  "price": string,;
-  "period": string,;
-  "description": string,;
-  "features": string[],;
-  "popular": boolean,;
-  "icon": string,;
-  "color": string,;
-  "textColor": string,;
-  "link": string,;
-  "marketPosition": string,;
-  "targetAudience": string,;
-  "trialDays": number,;
-  "setupTime": string,;
-  "category": string,;
-  "realService": boolean,;
-  "technology": string[],;
-  "integrations": string[],;
-  "useCases": string[],;
-  "roi": string,;
-  "competitors": string[],;
-  "marketSize": string,;
-  "growthRate": string,;
-  "contactInfo": {;
+  'id': string,;
+  'name': string,;
+  'tagline': string,;
+  'price': string,;
+  'period': string,;
+  'description': string,;
+  'features': string[],;
+  'popular': boolean,;
+  'icon': string,;
+  'color': string,;
+  'textColor': string,;
+  'link': string,;
+  'marketPosition': string,;
+  'targetAudience': string,;
+  'trialDays': number,;
+  'setupTime': string,;
+  'category': string,;
+  'realService': boolean,;
+  'technology': string[],;
+  'integrations': string[],;
+  'useCases': string[],;
+  'roi': string,;
+  'competitors': string[],;
+  'marketSize': string,;
+  'growthRate': string,;
+  'contactInfo': {;
     }
-    "mobile": string,;
-    "email": string,;
-    "address": string,;
-    "website": string;
+    'mobile': string,;
+    'email': string,;
+    'address': string,;
+    'website': string;
   },;
-  "realImplementation": boolean,;
-  "implementationDetails": string,;
-  "launchDate": string,;
-  "customers": number,;
-  "rating": number,;
-  "reviews": number;
+  'realImplementation': boolean,;
+  'implementationDetails': string,;
+  'launchDate': string,;
+  'customers': number,;
+  'rating': number,;
+  'reviews': number;
 }
 ;
 export const getPopularEmergingTechServices2026 = () =>: any {
@@ -1384,8 +1378,8 @@ export const getPopularEmergingTechServices2026 = () =>: any {
 }
 ;
 export const getEmergingTechServices2026ByPriceRange = (
-  "min_price": number,
-  "max_price": number) =>: any {
+  'min_price': number,
+  'max_price': number) =>: any {
   }
   return emergingTechServices2026.filter ((service) => {
     }

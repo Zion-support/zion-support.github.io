@@ -67,7 +67,7 @@ import {
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda"),
                             );
-                      }}
+                      }
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
@@ -82,7 +82,7 @@ import {
               )}
 
                             );
-                      }}
+                      }
                     />;
                   </FormControl>;
 
@@ -102,7 +102,7 @@ import {
                         const currentValues = field && field.value || [];
                         return checked;
                             );
-                      }}
+                      }
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
@@ -121,7 +121,7 @@ import {
             <FormField;
 
                             );
-                      }}
+                      }
                     />;
                   </FormControl>;
 
@@ -190,7 +190,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           : field.onChange(
                               currentValues.filter((value) => value !== 'nda')
                             )
-                      }}
+                      }
                     />
                   </FormControl>
                   <div className = $2;
@@ -199,7 +199,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           : field.onChange(
                               currentValues.filter((value) => value !== 'ip')
                             )
-                      }}
+                      }
                     />
                   </FormControl>
                   <div className = $2;
@@ -208,7 +208,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           : field.onChange(
                               currentValues.filter((value) => value !== 'termination')
                             )
-                      }}
+                      }
                     />
                   </FormControl>
                   <div className = $2;
@@ -217,7 +217,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           : field.onChange(
                               currentValues.filter((value) => value !== 'revisions')
                             )
-                      }}
+                      }
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
@@ -249,7 +249,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
         </FormItem>)}
     />);
                             );
-                      }}
+                      }
                     />;
                   </FormControl>;
                     <FormDescription>;

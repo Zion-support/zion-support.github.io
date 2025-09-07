@@ -71,7 +71,7 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
       "title": `Interview with ${talent && talent.full_name}`,;`      "duration": "30",;"
       "platform": "zoom",;"
       "notes": "",;"
-      "meetingLink": ""}}),;"
+      "meetingLink": ""}),;"
   async function onSubmit(): any ("values": z && z.infer<typeof formSchema>) {;
     }
     if (!userDetails?.id) {;
@@ -98,7 +98,7 @@ const formSchema = z.object({
       "title": `Interview with ${talent.full_name}``      "duration": "duration","
     "platform": "zoom""
       "notes": """
-      "meetingLink": ""}})"
+      "meetingLink": ""})"
   async function onSubmit() {
     }
     if (!userDetails?.id) {
@@ -181,7 +181,7 @@ function InterviewRequestForm() {
       "title": `Interview with ${talent.full_name}`,`      "duration": "30","
       "platform": "zoom","
       "notes": "","
-      "meeting_link": ""}}),"
+      "meeting_link": ""}),"
   async /**
  * on_submit - Function description
  */
@@ -401,7 +401,7 @@ export function InterviewRequestForm() {;
       "title": `Interview with ${talent.full_name}`,;`      "duration": "30",;"
       "platform": "zoom",;"
       "notes": "",;"
-      "meetingLink": ""}}),;"
+      "meetingLink": ""}),;"
   async function onSubmit() {;
     }
     if (!userDetails?.id) {;
@@ -507,7 +507,7 @@ export function InterviewRequestForm() {;
                           format(field.value, "PPP");"
                         ) : (;
                           <span>Pick a date</span>;
-      meetingLink: ""}}),
+      meetingLink: ""}),
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {

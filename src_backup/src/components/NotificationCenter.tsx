@@ -82,7 +82,7 @@ export const "NotificationCenter": React.FC;<PopoverTrigger asChild>;
       </PopoverContent>;
     </Popover>)},;
         <NotificationHeader;
-  )}}, [open, loadedOnce, fetchNotifications])}catch (err) {logErrorToProduction ('Failed to mark notifications as "read":', {"data": err ;'
+  )}, [open, loadedOnce, fetchNotifications])}catch (err) {logErrorToProduction ('Failed to mark notifications as "read":', {"data": err ;'
 })enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';'
   }
   "variant": 'error' ;'

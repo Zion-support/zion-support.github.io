@@ -181,7 +181,7 @@ export function EnterpriseStickyNav() {;
 }
     </nav>);
 }
-}})
+})
     </nav>;
   );
 }

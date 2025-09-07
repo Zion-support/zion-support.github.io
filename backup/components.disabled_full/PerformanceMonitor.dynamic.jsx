@@ -1,4 +1,4 @@
-const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceMonitor' ,'
+const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default PerformanceMonitor' ,'
 </p>'
 </p>'
 </p>'
@@ -14,7 +14,7 @@ const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{'; "loa
 
 </p>'
 
-const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceMonitor' ,'
+const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default PerformanceMonitor' ,'
 
 </p>'
 
@@ -24,14 +24,14 @@ const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{'; "loa
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default PerformanceMonitor\' ,const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default PerformanceMonitor\" ,\"\"\";
-const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceMonitor' ,';
+const PerformanceMonitor = dynamic(() => import(\'./PerformanceMonitor\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default PerformanceMonitor\' ,const PerformanceMonitor = dynamic(() => import(\'./PerformanceMonitor\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default PerformanceMonitor\' ,\'\'\';
+const PerformanceMonitor = dynamic(() => import(\'./PerformanceMonitor\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceMonitor' ,';
 </p>';
 </p>';
 </p>';
 </p>';
 ;
-const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceMonitor' ,';
+const PerformanceMonitor = dynamic(() => import(\'./PerformanceMonitor\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceMonitor' ,';
 </p>';
 </p>';
 </p>';
@@ -53,7 +53,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
-const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceMonitor' ,';
+const PerformanceMonitor = dynamic(() => import(\'./PerformanceMonitor\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceMonitor' ,';
 </p>';
 </p>';
 </p>';
@@ -62,9 +62,9 @@ const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{'; \"
 </p>';
 </p>';
 </p>';
-const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceMonitor' ,';
+const PerformanceMonitor = dynamic(() => import(\'./PerformanceMonitor\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceMonitor' ,';
 </p>'</p>';
-const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceMonitor' ,'
+const PerformanceMonitor = dynamic(() => import(\'./PerformanceMonitor\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceMonitor' ,'
 </p>'
 </p>'
 </p>'
@@ -89,7 +89,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 </p>'
 
 </p>'
-const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceMonitor' ,'
+const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default PerformanceMonitor' ,'
 </p>'
 </p>'
 </p>'

@@ -28,7 +28,7 @@ return new Response(;
         {
           }
           "status": 500,
-"headers": { "Content-Type": "application/json", ...corsHeaders }}"
+"headers": { "Content-Type": "application/json", ...corsHeaders }"
       )
     }
     // Process pending reminder jobs,
@@ -69,7 +69,7 @@ await supabase
     return new Response(      {
         }
         "status": 500,
-"headers": { "Content-Type": "application/json", ...corsHeaders }}"
+"headers": { "Content-Type": "application/json", ...corsHeaders }"
     )import { serve } from '"https": //deno.land / std@0.168.0 / http / server.ts';,'
 import { create_client } from '"https": //esm.sh/@supabase / supabase - js@2.7.1';'
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;"
@@ -130,7 +130,7 @@ serve(async ("req":Request) => {;
         {;
           }
           "status": 500,;
-          "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+          "headers": { "Content-Type": "application/json", ...corsHeaders }"
       );
     }
 ;
@@ -149,7 +149,7 @@ serve(async ("req":Request) => {;
         {;
           }
           "status": 500,;
-          "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+          "headers": { "Content-Type": "application/json", ...corsHeaders }"
       );
     }
 ;
@@ -208,7 +208,7 @@ serve(async ("req":Request) => {;
       {;
         }
         "status": 200,;
-        "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+        "headers": { "Content-Type": "application/json", ...corsHeaders }"
     );
   } catch (error) {;
     }
@@ -218,7 +218,7 @@ serve(async ("req":Request) => {;
       {;
         }
         "status": 500,;
-        "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+        "headers": { "Content-Type": "application/json", ...corsHeaders }"
     );
   }
 });

@@ -2,7 +2,7 @@
 ;
 import React from \'react\';'
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{\"padding\": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage } from \'next\'; import Head from \'next/head\'; import Layout from \'../components/Layout\'; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from \'lucide-react\';'
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={\"padding\": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage } from \'next\'; import Head from \'next/head\'; import Layout from \'../components/Layout\'; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from \'lucide-react\';'
 
 const \"BlockchainSolutions\": NextPage = () => {;"
   }
@@ -14,7 +14,7 @@ export default BlockchainSolutions;
 
 const React from "react";"
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{"padding": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={"padding": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
 } from "next"; import Head from "next/head"; import Layout from "./components/Layout"; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from "lucide-react";"
 
 const "BlockchainSolutions": NextPage = () => {;
@@ -28,7 +28,7 @@ const "BlockchainSolutions": NextPage = () => {;
 export default BlockchainSolutions;""";"
 import _React from 'react';'
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{"padding": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage } from 'next'; import Head from 'next/head'; import Layout from '../components/Layout'; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from 'lucide-react';'
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={"padding": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage } from 'next'; import Head from 'next/head'; import Layout from '../components/Layout'; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from 'lucide-react';'
 
 const "BlockchainSolutions": NextPage = () => {;"
   }
@@ -40,7 +40,7 @@ export default BlockchainSolutions;
 
 const React from "react";"
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{"padding": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={"padding": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
 } from "next"; import Head from "next/head"; import Layout from "./components/Layout"; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from "lucide-react";"
 
 const "BlockchainSolutions": NextPage = () => {;
@@ -57,7 +57,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 
 const React from "react";"
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{"padding": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={"padding": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
 } from "next"; import Head from "next/head"; import Layout from "./components/Layout"; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from "lucide-react";"
 
 const "BlockchainSolutions": NextPage = () => {;
@@ -74,7 +74,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 const React from "react";"
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{"padding": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={"padding": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
 } from "next"; import Head from "next/head"; import Layout from "./components/Layout"; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from "lucide-react";"
 
 const "BlockchainSolutions": NextPage = () => {;
@@ -89,7 +89,7 @@ export default BlockchainSolutions;""";"
 
 const React from "react";"
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{"padding": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={"padding": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
 } from "next"; import Head from "next/head"; import Layout from "./components/Layout"; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from "lucide-react";"
 
 const "BlockchainSolutions": NextPage = () => {;
@@ -106,7 +106,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 
 const React from "react";"
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{"padding": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={"padding": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
 } from "next"; import Head from "next/head"; import Layout from "./components/Layout"; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from "lucide-react";"
 
 const "BlockchainSolutions": NextPage = () => {;
@@ -121,7 +121,7 @@ export default BlockchainSolutions;""";"
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 import React from \'react\';'
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{\"padding\": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage } from \'next\'; import Head from \'next/head\'; import Layout from \'../components/Layout\'; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from \'lucide-react\';'
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={\"padding\": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage } from \'next\'; import Head from \'next/head\'; import Layout from \'../components/Layout\'; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from \'lucide-react\';'
 
 const \"BlockchainSolutions\": NextPage = () => {;"
   }
@@ -132,7 +132,7 @@ export default BlockchainSolutions;
 
 const React from "react";"
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{"padding": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={"padding": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
 } from "next"; import Head from "next/head"; import Layout from "./components/Layout"; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from "lucide-react";"
 
 const "BlockchainSolutions": NextPage = () => {;
@@ -145,7 +145,7 @@ const "BlockchainSolutions": NextPage = () => {;
 export default BlockchainSolutions;""""
 import _React from 'react';'
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{"padding": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage } from 'next'; import Head from 'next/head'; import Layout from '../components/Layout'; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from 'lucide-react';'
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={"padding": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage } from 'next'; import Head from 'next/head'; import Layout from '../components/Layout'; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from 'lucide-react';'
 
 const "BlockchainSolutions": NextPage = () => {;"
   }
@@ -156,7 +156,7 @@ export default BlockchainSolutions;
 
 const React from "react";"
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{"padding": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={"padding": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
 } from "next"; import Head from "next/head"; import Layout from "./components/Layout"; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from "lucide-react";"
 
 const "BlockchainSolutions": NextPage = () => {;
@@ -171,7 +171,7 @@ ursor/add-new-services-and-deploy-updates-0462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
 const React from "react";"
 
-export default function BlockchainSolutionsPlaceholder() { return ( <div style={{"padding": 40}}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
+export default function BlockchainSolutionsPlaceholder() { return ( <div style={"padding": 40}> <h1>Blockchain Solutions</h1> <p>Temporarily simplified while page is corrected.</p> </div> )} import type { NextPage
 } from "next"; import Head from "next/head"; import Layout from "./components/Layout"; import { Shield,Zap,Globe,Lock,Database,ArrowRight,CheckCircle,Users,Award } from "lucide-react";"
 
 const "BlockchainSolutions": NextPage = () => {;

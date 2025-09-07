@@ -32,9 +32,9 @@ import {
 } from 'lucide-react';
 
 const contactInfo = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709'
 };
 
 const microSaasServices = [
@@ -274,40 +274,40 @@ const microSaasServices = [
 
 const industries = [
   {
-    title: "E-commerce & Retail",
-    description: "Complete digital transformation solutions for online and offline retail businesses",
-    icon: "🛒",
-    useCases: ["Inventory management", "Customer analytics", "Marketing automation", "Order processing"]
+    title: 'E-commerce & Retail',
+    description: 'Complete digital transformation solutions for online and offline retail businesses',
+    icon: '🛒',
+    useCases: ['Inventory management', 'Customer analytics', 'Marketing automation', 'Order processing']
   },
   {
-    title: "Professional Services",
-    description: "Streamlined operations for agencies, consultants, and service providers",
-    icon: "💼",
-    useCases: ["Client management", "Project tracking", "Time billing", "Resource planning"]
+    title: 'Professional Services',
+    description: 'Streamlined operations for agencies, consultants, and service providers',
+    icon: '💼',
+    useCases: ['Client management', 'Project tracking', 'Time billing', 'Resource planning']
   },
   {
-    title: "Healthcare & Wellness",
-    description: "HIPAA-compliant solutions for healthcare providers and wellness businesses",
-    icon: "🏥",
-    useCases: ["Patient management", "Appointment scheduling", "Billing automation", "Compliance tracking"]
+    title: 'Healthcare & Wellness',
+    description: 'HIPAA-compliant solutions for healthcare providers and wellness businesses',
+    icon: '🏥',
+    useCases: ['Patient management', 'Appointment scheduling', 'Billing automation', 'Compliance tracking']
   },
   {
-    title: "Real Estate",
-    description: "Property management and client relationship tools for real estate professionals",
-    icon: "🏠",
-    useCases: ["Lead management", "Property listings", "Client communication", "Transaction tracking"]
+    title: 'Real Estate',
+    description: 'Property management and client relationship tools for real estate professionals',
+    icon: '🏠',
+    useCases: ['Lead management', 'Property listings', 'Client communication', 'Transaction tracking']
   },
   {
-    title: "Education & Training",
-    description: "Learning management and student engagement platforms for educational institutions",
-    icon: "🎓",
-    useCases: ["Course management", "Student tracking", "Assessment tools", "Progress monitoring"]
+    title: 'Education & Training',
+    description: 'Learning management and student engagement platforms for educational institutions',
+    icon: '🎓',
+    useCases: ['Course management', 'Student tracking', 'Assessment tools', 'Progress monitoring']
   },
   {
-    title: "Manufacturing",
-    description: "Production optimization and supply chain management for manufacturing companies",
-    icon: "🏭",
-    useCases: ["Production planning", "Quality control", "Supplier management", "Cost tracking"]
+    title: 'Manufacturing',
+    description: 'Production optimization and supply chain management for manufacturing companies',
+    icon: '🏭',
+    useCases: ['Production planning', 'Quality control', 'Supplier management', 'Cost tracking']
   }
 ];
 
@@ -316,38 +316,38 @@ export default function MicroSaasPage() {
     <>
       <Head>
         <title>Micro SAAS Solutions - Zion Tech Group | AI-Powered Business Tools</title>
-        <meta name="description" content="Comprehensive micro SAAS solutions including AI analytics, CRM, social media management, and more. Transform your business with affordable, powerful tools." />
-        <meta name="keywords" content="micro saas, business software, AI tools, CRM, analytics, automation, project management, email marketing" />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
+        <meta name='description' content='Comprehensive micro SAAS solutions including AI analytics, CRM, social media management, and more. Transform your business with affordable, powerful tools.' />
+        <meta name='keywords' content='micro saas, business software, AI tools, CRM, analytics, automation, project management, email marketing' />
+        <link rel='canonical' href='https://ziontechgroup.com/micro-saas' />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900'>
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className='bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20'>
+          <div className='container mx-auto px-4'>
             <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              className='text-center max-w-4xl mx-auto'
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className='text-4xl md:text-6xl font-bold mb-6'>
                 Micro SAAS Solutions
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              <p className='text-xl md:text-2xl mb-8 text-blue-100'>
                 Powerful, affordable business tools that scale with your growth. From AI-powered analytics to automated workflows, 
                 our micro SAAS solutions help you work smarter, not harder.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link 
-                  href="/contact"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                  href='/contact'
+                  className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg'
                 >
                   Get Free Consultation
                 </Link>
                 <a 
                   href={`tel:${contactInfo.phone}`}
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
+                  className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg'
                 >
                   Call {contactInfo.phone}
                 </a>
@@ -357,122 +357,122 @@ export default function MicroSaasPage() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+        <section className='py-20 bg-gray-50'>
+          <div className='container mx-auto px-4'>
             <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              className='text-center mb-16'
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
                 Our Micro SAAS Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
                 Affordable, powerful business tools that deliver real results. Choose from our comprehensive suite of micro SAAS solutions.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {microSaasServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
+                  className='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative'
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
+                  whileHover={ y: -5 }
                 >
                   {service.popular && (
-                    <div className="absolute -top-3 -right-3 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
-                      <Star className="w-4 h-4 fill-current" />
+                    <div className='absolute -top-3 -right-3 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1'>
+                      <Star className='w-4 h-4 fill-current' />
                       Popular
                     </div>
                   )}
                   
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                      <service.icon className="w-8 h-8 text-blue-600" />
+                  <div className='flex items-center mb-4'>
+                    <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4'>
+                      <service.icon className='w-8 h-8 text-blue-600' />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                      <div className="flex items-center gap-2 mt-1">
-                        <Clock className="w-4 h-4 text-gray-400" />
-                        <span className="text-sm text-gray-500">{service.setupTime}</span>
+                      <h3 className='text-xl font-semibold text-gray-900'>{service.title}</h3>
+                      <div className='flex items-center gap-2 mt-1'>
+                        <Clock className='w-4 h-4 text-gray-400' />
+                        <span className='text-sm text-gray-500'>{service.setupTime}</span>
                       </div>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <p className='text-gray-600 mb-4'>{service.description}</p>
                   
-                  <div className="mb-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                      <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
+                  <div className='mb-4'>
+                    <div className='flex items-center gap-2 mb-2'>
+                      <span className='text-2xl font-bold text-blue-600'>{service.price}</span>
+                      <span className='text-sm text-gray-500 line-through'>{service.marketPrice}</span>
                     </div>
-                    <div className="text-sm text-green-600 font-medium">
+                    <div className='text-sm text-green-600 font-medium'>
                       Save up to 50% vs market rate
                     </div>
                   </div>
 
                   {/* ROI and Popularity */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-sm">
-                      <span className="text-gray-500">Expected ROI:</span>
-                      <span className="text-green-600 font-semibold ml-1">
+                  <div className='flex items-center justify-between mb-4'>
+                    <div className='text-sm'>
+                      <span className='text-gray-500'>Expected ROI:</span>
+                      <span className='text-green-600 font-semibold ml-1'>
                         {service.roi.split(' ')[0]} ROI
                       </span>
                     </div>
                     {service.popular && (
-                      <div className="flex items-center gap-1 text-yellow-600">
-                        <Star className="w-4 h-4 fill-current" />
-                        <span className="text-sm font-medium">Popular</span>
+                      <div className='flex items-center gap-1 text-yellow-600'>
+                        <Star className='w-4 h-4 fill-current' />
+                        <span className='text-sm font-medium'>Popular</span>
                       </div>
                     )}
                   </div>
 
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
+                  <div className='mb-4'>
+                    <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>
+                    <ul className='space-y-1'>
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <li key={featureIndex} className='flex items-center text-sm text-gray-700'>
+                          <CheckCircle className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
+                  <div className='mb-4'>
+                    <h4 className='font-semibold text-gray-900 mb-2'>Benefits:</h4>
+                    <ul className='space-y-1'>
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-700">
-                          <ArrowRight className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                        <li key={benefitIndex} className='flex items-center text-sm text-gray-700'>
+                          <ArrowRight className='w-4 h-4 text-blue-500 mr-2 flex-shrink-0' />
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mb-4">
-                    <div className="text-sm text-gray-600">
+                  <div className='mb-4'>
+                    <div className='text-sm text-gray-600'>
                       <strong>Target Users:</strong> {service.targetUsers}
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-2">
+                  <div className='flex flex-col sm:flex-row gap-2'>
                     <Link
-                      href="/contact"
-                      className="flex-1 bg-blue-600 text-white px-4 py-2 rounded text-center hover:bg-blue-700 transition-colors font-semibold"
+                      href='/contact'
+                      className='flex-1 bg-blue-600 text-white px-4 py-2 rounded text-center hover:bg-blue-700 transition-colors font-semibold'
                     >
                       Get Quote
                     </Link>
                     <Link
                       href={`/contact?service=${encodeURIComponent(service.title)}`}
-                      className="flex-1 border border-blue-600 text-blue-600 px-4 py-2 rounded text-center hover:bg-blue-50 transition-colors font-semibold"
+                      className='flex-1 border border-blue-600 text-blue-600 px-4 py-2 rounded text-center hover:bg-blue-50 transition-colors font-semibold'
                     >
                       Learn More
                     </Link>
@@ -484,42 +484,42 @@ export default function MicroSaasPage() {
         </section>
 
         {/* Industries Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+        <section className='py-20 bg-white'>
+          <div className='container mx-auto px-4'>
             <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              className='text-center mb-16'
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
                 Industries We Serve
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
                 Our micro SAAS solutions are designed to meet the unique needs of various industries and business types.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {industries.map((industry, index) => (
                 <motion.div
                   key={index}
-                  className="bg-gray-50 p-8 rounded-xl hover:bg-gray-100 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className='bg-gray-50 p-8 rounded-xl hover:bg-gray-100 transition-colors'
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
-                  <div className="text-4xl mb-4">{industry.icon}</div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{industry.title}</h3>
-                  <p className="text-gray-600 mb-4">{industry.description}</p>
+                  <div className='text-4xl mb-4'>{industry.icon}</div>
+                  <h3 className='text-xl font-semibold mb-2 text-gray-900'>{industry.title}</h3>
+                  <p className='text-gray-600 mb-4'>{industry.description}</p>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Use Cases:</h4>
-                    <ul className="space-y-1">
+                    <h4 className='font-semibold text-gray-900 mb-2'>Use Cases:</h4>
+                    <ul className='space-y-1'>
                       {industry.useCases.map((useCase, idx) => (
-                        <li key={idx} className="text-sm text-gray-600 flex items-center">
-                          <ArrowRight className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
+                        <li key={idx} className='text-sm text-gray-600 flex items-center'>
+                          <ArrowRight className='w-3 h-3 text-blue-500 mr-2 flex-shrink-0' />
                           {useCase}
                         </li>
                       ))}
@@ -532,59 +532,59 @@ export default function MicroSaasPage() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+        <section className='py-20 bg-gray-50'>
+          <div className='container mx-auto px-4'>
             <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              className='text-center mb-16'
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
                 Why Choose Our Micro SAAS Solutions?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
                 We combine cutting-edge technology with affordable pricing to deliver solutions that provide real business value.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {[
                 {
                   icon: Award,
-                  title: "Proven Technology",
-                  description: "Built with latest AI and cloud technologies for maximum performance"
+                  title: 'Proven Technology',
+                  description: 'Built with latest AI and cloud technologies for maximum performance'
                 },
                 {
                   icon: DollarSign,
-                  title: "Affordable Pricing",
-                  description: "50% lower than market rates with transparent, no-hidden-fees pricing"
+                  title: 'Affordable Pricing',
+                  description: '50% lower than market rates with transparent, no-hidden-fees pricing'
                 },
                 {
                   icon: Clock,
-                  title: "Quick Setup",
-                  description: "Get up and running in 1-4 weeks with our streamlined onboarding"
+                  title: 'Quick Setup',
+                  description: 'Get up and running in 1-4 weeks with our streamlined onboarding'
                 },
                 {
                   icon: Shield,
-                  title: "Secure & Reliable",
-                  description: "Enterprise-grade security with 99.9% uptime guarantee"
+                  title: 'Secure & Reliable',
+                  description: 'Enterprise-grade security with 99.9% uptime guarantee'
                 }
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className='text-center'
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-8 h-8 text-blue-600" />
+                  <div className='bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                    <item.icon className='w-8 h-8 text-blue-600' />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
+                  <h3 className='text-xl font-semibold mb-2'>{item.title}</h3>
+                  <p className='text-gray-600'>{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -592,48 +592,48 @@ export default function MicroSaasPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+        <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>
+          <div className='container mx-auto px-4 text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className='text-3xl md:text-4xl font-bold mb-6'>
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              <p className='text-xl mb-8 text-blue-100 max-w-3xl mx-auto'>
                 Join thousands of businesses that have already transformed their operations with our micro SAAS solutions. 
                 Start your free trial today and see the difference.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
                 <Link 
-                  href="/contact"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                  href='/contact'
+                  className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg'
                 >
                   Start Free Trial
                 </Link>
                 <a 
                   href={`tel:${contactInfo.phone}`}
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
+                  className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg'
                 >
                   Call {contactInfo.phone}
                 </a>
               </div>
               
               {/* Contact Information */}
-              <div className="grid md:grid-cols-3 gap-8 mt-12">
-                <div className="flex items-center justify-center">
-                  <Phone className="w-6 h-6 mr-2" />
+              <div className='grid md:grid-cols-3 gap-8 mt-12'>
+                <div className='flex items-center justify-center'>
+                  <Phone className='w-6 h-6 mr-2' />
                   <span>{contactInfo.phone}</span>
                 </div>
-                <div className="flex items-center justify-center">
-                  <Mail className="w-6 h-6 mr-2" />
+                <div className='flex items-center justify-center'>
+                  <Mail className='w-6 h-6 mr-2' />
                   <span>{contactInfo.email}</span>
                 </div>
-                <div className="flex items-center justify-center">
-                  <MapPin className="w-6 h-6 mr-2" />
+                <div className='flex items-center justify-center'>
+                  <MapPin className='w-6 h-6 mr-2' />
                   <span>{contactInfo.address}</span>
                 </div>
               </div>

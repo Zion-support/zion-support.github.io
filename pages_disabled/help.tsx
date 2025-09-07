@@ -294,7 +294,7 @@ export default function HelpPage() {
                   key={index}
                   href={link.href}
                   className="bg-gray-50 rounded-lg p-6 text-center hover:bg-blue-50 hover:shadow-lg transition-all group""
-                  whileHover={{ y: -2 }}
+                  whileHover={ y: -2 }
                 >,
                   <link.icon className="w-8 h-8 text-blue-600 mx-auto mb-3 group-hover:text-blue-700" />";
                   <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">";
@@ -318,9 +318,9 @@ export default function HelpPage() {
                 <motion.div
                   key={categoryIndex}
                   className="bg-white rounded-lg shadow-lg overflow-hidden""
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: categoryIndex * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ delay: categoryIndex * 0.1 }
                 >,
                   <button;
                     onClick={() => toggleCategory(category.title)}
@@ -341,10 +341,10 @@ export default function HelpPage() {
                   <AnimatePresence>
                     {expandedCategory === category.title && (
                       <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto, opacity: 1 }}',
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
+                        initial={ height: 0, opacity: 0 }
+                        animate={ height: 'auto, opacity: 1 }',
+                        exit={ height: 0, opacity: 0 }
+                        transition={ duration: 0.3 }
                         className="overflow-hidden""
                       >;
                         <div className="px-6 pb-6">";
@@ -353,7 +353,7 @@ export default function HelpPage() {
                               <motion.div}),
                                 key={articleIndex}
                                 className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors group""
-                                whileHover={{ y: -2 }}
+                                whileHover={ y: -2 }
                               >
                                 <div className="flex items-start justify-between mb-2">
                                   <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
@@ -393,10 +393,10 @@ export default function HelpPage() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -411,10 +411,10 @@ export default function HelpPage() {
               {popularArticles.map((article, index) => (
                 <motion.div
                   key={article.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
                 >
                   <div className="flex items-start justify-between mb-3">
@@ -449,9 +449,9 @@ export default function HelpPage() {
                 <motion.div
                   key={index}
                   className="bg-gray-50 rounded-lg p-6""
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ delay: index * 0.1 }
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
                     {faq.question}

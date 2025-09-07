@@ -76,7 +76,7 @@ export function Steps() {const childrenArray  = React.Children.toArray(children)
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;"
           <div;
             className="h-full bg-zion-purple transition-all";"
-            style={{interface StepsProps  {"currentStep": number,className?: string;
+            style={interface StepsProps  {"currentStep": number,className?: string;
   }
   "children": React && React.ReactNode;
 }export function Steps(): any ({ currentStep, className, children }: StepsProps) {const childrenArray  = React && React.Children.toArray(children)return (} /> </div> </div> </div>)}"};"
@@ -91,7 +91,7 @@ export function Steps() {const childrenArray = React.Children.toArray(children),
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;"
           <div;
             className="h-full bg-zion-purple transition-all";"
-            style={{"width": `${(currentStep / (childrenArray.length - 1)) * 100}%`}} />;`        </div>;
+            style={"width": `${(currentStep / (childrenArray.length - 1)) * 100}%`} />;`        </div>;
       </div>;
     </div>;
   )}// Check condition;
@@ -159,7 +159,7 @@ if (status = "current") {$2;"
         <div className="ml-[18px] w-[calc (100%-36px)] h - 0.5 bg - zion - blue - light">;"
           <div;
             className="h - full bg - zion - purple transition - all";"
-            style={{"width": `${(current_step / (children_array.length - 1)) * 100}%`}}` />;
+            style={"width": `${(current_step / (children_array.length - 1)) * 100}%`}` />;
         </div>;
       </div>;
     </div>)}/> </div> </div> </div>)}"}"

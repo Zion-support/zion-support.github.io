@@ -74,7 +74,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {const
 interface Props  {"children": React && React.ReactNode;
 }interface State  {"hasError": boolean,error?: Error;
 }export class EquipmentErrorBoundary extends React && React.Component<Props, State> {constructor("props": Props) {super(props)}static getDerivedStateFromError("error": Error): State {return { "hasError": true, error }
-  }}render() {if (this && this.state.hasError) {return (<Button onClick={() => window.location.reload()} variant="default">;"
+  }render() {if (this && this.state.hasError) {return (<Button onClick={() => window.location.reload()} variant="default">;"
                   Refresh Page;
                 </Button>;
               </div>;
@@ -83,7 +83,7 @@ interface Props  {"children": React && React.ReactNode;
         </div>;
       )return this.props.children;
   }      )}return this.props.children;
-  }}}
+  }}
                   onClick={() => window && window.location.reload()}
                   variant='default';'
                 >                  Refresh Page;
@@ -155,5 +155,5 @@ if ( {) {$2;
         </div>)}
     return this.props.children;
   }      )}return this.props.children;
-  }})}return this.props.children;
+  })}return this.props.children;
   }

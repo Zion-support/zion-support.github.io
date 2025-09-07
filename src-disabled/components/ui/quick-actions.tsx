@@ -12,14 +12,14 @@ interface QuickAction {
 
   if (!isVisible) {
     return (
-      <div className="fixed bottom-4 left-4 z-50">
+      <div className='fixed bottom-4 left-4 z-50'>
         <Button
-          variant="outline"
-          size="sm"
+          variant='outline'
+          size='sm'
           onClick={() => setIsVisible(true)}
-          className="bg-background/80 backdrop-blur-sm"
+          className='bg-background/80 backdrop-blur-sm'
         >
-          <Settings className="w-4 h-4 mr-2" />
+          <Settings className='w-4 h-4 mr-2' />
           Quick Actions
         </Button>
       </div>
@@ -32,94 +32,94 @@ interface QuickAction {
     );
   }
   return (
-    <div className="fixed bottom-4 left-4 z-50 w-80">"
-      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">"
-        <CardHeader className="pb-2">"
-          <div className="flex items-center justify-between">"
-            <CardTitle className="text-sm flex items-center">"
-              <Settings className="w-4 h-4 mr-2" />"
+    <div className='fixed bottom-4 left-4 z-50 w-80'>'
+      <Card className='bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto'>'
+        <CardHeader className='pb-2'>'
+          <div className='flex items-center justify-between'>'
+            <CardTitle className='text-sm flex items-center'>'
+              <Settings className='w-4 h-4 mr-2' />'
               Quick Actions
             </CardTitle>
             <Button
-              variant="ghost""
-              size="sm""
+              variant='ghost''
+              size='sm''
               onClick={() => setIsVisible(false)}
-              className="h-6 w-6 p-0""
+              className='h-6 w-6 p-0''
   }
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 w-80">
-      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">
-        <CardHeader className="pb-2">
-          <div className="flex items-center justify-between">
-            <CardTitle className="text-sm flex items-center">
-              <Settings className="w-4 h-4 mr-2" />
+    <div className='fixed bottom-4 left-4 z-50 w-80'>
+      <Card className='bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto'>
+        <CardHeader className='pb-2'>
+          <div className='flex items-center justify-between'>
+            <CardTitle className='text-sm flex items-center'>
+              <Settings className='w-4 h-4 mr-2' />
               Quick Actions
             </CardTitle>
             <Button
-              variant="ghost"
-              size="sm"
+              variant='ghost'
+              size='sm'
               onClick={() => setIsVisible(false)}
-              className="h-6 w-6 p-0"
+              className='h-6 w-6 p-0'
             >
               ✕
             </Button>
           </div>
         </CardHeader>
-        <CardContent className="pt-0 space-y-4">"
+        <CardContent className='pt-0 space-y-4'>'
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
-              <div className="flex items-center gap-2 mb-2">",
-                <Badge className={categoryColors[category as keyof typeof categoryColors]} variant="outline">"
+              <div className='flex items-center gap-2 mb-2'>',
+                <Badge className={categoryColors[category as keyof typeof categoryColors]} variant='outline'>'
                   {category}
                 </Badge>
               </div>
-              <div className="space-y-2">"
+              <div className='space-y-2'>'
                 {categoryActions.map((action) => (
-                  <div key={action.id} className="space-y-1">"
+                  <div key={action.id} className='space-y-1'>'
                     <Button
-                      variant={action.dangerous ? "destructive" : "outline"}"
-                      size="sm""
+                      variant={action.dangerous ? 'destructive' : 'outline'}'
+                      size='sm''
                       onClick={() => executeAction(action.id, action.action)}
                       disabled={isProcessing === action.id}
-                      className="w-full justify-start h-auto p-3""
+                      className='w-full justify-start h-auto p-3''
                     >
-                      <div className="flex items-start gap-3 w-full">"
-                        <div className="mt-0.5">"
+                      <div className='flex items-start gap-3 w-full'>'
+                        <div className='mt-0.5'>'
                           {isProcessing === action.id ? (
-                            <RefreshCw className="w-4 h-4 animate-spin" />"
-        <CardContent className="pt-0 space-y-4">
+                            <RefreshCw className='w-4 h-4 animate-spin' />'
+        <CardContent className='pt-0 space-y-4'>
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
-              <div className="flex items-center gap-2 mb-2">
-                <Badge className={categoryColors[category as keyof typeof categoryColors]} variant="outline">
+              <div className='flex items-center gap-2 mb-2'>
+                <Badge className={categoryColors[category as keyof typeof categoryColors]} variant='outline'>
                   {category}
                 </Badge>
               </div>
-              <div className="space-y-2">
+              <div className='space-y-2'>
                 {categoryActions.map((action) => (
-                  <div key={action.id} className="space-y-1">
+                  <div key={action.id} className='space-y-1'>
                     <Button
-                      variant={action.dangerous ? "destructive" : "outline"}
-                      size="sm"
+                      variant={action.dangerous ? 'destructive' : 'outline'}
+                      size='sm'
                       onClick={() => executeAction(action.id, action.action)}
                       disabled={isProcessing === action.id}
-                      className="w-full justify-start h-auto p-3"
+                      className='w-full justify-start h-auto p-3'
                     >
-                      <div className="flex items-start gap-3 w-full">
-                        <div className="mt-0.5">
+                      <div className='flex items-start gap-3 w-full'>
+                        <div className='mt-0.5'>
                           {isProcessing === action.id ? (
-                            <RefreshCw className="w-4 h-4 animate-spin" />
+                            <RefreshCw className='w-4 h-4 animate-spin' />
                           ) : (
                             action.icon
                           )}
                         </div>
-                        <div className="flex-1 text-left">"
-                          <div className="font-medium text-sm">{action.label}</div>"
-                          <div className="text-xs opacity-70 mt-1">"
-                        <div className="flex-1 text-left">
-                          <div className="font-medium text-sm">{action.label}</div>
-                          <div className="text-xs opacity-70 mt-1">
+                        <div className='flex-1 text-left'>'
+                          <div className='font-medium text-sm'>{action.label}</div>'
+                          <div className='text-xs opacity-70 mt-1'>'
+                        <div className='flex-1 text-left'>
+                          <div className='font-medium text-sm'>{action.label}</div>
+                          <div className='text-xs opacity-70 mt-1'>
                             {action.description}
                           </div>;
                         </div>;
@@ -247,60 +247,60 @@ if ( {) {
     return (
   const [isVisible, setIsVisible] = useState(false),;
   const [isProcessing, setIsProcessing] = useState<string | null>(null),;
-      icon: <Activity className="w-4 h-4" />,"
-"
-      icon: <Package className="w-4 h-4" />,"
-      icon: <Trash2 className="w-4 h-4" />,"
-</Trash2>"
+      icon: <Activity className='w-4 h-4' />,'
+'
+      icon: <Package className='w-4 h-4' />,'
+      icon: <Trash2 className='w-4 h-4' />,'
+</Trash2>'
       icon: <Zap className='w-4 h-4' />
 
-      icon: <Download className="w-4 h-4" />,"
-      icon: <Monitor className="w-4 h-4" />,"
-      icon: <RefreshCw className="w-4 h-4" />,"
+      icon: <Download className='w-4 h-4' />,'
+      icon: <Monitor className='w-4 h-4' />,'
+      icon: <RefreshCw className='w-4 h-4' />,'
       icon: <Monitor className='w-4 h-4' />,;
 
       icon: <RefreshCw className='w-4 h-4' />,;
 
-      <div className="fixed bottom-4 left-4 z-50">"
+      <div className='fixed bottom-4 left-4 z-50'>'
 </div>
-        <Button;"
-          variant="outline"""
-          size="sm""
+        <Button;'
+          variant='outline'''
+          size='sm''
           onClick={() => setIsVisible(true)}
-          <Settings className="w-4 h-4 mr-2" />"
+          <Settings className='w-4 h-4 mr-2' />'
 
-      </div>"
+      </div>'
           <Settings className='w-4 h-4 mr-2' />;
 
       </div>;
-    <div className="fixed bottom-4 left-4 z-50 w-80">"
-      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">"
-        <CardHeader className="pb-2">"
-          <div className="flex items-center justify-between">"
-            <CardTitle className="text-sm flex items-center">"
+    <div className='fixed bottom-4 left-4 z-50 w-80'>'
+      <Card className='bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto'>'
+        <CardHeader className='pb-2'>'
+          <div className='flex items-center justify-between'>'
+            <CardTitle className='text-sm flex items-center'>'
 
-              variant="ghost"""
+              variant='ghost'''
               onClick={() => setIsVisible(false)}
 
 
-        <CardContent className="pt-0 space-y-4">"
+        <CardContent className='pt-0 space-y-4'>'
 
             <div key={category}>
-              <div className="flex items-center gap-2 mb-2">"
-                <Badge className={categoryColors[category as keyof typeof categoryColors]} variant="outline">"
+              <div className='flex items-center gap-2 mb-2'>'
+                <Badge className={categoryColors[category as keyof typeof categoryColors]} variant='outline'>'
 
-              <div className="space-y-2">"
-                  <div key={action.id} className="space-y-1">"
-                      variant={action.dangerous ? "destructive" : "outline"}""
+              <div className='space-y-2'>'
+                  <div key={action.id} className='space-y-1'>'
+                      variant={action.dangerous ? 'destructive' : 'outline'}''
                       onClick={() => executeAction(action.id, action.action)}
-                      <div className="flex items-start gap-3 w-full">"
-                        <div className="mt-0.5">"
-                            <RefreshCw className="w-4 h-4 animate-spin" />"
+                      <div className='flex items-start gap-3 w-full'>'
+                        <div className='mt-0.5'>'
+                            <RefreshCw className='w-4 h-4 animate-spin' />'
 
-                        <div className="flex-1 text-left">"
-                          <div className="font-medium text-sm">{action.label}</div>""
-                          <div className="text-xs opacity-70 mt-1">"
-    </div>;"
+                        <div className='flex-1 text-left'>'
+                          <div className='font-medium text-sm'>{action.label}</div>''
+                          <div className='text-xs opacity-70 mt-1'>'
+    </div>;'
       icon: <Zap className='w - 4 h - 4' />,
 
       icon: <Download className='w - 4 h - 4' />,
@@ -406,7 +406,7 @@ pr-12325
 }
 }
 }
-}}}}}}}}}
+}}}}}
 } ;
             )
           )}

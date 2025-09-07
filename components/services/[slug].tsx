@@ -14,7 +14,6 @@ import { verified2025Additions   } from '../../data/verified-2025-additions';
 import { realServicesQ12025   } from '../../data/real-services-q1-2025';
 import { newVerifiedServicesQ22025  } from '../../data/real-verified-services-q2-2025';
 
-<<<<<<< HEAD
 
 
  
@@ -38,7 +37,6 @@ import { realServicesQ12025   } from '../../data/real-services-q1-2025';'
 import { newVerifiedServicesQ22025  } from '../../data/real-verified-services-q2-2025';'
 
 type Service = any;
-=======
 type Service = any;
 export default ServiceDetail;
 }function getAllServices () : Service[] {return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])}return {"paths": Array.from (slugs) .map ( (slug) => ({"params": {slug;
@@ -57,7 +55,6 @@ null;
 null;
 2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div>) )2)}function getAllServices () : Service[] {2)service.name;
 }| Zion Tech Group</title> ;
-<<<<<<< HEAD
 }null;}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div>) )2)2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div>) )ursor/fix-website-loading-errors-and-merge-6662;
 }</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {`"tel":$ {contactInfo.mobile.replace (/[^+\\d]/g, '')}`;`}className=""hover":underline" > {contactInfo.mobile;"
 }</a></div> <div className="flex items-center gap-2 text-purple-400" ><Mail className="w-4 h-4" /><a href= {`"mailto":$ {contactInfo.email;`}`;`}className=""hover":underline" > {contactInfo.email;"
@@ -143,10 +140,6 @@ null;
 2)
 }/> </Head> </li>) )
 }</ul> </div>) )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }</ul> </div> <div>) )
 2) 
 pr-12243
@@ -209,8 +202,6 @@ null;
 }{
   service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   service.marketPosition
 }</p>
 }{
@@ -264,7 +255,6 @@ const contactInfo = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-=======
 fallback: false ;'
 import React from 'react';'
 import Head from 'next/head';'
@@ -283,7 +273,6 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025';'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
 type Service = typeof enhancedRealMicroSaasServices[number];
 
-<<<<<<< HEAD
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href = "/services"><a className="text-sm text-blue-600 "hover":underline">Back to Services</a></Link>"
 ;
@@ -299,8 +288,6 @@ export default ServiceDetail
 export default ServiceDetail,
 export default ServiceDetail
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 export default function ServiceDetailPage(): any ({;
@@ -358,7 +345,6 @@ null;
 };
 export default ServiceDetail ;
 export default ServiceDetail;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 pr-12243
   service.name
@@ -371,19 +357,13 @@ export default ServiceDetail
 
 export default ServiceDetail
 }
-=======
-<<<<<<< HEAD
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 export default ServiceDetail
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
   service.name;"
@@ -395,7 +375,6 @@ export default ServiceDetail;
 }
   service.name;"
 }- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover: underline\" />Back to Services</a></Link>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 };
 export default ServiceDetail;
 export default ServiceDetail;
@@ -412,8 +391,6 @@ export default function ServiceDetailPage(): any ({;}
 
 export default ServiceDetail
 }
-<<<<<<< HEAD
-=======
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 };
@@ -433,7 +410,6 @@ null;
 
 }/> </Head> </li>) ) ;
 }</ul> </div>) ) ;
-<<<<<<< HEAD
 }</ul> </div> <div>) ) ;
 }</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><ahref= {"
   `"tel":$ {`  }
@@ -460,7 +436,6 @@ null;
   service && service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >"Position":</span> {;"
   }
   service && service.marketPosition ;
-=======
 }</ul> </div> <div />) ) ;"
 }</div> </div> </div> </div> </div> </div> </div> <div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"  /> <h3 className=\"text-white font-semibold mb-3\"  />Contact</h3> <div className=\"space-y-3 text-sm\"  /> <div className=\"flex items-center gap-2 text-cyan-400\"  /><Phone className=\"w-4 h-4\" /><ahref= {
   `tel: $ {;}
@@ -485,7 +460,6 @@ null;
 }<div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"  /> <h3 className=\"text-white font-semibold mb-3\"  />Market & ROI</h3> <div className=\"space-y-3 text-sm text-gray-300\"  /> {;"
   service && service.marketPosition && <p className=\"leading-relaxed\"  /><span className=\"text-gray-400\"  />Position:</span> {;}
   service && service.marketPosition ;}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }</p> ;
 }{;
   }
@@ -493,7 +467,6 @@ null;
   }
   service && service.roi ;
 }</p> ;
-<<<<<<< HEAD
 }{;
   }
   service && service.competitors?.length ? () : null ;
@@ -505,7 +478,6 @@ null;
 };
 export default ServiceDetail ;
 export default ServiceDetail;
-<<<<<<< HEAD
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href = "/services"><a className="text-sm text-blue-600 "hover":underline">Back to Services</a></Link>"
 ;
@@ -522,41 +494,25 @@ export default ServiceDetail,
 export default ServiceDetail
 
 };
-=======
 export default ServiceDetail
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover: underline">Back to Services</a></Link>;
 };
 export default ServiceDetail 
 export default ServiceDetail
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 };
 ;
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 ;
 }
 pr-12243
-<<<<<<< HEAD
-=======
 
-=======
-=======
   service.name;"
 }- Zion Tech Solutions</title> </Head> </Link> <Link href = \"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ;
 }
 export default ServiceDetail;
@@ -623,13 +579,10 @@ export default ServiceDetail
 export default ServiceDetail
 
 export default ServiceDetail
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 
 
-<<<<<<< HEAD
 };
-=======
 export default ServiceDetail
 export default ServiceDetail
   service.name;"
@@ -638,18 +591,14 @@ export default ServiceDetail
 export default ServiceDetail
 export default ServiceDetail
 }
-<<<<<<< HEAD
   service.name;"
 }- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover: underline\" />Back to Services</a></Link>;
 };
 export default ServiceDetail;
 export default ServiceDetail;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 ;
 }
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 export default ServiceDetail;
@@ -658,7 +607,6 @@ export default ServiceDetail;
 };
 export default ServiceDetail;
 export default ServiceDetail;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
   return enhancedRealMicroSaasServices .concat (extra_services as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]);
 }return {}
@@ -713,7 +661,6 @@ null;
 }<a href="/market - pricing" className="inline - block mt - 2 text - cyan - 300 hover: text - cyan - 200">See average market prices →</a> return (<EnhancedLayout> <Head> <title > Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {}
   service.name;"
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text - sm text - blue - 600 hover:underline">Back to Services</a></Link>;
-=======
 }
   return enhancedRealMicroSaasServices .concat (extra_services as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]);
 }return {
@@ -792,8 +739,8 @@ export default ServiceDetail;
 }
 export default ServiceDetail;
 export default ServiceDetail;
-}}ursor/fix-website-loading-errors-and-merge-6662;
-}}
+}ursor/fix-website-loading-errors-and-merge-6662;
+}
 }
   return enhancedRealMicroSaasServices .concat (extra_services as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])}return {"paths": Array.from (slugs) .map ( (slug) => ({"params": {slug;
 }) )"fallback": false;
@@ -822,29 +769,17 @@ null;
 export default ServiceDetail;
 export default ServiceDetail;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
 }
 "
-<<<<<<< HEAD
-=======
 }</ul> </div> <div>) ) 
 }</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
   `tel:$ {
@@ -882,11 +817,3 @@ pr-12243
 }
 export default ServiceDetail 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

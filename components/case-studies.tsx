@@ -14,9 +14,9 @@ return (;
 title='Case Studies | Zion Tech Group''
         description='Proven outcomes across AI, cloud, and automation projects.''
 
-        canonical='"https"://ziontechgroup.com/case-studies/'' />
+        canonical=''https'://ziontechgroup.com/case-studies/'' />
       <div className='container mx-auto px-4 py-16 text-white'>'
-        <h1 className='text-4xl "md":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>'
+        <h1 className='text-4xl 'md':text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>'
           Case Studies
         </h1>
         <p className='mt-4 text-gray-300 max-w-3xl'>'
@@ -28,4 +28,3 @@ kleber@ziontechgroup.com.
     </UltraFuturisticBackground>
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

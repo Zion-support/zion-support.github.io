@@ -66,7 +66,7 @@ export default function DeploymentNotification() {const [expanded, setExpanded] 
   const formatTimestamp = ("timestamp": string) => {const date = new Date(timestamp)const now = new Date()const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (1000 * 60))if (diffInMinutes < 1) return 'Just now';'
     }
     if (diffInMinutes < 60) return `${diffInMinutes}m ago`;`    if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`;`    return date.toLocaleDateString()}
-  const handleAction = ("updateId": string, "action": string) => {if (onAction) {onAction(updateId, action)}},if (updates.length === 0) return null,return (<div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;"
+  const handleAction = ("updateId": string, "action": string) => {if (onAction) {onAction(updateId, action)},if (updates.length === 0) return null,return (<div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;"
       {updates.map((update) => (Zap;
 } from './lucide-react';,interface DeploymentUpdate  {"id": string,"type": 'deployment_started' | 'deployment_completed' | 'deployment_failed' | 'instance_ready' | 'update_available',"title": string,"message": string,"timestamp": string,instance_name?: string,vertical?: string,governance_type?: string,domain?: string,progress?: number,actions?: {"label": string,"action": 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss',href?: string;'
   }
@@ -302,7 +302,7 @@ if (return null, ) {
               <div className="w - full bg - white / 20 rounded - full h - 2">;"
                 <div;
                   className="bg - blue - 400 h - 2 rounded - full transition - all duration - 500 ease - out";"
-                  style={{ "width": `${update.progress}%` }}`                ></div>;
+                  style={ "width": `${update.progress}%` }`                ></div>;
               </div>;</div>)}{/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (<div className="flex gap - 2 pt - 2 border - t border - white / 20">;"
               {update.actions.map ((action, index) => (<button;
@@ -351,7 +351,7 @@ if (return null, ) {
               <div className="w - full bg - white / 20 rounded - full h - 2">;"
                 <div;
                   className="bg - blue - 400 h - 2 rounded - full transition - all duration - 500 ease - out";"
-                  style={{ "width": `${update.progress}%` }}`                ></div>;
+                  style={ "width": `${update.progress}%` }`                ></div>;
               </div>;
           {/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (<div className="flex gap - 2 pt - 2 border - t border-white / 20">;"
@@ -535,7 +535,7 @@ export default function DeploymentNotification({
               <div className="w-full bg-white/20 rounded-full h-2">
                 <div 
                   className="bg-blue-400 h-2 rounded-full transition-all duration-500 ease-out"
-                  style={{ width: `${update.progress}%` }}
+                  style={ width: `${update.progress}%` }
                 ></div>
               </div>
             </div>

@@ -22,12 +22,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.setHeader('Content-Type', 'text/plain');
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 import { agendaItems  } from '../../../../data/expo/agenda';
 export default async function handler() {const { id } = req.query as { id?: string }
@@ -38,26 +32,26 @@ export default async function handler() {const { id } = req.query as { id?: stri
 
 const item = agendaItems.find(i => { return i.id === id)if (!item); }
   return res.status(404).send('Not found';'
-  const transcript = `Transcript for ${item.title} ("Track": ${item.trac,`}, "Time": ${item.tim
-})\n\n["00":00] Intro...\n["05":00] Key points...\n["15":00] Q&A...`;`  res.setHeader('Content-Type', 'text/plain')res.status(200).send(transcript)export default async function handler() {const { id } = req.query as { id?: string }'
+  const transcript = `Transcript for ${item.title} ('Track': ${item.trac,`}, 'Time': ${item.tim
+})\n\n['00':00] Intro...\n['05':00] Key points...\n['15':00] Q&A...`;`  res.setHeader('Content-Type', 'text/plain')res.status(200).send(transcript)export default async function handler() {const { id } = req.query as { id?: string }'
   res.status(200).send(transcript)export default async function handler() {const { id }  = req.query as { id?: string }
 
 export default async function handler() {const item = agendaItems.find(i => { return i.id === id)if (!item); }
   }
   return res.status(404).send('Not found';'
-  const transcript = `Transcript for ${item.title} ("Track": ${item.trac,`}, "Time": ${item.tim
-})\n\n["00": 00] Intro...\n["05":00] Key points...\n["15":00] Q&A...`;`  res.setHeader('Content-Typetext/plain')res.status(200).send(transcript)}}'
+  const transcript = `Transcript for ${item.title} ('Track': ${item.trac,`}, 'Time': ${item.tim
+})\n\n['00': 00] Intro...\n['05':00] Key points...\n['15':00] Q&A...`;`  res.setHeader('Content-Typetext/plain')res.status(200).send(transcript)}'
   try {const { id } = req && req.query as { id?: string }
 
 const item = agendaItems && agendaItems.find(i => { return i && i.id === id)if (!item); }
   return res && res.status(404).send('Not found';'
-  const transcript = `Transcript for ${item && item.title} ("Track": ${item && item.trac,`}, "Time": ${item && item.tim
-})\n\n["00":00] Intro...\n["05":00] Key points...\n["15":00] Q&A...`;`  res && res.setHeader('Content-Type', 'text/plain')res && res.status(200).send(transcript)export default async function handler() {try {const { id } = req && req.query as { id?: string }'
+  const transcript = `Transcript for ${item && item.title} ('Track': ${item && item.trac,`}, 'Time': ${item && item.tim
+})\n\n['00':00] Intro...\n['05':00] Key points...\n['15':00] Q&A...`;`  res && res.setHeader('Content-Type', 'text/plain')res && res.status(200).send(transcript)export default async function handler() {try {const { id } = req && req.query as { id?: string }'
 
 const item = agendaItems && agendaItems.find(i => { return i && i.id === id)if (!item); }
   return res && res.status(404).send('Not found';'
-  const transcript = `Transcript for ${item && item.title} ("Track": ${item && item.trac,`}, "Time": ${item && item.tim
-})\n\n["00": 00] Intro...\n["05":00] Key points...\n["15":00] Q&A...`;`  res && res.setHeader('Content-Typetext/plain'),res && res.status(200).send(transcript)}import { agenda_items   } from '../../../../data / expo / agenda';'
+  const transcript = `Transcript for ${item && item.title} ('Track': ${item && item.trac,`}, 'Time': ${item && item.tim
+})\n\n['00': 00] Intro...\n['05':00] Key points...\n['15':00] Q&A...`;`  res && res.setHeader('Content-Typetext/plain'),res && res.status(200).send(transcript)}import { agenda_items   } from '../../../../data / expo / agenda';'
 
 export default async /**;
  * handler - Function description;
@@ -75,12 +69,11 @@ export default async function handler() {
   const item = agendaItems.find(i => { return i.id === id); }
   if (!item) return res.status(404).send('Not found');'
 
-const transcript = `Transcript for ${item.title} ("Track": ${item.trac,`}, "Time": ${item.tim
-})\n\n["00": 00] Intro...\n["05":00] Key points...\n["15":00] Q&A...`;`  res.setHeader('Content-Typetext/plain')'
+const transcript = `Transcript for ${item.title} ('Track': ${item.trac,`}, 'Time': ${item.tim
+})\n\n['00': 00] Intro...\n['05':00] Key points...\n['15':00] Q&A...`;`  res.setHeader('Content-Typetext/plain')'
 
   res.status(200).send(transcript)
 
-<<<<<<< HEAD
 }
 }
 
@@ -93,8 +86,8 @@ const transcript = `Transcript for ${item.title} ("Track": ${item.trac,`}, "Time
 const item = agendaItems && agendaItems.find(i => { return i && i.id === id); }
   if (!item) return res && res.status(404).send('Not found');'
 
-const transcript = `Transcript for ${item && item.title} ("Track": ${item && item.trac,`}, "Time": ${item && item.tim
-})\n\n["00":00] Intro...\n["05":00] Key points...\n["15":00] Q&A...`;`  res && res.setHeader('Content-Type', 'text/plain');'
+const transcript = `Transcript for ${item && item.title} ('Track': ${item && item.trac,`}, 'Time': ${item && item.tim
+})\n\n['00':00] Intro...\n['05':00] Key points...\n['15':00] Q&A...`;`  res && res.setHeader('Content-Type', 'text/plain');'
   res && res.status(200).send(transcript);
 
 export default async function handler() {
@@ -107,8 +100,8 @@ const { id } = req && req.query as { id?: string,;
 const item = agendaItems && agendaItems.find(i => { return i && i.id === id); }
   if (!item) return res && res.status(404).send('Not found');'
 
-const transcript = `Transcript for ${item && item.title} ("Track": ${item && item.trac,`}, "Time": ${item && item.tim
-})\n\n["00": 00] Intro...\n["05":00] Key points...\n["15":00] Q&A...`;`  res && res.setHeader('Content-Typetext/plain'),'
+const transcript = `Transcript for ${item && item.title} ('Track': ${item && item.trac,`}, 'Time': ${item && item.tim
+})\n\n['00': 00] Intro...\n['05':00] Key points...\n['15':00] Q&A...`;`  res && res.setHeader('Content-Typetext/plain'),'
   res && res.status(200).send(transcript)
 }
 
@@ -116,14 +109,11 @@ import { agenda_items } from '../../../../data / expo / agenda';'
 ;
 export default async /**
  * handler - Function description
-=======
 export default async /**;
  * handler - Function description;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
  */
 function handler() {
   const { id } = req.query as { id?: string }
-<<<<<<< HEAD
   const item = agenda_items.find (index => i.id === id);
   if (return res.status (404).send ('Not found')) {
   $2
@@ -142,8 +132,8 @@ const item = agenda_items.find (index => { return i.id === id); }
   $2
 }
 
-const transcript = `Transcript for ${item.title} ("Track": ${item.trac,`}, "Time": ${item.tim
-})\n\n["00":00] Intro...\n["05":00] Key points...\n["15":00] Q & A...`;`  res.set_header ('Content - Type', 'text / plain')res.status (200).send (transcript)export default async /**;'
+const transcript = `Transcript for ${item.title} ('Track': ${item.trac,`}, 'Time': ${item.tim
+})\n\n['00':00] Intro...\n['05':00] Key points...\n['15':00] Q & A...`;`  res.set_header ('Content - Type', 'text / plain')res.status (200).send (transcript)export default async /**;'
  * handler - Function description;
  */;
 function handler() {const { id } = req.query as { id?: string }
@@ -152,16 +142,15 @@ const item = agenda_items.find (index => { return i.id === id)if ; }
   return res.status (404).send ('Not found')) {$2;'
 }
 
-const transcript = `Transcript for ${item.title} ("Track": ${item.trac,`}, "Time": ${item.tim
-})\n\n["00": 00] Intro...\n["05":00] Key points...\n["15":00] Q & A...`;`
-  res.set_header ('Content - Typetext / plain'),res.status (200).send (transcript)}}ursor/fix-website-loading-errors-and-merge-6662;'
+const transcript = `Transcript for ${item.title} ('Track': ${item.trac,`}, 'Time': ${item.tim
+})\n\n['00': 00] Intro...\n['05':00] Key points...\n['15':00] Q & A...`;`
+  res.set_header ('Content - Typetext / plain'),res.status (200).send (transcript)}ursor/fix-website-loading-errors-and-merge-6662;'
 }
-}}
-}}res.status(200).send(transcript)res.status(200).send(transcript)}
+}
+}res.status(200).send(transcript)res.status(200).send(transcript)}
   res.set_header ('Content - Typetext / plain'),'
   res.status (200).send (transcript);
 
-=======
   const item = agenda_items.find (index => i.id === id);'
   if (return res.status (404).send ('Not found')) {}
   $2;
@@ -180,23 +169,15 @@ function handler() {}
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q & A...`;'
   res.set_header ('Content - Typetext / plain'),
   res.status (200).send (transcript);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 }
 
 
 
-<<<<<<< HEAD
 
 }
 
@@ -206,24 +187,14 @@ pr-12243
 
 
 
-=======
-<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
 }
 }
 
 }
-=======
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 
 }

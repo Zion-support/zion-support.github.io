@@ -24,17 +24,17 @@ const ContactForm: React.FC = () => {;
   AlertCircle,;
 } from 'lucide-react';'
 
-const "ContactForm": React.FC = () => {
+const 'ContactForm': React.FC = () => {
  ;
   }
   const [formData, setFormData] = useState({
     }
-    "name": '','
-    "email": '','
-    "company": '','
-    "phone": '','
-    "service": '','
-"message": '','
+    'name': '','
+    'email': '','
+    'company': '','
+    'phone': '','
+    'service': '','
+'message': '','
   });
 
 const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,7 +44,7 @@ const [submitStatus, setSubmitStatus] = useState<;
   >('idle');'
 
 const handleChange = (;
-    "e": React.ChangeEvent<
+    'e': React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
@@ -56,7 +56,7 @@ const handleChange = (;
 };
 
 
-const handleSubmit = async ("e": React.FormEvent) => {
+const handleSubmit = async ('e': React.FormEvent) => {
     }
     e.preventDefault();
     setIsSubmitting(true);
@@ -68,12 +68,12 @@ try {
       setSubmitStatus('success');'
       setFormData({
         }
-        "name": '','
-        "email": '','
-        "company": '','
-        "phone": '','
-        "service": '','
-"message": '','
+        'name': '','
+        'email': '','
+        'company': '','
+        'phone': '','
+        'service': '','
+'message': '','
       });
     } catch (error) {;
       }
@@ -85,7 +85,6 @@ try {
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
-<<<<<<< HEAD
   const services = [
 'AI Development',
     'Cloud Architecture',
@@ -94,7 +93,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     'Blockchain Solutions',
     'Data Analytics',
     'Other',
-=======
   const services = ['
     'AI Development''
     'Cloud Architecture''
@@ -103,24 +101,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     'Blockchain Solutions''
     'Data Analytics''
     'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
 const services = [;
   'AI Development','Cloud Architecture','Digital Transformation','IoT Platforms','Blockchain Solutions','Data Analytics','Other'];'
 
 const contactInfo = [;
-  {"icon": Mail,"title": 'Email Us',"content": 'contact@ziontechgroup && ziontechgroup.com',"href": '"mailto":contact@ziontechgroup && ziontechgroup.com'},    {"icon": Phone,"title": 'Call Us',"content": '+1 (555) 123-4567',      "href": '"mailto":contact@ziontechgroup && ziontechgroup.com';'
-}{"icon": Phone,"title": 'Call Us',"content": '+1 (555) 123-4567',"href": '"tel":+15551234567'},    {"icon": MapPin,"title": 'Visit Us',"content": '123 Tech Street, Innovation City, IC 12345',"href": '#'},return (<section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>;'
+  {'icon': Mail,'title': 'Email Us','content': 'contact@ziontechgroup && ziontechgroup.com','href': ''mailto':contact@ziontechgroup && ziontechgroup.com'},    {'icon': Phone,'title': 'Call Us','content': '+1 (555) 123-4567',      'href': ''mailto':contact@ziontechgroup && ziontechgroup.com';'
+}{'icon': Phone,'title': 'Call Us','content': '+1 (555) 123-4567','href': ''tel':+15551234567'},    {'icon': MapPin,'title': 'Visit Us','content': '123 Tech Street, Innovation City, IC 12345','href': '#'},return (<section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>;'
       {/* Background Elements */}<div className='absolute inset-0'>;'
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;'
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0 && 0.1),transparent_50%)]' />;'
 
       </div>;
 '
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className="relative container mx-auto px-4">;
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className='relative container mx-auto px-4'>;
 
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className="relative container mx-auto px-4">"
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className='relative container mx-auto px-4'>'
 ];
 
 ;
@@ -136,24 +133,24 @@ const contact_info = [;
 
       }
 
-      "icon": Mail,
-      "title": 'Email Us','
-      "content": 'contact@ziontechgroup.com','
-"href": '"mailto":contact@ziontechgroup.com','
+      'icon': Mail,
+      'title': 'Email Us','
+      'content': 'contact@ziontechgroup.com','
+'href': ''mailto':contact@ziontechgroup.com','
     },
     {
       }
-      "icon": Phone,
-      "title": 'Call Us','
-      "content": '+1 (555) 123-4567','
-"href": '"tel":+15551234567','
+      'icon': Phone,
+      'title': 'Call Us','
+      'content': '+1 (555) 123-4567','
+'href': ''tel':+15551234567','
     },
     {
       }
-      "icon": MapPin,
-      "title": 'Visit Us','
-      "content": '123 Tech Street, Innovation City, IC 12345','
-"href": '#','
+      'icon': MapPin,
+      'title': 'Visit Us','
+      'content': '123 Tech Street, Innovation City, IC 12345','
+'href': '#','
     }
   ];
 
@@ -168,16 +165,16 @@ return (;
       <div className='relative container mx-auto px-4'>;'
         {/* Section Header */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ 'opacity': 0, 'y': 30 
 }
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.8 }}
-          viewport={{ "once": true 
+          whileInView={ 'opacity': 1, 'y': 0 }
+          transition={ 'duration': 0.8 }
+          viewport={ 'once': true 
 }
 
 className='text-center mb-16''
         >
-          <h2 className='text-4xl "md":text-6xl font-bold text-white mb-6'>'
+          <h2 className='text-4xl 'md':text-6xl font-bold text-white mb-6'>'
             Let&apos;s Start a
             <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>'
               Conversation
@@ -189,26 +186,26 @@ experts to discuss how we can help you achieve your technology,
 goals.
           </p>
         </motion.div>
-    <section className="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+    <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
       {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]" />
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]" />
+      <div className='absolute inset-0'>
+        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]' />
+        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]' />
       </div>
 
 
-        <div className='grid grid-cols-1 "lg": grid-cols-2 gap-12 max-w-7xl mx-auto'>'
+        <div className='grid grid-cols-1 'lg': grid-cols-2 gap-12 max-w-7xl mx-auto'>'
           {/* Contact Information *
 }
 
           <motion.div
           <motion&& motion.div,
-initial={{ "opacity": 0, "x": -30 
+initial={ 'opacity': 0, 'x': -30 
 }
-            whileInView={{ "opacity": 1, "x": 0 
+            whileInView={ 'opacity': 1, 'x': 0 
 }
-            transition={{ "duration": 0 && 0.8, "delay": 0 && 0.2 }}
-            viewport={{ "once": true }}
+            transition={ 'duration': 0 && 0.8, 'delay': 0 && 0.2 }
+            viewport={ 'once': true }
 
 className='space-y-8''
           >
@@ -230,23 +227,23 @@ needs. Reach out to us today.
                   }
                   key={info.title}
                   href={info.href}
-                  initial={{ "opacity": 0, "x": -20 
+                  initial={ 'opacity': 0, 'x': -20 
 }
-                  whileInView={{ "opacity": 1, "x": 0 
+                  whileInView={ 'opacity': 1, 'x': 0 
 }
-                  transition={{ "duration": 0 && 0.6, "delay": 0 && 0.3 + index * 0 && 0.1 }}
-                  viewport={{ "once": true }}
+                  transition={ 'duration': 0 && 0.6, 'delay': 0 && 0.3 + index * 0 && 0.1 }
+                  viewport={ 'once': true }
 
-className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 "hover":border-blue-500/30 transition-all duration-300 group''
+className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 'hover':border-blue-500/30 transition-all duration-300 group''
                 >
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-"hover":scale-110 transition-transform duration-300'>'
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-'hover':scale-110 transition-transform duration-300'>'
                     <info.icon className='w-6 h-6 text-white' />'
                   </div>
                   <div>
                     <h4 className='text-lg font-semibold text-white mb-1'>'
                       {info.title}
                     </h4>
-                    <p className='text-gray-300 group-"hover":text-blue-400 transition-colors duration-300'>'
+                    <p className='text-gray-300 group-'hover':text-blue-400 transition-colors duration-300'>'
 
                       {info.conten
 }
@@ -255,37 +252,36 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                 </motion.a>;
               ))}
             </div>;
-                  className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 "hover":border-blue-500/30 transition-all duration-300 group'>;'
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-"hover":scale-110 transition-transform duration-300'>;'
+                  className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 'hover':border-blue-500/30 transition-all duration-300 group'>;'
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-'hover':scale-110 transition-transform duration-300'>;'
                     <info && info.icon className='w-6 h-6 text-white' />;'
                   </div>;
                   <div>;
                     <h4 className='text-lg font-semibold text-white mb-1'>;'
                       {info && info.title}
                     </h4>;
-                    <p className='text-gray-300 group-"hover": text-blue-400 transition-colors duration-300'>                      {info && info.conten,'
+                    <p className='text-gray-300 group-'hover': text-blue-400 transition-colors duration-300'>                      {info && info.conten,'
 }                >;
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-"hover":scale-110 transition-transform duration-300">;"
-                    <info && info.icon className="w-6 h-6 text-white" />;"
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-'hover':scale-110 transition-transform duration-300'>;'
+                    <info && info.icon className='w-6 h-6 text-white' />;'
                   </div>;
                   <div>;
-                    <h4 className="text-lg font-semibold text-white mb-1">{info && info.title}</h4>;"
-                    <p className="text-gray-300 group-"hover":text-blue-400 transition-colors duration-300">;"
+                    <h4 className='text-lg font-semibold text-white mb-1'>{info && info.title}</h4>;'
+                    <p className='text-gray-300 group-'hover':text-blue-400 transition-colors duration-300'>;'
                       {info && info.content}
                     </p>;
                   </div>;
                 </motion && motion.a>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               ))}
             {/* Additional Info */}
             <motion&& motion.div;
-              initial={{ "opacity": 0, "y": 20 
+              initial={ 'opacity': 0, 'y': 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 
+              whileInView={ 'opacity': 1, 'y': 0 
 }
-              transition={{ "duration": 0 && 0.6, "delay": 0 && 0.6 }}
+              transition={ 'duration': 0 && 0.6, 'delay': 0 && 0.6 }
 
-              viewport={{ "once": true }}
+              viewport={ 'once': true }
 
 className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6''
             >
@@ -312,29 +308,16 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
               </ul>
             </motion.div>
           </motion.div>
-<<<<<<< HEAD
-              viewport={{ once: true }}className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
-              viewport={{ once: true }}
+              viewport={ once: true }className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
+              viewport={ once: true }
               className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
-              viewport={{ once: true }}className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
+              viewport={ once: true }className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
               <h4 className='text-lg font-semibold text-white mb-3'>;
                 Why Choose Zion Tech?;
               </h4>;
               <ul className='space-y-2 text-gray-300'>            >;
-              <h4 className="text-lg font-semibold text-white mb-3">Why Choose Zion Tech?</h4>;
-              <ul className="space-y-2 text-gray-300">;
-                <li className="flex items-center space-x-2">;
-                  <CheckCircle className="w-5 h-5 text-green-400" />;
-                  <span>Expert team with 10+ years experience</span>;
-                </li>;
-                <li className="flex items-center space-x-2">;
-                  <CheckCircle className="w-5 h-5 text-green-400" />;
-                  <span>Proven track record of successful projects</span>;
-                </li>;
-                <li className="flex items-center space-x-2">;
-                  <CheckCircle className="w-5 h-5 text-green-400" />;
-                  <span>24/7 support and maintenance</span>;
-                </li>;
+              <h4 className='text-lg font-semibold text-white mb-3'>Why Choose Zion Tech?</h4>;
+              <ul className='space-y-2 text-gray-300'>;
                 <li className='flex items-center space-x-2'>;
                   <CheckCircle className='w-5 h-5 text-green-400' />;
                   <span>Expert team with 10+ years experience</span>;
@@ -348,8 +331,20 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
                   <span>24/7 support and maintenance</span>;
                 </li>;
                 <li className='flex items-center space-x-2'>;
-                  <CheckCircle className='w-5 h-5 text-green-400' />                  <span>Competitive pricing and flexible solutions</span>                <li className="flex items-center space-x-2">;
-                  <CheckCircle className="w-5 h-5 text-green-400" />;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>Expert team with 10+ years experience</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>Proven track record of successful projects</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>24/7 support and maintenance</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />                  <span>Competitive pricing and flexible solutions</span>                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
                   <span>Competitive pricing and flexible solutions</span>;
                 </li>;
               </ul>;
@@ -384,13 +379,13 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
           {/* Contact Form *
 }
           <motion&& motion.div;
-            initial={{ "opacity": 0, "x": 30 
+            initial={ 'opacity': 0, 'x': 30 
 }
-            whileInView={{ "opacity": 1, "x": 0 
+            whileInView={ 'opacity': 1, 'x': 0 
 }
-            transition={{ "duration": 0 && 0.8, "delay": 0 && 0.4 }}
+            transition={ 'duration': 0 && 0.8, 'delay': 0 && 0.4 }
 
-            viewport={{ "once": true 
+            viewport={ 'once': true 
 }
 
 className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8''
@@ -398,9 +393,9 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-
             {submitStatus === 'success' ? ('
               <motion.div
 }
-initial={{ "opacity": 0, "scale": 0.8 
+initial={ 'opacity': 0, 'scale': 0.8 
 }
-                animate={{ "opacity": 1, "scale": 1 }}
+                animate={ 'opacity': 1, 'scale': 1 }
 
 className='text-center py-12''
               >
@@ -414,16 +409,15 @@ within 24 hours.
                 </p>
                 <button,
 onClick={() => setSubmitStatus('idle')}'
-                  className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold "hover":from-blue-700 "hover":to-purple-700 transition-all duration-300''
+                  className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold 'hover':from-blue-700 'hover':to-purple-700 transition-all duration-300''
                 >
                   Send Another Message
                 </button>
               </motion.div>
-<<<<<<< HEAD
             ) : (
 
 <form onSubmit={handleSubmit} className='space-y-6'>'
-                <div className='grid grid-cols-1 "md":grid-cols-2 gap-6'>'
+                <div className='grid grid-cols-1 'md':grid-cols-2 gap-6'>'
                   <div>
                     <label,
 htmlFor='name''
@@ -445,11 +439,11 @@ type='email''
                       onChange={handleChang
 }
                       required;
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus":outline-none "focus":border-blue-500 transition-colors';'
+                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 'focus':outline-none 'focus':border-blue-500 transition-colors';'
                       placeholder='Enter your email';' />;
                   </div>;
                 </div>;
-<div className='grid grid-cols-1 "md":grid-cols-2 gap-6'>;'
+<div className='grid grid-cols-1 'md':grid-cols-2 gap-6'>;'
                   <div>;
                     <label;
                       htmlFor='company';'
@@ -471,34 +465,30 @@ type='email''
                   <div>;
                     <label;
                       htmlFor='phone';
-=======
-            ) : ("
-              <form onSubmit={handleSubmit} className="space-y-6">"
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>"
-                    <label htmlFor="name" className="block text-white font-medium mb-2" htmlFor="input-
-                      Full Name *"
-                    ">
+            ) : ('
+              <form onSubmit={handleSubmit} className='space-y-6'>'
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                  <div>'
+                    <label htmlFor='name' className='block text-white font-medium mb-2' htmlFor='input-
+                      Full Name *'
+                    '>
                       Full Name *
                     </label>
-                    <input"
-                      type="text""
-                      id="name""
-                      name="name"
+                    <input'
+                      type='text''
+                      id='name''
+                      name='name'
                       value={formData.name}
                       onChange={handleChange}
-                      required"
-                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors""
-                      placeholder="Enter your full name"
-<<<<<<< HEAD
+                      required'
+                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors''
+                      placeholder='Enter your full name'
                     />
               <form onSubmit={handleSubmit} className='space-y-6'>
 <form onSubmit={handleSubmit} className='space-y-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                     />'
               <form onSubmit={handleSubmit} className='space-y-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div>
                     <label'
@@ -516,17 +506,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       id='email''
                       name='email'
                   </div>
-                </div>'"
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors""
-                      placeholder="Enter your email"
+                </div>''
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors''
+                      placeholder='Enter your email'
                     />
                   </div>
-                </div>"
-                      placeholder="Enter your email";
+                </div>'
+                      placeholder='Enter your email';
                     />;
                   </div>;
                 </div>;
-<<<<<<< HEAD
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -536,7 +525,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
 
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus":outline-none "focus":border-blue-500 transition-colors''
+                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 'focus':outline-none 'focus':border-blue-500 transition-colors''
                       placeholder='Enter company name' />'
                   </div>
                   <div>
@@ -551,10 +540,9 @@ htmlFor='phone''
                       id='phone';'
                       name='phone';'
                       value={formData && formData.phone}
-<<<<<<< HEAD
                       onChange={handleChange}
 
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none "focus":border-blue-500 transition-colors''
+                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 'focus': outline-none 'focus':border-blue-500 transition-colors''
 
                       placeholder='Enter phone number'' />
                   </div>
@@ -573,7 +561,7 @@ id='service''
                     value={formData.service}
                     onChange={handleChang
 }
-                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white "focus":outline-none "focus":border-blue-500 transition-colors'>'
+                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white 'focus':outline-none 'focus':border-blue-500 transition-colors'>'
 
                     <option value=''>Select a service</option>;'
                     {services.map(service => { return (<option; }
@@ -609,7 +597,7 @@ id='message''
                     required
                     rows={5}
 
-className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus":outline-none "focus":border-blue-500 transition-colors resize-none''
+className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 'focus':outline-none 'focus':border-blue-500 transition-colors resize-none''
                     placeholder='Tell us about your project or inquiry...'' />
                 </div>
                 {submitStatus === 'error' && ('
@@ -618,10 +606,10 @@ className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-w
                 {submitStatus === 'error' && (<motion.div;' />;
                 </div>;{submitStatus === 'error' && (<motion&& motion.div;'
                     }
-                    initial={{ "opacity": 0, "y": -10 
+                    initial={ 'opacity': 0, 'y': -10 
 }
 
-                    animate={{ "opacity": 1, "y": 0 }}
+                    animate={ 'opacity': 1, 'y': 0 }
 
 className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4''
                   >
@@ -635,7 +623,7 @@ className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-
 type='submit';'
                   disabled={isSubmitting}
 
-                  className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg "hover": from-blue-700 "hover":to-purple-700 transition-all duration-300 shadow-lg "hover":shadow-xl transform "hover":-translate-y-1 "disabled":opacity-50 "disabled":cursor-not-allowed "disabled":transform-none flex items-center justify-center space-x-2''
+                  className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg 'hover': from-blue-700 'hover':to-purple-700 transition-all duration-300 shadow-lg 'hover':shadow-xl transform 'hover':-translate-y-1 'disabled':opacity-50 'disabled':cursor-not-allowed 'disabled':transform-none flex items-center justify-center space-x-2''
                 >
                   {isSubmitting ? (
                     <>
@@ -653,7 +641,6 @@ type='submit';'
               </form>;
             )}
 
-<<<<<<< HEAD
 
 export default ContactForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -674,17 +661,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>;
                   <label;
                     html_for='service';
-=======
 export default ContactForm;
                 <div>;
                   <label;'
                     html_for='service';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     className='block text - white font - medium mb - 2';
                   >;
                     Service of Interest;
                   </label>;
-<<<<<<< HEAD
                   <select;
                     id='service';
                     name='service';
@@ -700,10 +684,9 @@ export default ContactForm;
                       >                        {service}                    Service of Interest;
                   </label>;
                   <select;
-                    id="service";
-                    name="service";
+                    id='service';
+                    name='service';
                     value={form_data.service}
-=======
                   <select;'
                     id='service';'
                     name='service';
@@ -719,122 +702,98 @@ export default ContactForm;
                         className='bg - gray - 800 text - white';
                       >                        {service}                    Service of Interest;
                   </label>;
-                  <select;"
-                    id="service";"
-                    name="service";
+                  <select;'
+                    id='service';'
+                    name='service';
                     value={form_data.service}
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     on_change={handle_change}
-                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue-500 transition-colors";
+                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue-500 transition-colors';
                   >;
-                    <option value="">Select a service</option>;
-<<<<<<< HEAD
-                    {services.map ((service) => (<option key={service} value={service} className="bg - gray-800 text-white">;
-=======
+                    <option value=''>Select a service</option>;
+                    {services.map ((service) => (<option key={service} value={service} className='bg - gray-800 text-white'>;
                     {services.map ((service) => (
-                      <option key={service} value={service} className="bg - gray-800 text-white">;
-=======
-                    on_change={handle_change}"
-                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue - 500 transition - colors";
-                  >;"
-                    <option value="">Select a service</option>;
-                    {services.map ((service) => ("
-                      <option key={service} value={service} className="bg - gray - 800 text - white">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+                      <option key={service} value={service} className='bg - gray-800 text-white'>;
+                    on_change={handle_change}'
+                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue - 500 transition - colors';
+                  >;'
+                    <option value=''>Select a service</option>;
+                    {services.map ((service) => ('
+                      <option key={service} value={service} className='bg - gray - 800 text - white'>;
                         {service}
                       </option>))}
                   </select>;
                 </div>;
                 <div>;
-<<<<<<< HEAD
                   <label;
                     html_for='message';
-=======
                   <label;'
                     html_for='message';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     className='block text - white font - medium mb - 2';
                   >;
                     Message *;
                   </label>;
-<<<<<<< HEAD
                   <textarea;
                     id='message';
                     name='message'                    value={form_data.message}
                     on_change={handle_change}
                     required;
-=======
                   <textarea;'
                     id='message';'
                     name='message'                    value={form_data.message}
                     on_change={handle_change}
                     required;
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     rows={5}
                     className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
-                    placeholder='Tell us about your project or inquiry...'                  />                  <label html_for="message" className="block text - white font-medium mb-2" html_for="input-;
+                    placeholder='Tell us about your project or inquiry...'                  />                  <label html_for='message' className='block text - white font-medium mb-2' html_for='input-;
                     Message *;
-<<<<<<< HEAD
-                  ">;
+                  '>;
                     Message *;
                   </label>;
                   <textarea;
-                    id="message";
-                    name="message";
+                    id='message';
+                    name='message';
                     on_change={handle_change}
                     required;
                     rows={5}
                     className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
-                    placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition-colors resize-none";
-                    placeholder="Tell us about your project or inquiry...";
+                    placeholder='Tell us about your project or inquiry...'                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition-colors resize-none';
+                    placeholder='Tell us about your project or inquiry...';
                   />;
                 </div>;
                 {submit_status === 'error' && (<motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
+                    initial={ opacity: 0, coordinate_y: -10 }
+                    animate={ opacity: 1, coordinate_y: 0 }
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
-=======
-=======
                     rows={5}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';'"
-                    placeholder='Tell us about your project or inquiry...'                  />                  <label html_for="message" className="block text - white font - medium mb - 2" html_for="input-;
-                    Message *;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  ">;
+                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';''
+                    placeholder='Tell us about your project or inquiry...'                  />                  <label html_for='message' className='block text - white font - medium mb - 2' html_for='input-;
+                    Message *;'
+                  '>;
                     Message *;
                   </label>;
-                  <textarea;"
-                    id="message";"
-                    name="message";
+                  <textarea;'
+                    id='message';'
+                    name='message';
                     on_change={handle_change}
                     required;
-<<<<<<< HEAD
                     rows={5}
                     className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
-                    placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition-colors resize-none";
-=======
+                    placeholder='Tell us about your project or inquiry...'                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition-colors resize-none';
                     rows={5}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';'"
-                    placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                    placeholder="Tell us about your project or inquiry...";
+                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';''
+                    placeholder='Tell us about your project or inquiry...'                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';'
+                    placeholder='Tell us about your project or inquiry...';
                   />;
                 </div>;'
                 {submit_status === 'error' && (
                   <motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}'
+                    initial={ opacity: 0, coordinate_y: -10 }
+                    animate={ opacity: 1, coordinate_y: 0 }'
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   >;
-                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded-lg p-4";
+                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded-lg p-4';
                   >;
-                    <AlertCircle className="w-5 h-5" />;
-<<<<<<< HEAD
+                    <AlertCircle className='w-5 h-5' />;
                     <span > Something went wrong. Please try again.</span>;
                   </motion.div>)}
                 <button;
@@ -846,20 +805,17 @@ export default ContactForm;
                       <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />                      <span > Sending...</span>;
                     </>) : (<>;
                       <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}
-                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2";
+                  className='w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2';
                 >;
                   {is_submitting ? (<>;
-                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded-full animate-spin" />;
+                      <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded-full animate-spin' />;
                       <span > Sending...</span>;
                     </>) : (<>;
-                      <Send className='w - 5 h - 5' />                      <Send className="w-5 h-5" />;
-=======
-=======
-                  >;'"
-                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4";
-                  >;"
-                    <AlertCircle className="w - 5 h - 5" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                      <Send className='w - 5 h - 5' />                      <Send className='w-5 h-5' />;
+                  >;''
+                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
+                  >;'
+                    <AlertCircle className='w - 5 h - 5' />;
                     <span > Something went wrong. Please try again.</span>;
                   </motion.div>)}
                 <button;'
@@ -871,32 +827,28 @@ export default ContactForm;
                     <>;'
                       <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />                      <span > Sending...</span>;
                     </>) : (
-<<<<<<< HEAD
                     <>;
                       <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}
-                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2";
+                  className='w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2';
                 >;
                   {is_submitting ? (
                     <>;
-                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded-full animate-spin" />;
+                      <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded-full animate-spin' />;
                       <span > Sending...</span>;
                     </>) : (
                     <>;
-                      <Send className='w - 5 h - 5' />                      <Send className="w-5 h-5" />;
-=======
+                      <Send className='w - 5 h - 5' />                      <Send className='w-5 h-5' />;
                     <>;'
-                      <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}"
-                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify - center space - x-2";
+                      <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}'
+                  className='w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify - center space - x-2';
                 >;
                   {is_submitting ? (
-                    <>;"
-                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />;
+                    <>;'
+                      <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />;
                       <span > Sending...</span>;
                     </>) : (
-                    <>;'"
-                      <Send className='w - 5 h - 5' />                      <Send className="w - 5 h - 5" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+                    <>;''
+                      <Send className='w - 5 h - 5' />                      <Send className='w - 5 h - 5' />;
                       <span > Send Message</span>;
                     </>)}
                 </button>;
@@ -904,14 +856,11 @@ export default ContactForm;
           </motion.div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </section>)}export default ContactForm)}export default ContactForm;)export default ContactForm;  )}
 export default ContactForm;export default ContactForm;</motion.div>;
         </div>;
       </div>;
     </section>;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     </section>);
 }
 ;
@@ -926,17 +875,16 @@ export default ContactForm;  )
 export default ContactForm;
 
 export default ContactForm;
-<<<<<<< HEAD
 )}export default ContactForm;
-                    id="service"
-                    name="service"
+                    id='service'
+                    name='service'
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors'
                   >
-                    <option value="">Select a service</option>
+                    <option value=''>Select a service</option>
                     {services.map((service) => (
-                      <option key={service} value={service} className="bg-gray-800 text-white">
+                      <option key={service} value={service} className='bg-gray-800 text-white'>
                         {service}
                       </option>
                     ))}
@@ -944,37 +892,35 @@ export default ContactForm;
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white font-medium mb-2">
+                  <label htmlFor='message' className='block text-white font-medium mb-2'>
                     Message *
                   </label>
                   <textarea
-                    id="message"
-                    name="message"
+                    id='message'
+                    name='message'
                     value={formData.message}
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none"
-                    placeholder="Tell us about your project or inquiry..."
+                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
+                    placeholder='Tell us about your project or inquiry...'
                   />
                 </div>
 
                 {submitStatus === 'error' && (
                   <motion.div
-<<<<<<< HEAD
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0}}
+                    initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0}
                     className = $2;
 export default ContactForm,
-=======
                      />
                 </div>
                 {submitStatus === 'error' && (<motion.div
                      />
                 </div>;{submitStatus === 'error' && (<motion&& motion.div;}
-                    initial={{ opacity: 0, y: -10 }
+                    initial={ opacity: 0, y: -10 }
 
-                    animate={{ opacity: 1, y: 0 }}
+                    animate={ opacity: 1, y: 0 }
 
 className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4'
                       />
@@ -1026,9 +972,9 @@ export default ContactForm
                         className='bg - gray - 800 text - white'
                       >                        {service}                    Service of Interest
                   </label>
-                  <select;"
-                    id="service";"
-                    name="service"
+                  <select;'
+                    id='service';'
+                    name='service'
                     value={form_data.service}
 
                         {service}
@@ -1047,21 +993,21 @@ export default ContactForm
                     name='message'                    value={form_data.message}
                     on_change={handle_change}
                     required
-                  ">
+                  '>
                     Message *
                   </label>
-                  <textarea;"
-                    id="message";"
-                    name="message"
+                  <textarea;'
+                    id='message';'
+                    name='message'
                     on_change={handle_change}
                     required
-                    placeholder="Tell us about your project or inquiry..."
+                    placeholder='Tell us about your project or inquiry...'
                   />
                 </div>;'
                 {submit_status === 'error' && (
                   <motion.div
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}'
+                    initial={ opacity: 0, coordinate_y: -10 }
+                    animate={ opacity: 1, coordinate_y: 0 }'
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4'
                     <span > Something went wrong. Please try again.</span>
                   </motion.div>)}
@@ -1079,42 +1025,26 @@ export default ContactForm
                     </>)}
                 </button>
               </form>)}
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </motion.div>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 }
 export default ContactForm;  )
 }
 export default ContactForm;
-<<<<<<< HEAD
 
-"
-=======
-}className="flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4" > <AlertCircle className="w-5 h-5" /> <span>Something went wrong. Please try again.</span> </motion.div>) 
-}<button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2" > {
-  isSubmitting ? (<> <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> <span>Sending...</span> </>) : (<> <Send className="w-5 h-5" /> <span>Send Message</span> </>) 
+'
+}className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4' > <AlertCircle className='w-5 h-5' /> <span>Something went wrong. Please try again.</span> </motion.div>) 
+}<button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2' > {
+  isSubmitting ? (<> <div className='w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin' /> <span>Sending...</span> </>) : (<> <Send className='w-5 h-5' /> <span>Send Message</span> </>) 
 }</button> </form>) 
 }</motion.div> </div> </div> </section>) 
 }
 export default ContactForm
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 );
 };
 export default ContactForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+''

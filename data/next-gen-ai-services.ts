@@ -1130,7 +1130,7 @@ export const "nextGenAIServices": NextGenAIService[] = [;
     "popular": true,"icon": '⚡',"color": 'from-blue-600 to-cyan-700',"textColor": 'text-blue-400',"link": '"https"://ziontechgroup.com/ai-quantum-optimization-engine',"targetAudience": 'Manufacturing companies, Logistics firms, Financial institutions, Research organizations, Government agencies, Energy companies',"trialDays": 30,"setupTime": '3 weeks',"category": 'AI & Quantum Computing',"realService": true,"integrations": ['SAPOracleSalesforceCustom APIsDatabase systemsCloud platforms'],"useCases": ['Supply chain optimizationFinancial portfolio optimizationManufacturing process optimizationEnergy grid optimizationTransportation routingResource allocation'],"roi": 'Average customer sees 1200% ROI through operational efficiency improvements and cost reductions.',"competitors": ['Traditional optimization software ($100K+)Basic optimization tools ($20K+)'],"growthRate": '250% annual growth',"link": '"https"://ziontechgroup.com/ai-quantum-optimization-engine',    "targetAudience": 'Manufacturing companies, Logistics firms, Financial institutions, Research organizations, Government agencies, Energy companies',"trialDays": 30,"setupTime": '3 weeks',"category": 'AI & Quantum Computing',"realService": true,    "growthRate": '250% annual growth',"variant": 'quantum-advanced',"contactInfo": {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709';'
       }
       "address": '364 E Main St STE 1008 Middletown DE 19709';'
-    }},"realImplementation": true,"implementationDetails": 'Advanced optimization engine with quantum-inspired algorithms, scalable architecture, and comprehensive integration capabilities.',"launchDate": '2024-11-15',"customers": 75,"rating": 4 && 4.8,"rating": 4.8,"reviews": 52;'
+    },"realImplementation": true,"implementationDetails": 'Advanced optimization engine with quantum-inspired algorithms, scalable architecture, and comprehensive integration capabilities.',"launchDate": '2024-11-15',"customers": 75,"rating": 4 && 4.8,"rating": 4.8,"reviews": 52;'
   },"reviews": 52;
     "reviews": 52;
     "rating": 4.8,"reviews": 52;
@@ -2115,7 +2115,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Next
 },// AI-Powered Healthcare Diagnostics;
   {"id": "ai-healthcare-diagnostics","name": "AI Healthcare Diagnostics Platform","tagline": "Accurate medical diagnostics with 95% accuracy using AI","price": "$5,999","period": "/month","description": "Advanced healthcare diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",features[ "95% diagnostic accuracy","Multi-modality image analysis","Patient data integration","Treatment recommendation engine","Risk assessment algorithms","Clinical decision support","Automated reporting","HIPAA compliance","Integration with EMR systems","Continuous learning algorithms" ],"popular": true,"icon": "🏥","color": "from-red-600 to-pink-600","textColor": "text-red-400","link": ""https"://ziontechgroup.com/ai-healthcare-diagnostics","marketPosition": "Leading edge in AI-powered healthcare. Competes with IBM Watson Health ($10000+/month) and Google Health AI ($5000+/month) with superior accuracy.","targetAudience": "Hospitals, Medical clinics, Diagnostic centers, Healthcare providers, Medical research institutions","trialDays": 30,"setupTime": "6-12 weeks","category": "AI & Healthcare","realService": true,technology["TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "HIPAA-compliant infrastructure"],integrations["Epic", "Cerner", "Allscripts", "Custom EMR systems", "PACS systems", "Lab information systems"],useCases["Medical imaging analysis", "Patient diagnosis", "Treatment planning", "Risk assessment", "Clinical research", "Population health"],"roi": "Average customer sees 300% ROI within 12 months through improved diagnostic accuracy and patient outcomes.",competitors["IBM Watson Health", "Google Health AI", "Microsoft Healthcare", "Siemens Healthineers", "GE Healthcare"],"marketSize": "$45B AI healthcare market","growthRate": "350% annual growth","variant": "ai-futuristic","contactInfo": {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709","website": ""https"://ziontechgroup.com";"
 },"realImplementation": true,"implementationDetails": "Full healthcare platform with advanced AI models, HIPAA compliance, comprehensive security, and medical device integration.","launchDate": "2024-01-10","customers": 45,"rating": 4.9,"reviews": 34;"
-]}}
+]}
     },"realImplementation": true,"implementationDetails": 'Full healthcare platform with advanced AI models, HIPAA compliance, comprehensive security, and medical device integration.',"launchDate": '2024-01-10',"customers": 45,"rating": 4.9,"reviews": 34;'
   }
 ];
@@ -8081,7 +8081,7 @@ export const "nextGenAIServices": NextGenAIService[] = [;
     "customers": 45,
     "rating": 4.9,
     "reviews": 34;
-]}}
+]}
     },
     "realImplementation": true,
     "implementationDetails": 'Full healthcare platform with advanced AI models, HIPAA compliance, comprehensive security, and medical device integration.','

@@ -59,7 +59,7 @@ import { ForumCategoryInfo } from "@/types/community",{id: "project-help";
     description: "Get help with your ongoing projects and collaboration.";
     adminOnly: false;
     icon: "MessageSquare";
-  {{id: "feedback";
+  {id: "feedback";
     name: "Feedback & Feature Requests";
     description: "Share your feedback and suggest new features.";
     adminOnly: false;
@@ -86,7 +86,6 @@ const categories: ForumCategoryInfo[] = [;
                 <CardDescription className="text - base">{category.description}</CardDescription>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
           </Link>);
       })}
     </div>);

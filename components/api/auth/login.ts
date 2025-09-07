@@ -11,7 +11,7 @@ export default function handler() {
   }
   if (req && req.method !== 'POST') {'
 }
-return res && res.status(405).json({ "error": 'Method not allowed',;'
+return res && res.status(405).json({ 'error': 'Method not allowed',;'
 });
   }
   }
@@ -19,12 +19,12 @@ return res && res.status(405).json({ "error": 'Method not allowed',;'
 const cookie = createSessionCookie({
     }
     email,
-    "role": result.role,
-    "twofaVerified": true
+    'role': result.role,
+    'twofaVerified': true
   });
   res.setHeader('Set-Cookie', cookie);'
-return res.status(200).json({ "ok": true,;
+return res.status(200).json({ 'ok': true,;
 });
-return res.status(200).json({ "ok": true }),;
+return res.status(200).json({ 'ok': true }),;
 }
 

@@ -33,17 +33,17 @@ export default function QuantumCybersecurityServices() {
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
           <div className="text-center z-10 max-w-6xl mx-auto">
             <motion.h1
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
+              initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
+              animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
+              transition={ duration: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -55,17 +55,17 @@ export default function QuantumCybersecurityServices() {
               </span>
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
+              initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
+              animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
+              transition={ duration: 0.8, delay: 0.2 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -75,17 +75,17 @@ export default function QuantumCybersecurityServices() {
               Unbreakable security powered by quantum computing and advanced AI
               algorithms. Protect your business from tomorrow's threats today.            </motion.p>
             <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
+              initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
+              animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
+              transition={ duration: 0.8, delay: 0.4 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -105,9 +105,9 @@ export default function QuantumCybersecurityServices() {
             </motion.div>
             {/* Key Benefits */}
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
+              initial={ opacity: 0, y: 50 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 1, delay: 0.6 }
               className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'
             >
               <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
@@ -139,9 +139,9 @@ export default function QuantumCybersecurityServices() {
         {/* Services Section */}
         <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -156,10 +156,10 @@ export default function QuantumCybersecurityServices() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 50 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <UltraFuturisticServiceCard2026
                     service={service}
@@ -173,9 +173,9 @@ export default function QuantumCybersecurityServices() {
         {/* Why Quantum Security Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20'>
           <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
@@ -184,10 +184,10 @@ export default function QuantumCybersecurityServices() {
               </h2>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, x: -30 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0.8, delay: 0.1 }
+                viewport={ once: true }
                 className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8'
               >
                 <h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
@@ -201,10 +201,10 @@ export default function QuantumCybersecurityServices() {
                 </ul>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, x: 30 }
+                whileInView={ opacity: 1, x: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
+                viewport={ once: true }
                 className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8'
               >
                 <h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
@@ -223,9 +223,9 @@ export default function QuantumCybersecurityServices() {
         {/* Security Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
@@ -234,10 +234,10 @@ export default function QuantumCybersecurityServices() {
               </h2>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.1 }
+                viewport={ once: true }
                 className='text-center'
               >
                 <div className='text-6xl mb-4'>🔒</div>
@@ -248,10 +248,10 @@ export default function QuantumCybersecurityServices() {
                   Never trust, always verify approach to security.
                 </p>              </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
+                viewport={ once: true }
                 className='text-center'
               >
                 <div className='text-6xl mb-4'>🔄</div>
@@ -262,10 +262,10 @@ export default function QuantumCybersecurityServices() {
                   24/7 threat detection and response.
                 </p>              </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.3 }
+                viewport={ once: true }
                 className='text-center'
               >
                 <div className='text-6xl mb-4'>🤖</div>
@@ -276,10 +276,10 @@ export default function QuantumCybersecurityServices() {
                   Automated threat response and incident resolution.
                 </p>              </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
+                viewport={ once: true }
                 className='text-center'
               >
                 <div className="text-6xl mb-4">📊</div>
@@ -292,10 +292,10 @@ export default function QuantumCybersecurityServices() {
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className='text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>

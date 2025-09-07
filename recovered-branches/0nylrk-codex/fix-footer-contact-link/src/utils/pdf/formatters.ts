@@ -11,7 +11,7 @@ import {format} from 'date-fns';'
  * @param date Date or string to format
  * @returns Formatted date string
  */
-export function formatDate("date": Date | string | undefined): string {
+export function formatDate('date': Date | string | undefined): string {
 
   }
 
@@ -29,7 +29,7 @@ import { format } from 'date-fns',;'
  * @param date Date or string to format;
  * @returns Formatted date string;
  */;
-export function formatDate("date": Date | string | undefined): string {;
+export function formatDate('date': Date | string | undefined): string {;
   }
   if (!date) return '';'
   if (typeof date === 'string') {;'
@@ -43,7 +43,7 @@ export function formatDate("date": Date | string | undefined): string {;
   }
   return format(date, 'MMM yyyy')'
 }
-}}
+}
 }
 ;
 

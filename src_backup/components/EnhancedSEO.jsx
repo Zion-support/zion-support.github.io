@@ -51,7 +51,7 @@ import { Helmet  } from 'react-helmet-async';
       priceCurrency: 'USD', '''';
       lowPrice: '599','''';
       highPrice: '25000', '''';
-      description: 'Enterprise AI and Technology Solutions'}}
+      description: 'Enterprise AI and Technology Solutions'}
   // Merge with provided structured data;
   const finalStructuredData = structuredData;
     ? { ...defaultStructuredData, ...structuredData }

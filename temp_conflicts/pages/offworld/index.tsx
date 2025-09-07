@@ -34,42 +34,42 @@ export default function OffworldConsole() {
   }
 
   return (
-    <div className="min-h-screen p-8 space-y-8">
+    <div className='min-h-screen p-8 space-y-8'>
       <Head>
         <title>Zion Offworld Console</title>
       </Head>
-      <h1 className="text-2xl font-bold">Offworld Console</h1>
+      <h1 className='text-2xl font-bold'>Offworld Console</h1>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold">Chat</h2>
-        <input className="border p-2 w-full" placeholder="Type message" value={chat} onChange={e => setChat(e.target.value)} />
-        <button className="px-3 py-2 bg-black text-white rounded" onClick={sendChat}>Send</button>
+      <section className='space-y-2'>
+        <h2 className='font-semibold'>Chat</h2>
+        <input className='border p-2 w-full' placeholder='Type message' value={chat} onChange={e => setChat(e.target.value)} />
+        <button className='px-3 py-2 bg-black text-white rounded' onClick={sendChat}>Send</button>
       </section>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold">DAO Voting</h2>
-        <input className="border p-2 w-full" placeholder="Proposal ID" value={proposalId} onChange={e => setProposalId(e.target.value)} />
-        <select className="border p-2" value={voteChoice} onChange={e => setVoteChoice(e.target.value)}>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-          <option value="abstain">Abstain</option>
+      <section className='space-y-2'>
+        <h2 className='font-semibold'>DAO Voting</h2>
+        <input className='border p-2 w-full' placeholder='Proposal ID' value={proposalId} onChange={e => setProposalId(e.target.value)} />
+        <select className='border p-2' value={voteChoice} onChange={e => setVoteChoice(e.target.value)}>
+          <option value='yes'>Yes</option>
+          <option value='no'>No</option>
+          <option value='abstain'>Abstain</option>
         </select>
-        <button className="px-3 py-2 bg-black text-white rounded" onClick={castVote}>Vote</button>
+        <button className='px-3 py-2 bg-black text-white rounded' onClick={castVote}>Vote</button>
       </section>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold">Talent Profile Sync</h2>
-        <input className="border p-2 w-full" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
-        <input className="border p-2 w-full" placeholder="Skills (comma separated)" value={skills} onChange={e => setSkills(e.target.value)} />
-        <button className="px-3 py-2 bg-black text-white rounded" onClick={syncProfile}>Pin Profile to IPFS</button>
+      <section className='space-y-2'>
+        <h2 className='font-semibold'>Talent Profile Sync</h2>
+        <input className='border p-2 w-full' placeholder='Name' value={name} onChange={e => setName(e.target.value)} />
+        <input className='border p-2 w-full' placeholder='Skills (comma separated)' value={skills} onChange={e => setSkills(e.target.value)} />
+        <button className='px-3 py-2 bg-black text-white rounded' onClick={syncProfile}>Pin Profile to IPFS</button>
       </section>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold">Broadcast Manifesto</h2>
-        <button className="px-3 py-2 bg-indigo-600 text-white rounded" onClick={broadcast}>Broadcast</button>
+      <section className='space-y-2'>
+        <h2 className='font-semibold'>Broadcast Manifesto</h2>
+        <button className='px-3 py-2 bg-indigo-600 text-white rounded' onClick={broadcast}>Broadcast</button>
       </section>
 
-      {status && <p className="text-sm text-gray-700">{status}</p>}
+      {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
   )
 }

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -10,36 +8,29 @@ type Props = {
 
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (
-<<<<<<< HEAD
-    <div className="enhanced-card hover:shadow-lg transition-shadow">
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-2">
-          <StarRating value={review.rating} onChange={() => {}} readOnly size={18} />
-          <span className="text-sm text-gray-500">{new Date(review.createdAt).toLocaleDateString()}</span>
+    <div className='enhanced-card hover:shadow-lg transition-shadow'>
+      <div className='flex items-center justify-between mb-2'>
+        <div className='flex items-center gap-2'>
+          <StarRating value={review.rating} onChange={() => {} readOnly size={18} />
+          <span className='text-sm text-gray-500'>{new Date(review.createdAt).toLocaleDateString()}</span>
         </div>
         <button
-          className="text-xs text-red-500 hover:underline"
+          className='text-xs text-red-500 hover:underline'
           onClick={() => onReport && onReport(review.id)}
-=======
     <div className = $2;
 export default ReviewCard,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 type Props = any;
 export default ReviewCard;
       <div className='flex items-center justify-between mb-2' />;
         <div className='flex items-center gap-2' />;
           <StarRating;
-=======
 type Props = any
 export default ReviewCard
       <div className='flex items-center justify-between mb-2'    />
         <div className='flex items-center gap-2'    />
           <StarRating
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
             value={review.rating}
-            onChange={() =    /> {}}
+            onChange={() =    /> {}
             readOnly
             size={18}
           />
@@ -50,29 +41,27 @@ export default ReviewCard
         <button
           className='text-xs text-red-500 hover:underline'
           onClick={() =    /> onReport && onReport(review.id)}
->>>>>>> origin/main
         >
           Report abuse
         </button>
       </div>
-<<<<<<< HEAD
-      <div className="flex items-center gap-2 mb-3">
-        <span className="text-sm font-medium">{review.authorName}</span>
+      <div className='flex items-center gap-2 mb-3'>
+        <span className='text-sm font-medium'>{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
-          <span className="pill pill-success">Would work again</span>
+          <span className='pill pill-success'>Would work again</span>
         )}
       </div>
-      <p className="text-sm leading-6">{review.text}</p>
+      <p className='text-sm leading-6'>{review.text}</p>
 
-      <div className="flex flex-wrap gap-2 mt-3">
+      <div className='flex flex-wrap gap-2 mt-3'>
         {typeof review.categories?.communication === 'number' && (
-          <span className="pill">Communication: {review.categories.communication}★</span>
+          <span className='pill'>Communication: {review.categories.communication}★</span>
         )}
         {typeof review.categories?.qualityOfWork === 'number' && (
-          <span className="pill">Quality: {review.categories.qualityOfWork}★</span>
+          <span className='pill'>Quality: {review.categories.qualityOfWork}★</span>
         )}
         {typeof review.categories?.timeliness === 'number' && (
-          <span className="pill">Timeliness: {review.categories.timeliness}★</span>
+          <span className='pill'>Timeliness: {review.categories.timeliness}★</span>
         )}
       </div>
     </div>
@@ -84,7 +73,7 @@ export default ReviewCard;
         <div className='flex items-center gap-2'>;'
           <StarRating;
             value={review.rating}
-            onChange={() => {}}
+            onChange={() => {}
             readOnly;
             size={18}
           />;
@@ -93,7 +82,7 @@ export default ReviewCard;
           </span>;
         </div>;
         <button;
-          className='text-xs text-red-500 "hover":underline';'
+          className='text-xs text-red-500 'hover':underline';'
           onClick={() => onReport && onReport(review.id)}
         >;
           Report abuse;
@@ -108,19 +97,19 @@ export default ReviewCard;
       <div className='flex flex-wrap gap-2 mt-3'>;'
         {typeof review.categories?.communication === 'number' && (<span className='pill'>;'
             }
-            "Communication": {review.categories.communicatio
+            'Communication': {review.categories.communicatio
 }★;
           </span>;
         )}
         {typeof review.categories?.qualityOfWork === 'number' && (<span className='pill'>;'
             }
-            "Quality": {review.categories.qualityOfWor
+            'Quality': {review.categories.qualityOfWor
 }★;
           </span>;
         )}
         {typeof review.categories?.timeliness === 'number' && (<span className='pill'>;'
             }
-            "Timeliness": {review.categories.timelines
+            'Timeliness': {review.categories.timelines
 }★;
           </span>;
         )}

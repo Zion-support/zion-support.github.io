@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
 
   };
   const handleEdit = (work: WorkExperience) => {;
@@ -84,7 +83,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       start_date: format(new Date(), 'yyyy-MM-dd'),;
       is_current: false,,
   description: '',;
-      location: ''}}),;
+      location: ''}),;
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {;
     try {;
       setError(null),;
@@ -125,10 +124,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   },
 
   return (
-    <div className="space-y-6">
+    <div className='space-y-6'>
       <div>
-        <h2 className="text-xl font-semibold mb-2">Work Experience</h2>
-        <p className="text-muted-foreground">
+        <h2 className='text-xl font-semibold mb-2'>Work Experience</h2>
+        <p className='text-muted-foreground'>
           Add your work history to showcase your professional experience.
         </p>
       </div>
@@ -279,16 +278,16 @@ interface WorkExperienceFormProps {;
                             : format(work.end_date, 'MMM yyyy')
                           : ''}
 
-        <div className="space-y-4">
-          <h3 className="text-md font-medium">Added Experience</h3>
+        <div className='space-y-4'>
+          <h3 className='text-md font-medium'>Added Experience</h3>
           {workExperiences.map((work) => (
-            <Card key={work.id} className="bg-muted/40">
-              <CardContent className="pt-6">
-                <div className="flex justify-between">
+            <Card key={work.id} className='bg-muted/40'>
+              <CardContent className='pt-6'>
+                <div className='flex justify-between'>
                   <div>
-                    <h4 className="font-medium">{work.role_title}</h4>
-                    <p className="text-sm text-muted-foreground">{work.company_name}</p>
-                    <p className="text-xs text-muted-foreground mt-1">
+                    <h4 className='font-medium'>{work.role_title}</h4>
+                    <p className='text-sm text-muted-foreground'>{work.company_name}</p>
+                    <p className='text-xs text-muted-foreground mt-1'>
                       {typeof work.start_date === 'string' 
                         ? work.start_date 
                         : format(work.start_date, 'MMM yyyy')} - {work.is_current 
@@ -296,10 +295,9 @@ interface WorkExperienceFormProps {;
                         : (work.end_date ? (typeof work.end_date === 'string' 
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
                     </p>
                     {work.location && (
-                      <p className="text-xs text-muted-foreground">{work.location}</p>
+                      <p className='text-xs text-muted-foreground'>{work.location}</p>
                     )}
 
                     <Button
@@ -332,14 +330,14 @@ interface WorkExperienceFormProps {;
                     onBack()
 
                   }
-                }}
+                }
               >;
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
 
-              <div className="flex gap-2">
-                <Button type="submit" disabled={isLoading}>
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              <div className='flex gap-2'>
+                <Button type='submit' disabled={isLoading}>
+                  {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
 
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
@@ -361,13 +359,13 @@ interface WorkExperienceFormProps {;
   editingId ? 'Cancel': 'Back' ;
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;
-}'"
+}''
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>;
-                    {work.location && (<p className="text-xs text-muted-foreground">{work.location}</p>;
+                    {work.location && (<p className='text-xs text-muted-foreground'>{work.location}</p>;
                     )}</div>;
                   <div className='flex gap-2'>;</div>;
-                  <div className="flex gap-2">;
+                  <div className='flex gap-2'>;
                     <Button;
                     setEditingId(null),setEditingId(null),form.reset({company_name: '',role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',location: ''})} else {onBack()/>;{error && (<Alert variant='destructive'>;
                 <AlertDescription>{error}</AlertDescription>;
@@ -382,12 +380,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       description: '';
                       location: '';
                     })} else {onBack()}
-                }}
+                }
               >;
                 {editingId ? 'Cancel' : 'Back'}</Button>;
-              <div className="flex gap-2">;
-                <Button type="submit" disabled={isLoading}>;
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}{editingId ? 'Update' : 'Add'} Experience;
+              <div className='flex gap-2'>;
+                <Button type='submit' disabled={isLoading}>;
+                  {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}{editingId ? 'Update' : 'Add'} Experience;
                 </Button>;
                 {!editingId && workExperiences.length > 0 && (<Button type='button' onClick={onComplete}>;
                     Next;
@@ -409,7 +407,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if ( {) {$2;
 }
                     setEditingId (null)form.reset ({company_name: '',role_title: '',start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: '',location: ''})} else {on_back ()}
-                }}
+                }
               >;
                 {editing_id ? 'Cancel' : 'Back'}
               </Button>;
@@ -437,7 +435,7 @@ if ( {) {$2;
   editing_id ? 'Cancel': 'Back';
 }</Button> Next </Button>);
 }</div> </div> </form> </Form> </div> </div>);
-}'"  );
+}''  );
 }
 
               </div>
@@ -452,4 +450,4 @@ if ( {) {$2;
   editingId ? 'Cancel': 'Back' ;
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;
-}'"
+}''

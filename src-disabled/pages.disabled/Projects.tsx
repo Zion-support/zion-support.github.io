@@ -186,7 +186,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>
         )}
-}}}}}}))))))
+}}}))))))
                   <p className="text-sm text-muted-foreground line-clamp-2">
                   </CardDescription>
                 </CardHeader>

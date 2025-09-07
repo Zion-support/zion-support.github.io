@@ -140,11 +140,11 @@ export const suggestDidYouMean = ("query": string) =>: any {
   }
   return null;
 }
-}}
-  }}export const suggestDidYouMean = (query: string) =>: any {// Add did you mean functionality here;
+}
+  }export const suggestDidYouMean = (query: string) =>: any {// Add did you mean functionality here;
   return null;}
 ursor/automate-test-improve-and-merge-code-646c;
-}}
+}
 }
 }
 export type SearchType = $2;

@@ -1,7 +1,7 @@
-import { ProfileData } from "@/types/profile";
-import { TalentProfile } from "@/types/talent";
-import { ProfileData } from "@/types/profile",
-import { TalentProfile } from "@/types/talent",    years_experience: 3, // Default value;
+import { ProfileData } from '@/types/profile';
+import { TalentProfile } from '@/types/talent';
+import { ProfileData } from '@/types/profile',
+import { TalentProfile } from '@/types/talent',    years_experience: 3, // Default value;
     skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
     availability_type: profile.availability?.status === 'available' ? 'full_time' :;
                       profile.availability?.status === 'limited' ? 'part_time' : 'unavailable';
@@ -16,8 +16,8 @@ import { TalentProfile } from "@/types/talent",    years_experience: 3, // Defau
 ;
 
 }
-import { ProfileData } from "@/types/profile";
-import { TalentProfile } from "@/types/talent";
+import { ProfileData } from '@/types/profile';
+import { TalentProfile } from '@/types/talent';
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
   // If this is already a TalentProfile, just return it

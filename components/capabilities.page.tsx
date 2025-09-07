@@ -13,12 +13,12 @@ export default function CapabilitiesPage() {
 return (;
     <EnhancedLayout>
 <h1 className='text-2xl font-semibold'>Capabilities</h1>'
-      <div className='mt-6 grid "md": grid-cols-4 gap-4 text-sm'>'
+      <div className='mt-6 grid 'md': grid-cols-4 gap-4 text-sm'>'
         {CAPABILITIES.map(c => (
           <div
 }
 key={c}
-            className='rounded-xl border border-gray-200 "dark":border-gray-800 px-4 py-3 bg-white "dark":bg-gray-950'>'
+            className='rounded-xl border border-gray-200 'dark':border-gray-800 px-4 py-3 bg-white 'dark':bg-gray-950'>'
 
             {
 }
@@ -38,9 +38,9 @@ function CapabilitiesPage() {return (<EnhancedLayout>;
         {CAPABILITIES.map (c => (<div;
             key={c}
             className='rounded - xl border border - gray - 200 dark:border - gray - 800 px - 4 py - 3 bg - white dark:bg - gray - 950';
-          >            {c}      <h1 className="text-2xl font-semibold">Capabilities</h1>;
-      <div className="mt - 6 grid md:grid - cols - 4 gap-4 text-sm">;
-        {CAPABILITIES.map ((c) => (<div key={c} className="rounded - xl border border - gray - 200 dark:border - gray - 800 px - 4 py - 3 bg - white dark:bg-gray-950">;
+          >            {c}      <h1 className='text-2xl font-semibold'>Capabilities</h1>;
+      <div className='mt - 6 grid md:grid - cols - 4 gap-4 text-sm'>;
+        {CAPABILITIES.map ((c) => (<div key={c} className='rounded - xl border border - gray - 200 dark:border - gray - 800 px - 4 py - 3 bg - white dark:bg-gray-950'>;
           </div>))}
       </div>;
     </EnhancedLayout>)const CAPABILITIES = [;
@@ -65,10 +65,10 @@ export default function CapabilitiesPage() {return (<EnhancedLayout>;
           >;
   return (
     <EnhancedLayout>
-      <h1 className="text-2xl font-semibold">Capabilities</h1>
-      <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
+      <h1 className='text-2xl font-semibold'>Capabilities</h1>
+      <div className='mt-6 grid md:grid-cols-4 gap-4 text-sm'>
         {CAPABILITIES.map((c) => (
-          <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">
+          <div key={c} className='rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950'>
             {c}
           </div>
         ))}
@@ -79,7 +79,6 @@ export default function CapabilitiesPage() {return (<EnhancedLayout>;
     </EnhancedLayout>;
 );
 }
-<<<<<<< HEAD
   );
 }
     </EnhancedLayout>;
@@ -91,6 +90,3 @@ export default function CapabilitiesPage() {return (<EnhancedLayout>;
     </EnhancedLayout>
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -180,26 +180,26 @@ export default function ComprehensiveServicesShowcase2025() {
             <motion.div
               key={i}
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20"
-              animate={{
+              animate={
                 x: [0, 100, 0],
                 y: [0, -100, 0],
-                opacity: [0.2, 0.8, 0.2]}}
-              transition={{
+                opacity: [0.2, 0.8, 0.2]}
+              transition={
                 duration: 10 + i * 2,
                 repeat: Infinity,
-                delay: i * 0.5}}
-              style={{
+                delay: i * 0.5}
+              style={
                 left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`}}
+                top: `${Math.random() * 100}%`}
             />
           ))}
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -222,9 +222,9 @@ export default function ComprehensiveServicesShowcase2025() {
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: 0.2 + index * 0.1 }
                   className="text-center"
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400">
@@ -348,9 +348,9 @@ export default function ComprehensiveServicesShowcase2025() {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
                 className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
                 {/* Category Badge */}
@@ -436,9 +436,9 @@ export default function ComprehensiveServicesShowcase2025() {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={ opacity: 0, x: -20 }
+                animate={ opacity: 1, x: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
                 className="group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
                 <div className="flex items-start space-x-6">
@@ -540,7 +540,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 setSearchTerm(''),
                 setSelectedCategory('All Services'),
                 setSelectedPriceRange('all')
-              }}
+              }
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
             >
               Clear All Filters
@@ -553,10 +553,10 @@ export default function ComprehensiveServicesShowcase2025() {
       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?

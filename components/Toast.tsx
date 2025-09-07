@@ -9,7 +9,7 @@ interface Toast  {"id": string;
   action?: {"label": string;
     }
     "onClick": () => void;
-}}
+}
 
 interface ToastContextType {
   }
@@ -53,7 +53,7 @@ const "newToast": Toast = {id,"duration": 5000,...toast}setToasts((prev) => ;
 }, [];
   const clearToasts = useCallback(() => {setToasts([])}, [];
   return (<ToastContext.Provider;
-      value={{ toasts, addToast, removeToast, clearToasts }}
+      value={ toasts, addToast, removeToast, clearToasts }
         />
       {children}
       <ToastContainer toasts={toasts} onRemove={removeToast}    />
@@ -125,10 +125,9 @@ const getIconAndColor = (
       case "success":
        ;
   return {
-=======
   action?: {label: string;
     onClick: () => void;
-}}interface ToastContextType  {toasts: Toast[];
+}interface ToastContextType  {toasts: Toast[];
   addToast: (toast: Omit<Toast, "id">) => string;
   removeToast: (id: string) => void;
   clearToasts: () => void;
@@ -141,7 +140,7 @@ const getIconAndColor = (
         return updated.slice(-maxToasts)})// Auto remove toast after duration;
       if (newToast.duration && newToast.duration > 0) {setTimeout(() => {removeToast(id)}, newToast.duration)}return id;
     },[maxToasts],)const removeToast = useCallback((id: string) => {setToasts((prev) => prev.filter((toast) => toast.id !== id))}, [])const clearToasts = useCallback(() => {setToasts([])}, [])return (<ToastContext.Provider;
-      value={{ toasts, addToast, removeToast, clearToasts }}
+      value={ toasts, addToast, removeToast, clearToasts }
     >;
       {children}
       <ToastContainer toasts={toasts} onRemove={removeToast} />;
@@ -293,13 +292,10 @@ return (;
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" />
                 <path;
 fillRule="evenodd"
-=======
           <div className="ml-4 flex-shrink-0 flex">;
             <button;
               onClick={handleRemove}
               className={`inline-flex ${titleColor} hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-${toast.type === "success" ? "green" : toast.type === "error" ? "red" : toast.type === "warning" ? "yellow" : "blue"}-50`}
-<<<<<<< HEAD
-<<<<<<< HEAD
             >
               <span className="sr-only">Close</span>"
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">"
@@ -339,7 +335,6 @@ export const useToastNotifications = () => {
 
 
   const { addToast } = useToast()
-=======
   )
 };
 
@@ -348,10 +343,6 @@ export const useToastNotifications = () => {
   const { addToast } = useToast();
 
   return {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
               <span className="sr-only">Close</span>;
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">;
@@ -376,10 +367,7 @@ export const useToastNotifications = () => {const { addToast }  = useToast()retu
       addToast({ type: "success", title, message, ...options }),error: (title: string, message?: string, options?: Partial<Toast>) =>;
       addToast({ type: "error", title, message, ...options }),warning: (title: string, message?: string, options?: Partial<Toast>) =>;
       addToast({ type: "warning", title, message, ...options }),info: (title: string, message?: string, options?: Partial<Toast>) =>;
-<<<<<<< HEAD
-      addToast({ type: "info", title, message, ...options }),}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
+      addToast({ type: "info", title, message, ...options }),}
     success: (title: string, message?: string, options?: Partial<Toast>) => 
       addToast({ type: 'success', title, message, ...options }),
     error: (title: string, message?: string, options?: Partial<Toast>) => 
@@ -390,8 +378,4 @@ export const useToastNotifications = () => {const { addToast }  = useToast()retu
       addToast({ type: 'info', title, message, ...options }),
   }
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-      addToast({ type: "info", title, message, ...options }),}}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
->>>>>>> origin/main
+      addToast({ type: "info", title, message, ...options }),}

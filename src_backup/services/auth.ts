@@ -13,7 +13,7 @@ function register () {try {try {try { const res = await fetch ('/api / auth / re
 function forgotPassword () {try {try {try {' const res = await fetch ('/api / auth / forgot', { method: 'POST', headers: { 'Content - Type': 'application / json' } catch (error) {';
     console.error ('Error in forgotPassword: ', error) }
 } catch (error) {console.error ('Error in forgotPassword: ', error) }
-} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) ';'";'";
+} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) ';'';'';
 /**
  * Authentication service
  * Handles user authentication and session management

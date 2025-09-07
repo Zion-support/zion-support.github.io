@@ -19,7 +19,7 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length
 
-        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
+        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length})
   }
   return res.status(405).json({ error: "Method not allowed" })
 }
@@ -50,7 +50,7 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length
         tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
-        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
+        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length})
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -85,7 +85,7 @@ export default function handler(req, res) {
         tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,;
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length;
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length;
-        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}});
+        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length});
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

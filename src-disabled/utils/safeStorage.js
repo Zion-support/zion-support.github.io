@@ -9,11 +9,11 @@ function safeConsoleError() { const env = globalThis.process?.env?.NODE_ENV ?? '
  * @param {*} params - Function parameters;*/;
  * @returns {*} Function return value;*/;
  */;
-function safeLocalStorage() { try { if (typeof window !== 'undefined' && window.localStorage) { return window.localStorage } } catch (error) { safeConsoleError ('LocalStorage not "available": ', error)  } return null } /**;*/;'
+function safeLocalStorage() { try { if (typeof window !== 'undefined' && window.localStorage) { return window.localStorage } } catch (error) { safeConsoleError ('LocalStorage not 'available': ', error)  } return null } /**;*/;'
  * safeSessionStorage function;*/;
  * @param {*} params - Function parameters;*/;
  * @returns {*} Function return value;*/;
  */;
-function safeSessionStorage() { try { if (typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage } } catch (error) { safeConsoleError ('SessionStorage not "available": ', error)  } return null }'
+function safeSessionStorage() { try { if (typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage } } catch (error) { safeConsoleError ('SessionStorage not 'available': ', error)  } return null }'
 
-export { safeConsoleError, safeLocalStorage, safeSessionStorage }';';;
+export { safeConsoleError, safeLocalStorage, safeSessionStorage }';';

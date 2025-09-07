@@ -1,7 +1,7 @@
-import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import { FileText, Plus, Search, Calendar } from 'lucide-react';'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';'
 import { Calendar } from 'lucide-react';
@@ -67,9 +67,9 @@ import { Calendar } from 'lucide-react';
                 <span className='mt - 1 text - xs text - muted - foreground'>;
                   {action.description}
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import React from 'react',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { FileText, Plus, Search, Calendar } from 'lucide-react'
 export function QuickActions() {
   const actions = null;
@@ -82,7 +82,7 @@ export function QuickActions() {
       </CardHeader>
       <CardContent>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
 
 <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -90,26 +90,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <Button 
               key={action.id}
-              variant="outline" 
+              variant='outline' 
               className={`h-auto justify-start p-4 ${action.color}`}
 
             >
-              <div className="flex flex-col items-start text-left">
+              <div className='flex flex-col items-start text-left'>
 
-                <div className="flex items-center">
+                <div className='flex items-center'>
                   {action.icon}
                   <span>{action.label}</span>
                 </div>
 
-                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
+                <span className='mt-1 text-xs text-muted-foreground'>{action.description}</span>
               </div>
-            </Button>"
-import React from "react",;"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
-import { Button } from "@/components/ui/button",;'
+            </Button>'
+import React from 'react',;'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;'
+import { Button } from '@/components/ui/button',;'
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
 
-      color: "bg-amber-100 dark:bg-amber-900/20";
+      color: 'bg-amber-100 dark:bg-amber-900/20';
     }
   ];
   return (;
@@ -118,13 +118,13 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react';
         <CardTitle>Quick Actions</CardTitle>;
         <CardDescription>Fast access to common tasks</CardDescription>;
       </CardHeader>;
-      <CardContent>;"
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
+      <CardContent>;'
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>;
           {actions.map(action => (;
             <Button;
 
-              key={action.id}"
-              variant="outline"`
+              key={action.id}'
+              variant='outline'`
               className={`h-auto justify-start p-4 ${action.color}`}
             >
 
@@ -139,15 +139,15 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react';
 
                 <span className='mt-1 text-xs text-muted-foreground'>;
                   {action && action.description}
-                </span>              </div>;"
-                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
+                </span>              </div>;'
+                <span className='mt-1 text-xs text-muted-foreground'>{action && action.description}</span>;
           {actions && actions.map(action => (;
 
-                <div className="flex items-center">;
+                <div className='flex items-center'>;
                   {action && action.icon}
                   <span>{action && action.label}</span>;
-                </div>;"
-                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
+                </div>;'
+                <span className='mt-1 text-xs text-muted-foreground'>{action && action.description}</span>;
               </div>;
             </Button>;
 
@@ -171,8 +171,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {actions.map (action => (
             <Button;
-              key={action.id}"
-              variant="outline";`
+              key={action.id}'
+              variant='outline';`
               className={`h - auto justify - start p - 4 ${action.color}`}
 
               </div>;

@@ -133,7 +133,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={(e) => {
               e.stopPropagation();
               onDownload(resume);
-            }}
+            }
             className="flex-1""
           >
             <Download className="h-4 w-4 mr-2" />"
@@ -145,7 +145,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={(e) => {
               e.stopPropagation();
               onSelect(resume);
-            }}
+            }
             className="flex-1""
           >
             {isSelected ? 'Selected' : 'Select'}'

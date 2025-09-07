@@ -15,7 +15,7 @@ export function Button() {';'
     }
     return (<button type={type} className={classes} onClick={onClick} disabled={disabled}>;
       {children}
-    </button>)}}
+    </button>)}
 ursor/integrate-build-improve-and-re-verify-8f7d;
 }ursor/automate-test-improve-and-merge-code-646c;
 }
@@ -36,7 +36,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
       {children}
     </button>;
   )}if (asChild) {}
-  return (}}}';'
+  return (}}';'
 origin/chore/resolve-conflicts-1756215853;
 ';'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;

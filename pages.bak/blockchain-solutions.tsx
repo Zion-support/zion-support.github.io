@@ -83,11 +83,11 @@ export default function Blockchainsolutions() {export default function Blockchai
       <p>This component is currently under development.</p>;
     </div>;
   )}
-}}
+}
 }ursor/automate-test-improve-and-merge-code-646c;
 }
 }
-}}
+}
 }
 }
 }

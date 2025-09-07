@@ -113,9 +113,9 @@ export default function ServicesShowcase2027() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -243,10 +243,10 @@ export default function ServicesShowcase2027() {
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  exit={{ opacity: 0, y: -30, scale: 0.9 }} className="group">
+                  initial={ opacity: 0, y: 30, scale: 0.9 }
+                  animate={ opacity: 1, y: 0, scale: 1 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
+                  exit={ opacity: 0, y: -30, scale: 0.9 } className="group">
                   <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/20">
                     {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">
@@ -335,8 +335,8 @@ export default function ServicesShowcase2027() {
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }} className="text-center py-20">
+              initial={ opacity: 0 }
+              animate={ opacity: 1 } className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>
@@ -345,7 +345,7 @@ export default function ServicesShowcase2027() {
                   setSearchTerm(''),
                   setSelectedCategory('all'),
                   setSelectedPriceRange('all')
-                }} className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                } className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Clear Filters
               </button>
             </motion.div>

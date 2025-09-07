@@ -195,7 +195,7 @@ export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdg
 export;
   const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
-  return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}}}
+  return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5; }
 ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
@@ -221,7 +221,7 @@ export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdg
 export;
   const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
-  return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}}}
+  return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}}
 ursor/fix-syntax-push-and-merge-to-main-40de; }
 
 export interface CuttingEdgeInnovativeService { "id": string; "name": string; "tagline": string; "price": string; "period": string,"description": string; "features": string[]; "popular": boolean; "icon": string; "color": string; "textColor": string; "link": string; "marketPosition": string; "targetAudience": string; "trialDays": number; "setupTime": string; "category": string; "realService": boolean; "technology": string[]; "integrations": string[]; "useCases": string[]; "roi": string; "competitors": string[]; "marketSize": string; "growthRate": string; "contactInfo": { "mobile": string; "email": string; "address": string; "website": strin
@@ -592,6 +592,6 @@ export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdg
 export;
   const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
-  return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}}}
+  return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}}
 ursor/add-new-services-and-deploy-updates-0462; }
 ursor/fix-syntax-push-and-merge-to-main-40de;

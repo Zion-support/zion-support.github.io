@@ -23,7 +23,7 @@
             <div className="w - full bg - zinc - 700 rounded - full h - 2">;"
               <div;
                 className="bg - blue - 500 h - 2 rounded - full transition - all duration - 300";"
-                style={{ "width": `${((current_step + 1) / walkthrough_steps.length) * 100}%` }}` />;
+                style={ "width": `${((current_step + 1) / walkthrough_steps.length) * 100}%` }` />;
             </div>;
           </div>;
           {/* Step Content */}
@@ -58,12 +58,12 @@
       {currentStepData.target && (
         <div;
             }
-            "bottom": 0}}
+            "bottom": 0}
         >;
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";"
               "width": "300px";"
-              "height": "200px"}}" />;
+              "height": "200px"}" />;
         </div>)}
     </>)}// Hook to add data attributes for walkthrough targeting;
 export function useWalkthroughTarget() {return {"data-walkthrough-target": id;"data-walkthrough-target": id;"
@@ -153,14 +153,14 @@ export function OnboardingWalkthrough() {
       <div className = $2;
             left: 0,
             right: 0,
-            bottom: 0}}
+            bottom: 0}
         >
           <div
             className = $2;
               left: "50%",
               transform: "translate(-50%, -50%)",
               width: "300px",
-              height: "200px"}}
+              height: "200px"}
           />
         </div>
       )}

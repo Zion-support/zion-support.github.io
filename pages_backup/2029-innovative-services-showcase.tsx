@@ -71,19 +71,19 @@ services: practicalBusinessSolutionServices2029,
           <div className='container mx-auto px-4 text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              initial={ opacity: 0, y: 30 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              animate={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              transition={ duration: 0.8 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             >
@@ -110,12 +110,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+              <div className='flex flex-wrap justify-center gap-4'>
+                <Link href='#services' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300'>
                   Explore Services
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className='ml-2 h-5 w-5' />
                 </Link>
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300">
+                <Link href='/contact' className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300'>
                   Get Started
                 </Link>
               </div>
@@ -129,10 +129,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='container mx-auto px-4'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
@@ -150,10 +150,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.title}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.2 }
+viewport={ once: true }
                   className='relative group'
                 >
                   <div
@@ -193,10 +193,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-black'>
           <div className='container mx-auto px-4'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
@@ -214,10 +214,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {allServices.slice(0, 4).map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+viewport={ once: true }
                   className='bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500'
                 >
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -275,10 +275,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+viewport={ once: true }
               className='text-center mt-16'
             >
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -297,10 +297,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='container mx-auto px-4 text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
 <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
                 Ready to Transform Your Business?

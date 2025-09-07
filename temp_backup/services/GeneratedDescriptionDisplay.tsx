@@ -20,7 +20,6 @@ const handleSave = () => {;
 setIsEditing (false);
 toast ({;
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 <CardHeader> <CardTitle className="text-white flex items-center justify-between" > Generated Description <Button > {";""
   isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
 }</Button> </CardTitle> </CardHeader> <CardContent> {;
   isEditing ? (<Textarea value= {;

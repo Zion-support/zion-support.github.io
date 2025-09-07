@@ -75,10 +75,9 @@ export const PwaInstallButton: React.FC = () => {const [promptEvent, setPromptEv
     }
     try {setIsInstalling(true),promptEvent.prompt(),const result = await promptEvent.userChoice,setIsInstalling(false),if (result.outcome === 'accepted') {toast.success('App installed'),setPromptEvent(null)} else {toast('Installation dismissed'),safeStorage.setItem(DISMISS_KEY, Date.now().toString()),setPromptEvent(null)}
     } catch (err) {setIsInstalling(false),toast('Installation failed', { description: 'Please try again later.' }),logErrorToProduction('PWA install error:', { data: err })}
-  },return (<div className="fixed bottom-4 right-4 z-50">;
+  },return (<div className='fixed bottom-4 right-4 z-50'>;
       <Button onClick={onClick} disabled={isInstalling}>;
-        {isInstalling && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-<<<<<<< HEAD:src_backup/components/PwaInstallButton.tsx
+        {isInstalling && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
         Install App
       </Button>
     </div>
@@ -116,7 +115,6 @@ export const PwaInstallButton: React.FC = () => {const [promptEvent, setPromptEv
   }return (<div className='fixed bottom-4 right-4 z-50'>;
       <Button onClick={onClick} disabled={isInstalling}>;
         {isInstalling && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-<<<<<<< HEAD:src_backup/components/PwaInstallButton.tsx
         Install App
       </Button>
     </div>

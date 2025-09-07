@@ -176,13 +176,13 @@ const { url } = await res.json();
     } finally {;
       setIsGenerating(false);
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -206,20 +206,20 @@ const { url } = await res.json();
         alert('PDF export failed');
         return;
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       const { url } = await res.json();
       window.open(url, '_blank');
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -254,8 +254,8 @@ const { url } = await res.json();
     await navigator.clipboard.writeText(url);
     alert('Shareable link copied to clipboard');
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
   const sections = [
     'Executive Summary'
@@ -271,19 +271,19 @@ const { url } = await res.json();
       <Head>
         <title>Tokenomics Whitepaper Generator</title>
       </Head>
-      <div className="space-y-6">
-        <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-semibold">Whitepaper Generator</h1>
-          <div className="flex items-center gap-3 text-sm">
-            <label className="inline-flex items-center gap-2">
-              <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+      <div className='space-y-6'>
+        <div className='flex items-center justify-between'>
+          <h1 className='text-2xl font-semibold'>Whitepaper Generator</h1>
+          <div className='flex items-center gap-3 text-sm'>
+            <label className='inline-flex items-center gap-2'>
+              <input type='checkbox' checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
               <span>Admin</span>
             </label>
-            <label className="inline-flex items-center gap-2">
-              <input type="checkbox" checked={publicPreview} onChange={(e) => setPublicPreview(e.target.checked)} />
+            <label className='inline-flex items-center gap-2'>
+              <input type='checkbox' checked={publicPreview} onChange={(e) => setPublicPreview(e.target.checked)} />
               <span>Public after launch</span>
             </label>
-            <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
+            <button onClick={handleShareableLink} className='px-3 py-1 rounded-md bg-indigo-600 text-white'>Create Share Link</button>
           </div>
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
@@ -292,32 +292,32 @@ const { url } = await res.json();
               <h2 className='font-medium'>Builder Inputs</h2>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div>
-                  <label className="text-xs opacity-70">Token name</label>
-                  <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
+                  <label className='text-xs opacity-70'>Token name</label>
+                  <input className='w-full border rounded-md px-3 py-2' value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
                 </div>
                 <div>
-                  <label className="text-xs opacity-70">Token supply</label>
-                  <input className="w-full border rounded-md px-3 py-2" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} />
+                  <label className='text-xs opacity-70'>Token supply</label>
+                  <input className='w-full border rounded-md px-3 py-2' value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} />
                 </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Use cases</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={useCases} onChange={(e) => setUseCases(e.target.value)} />
+                <div className='md:col-span-2'>
+                  <label className='text-xs opacity-70'>Use cases</label>
+                  <textarea className='w-full border rounded-md px-3 py-2' rows={2} value={useCases} onChange={(e) => setUseCases(e.target.value)} />
                 </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Rewards logic</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} />
+                <div className='md:col-span-2'>
+                  <label className='text-xs opacity-70'>Rewards logic</label>
+                  <textarea className='w-full border rounded-md px-3 py-2' rows={2} value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} />
                 </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Governance logic</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={governance} onChange={(e) => setGovernance(e.target.value)} />
+                <div className='md:col-span-2'>
+                  <label className='text-xs opacity-70'>Governance logic</label>
+                  <textarea className='w-full border rounded-md px-3 py-2' rows={2} value={governance} onChange={(e) => setGovernance(e.target.value)} />
                 </div>
                 <div>
-                  <label className="text-xs opacity-70">Legal jurisdiction</label>
-                  <select className="w-full border rounded-md px-3 py-2" value={jurisdiction} onChange={(e) => setJurisdiction(e.target.value)}>
-                    <option value="US">US</option>
-                    <option value="EU">EU</option>
-                    <option value="SG">Singapore</option>
-                    <option value="AE">UAE</option>
+                  <label className='text-xs opacity-70'>Legal jurisdiction</label>
+                  <select className='w-full border rounded-md px-3 py-2' value={jurisdiction} onChange={(e) => setJurisdiction(e.target.value)}>
+                    <option value='US'>US</option>
+                    <option value='EU'>EU</option>
+                    <option value='SG'>Singapore</option>
+                    <option value='AE'>UAE</option>
                   </select>
                 </div>
                 <div className='flex items-center gap-2'>
@@ -400,7 +400,7 @@ const { url } = await res.json();
                 >
                   Clear AI Draft
                 </button>
-                <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
+                <button onClick={() => setGeneratedMarkdown('')} className='px-4 py-2 rounded-md border'>Clear AI Draft</button>
               </div>
             </div>
             <div className='rounded-lg border p-4 space-y-2'>
@@ -433,7 +433,7 @@ const { url } = await res.json();
                   </button>
                 ))}
               </div>
-              <span className="text-xs opacity-60">Auto-updating preview</span>
+              <span className='text-xs opacity-60'>Auto-updating preview</span>
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
           </div>
@@ -474,13 +474,13 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
   return (
-    <div className="space-y-1 text-sm">
+    <div className='space-y-1 text-sm'>
       {data.map((d, idx) => (
-        <div key={idx} className="flex items-center gap-2">
-          <div className="h-2 bg-gray-200 rounded w-full">
-            <div className="h-2 bg-indigo-600 rounded" style={{ width: `${(d.percent / total) * 100}%` }} />
+        <div key={idx} className='flex items-center gap-2'>
+          <div className='h-2 bg-gray-200 rounded w-full'>
+            <div className='h-2 bg-indigo-600 rounded' style={ width: `${(d.percent / total) * 100}%` } />
           </div>
-          <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
+          <span className='w-48 truncate'>{d.label} ({d.percent}%)</span>
         </div>
       ))}
     </div>
@@ -520,7 +520,7 @@ function MarkdownPreview({
   }, [markdown]),
   const content = parts[activeSection] || '',
   return (
-    <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
+    <pre className='whitespace-pre-wrap text-sm leading-6'>{content || markdown}</pre>
   )
 ;
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {;
@@ -537,10 +537,10 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }, [markdown]);
   const content = parts[activeSection] || '';
   return (;
-    <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>;
+    <pre className='whitespace-pre-wrap text-sm leading-6'>{content || markdown}</pre>;
   );
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

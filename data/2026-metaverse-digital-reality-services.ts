@@ -74,7 +74,7 @@ export const "metaverseDigitalRealityServices2026": MetaverseDigitalRealityServi
     "category": "Metaverse Digital Reality 2026";"
     "realImplementation": true;"contactInfo": {ursor/fix-website-loading-errors-and-merge-6662;
     }
-  }];;export interface MetaverseDigitalRealityService2026  {}export const "metaverseDigitalRealityServices2026": MetaverseDigitalRealityService2026[] =;
+  }];export interface MetaverseDigitalRealityService2026  {}export const "metaverseDigitalRealityServices2026": MetaverseDigitalRealityService2026[] =;
   [;
     {"id": '2026-metaverse-digital-reality',"name": '2026 Metaverse Digital Reality Platform',"tagline": 'Immersive digital reality experiences',"price": '$399/month',"description":;'
         'Advanced metaverse platform creating immersive digital reality experiences for 2026 and beyond.',"features": [;'
@@ -193,7 +193,7 @@ export const "metaverseDigitalRealityServices2026": MetaverseDigitalRealityServi
   }
 ];
     "contactInfo": {}
-  }}
+  }
   }"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709";"
       "mobile": "+1 302 464 0950", "email": "kleber@ziontechgroup.com",      "address": "364 E Main St STE 1008 Middletown DE 19709";"
       "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709";"

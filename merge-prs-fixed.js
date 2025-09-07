@@ -20,7 +20,7 @@ try {;
     const status = execSync('git status --porcelain', { encoding: 'utf8' });
     if (status.trim()) {;
         console.log('⚠️  Working directory has changes. Stashing...'),;
-        execSync('git stash push -m "Auto-stash before merge process"');
+        execSync('git stash push -m 'Auto-stash before merge process'');
     }
 ;
     // Fetch latest changes;
@@ -48,17 +48,17 @@ try {;
                 if (file.trim()) {;
 
                     console.log(`Resolving conflicts in: ${file}`);
-                    try {execSync(`git checkout --ours "${file}"`);
-                    } catch (e) {execSync(`git checkout --theirs "${file}"`);
+                    try {execSync(`git checkout --ours '${file}'`);
+                    } catch (e) {execSync(`git checkout --theirs '${file}'`);
 
                     console.log(`Resolving conflicts in: ${file}`),;
                     try {;
-                        execSync(`git checkout --ours "${file}"`);
+                        execSync(`git checkout --ours '${file}'`);
                     } catch (e) {;
-                        execSync(`git checkout --theirs "${file}"`);
+                        execSync(`git checkout --theirs '${file}'`);
 
                     }
-                    exec_sync (`git add "${file}"`);
+                    exec_sync (`git add '${file}'`);
                 }
             }
 
@@ -67,7 +67,7 @@ try {;
 
 
             // Commit the merge;
-            exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
+            exec_sync ('git commit -m 'feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved'');
         }
     }
 
@@ -87,7 +87,7 @@ try {;
             exec_sync (`git checkout ${branch_name}`),
             // Merge into main;
             exec_sync ('git checkout main'),
-            exec_sync (`git merge ${branch_name} --no - ff -m "feat: merge ${branch_name} into main\n\n- Integrated changes from ${branch_name}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`),
+            exec_sync (`git merge ${branch_name} --no - ff -m 'feat: merge ${branch_name} into main\n\n- Integrated changes from ${branch_name}\n- Resolved any conflicts automatically\n- All features and improvements preserved'`),
             console.log (`✅ Successfully merged ${branch_name}`);
         } catch (error) {
             console.log (`⚠️  Error merging ${branch}: ${error.message}`),
@@ -95,11 +95,11 @@ try {;
             for (const file of files) {;
                 if (file.trim()) {;
                     }
-                    execSync(`git add "${file}"`);
+                    execSync(`git add '${file}'`);
                 }
             }
             // Commit the merge;
-            execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')}
+            execSync('git commit -m 'feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved'')}
     }
     // Get all branches;
     console.log('🌿 Getting all branches...');
@@ -117,7 +117,7 @@ try {;
             execSync(`git checkout ${branchName}`);
             // Merge into main;
             execSync('git checkout main');
-            execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`);
+            execSync(`git merge ${branchName} --no-ff -m 'feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved'`);
             console.log(`✅ Successfully merged ${branchName}`);
         } catch (error) {console.log(`⚠️  Error merging ${branch}: ${error.message}`);
             // Continue with other branches;
@@ -134,7 +134,7 @@ try {;
     console.log('🌿 Getting all branches...'),const branches = execSync('git branch -r', { encoding: 'utf8' }),const branchList = branches.split('\n').map(branch => branch.trim()).filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')).filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),.filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'))console.log(`Found ${branchList.length} branches to merge: `),branchList.forEach(branch => console.log(`  - ${branch}`)),// Merge each branch;
     for (const branch of branchList) {try {const branchName = branch.replace('origin/', ''),console.log(`\n🔄 Merging branch: ${branchName}`),// Checkout the branch;
             execSync(`git checkout ${branchName}`),// Merge into main;
-            execSync('git checkout main'),execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`),console.log(`✅ Successfully merged ${branchName}`)} catch (error) {console.log(`⚠️  Error merging ${branch}: ${error.message}`),// Continue with other branches;
+            execSync('git checkout main'),execSync(`git merge ${branchName} --no-ff -m 'feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved'`),console.log(`✅ Successfully merged ${branchName}`)} catch (error) {console.log(`⚠️  Error merging ${branch}: ${error.message}`),// Continue with other branches;
         }
     }// Push all changes;
     console.log('📤 Pushing all changes to main...'),execSync('git push origin main'),console.log('🎉 All merge operations completed successfully!'),console.log('✅ All PRs have been merged into main branch'),console.log('✅ All merge conflicts have been resolved'),console.log('✅ Repository is now clean and up to date')} catch (error) {console.error('❌ Error during merge process:', error.message),process.exit(1)}process.exit(1)}
@@ -184,7 +184,7 @@ try {
     const status = execSync($2);
     if (status.trim()) {
         console.log($2);
-        execSync('git stash push -m "Auto-stash before merge process"')
+        execSync('git stash push -m 'Auto-stash before merge process'')
     }
 
     // Fetch latest changes
@@ -210,16 +210,16 @@ try {
                 if (file.trim()) {
                     console.log($2);
                     try {
-                        execSync(`git checkout --ours "${file}"`)
+                        execSync(`git checkout --ours '${file}'`)
                     } catch (e) {
-                        execSync(`git checkout --theirs "${file}"`)
+                        execSync(`git checkout --theirs '${file}'`)
                     }
-                    execSync(`git add "${file}"`)
+                    execSync(`git add '${file}'`)
                 }
             }
             
             // Commit the merge
-            execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
+            execSync('git commit -m 'feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved'')
         }
     }
 

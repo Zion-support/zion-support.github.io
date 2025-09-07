@@ -83,21 +83,21 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
   );
 
   return (
-    <div className="py-6">
-      <div className="flex justify-between items-center px-6 mb-6">
-        <h2 className="text-xl font-bold text-foreground">Menu</h2>
+    <div className='py-6'>
+      <div className='flex justify-between items-center px-6 mb-6'>
+        <h2 className='text-xl font-bold text-foreground'>Menu</h2>
         <Button
-          variant="ghost"
-          size="icon"
+          variant='ghost'
+          size='icon'
           onClick={onClose}
-          aria-label="Close menu"
-          title="Close menu"
+          aria-label='Close menu'
+          title='Close menu'
         >
-          <X className="h-5 w-5" />
+          <X className='h-5 w-5' />
         </Button>
       </div>
 
-      <nav className="space-y-1">
+      <nav className='space-y-1'>
         {visibleItems.map((item) => (
           <Link
             key={item.name}
@@ -120,12 +120,12 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
               }
               onClose(), // Close mobile menu on any click
-            }}
+            }
           >
-            <div className="relative mr-4">
-              <item.icon className="h-5 w-5" aria-hidden="true" />
+            <div className='relative mr-4'>
+              <item.icon className='h-5 w-5' aria-hidden='true' />
               {item.badge && item.badge > 0 && (
-                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                <span className='absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center'>
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}
@@ -134,7 +134,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
           </Link>
         ))}
       </nav>
-      <div className="mt-6 px-6">
+      <div className='mt-6 px-6'>
         <ModeToggle />
       </div>
     </div>

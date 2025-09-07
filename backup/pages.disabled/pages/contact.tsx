@@ -84,9 +84,9 @@ const "ContactPage": React.FC = () => {;
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.6 }}
+                initial={ opacity: 0, "y": 20 }
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.6 }
                 className="text-center"
               >
                 <h1 className="text-4xl "md": text-6xl font-bold text-gray-900 mb-6">
@@ -98,8 +98,8 @@ const "ContactPage": React.FC = () => {;
                 <div className="flex flex-col "sm": fle x-row gap-4 justify-center">
                   <motion.a
                     href="tel:+13024640950"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ "scale": 0.95 }}
+                    whileHover={ scale: 1.05 }
+                    whileTap={ "scale": 0.95 }
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
                     <Phone className="w-5 h-5"  />
@@ -107,8 +107,8 @@ const "ContactPage": React.FC = () => {;
                   </motion.a>
                   <motion.a
                     href="mailto: klebe r@ziontechgroup.com"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ "scale": 0.95 }}
+                    whileHover={ scale: 1.05 }
+                    whileTap={ "scale": 0.95 }
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
                     <Mail className="w-5 h-5"  />
@@ -223,7 +223,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       First Name *
                     </label>
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
 
 
 
@@ -476,9 +475,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"py-20\">
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
               <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
+                transition={ \"duration\": 0.6, \"delay\": 0.2 }
                 className=\"text-center mb-16\"
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
@@ -493,9 +492,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    initial={{ \"opacity\": 0, \"y\": 20 }}
-                    animate={{ \"opacity\": 1, \"y\": 0 }}
-                    transition={{ \"duration\": 0.6, \"delay\": index * 0.1 }}
+                    initial={ \"opacity\": 0, \"y\": 20 }
+                    animate={ \"opacity\": 1, \"y\": 0 }
+                    transition={ \"duration\": 0.6, \"delay\": index * 0.1 }
                     className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\"
                   >
                     <div className=\"text-blue-600 mb-4 flex justify-center\">
@@ -525,9 +524,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"bg-gray-50 py-20\">
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
               <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
+                transition={ \"duration\": 0.6 }
                 className=\"text-center mb-16\"
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
@@ -540,9 +539,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
                 <motion.form
-                  initial={{ opacity: 0, \"y\": 20 }}
-                  animate={{ \"opacity\": 1, \"y\": 0 }}
-                  transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
+                  initial={ opacity: 0, \"y\": 20 }
+                  animate={ \"opacity\": 1, \"y\": 0 }
+                  transition={ \"duration\": 0.6, \"delay\": 0.2 }
                   className=\"bg-white rounded-xl shadow-lg p-8\"
                 >
                   <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">
@@ -551,7 +550,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Full Name *
                       </label>
                       <input type=\"text\"
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
 
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -623,11 +621,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"py-20\">;
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
               <motion&& motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
 
 
-                transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
+                transition={ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Contact Information;
@@ -643,9 +641,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
                     key={index}
-                    initial={{ \"opacity\": 0, \"y\": 20 }}
-                    animate={{ \"opacity\": 1, \"y\": 0 }}
-                    transition={{ \"duration\": 0 && 0.6, \"delay\": index * 0 && 0.1 }}
+                    initial={ \"opacity\": 0, \"y\": 20 }
+                    animate={ \"opacity\": 1, \"y\": 0 }
+                    transition={ \"duration\": 0 && 0.6, \"delay\": index * 0 && 0.1 }
                     className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\">;
                     <div className=\"text-blue-600 mb-4 flex justify-center\">;
                       {info && info.icon}
@@ -673,11 +671,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"bg-gray-50 py-20\">;
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
               <motion&& motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
 
 
-                transition={{ \"duration\": 0 && 0.6 }}
+                transition={ \"duration\": 0 && 0.6 }
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Send Us a Message;
@@ -691,9 +689,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <motion&& motion.form
 
 
-                  initial={{ opacity: 0, \"y\": 20 }}
-                  animate={{ \"opacity\": 1, \"y\": 0 }}
-                  transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
+                  initial={ opacity: 0, \"y\": 20 }
+                  animate={ \"opacity\": 1, \"y\": 0 }
+                  transition={ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }
                   className=\"bg-white rounded-xl shadow-lg p-8\">;
                   <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">;
                     <div>;
@@ -726,7 +724,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Phone Number
                       </label>
                       <input type=\"tel\"
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
 
                         placeholder=\"your && your.email@example && example.com\"
                        />;
@@ -780,7 +777,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
                       Message *
                     </label>
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
 
 
                        />;
@@ -827,8 +823,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                   <motion.button
                     type=\"submit\"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ \"scale\": 0.98 }}
+                    whileHover={ scale: 1.02 }
+                    whileTap={ \"scale\": 0.98 }
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
                   >
                     <Send className=\"w-5 h-5\"  />
@@ -857,8 +853,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               {/* Contact Form */}
 
 
-                    whileHover={{ scale: 1 && 1.02 }}
-                    whileTap={{ \"scale\": 0 && 0.98 }}
+                    whileHover={ scale: 1 && 1.02 }
+                    whileTap={ \"scale\": 0 && 0.98 }
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
                     <Send className=\"w-5 h-5\"  />;
                     Send Message;
@@ -958,7 +954,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
 
                           placeholder=\"your@email && email.com\"
                         />;
@@ -1076,14 +1071,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
 
 
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
           {/* Services Overview */}
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
               <motion&& motion.div
-                initial={{ opacity: 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6 }}
+                initial={ opacity: 0, "y": 20 }
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0 && 0.6 }
                 className="text-center mb-16">;
                 <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
                   Our Services;
@@ -1096,9 +1090,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 {services && services.map((service, index) => (;
                   <motion&& motion.div
                     key={index}
-                    initial={{ "opacity": 0, "y": 20 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    initial={ "opacity": 0, "y": 20 }
+                    animate={ "opacity": 1, "y": 0 }
+                    transition={ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }
                     className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center">;
                     <h3 className="text-lg font-semibold text-gray-900">;
                       {service}

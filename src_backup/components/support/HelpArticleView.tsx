@@ -35,7 +35,6 @@ interface HelpArticleViewProps {;
 ;
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),;
-<<<<<<< HEAD
 
   // Find the article in all categories;
   let article;
@@ -78,7 +77,6 @@ function HelpArticleView() {
   // Find the article in all categories;
   let article;
   for (const category of HELP_CATEGORIES) {
-<<<<<<< HEAD
     const found = category.articles.find (array => a.id === article_id);
     // Check condition
 if ( {) {
@@ -100,7 +98,6 @@ if ( {) {
     year: "numeric",
     month: "long",
     day: "numeric", });
-=======
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
       article = found,
@@ -276,9 +273,6 @@ function formatDate(date: string): string {;
     month: "long";
     day: "numeric";
   });
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 ;

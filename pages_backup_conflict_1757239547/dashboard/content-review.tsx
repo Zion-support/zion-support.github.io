@@ -41,14 +41,14 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   }, {} as Record<string, string>),;
   let role = 'guest';
   try { role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest' } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   if (role !== 'admin') return { redirect: { destination: '/', permanent: false } },;
   return { props: {}   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 },;
@@ -85,9 +85,9 @@ export default function ContentReviewPage(req, res) {
     mutate();  }
   return (
     <EnhancedLayout>
-      <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-4">
-          <h1 className="text-2xl font-semibold">Admin Content Review</h1>
+      <div className='max-w-7xl mx-auto'>
+        <div className='flex items-center justify-between mb-4'>
+          <h1 className='text-2xl font-semibold'>Admin Content Review</h1>
         </div>
         <div className='mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm'>
           <select
@@ -146,9 +146,9 @@ export default function ContentReviewPage(req, res) {
             Reset
           </button>
         </div>
-        <div className="overflow-auto border rounded">
-          <table className="min-w-full text-sm">
-            <thead className="bg-gray-50 dark:bg-gray-900">
+        <div className='overflow-auto border rounded'>
+          <table className='min-w-full text-sm'>
+            <thead className='bg-gray-50 dark:bg-gray-900'>
               <tr>
                 <th className='text-left px-3 py-2'>ID</th>
                 <th className='text-left px-3 py-2'>Type</th>
@@ -161,16 +161,16 @@ export default function ContentReviewPage(req, res) {
             </thead>
             <tbody>
               {flags.map((f: any) => (
-                <tr key={f.id} className="border-t hover:bg-gray-50/50">
-                  <td className="px-3 py-2 font-mono text-xs">{f.id}</td>
-                  <td className="px-3 py-2">{f.contentType}</td>
-                  <td className="px-3 py-2">{f.userEmail}</td>
-                  <td className="px-3 py-2 truncate max-w-xs" title={f.reason}>{f.reason}</td>
-                  <td className="px-3 py-2 text-xs">T{Math.round(f.aiScores?.toxicity*100)}% / N{Math.round(f.aiScores?.nsfw*100)}% / S{Math.round(f.aiScores?.scam*100)}%</td>
-                  <td className="px-3 py-2">{new Date(f.createdAt).toLocaleString()}</td>
-                  <td className="px-3 py-2">{f.status}</td>
-                  <td className="px-3 py-2">
-                    <button onClick={() => setSelected(f)} className="px-2 py-1 rounded border">Review</button>
+                <tr key={f.id} className='border-t hover:bg-gray-50/50'>
+                  <td className='px-3 py-2 font-mono text-xs'>{f.id}</td>
+                  <td className='px-3 py-2'>{f.contentType}</td>
+                  <td className='px-3 py-2'>{f.userEmail}</td>
+                  <td className='px-3 py-2 truncate max-w-xs' title={f.reason}>{f.reason}</td>
+                  <td className='px-3 py-2 text-xs'>T{Math.round(f.aiScores?.toxicity*100)}% / N{Math.round(f.aiScores?.nsfw*100)}% / S{Math.round(f.aiScores?.scam*100)}%</td>
+                  <td className='px-3 py-2'>{new Date(f.createdAt).toLocaleString()}</td>
+                  <td className='px-3 py-2'>{f.status}</td>
+                  <td className='px-3 py-2'>
+                    <button onClick={() => setSelected(f)} className='px-2 py-1 rounded border'>Review</button>
                   </td>
                   <td className='px-3 py-2 text-xs'>
                     T{Math.round(f.aiScores?.toxicity * 100)}% / N
@@ -190,8 +190,8 @@ export default function ContentReviewPage(req, res) {
                     </button>                  </td>
                 </tr>
               ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               {flags.length === 0 && (

@@ -29,7 +29,6 @@ setNewTitle ("");";""
 setNewBody ("");"
 setShowNew (false);""
 };";""
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 </span> </div> <Separator className=" mb-6"/> <div className=" mb-4 flex justify-end"> <Button value= {;
   newTitle ;
 }onChange= {;
   (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) ;"

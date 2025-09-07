@@ -45,24 +45,24 @@ export type ProjectParticipants = {;
   }
 
 
-  "clientUserId": string;
-  "talentUserId": string;
+  'clientUserId': string;
+  'talentUserId': string;
 }
-export type Project = {  "id": string;
+export type Project = {  'id': string;
   }
-  "title": string;
+  'title': string;
   description?: string;
-  "title": string;
+  'title': string;
   description?: string;
-  "due_date": string;
-  "amount_usd": number;
-  "status": 'pending' | 'completed' | 'cancelled';'
+  'due_date': string;
+  'amount_usd': number;
+  'status': 'pending' | 'completed' | 'cancelled';'
   attachments?: MilestoneAttachment[];
 
-  "updatedAt": string
+  'updatedAt': string
 
 }
-export function isMilestoneStatus("value": string): value is MilestoneStatus {
+export function isMilestoneStatus('value': string): value is MilestoneStatus {
   }
   return (
 
@@ -79,11 +79,11 @@ export function isMilestoneStatus("value": string): value is MilestoneStatus {
     value === 'Paid';'
   );export interface MilestoneAttachment {;
   }
-  "id": string;
-  "name": string;
-  "url": string;
-  "type": string;
-  "size": number;
+  'id': string;
+  'name': string;
+  'url': string;
+  'type': string;
+  'size': number;
 export interface CreateMilestoneRequest {
 
 
@@ -94,7 +94,7 @@ export interface CreateMilestoneRequest {;
 
   }
 
-  "title": string;
+  'title': string;
   description?: string;
 }
 export interface UpdateMilestoneRequest {
@@ -120,7 +120,7 @@ export interface UpdateMilestoneRequest {
 }
 
 
-export function getDaysUntilDue("milestone": Milestone): number | null {
+export function getDaysUntilDue('milestone': Milestone): number | null {
   }
   if (!milestone.dueDate) return null;
   const dueDate = new Date(milestone.dueDate);

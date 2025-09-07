@@ -24,7 +24,7 @@ interface RaiseDisputeButtonProps  {"projectId": string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";"
   size?: "default" | "sm" | "lg" | "icon";"
   className?: string;
-export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter(),const handleDisputeCreated = ("disputeId": string) => {setIsDialogOpen(false),router.push(`/dashboard/disputes/${disputeId}`)}}export function RaiseDisputeButton({projectId;`  }
+export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter(),const handleDisputeCreated = ("disputeId": string) => {setIsDialogOpen(false),router.push(`/dashboard/disputes/${disputeId}`)}export function RaiseDisputeButton({projectId;`  }
   milestoneId;
   variant;return (<>;
       <Button;

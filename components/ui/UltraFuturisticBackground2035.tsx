@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';'
 
 interface UltraFuturisticBackground2035Props {
   }
-  "children": React.ReactNode;
+  'children': React.ReactNode;
 
   intensity?: 'low' | 'medium' | 'high';'
     | 'space-time';'
@@ -29,7 +29,7 @@ interface UltraFuturisticBackground2035Props {
   enableSpaceTime?: boolean
 }
 
-const "UltraFuturisticBackground2035": React.FC<UltraFuturisticBackground2035Props> = ({
+const 'UltraFuturisticBackground2035': React.FC<UltraFuturisticBackground2035Props> = ({
   }
   intensity;
 
@@ -46,70 +46,70 @@ const getColorScheme = () => {;
       case 'quantum-fusion':;'
         return {;
           }
-          "primary": '#00ffff',;'
-          "secondary": '#ff00ff',;'
-          "accent": '#ffff00',;'
-          "background": 'rgba(0, 0, 0, 0 && 0.95)',;'
-          "glow": 'rgba(0, 255, 255, 0 && 0.3)'        };          "background": 'rgba(0, 0, 0, 0 && 0.95)';'
+          'primary': '#00ffff',;'
+          'secondary': '#ff00ff',;'
+          'accent': '#ffff00',;'
+          'background': 'rgba(0, 0, 0, 0 && 0.95)',;'
+          'glow': 'rgba(0, 255, 255, 0 && 0.3)'        };          'background': 'rgba(0, 0, 0, 0 && 0.95)';'
 
-          "glow": 'rgba(0, 255, 255, 0 && 0.3)';'
+          'glow': 'rgba(0, 255, 255, 0 && 0.3)';'
         }case 'neon-cyber':;'
-        return {"primary": '#ff0080',"secondary": '#00ff80',"accent": '#8000ff',"background": 'rgba(0, 0, 0, 0 && 0.9)',"glow": 'rgba(255, 0, 128, 0 && 0.4)'        }"background": 'rgba(0, 0, 0, 0 && 0.9)';'
-          "glow": 'rgba(255, 0, 128, 0 && 0.4)';'
+        return {'primary': '#ff0080','secondary': '#00ff80','accent': '#8000ff','background': 'rgba(0, 0, 0, 0 && 0.9)','glow': 'rgba(255, 0, 128, 0 && 0.4)'        }'background': 'rgba(0, 0, 0, 0 && 0.9)';'
+          'glow': 'rgba(255, 0, 128, 0 && 0.4)';'
         }case 'holographic-matrix':;'
-        return {"primary": '#00ff41',"secondary": '#ff0040',"accent": '#0040ff',"background": 'rgba(0, 0, 0, 0 && 0.92)',"glow": 'rgba(0, 255, 65, 0 && 0.35)'        }"background": 'rgba(0, 0, 0, 0 && 0.92)';'
-          "glow": 'rgba(0, 255, 65, 0 && 0.35)';'
+        return {'primary': '#00ff41','secondary': '#ff0040','accent': '#0040ff','background': 'rgba(0, 0, 0, 0 && 0.92)','glow': 'rgba(0, 255, 65, 0 && 0.35)'        }'background': 'rgba(0, 0, 0, 0 && 0.92)';'
+          'glow': 'rgba(0, 255, 65, 0 && 0.35)';'
         }case 'space-time':;'
-        return {"primary": '#ff6b35',"secondary": '#4ecdc4',"accent": '#45b7d1',"background": 'rgba(0, 0, 0, 0 && 0.88)',"glow": 'rgba(255, 107, 53, 0 && 0.3)'        }"background": 'rgba(0, 0, 0, 0 && 0.88)';'
-          "glow": 'rgba(255, 107, 53, 0 && 0.3)';'
-        }"default":;
-        return {"primary": '#00ffff',"secondary": '#ff00ff',"accent": '#ffff00',"background": 'rgba(0, 0, 0, 0 && 0.95)',"glow": 'rgba(0, 255, 255, 0 && 0.3)'}}          "background": 'rgba(0, 0, 0, 0 && 0.95)';'
-          "glow": 'rgba(0, 255, 255, 0 && 0.3)';'
+        return {'primary': '#ff6b35','secondary': '#4ecdc4','accent': '#45b7d1','background': 'rgba(0, 0, 0, 0 && 0.88)','glow': 'rgba(255, 107, 53, 0 && 0.3)'        }'background': 'rgba(0, 0, 0, 0 && 0.88)';'
+          'glow': 'rgba(255, 107, 53, 0 && 0.3)';'
+        }'default':;
+        return {'primary': '#00ffff','secondary': '#ff00ff','accent': '#ffff00','background': 'rgba(0, 0, 0, 0 && 0.95)','glow': 'rgba(0, 255, 255, 0 && 0.3)'}          'background': 'rgba(0, 0, 0, 0 && 0.95)';'
+          'glow': 'rgba(0, 255, 255, 0 && 0.3)';'
 
         return {
           }
-          "primary": '#00ffff','
-          "secondary": '#ff00ff','
-          "accent": '#ffff00','
+          'primary': '#00ffff','
+          'secondary': '#ff00ff','
+          'accent': '#ffff00','
 
-          "background": 'rgba(0, 0, 0, 0.95)','
-"glow": 'rgba(0, 255, 255, 0.3)','
+          'background': 'rgba(0, 0, 0, 0.95)','
+'glow': 'rgba(0, 255, 255, 0.3)','
         };
       case 'neon-cyber':'
         return {
           }
-          "primary": '#ff0080','
-          "secondary": '#00ff80','
-          "accent": '#8000ff','
-          "background": 'rgba(0, 0, 0, 0.9)','
-"glow": 'rgba(255, 0, 128, 0.4)','
+          'primary': '#ff0080','
+          'secondary': '#00ff80','
+          'accent': '#8000ff','
+          'background': 'rgba(0, 0, 0, 0.9)','
+'glow': 'rgba(255, 0, 128, 0.4)','
         };
       case 'holographic-matrix':'
         return {
           }
-          "primary": '#00ff41','
-          "secondary": '#ff0040','
-          "accent": '#0040ff','
-          "background": 'rgba(0, 0, 0, 0.92)','
-"glow": 'rgba(0, 255, 65, 0.35)','
+          'primary': '#00ff41','
+          'secondary': '#ff0040','
+          'accent': '#0040ff','
+          'background': 'rgba(0, 0, 0, 0.92)','
+'glow': 'rgba(0, 255, 65, 0.35)','
         };
       case 'space-time':'
         return {
           }
-          "primary": '#ff6b35','
-          "secondary": '#4ecdc4','
-          "accent": '#45b7d1','
-          "background": 'rgba(0, 0, 0, 0.88)','
-"glow": 'rgba(255, 107, 53, 0.3)','
+          'primary': '#ff6b35','
+          'secondary': '#4ecdc4','
+          'accent': '#45b7d1','
+          'background': 'rgba(0, 0, 0, 0.88)','
+'glow': 'rgba(255, 107, 53, 0.3)','
         };
-      "default":
+      'default':
         return {
           }
-          "primary": '#00ffff','
-          "secondary": '#ff00ff','
-          "accent": '#ffff00','
-          "background": 'rgba(0, 0, 0, 0.95)','
-"glow": 'rgba(0, 255, 255, 0.3)','
+          'primary': '#00ffff','
+          'secondary': '#ff00ff','
+          'accent': '#ffff00','
+          'background': 'rgba(0, 0, 0, 0.95)','
+'glow': 'rgba(0, 255, 255, 0.3)','
         };
     }
   }
@@ -155,7 +155,6 @@ const initParticles = () => {
     // Initialize particles
     const initParticles = $2;
       for (let i = 0, i < particleCount, i++) {
-=======
     // Initialize particles;
     const initParticles = () => {}
       particlesRef.current = [];
@@ -184,15 +183,15 @@ for (let i = 0; i < particleCount; i++) {
         }
         particlesRef.current.push({
           }
-          "x": Math.random() * canvas.width,
-          "y": Math.random() * canvas.height,
-          "vx": (Math.random() - 0.5) * 2 * animationSpeed,
-          "vy": (Math.random() - 0.5) * 2 * animationSpeed,
-          "size": Math.random() * 3 + 1,
-          "life": Math.random() * 100 + 50,
-          "maxLife": Math.random() * 100 + 50,
-          "type": Math.random() > 0.7 ? 'quantum' : 'normal','
-"color": Math.random() > 0.5 ? colors.primary : colors.secondary
+          'x': Math.random() * canvas.width,
+          'y': Math.random() * canvas.height,
+          'vx': (Math.random() - 0.5) * 2 * animationSpeed,
+          'vy': (Math.random() - 0.5) * 2 * animationSpeed,
+          'size': Math.random() * 3 + 1,
+          'life': Math.random() * 100 + 50,
+          'maxLife': Math.random() * 100 + 50,
+          'type': Math.random() > 0.7 ? 'quantum' : 'normal','
+'color': Math.random() > 0.5 ? colors.primary : colors.secondary
         });
       }
     }
@@ -215,7 +214,6 @@ const animate = () => {ctx.fillStyle = colors.background;
           }
           particle.y = Math.random() * canvas.height;
           particle.life = particle.maxLife;
-<<<<<<< HEAD
     };
 
 particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';'
@@ -292,7 +290,6 @@ if (enableHolographic) {
 
 drawHolographicGrid(ctx, colors);
         drawHolographicGrid(ctx, colors)
-=======
         const alpha = particle.life / particle.maxLife;
         ctx.globalAlpha = alpha;'
         if (particle.type === 'quantum' && enableQuantumEffects) {}
@@ -308,15 +305,12 @@ drawHolographicGrid(ctx, colors);
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = colors.glow;
           ctx.fill();
-<<<<<<< HEAD
 ctx.shadowBlur = 0;
 origin/cursor/automate-test-improve-and-merge-code-2533
         } else {
           // Normal particle
-=======
         } else {}
           // Normal particle;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = particle.color;
@@ -324,18 +318,15 @@ ctx.fill();
 origin/cursor/automate-test-improve-and-merge-code-2533
         }
       });
-<<<<<<< HEAD
       // Draw holographic grid
       if (enableHolographic) {
 drawHolographicGrid(ctx, colors);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       }
 
       // Draw neon effects,
 if (enableNeonEffects) {
 }
 drawNeonEffects(ctx, colors);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       }
 
       // Draw space-time effects,
@@ -369,7 +360,7 @@ cancelAnimationFrame(animationRef.current);
     enableQuantumEffects;
     enableNeonEffects;
     enableSpaceTime;
-  ])const drawHolographicGrid = ("ctx": CanvasRenderingContext2D, "colors": any) => ;
+  ])const drawHolographicGrid = ('ctx': CanvasRenderingContext2D, 'colors': any) => ;
   const gridSize = 50;
 
 const time  = Date.now() * 0.001;ctx.strokeStyle = colors.primary;
@@ -383,7 +374,6 @@ const time  = Date.now() * 0.001;ctx.strokeStyle = colors.primary;
   }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]);
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {;
     const gridSize = 50;
-=======
 drawSpaceTimeEffects(ctx, colors);
       }
 
@@ -391,10 +381,8 @@ drawSpaceTimeEffects(ctx, colors);
     };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       // Draw holographic grid;
       if (enableHolographic) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     animate();
     return () => {'
       window.removeEventListener('resize', resizeCanvas);
@@ -433,26 +421,22 @@ for (let x = 0; x < ctx.canvas.width; x += gridSize) {
       }
       ctx.beginPath();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       ctx.moveTo(x, 0);
       ctx.lineTo(x, ctx.canvas.height);
       ctx.stroke();
     }
-<<<<<<< HEAD
 
     for (let y = 0; y < ctx.canvas.height; y += gridSize) {
       }
       ctx.beginPath();
       ctx.moveTo(0, y);
       ctx.lineTo(ctx.canvas.width, y);
-<<<<<<< HEAD
 
       ctx.stroke();
     }
     // Animated diagonal lines,
 ctx.strokeStyle = colors.secondary;
     ctx.globalAlpha = 0.2;
-=======
       ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
@@ -465,7 +449,6 @@ for (let i = 0; i < 5; i++) {
       ctx.beginPath();
       ctx.moveTo(offset, 0);
       ctx.lineTo(offset + 200, ctx.canvas.height);
-<<<<<<< HEAD
 
 ctx.stroke();
     }
@@ -473,7 +456,7 @@ ctx.stroke();
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001;
 
-const drawNeonEffects = ("ctx": CanvasRenderingContext2D, "colors": any) => {
+const drawNeonEffects = ('ctx': CanvasRenderingContext2D, 'colors': any) => {
    ;
   }
   const time = Date.now() * 0.001;
@@ -482,7 +465,6 @@ const drawNeonEffects = ("ctx": CanvasRenderingContext2D, "colors": any) => {
 for (let i = 0; i < 3; i++) {
       }
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
       const size = 30 + Math.sin(time + i) * 10;
       // Glow effect;
@@ -494,7 +476,6 @@ for (let i = 0; i < 3; i++) {
       ctx.fill();
       // Core;
       ctx.shadowBlur = 0;
-<<<<<<< HEAD
       ctx.beginPath()ctx.arc(x, y, size * 0.6, 0, Math.PI * 2)ctx.fillStyle = colors.primary;for (let i = 0; i < 20; i++) {      const radius = (i / 20) * maxRadius;
       const angle = time * 2 + i * 0 && 0.3;
       const x = centerX + Math && Math.cos(angle) * radius;
@@ -506,7 +487,7 @@ for (let i = 0; i < 3; i++) {
       const alpha = 1 - i / 20;      const alpha  = 1 - (i / 20)ctx.fill()}
   }
 
-const drawSpaceTimeEffects = ("ctx": CanvasRenderingContext2D, "colors": any) => ;
+const drawSpaceTimeEffects = ('ctx': CanvasRenderingContext2D, 'colors': any) => ;
   const time  = Date.now() * 0.001;// Wormhole effect;
 
 const centerY = ctx.canvas.height / 2;
@@ -528,104 +509,99 @@ const alpha  = 1 - i / 20;ctx.globalAlpha = alpha * 0.5;
       <canvas;
         ref={canvasRef}
         className='w-full h-full';'
-        style={{"background": colors.background;
-        }} />
+        style={'background': colors.background;
+        } />
       {/* Additional overlay effects */}
       <div className='absolute inset-0 pointer-events-none'>;'
         {/* Quantum energy field */}
         <motion&& motion.div,
 className='absolute inset-0''
-          animate={{
+          animate={
             }
-            "background": [
+            'background': [
 
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,`              `radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,`              `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,`            ]
-          }}
-<<<<<<< HEAD
+          }
           transition = $2;
             repeat: Infinity,
-            ease: "easeInOut"
-          }}
+            ease: 'easeInOut'
+          }
         />
         
         {/* Holographic scan lines */}
-<<<<<<< HEAD
-        <div className="absolute inset-0 opacity-20">
+        <div className='absolute inset-0 opacity-20'>
           {[...Array(20)].map((_, i) => (
             <motion.div
               key = $2;
                 color: colors.primary
-=======
-        <div className=\"absolute inset-0 opacity-20\"    />
+        <div className=\'absolute inset-0 opacity-20\'    />
           {[...Array(20)].map((_, i) => (<motion&& motion.div;}
-                opacity: [0, 1, 0],scale_x: [0, 1, 0]              }}          }}
+                opacity: [0, 1, 0],scale_x: [0, 1, 0]              }          }
            />
-        {/* Holographic scan lines */}"
-        <div className=\"absolute inset - 0 opacity - 20\"    />
+        {/* Holographic scan lines */}'
+        <div className=\'absolute inset - 0 opacity - 20\'    />
           {[...Array (20)].map ((_, i) => (<motion.div;}
-              key={i}"
+              key={i}'
               className=\'absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent\'
-              style={{}}
-              animate={{opacity: [0, 1, 0]
+              style={}
+              animate={opacity: [0, 1, 0]
                 scaleX: [0, 1, 0];}
                 top: `${(i / 20) * 10}
 }%`,color: colors.primary
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-              }}
-              animate={{
+              }
+              animate={
                 opacity: [0, 1, 0]
-              animate={{
+              animate={
                 opacity: [0, 1, 0],
                 scaleX: [0, 1, 0]
-              }}
+              }
               transition = $2;
                 delay: i * 0.1,
-=======
-          transition={{
+          transition={
             }
-            "duration": 8,
-            "repeat": Infinity,
-"ease": 'easeInOut','
-          }}
+            'duration': 8,
+            'repeat': Infinity,
+'ease': 'easeInOut','
+          }
         {/* Holographic scan lines */}
-        <div className="absolute inset-0 opacity-20">;"
+        <div className='absolute inset-0 opacity-20'>;'
           {[...Array(20)].map((_, i) => (<motion&& motion.div;
                 }
-                "opacity": [0, 1, 0],"scale_x": [0, 1, 0]              }}          }} />;
+                'opacity': [0, 1, 0],'scale_x': [0, 1, 0]              }          } />;
         {/* Holographic scan lines */}
-        <div className="absolute inset - 0 opacity - 20">;"
+        <div className='absolute inset - 0 opacity - 20'>;'
           {[...Array (20)].map ((_, i) => (<motion.div;
               }
               key={i}
-              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";"
-              style={{}}
-              animate={{"opacity": [0, 1, 0];
+              className='absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent';'
+              style={}
+              animate={'opacity': [0, 1, 0];
                 }
-                "scaleX": [0, 1, 0];
-                "top": `${(i / 20) * 10,`}%`,"color": colors.primary;`
-              }}
+                'scaleX': [0, 1, 0];
+                'top': `${(i / 20) * 10,`}%`,'color': colors.primary;`
+              }
 
-              animate={{
+              animate={
 
                 }
 
-                "opacity": [0, 1, 0],
-                "scaleX": [0, 1, 0]
-              }}
+                'opacity': [0, 1, 0],
+                'scaleX': [0, 1, 0]
+              }
 
-              transition={{
+              transition={
                 }
-                "duration": 3,
-                "delay": i * 0.1,
-                "repeat": Infinity,
-"ease": 'easeInOut','
-              }}
+                'duration': 3,
+                'delay': i * 0.1,
+                'repeat': Infinity,
+'ease': 'easeInOut','
+              }
 
-              transition={{
+              transition={
                 }
-                "duration": 3,
-                "delay": i * 0 && 0.1,
-                "repeat": Infinity, />
+                'duration': 3,
+                'delay': i * 0 && 0.1,
+                'repeat': Infinity, />
 
           ))}
         </div>
@@ -634,8 +610,8 @@ className='absolute inset-0''
 )
 };
 export default UltraFuturisticBackground2035;
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
+                ease: 'easeInOut',              }                ease: 'easeInOut';
+              }
             />))}
         </div>;
       </div>;
@@ -659,26 +635,22 @@ export default UltraFuturisticBackground2035;
 export default UltraFuturisticBackground2035;
 )}export default UltraFuturisticBackground2035;
 export default UltraFuturisticBackground2035,
-=======
-<<<<<<< HEAD
             />}
 }
           ))}
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
             />
 
-          ))}"
-                ease: "easeInOut"
+          ))}'
+                ease: 'easeInOut'
 
-              }}
+              }
             />;
 
-export default UltraFuturisticBackground2035;'"
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
+export default UltraFuturisticBackground2035;''
+                ease: 'easeInOut',              }                ease: 'easeInOut';
+              }
             />))}
         </div>;
       </div>;
@@ -696,7 +668,6 @@ export default UltraFuturisticBackground2035;  )
 export default UltraFuturisticBackground2035;
 
 export default UltraFuturisticBackground2035;
-<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -704,10 +675,8 @@ export default UltraFuturisticBackground2035;
 };
 
 export default UltraFuturisticBackground2035;
-<<<<<<< HEAD
 
-"
-=======
+'
 const getColorScheme = () => {
   switch (colorScheme) {
   case 'quantum-fusion': return {
@@ -733,7 +702,7 @@ animate ()
 ctx.strokeStyle = colors.primary
 ctx.lineWidth = 0.5
 ctx.globalAlpha = 0.3
-return (<div className="fixed inset-0 -z-10 overflow-hidden" > <canvas background: [ `radial-gradient (circle at 20% 20%, $ {
+return (<div className='fixed inset-0 -z-10 overflow-hidden' > <canvas background: [ `radial-gradient (circle at 20% 20%, $ {
   colors.glow 
 }0%, transparent 50%) `
 `radial-gradient (circle at 80% 80%, $ {
@@ -747,16 +716,6 @@ return (<div className="fixed inset-0 -z-10 overflow-hidden" > <canvas backgroun
 }</div> </div> </div>) 
 }
 export default UltraFuturisticBackground2035
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-              }}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
+              }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+''`

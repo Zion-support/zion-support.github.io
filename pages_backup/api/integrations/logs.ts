@@ -1,8 +1,8 @@
 
 
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState } from "../../../lib/integrations/fileStore";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState } from '../../../lib/integrations/fileStore';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
@@ -55,8 +55,8 @@ export default /**;
 
 
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ursor/fix-website-loading-errors-and-merge-6662

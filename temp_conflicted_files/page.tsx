@@ -1,5 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
 
 export const metadata = {
   title: "AI Customer Insights | Zion Tech Group",
@@ -70,7 +69,6 @@ export default function AICustomerInsightsPage() {
                 "Standard segmentation",
                 "Email support",
                 "Monthly reports"
-=======
 export const metadata = {title: "AI Customer Insights | Zion Tech Group",description: "Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.",}export default function AICustomerInsightsPage() {return (<div className="animate-fade-in">;
       <div className="text-center mb-16">;
         <h1 className="text-4xl font-bold text-gray-900 mb-6">;
@@ -127,7 +125,6 @@ export const metadata = {title: "AI Customer Insights | Zion Tech Group",descrip
               description="Perfect for small businesses getting started with customer analytics";
               features={[;
                 "Up to 10,000 customer records","Basic behavioral analysis","Standard segmentation","Email support","Monthly reports";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               ]}
               popular={false}
             />;

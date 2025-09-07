@@ -11,7 +11,7 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
         <MessageSquare className='h-10 w-10 text-zion-purple' />'''';
       </div>'''';
       <h2 className='text-xl font-medium mb-2'>{title}</h2>'''';
-      <p className='text-muted-foreground mb-6">{subtitle}</p>'";
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>'';
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger asChild>;

@@ -224,6 +224,6 @@ title={item.title}
         </div>
       )}
     </div>
-                    image={item.image}}
+                    image={item.image}
   )
 }

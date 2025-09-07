@@ -113,12 +113,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {
               <div
                 key={i}
                 className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
-                style={{
+                style={
                   left: `${Math.random() * 100}%`
                   top: `${Math.random() * 100}%`
                   animationDelay: `${Math.random() * 2}s`
                   animationDuration: `${2 + Math.random() * 3}s`
-                }}
+                }
               />
             ))}
           </div>
@@ -128,9 +128,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           {/* Header */}
           <motion.header
             className="relative z-20 py-8 px-4 sm:px-6 lg:px-8"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: -20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative 2025
@@ -140,9 +140,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
           >
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions
           >
@@ -151,9 +151,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
           >
             <div className="max-w-7xl mx-auto">
               {/* Search Bar */}
@@ -217,8 +217,8 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                     key={service.id}
                     className="group relative"
                     variants={fadeInUp}
-                    whileHover={{ y: -10 }}
-                    transition={{ duration: 0.3 }}
+                    whileHover={ y: -10 }
+                    transition={ duration: 0.3 }
                   >
                     <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm">
                       {/* Service Icon and Header */}
@@ -342,8 +342,8 @@ const Innovative2025ServicesShowcase: React.FC = () => {
               {filteredServices.length === 0 && (
                 <motion.div
                   className="text-center py-20"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={ opacity: 0 }
+                  animate={ opacity: 1 }
                 >
                   <div className="text-6xl mb-6">🔍</div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -354,7 +354,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                     onClick={() => {
                       setSearchTerm('')
                       setSelectedCategory('all')
-                    }}
+                    }
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                   >
                     Clear Filters
@@ -366,9 +366,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           {/* Contact Section */}
           <motion.section
             className="relative z-20 py-20 px-4 sm:px-6 lg:px-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 1.2 }
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
@@ -414,9 +414,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           {/* Footer */}
           <motion.footer
             className="relative z-20 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 1.4 }
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
@@ -480,17 +480,17 @@ export default Innovative2025ServicesShowcase;
 export default Innovative2025ServicesShowcase,
           <motion.section;
             className="relative z-20 py-20 px-4 sm:px-6 lg:px-8";
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
+            initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
+            animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8, delay: 1.2 }  } catch (error) {
+            transition={ duration: 0.8, delay: 1.2 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -544,17 +544,17 @@ export default Innovative2025ServicesShowcase,
 }
           <motion.footer;
             className="relative z-20 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800";
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
+            initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
+            animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8, delay: 1.4 }  } catch (error) {
+            transition={ duration: 0.8, delay: 1.4 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }

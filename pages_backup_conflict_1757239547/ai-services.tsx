@@ -75,7 +75,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    style={{ transitionDelay: `${index * 100}ms` }  } catch (error) {
+                    style={ transitionDelay: `${index * 100}ms` }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }

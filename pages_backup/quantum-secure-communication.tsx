@@ -28,31 +28,31 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 
   return (
     <UltraAdvancedFuturisticBackground
-      intensity="high"
+      intensity='high'
 origin/cursor/automate-test-improve-and-merge-code-2533
-      colorScheme="quantum-fusion"
+      colorScheme='quantum-fusion'
       particleCount={500}
       animationSpeed={2.0}
       enableHolographic={true}
       enableQuantumEffects={true}
       particleCount={500  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       animationSpeed={2.0  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       enableHolographic={true  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       enableQuantumEffects={true  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     website: 'https://ziontechgroup.com'
@@ -78,33 +78,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
     >
-      <div className="min-h-screen">
+      <div className='min-h-screen'>
         <Head>
           <title>Quantum-Secure Communication - Zion Tech Group | Unbreakable Encryption</title>
-          <meta name="description" content="Unbreakable encryption for the quantum era with quantum key distribution and quantum-resistant protocols. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="quantum secure communication, quantum encryption, quantum key distribution, post-quantum cryptography, secure messaging, quantum security" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta name="robots" content="index, follow" />
-          <meta property="og:title" content="Quantum-Secure Communication - Zion Tech Group" />
-          <meta property="og:description" content="Unbreakable encryption for the quantum era with quantum key distribution. Contact: +1 302 464 0950" />
-          <meta property="og:url" content="https://ziontechgroup.com/quantum-secure-communication" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/quantum-secure-communication" />
+          <meta name='description' content='Unbreakable encryption for the quantum era with quantum key distribution and quantum-resistant protocols. Contact: +1 302 464 0950' />
+          <meta name='keywords' content='quantum secure communication, quantum encryption, quantum key distribution, post-quantum cryptography, secure messaging, quantum security' />
+          <meta name='author' content='Zion Tech Group' />
+          <meta name='robots' content='index, follow' />
+          <meta property='og:title' content='Quantum-Secure Communication - Zion Tech Group' />
+          <meta property='og:description' content='Unbreakable encryption for the quantum era with quantum key distribution. Contact: +1 302 464 0950' />
+          <meta property='og:url' content='https://ziontechgroup.com/quantum-secure-communication' />
+          <meta property='og:type' content='website' />
+          <link rel='canonical' href='https://ziontechgroup.com/quantum-secure-communication' />
         </Head>
         <UltraAdvancedNavigation />
         {/* Hero Section */}
 <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
 className='text-center mb-16'
             >
               <motion.div
-                initial={{ scale: 0.8, rotate: -5 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                initial={ scale: 0.8, rotate: -5 }
+                animate={ scale: 1, rotate: 0 }
+                transition={ duration: 1, delay: 0.2 }
 className='mb-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -116,9 +116,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
 
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.3 }
                 className='text-5xl md:text-7xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-6'
               >
                 Quantum-Secure Communication
@@ -126,9 +126,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <motion.p
 origin/cursor/automate-test-improve-and-merge-code-2533
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
                 className='text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium'
               >
                 Unbreakable encryption for the{' '}
@@ -136,9 +136,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.p>
 
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.5 }
                 className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -150,15 +150,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               {/* Pricing and CTA */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.6 }
                 className='flex flex-col sm:flex-row gap-6 justify-center mb-16'
               >
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
+                  whileHover={ scale: 1.05, y: -2 }
+                  whileTap={ scale: 0.95 }
+                  transition={ duration: 0.2 }
 className='bg-gradient-to-r from-purple-500 to-pink-600 p-1 rounded-2xl shadow-2xl'
                 >
                   <div className='bg-gray-900 rounded-2xl px-8 py-6'>
@@ -184,9 +184,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </motion.div>
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2, delay: 0.1 }}
+                  whileHover={ scale: 1.05, y: -2 }
+                  whileTap={ scale: 0.95 }
+                  transition={ duration: 0.2, delay: 0.1 }
                 >
 <Button
                     href='/contact'
@@ -203,9 +203,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
               {/* Key Benefits */}
               <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.8 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={ duration: 1, delay: 0.8 }
 className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
               >
                 <div className='text-center p-4'>
@@ -241,10 +241,10 @@ className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -263,11 +263,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.02, y: -5 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
+                  whileHover={ scale: 1.02, y: -5 }
 className='group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
@@ -288,10 +288,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -310,11 +310,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.02, y: -5 }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
+                  whileHover={ scale: 1.02, y: -5 }
 className='group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
@@ -339,24 +339,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Technology Stack */}
               <motion.div;
 
-                initial={{ opacity: 0, x: -20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                initial={ opacity: 0, x: -20 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                whileInView={ opacity: 1, x: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                transition={ duration: 0.6 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                viewport={ once: true }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               >
@@ -369,10 +369,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {technology.map((tech, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      whileInView={{ opacity: 1, coordinate_y: 0 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      whileInView={ opacity: 1, coordinate_y: 0 }
+                      transition={ duration: 0.4, delay: index * 0.1 }
+                      viewport={ once: true }
 className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50'
                     >
                       <div className='w-2 h-2 bg-purple-400 rounded-full'></div>
@@ -381,24 +381,24 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
               {/* Integrations */}
               <motion.div;
 
-                initial={{ opacity: 0, x: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                initial={ opacity: 0, x: 20 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                whileInView={ opacity: 1, x: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                transition={ duration: 0.6 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                viewport={ once: true }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               >
@@ -411,10 +411,10 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
                   {integrations.map((integration, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      whileInView={{ opacity: 1, coordinate_y: 0 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      whileInView={ opacity: 1, coordinate_y: 0 }
+                      transition={ duration: 0.4, delay: index * 0.1 }
+                      viewport={ once: true }
 className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50'
                     >
                       <div className='w-2 h-2 bg-cyan-400 rounded-full'></div>
@@ -430,10 +430,10 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -446,10 +446,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.1 }
+                viewport={ once: true }
 className='bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8'
               >
                 <h3 className='text-2xl font-bold text-white mb-6'>
@@ -479,10 +479,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.2 }
+                viewport={ once: true }
 className='bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -523,24 +523,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-4xl mx-auto text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              initial={ opacity: 0, y: 20 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              whileInView={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              transition={ duration: 0.6 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              viewport={ once: true }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             >
@@ -554,19 +554,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <div className='flex flex-col sm:flex-row gap-6 justify-center'>
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  whileHover={ scale: 1.05, y: -2 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  whileTap={ scale: 0.95 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  transition={{ duration: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  transition={ duration: 0.2 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 >
@@ -584,19 +584,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>
                 </motion.div>
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  whileHover={ scale: 1.05, y: -2 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  whileTap={ scale: 0.95 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  transition={{ duration: 0.2, delay: 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  transition={ duration: 0.2, delay: 0.1 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 >

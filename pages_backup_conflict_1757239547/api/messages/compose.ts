@@ -10,8 +10,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const user = requireUser(req, res);
   if (!user) return;
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
   const {
     recipientId
     body
@@ -28,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     context?: ConversationContext;
   }
   if (!recipientId |!body)
-    return res.status(400).json({ error: "Missing required fields" });
+    return res.status(400).json({ error: 'Missing required fields' });
   const { conversation, message } = sendMessage({
     senderId: user.id
     recipientId

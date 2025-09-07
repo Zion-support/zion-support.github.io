@@ -197,9 +197,9 @@ export default function RevolutionaryServicesPage() {
             <div className="max-w-5xl mx-auto">
               <motion.h1 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Revolutionary
@@ -209,9 +209,9 @@ export default function RevolutionaryServicesPage() {
               </motion.h1>
               <motion.p 
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
               >
                 Experience the future of technology with our revolutionary micro SaaS platform. 
                 Quantum AI, autonomous systems, space technology, and cutting-edge solutions that redefine what's possible.
@@ -220,9 +220,9 @@ export default function RevolutionaryServicesPage() {
               {/* Service Count Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
               >
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{revolutionaryMicroSaasServices.length}+</div>
@@ -245,9 +245,9 @@ export default function RevolutionaryServicesPage() {
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.6 }
               >
                 <Button 
                   variant="primary" 
@@ -298,14 +298,14 @@ export default function RevolutionaryServicesPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={ once: true }
             >
               {enhancedCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                 >
                   <UltraFuturisticCard
                     variant="quantum-advanced"
@@ -332,10 +332,10 @@ export default function RevolutionaryServicesPage() {
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -354,13 +354,13 @@ export default function RevolutionaryServicesPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={ once: true }
             >
               {popularServices.slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -10 }}
+                  whileHover={ y: -10 }
                 >
                   <UltraFuturisticCard
                     variant={service.variant as any}
@@ -409,10 +409,10 @@ export default function RevolutionaryServicesPage() {
             {/* Filters and Controls */}
             <motion.div 
               className="mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
             >
               <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
                 <div className="flex flex-wrap gap-4">
@@ -487,13 +487,13 @@ export default function RevolutionaryServicesPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={ once: true }
             >
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -5 }}
+                  whileHover={ y: -5 }
                 >
                   <UltraFuturisticCard
                     variant={service.variant as any}
@@ -598,9 +598,9 @@ export default function RevolutionaryServicesPage() {
             {filteredServices.length === 0 && (
               <motion.div 
                 className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={ duration: 0.6 }
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
@@ -611,7 +611,7 @@ export default function RevolutionaryServicesPage() {
                              setSearchQuery(''),
                              setSelectedCategory('All'),
                              setPriceRange('All')
-                           }}
+                           }
                          >
                            Clear Filters
                          </Button>
@@ -625,16 +625,16 @@ export default function RevolutionaryServicesPage() {
           {selectedService && (
             <motion.div
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }
+              exit={ opacity: 0 }
               onClick={() => setSelectedService(null)}
             >
               <motion.div
                 className="bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
+                initial={ scale: 0.9, opacity: 0 }
+                animate={ scale: 1, opacity: 1 }
+                exit={ scale: 0.9, opacity: 0 }
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="p-8">
@@ -756,10 +756,10 @@ export default function RevolutionaryServicesPage() {
           <div className="container mx-auto px-4 text-center">
             <motion.div 
               className="max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the Future?

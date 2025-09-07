@@ -69,9 +69,9 @@ navigator.clipboard.writeText(generated).catch(() => {});
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
-      <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
+    <div className='max-w-3xl mx-auto'>
+      <h1 className='text-2xl font-semibold mb-4'>Service Description Generator</h1>
+      <p className='text-sm text-gray-600 dark:text-gray-300 mb-6'>
         Enter your service details. We will generate a polished description using GPT-4. You can edit it on the page and accept when ready.
       </p>
       <form
@@ -155,16 +155,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <button
                 onClick={handleAccept}
           <button
-            type="submit"
+            type='submit'
             disabled={loading}
           <button
-            type="submit"
+            type='submit'
             disabled={loading  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
+            className='inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60'
           >
             {loading ? 'Generating…' : 'Generate Description'}
           </button>

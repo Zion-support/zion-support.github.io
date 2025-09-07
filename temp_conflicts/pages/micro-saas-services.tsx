@@ -251,7 +251,7 @@ export default function MicroSaasServicesPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-4">{insight.title}</h3>

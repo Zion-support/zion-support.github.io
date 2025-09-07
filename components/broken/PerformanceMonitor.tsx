@@ -8,15 +8,14 @@ import { Activity, Zap, Clock, TrendingUp, TrendingDown;
   BarChart3, Gauge, HardDrive, Wifi, Cpu;
   } from 'lucide-react';'
 
-interface PerformanceMetrics  {"loadTime": number;
+interface PerformanceMetrics  {'loadTime': number;
   }
-  "firstContentfulPaint": number;
-  "largestContentfulPaint": number;
-  "cumulativeLayoutShift": number;
-  "firstInputDelay": number;
-  "timeToInteractive": number;
+  'firstContentfulPaint': number;
+  'largestContentfulPaint': number;
+  'cumulativeLayoutShift': number;
+  'firstInputDelay': number;
+  'timeToInteractive': number;
   memoryUsage?: number;
-<<<<<<< HEAD
   networkLatency?: number;
 }
 
@@ -24,25 +23,24 @@ interface PerformanceMonitorProps {
   }
   showUI?: boolean;
   autoRefresh?: boolean;
-<<<<<<< HEAD
   refreshInterval?: number;
 
 }
 
-const "PerformanceMonitor": React.FC<PerformanceMonitorProps> = ({showUI;
+const 'PerformanceMonitor': React.FC<PerformanceMonitorProps> = ({showUI;
 
 }
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document.readyState === 'complete') {})return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document.readyState === 'complete') {})const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => ;'
   return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document && document.readyState === 'complete') {})})}, [])//Check for performance issues and add alerts;'
-  const "newAlerts": string[] = [];
-if (newMetrics && newMetrics.loadTime > 3000) {const formatTime = ("ms": number) : (string) => {if (ms === 0);
+  const 'newAlerts': string[] = [];
+if (newMetrics && newMetrics.loadTime > 3000) {const formatTime = ('ms': number) : (string) => {if (ms === 0);
   }
-  return 'N/A';if (ms < 1000) return `$ {Math.round (ms)}ms`;if (ms < 1000) return `$ {Math.round (ms)}ms`;}}}}}}//Get device icon const getDeviceIcon = ("deviceType": string) => {switch (deviceType) {case 'mobile':;'  }
+  return 'N/A';if (ms < 1000) return `$ {Math.round (ms)}ms`;if (ms < 1000) return `$ {Math.round (ms)}ms`;}}}//Get device icon const getDeviceIcon = ('deviceType': string) => {switch (deviceType) {case 'mobile':;'  }
   return Smartphone;
 case 'tablet': return Tablet;'
-"default": return Laptop;
-}}
+'default': return Laptop;
+}
 
 const getPerformanceScore = () => {let score = 0;
 }
@@ -77,7 +75,7 @@ else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;else score += 25;
 }else score += 25;
 }else score += 25;
-}//Don't render anything in production return (<AnimatePresence> {isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';'
+}//Don't render anything in production return (<AnimatePresence> {isVisible && (<motion.div </div> <div className='flex items-center space-x-2' > <button > <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';'
 
 }
 
@@ -109,7 +107,6 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
   
 
 }) 
-=======
   if($2) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
@@ -119,7 +116,6 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
   if($2) {;'
   //Wait for page to be fully loaded if (document && document.readyState === 'complete') {
 })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
@@ -127,7 +123,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }) 
 }, []);
-//Check for performance issues and add alerts const "newAlerts": string[] = [];
+//Check for performance issues and add alerts const 'newAlerts': string[] = [];
 if (newMetrics && newMetrics.loadTime > 3000) {;
   const formatTime = (ms: number) : string => {;
   if (ms === 0) return 'N/A';
@@ -150,7 +146,7 @@ if (ms < 1000) return `$ {
 
 }
 
-const formatTime = ("ms": number) : (string) => {;
+const formatTime = ('ms': number) : (string) => {;
   }
   if (ms = == 0);
 return 'N/A';'
@@ -160,8 +156,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 };
 
-=======
-=======
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {}
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {}
   return new Promise ( (resolve) => {}
@@ -170,14 +164,14 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 })
 
 
-//Get device icon const getDeviceIcon = ("deviceType": string) => {
+//Get device icon const getDeviceIcon = ('deviceType': string) => {
   }
   switch (deviceType) {
   }
   case 'mobile':;'
   return Smartphone;
 case 'tablet': return Tablet;'
-"default": return Laptop;
+'default': return Laptop;
 }
 const getPerformanceScore = () => {
   }
@@ -186,14 +180,7 @@ let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   }
   totalMetrics++;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 pr-12243
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 if (metrics.fcp < 1800) score += 100;
 else if (metrics.fcp < 3000) score += 75;
 else if (metrics.fcp < 4000) score += 50;
@@ -215,11 +202,8 @@ else score += 25
 if (metrics.cls < 0.1) score += 100;
 else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> origin/main
 
     // FID scoring (0-100)
     if (metrics.fid !== null) {
@@ -239,7 +223,6 @@ else if (metrics.cls < 0.4) score += 50;
       else score += 25
     }
 
-<<<<<<< HEAD
     return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0
   };
 
@@ -257,74 +240,74 @@ else if (metrics.cls < 0.4) score += 50;
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: 20, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.95 }}
-          className="fixed bottom-4 left-4 z-50"
+          initial={ opacity: 0, y: 20, scale: 0.95 }
+          animate={ opacity: 1, y: 0, scale: 1 }
+          exit={ opacity: 0, y: 20, scale: 0.95 }
+          className='fixed bottom-4 left-4 z-50'
         >
           {/* Performance Monitor Panel */}
-          <div className="bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 overflow-hidden">
+          <div className='bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 overflow-hidden'>
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
-              <div className="flex items-center space-x-2">
-                <Activity className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-semibold">Performance Monitor</span>
+            <div className='flex items-center justify-between p-4 border-b border-gray-700/50'>
+              <div className='flex items-center space-x-2'>
+                <Activity className='w-5 h-5 text-cyan-400' />
+                <span className='text-white font-semibold'>Performance Monitor</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className='flex items-center space-x-2'>
                 <button
                   onClick={refreshMetrics}
                   disabled={isLoading}
-                  className="p-1 text-gray-400 hover:text-white transition-colors duration-200 disabled:opacity-50"
-                  aria-label="Refresh metrics"
+                  className='p-1 text-gray-400 hover:text-white transition-colors duration-200 disabled:opacity-50'
+                  aria-label='Refresh metrics'
                 >
                   <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
                 </button>
                 <button
                   onClick={() => setIsExpanded(!isExpanded)}
-                  className="p-1 text-gray-400 hover:text-white transition-colors duration-200"
+                  className='p-1 text-gray-400 hover:text-white transition-colors duration-200'
                   aria-label={isExpanded ? 'Collapse' : 'Expand'}
                 >
-                  <BarChart3 className="w-4 h-4" />
+                  <BarChart3 className='w-4 h-4' />
                 </button>
                 <button
                   onClick={() => setIsVisible(false)}
-                  className="p-1 text-gray-400 hover:text-white transition-colors duration-200"
-                  aria-label="Close"
+                  className='p-1 text-gray-400 hover:text-white transition-colors duration-200'
+                  aria-label='Close'
                 >
-                  <X className="w-4 h-4" />
+                  <X className='w-4 h-4' />
                 </button>
               </div>
             </div>
 
             {/* Performance Score */}
-            <div className="p-4 border-b border-gray-700/50">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-400">Performance Score</span>
+            <div className='p-4 border-b border-gray-700/50'>
+              <div className='flex items-center justify-between mb-2'>
+                <span className='text-sm text-gray-400'>Performance Score</span>
                 {getScoreIcon(getPerformanceScore())}
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="text-2xl font-bold text-white">
+              <div className='flex items-center space-x-3'>
+                <div className='text-2xl font-bold text-white'>
                   {getPerformanceScore()}
                 </div>
               </div>
               
-              <div className="text-xs text-gray-400 text-center">
+              <div className='text-xs text-gray-400 text-center'>
                 Last updated: {lastUpdate.toLocaleTimeString()}
               </div>
             </div>
 
             {/* Key Metrics */}
-            <div className="p-4 space-y-3">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="text-center p-2 bg-gray-800/50 rounded-lg">
-                  <div className="text-xs text-gray-400 mb-1">Load Time</div>
-                  <div className="text-sm font-semibold text-white">
+            <div className='p-4 space-y-3'>
+              <div className='grid grid-cols-2 gap-3'>
+                <div className='text-center p-2 bg-gray-800/50 rounded-lg'>
+                  <div className='text-xs text-gray-400 mb-1'>Load Time</div>
+                  <div className='text-sm font-semibold text-white'>
                     {formatTime(metrics.loadTime)}
                   </div>
                 </div>
-                <div className="text-center p-2 bg-gray-800/50 rounded-lg">
-                  <div className="text-xs text-gray-400 mb-1">FCP</div>
-                  <div className="text-sm font-semibold text-white">
+                <div className='text-center p-2 bg-gray-800/50 rounded-lg'>
+                  <div className='text-xs text-gray-400 mb-1'>FCP</div>
+                  <div className='text-sm font-semibold text-white'>
                     {formatTime(metrics.firstContentfulPaint)}
                   </div>
                 </div>
@@ -335,30 +318,30 @@ else if (metrics.cls < 0.4) score += 50;
             <AnimatePresence>
               {isExpanded && (
                 <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="border-t border-gray-700/50"
+                  initial={ height: 0, opacity: 0 }
+                  animate={ height: 'auto', opacity: 1 }
+                  exit={ height: 0, opacity: 0 }
+                  transition={ duration: 0.3 }
+                  className='border-t border-gray-700/50'
                 >
-                  <div className="p-4 space-y-4">
+                  <div className='p-4 space-y-4'>
                     {/* Detailed Metrics */}
-                    <div className="space-y-3">
-                      <h4 className="text-sm font-semibold text-white">Detailed Metrics</h4>
+                    <div className='space-y-3'>
+                      <h4 className='text-sm font-semibold text-white'>Detailed Metrics</h4>
                       
-                      <div className="space-y-2">
-                        <div className="flex justify-between text-sm">
-                          <span className="text-gray-400">Largest Contentful Paint:</span>
-                          <span className="text-white">{formatTime(metrics.largestContentfulPaint)}</span>
+                      <div className='space-y-2'>
+                        <div className='flex justify-between text-sm'>
+                          <span className='text-gray-400'>Largest Contentful Paint:</span>
+                          <span className='text-white'>{formatTime(metrics.largestContentfulPaint)}</span>
                         </div>
-                        <div className="flex justify-between text-sm">
-                          <span className="text-gray-400">Time to Interactive:</span>
-                          <span className="text-white">{formatTime(metrics.timeToInteractive)}</span>
+                        <div className='flex justify-between text-sm'>
+                          <span className='text-gray-400'>Time to Interactive:</span>
+                          <span className='text-white'>{formatTime(metrics.timeToInteractive)}</span>
                         </div>
                         {metrics.memoryUsage && (
-                          <div className="flex justify-between text-sm">
-                            <span className="text-gray-400">Memory Usage:</span>
-                            <span className="text-white">{metrics.memoryUsage.toFixed(1)} MB</span>
+                          <div className='flex justify-between text-sm'>
+                            <span className='text-gray-400'>Memory Usage:</span>
+                            <span className='text-white'>{metrics.memoryUsage.toFixed(1)} MB</span>
                           </div>
                         )}
                       </div>
@@ -366,12 +349,12 @@ else if (metrics.cls < 0.4) score += 50;
 
                     {/* Alerts */}
                     {alerts.length > 0 && (
-                      <div className="space-y-2">
-                        <h4 className="text-sm font-semibold text-white">Performance Alerts</h4>
-                        <div className="space-y-1">
+                      <div className='space-y-2'>
+                        <h4 className='text-sm font-semibold text-white'>Performance Alerts</h4>
+                        <div className='space-y-1'>
                           {alerts.map((alert, index) => (
-                            <div key={index} className="flex items-center space-x-2 text-xs text-yellow-400">
-                              <AlertTriangle className="w-3 h-3" />
+                            <div key={index} className='flex items-center space-x-2 text-xs text-yellow-400'>
+                              <AlertTriangle className='w-3 h-3' />
                               <span>{alert}</span>
                             </div>
                           ))}
@@ -380,9 +363,9 @@ else if (metrics.cls < 0.4) score += 50;
                     )}
 
                     {/* Recommendations */}
-                    <div className="space-y-2">
-                      <h4 className="text-sm font-semibold text-white">Recommendations</h4>
-                      <div className="text-xs text-gray-400 space-y-1">
+                    <div className='space-y-2'>
+                      <h4 className='text-sm font-semibold text-white'>Recommendations</h4>
+                      <div className='text-xs text-gray-400 space-y-1'>
                         {getPerformanceScore() < 90 && (
                           <>
                             <div>• Optimize images and assets</div>
@@ -408,9 +391,9 @@ else if (metrics.cls < 0.4) score += 50;
 
 // Helper functions
 const getScoreIcon = (score: number) => {
-  if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
-  if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-  return <AlertTriangle className="w-5 h-5 text-red-400" />
+  if (score >= 90) return <CheckCircle className='w-5 h-5 text-green-400' />;
+  if (score >= 70) return <AlertTriangle className='w-5 h-5 text-yellow-400' />;
+  return <AlertTriangle className='w-5 h-5 text-red-400' />
 };
 
 const getScoreLabel = (score: number) => {
@@ -421,10 +404,7 @@ const getScoreLabel = (score: number) => {
 };
 
 export default PerformanceMonitor;
-=======
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 else score += 25
 }
 else score += 25 
@@ -436,10 +416,10 @@ else score += 25
 
 //Don't render anything in production return (<AnimatePresence> {'
   }
-  isVisible && (<motion.div </div> <div className = "flex items-center space-x-2" > <button > <RefreshCw className= {"
+  isVisible && (<motion.div </div> <div className = 'flex items-center space-x-2' > <button > <RefreshCw className= {'
   `w-4 h-4 $ {`  }
   isLoading ? 'animate-spin': '''
-}``} /> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {"
+}``} /> </button> <button > <BarChart3 className='w-4 h-4' /> </button> <button > <X className='w-4 h-4' /> </button> </div> </div> </div> </div> </div> </div> {'
   /* Expanded View */
 }<AnimatePresence> {
   }
@@ -454,7 +434,7 @@ else score += 25
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
 }
 // Helper functions;
-  const getScoreLabel = ("score": number) => {
+  const getScoreLabel = ('score': number) => {
   }
   if (score >= 90);
   return 'Excellent';'
@@ -465,10 +445,6 @@ if (score >= 70) return 'Good';'
 if (score >= 50) return 'Needs Improvement';'
 }
 export default PerformanceMonitor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
  ;
   }
@@ -477,24 +453,20 @@ const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetri
 }
 if ( {) {
   $2
-<<<<<<< HEAD
 }
   //Wait for page to be fully loaded // Check condition,
 if ( {) {
   $2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
-=======
 
 
 '
 //Don't render anything in production return (<AnimatePresence> {}
-  isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {}
+  isVisible && (<motion.div </div> <div className='flex items-center space-x-2' > <button > <RefreshCw className= {}
   `w-4 h-4 $ {'
   isLoading ? 'animate-spin': ''`
-}`"
-}/> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {}
+}`'
+}/> </button> <button > <BarChart3 className='w-4 h-4' /> </button> <button > <X className='w-4 h-4' /> </button> </div> </div> </div> </div> </div> </div> {}
   /* Expanded View */
 }<AnimatePresence> {}
   isExpanded && (<motion.div </div>)
@@ -515,7 +487,6 @@ if (score >= 70) return 'Good';'
 if (score >= 50) return 'Needs Improvement';
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export default PerformanceMonitor;
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {}
   return new Promise ( (resolve) => {}
@@ -526,17 +497,16 @@ if ( {) {}
   //Wait for page to be fully loaded // Check condition;
 if ( {) {}
   $2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 });
 }, []);
-//Check for performance issues and add alerts const "new_alerts": string[] = [];
+//Check for performance issues and add alerts const 'new_alerts': string[] = [];
 // Check condition,
 if ( {) {
   $2
 }
 
-const format_time = ("ms": number) : (string) => {
+const format_time = ('ms': number) : (string) => {
   // Check condition
 }
 if (return 'N / A') {'
@@ -549,17 +519,16 @@ if ;
   Math.round (ms);
 }ms`;`;
 }
-//Get device icon const getDeviceIcon = ("device_type": string) =>: any {
+//Get device icon const getDeviceIcon = ('device_type': string) =>: any {
   }
   switch (device_type) {
   }
   case 'mobile':;'
   return Smartphone;
 case 'tablet': return Tablet;'
-"default": return Laptop;
+'default': return Laptop;
 ;
 }
-<<<<<<< HEAD
 const getPerformanceScore = () =>: any {
   }
   let score = 0;
@@ -639,18 +608,18 @@ else score += 25;
 }
 //Don't render anything in production return (<AnimatePresence> {'
   }
-  is_visible && (<motion.div </div> <div className="flex items - center space - x-2" > <button > <RefreshCw className= {"
+  is_visible && (<motion.div </div> <div className='flex items - center space - x-2' > <button > <RefreshCw className= {'
   `w - 4 h - 4 $ {`  }
   is_loading ? 'animate - spin': '';'
-}`;`} /> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;"
+}`;`} /> </button> <button > <BarChart3 className='w-4 h-4' /> </button> <button > <X className='w-4 h-4' /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;'
 }<AnimatePresence> {isExpanded && (<motion.div </div>)}</div> </div> </div>) )}</div> </div>)}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}
 else score += 25;
 }
 else score += 25;
 }else score += 25;
-}//Don't render anything in production return (<AnimatePresence> {isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';'
-}`;`} /> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;"
-}<AnimatePresence> {isExpanded && (<motion.div </div>)}</div> </div> </div>) )}</div> </div>)}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}// Helper functions const getScoreLabel = ("score": number) => {if (score >= 90);
+}//Don't render anything in production return (<AnimatePresence> {isVisible && (<motion.div </div> <div className='flex items-center space-x-2' > <button > <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';'
+}`;`} /> </button> <button > <BarChart3 className='w-4 h-4' /> </button> <button > <X className='w-4 h-4' /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;'
+}<AnimatePresence> {isExpanded && (<motion.div </div>)}</div> </div> </div>) )}</div> </div>)}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}// Helper functions const getScoreLabel = ('score': number) => {if (score >= 90);
   }
   return 'Excellent';'
 if (score >= 70) return 'Good';'
@@ -666,7 +635,6 @@ const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetri
   return new Promise ( (resolve) => {// Check condition;
 }
 if ( {) {$2;
-=======
 const getPerformanceScore = () =>: any {}
   let score = 0;
 let total_metrics = 0;
@@ -743,12 +711,12 @@ if (score += 50) {}
 }
 else score += 25;
 }'
-//Don't render anything in production return (<AnimatePresence> {"
-  is_visible && (<motion.div </div> <div className="flex items - center space - x-2" > <button > <RefreshCw className= {}`
+//Don't render anything in production return (<AnimatePresence> {'
+  is_visible && (<motion.div </div> <div className='flex items - center space - x-2' > <button > <RefreshCw className= {}`
   `w - 4 h - 4 $ {'
   is_loading ? 'animate - spin': '';`
-}`;"
-}/> </button> <button > <BarChart3 className="w - 4 h - 4" /> </button> <button > <X className="w - 4 h - 4" /> </button> </div> </div> </div> </div> </div> </div> {}
+}`;'
+}/> </button> <button > <BarChart3 className='w - 4 h - 4' /> </button> <button > <X className='w - 4 h - 4' /> </button> </div> </div> </div> </div> </div> </div> {}
   /* Expanded View */;
 }<AnimatePresence> {}
   is_expanded && (<motion.div </div>);
@@ -772,17 +740,16 @@ if (return 'Good') {}
 // Check condition'
 if (return 'Needs Improvement') {}
   $2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
   //Wait for page to be fully loaded // Check condition;
 if ( {) {$2;
 }
-})}, [])//Check for performance issues and add alerts const "new_alerts": string[] = [];
+})}, [])//Check for performance issues and add alerts const 'new_alerts': string[] = [];
 // Check condition;
 if ( {) {$2;
 }
 
-const format_time = ("ms": number) : (string) => {// Check condition;
+const format_time = ('ms': number) : (string) => {// Check condition;
 }
 if (return 'N / A') {$2;'
 }
@@ -797,11 +764,11 @@ export default PerformanceMonitor;
 
 export default PerformanceMonitor;
 }
-  Math.round (ms)}ms`;}`//Get device icon const getDeviceIcon = ("device_type": string) =>: any {switch (device_type) {case 'mobile':;'
+  Math.round (ms)}ms`;}`//Get device icon const getDeviceIcon = ('device_type': string) =>: any {switch (device_type) {case 'mobile':;'
   }
   return Smartphone;
 case 'tablet': return Tablet;'
-"default": return Laptop;}
+'default': return Laptop;}
 
 const getPerformanceScore = () =>: any {let score = 0;
 }
@@ -871,11 +838,11 @@ if (score += 50) {$2;
 }
 else score += 25;
 }
-//Don't render anything in production return (<AnimatePresence> {is_visible && (<motion.div </div> <div className="flex items - center space - x-2" > <button > <RefreshCw className= {`w - 4 h - 4 $ {is_loading ? 'animate - spin': '';'
+//Don't render anything in production return (<AnimatePresence> {is_visible && (<motion.div </div> <div className='flex items - center space - x-2' > <button > <RefreshCw className= {`w - 4 h - 4 $ {is_loading ? 'animate - spin': '';'
 }`;`
-} /> </button> <button > <BarChart3 className="w - 4 h - 4" /> </button> <button > <X className="w - 4 h - 4" /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;"
+} /> </button> <button > <BarChart3 className='w - 4 h - 4' /> </button> <button > <X className='w - 4 h - 4' /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;'
 }<AnimatePresence> {is_expanded && (<motion.div </div>)}</div> </div> </div>) )}</div> </div>)}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}
-// Helper functions const getScoreLabel = ("score": number) =>: any {// Check condition;
+// Helper functions const getScoreLabel = ('score': number) =>: any {// Check condition;
 }
 if (return 'Excellent') {$2;'
 }
@@ -886,7 +853,7 @@ if (return 'Good') {$2;'
 if (return 'Needs Improvement') {$2;'
 }
 }export default PerformanceMonitor;export default PerformanceMonitor;
-}}}
+}}
 
 
 
@@ -1011,11 +978,11 @@ if (score += 50) {
 else score += 25;
 }
 //Don't render anything in production return (<AnimatePresence> {
-  is_visible && (<motion.div </div> <div className="flex items - center space - x-2" > <button > <RefreshCw className= {
+  is_visible && (<motion.div </div> <div className='flex items - center space - x-2' > <button > <RefreshCw className= {
   `w - 4 h - 4 $ {
   is_loading ? 'animate - spin': '';
 }`;
-}/> </button> <button > <BarChart3 className="w - 4 h - 4" /> </button> <button > <X className="w - 4 h - 4" /> </button> </div> </div> </div> </div> </div> </div> {
+}/> </button> <button > <BarChart3 className='w - 4 h - 4' /> </button> <button > <X className='w - 4 h - 4' /> </button> </div> </div> </div> </div> </div> </div> {
   /* Expanded View */;
 }<AnimatePresence> {
   is_expanded && (<motion.div </div>);
@@ -1048,7 +1015,6 @@ if ( {) {$2;}
 })}, [])//Check for performance issues and add alerts const new_alerts: string[] = [];
 // Check condition;
 if ( {) {$2;}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 
 const format_time = (ms: number) : string => {// Check condition;}
@@ -1056,15 +1022,10 @@ if (return 'N / A') {$2;}
 }
 // Check condition;
 if (return `$ {) {$2;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ;
 export default PerformanceMonitor;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 }
 export default PerformanceMonitor;}
 }
@@ -1132,10 +1093,10 @@ else // Check condition;
 if (score += 50) {$2;}
 }
 else score += 25;
-}"
-//Don't render anything in production return (<AnimatePresence /> {is_visible && (<motion.div </div /> <div className=\"flex items - center space - x-2\"  /> <button  /> <RefreshCw className= {`w - 4 h - 4 $ {is_loading ? 'animate - spin': '';}
-}`;"
-}/> </button> <button  /> <BarChart3 className=\"w - 4 h - 4\" /> </button> <button  /> <X className=\"w - 4 h - 4\" /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;}
+}'
+//Don't render anything in production return (<AnimatePresence /> {is_visible && (<motion.div </div /> <div className=\'flex items - center space - x-2\'  /> <button  /> <RefreshCw className= {`w - 4 h - 4 $ {is_loading ? 'animate - spin': '';}
+}`;'
+}/> </button> <button  /> <BarChart3 className=\'w - 4 h - 4\' /> </button> <button  /> <X className=\'w - 4 h - 4\' /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;}
 }<AnimatePresence /> {is_expanded && (<motion.div </div />)}</div> </div> </div>) )}</div> </div>)}<> <div />• Optimize images and assets</div> <div />• Minimize JavaScript bundles</div> <div />• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (<div />• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}
 // Helper functions const getScoreLabel = (score: number) =>: any {// Check condition;}
 if (return 'Excellent') {$2;}
@@ -1149,9 +1110,8 @@ if (return 'Needs Improvement') {$2;}
 }
 export default PerformanceMonitor;
 export default PerformanceMonitor;
-}}}
-"
-=======
+}}
+'
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
@@ -1208,11 +1168,11 @@ else score += 25
 }
 }
 //Don't render anything in production return (<AnimatePresence> {
-  isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
+  isVisible && (<motion.div </div> <div className='flex items-center space-x-2' > <button > <RefreshCw className= {
   `w-4 h-4 $ {
   isLoading ? 'animate-spin': '' 
 }` 
-}/> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {
+}/> </button> <button > <BarChart3 className='w-4 h-4' /> </button> <button > <X className='w-4 h-4' /> </button> </div> </div> </div> </div> </div> </div> {
   /* Expanded View */ 
 }<AnimatePresence> {
   isExpanded && (<motion.div </div>) 
@@ -1230,30 +1190,13 @@ if (score >= 70) return 'Good'
 if (score >= 50) return 'Needs Improvement'
 return 'Poor' 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
 }
-<<<<<<< HEAD
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 pr-12243
-=======
 
 
 
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+''`
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

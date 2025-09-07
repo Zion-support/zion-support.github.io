@@ -40,7 +40,7 @@ i18n;
       "lookupCookie":'zion_language',;'
       "lookupLocalStorage":'zion_language',;'
       "caches":['cookie'];'
-    }});
+    });
   .catch((error) => {;
     }
     logErrorToProduction('Error initializing i18next or its "detector":', { "data":error }),;'

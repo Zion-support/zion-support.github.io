@@ -75,7 +75,7 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
             max={200}
             step={5}
             onValueChange={handleChange}</div>;
-  )}}}
+  )}}
 }className="mt-6";"
 className='mt-6';'
           />;
@@ -98,4 +98,4 @@ className='mt-6';'
             className="mt - 6";"
           />;
         </div>)}
-    </div>)}}}
+    </div>)}}

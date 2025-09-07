@@ -71,12 +71,12 @@ const mockSentry = {// Core Sentry methods;
     apply() {}
   },// Tracing;
   "Tracing": {"BrowserTracing": class BrowserTracing {constructor() {}
-    }},// Integrations;
+    },// Integrations;
   "Integrations": {"BrowserTracing": class BrowserTracing {constructor() {}
     }
     "Http": class Http {constructor() {}
     },"OnUncaughtException": class OnUncaughtException {constructor() {}
-    },"OnUnhandledRejection": class OnUnhandledRejection {constructor() {}}
+    },"OnUnhandledRejection": class OnUnhandledRejection {constructor() {}
     }
     }
   },// Transport;

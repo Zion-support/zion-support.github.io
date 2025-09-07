@@ -3,15 +3,15 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     }
     super(props);
-    this.state = { "hasError": false };
+    this.state = { 'hasError': false };
   }
   static getDerivedStateFromError(error) {
     }
-    return { "hasError": true };
+    return { 'hasError': true };
   }
   componentDidCatch(error, errorInfo) {
     }
-    console.error('Error caught by "boundary":', error, errorInfo);'
+    console.error('Error caught by 'boundary':', error, errorInfo);'
   }
   render() {
     }
@@ -22,42 +22,42 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React, { useState } from "react";"
-import {useQuery} from "@tanstack/react-query";"
-import {supabase} from "@/integrations/supabase/client";"
-import {AnalyticsContainer} from "@/components/analytics/AnalyticsContainer";"
-import {AnalyticsSummary} from "@/components/analytics/AnalyticsSummary";"
-import {PageViewsTable} from "@/components/analytics/PageViewsTable";"
-import {UserBehaviorStats} from "@/components/analytics/UserBehaviorStats";"
-import {PageViewsChart} from "@/components/analytics/PageViewsChart";"
-import {ConversionAnalysisChart} from "@/components/analytics/ConversionAnalysisChart";"
-import {ExportPanel} from "@/components/analytics/ExportPanel";"
+import React, { useState } from 'react';'
+import {useQuery} from '@tanstack/react-query';'
+import {supabase} from '@/integrations/supabase/client';'
+import {AnalyticsContainer} from '@/components/analytics/AnalyticsContainer';'
+import {AnalyticsSummary} from '@/components/analytics/AnalyticsSummary';'
+import {PageViewsTable} from '@/components/analytics/PageViewsTable';'
+import {UserBehaviorStats} from '@/components/analytics/UserBehaviorStats';'
+import {PageViewsChart} from '@/components/analytics/PageViewsChart';'
+import {ConversionAnalysisChart} from '@/components/analytics/ConversionAnalysisChart';'
+import {ExportPanel} from '@/components/analytics/ExportPanel';'
 export default function Analytics() {;
 }
-const [timeRange, setTimeRange] = useState('30d');    "queryKey": ['page-views-trend', timeRange],;'
-    "queryFn": async () => {
+const [timeRange, setTimeRange] = useState('30d');    'queryKey': ['page-views-trend', timeRange],;'
+    'queryFn': async () => {
       // Get daily page views for trend chart
 }
 const { data, error } = await supabase;
         .from('analytics_events')'
         .select('created_at, path')'
-        .eq('event_typepage_view')import React, { useState } from "react";"
-import { useQuery } from "@tanstack/react-query";"
-import { supabase } from "@/integrations/supabase/client",;"
-import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",;"
-import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",;"
-import { PageViewsTable } from "@/components/analytics/PageViewsTable",;"
-import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",;"
-import { PageViewsChart } from "@/components/analytics/PageViewsChart",;"
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart",;"
-import { ExportPanel } from "@/components/analytics/ExportPanel",;"
+        .eq('event_typepage_view')import React, { useState } from 'react';'
+import { useQuery } from '@tanstack/react-query';'
+import { supabase } from '@/integrations/supabase/client',;'
+import { AnalyticsContainer } from '@/components/analytics/AnalyticsContainer',;'
+import { AnalyticsSummary } from '@/components/analytics/AnalyticsSummary',;'
+import { PageViewsTable } from '@/components/analytics/PageViewsTable',;'
+import { UserBehaviorStats } from '@/components/analytics/UserBehaviorStats',;'
+import { PageViewsChart } from '@/components/analytics/PageViewsChart',;'
+import { ConversionAnalysisChart } from '@/components/analytics/ConversionAnalysisChart',;'
+import { ExportPanel } from '@/components/analytics/ExportPanel',;'
 export default function Analytics() {;
   }
   const [timeRange, setTimeRange] = useState('30d'),;'
-  const { "data": pageViewTrends } = useQuery({;
+  const { 'data': pageViewTrends } = useQuery({;
     }
-    "queryKey": ['page-views-trend', timeRange];'
-    "queryFn": async () => {;
+    'queryKey': ['page-views-trend', timeRange];'
+    'queryFn': async () => {;
       // Get daily page views for trend chart;
       }
       const days = parseInt(timeRange && timeRange.replace('d', ''));'
@@ -75,11 +75,11 @@ export default function Analytics() {;
           result.push(viewsByDate[dateStr]);
         } else {;
           }
-          result.push({ "date": dateStr, "views": 0 });        }
+          result.push({ 'date': dateStr, 'views': 0 });        }
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
-    }    "queryKey": ['conversion-data', timeRange];'
-    "queryFn": async () => {;
+    }    'queryKey': ['conversion-data', timeRange];'
+    'queryFn': async () => {;
       }
       const days = parseInt(timeRange && timeRange.replace('d', ''));'
       const startDate = new Date();
@@ -256,7 +256,7 @@ return result;
 return (;
     <AnalyticsContainer>;
       <AnalyticsSummary />;
-      <div className="grid grid-cols-1 "lg":grid-cols-2 gap-6 mb-6">;"
+      <div className='grid grid-cols-1 'lg':grid-cols-2 gap-6 mb-6'>;'
         <PageViewsChart,
 data={pageViewTrends |[]}
           timeRange={timeRange}
@@ -334,7 +334,7 @@ data={pageViewTrends |[]}
     <AnalyticsContainer>;
       <AnalyticsSummary />;
       ;
-      <div className="grid grid-cols-1 "lg":grid-cols-2 gap-6 mb-6">;"
+      <div className='grid grid-cols-1 'lg':grid-cols-2 gap-6 mb-6'>;'
         <PageViewsChart;
           data={pageViewTrends || []}
           timeRange={timeRange}
@@ -342,11 +342,11 @@ data={pageViewTrends |[]}
         <PageViewsTable />;
       </div>;
       ;
-      <div className="mb-6">;"
+      <div className='mb-6'>;'
         <UserBehaviorStats />;
       </div>;
       ;
-      <div className="grid grid-cols-1 "lg":grid-cols-2 gap-6 mb-6">;"
+      <div className='grid grid-cols-1 'lg':grid-cols-2 gap-6 mb-6'>;'
         <ConversionAnalysisChart ;
           data={conversionData || []} ;
           timeRange={timeRange}import React, { useState } from './react';'
@@ -366,10 +366,10 @@ function Analytics() {
   }
   const [time_range, setTimeRange] = useState ('30d');'
 ;
-  const { "data": pageViewTrends } = use_query ({
+  const { 'data': pageViewTrends } = use_query ({
     }
-    "query_key": ['page - views - trend', time_range];'
-    "query_fn": async () => {
+    'query_key': ['page - views - trend', time_range];'
+    'query_fn': async () => {
       // Get daily page views for trend chart;
       }
       const days = parse_int (time_range.replace ('d', ''));'
@@ -392,7 +392,7 @@ if (throw error) {
         }
         const date = new Date (view.created_at).toISOString ().split ('T')[0];'
         // Check condition,
-if (viewsByDate[date] = { date, "views": 0 }, ) {
+if (viewsByDate[date] = { date, 'views': 0 }, ) {
   $2
 }
         viewsByDate[date].views++;
@@ -413,17 +413,17 @@ if ( {) {
           result.push (viewsByDate[date_str]);
         } else {
           }
-          result.push ({ "date": date_str, "views": 0 });
+          result.push ({ 'date': date_str, 'views': 0 });
         }
       }
       return result.sort ((a, b) => a.date.locale_compare (b.date));
     }
   });
 ;
-  const { "data": conversion_data } = use_query ({
+  const { 'data': conversion_data } = use_query ({
     }
-    "query_key": ['conversion - data', time_range];'
-    "query_fn": async () => {
+    'query_key': ['conversion - data', time_range];'
+    'query_fn': async () => {
       }
       const days = parse_int (time_range.replace ('d', ''));'
       const start_date = new Date ();
@@ -489,7 +489,7 @@ if ( {) {
 return (;
     <AnalyticsContainer>;
       <AnalyticsSummary />;
-      <div className="grid grid - cols - 1 "lg":grid - cols - 2 gap - 6 mb-6">;"
+      <div className='grid grid - cols - 1 'lg':grid - cols - 2 gap - 6 mb-6'>;'
         <PageViewsChart;
           data={pageViewTrends || []}
           time_range={time_range}

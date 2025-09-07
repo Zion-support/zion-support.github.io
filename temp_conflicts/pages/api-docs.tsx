@@ -13,12 +13,12 @@ const APIDocs: React.FC = () => {
   const [copiedEndpoint, setCopiedEndpoint] = useState(''),
 
   const apiCategories = [
-    { id: 'all', name: 'All APIs', icon: <Code className="w-4 h-4" /> },
-    { id: 'ai', name: 'AI & ML', icon: <Brain className="w-4 h-4" /> },
-    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-4 h-4" /> },
-    { id: 'space', name: 'Space Technology', icon: <Rocket className="w-4 h-4" /> },
-    { id: 'metaverse', name: 'Metaverse', icon: <Globe className="w-4 h-4" /> },
-    { id: 'security', name: 'Security', icon: <Shield className="w-4 h-4" /> }
+    { id: 'all', name: 'All APIs', icon: <Code className='w-4 h-4' /> },
+    { id: 'ai', name: 'AI & ML', icon: <Brain className='w-4 h-4' /> },
+    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className='w-4 h-4' /> },
+    { id: 'space', name: 'Space Technology', icon: <Rocket className='w-4 h-4' /> },
+    { id: 'metaverse', name: 'Metaverse', icon: <Globe className='w-4 h-4' /> },
+    { id: 'security', name: 'Security', icon: <Shield className='w-4 h-4' /> }
   ],
 
   const apis = [
@@ -35,7 +35,7 @@ const APIDocs: React.FC = () => {
         { method: 'POST', path: '/training/start', description: 'Start AI model training' },
         { method: 'GET', path: '/training/status/{id}', description: 'Get training status' }
       ],
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Brain className='w-8 h-8' />,
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -51,7 +51,7 @@ const APIDocs: React.FC = () => {
         { method: 'POST', path: '/algorithm/run', description: 'Run quantum algorithm' },
         { method: 'GET', path: '/results/{id}', description: 'Get computation results' }
       ],
-      icon: <Cpu className="w-8 h-8" />,
+      icon: <Cpu className='w-8 h-8' />,
       color: 'from-purple-500 to-pink-500'
     },
     {
@@ -67,7 +67,7 @@ const APIDocs: React.FC = () => {
         { method: 'GET', path: '/resources/near-earth', description: 'Get near-Earth resources' },
         { method: 'POST', path: '/mining/calculate', description: 'Calculate mining feasibility' }
       ],
-      icon: <Rocket className="w-8 h-8" />,
+      icon: <Rocket className='w-8 h-8' />,
       color: 'from-green-500 to-emerald-500'
     },
     {
@@ -83,7 +83,7 @@ const APIDocs: React.FC = () => {
         { method: 'PUT', path: '/worlds/{id}/update', description: 'Update world properties' },
         { method: 'POST', path: '/assets/upload', description: 'Upload 3D assets' }
       ],
-      icon: <Globe className="w-8 h-8" />,
+      icon: <Globe className='w-8 h-8' />,
       color: 'from-orange-500 to-red-500'
     },
     {
@@ -99,7 +99,7 @@ const APIDocs: React.FC = () => {
         { method: 'GET', path: '/keys/generate', description: 'Generate quantum-resistant keys' },
         { method: 'POST', path: '/verify', description: 'Verify quantum signatures' }
       ],
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className='w-8 h-8' />,
       color: 'from-yellow-500 to-orange-500'
     }
   ],
@@ -152,20 +152,20 @@ const APIDocs: React.FC = () => {
       title: 'AI Consciousness Analysis',
       code: `import requests
 
-url = "https://api.ziontechgroup.com/ai/v2/consciousness/analyze"
+url = 'https://api.ziontechgroup.com/ai/v2/consciousness/analyze'
 headers = {
-    "Authorization": "Bearer YOUR_API_KEY",
-    "Content-Type": "application/json"
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
 }
 
 data = {
-    "model_id": "gpt-4",
-    "text": "Hello, how are you today?"
+    'model_id': 'gpt-4',
+    'text': 'Hello, how are you today?'
 }
 
 response = requests.post(url, json=data, headers=headers)
 result = response.json()
-print(f"Consciousness Level: {result['consciousness_score']}")`
+print(f'Consciousness Level: {result['consciousness_score']}')`
     },
     {
       language: 'JavaScript',
@@ -194,16 +194,16 @@ axios.post(url, data, { headers })
     {
       language: 'cURL',
       title: 'Space Resource Analysis',
-      code: `curl -X POST "https://api.ziontechgroup.com/space/v1/analysis/request" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
+      code: `curl -X POST 'https://api.ziontechgroup.com/space/v1/analysis/request' \\
+  -H 'Authorization: Bearer YOUR_API_KEY' \\
+  -H 'Content-Type: application/json' \\
   -d '{
-    "satellite_id": "sat_001",
-    "coordinates": {
-      "lat": 40.7128,
-      "lng": -74.0060
+    'satellite_id': 'sat_001',
+    'coordinates': {
+      'lat': 40.7128,
+      'lng': -74.0060
     },
-    "analysis_type": "mineral_detection"
+    'analysis_type': 'mineral_detection'
   }'`
     }
   ],
@@ -221,14 +221,14 @@ axios.post(url, data, { headers })
 
 export default function ApiDocs() {
 	return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
+		<div className='min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8'>
 			<Head>
 				<title>API Docs | Zion Tech Group</title>
-				<link rel="canonical" href="https://ziontechgroup.com/api-docs" />
+				<link rel='canonical' href='https://ziontechgroup.com/api-docs' />
 			</Head>
-			<div className="max-w-3xl mx-auto space-y-6">
-				<h1 className="text-4xl md:text-5xl font-bold text-white">API Docs</h1>
-				<p className="text-slate-300">See the <a className="text-cyan-400 underline" href="/api-documentation">API Reference</a> for full details. This page exists to support existing links.</p>
+			<div className='max-w-3xl mx-auto space-y-6'>
+				<h1 className='text-4xl md:text-5xl font-bold text-white'>API Docs</h1>
+				<p className='text-slate-300'>See the <a className='text-cyan-400 underline' href='/api-documentation'>API Reference</a> for full details. This page exists to support existing links.</p>
 			</div>
 		</div>
 	)

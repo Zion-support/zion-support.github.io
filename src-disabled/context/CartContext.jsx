@@ -11,13 +11,13 @@ const initialState = {items: []}
                     : i,
 } else {items = [...state.items, action.payload];}
             }
-            return { items }}
+            return { items }
         case 'REMOVE_ITEM': return {items: state.items.filter(i = > i.id !== action.payload)}
 }case 'UPDATE_QUANTITY': ;
   const { id, quantity } = action.payload;
             return {items: state.items.map(item =>;}
                     item.id === id ? { ...item, quantity } : item;
-                )}}
+                )}
         case 'CLEAR_CART': return { items: [] }case 'SET_ITEMS': return {items: action.payload}
 }default: return state;
     }

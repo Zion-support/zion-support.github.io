@@ -37,7 +37,6 @@ interface SmartContractBuilderProps  {isOpen: boolean;
   clientName: string;
   onContractGenerated?: (contractContent: string) => void;
 }
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
 export function SmartContractBuilder({
   isOpen;
 
@@ -167,7 +166,7 @@ function SmartContractBuilder() {const [active_tab, setActiveTab] = useState < s
   const [enableOnChainAgreement, setEnableOnChainAgreement] = useState<boolean>(false)const [selectedNetwork, setSelectedNetwork] = useState<'ethereum' | 'polygon' | ''>('')// clientWalletAddress and talentWalletAddress might be part of formValues or separate state;
   // For now, let's assume they can be part of formValues or derived if prefilled.// We'll use formValues && formValues.clientWalletAddress and formValues && formValues.talentWalletAddress;const [onChainDeploymentStatus, setOnChainDeploymentStatus] = useState<'idle' | 'connecting' | 'fetching_code' | 'deploying' | 'success' | 'error'>('idle')const [transactionHash, setTransactionHash] = useState<string | null>(null)const [deployedContractAddress, setDeployedContractAddress] = useState<string | null>(null)const [deploymentError, setDeploymentError] = useState<string | null>(null)const [populatedSolidityCode, setPopulatedSolidityCode] = useState<string | null>(null)// Bytecode from generate-smart-contract;
   const [contractAbi, setContractAbi] = useState<any | null>(null)// ABI based on contractType;// This hook might be for the older Solidity template system.// We are now using supabase function 'generate-smart-contract' for Solidity for deployment && deployment.const { generateSolidityContract: generateSolidityFromHook, deploySmartContract: deployViaHook } = useSmartContracts()// Prefill form with talent and client name(existing useEffect)useEffect(() => {// TODO: Add dependencies if needed;return () => {// Cleanup function;
-}}, [])[])if(talent && clientName && !formValues) { // Only prefill if formValues is not already set(e && e.g., by a template)setFormValues(prev => ({...prev,projectTitle: prev?.projectTitle || '', // Keep existing or empty;
+}, [])[])if(talent && clientName && !formValues) { // Only prefill if formValues is not already set(e && e.g., by a template)setFormValues(prev => ({...prev,projectTitle: prev?.projectTitle || '', // Keep existing or empty;
         clientName: clientName,talentName: talent && talent.full_name || talent && talent.user_id, // Use full_name or fallback;
         deliverables: prev?.deliverables || '',paymentStructure: prev?.paymentStructure || '',milestones: ensureMilestonesArray(prev?.milestones), // Ensure milestones is an array;
         clientWalletAddress: prev?.clientWalletAddress || '',talentWalletAddress: prev?.talentWalletAddress || '',// Initialize other fields from ContractFormValues as needed;
@@ -190,7 +189,6 @@ function SmartContractBuilder() {const [active_tab, setActiveTab] = useState < s
 } catch(error) {console && console.error("Error generating Solidity contract:", error)toast && toast.error("Failed to generate Solidity contract.")}
   }// New function for generating Markdown legal draft;
       return}
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
     setIsLoadingLegalDraft(true);
     setLegalDraftError(null);
     setGeneratedMarkdownContract(null);
@@ -226,7 +224,6 @@ if ( {) {$2;
 if ( {) {$2;
 }
           onLegalDraftGenerated (data.markdown_content)}
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
         setActiveTab ("preview_markdown"); // Switch to a new tab for Markdown preview;
         toast.success ("Legal draft generated successfully!")} else {
         throw new Error ("No content received from draft generator.")}
@@ -239,7 +236,7 @@ if ( {) {$2;
 
         setActiveTab ("preview_markdown")// Switch to a new tab for Markdown preview;
         toast.success ("Legal draft generated successfully!")} else {throw new Error ("No content received from draft generator.")}
-    } catch (err: any) {console.error ("Error generating legal draft:", err)setLegalDraftError (err.message || "Failed to generate legal draft.")toast.error (err.message || "Failed to generate legal draft.")} finally {setIsLoadingLegalDraft (false)}}
+    } catch (err: any) {console.error ("Error generating legal draft:", err)setLegalDraftError (err.message || "Failed to generate legal draft.")toast.error (err.message || "Failed to generate legal draft.")} finally {setIsLoadingLegalDraft (false)}
       toast.info ("Generating PDF...")html2pdf ().from (element).set (opt).save ().then (() => toast.success ("PDF downloaded successfully!")).catch ((err) => {toast.error ("PDF generation failed.")console.error ("Error generating PDF:", err)})} else {toast.warn ("No draft content available to download or form values missing.")}
   }
       return}throw new Error("No content received from draft generator.")}
@@ -248,7 +245,6 @@ if ( {) {$2;
       toast.info("Generating PDF...")html2pdf().from(element).set(opt).save().then(() => toast.success("PDF downloaded successfully!")).catch((err) => {toast.error("PDF generation failed.")console.error("Error generating PDF:", err)})} else {toast.warn("No draft content available to download or form values missing.")}
   }
       return}
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
     network: 'ethereum';
     useEscrow: true;
     deployToChain: false
@@ -406,7 +402,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
   // This function is passed to ContractForm.// We now decide what "generate" means in this context.// The subtask asks for a "Generate Legal Draft" button.// Let's assume ContractForm's onContractGenerated is for the primary action, which could be Solidity or data pass-through.// For clarity, we will add a dedicated "Generate Legal Draft" button in SmartContractBuilder's JSX.// The onContractGenerated from ContractForm might be re-purposed or trigger our Solidity generation.const handleFormSubmitFromContractForm = (values: ContractFormValues) => {// This is called by ContractForm's own submit/generate button.// Let's make this one generate the Solidity code, as per existing flow.setFormValues(values)// Update formValues state first;
     handleGenerateSolidity()// Then generate Solidity.}
   return (<Dialog open={isOpen} onOpenChange={onClose}>;
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
 
       // Adjust constructor arguments based on contractTypeToDeploy;'
       if(contractTypeToDeploy === 'simple') {;
@@ -600,7 +595,6 @@ if ( { // Chain not added) {}
                     </Button>;
                   </div>                )}
               </div>;
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
             )}
 
         <TemplateManager
@@ -632,7 +626,6 @@ setActiveTab ("preview")}";
 }deploymentInfo= {deploymentInfo;
 }/> > {';
   deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
 }</Button> </div>) ;
 }</div>) ;
 }</TabsContent> </Tabs> <TemplateManagerisOpen= {
@@ -723,7 +716,6 @@ setActiveTab ("preview")}";
 }deploymentInfo= {deploymentInfo ;
 }/> > {';
   deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
 }</Button> </div>) ;
 }</div>) ;
 }</TabsContent> </Tabs> <TemplateManager isOpen= {;

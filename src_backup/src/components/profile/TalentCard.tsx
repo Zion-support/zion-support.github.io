@@ -20,7 +20,7 @@ export function TalentCard() {const [avatarError, setAvatarError] = useState(fal
       <div className="p-6">;"
         <div className="flex items-start">;"
           <div className="relative mr-4">;"
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}}"
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}"
   }
   const handleRequestHire = ("e": React.MouseEvent) => {e.preventDefault()e.stopPropagation()if (onRequestHire) {onRequestHire(talent) }
       onRequestHire(talent)if (onRequestHire) {onRequestHire(talent)}
@@ -53,7 +53,7 @@ export interface TalentCardProps  {"talent": TalentProfile,"onViewProfile": ("id
                   }
                   src={talent && talent.profile_picture_url}
                   alt={talent && talent.full_name || 'Talent Avatar'}'
-                  fill={true}                  style={{ "objectFit": 'cover' }}'
+                  fill={true}                  style={ "objectFit": 'cover' }'
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}'
                   priority={false}
                 />;
@@ -70,14 +70,14 @@ export interface TalentCardProps  {"talent": TalentProfile,"onViewProfile": ("id
   "talent": TalentProfile,"onViewProfile": ("id": string,) => void,"onRequestHire": ("talent": TalentProfile,) => void,"isSaved": boolean,"onToggleSave": ("id": string, "isSaved": boolean,) => void,"isAuthenticated": boolean;
                   alt={talent.full_name || 'Talent Avatar'}'
                   fill={true}
-                  style={{ "objectFit": 'cover' }}className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container;"
+                  style={ "objectFit": 'cover' }className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container;"
                   onError={() => setAvatarError(true)}
                   priority={false}{talent.profile_picture_url && !avatarError ? (<Image;
                   }
                   src={talent.profile_picture_url}
                   alt={talent.full_name || 'Talent Avatar'}'
                   fill={true}
-                  style={{ "objectFit": 'cover' }}'
+                  style={ "objectFit": 'cover' }'
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container;'
                   onError={() => setAvatarError(true)}
                   priority={false}
@@ -225,7 +225,7 @@ export interface TalentCardProps  {"talent": TalentProfile,"onViewProfile": ("id
                 onClick={handleRequestHire}</Button>;
           </div>;
         </div>;
-      </div>;;
+      </div>;
                 className='bg-zion-purple "hover":bg-zion-purple-light text-white';'
               >;
                 Hire;

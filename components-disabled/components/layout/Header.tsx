@@ -155,12 +155,12 @@ className="flex items-center space-x-1 text-gray-700 "hover":text-blue-600 curso
                       }
                       if (item.name === 'Services') setIsServicesOpen(true);'
                       if (item.name === 'Solutions') setIsSolutionsOpen(true);'
-                    }}
+                    }
                     onMouseLeave={() => {
                       }
                       if (item.name === 'Services') setIsServicesOpen(false);'
                       if (item.name === 'Solutions') setIsSolutionsOpen(false);'
-                    }}
+                    }
                   >
                     <span className="font-medium">{item.name}</span>"
                     <ChevronDown className="h-4 w-4" />"
@@ -180,9 +180,9 @@ href={item.href}
                     {isServicesOpen && (
                       <motion.div
 }
-initial={{ "opacity": 0, "y": 10 }}
-                        animate={{ "opacity": 1, "y": 0 }}
-                        exit={{ "opacity": 0, "y": 10 }}
+initial={ "opacity": 0, "y": 10 }
+                        animate={ "opacity": 1, "y": 0 }
+                        exit={ "opacity": 0, "y": 10 }
                         className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
                         onMouseEnter={() => setIsServicesOpen(true)}
                         onMouseLeave={() => setIsServicesOpen(false)}
@@ -210,9 +210,9 @@ key={child.name}
                     {isSolutionsOpen && (
                       <motion.div
 }
-initial={{ "opacity": 0, "y": 10 }}
-                        animate={{ "opacity": 1, "y": 0 }}
-                        exit={{ "opacity": 0, "y": 10 }}
+initial={ "opacity": 0, "y": 10 }
+                        animate={ "opacity": 1, "y": 0 }
+                        exit={ "opacity": 0, "y": 10 }
                         className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
                         onMouseEnter={() => setIsSolutionsOpen(true)}
                         onMouseLeave={() => setIsSolutionsOpen(false)}
@@ -425,9 +425,9 @@ key={item && item.name}
           {isMenuOpen && (;
             <motion&& motion.div
 }
-initial={{ "opacity": 0, "height": 0 }}
-              animate={{ "opacity": 1, "height": 'auto' }}'
-              exit={{ "opacity": 0, "height": 0 }}
+initial={ "opacity": 0, "height": 0 }
+              animate={ "opacity": 1, "height": 'auto' }'
+              exit={ "opacity": 0, "height": 0 }
               className=""md":hidden">;"
               <div className="px-2 pt-2 pb-3 space-y-1 "sm":px-3 bg-white border-t">;"
                 {navigation && navigation.map((item) => (;
@@ -483,9 +483,9 @@ export default Header;
           {isMenuOpen && (
             <motion.div;
               }
-              initial={{ "opacity": 0, "height": 0 }}
-              animate={{ "opacity": 1, "height": 'auto' }}'
-              exit={{ "opacity": 0, "height": 0 }}
+              initial={ "opacity": 0, "height": 0 }
+              animate={ "opacity": 1, "height": 'auto' }'
+              exit={ "opacity": 0, "height": 0 }
               className=""md":hidden";"
             >;
               <div className="px - 2 pt - 2 pb - 3 space - y-1 "sm":px - 3 bg - white border - t">;"
@@ -894,12 +894,12 @@ className="flex items-center space-x-1 text-gray-700 "hover":text-blue-600 curso
                       }
                       if (item.name === 'Services') setIsServicesOpen(true);'
                       if (item.name === 'Solutions') setIsSolutionsOpen(true);'
-                    }}
+                    }
                     onMouseLeave={() => {
                       }
                       if (item.name === 'Services') setIsServicesOpen(false);'
                       if (item.name === 'Solutions') setIsSolutionsOpen(false);'
-                    }}
+                    }
                   >
                     <span className="font-medium">{item.name}</span>"
                     <ChevronDown className="h-4 w-4" />"
@@ -919,9 +919,9 @@ href={item.href}
                     {isServicesOpen && (
                       <motion.div
 }
-initial={{ "opacity": 0, "y": 10 }}
-                        animate={{ "opacity": 1, "y": 0 }}
-                        exit={{ "opacity": 0, "y": 10 }}
+initial={ "opacity": 0, "y": 10 }
+                        animate={ "opacity": 1, "y": 0 }
+                        exit={ "opacity": 0, "y": 10 }
                         className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
                         onMouseEnter={() => setIsServicesOpen(true)}
                         onMouseLeave={() => setIsServicesOpen(false)}
@@ -949,9 +949,9 @@ key={child.name}
                     {isSolutionsOpen && (
                       <motion.div
 }
-initial={{ "opacity": 0, "y": 10 }}
-                        animate={{ "opacity": 1, "y": 0 }}
-                        exit={{ "opacity": 0, "y": 10 }}
+initial={ "opacity": 0, "y": 10 }
+                        animate={ "opacity": 1, "y": 0 }
+                        exit={ "opacity": 0, "y": 10 }
                         className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
                         onMouseEnter={() => setIsSolutionsOpen(true)}
                         onMouseLeave={() => setIsSolutionsOpen(false)}
@@ -1006,9 +1006,9 @@ onClick={() => setIsMenuOpen(!isMenuOpen)}
           {isMenuOpen && (
             <motion.div
 }
-initial={{ "opacity": 0, "height": 0 }}
-              animate={{ "opacity": 1, "height": 'auto' }}'
-              exit={{ "opacity": 0, "height": 0 }}
+initial={ "opacity": 0, "height": 0 }
+              animate={ "opacity": 1, "height": 'auto' }'
+              exit={ "opacity": 0, "height": 0 }
               className=""lg":hidden border-t border-gray-200""
             >
               <div className="py-4 space-y-4">"

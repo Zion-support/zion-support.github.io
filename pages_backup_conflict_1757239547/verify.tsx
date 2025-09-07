@@ -81,14 +81,14 @@ export default function VerifyPage() {
     setBusy(false);  }
   const labels = getBadgeLabels(profile |undefined);
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     setBusy(false);
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   const labels = getBadgeLabels(profile || undefined),
@@ -96,8 +96,8 @@ export default function VerifyPage() {
     <>
       <Head>
         <title>Verify Identity - Zion</title>
-        <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='description' content='Complete KYC/AML verification to secure marketplace trust' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <main className='max-w-3xl mx-auto px-4 py-8'>
         <h1 className='text-2xl font-bold mb-4'>Identity Verification</h1>
@@ -110,15 +110,15 @@ export default function VerifyPage() {
         )}
         <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
-            <label className="block text-sm font-medium">User ID</label>
-            <input className="mt-1 w-full border rounded px-3 py-2" value={userId} onChange={(e) => setUserId(e.target.value)} />
+            <label className='block text-sm font-medium'>User ID</label>
+            <input className='mt-1 w-full border rounded px-3 py-2' value={userId} onChange={(e) => setUserId(e.target.value)} />
           </div>
           <div>
-            <label className="block text-sm font-medium">Role</label>
-            <select className="mt-1 w-full border rounded px-3 py-2" value={role} onChange={(e) => setRole(e.target.value as KycRole)}>
-              <option value="client">Client</option>
-              <option value="talent">Talent</option>
-              <option value="enterprise">Enterprise</option>
+            <label className='block text-sm font-medium'>Role</label>
+            <select className='mt-1 w-full border rounded px-3 py-2' value={role} onChange={(e) => setRole(e.target.value as KycRole)}>
+              <option value='client'>Client</option>
+              <option value='talent'>Talent</option>
+              <option value='enterprise'>Enterprise</option>
             </select>
           </div>
           <div className='md:col-span-2'>
@@ -131,8 +131,8 @@ export default function VerifyPage() {
           {role === 'enterprise' && (
             <>
               <div>
-                <label className="block text-sm font-medium">Business name</label>
-                <input className="mt-1 w-full border rounded px-3 py-2" value={businessName} onChange={(e) => setBusinessName(e.target.value)} />
+                <label className='block text-sm font-medium'>Business name</label>
+                <input className='mt-1 w-full border rounded px-3 py-2' value={businessName} onChange={(e) => setBusinessName(e.target.value)} />
               </div>
               <div>
                 <label className='block text-sm font-medium'>
@@ -168,7 +168,7 @@ export default function VerifyPage() {
               <div className='w-full bg-gray-100 rounded h-3 overflow-hidden'>
                 <div
                   className='bg-blue-600 h-3'
-                  style={{ width: `${progress}%` }}
+                  style={ width: `${progress}%` }
                 />              </div>
             </div>
             <section>
@@ -180,10 +180,10 @@ export default function VerifyPage() {
                   );
                     >
                       <div>
-                        <div className="text-sm font-medium">{k}</div>
-                        <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>
+                        <div className='text-sm font-medium'>{k}</div>
+                        <div className='text-xs text-gray-500'>{hasIt ? 'Uploaded' : 'Missing'}</div>
                       </div>
-                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
+                      <button disabled={busy} onClick={() => upload(k)} className='text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50'>{hasIt ? 'Replace' : 'Upload'}</button>
                     </div>
                   );                })}
               </div>
@@ -199,10 +199,10 @@ export default function VerifyPage() {
                       >
 
                         <div>
-                          <div className="text-sm font-medium">{k}</div>
-                          <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
+                          <div className='text-sm font-medium'>{k}</div>
+                          <div className='text-xs text-gray-500'>{hasIt ? 'Uploaded' : 'Optional'}</div>
                         </div>
-                        <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
+                        <button disabled={busy} onClick={() => upload(k)} className='text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50'>{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
                     );                  })}
                 </div>
@@ -227,29 +227,29 @@ export default function VerifyPage() {
     </>
 );
             <div>
-              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
+              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'>Submit for review</button>
             </div>
             {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
         )}
       </main>
     </>
 );
-            {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+            {message && <div className='text-sm text-blue-700'>{message}</div>  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           </div>
         )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       </main>;
     </>;
   );
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

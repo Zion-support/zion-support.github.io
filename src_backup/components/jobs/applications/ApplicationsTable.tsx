@@ -20,7 +20,6 @@ import { Table;
   TableCell;
   TableHead;
   TableHeader;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   TableBody,
   TableCell,
@@ -37,7 +36,6 @@ import React, { useState } from "react", // Import React and useState
 import { toast } from "@/hooks/use-toast",
 import Image from 'next/image', // Import next/image
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ApplicationsTableProps {
@@ -104,7 +102,6 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast'
 import Image from 'next/image'; // Import next/image
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;
@@ -128,7 +125,6 @@ import { HireConfirmationModal  } from '@/components/hiring-tracker/HireConfirma
 import React, { useState } from 'react'; // Import React and useState;
 import { toast  } from '@/hooks/use-toast';
 import Image from 'next/image'; // Import next/image;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ApplicationsTableProps {
@@ -199,7 +195,6 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
   const [avatarError, setAvatarError] = useState(false)
   const talentName = application.talent_profile?.full_name |"Candidate"
   return (
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 // Sub - component for avatar to handle its own error state;
 
 const ApplicationAvatar = ({}
@@ -246,7 +241,6 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
           className="rounded-full object-cover"
           onError={() => setAvatarError(true)}
           priority={false}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
         />
 
       ) : (
@@ -280,7 +274,6 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }, ) =
           height={32} // for h - 8 w - 8;
           className='rounded - full object - cover';
           on_error={() => setAvatarError (true)}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
           priority={false}        />) : (
         <User className='h - 4 w - 4' />)}
     </AvatarPrimitive>);
@@ -302,7 +295,6 @@ function ApplicationsTable() {
       description: 'Offer has been sent to the talent.',
     });
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
   }
     </AvatarPrimitive>;
   );
@@ -358,14 +350,12 @@ export function ApplicationsTable({
       description: "Offer has been sent to the talent."
     })
   },
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
   
 
 
 }
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = null;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
@@ -386,7 +376,7 @@ function ApplicationsTable() {const [hireModalOpen, setHireModalOpen] = useState
     </AvatarPrimitive>;
   )}export function ApplicationsTable(): any ({applications,processingId,onViewApplication,onStatusChange,onViewScore}: ApplicationsTableProps) {const [hireModalOpen, setHireModalOpen] = useState(false)const [selectedApplication, setSelectedApplication] =;
     useState<JobApplication | null>(null)const handleHireClick = (application: JobApplication) => {setSelectedApplication(application)setHireModalOpen(true)}const handleHireConfirmed = () => {toast({title: 'Hiring process initiated',description: 'Offer has been sent to the talent.'})}export function ApplicationsTable() {const [hireModalOpen, setHireModalOpen] = useState(false),const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),const handleHireClick = (application: JobApplication) => {setSelectedApplication(application),setHireModalOpen(true)},const handleHireConfirmed = () => {toast({title: "Hiring process initiated",description: "Offer has been sent to the talent.";
-    })}}
+    })}
 // Sub-component for avatar to handle its own error state;
 const ApplicationAvatar  = null;return (<>;<div>;
                       <div className='font-medium'>;
@@ -436,15 +426,12 @@ const ApplicationAvatar = null;
                       </div>;
                     </div>;
                   </div>;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
                 </TableCell>;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 
         isOpen = {hireModalOpen,}
         onClose = {() => setHireModalOpen(false),}
         application = {selectedApplication |undefined,}
         onConfirm = {handleHireConfirmed,}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
             {applications.map((application) => (
               <TableRow key={application.id}>
 
@@ -557,7 +544,6 @@ export function ApplicationsTable({}
                   ) : ("
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
                 </TableCell>
 
   () => onViewScore (application)
@@ -583,7 +569,6 @@ export function ApplicationsTable({}
   handleHireConfirmed;
 }/> </>)'"
 }'"}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
       />;
     </>;
       />
@@ -627,7 +612,6 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
                   <StatusBadge status={application.status} />;
                 </TableCell>;"
                 <TableCell className="hidden lg:table-cell">;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
                   {application.match_score !== undefined && application.match_score !== null ? (<ClickableBadge;
                   {application.match_score !== undefined && application.match_score !== null ? (;
                     <ClickableBadge;"
@@ -669,7 +653,6 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication || undefined}
         onConfirm={handleHireConfirmed}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
       />;32;
 }//for h - 8 w - 8 height= {32 ";
 }//for h - 8 w - 8 className="rounded - full object - cover" on_error= {() => setAvatarError (true)}priority= {false ";

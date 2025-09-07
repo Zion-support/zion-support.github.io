@@ -107,7 +107,7 @@ project={editingProject || undefined}
                 }
                 setShowAddProject(false);
                 setEditingProject(null);
-              }}
+              }
             />;
           </CardContent>;
         </Card>;
@@ -199,7 +199,7 @@ return (;
                 }
                 setShowAddProject (false);
                 setEditingProject (null);
-              }}
+              }
             />;
           </CardContent>;
         </Card>)}

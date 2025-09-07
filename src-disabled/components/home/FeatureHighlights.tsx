@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
 className?: string;
   style?: React && React.CSSProperties;
 
@@ -25,7 +22,6 @@ interface FeatureHighlightsProps {
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = null;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
@@ -43,7 +39,6 @@ function FeatureHighlights() {
   const highlights_data = [;
 
 
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
 
 
   const highlightsData = [
@@ -86,8 +81,6 @@ function FeatureHighlights() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
             <Card
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardContent className="p-6">
@@ -169,7 +162,6 @@ import { Card, CardContent } from "@/components/ui/card",import { cn } from "@/l
                   {category.features.map((feature, idx) => (<li key={idx} className="flex items-start">;
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />;
                       <span className="text-zion-slate-light">{feature}</span>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
                     </li>;<Card;
               key={index}
               className='bg-zion-blue-dark border-zion-blue-light';
@@ -177,7 +169,6 @@ import { Card, CardContent } from "@/components/ui/card",import { cn } from "@/l
               <CardContent className='p-6'>;
                 <h3 className='text-xl font-bold text-white mb-4'>;
                   {category.title}
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
                 </h3>
                 <ul className='space-y-3'>
                   {category.features.map((feature, idx) => (
@@ -233,11 +224,8 @@ interface FeatureHighlightsProps {;
                 </ul>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
           ))}
 
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
           {highlights_data.map ((category, index) => (
   return ()"
@@ -283,7 +271,6 @@ interface FeatureHighlightsProps {;
 </div>
 pr-12325
             <Card;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
           ))}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
           {highlights_data.map ((category, index) => (<Card;
               key={index}
@@ -295,7 +282,6 @@ pr-12325
                   {category.title}
                 </h3>;'
                 <ul className='space - y-3'>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
                   {category.features.map ((feature, idx) => (<li key={idx} className='flex items - start'>;
                       <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0' />;
                       <span className='text - zion - slate - light'>{feature}</span>                    </li>            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;
@@ -318,7 +304,6 @@ pr-12325
             </Card>))}
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
     </section>)}
 import { motion   } from 'framer-motion';
   {icon: "⚡",title: "Lightning Fast Performance",description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs";
@@ -388,30 +373,28 @@ import { motion   } from 'framer-motion';
 }
 export /**;
  * FeatureHighlights - Function description;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
  */;
 function FeatureHighlights() {return (";
     <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">";
       <div className="max - w-7xl mx - auto px - 6">;
         <motion.div          className="text - center mb - 16";
-          initial = {{ opacity: 0,coordinate_y: 20;
-}}
-          whileInView = {{ opacity: 1,coordinate_y: 0;
+          initial = { opacity: 0,coordinate_y: 20;
+}
+          whileInView = { opacity: 1,coordinate_y: 0;
  */
 
   { opacity: 0,
   coordinate_y: 20;
-}}
+}
           whileInView = {}
   { opacity: 1,
   coordinate_y: 0;
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}"
+}
+          viewport={ once: true }
+          transition={ duration: 0.6 }"
         >";"
           <div className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";"
             <Award className="w - 4 h - 4"  />            <span > Why Choose Zion</span>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
           </div>;
 ";
           <h2 className="text - 3xl md:text - 4xl lg:text - 5xl font - bold text - white mb - 6">;
@@ -430,8 +413,8 @@ function FeatureHighlights() {return (";
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
           {features.map ((feature, index (<motion.div;
               key={index}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}"
+          viewport={ once: true }
+          transition={ duration: 0.6 }"
         >";"
 </motion>"
           <div className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";"
@@ -448,9 +431,8 @@ function FeatureHighlights() {return (";
             <motion.div;
 pr-12325
               variants={item_variants}
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
-              while_hover={{coordinate_y: -5,scale: 1.02,transition: { duration: 0.3 }
-              }}";
+              while_hover={coordinate_y: -5,scale: 1.02,transition: { duration: 0.3 }
+              }";
               className="group";
 ";
               <div className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300">;
@@ -458,7 +440,7 @@ pr-12325
                   <feature.icon className={`w - 6 h - 6 ${feature.icon_color}`} />;
                 </div>;
 ";
-              while_hover={{}
+              while_hover={}
                 coordinate_y: -5,
                 scale: 1.02,
 
@@ -477,7 +459,6 @@ pr-12325
                 {feature.description}</div>;
       </div>;
     </section>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
   )}
   {icon: "⚡",title: "Lightning Fast Performance",description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs";
 },{icon: "🔒",title: "Enterprise Security",description: "Bank-level security protocols and compliance standards to protect your valuable data";
@@ -485,17 +466,17 @@ pr-12325
 },{icon: "🤖",title: "AI-Powered Intelligence",description: "Smart automation and predictive analytics that adapt to your business requirements";
 },{icon: "📊",title: "Real-Time Analytics",description: "Comprehensive insights and reporting to make data-driven decisions instantly";
 }];
-}}}const itemVariants = {hidden: { opacity: 0, y: 30,scale: 0 && 0.95;
+}}const itemVariants = {hidden: { opacity: 0, y: 30,scale: 0 && 0.95;
 },visible: {opacity: 1,y: 0,scale: 1,transition: {duration: 0 && 0.6,ease: "easeOut";
-}}}const achievementVariants = {hidden: { opacity: 0,scale: 0 && 0.8;
-},visible: {opacity: 1,scale: 1,transition: { duration: 0 && 0.5 }}}const techVariants = {hidden: { opacity: 0,x: -20;
-},visible: {opacity: 1,x: 0,transition: { duration: 0 && 0.5 }}}export function FeatureHighlights() {return (";
+}}const achievementVariants = {hidden: { opacity: 0,scale: 0 && 0.8;
+},visible: {opacity: 1,scale: 1,transition: { duration: 0 && 0.5 }}const techVariants = {hidden: { opacity: 0,x: -20;
+},visible: {opacity: 1,x: 0,transition: { duration: 0 && 0.5 }}export function FeatureHighlights() {return (";
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <div className="max-w-7xl mx-auto px-6">;
         <motion&& motion.div          className="text-center mb-16";
-          initial = {{ opacity: 0,y: 20;
-}}
-          whileInView = {{ opacity: 1,y: 0;
+          initial = { opacity: 0,y: 20;
+}
+          whileInView = { opacity: 1,y: 0;
   );
 
 import { motion  } from 'framer-motion';
@@ -564,16 +545,15 @@ import { motion  } from 'framer-motion';
 
   { opacity: 0,
   y: 20;
-}}
+}
 
   { opacity: 1,
   y: 0;
-}}
-          viewport={{ once: true }}"
-          transition={{ duration: 0 && 0.6 }}>";"
+}
+          viewport={ once: true }"
+          transition={ duration: 0 && 0.6 }>";"
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">";"
             <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
           </div>;
 ";
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">;
@@ -588,8 +568,8 @@ import { motion  } from 'framer-motion';
           {features && features.map((feature, index (<motion&& motion.div;
               key={index}
               variants={itemVariants}
-              whileHover={{y: -5,scale: 1 && 1.02,transition: { duration: 0 && 0.3 }
-              }}";
+              whileHover={y: -5,scale: 1 && 1.02,transition: { duration: 0 && 0.3 }
+              }";
               className="group";
 ";
               <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">;
@@ -607,7 +587,7 @@ import { motion  } from 'framer-motion';
             <motion&& motion.div;
               key={index}
                 transition: { duration: 0.3 }"
-              }}";""
+              }";""
               className="group";""
               <div className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300">;"
 </motion>
@@ -628,8 +608,8 @@ import { motion  } from 'framer-motion';
   y: 20;
 
   y: 0;
-          viewport={{ once: true }}"
-          transition={{ duration: 0 && 0.6 }}>";"
+          viewport={ once: true }"
+          transition={ duration: 0 && 0.6 }>";"
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">";"
             <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>;"
 
@@ -657,13 +637,12 @@ pr-12325
               </p>;
             </motion && motion.div>;
           ))}
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
         </div>;<motion&& motion.div          className="mt-16 text-center";
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition = {{ duration: 0 && 0.6,delay: 0 && 0.4;
-}}>";
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true }
+          transition = { duration: 0 && 0.6,delay: 0 && 0.4;
+}>";
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">;
             <span>Experience the difference</span>";
             <span className="text-2xl">→</span>;
@@ -677,7 +656,7 @@ pr-12325
 
   { duration: 0 && 0.6,
   delay: 0 && 0.4"
-}}>";"
+}>";"
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">;"
             <span>Experience the difference</span>";"
             <span className="text-2xl">→</span>;
@@ -693,19 +672,18 @@ pr-12325
             </motion.div>))}
         </div>;"
         <motion.div          className="mt - 16 text - center";
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          viewport={{ once: true }}
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
-          transition = {{ duration: 0.6,delay: 0.4;
-}}
+          initial={ opacity: 0, coordinate_y: 20 }
+          whileInView={ opacity: 1, coordinate_y: 0 }
+          viewport={ once: true }
+          transition = { duration: 0.6,delay: 0.4;
+}
         >";
           <div className="inline - flex items - center gap - 4 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full text - white font - semibold">;
             <span > Experience the difference</span>";
           transition = {}
   { duration: 0.6,
   delay: 0.4;
-}}"
+}"
         >";"
           <div className="inline - flex items - center gap - 4 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full text - white font - semibold">;"
             <span > Experience the difference</span>";"
@@ -713,9 +691,7 @@ pr-12325
           </div>;
         </motion.div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
     </section>)}
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
 '"`);
 
 ;
@@ -727,9 +703,7 @@ pr-12325
       </div>
     </section>
   );
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
 }
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 '"`);</div>;
       </div>;

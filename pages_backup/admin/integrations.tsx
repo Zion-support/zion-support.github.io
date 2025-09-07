@@ -20,21 +20,21 @@ interface ConnectionMap {;
 
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
-    console.error("Error:", error);
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-interface ConnectionMap { [providerId: string]: any   } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+interface ConnectionMap { [providerId: string]: any   } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }'
 function StatusIcon() { return null; }
-  return <span className="text-xl" title={status}>{label}</span>;
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+  return <span className='text-xl' title={status}>{label}</span>;
+  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -127,8 +127,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
 
   async function resync(providerId: string) {
     setLoading(true)
@@ -153,9 +153,9 @@ await fetch('/api/integrations/resync', {
     ]);
     setProviders(p.providers || []);
     setConnections(s.connections || {});
-    } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   useEffect(() => { refresh(); }, []);
@@ -170,13 +170,13 @@ await fetch('/api/integrations/resync', {
 :pages/admin/integrations.tsx
 
     } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   async function disconnect(providerId: string) {
@@ -185,13 +185,13 @@ await fetch('/api/integrations/resync', {
       await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
       await refresh();
     } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   async function resync(providerId: string) {
@@ -200,13 +200,13 @@ await fetch('/api/integrations/resync', {
       await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
       await refresh();
     } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   const grouped = useMemo(() => ({
@@ -215,13 +215,13 @@ await fetch('/api/integrations/resync', {
   }), [providers]);
 
     } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   async function disconnect(providerId: string) {
@@ -230,13 +230,13 @@ await fetch('/api/integrations/resync', {
       await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
       await refresh();
     } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   async function resync(providerId: string) {
@@ -245,13 +245,13 @@ await fetch('/api/integrations/resync', {
       await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
       await refresh();
     } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   const grouped = useMemo(() => ({
@@ -264,10 +264,10 @@ await fetch('/api/integrations/resync', {
     const isConnected = conn.status === 'connected';
 
     return (
-      <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
+      <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40'>
+        <div className='flex items-center justify-between'>
+          <div className='flex items-center gap-3'>
+            <div className='h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs'>{p.name.slice(0,2)}</div>
 :pages/admin/integrations.tsx
             <div>
               <div className='font-semibold'>{p.name}</div>
@@ -279,13 +279,13 @@ await fetch('/api/integrations/resync', {
         </div>
 
           )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 
-              <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
-              <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
-              <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
+              <button onClick={() => resync(p.id)} disabled={loading} className='px-3 py-1.5 rounded bg-blue-600 text-white text-sm'>Resync Now</button>
+              <button onClick={() => setSelected(p.id)} className='px-3 py-1.5 rounded border text-sm'>Configure</button>
+              <button onClick={() => disconnect(p.id)} disabled={loading} className='px-3 py-1.5 rounded border text-sm'>Disconnect</button>
             </>
 
 <div className='flex items-center gap-2'>
@@ -334,10 +334,10 @@ await fetch('/api/integrations/resync', {
     const provider = providers.find(p => p.id === selected)!,
     const isCrm = provider.category === 'crm',
 
-                  <div className="mb-1">Push notes:</div>
-                  <div className="flex gap-3">
-                    <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'auto'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'auto' })} /> Auto</label>
-                    <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'manual'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'manual' })} /> Manual only</label>
+                  <div className='mb-1'>Push notes:</div>
+                  <div className='flex gap-3'>
+                    <label className='flex items-center gap-2'><input type='radio' name='pushNotes' checked={syncRules.pushNotesMode === 'auto'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'auto' })} /> Auto</label>
+                    <label className='flex items-center gap-2'><input type='radio' name='pushNotes' checked={syncRules.pushNotesMode === 'manual'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'manual' })} /> Manual only</label>
                   </div>
 
                 </div>
@@ -347,8 +347,8 @@ await fetch('/api/integrations/resync', {
 
               </>
             )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 
   const grouped = useMemo(;
@@ -489,7 +489,7 @@ await fetch('/api/integrations/resync', {
               onClick={async () => {
                 await connect(provider.id);
                 setSelected(null);
-              }}
+              }
             >
               Save
             </button>
@@ -550,8 +550,8 @@ await fetch('/api/integrations/resync', {
 
         </section>
 
-        <section>"
-          <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
+        <section>'
+          <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>
           <ManualOverrideForm />
 
         </section>
@@ -578,9 +578,9 @@ await fetch('/api/integrations/resync', {
 :pages/admin/integrations.tsx
 
   )
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -588,9 +588,9 @@ await fetch('/api/integrations/resync', {
     const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
 
     if (res.ok) setMessage('Saved'), else setMessage('Error'),
-    } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -641,17 +641,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
 
-    <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
-      <div className="grid grid-cols-1 gap-3">
-        <label className="text-sm">Job/Post ID
+    <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>
+      <div className='grid grid-cols-1 gap-3'>
+        <label className='text-sm'>Job/Post ID
 
-          <input value={jobId} onChange={e => setJobId(e.target.value)} placeholder="job_123" className="w-full mt-1 px-3 py-2 rounded border bg-transparent" />
-        </label>"
-        <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={disableCrmSync} onChange={e => setDisableCrmSync(e.target.checked)} /> Disable CRM sync</label>"
-        <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={disableAtsSync} onChange={e => setDisableAtsSync(e.target.checked)} /> Disable ATS sync</label>"
-        <div className="flex items-center gap-2">"
-          <button onClick={save} className="px-3 py-1.5 rounded bg-black text-white text-sm">Save Override</button>"
-          <div className="text-sm text-gray-500">{message}</div>
+          <input value={jobId} onChange={e => setJobId(e.target.value)} placeholder='job_123' className='w-full mt-1 px-3 py-2 rounded border bg-transparent' />
+        </label>'
+        <label className='flex items-center gap-2 text-sm'><input type='checkbox' checked={disableCrmSync} onChange={e => setDisableCrmSync(e.target.checked)} /> Disable CRM sync</label>'
+        <label className='flex items-center gap-2 text-sm'><input type='checkbox' checked={disableAtsSync} onChange={e => setDisableAtsSync(e.target.checked)} /> Disable ATS sync</label>'
+        <div className='flex items-center gap-2'>'
+          <button onClick={save} className='px-3 py-1.5 rounded bg-black text-white text-sm'>Save Override</button>'
+          <div className='text-sm text-gray-500'>{message}</div>
         </div>
       </div>
     </div>
@@ -772,8 +772,8 @@ function ManualOverrideForm() { return null; }
 }
 
   ),
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

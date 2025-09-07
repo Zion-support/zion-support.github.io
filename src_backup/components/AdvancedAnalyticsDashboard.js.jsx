@@ -117,8 +117,8 @@ const AdvancedAnalyticsDashboard = () => {}
     <div className='max-w-7xl mx-auto p-6'>;
       {/* Header */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}'''';
-        animate={{ opacity: 1, y: 0 }}'''';
+        initial={ opacity: 0, y: 20 }'''';
+        animate={ opacity: 1, y: 0 }'''';
         className='mb-8''''';
       >'''';
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>'''';
@@ -148,15 +148,15 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* Metrics Cards */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}'''';
-        transition={{ delay: 0.1 }}'''';
+        initial={ opacity: 0, y: 20 }
+        animate={ opacity: 1, y: 0 }'''';
+        transition={ delay: 0.1 }'''';
         className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 '>;
         {metrics.map((metric, index) => (<motion.div;
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 * index }}'''';
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ delay: 0.1 * index }'''';
           >'''';
             <Card className='h-full hover:shadow-lg transition-shadow'>'''';
               <CardHeader className='pb-3'>'''';
@@ -192,9 +192,9 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* Service Performance Table */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}'''';
-        transition={{ delay: 0.2 }}'''';
+        initial={ opacity: 0, y: 20 }
+        animate={ opacity: 1, y: 0 }'''';
+        transition={ delay: 0.2 }'''';
         className='mb-8 '>;
         <Card>'''';
           <CardHeader>'''';
@@ -231,9 +231,9 @@ const AdvancedAnalyticsDashboard = () => {}
                 <tbody>;
                   {servicePerformance.map((service, index) => (<motion.tr;
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}'''';
-                      transition={{ delay: 0.1 * index }}'''';
+                      initial={ opacity: 0, x: -20 }
+                      animate={ opacity: 1, x: 0 }'''';
+                      transition={ delay: 0.1 * index }'''';
                       className='border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5''''';
                     >'''';
                       <td className='py-3 px-4'>'''';
@@ -246,7 +246,7 @@ const AdvancedAnalyticsDashboard = () => {}
                           <div className='w-16 bg-zion-slate-light/20 rounded-full h-2'>'''';
                             <div''`;
                               className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full'``;
-                              style={{ width: `${service.performance}%` }}
+                              style={ width: `${service.performance}%` }
                             ></div>'''';
                           </div>'''';
                           <span className='text-sm font-medium'>;
@@ -288,9 +288,9 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* Charts and Insights */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}'''';
-        transition={{ delay: 0.3 }}'''';
+        initial={ opacity: 0, y: 20 }
+        animate={ opacity: 1, y: 0 }'''';
+        transition={ delay: 0.3 }'''';
         className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 '>;
         {/* Category Distribution */}
         <Card>'''';
@@ -304,9 +304,9 @@ const AdvancedAnalyticsDashboard = () => {}
             <div className='space-y-3'>;
               {categoryDistribution.map((category, index) => (<motion.div;
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}'''';
-                  transition={{ delay: 0.1 * index }}'''';
+                  initial={ opacity: 0, x: -20 }
+                  animate={ opacity: 1, x: 0 }'''';
+                  transition={ delay: 0.1 * index }'''';
                   className='flex items-center justify-between''''';
                 >'''';
                   <div className='flex items-center gap-3'>`;
@@ -321,7 +321,7 @@ const AdvancedAnalyticsDashboard = () => {}
                     <div className='w-20 bg-zion-slate-light/20 rounded-full h-2'>`;
                       <div``;
                         className={`bg-gradient-to-r ${category.color} h-2 rounded-full`}``;
-                        style={{ width: `${category.value}%` }}
+                        style={ width: `${category.value}%` }
                       ></div>'''';
                     </div>'''';
                     <span className='text-sm font-medium text-zion-slate-light'>;
@@ -385,9 +385,9 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* CTA Section */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}'''';
-        transition={{ delay: 0.4 }}'''';
+        initial={ opacity: 0, y: 20 }
+        animate={ opacity: 1, y: 0 }'''';
+        transition={ delay: 0.4 }'''';
         className='text-center''''';
       >'''';
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';

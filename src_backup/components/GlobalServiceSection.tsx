@@ -114,7 +114,6 @@ export function GlobalServiceSection() {return (<section className='py-20 bg-zio
             Our 24x7x365 global IT service offering provides enterprise-grade;
             solutions for businesses of all sizes;
           </p>;
-<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
         </div>;
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
@@ -122,7 +121,6 @@ export function GlobalServiceSection() {return (<section className='py-20 bg-zio
 
             <div
               key={index}
-<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
               className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300'
             >
               <div className='text-zion-cyan mb-4'>{service.icon}</div>
@@ -137,7 +135,6 @@ export function GlobalServiceSection() {return (<section className='py-20 bg-zio
               </h3>;
               <p className='text-zion-slate-light mb-4'>;
                 {service && service.description}
-<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
               </p>            </div>;className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300';
             >;
               <div className='text-zion-cyan mb-4'>{service.icon}</div>;
@@ -146,7 +143,6 @@ export function GlobalServiceSection() {return (<section className='py-20 bg-zio
               </h3>;
               <p className='text-zion-slate-light mb-4'>;
                 {service.description}
-<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
               </p>
             </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -215,7 +211,6 @@ export function GlobalServiceSection() {
 
       </div>
     </section>
-<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
               </p>;
             </div>;
           ))}export function GlobalServiceSection() {return (<section className="py-20 bg-zion-blue" id="global-services">;
@@ -273,7 +268,6 @@ import { Button } from "./ui/button",;
         </div>;<div className='flex justify-center mt-12'>;
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">;
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
-<<<<<<< HEAD:src_backup/components/GlobalServiceSection.tsx
 import { Server,HardDrive,Network,Clock,Recycle,Truck} from 'lucide-react';
 import { Button  } from './ui / button';
 import { GradientHeading } from './GradientHeading';

@@ -10,7 +10,7 @@ export async function createSystemNotification() {
     userId;
     title;
     message;
-    "type": 'system';'
+    'type': 'system';'
     sendEmail;
     actionUrl,
 actionText
@@ -34,7 +34,7 @@ function createSystemNotification() {
     user_id;
     title;
     message;
-    "type": 'system';'
+    'type': 'system';'
     send_email;
     action_url,
     action_text;
@@ -61,7 +61,7 @@ export async function createSystemNotification() {;
     userId,;
     title,;
     message,;
-    "type": 'system',;'
+    'type': 'system',;'
     sendEmail;
     actionUrl;
     actionText;

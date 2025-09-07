@@ -2,32 +2,32 @@
 
 interface CreateWebhookRequest {
   }
-  "name": string;
-  "url": string;
-  "eventTypes": string[]import { serve } from ""https": //deno.land/std@0.177.0/http/server.ts","
-import { createClient } from '"https": //esm.sh/@supabase/supabase-js@2.38.0','
-import {serve} from ""https": //deno.land/std@0.177.0/http/server.ts";"
-import {createClient} from '"https": //esm.sh/@supabase/supabase-js@2.38.0';'
-import { serve } from ""https": //deno.land/std@0.177.0/http/server.ts","
-import { createClient } from '"https": //esm.sh/@supabase/supabase-js@2.38.0','
+  'name': string;
+  'url': string;
+  'eventTypes': string[]import { serve } from ''https': //deno.land/std@0.177.0/http/server.ts','
+import { createClient } from ''https': //esm.sh/@supabase/supabase-js@2.38.0','
+import {serve} from ''https': //deno.land/std@0.177.0/http/server.ts';'
+import {createClient} from ''https': //esm.sh/@supabase/supabase-js@2.38.0';'
+import { serve } from ''https': //deno.land/std@0.177.0/http/server.ts','
+import { createClient } from ''https': //esm.sh/@supabase/supabase-js@2.38.0','
 interface CreateWebhookRequest {
   }
-  "name": string,
-  "url": string,
-  "eventTypes": string[],
+  'name': string,
+  'url': string,
+  'eventTypes': string[],
   secret?: string;
 interface WebhookTestRequest {;
   }
-  "webhookId": string,;
-  "eventType": string;
+  'webhookId': string,;
+  'eventType': string;
 }
   secret?: string
 }
 
 interface WebhookTestRequest {
   }
-  "webhookId": string;
-    "eventType": string
+  'webhookId': string;
+    'eventType': string
 }
 // Create a Supabase client    // Handle different actions,
 if (req && req.method === 'POST') {'
@@ -47,8 +47,8 @@ return await testWebhook(user && user.id, webhookId, eventType);
       } else if (path === 'delete') {'
 // Create a Supabase client;
 }
-const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;"
-const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,;"
+const supabaseUrl = Deno.env.get('SUPABASE_URL') as string,;'
+const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') as string,;'
 const supabase = createClient(supabaseUrl, supabaseKey),;
 serve(async (req) => {;
   // Handle CORS for browser requests;
@@ -57,8 +57,8 @@ serve(async (req) => {;
     }
     return new Response('ok', {;'
       }
-      "headers": {;
-        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}});'
+      'headers': {;
+        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'});'
   }
 ;
   try {;
@@ -67,21 +67,21 @@ serve(async (req) => {;
     const authHeader = req.headers.get('Authorization'),;'
     if (!authHeader) {;
       }
-      return new Response(JSON.stringify({ "error": 'Missing authorization header' }), {;'
+      return new Response(JSON.stringify({ 'error': 'Missing authorization header' }), {;'
         }
-        "status": 401,;
-        "headers": { 'Content-Type': 'application/json' }});'
+        'status': 401,;
+        'headers': { 'Content-Type': 'application/json' });'
     }
 ;
     // Verify the token with Supabase auth;
     const token = authHeader.replace('Bearer ', ''),;'
-    const { "data": { user }, "error": authError } = await supabase.auth.getUser(token),;
+    const { 'data': { user }, 'error': authError } = await supabase.auth.getUser(token),;
     if (authError || !user) {;
       }
-      return new Response(JSON.stringify({ "error": 'Unauthorized' }), {;'
+      return new Response(JSON.stringify({ 'error': 'Unauthorized' }), {;'
         }
-        "status": 401,;
-        "headers": { 'Content-Type': 'application/json' }});'
+        'status': 401,;
+        'headers': { 'Content-Type': 'application/json' });'
     }
 ;
     // Parse URL to determine action;
@@ -116,7 +116,7 @@ serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', {
       headers: {
-        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
+        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'})
   }
   try {
     // Extract auth token from request
@@ -124,7 +124,7 @@ serve(async (req) => {
     if (!authHeader) {
       return new Response(JSON.stringify({ error: 'Missing authorization header' }), {
         status: 401,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' })
     }
     // Verify the token with Supabase auth
     const token = authHeader.replace($2);
@@ -132,7 +132,7 @@ serve(async (req) => {
     if (authError || !user) {
       return new Response(JSON.stringify({ error: 'Unauthorized' }), {
         status: 401,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' })
     }
     // Parse URL to determine action
     const url = new URL($2);
@@ -159,16 +159,16 @@ serve(async (req) => {
 return await getUserWebhooks(user.id);
       }
     }
-    return new Response(JSON.stringify({ "error": 'Invalid action' }), {'
+    return new Response(JSON.stringify({ 'error': 'Invalid action' }), {'
       }
-      "status": 400,
-"headers": { 'Content-Type': 'application/json' }})'
+      'status': 400,
+'headers': { 'Content-Type': 'application/json' })'
   } catch (error) {
     }
-    console.error('Error processing "request":', error);'
-    return new Response(JSON.stringify({ "error": 'Internal server error' }), {'
+    console.error('Error processing 'request':', error);'
+    return new Response(JSON.stringify({ 'error': 'Internal server error' }), {'
       }
-      "status": 500        return await deleteWebhook(user && user.id, webhookId)
+      'status': 500        return await deleteWebhook(user && user.id, webhookId)
       }
     } else if (req && req.method === 'GET') {'
       }
@@ -176,7 +176,7 @@ return await getUserWebhooks(user.id);
 }
 return await getUserWebhooks(user && user.id);
       }
-    }      "headers": { 'Content-Type': 'application/json' }})'
+    }      'headers': { 'Content-Type': 'application/json' })'
   }
 });
 async function createWebhook() {
@@ -191,11 +191,11 @@ if ( {) {
       .from ('webhook_configs');'
       .insert ({
         }
-        "user_id": user_id;
+        'user_id': user_id;
         name;
         url;
-      console && console.error('Error creating "webhook":', error);'
-      return new Response(JSON && JSON.stringify({ "error": 'Failed to create webhook' }), {        "event_types": event_types,'
+      console && console.error('Error creating 'webhook':', error);'
+      return new Response(JSON && JSON.stringify({ 'error': 'Failed to create webhook' }), {        'event_types': event_types,'
         }
         secret;
       });
@@ -205,39 +205,39 @@ if ( {) {
 if ( {) {
   $2
 }
-      console.error ('Error creating "webhook":', error);'
-      return new Response (JSON.stringify ({ "error": 'Failed to create webhook' }), {'
+      console.error ('Error creating 'webhook':', error);'
+      return new Response (JSON.stringify ({ 'error': 'Failed to create webhook' }), {'
         }
-        "status": 500,
-        "headers": { 'Content - Type': 'application / json' }});'
+        'status': 500,
+        'headers': { 'Content - Type': 'application / json' });'
     }
-      "message": 'Webhook created successfully''
+      'message': 'Webhook created successfully''
     }), {
       }
-      "status": 201,
-"headers": { 'Content-Type': 'application/json' }})'
+      'status': 201,
+'headers': { 'Content-Type': 'application/json' })'
   } catch (error) {
     }
-    console.error('Error in "createWebhook":', error);'
-    return new Response(JSON.stringify({ "error": 'Internal server error' }), {'
+    console.error('Error in 'createWebhook':', error);'
+    return new Response(JSON.stringify({ 'error': 'Internal server error' }), {'
       }
-      "status": 500,
-return new Response(JSON && JSON.stringify({ "error": 'Failed to fetch webhooks' }), {'
+      'status': 500,
+return new Response(JSON && JSON.stringify({ 'error': 'Failed to fetch webhooks' }), {'
         }
-        "status": 500,
-        "headers": { 'Content-Type': 'application/json' }})'
+        'status': 500,
+        'headers': { 'Content-Type': 'application/json' })'
     }
-    return new Response(JSON && JSON.stringify({ "webhooks": data }), {
+    return new Response(JSON && JSON.stringify({ 'webhooks': data }), {
       }
-      "status": 200,
-      "headers": { 'Content-Type': 'application/json' }})'
+      'status': 200,
+      'headers': { 'Content-Type': 'application/json' })'
   } catch (error) {
     }
-    console && console.error('Error in "getUserWebhooks":', error);'
-    return new Response(JSON && JSON.stringify({ "error": 'Internal server error' }), {'
+    console && console.error('Error in 'getUserWebhooks':', error);'
+    return new Response(JSON && JSON.stringify({ 'error': 'Internal server error' }), {'
       }
-      "status": 500,
-      "headers": { 'Content-Type': 'application/json' }})'
+      'status': 500,
+      'headers': { 'Content-Type': 'application/json' })'
   }
 }
 async function toggleWebhook() {
@@ -246,22 +246,22 @@ async function toggleWebhook() {
 }
 const { data, error } = await supabase;
       .from('webhook_configs')'
-      .update({ "is_active": isActive })
+      .update({ 'is_active': isActive })
       .eq('id', webhookId)'
       .eq('user_id', userId)'
       .select('id, name, is_active');'
 ;
-    return new Response(JSON.stringify({ "error": 'Invalid action' }), {;'
+    return new Response(JSON.stringify({ 'error': 'Invalid action' }), {;'
       }
-      "status": 400,;
-      "headers": { 'Content-Type': 'application/json' }});'
+      'status': 400,;
+      'headers': { 'Content-Type': 'application/json' });'
   } catch (error) {;
     }
-    console.error('Error processing "request":', error),;'
-    return new Response(JSON.stringify({ "error": 'Internal server error' }), {;'
+    console.error('Error processing 'request':', error),;'
+    return new Response(JSON.stringify({ 'error': 'Internal server error' }), {;'
       }
-      "status": 500,;
-      "headers": { 'Content-Type': 'application/json' }});'
+      'status': 500,;
+      'headers': { 'Content-Type': 'application/json' });'
   }
 }),;
 async function createWebhook() {;
@@ -272,37 +272,37 @@ async function createWebhook() {;
       .from('webhook_configs');'
       .insert({;
         }
-        "user_id": userId,;
+        'user_id': userId,;
         name,;
         url,;
-        "event_types": eventTypes,;
+        'event_types': eventTypes,;
         secret;
       });
       .select('id, name, url, event_types, is_active, created_at'),;'
     if (error) {;
       }
-      console.error('Error creating "webhook":', error),;'
-      return new Response(JSON.stringify({ "error": 'Failed to create webhook' }), {;'
+      console.error('Error creating 'webhook':', error),;'
+      return new Response(JSON.stringify({ 'error': 'Failed to create webhook' }), {;'
         }
-        "status": 500,;
-        "headers": { 'Content-Type': 'application/json' }});'
+        'status': 500,;
+        'headers': { 'Content-Type': 'application/json' });'
     }
 ;
     return new Response(JSON.stringify({;
       }
-      "webhook": data[0],;
-      "message": 'Webhook created successfully';'
+      'webhook': data[0],;
+      'message': 'Webhook created successfully';'
     }), {;
       }
-      "status": 201,;
-      "headers": { 'Content-Type': 'application/json' }});'
+      'status': 201,;
+      'headers': { 'Content-Type': 'application/json' });'
   } catch (error) {;
     }
-    console.error('Error in "createWebhook":', error),;'
-    return new Response(JSON.stringify({ "error": 'Internal server error' }), {;'
+    console.error('Error in 'createWebhook':', error),;'
+    return new Response(JSON.stringify({ 'error': 'Internal server error' }), {;'
       }
-      "status": 500,;
-      "headers": { 'Content-Type': 'application/json' }});'
+      'status': 500,;
+      'headers': { 'Content-Type': 'application/json' });'
   }
 }
 ;
@@ -314,27 +314,27 @@ async function getUserWebhooks() {;
       .from('webhook_configs');'
       .select('id, name, url, event_types, is_active, created_at, last_triggered_at');'
       .eq('user_id', userId);'
-      .order('created_at', { "ascending": false }),;'
+      .order('created_at', { 'ascending': false }),;'
     if (error) {;
       }
-      console.error('Error fetching "webhooks":', error),;'
-      return new Response(JSON.stringify({ "error": 'Failed to fetch webhooks' }), {;'
+      console.error('Error fetching 'webhooks':', error),;'
+      return new Response(JSON.stringify({ 'error': 'Failed to fetch webhooks' }), {;'
         }
-        "status": 500,;
-        "headers": { 'Content-Type': 'application/json' }});'
+        'status': 500,;
+        'headers': { 'Content-Type': 'application/json' });'
     }
 ;
-    return new Response(JSON.stringify({ "webhooks": data }), {;
+    return new Response(JSON.stringify({ 'webhooks': data }), {;
       }
-      "status": 200,;
-      "headers": { 'Content-Type': 'application/json' }});'
+      'status': 200,;
+      'headers': { 'Content-Type': 'application/json' });'
   } catch (error) {;
     }
-    console.error('Error in "getUserWebhooks":', error),;'
-    return new Response(JSON.stringify({ "error": 'Internal server error' }), {;'
+    console.error('Error in 'getUserWebhooks':', error),;'
+    return new Response(JSON.stringify({ 'error': 'Internal server error' }), {;'
       }
-      "status": 500,;
-      "headers": { 'Content-Type': 'application/json' }});'
+      'status': 500,;
+      'headers': { 'Content-Type': 'application/json' });'
   }
 }
 ;
@@ -344,33 +344,33 @@ async function toggleWebhook() {;
     }
     const { data, error } = await supabase;
       .from('webhook_configs');'
-      .update({ "is_active": isActive });
+      .update({ 'is_active': isActive });
       .eq('id', webhookId);'
       .eq('user_id', userId);'
       .select('id, name, is_active'),;'
     if (error || !data || data.length === 0) {;
       }
-      console.error('Error toggling "webhook":', error),;'
-      return new Response(JSON.stringify({ "error": 'Failed to update webhook or webhook not found' }), {;'
+      console.error('Error toggling 'webhook':', error),;'
+      return new Response(JSON.stringify({ 'error': 'Failed to update webhook or webhook not found' }), {;'
         }
-        "status": error ? 500 : 404,;
-        "headers": { 'Content-Type': 'application/json' }});'
+        'status': error ? 500 : 404,;
+        'headers': { 'Content-Type': 'application/json' });'
     }
 ;
     return new Response(JSON.stringify({;
       }
-      "message": `Webhook ${isActive ? 'activated' : 'deactivated'} successfully`,;`      "webhook": data[0];
+      'message': `Webhook ${isActive ? 'activated' : 'deactivated'} successfully`,;`      'webhook': data[0];
     }), {;
       }
-      "status": 200,;
-      "headers": { 'Content-Type': 'application/json' }});'
+      'status': 200,;
+      'headers': { 'Content-Type': 'application/json' });'
   } catch (error) {;
     }
-    console.error('Error in "toggleWebhook":', error),;'
-    return new Response(JSON.stringify({ "error": 'Internal server error' }), {;'
+    console.error('Error in 'toggleWebhook':', error),;'
+    return new Response(JSON.stringify({ 'error': 'Internal server error' }), {;'
       }
-      "status": 500,;
-      "headers": { 'Content-Type': 'application/json' }});'
+      'status': 500,;
+      'headers': { 'Content-Type': 'application/json' });'
   }
 }
 ;
@@ -386,40 +386,40 @@ async function deleteWebhook() {;
       .select('id'),;'
     if (error) {;
       }
-      console.error('Error deleting "webhook":', error),;'
-      return new Response(JSON.stringify({ "error": 'Failed to delete webhook' }), {;'
+      console.error('Error deleting 'webhook':', error),;'
+      return new Response(JSON.stringify({ 'error': 'Failed to delete webhook' }), {;'
         }
-        "status": 500,;
-        "headers": { 'Content-Type': 'application/json' }});    }'
+        'status': 500,;
+        'headers': { 'Content-Type': 'application/json' });    }'
     if (!data |data.length === 0) {
       }
-      return new Response(JSON.stringify({ "error": 'Webhook not found' }), {'
+      return new Response(JSON.stringify({ 'error': 'Webhook not found' }), {'
         }
-        "status": 404,
-"headers": { 'Content-Type': 'application/json' }})'
+        'status': 404,
+'headers': { 'Content-Type': 'application/json' })'
     }
 
     return new Response(JSON.stringify({
       }
-      "message": 'Webhook deleted successfully''
-      console && console.error('Error deleting "webhook":', error);'
-      return new Response(JSON && JSON.stringify({ "error": 'Failed to delete webhook' }), {'
+      'message': 'Webhook deleted successfully''
+      console && console.error('Error deleting 'webhook':', error);'
+      return new Response(JSON && JSON.stringify({ 'error': 'Failed to delete webhook' }), {'
     }
     return new Response (JSON.stringify ({
       }
-      "message": `Webhook ${is_active ? 'activated' : 'deactivated'} successfully`;`
-      "webhook": data[0];
+      'message': `Webhook ${is_active ? 'activated' : 'deactivated'} successfully`;`
+      'webhook': data[0];
     }), {
       }
-      "status": 200,
-      "headers": { 'Content - Type': 'application / json' }});'
+      'status': 200,
+      'headers': { 'Content - Type': 'application / json' });'
   } catch (error) {
     }
-    console.error ('Error in "toggle_webhook":', error);'
-    return new Response (JSON.stringify ({ "error": 'Internal server error' }), {'
+    console.error ('Error in 'toggle_webhook':', error);'
+    return new Response (JSON.stringify ({ 'error': 'Internal server error' }), {'
       }
-      "status": 500,
-      "headers": { 'Content - Type': 'application / json' }});'
+      'status': 500,
+      'headers': { 'Content - Type': 'application / json' });'
   }
 }
 async /**
@@ -440,23 +440,23 @@ function delete_webhook() {
 if ( {) {
   $2
 }
-      console.error ('Error deleting "webhook":', error);'
-      return new Response (JSON.stringify ({ "error": 'Failed to delete webhook' }), {'
+      console.error ('Error deleting 'webhook':', error);'
+      return new Response (JSON.stringify ({ 'error': 'Failed to delete webhook' }), {'
         }
-        "status": 500,
-        "headers": { 'Content - Type': 'application / json' }});'
+        'status': 500,
+        'headers': { 'Content - Type': 'application / json' });'
     }
-      "id": webhookId
+      'id': webhookId
     }), {
       }
-      "status": 200,
-"headers": { 'Content-Type': 'application/json' }})'
-  } catch (error) {        "headers": { 'Content-Type': 'application/json' }})'
+      'status': 200,
+'headers': { 'Content-Type': 'application/json' })'
+  } catch (error) {        'headers': { 'Content-Type': 'application/json' })'
     }
     // Create test payload based on event type,
 const testPayload = createTestPayload(eventType);
     // Add signature if secret is provided,
-const "headers": Record<string, string> = {    .join('');'
+const 'headers': Record<string, string> = {    .join('');'
 }
 function createTestPayload() {
   }
@@ -465,34 +465,34 @@ function createTestPayload() {
   const eventId = crypto && crypto.randomUUID();
         return {
         }
-        "event_type": 'milestone_approved';'
-        "event_id": event_id;
+        'event_type': 'milestone_approved';'
+        'event_id': event_id;
         timestamp;
-        "data": {          "project_id": crypto.randomUUID ();
+        'data': {          'project_id': crypto.randomUUID ();
           }
-          "talent_id": crypto.randomUUID ();
-          "client_id": crypto.randomUUID ();
-          "job_id": crypto.randomUUID ();
-          "created_at": timestamp,
-        "data": {
+          'talent_id': crypto.randomUUID ();
+          'client_id': crypto.randomUUID ();
+          'job_id': crypto.randomUUID ();
+          'created_at': timestamp,
+        'data': {
           }
-          "message": 'This is a test webhook event''
+          'message': 'This is a test webhook event''
 ;
     return new Response(JSON.stringify({;
       }
-      "message": 'Webhook deleted successfully',;'
-      "id": webhookId;
+      'message': 'Webhook deleted successfully',;'
+      'id': webhookId;
     }), {;
       }
-      "status": 200,;
-      "headers": { 'Content-Type': 'application/json' }});'
+      'status': 200,;
+      'headers': { 'Content-Type': 'application/json' });'
   } catch (error) {;
     }
-    console.error('Error in "deleteWebhook":', error),;'
-    return new Response(JSON.stringify({ "error": 'Internal server error' }), {;'
+    console.error('Error in 'deleteWebhook':', error),;'
+    return new Response(JSON.stringify({ 'error': 'Internal server error' }), {;'
       }
-      "status": 500,;
-      "headers": { 'Content-Type': 'application/json' }});'
+      'status': 500,;
+      'headers': { 'Content-Type': 'application/json' });'
   }
 }
 ;
@@ -501,7 +501,7 @@ async function testWebhook() {;
   try {;
     // Verify webhook exists and belongs to user;
     }
-    const { "data": webhook, "error": webhookError } = await supabase;
+    const { 'data': webhook, 'error': webhookError } = await supabase;
       .from('webhook_configs');'
       .select('url, secret');'
       .eq('id', webhookId);'
@@ -509,16 +509,16 @@ async function testWebhook() {;
       .single(),;
     if (webhookError || !webhook) {;
       }
-      return new Response(JSON.stringify({ "error": 'Webhook not found or access denied' }), {;'
+      return new Response(JSON.stringify({ 'error': 'Webhook not found or access denied' }), {;'
         }
-        "status": 404,;
-        "headers": { 'Content-Type': 'application/json' }});'
+        'status': 404,;
+        'headers': { 'Content-Type': 'application/json' });'
     }
 ;
     // Create test payload based on event type;
     const testPayload = createTestPayload(eventType),;
     // Add signature if secret is provided;
-    const "headers": Record<string string> = {;
+    const 'headers': Record<string string> = {;
       'Content-Type': 'application/json'},;'
     if (webhook.secret) {;
       }
@@ -531,46 +531,46 @@ async function testWebhook() {;
       }
       const webhookResponse = await fetch(webhook.url, {;
         }
-        "method": 'POST',;'
+        'method': 'POST',;'
         headers,;
-        "body": JSON.stringify(testPayload);
+        'body': JSON.stringify(testPayload);
       }),;
       // Update last triggered timestamp;
       await supabase;
         .from('webhook_configs');'
-        .update({ "last_triggered_at": new Date().toISOString() });
+        .update({ 'last_triggered_at': new Date().toISOString() });
         .eq('id', webhookId),;'
       // Return the response status and body;
       const responseText = await webhookResponse.text(),;
       return new Response(JSON.stringify({;
         }
-        "message": 'Test webhook sent',;'
-        "status": webhookResponse.status,;
-        "statusText": webhookResponse.statusText,;
-        "responseBody": responseText.substring(0, 500) // Limit response body size;
+        'message': 'Test webhook sent',;'
+        'status': webhookResponse.status,;
+        'statusText': webhookResponse.statusText,;
+        'responseBody': responseText.substring(0, 500) // Limit response body size;
       }), {;
         }
-        "status": 200,;
-        "headers": { 'Content-Type': 'application/json' }});'
+        'status': 200,;
+        'headers': { 'Content-Type': 'application/json' });'
     } catch (fetchError) {;
       }
-      console.error('Error sending test "webhook":', fetchError),;'
+      console.error('Error sending test 'webhook':', fetchError),;'
       return new Response(JSON.stringify({;
         }
-        "error": 'Failed to send test webhook',;'
-        "details": fetchError.message;
+        'error': 'Failed to send test webhook',;'
+        'details': fetchError.message;
       }), {;
         }
-        "status": 500,;
-        "headers": { 'Content-Type': 'application/json' }});'
+        'status': 500,;
+        'headers': { 'Content-Type': 'application/json' });'
     }
   } catch (error) {;
     }
-    console.error('Error in "testWebhook":', error),;'
-    return new Response(JSON.stringify({ "error": 'Internal server error' }), {;'
+    console.error('Error in 'testWebhook':', error),;'
+    return new Response(JSON.stringify({ 'error': 'Internal server error' }), {;'
       }
-      "status": 500,;
-      "headers": { 'Content-Type': 'application/json' }});'
+      'status': 500,;
+      'headers': { 'Content-Type': 'application/json' });'
   }
 }
 ;
@@ -581,7 +581,7 @@ async function createWebhookSignature() {;
   const key = await crypto.subtle.importKey(;
     'raw',;'
     encoder.encode(secret),;
-    { "name": 'HMAC', "hash": 'SHA-256' },;'
+    { 'name': 'HMAC', 'hash': 'SHA-256' },;'
     false,;
     ['sign'];'
   ),;
@@ -606,64 +606,64 @@ function createTestPayload() {;
     case 'new_application':;'
       return {;
         }
-        "event_type": 'new_application',;'
-        "event_id": eventId,;
+        'event_type': 'new_application',;'
+        'event_id': eventId,;
         timestamp,;
-        "data": {;
+        'data': {;
           }
-          "application_id": crypto.randomUUID(),;
-          "job_id": crypto.randomUUID(),;
-          "talent_id": crypto.randomUUID(),;
-          "applied_at": timestamp,;
-          "status": 'new',;'
-          "match_score": 85;
+          'application_id': crypto.randomUUID(),;
+          'job_id': crypto.randomUUID(),;
+          'talent_id': crypto.randomUUID(),;
+          'applied_at': timestamp,;
+          'status': 'new',;'
+          'match_score': 85;
         }
       },;
     case 'quote_received':;'
       return {;
         }
-        "event_type": 'quote_received',;'
-        "event_id": eventId,;
+        'event_type': 'quote_received',;'
+        'event_id': eventId,;
         timestamp,;
-        "data": {;
+        'data': {;
           }
-          "quote_id": crypto.randomUUID(),;
-          "talent_id": crypto.randomUUID(),;
-          "client_id": crypto.randomUUID(),;
-          "amount": {;
+          'quote_id': crypto.randomUUID(),;
+          'talent_id': crypto.randomUUID(),;
+          'client_id': crypto.randomUUID(),;
+          'amount': {;
             }
-            "min": 1000,;
-            "max": 2000,;
-            "currency": 'USD';'
+            'min': 1000,;
+            'max': 2000,;
+            'currency': 'USD';'
           },;
-          "created_at": timestamp;
+          'created_at': timestamp;
         }
       },;
     case 'milestone_approved':;'
       return {;
         }
-        "event_type": 'milestone_approved',;'
-        "event_id": eventId,;
+        'event_type': 'milestone_approved',;'
+        'event_id': eventId,;
         timestamp,;
-        "data": {;
+        'data': {;
           }
-          "milestone_id": crypto.randomUUID(),;
-          "project_id": crypto.randomUUID(),;
-          "title": 'Test Milestone',;'
-          "amount": 500,;
-          "approved_at": timestamp;
+          'milestone_id': crypto.randomUUID(),;
+          'project_id': crypto.randomUUID(),;
+          'title': 'Test Milestone',;'
+          'amount': 500,;
+          'approved_at': timestamp;
         }
       },;
     case 'talent_hired':;'
       return {;
         }
-        "event_type": 'talent_hired',;'
-        "event_id": eventId,;
+        'event_type': 'talent_hired',;'
+        'event_id': eventId,;
         timestamp,;
-        "data": {;
+        'data': {;
           }
-          "project_id": crypto.randomUUID(),;
-          "talent_id": crypto.randomUUID(),;
-          "client_id": crypto.randomUUID(),;
-          "job_id": crypto.randomUUID(),;
-          "created_at": timestamp,;
+          'project_id': crypto.randomUUID(),;
+          'talent_id': crypto.randomUUID(),;
+          'client_id': crypto.randomUUID(),;
+          'job_id': crypto.randomUUID(),;
+          'created_at': timestamp,;

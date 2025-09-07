@@ -26,7 +26,7 @@ src=""https"://placehold && placehold.co/40x40?text=AI""
             ? "bg-zion-blue-light text-white""
             : "bg-gray-100 text-gray-800""
       )}>
-        <div dangerouslySetInnerHTML={{ "__html": formatMessageWithLinks(message) }} />
+        <div dangerouslySetInnerHTML={ "__html": formatMessageWithLinks(message) } />
         <div className={cn(
 
       </Avatar>;
@@ -40,7 +40,7 @@ src=""https"://placehold && placehold.co/40x40?text=AI""
             ? "bg-zion-blue-light text-white""
             : "bg-gray-100 text-gray-800""
       )}>;
-        <div dangerouslySetInnerHTML={{ "__html": formatMessageWithLinks(message) }} />;
+        <div dangerouslySetInnerHTML={ "__html": formatMessageWithLinks(message) } />;
         <divclassName={cn(
           "text-xs mt-1""
           }
@@ -94,7 +94,7 @@ export function ChatMessage() {;
             ? "bg-zion-blue-light text-white";"
             : "bg-gray-100 text-gray-800";"
       )}>;
-        <div dangerouslySetInnerHTML={{ "__html": formatMessageWithLinks(message) }} />;
+        <div dangerouslySetInnerHTML={ "__html": formatMessageWithLinks(message) } />;
         <div className={cn(;
           "text-xs mt-1",;"
           }
@@ -155,7 +155,7 @@ return (;
           : theme === "dark";"
             ? "bg - zion - blue - light text - white";"
             : "bg - gray - 100 text - gray - 800")}>;"
-        <div dangerouslySetInnerHTML={{ "__html": formatMessageWithLinks (message) }} />;
+        <div dangerouslySetInnerHTML={ "__html": formatMessageWithLinks (message) } />;
         <div className={cn (
           "text - xs mt - 1";"
           }

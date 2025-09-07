@@ -45,9 +45,9 @@ fetchAnalyticsData()}, [fetchAnalyticsData])const "StatCard": React.FC<{"title":
     change?: number;
     color?: string;
   }> = ({ title, value, icon, change, color = 'blue' }) => (<motion.div;'
-      initial={{ "opacity": 0, "y": 20 
+      initial={ "opacity": 0, "y": 20 
 }
-      animate={{ "opacity": 1, "y": 0 
+      animate={ "opacity": 1, "y": 0 
 }
       className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">"
 
@@ -115,9 +115,9 @@ fetchAnalyticsData()}, [fetchAnalyticsData])const "StatCard": React.FC<{"title":
       </div>;
       <div className="grid grid-cols-1 "lg": grid-cols-2 gap-6">;"
         <motion.div;
-          initial={{ "opacity": 0, "y": 20 
+          initial={ "opacity": 0, "y": 20 
 }
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
           className="bg-white rounded-xl shadow-lg p-6">"
 
@@ -135,9 +135,9 @@ fetchAnalyticsData()}, [fetchAnalyticsData])const "StatCard": React.FC<{"title":
           </div>;
         </motion.div>;
         <motion.div;
-          initial={{ "opacity": 0, "y": 20 
+          initial={ "opacity": 0, "y": 20 
 }
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
           className="bg-white rounded-xl shadow-lg p-6">"
 
@@ -154,9 +154,9 @@ fetchAnalyticsData()}, [fetchAnalyticsData])const "StatCard": React.FC<{"title":
         </motion.div>;
       </div>;
       <motion.div;
-        initial={{ "opacity": 0, "y": 20 
+        initial={ "opacity": 0, "y": 20 
 }
-        animate={{ "opacity": 1, "y": 0 
+        animate={ "opacity": 1, "y": 0 
 }
         className="bg-white rounded-xl shadow-lg p-6">"
 

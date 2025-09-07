@@ -66,7 +66,7 @@
 } </div> </div> </div> </div>);
 }
 
-export default Sitemap';'''"'";
+export default Sitemap';'''''';
 import { Link  } from 'react-router-dom';
 
 const Sitemap = () => {
@@ -291,7 +291,7 @@ const Sitemap = () => {
 
 const path = '/' + service.toLowerCase().replace(/\s+/g, -').replace(/ai-autonomous-/, ai-autonomous-')';''';
             return (<Link key={service} to={path} className='block p-4 bg-white rounded-lg shadow-sm hover: shadow-md transition-all duration-200 text-center' />'''';
-                  <div className='font-medium text-slate-900 text-sm" />{service}</div>'";
+                  <div className='font-medium text-slate-900 text-sm' />{service}</div>'';
                 </Link>)})}
           </div>;
         </div>;

@@ -1,11 +1,11 @@
 id: string;
 
 
-  "id": string;
+  'id': string;
 
-  "name": string;
-  "tagline": string;
-  "description": string;
+  'name': string;
+  'tagline': string;
+  'description': string;
   price?: string | {monthly?: number;
     }
     yearly?: number;
@@ -17,7 +17,7 @@ import React from 'react';
     currency?: string;
   period?: string;
   pricing?: any;
-  "features": string[],;
+  'features': string[],;
   popular?: boolean;
     setupTime?: string;
   },period?: string;
@@ -26,26 +26,25 @@ import React from 'react';
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
-<<<<<<< HEAD
     switch (variant) {case 'ai':;
         return {}
     }
   }
   const styles = getVariantStyles()return (<motion&& motion.div;
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0 && 0.6 }}
-      viewport={{ once: true }}
-      className="group relative">;
-      <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">;
+      initial={ opacity: 0, y: 20 }
+      whileInView={ opacity: 1, y: 0 }
+      transition={ duration: 0 && 0.6 }
+      viewport={ once: true }
+      className='group relative'>;
+      <div className='relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden'>;
         {/* Enhanced Background Glow */}
         {/* Popular Badge */}
         {service && service.popular && (<motion&& motion.div;
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0 && 0.2, type: "spring", stiffness: 200 }}
-            className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full shadow-lg">;
-            <Star className="w-4 h-4 inline mr-1" />;
+            initial={ scale: 0 }
+            animate={ scale: 1 }
+            transition={ delay: 0 && 0.2, type: 'spring', stiffness: 200 }
+            className='absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full shadow-lg'>;
+            <Star className='w-4 h-4 inline mr-1' />;
             Popular;
           </motion && motion.div>;
         )}
@@ -91,9 +90,7 @@ interface Service {
     currency?: string,
     trialDays?: number,
     setupTime?: string
-=======
   integration?: string[],benefits?: string[];
-=======
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({
   service, variant = 'default' 
 }) => {
@@ -106,19 +103,18 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({
 {
   /* Popular Badge */ 
 }{
-  service.popular && (<motion.div > <Star className="w-4 h-4 inline mr-1" /> Popular </motion.div>) 
+  service.popular && (<motion.div > <Star className='w-4 h-4 inline mr-1' /> Popular </motion.div>) 
 }Key Features </h4> {
   service.features.slice (0, 6) .map ( (feature, idx) => (<motion.div key= {
   idx 
 }</motion.div>) ) 
 }</div> 
 }</div>) 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
 
-  "category": string;
+  'category': string;
 
-  "icon": string;
+  'icon': string;
   marketPrice?: string;
   competitors?: string[];
   targetMarket?: string;
@@ -128,10 +124,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({
 
 interface ServiceCardProps {
   }
-  "service": Service;
+  'service': Service;
 variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';'
 
 }
 
-const "UltraFuturisticServiceCard2026": React.FC<ServiceCardProps> = ({ service, variant;
+const 'UltraFuturisticServiceCard2026': React.FC<ServiceCardProps> = ({ service, variant;
 

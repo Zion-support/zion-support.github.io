@@ -93,9 +93,9 @@ export default function CookiesPage() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Cookie className="w-10 h-10 text-white" />
@@ -117,10 +117,10 @@ export default function CookiesPage() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50"
           >
             <h2 className="text-3xl font-bold text-white mb-6">What Are Cookies?</h2>
@@ -141,10 +141,10 @@ export default function CookiesPage() {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Types of Cookies We Use</h2>
@@ -155,10 +155,10 @@ export default function CookiesPage() {
             {cookieTypes.map((type, index) => (
               <motion.div
                 key={type.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
                 className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -187,10 +187,10 @@ export default function CookiesPage() {
       <section className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Third-Party Cookies</h2>
@@ -201,10 +201,10 @@ export default function CookiesPage() {
             {thirdPartyCookies.map((cookie, index) => (
               <motion.div
                 key={cookie.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
                 className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50"
               >
                 <h3 className="text-xl font-bold text-white mb-3">{cookie.name}</h3>
@@ -230,10 +230,10 @@ export default function CookiesPage() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Managing Your Cookie Preferences</h2>
@@ -303,10 +303,10 @@ export default function CookiesPage() {
       <section className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-4xl font-bold text-white mb-6">Questions About Cookies?</h2>
             <p className="text-xl text-gray-300 mb-8">

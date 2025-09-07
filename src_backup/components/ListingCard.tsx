@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/ListingCard.tsx
 id?: string,;
 
   title: string,;
@@ -10,8 +9,6 @@ id?: string,;
   className?: string,;
   profileType?: 'service' | 'talent';
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ListingCard.tsx
 
 ;
 id?: string,title: string,description: string,images?: string[],category: string,tags?: string[],author?: { name: string, id?: string, avatarUrl?: string, email?: string },className?: string,profileType?: 'service' | 'talent';
@@ -21,7 +18,6 @@ id?: string,title: string,description: string,images?: string[],category: string
   images?: string[];
   category: string;
   tags?: string[];
-<<<<<<< HEAD:src_backup/components/ListingCard.tsx
   author?: { name: string; id?: string; avatarUrl?: string; email?: string };
   className?: string;
   profileType?: 'service' | 'talent';
@@ -39,10 +35,8 @@ export function ListingCard(): any ({;
   profileType = 'service',;
 }: ListingCardProps) {;
   // Generate a profile ID based on the listing data;
-=======
   author?: { name: string; id?: string; avatarUrl?: string; email?: string }className?: string;
   profileType?: 'service' | 'talent';export function ListingCard(): any ({id,title,description,images,category,tags,author,className,profileType = 'service'}: ListingCardProps) {// Generate a profile ID based on the listing data;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ListingCard.tsx
   // In a real app, this would be a proper ID from the database;
   const profileId =;
     id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')>;
@@ -68,63 +62,59 @@ export function ListingCard(): any ({;
             {tags && tags.map((tag, i) => (<Badge;
                 key={i}
                 variant='outline';
-                className='border-zion-slate-dark text-zion-slate-light'>                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
-          <div className="flex flex-wrap gap-2 mb-4">;
-            {tags && tags.map((tag, i) => (<Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;const profileId  = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')return (<Link;
+                className='border-zion-slate-dark text-zion-slate-light'>                {tag}              <Badge key={i} variant='outline' className='border-zion-slate-dark text-zion-slate-light'>;
+          <div className='flex flex-wrap gap-2 mb-4'>;
+            {tags && tags.map((tag, i) => (<Badge key={i} variant='outline' className='border-zion-slate-dark text-zion-slate-light'>;const profileId  = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')return (<Link;
       href = {`/profile/${profileId}`}
       tabIndex={0}
-      className={cn("flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",className;
+      className={cn('flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple',className;
       )}
-<<<<<<< HEAD:src_backup/components/ListingCard.tsx
     >
 
 
       {images && images.length > 0 && images[0] && (
-        <div className="h-48 w-full overflow-hidden relative">
+        <div className='h-48 w-full overflow-hidden relative'>
           <Image
             src={images[0]}
             alt={title}
 
 
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
+            className='object-cover transition-transform duration-300 group-hover:scale-105'
+            loading='lazy'
           />
 
 
 
         </div>
-=======
     >;
-      {images && images.length > 0 && images[0] && (<div className="h-48 w-full overflow-hidden relative">;
+      {images && images.length > 0 && images[0] && (<div className='h-48 w-full overflow-hidden relative'>;
           <Image;
             src={images[0]}
-            alt={title}className="object-cover transition-transform duration-300 group-hover:scale-105";
-            loading="lazy";
+            alt={title}className='object-cover transition-transform duration-300 group-hover:scale-105';
+            loading='lazy';
           />;
         </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ListingCard.tsx
       )}
-      <div className="flex flex-col p-4 flex-grow">;
-        <div className="mb-2">;
-          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
+      <div className='flex flex-col p-4 flex-grow'>;
+        <div className='mb-2'>;
+          <Badge variant='secondary' className='bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30'>;
             {category}
-<<<<<<< HEAD:src_backup/components/ListingCard.tsx
           </Badge>
         </div>
 
 
 
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
-        <p className="text-zion-slate mb-4 flex-grow">{description}</p>
+        <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>{title}</h3>
+        <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
         
         {tags && tags.length > 0 && (
 
 
 
 
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
-              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+              <Badge key={i} variant='outline' className='border-zion-slate-dark text-zion-slate-light'>
                 {tag}
 
 
@@ -132,15 +122,13 @@ export function ListingCard(): any ({;
 
 
             ))}
-=======
           </Badge>;
         </div>;
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
-        <p className="text-zion-slate mb-4 flex-grow">{description}</p>;
-        {tags && tags.length > 0 && (<div className="flex flex-wrap gap-2 mb-4">;
-            {tags.map((tag, i) => (<Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
+        <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>{title}</h3>;
+        <p className='text-zion-slate mb-4 flex-grow'>{description}</p>;
+        {tags && tags.length > 0 && (<div className='flex flex-wrap gap-2 mb-4'>;
+            {tags.map((tag, i) => (<Badge key={i} variant='outline' className='border-zion-slate-dark text-zion-slate-light'>;
                 {tag}))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ListingCard.tsx
           </div>;
         )}</Badge>;))}
           </div>;
@@ -154,17 +142,16 @@ export function ListingCard(): any ({;
               />;
             ) : (<div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />;
             )}
-            <span className='text-sm text-zion-slate-light'>{author && author.name}</span>          </div>        {author && (<div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">;
-            {author && author.avatarUrl ? (<Image src={author && author.avatarUrl} alt={author && author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />;
-            ) : (<div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />;
+            <span className='text-sm text-zion-slate-light'>{author && author.name}</span>          </div>        {author && (<div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>;
+            {author && author.avatarUrl ? (<Image src={author && author.avatarUrl} alt={author && author.name} width={32} height={32} className='rounded-full mr-2' loading='lazy' />;
+            ) : (<div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />;
             )}
-            <span className="text-sm text-zion-slate-light">{author && author.name}</span>;
-          </div>;{author && (<div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">;
-            {author.avatarUrl ? (<Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />;
-            ) : (<div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />;
-            )}<span className="text-sm text-zion-slate-light">{author.name}</span>;
+            <span className='text-sm text-zion-slate-light'>{author && author.name}</span>;
+          </div>;{author && (<div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>;
+            {author.avatarUrl ? (<Image src={author.avatarUrl} alt={author.name} width={32} height={32} className='rounded-full mr-2' loading='lazy' />;
+            ) : (<div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />;
+            )}<span className='text-sm text-zion-slate-light'>{author.name}</span>;
           </div>;
-<<<<<<< HEAD:src_backup/components/ListingCard.tsx
 
 
         
@@ -174,16 +161,16 @@ export function ListingCard(): any ({;
 
         
         {author && (
-          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
+          <div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>
             {author.avatarUrl ? (
-              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />
+              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className='rounded-full mr-2' loading='lazy' />
             ) : (
-              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
+              <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />
             )}
 
 
 
-            <span className="text-sm text-zion-slate-light">{author.name}</span>
+            <span className='text-sm text-zion-slate-light'>{author.name}</span>
           </div>
         )}
 
@@ -193,7 +180,7 @@ export function ListingCard(): any ({;
   );
 }
 
-;"}) })"
+;'}) })'
   );
 }
 
@@ -212,32 +199,29 @@ import Image from 'next / image';interface ListingCardProps {
   class_name?: string,
   profile_type?: 'service' | 'talent';
 }
-import React from "react",
-import { cn } from "@/lib/utils",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react',
+import { cn } from '@/lib/utils',
+import { Badge } from '@/components/ui/badge',
+import Link from 'next/link';
+import Image from 'next/image';
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ListingCardProps {
   id?: string;
-=======
         )}</div>;
     </Link>;
-  )}"}) })";
+  )}'}) })';
   )}import React from 'react';
 import { cn  } from '@/lib / utils';
 import { Badge  } from '@/components / ui / badge';
 import Link from 'next / link';
 import Image from 'next / image';interface ListingCardProps  {id?: string,title: string,description: string,images?: string[],category: string,tags?: string[],author?: { name: string, id?: string, avatar_url?: string, email?: string },class_name?: string,profile_type?: 'service' | 'talent';
-}import React from "react",import { cn } from "@/lib/utils",import { Badge } from "@/components/ui/badge",import Link from 'next/link';
+}import React from 'react',import { cn } from '@/lib/utils',import { Badge } from '@/components/ui/badge',import Link from 'next/link';
 import Image from 'next/image';
 interface ListingCardProps  {id?: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ListingCard.tsx
   title: string;
   description: string;
   images?: string[];
   category: string;
-<<<<<<< HEAD:src_backup/components/ListingCard.tsx
   tags?: string[];
   author?: { name: string, id?: string, avatarUrl?: string, email?: string },
   className?: string;
@@ -246,7 +230,6 @@ interface ListingCardProps  {id?: string;
 
 export function ListingCard({ 
   id;
-=======
   tags?: string[];author?: { name: string; id?: string; avatar_url?: string; email?: string }
   class_name?: string;
   profile_type?: 'service' | 'talent';
@@ -259,7 +242,6 @@ function ListingCard() {// Generate a profile ID based on the listing data;
     id || (profile_type === 'service' ? 'service - provider - 1' : 'talent - 1')>;author?: { name: string, id?: string, avatarUrl?: string, email?: string },className?: string;
   profileType?: 'service' | 'talent';
 }export function ListingCard({id;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ListingCard.tsx
   title;
   description;
   images;
@@ -290,7 +272,6 @@ interface ListingCardProps  {id?: string;
   category: string;
   tags?: string[];
   author?: { name: string; id?: string; avatarUrl?: string; email?: string }
-<<<<<<< HEAD:src_backup/components/ListingCard.tsx
   className?: string
   profileType?: 'service' | 'talent'
 export function ListingCard({
@@ -312,7 +293,6 @@ export function ListingCard({
 origin/cursor/automate-test-improve-and-merge-code-2533
       {images && images.length > 0 && images[0] && (
         <div className='h - 48 w - full overflow - hidden relative'>;
-=======
   className?: string;
   profileType?: 'service' | 'talent';
 export function ListingCard() {// Generate a profile ID based on the listing data;
@@ -320,7 +300,6 @@ export function ListingCard() {// Generate a profile ID based on the listing dat
   const profileId =;
     id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')>;
       {images && images.length > 0 && images[0] && (<div className='h - 48 w - full overflow - hidden relative'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ListingCard.tsx
           <Image;
             src={images[0]}
             alt={title}
@@ -340,7 +319,6 @@ export function ListingCard() {// Generate a profile ID based on the listing dat
           {title}
         </h3>;
         <p className='text - zion - slate mb - 4 flex - grow'>{description}</p>;
-<<<<<<< HEAD:src_backup/components/ListingCard.tsx
         {tags && tags.length > 0 && (
           <div className='flex flex - wrap gap - 2 mb - 4'>;
             {tags.map ((tag, i) => (
@@ -349,14 +327,13 @@ export function ListingCard() {// Generate a profile ID based on the listing dat
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
               >
-=======
         {tags && tags.length > 0 && (<div className='flex flex - wrap gap - 2 mb - 4'>;
             {tags.map ((tag, i) => (<Badge;
                 key={i}variant='outline';
                 className='border - zion - slate - dark text - zion - slate - light';
-              >                {tag}              <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light">;
-          <div className="flex flex - wrap gap - 2 mb - 4">;
-            {tags.map ((tag, i) => (<Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light">;
+              >                {tag}              <Badge key={i} variant='outline' className='border - zion - slate - dark text - zion - slate - light'>;
+          <div className='flex flex - wrap gap - 2 mb - 4'>;
+            {tags.map ((tag, i) => (<Badge key={i} variant='outline' className='border - zion - slate - dark text - zion - slate - light'>;
                 {tag}
               </Badge>))}
           </div>)}
@@ -369,16 +346,15 @@ export function ListingCard() {// Generate a profile ID based on the listing dat
                 className='rounded - full mr - 2';
                 loading='lazy';
               />) : (<div className='h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2' />)}
-            <span className='text - sm text - zion - slate - light'>{author.name}</span>          </div>        {author && (<div className="flex items - center mt - auto pt - 4 border - t border - zion - blue - light">;
-            {author.avatar_url ? (<Image src={author.avatar_url} alt={author.name} width={32} height={32} className="rounded - full mr - 2" loading="lazy" />) : (<div className="h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2" />)}
-            <span className="text - sm text - zion - slate - light">{author.name}</span>;
+            <span className='text - sm text - zion - slate - light'>{author.name}</span>          </div>        {author && (<div className='flex items - center mt - auto pt - 4 border - t border - zion - blue - light'>;
+            {author.avatar_url ? (<Image src={author.avatar_url} alt={author.name} width={32} height={32} className='rounded - full mr - 2' loading='lazy' />) : (<div className='h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2' />)}
+            <span className='text - sm text - zion - slate - light'>{author.name}</span>;
           </div>)}
       </div>;
-    </Link>)}"}) })";;
+    </Link>)}'}) })';
                 variant='outline';
                 className='border-zion-slate-dark text-zion-slate-light';
               >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ListingCard.tsx
                 {tag}
               </Badge>;
             ))}
@@ -398,14 +374,11 @@ export function ListingCard() {// Generate a profile ID based on the listing dat
             <span className='text-sm text-zion-slate-light'>{author.name}</span>;
           </div>;
         )}
-<<<<<<< HEAD:src_backup/components/ListingCard.tsx
       </div>
     </Link>
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       </div>;
     </Link>;
   )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ListingCard.tsx

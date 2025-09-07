@@ -31,8 +31,8 @@ interface AccessibilitySettings  {"highContrast": boolean;
     if (newSettings.focusIndicator) {root.classList.add('focus-visible')} else {root.classList.remove('focus-visible')}// Color blindness simulation;'
     if (newSettings.colorBlindness !== 'normal') {root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {root.classList.remove('color-blind-protanopia', 'color-blind-deuteranopia', 'color-blind-tritanopia')}// Font size;'    root.classList.remove('font-size-normal', 'font-size-large', 'font-size-xlarge')root.classList.add(`font-size-${newSettings.fontSize}`)}, [])// Enhanced keyboard navigation;`  const setupKeyboardNavigation = useCallback(() => {if (!settings.keyboardNavigation) return;const handleKeyDown = ("e": KeyboardEvent) => {// Skip to main content;
       }
-      if (e.key === 'Tab' && e.altKey) {e.preventDefault()const mainContent = document.querySelector('main')if (mainContent) {(mainContent as HTMLElement).focus()}}'
-    }const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')}document.addEventListener('keydown', handleKeyDown)document.addEventListener('mousedown', handleMouseDown)return () => {document.removeEventListener('keydown', handleKeyDown)document.removeEventListener('mousedown', handleMouseDown)}}, [fontSize])// Skip to navigation;'
+      if (e.key === 'Tab' && e.altKey) {e.preventDefault()const mainContent = document.querySelector('main')if (mainContent) {(mainContent as HTMLElement).focus()}'
+    }const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')}document.addEventListener('keydown', handleKeyDown)document.addEventListener('mousedown', handleMouseDown)return () => {document.removeEventListener('keydown', handleKeyDown)document.removeEventListener('mousedown', handleMouseDown)}, [fontSize])// Skip to navigation;'
       if (e.key === 'Tab' && e.shiftKey && e.altKey) {e.preventDefault()const navigation = document.querySelector('nav')if (navigation) {(navigation as HTMLElement).focus()}'
       }// Skip to footer;
       if (e.key === 'Tab' && e.ctrlKey) {e.preventDefault()const footer = document.querySelector('footer')if (footer) {(footer as HTMLElement).focus()}'
@@ -43,7 +43,7 @@ interface AccessibilitySettings  {"highContrast": boolean;
     announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)}, 1000)}, [settings.screenReader])// Enhanced focus management;
   const setupFocusManagement = useCallback(() => {if (!settings.focusIndicator) return;const focusableElements = document.querySelectorAll('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])';'
     )focusableElements.forEach((element) => {element.addEventListener('focus', () => {element.classList.add('focus-ring')announceToScreenReader(`${element.textContent || element.getAttribute('aria-label') || 'Element'} focused`)})element.addEventListener('blur', () => {element.classList.remove('focus-ring')})})}, [settings.focusIndicator, announceToScreenReader])// Apply settings when they change;'  useEffect(() => {applyAccessibilitySettings(settings)}, [settings, applyAccessibilitySettings])// Setup keyboard navigation and focus management;
-  useEffect(() => {const cleanupKeyboard = setupKeyboardNavigation()const cleanupFocus  = setupFocusManagement()return () => {cleanupKeyboard?.()cleanupFocus?.()}}, [setupKeyboardNavigation, setupFocusManagement])// Save settings to localStorage;
+  useEffect(() => {const cleanupKeyboard = setupKeyboardNavigation()const cleanupFocus  = setupFocusManagement()return () => {cleanupKeyboard?.()cleanupFocus?.()}, [setupKeyboardNavigation, setupFocusManagement])// Save settings to localStorage;
   useEffect(() => {localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [settings])// Load settings from localStorage on mount;'
   useEffect(() => {const savedSettings = localStorage.getItem('zion-accessibility-settings')if (savedSettings) {try {const parsed = JSON.parse(savedSettings)setSettings(parsed)} catch (error) {console.warn('Failed to parse accessibility "settings":', error)}'
     }
@@ -99,8 +99,8 @@ interface AccessibilitySettings  {"highContrast": boolean;
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Accessibility Settings";"
           aria-expanded={isOpen}
-          whileHover={{ "scale": 1.1 }}
-          whileTap={{ "scale": 0.9 }}
+          whileHover={ "scale": 1.1 }
+          whileTap={ "scale": 0.9 }
         >;
           <Accessibility className="w-6 h-6" />;"
         </motion.button>;
@@ -109,16 +109,16 @@ interface AccessibilitySettings  {"highContrast": boolean;
         {isOpen && (<motion.div;
             }
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4";"
-            initial={{ "opacity": 0 }}
-            animate={{ "opacity": 1 }}
-            exit={{ "opacity": 0 }}
+            initial={ "opacity": 0 }
+            animate={ "opacity": 1 }
+            exit={ "opacity": 0 }
             onClick={() => setIsOpen(false)}
           >;
             <motion.div;
               className="bg-white "dark":bg-slate-800 rounded-2xl shadow-2xl max-w-md w-full max-h-[80vh] overflow-y-auto";"
-              initial={{ "scale": 0.9, "opacity": 0 }}
-              animate={{ "scale": 1, "opacity": 1 }}
-              exit={{ "scale": 0.9, "opacity": 0 }}
+              initial={ "scale": 0.9, "opacity": 0 }
+              animate={ "scale": 1, "opacity": 1 }
+              exit={ "scale": 0.9, "opacity": 0 }
               onClick={(e) => e.stopPropagation()}
             >;
               {/* Header */}
@@ -245,7 +245,7 @@ interface AccessibilitySettings  {"highContrast": boolean;
               <div className="p-6 border-t border-slate-200 "dark":border-slate-700">;"
                 <button;
                   onClick={() => {setSettings({"highContrast": false,"largeText": false,"reducedMotion": false,"screenReader": false,"keyboardNavigation": false,"focusIndicator": true,"colorBlindness": 'normal',"fontSize": 'normal';'
-                    })}}
+                    })}
                   className="w-full px-4 py-2 bg-slate-100 "dark":bg-slate-700 text-slate-700 "dark":text-slate-300 rounded-lg "hover":bg-slate-200 "dark":"hover":bg-slate-600 transition-colors";"
                 >;
                   Reset to Defaults;
@@ -259,4 +259,4 @@ interface AccessibilitySettings  {"highContrast": boolean;
   )}import React, { useState, useEffect } from 'react' interface AccessibilityEnhancerProps {"";"
   }
   "children": React.ReactNode} const "AccessibilityEnhancer": React.FC < AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState ({ "highContrast": false, "largeText": false, "reducedMotion": false, "focusVisible": true })  useEffect ( () => {'';"";"
-}}
+}

@@ -107,9 +107,9 @@ function FeaturedListingsSection() {
               key={listing.id}
               listing={listing}
               view="grid""
-              onRequestQuote={() => {}}              listing={listing}
+              onRequestQuote={() => {}              listing={listing}
               view="grid""
-              onRequestQuote={() => {}}
+              onRequestQuote={() => {}
             />
           ))}
         </div>

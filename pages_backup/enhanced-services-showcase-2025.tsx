@@ -19,8 +19,8 @@ export default function EnhancedServicesShowcase2025() {
   const allServices = null;
   return (
     <EnhancedFuturisticBackground 
-      intensity="high" 
-      colorScheme="quantum"
+      intensity='high' 
+      colorScheme='quantum'
       particleCount={300}
       animationSpeed={1.5}
     {
@@ -149,46 +149,46 @@ duration: 0.5,
   
 origin/cursor/automate-test-improve-and-merge-code-2533
     >
-      <div className="min-h-screen">
+      <div className='min-h-screen'>
         <Head>
           <title>2025 Innovative Services Showcase - Zion Tech Group | Revolutionary AI, Quantum & Emerging Tech</title>
-          <meta name="description" content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting-edge emerging technologies. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="AI services 2025, quantum computing, blockchain, IoT, edge computing, 5G, cybersecurity, metaverse, space technology, Zion Tech Group" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="2025 Innovative Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="Revolutionary AI, quantum computing, and emerging technology services for 2025. Contact: +1 302 464 0950" />
-          <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-showcase-2025" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-showcase-2025" />
+          <meta name='description' content='Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting-edge emerging technologies. Contact: +1 302 464 0950' />
+          <meta name='keywords' content='AI services 2025, quantum computing, blockchain, IoT, edge computing, 5G, cybersecurity, metaverse, space technology, Zion Tech Group' />
+          <meta name='author' content='Zion Tech Group' />
+          <meta property='og:title' content='2025 Innovative Services Showcase - Zion Tech Group' />
+          <meta property='og:description' content='Revolutionary AI, quantum computing, and emerging technology services for 2025. Contact: +1 302 464 0950' />
+          <meta property='og:url' content='https://ziontechgroup.com/enhanced-services-showcase-2025' />
+          <meta property='og:type' content='website' />
+          <link rel='canonical' href='https://ziontechgroup.com/enhanced-services-showcase-2025' />
         </Head>
         {/* Hero Section */}
         <section className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
         {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-        <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              initial={ opacity: 0, y: 30 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              animate={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              transition={ duration: 0.8 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         duration: 0 && 0.5,;
@@ -227,7 +227,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <meta
             name='description'
-            content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting-edge emerging technologies. Contact: +1 302 464 0950"
+            content='Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting-edge emerging technologies. Contact: +1 302 464 0950'
           />;
           <meta
             name='keywords'
@@ -258,12 +258,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                   2025 Innovation Showcase
                 </h1>
-                <Sparkles className="w-12 h-12 text-pink-400 ml-4" />
+                <Sparkles className='w-12 h-12 text-pink-400 ml-4' />
               </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                 Revolutionary AI, Quantum Computing & Emerging Technology Services
               </p>
-              <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+              <p className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto'>
                 Discover our cutting-edge solutions that are transforming industries and driving the future of technology
               </p>
               {/* Service Statistics */}
@@ -307,8 +307,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                   <input
-                    type="text"
-                    placeholder="Search services..."
+                    type='text'
+                    placeholder='Search services...'
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
@@ -333,7 +333,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <meta;
             name='description';
-            content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting - edge emerging technologies. Contact: +1 302 464 0950";
+            content='Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting - edge emerging technologies. Contact: +1 302 464 0950';
           />;
           <meta;
             name='keywords';
@@ -361,9 +361,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Hero Section */}
         <section className='relative z - 10 pt - 20 pb - 16 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-7xl mx - auto text - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <div className='flex items - center justify - center mb - 6'>;
                 <Sparkles className='w - 12 h - 12 text - cyan - 400 mr - 4' />;
@@ -471,24 +471,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
                 {/* Category Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 <select;
                   value={selectedCategory  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+                  onChange={(e) => setSelectedCategory(e.target.value)} className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'>
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
                   ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 </select>;
@@ -508,27 +508,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </section>;
         {/* Services Grid */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto'>
 
 
             <motion.div
               variants={containerVariants}
-              initial="hidden"
-              animate="visible" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              initial='hidden'
+              animate='visible' className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               <AnimatePresence>
                 {filteredServices.map((service) => (
                   <motion.div
                     key={service.id}
                     variants={itemVariants}
-                    layout className="group relative bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105">
+                    layout className='group relative bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105'>
                     {/* Service Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="text-3xl">{service.icon}</div>
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='text-3xl'>{service.icon}</div>
                       {service.popular && (
                         <div className='flex items-center space-x-1 text-yellow-400 text-sm'>
                           <Star className='w-4 h-4 fill-current' />
@@ -552,9 +552,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className='text - gray - 400 text - lg'>;
                           {service.period}
 
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-2xl font-bold text-cyan-400">
-                        {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
+                    <div className='flex items-center justify-between mb-4'>
+                      <div className='text-2xl font-bold text-cyan-400'>
+                        {service.price}<span className='text-gray-400 text-lg'>{service.period}</span>
 
                       </div>
                       <div className='flex items-center space-x-2 text-sm text-gray-400'>
@@ -633,8 +633,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* No Results Message */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
-                initial={{ opacity: 0 }}
-animate={{ opacity: 1 }}
+                initial={ opacity: 0 }
+animate={ opacity: 1 }
                 className='text-center py-16'
               >
                 <div className='text-6xl mb-4'>🔍</div>
@@ -652,15 +652,15 @@ animate={{ opacity: 1 }}
 <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className='text-xl text-gray-300 mb-8'>
                 Join thousands of companies achieving breakthrough results with our revolutionary services
               </p>
               {/* Contact Information */}
@@ -669,17 +669,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center'>
                     <Target className='w-6 h-6 text-cyan-400' />
                   </div>
-                  <span className="text-lg text-white">+1 302 464 0950</span>
+                  <span className='text-lg text-white'>+1 302 464 0950</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
-                    <Award className="w-6 h-6 text-purple-400" />
+                <div className='flex items-center justify-center space-x-3'>
+                  <div className='w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center'>
+                    <Award className='w-6 h-6 text-purple-400' />
                   </div>
-                  <span className="text-lg text-white">kleber@ziontechgroup.com</span>
+                  <span className='text-lg text-white'>kleber@ziontechgroup.com</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
-                    <Lightbulb className="w-6 h-6 text-green-400" />
+                <div className='flex items-center justify-center space-x-3'>
+                  <div className='w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center'>
+                    <Lightbulb className='w-6 h-6 text-green-400' />
                   </div>
                   <span className='text-lg text-white'>
                     364 E Main St STE 1008 Middletown DE 19709

@@ -17,15 +17,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(405).end();
     return
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   // TODO: Implement authentication logic here
   res.status(200).json({ message: 'Auth endpoint placeholder' })
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -35,8 +35,8 @@ export default function handler(req, res) {
     res.status(405).end();
     return;
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;

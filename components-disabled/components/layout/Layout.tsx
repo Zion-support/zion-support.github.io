@@ -39,7 +39,7 @@ export default function Layout() {;
 <div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;"
     </div>;
   )"; "type": LayoutProps = { "children": React.ReactNode}; export default function Layout() { return <div>{children}</div>; type LayoutProps = { "children": React.ReactNode}; export default function Layout() { return <div>{children}</div> } " ;"
-}}
+}
     <div className="min-h-screen bg-white">;"
 export default /**
  * Layout - Function description
@@ -90,7 +90,7 @@ export default /**
  * Layout - Function description
  */
 function Layout() { return <div>{children}</div> } " ;"
-}}
+}
 interface LayoutProps {
   }
   "children": React.ReactNode;

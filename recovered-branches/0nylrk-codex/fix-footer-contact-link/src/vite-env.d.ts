@@ -68,7 +68,7 @@ declare let process: {
 declare module '@/components/ui/badge' {
   export interface BadgeProps {
     className?: string,
-    variant?: "default" | "secondary" | "destructive" | "outline",
+    variant?: 'default' | 'secondary' | 'destructive' | 'outline',
     children?: React.ReactNode,
     key?: string | number
   }
@@ -202,5 +202,5 @@ declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }
   // Empty stub for the styles;
-}}
+}
 ;

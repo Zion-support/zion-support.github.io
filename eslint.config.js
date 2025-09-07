@@ -1,18 +1,12 @@
-import js from '@eslint/js';'
-import typescript from '@typescript-eslint/eslint-plugin';'
-import typescriptParser from '@typescript-eslint/parser';'
-import react from 'eslint-plugin-react';'
-import reactHooks from 'eslint-plugin-react-hooks';'
-import globals from 'globals';'
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
-  ...compat.extends(
-    'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended'
-  ),
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
@@ -24,50 +18,39 @@ export default [
       },
       globals: {
         ...globals.browser,
-        ...globals.node
-        }
-        "jest": 'readonly','
-        "describe": 'readonly','
-        "it": 'readonly','
-        "test": 'readonly','
-        "expect": 'readonly','
-        "beforeEach": 'readonly','
-        "afterEach": 'readonly','
-        "beforeAll": 'readonly','
-        "afterAll": 'readonly''
-      },
-      "parser": typescriptParser,
-      "parserOptions": {
-        }
-        "ecmaFeatures": {
-          }
-          "jsx": true
-        }
+        ...globals.node,
+        "jest": 'readonly',
+        "describe": 'readonly',
+        "it": 'readonly',
+        "test": 'readonly',
+        "expect": 'readonly',
+        "beforeEach": 'readonly',
+        "afterEach": 'readonly',
+        "beforeAll": 'readonly',
+        "afterAll": 'readonly'
       }
     },
-    "plugins": {
-      '@typescript-eslint': typescript,'
-      'react': react,'
-      'react-hooks': reactHooks'
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks
     },
-    "rules": {
-      'no-unused-vars': 'off','
-      '@typescript-eslint/no-unused-vars': ['warn', { "argsIgnorePattern": '^_' }],'
-      '@typescript-eslint/no-explicit-any': 'warn','
-      '@typescript-eslint/ban-ts-comment': 'off','
-      'no-console': ['warn', { "allow": ['warn', 'error'] }],'
-      'prefer-const': 'error','
-      'no-debugger': 'warn','
-      'react/react-in-jsx-scope': 'off','
-      'react/prop-types': 'off','
-      'react-hooks/rules-of-hooks': 'error','
-      'react-hooks/exhaustive-deps': 'warn''
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { "argsIgnorePattern": '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      'no-console': ['warn', { "allow": ['warn', 'error'] }],
+      'prefer-const': 'error',
+      'no-debugger': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn'
     },
-    "settings": {
-      }
+    settings: {
       "react": {
-        }
-        "version": 'detect''
+        "version": 'detect'
       }
     }
   },
@@ -77,18 +60,14 @@ export default [
       '.next/**',
       'dist/**',
       'build/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'scripts/**',
-      'automation/**',
-      'automation_backup/**',
-      'apps.backup/**',
-      'backup-problematic-files/**',
-      'backup-merge-conflicts/**',
-      'corrupted_backup/**',
-      'corrupted-files-backup/**',
+      'out/**',
+      'coverage/**',
+      'src-disabled/**',
       'src.disabled/**',
+      'src.corrupted/**',
+      'src.broken/**',
+      'src.pages.disabled/**',
+      'src.pages.disabled.auto/**',
       'components.disabled/**',
       'components-disabled/**',
       'components.disabled_full/**',
@@ -112,8 +91,6 @@ export default [
       'pages.bak/**',
       'pages.blog.disabled/**',
       'solutions.disabled/**',
-      'src.corrupted/**',
-      'src.pages.disabled/**',
       'src_backup/**',
       'temp-backup/**',
       'tests.disabled/**',
@@ -147,7 +124,6 @@ export default [
       'pm2-automation/**',
       'pm2-backups/**',
       'recovered-branches/**',
-      'src.broken/**',
       'src_backup_temp/**',
       'test-next/**',
       'tools/**',
@@ -208,7 +184,12 @@ export default [
       'pages-backup/**',
       'pages-disabled/**',
       'pages-quarantine/**',
-      'app/**'
+      'app/**',
+      'types/**',
+      'vite.config*.ts',
+      'temp_footer_start.tsx',
+      'test-utils.jsx',
+      'zion/**'
     ]
   }
 ];

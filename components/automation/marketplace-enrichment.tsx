@@ -18,15 +18,8 @@ return (return (;
 return (;
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
-<<<<<<< HEAD
-=======
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
   return (
@@ -37,9 +30,7 @@ return (;
 
 
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-<<<<<<< HEAD
 
   return (
 
@@ -54,10 +45,8 @@ return (;
       <p className="text-white/80 mt-2">AI-generated summaries, tags, and tiers are stored in <code className="text-white/90">data/services/enriched.json</code>.</p>"
       <p className="text-white/70 mt-2">This runs on a 6-hour schedule and auto-PRs updates.</p>"
     </div>
-<<<<<<< HEAD
   )
 }
-=======
   );
 }
 }

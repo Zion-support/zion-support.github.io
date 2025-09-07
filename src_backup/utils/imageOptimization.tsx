@@ -161,7 +161,7 @@ if (||) {}
   return (
 
       className={cn('relative overflow-hidden', className)}
-      style={{ width, height }}'`
+      style={ width, height }'`
     ).toString('base64')}`
   }
     >
@@ -303,7 +303,6 @@ export function getImageDimensions(;
   return new Promise((resolve, reject) => {}
     const img = new window.Image()
     img.onload = () =>
-<<<<<<< HEAD:src_backup/utils/imageOptimization.tsx
       resolve({ width: img.naturalWidth, height: img.naturalHeight });
     img.onerror = reject;
     img.src = src;

@@ -78,7 +78,7 @@ if (metrics.loadTime > 3000) score -= 15
 if (metrics.timeToInteractive > 3500) score -= 20
 > {
   showMetrics ? 'Hide' : 'Show' 
-}Metrics </button> </div> </div> <div className="w-full bg-white/10 rounded-full h-3" > <motion.div </div> </div> {
+}Metrics </button> </div> </div> <div className='w-full bg-white/10 rounded-full h-3' > <motion.div </div> </div> {
   /* Metrics Display */ 
 }{
   showMetrics && (<motion.div </div> </motion.div>) 
@@ -91,7 +91,7 @@ if (metrics.timeToInteractive > 3500) score -= 20
   isOptimizing ? 'bg-gray-600 cursor-not-allowed' : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 hover:scale-105' 
 }flex items-center justify-center gap-2` 
 }> {
-  isOptimizing ? (<> <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> <span>Optimizing...</span> </>) : (<> <Zap className="w-4 h-4" /> <span>Run All Optimizations</span> </>) 
+  isOptimizing ? (<> <div className='w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin' /> <span>Optimizing...</span> </>) : (<> <Zap className='w-4 h-4' /> <span>Run All Optimizations</span> </>) 
 }</button> </div>) 
 }</div> <li>• Use WebP images for better compression</li> <li>• Implement lazy loading for images</li> <li>• Minimize CSS and JavaScript bundles</li> <li>• Use CDN for static assets</li> <li>• Enable gzip compression</li> </ul> </div> </div>) 
 }

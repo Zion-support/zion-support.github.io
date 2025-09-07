@@ -11,9 +11,9 @@ export type HttpMethod = any;
 export interface CodeSample  {language: 'curl' | 'javascript' | 'python';
   code: string;export interface RateLimitInfo  {tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
-  burst?: number;;;export interface ErrorCode  {code: string;
+  burst?: number;export interface ErrorCode  {code: string;
   http_status: number;
-  message: string;;export interface EndpointSpec  {export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';export interface CodeSample  {language: 'curl' | 'javascript' | 'python';
+  message: string;export interface EndpointSpec  {export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';export interface CodeSample  {language: 'curl' | 'javascript' | 'python';
   code: string;export interface RateLimitInfo  {tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
   burst?: number;export interface ErrorCode  {code: string;
@@ -91,7 +91,7 @@ export interface SectionSpec  {export interface SectionSpec  {export interface S
   id: string;
   title: string;
   description?: string;
-  endpoints: EndpointSpec[];;export interface ApiDocsSpec  {export interface ApiDocsSpec  {export interface ApiDocsSpec  {export interface ApiDocsSpec  {export interface ApiDocsSpec  {ursor/fix-website-loading-errors-and-merge-6662;
+  endpoints: EndpointSpec[];export interface ApiDocsSpec  {export interface ApiDocsSpec  {export interface ApiDocsSpec  {export interface ApiDocsSpec  {export interface ApiDocsSpec  {ursor/fix-website-loading-errors-and-merge-6662;
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
@@ -99,7 +99,7 @@ export interface SectionSpec  {export interface SectionSpec  {export interface S
 export interface CodeSample  {language: 'curl' | 'javascript' | 'python';
   code: string;
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-  lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;;
+  lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;
 export type Visibility = 'public' | 'partner' | 'internal';export interface CodeSample  {language: 'curl' | 'javascript' | 'python',code: string;
 }
 export interface RateLimitInfo  {tier: 'free' | 'partner' | 'internal', limitPerMinute: number,burst?: number;
@@ -116,7 +116,7 @@ export interface EndpointSpec  {id: string, title: string,description: string, p
   lastUpdatedIso: string;
   lastUpdatedIso: string;
   lastUpdatedIso: string;
-}}}
+}}
   tags?: string[];
 export interface SectionSpec {
 export interface SectionSpec {

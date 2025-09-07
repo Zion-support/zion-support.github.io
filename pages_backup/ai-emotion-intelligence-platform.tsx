@@ -165,10 +165,10 @@ export default function AIEmotionIntelligencePlatform() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">AI Emotion Intelligence Platform</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      <main className='max-w-7xl mx-auto px-4 py-8'>
+        <div className='text-center mb-12'>
+          <h1 className='text-4xl font-bold mb-4'>AI Emotion Intelligence Platform</h1>
+          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
             Real-time emotion analysis and response for customer interactions powered by advanced AI.
           </p>
         </div>
@@ -180,15 +180,15 @@ export default function AIEmotionIntelligencePlatform() {
         <section className='relative min-h-screen flex items-center justify-center overflow-hidden pt-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className='mb-8'
             >
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, scale: 0.8 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 0.8, delay: 0.2 }
                 className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6'
               >
                 <Sparkles className='w-4 h-4 mr-2' />
@@ -198,31 +198,31 @@ export default function AIEmotionIntelligencePlatform() {
     <>
       <Head>
         <title>AI Emotion Intelligence Platform - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights." />
-        <meta name="keywords" content="AI emotion detection, sentiment analysis, customer experience, emotion AI, real-time analysis" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights.' />
+        <meta name='keywords' content='AI emotion detection, sentiment analysis, customer experience, emotion AI, real-time analysis' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <UltraFuturisticBackground2030>
         <UltraFuturisticNavigation2030 />
         {/* Hero Section */}
-        <section className="relative min - h-screen flex items - center justify - center overflow - hidden pt - 20">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+        <section className='relative min - h-screen flex items - center justify - center overflow - hidden pt - 20'>;
+          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }} className="mb - 8">;
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 } className='mb - 8'>;
               <motion.div;
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
-                <Sparkles className="w-4 h-4 mr-2" />
+                initial={ opacity: 0, scale: 0.8 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 0.8, delay: 0.2 } className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6'>
+                <Sparkles className='w-4 h-4 mr-2' />
                 AI & Customer Experience
               </motion.div>
               <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+transition={ duration: 0.8, delay: 0.4 }
                 className='text-5xl md:text-7xl font-bold mb-6'
               >
                 <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>
@@ -231,18 +231,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.8, delay: 0.6 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+transition={ duration: 0.8, delay: 0.6 }
                 className='text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'
               >
                 Real-time emotion analysis and response for customer
                 interactions
               </motion.p>
               <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.8, delay: 0.8 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+transition={ duration: 0.8, delay: 0.8 }
                 className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto'
               >
                 Advanced AI platform that analyzes customer emotions in
@@ -253,9 +253,9 @@ transition={{ duration: 0.8, delay: 0.8 }}
             </motion.div>
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.8, delay: 1.0 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+transition={ duration: 0.8, delay: 1.0 }
               className='flex flex-col sm:flex-row items-center justify-center gap-6 mb-16'
             >
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -282,9 +282,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
             {/* Key Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.8, delay: 1.2 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+transition={ duration: 0.8, delay: 1.2 }
               className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'
             >
               <div className='text-center'>
@@ -321,10 +321,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -341,10 +341,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+viewport={ once: true }
                   className='group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10'
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
@@ -363,10 +363,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className='py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -383,10 +383,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+viewport={ once: true }
                   className='p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300'
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6'>
@@ -406,10 +406,10 @@ viewport={{ once: true }}
         <section id='pricing' className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -425,22 +425,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               {pricing.map((plan, index) => (
                 <motion.div
-              viewport={{ once: true }} className="text - center mb - 16">;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+              viewport={ once: true } className='text - center mb - 16'>;
+              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Choose Your Plan;
               </h2>;
-              <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
+              <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
                 Start with our professional plan and scale as you grow;
               </p>;
             </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+            <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
               {pricing.map ((plan, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                   className={`relative p - 8 rounded - 2xl border transition - all duration - 300 transform hover:scale - 105 ${
                     plan.popular;
                       ? 'bg - gradient - to - br from - pink - 500 / 10 to - purple - 500 / 10 border - pink - 500 / 50 shadow - 2xl shadow - pink - 500 / 25';
@@ -497,10 +497,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Get Started?

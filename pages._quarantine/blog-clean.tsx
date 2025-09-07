@@ -16,7 +16,7 @@ const "Blog": NextPage = () => {const blogPosts = [{"id": 1,"title": "The Future
     }
   ];
   const categories = ["All Posts","AI & Machine Learning","Cloud Services","Web Development","Mobile Development","Blockchain","Cybersecurity","IoT","Industry Insights";"
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
 const categories = ["All Posts",;"
     "AI & Machine Learning","
@@ -28,11 +28,7 @@ const categories = ["All Posts",;"
     "IoT","
     "Industry Insights""
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 class ErrorBoundary extends React.Component {
   }
   constructor(props) {
@@ -88,7 +84,7 @@ const "Blog": NextPage = () => {const blogPosts = [{"id": 1,"title": "The Future
     }
   ];
   const categories = ["All Posts","AI & Machine Learning","Cloud Services","Web Development","Mobile Development","Blockchain","Cybersecurity","IoT","Industry Insights";"
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }
@@ -380,8 +376,6 @@ href=""https"://ziontechgroup.com""
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 export default Blog;
@@ -857,14 +851,8 @@ href=""https"://ziontechgroup.com""
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 export default Blog;

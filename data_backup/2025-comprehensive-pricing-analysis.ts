@@ -486,7 +486,7 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
 export;
   const getCompetitiveLandscape = () => {;
   }
-  return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura']}}:data_backup/2025-comprehensive-pricing-analysis.ts;'
+  return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura']}:data_backup/2025-comprehensive-pricing-analysis.ts;'
 
 export interface PricingAnalysis  {"serviceId": string;"
   }
@@ -739,4 +739,4 @@ export const getMarketInsights = () => { const insights = { "totalMarketSize": '
 export;
   const getCompetitiveLandscape = () => {;
   }
-  return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura']}}
+  return { aiServices[ 'IBM Watson','Google AI','Microsoft Azure AI','Amazon SageMaker'],quantumComputing[ 'IBM Quantum','Google Quantum AI','Microsoft Azure Quantum','D-Wave'],cybersecurity[ 'CrowdStrike','SentinelOne','Darktrace','Palo Alto Networks'],manufacturing[ 'Siemens','Rockwell Automation','ABB','GE Digital'],blockchain[ 'Chainalysis','ConsenSys','Alchemy','Infura']}

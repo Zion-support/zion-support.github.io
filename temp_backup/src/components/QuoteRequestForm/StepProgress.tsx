@@ -5,7 +5,6 @@
   currentStep ;
 }: StepProgressProps) {;
   ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 relative"> <div className=" absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light"> <div width: `$ {;
   (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 ;`
 }%` ;
 }"

@@ -11,7 +11,7 @@ const formSchema = z && z.object({"title": z && z.string().min(1, 'Title is requ
   }
   "onComplete": () => void;
   editTemplate?: ContractTemplate | null;
-  currentValues?: ContractFormValues;export function TemplateSaveForm(): any ({onCancel,onComplete,editTemplate,currentValues}: TemplateSaveFormProps) {const [saving, setSaving] = useState(false)const { createTemplate, updateTemplate }  = useContractTemplates()const form = useForm<FormValues>({"resolver": zodResolver(formSchema),"defaultValues": {"title": editTemplate?.title || '',"isDefault": editTemplate?.is_default || false}})const onSubmit = async ("values": FormValues) => {    if (!currentValues && !editTemplate) {return;import { ContractFormValues } from "@/components/contracts/components/ContractForm",import { ContractTemplate } from "@/types/contracts",import { useContractTemplates } from "@/hooks/useContractTemplates",import { Button } from "@/components/ui/button",import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",const formSchema = null;"
+  currentValues?: ContractFormValues;export function TemplateSaveForm(): any ({onCancel,onComplete,editTemplate,currentValues}: TemplateSaveFormProps) {const [saving, setSaving] = useState(false)const { createTemplate, updateTemplate }  = useContractTemplates()const form = useForm<FormValues>({"resolver": zodResolver(formSchema),"defaultValues": {"title": editTemplate?.title || '',"isDefault": editTemplate?.is_default || false})const onSubmit = async ("values": FormValues) => {    if (!currentValues && !editTemplate) {return;import { ContractFormValues } from "@/components/contracts/components/ContractForm",import { ContractTemplate } from "@/types/contracts",import { useContractTemplates } from "@/hooks/useContractTemplates",import { Button } from "@/components/ui/button",import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",const formSchema = null;"
 import { Form;
   }
   FormControl;
@@ -49,7 +49,7 @@ interface TemplateSaveFormProps  {"on_cancel": () => void;
 export /**;
  * TemplateSaveForm - Function description;
  */;
-function TemplateSaveForm() {const [saving, set_saving] = useState (false)const { create_template, update_template } = useContractTemplates ()const form = use_form < FormValues>({"resolver": zod_resolver (form_schema),"default_values": {"title": edit_template?.title || '',"is_default": edit_template?.is_default || false}})const on_submit = async ("values": FormValues) => {    // Check condition;'
+function TemplateSaveForm() {const [saving, set_saving] = useState (false)const { create_template, update_template } = useContractTemplates ()const form = use_form < FormValues>({"resolver": zod_resolver (form_schema),"default_values": {"title": edit_template?.title || '',"is_default": edit_template?.is_default || false})const on_submit = async ("values": FormValues) => {    // Check condition;'
 }
 if ( {) {$2;
 }

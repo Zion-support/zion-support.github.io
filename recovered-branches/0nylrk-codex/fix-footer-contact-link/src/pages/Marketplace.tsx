@@ -347,7 +347,7 @@ return (;
           <div className=""lg": col - span-1">;"
             <FilterSidebar;
 
-              filters={{
+              filters={
                 }
                 selectedProductTypes,
 selectedLocations
@@ -371,7 +371,7 @@ value={searchQuery}
           {/* Sidebar Filters */}
           <div className=""lg": col - span-1">;"
             <FilterSidebar;
-              filters={{
+              filters={
                 }
                 selectedProductTypes;
                 selectedLocations;
@@ -379,7 +379,7 @@ value={searchQuery}
 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability
-              }}
+              }
               filterOptions={filterOptions}
               onFilterChange={handleFilterChange}
               onRatingChange={setSelectedRating}

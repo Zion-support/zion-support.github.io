@@ -222,7 +222,7 @@ export default function APITestingSuitePage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-indigo"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex items-start space-x-6">
                   <div className="relative">
@@ -263,7 +263,7 @@ export default function APITestingSuitePage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-indigo"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <h3 className="text-xl font-bold mb-4 text-white">{type.name}</h3>
                 <p className="text-gray-400 mb-6">{type.description}</p>
@@ -391,7 +391,7 @@ export default function APITestingSuitePage() {
               <Card
                 key={index}
                 className={`card-hover border-gradient-indigo ${plan.popular ? 'ring-2 ring-indigo-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">

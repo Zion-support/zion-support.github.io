@@ -37,7 +37,6 @@ interface FeatureCardProps {"id": number;
   "isActive": boolean;
   "onClick": () => void;
 }
-=======}
 export /**
  * FeatureCard - Function description
  */
@@ -77,7 +76,7 @@ if ( {) {
           e.preventDefault();
           onClick();
         }
-      }}
+      }
       tab_index={0}
       role="button";"
       aria - pressed={is_active}
@@ -147,7 +146,7 @@ export function FeatureCard({
           e.preventDefault($2);
           onClick()
         }
-      }}
+      }
       tabIndex={0}
       role="button"
       aria-pressed={isActive}

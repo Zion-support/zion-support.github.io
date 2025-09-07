@@ -69,6 +69,6 @@ defaultValue={filter}
 }
 
   )
-}};
+};
   )
 },

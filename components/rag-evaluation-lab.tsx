@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React from 'react','
@@ -8,10 +7,10 @@ import Link from 'next/link';'
 
 export default function RAGEvaluationLabPage() {return (<>;
 			<SEO title;
-							{ "title": 'Dashboards & Reports', "desc": 'Team dashboards, API access, and exportable reports.' }'
-						].map((f) => (<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">;"
-								<h3 className="text-lg font-semibold text-white">{f.title}</h3>;"
-								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;"
+							{ 'title': 'Dashboards & Reports', 'desc': 'Team dashboards, API access, and exportable reports.' }'
+						].map((f) => (<div key={f.title} className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'>;'
+								<h3 className='text-lg font-semibold text-white'>{f.title}</h3>;'
+								<p className='mt-2 text-sm text-gray-300'>{f.desc}</p>;'
 							</div>;
 						))}
 
@@ -23,8 +22,8 @@ title='RAG Evaluation Lab''
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.''
               {
                 }
-                "title": 'Grounding & Faithfulness''
-                "desc": 'Measure factual consistency, citation quality, and hallucination rate.''
+                'title': 'Grounding & Faithfulness''
+                'desc': 'Measure factual consistency, citation quality, and hallucination rate.''
 
               }
               {<div;
@@ -38,9 +37,9 @@ title='RAG Evaluation Lab''
                   </span>;
                 </p>;
               </div>;
-						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>;
-						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>;
-						<span className="text-gray-400">Call: +1 302 464 0950</span>;
+						<Link href='/contact' className='px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold'>Start Evaluating</Link>;
+						<a href='mailto:kleber@ziontechgroup.com' className='px-5 py-3 rounded-lg border border-white/20'>Email: kleber@ziontechgroup.com</a>;
+						<span className='text-gray-400'>Call: +1 302 464 0950</span>;
 					</div>;
 				</div>;
 			</section>;
@@ -51,7 +50,7 @@ title='RAG Evaluation Lab''
           </div>
           <div className='mt-12'>'
             <h2 className='text-2xl font-semibold'>Pricing</h2>'
-            <div className='mt-6 grid grid-cols-1 "md":grid-cols-3 gap-6'>'
+            <div className='mt-6 grid grid-cols-1 'md':grid-cols-3 gap-6'>'
               <div className='rounded-2xl border border-cyan-400/30 p-6'>'
                 <h3 className='text-xl font-bold'>Starter</h3>'
                 <p className='mt-2 text-gray-300'>'
@@ -86,13 +85,12 @@ title='RAG Evaluation Lab''
             </div>
             <p className='mt-4 text-sm text-gray-400'>'
 
-              Market "references": {' ,'
+              Market 'references': {' ,'
 }
-<<<<<<< HEAD
-    </>);					<div className="mt - 12 flex flex - wrap items-center gap-4">;
-      <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - cyan - 400 text-black font-semibold">Start Evaluating</Link>;
-      <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded-lg border border-white / 20">Email: kleber@ziontechgroup.com</a>;
-      <span className="text-gray-400">Call: +1 302 464 0950</span>;
+    </>);					<div className='mt - 12 flex flex - wrap items-center gap-4'>;
+      <Link href='/contact' className='px - 5 py - 3 rounded - lg bg - cyan - 400 text-black font-semibold'>Start Evaluating</Link>;
+      <a href='mailto:kleber@ziontechgroup.com' className='px - 5 py - 3 rounded-lg border border-white / 20'>Email: kleber@ziontechgroup.com</a>;
+      <span className='text-gray-400'>Call: +1 302 464 0950</span>;
     </div>;
     </div>;
   </section>;
@@ -135,8 +133,8 @@ title='RAG Evaluation Lab''
             <p className='mt-4 text-sm text-gray-400'>;
               Market references:{' '}
               <a;
-                className='underline "hover":text-cyan-300';'
-                href='"https"://humanloop.com';'
+                className='underline 'hover':text-cyan-300';'
+                href=''https'://humanloop.com';'
                 target='_blank';'
                 rel='noreferrer'>'
 
@@ -144,8 +142,8 @@ title='RAG Evaluation Lab''
               </a>;
               ,{' '}'
               <a;
-                className='underline "hover":text-cyan-300';'
-                href='"https"://arize.com';'
+                className='underline 'hover':text-cyan-300';'
+                href=''https'://arize.com';'
                 target='_blank';'
                 rel='noreferrer'>'
 
@@ -154,8 +152,8 @@ title='RAG Evaluation Lab''
               ,{' '}'
 
               <a,
-className='underline "hover":text-cyan-300''
-                href='"https"://promptfoo.dev''
+className='underline 'hover':text-cyan-300''
+                href=''https'://promptfoo.dev''
                 target='_blank''
                 rel='noreferrer''
               >
@@ -172,12 +170,12 @@ href='/contact''
               Start Evaluating
             </Link>
             <a,
-href='"mailto":kleber@ziontechgroup.com''
+href=''mailto':kleber@ziontechgroup.com''
               className='px-5 py-3 rounded-lg border border-white/20''
             >
-              "Email": kleber@ziontechgroup.com
+              'Email': kleber@ziontechgroup.com
             </a>
-            <span className='text-gray-400'>"Call": +1 302 464 0950</span>'
+            <span className='text-gray-400'>'Call': +1 302 464 0950</span>'
           </div>
         </div>
       </section>

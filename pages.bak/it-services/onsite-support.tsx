@@ -59,7 +59,7 @@ return (;
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+}
 }
 }
 }
@@ -101,7 +101,7 @@ export default function Onsitesupport() {return (<div>;
       <p>This component is currently under development.</p>;
     </div>;
   )}
-}}
+}
 }
 
 export default function Onsitesupport() {ursor/automate-test-improve-and-merge-code-646c;
@@ -113,8 +113,8 @@ interface OnsitesupportProps  {// Add props here as needed;
 }
 }
 
-export default function Onsitesupport() {}}
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
+export default function Onsitesupport() {}
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true 
 }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
   }
   return <div>Something went wrong.</div>;
@@ -204,8 +204,8 @@ export default function Onsitesupport(): any ({}: OnsitesupportProps) {return (<
       <h1>Onsitesupport</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  )}}
-}}
+  )}
+}
 }ursor/automate-test-improve-and-merge-code-646c;
 }
 }

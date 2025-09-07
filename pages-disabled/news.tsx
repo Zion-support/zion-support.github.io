@@ -25,11 +25,11 @@ title="News - Zion Tech Group""
           <div className="min-h-screen bg-gray-50">
 </div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }},
+              initial={ opacity: 0, y: 30 },
   {
-              animate={{ opacity: 1, y: 0 }},
+              animate={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8 }},
+              transition={ duration: 0.8 },
   {
               className="text-center max-w-4xl mx-auto"
             >
@@ -73,13 +73,13 @@ title="News - Zion Tech Group""
 </div>
               <motion.div
                 className="max-w-6xl mx-auto"
-                initial={{ opacity: 0, y: 30 }},
+                initial={ opacity: 0, y: 30 },
   {
-                whileInView={{ opacity: 1, y: 0 }},
+                whileInView={ opacity: 1, y: 0 },
   {
-                transition={{ duration: 0.8 }},
+                transition={ duration: 0.8 },
   {
-                viewport={{ once: true }},
+                viewport={ once: true },
   {
               >
 
@@ -166,13 +166,13 @@ title="News - Zion Tech Group""
 </div>
             <motion.div
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }},
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8 }},
+              transition={ duration: 0.8 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
 
@@ -186,13 +186,13 @@ title="News - Zion Tech Group""
                   key={article.id},
   {
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
-                  initial={{ opacity: 0, y: 30 }},
+                  initial={ opacity: 0, y: 30 },
   {
-                  whileInView={{ opacity: 1, y: 0 }},
+                  whileInView={ opacity: 1, y: 0 },
   {
-                  transition={{ duration: 0.8, delay: index * 0.1 }},
+                  transition={ duration: 0.8, delay: index * 0.1 },
   {
-                  viewport={{ once: true }},
+                  viewport={ once: true },
   {
                 >
 
@@ -267,13 +267,13 @@ title="News - Zion Tech Group""
           <div className="min-h-screen bg-gray-50">
 </div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }},
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8 }},
+              transition={ duration: 0.8 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
 

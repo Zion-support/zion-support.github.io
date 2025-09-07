@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 const apiFeatures = [
   {
     icon: Code,
@@ -37,9 +29,6 @@ const apiFeatures = [
     features: ['Interactive docs', 'Code examples', 'SDK libraries', 'Developer support']
   }
 ];
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function API() {
   const apiEndpoints = [
     {
@@ -191,9 +180,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             {apiFeatures.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
                 className="bg-white rounded-xl p-8 shadow-lg"
               >
                 <div className="flex items-center mb-4">
@@ -418,13 +407,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Code,
   Check,
   Globe,
@@ -560,10 +543,10 @@ export default function APIPage() {
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8 }
+                  viewport={ once: true }
                 >;
                   <div className="bg - indigo - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
                     <Shield className="w - 8 h - 8 text - indigo - 600" />;
@@ -577,10 +560,10 @@ export default function APIPage() {
                 </motion.div>;
                 <motion.div;
                   className="text - center";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: 0.1 }
+                  viewport={ once: true }
                 >;
                   <div className="bg - purple - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
                     <Code className="w - 8 h - 8 text - purple - 600" />;
@@ -594,15 +577,15 @@ export default function APIPage() {
                 </motion.div>;
                 <motion.div;
                   className="text - center";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: 0.2 }
+                  viewport={ once: true }
                   className="bg-white border border-gray-200 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8 }}
-                  viewport={{ once: true }}>;
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8 }
+                  viewport={ once: true }>;
                   <div className="flex items-center mb-4">;
                     <Check className="w-6 h-6 text-green-500 mr-3" />;
                     <h3 className="text-lg font-semibold text-gray-900">;
@@ -620,10 +603,10 @@ export default function APIPage() {
 
                 <motion&& motion.div
                   className="bg-white border border-gray-200 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-                  viewport={{ once: true }}>;
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: 0 && 0.1 }
+                  viewport={ once: true }>;
                   <div className="flex items-center mb-4">;
                     <XCircle className="w-6 h-6 text-red-500 mr-3" />;
                     <h3 className="text-lg font-semibold text-gray-900">;
@@ -643,10 +626,10 @@ export default function APIPage() {
           <div className="container mx - auto px - 4">;
             <motion.div;
               className="text - center mb - 16";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
                 Response Examples;
@@ -660,10 +643,10 @@ export default function APIPage() {
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
                 <motion.div;
                   className="bg - white border border - gray - 200 rounded - lg p - 6";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8 }
+                  viewport={ once: true }
                 >;
                   <div className="flex items - center mb - 4">;
                     <Check className="w - 6 h - 6 text - green - 500 mr - 3" />;
@@ -681,10 +664,10 @@ export default function APIPage() {
                 </motion.div>;
                 <motion.div;
                   className="bg - white border border - gray - 200 rounded - lg p - 6";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: 0.1 }
+                  viewport={ once: true }
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -704,11 +687,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api.tsx
       </div>
     </Layout>
         {/* CTA Section */}
@@ -716,10 +694,10 @@ export default function APIPage() {
           <div className="container mx - auto px - 4">;
             <motion.div;
               className="text - center";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Ready to Get Started?;
@@ -748,9 +726,6 @@ export default function APIPage() {
       </div>;
     </MainLayout>);
 }
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </main>
 </>
   );

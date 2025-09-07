@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   Search;
   Filter;
@@ -19,8 +18,6 @@
   Search,Filter,Star,TrendingUp,Zap,Brain,Cpu,Shield,Rocket,Globe,Database,Lock,Cloud,Atom,Sparkles,Target,import { motion  } from 'framer-motion';
 import {Search,Filter,Star,TrendingUp,Zap,Brain,Cpu,Shield,Rocket,Globe,Database,Lock,Cloud,Atom,Sparkles,Target,} from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target  } from 'lucide-react';
 import React, { useState, useMemo } from 'react';
-=======
-<<<<<<< HEAD
 // Filter and sort services const filteredServices = allServices .filter (service => {
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || case 'rating': return b.rating - a.rating
 case 'customers': return (<UltraAdvancedFuturisticBackground intensity="extreme" colorScheme="quantum-fusion" particleCount= {
@@ -190,9 +187,7 @@ emerging technologies, and comprehensive IT solutions </p> {
   contactInfo.address 
 }</span> </div> </div> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Contact Us Now </a> <a href="/pricing" className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300" > View Pricing </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
 }
-=======
 import React, { useState, useMemo } from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
@@ -311,15 +306,15 @@ const matches_search = service.name.toLowerCase ().includes (search_term.toLower
           <link rel="canonical" href=""https"://ziontechgroup.com / 2026 - services - showcase" />;"
         {/* Navigation */}
         {/* Hero Section */}
-              initial={{ "opacity": 0, "y": 30 }}
-              animate={{ "opacity": 1, "y": 0 }}"default":;
+              initial={ "opacity": 0, "y": 30 }
+              animate={ "opacity": 1, "y": 0 }"default":;
           return a.name.localeCompare(b.name)}
     })const categories = [;
     { "id": 'all', "name": 'All Services', "icon": Globe, "count": allServices.length },{"id": 'AI',"name": 'AI & Machine Learning',"icon": Brain,"count": allServices.filter(s => s.category.includes('AI')).length},{"id": 'Quantum';'
               }
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              animate={{ "opacity": 1, "y": 0 
+              animate={ "opacity": 1, "y": 0 
 }"default":;
           return a.name.localeCompare(b.name)}
     })const categories = [
@@ -390,13 +385,13 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
 <section className='relative z-10 pt-32 pb-16 px-4 "sm":px-6 "lg":px-8'>;'
           <div className='max-w-7xl mx-auto text-center'>;'
             <motion.div;
-              initial={{ "opacity": 0, "y": 30 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              initial={ "opacity": 0, "y": 30 
 }
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 
 }
             >;
 <h1 className='text-5xl "md":text-7xl font-bold mb-6'>;'
@@ -554,16 +549,16 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
               {filteredServices.map((service, index) => (<motion.div;
                   }
                   key={service.id}
-                  initial={{ "opacity": 0, "y": 30 }}
-                  animate={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                  initial={ "opacity": 0, "y": 30 }
+                  animate={ "opacity": 1, "y": 0 }
+                  transition={ "duration": 0.6, "delay": index * 0.1 }
 className='group';'
                 >;
-                  initial={{ "opacity": 0, "y": 30 
+                  initial={ "opacity": 0, "y": 30 
 }
-                  animate={{ "opacity": 1, "y": 0 
+                  animate={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0.6, "delay": index * 0.1 
+                  transition={ "duration": 0.6, "delay": index * 0.1 
 }
 className='group'>'
 
@@ -596,11 +591,11 @@ className='group'>'
               {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
                   }
                   key={service && service.id}
-                  initial={{ "opacity": 0, "y": 30 
+                  initial={ "opacity": 0, "y": 30 
 }
-                  animate={{ "opacity": 1, "y": 0 
+                  animate={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 
+                  transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 
 }
                   className='group'>;'
                   <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm "hover":border-cyan-500/50 transition-all duration-300 "hover":transform "hover":scale-105'>;'
@@ -618,11 +613,11 @@ className='group'>'
                         </span>;
                       )}
                   key={service.id}
-                  initial={{ "opacity": 0, "coordinate_y": 30 
+                  initial={ "opacity": 0, "coordinate_y": 30 
 }
-                  animate={{ "opacity": 1, "coordinate_y": 0 
+                  animate={ "opacity": 1, "coordinate_y": 0 
 }
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                  transition={ "duration": 0.6, "delay": index * 0.1 }
                     {/* Service Header *
 }
                     <div className="flex items - start justify-between mb-4">;"
@@ -771,9 +766,9 @@ className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-s
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
                 }
-                initial={{ "opacity": 0 }}
-                animate={{ "opacity": 1 }}{/* Contact Section */}
-                animate={{ "opacity": 1 }}{/* Contact Section *
+                initial={ "opacity": 0 }
+                animate={ "opacity": 1 }{/* Contact Section */}
+                animate={ "opacity": 1 }{/* Contact Section *
 }
         <section className='relative z-10 py-20 px-4 "sm":px-6 "lg":px-8'>;'
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 py-20 px-4 "sm":px-6 "lg":px-8">;"
@@ -798,11 +793,11 @@ className='text-center py-16'>'
 <section className='relative z-10 py-20 px-4 "sm":px-6 "lg":px-8'>;'
           <div className='max-w-4xl mx-auto text-center'>;'
             <motion.div;
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 
+              whileInView={ "opacity": 1, "y": 0 
 }
                         </span>;
                         <span className='text - gray - 400 text - sm'>;'
@@ -864,8 +859,8 @@ className='text-center py-16'>'
             {/* No Results */}
             {filtered_services.length === 0 && (<motion.div;
                 }
-                initial={{ "opacity": 0 }}
-                animate={{ "opacity": 1 
+                initial={ "opacity": 0 }
+                animate={ "opacity": 1 
 }
                 className='text - center py - 16'>'
 
@@ -887,11 +882,11 @@ className='text-center py-16'>'
           <div className='max - w-4xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 py - 20 px - 4 "sm":px-6 "lg":px-8">;"
           <div className="max - w-4xl mx-auto text-center">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 30 
+              initial={ "opacity": 0, "coordinate_y": 30 
 }
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              viewport={{ "once": true }}<a;
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "coordinate_y": 0 }
+              viewport={ "once": true }<a;
+              viewport={ "once": true 
 }<a;
                   href='/contact';'
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300 transform "hover":scale-105'>;'
@@ -920,10 +915,10 @@ className='text-center py-16'>'
               </div>;
                 <a;
                   href="/contact";"
-              transition={{ "duration": 0.8 }}
+              transition={ "duration": 0.8 }
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm';'
             >;
-              transition={{ "duration": 0.8 
+              transition={ "duration": 0.8 
 }
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'>'
 
@@ -949,8 +944,8 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 bord
                     {contactInfo.address}
             {filteredServices.length === 0 && (
               <motion.div
-                initial={{ opacity: 0}}
-                animate={{ opacity: 1}}
+                initial={ opacity: 0}
+                animate={ opacity: 1}
                 className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -965,10 +960,10 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 bord
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              viewport={{ once: true}}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
+              viewport={ once: true}
+              transition={ duration: 0.8 }
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
             >
               <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -1124,4 +1119,3 @@ href='/pricing';'
     </UltraAdvancedFuturisticBackground>)}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

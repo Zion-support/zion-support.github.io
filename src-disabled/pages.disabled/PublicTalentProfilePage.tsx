@@ -1,5 +1,5 @@
 
-              }}
+              }
             />
             {/* Placeholder for other sidebar elements */}
           </div>

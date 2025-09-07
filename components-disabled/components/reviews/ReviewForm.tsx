@@ -2,8 +2,8 @@
   categories?: {communication?: number;
     }
     qualityOfWork?: number;
-    timeliness?: number;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
-}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
+    timeliness?: number;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { 'hasError': false }static getDerivedStateFromError(error) {return { 'hasError': true 
+}componentDidCatch(error, errorInfo) {console.error('Error caught by 'boundary':', error, errorInfo)}render() {if (this.state.hasError) ;'
   }
   return <div>Something went wrong.</div>;
     }return this.props.children;
@@ -25,24 +25,24 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     }
     super(props);
-    this.state = { "hasError": false
+    this.state = { 'hasError': false
 };
   }
   static getDerivedStateFromError(error) {
 }
-return { "hasError": true,;
+return { 'hasError': true,;
 };
   }
   componentDidCatch(error, errorInfo) {
     }
-    console.error('Error caught by "boundary":', error, errorInfo);'
+    console.error('Error caught by 'boundary':', error, errorInfo);'
   }
   render() {
     }
     if (this.state.hasError) {
       }
       return <div>Something went wrong.</div>;
- </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;""
+ </div> <div> <label className='block text-sm font-medium mb-2' >Your Review</label> <textarea required /> </div> </div> <span className='pill' >Optional</span> </div> </div> <span className='pill' >Optional</span> </div> </div> <span className='pill' >Optional</span> </div> </div> <span className='pill' >Optional</span> </div> </div> <button > {;''
   submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>) ;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
@@ -90,33 +90,33 @@ const ReviewForm: React.FC < Props> = ({ initial }) => {
 }
 }</button> </form>)}
 
-type Props = {type Props = {type Props = {"initial": Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;}import React, { useState } from 'react';'
-}</button> </form>)}type Props = {type Props = {type Props = {"initial": Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;}import React, { useState } from 'react';'
- </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;"
+type Props = {type Props = {type Props = {'initial': Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;}import React, { useState } from 'react';'
+}</button> </form>)}type Props = {type Props = {type Props = {'initial': Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;}import React, { useState } from 'react';'
+ </div> <div> <label className='block text-sm font-medium mb-2' >Your Review</label> <textarea required /> </div> </div> <span className='pill' >Optional</span> </div> </div> <span className='pill' >Optional</span> </div> </div> <span className='pill' >Optional</span> </div> </div> <span className='pill' >Optional</span> </div> </div> <button > {;'
   }
   submitting ? 'Submitting...' : 'Submit Review' ;'
 }</button> </form>) 
 };
 type Props = {;
   }
-  "initial": Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>'
+  'initial': Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>'
 };import React, { useState } from 'react';'
 }</button> </form>)}
 
-type Props = {type Props = {type Props = {"initial": Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;}import React, { useState } from 'react';'
-}</button> </form>)}type Props = {type Props = {type Props = {"initial": Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;}import React, { useState } from 'react';'
- </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;"
+type Props = {type Props = {type Props = {'initial': Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;}import React, { useState } from 'react';'
+}</button> </form>)}type Props = {type Props = {type Props = {'initial': Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;}import React, { useState } from 'react';'
+ </div> <div> <label className='block text-sm font-medium mb-2' >Your Review</label> <textarea required /> </div> </div> <span className='pill' >Optional</span> </div> </div> <span className='pill' >Optional</span> </div> </div> <span className='pill' >Optional</span> </div> </div> <span className='pill' >Optional</span> </div> </div> <button > {;'
   }
   submitting ? 'Submitting...' : 'Submit Review' ;'
 }</button> </form>) 
 };
 type Props = {;
   }
-  "initial": Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>'
+  'initial': Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>'
 };import React, { useState } from 'react';'
 import StarRating from './StarRating';'
 
-export type ReviewFormValues = {"projectId": string,"fromRole": 'client' | 'talent',"fromId": string,"rating": number,"text": string,categories?: {communication?: number;'
+export type ReviewFormValues = {'projectId': string,'fromRole': 'client' | 'talent','fromId': string,'rating': number,'text': string,categories?: {communication?: number;'
     }
     qualityOfWork?: number;
     timeliness?: number;}
@@ -124,11 +124,11 @@ export type ReviewFormValues = {"projectId": string,"fromRole": 'client' | 'tale
   }anonymous?: boolean;
 }
 
-type Props = {"initial": Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;'
+type Props = {'initial': Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;'
 
 }
 
-const "ReviewForm": React.FC<Props> = ({ initial   ,;
+const 'ReviewForm': React.FC<Props> = ({ initial   ,;
 }) => {
 
 
@@ -139,7 +139,7 @@ import React, { useState } from 'react';'
 
 export type ReviewFormValues = any;
 
-const "ReviewForm": React.FC<Props> = ({ initial   ,;
+const 'ReviewForm': React.FC<Props> = ({ initial   ,;
 }) => {
 
 
@@ -155,11 +155,11 @@ const [rating, setRating] = useState(0);
   anonymous?: boolean;
 }
 
-type Props = {"initial": Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;'
+type Props = {'initial': Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;'
 
 }
 
-const "ReviewForm": React.FC < Props> = ({ initial   ,;
+const 'ReviewForm': React.FC < Props> = ({ initial   ,;
 }) => {
 
 
@@ -169,22 +169,22 @@ const "ReviewForm": React.FC < Props> = ({ initial   ,;
 const [rating, set_rating] = useState (0)const [text, set_text] = useState ('')const [anonymous, set_anonymous] = useState (false)const [communication, set_communication] = useState < number | undefined>()const [qualityOfWork, setQualityOfWork] = useState < number | undefined>()const [timeliness, set_timeliness] = useState < number | undefined>()const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState < boolean>(false)const [submitting, set_submitting] = useState (false)const [message, set_message]  = useState < string | null>(null)async /**;'
  * handle_submit - Function description;
  */;
-function handle_submit() {e.prevent_default ()set_submitting (true)set_message (null),try {const res = await fetch ('/api / reviews / submit', {"method": 'POST',"headers": { 'Content - Type': 'application / json','
-},"body": JSON.stringify ({"project_id": initial.project_id,"from_role": initial.from_role,"from_id": initial.from_id,rating,text,anonymous;
+function handle_submit() {e.prevent_default ()set_submitting (true)set_message (null),try {const res = await fetch ('/api / reviews / submit', {'method': 'POST','headers': { 'Content - Type': 'application / json','
+},'body': JSON.stringify ({'project_id': initial.project_id,'from_role': initial.from_role,'from_id': initial.from_id,rating,text,anonymous;
   }
-  const res = await fetch('/api/reviews/submit', {"method": 'POST';'
+  const res = await fetch('/api/reviews/submit', {'method': 'POST';'
         }
-        "headers": { 'Content-Type': 'application/json','
+        'headers': { 'Content-Type': 'application/json','
 }
-        "body": JSON.stringify({"projectId": initial.projectId,"fromRole": initial.fromRole,"fromId": initial.fromId,rating,text,anonymous,"categories": {communication;
+        'body': JSON.stringify({'projectId': initial.projectId,'fromRole': initial.fromRole,'fromId': initial.fromId,rating,text,anonymous,'categories': {communication;
             }
             qualityOfWork;
             timeliness;}
             wouldWorkWithAgain;}
           }
-        })})setMessage('Review submitted! Pending admin approval.')async function handleSubmit(): any ("e": React && React.FormEvent) {e && e.preventDefault()setSubmitting(true)setMessage(null),try {const res = await fetch('/api/reviews/submit', {"method": 'POST',"headers": { 'Content-Type': 'application/json','
-},"body": JSON && JSON.stringify({"projectId": initial && initial.projectId,"fromRole": initial && initial.fromRole,"fromId": initial && initial.fromId,rating,text,anonymous,"categories": {communication,qualityOfWork,timeliness,wouldWorkWithAgain}})};
-  const data = await res && res.json()if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit')setMessage('Review submitted! Pending admin approval.')} catch ("err": any) {setMessage(err && err.message)} finally {setSubmitting(false)}'
+        })})setMessage('Review submitted! Pending admin approval.')async function handleSubmit(): any ('e': React && React.FormEvent) {e && e.preventDefault()setSubmitting(true)setMessage(null),try {const res = await fetch('/api/reviews/submit', {'method': 'POST','headers': { 'Content-Type': 'application/json','
+},'body': JSON && JSON.stringify({'projectId': initial && initial.projectId,'fromRole': initial && initial.fromRole,'fromId': initial && initial.fromId,rating,text,anonymous,'categories': {communication,qualityOfWork,timeliness,wouldWorkWithAgain})};
+  const data = await res && res.json()if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit')setMessage('Review submitted! Pending admin approval.')} catch ('err': any) {setMessage(err && err.message)} finally {setSubmitting(false)}'
  
 }
  ;
@@ -192,7 +192,7 @@ function handle_submit() {e.prevent_default ()set_submitting (true)set_message (
       <div>;
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />;'
       </div>;<div>;
-        <label className = 'block text-sm font-medium mb-2'>Your Review</label>          "categories": ;'
+        <label className = 'block text-sm font-medium mb-2'>Your Review</label>          'categories': ;'
   const data = await res.json ()if (throw new Error (data.error || 'Failed to submit')) {$2'
 };
 
@@ -203,7 +203,7 @@ type Props = {
 }
 type Props = {;
   }
-  "initial": Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;'
+  'initial': Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;'
 
     wouldWorkWithAgain?: boolean;
   }
@@ -212,9 +212,9 @@ type Props = {;
 
 type Props = {
   }
-  "initial": Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;'
+  'initial': Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;'
 
-const "ReviewForm": React.FC < Props> = ({ initial   ,;
+const 'ReviewForm': React.FC < Props> = ({ initial   ,;
 }) => {
 
 
@@ -253,19 +253,19 @@ function handle_submit() {
       }
       const res = await fetch ('/api / reviews / submit', {'
         }
-        "method": 'POST','
-        "headers": { 'Content - Type': 'application / json','
+        'method': 'POST','
+        'headers': { 'Content - Type': 'application / json','
 },
-        "body": JSON.stringify ({
+        'body': JSON.stringify ({
           }
-          "project_id": initial.project_id,
-          "from_role": initial.from_role,
-          "from_id": initial.from_id,
+          'project_id': initial.project_id,
+          'from_role': initial.from_role,
+          'from_id': initial.from_id,
           rating,
           text,
           anonymous,
 
-          "categories": {
+          'categories': {
             }
             communication,
 qualityOfWork
@@ -275,7 +275,7 @@ wouldWorkWithAgain
         })
 
 
-  async function handleSubmit(): any ("e": React && React.FormEvent) {;
+  async function handleSubmit(): any ('e': React && React.FormEvent) {;
     }
     e && e.preventDefault();
     setSubmitting(true);
@@ -291,18 +291,18 @@ wouldWorkWithAgain
 
 const res = await fetch('/api/reviews/submit', {;'
         }
-        "method": 'POST',;'
-        "headers": { 'Content-Type': 'application/json','
+        'method': 'POST',;'
+        'headers': { 'Content-Type': 'application/json','
 },;
-        "body": JSON && JSON.stringify({;
+        'body': JSON && JSON.stringify({;
           }
-          "projectId": initial && initial.projectId,;
-          "fromRole": initial && initial.fromRole,;
-          "fromId": initial && initial.fromId,;
+          'projectId': initial && initial.projectId,;
+          'fromRole': initial && initial.fromRole,;
+          'fromId': initial && initial.fromId,;
           rating,;
           text,;
           anonymous,;
-          "categories": {;
+          'categories': {;
             }
             communication,;
             qualityOfWork,;
@@ -322,7 +322,7 @@ const data = await res && res.json();
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');'
 
       setMessage('Review submitted! Pending admin approval.');'
-    } catch ("err": any) {;
+    } catch ('err': any) {;
       }
       setMessage(err && err.message);
     } finally {;
@@ -335,7 +335,7 @@ const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {'
   $2
 }
-      set_message ('Review submitted! Pending admin approval.')} catch ("err": any) {set_message (err.message)} finally {set_submitting (false)}'
+      set_message ('Review submitted! Pending admin approval.')} catch ('err': any) {set_message (err.message)} finally {set_submitting (false)}'
   }
   return (<form on_submit={handle_submi
 } className='space - y-6'>;'
@@ -343,19 +343,19 @@ const data = await res.json ();
         <label className='block text - sm font - medium mb - 2'>Overall Rating</label>        <StarRating value={rating} on_change={set_rating} />;'
       </div>;
       <div>;
-        <label className='block text - sm font - medium mb - 2'>Your Review</label>          "categories": {communication;'
+        <label className='block text - sm font - medium mb - 2'>Your Review</label>          'categories': {communication;'
             }
             qualityOfWork;
             timeliness;
-            wouldWorkWithAgain}})})}
+            wouldWorkWithAgain})})}
   }
   return (}
-        <label className='block text - sm font - medium mb - 2'>Your Review</label>          "categories": {'
+        <label className='block text - sm font - medium mb - 2'>Your Review</label>          'categories': {'
             }
             communication;
             qualityOfWork;}
             timeliness;}
-            wouldWorkWithAgain}})});
+            wouldWorkWithAgain})});
 
     }
   }
@@ -364,19 +364,19 @@ return (;
     }
   }
   return (<div>;
-        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>;"
+        <label className='block text-sm font-medium mb-2' htmlFor='input-Overall Rating'>Overall Rating</label>;'
         <StarRating value={rating} onChange={setRating} />;
       </div>;
       <div>;
     <form onSubmit={handleSubmit} className='space-y-6'>;'
       <div>;
-        <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">;"
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className='space-y-6'>;'
       <div>;
-        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>;"
+        <label className='block text-sm font-medium mb-2' htmlFor='input-Overall Rating'>Overall Rating</label>;'
         <StarRating value={rating} onChange={setRating} />;
       </div>;<div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>;'
-    } catch ("err": any) {setMessage(err.message)} finally {setSubmitting(false)}
+    } catch ('err': any) {setMessage(err.message)} finally {setSubmitting(false)}
   }
   return (<form onSubmit={handleSubmi
 } className='space-y-6'>;'
@@ -387,9 +387,9 @@ return (;
       <div>;
 <label className='block text-sm font-medium mb-2'>Your Review</label>;'
         <textarea;
-          className='w-full rounded-md border border-gray-300 p-3 "focus":outline-none "focus":ring-2 "focus":ring-blue-500';'
+          className='w-full rounded-md border border-gray-300 p-3 'focus':outline-none 'focus':ring-2 'focus':ring-blue-500';'
         <textarea,
-className='w-full rounded-md border border-gray-300 p-3 "focus": outline-none "focus":ring-2 "focus":ring-blue-500''
+className='w-full rounded-md border border-gray-300 p-3 'focus': outline-none 'focus':ring-2 'focus':ring-blue-500''
           rows={5}
           value={text}
           onChange={e => { return setText(e && e.target.value
@@ -399,7 +399,7 @@ className='w-full rounded-md border border-gray-300 p-3 "focus": outline-none "f
           onChange={e => { return setText(e && e.target.value)}          required; }
 
         <textarea,
-className="w-full rounded-md border border-gray-300 p-3 "focus": outline-none "focus":ring-2 "focus":ring-blue-500""
+className='w-full rounded-md border border-gray-300 p-3 'focus': outline-none 'focus':ring-2 'focus':ring-blue-500''
           rows={5}
           value={text}
 
@@ -412,9 +412,9 @@ id='anonymous''
           onChange={e => { return setAnonymous(e && e.target.checked
 }
         />; }
-      </div>;<label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>;"
+      </div>;<label className='block text-sm font-medium mb-2' htmlFor='input-Your Review'>Your Review</label>;'
         <textarea;
-          className="w-full rounded-md border border-gray-300 p-3 "focus": outline-none "focus":ring-2 "focus":ring-blue-500";"
+          className='w-full rounded-md border border-gray-300 p-3 'focus': outline-none 'focus':ring-2 'focus':ring-blue-500';'
           rows={5}
           value={text}onChange={e => { return setText(e.target.value)}
           required; }
@@ -426,7 +426,7 @@ id='anonymous''
           type='checkbox';'
           checked={anonymous}onChange={e => { return setAnonymous(e && e.target.checked)}
         />; }
-        <label htmlFor='anonymous'>Submit anonymously</label>;<div className='grid "md":grid-cols-2 gap-4'>;'
+        <label htmlFor='anonymous'>Submit anonymously</label>;<div className='grid 'md':grid-cols-2 gap-4'>;'
         <div className='enhanced-card'>;'
           <div className='flex items-center justify-between mb-2'>;'
             <span className='text-sm'>Communication</span>;<StarRating;'
@@ -438,22 +438,22 @@ id='anonymous''
   }
   return (<form on_submit={handle_submit} className='space - y-6'>;'
       <div>;
-        <label className='block text - sm font - medium mb - 2'>Overall Rating</label>    <form on_submit={handle_submit} className="space - y-6">;"
+        <label className='block text - sm font - medium mb - 2'>Overall Rating</label>    <form on_submit={handle_submit} className='space - y-6'>;'
       <div>;
-        <label className="block text - sm font - medium mb - 2" html_for="input - Overall Rating">Overall Rating</label>;"
+        <label className='block text - sm font - medium mb - 2' html_for='input - Overall Rating'>Overall Rating</label>;'
         <StarRating value={rating} on_change={set_rating} />;
       </div>;
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>;'
         <textarea;
-          className='w - full rounded - md border border - gray - 300 p - 3 "focus":outline - none "focus":ring - 2 "focus":ring - blue - 500';'
+          className='w - full rounded - md border border - gray - 300 p - 3 'focus':outline - none 'focus':ring - 2 'focus':ring - blue - 500';'
           rows={5}
           value={text}
           on_change={e => { return set_text (e.target.value)}          required; }
         />;
       </div>;
         <textarea;
-          className="w - full rounded - md border border - gray - 300 p - 3 "focus": outline - none "focus":ring - 2 "focus":ring - blue - 500";"
+          className='w - full rounded - md border border - gray - 300 p - 3 'focus': outline - none 'focus':ring - 2 'focus':ring - blue - 500';'
           rows={5}
           value={text}
           on_change={(e) => set_text (e.target.value)}
@@ -468,7 +468,7 @@ id='anonymous''
           on_change={e => { return set_anonymous (e.target.checked)}
         />; }
         <label html_for='anonymous'>Submit anonymously</label>;'
-      <div className='grid "md":grid - cols - 2 gap - 4'>;'
+      <div className='grid 'md':grid - cols - 2 gap - 4'>;'
         <div className='enhanced - card'>;'
           <div className='flex items - center justify - between mb - 2'>;'
             <span className='text - sm'>Communication</span>;'
@@ -516,8 +516,8 @@ id='anonymous''
           </div>;
           <span className='pill'>Optional</span>        </div>;'
       </div>;<button;
-        type="submit";"
-        className="enhanced-button enhanced-button-primary";"
+        type='submit';'
+        className='enhanced-button enhanced-button-primary';'
         disabled={submitting}
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}'
@@ -550,8 +550,8 @@ export default ReviewForm;    </form>);
   )disabled={submitting}
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}<button;'
-        type="submit";"
-        className="enhanced-button enhanced-button-primary";"
+        type='submit';'
+        className='enhanced-button enhanced-button-primary';'
               onChange={e => { return setWouldWorkWithAgain(e.target.checked)}
             />; }
           </div>;

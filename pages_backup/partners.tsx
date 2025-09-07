@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/partners.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/partners.tsx
 import React from 'react';
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -170,13 +159,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 const Page = () => {
   return (
     <MainLayout 
-      title="Page - Zion Tech Group"
-      description="Zion Tech Group page"
+      title='Page - Zion Tech Group'
+      description='Zion Tech Group page'
     >
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
+      <div className='min-h-screen bg-gray-50'>
+        <div className='max-w-7xl mx-auto px-4 py-20'>
+          <h1 className='text-4xl font-bold text-gray-900 mb-6'>Page</h1>
+          <p className='text-xl text-gray-600'>Coming soon...</p>
         </div>
       </div>
     </MainLayout>
@@ -184,13 +173,7 @@ const Page = () => {
 };
 
 export default Page;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/partners.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Handshake, Globe, Rocket, Brain, Atom, Shield;
@@ -246,13 +229,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
 className='mb-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
               Strategic Partners
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
@@ -261,16 +244,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
 className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               Join our ecosystem of technology leaders, innovators, and industry
               experts to create transformative solutions that shape the future
               of computing.
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Building the future of technology through strategic partnerships and collaboration
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
@@ -287,10 +270,10 @@ className='mb-12'
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
 className='text-center'
               >
                 <div className='w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4'>
@@ -302,33 +285,33 @@ className='text-center'
                 <div className='text-white/70'>{stat.label}</div>
               </motion.div>
             ))}
-          name="description"
-          content="Join our partner ecosystem and grow your business with Zion Tech Group. Technology, solution, and channel partnerships available."
+          name='description'
+          content='Join our partner ecosystem and grow your business with Zion Tech Group. Technology, solution, and channel partnerships available.'
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
 
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <main className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
-            <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+        <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32'>
+            <div className='text-center'>
+              <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6'>
                 Partner With Us
               </h1>
-              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
+              <p className='text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8'>
                 Join our ecosystem of innovative partners and grow your business
                 with cutting-edge technology solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link href="/contact">
-                  <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-lg transition-colors">
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+                <Link href='/contact'>
+                  <button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-lg transition-colors'>
                     Become a Partner
-                    <ArrowRight className="w-5 h-5 ml-2 inline" />
+                    <ArrowRight className='w-5 h-5 ml-2 inline' />
                   </button>
                 </Link>
-                <Link href="#benefits">
-                  <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold rounded-lg transition-colors">
+                <Link href='#benefits'>
+                  <button className='border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold rounded-lg transition-colors'>
                     Learn More
                   </button>
                 </Link>
@@ -338,37 +321,37 @@ className='text-center'
         </section>
 
         {/* Partnership Types */}
-        <section className="py-20 sm:py-32">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+        <section className='py-20 sm:py-32'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
                 Partnership Types
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
                 Choose the partnership model that best fits your business goals
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
               {partnerTypes.map((type, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow"
+                  className='bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow'
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <type.icon className="w-8 h-8 text-white" />
+                  <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6'>
+                    <type.icon className='w-8 h-8 text-white' />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                  <h3 className='text-2xl font-bold text-gray-900 mb-4 text-center'>
                     {type.title}
                   </h3>
-                  <p className="text-gray-600 mb-6 text-center">
+                  <p className='text-gray-600 mb-6 text-center'>
                     {type.description}
                   </p>
-                  <ul className="space-y-3">
+                  <ul className='space-y-3'>
                     {type.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{benefit}</span>
+                      <li key={benefitIndex} className='flex items-center'>
+                        <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />
+                        <span className='text-gray-700'>{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -379,26 +362,26 @@ className='text-center'
         </section>
 
         {/* Current Partners */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+        <section className='py-20 bg-white'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
                 Our Partners
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
                 Trusted by leading technology companies worldwide
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {currentPartners.map((partner, index) => (
                 <div
                   key={index}
-                  className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow"
+                  className='bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow'
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                      <Building className="w-6 h-6 text-white" />
+                  <div className='flex items-center justify-between mb-4'>
+                    <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center'>
+                      <Building className='w-6 h-6 text-white' />
                     </div>
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-semibold ${
@@ -412,13 +395,13 @@ className='text-center'
                       {partner.tier}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className='text-xl font-bold text-gray-900 mb-2'>
                     {partner.name}
                   </h3>
-                  <p className="text-blue-600 font-semibold mb-2">
+                  <p className='text-blue-600 font-semibold mb-2'>
                     {partner.category}
                   </p>
-                  <p className="text-gray-600 text-sm">{partner.description}</p>
+                  <p className='text-gray-600 text-sm'>{partner.description}</p>
                 </div>
               ))}
             </div>
@@ -426,27 +409,27 @@ className='text-center'
         </section>
 
         {/* Partnership Benefits */}
-        <section id="benefits" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+        <section id='benefits' className='py-20 bg-gray-50'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
                 Partnership Benefits
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
                 Why partner with Zion Tech Group?
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {partnershipBenefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                <div key={index} className='text-center'>
+                  <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+                    <benefit.icon className='w-8 h-8 text-white' />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className='text-xl font-bold text-gray-900 mb-3'>
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600">{benefit.description}</p>
+                  <p className='text-gray-600'>{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -454,29 +437,29 @@ className='text-center'
         </section>
 
         {/* Partnership Process */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+        <section className='py-20 bg-white'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
                 Partnership Process
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
                 How to become a partner in 4 simple steps
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {partnershipProcess.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">
+                <div key={index} className='text-center'>
+                  <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+                    <span className='text-2xl font-bold text-white'>
                       {step.step}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className='text-xl font-bold text-gray-900 mb-3'>
                     {step.title}
                   </h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  <p className='text-gray-600'>{step.description}</p>
                 </div>
               ))}
             </div>
@@ -484,25 +467,25 @@ className='text-center'
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+        <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
               Ready to Partner With Us?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
               Join our partner ecosystem and unlock new opportunities for growth
               and innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/contact">
-                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+              <Link href='/contact'>
+                <button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg'>
                   Start Partnership Discussion
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  <ArrowRight className='w-5 h-5 ml-2 inline' />
                 </button>
               </Link>
               <a
-                href="mailto:partners@ziontechgroup.com"
-                className="text-white hover:text-blue-200 transition-colors"
+                href='mailto:partners@ziontechgroup.com'
+                className='text-white hover:text-blue-200 transition-colors'
               >
                 partners@ziontechgroup.com
               </a>
@@ -515,10 +498,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
 className='text-center mb-16'
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
@@ -534,15 +517,15 @@ className='text-center mb-16'
             {partnershipTypes.map((type, index) => (
               <motion.div
                 key={type.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-cyan-400" />
+                <div className='w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                  <stat.icon className='w-8 h-8 text-cyan-400' />
                 </div>
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {type.title}
@@ -569,15 +552,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <h2 className='text-4xl font-bold text-white mb-6'>Partnership Types</h2>
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>
               We offer various partnership models to meet your business objectives and growth goals
             </p>
           </motion.div>
@@ -603,15 +586,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={type && type.title}
 
 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                viewport={ once: true }
 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
-                  <type.icon className="w-8 h-8 text-white" />
+                  <type.icon className='w-8 h-8 text-white' />
                 </div>
                   ))}
                 </ul>;
@@ -629,19 +612,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
       {/* Current Partners */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
 
 
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <h2 className='text-4xl font-bold text-white mb-6'>Our Partners</h2>
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>
               Leading technology companies and organizations that trust us to deliver innovative solutions
             </p>
           </motion.div>
@@ -661,17 +644,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={partner && partner.name}
 
 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                viewport={ once: true }
 
 
               >
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
+                <div className='p-6'>
+                  <div className='flex items-center gap-3 mb-4'>
                     <div className={`w-12 h-12 bg-gradient-to-br ${partner.color} rounded-xl flex items-center justify-center`}>
-                      <partner.icon className="w-6 h-6 text-white" />
+                      <partner.icon className='w-6 h-6 text-white' />
                     </div>
                     <div className='flex items-center gap-2'>
                       <span className='text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full'>
@@ -719,9 +702,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </motion && motion.div>;
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center gap-1"
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center gap-1'
                     >
                       Visit Website
                       <ExternalLink className='w-3 h-3' />
@@ -737,16 +720,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
 <h2 className='text-4xl font-bold text-white mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Partner with Us?
             </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
               Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -765,13 +748,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
+}</div> </div> </section> > <h2 className='text-4xl font-bold text-white mb-6' >Partnership Types</h2> <p className='text-xl text-white/70 max-w-3xl mx-auto' > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
 }</ul> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) ) 
-}</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) ) 
+}</div> </div> </section> > <h2 className='text-4xl font-bold text-white mb-6' >Our Partners</h2> <p className='text-xl text-white/70 max-w-3xl mx-auto' > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) ) 
+}</ul> </div> <div className='flex items-center justify-between' > <a > Visit Website <ExternalLink className='w-3 h-3' /> </Link> <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105' > Learn More </button> </div> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Ready to Partner with Us?;
             </h2>;
@@ -793,10 +776,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <EnhancedFooter />;
     </div>;
   ),;
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion && motion.div> </li>) ) ;
+}</div> </div> </section> > <h2 className='text-4xl font-bold text-white mb-6' >Partnership Types</h2> <p className='text-xl text-white/70 max-w-3xl mx-auto' > We offer various partnership models to meet your business objectives and growth goals </p> </motion && motion.div> </li>) ) ;
 }</ul> </motion && motion.div>) ) ;
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion && motion.div> </span> </div> </div> </li>) ) ;
-}</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion && motion.div>) ) ;
+}</div> </div> </section> > <h2 className='text-4xl font-bold text-white mb-6' >Our Partners</h2> <p className='text-xl text-white/70 max-w-3xl mx-auto' > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion && motion.div> </span> </div> </div> </li>) ) ;
+}</ul> </div> <div className='flex items-center justify-between' > <a > Visit Website <ExternalLink className='w-3 h-3' /> </Link> <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105' > Learn More </button> </div> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
   {
   opacity: 0, y: 30
@@ -812,13 +795,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
   once: true 
 
-}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+}> <h2 className='text-4xl font-bold text-white mb-6' > Ready to Partner with Us? </h2> <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto' > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10' > Download Partnership Guide </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/partners.tsx
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

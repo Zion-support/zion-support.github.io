@@ -72,13 +72,13 @@ setCountedValues("prev": "> ({...prev",[target]: "Math.floor (current) "}) ) }, 
         {/* Section Header */"}"
         <motion.div;
           ref={ref}
-          initial = {{ "opacity": "0","y": "3 0;"
-"}}"
+          initial = { "opacity": "0","y": "3 0;"
+"}"
           animate={controls}
-          variants = {{"visible": "{"opacity": 1","y": "0","transition": "{"duration": 0.6;"
+          variants = {"visible": "{"opacity": 1","y": "0","transition": "{"duration": 0.6;"
 "}"
             }
-          }}";"
+          }";"
           className="text-center mb-16";"
 ";"
           <h2 className="text-4xl "sm": "tex t-5xl font-bold text-white mb-6">;"
@@ -93,36 +93,36 @@ setCountedValues("prev": "> ({...prev",[target]: "Math.floor (current) "}) ) }, 
           {stats.map((stat", index)  => (<motion.div;"
               }
               key={stat.id}
-              initial = {{ "opacity": "0","y": "3 0;"
-"}}"
+              initial = { "opacity": "0","y": "3 0;"
+"}"
               animate={controls}
-              variants = {{"visible": "{"opacity": 1","y": "0","transition": "{"duration": 0.6","delay": "inde x * 0.1;"
+              variants = {"visible": "{"opacity": 1","y": "0","transition": "{"duration": 0.6","delay": "inde x * 0.1;"
 "}"
                 }
-              }}";"
+              }";"
               className="group relative";"
               <motion.div";"
                 className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden";"
-                whileHover={{"y": "-10","scale": "1.02","borderColor": "`rgba(34", 221, 210,`;`  }
-  0.5)`;`}}
-                transition={{ "duration": "0.3 "}}{/* Background gradient overlay */}`;`                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-"hover": "opacit y-10 transition-opacity duration-300`"}></div>;"                {/* Icon */}
-                <motion.div`;`"className": "{`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient"} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}`                  whileHover={{"rotate": "36 0","scale": "1.1;"
-"}}"
-                  transition={{ "duration": "0.6 "}}"
+                whileHover={"y": "-10","scale": "1.02","borderColor": "`rgba(34", 221, 210,`;`  }
+  0.5)`;`}
+                transition={ "duration": "0.3 "}{/* Background gradient overlay */}`;`                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-"hover": "opacit y-10 transition-opacity duration-300`"}></div>;"                {/* Icon */}
+                <motion.div`;`"className": "{`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient"} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}`                  whileHover={"rotate": "36 0","scale": "1.1;"
+"}"
+                  transition={ "duration": "0.6 "}"
 `;`                  <stat.icon className={`w-10 h-10 text-${stat.color}`} />;`                </motion.div>;
                 {/* Value */}
                 <motion.div";"
                   className="mb-4 relative z-10";"
-                  initial={{ "scale": "0.8 "}}"
-                  animate={{ "scale": "1 "}}"
-                  transition = {{ "duration": 0.5,"delay": inde x * 0.1;
-}}
+                  initial={ "scale": "0.8 "}"
+                  animate={ "scale": "1 "}"
+                  transition = { "duration": 0.5,"delay": inde x * 0.1;
+}
                 >";"
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">';'
                     {countedValues[stat.value] || 0}';';'
                     {stat.value.includes('%') && '%'}';';'
   { "duration": "0.5","delay": "inde x * 0.1;"
-"}}"
+"}"
                 >";"
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;"
 setCountedValues("prev":  > ({...prev,[target]: Math.floor (current) }) ) }, 16)return timer}useEffect(() => {// "TODO": Add dependencies if needed;
@@ -139,13 +139,13 @@ setCountedValues("prev":  > ({...prev,[target]: Math.floor (current) }) ) }, 16)
         {/* Section Header */}
         <motion.div;
           ref={ref}
-          initial = {{ "opacity": 0,"y": 3 0;
-}}
+          initial = { "opacity": 0,"y": 3 0;
+}
           animate={controls}
-          variants = {{"visible": {"opacity": 1,"y": 0,"transition": {"duration": 0.6;
+          variants = {"visible": {"opacity": 1,"y": 0,"transition": {"duration": 0.6;
 }
             }
-          }}";"
+          }";"
           className="text-center mb-16";"
 ";"
           <h2 className="text-4xl "sm": tex t-5xl font-bold text-white mb-6">;"
@@ -160,31 +160,31 @@ setCountedValues("prev":  > ({...prev,[target]: Math.floor (current) }) ) }, 16)
           {stats.map((stat, index)  => (<motion.div;
               }
               key={stat.id}
-              initial = {{ "opacity": 0,"y": 3 0;
-}}
+              initial = { "opacity": 0,"y": 3 0;
+}
               animate={controls}
-              variants = {{"visible": {"opacity": 1,"y": 0,"transition": {"duration": 0.6,"delay": inde x * 0.1;
+              variants = {"visible": {"opacity": 1,"y": 0,"transition": {"duration": 0.6,"delay": inde x * 0.1;
 }
                 }
-              }}";"
+              }";"
               className="group relative";"
               <motion.div";"
                 className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden";"
-                whileHover={{"y": -10,"scale": 1.02,"borderColor": `rgba(34, 221, 210,`;`  }
-  0.5)`;`}}
-                transition={{ "duration": 0.3 }}
+                whileHover={"y": -10,"scale": 1.02,"borderColor": `rgba(34, 221, 210,`;`  }
+  0.5)`;`}
+                transition={ "duration": 0.3 }
                 {/* Background gradient overlay */}`;`                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-"hover": opacit y-10 transition-opacity duration-300`}></div>;`                {/* Icon */}
-                <motion.div`;`"className": {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}`                  whileHover={{"rotate": 36 0,"scale": 1.1;
-}}
-                  transition={{ "duration": 0.6 }}
+                <motion.div`;`"className": {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}`                  whileHover={"rotate": 36 0,"scale": 1.1;
+}
+                  transition={ "duration": 0.6 }
 `;`                  <stat.icon className={`w-10 h-10 text-${stat.color}`} />;`                </motion.div>;
                 {/* Value */}
                 <motion.div";"
                   className="mb-4 relative z-10";"
-                  initial={{ "scale": 0.8 }}
-                  animate={{ "scale": 1 }}
-                  transition = {{ "duration": 0.5,"delay": inde x * 0.1;
-}}
+                  initial={ "scale": 0.8 }
+                  animate={ "scale": 1 }
+                  transition = { "duration": 0.5,"delay": inde x * 0.1;
+}
                 >";"
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;"
                     {countedValues[stat.value] || 0}
@@ -212,16 +212,16 @@ setCountedValues("prev":  > ({...prev,[target]: Math.floor (current) }) ) }, 16)
         </div>;
         {/* Bottom Achievement Section */}
         <motion.div;
-          initial = {{ "opacity": "0","y": "3 0 "}}          animate={controls}"
-          variants = {{"visible": "{"opacity": 1","y": "0","transition": "{"duration": 0.6","delay": "0.6"}            }"
-          }}";"
+          initial = { "opacity": "0","y": "3 0 "}          animate={controls}"
+          variants = {"visible": "{"opacity": 1","y": "0","transition": "{"duration": 0.6","delay": "0.6"}            }"
+          }";"
           className="mt-16";"
 ";"
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 "lg": "p-12 text-center">;"
             <motion.div";"
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6";"
-              whileHover={{ "rotate": 36 0 "}}"
-              transition={{ "duration": "0.6 "}}"
+              whileHover={ "rotate": 36 0 "}"
+              transition={ "duration": "0.6 "}"
 ";"
               <Award className="w-10 h-10 text-white" />            </motion.div>;"
 ";"
@@ -245,16 +245,16 @@ setCountedValues("prev":  > ({...prev,[target]: Math.floor (current) }) ) }, 16)
                 <div className="text-gray-300">Client Retention</div>;"
               </div>;
         <motion.div;
-          initial = {{ "opacity": 0,"y": 3 0 }}          animate={controls}
-          variants = {{"visible": {"opacity": 1,"y": 0,"transition": {"duration": 0.6,"delay": 0.6}            }
-          }}";"
+          initial = { "opacity": 0,"y": 3 0 }          animate={controls}
+          variants = {"visible": {"opacity": 1,"y": 0,"transition": {"duration": 0.6,"delay": 0.6}            }
+          }";"
           className="mt-16";"
 ";"
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 "lg":p-12 text-center">;"
             <motion.div";"
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6";"
-              whileHover={{ "rotate": 36 0 }}
-              transition={{ "duration": 0.6 }}
+              whileHover={ "rotate": 36 0 }
+              transition={ "duration": 0.6 }
 ";"
               <Award className="w-10 h-10 text-white" />            </motion.div>;"
 ";"

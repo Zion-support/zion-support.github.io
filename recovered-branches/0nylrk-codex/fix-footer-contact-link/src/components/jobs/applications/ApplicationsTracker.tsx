@@ -214,7 +214,7 @@ return (;
           Not Selected;
         </Button>;
       </div>;
-}}
+}
       </div>
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">

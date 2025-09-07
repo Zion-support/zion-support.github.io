@@ -26,7 +26,7 @@ export default function TalentDirectory() {
                               Math.min(totalPages, currentPage + 1)
                             )
 origin/cursor/automate-test-improve-and-merge-code-2533
-                          }}
+                          }
                         />
                       </PaginationItem>
                     </PaginationContent>
@@ -38,18 +38,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
-              <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="font-bold text-white">Filter & Sort</h3>
+            <div className='fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex'>
+              <div className='w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto'>
+                <div className='flex justify-between items-center mb-4'>
+                  <h3 className='font-bold text-white'>Filter & Sort</h3>
                   <Button
-                    variant="ghost"
-                    size="sm"
+                    variant='ghost'
+                    size='sm'
                     onClick={() => setIsMobileFilterOpen(false)}
-                    className="text-zion-slate-light h-8 w-8 p-0"
+                    className='text-zion-slate-light h-8 w-8 p-0'
                   >
-                    <X className="h-4 w-4" />
-                    <span className="sr-only">Close</span>
+                    <X className='h-4 w-4' />
+                    <span className='sr-only'>Close</span>
                   </Button>
                 </div>
                 <FilterSidebar
@@ -90,10 +90,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }, (, i) => i + 1) .map ( (page) => (<PaginationItem key= {;
   page ;
 }> <PaginationButton /> </PaginationItem>) ) ;
-}<PaginationItem> <PaginationNext /> </PaginationItem> </PaginationContent> </Pagination> </div>) ";
-}</ErrorBoundary> </div> <Button variant="ghost" size="sm" onClick={;
-  () => setIsMobileFilterOpen (false) ";
-}className="text-zion-slate-light h-8 w-8 p-0" > <X className="h-4 w-4" /> <span className="sr-only" >Close</span> </Button> </div> <FilterSidebar searchTerm= {;
+}<PaginationItem> <PaginationNext /> </PaginationItem> </PaginationContent> </Pagination> </div>) ';
+}</ErrorBoundary> </div> <Button variant='ghost' size='sm' onClick={;
+  () => setIsMobileFilterOpen (false) ';
+}className='text-zion-slate-light h-8 w-8 p-0' > <X className='h-4 w-4' /> <span className='sr-only' >Close</span> </Button> </div> <FilterSidebar searchTerm= {;
   searchTerm ;
 }setSearchTerm= {;
   setSearchTerm ;
@@ -131,5 +131,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   isMobileFilterOpen ;
 }/> </div> </div>) ;
 }</div> </div> </div>) ;
-}"
+}'
 origin/cursor/automate-test-improve-and-merge-code-2533

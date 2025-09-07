@@ -118,7 +118,6 @@ interface ActionButtonsProps  {export const ActionButtons: React.FC<ActionButton
         aria-label="Ban user"
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
       >
         <Ban className="h-4 w-4" />
       </Button>
@@ -159,7 +158,6 @@ interface ActionButtonsProps {
   );
 
 import React from 'react';
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
 import { Button } from '@/components / ui / button';
 
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
@@ -294,7 +292,6 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on
         >;
           Ignore;
         </Button>)}
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
     </div>);
 }
 '"},

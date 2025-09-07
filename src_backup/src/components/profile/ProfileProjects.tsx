@@ -88,10 +88,10 @@ import { Card, CardContent } from "@/components/ui/card",import { Badge } from "
         ))}
       </div>;
     </div>;
-  )}}
+  )}
 }
 }
-}}<div className='text-xs text-zion-slate-light mt-2'>                {project && project.date}<div className="text-xs text-zion-slate-light mt-2">;"
+}<div className='text-xs text-zion-slate-light mt-2'>                {project && project.date}<div className="text-xs text-zion-slate-light mt-2">;"
                 {project && project.date}
               </div>;
             </CardContent>;

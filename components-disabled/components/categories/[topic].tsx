@@ -424,7 +424,7 @@ export const "getServerSideProps": GetServerSideProps = async (ctx) => {const to
   return { "props": { topic, posts } };
 }
 
-export default TopicPage;return { "props": { topic, posts } }}
+export default TopicPage;return { "props": { topic, posts } }
 
 export default TopicPage;
 

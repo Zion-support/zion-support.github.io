@@ -1,8 +1,8 @@
-import {serve} from '"https": //deno.land/std@0.208.0/http/server.ts';'
-import {createClient} from '"https": //esm.sh/@supabase/supabase-js@2.39.7';'
-import {createClient} from '"https": //esm && esm.sh/@supabase/supabase-js@2 ;'
-import {serve} from '"https": //deno.land / std@0.208.0 / http / server.ts','
-import {create_client} from '"https": //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')'
+import {serve} from ''https': //deno.land/std@0.208.0/http/server.ts';'
+import {createClient} from ''https': //esm.sh/@supabase/supabase-js@2.39.7';'
+import {createClient} from ''https': //esm && esm.sh/@supabase/supabase-js@2 ;'
+import {serve} from ''https': //deno.land / std@0.208.0 / http / server.ts','
+import {create_client} from ''https': //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')'
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
@@ -12,15 +12,15 @@ if (req && req.method === 'OPTIONS') {  if (req && req.method === 'OPTIONS') {'
     }
     return new Response(null, {
       }
-      "status": 204;
-    "headers": corsHeaders})
+      'status': 204;
+    'headers': corsHeaders})
   }
   try {    if (!hostname && !subdomainParam) {
 }
 throw new Error('No hostname or subdomain provided');'
     }
     // Extract tenant info,
-let "tenantInfo": TenantInfo | null = null;
+let 'tenantInfo': TenantInfo | null = null;
     if (subdomainParam) {
       // Direct subdomain lookup
 }
@@ -32,8 +32,8 @@ const { data, error } = await supabase;
         .single();
       if (error) {
         }
-        console && console.error('Database "error":', error);'
-        throw new Error(`Database "error": ${error && error.message}`)        console && console.error('Database "error":', error);'throw new Error(`Database "error": ${error && error.message}`);`      }
+        console && console.error('Database 'error':', error);'
+        throw new Error(`Database 'error': ${error && error.message}`)        console && console.error('Database 'error':', error);'throw new Error(`Database 'error': ${error && error.message}`);`      }
       tenantInfo = data as TenantInfo
     } else {
       // Try matching custom domain first
@@ -55,7 +55,7 @@ const subdomainResult = await supabase;
             .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')'
             .eq('subdomain', subdomain)'
             .eq('is_active', true)'
-            .single();  "theme_preset": string;
+            .single();  'theme_preset': string;
 }
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'GET, POST, OPTIONSAccess - Control - Allow - Headers': 'Content - Type, Authorization, x - client - info_access - Control - Max - Age': '86400'}'
@@ -81,8 +81,8 @@ if ( {) {
 }
     return new Response (null, {
       }
-      "status": 204,
-      "headers": cors_headers});
+      'status': 204,
+      'headers': cors_headers});
   }
   try {
     }
@@ -103,7 +103,7 @@ if ( {) {
       throw new Error ('No hostname or subdomain provided');'
     }
     // Extract tenant info;
-let "tenant_info": TenantInfo | null = null,;
+let 'tenant_info': TenantInfo | null = null,;
     // Check condition,
 if ( {) {
   $2
@@ -120,8 +120,8 @@ if ( {) {
 if ( {) {
   $2
 }
-        console.error ('Database "error":', error);'
-        throw new Error (`Database "error": ${error.message}`);`
+        console.error ('Database 'error':', error);'
+        throw new Error (`Database 'error': ${error.message}`);`
       }
       tenant_info = data as TenantInfo;
     } else {
@@ -156,30 +156,30 @@ if ( {) {
             tenant_info = subdomain_result.data as TenantInfo;    return new Response (
       JSON.stringify ({
         }
-        "tenant": tenant_info,
-        "status": 'success';'
+        'tenant': tenant_info,
+        'status': 'success';'
       });
       {
         }
-        "headers": {
+        'headers': {
           'Content - Type': 'application / json','
-          ...cors_headers}}
+          ...cors_headers}
     );
   } catch (error) {
     }
-    console.error ('Tenant detector "error":', error);'
+    console.error ('Tenant detector 'error':', error);'
 return new Response (;
       JSON.stringify ({
         }
-        "error": error.message || 'Internal server error','
-        "status": 'error';'
+        'error': error.message || 'Internal server error','
+        'status': 'error';'
       });
       {
         }
-        "status": 500;
-        "headers": {  }
+        'status': 500;
+        'headers': {  }
 });          'Content - Type': 'application / json','
-          ...cors_headers}}
+          ...cors_headers}
     );
   }
 });
@@ -198,7 +198,7 @@ return new Response (;
       {
         headers: {
           'Content-Type': 'application/json',
-          ...corsHeaders}},
+          ...corsHeaders},
     )
   } catch (error) {
     console.error($2);
@@ -207,7 +207,7 @@ return new Response (;
         status: 500;
         headers: {
           'Content-Type': 'application/json',
-          ...corsHeaders}},
+          ...corsHeaders},
     )
   }
 }),

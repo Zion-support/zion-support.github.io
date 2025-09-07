@@ -32,10 +32,10 @@ import {Search;
   }
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;
-  Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+  Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { 'hasError': false }static getDerivedStateFromError(error) {return { 'hasError': true }componentDidCatch(error, errorInfo) {console.error('Error caught by 'boundary':', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
   }
-  Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
-}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
+  Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { 'hasError': false }static getDerivedStateFromError(error) {return { 'hasError': true 
+}componentDidCatch(error, errorInfo) {console.error('Error caught by 'boundary':', error, errorInfo)}render() {if (this.state.hasError) ;'
   }
   return <div>Something went wrong.</div>;
     }return this.props.children;
@@ -58,9 +58,9 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
   const [searchTerm, setSearchTerm]  = useState('')const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')export default function ServicesShowcase2027() {const [searchTerm, setSearchTerm]  = useState('')const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')// Sort options;'
   }
   const sortOptions = [;
-    { "value": 'name', "label": 'Sort by Name' }'
-    { "value": 'price', "label": 'Sort by Price' }'
-    { "value": 'roi', "label": 'Sort by ROI' }'
+    { 'value': 'name', 'label': 'Sort by Name' }'
+    { 'value': 'price', 'label': 'Sort by Price' }'
+    { 'value': 'roi', 'label': 'Sort by ROI' }'
   ];
                          service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory)const matchesPrice = selectedPriceRange === 'all' |;'
                         (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |;'
@@ -77,11 +77,11 @@ const [searchTerm, setSearchTerm]  = useState('');'
   const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')// Sort options;'
 
 const sortOptions = [;
-  { "value": 'name', "label": 'Sort by Name','
+  { 'value': 'name', 'label': 'Sort by Name','
 }
-    { "value": 'price', "label": 'Sort by Price','
+    { 'value': 'price', 'label': 'Sort by Price','
 }
-    { "value": 'roi', "label": 'Sort by ROI','
+    { 'value': 'roi', 'label': 'Sort by ROI','
 }
   ];
                          service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory;'
@@ -117,103 +117,103 @@ const sortedServices = [...filteredServices].sort((a, b) => {switch (sortBy) {ca
           parseInt(b && b.price.replace(/[^0-9]/g, ''))return (parseInt(a.price.replace(/[^0-9]/g, '')) -;'
           parseInt(b.price.replace(/[^0-9]/g, '')))case 'roi':;'
         return (parseInt(a && a.roi.replace(/[^0-9]/g, '')) -;'
-          parseInt(b && b.roi.replace(/[^0-9]/g, '')))"default":;'
+          parseInt(b && b.roi.replace(/[^0-9]/g, '')))'default':;'
         return 0;    }        return parseInt(a && a.price.replace(/[^0-9]/g, '')) - parseInt(b && b.price.replace(/[^0-9]/g, ''))case 'roi':;'
-        return parseInt(a && a.roi.replace(/[^0-9]/g, '')) - parseInt(b && b.roi.replace(/[^0-9]/g, ''))"default": return 0;'
+        return parseInt(a && a.roi.replace(/[^0-9]/g, '')) - parseInt(b && b.roi.replace(/[^0-9]/g, ''))'default': return 0;'
   })return (<UltraFuturisticMatrixBackground2027>;
       <Head>;
         <title>2027 Services Showcase - Zion Tech Group | Cutting-Edge Innovations &;
           Micro SAAS;
-        </title>;"default":;
+        </title>;'default':;
         return 0;
     }
   })const categories = [;
-    { "id": 'all', "name": 'All Services', "icon": '🚀', "count": allServices.length },{"id": 'AI Consciousness Evolution',"name": 'AI Consciousness',"icon": '🧠',"count": allServices.filter(s => { return s.category.includes('AI Consciousness')).length; }'
+    { 'id': 'all', 'name': 'All Services', 'icon': '🚀', 'count': allServices.length },{'id': 'AI Consciousness Evolution','name': 'AI Consciousness','icon': '🧠','count': allServices.filter(s => { return s.category.includes('AI Consciousness')).length; }'
   })const categories = [
-  { "id": 'all', "name": 'All Services', "icon": '🚀', "count": allServices.length,'
-},{"id": 'AI Consciousness Evolution',"name": 'AI Consciousness',"icon": '🧠',"count": allServices.filter(s => { return s.category.includes('AI Consciousness')).length; }'
+  { 'id': 'all', 'name': 'All Services', 'icon': '🚀', 'count': allServices.length,'
+},{'id': 'AI Consciousness Evolution','name': 'AI Consciousness','icon': '🧠','count': allServices.filter(s => { return s.category.includes('AI Consciousness')).length; }'
     }
-    {"id": 'Quantum Consciousness';'
+    {'id': 'Quantum Consciousness';'
       }
-      "name": 'Quantum Consciousness';'
-      "icon": '⚛️';'
-      "count": allServices.filter(s =>;
+      'name': 'Quantum Consciousness';'
+      'icon': '⚛️';'
+      'count': allServices.filter(s =>;
         s.category.includes('Quantum Consciousness')).length;'
     }
-    {"id": 'AI Civilization';'
+    {'id': 'AI Civilization';'
       }
-      "name": 'AI Civilization';'
-      "icon": '🏛️';'
-      "count": allServices.filter(s => { return s.category.includes('AI Civilization')).length; }'
+      'name': 'AI Civilization';'
+      'icon': '🏛️';'
+      'count': allServices.filter(s => { return s.category.includes('AI Civilization')).length; }'
     }
-    {"id": 'Quantum Time';'
+    {'id': 'Quantum Time';'
       }
-      "name": 'Quantum Time';'
-      "icon": '⏰';'
-      "count": allServices.filter(s => { return s.category.includes('Quantum Time')).length; }'
+      'name': 'Quantum Time';'
+      'icon': '⏰';'
+      'count': allServices.filter(s => { return s.category.includes('Quantum Time')).length; }'
     }
-    {"id": 'AI Multiverse';'
+    {'id': 'AI Multiverse';'
       }
-      "name": 'AI Multiverse';'
-      "icon": '🌌';'
-      "count": allServices.filter(s => { return s.category.includes('AI Multiverse')).length; }'
+      'name': 'AI Multiverse';'
+      'icon': '🌌';'
+      'count': allServices.filter(s => { return s.category.includes('AI Multiverse')).length; }'
     }
-    {"id": 'Customer Success Automation';'
+    {'id': 'Customer Success Automation';'
       }
-      "name": 'Customer Success';'
-      "icon": '🎯';'
-      "count": allServices.filter(s => { return s.category.includes('Customer Success')).length; }'
+      'name': 'Customer Success';'
+      'icon': '🎯';'
+      'count': allServices.filter(s => { return s.category.includes('Customer Success')).length; }'
     }
-    {"id": 'Content Marketing Automation';'
+    {'id': 'Content Marketing Automation';'
       }
-      "name": 'Content Marketing';'
-      "icon": '📝';'
-      "count": allServices.filter(s => { return s.category.includes('Content Marketing')).length; }'
+      'name': 'Content Marketing';'
+      'icon': '📝';'
+      'count': allServices.filter(s => { return s.category.includes('Content Marketing')).length; }'
     }
-    {"id": 'Inventory Management';'
+    {'id': 'Inventory Management';'
       }
-      "name": 'Inventory Management';'
-      "icon": '📦';'
-      "count": allServices.filter(s =>;
+      'name': 'Inventory Management';'
+      'icon': '📦';'
+      'count': allServices.filter(s =>;
         s.category.includes('Inventory Management')).length;'
     }
-    {"id": 'HR Automation';'
+    {'id': 'HR Automation';'
       }
-      "name": 'HR Automation';'
-      "icon": '👥';'
-      "count": allServices.filter(s => { return s.category.includes('HR Automation')).length; }'
+      'name': 'HR Automation';'
+      'icon': '👥';'
+      'count': allServices.filter(s => { return s.category.includes('HR Automation')).length; }'
     }
-    {"id": 'Financial Automation';'
+    {'id': 'Financial Automation';'
       }
-      "name": 'Financial Automation';'
-      "icon": '💰';'
-      "count": allServices.filter(s =>;
+      'name': 'Financial Automation';'
+      'icon': '💰';'
+      'count': allServices.filter(s =>;
         s.category.includes('Financial Automation')).length}];const priceRanges = [;'
-    { "id": 'all', "name": 'All Prices', "count": allServices.length },{"id": 'low',"name": 'Under $1K/month',"count": allServices.filter(s => { return parseInt(s.price.replace(/[^0-9]/g, '')) < 1000; }'
+    { 'id': 'all', 'name': 'All Prices', 'count': allServices.length },{'id': 'low','name': 'Under $1K/month','count': allServices.filter(s => { return parseInt(s.price.replace(/[^0-9]/g, '')) < 1000; }'
         }
         s.category.includes('Financial Automation')).length}];'
 
 const priceRanges = [;
-  { "id": 'all', "name": 'All Prices', "count": allServices.length,'
-},{"id": 'low',"name": 'Under $1K/month',"count": allServices.filter(s => { return parseInt(s.price.replace(/[^0-9]/g, '')) < 1000; }'
+  { 'id': 'all', 'name': 'All Prices', 'count': allServices.length,'
+},{'id': 'low','name': 'Under $1K/month','count': allServices.filter(s => { return parseInt(s.price.replace(/[^0-9]/g, '')) < 1000; }'
       ).length;
     }
-    {"id": 'medium';'
+    {'id': 'medium';'
       }
-      "name": '$1K - $10K/month';'
-      "count": allServices.filter(s =>;
+      'name': '$1K - $10K/month';'
+      'count': allServices.filter(s =>;
           parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 &&;'
           parseInt(s.price.replace(/[^0-9]/g, '')) < 10000;'
       ).length;
     }
-    {"id": 'high';'
+    {'id': 'high';'
       }
-      "name": '$10K+/month';'
-      "count": allServices.filter(s => { return parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000; }'
+      'name': '$10K+/month';'
+      'count': allServices.filter(s => { return parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000; }'
       ).length}];
-  const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com'}return (<UltraFuturisticMatrixBackground2027>;'
+  const contactInfo = {'mobile': '+1 302 464 0950','email': 'kleber@ziontechgroup.com','address': '364 E Main St STE 1008 Middletown DE 19709','website': ''https'://ziontechgroup.com'}return (<UltraFuturisticMatrixBackground2027>;'
 
-const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com',;'
+const contactInfo = {'mobile': '+1 302 464 0950','email': 'kleber@ziontechgroup.com','address': '364 E Main St STE 1008 Middletown DE 19709','website': ''https'://ziontechgroup.com',;'
   }
   return (<UltraFuturisticMatrixBackground2027>;
       <Head>;
@@ -222,7 +222,7 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
         </title>;
         <meta;
           name='description';'
-          content="Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolution, quantum computing, autonomous AI civilizations, and practical micro SAAS solutions for businesses.";" />;
+          content='Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolution, quantum computing, autonomous AI civilizations, and practical micro SAAS solutions for businesses.';' />;
         <meta;
           name='keywords';'
           content='2027 services, AI consciousness evolution, quantum computing, autonomous AI civilizations, micro SAAS, business automation, Zion Tech Group';' />;
@@ -230,132 +230,132 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
           rel='canonical';'
         {/* Open Graph */}
         <meta;
-          property='"og":title';'
+          property=''og':title';'
           content='2027 Services Showcase - Zion Tech Group';'
         <meta;
-          property='"og":url';'
+          property=''og':url';'
         {/* Twitter */}
-        <meta name='"twitter":card' content='summary_large_image' />;'
+        <meta name=''twitter':card' content='summary_large_image' />;'
         <meta;
-          name='"twitter":title';'
+          name=''twitter':title';'
           content='2027 Services Showcase - Zion Tech Group';'
         <meta;
-          name='"twitter":description';'
+          name=''twitter':description';'
           content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.';' />      </Head>        {/* Open Graph */}
               </span>;
             </h1>;
-            <p className="text-xl "md":text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">;"
+            <p className='text-xl 'md':text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto'>;'
               Experience the future of technology with our revolutionary 2027 services. From AI consciousness evolution to practical micro SAAS solutions.;
             </p>;
             {/* Stats */}
-            <div className="grid grid-cols-2 "md":grid-cols-4 gap-6 mb-12">;"
-              <div className="text-center">;"
-                <div className="text-3xl "md":text-4xl font-bold text-cyan-400 mb-2">;"
-                  {allServices.length}+;
-                </div>;
-                <div className="text-cyan-300">Services</div>;"
-              </div>;
-              <div className="text-center">;"
-                <div className="text-3xl "md":text-4xl font-bold text-purple-400 mb-2">;"
-                  15+;
-                </div>;
-                <div className="text-purple-300">Categories</div>;"
-              </div>;
-              <div className="text-center">;"
-                <div className="text-3xl "md":text-4xl font-bold text-pink-400 mb-2">;"
-                  1000+;
-                </div>;
-                <div className="text-pink-300">Customers</div>;"
-              </div>;
-              <div className="text-center">;"
-                <div className="text-3xl "md":text-4xl font-bold text-green-400 mb-2">;"
-                  4.9★;
-                </div>;
-                <div className="text-green-300">Rating</div>;"
-              </div>;
-            </div>;
-                href="/contact";"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2">;"
-                <Rocket className="w-5 h-5" />;"
-                <span>Get Started</span>;
-              </Link>;
-              <Link;
-                href="/pricing";" />;
-      </Head>;
-      <UltraFuturisticNavigation2027 />;
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="2027 Services Showcase - Zion Tech Group" />
-        <meta name="twitter:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
-      </Head>
-
-      <UltraFuturisticNavigation2027 />
-
-      {/* Hero Section */}
-<section className='pt-32 pb-20 px-4 "sm":px-6 "lg":px-8'>;'
-        <div className='max-w-7xl mx-auto text-center'>;'
-          <motion.div;
-            initial={{ "opacity": 0, "y": 30 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            initial={{ "opacity": 0, "y": 30 
-}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 
-}
-          >;
-<h1 className='text-5xl "md":text-7xl font-bold mb-6'>;'
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;'
-                2027 Services Showcase;
-              </span>;
-            </h1>;
-            <p className='text-xl "md":text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto'>;'
-              Experience the future of technology with our revolutionary 2027;
-              services. From AI consciousness evolution to practical micro SAAS;
-              solutions.;
-            </p>;
-            {/* Stats */}
-            <div className='grid grid-cols-2 "md":grid-cols-4 gap-6 mb-12'>;'
+            <div className='grid grid-cols-2 'md':grid-cols-4 gap-6 mb-12'>;'
               <div className='text-center'>;'
-                <div className='text-3xl "md":text-4xl font-bold text-cyan-400 mb-2'>;'
+                <div className='text-3xl 'md':text-4xl font-bold text-cyan-400 mb-2'>;'
                   {allServices.length}+;
                 </div>;
                 <div className='text-cyan-300'>Services</div>;'
               </div>;
               <div className='text-center'>;'
-                <div className='text-3xl "md":text-4xl font-bold text-purple-400 mb-2'>;'
+                <div className='text-3xl 'md':text-4xl font-bold text-purple-400 mb-2'>;'
                   15+;
                 </div>;
                 <div className='text-purple-300'>Categories</div>;'
               </div>;
               <div className='text-center'>;'
-                <div className='text-3xl "md":text-4xl font-bold text-pink-400 mb-2'>;'
+                <div className='text-3xl 'md':text-4xl font-bold text-pink-400 mb-2'>;'
                   1000+;
                 </div>;
                 <div className='text-pink-300'>Customers</div>;'
               </div>;
               <div className='text-center'>;'
-                <div className='text-3xl "md":text-4xl font-bold text-green-400 mb-2'>;'
+                <div className='text-3xl 'md':text-4xl font-bold text-green-400 mb-2'>;'
+                  4.9★;
+                </div>;
+                <div className='text-green-300'>Rating</div>;'
+              </div>;
+            </div>;
+                href='/contact';'
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'>;'
+                <Rocket className='w-5 h-5' />;'
+                <span>Get Started</span>;
+              </Link>;
+              <Link;
+                href='/pricing';' />;
+      </Head>;
+      <UltraFuturisticNavigation2027 />;
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='2027 Services Showcase - Zion Tech Group' />
+        <meta name='twitter:description' content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.' />
+      </Head>
+
+      <UltraFuturisticNavigation2027 />
+
+      {/* Hero Section */}
+<section className='pt-32 pb-20 px-4 'sm':px-6 'lg':px-8'>;'
+        <div className='max-w-7xl mx-auto text-center'>;'
+          <motion.div;
+            initial={ 'opacity': 0, 'y': 30 }
+            animate={ 'opacity': 1, 'y': 0 }
+            transition={ 'duration': 0.8 }
+            initial={ 'opacity': 0, 'y': 30 
+}
+            animate={ 'opacity': 1, 'y': 0 }
+            transition={ 'duration': 0.8 
+}
+          >;
+<h1 className='text-5xl 'md':text-7xl font-bold mb-6'>;'
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;'
+                2027 Services Showcase;
+              </span>;
+            </h1>;
+            <p className='text-xl 'md':text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto'>;'
+              Experience the future of technology with our revolutionary 2027;
+              services. From AI consciousness evolution to practical micro SAAS;
+              solutions.;
+            </p>;
+            {/* Stats */}
+            <div className='grid grid-cols-2 'md':grid-cols-4 gap-6 mb-12'>;'
+              <div className='text-center'>;'
+                <div className='text-3xl 'md':text-4xl font-bold text-cyan-400 mb-2'>;'
+                  {allServices.length}+;
+                </div>;
+                <div className='text-cyan-300'>Services</div>;'
+              </div>;
+              <div className='text-center'>;'
+                <div className='text-3xl 'md':text-4xl font-bold text-purple-400 mb-2'>;'
+                  15+;
+                </div>;
+                <div className='text-purple-300'>Categories</div>;'
+              </div>;
+              <div className='text-center'>;'
+                <div className='text-3xl 'md':text-4xl font-bold text-pink-400 mb-2'>;'
+                  1000+;
+                </div>;
+                <div className='text-pink-300'>Customers</div>;'
+              </div>;
+              <div className='text-center'>;'
+                <div className='text-3xl 'md':text-4xl font-bold text-green-400 mb-2'>;'
                   4.9★;
                 </div>;
                 <div className='text-green-300'>Rating</div>;'
               </div>;
             </div>;
             {/* CTA Buttons */}
-<div className='flex flex-col "sm":flex-row gap-4 justify-center'>;'
+<div className='flex flex-col 'sm':flex-row gap-4 justify-center'>;'
               <Link;
                 href='/contact';'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2';'
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2';'
               >;
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'>'
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'>'
 
                 <Rocket className='w-5 h-5' />;'
                 <span>Get Started</span>;
               </Link>;
               <Link;
                 href='/pricing';'
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl "hover":bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2';'
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl 'hover':bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2';'
               >;
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl "hover":bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'>'
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl 'hover':bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'>'
 
                 <DollarSign className='w-5 h-5' />;'
                 <span>View Pricing</span>;
@@ -364,16 +364,16 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
           </motion.div>;
         </div>;
       </section>;
-                className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl "hover":bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2">;"
-                <DollarSign className="w-5 h-5" />;"
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl 'hover':bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'>;'
+                <DollarSign className='w-5 h-5' />;'
                 <span>View Pricing</span>;
               </Link>;
             </div>;
           </motion && motion.div>;
         </div>;
       </section>;{/* Search and Filters */}<input;
-                  type="text";"
-                  placeholder="Search services...";"
+                  type='text';'
+                  placeholder='Search services...';'
                   value={searchTerm}
                 </select>;
               </div>;{/* Price Range Filter */}
@@ -384,25 +384,25 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
                 <select;
                   value={selectedPriceRange}
                   onChange={e => { return setSelectedPriceRange(e && e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white "focus":outline-none "focus":border-cyan-400'; }'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white 'focus':outline-none 'focus':border-cyan-400'; }'
                 >;
                   {priceRanges && priceRanges.map(range => (                    <option key={range && range.id} value={range && range.id}>                <select;
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e && e.target.value)}
-                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white "focus":outline-none "focus":border-cyan-400";"
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white 'focus':outline-none 'focus':border-cyan-400';'
                 >;
                   {priceRanges && priceRanges.map((range) => (<option key={range && range.id} value={range && range.id}>;
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white "focus": outline-none "focus":border-cyan-400'>'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white 'focus': outline-none 'focus':border-cyan-400'>'
 
                   {priceRanges && priceRanges.map(range => (                    <option key={range && range.id} value={range && range.i
 }>                <select;
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e && e.target.value)}
-                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white "focus": outline-none "focus":border-cyan-400">"
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white 'focus': outline-none 'focus':border-cyan-400'>'
 
                   {priceRanges && priceRanges.map((range) => (<option key={range && range.id} value={range && range.i
 }>;
-                      {range && range.name} ({range && range.count})</option>;<section className='px-4 "sm":px-6 "lg":px-8 mb-16'>;'
+                      {range && range.name} ({range && range.count})</option>;<section className='px-4 'sm':px-6 'lg':px-8 mb-16'>;'
         <div className='max-w-7xl mx-auto'>;'
           <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20'>;'
             {/* Search Bar */}
@@ -414,12 +414,12 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
                   placeholder='Search services...';'
                   value={searchTerm}
                   onChange={e => { return setSearchTerm(e.target.value)}
-                  className='w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 "focus":outline-none "focus":border-cyan-400 "focus":ring-2 "focus":ring-cyan-500/20'; }'
+                  className='w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 'focus':outline-none 'focus':border-cyan-400 'focus':ring-2 'focus':ring-cyan-500/20'; }'
                 />;
               </div>;
             </div>;
             {/* Filters */}
-<div className='grid grid-cols-1 "md":grid-cols-3 gap-6'>;'
+<div className='grid grid-cols-1 'md':grid-cols-3 gap-6'>;'
               {/* Category Filter */}
               <div>;
                 <label className='block text-cyan-400 font-medium mb-2'>;'
@@ -428,10 +428,10 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
                 <select;
                   value={selectedCategory}
                   onChange={e => { return setSelectedCategory(e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white "focus":outline-none "focus":border-cyan-400'; }'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white 'focus':outline-none 'focus':border-cyan-400'; }'
                 >;
                   {categories.map(category => (<option key={category.id} value={category.id}>;
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white "focus": outline-none "focus":border-cyan-400'>'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white 'focus': outline-none 'focus':border-cyan-400'>'
 
                   {categories.map(category => (<option key={category.id} value={category.i
 }>;
@@ -448,16 +448,16 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
                 <select;
                   value={selectedPriceRange}
                   onChange={e => { return setSelectedPriceRange(e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white "focus":outline-none "focus":border-cyan-400'; }'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white 'focus':outline-none 'focus':border-cyan-400'; }'
                 >;
                   {priceRanges.map(range => (<option key={range.id} value={range.id}>;
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white "focus": outline-none "focus":border-cyan-400'>'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white 'focus': outline-none 'focus':border-cyan-400'>'
 
                   {priceRanges.map(range => (<option key={range.id} value={range.i
 }>;
                       {range.name} ({range.count})</option>;
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400"
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400'
                 >
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
@@ -473,23 +473,23 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
                   Sort By;
                 </label>;{/* Sort By */}
               <div>;
-                <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>;"
+                <label className='block text-cyan-400 font-medium mb-2' htmlFor='input-Sort By'>Sort By</label>;'
                 <select;
               <div>
-                <label className="block text-cyan-400 font-medium mb-2">Sort By</label>
+                <label className='block text-cyan-400 font-medium mb-2'>Sort By</label>
                 <select
                   value={sortBy}
                   onChange={e => { return setSortBy(e && e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white "focus":outline-none "focus":border-cyan-400'>'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white 'focus':outline-none 'focus':border-cyan-400'>'
 
                   <option value='name'>Name</option>; }'
                   <option value='price'>Price</option>;'
                   <option value='roi'>ROI</option>                </select>                <select;'
                   value={sortBy}
                 >;
-                  <option value="name">Name</option>;"
-                  <option value="price">Price</option>;"
-                  <option value="roi">ROI</option>;"
+                  <option value='name'>Name</option>;'
+                  <option value='price'>Price</option>;'
+                  <option value='roi'>ROI</option>;'
                 </select>;
               </div>;
             </div>;
@@ -497,18 +497,18 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
         </div>;
       </section>;
       {/* Services Grid */}
-      <section className="px-4 "sm":px-6 "lg":px-8 mb-20">;"
-        <div className="max-w-7xl mx-auto">;"
-          <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">;"
+      <section className='px-4 'sm':px-6 'lg':px-8 mb-20'>;'
+        <div className='max-w-7xl mx-auto'>;'
+          <div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-3 gap-8'>;'
 <label className='block text-cyan-400 font-medium mb-2'>;'
                   Sort By;
                 </label>;
                 <select;
                   value={sortBy}
                   onChange={e => { return setSortBy(e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white "focus":outline-none "focus":border-cyan-400'; }'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white 'focus':outline-none 'focus':border-cyan-400'; }'
                 >;
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white "focus":outline-none "focus":border-cyan-400'>'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white 'focus':outline-none 'focus':border-cyan-400'>'
 
                   <option value='name'>Name</option>;'
                   <option value='price'>Price</option>;'
@@ -520,43 +520,43 @@ const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.
         </div>;
       </section>;
       {/* Services Grid */}
-<section className='px-4 "sm":px-6 "lg":px-8 mb-20'>;'
+<section className='px-4 'sm':px-6 'lg':px-8 mb-20'>;'
         <div className='max-w-7xl mx-auto'>;'
-          <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>;'
+          <div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-3 gap-8'>;'
             <AnimatePresence>;
       {/* Services Grid */}
-      <section className='px - 4 "sm":px - 6 "lg":px - 8 mb - 20'>;'
+      <section className='px - 4 'sm':px - 6 'lg':px - 8 mb - 20'>;'
         <div className='max - w-7xl mx - auto'>;'
-          <div className='grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8'>            <AnimatePresence>      <section className="px - 4 "sm":px - 6 "lg":px-8 mb-20">;"
-        <div className="max-w-7xl mx-auto">;"
-          <div className="grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols-3 gap-8">;"
+          <div className='grid grid - cols - 1 'md':grid - cols - 2 'lg':grid - cols - 3 gap - 8'>            <AnimatePresence>      <section className='px - 4 'sm':px - 6 'lg':px-8 mb-20'>;'
+        <div className='max-w-7xl mx-auto'>;'
+          <div className='grid grid - cols - 1 'md':grid - cols - 2 'lg':grid - cols-3 gap-8'>;'
             <AnimatePresence>;
               {sorted_services.map ((service, index) => (<motion.div;
                   }
                   key={service.id}
-                  initial={{ "opacity": 0, "coordinate_y": 30, "scale": 0.9 }}
-                  animate={{ "opacity": 1, "coordinate_y": 0, "scale": 1 }}
-                  transition={{ "duration": 0.5, "delay": index * 0.1 }}exit={{ "opacity": 0, "y": -30, "scale": 0.9 }}
+                  initial={ 'opacity': 0, 'coordinate_y': 30, 'scale': 0.9 }
+                  animate={ 'opacity': 1, 'coordinate_y': 0, 'scale': 1 }
+                  transition={ 'duration': 0.5, 'delay': index * 0.1 }exit={ 'opacity': 0, 'y': -30, 'scale': 0.9 }
 className='group';'
                 >;
-                  initial={{ "opacity": 0, "coordinate_y": 30, "scale": 0.9 
+                  initial={ 'opacity': 0, 'coordinate_y': 30, 'scale': 0.9 
 }
-                  animate={{ "opacity": 1, "coordinate_y": 0, "scale": 1 
+                  animate={ 'opacity': 1, 'coordinate_y': 0, 'scale': 1 
 }
-                  transition={{ "duration": 0.5, "delay": index * 0.1 
-}exit={{ "opacity": 0, "y": -30, "scale": 0.9 
+                  transition={ 'duration': 0.5, 'delay': index * 0.1 
+}exit={ 'opacity': 0, 'y': -30, 'scale': 0.9 
 }
 className='group'>'
 
-                  <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full "hover":border-cyan-400/50 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20'>;'
+                  <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full 'hover':border-cyan-400/50 transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20'>;'
                     {/* Service Header */}
                     <div className='flex items-start justify-between mb-4'>;'
                       <div className='text-4xl'>🚀</div>;'
                     </div>;
                     {/* Service Info */}
-                    <h3 className="text - xl font - bold text - white mb - 2 group - "hover":text - cyan - 400 transition-colors duration-300">;"
+                    <h3 className='text - xl font - bold text - white mb - 2 group - 'hover':text - cyan - 400 transition-colors duration-300'>;'
                       {service.name}</h3>;
-                    <p className="text - cyan - 300 text - sm mb - 4 line-clamp-3">;"
+                    <p className='text - cyan - 300 text - sm mb - 4 line-clamp-3'>;'
                       {service.description}
                       <div className='text-2xl font-bold text-white'>                        {service.price}</h3>;'
                     <p className='text-cyan-300 text-sm mb-4 line-clamp-3'>;'
@@ -566,28 +566,28 @@ className='group'>'
                       <div className='text-2xl font-bold text-white'>;'
                         {service.price}</div>;
                     </div>;
-                    <div className="flex items-start justify-between mb-4">;"
-                      <div className="text-4xl">🚀</div>;"
+                    <div className='flex items-start justify-between mb-4'>;'
+                      <div className='text-4xl'>🚀</div>;'
                     </div>;
                     {/* Service Info */}
-                    <h3 className="text-xl font-bold text-white mb-2 group-"hover":text-cyan-400 transition-colors duration-300">;"
+                    <h3 className='text-xl font-bold text-white mb-2 group-'hover':text-cyan-400 transition-colors duration-300'>;'
                       {service && service.name}
                     </h3>;
-                    <p className="text-cyan-300 text-sm mb-4 line-clamp-3">;"
+                    <p className='text-cyan-300 text-sm mb-4 line-clamp-3'>;'
                       {service && service.description}
                     </p>;
                     {/* Price */}
                     <div className='mb-4'>;'
-                      <div className='text-2xl font-bold text-white'>                    <div className="mb-4">;"
-                      <div className="text-2xl font-bold text-white">;"
+                      <div className='text-2xl font-bold text-white'>                    <div className='mb-4'>;'
+                      <div className='text-2xl font-bold text-white'>;'
                         {service && service.price}
                       </div>;
                     </div>;
-                        {service.features.length > 3 && (<div className="text-cyan-400 text-sm">;"
+                        {service.features.length > 3 && (<div className='text-cyan-400 text-sm'>;'
                     {/* Features */}
 <div className='mb-6'>;'
                       <h4 className='text-cyan-400 font-semibold mb-3'>;'
-                        Key "Features":;
+                        Key 'Features':;
                       </h4>;
                       <div className='space-y-2'>;'
                         {service.features.slice(0, 3).map((feature, idx) => (<div;
@@ -608,18 +608,18 @@ className='group'>'
                           </div>;
                         )}{/* ROI */}</div>;
                     </div>;
-                    <div className="mb-6 text-center">;"
-                      <div className="text-green-400 font-semibold text-lg">"ROI": {service.roi}</div>;"
-                      <div className="text-gray-400 text-xs">Return on Investment</div>;"
+                    <div className='mb-6 text-center'>;'
+                      <div className='text-green-400 font-semibold text-lg'>'ROI': {service.roi}</div>;'
+                      <div className='text-gray-400 text-xs'>Return on Investment</div>;'
 <div className='mb-6 text-center'>;'
                       <div className='text-green-400 font-semibold text-lg'>;'
-                        "ROI": {service.roi}
-                      <div className="text-green-400 font-semibold text-lg">"ROI": {service.ro,"
+                        'ROI': {service.roi}
+                      <div className='text-green-400 font-semibold text-lg'>'ROI': {service.ro,'
 }</div>;
-                      <div className="text-gray-400 text-xs">Return on Investment</div>;"
+                      <div className='text-gray-400 text-xs'>Return on Investment</div>;'
 <div className='mb-6 text-center'>;'
                       <div className='text-green-400 font-semibold text-lg'>;'
-                        "ROI": {service.ro
+                        'ROI': {service.ro
 }
                       </div>;
                       <div className='text-gray-400 text-xs'>;'
@@ -629,7 +629,7 @@ className='group'>'
                     {/* ROI */}
                     <div className='mb-6 text-center'>;'
                       <div className='text-green-400 font-semibold text-lg'>;'
-                        "ROI": {service && service.ro
+                        'ROI': {service && service.ro
 }
                       </div>;
                       <div className='text-gray-400 text-xs'>;'
@@ -637,38 +637,38 @@ className='group'>'
                       </div>;
                     </div>;
                     {/* Actions */}
-                    <div className="flex space-x-3">;"
+                    <div className='flex space-x-3'>;'
                       <Link;
                         href={service && service.link}
-                        className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg "hover": from-cyan-600 "hover":to-purple-700 transition-all duration-300 text-center text-sm">;"
+                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg 'hover': from-cyan-600 'hover':to-purple-700 transition-all duration-300 text-center text-sm'>;'
                         Learn More;
                       </Link>;
                       <Link;
                         href='/contact';'
                         href={service.link}
-                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300 text-center text-sm';'
+                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 text-center text-sm';'
                       >;
-                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300 text-center text-sm'>'
+                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 text-center text-sm'>'
 
                         Learn More;
                       </Link>;
                       <Link;
-                        href="/contact";"
-                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg "hover":bg-cyan-500/10 transition-all duration-300 text-sm";"
+                        href='/contact';'
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg 'hover':bg-cyan-500/10 transition-all duration-300 text-sm';'
 href='/contact';'
-                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg "hover":bg-cyan-500/10 transition-all duration-300 text-sm';'
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg 'hover':bg-cyan-500/10 transition-all duration-300 text-sm';'
                       >;
-                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg "hover":bg-cyan-500/10 transition-all duration-300 text-sm'>'
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg 'hover':bg-cyan-500/10 transition-all duration-300 text-sm'>'
 
                         Contact;
                     </div>;
-                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg "hover":bg-cyan-500/10 transition-all duration-300 text-sm">;"
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg 'hover':bg-cyan-500/10 transition-all duration-300 text-sm'>;'
                         Contact;
                       </Link>;
-                    </div>;className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg "hover":bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact";"
+                    </div>;className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg 'hover':bg-cyan-500/10 transition-all duration-300 text-sm'                        href='/contact';'
                     {/* Category Badge */}<div className='mt-4'>;'
-                      <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className="mt-4">;"
-                      <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30">;"
+                      <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className='mt-4'>;'
+                      <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>;'
                         {service && service.category}
                       </span>;
                     </div>;
@@ -684,13 +684,13 @@ href='/contact';'
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (<motion&& motion.div;
               }
-              initial={{ "opacity": 0 }}
-              animate={{ "opacity": 1 }}onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}}'
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')setSelectedPriceRange('all')className='text-center py-20';'
+              initial={ 'opacity': 0 }
+              animate={ 'opacity': 1 }onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}'
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')setSelectedPriceRange('all')className='text-center py-20';'
             >;
-              animate={{ "opacity": 1 }}onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all'),'
+              animate={ 'opacity': 1 }onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all'),'
 }
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')setSelectedPriceRange('all')className='text-center py-20'>'
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')setSelectedPriceRange('all')className='text-center py-20'>'
 
               <div className='text-6xl mb-4'>🔍</div>;'
               <h3 className='text-2xl font-bold text-white mb-2'>;'
@@ -700,19 +700,19 @@ href='/contact';'
                 Try adjusting your search criteria or browse all services.;
               </p>;
               <button;
-                onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}}'
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300';'
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300";"
+                onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}'
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300';'
+                }
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300';'
               >;
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300">"
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300'>'
 
                 Clear Filters;
               </button>;
             </motion.div>;
           )}
       {/* Contact Section */}
-<section className='px-4 "sm":px-6 "lg":px-8 mb-20'>;'
+<section className='px-4 'sm':px-6 'lg':px-8 mb-20'>;'
         <div className='max-w-4xl mx-auto'>;'
           <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>;'
             <h2 className='text-3xl font-bold text-white mb-4'>;'
@@ -722,7 +722,7 @@ href='/contact';'
               Contact our team to discuss how our 2027 services can;
               revolutionize your operations and drive unprecedented growth.;
             </p>;
-            <div className='grid grid-cols-1 "md":grid-cols-3 gap-6 mb-8'>;'
+            <div className='grid grid-cols-1 'md':grid-cols-3 gap-6 mb-8'>;'
               <div className='flex items-center justify-center space-x-3'>;'
                 <Phone className='w-5 h-5 text-cyan-400' />;'
                 <span className='text-white'>{contactInfo.mobile}</span>;'
@@ -736,47 +736,47 @@ href='/contact';'
                 <span className='text-white'>{contactInfo.address}</span>;'
               </div>;
             </div>;
-            <div className='flex flex-col "sm":flex-row gap-4 justify-center'>;'
+            <div className='flex flex-col 'sm':flex-row gap-4 justify-center'>;'
           )}
               <Link;
                 href='/contact';'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>;'
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>;'
                 Get Started Today;
               </Link>;
               <Link;
                 href='/pricing';'
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl "hover":bg-cyan-500/10 transition-all duration-300'>              Ready to Transform Your Business?;'
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl 'hover':bg-cyan-500/10 transition-all duration-300'>              Ready to Transform Your Business?;'
             </h2>;
-            <p className="text-cyan-300 mb-8 text-lg">;"
+            <p className='text-cyan-300 mb-8 text-lg'>;'
               Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.;
             </p>;
-            <div className="grid grid-cols-1 "md":grid-cols-3 gap-6 mb-8">;"
-              <div className="flex items-center justify-center space-x-3">;"
-                <Phone className="w-5 h-5 text-cyan-400" />;"
-                <span className="text-white">{contactInfo && contactInfo.mobile}</span>;"
+            <div className='grid grid-cols-1 'md':grid-cols-3 gap-6 mb-8'>;'
+              <div className='flex items-center justify-center space-x-3'>;'
+                <Phone className='w-5 h-5 text-cyan-400' />;'
+                <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;'
               </div>;
-              <div className="flex items-center justify-center space-x-3">;"
-                <Mail className="w-5 h-5 text-purple-400" />;"
-                <span className="text-white">{contactInfo && contactInfo.email}</span>;"
+              <div className='flex items-center justify-center space-x-3'>;'
+                <Mail className='w-5 h-5 text-purple-400' />;'
+                <span className='text-white'>{contactInfo && contactInfo.email}</span>;'
               </div>;
-              <div className="flex items-center justify-center space-x-3">;"
-                <MapPin className="w-5 h-5 text-pink-400" />;"
-                <span className="text-white">{contactInfo && contactInfo.address}</span>;"
+              <div className='flex items-center justify-center space-x-3'>;'
+                <MapPin className='w-5 h-5 text-pink-400' />;'
+                <span className='text-white'>{contactInfo && contactInfo.address}</span>;'
               </div>;
             </div>;
               <Link;
-                href="/contact";"
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30 shadow-lg shadow-cyan-500/25';'
+                href='/contact';'
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30 shadow-lg shadow-cyan-500/25';'
               >;
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>'
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>'
 
                 Get Started Today;
               </Link>;
               <Link;
 href='/pricing';'
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl "hover":bg-cyan-500/10 transition-all duration-300';'
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl 'hover':bg-cyan-500/10 transition-all duration-300';'
               >;
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl "hover":bg-cyan-500/10 transition-all duration-300'>'
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl 'hover':bg-cyan-500/10 transition-all duration-300'>'
 
                 View Pricing Plans;
               </Link>;
@@ -785,29 +785,29 @@ href='/pricing';'
         </div>;
       </section>;
       {/* Footer */}</div>;
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">;"
+            <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2'>;'
               Zion Tech Group;
             </h3>;
-            <p className="text-cyan-300">2027 Innovation Hub</p>;"
+            <p className='text-cyan-300'>2027 Innovation Hub</p>;'
           </div>;
-          <div className="text-cyan-300 text-sm">;"
+          <div className='text-cyan-300 text-sm'>;'
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;
-            <p className="mt-2">;"
-              <Link href="/privacy" className=""hover":text-cyan-400 transition-colors duration-300">Privacy Policy</Link>;"
-          <div className="text-cyan-300 text-sm">;"
+            <p className='mt-2'>;'
+              <Link href='/privacy' className=''hover':text-cyan-400 transition-colors duration-300'>Privacy Policy</Link>;'
+          <div className='text-cyan-300 text-sm'>;'
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;
-            <p className="mt-2">;"
-              <Link href="/privacy" className=""hover":text-cyan-400 transition-colors duration-300">Privacy Policy</Link>;"
+            <p className='mt-2'>;'
+              <Link href='/privacy' className=''hover':text-cyan-400 transition-colors duration-300'>Privacy Policy</Link>;'
               {' • '}'
-              <Link href="/terms" className=""hover":text-cyan-400 transition-colors duration-300">Terms of Service</Link>;"
+              <Link href='/terms' className=''hover':text-cyan-400 transition-colors duration-300'>Terms of Service</Link>;'
               {' • '}'
 }
-              <Link href="/contact" className=""hover": text-cyan-400 transition-colors duration-300">Contact Us</Link>;"
+              <Link href='/contact' className=''hover': text-cyan-400 transition-colors duration-300'>Contact Us</Link>;'
                     </p>;
                     {/* Price */}
                     <div className='mb - 4'>;'
-                      <div className='text - 2xl font - bold text - white'>                    <div className="mb-4">;"
-                      <div className="text - 2xl font-bold text-white">;"
+                      <div className='text - 2xl font - bold text - white'>                    <div className='mb-4'>;'
+                      <div className='text - 2xl font-bold text-white'>;'
                         {service.price}
                       </div>
                     </div>
@@ -815,7 +815,7 @@ href='/pricing';'
                     {/* Features */}
                     <div className='mb - 6'>;'
                       <h4 className='text - cyan - 400 font - semibold mb - 3'>;'
-                        Key "Features":;
+                        Key 'Features':;
                       </h4>;
                       <div className='space - y-2'>;'
                         {service.features.slice (0, 3).map ((feature, idx) => (<div;
@@ -828,11 +828,11 @@ href='/pricing';'
                               {feature}
                             </span>;
                           </div>))}
-                        {service.features.length > 3 && (<div className='text - cyan - 400 text - sm'>                            +{service.features.length - 3} more features                        {service.features.slice (0, 3).map ((feature, idx) => (<div key={idx} className="flex items-center space-x-2">;"
-                            <CheckCircle className="w - 4 h - 4 text-green-400" />;"
-                            <span className="text - gray-300 text-sm">{feature}</span>;"
+                        {service.features.length > 3 && (<div className='text - cyan - 400 text - sm'>                            +{service.features.length - 3} more features                        {service.features.slice (0, 3).map ((feature, idx) => (<div key={idx} className='flex items-center space-x-2'>;'
+                            <CheckCircle className='w - 4 h - 4 text-green-400' />;'
+                            <span className='text - gray-300 text-sm'>{feature}</span>;'
                           </div>))}
-                        {service.features.length > 3 && (<div className="text - cyan-400 text-sm">;"
+                        {service.features.length > 3 && (<div className='text - cyan-400 text-sm'>;'
                             +{service.features.length - 3} more features;
                           </div>)}
                             +{service.features.length - 3} more features
@@ -844,7 +844,7 @@ href='/pricing';'
                     {/* ROI */}
                     <div className='mb - 6 text - center'>;'
                       <div className='text - green - 400 font - semibold text - lg'>;'
-                        "ROI": {service.ro
+                        'ROI': {service.ro
 }
                       </div>;
                       <div className='text - gray - 400 text - xs'>;'
@@ -855,29 +855,29 @@ href='/pricing';'
                     <div className='flex space - x-3'>;'
                       <Link;
                         href={service.link}
-                        className='flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg "hover":from - cyan - 600 "hover":to - purple - 700 transition - all duration - 300 text - center text - sm'                      >;'
+                        className='flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg 'hover':from - cyan - 600 'hover':to - purple - 700 transition - all duration - 300 text - center text - sm'                      >;'
                         Learn More;
                       </Link>;
                       <Link;
                         href='/contact';'
-                        className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg "hover":bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                      >                    </div>;'
+                        className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg 'hover':bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                      >                    </div>;'
                     {/* Actions */}
-                    <div className="flex space-x-3">;"
+                    <div className='flex space-x-3'>;'
                       <Link;
                         href={service.link}
-                        className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg "hover": from - cyan - 600 "hover":to - purple - 700 transition - all duration - 300 text-center text-sm">"
+                        className='flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg 'hover': from - cyan - 600 'hover':to - purple - 700 transition - all duration - 300 text-center text-sm'>'
 
                         Learn More;
                       </Link>;
                       <Link;
                         href='/contact';'
-                        className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg "hover":bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                        href="/contact";"
-                        className="px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg "hover":bg - cyan - 500 / 10 transition - all duration-300 text-sm">"
+                        className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg 'hover':bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                        href='/contact';'
+                        className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg 'hover':bg - cyan - 500 / 10 transition - all duration-300 text-sm'>'
 
                     {/* Category Badge */}
                     <div className='mt - 4'>;'
-                      <span className='inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30'>                        {service.category}                    <div className="mt-4">;"
-                      <span className="inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border-cyan-500 / 30">;"
+                      <span className='inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30'>                        {service.category}                    <div className='mt-4'>;'
+                      <span className='inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border-cyan-500 / 30'>;'
                         {service.category}
                       </span>
                     </div>
@@ -890,8 +890,8 @@ href='/pricing';'
           {/* No Results */}
           {sorted_services.length === 0 && (<motion.div;
               }
-              initial={{ "opacity": 0 }}
-              animate={{ "opacity": 1 
+              initial={ 'opacity': 0 }
+              animate={ 'opacity': 1 
 }
               className='text - center py - 20'>'
 
@@ -902,21 +902,21 @@ href='/pricing';'
               <p className='text - cyan - 300 mb - 6'>;'
                 Try adjusting your search criteria or browse all services.;
               </p>              <button;
-                on_click={() => {setSearchTerm ('')setSelectedCategory ('all')setSelectedPriceRange ('all')}}'
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl "hover":from - cyan - 600 "hover":to - purple - 700 transition - all duration - 300'              >              className="text-center py-20";"
+                on_click={() => {setSearchTerm ('')setSelectedCategory ('all')setSelectedPriceRange ('all')}'
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl 'hover':from - cyan - 600 'hover':to - purple - 700 transition - all duration - 300'              >              className='text-center py-20';'
             >;
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl "hover":from - cyan - 600 "hover":to - purple - 700 transition - all duration - 300'              >              className="text-center py-20">"
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl 'hover':from - cyan - 600 'hover':to - purple - 700 transition - all duration - 300'              >              className='text-center py-20'>'
 
-              <div className="text-6xl mb-4">🔍</div>;"
-              <h3 className="text - 2xl font - bold text-white mb-2">No services found</h3>;"
-              <p className="text - cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>;"
-                on_click={() => {setSearchTerm ('')setSelectedCategory ('all')setSelectedPriceRange ('all')}}'
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl "hover":from - cyan - 600 "hover":to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all')}}'
-                className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl "hover":from - cyan - 600 "hover":to - purple - 700 transition-all duration-300";"
+              <div className='text-6xl mb-4'>🔍</div>;'
+              <h3 className='text - 2xl font - bold text-white mb-2'>No services found</h3>;'
+              <p className='text - cyan-300 mb-6'>Try adjusting your search criteria or browse all services.</p>;'
+                on_click={() => {setSearchTerm ('')setSelectedCategory ('all')setSelectedPriceRange ('all')}'
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl 'hover':from - cyan - 600 'hover':to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all')}'
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl 'hover':from - cyan - 600 'hover':to - purple - 700 transition-all duration-300';'
               >;
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl "hover": from - cyan - 600 "hover":to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all'),'
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl 'hover': from - cyan - 600 'hover':to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all'),'
 }
-                className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl "hover":from - cyan - 600 "hover":to - purple - 700 transition-all duration-300">"
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl 'hover':from - cyan - 600 'hover':to - purple - 700 transition-all duration-300'>'
 
                 Clear Filters;
               </button>;
@@ -924,7 +924,7 @@ href='/pricing';'
         </div>;
       </section>;
       {/* Contact Section */}
-      <section className='px - 4 "sm":px - 6 "lg":px - 8 mb - 20'>;'
+      <section className='px - 4 'sm':px - 6 'lg':px - 8 mb - 20'>;'
         <div className='max - w-4xl mx - auto'>;'
           <div className='bg - gradient - to - r from - cyan - 900 / 40 via - purple - 900 / 40 to - pink - 900 / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 8 text - center shadow - 2xl shadow - cyan - 500 / 20'>;'
             <h2 className='text - 3xl font - bold text - white mb - 4'>;'
@@ -934,7 +934,7 @@ href='/pricing';'
               Contact our team to discuss how our 2027 services can;
               revolutionize your operations and drive unprecedented growth.;
             </p>;
-            <div className='grid grid - cols - 1 "md":grid - cols - 3 gap - 6 mb - 8'>;'
+            <div className='grid grid - cols - 1 'md':grid - cols - 3 gap - 6 mb - 8'>;'
               <div className='flex items - center justify - center space - x-3'>;'
                 <Phone className='w - 5 h - 5 text - cyan - 400' />;'
                 <span className='text - white'>{contact_info.mobile}</span>;'
@@ -948,47 +948,47 @@ href='/pricing';'
                 <span className='text - white'>{contact_info.address}</span>;'
               </div>;
             </div>;
-            <div className='flex flex - col "sm":flex - row gap - 4 justify - center'>;'
+            <div className='flex flex - col 'sm':flex - row gap - 4 justify - center'>;'
               <Link;
                 href='/contact';'
-                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl "hover":from - cyan - 600 "hover":to - purple - 700 transition - all duration - 300 transform "hover":shadow - xl "hover":shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25'              >;'
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl 'hover':from - cyan - 600 'hover':to - purple - 700 transition - all duration - 300 transform 'hover':shadow - xl 'hover':shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25'              >;'
                 Get Started Today;
               </Link>;
               <Link;
                 href='/pricing';'
-                className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl "hover":bg - cyan - 500 / 10 transition - all duration - 300'              >              Ready to Transform Your Business?;'
+                className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl 'hover':bg - cyan - 500 / 10 transition - all duration - 300'              >              Ready to Transform Your Business?;'
             </h2>;
-            <p className="text - cyan - 300 mb-8 text-lg">;"
+            <p className='text - cyan - 300 mb-8 text-lg'>;'
               Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.;
             </p>;
-            <div className="grid grid - cols - 1 "md":grid - cols - 3 gap-6 mb-8">;"
-              <div className="flex items - center justify-center space-x-3">;"
-                <Phone className="w - 5 h - 5 text-cyan-400" />;"
-                <span className="text-white">{contact_info.mobile}</span>;"
+            <div className='grid grid - cols - 1 'md':grid - cols - 3 gap-6 mb-8'>;'
+              <div className='flex items - center justify-center space-x-3'>;'
+                <Phone className='w - 5 h - 5 text-cyan-400' />;'
+                <span className='text-white'>{contact_info.mobile}</span>;'
               </div>;
-              <div className="flex items - center justify-center space-x-3">;"
-                <Mail className="w - 5 h - 5 text-purple-400" />;"
-                <span className="text-white">{contact_info.email}</span>;"
+              <div className='flex items - center justify-center space-x-3'>;'
+                <Mail className='w - 5 h - 5 text-purple-400' />;'
+                <span className='text-white'>{contact_info.email}</span>;'
               </div>;
-              <div className="flex items - center justify-center space-x-3">;"
-                <MapPin className="w - 5 h - 5 text-pink-400" />;"
-                <span className="text-white">{contact_info.address}</span>;"
+              <div className='flex items - center justify-center space-x-3'>;'
+                <MapPin className='w - 5 h - 5 text-pink-400' />;'
+                <span className='text-white'>{contact_info.address}</span>;'
               </div>;
             </div>;
-            <div className="flex flex - col "sm":flex - row gap-4 justify-center">;"
+            <div className='flex flex - col 'sm':flex - row gap-4 justify-center'>;'
               <Link;
-                href="/contact";"
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl "hover":from - cyan - 600 "hover":to - purple - 700 transition - all duration - 300 transform "hover":shadow - xl "hover":shadow - cyan - 500 / 30 shadow - lg shadow-cyan-500 / 25">"
+                href='/contact';'
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl 'hover':from - cyan - 600 'hover':to - purple - 700 transition - all duration - 300 transform 'hover':shadow - xl 'hover':shadow - cyan - 500 / 30 shadow - lg shadow-cyan-500 / 25'>'
 
                 Get Started Today;
               </Link>;
               <Link;
                 href='/pricing';'
-                className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl "hover":bg - cyan - 500 / 10 transition - all duration - 300'                href="/pricing";"
-                className="px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl "hover":bg - cyan - 500 / 10 transition-all duration-300">"
+                className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl 'hover':bg - cyan - 500 / 10 transition - all duration - 300'                href='/pricing';'
+                className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl 'hover':bg - cyan - 500 / 10 transition-all duration-300'>'
 
       {/* Footer */}
-      <footer className='px - 4 "sm":px - 6 "lg":px - 8 py - 12 border - t border - cyan - 500 / 30'>;'
+      <footer className='px - 4 'sm':px - 6 'lg':px - 8 py - 12 border - t border - cyan - 500 / 30'>;'
         <div className='max - w-7xl mx - auto text - center'>;'
           <div className='mb - 8'>;'
             <div className='w - 16 h - 16 bg - gradient - to - br from - cyan - 400 via - purple - 500 to - pink - 500 rounded - xl flex items - center justify - center text - white text - 2xl font - bold mx - auto mb - 4 shadow - 2xl shadow - cyan - 500 / 50'>;'
@@ -1004,44 +1004,44 @@ href='/pricing';'
             <p className='mt - 2'>;'
               <Link;
                 href='/privacy';'
-                className='"hover":text - cyan - 400 transition - colors duration - 300'>'
+                className=''hover':text - cyan - 400 transition - colors duration - 300'>'
 
                 Privacy Policy;
               </Link>;
               {' • '}'
               <Link;
                 href='/terms';'
-                className='"hover":text - cyan - 400 transition - colors duration - 300'>'
+                className=''hover':text - cyan - 400 transition - colors duration - 300'>'
 
                 Terms of Service;
               </Link>;
               {' • '}'
               <Link;
                 href='/contact';'
-                className='"hover":text - cyan - 400 transition - colors duration - 300'>'
+                className=''hover':text - cyan - 400 transition - colors duration - 300'>'
 
                 Contact Us;
               </Link>            </p>              Z;
             </div>;
-            <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text-transparent mb-2">;"
+            <h3 className='text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text-transparent mb-2'>;'
               Zion Tech Group;
             </h3>;
-            <p className="text-cyan-300">2027 Innovation Hub</p>;"
+            <p className='text-cyan-300'>2027 Innovation Hub</p>;'
           </div>;
-          <div className="text - cyan-300 text-sm">;"
+          <div className='text - cyan-300 text-sm'>;'
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;
-            <p className="mt-2">;"
-              <Link href="/privacy" className=""hover":text - cyan - 400 transition-colors duration-300">Privacy Policy</Link>;"
+            <p className='mt-2'>;'
+              <Link href='/privacy' className=''hover':text - cyan - 400 transition-colors duration-300'>Privacy Policy</Link>;'
               {' • '}'
-              <Link href="/terms" className=""hover":text - cyan - 400 transition-colors duration-300">Terms of Service</Link>;"
+              <Link href='/terms' className=''hover':text - cyan - 400 transition-colors duration-300'>Terms of Service</Link>;'
               {' • '}'
-              <Link href="/contact" className=""hover": text - cyan - 400 transition-colors duration-300">Contact Us</Link>;"
+              <Link href='/contact' className=''hover': text - cyan - 400 transition-colors duration-300'>Contact Us</Link>;'
             </p>;
           </div>;
         </div>;
       </footer>;
   )}
-    </UltraFuturisticMatrixBackground2027>))}<footer className='px-4 "sm":px-6 "lg":px-8 py-12 border-t border-cyan-500/30'>;'
+    </UltraFuturisticMatrixBackground2027>))}<footer className='px-4 'sm':px-6 'lg':px-8 py-12 border-t border-cyan-500/30'>;'
         <div className='max-w-7xl mx-auto text-center'>;'
           <div className='mb-8'>;'
             <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 shadow-2xl shadow-cyan-500/50'>;'
@@ -1057,27 +1057,27 @@ href='/pricing';'
             <p className='mt-2'>;'
               <Link;
                 href='/privacy';'
-                className='"hover":text-cyan-400 transition-colors duration-300';'
+                className=''hover':text-cyan-400 transition-colors duration-300';'
               >;
-                className='"hover":text-cyan-400 transition-colors duration-300'>'
+                className=''hover':text-cyan-400 transition-colors duration-300'>'
 
                 Privacy Policy;
               </Link>;
               {' • '}'
               <Link;
                 href='/terms';'
-                className='"hover":text-cyan-400 transition-colors duration-300';'
+                className=''hover':text-cyan-400 transition-colors duration-300';'
               >;
-                className='"hover":text-cyan-400 transition-colors duration-300'>'
+                className=''hover':text-cyan-400 transition-colors duration-300'>'
 
                 Terms of Service;
               </Link>;
               {' • '}'
               <Link;
                 href='/contact';'
-                className='"hover":text-cyan-400 transition-colors duration-300';'
+                className=''hover':text-cyan-400 transition-colors duration-300';'
               >;
-                className='"hover":text-cyan-400 transition-colors duration-300'>'
+                className=''hover':text-cyan-400 transition-colors duration-300'>'
 
                 Contact Us;
               </Link>;
@@ -1090,4 +1090,3 @@ href='/pricing';'
 )
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

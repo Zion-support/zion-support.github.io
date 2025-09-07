@@ -38,10 +38,10 @@ const Button: React.FC<ButtonProps> = ({
       className={classes}
       onClick={onClick}
       disabled={disabled || loading}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={ scale: 1.02 }
+      whileTap={ scale: 0.98 }
     >
-      {loading && <LoadingSpinner size="sm" />}
+      {loading && <LoadingSpinner size='sm' />}
       {children}
     </motion.button>
   )

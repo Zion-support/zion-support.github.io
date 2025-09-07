@@ -94,7 +94,7 @@ serve(async (req) => {;
     return new Response('ok', {;'
       }
       "headers":{;
-        'Access-Control-Allow-Origin':'*Access-Control-Allow-Methods':'POST, OPTIONSAccess-Control-Allow-Headers':'authorization, x-client-info, apikey, content-type'}}),;'
+        'Access-Control-Allow-Origin':'*Access-Control-Allow-Methods':'POST, OPTIONSAccess-Control-Allow-Headers':'authorization, x-client-info, apikey, content-type'}),;'
   }
 ;
   const url = new URL(req.url),;

@@ -7,5 +7,5 @@ import { useState, useEffect, useCallback, useRef } from 'react' export const us
   const [performanceMetrics, setPerformanceMetrics] = useState(null);
   const sessionRef = useRef('') const lastActivityRef =;
   useRef(Date.now());
-  const flushTimerRef = useRef(null)"";
+  const flushTimerRef = useRef(null)'';
 }

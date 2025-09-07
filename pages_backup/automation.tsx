@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/automation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/automation.tsx
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -185,18 +177,18 @@ export default function AutomationPage() {
           <div className="text-center max-w-4xl mx-auto">
             <motion.h1 
               className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               Intelligent 
               <span className="text-orange-400"> Automation Solutions</span>
             </motion.h1>
             <motion.p 
               className="text-xl mb-8 text-orange-100"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
             >
               Transform your business operations with our intelligent automation solutions. 
               From RPA to workflow management, we help you streamline processes, reduce costs, 
@@ -204,9 +196,9 @@ export default function AutomationPage() {
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row justify-center gap-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.4 }
             >
               <Link href="/contact" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                 Get Free Consultation
@@ -234,9 +226,9 @@ export default function AutomationPage() {
               <motion.div 
                 key={index}
                 className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
               >
                 <div className="text-3xl mb-4">
                   <service.icon className="w-12 h-12 text-orange-600" />
@@ -275,9 +267,9 @@ export default function AutomationPage() {
               <motion.div 
                 key={index}
                 className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
               >
                 <div className="text-4xl mb-4">{type.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{type.title}</h3>
@@ -303,9 +295,9 @@ export default function AutomationPage() {
               <motion.div 
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
               >
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">{benefit.icon}</span>
@@ -352,12 +344,7 @@ export default function AutomationPage() {
     </Layout>
   );
 }
-<<<<<<< HEAD:pages_backup/automation.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 import Head from 'next / head';
 import {
@@ -644,10 +631,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/automation.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -45,7 +45,7 @@ export default function AIServices() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
+              initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -58,7 +58,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+              whileInView={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -71,7 +71,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
+              transition={ duration: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -107,7 +107,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  initial={{ opacity: 0, y: 30 }  } catch (error) {
+                  initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -120,7 +120,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+                  whileInView={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -133,7 +133,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+                  transition={ duration: 0.5, delay: index * 0.1 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -197,7 +197,7 @@ export default function AIServices() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-6 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
+              initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -210,7 +210,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+              whileInView={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -223,7 +223,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
+              transition={ duration: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -245,7 +245,7 @@ export default function AIServices() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <motion.button
-                  whileHover={{ scale: 1.05 }  } catch (error) {
+                  whileHover={ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -258,7 +258,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  whileTap={{ scale: 0.95 }  } catch (error) {
+                  whileTap={ scale: 0.95 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -276,7 +276,7 @@ export default function AIServices() {
                   Start AI Project
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }  } catch (error) {
+                  whileHover={ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -289,7 +289,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  whileTap={{ scale: 0.95 }  } catch (error) {
+                  whileTap={ scale: 0.95 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {

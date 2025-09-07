@@ -32,10 +32,10 @@ import {toast} from 'sonner';    avatar?: string;'
   }>>([
     {
       }
-      "id": "id","
-    "name": 'You''
-      "isVideoEnabled": true;
-    "isMuted": false
+      'id': 'id','
+    'name': 'You''
+      'isVideoEnabled': true;
+    'isMuted': false
     }
   ]);
 import { useState, useEffect } from 'react';'
@@ -55,15 +55,15 @@ export default function VideoCall() {;
   const [hasJoined, setHasJoined] = useState(false),;
   const [participants, setParticipants] = useState<Array<{;
     }
-    "id": string,;
-    "name": string,;
+    'id': string,;
+    'name': string,;
     avatar?: string,;
     isMuted?: boolean,;
     isVideoEnabled?: boolean,;
     isScreenSharing?: boolean,;
     isHost?: boolean;
-    "id": string,
-    "name": string,
+    'id': string,
+    'name': string,
     avatar?: string,
 isMuted?: boolean,
 isVideoEnabled?: boolean,
@@ -72,10 +72,10 @@ isHost?: boolean
   }>>([;
     {;
       }
-      "id": 'user-1',;'
-      "name": 'You',;'
-      "isVideoEnabled": true,;
-      "isMuted": false;
+      'id': 'user-1',;'
+      'name': 'You',;'
+      'isVideoEnabled': true,;
+      'isMuted': false;
     }
     setIsJoining(true);
     // Simulate connection delay;
@@ -84,9 +84,9 @@ isHost?: boolean
       setHasJoined(true);
       setIsJoining(false);
     setHasJoined(false);
-    toast && toast.info("Call ended", {,"
+    toast && toast.info('Call ended', {,'
   }
-  "description": "You have left the meeting";"
+  'description': 'You have left the meeting';'
     });
   const handleJoinCall = () => {;
     }
@@ -96,9 +96,9 @@ isHost?: boolean
       }
       setHasJoined(true);
       setIsJoining(false);
-      toast.success("Call joined", {"
+      toast.success('Call joined', {'
         }
-        "description": `You have joined meeting room ${roomId}`,`
+        'description': `You have joined meeting room ${roomId}`,`
       });
   },
 
@@ -128,24 +128,24 @@ isHost?: boolean
 
   return (
     <>
-      <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />
+      <SEO title={`Video Call - Room ${roomId}`} description='Zion video call' />
       <Header />
-      <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
+      <main className='container mx-auto py-8 min-h-[calc(100vh-200px)]'>
         {!hasJoined ? (
-          <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">
-            <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>
-            <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>
+          <div className='flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8'>
+            <h1 className='text-3xl font-bold mb-6 text-white'>Join Video Call</h1>
+            <p className='text-zion-slate-light mb-8'>Room ID: {roomId}</p>
             <Button
               onClick={handleJoinCall}
               disabled={isJoining}
-              size="lg"
-              className="bg-zion-purple hover:bg-zion-purple-light"
+              size='lg'
+              className='bg-zion-purple hover:bg-zion-purple-light'
             >
-              {isJoining ? "Connecting..." : "Join Call"}
+              {isJoining ? 'Connecting...' : 'Join Call'}
             </Button>
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className='space-y-4'>
             <VideoCallRoom
     }, 1500)
 };
@@ -153,24 +153,24 @@ isHost?: boolean
   const handleLeaveCall = () => {;
     }
     setHasJoined(false);
-    toast && toast.info("Call ended", {,"
+    toast && toast.info('Call ended', {,'
   }
-  "description": "You have left the meeting";"
+  'description': 'You have left the meeting';'
     });
             {/* This button is just for demo/testing purposes */}
-            <div className="flex justify-center mt-4">"
+            <div className='flex justify-center mt-4'>'
               <Button,
-variant="outline";"
+variant='outline';'
                 onClick={simulateUserJoining}
-                className="text-sm""
+                className='text-sm''
               >
               roomId={roomId |''}
               participants={participants}
               onLeave={handleLeaveCall}
             />
             {/* This button is just for demo/testing purposes */}
-            <div className="flex justify-center mt-4">
-              <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
+            <div className='flex justify-center mt-4'>
+              <Button variant='outline' onClick={simulateUserJoining} className='text-sm'>
                 Simulate user joining (demo only)
               </Button>
             </div>
@@ -180,10 +180,10 @@ variant="outline";"
       <Footer />;
     </>;  );
 }
-      "id": 'user - 1','
-      "name": 'You','
-      "isVideoEnabled": true,
-      "is_muted": false;
+      'id': 'user - 1','
+      'name': 'You','
+      'isVideoEnabled': true,
+      'is_muted': false;
     }
   ]);
 ;

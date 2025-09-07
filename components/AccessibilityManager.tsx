@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';'
-interface AccessibilitySettings  {"highContrast": boolean;
+interface AccessibilitySettings  {'highContrast': boolean;
    }
-   "fontSize": 'small' | 'normal' | 'large' | 'xlarge';'
-   "reducedMotion": boolean;
-   "focusVisible": boolean;
-   "screenReader": boolean;
-}const "AccessibilityManager": React.FC = () => {const [settings, setSettings] = useState<AccessibilitySettings>({"highContrast": false, "fontSize": 'normal',"reducedMotion": false, "focusVisible": false,"screenReader": false;'
+   'fontSize': 'small' | 'normal' | 'large' | 'xlarge';'
+   'reducedMotion': boolean;
+   'focusVisible': boolean;
+   'screenReader': boolean;
+}const 'AccessibilityManager': React.FC = () => {const [settings, setSettings] = useState<AccessibilitySettings>({'highContrast': false, 'fontSize': 'normal','reducedMotion': false, 'focusVisible': false,'screenReader': false;'
   })const [isOpen, setIsOpen]  = useState(false)useEffect(() => {// Check for user preferences;
     }
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-"motion": reduce)').matches;'
-    const prefersHighContrast  = window.matchMedia('(prefers-"contrast": high)').matches;// Load saved settings;'
-    const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {setSettings(JSON.parse(savedSettings))} else {setSettings(prev => ({...prev, "reducedMotion": prefersReducedMotion,"highContrast": prefersHighContrast;'
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-'motion': reduce)').matches;'
+    const prefersHighContrast  = window.matchMedia('(prefers-'contrast': high)').matches;// Load saved settings;'
+    const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {setSettings(JSON.parse(savedSettings))} else {setSettings(prev => ({...prev, 'reducedMotion': prefersReducedMotion,'highContrast': prefersHighContrast;'
       }))}// Detect screen reader;
     const hasScreenReader = window.speechSynthesis && window.speechSynthesis.getVoices().length > 0;
-    setSettings(prev => ({ ...prev, "screenReader": hasScreenReader }))}, [])useEffect(() => {// Apply accessibility settings;
+    setSettings(prev => ({ ...prev, 'screenReader': hasScreenReader }))}, [])useEffect(() => {// Apply accessibility settings;
     }
     const root  = document.documentElement;// High contrast;
 
@@ -22,22 +22,22 @@ interface AccessibilityManagerProps {
   children?: React.ReactNode;
 }
 
-const "AccessibilityManager": React.FC = () => ;
-  const [settings, setSettings] = useState<AccessibilitySettings>({"highContrast": false, "fontSize": 'normal',"reducedMotion": false, "focusVisible": false,"screenReader": false;'
+const 'AccessibilityManager': React.FC = () => ;
+  const [settings, setSettings] = useState<AccessibilitySettings>({'highContrast': false, 'fontSize': 'normal','reducedMotion': false, 'focusVisible': false,'screenReader': false;'
   })const [isOpen, setIsOpen]  = useState(false)useEffect(() => {
 // Check for user preferences;
 
 }
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-"motion": reduce)').matches;'
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-'motion': reduce)').matches;'
 
-const prefersHighContrast  = window.matchMedia('(prefers-"contrast": high)').matches;// Load saved settings;'
+const prefersHighContrast  = window.matchMedia('(prefers-'contrast': high)').matches;// Load saved settings;'
 
-const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {setSettings(JSON.parse(savedSettings))} else {setSettings(prev => ({...prev, "reducedMotion": prefersReducedMotion,"highContrast": prefersHighContrast;'
+const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {setSettings(JSON.parse(savedSettings))} else {setSettings(prev => ({...prev, 'reducedMotion': prefersReducedMotion,'highContrast': prefersHighContrast;'
       }))}// Detect screen reader;
 
 const hasScreenReader = window.speechSynthesis && window.speechSynthesis.getVoices().length > 0;
-    setSettings(prev = > ({ ...prev, "screenReader": hasScreenReader })
+    setSettings(prev = > ({ ...prev, 'screenReader': hasScreenReader })
 }, [];
   useEffect(() => {
     // Analytics initialization
@@ -51,27 +51,27 @@ const root  = document.documentElement;// High contrast;
     root.setAttribute('data-font-size', settings.fontSize)// Reduced motion;'
     if (settings.reducedMotion) {root.classList.add('reduced-motion')} else {root.classList.remove('reduced-motion')}// Focus visible;'
     if (settings.focusVisible) {root.classList.add('focus-visible')} else {root.classList.remove('focus-visible')}// Save settings;'
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])const updateSetting = <K extends keyof AccessibilitySettings>("key": K,"value": AccessibilitySettings[K];'
-  ) => {setSettings(prev => ({ ...prev, [key]: value }))}const announceToScreenReader = ("message": string) => {if (settings.screenReader) {const announcement = document.createElement('div')announcement.setAttribute('aria-live', 'polite')announcement.setAttribute('aria-atomic', 'true')announcement.className = 'sr-only';'
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])const updateSetting = <K extends keyof AccessibilitySettings>('key': K,'value': AccessibilitySettings[K];'
+  ) => {setSettings(prev => ({ ...prev, [key]: value }))}const announceToScreenReader = ('message': string) => {if (settings.screenReader) {const announcement = document.createElement('div')announcement.setAttribute('aria-live', 'polite')announcement.setAttribute('aria-atomic', 'true')announcement.className = 'sr-only';'
       }
       announcement.textContent = message;
       document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)}, 1000)}
-  }const handleToggle = ("key": keyof AccessibilitySettings, "value": boolean) => {updateSetting(key, value)announceToScreenReader(`${key} ${value ? 'enabled' : 'disabled'}`)}const handleFontSizeChange = ("size": AccessibilitySettings['fontSize']) => {updateSetting('fontSize', size)announceToScreenReader(`Font size changed to ${size}`)}return (<>;`  ) => {setSettings(prev = > ({ ...prev, [key]: value });
+  }const handleToggle = ('key': keyof AccessibilitySettings, 'value': boolean) => {updateSetting(key, value)announceToScreenReader(`${key} ${value ? 'enabled' : 'disabled'}`)}const handleFontSizeChange = ('size': AccessibilitySettings['fontSize']) => {updateSetting('fontSize', size)announceToScreenReader(`Font size changed to ${size}`)}return (<>;`  ) => {setSettings(prev = > ({ ...prev, [key]: value });
 }
 
-const announceToScreenReader = ("message": string) => {if (settings.screenReader) ;
+const announceToScreenReader = ('message': string) => {if (settings.screenReader) ;
   }
   const announcement = document.createElement('div')announcement.setAttribute('aria-live', 'polite')announcement.setAttribute('aria-atomic', 'true')announcement.className = 'sr-only';'
       announcement.textContent = message;
       document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)}, 1000)}
   }
 
-const handleFontSizeChange = ("size": AccessibilitySettings['fontSize']) => {updateSetting('fontSize', size)announceToScreenReader(`Font size changed to ${size}`);`  return (<>;
+const handleFontSizeChange = ('size': AccessibilitySettings['fontSize']) => {updateSetting('fontSize', size)announceToScreenReader(`Font size changed to ${size}`);`  return (<>;
       {/* Accessibility Controls */}
       <div className='accessibility-controls fixed bottom-4 right-4 z-50'>;'
         <button;
           onClick={() => setIsOpen(!isOpen)}
-          className='bg-blue-600 text-white p-3 rounded-full shadow-lg "hover": bg-blue-700 transition-colors "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":ring-offset-2';'
+          className='bg-blue-600 text-white p-3 rounded-full shadow-lg 'hover': bg-blue-700 transition-colors 'focus':outline-none 'focus':ring-2 'focus':ring-blue-500 'focus':ring-offset-2';'
           aria-label='Open accessibility settings';'
           aria-expanded={isOpen}
         >;
@@ -104,7 +104,7 @@ const handleFontSizeChange = ("size": AccessibilitySettings['fontSize']) => {upd
                     key={size}
                     onClick={() => handleFontSizeChange(size)}
                     className={`px-3 py-1 rounded text-sm ${settings.fontSize === size;`                        ? 'bg-blue-600 text-white';'
-                        : 'bg-gray-200 text-gray-700 "hover":bg-gray-300';'
+                        : 'bg-gray-200 text-gray-700 'hover':bg-gray-300';'
                     }`}`                    aria-pressed={settings.fontSize === size}
                   >;
                     {size === 'small' ? 'A' : size === 'normal' ? 'A' : size === 'large' ? 'A' : 'A'}'
@@ -143,8 +143,8 @@ const handleFontSizeChange = ("size": AccessibilitySettings['fontSize']) => {upd
             </div>;
             {/* Screen Reader Status */}
             <div className='text-sm text-gray-600'>;'
-              Screen "Reader": {settings.screenReader ? 'Detected' : 'Not Detected'}'
-              Screen "Reader": {settings.screenReader ? 'Detected' : 'Not Detected,'
+              Screen 'Reader': {settings.screenReader ? 'Detected' : 'Not Detected'}'
+              Screen 'Reader': {settings.screenReader ? 'Detected' : 'Not Detected,'
 }
             </div>;
           </div>;

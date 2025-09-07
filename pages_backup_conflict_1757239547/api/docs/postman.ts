@@ -18,14 +18,14 @@ function toPostman() {
           header: [
             {
               key: "Authorization"
-              value: "Bearer {{token}}"
+              value: "Bearer {token}"
               disabled: !(ep.auth |[]).includes("jwt")
             }
           ]
 
           url: {
-            raw: `{{baseUrl}}${ep.path}`
-            host: ["{{baseUrl}}"]
+            raw: `{baseUrl}${ep.path}`
+            host: ["{baseUrl}"]
             path: ep.path.replace(/^\//, "").split("/")
           }
           body: ep.requestBodySchema
@@ -73,12 +73,12 @@ function toPostman() {;
         name: `${section.title} - ${ep.title}`,;
         request: {;
           method: ep.method,;
-          header: [{ key: 'Authorization', value: 'Bearer {{token}}', disabled: !(ep.auth || []).includes('jwt') }],;
+          header: [{ key: 'Authorization', value: 'Bearer {token}', disabled: !(ep.auth || []).includes('jwt') }],;
           url: {;
-            raw: `{{baseUrl}}${ep.path}`,;
-            host: ['{{baseUrl}}'],;
+            raw: `{baseUrl}${ep.path}`,;
+            host: ['{baseUrl}'],;
             path: ep.path.replace(/^\//, '').split('/')},;
-          body: ep.requestBodySchema ? { mode: 'raw', raw: JSON.stringify({}, null, 2) } : undefined}}));
+          body: ep.requestBodySchema ? { mode: 'raw', raw: JSON.stringify({}, null, 2) } : undefined}));
     ),;
     variable: [;
       { key: 'baseUrl', value: 'https://api.zion.os' },;

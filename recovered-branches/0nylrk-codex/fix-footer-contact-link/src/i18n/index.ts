@@ -13,7 +13,7 @@ import arTranslation from './locales/ar/translation ;'
       "order": ['localStoragenavigator'];'
       "lookupLocalStorage": "lookupLocalStorage","
     "caches": ['localStorage']'
-    }});
+    });
 // For RTL language support
   .use (LanguageDetector) // Detect user language;
   .use (initReactI18next) // Initialize react - i18next;
@@ -49,7 +49,7 @@ import arTranslation from './locales/ar/translation ;'
       "order": ['local_storagenavigator'];'
       "lookupLocalStorage": 'zion_language','
       "caches": ['local_storage'];'
-    }});
+    });
 ;
 // For RTL language support;
 document.document_element.dir = i18n.dir ();

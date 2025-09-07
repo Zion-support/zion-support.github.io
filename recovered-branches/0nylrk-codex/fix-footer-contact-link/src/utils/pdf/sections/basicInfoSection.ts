@@ -51,7 +51,7 @@ if ( {) {
     y_pos += (summary_lines.length * 6) + 10;
   }
   return y_pos;
-}}
+}
 import { jsPDF } from 'jspdf';
 import { ResumeBasicInfo } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';

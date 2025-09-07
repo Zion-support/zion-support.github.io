@@ -1,6 +1,6 @@
 
   "contactInfo": {"contactInfo": {import { ServiceVariant  } from '../types / service - variants';'
-export interface AdvancedAIAutomationService  {{}
+export interface AdvancedAIAutomationService  {}
   {"id": string, "name": string,"tagline": string, "price": string,"period": string, "description": string,"features": string[], "popular": boolean,"icon": string, "color": string,"textColor": string, "link": string,"marketPosition": string, "targetAudience": string[],"trialDays": number, "setupTime": string,"category": string, "realService": boolean,"technology": string[], "integrations": string[],"useCases": string[], "roi": string,"competitors": string[], "marketSize": string,"growthRate": string, "variant": string,"contactInfo": {"mobile": string, "email": string,"address": string,"website": string;
     },"realImplementation": boolean, "implementationDetails": string,"launchDate": string, "customers": number,"rating": number,"reviews": number;
 }
@@ -9,10 +9,10 @@ export interface AdvancedAIAutomationService  {{}
     "real_implementation": true,"implementation_details": 'AI - powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.';'
     "launch_date": '2024 - 10 - 01';'
     "customers": 89;
-    "rating": 4.8,"reviews": 38;];;}
-];;
+    "rating": 4.8,"reviews": 38;];}
+];
   }
-  }];;
+  }];
     "realImplementation": true;
     "implementationDetails":;
       'Enterprise-grade DevOps automation platform with AI-powered optimization, multi-cloud support, and advanced monitoring capabilities.';'
@@ -342,7 +342,7 @@ export interface AdvancedAIAutomationService  {{}
   }
 ];
   }
-];;
+];
   "contactInfo": {},
     "realImplementation": boolean, "implementationDetails": string,
   "launchDate": string, "customers": number,
@@ -676,7 +676,6 @@ export const "advancedAIAutomationServices2025": AdvancedAIAutomationService[] =
     "reviews": 34;
   },;
   // AI-Powered DevOps Automation;
-<<<<<<< HEAD
   {;
     }
     "id": 'ai-devops-automation',;'
@@ -723,7 +722,6 @@ export const "advancedAIAutomationServices2025": AdvancedAIAutomationService[] =
     "reviews": 28;
   },;
   // AI-Powered Customer Support Automation;
-<<<<<<< HEAD
   {;
     }
     "id": 'ai-customer-support-automation',;'
@@ -770,7 +768,6 @@ export const "advancedAIAutomationServices2025": AdvancedAIAutomationService[] =
     "reviews": 41;
   },;
   // AI-Powered Marketing Automation;
-<<<<<<< HEAD
   {;
     }
     "id": 'ai-marketing-automation',;'
@@ -817,7 +814,6 @@ export const "advancedAIAutomationServices2025": AdvancedAIAutomationService[] =
     "reviews": 67;
   },;
   // AI-Powered Sales Intelligence;
-<<<<<<< HEAD
   {;
     }
     "id": 'ai-sales-intelligence',;'

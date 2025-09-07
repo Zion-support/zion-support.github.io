@@ -18,16 +18,16 @@ import {
 getDocsSearchPath;
 docsSearchSuggestions;
 } from '@/data / docsSearchData';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput","
-import { cn } from "@/lib/utils","
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput','
+import { cn } from '@/lib/utils','
 import {
  getDocsSearchPath,
  docsSearchSuggestions
-} from "@/data/docsSearchData","
+} from '@/data/docsSearchData','
 
 
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
-import { cn } from "@/lib/utils",;
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput',;
+import { cn } from '@/lib/utils',;
 
 import {
  getDocsSearchPath,
@@ -35,7 +35,7 @@ import {
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 
-} from "@/data/docsSearchData",
+} from '@/data/docsSearchData',
 
 
 interface ApiDocsLayoutProps {

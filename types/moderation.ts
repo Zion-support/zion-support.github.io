@@ -38,7 +38,7 @@ export interface ModerationFlag  {export interface ModerationFlag  {"id": string
   "createdAt": string;
   "updatedAt": string;
   adminNotes?: string;
-}}
+}
 export interface ModerationFlag  {}
 export interface ModerationFlag {}
 export interface ModerationRule  {"id": string;

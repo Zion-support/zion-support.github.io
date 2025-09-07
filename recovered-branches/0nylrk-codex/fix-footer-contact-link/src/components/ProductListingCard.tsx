@@ -246,7 +246,7 @@ key={idx}
             </div>;
           )}
         </div>;                navigate(`/listing/${listing.id}`)`
-              }}
+              }
               className="bg-zion-purple "hover":bg-zion-purple-dark text-white""
             >
               Buy Now

@@ -190,8 +190,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
     { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },;
     { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },;
     { id: 'security', name: 'Cybersecurity', icon: '🔒', count: cybersecurityCount   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ],;
@@ -201,8 +201,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
     { id: 'medium', name: '$2K - $8K/month', range: '$2K - $8K' },;
     { id: 'high', name: '$8K - $20K/month', range: '$8K - $20K' },;
     { id: 'premium', name: '$20K+/month', range: '$20K+'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ],;
@@ -212,8 +212,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
     { id: 'price-high', name: 'Price High to Low' },;
     { id: 'rating', name: 'Rating' },;
     { id: 'customers', name: 'Customer Count'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ],;
@@ -225,8 +225,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
         const parsed = parseFloat(match || '0');
         return isNaN(parsed) ? 0 : parsed;
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       return 0;
@@ -266,8 +266,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
       default:;
         filtered.sort((a, b) => a.name.localeCompare(b.name));
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -280,13 +280,13 @@ export default function EnhancedServicesShowcase2025(req, res) {
       transition: {;
         staggerChildren: 0.1;
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   };
@@ -298,61 +298,61 @@ export default function EnhancedServicesShowcase2025(req, res) {
       transition: {;
         duration: 0.5;
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   },
   return (
     <EnhancedFuturisticBackground
-      intensity="high"
-      colorScheme="quantum"
+      intensity='high'
+      colorScheme='quantum'
       particleCount={300  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       animationSpeed={1.5  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     >
-      <div className="min-h-screen">
+      <div className='min-h-screen'>
         <Head>
           <title>2025 Innovative Services Showcase - Zion Tech Group | Revolutionary AI, Quantum & Emerging Tech</title>
-          <meta name="description" content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting-edge emerging technologies. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="AI services 2025, quantum computing, blockchain, IoT, edge computing, 5G, cybersecurity, metaverse, space technology, Zion Tech Group" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="2025 Innovative Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="Revolutionary AI, quantum computing, and emerging technology services for 2025. Contact: +1 302 464 0950" />
-          <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-showcase-2025" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-showcase-2025" />
+          <meta name='description' content='Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting-edge emerging technologies. Contact: +1 302 464 0950' />
+          <meta name='keywords' content='AI services 2025, quantum computing, blockchain, IoT, edge computing, 5G, cybersecurity, metaverse, space technology, Zion Tech Group' />
+          <meta name='author' content='Zion Tech Group' />
+          <meta property='og:title' content='2025 Innovative Services Showcase - Zion Tech Group' />
+          <meta property='og:description' content='Revolutionary AI, quantum computing, and emerging technology services for 2025. Contact: +1 302 464 0950' />
+          <meta property='og:url' content='https://ziontechgroup.com/enhanced-services-showcase-2025' />
+          <meta property='og:type' content='website' />
+          <link rel='canonical' href='https://ziontechgroup.com/enhanced-services-showcase-2025' />
         </Head>
         {/* Hero Section */}
         <section className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
-              <div className="flex items-center justify-center mb-6">
-                <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
-                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <div className='flex items-center justify-center mb-6'>
+                <Sparkles className='w-12 h-12 text-cyan-400 mr-4' />
+                <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
                   2025 Innovation Showcase
                 </h1>
-                <Sparkles className="w-12 h-12 text-pink-400 ml-4" />
+                <Sparkles className='w-12 h-12 text-pink-400 ml-4' />
               </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                 Revolutionary AI, Quantum Computing & Emerging Technology Services
               </p>
-              <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+              <p className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto'>
                 Discover our cutting-edge solutions that are transforming industries and driving the future of technology
               </p>
               {/* Service Statistics */}
@@ -363,17 +363,17 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   </div>
                   <div className='text-gray-400'>Total Services</div>
                 </div>
-                <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
-                  <div className="text-3xl font-bold text-purple-400">{aiCount + quantumCount}</div>
-                  <div className="text-gray-400">AI & Quantum</div>
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>
+                  <div className='text-3xl font-bold text-purple-400'>{aiCount + quantumCount}</div>
+                  <div className='text-gray-400'>AI & Quantum</div>
                 </div>
-                <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
-                  <div className="text-3xl font-bold text-green-400">{blockchainCount + iotCount}</div>
-                  <div className="text-gray-400">Emerging Tech</div>
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>
+                  <div className='text-3xl font-bold text-green-400'>{blockchainCount + iotCount}</div>
+                  <div className='text-gray-400'>Emerging Tech</div>
                 </div>
-                <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
-                  <div className="text-3xl font-bold text-pink-400">{spaceCount + cybersecurityCount}</div>
-                  <div className="text-gray-400">Specialized</div>
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>
+                  <div className='text-3xl font-bold text-pink-400'>{spaceCount + cybersecurityCount}</div>
+                  <div className='text-gray-400'>Specialized</div>
                 </div>
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>
                   <div className='text-3xl font-bold text-pink-400'>
@@ -441,33 +441,33 @@ export default function EnhancedServicesShowcase2025(req, res) {
           <div className='max-w-7xl mx-auto'>
             <motion.div
               variants={containerVariants  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              initial="hidden"
-              animate="visible" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              initial='hidden'
+              animate='visible' className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               <AnimatePresence>
                 {filteredServices.map((service) => (
                   <motion.div
                     key={service.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                     variants={itemVariants  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                    layout className="group relative bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105">
+                    layout className='group relative bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105'>
                     {/* Service Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="text-3xl">{service.icon}</div>
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='text-3xl'>{service.icon}</div>
                       {service.popular && (
                         <div className='flex items-center space-x-1 text-yellow-400 text-sm'>
                           <Star className='w-4 h-4 fill-current' />                          <span>Popular</span>
@@ -530,14 +530,14 @@ export default function EnhancedServicesShowcase2025(req, res) {
                     <div className='flex gap-3'>
                       <a
                         href={service.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                        target="_blank"
-                        rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                        target='_blank'
+                        rel='noopener noreferrer' className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center'>
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <ArrowRight className='w-4 h-4 ml-2' />
                       </Link>
                       <a
                         href='/contact'
@@ -562,8 +562,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
             {/* No Results Message */}
             {filteredServices.length === 0 && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className='text-center py-16'
               >
                 <div className='text-6xl mb-4'>🔍</div>
@@ -579,14 +579,14 @@ export default function EnhancedServicesShowcase2025(req, res) {
         {/* Call to Action */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className='text-xl text-gray-300 mb-8'>
                 Join thousands of companies achieving breakthrough results with our revolutionary services
               </p>
               {/* Contact Information */}
@@ -595,17 +595,17 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   <div className='w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center'>
                     <Target className='w-6 h-6 text-cyan-400' />
                   </div>
-                  <span className="text-lg text-white">+1 302 464 0950</span>
+                  <span className='text-lg text-white'>+1 302 464 0950</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
-                    <Award className="w-6 h-6 text-purple-400" />
+                <div className='flex items-center justify-center space-x-3'>
+                  <div className='w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center'>
+                    <Award className='w-6 h-6 text-purple-400' />
                   </div>
-                  <span className="text-lg text-white">kleber@ziontechgroup.com</span>
+                  <span className='text-lg text-white'>kleber@ziontechgroup.com</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
-                    <Lightbulb className="w-6 h-6 text-green-400" />
+                <div className='flex items-center justify-center space-x-3'>
+                  <div className='w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center'>
+                    <Lightbulb className='w-6 h-6 text-green-400' />
                   </div>
                   <span className='text-lg text-white'>
                     364 E Main St STE 1008 Middletown DE 19709
@@ -614,9 +614,9 @@ export default function EnhancedServicesShowcase2025(req, res) {
               {/* Action Buttons */}
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>
                 <a
-                  href="/contact" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline">
-                  <span className="relative">Start Your Transformation</span>
-                  <Rocket className="ml-2 w-6 h-6" />
+                  href='/contact' className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'>
+                  <span className='relative'>Start Your Transformation</span>
+                  <Rocket className='ml-2 w-6 h-6' />
                 </Link>
                 <a
                   href='/pricing'

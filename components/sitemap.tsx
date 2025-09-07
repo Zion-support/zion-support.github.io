@@ -50,7 +50,7 @@ export default function SitemapPage() {const links = [
 }
     { "name": "Support", "href": "/support","
 }
-    { "name": "Contact", "href": "/contact" }class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}"
+    { "name": "Contact", "href": "/contact" }class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }"
   static getDerivedStateFromError(error) {return { "hasError": true 
 }
   componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
@@ -81,8 +81,6 @@ import React from "react";"
 import Head from "next/head";"
 
 export default function SitemapPage() {
-=======
-<<<<<<< HEAD
 
 
 }
@@ -275,7 +273,6 @@ const links = [;
 }
 
 
->>>>>>> origin/main
 	const links = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Services', href: '/services' },
@@ -304,10 +301,8 @@ return (;
 				</ul>
 			</div>
 		</div>
-<<<<<<< HEAD
 	)
 }
-=======
 	);
 
 }
@@ -604,7 +599,6 @@ key={l.href}
     </div>
   );
 }
-<<<<<<< HEAD
   );
 
 }
@@ -755,7 +749,3 @@ return (;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

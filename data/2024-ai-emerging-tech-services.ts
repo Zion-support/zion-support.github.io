@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 // Placeholder content - file was empty after conflict resolution;
 import { ServiceVariant  } from '../types/service-variants';
@@ -8,7 +6,6 @@ export interface AIEmergingTechService  {id: string;
   tagline: string;
   price: string;
   period: string,description: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { ServiceVariant } from "../types/service-variants";
 
 export interface AIEmergingTechService {

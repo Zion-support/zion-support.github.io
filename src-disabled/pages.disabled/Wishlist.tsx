@@ -50,8 +50,8 @@ export default function WishlistPage() {;
 }/> Saved {;
   new Date (fav.created at) .toLocaleDateString () ;
 }</p>) ;
-}</div>) : null ";
-}> <X className="h-4 w-4" /> </button> <ProductListingCard listing= {;
+}</div>) : null ';
+}> <X className='h-4 w-4' /> </button> <ProductListingCard listing= {;
   item ;
 }/> <Button > {';
   items.some (i => i.id === item.id) ? 'In Cart': 'Add to Cart' ;
@@ -62,4 +62,4 @@ export default function WishlistPage() {;
 });
 }</div>) ;
 }</div>) ;
-}'"
+}''

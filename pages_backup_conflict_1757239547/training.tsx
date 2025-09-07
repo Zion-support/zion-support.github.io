@@ -21,19 +21,19 @@ import Layout from '../components/Layout';
 export default function Training() {
   return (
     <Layout
-      title="Training & Education - Zion Tech Group"
-      description="Professional training and education services for technology professionals."
+      title='Training & Education - Zion Tech Group'
+      description='Professional training and education services for technology professionals.'
     >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Training & Education</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      <div className='min-h-screen bg-gray-50 py-20'>
+        <div className='container mx-auto px-4'>
+          <div className='text-center mb-12'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>Training & Education</h1>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Professional training and education services for technology professionals.
             </p>
           </div>
-          <div className="text-center">
-            <p className="text-gray-600">Training page is under construction.</p>
+          <div className='text-center'>
+            <p className='text-gray-600'>Training page is under construction.</p>
           </div>
         </div>
       </div>
@@ -43,59 +43,59 @@ export default function Training() {
   return (
     <Layout>
       <SEO
-        title="Training & Certification - Zion Tech Group"
-        description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
+        title='Training & Certification - Zion Tech Group'
+        description='Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career.'
       />
-      <div className="min-h-screen">
+      <div className='min-h-screen'>
         {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-        <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
-          <div className="relative z-10 container mx-auto px-4 text-center">
+        <section className='relative py-20 lg:py-32 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10' />
+          <div className='relative z-10 container mx-auto px-4 text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              initial={ opacity: 0, y: 20 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              animate={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              transition={ duration: 0.8 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             >
-              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+              <h1 className='text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
                 Training & Certification
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              <p className='text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8'>
                 Master the future of technology with our comprehensive training programs in AI consciousness, quantum computing, and autonomous operations.
               </p>
-              <div className="flex flex-wrap justify-center gap-4 text-gray-400">
-                <div className="flex items-center gap-2">
-                  <GraduationCap className="w-5 h-5" />
+              <div className='flex flex-wrap justify-center gap-4 text-gray-400'>
+                <div className='flex items-center gap-2'>
+                  <GraduationCap className='w-5 h-5' />
                   <span>Expert-Led Training</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5" />
+                <div className='flex items-center gap-2'>
+                  <Award className='w-5 h-5' />
                   <span>Industry Certifications</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5" />
+                <div className='flex items-center gap-2'>
+                  <Users className='w-5 h-5' />
                   <span>Global Community</span>
                 </div>
               </div>
             </motion.div>
           </div>
-          <div className="text-center">
-            <p className="text-gray-600">Training page is under construction.</p>
+          <div className='text-center'>
+            <p className='text-gray-600'>Training page is under construction.</p>
           </div>
         </div>
       </div>
@@ -127,9 +127,9 @@ export default Training;
         <section className='relative py-20 lg:py-32 overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10' />
           <div className='relative z-10 container mx-auto px-4 text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className='text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
                 Training & Certification
@@ -179,10 +179,10 @@ export default Training;
         {/* Featured Programs */}
         <section className='py-20'>
           <div className='container mx-auto px-4'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
@@ -196,10 +196,10 @@ export default Training;
             <div className='grid lg:grid-cols-3 gap-8 mb-16'>              {featuredPrograms.map((program, index) => (
                 <motion.div
                   key={program.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.2 }
+                  viewport={ once: true }
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
                 >
                   <div className='h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center'>
@@ -274,10 +274,10 @@ export default Training;
         {/* All Programs */}
         <section className='py-20 bg-black/50'>
           <div className='container mx-auto px-4'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
@@ -292,10 +292,10 @@ export default Training;
             <div className='space-y-4'>              {filteredPrograms.map((program, index) => (
                 <motion.div
                   key={program.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
                 >
                   <div className='p-6'>
@@ -354,10 +354,10 @@ export default Training;
                     </div>
                     {expandedProgram === program.id && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
+                        initial={ opacity: 0, height: 0 }
+                        animate={ opacity: 1, height: 'auto' }
+                        exit={ opacity: 0, height: 0 }
+                        transition={ duration: 0.3 }
                         className='mt-4 pt-4 border-t border-gray-700'
                       >
                         <div className='grid md:grid-cols-2 gap-6'>
@@ -442,10 +442,10 @@ export default Training;
         {/* Learning Paths */}
         <section className='py-20'>
           <div className='container mx-auto px-4'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
@@ -516,10 +516,10 @@ export default Training;
                 },              ].map((path, index) => (
                 <motion.div
                   key={path.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.2 }
+                  viewport={ once: true }
                   className='p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300'
                 >
                   <div className='text-center mb-6'>
@@ -572,10 +572,10 @@ export default Training;
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10'>
           <div className='container mx-auto px-4 text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
                 Ready to Transform Your Career?
@@ -624,7 +624,7 @@ export default Training;
   {
   duration: 0.8 
 
-}> <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6" > Training & Certification </h1> </p> <div className="flex flex-wrap justify-center gap-4 text-gray-400" > <div className="flex items-center gap-2" > <GraduationCap className="w-5 h-5" /> <span>Expert-Led Training</span> </div> <div className="flex items-center gap-2" > <Award className="w-5 h-5" /> <span>Industry Certifications</span> </div> <div className="flex items-center gap-2" > <Users className="w-5 h-5" /> <span>Global Community</span> </div> </div> </motion.div> </div> </section> key= {
+}> <h1 className='text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6' > Training & Certification </h1> </p> <div className='flex flex-wrap justify-center gap-4 text-gray-400' > <div className='flex items-center gap-2' > <GraduationCap className='w-5 h-5' /> <span>Expert-Led Training</span> </div> <div className='flex items-center gap-2' > <Award className='w-5 h-5' /> <span>Industry Certifications</span> </div> <div className='flex items-center gap-2' > <Users className='w-5 h-5' /> <span>Global Community</span> </div> </div> </motion.div> </div> </section> key= {
   category.id 
 }onClick= {
   () => setSelectedCategory (category.id) 
@@ -637,14 +637,14 @@ export default Training;
 }({
   category.count 
 }) </button>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > Featured Programs </h2> <p className="text-xl text-gray-400" > Our most popular and comprehensive training programs </p> </motion.div> </div>) ) 
-}</div> <a href="#" className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Enroll Now <ArrowRight className="w-4 h-4" /> </Link> </div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > All Training Programs </h2> <p className="text-xl text-gray-400" > Comprehensive collection of training programs across all technology domains </p> </motion.div> </div> </div> </div>) : (<ChevronDown className="w-5 h-5" />) 
+}</div> </div> </section> > <h2 className='text-4xl font-bold text-white mb-4' > Featured Programs </h2> <p className='text-xl text-gray-400' > Our most popular and comprehensive training programs </p> </motion.div> </div>) ) 
+}</div> <a href='#' className='w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105' > Enroll Now <ArrowRight className='w-4 h-4' /> </Link> </div> </motion.div>) ) 
+}</div> </div> </section> > <h2 className='text-4xl font-bold text-white mb-4' > All Training Programs </h2> <p className='text-xl text-gray-400' > Comprehensive collection of training programs across all technology domains </p> </motion.div> </div> </div> </div>) : (<ChevronDown className='w-5 h-5' />) 
 }</button> </div> </div> {
-  expandedProgram === program.id && (<motion.div > <div className="grid md:grid-cols-2 gap-6" > <div> <h4 className="text-white font-semibold mb-3" >What You'll Learn</h4> <ul className="space-y-2 text-sm text-gray-300" > <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Core concepts and principles</span> </li> <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Hands-on practical exercises</span> </li> <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Real-world project implementation</span> </li> <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Industry best practices</span> </li> </ul> </div> <div> <h4 className="text-white font-semibold mb-3" >Program Details</h4> <div className="space-y-2 text-sm text-gray-300" > <div className="flex justify-between" > <span>Duration:</span> </div> <div className="flex justify-between" > <span>Level:</span> </div> <div className="flex justify-between" > <span>Format:</span> <span className="text-white" >Online + Live Sessions</span> </div> <div className="flex justify-between" > <span>Support:</span> <span className="text-white" >24/7 Community + Mentors</span> </div> </div> </div> </div> <div className="mt-6 flex gap-3" > <a href="#" className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300" > Enroll Now <ArrowRight className="w-4 h-4" /> </Link> <a href="#" className="inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Learn More </Link> </div> </motion.div>) 
+  expandedProgram === program.id && (<motion.div > <div className='grid md:grid-cols-2 gap-6' > <div> <h4 className='text-white font-semibold mb-3' >What You'll Learn</h4> <ul className='space-y-2 text-sm text-gray-300' > <li className='flex items-center gap-2' > <CheckCircle className='w-4 h-4 text-green-400' /> <span>Core concepts and principles</span> </li> <li className='flex items-center gap-2' > <CheckCircle className='w-4 h-4 text-green-400' /> <span>Hands-on practical exercises</span> </li> <li className='flex items-center gap-2' > <CheckCircle className='w-4 h-4 text-green-400' /> <span>Real-world project implementation</span> </li> <li className='flex items-center gap-2' > <CheckCircle className='w-4 h-4 text-green-400' /> <span>Industry best practices</span> </li> </ul> </div> <div> <h4 className='text-white font-semibold mb-3' >Program Details</h4> <div className='space-y-2 text-sm text-gray-300' > <div className='flex justify-between' > <span>Duration:</span> </div> <div className='flex justify-between' > <span>Level:</span> </div> <div className='flex justify-between' > <span>Format:</span> <span className='text-white' >Online + Live Sessions</span> </div> <div className='flex justify-between' > <span>Support:</span> <span className='text-white' >24/7 Community + Mentors</span> </div> </div> </div> </div> <div className='mt-6 flex gap-3' > <a href='#' className='flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300' > Enroll Now <ArrowRight className='w-4 h-4' /> </Link> <a href='#' className='inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300' > Learn More </Link> </div> </motion.div>) 
 }</div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > Learning Paths </h2> <p className="text-xl text-gray-400" > Structured learning journeys to master complete technology domains </p> </motion.div> </div> </div> </div> </div>) ) 
-}</div> <a > Start Learning Path <ArrowRight className="w-4 h-4" /> </Link> </motion.div>) ) 
+}</div> </div> </section> > <h2 className='text-4xl font-bold text-white mb-4' > Learning Paths </h2> <p className='text-xl text-gray-400' > Structured learning journeys to master complete technology domains </p> </motion.div> </div> </div> </div> </div>) ) 
+}</div> <a > Start Learning Path <ArrowRight className='w-4 h-4' /> </Link> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
@@ -661,7 +661,7 @@ export default Training;
   {
   once: true 
 
-}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
+}> <h2 className='text-4xl font-bold text-white mb-6' > Ready to Transform Your Career? </h2> <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto' > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105' > Get Personalized Guidance </Link> <a href='/resources' className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300' > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
 };
   )
 }

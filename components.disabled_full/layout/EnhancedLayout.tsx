@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/fix-syntax-push-and-merge-to-main-40de;
@@ -53,8 +50,6 @@ return (;
       <EnhancedFooter />
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";"
@@ -67,20 +62,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
-=======
 } import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 }
 
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-=======
 
 
 
@@ -89,10 +78,9 @@ ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/automate-test-improve-and-merge-code-646c;
-}}
+}
 } import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from './EnhancedFooter';'
 }
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

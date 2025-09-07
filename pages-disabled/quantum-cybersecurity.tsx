@@ -271,8 +271,8 @@ return (;
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"
         <div className="max-w-7xl mx-auto px-6">;"
           <motion&& motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            animate={{ "opacity": 1, "y": 0 }}
+initial={ "opacity": 0, "y": 20 }
+            animate={ "opacity": 1, "y": 0 }
               <a,
 href="/contact""
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 "hover":from-blue-700 "hover":to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform "hover":scale-105">;"
@@ -284,16 +284,16 @@ href="#demo""
       <section className="py-20 bg-white">;"
         <div className="max-w-7xl mx-auto px-6">;"
           <motion&& motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
+initial={ "opacity": 0, "y": 20 }
+            whileInView={ "opacity": 1, "y": 0 }
           <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">"
             {features.map((feature, index) => (
               <motion.div
 }
 key={feature.title}
-                initial={{ "opacity": 0, "y": 20 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                whileInView={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
                 className="bg-slate-50 rounded-2xl p-8 "hover":bg-slate-100 transition-all duration-300 transform "hover":-translate-y-2">;"
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature && feature.color} flex items-center justify-center mb-6`}>;`                  <feature && feature.icon className="w-8 h-8 text-white" />;"
                 </div>;
@@ -310,9 +310,9 @@ key={feature.title}
         <div className="max-w-7xl mx-auto px-6">;"
           <div className="grid grid-cols-1 "lg":grid-cols-2 gap-16 items-center">;"
             <motion&& motion.div,
-initial={{ "opacity": 0, "x": -20 }}
-              whileInView={{ "opacity": 1, "x": 0 }}
-              transition={{ "duration": 0.6 }}
+initial={ "opacity": 0, "x": -20 }
+              whileInView={ "opacity": 1, "x": 0 }
+              transition={ "duration": 0.6 }
             >
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Quantum Cybersecurity?</h2>"
               <p className="text-lg text-slate-600 leading-relaxed mb-8">"
@@ -324,18 +324,18 @@ initial={{ "opacity": 0, "x": -20 }}
                   <motion.div
 }
 key={benefit}
-                    initial={{ "opacity": 0, "x": -20 }}
-                    whileInView={{ "opacity": 1, "x": 0 }}
-                    transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
+                    initial={ "opacity": 0, "x": -20 }
+                    whileInView={ "opacity": 1, "x": 0 }
+                    transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
                     className="flex items-center space-x-3">;"
                     <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />;"
                     <span className="text-slate-700">{benefit}</span>;"
                   </motion && motion.div>;
                 ))}
             <motion.div,
-initial={{ "opacity": 0, "x": 20 }}
-              whileInView={{ "opacity": 1, "x": 0 }}
-              transition={{ "duration": 0.6, "delay": 0.2 }}
+initial={ "opacity": 0, "x": 20 }
+              whileInView={ "opacity": 1, "x": 0 }
+              transition={ "duration": 0.6, "delay": 0.2 }
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8""
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Security Metrics</h3>"
@@ -361,16 +361,16 @@ initial={{ "opacity": 0, "x": 20 }}
       <section className="py-20 bg-white">;"
         <div className="max-w-7xl mx-auto px-6">;"
           <motion&& motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
+initial={ "opacity": 0, "y": 20 }
+            whileInView={ "opacity": 1, "y": 0 }
           <div className="grid grid-cols-1 "md":grid-cols-2 gap-8">"
             {threats.map((threat, index) => (
               <motion.div
 }
 key={threat.type}
-                initial={{ "opacity": 0, "y": 20 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                whileInView={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
                 className="bg-slate-50 rounded-2xl p-8 "hover":bg-slate-100 transition-all duration-300">;"
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{threat && threat.type}</h3>;"
                 <p className="text-slate-600 mb-4 leading-relaxed">{threat && threat.description}</p>;"
@@ -387,13 +387,13 @@ key={threat.type}
       <section className="py-20 bg-slate-900">;"
         <div className="max-w-7xl mx-auto px-6">;"
           <motion&& motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
+initial={ "opacity": 0, "y": 20 }
+            whileInView={ "opacity": 1, "y": 0 }
           <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-8">"
             <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.6 }}
+initial={ "opacity": 0, "y": 20 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.6 }
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center""
             >
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4">"
@@ -403,9 +403,9 @@ initial={{ "opacity": 0, "y": 20 }}
               <p className="text-white/70 text-sm">Service Organization Control compliance for security, availability, and confidentiality</p>"
             </motion.div>
             <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.6, "delay": 0.1 }}
+initial={ "opacity": 0, "y": 20 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.6, "delay": 0.1 }
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center""
             >
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">"
@@ -415,9 +415,9 @@ initial={{ "opacity": 0, "y": 20 }}
               <p className="text-white/70 text-sm">General Data Protection Regulation compliance for EU data privacy</p>"
             </motion.div>
             <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.6, "delay": 0.2 }}
+initial={ "opacity": 0, "y": 20 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.6, "delay": 0.2 }
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center""
             >
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4">"
@@ -427,9 +427,9 @@ initial={{ "opacity": 0, "y": 20 }}
               <p className="text-white/70 text-sm">Information security management system certification</p>"
             </motion.div>
             <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.6, "delay": 0.3 }}
+initial={ "opacity": 0, "y": 20 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.6, "delay": 0.3 }
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center""
             >
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mx-auto mb-4">"
@@ -445,16 +445,16 @@ initial={{ "opacity": 0, "y": 20 }}
       <section className="py-20 bg-white">;"
         <div className="max-w-7xl mx-auto px-6">;"
           <motion&& motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
+initial={ "opacity": 0, "y": 20 }
+            whileInView={ "opacity": 1, "y": 0 }
           <div className="grid grid-cols-1 "md":grid-cols-3 gap-8">"
             {pricing.map((plan, index) => (
               <motion.div
 }
 key={plan.plan}
-                initial={{ "opacity": 0, "y": 20 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                whileInView={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
                 className={`relative bg-slate-50 rounded-2xl p-8 ${`                  }
                   plan && plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : '''
                 }`}>;`
@@ -533,9 +533,9 @@ href="/contact""
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;"
         <div className="max-w-4xl mx-auto px-6 text-center">;"
           <motion&& motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.6 }}>;
+initial={ "opacity": 0, "y": 20 }
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.6 }>;
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Secure Your Future?</h2>;"
             <p className="text-xl text-blue-100 mb-8">;"
               Don't wait until it's too late. Protect your business with quantum-resistant cybersecurity today.;'
@@ -563,6 +563,6 @@ href="/contact""
       <section className="pt - 32 pb - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate-900">;"
         <div className="max - w-7xl mx - auto px-6">;"
           <motion.div;
-            initial={{ "opacity": 0, "coordinate_y": 20 }}
-            animate={{ "opacity": 1, "coordinate_y": 0 }}
-            transition={{ "duration": 0.6 }}
+            initial={ "opacity": 0, "coordinate_y": 20 }
+            animate={ "opacity": 1, "coordinate_y": 0 }
+            transition={ "duration": 0.6 }

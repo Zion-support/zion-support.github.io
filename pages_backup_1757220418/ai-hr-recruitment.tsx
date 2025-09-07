@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages_backup_1757220418/ai-hr-recruitment.tsx
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Users } from 'lucide-react';
@@ -72,7 +71,6 @@ export default function AIHRRecruitmentPage() {
             </div>
           </div>
         </div>
-=======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
@@ -132,18 +130,14 @@ const AIHrRecruitment: React.FC = () => {
           </div>
         </div>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/ai-hr-recruitment.tsx
         <div className="bg-teal-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Find the Right Talent</h2>
           <p className="text-lg text-gray-700 mb-6">
             Accelerate your recruitment process with AI-powered tools that help you find and hire the best candidates.
           </p>
           <div className="flex justify-center gap-4">
-<<<<<<< HEAD:pages_backup_1757220418/ai-hr-recruitment.tsx
             <a href="/contact" className="bg-teal-600 text-white px-6 py-3 rounded-lg hover: bg-teal-700">
-=======
             <a href="/contact" className="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/ai-hr-recruitment.tsx
               Get Started
             </a>
             <a href="/about" className="border border-teal-600 text-teal-600 px-6 py-3 rounded-lg hover:bg-teal-50">
@@ -154,9 +148,6 @@ const AIHrRecruitment: React.FC = () => {
       </main>
     </Layout>
   )
-<<<<<<< HEAD:pages_backup_1757220418/ai-hr-recruitment.tsx
 }
-=======
 }
 export default AIHrRecruitment
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/ai-hr-recruitment.tsx

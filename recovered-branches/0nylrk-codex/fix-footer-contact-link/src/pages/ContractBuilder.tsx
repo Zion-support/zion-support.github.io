@@ -19,10 +19,10 @@ return (;
     <ProtectedRoute>
       <>
         <SEO,
-title="Smart Contract Builder | Zion AI Marketplace""
-          description="Create and deploy blockchain-backed smart contracts for your projects"" />
+title='Smart Contract Builder | Zion AI Marketplace''
+          description='Create and deploy blockchain-backed smart contracts for your projects'' />
         <AppHeader />
-        <main className="container mx-auto py-10 px-4">"
+        <main className='container mx-auto py-10 px-4'>'
           <ContractBuilderContent />
         </main>
         <Footer />
@@ -52,11 +52,11 @@ function ContractBuilderPage() {;
     <ProtectedRoute>;
       <>;
         <SEO ;
-          title="Smart Contract Builder | Zion AI Marketplace" ;"
-          description="Create and deploy blockchain-backed smart contracts for your projects";" />;
+          title='Smart Contract Builder | Zion AI Marketplace' ;'
+          description='Create and deploy blockchain-backed smart contracts for your projects';' />;
         <AppHeader />;
         ;
-        <main className="container mx-auto py-10 px-4">;"
+        <main className='container mx-auto py-10 px-4'>;'
           <ContractBuilderContent />;
         </main>;
         ;
@@ -66,7 +66,7 @@ function ContractBuilderPage() {;
   ),;
 }
 ;
-export default ContractBuilderPage,; <ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects" /> <AppHeader /> <main className="container mx-auto py-10 px-4" > <ContractBuilderContent /> </main> <Footer /> </> </ProtectedRoute> export default ContractBuilderPage;"
+export default ContractBuilderPage,; <ProtectedRoute> <> <SEO title='Smart Contract Builder | Zion AI Marketplace' description='Create and deploy blockchain-backed smart contracts for your projects' /> <AppHeader /> <main className='container mx-auto py-10 px-4' > <ContractBuilderContent /> </main> <Footer /> </> </ProtectedRoute> export default ContractBuilderPage;'
 }
 
 ;

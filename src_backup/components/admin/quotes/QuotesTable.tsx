@@ -146,7 +146,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
                 </TableCell>
 
                 <TableCell className="text-white">
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 
   quotes;
   is_archived = false;'
@@ -238,7 +237,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
                       <span className="sr-only">View Details</span>
                     </Button>
 
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
                     
 
 
@@ -273,7 +271,7 @@ import { ;
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {}
                               deleteQuote(quote.id)
                             }
-                          }}
+                          }
                         >"
                           <Trash2 className="h-4 w-4" />"
                           <span className="sr-only">Delete</span>
@@ -312,7 +310,7 @@ import { ;
                             onClick = {() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
-                              } }}
+                              } }
 
                           <DropdownMenuItem 
 
@@ -376,7 +374,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 ;
   isLoading: boolean,updateStatus: (id: string, status: QuoteStatus) => void,toggleArchive: (id: string, isArchived: boolean) => void,deleteQuote: (id: string) => void,onViewDetails: (quote: QuoteRequest) => void;
-}}
+}
 export const QuotesTable: React.FC<QuotesTableProps> = ({}
 export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
   isArchived = false;
@@ -437,15 +435,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                   <div className="flex items-center gap-2">;
 
                       <span className="sr-only">View Details</span>;
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
                     </Button>;
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
                         <Button
                           variant="ghost" 
                           size="icon"
@@ -454,7 +449,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                             if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
                               deleteQuote(quote && quote.id);
                             ,}
-                          }}
+                          }
 
                         >;
                     </Button>;{isArchived ? (<>;
@@ -469,7 +464,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                           size="icon";
                           className="text-red-500";
                           onClick = {() => {if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {deleteQuote(quote && quote.id)}
-                          }}>;
+                          }>;
                           <Trash2 className="h-4 w-4" />;
                           <span className="sr-only">Delete</span>;
                         </Button>;
@@ -498,7 +493,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                             Mark as Closed;
                           </DropdownMenuItem>;
                           <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>;
-                          }}
+                          }
 
                           <span className="sr-only">Delete</span>;
                         </Button>;
@@ -578,7 +573,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
 
 }
                               delete_quote (quote.id) }
-                          }}
+                          }
 
                           </Button>;
                         </DropdownMenuTrigger>;"
@@ -660,7 +655,6 @@ interface QuotesTableProps  {quotes: QuoteRequest[];
   deleteQuote: (id: string,) => void;
   onViewDetails: (quote: QuoteRequest,) => void;
 }
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const QuotesTable: React.FC<QuotesTableProps> = ({

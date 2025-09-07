@@ -133,8 +133,8 @@ export default function AccountSettingsPage() {
     } catch (error) {
       setStatus(e?.message || 'Restore failed');
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   },
@@ -143,14 +143,14 @@ export default function AccountSettingsPage() {
       <Head>
         <title>Account Settings — Zion</title>
       </Head>
-      <div className="max-w-3xl mx-auto space-y-8">
-        <section className="rounded-xl border p-5">
-          <h1 className="text-xl font-semibold mb-2">Account</h1>
-          <p className="text-sm text-gray-500">Manage your Web3 identity and backups. Email is optional when using wallets.</p>
-          <div className="mt-4 flex items-center justify-between">
+      <div className='max-w-3xl mx-auto space-y-8'>
+        <section className='rounded-xl border p-5'>
+          <h1 className='text-xl font-semibold mb-2'>Account</h1>
+          <p className='text-sm text-gray-500'>Manage your Web3 identity and backups. Email is optional when using wallets.</p>
+          <div className='mt-4 flex items-center justify-between'>
             <div>
-              <div className="text-sm font-medium">Display Web3 identity</div>
-              <div className="text-xs text-gray-500">Show ENS/Lens name instead of email</div>
+              <div className='text-sm font-medium'>Display Web3 identity</div>
+              <div className='text-xs text-gray-500'>Show ENS/Lens name instead of email</div>
             </div>
             <label className='inline-flex items-center cursor-pointer'>
               <input
@@ -224,9 +224,9 @@ export default function AccountSettingsPage() {
               </span>
             )}
           </div>
-          <div className="mt-4 flex gap-2">
-            <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
-            <button onClick={doRestore} className="rounded-md border px-4 py-2">Restore profile</button>
+          <div className='mt-4 flex gap-2'>
+            <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder='Enter CID to restore' className='flex-1 rounded-md border px-3 py-2' />
+            <button onClick={doRestore} className='rounded-md border px-4 py-2'>Restore profile</button>
           </div>
         </section>
         {status && <div className='text-sm text-gray-600'>{status}</div>}

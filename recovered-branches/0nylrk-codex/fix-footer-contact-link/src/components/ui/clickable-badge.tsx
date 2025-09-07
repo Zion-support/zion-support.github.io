@@ -9,7 +9,6 @@ export function ClickableBadge(): any ({;  children;
 }
 export function ClickableBadge({
 
-=======import React from "react",
 import React from "react",
 import { X } from "lucide-react",
 import { cn } from "@/lib/utils";
@@ -78,14 +77,14 @@ export function ClickableBadge({
           onClick={(e) => {
             e.stopPropagation($2);
             onRemove()
-          }}
+          }
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
           <X className="h-3 w-3" />
         </button>
       )}
-          }}
+          }
     </div>
   )
 }

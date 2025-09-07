@@ -73,8 +73,8 @@ export default function ProjectMilestonesPage(req, res) {
       document.cookie = `x-user-id=${userId}, path=/`,;
       document.cookie = `x-user-role=${role}, path=/`;
     } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   }, [role]),;
@@ -92,8 +92,8 @@ export default function ProjectMilestonesPage(req, res) {
       } finally {
         if (!cancelled) setLoading(false);
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     })();
@@ -132,7 +132,7 @@ export default function ProjectMilestonesPage(req, res) {
     <div>
       <Head>
         <title>Project Milestones</title>
-        <meta name="description" content="Track project deliverables and milestone payments" />
+        <meta name='description' content='Track project deliverables and milestone payments' />
       </Head>
       <div className='max-w-5xl mx-auto px-4 py-8'>
         <div className='mb-6'>
@@ -152,7 +152,7 @@ export default function ProjectMilestonesPage(req, res) {
         {loading && <div>Loading milestones...</div>}
         {error && <div className='text-red-600'>{error}</div>}
         {!loading && !error && (
-          <div className="space-y-4">
+          <div className='space-y-4'>
             {milestones.length === 0 && (
               <div className='text-gray-600'>
                 No milestones yet.{' '}

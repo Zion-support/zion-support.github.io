@@ -11,20 +11,20 @@ const "QuantumServicesPage": React.FC = () => {const quantumServices = [;
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">;"
           <div className="text-center max-w-4xl mx-auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "y": 20 }}
-              animate={{ "opacity": 1, "y": 0 }}
+              initial={ "opacity": 0, "y": 20 }
+              animate={ "opacity": 1, "y": 0 }
         {/* Quantum Capabilities */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">;"
           <div className="max-w-6xl mx-auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "y": 20 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
-                  initial={{ "opacity": 0, "y": 20 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 20 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
+                  initial={ "opacity": 0, "y": 20 }
+                  whileInView={ "opacity": 1, "y": 0 }
+                  transition={ "duration": 0.6, "delay": index * 0.1 }
+                  viewport={ "once": true }
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 "hover":border-blue-500 transition-all duration-300";"
                 >;
                   <div className="flex items-center mb-4">;"
@@ -40,14 +40,14 @@ const "QuantumServicesPage": React.FC = () => {const quantumServices = [;
         <section className="py-20 px-4">;"
           <div className="max-w-6xl mx-auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "y": 20 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
-                  initial={{ "opacity": 0, "y": 20 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 20 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
+                  initial={ "opacity": 0, "y": 20 }
+                  whileInView={ "opacity": 1, "y": 0 }
+                  transition={ "duration": 0.6, "delay": index * 0.1 }
+                  viewport={ "once": true }
                   className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 "hover":scale-105 ${: 'border-gray-700 "hover":border-blue-500';'                  }`}`                >;
                   {service.popular && (<div className="absolute -top-3 left-1/2 transform -translate-x-1/2">;"
                       <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">;"
@@ -105,9 +105,9 @@ function QuantumServices() {return (<Layout>;
         <section className="min - h-[60vh] flex items - center justify - center px - 4 py-20">;"
           <div className="text - center max - w-4xl mx-auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 20 }}
-              animate={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
+              initial={ "opacity": 0, "coordinate_y": 20 }
+              animate={ "opacity": 1, "coordinate_y": 0 }
+              transition={ "duration": 0.8 }
             >;
               <h1 className="text - 5xl "md":text - 7xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 via - purple - 500 to - cyan - 600 bg - clip - text text-transparent">;"
                 Quantum Computing;
@@ -136,10 +136,10 @@ function QuantumServices() {return (<Layout>;
         <section className="py - 20 px - 4 bg - gradient - to - b from - black to - gray-900">;"
           <div className="max - w-6xl mx-auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 20 }}
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "coordinate_y": 20 }
+              whileInView={ "opacity": 1, "coordinate_y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
               className="text - center mb-16";"
             >;
               <h2 className="text - 4xl "md":text - 5xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 to - purple - 500 bg - clip - text text-transparent">;"
@@ -153,10 +153,10 @@ function QuantumServices() {return (<Layout>;
               {quantum_capabilities.map ((capability, index) => (<motion.div;
                   }
                   key={capability.title}
-                  initial={{ "opacity": 0, "coordinate_y": 20 }}
-                  whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  initial={ "opacity": 0, "coordinate_y": 20 }
+                  whileInView={ "opacity": 1, "coordinate_y": 0 }
+                  transition={ "duration": 0.6, "delay": index * 0.1 }
+                  viewport={ "once": true }
                   className="bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border border - gray - 700 "hover":border - blue - 500 transition - all duration-300";"
                 >;
                   <div className="flex items - center mb-4">;"
@@ -174,10 +174,10 @@ function QuantumServices() {return (<Layout>;
         <section className="py - 20 px-4">;"
           <div className="max - w-6xl mx-auto">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 20 }}
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "coordinate_y": 20 }
+              whileInView={ "opacity": 1, "coordinate_y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
               className="text - center mb-16";"
             >;
               <h2 className="text - 4xl "md":text - 5xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 to - purple - 500 bg - clip - text text-transparent">;"
@@ -191,10 +191,10 @@ function QuantumServices() {return (<Layout>;
               {quantum_services.map ((service, index) => (<motion.div;
                   }
                   key={service.id}
-                  initial={{ "opacity": 0, "coordinate_y": 20 }}
-                  whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  initial={ "opacity": 0, "coordinate_y": 20 }
+                  whileInView={ "opacity": 1, "coordinate_y": 0 }
+                  transition={ "duration": 0.6, "delay": index * 0.1 }
+                  viewport={ "once": true }
                   className={`relative bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border transition - all duration - 300 "hover":scale - 105 ${service.popular;`                      ? 'border - blue - 500 shadow - lg shadow - blue - 500 / 25';'
                       : 'border - gray - 700 "hover":border - blue - 500';'
                   }`}`
@@ -224,8 +224,8 @@ function QuantumServices() {return (<Layout>;
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">;"
           <div className="max-w-4xl mx-auto text-center">;"
             <motion.div;
-              initial={{ "opacity": 0, "y": 20 }}
-              whileInView={{ "opacity": 1, "y": 0 }}}
+              initial={ "opacity": 0, "y": 20 }
+              whileInView={ "opacity": 1, "y": 0 }}
 import React from 'react';'
                       <span className="text - lg text - gray-400">/{service.period}</span>;"
                     </div>;
@@ -250,10 +250,10 @@ import React from 'react';'
         <section className="py - 20 px - 4 bg - gradient - to - b from - gray - 900 to-black">;"
           <div className="max - w-4xl mx - auto text-center">;"
             <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 20 }}
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "coordinate_y": 20 }
+              whileInView={ "opacity": 1, "coordinate_y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
             >;
               <h2 className="text - 4xl "md": text - 5xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 to - purple - 500 bg - clip - text text-transparent">;"
                 Ready for the Quantum Future?;

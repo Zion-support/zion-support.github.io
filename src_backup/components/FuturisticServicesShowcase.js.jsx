@@ -3,12 +3,12 @@ import { motion, AnimatePresence  } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES  } from '../data/advancedMicroServices.jsx';
 const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)return (<motion.div initial = {}
   { opacity: 0, y: 50, scale: 0.9;
-}} animate = {}
+} animate = {}
   isVisible ? { opacity: 1, y: 0, scale: 1;
-} : {}} transition = {}
+} : {} transition = {}
   { duration: 0.6, delay: index * 0.1 '''';
 '''';
-}} className='relative group' onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>'''';
+} className='relative group' onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>'''';
       {/* Animated Background */}'''';
       <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500'></div>;
       {/* Neon Border Effect */}'';
@@ -20,15 +20,15 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
           <div className='absolute inset-0 overflow-hidden pointer-events-none'>'''';
             {[...Array(8)].map((_, i) => (<motion.div key={i} className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60' animate = {}
   {}
-                x[0, Math.random() * 100 - 50], y[0, Math.random() * 100 - 50], opacity[0.6, 0.2, 0.6] }} transition = {}
+                x[0, Math.random() * 100 - 50], y[0, Math.random() * 100 - 50], opacity[0.6, 0.2, 0.6] } transition = {}
   {}
                 duration: 3 + Math.random() * 2, '''';
                 repeat: Infinity,'''';
-                ease: 'easeInOut'}} style={{}
+                ease: 'easeInOut'} style={}
 `;
 ``;
                 left: `${20 + Math.random() * 60}%`, ``;
-                top: `${20 + Math.random() * 60}%`}}/>))}
+                top: `${20 + Math.random() * 60}%`}/>))}
           </div>;
 '''';
           {/* Service Header */}'''';
@@ -152,23 +152,23 @@ export const FuturisticServicesShowcase = () => {}
       {/* Animated Background */}'''';
       <div className='absolute inset-0 overflow-hidden'>'''';
         <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5'></div>'''';
-        {[...Array(20)].map((_, i) => (<div key={i} className='absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float' style={{}
+        {[...Array(20)].map((_, i) => (<div key={i} className='absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float' style={}
 `;
 ``;
                 left: `${Math.random() * 100}%`, ``;
                 top: `${Math.random() * 100}%`, ``;
                 animationDelay: `${Math.random() * 5}s`, ``;
-                animationDuration: `${3 + Math.random() * 4}s`}}/>))}
+                animationDuration: `${3 + Math.random() * 4}s`}/>))}
       </div>'''';
 '''';
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>;
         {/* Header Section */}
         <motion.div initial = {}
   { opacity: 0, y: -50;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} transition={{ duration: 0.8 }} className='text-center mb-16'>'''';
+} transition={ duration: 0.8 } className='text-center mb-16'>'''';
           <h1 className='text-5xl lg:text-7xl font-bold mb-6'>'''';
             <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>;
               Advanced Micro SAAS;
@@ -208,12 +208,12 @@ export const FuturisticServicesShowcase = () => {}
         {/* Call to Action */}
         <motion.div initial = {}
   { opacity: 0, y: 50;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} transition = {}
+} transition = {}
   { duration: 0.8, delay: 0.5 '''';
 '''';
-}} className='text-center mt-20'>'''';
+} className='text-center mt-20'>'''';
           <div className='bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/30'>'''';
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?'''';
@@ -233,4 +233,4 @@ export const FuturisticServicesShowcase = () => {}
         </motion.div>;
       </div>;
     </div>)}''`;
-''`'"`'";
+''`''`'';

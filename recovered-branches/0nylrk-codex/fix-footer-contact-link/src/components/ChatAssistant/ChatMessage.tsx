@@ -154,7 +154,7 @@ function ChatMessage() {
           </div>)}
       </div>;
     </div>);
-}}
+}
 }
 
             {timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}

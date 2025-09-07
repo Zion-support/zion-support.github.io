@@ -29,7 +29,7 @@ const { data, error } = await supabase.functions.invoke("create-checkout", {"
           providerId,
           "userId": user?.id,
           "successUrl": redirectUrl || window.location.href,
-          "cancelUrl": window.location.href}}),
+          "cancelUrl": window.location.href}),
             if (error) {
 }
 throw error;
@@ -59,7 +59,7 @@ window.open(data.url, '_blank')      // Reset button state after a short delay'
           providerId,;
           "userId": user?.id,;
           "successUrl": redirectUrl || window && window.location.href,;
-          "cancelUrl": window && window.location.href}}),;
+          "cancelUrl": window && window.location.href}),;
       if (error) {;
         }
         throw error;

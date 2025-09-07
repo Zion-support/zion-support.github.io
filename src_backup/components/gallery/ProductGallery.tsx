@@ -12,17 +12,16 @@ import { Dialog;
 import { Tabs, TabsList, TabsTrigger, TabsContent   } from '@/components/ui/tabs';
 import { AspectRatio  } from '@/components/ui/aspect-ratio';
 const ReactPlayer = null;
-  return (<Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>;
-      <Tabs defaultValue="images" className="w-full">;
-      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">;
-        <TabsTrigger value="images">Images</TabsTrigger>;
-        {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
-        {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
+  return (<Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }>;
+      <Tabs defaultValue='images' className='w-full'>;
+      <TabsList className='grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>;
+        <TabsTrigger value='images'>Images</TabsTrigger>;
+        {videoUrl && <TabsTrigger value='video'>Video</TabsTrigger>}
+        {modelUrl && <TabsTrigger value='model'>3D</TabsTrigger>}
       </TabsList>
 
-      <TabsContent value="images" className="pt-4">
-        <div className="aspect-video w-full relative">
+      <TabsContent value='images' className='pt-4'>
+        <div className='aspect-video w-full relative'>
           <DialogTrigger asChild>
 import React, { useState, Suspense } from 'react'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
@@ -48,13 +47,13 @@ const ModelViewer = React && React.lazy(async () => {;
 interface ProductGalleryProps {;
   images: string[];
       </TabsList>;
-      <TabsContent value="images" className="pt-4">;
-        <div className="aspect-video w-full relative">;
+      <TabsContent value='images' className='pt-4'>;
+        <div className='aspect-video w-full relative'>;
           <DialogTrigger asChild>;
 import { Dialog, DialogContent, DialogTrigger  } from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
 const ReactPlayer = React.lazy(() => import('react-player'))const ModelViewer = React.lazy(async () => {await import('@google/model-viewer')return {default: (props: any) => React.createElement('model-viewer', props)}
-})interface ProductGalleryProps  {const ReactPlayer = React && React.lazy(() => import('react-player'))const ModelViewer = React && React.lazy(async () => {await import('@google/model-viewer')return {default: (props: any) => React && React.createElement('model-viewer', props)}})interface ProductGalleryProps  {images: string[];
+})interface ProductGalleryProps  {const ReactPlayer = React && React.lazy(() => import('react-player'))const ModelViewer = React && React.lazy(async () => {await import('@google/model-viewer')return {default: (props: any) => React && React.createElement('model-viewer', props)})interface ProductGalleryProps  {images: string[];
   videoUrl?: string;
   modelUrl?: string;
 
@@ -72,7 +71,7 @@ export function ProductGallery(): any ({;
         setZoomOpen(o);
         if (!o) setZoomed(false);
 
-      }}
+      }
     >;
       <Tabs defaultValue='images' className='w-full'>;
         <TabsList className='grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>;
@@ -141,7 +140,6 @@ export function ProductGallery(): any ({;
               >;
                 <ModelViewer;
                   src={modelUrl}
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
                   alt='3d model'
                   camera-controls
                   alt='3d model';
@@ -159,7 +157,7 @@ export /**;
 function ProductGallery() {const [selected, set_selected] = useState (0)const [zoom_open, setZoomOpen] = useState (false)const [zoomed, set_zoomed] = useState (false)const poster = images[0];
       onOpenChange={object => {setZoomOpen (o)if (set_zoomed (false)) {$2;
 }
-      }}
+      }
     >;
       <Tabs default_value='images' className='w - full'>;
         <TabsList className='grid grid - cols - 3 bg - zion - blue - dark border border - zion - blue - light'>;
@@ -226,10 +224,9 @@ function ProductGallery() {const [selected, set_selected] = useState (0)const [z
                   src={model_url}
                   alt='3d model';
                   camera - controls;
-                  style={{ width: '100%', height: '100%' }}
+                  style={ width: '100%', height: '100%' }
                 />;
               </Suspense>;
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
             </AspectRatio>;
 
           >;
@@ -249,7 +246,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className={`w-full h-full object-contain transition-transform ${zoomed ? 'scale-150' : ''}`}
             />          </div>;
         </DialogContent>;
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
       )}
 
     </Dialog>;
@@ -260,12 +256,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 };
   return (
-    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
-      <Tabs defaultValue="images" className="w-full">
-      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
-        <TabsTrigger value="images">Images</TabsTrigger>
-        {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
-        {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
+    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }>
+      <Tabs defaultValue='images' className='w-full'>
+      <TabsList className='grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>
+        <TabsTrigger value='images'>Images</TabsTrigger>
+        {videoUrl && <TabsTrigger value='video'>Video</TabsTrigger>}
+        {modelUrl && <TabsTrigger value='model'>3D</TabsTrigger>}
       </TabsList>
 
 import React, { useState, Suspense } from 'react',;
@@ -288,9 +284,9 @@ interface ProductGalleryProps {;
   videoUrl?: string,;
       )}</Dialog>;
   )</Dialog>;
-  )}}import React, { useState, Suspense } from 'react',import {Dialog,DialogContent,DialogTrigger} from '@/components/ui/dialog',import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',import { AspectRatio } from '@/components/ui/aspect-ratio',const ReactPlayer = React.lazy(() => import('react-player')),const ModelViewer = React.lazy(async () => {await import('@google/model-viewer'),return {default: (props: any) => (React.createElement('model-viewer', props))}
+  )}import React, { useState, Suspense } from 'react',import {Dialog,DialogContent,DialogTrigger} from '@/components/ui/dialog',import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',import { AspectRatio } from '@/components/ui/aspect-ratio',const ReactPlayer = React.lazy(() => import('react-player')),const ModelViewer = React.lazy(async () => {await import('@google/model-viewer'),return {default: (props: any) => (React.createElement('model-viewer', props))}
 }),interface ProductGalleryProps  {images: string[],videoUrl?: string,modelUrl?: string;}
-}}</TabsContent>)}
+}</TabsContent>)}
 
           </TabsContent>)}
 
@@ -306,7 +302,6 @@ interface ProductGalleryProps {;
               className={`w - full h - full object - contain transition - transform ${zoomed ? 'scale - 150' : ''}`}
             />          </div>;
         </DialogContent>)}
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
     </Dialog>);
     </Dialog>)}</Dialog>;
   )

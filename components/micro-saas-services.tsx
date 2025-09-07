@@ -33,9 +33,7 @@ import {
   Mail, 
   Share2, 
   Check, 
-<<<<<<< HEAD
   Star;
-=======
   Star,
   Zap,
   TrendingUp,
@@ -51,7 +49,6 @@ import {
   Mail;
   Share2;
   Check;Star;
->>>>>>> origin/main
   Zap;
   TrendingUp;
   Users;
@@ -59,8 +56,6 @@ import {
   Lock;
   BarChart3;
   Calendar;
-<<<<<<< HEAD
-=======
 
   Target
  } from 'lucide-react';'
@@ -69,7 +64,7 @@ export default function MicroSaasServicesPage() {
   }
   const microSaasServices = null;
             we deliver professional solutions with competitive pricing and exceptional value.
-      "features": [
+      'features': [
         'AI-powered content generation''
         'Multiple content types (blog, social, email)''
         'SEO optimization suggestions''
@@ -77,7 +72,7 @@ export default function MicroSaasServicesPage() {
         'Plagiarism-free content''
         'Multi-language support''
       ]
-      "useCases": [
+      'useCases': [
         'Blog content creation''
         'Social media posts''
         'Email marketing campaigns''
@@ -85,12 +80,12 @@ export default function MicroSaasServicesPage() {
         'Landing page copy''
         'Newsletter content''
       ]
-      "pricing": {
+      'pricing': {
         }
-        "starter": {
+        'starter': {
           }
-          "price": 19,
-          "features": [
+          'price': 19,
+          'features': [
             '5 URLs','
             '5-min monitoring','
             'Basic metrics','
@@ -98,10 +93,10 @@ export default function MicroSaasServicesPage() {
             '7-day retention','
           ]
         },
-        "professional": {
+        'professional': {
           }
-          "price": 49,
-          "features": [
+          'price': 49,
+          'features': [
             '25 URLs','
             '1-min monitoring','
             'Advanced metrics','
@@ -110,12 +105,12 @@ export default function MicroSaasServicesPage() {
             'API access','
           ]
         },
-        "enterprise": {
+        'enterprise': {
 
           }
 
-          "price": 299,
-"features": [
+          'price': 299,
+'features': [
             'Unlimited generations','
             'Custom templates','
             'White-label options','
@@ -123,21 +118,21 @@ export default function MicroSaasServicesPage() {
           ]
         }
       },
-      "marketPrice": '$29-299/month','
-      "competitors": ['Jasper AI', 'Copy.ai', 'Writesonic'],'
-      "website": '"https"://ai-content.ziontech.ai','
-      "demo": '"https"://demo.ai-content.ziontech.ai','
+      'marketPrice': '$29-299/month','
+      'competitors': ['Jasper AI', 'Copy.ai', 'Writesonic'],'
+      'website': ''https'://ai-content.ziontech.ai','
+      'demo': ''https'://demo.ai-content.ziontech.ai','
     },
     {
       }
-      "id": 'performance-monitor','
-      "name": 'Website Performance Monitor','
-      "description":
+      'id': 'performance-monitor','
+      'name': 'Website Performance Monitor','
+      'description':
         'Monitor your website performance in real-time with comprehensive metrics, alerts, and optimization recommendations.','
-      "icon": <Monitor className='w-8 h-8 text-white' />,'
-      "color": 'bg-gradient-to-br from-blue-500 to-cyan-600','
-      "gradient": 'from-blue-400 to-cyan-500','
-      "features": [
+      'icon': <Monitor className='w-8 h-8 text-white' />,'
+      'color': 'bg-gradient-to-br from-blue-500 to-cyan-600','
+      'gradient': 'from-blue-400 to-cyan-500','
+      'features': [
         'Real-time performance monitoring','
         'Core Web Vitals tracking','
         'Uptime monitoring','
@@ -145,7 +140,7 @@ export default function MicroSaasServicesPage() {
         'Historical data analysis','
         'Optimization recommendations','
       ],
-      "useCases": [
+      'useCases': [
         'Website performance tracking','
         'User experience monitoring','
         'SEO performance optimization','
@@ -153,12 +148,12 @@ export default function MicroSaasServicesPage() {
         'CDN performance analysis','
         'Mobile performance testing','
       ],
-      "pricing": {
+      'pricing': {
         }
-        "starter": {
+        'starter': {
           }
-          "price": 19,
-          "features": [
+          'price': 19,
+          'features': [
             '5 URLs','
             '5-min monitoring','
             'Basic metrics','
@@ -166,10 +161,10 @@ export default function MicroSaasServicesPage() {
             '7-day retention','
           ]
         },
-        "professional": {
+        'professional': {
           }
-          "price": 49,
-          "features": [
+          'price': 49,
+          'features': [
             '25 URLs','
             '1-min monitoring','
             'Advanced metrics','
@@ -178,10 +173,10 @@ export default function MicroSaasServicesPage() {
             'API access','
           ]
         },
-        "enterprise": {
+        'enterprise': {
           }
-          "price": 149,
-          "features": [
+          'price': 149,
+          'features': [
             'Unlimited URLs','
             'Real-time monitoring','
             'All metrics','
@@ -191,22 +186,22 @@ export default function MicroSaasServicesPage() {
           ]
         }
       },
-      "marketPrice": '$19-149/month','
-      "competitors": ['Pingdom', 'GTmetrix', 'WebPageTest'],'
-      "website": '"https"://performance.ziontech.ai','
-      "demo": '"https"://demo.performance.ziontech.ai','
+      'marketPrice': '$19-149/month','
+      'competitors': ['Pingdom', 'GTmetrix', 'WebPageTest'],'
+      'website': ''https'://performance.ziontech.ai','
+      'demo': ''https'://demo.performance.ziontech.ai','
     },
 
     {
       }
-      "id": 'seo-analytics','
-      "name": 'SEO Analytics Dashboard','
-      "description":
+      'id': 'seo-analytics','
+      'name': 'SEO Analytics Dashboard','
+      'description':
         'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.','
-      "icon": <Search className='w-8 h-8 text-white' />,'
-      "color": 'bg-gradient-to-br from-green-500 to-emerald-600','
-      "gradient": 'from-green-400 to-emerald-500','
-      "features": [
+      'icon': <Search className='w-8 h-8 text-white' />,'
+      'color': 'bg-gradient-to-br from-green-500 to-emerald-600','
+      'gradient': 'from-green-400 to-emerald-500','
+      'features': [
         'Keyword tracking & ranking','
         'Competitor analysis','
         'Backlink monitoring','
@@ -214,7 +209,7 @@ export default function MicroSaasServicesPage() {
         'Performance reporting','
         'Mobile optimization insights','
       ],
-      "useCases": [
+      'useCases': [
         'SEO performance tracking','
         'Competitor research','
         'Keyword strategy development','
@@ -222,12 +217,12 @@ export default function MicroSaasServicesPage() {
         'Link building campaigns','
         'Content optimization','
       ],
-      "pricing": {
+      'pricing': {
         }
-        "starter": {
+        'starter': {
           }
-          "price": 39,
-          "features": [
+          'price': 39,
+          'features': [
             '100 keywords','
             'Basic analysis','
             'Monthly reports','
@@ -235,10 +230,10 @@ export default function MicroSaasServicesPage() {
             '7-day retention','
           ]
         },
-        "professional": {
+        'professional': {
           }
-          "price": 89,
-          "features": [
+          'price': 89,
+          'features': [
             '500 keywords','
             'Advanced analysis','
             'Weekly reports','
@@ -247,10 +242,10 @@ export default function MicroSaasServicesPage() {
             'API access','
           ]
         },
-        "enterprise": {
+        'enterprise': {
           }
-          "price": 199,
-          "features": [
+          'price': 199,
+          'features': [
             'Unlimited keywords','
             'Full SEO suite','
             'Daily reports','
@@ -260,21 +255,21 @@ export default function MicroSaasServicesPage() {
           ]
         }
       },
-      "marketPrice": '$39-199/month','
-      "competitors": ['Ahrefs', 'SEMrush', 'Moz'],'
-      "website": '"https"://seo.ziontech.ai','
-      "demo": '"https"://demo.seo.ziontech.ai','
+      'marketPrice': '$39-199/month','
+      'competitors': ['Ahrefs', 'SEMrush', 'Moz'],'
+      'website': ''https'://seo.ziontech.ai','
+      'demo': ''https'://demo.seo.ziontech.ai','
     },
     {
       }
-      "id": 'api-rate-limiter','
-      "name": 'API Rate Limiter','
-      "description":
+      'id': 'api-rate-limiter','
+      'name': 'API Rate Limiter','
+      'description':
         'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.','
-      "icon": <Shield className='w-8 h-8 text-white' />,'
-      "color": 'bg-gradient-to-br from-red-500 to-orange-600','
-      "gradient": 'from-red-400 to-orange-500','
-      "features": [
+      'icon': <Shield className='w-8 h-8 text-white' />,'
+      'color': 'bg-gradient-to-br from-red-500 to-orange-600','
+      'gradient': 'from-red-400 to-orange-500','
+      'features': [
         'Intelligent rate limiting','
         'Traffic pattern analysis','
         'API key management','
@@ -282,7 +277,7 @@ export default function MicroSaasServicesPage() {
         'Custom rules & policies','
         'Comprehensive analytics','
       ],
-      "useCases": [
+      'useCases': [
         'API protection & security','
         'Traffic management','
         'Developer portal management','
@@ -290,12 +285,12 @@ export default function MicroSaasServicesPage() {
         'SaaS API security','
         'Enterprise API governance','
       ],
-      "pricing": {
+      'pricing': {
         }
-        "starter": {
+        'starter': {
           }
-          "price": 25,
-          "features": [
+          'price': 25,
+          'features': [
             '10 rate limit rules','
             'Basic limiting','
             'API key management','
@@ -303,10 +298,10 @@ export default function MicroSaasServicesPage() {
             '7-day retention','
           ]
         },
-        "professional": {
+        'professional': {
           }
-          "price": 79,
-          "features": [
+          'price': 79,
+          'features': [
             '50 rate limit rules','
             'Advanced limiting','
             'Unlimited API keys','
@@ -315,10 +310,10 @@ export default function MicroSaasServicesPage() {
             'API access','
           ]
         },
-        "enterprise": {
+        'enterprise': {
           }
-          "price": 199,
-          "features": [
+          'price': 199,
+          'features': [
             'Unlimited rules','
             'Enterprise security','
             'Advanced features','
@@ -328,21 +323,21 @@ export default function MicroSaasServicesPage() {
           ]
         }
       },
-      "marketPrice": '$25-199/month','
-      "competitors": ['Kong', 'Tyk', 'AWS API Gateway'],'
-      "website": '"https"://rate-limiter.ziontech.ai','
-      "demo": '"https"://demo.rate-limiter.ziontech.ai','
+      'marketPrice': '$25-199/month','
+      'competitors': ['Kong', 'Tyk', 'AWS API Gateway'],'
+      'website': ''https'://rate-limiter.ziontech.ai','
+      'demo': ''https'://demo.rate-limiter.ziontech.ai','
     },
     {
       }
-      "id": 'email-marketing','
-      "name": 'Email Marketing Automation','
-      "description":
+      'id': 'email-marketing','
+      'name': 'Email Marketing Automation','
+      'description':
         'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.','
-      "icon": <Mail className='w-8 h-8 text-white' />,'
-      "color": 'bg-gradient-to-br from-indigo-500 to-purple-600','
-      "gradient": 'from-indigo-400 to-purple-500','
-      "features": [
+      'icon': <Mail className='w-8 h-8 text-white' />,'
+      'color': 'bg-gradient-to-br from-indigo-500 to-purple-600','
+      'gradient': 'from-indigo-400 to-purple-500','
+      'features': [
         'Drag & drop email builder','
         'Advanced automation workflows','
         'A/B testing & optimization','
@@ -350,7 +345,7 @@ export default function MicroSaasServicesPage() {
         'Performance analytics','
         'Template library','
       ],
-      "useCases": [
+      'useCases': [
         'Newsletter campaigns','
         'Welcome series automation','
         'Abandoned cart recovery','
@@ -358,12 +353,12 @@ export default function MicroSaasServicesPage() {
         'Customer onboarding','
         'Lead nurturing','
       ],
-      "pricing": {
+      'pricing': {
         }
-        "starter": {
+        'starter': {
           }
-          "price": 29,
-          "features": [
+          'price': 29,
+          'features': [
             '1,000 subscribers','
             'Basic templates','
             'Simple automation','
@@ -371,10 +366,10 @@ export default function MicroSaasServicesPage() {
             'Email support','
           ]
         },
-        "professional": {
+        'professional': {
           }
-          "price": 79,
-          "features": [
+          'price': 79,
+          'features': [
             '10,000 subscribers','
             'Advanced templates','
             'Advanced automation','
@@ -383,12 +378,12 @@ export default function MicroSaasServicesPage() {
             'API access','
           ]
         },
-        "enterprise": {
+        'enterprise': {
 
           }
 
-          "price": 199,
-          "features": [
+          'price': 199,
+          'features': [
             'Unlimited subscribers','
             'Custom templates','
             'Complex workflows','
@@ -398,21 +393,21 @@ export default function MicroSaasServicesPage() {
           ]
         }
       },
-      "marketPrice": '$29-199/month','
-      "competitors": ['Mailchimp', 'ConvertKit', 'ActiveCampaign'],'
-      "website": '"https"://email.ziontech.ai','
-      "demo": '"https"://demo.email.ziontech.ai','
+      'marketPrice': '$29-199/month','
+      'competitors': ['Mailchimp', 'ConvertKit', 'ActiveCampaign'],'
+      'website': ''https'://email.ziontech.ai','
+      'demo': ''https'://demo.email.ziontech.ai','
     },
     {
       }
-      "id": 'social-media-scheduler','
-      "name": 'Social Media Scheduler','
-      "description":
+      'id': 'social-media-scheduler','
+      'name': 'Social Media Scheduler','
+      'description':
         'Schedule, manage, and analyze your social media presence across multiple platforms from one unified dashboard.','
-      "icon": <Share2 className='w-8 h-8 text-white' />,'
-      "color": 'bg-gradient-to-br from-pink-500 to-rose-600','
-      "gradient": 'from-pink-400 to-rose-500','
-      "features": [
+      'icon': <Share2 className='w-8 h-8 text-white' />,'
+      'color': 'bg-gradient-to-br from-pink-500 to-rose-600','
+      'gradient': 'from-pink-400 to-rose-500','
+      'features': [
         'Multi-platform scheduling','
         'Content calendar management','
         'Campaign planning tools','
@@ -420,7 +415,7 @@ export default function MicroSaasServicesPage() {
         'Team collaboration','
         'Auto-posting & optimization','
       ],
-      "useCases": [
+      'useCases': [
         'Social media management','
         'Content calendar planning','
         'Campaign coordination','
@@ -428,12 +423,12 @@ export default function MicroSaasServicesPage() {
         'Performance tracking','
         'Brand consistency','
       ],
-      "pricing": {
+      'pricing': {
         }
-        "starter": {
+        'starter': {
           }
-          "price": 19,
-          "features": [
+          'price': 19,
+          'features': [
             '3 social accounts','
             'Basic scheduling','
             'Simple calendar','
@@ -441,10 +436,10 @@ export default function MicroSaasServicesPage() {
             'Email support','
           ]
         },
-        "professional": {
+        'professional': {
           }
-          "price": 49,
-          "features": [
+          'price': 49,
+          'features': [
             '10 social accounts','
             'Advanced scheduling','
             'Content calendar','
@@ -453,12 +448,12 @@ export default function MicroSaasServicesPage() {
             'API access','
           ]
         },
-        "enterprise": {
+        'enterprise': {
 
           }
 
-          "price": 129,
-          "features": [
+          'price': 129,
+          'features': [
             'Unlimited accounts','
             'Enterprise scheduling','
             'Advanced calendar','
@@ -469,59 +464,59 @@ export default function MicroSaasServicesPage() {
           ]
         }
       },
-      "marketPrice": '$19-129/month','
-      "competitors": ['Buffer', 'Hootsuite', 'Later'],'
-      "website": '"https"://social.ziontech.ai','
-      "demo": '"https"://demo.social.ziontech.ai','
+      'marketPrice': '$19-129/month','
+      'competitors': ['Buffer', 'Hootsuite', 'Later'],'
+      'website': ''https'://social.ziontech.ai','
+      'demo': ''https'://demo.social.ziontech.ai','
     }
   ];
 
 const marketInsights = [;
     {
       }
-      "title": 'AI Content Generation','
-      "marketSize": '$1.2B','
-      "growth": '+23%','
-"description":
+      'title': 'AI Content Generation','
+      'marketSize': '$1.2B','
+      'growth': '+23%','
+'description':
         'Rapidly growing market with increasing demand for automated content creation','
     },
     {
       }
-      "title": 'Performance Monitoring','
-      "marketSize": '$3.8B','
-      "growth": '+18%','
-"description":
+      'title': 'Performance Monitoring','
+      'marketSize': '$3.8B','
+      'growth': '+18%','
+'description':
         'Essential for modern web applications and user experience optimization','
     },
     {
       }
-      "title": 'SEO Analytics','
-      "marketSize": '$2.1B','
-      "growth": '+21%','
-"description":
+      'title': 'SEO Analytics','
+      'marketSize': '$2.1B','
+      'growth': '+21%','
+'description':
         'Critical for digital marketing and search engine optimization','
     },
     {
       }
-      "title": 'API Management','
-      "marketSize": '$4.2B','
-      "growth": '+25%','
-"description": 'Growing demand for API security and traffic management','
+      'title': 'API Management','
+      'marketSize': '$4.2B','
+      'growth': '+25%','
+'description': 'Growing demand for API security and traffic management','
     },
     {
       }
-      "title": 'Email Marketing','
-      "marketSize": '$7.5B','
-      "growth": '+15%','
-"description":
+      'title': 'Email Marketing','
+      'marketSize': '$7.5B','
+      'growth': '+15%','
+'description':
         'Mature market with strong automation and personalization trends','
     },
     {
       }
-      "title": 'Social Media Management','
-      "marketSize": '$2.8B','
-      "growth": '+19%','
-"description":
+      'title': 'Social Media Management','
+      'marketSize': '$2.8B','
+      'growth': '+19%','
+'description':
         'Increasing need for multi-platform social media coordination','
     }
   ];
@@ -536,12 +531,12 @@ Solutions
 name='description''
           content='Discover our comprehensive suite of micro SaaS services including AI content generation, performance monitoring, SEO analytics, API management, email marketing, and social media scheduling.'' />
         <meta,
-property='"og": title''
+property=''og': title''
           content='Micro SaaS Services | Zion Tech Group'' />
         <meta,
-property='"og":description''
+property=''og':description''
           content='Professional micro SaaS services for modern businesses. AI-powered solutions with competitive pricing and enterprise-grade features.'' />
-        <meta name='"twitter":card' content='summary_large_image' />'
+        <meta name=''twitter':card' content='summary_large_image' />'
       </Head>
       {/* Hero Section *
 }
@@ -578,13 +573,13 @@ solutions with competitive pricing and exceptional value.
 strong demand and proven business models.
             </p>
           </div>
-          <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
+          <div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-3 gap-8'>'
             {marketInsights.map((insight, index) => (
               <Card
 }
 key={index}
                 className='card - hover border - gradient - blue text - center';'
-                style={{ "animation_delay": `${index * 0.1}s` ,`}
+                style={ 'animation_delay': `${index * 0.1}s` ,`}
               >;
                 <div className='p - 6'>;'
                   <h3 className='text - xl font - bold text - white mb - 4'>;'
@@ -631,11 +626,11 @@ with professional-grade features and competitive pricing.
 
       {/* Services Grid */}
                       {insight.growth}</h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
               Our services are positioned competitively in growing markets with strong demand and proven business models.;
             </p>;
           </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {marketInsights.map((insight, index) => ({/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0 && 0.08),transparent_50%)]' />;
@@ -655,19 +650,19 @@ with professional-grade features and competitive pricing.
             enterprise-grade performance monitoring, we deliver professional;
             solutions with competitive pricing and exceptional value.          </p>      </Head>;
       {/* Hero Section */}
-      <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0 && 0.08),transparent_50%)]" />;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0 && 0.06),transparent_50%)]" />;
-        <div className="absolute inset-0 bg-grid opacity-10" />;
-        <div className="relative z-10 container-cursor text-center">;
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">;
-            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />;
+      <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0 && 0.08),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0 && 0.06),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-grid opacity-10' />;
+        <div className='relative z-10 container-cursor text-center'>;
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>;
+            <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />;
             Micro SaaS Services;
           </div>;
-          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">;
+          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg'>;
             Professional Micro SaaS Solutions;
           </h1>;
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">;
+          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed'>;
             Discover our comprehensive suite of micro SaaS services designed for modern businesses. ;
             From AI-powered content generation to enterprise-grade performance monitoring, we deliver professional solutions with competitive pricing and exceptional value.;
           </p>;
@@ -689,7 +684,7 @@ with professional-grade features and competitive pricing.
             {marketInsights && marketInsights.map((insight, index) => (<Card;
                 key={index}
                 className='card-hover border-gradient-blue text-center';
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className='p-6'>;
                   <h3 className='text-xl font-bold text-white mb-4'>;
                     {insight && insight.title}
@@ -704,20 +699,20 @@ with professional-grade features and competitive pricing.
                   </div>;
                   <p className='text-gray-400 text-sm'>{insight && insight.description}</p>                </div>              Market Overview & Competitive Analysis;
             </h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
               Our services are positioned competitively in growing markets with strong demand and proven business models.;
             </p>;
           </div>;
               <Card;
                 key={index}
-                className="card-hover border-gradient-blue text-center";
+                className='card-hover border-gradient-blue text-center';
                     </div>;
                   </div>;
                   <p className='text-gray-400 text-sm'>{insight.description}</p>;
                 </div>;
               </Card>;
             ))}{/* Services Grid */}
-                className="card-hover border-gradient-blue text-center"
+                className='card-hover border-gradient-blue text-center'
 
       <section className='section-padding bg-gradient-cursor'>;'
         <div className='container-cursor'>;'
@@ -761,24 +756,24 @@ with professional-grade features and competitive pricing.
             </p>;
           </div>;
           <div className='space-y-16'>;'
-            {microSaasServices.map((service, index) => (style={{ "animationDelay": `${index * 0 && 0.1}s` ,`
+            {microSaasServices.map((service, index) => (style={ 'animationDelay': `${index * 0 && 0.1}s` ,`
 }>;
-                <div className="p-6">;"
-                  <h3 className="text-xl font-bold text-white mb-4">{insight && insight.title}</h3>;"
-                  <div className="flex items-center justify-center space-x-4 mb-4">;"
-                    <div className="text-2xl font-bold text-cursor-blue">{insight && insight.marketSize}</div>;"
-                    <div className="text-green-400 font-semibold">{insight && insight.growth}</div>;"
+                <div className='p-6'>;'
+                  <h3 className='text-xl font-bold text-white mb-4'>{insight && insight.title}</h3>;'
+                  <div className='flex items-center justify-center space-x-4 mb-4'>;'
+                    <div className='text-2xl font-bold text-cursor-blue'>{insight && insight.marketSize}</div>;'
+                    <div className='text-green-400 font-semibold'>{insight && insight.growth}</div>;'
                   </div>;
-                  <p className="text-gray-400 text-sm">{insight && insight.description}</p>;"
+                  <p className='text-gray-400 text-sm'>{insight && insight.description}</p>;'
                 </div>;
               </Card>;
             ))}
               <div;
                 key={service && service.id}
                 className='bg-gray-900/50 rounded-2xl p-8 border border-gray-800'>;'
-                <div className='grid grid-cols-1 "lg":grid-cols-3 gap-8'>;'
+                <div className='grid grid-cols-1 'lg':grid-cols-3 gap-8'>;'
                   {/* Service Info */}
-                  <div className='"lg":col-span-2'>;'
+                  <div className=''lg':col-span-2'>;'
                     <div className='flex items-center space-x-4 mb-6'>;'
                       <div;
                         {service.icon}
@@ -787,13 +782,13 @@ with professional-grade features and competitive pricing.
                         <h3 className='text - 2xl font - bold text - white'>;'
 
                           {service.name}
-      <section className="section-padding bg-gradient-cursor">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
               Our Micro SaaS Services
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Each service is designed to solve specific business challenges with professional-grade features and competitive pricing.
             </p>
           </div>
@@ -802,7 +797,7 @@ with professional-grade features and competitive pricing.
                         <p className='text-gray-400'>{service.description}</p>'
                       </div>
                     </div>
-                    <div className='grid grid-cols-1 "md":grid-cols-2 gap-6 mb-8'>'
+                    <div className='grid grid-cols-1 'md':grid-cols-2 gap-6 mb-8'>'
                       <div>
                         <h4 className='text-lg font-semibold text-white mb-3 flex items-center'>'
                           <Zap className='w-5 h-5 mr-2 text-cursor-blue' />'
@@ -839,16 +834,16 @@ key={featureIndex}
                             </li>;
                           ))}
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                          <Zap className="w-5 h-5 mr-2 text-cursor-blue" />
+                        <h4 className='text-lg font-semibold text-white mb-3 flex items-center'>
+                          <Zap className='w-5 h-5 mr-2 text-cursor-blue' />
                           Key Features
                         </h4>
-                        <ul className="space-y-2">
+                        <ul className='space-y-2'>
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                              <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
+                            <li key={featureIndex} className='flex items-center text-gray-300 text-sm'>
+                              <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />
                               {feature}
                             </li>
                           ))}
@@ -856,14 +851,14 @@ key={featureIndex}
                       </div>
 
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                          <Target className="w-5 h-5 mr-2 text-cursor-blue" />
+                        <h4 className='text-lg font-semibold text-white mb-3 flex items-center'>
+                          <Target className='w-5 h-5 mr-2 text-cursor-blue' />
                           Use Cases
                         </h4>
-                        <ul className="space-y-2">
+                        <ul className='space-y-2'>
                           {service.useCases.map((useCase, useCaseIndex) => (
-                            <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">
-                              <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
+                            <li key={useCaseIndex} className='flex items-center text-gray-300 text-sm'>
+                              <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />
                               {useCase}
                             </li>
                           ))}
@@ -875,7 +870,7 @@ key={featureIndex}
                       <Button,
 size='sm''
 
-                        className='bg-cursor-blue "hover": bg-blue-600''
+                        className='bg-cursor-blue 'hover': bg-blue-600''
                       >
                         Visit Website
                       </Button>
@@ -884,14 +879,14 @@ href={service.dem
 }
 variant='outline';'
                         size='sm';'
-                        className='border-cursor-blue text-cursor-blue "hover":bg-cursor-blue "hover":text-white'>'
+                        className='border-cursor-blue text-cursor-blue 'hover':bg-cursor-blue 'hover':text-white'>'
 
                         Try Demo;
                       </Button>;
                     </div>;
                   </div>;
                   {/* Pricing & Market Info */}
-<div className='"lg":col-span-1'>;'
+<div className=''lg':col-span-1'>;'
                     <div className='bg-gray-800/50 rounded-xl p-6 border border-gray-700'>;'
                       <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;'
                         <BarChart3 className='w-5 h-5 mr-2 text-cursor-blue' />;'
@@ -918,8 +913,8 @@ variant='outline';'
                                   <span className='text-sm text-gray-300 capitalize'>;'
                                     {tier}
                           {service && service.useCases.map((useCase, useCaseIndex) => (;
-                            <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">;
-                              <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />;
+                            <li key={useCaseIndex} className='flex items-center text-gray-300 text-sm'>;
+                              <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />;
 
                                   </span>
                                   <span className='text-sm font-semibold text-white'>'
@@ -942,19 +937,19 @@ variant='outline';'
 key={compIndex}
                                   className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'>;'
                                   {competitor}
-                    <div className="flex flex-wrap gap-4">
+                    <div className='flex flex-wrap gap-4'>
                       <Button
                         href={service.website}
-                        size="sm"
-                        className="bg-cursor-blue hover:bg-blue-600"
+                        size='sm'
+                        className='bg-cursor-blue hover:bg-blue-600'
                       >
                         Visit Website
                       </Button>
                       <Button
                         href={service.demo}
-                        variant="outline"
-                        size="sm"
-                        className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
+                        variant='outline'
+                        size='sm'
+                        className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'
                       >
                         Try Demo
                       </Button>
@@ -962,36 +957,36 @@ key={compIndex}
                   </div>
 
                   {/* Pricing & Market Info */}
-                  <div className="lg:col-span-1">
-                    <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-                      <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                        <BarChart3 className="w-5 h-5 mr-2 text-cursor-blue" />
+                  <div className='lg:col-span-1'>
+                    <div className='bg-gray-800/50 rounded-xl p-6 border border-gray-700'>
+                      <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+                        <BarChart3 className='w-5 h-5 mr-2 text-cursor-blue' />
                         Pricing & Market
                       </h4>
                       
-                      <div className="space-y-4">
+                      <div className='space-y-4'>
                         <div>
-                          <p className="text-sm text-gray-400 mb-1">Market Price Range</p>
-                          <p className="text-lg font-bold text-white">{service.marketPrice}</p>
+                          <p className='text-sm text-gray-400 mb-1'>Market Price Range</p>
+                          <p className='text-lg font-bold text-white'>{service.marketPrice}</p>
                         </div>
 
                         <div>
-                          <p className="text-sm text-gray-400 mb-1">Our Pricing</p>
-                          <div className="space-y-2">
+                          <p className='text-sm text-gray-400 mb-1'>Our Pricing</p>
+                          <div className='space-y-2'>
                             {Object.entries(service.pricing).map(([tier, details]) => (
-                              <div key={tier} className="flex justify-between items-center">
-                                <span className="text-sm text-gray-300 capitalize">{tier}</span>
-                                <span className="text-sm font-semibold text-white">${details.price}/mo</span>
+                              <div key={tier} className='flex justify-between items-center'>
+                                <span className='text-sm text-gray-300 capitalize'>{tier}</span>
+                                <span className='text-sm font-semibold text-white'>${details.price}/mo</span>
                               </div>
                             ))}
                           </div>
                         </div>
 
                         <div>
-                          <p className="text-sm text-gray-400 mb-1">Key Competitors</p>
-                          <div className="flex flex-wrap gap-2">
+                          <p className='text-sm text-gray-400 mb-1'>Key Competitors</p>
+                          <div className='flex flex-wrap gap-2'>
                             {service.competitors.map((competitor, compIndex) => (
-                              <span key={compIndex} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">
+                              <span key={compIndex} className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'>
                                 {competitor}
                               </span>
                             ))}
@@ -1019,62 +1014,62 @@ key={compIndex}
                                   key={compIndex}
                                   className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'>;
                                   {competitor}</span>;
-                              ))}                          </div>                          <p className="text-sm text-gray-400 mb-1">Key Competitors</p>;
-                          <div className="flex flex-wrap gap-2">;
-                            {service && service.competitors.map((competitor, compIndex) => (<span key={compIndex} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">;
+                              ))}                          </div>                          <p className='text-sm text-gray-400 mb-1'>Key Competitors</p>;
+                          <div className='flex flex-wrap gap-2'>;
+                            {service && service.competitors.map((competitor, compIndex) => (<span key={compIndex} className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'>;
                         </div>;
                       </div>;
                     </div>;
                   </div>;
                 </div>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
               We combine professional-grade features with competitive pricing to deliver exceptional value for your business.;
             </p>;
           </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            <Card className="card-hover border-gradient-blue text-center">;
-              <div className="p-6">;
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center">;
-                  <Star className="w-8 h-8 text-cursor-blue" />;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
+            <Card className='card-hover border-gradient-blue text-center'>;
+              <div className='p-6'>;
+                <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>;
+                  <Star className='w-8 h-8 text-cursor-blue' />;
                 </div>;
-                <h3 className="text-xl font-bold text-white mb-3">Professional Quality</h3>;
-                <p className="text-gray-400 text-sm">Enterprise-grade features and reliability at micro SaaS prices</p>;
+                <h3 className='text-xl font-bold text-white mb-3'>Professional Quality</h3>;
+                <p className='text-gray-400 text-sm'>Enterprise-grade features and reliability at micro SaaS prices</p>;
               </div>;
             </Card>;
-            <Card className="card-hover border-gradient-blue text-center">;
-              <div className="p-6">;
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center">;
-                  <TrendingUp className="w-8 h-8 text-cursor-blue" />;
+            <Card className='card-hover border-gradient-blue text-center'>;
+              <div className='p-6'>;
+                <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>;
+                  <TrendingUp className='w-8 h-8 text-cursor-blue' />;
                 </div>;
-                <h3 className="text-xl font-bold text-white mb-3">Competitive Pricing</h3>;
-                <p className="text-gray-400 text-sm">Market-competitive pricing with better value than alternatives</p>;
+                <h3 className='text-xl font-bold text-white mb-3'>Competitive Pricing</h3>;
+                <p className='text-gray-400 text-sm'>Market-competitive pricing with better value than alternatives</p>;
               </div>;
             </Card>;
-            <Card className="card-hover border-gradient-blue text-center">;
-              <div className="p-6">;
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center">;
-                  <Users className="w-8 h-8 text-cursor-blue" />;
+            <Card className='card-hover border-gradient-blue text-center'>;
+              <div className='p-6'>;
+                <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>;
+                  <Users className='w-8 h-8 text-cursor-blue' />;
                 </div>;
-                <h3 className="text-xl font-bold text-white mb-3">Expert Support</h3>;
-                <p className="text-gray-400 text-sm">Professional support and guidance for your business needs</p>;
+                <h3 className='text-xl font-bold text-white mb-3'>Expert Support</h3>;
+                <p className='text-gray-400 text-sm'>Professional support and guidance for your business needs</p>;
               </div>;
             </Card>;
-            <Card className="card-hover border-gradient-blue text-center">;
-              <div className="p-6">;
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center">;
-                  <Globe className="w-8 h-8 text-cursor-blue" />;
+            <Card className='card-hover border-gradient-blue text-center'>;
+              <div className='p-6'>;
+                <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>;
+                  <Globe className='w-8 h-8 text-cursor-blue' />;
                 </div>;
-                <h3 className="text-xl font-bold text-white mb-3">Global Infrastructure</h3>;
-                <p className="text-gray-400 text-sm">Worldwide availability with enterprise-grade reliability</p>;
+                <h3 className='text-xl font-bold text-white mb-3'>Global Infrastructure</h3>;
+                <p className='text-gray-400 text-sm'>Worldwide availability with enterprise-grade reliability</p>;
                                 </span>;
                               ))}
                           </div>;
                                 </span>;
                               );
-                            )}                          </div>                          <p className="text-sm text-gray-400 mb-1">Key Competitors</p>;
-                          <div className="flex flex-wrap gap-2">;
+                            )}                          </div>                          <p className='text-sm text-gray-400 mb-1'>Key Competitors</p>;
+                          <div className='flex flex-wrap gap-2'>;
                             {service && service.competitors.map((competitor, compIndex) => (;
-                              <span key={compIndex} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">;
+                              <span key={compIndex} className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'>;
                         </div>;
                       </div>;
                     </div>;
@@ -1095,7 +1090,7 @@ key={compIndex}
 deliver exceptional value for your business.
             </p>
           </div>
-          <div className='grid grid-cols-1 "md": grid-cols-2 "lg":grid-cols-4 gap-8'>'
+          <div className='grid grid-cols-1 'md': grid-cols-2 'lg':grid-cols-4 gap-8'>'
             <Card className='card-hover border-gradient-blue text-center'>'
               <div className='p-6'>'
                 <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>'
@@ -1164,11 +1159,11 @@ deliver exceptional value for your business.
             Choose the micro SaaS service that fits your business needs and,
 start transforming your operations today.
           </p>
-          <div className='flex flex-col "sm":flex-row gap-6 justify-center'>'
+          <div className='flex flex-col 'sm':flex-row gap-6 justify-center'>'
             <Button,
 href='/contact''
               size='lg''
-              className='bg-white text-cursor-blue "hover":bg-gray-100 shadow-2xl hover-glow''
+              className='bg-white text-cursor-blue 'hover':bg-gray-100 shadow-2xl hover-glow''
             >
               Get Started
             </Button>
@@ -1176,7 +1171,7 @@ href='/contact''
 href='/pricing''
 variant='outline';'
               size='lg''
-              className='border-white text-white "hover":bg-white "hover":text-cursor-blue shadow-2xl''
+              className='border-white text-white 'hover':bg-white 'hover':text-cursor-blue shadow-2xl''
             >
               View Pricing
             </Button>
@@ -1189,14 +1184,14 @@ variant='outline';'
           </div>;
         </div>;
       </section>;
-          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Choose the micro SaaS service that fits your business needs and start transforming your operations today.
           </p>
-          <div className="flex flex-col sm: flex-row gap-6 justify-center">
+          <div className='flex flex-col sm: flex-row gap-6 justify-center'>
             <Button
-              href="/contact"
-              size="lg"
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
+              href='/contact'
+              size='lg'
+              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow'
             >
               Get Started
             </Button>
@@ -1282,14 +1277,14 @@ variant='outline';'
           </div>;
         </div>;
       </section>;
-          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">;
+          <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
             Choose the micro SaaS service that fits your business needs and start transforming your operations today.;
           </p>;
-          <div className="flex flex-col sm: flex-row gap-6 justify-center">;
+          <div className='flex flex-col sm: flex-row gap-6 justify-center'>;
             <Button;
-              href="/contact";
-              size="lg";
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow";
+              href='/contact';
+              size='lg';
+              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow';
             >;
               Get Started;
             </Button>;
@@ -1332,4 +1327,3 @@ href='/pricing';
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

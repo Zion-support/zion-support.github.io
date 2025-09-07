@@ -13,7 +13,7 @@ return (;
       <h1 className='text-2xl font-bold'>{episode.title}</h1>'
       <p className='text-sm text-gray-600'>'
 
-        "Guest": {episode.invitee?.name} ·{' '}'
+        'Guest': {episode.invitee?.name} ·{' '}'
         {new Date(episode.createdAt).toLocaleString(
 }
     <div className='space-y-4'>
@@ -30,7 +30,6 @@ return (;
           <source src={episode.audio.mp3Url} type='audio/mpeg' />;'
         </audio>;
       )}
-<<<<<<< HEAD
       <div>;
         <h2 className='text-xl font-semibold'>Transcript</h2>;'
         <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>;'
@@ -40,16 +39,11 @@ return (;
     </div>;
   )
 
-<<<<<<< HEAD
   );
         </pre>;
       </div>;
     </div>;
   )
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function EpisodePage() {
@@ -69,24 +63,20 @@ export default function EpisodePage() {
   if (!episode) return <div>Loading…</div>,
 
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-bold">{episode.title}</h1>
-      <p className="text-sm text-gray-600">Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
+    <div className='space-y-4'>
+      <h1 className='text-2xl font-bold'>{episode.title}</h1>
+      <p className='text-sm text-gray-600'>Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
       {episode.audio?.mp3Url && (
-        <audio controls className="w-full">
-          <source src={episode.audio.mp3Url} type="audio/mpeg" />
+        <audio controls className='w-full'>
+          <source src={episode.audio.mp3Url} type='audio/mpeg' />
         </audio>
       )}
       <div>
-        <h2 className="text-xl font-semibold">Transcript</h2>
-        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
+        <h2 className='text-xl font-semibold'>Transcript</h2>
+        <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>{episode.transcript}</pre>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
-=======
-<<<<<<< HEAD
 
   );

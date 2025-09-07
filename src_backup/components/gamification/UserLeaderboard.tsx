@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/gamification/UserLeaderboard.tsx
   Card,
   CardContent,
   CardDescription,
@@ -8,17 +7,14 @@
 import { Trophy } from 'lucide-react';
 
 export interface LeaderboardEntry {
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/gamification/UserLeaderboard.tsx
 
 import { Trophy  } from 'lucide-react';
   Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components / ui / card';
 export interface LeaderboardEntry  {name: string,points: number;import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 export interface LeaderboardEntry  {name: string;
   points: number;
-<<<<<<< HEAD:src_backup/components/gamification/UserLeaderboard.tsx
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Trophy } from 'lucide-react'
 export interface LeaderboardEntry {
   name: string
@@ -33,9 +29,7 @@ export interface LeaderboardEntry {
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 interface UserLeaderboardProps {
-=======
 interface UserLeaderboardProps  {entries: LeaderboardEntry[];
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/gamification/UserLeaderboard.tsx
   entries: LeaderboardEntry[];
 }
 export interface LeaderboardEntry  {name: string;
@@ -46,7 +40,6 @@ interface UserLeaderboardProps  {entries: LeaderboardEntry[];
 export interface LeaderboardEntry  {name: string;
   points: number;interface UserLeaderboardProps  {entries: LeaderboardEntry[];
   entries: LeaderboardEntry[];
-<<<<<<< HEAD:src_backup/components/gamification/UserLeaderboard.tsx
 }
 
 export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
@@ -54,7 +47,7 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
 
 
 
-          <Trophy className="h-5 w-5" /> Leaderboard
+          <Trophy className='h-5 w-5' /> Leaderboard
 <CardTitle className='flex items-center gap-2'>
           <Trophy className='h-5 w-5' /> Leaderboard
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -70,43 +63,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
+              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'
             >
-              <span className="font-medium">
+              <span className='font-medium'>
                 {idx + 1}. {e.name}
               </span>
 
 
 
-              <span className="text-sm">{e.points} pts</span>
+              <span className='text-sm'>{e.points} pts</span>
             </div>
           ))}
 
         </div>;
-=======
 }export interface LeaderboardEntry  {name: string,points: number;
 }interface UserLeaderboardProps  {entries: LeaderboardEntry[];
 }export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {return (<Card>;
       <CardHeader>;
-          <Trophy className="h-5 w-5" /> Leaderboard;
+          <Trophy className='h-5 w-5' /> Leaderboard;
 <CardTitle className='flex items-center gap-2'>;
           <Trophy className='h-5 w-5' /> Leaderboard;
         </CardTitle>;
         <CardDescription>Top users by points</CardDescription>;
       </CardHeader>;
       <CardContent>;
-        <div className="space-y-2">;
+        <div className='space-y-2'>;
 <div className='space-y-2'>;
           {entries.map((e, idx) => (<div;
-              key={e.name}className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50";
+              key={e.name}className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50';
             >;
-              <span className="font-medium">;
+              <span className='font-medium'>;
                 {idx + 1}. {e.name}
               </span>;
-              <span className="text-sm">{e.points} pts</span>;
+              <span className='text-sm'>{e.points} pts</span>;
             </div>;
           ))}</div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/gamification/UserLeaderboard.tsx
       </CardContent>;
     </Card>;
   )}export /**;
@@ -119,8 +110,8 @@ function UserLeaderboard() {return (<Card>;
         <CardDescription > Top users by points</CardDescription>;
       </CardHeader>;
       <CardContent>;
-        <div className='space - y-2'>        <CardTitle className="flex items - center gap - 2">;
-          <Trophy className="h - 5 w - 5" /> Leaderboard;
+        <div className='space - y-2'>        <CardTitle className='flex items - center gap - 2'>;
+          <Trophy className='h - 5 w - 5' /> Leaderboard;
         </CardTitle>;
         <CardDescription > Top users by points</CardDescription>;
       </CardHeader>;
@@ -130,16 +121,15 @@ function UserLeaderboard() {return (<Card>;
               key={e.name}
               className='flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50'            <div;
               key = {e.name }
-              className="flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50";
+              className='flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50';
             >;
               <span className='font - medium'>;
                 {idx + 1}. {e.name}
               </span>;
-              <span className='text - sm'>{e.points} pts</span>            </div>              <span className="text - sm">{e.points} pts</span>;
+              <span className='text - sm'>{e.points} pts</span>            </div>              <span className='text - sm'>{e.points} pts</span>;
             </div>))}
         </div>;
       </CardContent>;
-<<<<<<< HEAD:src_backup/components/gamification/UserLeaderboard.tsx
     </Card>);
 }
 ;
@@ -153,7 +143,6 @@ function UserLeaderboard() {return (<Card>;
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </Card>)}<span className='text-sm'>{e.points} pts</span>;
             </div>;
           ))}
@@ -161,4 +150,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardContent>;
     </Card>;
   )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/gamification/UserLeaderboard.tsx

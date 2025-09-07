@@ -155,7 +155,7 @@ export const "NotificationList": React.FC<NotificationListProps> = ({onDismiss,o
             icon={<Bell className="h-8 w-8" />}"
             title="No Notifications";"
             description="You're all caught up.";"
-            action={{ "text": 'Refresh', "onClick": onRetry }}'
+            action={ "text": 'Refresh', "onClick": onRetry }'
             className="border-none bg-transparent";"
           />;
         </div>;
@@ -183,7 +183,7 @@ export const "NotificationList": React.FC<NotificationListProps> = ({onDismiss,o
             icon = {<Bell className="h - 8 w - 8" /> }"
             title="No Notifications";"
             description="You're all caught up.";"
-            action={{ "text": 'Refresh', "on_click": on_retry }}'
+            action={ "text": 'Refresh', "on_click": on_retry }'
             className="border - none bg - transparent";"
           />;
         </div>) : (notifications.map ((notification, ) => (<NotificationItem;

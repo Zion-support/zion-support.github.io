@@ -8,14 +8,14 @@ import {WorkExperience} from '@/types/resume';'
 import {format} from 'date-fns';'
 interface WorkExperienceSectionProps {
   }
-  "workExperience": WorkExperience[]
+  'workExperience': WorkExperience[]
 }
 export function WorkExperienceSection() {
   // Sort work experience by date (newest first)
 }
 interface WorkExperienceSectionProps {
   }
-  "work_experience": WorkExperience[];
+  'work_experience': WorkExperience[];
 }
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
     }
@@ -23,7 +23,7 @@ interface WorkExperienceSectionProps {
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
 return dateB.getTime() - dateA.getTime();
   });
-  const formatDate = ("date": Date | string | undefined) => {
+  const formatDate = ('date': Date | string | undefined) => {
     }
     if (!date) return '''
     if (typeof date === 'string') {'
@@ -32,7 +32,7 @@ return dateB.getTime() - dateA.getTime();
 import { format } from 'date-fns';'
 interface WorkExperienceSectionProps {;
   }
-  "workExperience": WorkExperience[];
+  'workExperience': WorkExperience[];
 }
 ;
 export function WorkExperienceSection() {;
@@ -45,7 +45,7 @@ export function WorkExperienceSection() {;
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
     return dateB.getTime() - dateA.getTime();
   }),;
-  const formatDate = ("date": Date | string | undefined) => {;
+  const formatDate = ('date': Date | string | undefined) => {;
     }
     if (!date) return '',;'
     if (typeof date === 'string') {;'

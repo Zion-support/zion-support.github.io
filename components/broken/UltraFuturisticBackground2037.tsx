@@ -4,8 +4,7 @@
       <canvas;
         ref={canvas_ref}
         className=&quot;w - full h - full & quot;
-        style={{}
-=======
+        style={}
 useEffect ( () => {
   // Only run on client side if (typeof window === 'undefined') return
 canvas.width = window.innerWidth
@@ -113,8 +112,6 @@ animate (0)
 }</div>) 
 }
 export default UltraFuturisticBackground2037
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'high';
@@ -440,14 +437,13 @@ export default function UltraFuturisticBackground2037({intensity = 'medium';
       <canvas
         ref={canvasRef}
         className=&quot;w-full h-full&quot;
-        style={{
+        style={
           background: 'transparent'
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
-        }}
+        }
       />;
       {children}
     </div>;
   );
 }
 export default UltraFuturisticBackground2037;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

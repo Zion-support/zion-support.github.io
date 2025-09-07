@@ -70,14 +70,14 @@ fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
       .then(setInvoices);  }, []);
   const seatsUsed = members.length;
   return (
-    <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
+    <main style={ padding: '2rem', maxWidth: 1100, margin: '0 auto' }>
       <header
-        style={{
+        style={
           marginBottom: 16
           display: 'flex'
           alignItems: 'center'
           gap: 12
-        }}
+        }
       >
 
 import { useEffect, useMemo, useState } from 'react',
@@ -102,31 +102,31 @@ export default function CompanyAdmin() {
 
   return (
 
-    <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
+    <main style={ padding: '2rem', maxWidth: 1100, margin: '0 auto' }>
 
 <header
-        style={{
+        style={
           marginBottom: 16
           display: 'flex'
           alignItems: 'center'
           gap: 12
-        }}
+        }
       >
-        <h1 style={{ margin: 0 }}>Company Admin</h1>
-        <div style={{ marginLeft: 'auto' }}>
+        <h1 style={ margin: 0 }>Company Admin</h1>
+        <div style={ marginLeft: 'auto' }>
 :pages/enterprise/admin/index.tsx
           <Link href='/workspace/acme'>Go to Workspace</Link>        </div>
           <Link href='/workspace/acme'>Go to Workspace</Link>
         </div>
       </header>
-      <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+      <nav style={ display: 'flex', gap: 8, marginBottom: 16 }>
 {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
 
           <button
             key={t}
 
             onClick={() => setTab(t)}
-            style={{;'
+            style={;'
               padding: '0 && 0.5rem 0 && 0.75rem',;
               borderRadius: 8,;'
               border: '1px solid #e5e7eb',;'
@@ -195,49 +195,49 @@ const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
 
         {(['membersusageactivitybilling'] as const).map(t => (
 
-          <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
-        ))  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+          <button key={t} onClick={() => setTab(t)} style={ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }>{t}</button>
+        ))  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       </nav>;'
       {tab === 'members' && (;
         <MembersTab members={members} setMembers={setMembers} />;
-      )  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+      )  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;'
       {tab === 'usage' && usage && (;
         <UsageTab usage={usage} setUsage={setUsage} seatsUsed={seatsUsed} />;
-      )  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+      )  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;'
       {tab === 'activity' && (;
         <ActivityTab events={activity} />;
-      )  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+      )  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;'
       {tab === 'billing' && (;
         <BillingTab invoices={invoices} />;
-      )  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+      )  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     </main>;
   );
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 
 }
@@ -305,7 +305,7 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
   return (
     <section>
       <h2>Team members</h2>
-      <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>
+      <div style={ display: 'flex', gap: 8, margin: '12px 0' }>
 <input
           placeholder='Full name'
           value={name}
@@ -325,18 +325,18 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
           <option value='viewer'>Viewer</option>
           <option value='admin'>Admin</option>
         </select>
-        <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>
+        <button onClick={add} style={ padding: '0.5rem 0.75rem' }>
           Add
         </button>
       </div>
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+      <table style={ width: '100%', borderCollapse: 'collapse' }>
         <thead>
           <tr>
 <th
 
-              style={{
+              style={
                 textAlign: 'left'
                 padding: 8
                 borderBottom: '1px solid #e5e7eb'
@@ -350,7 +350,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 padding: 8,'
                 border_bottom: '1px solid #e5e7eb',
 
-              }}
+              }
             >;
               Actions;
             </th>          </tr>;
@@ -358,11 +358,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <tbody>;
           {members.map (m => (
             <tr key={m.id}>;'
-              <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
+              <td style={ padding: 8, border_bottom: '1px solid #f3f4f6' }>;
 
                 {m.name}
               </td>;'
-              <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
+              <td style={ padding: 8, border_bottom: '1px solid #f3f4f6' }>;
                 {m.email}
 
                 <select
@@ -373,7 +373,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               </td>;
 
-              <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
+              <td style={ padding: 8, border_bottom: '1px solid #f3f4f6' }>;
                 <select;
                   value={m.role}
                   on_change={e =>;'
@@ -390,10 +390,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <td;
 
-                style={{}
+                style={}
                   padding: 8,
 '
-                  style={{ color: '#b91c1c' }}
+                  style={ color: '#b91c1c' }
                 >;
                   Remove;
                 </button>              </td>;
@@ -415,13 +415,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <section>;
       <h2>Usage limits</h2>;
       <div;
-        style={{}
+        style={}
 '
           display: 'grid','
           gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
           gap: 12,
           maxWidth: 600,
-        }}>;
+        }>;
         <label>;
           <div>Monthly job posts</div>;
 
@@ -441,13 +441,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </label>;
       </div>;
       <div;
-        style={{}
+        style={}
           marginTop: 12,'
           display: 'flex','
           alignItems: 'center',
           gap: 12,
-        }}>;'
-        <button onClick={save} style={{ padding: '0 && 0.5rem 0 && 0.75rem' }}>;
+        }>;'
+        <button onClick={save} style={ padding: '0 && 0.5rem 0 && 0.75rem' }>;
           Save limits;
         </button>;
         <span>Seats used: {seatsUsed}</span>;
@@ -462,7 +462,7 @@ function ActivityTab(): any ({ events }: { events: any[] }) {;
       <ul>;
         {events && events.map(e => (;
           <li key={e && e.id}>;'
-            <span style={{ color: '#6b7280' }}>;'
+            <span style={ color: '#6b7280' }>;'
               {new Date(e && e.timestampIso).toLocaleString()} —{' '}
             </span>            <strong>{e && e.actorEmail}</strong> {e && e.action}
           </li>;
@@ -474,31 +474,31 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
   return (
     <section>;
       <h2>Billing & invoices</h2>;'
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>;
+      <table style={ width: '100%', borderCollapse: 'collapse' }>;
         <thead>;
           <tr>;
             <th;
-              style={{}
+              style={}
 '
                 textAlign: 'right'
                 padding: 8'
                 borderBottom: '1px solid #e5e7eb'
-              }}
+              }
             >
 :pages/enterprise/admin/index.tsx
               Actions
             </th>          </tr>
 
-        <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>Add</button>
+        <button onClick={add} style={ padding: '0.5rem 0.75rem' }>Add</button>
       </div>
 
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+      <table style={ width: '100%', borderCollapse: 'collapse' }>
         <thead>
           <tr>
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Name</th>
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Email</th>
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Role</th>
-            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
+            <th style={ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }>Name</th>
+            <th style={ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }>Email</th>
+            <th style={ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }>Role</th>
+            <th style={ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }>Actions</th>
           </tr>
 
         </thead>
@@ -506,25 +506,25 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
           {members.map(m => (
             <tr key={m.id}>
 
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>{m.name}</td>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>{m.email}</td>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>
                 <select value={m.role} onChange={e => changeRole(m.id, e.target.value as Member['role'])}>
-                  <option value="recruiter">Recruiter</option>
+                  <option value='recruiter'>Recruiter</option>
 
-                  <option value="manager">Manager</option>
-                  <option value="viewer">Viewer</option>
-                  <option value="admin">Admin</option>
+                  <option value='manager'>Manager</option>
+                  <option value='viewer'>Viewer</option>
+                  <option value='admin'>Admin</option>
                 </select>
               </td>
 
-<td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+<td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>
                 {m.name}
               </td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>
                 {m.email}
               </td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>
                 <select
                   value={m.role}
                   onChange={e =>
@@ -538,15 +538,15 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
                 </select>
               </td>
               <td
-                style={{
+                style={
                   padding: 8
                   borderBottom: '1px solid #f3f4f6'
                   textAlign: 'right'
-                }}
+                }
               >
                 <button
                   onClick={() => remove(m.id)}
-                  style={{ color: '#b91c1c' }}
+                  style={ color: '#b91c1c' }
                 >
                   Remove
                 </button>
@@ -593,22 +593,22 @@ function UsageTab({
     <section>
       <h2>Usage limits</h2>
       <div
-        style={{
+        style={
           display: 'grid'
           gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'
           gap: 12
           maxWidth: 600
-        }}
+        }
       >
 :pages/enterprise/admin/index.tsx
 
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-                <button onClick={() => remove(m.id)} style={{ color: '#b91c1c' }}>Remove</button>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }>
+                <button onClick={() => remove(m.id)} style={ color: '#b91c1c' }>Remove</button>
               </td>
             </tr>
           ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         </tbody>;
@@ -616,8 +616,8 @@ function UsageTab({
     </section>;
   );
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -645,15 +645,15 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
   return (
     <section>
       <h2>Usage limits</h2>'
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
+      <div style={ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }>
 
         <label>
-          <div>Monthly job posts</div>"
-          <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
+          <div>Monthly job posts</div>'
+          <input type='number' value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
         </label>
         <label>
-          <div>Budget cap (USD)</div>"
-          <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
+          <div>Budget cap (USD)</div>'
+          <input type='number' value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
         </label>
       </div>
 
@@ -671,9 +671,9 @@ function ActivityTab({ events }: { events: any[] }) {
       </ul>
     </section>
 
-      <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
+      <div style={ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }>
 
-        <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
+        <button onClick={save} style={ padding: '0.5rem 0.75rem' }>Save limits</button>
         <span>Seats used: {seatsUsed}</span>
       </div>
     </section>
@@ -687,7 +687,7 @@ function ActivityTab({ events }: { events: any[] }) {}
       <ul>
         {events.map((e) => (
           <li key={e.id}>'
-            <span style={{ color: '#6b7280' }}>{new Date(e.timestampIso).toLocaleString()} — </span>
+            <span style={ color: '#6b7280' }>{new Date(e.timestampIso).toLocaleString()} — </span>
             <strong>{e.actorEmail}</strong> {e.action}
           </li>
         ))}
@@ -706,15 +706,15 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
   return (
     <section>
       <h2>Usage limits</h2>'
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
+      <div style={ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }>
 
         <label>
-          <div>Monthly job posts</div>"
-          <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
+          <div>Monthly job posts</div>'
+          <input type='number' value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
         </label>
         <label>
-          <div>Budget cap (USD)</div>"
-          <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
+          <div>Budget cap (USD)</div>'
+          <input type='number' value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
         </label>
       </div>
 
@@ -735,8 +735,8 @@ function ActivityTab({ events }: { events: any[] }) {
 
   )
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -747,24 +747,24 @@ function ActivityTab({ events }: { events: any[] }) {;
       <ul>;
         {events.map((e) => (;
           <li key={e.id}>;
-            <span style={{ color: '#6b7280' }}>{new Date(e.timestampIso).toLocaleString()} — </span>;
+            <span style={ color: '#6b7280' }>{new Date(e.timestampIso).toLocaleString()} — </span>;
             <strong>{e.actorEmail}</strong> {e.action  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           </li>;
         ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       </ul>;
     </section>;
   );
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     <section>
@@ -777,57 +777,57 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
 
 <th
 
-              style={{
+              style={
                 textAlign: 'left'
                 padding: 8
                 borderBottom: '1px solid #e5e7eb'
-              }}
+              }
             >
               Invoice #
             </th>
             <th
-              style={{
+              style={
                 textAlign: 'left'
                 padding: 8
                 borderBottom: '1px solid #e5e7eb'
-              }}
+              }
             >
               Period
             </th>
             <th
-              style={{
+              style={
                 textAlign: 'right'
                 padding: 8
                 borderBottom: '1px solid #e5e7eb'
-              }}
+              }
             >
               Amount
             </th>
             <th
-              style={{
+              style={
                 textAlign: 'center'
                 padding: 8
                 borderBottom: '1px solid #e5e7eb'
-              }}
+              }
             >
               Status
             </th>
             <th
-              style={{
+              style={
                 textAlign: 'right'
                 padding: 8
                 borderBottom: '1px solid #e5e7eb'
-              }}
+              }
             >
               Actions
 :pages/enterprise/admin/index.tsx
             </th>          </tr>
 
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Invoice #</th>
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Period</th>
-            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Amount</th>
-            <th style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Status</th>
-            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
+            <th style={ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }>Invoice #</th>
+            <th style={ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }>Period</th>
+            <th style={ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }>Amount</th>
+            <th style={ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }>Status</th>
+            <th style={ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }>Actions</th>
 
           </tr>
 
@@ -836,56 +836,56 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
           {invoices.map(inv => (
             <tr key={inv.id}>
 
-<td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+<td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>
                 {inv.number}
               </td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>
 
                 {inv.periodStartIso} → {inv.periodEndIso}
               </td>;
               <td;
-                style={{}
+                style={}
                   padding: 8,'
                   border_bottom: '1px solid #f3f4f6','
                   text_align: 'right',
 
-                }}
+                }
               >;
                 ${inv.amount_usd.to_fixed (2)}
               </td>;
               <td;
 
-                }}
+                }
               >;
                 {inv.status}
               </td>;
               <td;
-                style={{}
+                style={}
                   padding: 8'
                   borderBottom: '1px solid #f3f4f6''
                   textAlign: 'right'
-                }}
+                }
               >
 
                 textAlign: 'right',
                 padding: 8,
 
                 borderBottom: '1px solid #e5e7eb',
-              }}>;
+              }>;
               Actions;
             </th>          </tr>;
         </thead>;
         <tbody>;
           {invoices && invoices.map(inv => (;
             <tr key={inv && inv.id}>;'
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>;
                 {inv && inv.number}
               </td>;'
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>;
                 {inv && inv.periodStartIso} → {inv && inv.periodEndIso}
               </td>;
               <td;
-                style={{}
+                style={}
                   padding: 8,
 
                   rel='noreferrer'>;
@@ -893,11 +893,11 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
                 </a>              </td>;
             </tr>;
 
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>{inv.number}</td>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6' }>{inv.periodStartIso} → {inv.periodEndIso}</td>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }>${inv.amountUsd.toFixed(2)}</td>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }>{inv.status}</td>
+              <td style={ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }>
 
                   rel='noreferrer'
                 >
@@ -919,8 +919,8 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
 }
 }
           ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         </tbody>;
@@ -928,8 +928,8 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
     </section>;
   );
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 :pages/enterprise/admin/index.tsx
 }
@@ -938,7 +938,7 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
                   border_bottom: '1px solid #f3f4f6',
 
                   text_align: 'right',
-                }}
+                }
               >;
                 <a;`
                   href={`/api / enterprise / companies/${COMPANY_ID}/billing / invoices/${inv.id}`}'

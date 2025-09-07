@@ -6,13 +6,13 @@ import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/z
 function writeSection() {
   }
   doc.addPage();
-  doc.fontSize(20).fillColor('#111111').text(title, { "underline": true,'
+  doc.fontSize(20).fillColor('#111111').text(title, { 'underline': true,'
 });
   doc.moveDown();
   doc.fontSize(11).fillColor('#222222').text(content, {'
     }
-    "width": 480,
-"align": 'left','
+    'width': 480,
+'align': 'left','
   });
 
 export default async function handler() {
@@ -27,7 +27,7 @@ const edition =;
   res.setHeader('Content-Type', 'application/pdf');'
   res.setHeader(
     'Content-Disposition','
-    `attachment; filename="zion-protocol-${edition}.pdf"``  );
+    `attachment; filename='zion-protocol-${edition}.pdf'``  );
 
 export default async function handler() {
   }
@@ -41,17 +41,16 @@ const edition =;
   res.setHeader('Content-Type', 'application/pdf');'
   res.setHeader(
     'Content-Disposition''
-    `attachment; filename="zion-protocol-${edition}.pdf"``  );
+    `attachment; filename='zion-protocol-${edition}.pdf'``  );
 
 export default async function handler() {
   }
   const editionParam = null;
 
-const doc = new (PDFDocument as any)({ "autoFirstPage": false,;
+const doc = new (PDFDocument as any)({ 'autoFirstPage': false,;
 });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;`  doc.info.Author = 'Zion Protocol';'
   doc.pipe(res);
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const editionParam = $2;
   const edition = $2;
@@ -78,20 +77,20 @@ doc.addPage();
 doc
     .fontSize(26)
     .fillColor('#000000')'
-    .text('Zion Protocol Whitepaper', { "align": 'left','
+    .text('Zion Protocol Whitepaper', { 'align': 'left','
 });
   doc.moveDown();
   doc
     .fontSize(14)
     .fillColor('#444444')'
-    .text(`"Edition": ${edition.toUpperCase(,`}`);`
+    .text(`'Edition': ${edition.toUpperCase(,`}`);`
   doc.moveDown();
   doc
     .fontSize(10)
     .fillColor('#666666')'
     .text('Operator Prompt (for maintenance):');'
   doc.moveDown(0.5);
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { "width": 480,'
+  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { 'width': 480,'
 });
 
 const sections = getWhitepaperSections(edition as any);
@@ -115,15 +114,15 @@ function writeSection() {doc.addPage()doc.fontSize(20).fillColor('#111111').text
   const edition =;
     editionParam === 'investor' || editionParam === 'developer';
       ? editionParam;
-      : 'full';res.setHeader('Content-Type', 'application/pdf')res.setHeader('Content-Disposition',`attachment; filename="zion-protocol-${edition}.pdf"`;
+      : 'full';res.setHeader('Content-Type', 'application/pdf')res.setHeader('Content-Disposition',`attachment; filename='zion-protocol-${edition}.pdf'`;
   )export default async function handler() {const editionParam  = (req.query.edition as string) |'full';const edition =;
     editionParam === 'investor' |editionParam === 'developer';
       ? editionParam;
       : 'full';export default async function handler() {const editionParam = (req.query.edition as string) || 'full';
   const edition  = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
-  res.setHeader('Content-Typeapplication/pdf')res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`)res.setHeader('Content-Type', 'application/pdf')res.setHeader('Content-Disposition';
-    `attachment; filename="zion-protocol-${edition}.pdf"`;
+  res.setHeader('Content-Typeapplication/pdf')res.setHeader('Content-Disposition', `attachment, filename='zion-protocol-${edition}.pdf'`)res.setHeader('Content-Type', 'application/pdf')res.setHeader('Content-Disposition';
+    `attachment; filename='zion-protocol-${edition}.pdf'`;
   )export default async function handler() {const editionParam  = null;const doc = new (PDFDocument as any)({ autoFirstPage: false })doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res)doc;
@@ -142,11 +141,11 @@ function handler() {const edition_param = (req.query.edition as string) || 'full
   const edition =;
     edition_param === 'investor' || edition_param === 'developer';
       ? edition_param;
-      : 'full';res.set_header ('Content - Type', 'application / pdf')res.set_header ('Content - Disposition',`attachment; filename="zion - protocol-${edition}.pdf"`)export default async /**;
+      : 'full';res.set_header ('Content - Type', 'application / pdf')res.set_header ('Content - Disposition',`attachment; filename='zion - protocol-${edition}.pdf'`)export default async /**;
  * handler - Function description;
  */;
 function handler() {const edition_param = (req.query.edition as string) || 'full';
-  const edition  = edition_param === 'investor' || edition_param === 'developer' ? edition_param : 'full';res.set_header ('Content - Typeapplication / pdf')res.set_header ('Content - Disposition', `attachment, filename="zion - protocol-${edition}.pdf"`)const doc = new (PDFDocument as any)({ autoFirstPage: false })doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
+  const edition  = edition_param === 'investor' || edition_param === 'developer' ? edition_param : 'full';res.set_header ('Content - Typeapplication / pdf')res.set_header ('Content - Disposition', `attachment, filename='zion - protocol-${edition}.pdf'`)const doc = new (PDFDocument as any)({ autoFirstPage: false })doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';doc.pipe (res)// Cover page;
   doc.add_page ()doc;
     .font_size (26).fill_color ('#000000').text ('Zion Protocol Whitepaper', { align: 'left' })doc.move_down ()doc;
@@ -156,18 +155,14 @@ function handler() {const edition_param = (req.query.edition as string) || 'full
     .font_size (10).fill_color ('#444444').text ('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.')doc.end ()// End;
 
   doc && doc.end();
-<<<<<<< HEAD
   // End
   doc && doc.addPage();
-=======
   // End;
   doc && doc.addPage();'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   doc && doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 
 }
 ;
-<<<<<<< HEAD
 export default async /**
  * handler - Function description
  */
@@ -181,7 +176,7 @@ function handler() {
   res.set_header ('Content - Type', 'application / pdf');
   res.set_header (
     'Content - Disposition',
-    `attachment; filename="zion - protocol-${edition}.pdf"`);
+    `attachment; filename='zion - protocol-${edition}.pdf'`);
 export default async /**
  * handler - Function description
  */
@@ -190,25 +185,23 @@ function handler() {
   const edition = edition_param === 'investor' || edition_param === 'developer' ? edition_param : 'full';
 ;
   res.set_header ('Content - Typeapplication / pdf');
-  res.set_header ('Content - Disposition', `attachment, filename="zion - protocol-${edition}.pdf"`);
+  res.set_header ('Content - Disposition', `attachment, filename='zion - protocol-${edition}.pdf'`);
 ;
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
-=======
 export default async /**;
  * handler - Function description;
  */
 function handler() { return null; }`
-    `attachment; filename="zion - protocol-${edition}.pdf"`);
+    `attachment; filename='zion - protocol-${edition}.pdf'`);
 export default async /**;
  * handler - Function description;
  */
 function handler() { return null; }`
-  res.set_header ('Content - Disposition', `attachment, filename="zion - protocol-${edition}.pdf"`);
+  res.set_header ('Content - Disposition', `attachment, filename='zion - protocol-${edition}.pdf'`);
 ;
   const doc = new (PDFDocument as any)({ autoFirstPage: false });`
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   doc.info.Author = 'Zion Protocol';
 ;
   doc.pipe (res);
@@ -216,7 +209,6 @@ function handler() { return null; }`
   // Cover page;
   doc.add_page ();
   doc;
-<<<<<<< HEAD
     .font_size (26);
     .fill_color ('#000000');
     .text ('Zion Protocol Whitepaper', { align: 'left' });
@@ -238,7 +230,6 @@ function handler() { return null; }`
   doc.move_down ();
   doc.font_size (10).fill_color ('#666666').text ('Operator Prompt (for maintenance):');
   doc.move_down (0.5);
-=======
     .font_size (26);'
     .fill_color ('#000000');'
     .text ('Zion Protocol Whitepaper', { align: 'left' });
@@ -260,7 +251,6 @@ function handler() { return null; }`
   doc.move_down ();'
   doc.font_size (10).fill_color ('#666666').text ('Operator Prompt (for maintenance):');
   doc.move_down (0.5);'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   doc.font_size (9).fill_color ('#666666').text (OPERATOR_PROMPT, { width: 480 });
 ;
   const sections = getWhitepaperSections (edition as any);
@@ -269,30 +259,23 @@ function handler() { return null; }`
   // End;
   doc.add_page ();
   doc;
-<<<<<<< HEAD
     .font_size (10);
     .fill_color ('#444444');
     .text (
-=======
     .font_size (10);'
     .fill_color ('#444444');
     .text ('
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 ;
   doc.end ();
   // End;
-<<<<<<< HEAD
   doc.add_page ();
-=======
   doc.add_page ();'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   doc.font_size (10).fill_color ('#444444').text ('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 ;
   doc.end ();
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
-<<<<<<< HEAD
   doc.moveDown(0.5);
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
 
@@ -303,20 +286,15 @@ function handler() { return null; }`
   doc.fontSize(10).fillColor('#444444').text($2);
   doc.end()
 }
-=======
   doc.moveDown(0.5);'
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
 
   const sections = getWhitepaperSections(edition as any);
-<<<<<<< HEAD
   doc.end();
   doc.end()
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+''`
   doc.end()
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -324,6 +302,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   doc.end()
 }
 
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+'

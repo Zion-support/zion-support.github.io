@@ -1,11 +1,11 @@
-const SEOHead = dynamic(() => import(\"./SEOHead\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default SEOHead\' ,const SEOHead = dynamic(() => import("./SEOHead"),{"; "loading": () => <p>Loading.</p,>}) "export": "default SEOHead" ,""";"
-const SEOHead = dynamic(() => import("./SEOHead"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SEOHead' ,';'
+const SEOHead = dynamic(() => import(\'./SEOHead\'),{\'; \'loading\': () => <p>Loading...</p,>}) \'export\': \'default SEOHead\' ,const SEOHead = dynamic(() => import('./SEOHead'),{'; 'loading': () => <p>Loading.</p,>}) 'export': 'default SEOHead' ,''';'
+const SEOHead = dynamic(() => import('./SEOHead'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default SEOHead' ,';'
 </p>';'
 </p>';'
 </p>';'
 </p>';'
 ursor/automate-test-improve-and-merge-code-646c;
-const SEOHead = dynamic(() => import("./SEOHead"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SEOHead' ,';'
+const SEOHead = dynamic(() => import('./SEOHead'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default SEOHead' ,';'
 </p>';'
 </p>';'
 </p>';'
@@ -27,7 +27,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';'
-const SEOHead = dynamic(() => import("./SEOHead"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SEOHead' ,';'
+const SEOHead = dynamic(() => import('./SEOHead'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default SEOHead' ,';'
 </p>';'
 </p>';'
 </p>';'
@@ -36,9 +36,9 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';'
 </p>';'
 </p>';'
-const SEOHead = dynamic(() => import("./SEOHead"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SEOHead' ,';'
+const SEOHead = dynamic(() => import('./SEOHead'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default SEOHead' ,';'
 </p>'</p>';'
-const SEOHead = dynamic(() => import("./SEOHead"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SEOHead' ,''
+const SEOHead = dynamic(() => import('./SEOHead'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default SEOHead' ,''
 </p>''
 </p>''
 </p>''
@@ -63,10 +63,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 ursor/integrate-build-improve-and-re-verify-8f7d
 </p>''
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 </p>''
 </p>''

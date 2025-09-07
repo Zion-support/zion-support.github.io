@@ -38,9 +38,9 @@ const formData = new FormData(e.currentTarget);
 const updated = {
 ...activeVendor
       }
-      "name": String(formData.get('name') || activeVendor.name),'
-      "about": String(formData.get('about') || activeVendor.about || ''),'
-      "servicesOffered": String(
+      'name': String(formData.get('name') || activeVendor.name),'
+      'about': String(formData.get('about') || activeVendor.about || ''),'
+      'servicesOffered': String(
         formData.get('servicesOffered') |'
           activeVendor.servicesOffered?.join(',') |'
           '''
@@ -56,7 +56,6 @@ setActiveVendor(updated);
     }
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     if (!pkgTitle || !pkgPrice || !activeVendor) return,
->>>>>>> origin/main
     const packages = [...(activeVendor.packages || []), {
       id: `pkg_${Date.now()}`,
       title: pkgTitle,
@@ -72,9 +71,9 @@ const packages = [;
       ...(activeVendor.packages || []),
       {
         }
-        "id": `pkg_${Date.now()}``        "title": pkgTitle,
-"description": pkgDesc,
-"priceUsd": Number(pkgPrice)
+        'id': `pkg_${Date.now()}``        'title': pkgTitle,
+'description': pkgDesc,
+'priceUsd': Number(pkgPrice)
      
 }
 
@@ -90,7 +89,7 @@ const packages = [;
   return (<div className='text-gray-500'>No vendor found. Please apply first.</div>;'
     )async function saveProfile() {e.preventDefault()const formData = new FormData(e.currentTarget;
   }
-  const updated = {...activeVendor,"name": String(formData.get('name') || activeVendor.name),"about": String(formData.get('about') || activeVendor.about || ''),"servicesOffered": String(formData.get('servicesOffered') |;'
+  const updated = {...activeVendor,'name': String(formData.get('name') || activeVendor.name),'about': String(formData.get('about') || activeVendor.about || ''),'servicesOffered': String(formData.get('servicesOffered') |;'
           }
           activeVendor.servicesOffered?.join(',') |;'
           '';'
@@ -102,15 +101,15 @@ const packages = [;
 }
 
 const packages = [;
-  ...(activeVendor.packages || []),{"id": `pkg_${Date.now(,`}`;`        "title": pkgTitle;
-        "description": pkgDesc;
-        "priceUsd": Number(pkgPrice
+  ...(activeVendor.packages || []),{'id': `pkg_${Date.now(,`}`;`        'title': pkgTitle;
+        'description': pkgDesc;
+        'priceUsd': Number(pkgPrice
 }function addPackage() {if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
 }
 
 const packages = [;
-  ...(activeVendor && activeVendor.packages || []),{"id": `pkg_${Date && Date.now(,`}`,"title": pkgTitle,"description": pkgDesc,"priceUsd": Number(pkgPrice)}];`    setActiveVendor({ ...activeVendor, packages })setPkgTitle('')setPkgDesc('')setPkgPrice('')}'
+  ...(activeVendor && activeVendor.packages || []),{'id': `pkg_${Date && Date.now(,`}`,'title': pkgTitle,'description': pkgDesc,'priceUsd': Number(pkgPrice)}];`    setActiveVendor({ ...activeVendor, packages })setPkgTitle('')setPkgDesc('')setPkgPrice('')}'
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated)}
@@ -124,7 +123,7 @@ const packages = [;
         )}
         <form;
           onSubmit={saveProfile}
-          className='grid grid-cols-1 "md":grid-cols-2 gap-4'>;'
+          className='grid grid-cols-1 'md':grid-cols-2 gap-4'>;'
           <div>;
             <label className='block text-sm mb-1'>Agency Name</label>;'
             <input;
@@ -132,14 +131,14 @@ const packages = [;
               defaultValue={activeVendor && activeVendor.name}
               className='w-full border rounded px-3 py-2 bg-transparent';' />;
           </div>;
-          <div className='"md":col-span-2'>;'
+          <div className=''md':col-span-2'>;'
             <label className='block text-sm mb-1'>About</label>;'
             <textarea;
               name='about';'
               rows={4}
               className='w-full border rounded px-3 py-2 bg-transparent';' />;
           </div>;
-          <div className='"md":col-span-2'>;'
+          <div className=''md':col-span-2'>;'
             <label className='block text-sm mb-1'>Services Offered</label>;'
 
             <input,
@@ -148,8 +147,8 @@ name='servicesOffered''
               defaultValue={activeVendor.servicesOffered?.join(', ') |''}'
               className='w-full border rounded px-3 py-2 bg-transparent'' />
           </div>
-          <div className='"md":col-span-2'>'
-            <button className='px-4 py-2 rounded bg-black text-white "dark":bg-white "dark":text-black'>'
+          <div className=''md':col-span-2'>'
+            <button className='px-4 py-2 rounded bg-black text-white 'dark':bg-white 'dark':text-black'>'
               Save
             </button>
           </div>
@@ -158,44 +157,44 @@ name='servicesOffered''
 
 <section className='space-y-3'>'
         <h2 className='text-lg font-medium'>Publish Packages</h2>'
-        <div className='grid grid-cols-1 "md":grid-cols-3 gap-4'>'
+        <div className='grid grid-cols-1 'md':grid-cols-3 gap-4'>'
 
 
-    <div className="space-y-8">;"
-      <div className="flex items-center justify-between">;"
-        <h1 className="text-2xl font-semibold">Agency Dashboard</h1>;"
-        {!activeVendor && activeVendor.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-yellow-100 text-yellow-800">Pending Verification</span>}"
-      </div>;<section className="space-y-4">;"
-        <h2 className="text-lg font-medium">Profile</h2>;"
-        <form onSubmit={saveProfile} className="grid grid-cols-1 "md":grid-cols-2 gap-4">;"
+    <div className='space-y-8'>;'
+      <div className='flex items-center justify-between'>;'
+        <h1 className='text-2xl font-semibold'>Agency Dashboard</h1>;'
+        {!activeVendor && activeVendor.verified && <span className='text-xs px-2 py-0 && 0.5 rounded bg-yellow-100 text-yellow-800'>Pending Verification</span>}'
+      </div>;<section className='space-y-4'>;'
+        <h2 className='text-lg font-medium'>Profile</h2>;'
+        <form onSubmit={saveProfile} className='grid grid-cols-1 'md':grid-cols-2 gap-4'>;'
           <div>;
-            <label className="block text-sm mb-1" htmlFor="input-Agency Name">Agency Name</label>;"
-            <input name="name" defaultValue={activeVendor && activeVendor.name} className="w-full border rounded px-3 py-2 bg-transparent" />;"
+            <label className='block text-sm mb-1' htmlFor='input-Agency Name'>Agency Name</label>;'
+            <input name='name' defaultValue={activeVendor && activeVendor.name} className='w-full border rounded px-3 py-2 bg-transparent' />;'
           </div>;
-          <div className=""md":col-span-2">;"
-            <label className="block text-sm mb-1" htmlFor="input-About">About</label>;"
-            <textarea name="about" defaultValue={activeVendor && activeVendor.about || ''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />;"
+          <div className=''md':col-span-2'>;'
+            <label className='block text-sm mb-1' htmlFor='input-About'>About</label>;'
+            <textarea name='about' defaultValue={activeVendor && activeVendor.about || ''} rows={4} className='w-full border rounded px-3 py-2 bg-transparent' />;'
           </div>;
-          <div className=""md":col-span-2">;"
-            <label className="block text-sm mb-1" htmlFor="input-Services Offered">Services Offered</label>;"
-            <input name="servicesOffered" defaultValue={activeVendor && activeVendor.servicesOffered?.join() || ''} className="w-full border rounded px-3 py-2 bg-transparent" />;"
+          <div className=''md':col-span-2'>;'
+            <label className='block text-sm mb-1' htmlFor='input-Services Offered'>Services Offered</label>;'
+            <input name='servicesOffered' defaultValue={activeVendor && activeVendor.servicesOffered?.join() || ''} className='w-full border rounded px-3 py-2 bg-transparent' />;'
           </div>;
-          <div className=""md":col-span-2">;"
-            <button className="px-4 py-2 rounded bg-black text-white "dark":bg-white "dark":text-black">Save</button>;"
+          <div className=''md':col-span-2'>;'
+            <button className='px-4 py-2 rounded bg-black text-white 'dark':bg-white 'dark':text-black'>Save</button>;'
           </div>;
         </form>;
       </section>;<section className='space-y-3'>;'
         <h2 className='text-lg font-medium'>Publish Packages</h2>;'
-        <div className='grid grid-cols-1 "md":grid-cols-3 gap-4'>;<div;'
+        <div className='grid grid-cols-1 'md':grid-cols-3 gap-4'>;<div;'
               key={p && p.id}
-              className='border border-gray-200 "dark":border-gray-800 rounded p-4'>;'
+              className='border border-gray-200 'dark':border-gray-800 rounded p-4'>;'
               <div className='font-medium'>{p && p.title}</div>;'
               <div className='text-sm text-gray-500'>{p && p.description}</div>;'
               <div className='mt-2 text-sm'>${p && p.priceUsd}</div>;'
             </div>;
           ))}
         </div>;
-        <div className='grid grid-cols-1 "md":grid-cols-3 gap-2 items-end'>;'
+        <div className='grid grid-cols-1 'md':grid-cols-3 gap-2 items-end'>;'
           <input;
             placeholder='Title';'
             value={pkgTitle}
@@ -220,7 +219,7 @@ placeholder='Price (USD)''
             />
             <button,
 onClick={addPackage}
-              className='px-4 py-2 rounded bg-black text-white "dark": bg-white "dark":text-black''
+              className='px-4 py-2 rounded bg-black text-white 'dark': bg-white 'dark':text-black''
             >
               Add
             </button>
@@ -265,10 +264,10 @@ const data = await res.json();
 
       }
 
-      "method": 'POST','
-      "headers": { 'Content-Type': 'application/json','
+      'method': 'POST','
+      'headers': { 'Content-Type': 'application/json','
 },
-"body": JSON.stringify({ itemId, status })
+'body': JSON.stringify({ itemId, status })
     });
     fetchItems();
   useEffect(() => {;
@@ -286,7 +285,7 @@ return (;
       {items && items.map(item => { return (<div; }
           }
           key={item && item.id}
-          className='border border-gray-200 "dark":border-gray-800 rounded p-3 flex items-center justify-between'>;'
+          className='border border-gray-200 'dark':border-gray-800 rounded p-3 flex items-center justify-between'>;'
           <div>;
             <div className='font-medium'>{item && item.title}</div>;'
             <div className='text-xs text-gray-500'>;'
@@ -304,20 +303,20 @@ return (;
             <option value='in_progress'>In Progress</option>;'
             <option value='complete'>Complete</option>;'
             <option value='lost'>Lost</option>          </select>;'
-            <option value="lead">Lead</option>;"
-            <option value="qualified">Qualified</option>;"
-            <option value="proposal">Proposal</option>;"
-            <option value="in_progress">In Progress</option>;"
-            <option value="complete">Complete</option>;"
-            <option value="lost">Lost</option>;"
+            <option value='lead'>Lead</option>;'
+            <option value='qualified'>Qualified</option>;'
+            <option value='proposal'>Proposal</option>;'
+            <option value='in_progress'>In Progress</option>;'
+            <option value='complete'>Complete</option>;'
+            <option value='lost'>Lost</option>;'
 
 const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] |null; // tie to auth later;'
-  return { "props": { vendor } }
+  return { 'props': { vendor } }
 })}
 
 const { listVendors,;
 } = await import('../utils/vendor-store')const vendor = listVendors()[0] || null; // tie to auth later;'
-return { "props": { vendor } }})defaultValue={item.statu,;
+return { 'props': { vendor } })defaultValue={item.statu,;
 }
             onChange={e => { return changeStatus(item.id, e.target.value)}
 
@@ -335,15 +334,14 @@ return { "props": { vendor } }})defaultValue={item.statu,;
     </div>
 ); }
 
-export const "getServerSideProps": GetServerSideProps<Props> = async () => {
+export const 'getServerSideProps': GetServerSideProps<Props> = async () => {
 }
 const { listVendors,;
 } = await import('../utils/vendor-store');'
 
 const vendor = listVendors()[0] || null; // tie to auth later;
-return { "props": { vendor } },;
+return { 'props': { vendor } },;
 };
-=======
             className='border rounded px-2 py-1 bg-transparent text-sm';
           >;
             <option value='lead'>Lead</option>;
@@ -379,7 +377,6 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {cons
   const vendor = listVendors()[0] |null, // tie to auth later
   return { props: { vendor } }
 }
-<<<<<<< HEAD
 }
 
     </div>
@@ -402,12 +399,8 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
   return { props: { vendor } }
 }
 ;
-  return { props: { vendor } }}
+  return { props: { vendor } }
   const { listVendors } = await import($2);
   const vendor = listVendors()[0] || null, // tie to auth later
   return { props: { vendor } }
 },
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
@@ -59,13 +57,9 @@ import { Textarea } from '@/components/ui/ textarea';
   Dialog;
   DialogContent;
   DialogHeader;
-<<<<<<< HEAD:src_backup/components/profile/ContactPublisherModal.tsx
   DialogTitle} from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
 Dialog,
   DialogContent,
@@ -77,23 +71,15 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   DialogTitle} from '@/components/ui/ dialog';
 import { Button } from '@/components/ui/ button';
 import { Input } from '@/components/ui/ input';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/profile/ContactPublisherModal.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Form,
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-<<<<<<< HEAD
-<<<<<<< HEAD
   FormMessage,
 } from '@/components/ui/ form';
 import { use_form, type Resolver } from 'react - hook - form';
@@ -164,7 +150,7 @@ if ( {) {
   $2
 }
       setLoginOpen (true);
-      return }    default_values: { subject: '', message: '' }}),
+      return }    default_values: { subject: '', message: '' }),
   const handle_send = async () => {
     // Check condition
 if ( {) {
@@ -173,9 +159,6 @@ if ( {) {
       setLoginOpen (true);
       return;
 
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   FormMessage,;
 } from '@/components/ui/form';
 import { useForm, type Resolver } from 'react-hook-form';

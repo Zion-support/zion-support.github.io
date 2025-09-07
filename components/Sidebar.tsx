@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,7 +9,6 @@ import {
   Phone;
   Mail;
   MapPin;
-=======
 
 ;
 import React, { useState, useEffect } from 'react';
@@ -39,24 +36,21 @@ const navigation = {'Services': [;
     } else {document.body.style.overflow = 'unset';
     }
     return () => {document.body.style.overflow = 'unset';
-    }}, [isOpen])const handleDropdownToggle = (item: string) => {setActiveDropdown(activeDropdown === item ? null : item)}return (<AnimatePresence>;
+    }, [isOpen])const handleDropdownToggle = (item: string) => {setActiveDropdown(activeDropdown === item ? null : item)}return (<AnimatePresence>;
       {isOpen && (<>;
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';
 import { useRouter } from 'next/router';
-=======
-<<<<<<< HEAD
 {/* Backdrop */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
+            className='fixed inset-0 bg-black bg-opacity-50 z-40'
             onClick={onClose}
           />
           {/* Sidebar */}
-=======
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -65,7 +59,6 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import {
   X,
   ChevronDown,
@@ -88,7 +81,6 @@ import {
   Mail,
   MapPin,
   Building2
->>>>>>> origin/main
 } from 'lucide-react';
 const navigation = {
   'Services': [
@@ -99,8 +91,6 @@ const navigation = {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Blockchain', href: '/blockchain' },
-<<<<<<< HEAD
-=======
     { name: 'IoT Solutions', href: '/iot-solutions' }
   ],
   'Solutions': [
@@ -145,7 +135,6 @@ const quickLinks = [
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' }
 ];
->>>>>>> origin/main
 
     { name: 'IoT Solutions', href: '/iot-solutions' }
 
@@ -200,7 +189,6 @@ interface SidebarProps {
   onClose: () => void,
 }
 
-<<<<<<< HEAD
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -217,7 +205,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
-=======
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
 
@@ -252,7 +239,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         ? prev.filter(item => item !== title)
         : [...prev, title]
     );
->>>>>>> origin/main
   };
 
   return (
@@ -260,125 +246,108 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {isOpen && (
         <>
           {/* Backdrop */}
-<<<<<<< HEAD
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
+            className='fixed inset-0 bg-black bg-opacity-50 z-40'
             onClick={onClose}
           />
 
           
           {/* Sidebar */}
           <motion.div
-            initial={{ x: -300 }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-<<<<<<< HEAD
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
-=======
+            initial={ x: -300 }
+            animate={ x: 0 }
+            exit={ x: '-100%' }
+            transition={ type: 'tween', duration: 0.3 }
+            className='fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto'
 
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto";
+            transition={ type: 'tween', duration: 0.3 }
+            className='fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto';
           >;
-            <div className="p-6">;
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+            <div className='p-6'>;
+            className='fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto'
 
->>>>>>> origin/main
           >
-            <div className="p-6">
-=======
+            <div className='p-6'>
           <motion&& motion.div
-            initial={{ opacity: 0 ;}}
-            animate={{ opacity: 1 ;}}
-            exit={{ opacity: 0 ;}}
-            initial={{ x: -300 ;}}
-            animate={{ x: 0 ;}}
-            exit={{ x: -300 ;}}
-            transition={{ type: 'spring';, damping: 25;, stiffness: 200 ;}}
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+            initial={ opacity: 0 ;}
+            animate={ opacity: 1 ;}
+            exit={ opacity: 0 ;}
+            initial={ x: -300 ;}
+            animate={ x: 0 ;}
+            exit={ x: -300 ;}
+            transition={ type: 'spring';, damping: 25;, stiffness: 200 ;}
+            className='fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50'
               {/* Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center space-x-2">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
-                    <Building2 className="w-8 h-8 text-white" />
+              <div className='flex items-center justify-between mb-8'>
+                <div className='flex items-center space-x-2'>
+                  <div className='bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg'>
+                    <Building2 className='w-8 h-8 text-white' />
                   </div>
-                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+                  <span className='text-xl font-bold text-gray-900'>Zion Tech Group</span>
                 </div>
                 <button
                   onClick={onClose}
-<<<<<<< HEAD
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
-=======
+                  className='p-2 text-gray-500 hover:text-gray-700 transition-colors'
 
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors";
+                  className='p-2 text-gray-500 hover:text-gray-700 transition-colors';
                 >;
-                  <X className="w-6 h-6" />;
+                  <X className='w-6 h-6' />;
                 </button>;
               </div>;
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                  className='p-2 hover:bg-gray-100 rounded-lg transition-colors'
 
->>>>>>> origin/main
                 >
-                  <X className="w-6 h-6" />
+                  <X className='w-6 h-6' />
                 </button>
               </div>
               {/* Navigation */}
-              <nav className="space-y-4">
-<<<<<<< HEAD
+              <nav className='space-y-4'>
                 {Object.entries(navigation).map(([title, links]) => (
-=======
-<<<<<<< HEAD
                 {Object.entries(navigation).map(([title, links]) => (
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
-<<<<<<< HEAD
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
-=======
+                      className='flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors'
                             key={link.name}
                             href={link.href}
-                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                            className='block text-gray-600 hover:text-blue-600 transition-colors py-1'
                             onClick={onClose}
                           >
                             {link.name}
                           </Link>))}
               {/* Quick Links */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
-                <div className="space-y-2">
+              <div className='mt-8 pt-8 border-t border-gray-200'>
+                <h3 className='text-lg font-semibold text-gray-900 mb-4'>Quick Links</h3>
+                <div className='space-y-2'>
                   {quickLinks.map((link) => (
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                      className='block text-gray-600 hover:text-blue-600 transition-colors py-1'
                       onClick={onClose}
-=======
                 {Object && Object.entries(navigation).map(([title, links]) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors";
+                      className='flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors';
                     >;
                       <span>{title}</span>;
                       <ChevronDown className={`w-5 h-5 transition-transform ${activeDropdown === title ? 'rotate-180' : '';
                       }`} />;
                     </button>;
                     {activeDropdown === title && (<motion.div;
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="ml-4 space-y-2 mt-2";
+                        initial={ opacity: 0, height: 0 }
+                        animate={ opacity: 1, height: 'auto' }
+                        exit={ opacity: 0, height: 0 }
+                        className='ml-4 space-y-2 mt-2';
                       >;
                         {links.map((link) => (<Link;
                             key={link.name}
                             href={link.href}
-                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1";
+                            className='block text-gray-600 hover:text-blue-600 transition-colors py-1';
                             onClick={onClose}
                           >;
                             {link.name}
@@ -389,28 +358,28 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   </div>;
                 ))}
               </nav>;
-                      className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
+                      className='flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors'
                     >
-                      <span className="font-medium">{title}</span>
+                      <span className='font-medium'>{title}</span>
                       {openDropdowns.includes(title) ? (
-                        <ChevronDown className="w-4 h-4" />
+                        <ChevronDown className='w-4 h-4' />
                       ) : (
-                        <ChevronRight className="w-4 h-4" />
+                        <ChevronRight className='w-4 h-4' />
                       )}
                     </button>
                     <AnimatePresence>
                       {openDropdowns.includes(title) && (
                         <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          className="ml-4 space-y-1"
+                          initial={ height: 0, opacity: 0 }
+                          animate={ height: 'auto', opacity: 1 }
+                          exit={ height: 0, opacity: 0 }
+                          className='ml-4 space-y-1'
                         >
                           {links.map((link) => (
                             <Link
                               key={link.name}
                               href={link.href}
-                              className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                              className='block text-gray-600 hover:text-blue-600 transition-colors py-1'
                               onClick={onClose}
                             >
                               {link.name}
@@ -422,7 +391,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   </div>
                 ))}
               </nav>
->>>>>>> origin/main
 
                     >;
 
@@ -433,16 +401,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     </button>
                     {activeDropdown === title && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="ml-4 space-y-2 mt-2"
+                        initial={ opacity: 0, height: 0 }
+                        animate={ opacity: 1, height: 'auto' }
+                        exit={ opacity: 0, height: 0 }
+                        className='ml-4 space-y-2 mt-2'
                       >
                         {links.map((link) => (
                           <Link
                             key={link.name}
                             href={link.href}
-                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                            className='block text-gray-600 hover:text-blue-600 transition-colors py-1'
                             onClick={onClose}
                           >
                             {link.name}
@@ -454,14 +422,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 ))}
               </nav>
               {/* Quick Links */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
-                <div className="space-y-2">
+              <div className='mt-8 pt-8 border-t border-gray-200'>
+                <h3 className='text-lg font-semibold text-gray-900 mb-4'>Quick Links</h3>
+                <div className='space-y-2'>
                   {quickLinks.map((link) => (
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                      className='block text-gray-600 hover:text-blue-600 transition-colors py-1'
                       onClick={onClose}
                     >
                       {link.name}
@@ -469,39 +437,36 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
               {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center text-gray-600">
-                    <Phone className="w-4 h-4 mr-3" />
+              <div className='mt-8 pt-8 border-t border-gray-200'>
+                <h3 className='text-lg font-semibold text-gray-900 mb-4'>Contact Info</h3>
+                <div className='space-y-3'>
+                  <div className='flex items-center text-gray-600'>
+                    <Phone className='w-4 h-4 mr-3' />
                     <span>+1 302 464 0950</span>
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <Mail className="w-4 h-4 mr-3" />
+                  <div className='flex items-center text-gray-600'>
+                    <Mail className='w-4 h-4 mr-3' />
                     <span>kleber@ziontechgroup.com</span>
                   </div>
-                  <div className="flex items-start text-gray-600">
-                    <MapPin className="w-4 h-4 mr-3 mt-1" />
+                  <div className='flex items-start text-gray-600'>
+                    <MapPin className='w-4 h-4 mr-3 mt-1' />
                     <span>364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
                 </div>
-                <button className="flex items-center space-x-3 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                  <LogOut className="h-5 w-5" />
-                  <span className="font-medium">Sign Out</span>
+                <button className='flex items-center space-x-3 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors'>
+                  <LogOut className='h-5 w-5' />
+                  <span className='font-medium'>Sign Out</span>
                 </button>
-=======
 
               {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
-                <div className="space-y-2 text-sm text-gray-600">
+              <div className='mt-8 pt-8 border-t border-gray-200'>
+                <h3 className='text-lg font-semibold text-gray-900 mb-4'>Contact Us</h3>
+                <div className='space-y-2 text-sm text-gray-600'>
                   <p>+1 302 464 0950</p>
                   <p>kleber@ziontechgroup.com</p>
                   <p>24/7 Support Available</p>
                 </div>
->>>>>>> origin/main
               </div>
             </div>
           </motion.div>
@@ -566,26 +531,26 @@ interface SidebarProps {
         <>;
           {/* Backdrop */}
           <motion&& motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            initial={{ x: -300 }}
-            animate={{ x: 0 }}
-            exit={{ x: -300 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
+            initial={ x: -300 }
+            animate={ x: 0 }
+            exit={ x: -300 }
+            transition={ type: 'spring', damping: 25, stiffness: 200 }
+            className='fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50'
               {/* Header */}
-              <div className="flex items-center justify-between mb-8">;
-                <div className="flex items-center space-x-2">;
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">;
-                    <Building2 className="w-8 h-8 text-white" />;
+              <div className='flex items-center justify-between mb-8'>;
+                <div className='flex items-center space-x-2'>;
+                  <div className='bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg'>;
+                    <Building2 className='w-8 h-8 text-white' />;
                   </div>;
-                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>;
+                  <span className='text-xl font-bold text-gray-900'>Zion Tech Group</span>;
                 </div>;
                 <button
                   onClick={onClose}
               {/* Navigation */}
-              <nav className="space-y-4">;
+              <nav className='space-y-4'>;
                 {Object && Object.entries(navigation).map(([title, links]) => (;
                   <div key={title}>;
                     <button
@@ -593,28 +558,28 @@ interface SidebarProps {
                     <Link
                       key={link && link.name}
                       href={link && link.href}
-                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                      className='block text-gray-600 hover:text-blue-600 transition-colors py-1'
                       onClick={onClose}>;
                       {link && link.name}
                     </Link>;
                   ))}
               {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-200">;
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>;
-                <div className="space-y-3">;
-                  <div className="flex items-center space-x-3 text-gray-600">;
-                    <Phone className="w-4 h-4" />;
+              <div className='mt-8 pt-8 border-t border-gray-200'>;
+                <h3 className='text-lg font-semibold text-gray-900 mb-4'>Contact Us</h3>;
+                <div className='space-y-3'>;
+                  <div className='flex items-center space-x-3 text-gray-600'>;
+                    <Phone className='w-4 h-4' />;
                     <span>+1 302 464 0950</span>;
                   </div>;
-                  <div className="flex items-center space-x-3 text-gray-600">;
-                    <Mail className="w-4 h-4" />;
+                  <div className='flex items-center space-x-3 text-gray-600'>;
+                    <Mail className='w-4 h-4' />;
                     <span>kleber@ziontechgroup && ziontechgroup.com</span>;
                   </div>;
                 </div>;
-                <div className="mt-4">;
+                <div className='mt-4'>;
                   <Link
-                    href="/contact"
-                    className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                    href='/contact'
+                    className='inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors'
 }
 const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);
@@ -664,87 +629,81 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
         <>;
           {/* Backdrop */}
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset - 0 bg - black bg - opacity - 50 z - 40";
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
+            className='fixed inset - 0 bg - black bg - opacity - 50 z - 40';
             on_click={on_close}
           />;
           <motion.div;
-            initial={{ coordinate_x: -300 }}
-            animate={{ coordinate_x: 0 }}
-            exit={{ coordinate_x: -300 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed left - 0 top - 0 h - full w - 80 bg - white shadow - xl z - 50";
-            <div className="p - 6">;
+            initial={ coordinate_x: -300 }
+            animate={ coordinate_x: 0 }
+            exit={ coordinate_x: -300 }
+            transition={ type: 'spring', damping: 25, stiffness: 200 }
+            className='fixed left - 0 top - 0 h - full w - 80 bg - white shadow - xl z - 50';
+            <div className='p - 6'>;
               {/* Header */}
-              <div className="flex items - center justify - between mb - 8">;
-                <div className="flex items - center space - x-2">;
-                  <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 p - 2 rounded - lg">;
-                    <Building2 className="w - 8 h - 8 text - white" />;
+              <div className='flex items - center justify - between mb - 8'>;
+                <div className='flex items - center space - x-2'>;
+                  <div className='bg - gradient - to - r from - blue - 600 to - purple - 600 p - 2 rounded - lg'>;
+                    <Building2 className='w - 8 h - 8 text - white' />;
                   </div>;
-                  <span className="text - xl font - bold text - gray - 900">Zion Tech Group</span>;
+                  <span className='text - xl font - bold text - gray - 900'>Zion Tech Group</span>;
                 </div>;
                 <button;
                   on_click={on_close}
-                  className="p - 2 hover:bg - gray - 100 rounded - lg transition - colors";
-                  <X className="w - 6 h - 6" />;
+                  className='p - 2 hover:bg - gray - 100 rounded - lg transition - colors';
+                  <X className='w - 6 h - 6' />;
                 </button>;
               </div>;
               {/* Navigation */}
-              <nav className="space - y-4">;
+              <nav className='space - y-4'>;
                 {Object.entries (navigation).map (([title, links]) => (
                   <div key={title}>;
                     <button;
                       on_click={() => handleDropdownToggle (title)}
-                      className="flex items - center justify - between w - full text - left text - lg font - semibold text - gray - 900 py - 2 hover: text - blue - 600 transition - colors";
-              <div className="mt - 8 pt - 8 border - t border - gray - 200">;
-                <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Quick Links</h3>;
-                <div className="space - y-2">;
+                      className='flex items - center justify - between w - full text - left text - lg font - semibold text - gray - 900 py - 2 hover: text - blue - 600 transition - colors';
+              <div className='mt - 8 pt - 8 border - t border - gray - 200'>;
+                <h3 className='text - lg font - semibold text - gray - 900 mb - 4'>Quick Links</h3>;
+                <div className='space - y-2'>;
                   {quick_links.map ((link) => (
                     <Link;
                       key={link.name}
                       href={link.href}
-                      className="block text - gray - 600 hover:text - blue - 600 transition - colors py - 1";
+                      className='block text - gray - 600 hover:text - blue - 600 transition - colors py - 1';
                       on_click={on_close}
-<<<<<<< HEAD
                     >;
                       {link.name}
                     </Link>))}
                 </div>;
               </div>;
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
                     >
                       {link.name}
                     </Link>))}
                 </div>
               </div>
-<<<<<<< HEAD
               {/* Contact Info */}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               {/* Contact Info */}
-              <div className="mt - 8 pt - 8 border - t border - gray - 200">;
-                <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Contact Us</h3>;
-                <div className="space - y-3">;
-                  <div className="flex items - center space - x-3 text - gray - 600">;
-                    <Phone className="w - 4 h - 4" />;
+              <div className='mt - 8 pt - 8 border - t border - gray - 200'>;
+                <h3 className='text - lg font - semibold text - gray - 900 mb - 4'>Contact Us</h3>;
+                <div className='space - y-3'>;
+                  <div className='flex items - center space - x-3 text - gray - 600'>;
+                    <Phone className='w - 4 h - 4' />;
                     <span>+1 302 464 0950</span>;
                   </div>;
-                  <div className="flex items - center space - x-3 text - gray - 600">;
-                    <Mail className="w - 4 h - 4" />;
+                  <div className='flex items - center space - x-3 text - gray - 600'>;
+                    <Mail className='w - 4 h - 4' />;
                     <span > kleber@ziontechgroup.com</span>;
                   </div>;
                 </div>;
-                <div className="mt - 4">;
+                <div className='mt - 4'>;
                   <Link;
-                    href="/contact";
-                    className="inline - flex items - center space - x-2 bg - blue - 600 text - white px - 4 py - 2 rounded - lg hover:bg - blue - 700 transition - colors";
+                    href='/contact';
+                    className='inline - flex items - center space - x-2 bg - blue - 600 text - white px - 4 py - 2 rounded - lg hover:bg - blue - 700 transition - colors';
                     on_click={on_close}
                   >;
                     <span > Get Started</span>;
-                    <ExternalLink className="w - 4 h - 4" />;
+                    <ExternalLink className='w - 4 h - 4' />;
                   </Link>;
               </div>;
             </div>;
@@ -761,8 +720,6 @@ export default Sidebar;
 import React from 'react';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
           {/* Backdrop */},
           <motion.div,
             initial = $2;
@@ -811,8 +768,6 @@ import { Home, Settings, User, LogOut } from 'lucide-react';
                 </div>,
               </div>,
               {/* Contact Info */},
->>>>>>> origin/merge-automation-changes
-=======
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -874,48 +829,48 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       {isOpen && (
         <>
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
+            className='fixed inset-0 bg-black bg-opacity-50 z-40'
             onClick={onClose}
           />
           
           <motion.div
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+            initial={ x: '-100%' }
+            animate={ x: 0 }
+            exit={ x: '-100%' }
+            transition={ type: 'tween', duration: 0.3 }
+            className='fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto'
           >
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-8">
-                <h2 className="text-xl font-bold text-gray-900">Menu</h2>
+            <div className='p-6'>
+              <div className='flex items-center justify-between mb-8'>
+                <h2 className='text-xl font-bold text-gray-900'>Menu</h2>
                 <button
                   onClick={onClose}
-                  className="p-2 hover:bg-gray-100 rounded-md"
+                  className='p-2 hover:bg-gray-100 rounded-md'
                 >
-                  <X className="h-5 w-5" />
+                  <X className='h-5 w-5' />
                 </button>
               </div>
 
-              <nav className="space-y-2">
+              <nav className='space-y-2'>
                 {navigationItems.map((item) => (
                   <div key={item.label}>
                     <Link
                       href={item.href}
-                      className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                      className='flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md'
                       onClick={onClose}
                     >
-                      <item.icon className="h-5 w-5 mr-3" />
+                      <item.icon className='h-5 w-5 mr-3' />
                       {item.label}
                       {item.children && (
                         <button
                           onClick={(e) => {
                             e.preventDefault();
                             toggleExpanded(item.label);
-                          }}
-                          className="ml-auto"
+                          }
+                          className='ml-auto'
                         >
                           <ChevronDown 
                             className={`h-4 w-4 transition-transform ${
@@ -927,12 +882,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                     </Link>
                     
                     {item.children && expandedItems.includes(item.label) && (
-                      <div className="ml-8 space-y-1">
+                      <div className='ml-8 space-y-1'>
                         {item.children.map((child) => (
                           <Link
                             key={child.label}
                             href={child.href}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md"
+                            className='block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md'
                             onClick={onClose}
                           >
                             {child.label}
@@ -944,18 +899,18 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 ))}
               </nav>
 
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <div className="space-y-2 text-sm text-gray-600">
-                  <div className="flex items-center">
-                    <MapPin className="h-4 w-4 mr-2" />
+              <div className='mt-8 pt-8 border-t border-gray-200'>
+                <div className='space-y-2 text-sm text-gray-600'>
+                  <div className='flex items-center'>
+                    <MapPin className='h-4 w-4 mr-2' />
                     <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
                   </div>
-                  <div className="flex items-center">
-                    <Phone className="h-4 w-4 mr-2" />
+                  <div className='flex items-center'>
+                    <Phone className='h-4 w-4 mr-2' />
                     <span>+1 302 464 0950</span>
                   </div>
-                  <div className="flex items-center">
-                    <Mail className="h-4 w-4 mr-2" />
+                  <div className='flex items-center'>
+                    <Mail className='h-4 w-4 mr-2' />
                     <span>kleber@ziontechgroup.com</span>
                   </div>
                 </div>
@@ -967,9 +922,4 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     </AnimatePresence>
   );
 }
-<<<<<<< HEAD
-=======
 export default Sidebar;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

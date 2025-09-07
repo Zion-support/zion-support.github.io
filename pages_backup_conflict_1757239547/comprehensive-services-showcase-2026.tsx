@@ -75,8 +75,8 @@ interface Service {;
 
   reviews: number;
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -206,8 +206,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
     { value: '200-400', label: '$200 - $400' },;
     { value: '400-600', label: '$400 - $600' },;
     { value: '600+', label: '$600+'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ],;
@@ -226,8 +226,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
         case '600+': return price > 600,;
         default: return true;
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     })(),;
@@ -247,88 +247,88 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
         return b.customers - a.customers,;
       default: return 0;
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   }),
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
-      'Business Intelligence & Analytics': <Database className="w-5 h-5" />,
-      'Content Creation & Marketing': <Sparkles className="w-5 h-5" />,
-      'Customer Service & Support': <Users className="w-5 h-5" />,
-      'E-commerce & Retail': <Globe className="w-5 h-5" />,
-      'HR & Recruitment': <Users className="w-5 h-5" />,
-      'Financial Management': <TrendingUp className="w-5 h-5" />,
-      'Project Management': <Clock className="w-5 h-5" />,
-      'Education & Training': <Brain className="w-5 h-5" />,
-      'Healthcare & Medical': <Shield className="w-5 h-5" />,
-      'Cloud Infrastructure & DevOps': <Cloud className="w-5 h-5" />,
-      'Cybersecurity & Threat Intelligence': <Shield className="w-5 h-5" />,
-      'Data Engineering & Analytics': <Database className="w-5 h-5" />,
-      'API Management & Integration': <Zap className="w-5 h-5" />,
-      'Network Monitoring & Management': <Globe className="w-5 h-5" />,
-      'Database Management & Optimization': <Database className="w-5 h-5" />,
-      'IT Service Management': <Users className="w-5 h-5" />,
-      'Backup & Disaster Recovery': <Cloud className="w-5 h-5" />,
-      'Quantum Computing & AI': <Brain className="w-5 h-5" />,
-      'Blockchain & Web3': <Cube className="w-5 h-5" />,
-      'Internet of Things (IoT)': <Zap className="w-5 h-5" />,
-      'Edge Computing & 5G': <Globe className="w-5 h-5" />,
-      'AR/VR & Immersive Technology': <Cube className="w-5 h-5" />,
-      'Robotics & Automation': <Robot className="w-5 h-5" />,
-      'Digital Twin & Simulation': <Cube className="w-5 h-5" />
+      'Business Intelligence & Analytics': <Database className='w-5 h-5' />,
+      'Content Creation & Marketing': <Sparkles className='w-5 h-5' />,
+      'Customer Service & Support': <Users className='w-5 h-5' />,
+      'E-commerce & Retail': <Globe className='w-5 h-5' />,
+      'HR & Recruitment': <Users className='w-5 h-5' />,
+      'Financial Management': <TrendingUp className='w-5 h-5' />,
+      'Project Management': <Clock className='w-5 h-5' />,
+      'Education & Training': <Brain className='w-5 h-5' />,
+      'Healthcare & Medical': <Shield className='w-5 h-5' />,
+      'Cloud Infrastructure & DevOps': <Cloud className='w-5 h-5' />,
+      'Cybersecurity & Threat Intelligence': <Shield className='w-5 h-5' />,
+      'Data Engineering & Analytics': <Database className='w-5 h-5' />,
+      'API Management & Integration': <Zap className='w-5 h-5' />,
+      'Network Monitoring & Management': <Globe className='w-5 h-5' />,
+      'Database Management & Optimization': <Database className='w-5 h-5' />,
+      'IT Service Management': <Users className='w-5 h-5' />,
+      'Backup & Disaster Recovery': <Cloud className='w-5 h-5' />,
+      'Quantum Computing & AI': <Brain className='w-5 h-5' />,
+      'Blockchain & Web3': <Cube className='w-5 h-5' />,
+      'Internet of Things (IoT)': <Zap className='w-5 h-5' />,
+      'Edge Computing & 5G': <Globe className='w-5 h-5' />,
+      'AR/VR & Immersive Technology': <Cube className='w-5 h-5' />,
+      'Robotics & Automation': <Robot className='w-5 h-5' />,
+      'Digital Twin & Simulation': <Cube className='w-5 h-5' />
     },
-    return iconMap[category] || <Sparkles className="w-5 h-5" />
+    return iconMap[category] || <Sparkles className='w-5 h-5' />
   },
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
+    <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900'>
         {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className='relative overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20'></div>
+          <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              initial={ opacity: 0, y: 20 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              animate={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              transition={ duration: 0.8 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              className="text-center"
+              className='text-center'
             >
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 ZionTech Group
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                <span className='block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500'>
                   2026 Services
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                 Discover our comprehensive suite of innovative micro SAAS services, IT solutions, and emerging technology platforms designed to transform your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <div className="flex items-center space-x-2 text-white">
-                  <Users className="w-5 h-5" />
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+                <div className='flex items-center space-x-2 text-white'>
+                  <Users className='w-5 h-5' />
                   <span>{allServices.length}+ Services</span>
                 </div>
-                <div className="flex items-center space-x-2 text-white">
-                  <Star className="w-5 h-5 text-yellow-400" />
+                <div className='flex items-center space-x-2 text-white'>
+                  <Star className='w-5 h-5 text-yellow-400' />
                   <span>4.5+ Average Rating</span>
                 </div>
-                <div className="flex items-center space-x-2 text-white">
-                  <TrendingUp className="w-5 h-5 text-green-400" />
+                <div className='flex items-center space-x-2 text-white'>
+                  <TrendingUp className='w-5 h-5 text-green-400' />
                   <span>Growing Rapidly</span>
                 </div>
               </div>
@@ -336,34 +336,34 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
           </div>
         </div>
         {/* Search and Filters */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
+          <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               {/* Search */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <div className='relative'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
                 <input
-                  type="text"
-                  placeholder="Search services..."
+                  type='text'
+                  placeholder='Search services...'
                   value={searchTerm  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                  className='w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400'
                 />
               </div>
               <div className='flex items-center space-x-2 text-white'>
@@ -466,9 +466,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
           {sortedServices.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.5, delay: index * 0.1 }
               className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105'
             >
               {/* Service Header */}
@@ -647,12 +647,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 }<div> <select </option>) )
 }</select> </div> {
   /* Sort By */
-}<div> <select > <option value="popularity" className="bg-gray-800 text-white" >Sort by Popularity</option> <option value="price-low" className="bg-gray-800 text-white" >Price: Low to High</option> <option value="price-high" className="bg-gray-800 text-white" >Price: High to Low</option> <option value="rating" className="bg-gray-800 text-white" >Sort by Rating</option> <option value="customers" className="bg-gray-800 text-white" >Sort by Customers</option> </select> </div> </div> </div> </div> </h2> <p className="text-gray-300" > Discover innovative solutions tailored to your business needs </p> </div> Popular </div>)
+}<div> <select > <option value='popularity' className='bg-gray-800 text-white' >Sort by Popularity</option> <option value='price-low' className='bg-gray-800 text-white' >Price: Low to High</option> <option value='price-high' className='bg-gray-800 text-white' >Price: High to Low</option> <option value='rating' className='bg-gray-800 text-white' >Sort by Rating</option> <option value='customers' className='bg-gray-800 text-white' >Sort by Customers</option> </select> </div> </div> </div> </div> </h2> <p className='text-gray-300' > Discover innovative solutions tailored to your business needs </p> </div> Popular </div>)
 }</div> </li>) )
 }</ul> </div> </div> {
   /* CTA Button */
 }<a > Learn More & Get Started </Link> </div> </div> </motion.div>) )
-}</div> </div> <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30"> <div className="text-center"> <h2 className="text-3xl font-bold text-white mb-4"> text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Get in touch with our team to discuss how our innovative services can help you achieve your goals. </p> <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> <div className=" text-center"> <div className=" w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Users className=" w-8 h-8 text-cyan-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Expert Team</h3> <p className=" text-gray-300 text-sm">Dedicated professionals ready to help</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Zap className=" w-8 h-8 text-blue-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Fast Implementation</h3> <p className=" text-gray-300 text-sm">Quick setup and deployment</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className=" w-8 h-8 text-purple-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">24/7 Support</h3> <p className=" text-gray-300 text-sm">Round-the-clock assistance</p> </div> </div> <div className=" flex flex-col sm:flex-row gap-4 justify-center items-center"> <a href=" mailto:kleber@ziontechgroup.com"className=" bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"> Email Us </Link> <a href=" tel:+13024640950"className=" bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300" > Call Us </Link> </div> </div> </div> </div> </div>)
+}</div> </div> <div className='bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30'> <div className='text-center'> <h2 className='text-3xl font-bold text-white mb-4'> text-xl text-gray-300 mb-8 max-w-2xl mx-auto'> Get in touch with our team to discuss how our innovative services can help you achieve your goals. </p> <div className=' grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'> <div className=' text-center'> <div className=' w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4'> <Users className=' w-8 h-8 text-cyan-400'/> </div> <h3 className=' text-lg font-semibold text-white mb-2'>Expert Team</h3> <p className=' text-gray-300 text-sm'>Dedicated professionals ready to help</p> </div> <div className=' text-center'> <div className=' w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4'> <Zap className=' w-8 h-8 text-blue-400'/> </div> <h3 className=' text-lg font-semibold text-white mb-2'>Fast Implementation</h3> <p className=' text-gray-300 text-sm'>Quick setup and deployment</p> </div> <div className=' text-center'> <div className=' w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4'> <Shield className=' w-8 h-8 text-purple-400'/> </div> <h3 className=' text-lg font-semibold text-white mb-2'>24/7 Support</h3> <p className=' text-gray-300 text-sm'>Round-the-clock assistance</p> </div> </div> <div className=' flex flex-col sm:flex-row gap-4 justify-center items-center'> <a href=' mailto:kleber@ziontechgroup.com'className=' bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'> Email Us </Link> <a href=' tel:+13024640950'className=' bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300' > Call Us </Link> </div> </div> </div> </div> </div>)
 }
 export default ComprehensiveServicesShowcase2026;
 export default ComprehensiveServicesShowcase2026;

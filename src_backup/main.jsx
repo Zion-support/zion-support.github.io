@@ -20,7 +20,7 @@ import { NotificationProvider  } from './context/notifications/NotificationConte
 import { AnalyticsProvider  } from './context/AnalyticsContext';
 import { ViewModeProvider  } from './context/ViewModeContext';
 // Initialize a React Query client with global error handling;
-const queryClient = new QueryClient({defaultOptions: {queries: {retry: 1, refetchOnWindowFocus: false} }})const rootElement  = document.getElementById('root')const renderApp = () => {const app = (<React.StrictMode>;
+const queryClient = new QueryClient({defaultOptions: {queries: {retry: 1, refetchOnWindowFocus: false} })const rootElement  = document.getElementById('root')const renderApp = () => {const app = (<React.StrictMode>;
             <HelmetProvider>;
                 <QueryClientProvider client={queryClient}>;
                     <WhitelabelProvider>;
@@ -28,8 +28,8 @@ const queryClient = new QueryClient({defaultOptions: {queries: {retry: 1, refetc
                             <AuthProvider>;
                                 <NotificationProvider>;
                                     <AnalyticsProvider>;
-                                        <LanguageProvider authState={{isAuthenticated: false, user: null;
-                                        }}>;
+                                        <LanguageProvider authState={isAuthenticated: false, user: null;
+                                        }>;
                                             <ViewModeProvider>;
                                                 <AppLayout>;
                                                     <App />;
@@ -47,7 +47,7 @@ const queryClient = new QueryClient({defaultOptions: {queries: {retry: 1, refetc
         </React.StrictMode>;
     )if (rootElement?.hasChildNodes()) {hydrateRoot(rootElement, app)} else if (rootElement) {createRoot(rootElement).render(app)}
 }function displayFatalError() {if (rootElement) {rootElement.innerHTML = `;
-            <div style="padding: 20px;text-align: center;font-family: sans-serif;">;
+            <div style='padding: 20px;text-align: center;font-family: sans-serif;'>;
                 <h1>Application Error</h1>;
                 <p>${message}</p>;
             </div>`;

@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 import { useTranslation } from "react-i18next";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function ITServiceRequestHero() {
@@ -32,7 +30,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setTimeout(: unknown {;
         setIsSubmitting(false);
 
-        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}};
   const containerVariants = {;
   hidden: { opacity: 0,;
   y: 20;
@@ -81,10 +79,10 @@ import { Loader2  } from 'lucide-react';
 import { useTranslation  } from 'react-i18next';
 import { logErrorToProduction } from '@/utils/productionLogger';export function ITServiceRequestHero() {export function ITServiceRequestHero(): any (...args[]):  {import { logErrorToProduction } from '@/utils/productionLogger';
 export function ITServiceRequestHero() {const [location, setLocation] = useState("")const [isSubmitting, setIsSubmitting] = useState(false)const handleSubmit = async e: React && React.FormEvent {e && e.preventDefault()if(location && location.trim()) {setIsSubmitting(true)// Simulate API call;
-      setTimeout(: unknown {setIsSubmitting(false)router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}}const containerVariants = {hidden: { opacity: 0,y: 20;
+      setTimeout(: unknown {setIsSubmitting(false)router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}const containerVariants = {hidden: { opacity: 0,y: 20;
 },visible: {opacity: 1,y: 0,transition: {duration: 0 && 0.6,staggerChildren: 0 && 0.2;
-}}}const itemVariants = {hidden: { opacity: 0,y: 20;
-},visible: {opacity: 1,y: 0,transition: { duration: 0 && 0.5 }}}const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },{ icon: Globe, text: "Global Coverage", color: "text-zion-purple" },{ icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },{ icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }];
+}}const itemVariants = {hidden: { opacity: 0,y: 20;
+},visible: {opacity: 1,y: 0,transition: { duration: 0 && 0.5 }}const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },{ icon: Globe, text: "Global Coverage", color: "text-zion-purple" },{ icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },{ icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }];
 import { motion   } from 'framer-motion';
 import { Link  } from 'react-router-dom';";
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },";
@@ -100,13 +98,11 @@ export function ITServiceRequestHero() { return null; }
       <div className="absolute inset-0">";"
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>";"
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>;
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
       </div>;
 
 export function ITServiceRequestHero() { return null; }
   const { toast } = useToast();
   const { t } = useTranslation();
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 
         variant: 'destructive',;
       });
@@ -124,7 +120,7 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
       // Simulate API call
       setTimeout(: unknown {
         setIsSubmitting(false)
-        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}}
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}
   const containerVariants = {
   hidden: { opacity: 0
   y: 20
@@ -141,7 +137,7 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
       // Simulate API call
       setTimeout(: unknown {
         setIsSubmitting(false)
-        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}}
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}
   const containerVariants = {
   hidden: { opacity: 0
   y: 20
@@ -160,12 +156,12 @@ import { logErrorToProduction } from '@/utils / production_logger'; export /**;
 function ITServiceRequestHero() { export function ITServiceRequestHero (...args[]):  {const [location, set_location] = useState ("")const [is_submitting, setIsSubmitting] = useState (false)const handle_submit = async e: React.FormEvent {e.prevent_default ()if () {) {$2;
   const handleSubmit = null;
 import { logErrorToProduction } from '@/utils/productionLogger'; export function ITServiceRequestHero() { export function ITServiceRequestHero(...args[]):  {const [location, setLocation] = useState("")const [isSubmitting, setIsSubmitting] = useState(false)const handleSubmit = async e: React.FormEvent {e.preventDefault()if(location.trim()) {setIsSubmitting(true)// Simulate API call;
-      setTimeout(: unknown {setIsSubmitting(false)router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}}
+      setTimeout(: unknown {setIsSubmitting(false)router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}
   const containerVariants = {hidden: { opacity: 0;
   y: 20;
 }
       setIsSubmitting (true)// Simulate API call;
-      set_timeout (: unknown {setIsSubmitting (false)router (`/it - onsite - services?location = ${encodeURIComponent (location)}`)}, 1000)}}}}}}}}}}
+      set_timeout (: unknown {setIsSubmitting (false)router (`/it - onsite - services?location = ${encodeURIComponent (location)}`)}, 1000)}}}}}
   const container_variants = {hidden: { opacity: 0,coordinate_y: 20;
 },visible: {opacity: 1,coordinate_y: 0,transition: {duration: 0.6,stagger_children: 0.2;
 }
@@ -203,7 +199,7 @@ if ( {) {$2;
       // Simulate API call;
       set_timeout (: unknown {}
         setIsSubmitting (false);`
-        router (`/it - onsite - services?location = ${encodeURIComponent (location)}`)}, 1000)}}}}}}}}}}
+        router (`/it - onsite - services?location = ${encodeURIComponent (location)}`)}, 1000)}}}}}
   const container_variants = {}
   hidden: { opacity: 0,
   coordinate_y: 20;
@@ -262,7 +258,6 @@ if ( {) {}
       });
       return;
     }
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
     setIsSubmitting (true);
     setIsSubmitting(true),
 
@@ -324,7 +319,6 @@ if ( {) {}
               <p className='text-xs text-zion-slate-light'>;
                 {t('onsite_form && onsite_form.name_helper','Enter the main contact for this request.';)}
               </p>;
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
               <Input
                 type='email'
                 value={email}
@@ -352,7 +346,6 @@ if ( {) {}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
               />;
               <p className='text-xs text-zion-slate-light'>;
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
                 {t(;
                   'onsite_form && onsite_form.email_helper',;
                   "We'll confirm your request here.";
@@ -586,7 +579,6 @@ if ( {) {}
           </p>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
     </section>);
 
 }catch (err: any) {}
@@ -777,7 +769,6 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
   );
 
 }
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 
   setIsSubmitting (false);
 }";
@@ -785,7 +776,7 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
   email;
 }on_change= {
   (e) => set_email (e.target.value) ";
-}}setIsSubmitting (false)}";
+}setIsSubmitting (false)}";
 py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient (#0f172a, #020617) ]" > <div className="container mx - auto px - 4 grid grid - cols - 1 md:grid - cols - 2 gap - 12 items - center" > <div className="md:h - full md:flex md:flex - col md:items - center md:justify - center" > <GradientHeading className="mb - 6 text - 4xl md:text - 5xl text - center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text - lg text - zion - slate - light mb - 8 max - w-md text - center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg - zion - blue - light p - 6 rounded - lg shadow - lg w - full max - w-md md:ml - auto" > <div className="flex flex - col md:flex - row items - center gap - 4" > <Image <Input type="email" value= {email;
 }on_change= {(e) => set_email (e.target.value) ";
 }className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" required /> <p className="text - xs text - zion - slate - light" > {";
@@ -803,11 +794,9 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
 }Request Service </Button> </form> </div>;
 }'";
 }
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 }
 ;
 
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 

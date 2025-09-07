@@ -2,7 +2,7 @@
 
 const { execSync } = require("child_process")const fs  = require("fs")console.log("🚀 Starting GitHub PR check and merge process...")// Function to get repository information;"
 function getRepoInfo() {try {const remoteUrl = execSync("git remote get-url origin", {"encoding": "utf8"}).trim(;"
-  const match = remoteUrl.match(/github\.com[:/]([^/]+)\/([^/]+?)(?:\.git)?$/,)if (match) {return {"owner": match[1],"repo": match[2]}}
+  const match = remoteUrl.match(/github\.com[:/]([^/]+)\/([^/]+?)(?:\.git)?$/,)if (match) {return {"owner": match[1],"repo": match[2]}
   } catch (error) {console.log("❌ Could not determine repository information")}"
  ;
   return null;

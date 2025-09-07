@@ -352,7 +352,7 @@ const ContactSection = () => ('''';
       </div>;
 '''';
       {/* Service Categories */}'''';
-      <div className='space-y-16">'";
+      <div className='space-y-16'>'';
         {ENHANCED_SERVICE_CATEGORIES.map(category => (<ServiceCategory;
             key={category.value}
             category={category.label}

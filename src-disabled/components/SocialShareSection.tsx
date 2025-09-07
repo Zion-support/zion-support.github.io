@@ -6,16 +6,16 @@ export function SocialShareSection() {
   const shareUrl = null;
 
                 className={`${link.color} text-white`}
-                size="sm";
+                size='sm';
                 onClick={link.onClick}
                 aria-label={link.name}
                 title={link.name}
               >;
                 {link.icon}
-                <span className="sr-only">{link.name}</span>"
-                <span aria-hidden="true">{link.name}</span>"
-                <span className="sr-only">{link.name}</span>
-                <span aria-hidden="true">{link.name}</span>
+                <span className='sr-only'>{link.name}</span>'
+                <span aria-hidden='true'>{link.name}</span>'
+                <span className='sr-only'>{link.name}</span>
+                <span aria-hidden='true'>{link.name}</span>
               </Button>
             ))}
           </div>;
@@ -31,10 +31,10 @@ export function SocialShareSection() {
 });
 };
 }</div> </div> </div> </section>) ;
-}'";
+}'';
 }
 }</div> </div> </div> </section>)
-}'""
+}'''
 }
       name: 'Twitter','
       icon: <Twitter className='h - 5 w - 5' aria - hidden='true' />,',
@@ -109,12 +109,12 @@ export function SocialShareSection() {
 });
 }
 }</div> </div> </div> </section>);
-}'";
+}'';
 }
 ;)))
 }
 ;
 ;
 }</div> </div> </div> </section>)
-}'"
+}''
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -173,7 +173,7 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
         </button>;
       </form>;
     </div>;
-  )"}}export default InputFields;"
+  )"}export default InputFields;"
 </textarea>';'
 </InputFieldsProps>;';';'
 </textarea>;

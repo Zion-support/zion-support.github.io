@@ -200,7 +200,7 @@ export default function WebsitePerformanceMonitorPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex items-start space-x-6">
                   <div className="relative">
@@ -241,7 +241,7 @@ export default function WebsitePerformanceMonitorPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="text-4xl mb-4">{metric.icon}</div>
                 <h3 className={`text-xl font-bold mb-3 ${metric.color}`}>{metric.name}</h3>
@@ -350,7 +350,7 @@ export default function WebsitePerformanceMonitorPage() {
               <Card
                 key={index}
                 className={`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">

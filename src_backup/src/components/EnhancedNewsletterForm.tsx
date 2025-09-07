@@ -175,7 +175,7 @@ export function EnhancedNewsletterForm() {const [email, setEmail]  = useState(""
         <span>Join 10,000+ tech professionals who already subscribe</span>;
       </div>;
     </div>;
-  )}}{is_submitted ? (<div className='text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40'>;'
+  )}{is_submitted ? (<div className='text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40'>;'
           <p className='text - white font - medium'>Thank you for subscribing!</p>;'
           <p className='text - zion - slate - light mt - 1'>;'
             }

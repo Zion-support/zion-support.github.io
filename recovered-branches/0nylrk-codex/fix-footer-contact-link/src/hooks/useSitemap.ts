@@ -11,9 +11,9 @@ export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
 const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
   const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
   // Helper function to find a route by path,
-const findRouteByPath = ("path": string): SitemapItem | (undefined) => {    }
+const findRouteByPath = ('path': string): SitemapItem | (undefined) => {    }
 return true;
-  }  function isValidUserType("type": string): boolean {
+  }  function isValidUserType('type': string): boolean {
 }
 return ['employerbuyerjobSeekercreatoradmin'].includes(type);'
   }
@@ -39,13 +39,13 @@ function use_sitemap() {
   const accessible_routes = getAccessibleRoutes (is_authenticated, user_type);
 ;
   // Helper function to find a route by path;
-  const findRouteByPath = ("path": string): SitemapItem | (undefined) => {
+  const findRouteByPath = ('path': string): SitemapItem | (undefined) => {
     }
     return accessible_routes.find (route => { return route.path === path); }
   }
 ;
   // Helper function to check if a user can access a specific path;
-  const canAccessRoute = ("path": string): (boolean) => {
+  const canAccessRoute = ('path': string): (boolean) => {
     }
     const route = findRouteByPath (path);
 ;
@@ -74,7 +74,7 @@ const userTypeEnum = isValidUserType (user.user_type) ? user.user_type as UserTy
   }
 ;
   // Helper function to check if user_type is valid;
-  function isValidUserType ("type": string): boolean {
+  function isValidUserType ('type': string): boolean {
     }
     return ['employerbuyerjob_seekercreatoradmin'].includes (type);'
   }
@@ -116,12 +116,12 @@ export function useSitemap() {;
   const userType = user?.userType && isValidUserType(user.userType) ? user.userType as UserType : undefined,;
   const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType),;
   // Helper function to find a route by path;
-  const findRouteByPath = ("path": string): SitemapItem | (undefined) => {;
+  const findRouteByPath = ('path': string): SitemapItem | (undefined) => {;
     }
     return accessibleRoutes.find(route => { return route.path === path); }
   },;
   // Helper function to check if a user can access a specific path;
-  const canAccessRoute = ("path": string): (boolean) => {;
+  const canAccessRoute = ('path': string): (boolean) => {;
     }
     const route = findRouteByPath(path),;
     if (!route) return false,;
@@ -138,7 +138,7 @@ export function useSitemap() {;
     return true;
   },;
   // Helper function to check if userType is valid;
-  function isValidUserType("type": string): boolean {;
+  function isValidUserType('type': string): boolean {;
     }
     return ['employerbuyerjobSeekercreatoradmin'].includes(type);'
   }

@@ -403,5 +403,5 @@ function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]
           </CardContent>;
         </Card>))}
     </div>)}))}</div>;
-  )}}</div>;
+  )}</div>;
   )}

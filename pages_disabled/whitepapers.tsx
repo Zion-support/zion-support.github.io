@@ -80,9 +80,9 @@ export default function WhitepapersPage() {
         <section className="bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900 text-white py-20">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -101,10 +101,10 @@ export default function WhitepapersPage() {
           <div className="container mx-auto px-4">";
             <motion.div;
               className="text-center mb-16"";
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >,
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">";
                 Featured White Papers;
@@ -119,10 +119,10 @@ export default function WhitepapersPage() {
                 <motion.div}),
                   key={index}
                   className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >,
                   <div className="mb-4">";
                     <span className="inline-block bg-slate-100 text-slate-800 text-sm font-medium px-3 py-1 rounded-full">";
@@ -171,10 +171,10 @@ export default function WhitepapersPage() {
                   <motion.div);
                     key={index}
                     className="text-center""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }
                   >,
                     <div className="text-slate-600 mb-4 flex justify-center">";
                       <IconComponent className="w-12 h-12" />";
@@ -212,7 +212,7 @@ export default function WhitepapersPage() {
             <motion.a;
               href="/contact"";
               className="inline-flex items-center px-8 py-4 bg-white text-slate-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
-              whileHover={{ scale: 1.05 }}
+              whileHover={ scale: 1.05 }
             >,
               Subscribe to Research Updates;
               <ArrowRight className="w-5 h-5 ml-2" />";

@@ -17,12 +17,10 @@ url: "";";""
 selectedEvent: ""as WebhookEventType;
 eventTypes: [] as WebhookEventType[];
 ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }setNewWebhook ({;
   ...newWebhook;
 eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }newWebhook.url;"
 newWebhook.eventTypes;""
 newWebhook.secret || undefined);";""

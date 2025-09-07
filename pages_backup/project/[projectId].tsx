@@ -126,7 +126,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <FeedbackModal
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
-        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
+        defaultContext={ actionType: 'chatbot_use', metadata: { projectId } }
         userHeaders={headers}
       />
     </div>

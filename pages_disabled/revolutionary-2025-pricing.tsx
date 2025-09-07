@@ -162,9 +162,9 @@ export default function Revolutionary2025Pricing() {
           <section className="relative py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
               >
                 <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                   Revolutionary 2025 Pricing
@@ -195,9 +195,9 @@ export default function Revolutionary2025Pricing() {
                 {/* Market Analysis */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.6, delay: 0.1 }
                     className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30"
                   >
                     <div className="text-2xl font-bold text-blue-400">{marketAnalysis.totalMarketSize}</div>
@@ -205,9 +205,9 @@ export default function Revolutionary2025Pricing() {
                   </motion.div>
                   
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.6, delay: 0.2 }
                     className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-4 border border-green-500/30"
                   >
                     <div className="text-2xl font-bold text-green-400">{marketAnalysis.growthRate}</div>
@@ -215,9 +215,9 @@ export default function Revolutionary2025Pricing() {
                   </motion.div>
                   
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.6, delay: 0.3 }
                     className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/30"
                   >
                     <div className="text-2xl font-bold text-purple-400">{marketAnalysis.customerSatisfaction}</div>
@@ -225,9 +225,9 @@ export default function Revolutionary2025Pricing() {
                   </motion.div>
                   
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.6, delay: 0.4 }
                     className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30"
                   >
                     <div className="text-2xl font-bold text-orange-400">{marketAnalysis.averageROI}</div>
@@ -235,9 +235,9 @@ export default function Revolutionary2025Pricing() {
                   </motion.div>
                   
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.6, delay: 0.5 }
                     className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-4 border border-cyan-500/30"
                   >
                     <div className="text-2xl font-bold text-cyan-400">{marketAnalysis.timeToValue}</div>
@@ -245,9 +245,9 @@ export default function Revolutionary2025Pricing() {
                   </motion.div>
                   
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.6, delay: 0.6 }
                     className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30"
                   >
                     <div className="text-2xl font-bold text-pink-400">{marketAnalysis.globalReach}</div>
@@ -262,10 +262,10 @@ export default function Revolutionary2025Pricing() {
           <section className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
+                viewport={ once: true }
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -281,10 +281,10 @@ export default function Revolutionary2025Pricing() {
                 {pricingTiers.map((tier, index) => (
                   <motion.div
                     key={tier.name}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.2 }
+                    viewport={ once: true }
                     className={`relative ${
                       tier.popular 
                         ? 'scale-105 border-2 border-blue-500' 
@@ -344,10 +344,10 @@ export default function Revolutionary2025Pricing() {
           <section className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
+                viewport={ once: true }
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -385,10 +385,10 @@ export default function Revolutionary2025Pricing() {
                 {filteredServices.map((service) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, y: 20 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.5, delay: 0.1 }
+                    viewport={ once: true }
                     className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105"
                   >
                     {/* Service Header */}
@@ -483,10 +483,10 @@ export default function Revolutionary2025Pricing() {
           <section className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.8 }
+                viewport={ once: true }
               >
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Ready to Get Started?

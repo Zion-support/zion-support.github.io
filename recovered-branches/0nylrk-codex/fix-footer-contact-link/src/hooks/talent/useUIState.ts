@@ -21,13 +21,13 @@ export function useUIState() {;
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),;
   const [expandedSections, setExpandedSections] = useState({;
     }
-    "skills": true,;
-    "availability": true,;
-    "region": true,;
-    "experience": true,;
-    "price": true}),;
+    'skills': true,;
+    'availability': true,;
+    'region': true,;
+    'experience': true,;
+    'price': true}),;
   // Toggle expanded sections in the sidebar;
-  const toggleSection = ("sectionName": keyof typeof expandedSections) => {;
+  const toggleSection = ('sectionName': keyof typeof expandedSections) => {;
     }
     setExpandedSections(prev => ({;
       ...prev,;

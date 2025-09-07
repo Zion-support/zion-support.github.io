@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap } from 'lucide-react';
 import { useRouter } from 'next/router';
-=======
 
 ursor/automate-test-improve-and-merge-code-646c;
 'use client';'use client';import React, { useState } from 'react';'
@@ -137,11 +134,11 @@ const toggleDropdown = ("name": string) => {setActiveDropdown(activeDropdown ===
                 {item.dropdown && (<AnimatePresence>;
                     {activeDropdown === item.name && (<motion.div;
                         }
-                        initial={{ "opacity": 0, "y": 10 
+                        initial={ "opacity": 0, "y": 10 
 }
-                        animate={{ "opacity": 1, "y": 0 
+                        animate={ "opacity": 1, "y": 0 
 }
-                        exit={{ "opacity": 0, "y": 10 
+                        exit={ "opacity": 0, "y": 10 
 }
                         className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">"
 
@@ -175,11 +172,11 @@ const toggleDropdown = ("name": string) => {setActiveDropdown(activeDropdown ===
         <AnimatePresence>;
           {isMenuOpen && (<motion.div;
               }
-              initial={{ "opacity": 0, "height": 0 
+              initial={ "opacity": 0, "height": 0 
 }
-              animate={{ "opacity": 1, "height": 'auto' ,'
+              animate={ "opacity": 1, "height": 'auto' ,'
 }
-              exit={{ "opacity": 0, "height": 0 }}
+              exit={ "opacity": 0, "height": 0 }
               className=""lg":hidden mt-4 border-t border-gray-200 pt-4">"
 
               {navigation.map((item) => (<div key={item.nam
@@ -276,7 +273,7 @@ export default function Header() {const [mobileMenuOpen, setMobileMenuOpen] = us
   }
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const router = useRouter(;
   useEffect(() => ;
-  const handleRouteChange = () => {setMobileMenuOpen(false)setActiveDropdown(null)}router.events.on('routeChangeStart', handleRouteChange)return () => {router.events.off('routeChangeStart', handleRouteChange)}}, [router.events];'
+  const handleRouteChange = () => {setMobileMenuOpen(false)setActiveDropdown(null)}router.events.on('routeChangeStart', handleRouteChange)return () => {router.events.off('routeChangeStart', handleRouteChange)}, [router.events];'
   return (<header className="bg-white shadow-lg sticky top-0 z-50">;"
       <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8">;"
         <div className="flex justify-between items-center h-16">;"
@@ -301,11 +298,11 @@ export default function Header() {const [mobileMenuOpen, setMobileMenuOpen] = us
                 <AnimatePresence>;
                   {activeDropdown === key && (<motion.div;
                       }
-                      initial={{ "opacity": 0, "y": 10 
+                      initial={ "opacity": 0, "y": 10 
 }
-                      animate={{ "opacity": 1, "y": 0 
+                      animate={ "opacity": 1, "y": 0 
 }
-                      exit={{ "opacity": 0, "y": 10 
+                      exit={ "opacity": 0, "y": 10 
 }
                       className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50">"
 
@@ -341,11 +338,11 @@ export default function Header() {const [mobileMenuOpen, setMobileMenuOpen] = us
       <AnimatePresence>;
         {mobileMenuOpen && (<motion.div;
             }
-            initial={{ "opacity": 0, "height": 0 
+            initial={ "opacity": 0, "height": 0 
 }
-            animate={{ "opacity": 1, "height": 'auto' ,'
+            animate={ "opacity": 1, "height": 'auto' ,'
 }
-            exit={{ "opacity": 0, "height": 0 
+            exit={ "opacity": 0, "height": 0 
 }
             className=""md":hidden bg-white border-t">"
 
@@ -557,11 +554,11 @@ key={key}
                   {activeDropdown === key && (
                     <motion.div
 }
-initial={{ "opacity": 0, "y": 10 
+initial={ "opacity": 0, "y": 10 
 }
-                      animate={{ "opacity": 1, "y": 0 
+                      animate={ "opacity": 1, "y": 0 
 }
-                      exit={{ "opacity": 0, "y": 10 }}
+                      exit={ "opacity": 0, "y": 10 }
                       className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50""
                     >
                       {item.name}
@@ -571,17 +568,14 @@ initial={{ "opacity": 0, "y": 10
                         onClick={() => toggleDropdown(item.name)}
                         className="p-1"
                       >
-<<<<<<< HEAD
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
-=======
                         <ChevronDown 
                           className={`w-4 h-4 transition-transform duration-200 ${
                             activeDropdown === item.name ? 'rotate-180' : ''
                           }`} 
                         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                       </button>
                     )}
                   </div>
@@ -598,7 +592,6 @@ key={item.name}
                         </Link>
                       ))}
                     </div>
-<<<<<<< HEAD
 
           <div className="hidden "md":flex items-center space-x-4">"
             <Link href="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-md "hover":bg-blue-700 transition-colors">"
@@ -621,11 +614,11 @@ className=""md":hidden""
         {isMenuOpen && (
           <motion.div
 }
-initial={{ "opacity": 0, "height": 0 
+initial={ "opacity": 0, "height": 0 
 }
-            animate={{ "opacity": 1, "height": 'auto' ,'
+            animate={ "opacity": 1, "height": 'auto' ,'
 }
-            exit={{ "opacity": 0, "height": 0 
+            exit={ "opacity": 0, "height": 0 
 }
             className=""md":hidden bg-white border-t""
           >
@@ -653,11 +646,9 @@ key={item.name}
 
     </header>
   );
-<<<<<<< HEAD
 };
 
 export default Header;
-=======
       {/* Top Bar */};
       <div className="bg- blue-900text-whitepy-2">;
         <div className=" containermx-autopx-4">;
@@ -710,9 +701,9 @@ export default Header;
               <AnimatePresence>;
                 {isServicesOpen && (;
                   <motion.div;
-                    initial={{ opacity: 0, y: 10 }};
-                    animate={{ opacity: 1, y: 0 }};
-                    exit={{ opacity: 0, y: 10 }};
+                    initial={ opacity: 0, y: 10 };
+                    animate={ opacity: 1, y: 0 };
+                    exit={ opacity: 0, y: 10 };
                     className=" absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xlborderz-50";
                     onMouseEnter={() => setIsServicesOpen(true)};
                     onMouseLeave={() => setIsServicesOpen(false)};
@@ -741,9 +732,9 @@ export default Header;
               <AnimatePresence>;
                 {isSolutionsOpen && (;
                   <motion.div;
-                    initial={{ opacity: 0, y: 10 }};
-                    animate={{ opacity: 1, y: 0 }};
-                    exit={{ opacity: 0, y: 10 }};
+                    initial={ opacity: 0, y: 10 };
+                    animate={ opacity: 1, y: 0 };
+                    exit={ opacity: 0, y: 10 };
                     className=" absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xlborderz-50";
                     onMouseEnter={() => setIsSolutionsOpen(true)};
                     onMouseLeave={() => setIsSolutionsOpen(false)};
@@ -771,9 +762,9 @@ export default Header;
               <AnimatePresence>;
                 {isIndustriesOpen && (;
                   <motion.div;
-                    initial={{ opacity: 0, y: 10 }};
-                    animate={{ opacity: 1, y: 0 }};
-                    exit={{ opacity: 0, y: 10 }};
+                    initial={ opacity: 0, y: 10 };
+                    animate={ opacity: 1, y: 0 };
+                    exit={ opacity: 0, y: 10 };
                     className=" absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xlborderz-50";
                     onMouseEnter={() => setIsIndustriesOpen(true)};
                     onMouseLeave={() => setIsIndustriesOpen(false)};
@@ -831,9 +822,9 @@ export default Header;
       <AnimatePresence>;
         {isMenuOpen && (;
           <motion.div;
-            initial={{ opacity: 0, height: 0 ,}};
-            animate={{ opacity: 1, height: 'auto' ,}};
-            exit={{ opacity: 0, height: 0 ,}};
+            initial={ opacity: 0, height: 0 ,};
+            animate={ opacity: 1, height: 'auto' ,};
+            exit={ opacity: 0, height: 0 ,};
         {/* Mobile Navigation */};
         {isMenuOpen && (;
           <div className="md: hidden">;
@@ -868,26 +859,13 @@ export default Header;
           </button>;
         </div>;
         {/* Mobile Menu */};
->>>>>>> origin/merge-automation-changes
-=======
 }
 export default Header;
 
-=======
     </header>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
-=======
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               </div>
             </motion.div>
           )}
@@ -895,16 +873,7 @@ export default Header;
       </nav>
     </header>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
 }
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

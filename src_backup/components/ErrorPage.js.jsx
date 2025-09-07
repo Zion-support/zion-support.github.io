@@ -19,5 +19,5 @@ export const ErrorPage = ({}
       </div>;
     </div>;
   )}
-export default ErrorPage'';"";
-'''''"'";
+export default ErrorPage'';'';
+'''''''';

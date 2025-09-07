@@ -131,7 +131,7 @@ if ( {) {$2;
         </CardContent>;
       </Card>;
     </div>;
-  )}}<AlertTitle>Error</AlertTitle> <AlertDescription> {error ;
+  )}<AlertTitle>Error</AlertTitle> <AlertDescription> {error ;
 }</AlertDescription> </Alert>)}if (showNewResumeForm) {() => setShowNewResumeForm (false)}isLoading= {isLoading ;
 }/>)}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabsvalue= {activeTab;"
 }onValueChange= {setActiveTab;
@@ -174,7 +174,7 @@ if ( {) {$2;
 } /> {resume && (<ResumeStepContent active_tab= {active_tab;}resume= {resume as Resume;
 }onNextStep= {next_step;
 }onPrevStep= {prev_step;
-} />)}</Tabs> </CardContent> </Card> </div>)}'"}}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {activeTab ;"
+} />)}</Tabs> </CardContent> </Card> </div>)}'"}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {activeTab ;"
 }onValueChange= {setActiveTab ;
 }> <ResumeSteps steps= {RESUME STEPS ;
 }activeTab= {activeTab ;

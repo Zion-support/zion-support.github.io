@@ -134,8 +134,6 @@ return (;
           next run.;
         </p>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
             key={idx}
             className='rounded - xl border border - gray - 200 bg - white p - 5 shadow - sm'>'
 
@@ -228,7 +226,6 @@ const parsed = JSON.parse(raw);
       },
       "revalidate": 300
     };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   } catch {
     }
     return {
@@ -245,7 +242,6 @@ const parsed = JSON.parse(raw);
 }
 }
 '"`
-=======
 }
 
 }

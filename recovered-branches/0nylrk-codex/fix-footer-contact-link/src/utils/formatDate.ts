@@ -1,6 +1,6 @@
 
 
-export const formatDate = ("date": Date | string | number, "format": string = 'medium'): (string) => {;'
+export const formatDate = ('date': Date | string | number, 'format': string = 'medium'): (string) => {;'
 
   }
 
@@ -13,24 +13,24 @@ return dateObj && dateObj.toLocaleDateString(),;
     case 'medium':'
       return dateObj && dateObj.toLocaleDateString(undefined, { 
         }
-        "year": 'numeric', '
-        "month": 'short', '
-        "day": 'numeric' '
+        'year': 'numeric', '
+        'month': 'short', '
+        'day': 'numeric' '
       });
     case 'long':'
       return dateObj && dateObj.toLocaleDateString(undefined, { 
         }
-        "year": 'numeric', '
-        "month": 'long', '
-        "day": 'numeric' '
+        'year': 'numeric', '
+        'month': 'long', '
+        'day': 'numeric' '
       });
     case 'full':'
       return dateObj && dateObj.toLocaleDateString(undefined, { 
         }
-        "weekday": 'long','
-        "year": 'numeric', '
-        "month": 'long', '
-        "day": 'numeric' '
+        'weekday': 'long','
+        'year': 'numeric', '
+        'month': 'long', '
+        'day': 'numeric' '
 
       });
     case 'relative':'
@@ -55,7 +55,7 @@ return dateObj.toLocaleDateString();
  * @param format Optional format specification;
  * @returns Formatted date string;
  */;
-export const formatDate = ("date": Date | string | number, "format": string = 'medium'): (string) => {;'
+export const formatDate = ('date': Date | string | number, 'format': string = 'medium'): (string) => {;'
   }
   const dateObj = new Date(date),;
   switch (format) {;
@@ -65,24 +65,24 @@ export const formatDate = ("date": Date | string | number, "format": string = 'm
     case 'medium':;'
       return dateObj.toLocaleDateString(undefined, {;
         }
-        "year": 'numeric',;'
-        "month": 'short',;'
-        "day": 'numeric';'
+        'year': 'numeric',;'
+        'month': 'short',;'
+        'day': 'numeric';'
       }),;
     case 'long':;'
       return dateObj.toLocaleDateString(undefined, {;
         }
-        "year": 'numeric',;'
-        "month": 'long',;'
-        "day": 'numeric';'
+        'year': 'numeric',;'
+        'month': 'long',;'
+        'day': 'numeric';'
       }),;
     case 'full':;'
       return dateObj.toLocaleDateString(undefined, {;
         }
-        "weekday": 'long',;'
-        "year": 'numeric',;'
-        "month": 'long',;'
-        "day": 'numeric';'
+        'weekday': 'long',;'
+        'year': 'numeric',;'
+        'month': 'long',;'
+        'day': 'numeric';'
       }),;
     case 'relative':;'
       // Simple relative time (today, yesterday, or date);
@@ -100,12 +100,12 @@ export const formatDate = ("date": Date | string | number, "format": string = 'm
         }
         return dateObj.toLocaleDateString();
       }
-    "default": return dateObj.toLocaleDateString()
+    'default': return dateObj.toLocaleDateString()
   }
 }
 }
       }
-    "default": return dateObj && dateObj.toLocaleDateString()
+    'default': return dateObj && dateObj.toLocaleDateString()
   }
 
 }
@@ -113,13 +113,13 @@ export const formatDate = ("date": Date | string | number, "format": string = 'm
 },
 return dateObj && dateObj.toLocaleDateString();
       }
-    "default": return dateObj && dateObj.toLocaleDateString()
+    'default': return dateObj && dateObj.toLocaleDateString()
   }
 }
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
- * @returns Time ago string (e && e.g., "2 hours ago")"
+ * @returns Time ago string (e && e.g., '2 hours ago')'
  */
 export const timeAgo = (date: Date | string | number): string => {
   const dateObj = new Date($2);
@@ -156,7 +156,7 @@ return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;`/**;
 * @param format Optional format specification;
 * @returns Formatted date string;
 */;
-export const format_date = ("date": Date | string | number, "format": string = 'medium'): (string) => {'
+export const format_date = ('date': Date | string | number, 'format': string = 'medium'): (string) => {'
   }
   const date_obj = new Date (date);
 ;
@@ -167,24 +167,24 @@ return date_obj.toLocaleDateString (),;
     case 'medium':;'
       return date_obj.toLocaleDateString (undefined, {
         }
-        "year": 'numeric','
-        "month": 'short','
-        "day": 'numeric';'
+        'year': 'numeric','
+        'month': 'short','
+        'day': 'numeric';'
       });
     case 'long':;'
       return date_obj.toLocaleDateString (undefined, {
         }
-        "year": 'numeric','
-        "month": 'long','
-        "day": 'numeric';'
+        'year': 'numeric','
+        'month': 'long','
+        'day': 'numeric';'
       });
     case 'full':;'
       return date_obj.toLocaleDateString (undefined, {
         }
-        "weekday": 'long','
-        "year": 'numeric','
-        "month": 'long','
-        "day": 'numeric';'
+        'weekday': 'long','
+        'year': 'numeric','
+        'month': 'long','
+        'day': 'numeric';'
       });
     case 'relative':;'
       // Simple relative time (today, yesterday, or date);
@@ -207,16 +207,16 @@ if ( {) {
         }
         return date_obj.toLocaleDateString ();
       }
-    "default": return date_obj.toLocaleDateString ();
+    'default': return date_obj.toLocaleDateString ();
   }
 }
 ;
 /**;
 * Format a date to show how long ago it was;
 * @param date Date to format;
-* @returns Time ago string (e.g., "2 hours ago");"
+* @returns Time ago string (e.g., '2 hours ago');'
 */;
-export const time_ago = ("date": Date | string | number): (string) => {
+export const time_ago = ('date': Date | string | number): (string) => {
   }
   const date_obj = new Date (date);
   const now = new Date ();

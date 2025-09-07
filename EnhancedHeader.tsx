@@ -47,30 +47,30 @@ export default function EnhancedHeader() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       is_scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className='container mx-auto px-4'>
+        <div className='flex items-center justify-between h-16'>
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
+          <Link href='/' className='flex items-center space-x-2'>
+            <div className='w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
+              <span className='text-white font-bold text-lg'>Z</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+            <span className='text-xl font-bold text-gray-900'>Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className='hidden lg:flex items-center space-x-8'>
             {navigation_items.map((item) => (
-              <div key={item.name} className="relative">
+              <div key={item.name} className='relative'>
                 {item.dropdown ? (
                   <button
                     onClick={() => toggle_dropdown(item.name)}
-                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
+                    className='flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors'
                   >
                     <span>{item.name}</span>
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className='w-4 h-4' />
                   </button>
                 ) : (
-                  <Link href={item.href} className="text-gray-700 hover:text-blue-600 transition-colors">
+                  <Link href={item.href} className='text-gray-700 hover:text-blue-600 transition-colors'>
                     {item.name}
                   </Link>
                 )}
@@ -81,10 +81,10 @@ export default function EnhancedHeader() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!is_open)}
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
+            className='lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100'
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />
             </svg>
           </button>
         </div>
@@ -93,12 +93,12 @@ export default function EnhancedHeader() {
         <AnimatePresence>
           {is_open && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white border-t border-gray-200"
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
+              className='lg:hidden bg-white border-t border-gray-200'
             >
-              <div className="px-4 py-4 space-y-4">
+              <div className='px-4 py-4 space-y-4'>
                 {/* Mobile Navigation */}
                 {navigation_items.map((item) => (
                   <div key={item.name}>
@@ -106,19 +106,19 @@ export default function EnhancedHeader() {
                       <div>
                         <button
                           onClick={() => toggle_dropdown(item.name)}
-                          className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
+                          className='flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 transition-colors py-2'
                         >
                           <span>{item.name}</span>
-                          <ChevronDown className="w-4 h-4" />
+                          <ChevronDown className='w-4 h-4' />
                         </button>
                         {active_dropdown === item.name && (
-                          <div className="ml-4 space-y-2">
+                          <div className='ml-4 space-y-2'>
                             {item.dropdown.map((dropdown_item) => (
                               <Link
                                 key={dropdown_item.name}
                                 href={dropdown_item.href}
                                 onClick={closeMobileMenu}
-                                className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                                className='block text-gray-600 hover:text-blue-600 transition-colors py-1'
                               >
                                 {dropdown_item.name}
                               </Link>
@@ -130,7 +130,7 @@ export default function EnhancedHeader() {
                       <Link
                         href={item.href}
                         onClick={closeMobileMenu}
-                        className="block text-gray-700 hover:text-blue-600 transition-colors py-2"
+                        className='block text-gray-700 hover:text-blue-600 transition-colors py-2'
                       >
                         {item.name}
                       </Link>
@@ -138,13 +138,13 @@ export default function EnhancedHeader() {
                   </div>
                 ))}
                 {/* Contact Info */}
-                <div className="pt-4 border-t border-gray-200">
-                  <div className="space-y-2">
+                <div className='pt-4 border-t border-gray-200'>
+                  <div className='space-y-2'>
                     {contact_info.map((info, index) => (
-                      <div key={index} className="flex items-center space-x-2 text-sm text-gray-600">
-                        {info.icon === 'Phone' && <Phone className="w-4 h-4" />}
-                        {info.icon === 'Mail' && <Mail className="w-4 h-4" />}
-                        {info.icon === 'MapPin' && <MapPin className="w-4 h-4" />}
+                      <div key={index} className='flex items-center space-x-2 text-sm text-gray-600'>
+                        {info.icon === 'Phone' && <Phone className='w-4 h-4' />}
+                        {info.icon === 'Mail' && <Mail className='w-4 h-4' />}
+                        {info.icon === 'MapPin' && <MapPin className='w-4 h-4' />}
                         <span>{info.text}</span>
                       </div>
                     ))}

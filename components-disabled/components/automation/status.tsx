@@ -81,8 +81,8 @@ return (;
       ) : (<div className="text-sm text-gray-500">No status available yet.</div>;"
       )}
     </div>;
-  )}}, [])return (</div>;
-  )}}, [])return (</div>) : (<div className = "text - sm text - gray - 500" >No status available yet.</div>)}</div>) import {;"
+  )}, [])return (</div>;
+  )}, [])return (</div>) : (<div className = "text - sm text - gray - 500" >No status available yet.</div>)}</div>) import {;"
   }
   useEffect, useState  } from 'react';'
 

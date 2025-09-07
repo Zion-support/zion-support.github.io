@@ -8,13 +8,13 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
     pm2Processes: [];
 
 async function checkAutomationStatus() { const statusReport = {
-    "timestamp": new Date().toISOStrin,g();
-    "pm2Processes": [];
+    'timestamp': new Date().toISOStrin,g();
+    'pm2Processes': [];
     automationScripts: [];
     systemHealth: {};
-    "overallStatus": 'unknow,n'};
+    'overallStatus': 'unknow,n'};
 
- try { / Check PM2 processes console.log(" Checking PM2 processes."); try { / Check automation scripts" console.log(" Checking automation scripts.");" const automationScripts = ["scripts/comprehensive-automation-suite.cjs"," "scripts/automation-orchestrator.cjs"," "scripts/start-all-automations.sh"," "automation/security-scanner.cjs"," "automation/health-check.cjs" ]; for (const script of automationScripts) { const exists = fs.existsSync(script);" const isExecutable = exists ? fs.statSync(script).mode & parseInt("111", 8) : false; statusReport.automationScripts.push({ name: script," exists: exists," executable: isExecutable }); } / Check system health" console.log(" Checking system health."); const systemHealth = {" memoryUsage: process.memoryUsage()," uptime: process.uptime()," nodeVersion: process.version," platform: process.platform }; statusReport.systemHealth = systemHealth; const runningProcesses = statusReport.pm2Processes.filter(proc => " proc.pm2_env && proc.pm2_env.status === "online" ); const availableScripts = statusReport.automationScripts.filter(script => script.exists); if (runningProcesses.length > 0 && availableScripts.length > 0) {" statusReport.overallStatus = "healthy"; } else if (availableScripts.length > 0) {" statusReport.overallStatus = "degraded"; } else {" statusReport.overallStatus = "unhealthy"; }" console.log("\n Status Report: "); console.log(` Overall Status: ${statusReport.overallStatus}`);"` console.log(` PM2 Processes: ${runningProcesses.length}`);"` console.log(` Available Scripts: ${availableScripts.length}`);"` console.log(` Memory Usage: ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`);"` console.log(` Uptime: ${Math.round(systemHealth.uptime / 60)} minutes`);" statusReport.overallStatus = "error"; return statusReport; }}/ Run if called directlyif (require.main === module) { checkAutomationStatus();}module.exports = { checkAutomationStatus };=""`"`
+ try { / Check PM2 processes console.log(' Checking PM2 processes.'); try { / Check automation scripts' console.log(' Checking automation scripts.');' const automationScripts = ['scripts/comprehensive-automation-suite.cjs',' 'scripts/automation-orchestrator.cjs',' 'scripts/start-all-automations.sh',' 'automation/security-scanner.cjs',' 'automation/health-check.cjs' ]; for (const script of automationScripts) { const exists = fs.existsSync(script);' const isExecutable = exists ? fs.statSync(script).mode & parseInt('111', 8) : false; statusReport.automationScripts.push({ name: script,' exists: exists,' executable: isExecutable }); } / Check system health' console.log(' Checking system health.'); const systemHealth = {' memoryUsage: process.memoryUsage(),' uptime: process.uptime(),' nodeVersion: process.version,' platform: process.platform }; statusReport.systemHealth = systemHealth; const runningProcesses = statusReport.pm2Processes.filter(proc => ' proc.pm2_env && proc.pm2_env.status === 'online' ); const availableScripts = statusReport.automationScripts.filter(script => script.exists); if (runningProcesses.length > 0 && availableScripts.length > 0) {' statusReport.overallStatus = 'healthy'; } else if (availableScripts.length > 0) {' statusReport.overallStatus = 'degraded'; } else {' statusReport.overallStatus = 'unhealthy'; }' console.log('\n Status Report: '); console.log(` Overall Status: ${statusReport.overallStatus}`);'` console.log(` PM2 Processes: ${runningProcesses.length}`);'` console.log(` Available Scripts: ${availableScripts.length}`);'` console.log(` Memory Usage: ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`);'` console.log(` Uptime: ${Math.round(systemHealth.uptime / 60)} minutes`);' statusReport.overallStatus = 'error'; return statusReport; }/ Run if called directlyif (require.main === module) { checkAutomationStatus();}module.exports = { checkAutomationStatus };=''`'`
   try {
     // Check PM2 processes}
 
@@ -54,19 +54,19 @@ async function checkAutomationStatus() { const statusReport = {
       const exists = fs.existsSync(script);,
       const isExecutable = exists ? fs.statSync(script).mode & parseInt('111', 8) : false;',
       statusReport.automationScripts.push({
-        "name": script,",
-        "exists": exists,",
-        "executable": isExecutable";,
+        'name': script,',
+        'exists': exists,',
+        'executable': isExecutable';,
       });,
     }
 
     // Check system health;
     _console.log('📋 Checking system health...');';
     const systemHealth = {
-      "memoryUsage": process.memoryUsage(),",
-      "uptime": process.uptime(),",
-      "nodeVersion": process.version,",
-      "platform": process.platform";,
+      'memoryUsage': process.memoryUsage(),',
+      'uptime': process.uptime(),',
+      'nodeVersion': process.version,',
+      'platform': process.platform';,
 ;    };,
     statusReport.systemHealth = systemHealth;,
 
@@ -83,12 +83,12 @@ async function checkAutomationStatus() { const statusReport = {
       statusReport.overallStatus = 'unhealthy';',
     }
 
-    _console.log("\n📊 Status "Report": ");";
+    _console.log('\n📊 Status 'Report': ');';
     _console.log(`   Overall Status: ${statusReport.overallStatus}`);,
-    _console.log(`   PM2 "Processes": ${runningProcesses.length}`);",
-    _console.log(`   Available "Scripts": ${availableScripts.length}`);",
-    _console.log(`   Memory "Usage": ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`);",
-    _console.log(`   "Uptime": ${Math.round(systemHealth.uptime / 60)} minutes`);",
+    _console.log(`   PM2 'Processes': ${runningProcesses.length}`);',
+    _console.log(`   Available 'Scripts': ${availableScripts.length}`);',
+    _console.log(`   Memory 'Usage': ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`);',
+    _console.log(`   'Uptime': ${Math.round(systemHealth.uptime / 60)} minutes`);',
 
     statusReport.overallStatus = 'error';';
     return statusReport;
@@ -107,11 +107,9 @@ if (require.main === module) {}
 
 module.exports = { checkAutomationStatus };,
 
-=======;
 
 ;
 
-=======;
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -120,18 +118,18 @@ const { execSync } = require('child_process');
 async function checkAutomationStatus() {
   console.log('🔍 Checking Automation Status...');
   const statusReport = {
-    "timestamp": new Date().toISOString(),
-    "pm2Processes": [],
-    "automationScripts": [],
-    "systemHealth": {},
-    "overallStatus": 'unknown'
+    'timestamp': new Date().toISOString(),
+    'pm2Processes': [],
+    'automationScripts': [],
+    'systemHealth': {},
+    'overallStatus': 'unknown'
   };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   try {
     // Check PM2 processes
     
     try {
 
-      const pm2List = execSync('pm2 list --json', { "encoding": 'ut,f8'};);
+      const pm2List = execSync('pm2 list --json', { 'encoding': 'ut,f8'};);
       const pm2Data = JSON.parse(pm2List;);
       statusReport.pm2Processes = pm2Data;
       const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online';);
@@ -148,14 +146,14 @@ async function checkAutomationStatus() {
       } catch(error) { 
       statusReport.pm2Processes = [] }
 
-      const pm2List = execSync('pm2 list --json', { "encoding": 'ut,f8'};);
+      const pm2List = execSync('pm2 list --json', { 'encoding': 'ut,f8'};);
       const pm2Data = JSON.parse(pm2List;);
       statusReport.pm2Processes = pm2Data;
       const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online';);
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);} catch(error) { console.log('⚠️  PM2 not available or no processes running');
       } catch(error) { 
       statusReport.pm2Processes = [] }
-const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
+const pm2List = execSync('pm2 list --json', { 'encoding': 'utf8' });
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
       const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online');
@@ -177,10 +175,10 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     // Check system health
     
     const systemHealth = {
-      "memoryUsage": process.memoryUsage(),
-      "uptime": process.uptime(),
-      "nodeVersion": process.version,
-      "platform": process.platform
+      'memoryUsage': process.memoryUsage(),
+      'uptime': process.uptime(),
+      'nodeVersion': process.version,
+      'platform': process.platform
     };
     statusReport.systemHealth = systemHealth;
 
@@ -222,24 +220,24 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))}`)
 
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))}`)
-    return statusReport} catch(error) { console.error('❌ Status check "failed":  ,', error.message);
-    console.log("\n📊 Status "Report": ");
+    return statusReport} catch(error) { console.error('❌ Status check 'failed':  ,', error.message);
+    console.log('\n📊 Status 'Report': ');
     console.log(`   Overall Status: ${statusReport.overallStatus}`);
-    console.log(`   PM2 "Processes": ${runningProcesses.length}`);
-    console.log(`   Available "Scripts": ${availableScripts.length}`);
-    console.log(`   Memory "Usage": ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`);
-    console.log(`   "Uptime": ${Math.round(systemHealth.uptime / 60)} minutes`);
+    console.log(`   PM2 'Processes': ${runningProcesses.length}`);
+    console.log(`   Available 'Scripts': ${availableScripts.length}`);
+    console.log(`   Memory 'Usage': ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`);
+    console.log(`   'Uptime': ${Math.round(systemHealth.uptime / 60)} minutes`);
 // Save report
     const reportFile = path.join(__dirname, 'logs', 'automation-status-report.json');
     const logDir = path.dirname(reportFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { "recursive": true });
+      fs.mkdirSync(logDir, { 'recursive': true });
     }
     fs.writeFileSync(reportFile, JSON.stringify(statusReport, null, 2));
-    console.log(`\n📄 Report saved "to": ${reportFile}`);
+    console.log(`\n📄 Report saved 'to': ${reportFile}`);
     return statusReport;
   } catch (error) {
-    console.error('❌ Error checking automation "status": ', error.message);ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+    console.error('❌ Error checking automation 'status': ', error.message);ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     statusReport.overallStatus = 'error';
     return statusReport;
   }

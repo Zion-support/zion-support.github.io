@@ -27,7 +27,7 @@ return (;
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">"
               <div,
 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan""
-                style={{ "width": `${(skill.level / 5) * 100}%` }}` />            </div>
+                style={ "width": `${(skill.level / 5) * 100}%` }` />            </div>
           </div>
         ))}
       </div>
@@ -61,7 +61,7 @@ return (;
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">;"
               <div,
 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan""
-                style={{ "width": `${(skill && skill.level / 5) * 100}%` }}` />;            </div>;
+                style={ "width": `${(skill && skill.level / 5) * 100}%` }` />;            </div>;
           </div>;
         ))}
       </div>;
@@ -109,7 +109,7 @@ export function ProfileSkills() {;
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">;"
               <div;
                 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";"
-                style={{ "width": `${(skill.level / 5) * 100}%` }}` />;
+                style={ "width": `${(skill.level / 5) * 100}%` }` />;
             </div>;
           </div>;
         ))}

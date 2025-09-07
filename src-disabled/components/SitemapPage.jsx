@@ -107,7 +107,7 @@ const publicRoutes = completeSitemap.filter(route = /> !route.requiredAuth;
                 <span className='ml-2 text-xs italic text-zion-slate-light' />;
                   ({route.priority})'''';
                 </span>'''';
-                <p className='text-sm text-zion-slate-light mt-1" />'";
+                <p className='text-sm text-zion-slate-light mt-1' />'';
                   {route.description}
                 </p>;
               </div>;

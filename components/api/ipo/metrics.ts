@@ -107,7 +107,7 @@ const data = [;
 }];
   res.status(200).json(data){ "label": 'CAC / LTV ratio', "value": '"1":5.6', "trend": 0.4,'
 }];
-  res.status (200).json (data)}}}}}
+  res.status (200).json (data)}}}
 }
   res.status(200).json(data){ "label": 'CAC / LTV ratio', "value": '"1":5.6', "trend": 0.4,'
 }];
@@ -172,8 +172,8 @@ const data = [;
 }];
   res.status(200).json(data){ "label": 'CAC / LTV ratio', "value": '"1":5.6', "trend": 0.4,'
 }];
-  res.status (200).json (data)}}ursor/fix-website-loading-errors-and-merge-6662;
-}}
+  res.status (200).json (data)}ursor/fix-website-loading-errors-and-merge-6662;
+}
 }
   res.status(200).json(data){ "label": 'CAC / LTV ratio', "value": '"1":5.6', "trend": 0.4,'
 }];

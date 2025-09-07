@@ -194,7 +194,7 @@ const [uptime,setUptime] = useState(99.97); useEffect(() => {
 
 }
 
-const timer = setInterval(() => {; setCurrentTime(new Date()); setActiveUsers(prev => { return prev + Math.floor(Math.random() * 10) - 5); } setResponseTime(prev => { return Math.max(20,Math.min(80,prev + (Math.random() * 10) - 5))); }},5000); return () => clearInterval(timer);},[]);
+const timer = setInterval(() => {; setCurrentTime(new Date()); setActiveUsers(prev => { return prev + Math.floor(Math.random() * 10) - 5); } setResponseTime(prev => { return Math.max(20,Math.min(80,prev + (Math.random() * 10) - 5))); },5000); return () => clearInterval(timer);},[]);
 
 const metrics = [;
   {; \"title\": \'Active Users\'; \"value\": activeUsers.toLocaleString(),; \"change\": \'+12%\',; \"changeType\": \'positive\',; \"icon\": \'👥\';},; {; \"title\": \'Response Time\',; \"value\": `${responseTime}ms`,; \"change\": \'-8%\',; \"changeType\": \'positive\',; \"icon\": \'⚡\';},; {; \"title\": \'System Uptime\',; \"value\": `${uptime}%`,; \"change\": \'+0.02%\',; \"changeType\": \'positive\',; \"icon\": \'🟢\';},; {; \"title\": \'API Calls/min\',; \"value\": \'2,847\',; \"change\": \'+15%\',; \"changeType\": \'positive\',; \"icon\": \'📡\';} ];'
@@ -231,7 +231,7 @@ const [uptime,setUptime] = useState(99.97); useEffect(() => {
 
 }
 
-const timer = setInterval(() => {; setCurrentTime(new Date()); setActiveUsers(prev => { return prev + Math.floor(Math.random() * 10) - 5); } setResponseTime(prev => { return Math.max(20,Math.min(80,prev + (Math.random() * 10) - 5))); }},5000); return () => clearInterval(timer);},[]);
+const timer = setInterval(() => {; setCurrentTime(new Date()); setActiveUsers(prev => { return prev + Math.floor(Math.random() * 10) - 5); } setResponseTime(prev => { return Math.max(20,Math.min(80,prev + (Math.random() * 10) - 5))); },5000); return () => clearInterval(timer);},[]);
 
 const metrics = [;
   {; "title": 'Active Users',; "value": activeUsers.toLocaleString(),; "change": '+12%',; "changeType": 'positive',; "icon": '👥';},; {; "title": 'Response Time',; "value": `${responseTime}ms`,; "change": '-8%',; "changeType": 'positive',; "icon": '⚡';},; {; "title": 'System Uptime',; "value": `${uptime}%`,; "change": '+0.02%',; "changeType": 'positive',; "icon": '🟢';},; {; "title": 'API Calls/min',; "value": '2,847',; "change": '+15%',; "changeType": 'positive',; "icon": '📡';} ];'
@@ -268,7 +268,7 @@ const [uptime,setUptime] = useState(99.97); useEffect(() => {
 
 }
 
-const timer = setInterval(() => {; setCurrentTime(new Date()); setActiveUsers(prev => { return prev + Math.floor(Math.random() * 10) - 5); } setResponseTime(prev => { return Math.max(20,Math.min(80,prev + (Math.random() * 10) - 5))); }},5000); return () => clearInterval(timer);},[]);
+const timer = setInterval(() => {; setCurrentTime(new Date()); setActiveUsers(prev => { return prev + Math.floor(Math.random() * 10) - 5); } setResponseTime(prev => { return Math.max(20,Math.min(80,prev + (Math.random() * 10) - 5))); },5000); return () => clearInterval(timer);},[]);
 
 const metrics = [;
   {; \"title\": \'Active Users\',; \"value\": activeUsers.toLocaleString(),; \"change\": \'+12%\',; \"changeType\": \'positive\',; \"icon\": \'👥\';},; {; \"title\": \'Response Time\',; \"value\": `${responseTime}ms`,; \"change\": \'-8%\',; \"changeType\": \'positive\',; \"icon\": \'⚡\';},; {; \"title\": \'System Uptime\',; \"value\": `${uptime}%`,; \"change\": \'+0.02%\',; \"changeType\": \'positive\',; \"icon\": \'🟢\';},; {; \"title\": \'API Calls/min\',; \"value\": \'2,847\',; \"change\": \'+15%\',; \"changeType\": \'positive\',; \"icon\": \'📡\';} ];'

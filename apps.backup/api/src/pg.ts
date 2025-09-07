@@ -12,7 +12,7 @@ export async function withUser<T>("userId":string, "fn":("client":PoolClient) =>
 
 const result = await fn(client)} finally {client.release()}
 }
-}} finally {client.release ()}
+} finally {client.release ()}
 }
   if (!pool) {;
   }

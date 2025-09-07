@@ -19,7 +19,7 @@ const timeRangeToInterval = {
                       <div className="flex-1 h-2 bg-zion-blue-light rounded-full overflow-hidden">"
                         <div,
 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan""
-                          style={{ "width": `${percentage}%` }}`          )}
+                          style={ "width": `${percentage}%` }`          )}
         </div>
       </CardContent>
     </Card>
@@ -31,7 +31,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Skeleton } from "@/components/ui/skeleton",;"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;"
 import { useState } from "react",;"
-type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;                          style={{ "width": `${percentage}%` }}`                        />;
+type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;                          style={ "width": `${percentage}%` }`                        />;
                       </div>;
                       <span className="text-xs text-zion-slate">{percentage}%</span>;"
                     </div>;
@@ -76,7 +76,7 @@ if (throw error) {
   $2
 }
       return data || [];
-    }});
+    });
 ;
   // Format path names for better display;
   const formatPathName = ("path": string) =>: any {
@@ -140,7 +140,7 @@ return (;
                       <div className="flex - 1 h - 2 bg - zion - blue - light rounded - full overflow-hidden">;"
                         <div;
                           className="h - full bg - gradient - to - r from - zion - purple to - zion-cyan";"
-                          style={{ "width": `${percentage}%` }}` />;
+                          style={ "width": `${percentage}%` }` />;
                       </div>;
                       <span className="text - xs text - zion-slate">{percentage}%</span>;"
                     </div>;

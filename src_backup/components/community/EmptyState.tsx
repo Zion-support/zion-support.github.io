@@ -15,7 +15,6 @@ import React from 'react';
 import Link from 'next/link';
 import { MessageSquare  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
@@ -57,7 +56,6 @@ import Link from 'next/link';
   subtitle: string;
   cta: string;
   href: string;
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 
 import React from 'react';
 import Link from 'next/link';
@@ -90,7 +88,7 @@ import { Tooltip;
   TooltipProvider;
   TooltipTrigger;
  } from '@/components/ui/tooltip';
-interface EmptyStateProps  {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+interface EmptyStateProps  {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -113,7 +111,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({title;
         <MessageSquare className='h-10 w-10 text-zion-purple' />;
       </div>;
       <h2 className='text-xl font-medium mb-2'>{title}</h2>;
-      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>;
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className='text-xl font-medium mb-2'>{title}</h2>;
 import { Button } from '@/components/ui/button',import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',interface EmptyStateProps  {title: string,subtitle: string,cta: string,href: string,hasSession: boolean;
 }interface EmptyStateProps  {title: string,subtitle: string,cta: string,href: string,hasSession: boolean;
 const EmptyState: React.FC<EmptyStateProps> = ({title,subtitle,cta,href,hasSession}) => {  return (<div className='text-center py-16'>;
@@ -121,15 +119,14 @@ const EmptyState: React.FC<EmptyStateProps> = ({title,subtitle,cta,href,hasSessi
         <MessageSquare className='h-10 w-10 text-zion-purple' />;
       </div>;
       <h2 className='text-xl font-medium mb-2'>{title}</h2>;
-      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>;
-      <p className="text-muted-foreground mb-6">{subtitle}</p>;
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className='text-xl font-medium mb-2'>{title}</h2>;
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>;
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger asChild>;
             {hasSession ? (<Button asChild>;
                 <Link href={href}>{cta}</Link>;
               </Button>;
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
             ) : (;
               <Button disabled>{cta}</Button>;
 
@@ -147,7 +144,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
         <MessageSquare className='h-10 w-10 text-zion-purple' />
       </div>
       <h2 className='text-xl font-medium mb-2'>{title}</h2>
-      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className='text-xl font-medium mb-2'>{title}</h2>
 import React from 'react';
 import Link from 'next/link';
 
@@ -164,13 +161,13 @@ interface EmptyStateProps {;
 
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
-    <div className="text-center py-16">
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">
-        <MessageSquare className="h-10 w-10 text-zion-purple" />
+    <div className='text-center py-16'>
+      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>
+        <MessageSquare className='h-10 w-10 text-zion-purple' />
       </div>
-      <h2 className="text-xl font-medium mb-2">{title}</h2>
+      <h2 className='text-xl font-medium mb-2'>{title}</h2>
 
-      <p className="text-muted-foreground mb-6">{subtitle}</p>
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>
   hasSession: boolean
       <p className='text-muted-foreground mb-6'>{subtitle}</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -205,12 +202,12 @@ const EmptyState: React.FC < EmptyStateProps> = ({
   has_session,
 }) => {  return (
     <div className='text - center py - 16'>;
-            ) : (<Button disabled>{cta}</Button>;const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {return (<div className="text-center py-16">;
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">;
-        <MessageSquare className="h-10 w-10 text-zion-purple" />;
+            ) : (<Button disabled>{cta}</Button>;const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {return (<div className='text-center py-16'>;
+      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
+        <MessageSquare className='h-10 w-10 text-zion-purple' />;
       </div>;
-      <h2 className="text-xl font-medium mb-2">{title}</h2>;
-      <p className="text-muted-foreground mb-6">{subtitle}</p>;
+      <h2 className='text-xl font-medium mb-2'>{title}</h2>;
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>;
   hasSession: boolean;
       <p className='text-muted-foreground mb-6'>{subtitle}</p>;
       <TooltipProvider>;
@@ -230,8 +227,8 @@ const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_se
         <MessageSquare className='h - 10 w - 10 text - zion - purple' />;
       </div>;
       <h2 className='text - xl font - medium mb - 2'>{title}</h2>;
-      <p className='text - muted - foreground mb - 6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text - xl font - medium mb - 2">{title}</h2>;
-      <p className="text - muted - foreground mb - 6">{subtitle}</p>;
+      <p className='text - muted - foreground mb - 6'>{subtitle}</p>      <TooltipProvider>      <h2 className='text - xl font - medium mb - 2'>{title}</h2>;
+      <p className='text - muted - foreground mb - 6'>{subtitle}</p>;
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger as_child>;

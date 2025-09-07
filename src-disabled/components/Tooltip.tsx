@@ -70,7 +70,7 @@ const Tooltip: React.FC<TooltipProps> = ({,
   return (
     <div
       ref={triggerRef}
-      className="relative inline-block""
+      className='relative inline-block''
       onMouseEnter={showTooltip}
       onMouseLeave={hideTooltip}
       onFocus={showTooltip}
@@ -82,12 +82,12 @@ const Tooltip: React.FC<TooltipProps> = ({,
         {isVisible && (
           <motion.div
             ref={tooltipRef}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
+            initial={ opacity: 0, scale: 0.8 }
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0.8 }
 
           >
-            <div className="bg-gray-800 text-white text-sm px-3 py-2 rounded-lg shadow-lg max-w-xs">"
+            <div className='bg-gray-800 text-white text-sm px-3 py-2 rounded-lg shadow-lg max-w-xs'>'
               {content}
 
               {/* Arrow */}

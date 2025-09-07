@@ -1297,7 +1297,7 @@ export const "nextGenInnovativeServices": NextGenInnovativeService[] = [;
 },// Quantum IoT Platform;
   {"id": "quantum-iot-platform","name": "Quantum IoT Platform","tagline": "Quantum-secured IoT platform with AI edge computing","price": "$2,999","period": "/month","description": "Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real-time AI processing and quantum encryption.",features[ "Quantum device security","AI edge computing","Real-time processing","Device management","Data analytics","Security monitoring","Scalability tools","API for integration","Mobile app support","Cloud dashboard" ],"popular": true,"icon": "📱","color": "from-blue-600 to-cyan-700","textColor": "text-blue-400","link": ""https"://ziontechgroup.com/quantum-iot-platform","marketPosition": "First quantum IoT platform. 100x more secure than traditional solutions.","targetAudience": "IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics","trialDays": 30,"setupTime": "2-3 weeks","category": "Quantum IoT & Edge Computing","realService": true,technology["Quantum Computing", "AI/ML", "IoT", "Edge Computing", "Blockchain"],integrations["IoT devices", "Cloud platforms", "Security tools", "Analytics platforms"],useCases["Smart cities", "Industrial IoT", "Healthcare monitoring", "Consumer devices", "Security systems"],"roi": "600% ROI through security improvements and operational efficiency",competitors["AWS IoT ($5/month)", "Microsoft Azure IoT ($25/month)"],"marketSize": "$1.5T IoT market","growthRate": "250% annual growth","variant": "quantum-iot-futuristic","contactInfo": {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709","website": ""https"://ziontechgroup.com";"
 },"realImplementation": true,"implementationDetails": "Complete quantum IoT platform with security, edge computing, and device management features.","launchDate": "2024-03-01',"customers": 38,"rating": 4.7,"reviews": 26;'
-]}}
+]}
     },"realImplementation": true,"implementationDetails": 'Complete quantum IoT platform with security, edge computing, and device management features.',"launchDate": '2024-03-01',"customers": 38,"rating": 4.7,"reviews": 26;'
   }
 ];
@@ -4210,8 +4210,7 @@ export const "nextGenInnovativeServices": NextGenInnovativeService[] = [;
     "customers": 38,
     "rating": 4.7,
     "reviews": 26;
-]}}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+]}
     },
     "realImplementation": true,
     "implementationDetails": 'Complete quantum IoT platform with security, edge computing, and device management features.','
@@ -4223,36 +4222,12 @@ export const "nextGenInnovativeServices": NextGenInnovativeService[] = [;
 ],
   }
 ];
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     reviews: 26;
 
 
@@ -4601,30 +4576,26 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
     variant: "quantum-iot-futuristic","
     implementationDetails: "Complete quantum IoT platform with security, edge computing, and device management features.",""
     launchDate: "2024-03-01',
-]}}
+]}
 ];
 
 
 pr-12325
     launchDate: "2024-03-01','
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     customers: 38,
     rating: 4.7,
     reviews: 26;
-]}}
+]}
     },
-<<<<<<< HEAD
     realImplementation: true,
     implementationDetails: 'Complete quantum IoT platform with security, edge computing, and device management features.',
     launchDate: '2024-03-01',
-=======
 
     realImplementation: true,'
     implementationDetails: 'Complete quantum IoT platform with security, edge computing, and device management features.',''
     launchDate: '2024-03-01','
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     customers: 38,
     rating: 4.7,
     reviews: 26

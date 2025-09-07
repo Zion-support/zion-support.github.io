@@ -59,8 +59,8 @@ export function ReviewsModerationTable() {const [selectedReview, setSelectedRevi
       }
       "status": ReviewStatus;
     }) => {const { error } = await supabase;
-        .from("reviews").update({ status }).eq("id", reviewId),if (error) throw error,return { reviewId, status }},"onSuccess": (data) => {toast({"title": "Review updated","description": `Review has been ${data.status}.`}),onRefresh()}"onSuccess": (data) => {toast({"title": "Review updated";"        }
-        "description": `Review has been ${data.status}.`})onRefresh()setViewDetailsOpen(false)}`    "onError": ("error": Error,) => {toast({"title": "Error","title": "Error";"description": `Failed to update "review": ${error.message}`,"variant": "destructive"})}}),const getInitials = ("name": string) => {return name;"      .split(" ").map((n) => n[0]).join("").toUpperCase()},if (isLoading) {return (<div className="space-y-4">;"
+        .from("reviews").update({ status }).eq("id", reviewId),if (error) throw error,return { reviewId, status },"onSuccess": (data) => {toast({"title": "Review updated","description": `Review has been ${data.status}.`}),onRefresh()}"onSuccess": (data) => {toast({"title": "Review updated";"        }
+        "description": `Review has been ${data.status}.`})onRefresh()setViewDetailsOpen(false)}`    "onError": ("error": Error,) => {toast({"title": "Error","title": "Error";"description": `Failed to update "review": ${error.message}`,"variant": "destructive"})}),const getInitials = ("name": string) => {return name;"      .split(" ").map((n) => n[0]).join("").toUpperCase()},if (isLoading) {return (<div className="space-y-4">;"
         <div className="h-12 w-full bg-muted rounded animate-pulse" />;"
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;"
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;"
@@ -106,7 +106,7 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
       "status": ReviewStatus;
     }) => {      const { error } = await supabase;
         .from('reviews').update({ status }).eq('id', reviewId)if (error) throw error;'
-      return { reviewId, status }},"onSuccess": (data) => {      toast({"title": 'Review updated',"description": `Review has been ${data && data.status}.`})onRefresh()setViewDetailsOpen(false)},"onError": ("error": Error,) => {toast({"title": 'Error',"description": `Failed to update "review": ${error && error.message}`,"variant": 'destructive'})}})const getInitials = ("name": string,) => {return name;'      .split(' ').map(n => n[0]).join('').toUpperCase()}if (isLoading) {return (<div className='space-y-4'>;'
+      return { reviewId, status },"onSuccess": (data) => {      toast({"title": 'Review updated',"description": `Review has been ${data && data.status}.`})onRefresh()setViewDetailsOpen(false)},"onError": ("error": Error,) => {toast({"title": 'Error',"description": `Failed to update "review": ${error && error.message}`,"variant": 'destructive'})})const getInitials = ("name": string,) => {return name;'      .split(' ').map(n => n[0]).join('').toUpperCase()}if (isLoading) {return (<div className='space-y-4'>;'
         <div className='h-12 w-full bg-muted rounded animate-pulse' />;'
         <div className='h-16 w-full bg-muted rounded animate-pulse' />;'
         <div className='h-16 w-full bg-muted rounded animate-pulse' />;'
@@ -562,13 +562,13 @@ return {reviewId, status ;export function ReviewsModerationTable(): any ({review
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
-      )}}
+      )}
 })return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {";"
   }
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>;"
 }
   return (<div className="flex"> {[1, 2, 3,  4, 5].map ( (star) => (<Star key= {< />;"
-  )}})return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {";"
+  )})return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {";"
   }
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div> ;"
 }return (<div className="flex"> {[1, 2, 3,  4, 5].map ( (star) => (<Star key= {star ;"
@@ -775,7 +775,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</div> <DialogFooter> <Button variant=" destructive" on_click={() => handle_reject (selected_review.id)}disabled= {is_pending;"
 }> Reject </Button> <Button on_click={() => handle_approve (selected_review.id)}disabled= {is_pending;
 }> Approve </Button> </>)}> Mark as Rejected </Button>)}> Mark as Approved </Button>)}</DialogFooter> </DialogContent> </Dialog>)}</>)}"}"
-}}";"
+}";"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {reviews.map ( (review) => (<TableRow key= {review.id ";"
 }> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {review.reviewer profile?.avatar url ? (<AvatarImage src= {review.reviewer profile.avatar url ;"
 }alt= {";"

@@ -207,12 +207,12 @@ const getModelTypeIcon = () => {
         <AnimatePresence mode='wait' />'''''';
           {activeTab === 'overview' && (<motion.div key='overview' initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;}
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';}
 '''';}
-}} className='space-y-6' />'''';
+} className='space-y-6' />'''';
               {/* Key Metrics */}'''';
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4' />'''';
                 <div className='bg-gray-50 dark:bg-gray-800 p-4 rounded-lg' />'''';
@@ -314,12 +314,12 @@ const getModelTypeIcon = () => {
 '''''';
           {activeTab === 'models' && (<motion.div key='models' initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;}
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';}
 '''';}
-}} className='space-y-4' />'''';
+} className='space-y-4' />'''';
               <div className='flex items-center justify-between' />'''';
                 <h3 className='text-lg font-semibold text-gray-900 dark:text-white' />AI Models</h3>'''';
                 <div className='flex space-x-2' />'''';
@@ -333,13 +333,13 @@ const getModelTypeIcon = () => {
               <AnimatePresence />;
                 {showCreateModel && (<motion.div initial = {}
   { opacity: 0, height: 0;}
-}} animate = {}
+} animate = {}
   { opacity: 1,'';}
   height: 'auto';}
-}} exit = {}
+} exit = {}
   { opacity: 0, height: 0 '''';}
 '''';}
-}} className='bg-gray-50 dark:bg-gray-800 p-4 rounded-lg' />'''';
+} className='bg-gray-50 dark:bg-gray-800 p-4 rounded-lg' />'''';
                     <h4 className='font-medium text-gray-900 dark:text-white mb-3' />Create New Model</h4>'''';
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4' />'''';
                       <input type='text' placeholder='Model Name' value={newModelForm.name} onChange = {}
@@ -381,13 +381,13 @@ const getModelTypeIcon = () => {
               <AnimatePresence />;
                 {showImportModel && (<motion.div initial = {}
   { opacity: 0, height: 0;}
-}} animate = {}
+} animate = {}
   { opacity: 1,'';}
   height: 'auto';}
-}} exit = {}
+} exit = {}
   { opacity: 0, height: 0 '''';}
 '''';}
-}} className='bg-gray-50 dark:bg-gray-800 p-4 rounded-lg' />'''';
+} className='bg-gray-50 dark:bg-gray-800 p-4 rounded-lg' />'''';
                     <h4 className='font-medium text-gray-900 dark:text-white mb-3' />Import Model</h4>'''';
                     <input type='file' accept='.json' onChange={handleImportModel} className='block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100'/>'''';
                     <button onClick={() = /> setShowImportModel(false)} className='mt-3 px-4 py-2 text-sm font-medium text-gray-700 dark: text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600'>;
@@ -466,12 +466,12 @@ const getModelTypeIcon = () => {
 '''''';
           {activeTab === 'training' && (<motion.div key='training' initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;}
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';}
 '''';}
-}} className='space-y-4' />'''';
+} className='space-y-4' />'''';
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white' />Training Jobs</h3>'''';
               '''';
               <div className='space-y-4' />;
@@ -508,7 +508,7 @@ const model = models.find(m => m.id === job.modelId)';''';
 }%</span>'''';
                           </div>''`;
                           <div className='w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2' />'`'`;
-                            <div className='bg-blue-600 h-2 rounded-full transition-all duration-300' style={{ width: `${job.progress}%` ,
+                            <div className='bg-blue-600 h-2 rounded-full transition-all duration-300' style={ width: `${job.progress}%` ,
 }/>;
                           </div>
     </div>
@@ -566,12 +566,12 @@ const model = models.find(m => m.id === job.modelId)';''';
 '''''';
           {activeTab === 'predictions' && (<motion.div key='predictions' initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;}
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';}
 '''';}
-}} className='space-y-4' />'''';
+} className='space-y-4' />'''';
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white' />Make Predictions</h3>;
               '''';
               {/* Prediction Form */}'''';
@@ -647,12 +647,12 @@ const model = models.find(m => m.id === prediction.modelId)';''';
 '''''';
           {activeTab === 'analytics' && (<motion.div key='analytics' initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;}
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';}
 '''';}
-}} className='space-y-4' />'''';
+} className='space-y-4' />'''';
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white' />Performance Analytics</h3>'''';
               '''';
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4' />'''';
@@ -667,7 +667,7 @@ const model = models.find(m => m.id === prediction.modelId)';''';
                             {(model.accuracy * 100).toFixed(1)}%'''';
                           </span>''`;
                           <div className='w-20 bg-gray-200 dark: bg-gray-700 rounded-full h-2' />'`'`;
-                            <div className='bg-purple-600 h-2 rounded-full' style={{ width: `${model.accuracy * 100}%` ,
+                            <div className='bg-purple-600 h-2 rounded-full' style={ width: `${model.accuracy * 100}%` ,
 }/>;
                           </div>;
                         </div>;

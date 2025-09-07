@@ -20,10 +20,10 @@ export default function BlogPage() {return (<Layout;
           <div className="container mx-auto px-4">;"
             <div className="max-w-4xl mx-auto text-center">;"
               <motion.div;
-                initial={{ "opacity": 0, "y": 30 
+                initial={ "opacity": 0, "y": 30 
 }
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.8 
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.8 
 }
                 className="mb-8">"
 
@@ -48,11 +48,11 @@ export default function BlogPage() {return (<Layout;
                       }
                       key={post.id}
                       className="bg-white rounded-lg shadow-lg overflow-hidden "hover":shadow-xl transition-shadow duration-300";"
-                      initial={{ "opacity": 0, "y": 20 
+                      initial={ "opacity": 0, "y": 20 
 }
-                      animate={{ "opacity": 1, "y": 0 
+                      animate={ "opacity": 1, "y": 0 
 }
-                      transition={{ "duration": 0.5, "delay": index * 0.1 
+                      transition={ "duration": 0.5, "delay": index * 0.1 
 }
                     >;
                       <div className="aspect-w-16 aspect-h-9">;"

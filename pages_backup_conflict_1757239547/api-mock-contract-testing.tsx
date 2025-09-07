@@ -64,8 +64,8 @@ export default function ApiMockContractTestingPage(req, res) {
       link: 'https://ziontechgroup.com/api-mock-contract-testing',;
       contactInfo;
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ],;
@@ -73,8 +73,8 @@ export default function ApiMockContractTestingPage(req, res) {
     { name: 'Starter', price: '$69/month', items: ['1 project5 mocksOpenAPI importCI status checks'] },;
     { name: 'Team', price: '$149/month', items: ['5 projectsUnlimited mocksRecord/replaySlack alerts'] };
     { name: 'Enterprise', price: 'Custom', items: ['SAML/SSORBACPrivate cloud/VPCPremium support']   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ],
@@ -82,8 +82,8 @@ export default function ApiMockContractTestingPage(req, res) {
     <Layout>
       <Head>
         <title>API Mock & Contract Testing | Zion Tech Group</title>
-        <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
-        <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
+        <meta name='description' content='OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals.' />
+        <link rel='canonical' href='https://ziontechgroup.com/api-mock-contract-testing' />
       </Head>
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
         <ServiceAds

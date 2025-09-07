@@ -58,7 +58,7 @@ export function useConversationState() {;
     setActiveConversation;
     is_loading;
     setIsLoading}
-}}
+}
 import { useState } from 'react';
 import { Conversation, Message } from '@/types/messaging';
 /**

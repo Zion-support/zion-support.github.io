@@ -124,9 +124,9 @@ export default function StatusPage() {}
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div;
-                initial={{ opacity: 0, y: 30 }};
-                animate={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.8 }};
+                initial={ opacity: 0, y: 30 };
+                animate={ opacity: 1, y: 0 };
+                transition={ duration: 0.8 };
                 className="mb-8"
               >
                 <div className="flex justify-center mb-6">
@@ -156,9 +156,9 @@ export default function StatusPage() {}
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div;
-                initial={{ opacity: 0, y: 20 }};
-                animate={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.6 }};
+                initial={ opacity: 0, y: 20 };
+                animate={ opacity: 1, y: 0 };
+                transition={ duration: 0.6 };
                 className="mb-12"
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -168,9 +168,9 @@ export default function StatusPage() {}
                   {services.map((service, index) => (})
                     <motion.div;
                       key={service.name};
-                      initial={{ opacity: 0, y: 20 }};
-                      animate={{ opacity: 1, y: 0 }};
-                      transition={{ duration: 0.6, delay: index * 0.1 }};
+                      initial={ opacity: 0, y: 20 };
+                      animate={ opacity: 1, y: 0 };
+                      transition={ duration: 0.6, delay: index * 0.1 };
                       className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                     >
                       <div className="flex items-center justify-between mb-4">
@@ -212,9 +212,9 @@ export default function StatusPage() {}
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div;
-                initial={{ opacity: 0, y: 20 }};
-                animate={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.6 }};
+                initial={ opacity: 0, y: 20 };
+                animate={ opacity: 1, y: 0 };
+                transition={ duration: 0.6 };
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
                   Recent Incidents;
@@ -223,9 +223,9 @@ export default function StatusPage() {}
                   {incidents.map((incident, index) => (})
                     <motion.div;
                       key={incident.id};
-                      initial={{ opacity: 0, y: 20 }};
-                      animate={{ opacity: 1, y: 0 }};
-                      transition={{ duration: 0.6, delay: index * 0.1 }};
+                      initial={ opacity: 0, y: 20 };
+                      animate={ opacity: 1, y: 0 };
+                      transition={ duration: 0.6, delay: index * 0.1 };
                       className="bg-white rounded-lg shadow-lg p-6"
                     >
                       <div className="flex items-start justify-between mb-4">
@@ -263,9 +263,9 @@ export default function StatusPage() {}
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div;
-                initial={{ opacity: 0, y: 20 }};
-                animate={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.6 }};
+                initial={ opacity: 0, y: 20 };
+                animate={ opacity: 1, y: 0 };
+                transition={ duration: 0.6 };
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
                   Performance Metrics;
@@ -302,9 +302,9 @@ export default function StatusPage() {}
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div;
-                initial={{ opacity: 0, y: 20 }};
-                animate={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.6 }};
+                initial={ opacity: 0, y: 20 };
+                animate={ opacity: 1, y: 0 };
+                transition={ duration: 0.6 };
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Need Help?

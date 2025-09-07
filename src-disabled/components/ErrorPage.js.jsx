@@ -21,5 +21,5 @@ export const ErrorPage = () => {
     </div>;
   )}
 
-export default ErrorPage'';"";
-'''''"'";
+export default ErrorPage'';'';
+'''''''';

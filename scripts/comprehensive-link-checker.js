@@ -891,7 +891,7 @@ const links = $('a[href]') .map((i,elem) => {;'
   const href = $(elem).attr('href'); if ( href && !href.startsWith('#') && !href.startsWith('"javascript":') ) { return this.resolveUrl(href,url)} return null}) .get() .filter(Boolean); for (const link of links) { if (link && link.startsWith(this.baseUrl)) { await this.checkUrl(link,url,depth + 1)} return this.resolveUrl(href,url)} return null}).get().filter(Boolean); for (const link of links) {; if (link && link.startsWith(this.baseUrl)) {; await this.checkUrl(link,url,depth + 1)} } } } else {; this.brokenLinks.push({; url,"status": response.status,"parent": parentUrl,depth,"error": `HTTP ${response.status}`})},`} catch (error) { this.brokenLinks.push({ url "status":;` 'ERROR' "parent": parentUrl,depth "error": error.messag,e})} } resolveUrl(href,baseUrl) { "try": { if (href.startsWith( 'http')) {'; "return": hre,'
 } if (href.startsWith( '/')) {'; "return": `${this.baseUrl}${href},`} return new URL(href,baseUrl).href} catch (error) { return `${this.baseUrl}${href}`} return new URL(href,baseUrl).href} catch (error) {; return null} } async checkSitemapUrls() {`    }
     console.log(
-  '\n=== Checking Sitemap URLs ===')';;'
+  '\n=== Checking Sitemap URLs ===')';'
 
 const promises = this.sitemapUrls.map(url => { return this.checkUrl(url, null, 0)); }
     "await": Promise.all(promises
@@ -899,10 +899,10 @@ const promises = this.sitemapUrls.map(url => { return this.checkUrl(url, null, 0
   async checkNavigationLinks() {
     }
     console.log(
-  '\n=== Checking Navigation Links ===')';;'
+  '\n=== Checking Navigation Links ===')';'
 
 const navigationUrls = [;
-  '/', '';/about', '';/services', '';/solutions', '';/pricing', '';/contact', '';/blog', '';/careers', '';/team', '';/partners', '';/case-studies', '';/news', '';/help', '';/faq', '';/marketplace', '';/dashboard', '';/login', '';/search', '';/it-consulting', '';/ai-solutions', '';/solutions/enterprise', '';/solutions/healthcare', '';/research-development', '';/request-quote', '';/green-it', '';/space-tech'    ]';;'
+  '/', '';/about', '';/services', '';/solutions', '';/pricing', '';/contact', '';/blog', '';/careers', '';/team', '';/partners', '';/case-studies', '';/news', '';/help', '';/faq', '';/marketplace', '';/dashboard', '';/login', '';/search', '';/it-consulting', '';/ai-solutions', '';/solutions/enterprise', '';/solutions/healthcare', '';/research-development', '';/request-quote', '';/green-it', '';/space-tech'    ]';'
 
 const promises = navigationUrls.map(url => { return '; }\n=== Checking Sitemap URLs ===');'
 

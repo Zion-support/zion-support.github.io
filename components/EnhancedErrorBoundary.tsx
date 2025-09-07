@@ -11,8 +11,8 @@ interface State  {"hasError": boolean;
   }
   "error": Error | null;
   "errorInfo": ErrorInfo | null;
-}class EnhancedErrorBoundary extends Component<Props, State> {constructor("props": Props) {super(props)this.state = {"hasError": false,"error": null,"errorInfo": null}}static getDerivedStateFromError("error": Error): State ;
-  return {"hasError": true,error,"errorInfo": null}}override componentDidCatch("error": Error, "errorInfo": ErrorInfo) {this.setState({error,errorInfo})// Log error to console in development;
+}class EnhancedErrorBoundary extends Component<Props, State> {constructor("props": Props) {super(props)this.state = {"hasError": false,"error": null,"errorInfo": null}static getDerivedStateFromError("error": Error): State ;
+  return {"hasError": true,error,"errorInfo": null}override componentDidCatch("error": Error, "errorInfo": ErrorInfo) {this.setState({error,errorInfo})// Log error to console in development;
     if (process.env.NODE_ENV === 'development') {console.error('Error caught by "boundary": ', error, errorInfo)}// Send error to monitoring service;'
     this.logErrorToService(error, errorInfo)// Call custom error handler;
     this.props.onError?.(error, errorInfo)}private logErrorToService = ("error": Error, "errorInfo": ErrorInfo) => {// In a real application, you would send this to your error monitoring service;

@@ -27,7 +27,6 @@ interface SearchProps {
   "onResultSelect": ("result": SearchResult) => void;
   placeholder?: string;
   className?: string;
-<<<<<<< HEAD
   showFilters?: boolean;
 
 }
@@ -53,7 +52,6 @@ setIsSearching (true);
   }
 }
 
-<<<<<<< HEAD
 interface SearchProps {
   onSearch: (query: string) => void,
   onResultSelect: (result: SearchResult) => void,
@@ -124,7 +122,6 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   ];
 
 
-=======
 //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
   
 }];
@@ -140,9 +137,7 @@ setShowResults (true);
 setIsSearching (false) 
 }, 300) 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }, 300);
-<<<<<<< HEAD
 }, 300);
 [selected_filters]);
 [selected_filters]);
@@ -159,7 +154,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 //Handle filter toggle const toggleFilter = ("filterId": string) => {
   }
   setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId) 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }> {
   /* Search Form */ 
 }<form onSubmit= {
@@ -201,7 +195,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
   duration: 0 && 0.2 
 
-=======
 //Close search on outside click useEffect ( () => {}
 }animate= {}
   {}
@@ -216,7 +209,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {}
   duration: 0 && 0.2;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"> {;
   /* Filters */ ;
 }{;"
@@ -243,7 +235,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</button> </div> </div> {;
   /* Search Suggestions */ ;
 }<AnimatePresence> {;
-<<<<<<< HEAD
   showSuggestions && suggestions && suggestions.length > 0 && (<motion&& motion.div initial= {
 
   }
@@ -420,17 +411,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default EnhancedSearch;
 
 "
-=======
 }
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T
 wait: number 
 }export default EnhancedSearch
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 export default EnhancedSearch;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

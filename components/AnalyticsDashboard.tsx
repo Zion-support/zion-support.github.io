@@ -22,7 +22,7 @@ interface AnalyticsData  {"pageViews": number;
       "tablet": number;
     }"browser": {["key": string]: number;
     }"country": {["key": string]: number;
-    }}}
+    }}
 
 export default function AnalyticsDashboard() {const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null />(null;
   )const [isLoading, setIsLoading] = useState(true);
@@ -41,7 +41,7 @@ const fetchAnalytics = async () => {setIsLoading(true)await new Promise(resolve 
 },{ "path": '/contact', "views": 1890,'
 },{ "path": '/services', "views": 1560,'
 },{ "path": '/technologies', "views": 890,'
-}],"performance": {"fcp": 1200,"lcp": 2800,"fid": 45,"cls": 0.08,"ttfb": 180},"userBehavior": {"deviceType": {"mobile": 45,"desktop": 48,"tablet": 7},"browser": {"Chrome": 65,"Safari": 20,"Firefox": 10,"Edge": 5},"country": {'United States': 60,"Canada": 15,'United Kingdom': 10,"Germany": 8,"Other": 7}}})setIsLoading(false)}fetchAnalytics()}, [timeRange])const getPerformanceScore = ("metrics": AnalyticsData['performance']) => ;'
+}],"performance": {"fcp": 1200,"lcp": 2800,"fid": 45,"cls": 0.08,"ttfb": 180},"userBehavior": {"deviceType": {"mobile": 45,"desktop": 48,"tablet": 7},"browser": {"Chrome": 65,"Safari": 20,"Firefox": 10,"Edge": 5},"country": {'United States': 60,"Canada": 15,'United Kingdom': 10,"Germany": 8,"Other": 7}})setIsLoading(false)}fetchAnalytics()}, [timeRange])const getPerformanceScore = ("metrics": AnalyticsData['performance']) => ;'
   const scores = {"fcp":;
         }
         metrics.fcp < 1800;
@@ -75,9 +75,9 @@ const performanceScore = getPerformanceScore(analyticsData.performance;
       <div className="max-w-7xl mx-auto">;"
         {/* Header */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 20 
+          initial={ "opacity": 0, "y": 20 
 }
-          animate={{ "opacity": 1, "y": 0 
+          animate={ "opacity": 1, "y": 0 
 }
           className="mb-8">"
 
@@ -98,10 +98,10 @@ const performanceScore = getPerformanceScore(analyticsData.performance;
         </motion.div>;
         {/* Key Metrics */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 20 
+          initial={ "opacity": 0, "y": 20 
 }
-          animate={{ "opacity": 1, "y": 0 }}
-          transition={{ "delay": 0.1 
+          animate={ "opacity": 1, "y": 0 }
+          transition={ "delay": 0.1 
 }
           className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-6 mb-8">"
 
@@ -141,10 +141,10 @@ const performanceScore = getPerformanceScore(analyticsData.performance;
         </motion.div>;
         {/* Performance Metrics */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 20 
+          initial={ "opacity": 0, "y": 20 
 }
-          animate={{ "opacity": 1, "y": 0 }}
-          transition={{ "delay": 0.2 }}
+          animate={ "opacity": 1, "y": 0 }
+          transition={ "delay": 0.2 }
           className="grid grid-cols-1 "lg":grid-cols-2 gap-8 mb-8">"
 
           {/* Core Web Vitals *
@@ -230,10 +230,10 @@ const performanceScore = getPerformanceScore(analyticsData.performance;
         </motion.div>;
         {/* User Behavior */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 20 
+          initial={ "opacity": 0, "y": 20 
 }
-          animate={{ "opacity": 1, "y": 0 }}
-          transition={{ "delay": 0.3 }}
+          animate={ "opacity": 1, "y": 0 }
+          transition={ "delay": 0.3 }
           className="grid grid-cols-1 "lg":grid-cols-3 gap-8">"
 
           {/* Device Types *
@@ -251,7 +251,7 @@ const performanceScore = getPerformanceScore(analyticsData.performance;
                       <div className="w-20 bg-gray-700 rounded-full h-2">;"
                         <div;
                           className="bg-blue-500 h-2 rounded-full";"
-                          style={{ "width": `${percentage}%` ,`
+                          style={ "width": `${percentage}%` ,`
 }
                          /></div>;
                       </div>;

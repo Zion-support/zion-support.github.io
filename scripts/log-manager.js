@@ -3,8 +3,8 @@
 ursor/fix-syntax-push-and-merge-to-main-40de;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; )fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -12,28 +12,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -54,31 +54,31 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node;
 /**;
  * Log Manager - PM2 Automation Script;
@@ -86,17 +86,17 @@ const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 102
  */;
 
 const fs = // // require('fs')const path = // // require('path';'
-  const { execSync } = // // require('child_process')class LogManager {constructor() {this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot, 'logs')this.errorReportsDir = path.join(this.projectRoot, 'error-reports')this.backupDir = path.join(this.projectRoot, 'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0;"
+  const { execSync } = // // require('child_process')class LogManager {constructor() {this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot, 'logs')this.errorReportsDir = path.join(this.projectRoot, 'error-reports')this.backupDir = path.join(this.projectRoot, 'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0;'
       }
-      "spaceFreed": 0;"errorsFound": 0}this.setupDirectories()this.setupLogging(
+      'spaceFreed': 0;'errorsFound': 0}this.setupDirectories()this.setupLogging(
 }
-  setupDirectories() {[this.logsDir, this.errorReportsDir, this.backupDir].forEach(dir = > {if (!fs.existsSync(dir)) {fs.mkdirSync(dir, { "recursive": true })}"
+  setupDirectories() {[this.logsDir, this.errorReportsDir, this.backupDir].forEach(dir = > {if (!fs.existsSync(dir)) {fs.mkdirSync(dir, { 'recursive': true })}'
 
 ursor/fix-syntax-push-and-merge-to-main-40de,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -106,7 +106,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; ); fs.appendFileSync(
 
 const fileStats = []; logFiles.forEach(file = > { try {;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
 
 }
 
@@ -123,7 +123,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
+const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
 
 }
 
@@ -133,10 +133,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs.statSync(file);
 
-const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO'); try { const logFiles = this.getLogFiles(); let compressedCount = 0; logFiles.forEach(file = > { try {;'
   }
-  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -144,14 +144,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs.readFileSync(file,'utf8'); errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
+  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
 
 }
 
 const compressedFiles = this.getCompressedFiles(); compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
+  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
 
 }
 
@@ -175,31 +175,31 @@ const items = fs.readdirSync(dir); items.forEach(item = > {;
   }
   const fullPath = path.join(dir,item);
 
-const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result.trim().split('\n');'
 
 const lastLine = lines[lines.length - 1];
 
-const parts = lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace(); "recommendations": this.generateRecommendations(,;'
+const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace(); 'recommendations': this.generateRecommendations(,;'
 };
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO'); await this.analyzeLogs(); await this.checkLogHealth(); await this.rotateLogs(); await this.cleanOldLogs(); await this.compressLogs(); await this.optimizeLogStorage();'
 
 }
 
-const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`"Summary": ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
+const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`'Summary': ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
   }
-  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node
 /**
  * Log Manager - PM2 Automation Script
@@ -220,11 +220,11 @@ class LogManager {
     this && this.logsDir = path && path.join(this && this.projectRoot, 'logs');'
     this && this.errorReportsDir = path && path.join(this && this.projectRoot, 'error-reports');'
     this && this.backupDir = path && path.join(this && this.projectRoot, 'logs/backup');'
-    this && this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0;"
+    this && this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0;'
       }
-      "spaceFreed": 0,
+      'spaceFreed': 0,
 
-      "errorsFound":  
+      'errorsFound':  
 };
     this.setupDirectories();
     this.setupLogging()}
@@ -233,7 +233,7 @@ class LogManager {
       }
       if (!fs.existsSync(dir)) {
         }
-        fs.mkdirSync(dir, { "recursive": true })}"
+        fs.mkdirSync(dir, { 'recursive': true })}'
     })}
   setupLogging() {this.logFile = path.join(this.logsDir, 'log-manager.log'),this.log('Log Manager started', 'INFO')}'
   log(message, level = 'INFO') {const timestamp = new Date().toISOString(;'
@@ -247,11 +247,11 @@ const fileStats = [];
       logFiles.forEach(file = > {try {const stats = fs.statSync(file;
   }
   const size = stats.size;
-          totalSize += size;fileStats.push({"name": path.basename(file),"path": file,"size": size;"
+          totalSize += size;fileStats.push({'name': path.basename(file),'path': file,'size': size;'
             }
-            "modified": stats.mtime;
-            "age": Date.now() - stats.mtime.getTime()})} catch (error) {this.log(`Error reading file stats for ${file}: ${error.messag,`}`, 'ERROR')}})this.logStats.totalSize = totalSize;'
-      this.log(`Found ${logFiles.length} log files, total "size": ${this.formatBytes(totalSize)}`, 'INFO')// Sort by age (oldest first)fileStats.sort((a, b) => a.age - b.age)return fileStats} catch (error) {this.log(`Error analyzing "logs": ${error.message}`, 'ERROR')return []}'      logFiles.forEach(file = > {
+            'modified': stats.mtime;
+            'age': Date.now() - stats.mtime.getTime()})} catch (error) {this.log(`Error reading file stats for ${file}: ${error.messag,`}`, 'ERROR')})this.logStats.totalSize = totalSize;'
+      this.log(`Found ${logFiles.length} log files, total 'size': ${this.formatBytes(totalSize)}`, 'INFO')// Sort by age (oldest first)fileStats.sort((a, b) => a.age - b.age)return fileStats} catch (error) {this.log(`Error analyzing 'logs': ${error.message}`, 'ERROR')return []}'      logFiles.forEach(file = > {
         }
         try {
          ;
@@ -259,20 +259,20 @@ const fileStats = [];
   const size = stats.size;
           totalSize += size;
 
-          fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size;"
+          fileStats && fileStats.push({'name': path && path.basename(file),'path': file,'size': size;'
             }
-            "modified": stats && stats.mtime,
-            "age": Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) {
+            'modified': stats && stats.mtime,
+            'age': Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) {
           }
           this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`, 'ERROR')}'
 
       });
       this.logStats.totalSize = totalSize;
-      this.log(`Found ${logFiles.length} log files, total "size": ${this.formatBytes(totalSize)}`, 'INFO');'      // Sort by age (oldest first)
+      this.log(`Found ${logFiles.length} log files, total 'size': ${this.formatBytes(totalSize)}`, 'INFO');'      // Sort by age (oldest first)
       fileStats.sort((a, b) => a.age - b.age);
       return fileStats} catch (error) {
       }
-      this.log(`Error analyzing "logs": ${error.message}`, 'ERROR');'      return []}
+      this.log(`Error analyzing 'logs': ${error.message}`, 'ERROR');'      return []}
   }
   async rotateLogs() {this.log('Rotating log files...', 'INFO')try {const logFiles = this.getLogFiles()const now = new Date(;'
   }
@@ -285,9 +285,9 @@ const fileStats = [];
   const newName = `${fileName}-${timestamp}${extension}`;`
 const newPath = path.join(this.backupDir, newName)// Move to backup directory;
             fs.renameSync(file, newPath)// Compress if it's a large file;'
-            if (stats.size > 1024 * 1024) {try {execSync(`gzip "${newPath}"`, { "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newName}.gz`, 'INFO')} catch (error) {this.log(`Failed to compress ${newName}: ${error.message}`, 'WARN')}'            }
+            if (stats.size > 1024 * 1024) {try {execSync(`gzip '${newPath}'`, { 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newName}.gz`, 'INFO')} catch (error) {this.log(`Failed to compress ${newName}: ${error.message}`, 'WARN')}'            }
             rotatedCount++;
-            this.log(`Rotated log "file": ${path.basename(file)} -> ${newName}`, 'INFO')}'        } catch (error) {this.log(`Error rotating ${file}: ${error.message}`, 'ERROR')}'      })this.log(`Rotated ${rotatedCount} log files`, 'INFO')return rotatedCount} catch (error) {this.log(`Error during log "rotation": ${error.message}`, 'ERROR')return 0}'  }
+            this.log(`Rotated log 'file': ${path.basename(file)} -> ${newName}`, 'INFO')}'        } catch (error) {this.log(`Error rotating ${file}: ${error.message}`, 'ERROR')}'      })this.log(`Rotated ${rotatedCount} log files`, 'INFO')return rotatedCount} catch (error) {this.log(`Error during log 'rotation': ${error.message}`, 'ERROR')return 0}'  }
   async cleanOldLogs() {this.log('Cleaning old log files...', 'INFO')try {const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days;
@@ -298,16 +298,16 @@ const newPath = path.join(this.backupDir, newName)// Move to backup directory;
   const size = stats.size;
             fs.unlinkSync(file)cleanedCount++;
             spaceFreed += size;
-            this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size)})`, 'INFO')}'        } catch (error) {this.log(`Error cleaning ${file}: ${error.message}`, 'ERROR')}'      })this.logStats.filesCleaned = cleanedCount;
+            this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size)})`, 'INFO')}'        } catch (error) {this.log(`Error cleaning ${file}: ${error.message}`, 'ERROR')}'      })this.logStats.filesCleaned = cleanedCount;
       this.logStats.spaceFreed = spaceFreed;
-      this.log(`Cleaned ${cleanedCount} old log files, freed ${this.formatBytes(spaceFreed)}`, 'INFO')return { cleanedCount, spaceFreed }} catch (error) {this.log(`Error cleaning old "logs": ${error.message}`, 'ERROR')return { "cleanedCount": 0, "spaceFreed": 0 }}"  }
+      this.log(`Cleaned ${cleanedCount} old log files, freed ${this.formatBytes(spaceFreed)}`, 'INFO')return { cleanedCount, spaceFreed } catch (error) {this.log(`Error cleaning old 'logs': ${error.message}`, 'ERROR')return { 'cleanedCount': 0, 'spaceFreed': 0 }'  }
   async compressLogs() {this.log('Compressing large log files...', 'INFO')try {const logFiles = this.getLogFiles()let compressedCount = 0;'
       }
       logFiles.forEach(file = > {try ;
   }
   const stats = fs.statSync(file)// Compress files larger than 5MB;
-          if (stats.size > 5 * 1024 * 1024) {const compressedPath = `${file}.gz`;`            if (!fs.existsSync(compressedPath)) {execSync(`gzip "${file}"`, { "stdio": 'pipe' })compressedCount++;'              this.log(`Compressed log "file": ${path.basename(file)}`, 'INFO')}'          }
-        } catch (error) {this.log(`Error compressing ${file}: ${error.message}`, 'ERROR')}'      })this.log(`Compressed ${compressedCount} log files`, 'INFO')return compressedCount} catch (error) {this.log(`Error during log "compression": ${error.message}`, 'ERROR')return 0}'  }
+          if (stats.size > 5 * 1024 * 1024) {const compressedPath = `${file}.gz`;`            if (!fs.existsSync(compressedPath)) {execSync(`gzip '${file}'`, { 'stdio': 'pipe' })compressedCount++;'              this.log(`Compressed log 'file': ${path.basename(file)}`, 'INFO')}'          }
+        } catch (error) {this.log(`Error compressing ${file}: ${error.message}`, 'ERROR')}'      })this.log(`Compressed ${compressedCount} log files`, 'INFO')return compressedCount} catch (error) {this.log(`Error during log 'compression': ${error.message}`, 'ERROR')return 0}'  }
   async checkLogHealth() {this.log('Checking log health...', 'INFO')try {const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
@@ -319,7 +319,7 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i;
   }
   const matches = content.match(pattern)if (matches) {errorsFound += matches.length}
           })} catch (error) {this.log(`Error reading log file ${file}: ${error.message}`, 'ERROR')}'      })this.logStats.errorsFound = errorsFound;
-      this.log(`Found ${errorsFound} error patterns in log files`, 'INFO')return errorsFound} catch (error) {this.log(`Error checking log "health": ${error.message}`, 'ERROR')return 0}'  }
+      this.log(`Found ${errorsFound} error patterns in log files`, 'INFO')return errorsFound} catch (error) {this.log(`Error checking log 'health': ${error.message}`, 'ERROR')return 0}'  }
   async optimizeLogStorage() {this.log('Optimizing log storage...', 'INFO')try {// Check available disk space;'
 
 }
@@ -331,9 +331,9 @@ const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 102
 
 const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => {try ;
   }
-  const sourceFile = file.replace('.gz', '')if (fs.existsSync(sourceFile)) {fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile)}`, 'INFO')}'          } catch (error) {this.log(`Error removing source "file": ${error.message}`, 'ERROR')}'        })}
+  const sourceFile = file.replace('.gz', '')if (fs.existsSync(sourceFile)) {fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile)}`, 'INFO')}'          } catch (error) {this.log(`Error removing source 'file': ${error.message}`, 'ERROR')}'        })}
       // Set up log rotation schedule;
-      await this.setupLogRotation()} catch (error) {this.log(`Error optimizing log "storage": ${error.message}`, 'ERROR')}'  }
+      await this.setupLogRotation()} catch (error) {this.log(`Error optimizing log 'storage': ${error.message}`, 'ERROR')}'  }
   async setupLogRotation() {this.log('Setting up log rotation schedule...', 'INFO')try {// Create logrotate configuration;'
 
 }
@@ -351,7 +351,7 @@ const logrotateConfig = `;`${this.logsDir}/*.log {daily;
     endscript;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }`;`
-const configPath = path.join(this.logsDir, 'logrotate.conf')fs.writeFileSync(configPath, logrotateConfig)this.log('Log rotation configuration created', 'INFO')} catch (error) {this.log(`Error setting up log "rotation": ${error.message}`, 'ERROR')}'  }
+const configPath = path.join(this.logsDir, 'logrotate.conf')fs.writeFileSync(configPath, logrotateConfig)this.log('Log rotation configuration created', 'INFO')} catch (error) {this.log(`Error setting up log 'rotation': ${error.message}`, 'ERROR')}'  }
   getLogFiles() ;
   const files = [];
     function walkDir() {if (!fs.existsSync(dir)) return;
@@ -381,17 +381,17 @@ const items = fs.readdirSync(dir)items.forEach((item) => {const fullPath = path.
   return files}
   getDiskSpace() {try ;
   }
-  const result = execSync('df .', {"cwd": this.projectRoot,"encoding": 'utf8';'
+  const result = execSync('df .', {'cwd': this.projectRoot,'encoding': 'utf8';'
         }
-        "stdio": 'pipe,'
+        'stdio': 'pipe,'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024;"
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024;'
         }
-        "available": parseInt(parts[3]) * 1024}} catch (error) {this.log(`Error getting disk "space": ${error.messag,"
-}`, 'WARN')return { "total": 0, "used": 0, "available": 0 }}"  }
+        'available': parseInt(parts[3]) * 1024} catch (error) {this.log(`Error getting disk 'space': ${error.messag,'
+}`, 'WARN')return { 'total': 0, 'used': 0, 'available': 0 }'  }
   formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
@@ -399,10 +399,10 @@ const parts = lastLine.split(/\s+/;
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}'
-  generateReport() {const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;"
+  generateReport() {const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir, `log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))this.log(`Report "generated": ${reportFile}`, 'INFO';'  return report}
+const reportFile = path.join(this.errorReportsDir, `log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))this.log(`Report 'generated': ${reportFile}`, 'INFO';'  return report}
   generateRecommendations() ;
   const recommendations = [];
     if (this.logStats.totalSize > 1024 * 1024 * 100) { // 100MB;
@@ -422,13 +422,13 @@ const reportFile = path.join(this.errorReportsDir, `log-manager-report-${Date.no
       await this.rotateLogs()// Clean old logs;
       await this.cleanOldLogs()// Compress large logs;
       await this.compressLogs()// Optimize storage;
-      await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed', 'INFO')this.log(`"Summary": ${this.logStats.filesCleaned} files cleaned, ${this.formatBytes(this.logStats.spaceFreed)} freed`, 'INFO';'  return report} catch (error) {this.log(`Fatal error in log "manager": ${error.message}`, 'ERROR')throw error}'  }origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+      await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed', 'INFO')this.log(`'Summary': ${this.logStats.filesCleaned} files cleaned, ${this.formatBytes(this.logStats.spaceFreed)} freed`, 'INFO';'  return report} catch (error) {this.log(`Fatal error in log 'manager': ${error.message}`, 'ERROR')throw error}'  }origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }// Run the log manager if called directly;
 if (require.main = == module) ;
-  const manager = new LogManager()manager.run().then(() => {process.exit(0)}).catch((error) => {console.error('Log manager "failed": ', error),process.exit(1)})}'
+  const manager = new LogManager()manager.run().then(() => {process.exit(0)}).catch((error) => {console.error('Log manager 'failed': ', error),process.exit(1)})}'
 module.exports = LogManager;#!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -436,28 +436,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -478,34 +478,34 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -513,28 +513,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -555,33 +555,33 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;#!/usr/bin/env node const fs = const path =;'
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;#!/usr/bin/env node const fs = const path =;'
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -589,28 +589,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -631,34 +631,34 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -666,28 +666,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -708,35 +708,35 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;process && process.exit(0)}).catch((error) => {console && console.error('Log manager "failed": ', error),process && process.exit(1)})}'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;process && process.exit(0)}).catch((error) => {console && console.error('Log manager 'failed': ', error),process && process.exit(1)})}'
 module && module.exports = LogManager;
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd()this && this.logsDir = path && path.join(this && this.projectRoot,'logs')this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports')this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup')this && this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this && this.setupDirectories()this && this.setupLogging(,;'
-} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd()this && this.logsDir = path && path.join(this && this.projectRoot,'logs')this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports')this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup')this && this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this && this.setupDirectories()this && this.setupLogging(,;'
+} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'log-manager && manager.log'),this && this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.log(logEntry && logEntry.trim())fs && fs.appendFileSync(this && this.logFile,logEntry)} async analyzeLogs() { this && this.log('Analyzing log files...','INFO')try { const logFiles = this && this.getLogFiles()this && this.logStats.totalFiles = logFiles && logFiles.length; let totalSize = 0;'
@@ -744,28 +744,28 @@ const { execSync } = class LogManager { constructor() { this && this.projectRoot
 
 const fileStats = []; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file;
   }
-  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size; "modified": stats && stats.mtime; "age": Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} })this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total "size": ${this && this.formatBytes(totalSize,`}`,'INFO')fileStats && fileStats.sort((a,b) => a && a.age - b && b.age)return fileStats} catch (error) { this && this.log(`Error analyzing "logs": ${error && error.messag,`}`,'ERROR')return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO')try { const logFiles = this && this.getLogFiles()const now = new Date(;'
+  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({'name': path && path.basename(file),'path': file,'size': size; 'modified': stats && stats.mtime; 'age': Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} })this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total 'size': ${this && this.formatBytes(totalSize,`}`,'INFO')fileStats && fileStats.sort((a,b) => a && a.age - b && b.age)return fileStats} catch (error) { this && this.log(`Error analyzing 'logs': ${error && error.messag,`}`,'ERROR')return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO')try { const logFiles = this && this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now && now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)const fileAge = Date && Date.now() - stats && stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats && stats.size > 10 * 1024 * 1024) { const fileName = path && path.basename(file,path && path.extname(file))const extension = path && path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path && path.join(this && this.backupDir,newName)fs && fs.renameSync(file,newPath)if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this && this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log "file": ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this && this.log(`Error during log "rotation": ${error && error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO')try { const backupFiles = this && this.getBackupFiles()const now = Date && Date.now(;'
+const newPath = path && path.join(this && this.backupDir,newName)fs && fs.renameSync(file,newPath)if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this && this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log 'file': ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this && this.log(`Error during log 'rotation': ${error && error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO')try { const backupFiles = this && this.getBackupFiles()const now = Date && Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles && backupFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)const fileAge = now - stats && stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats && stats.size; fs && fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old "log": ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning old "logs": ${error && error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats && stats.size; fs && fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old 'log': ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this && this.log(`Error cleaning old 'logs': ${error && error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this && this.log('Compressing large log files...','INFO')try { const logFiles = this && this.getLogFiles()let compressedCount = 0; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)if (stats && stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this && this.log(`Compressed log "file": ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this && this.log(`Error during log "compression": ${error && error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO')try { const logFiles = this && this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this && this.log(`Compressed log 'file': ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this && this.log(`Error during log 'compression': ${error && error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO')try { const logFiles = this && this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles && logFiles.forEach(file = > { try { const content = fs && fs.readFileSync(file,'utf8')errorPatterns && errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content && content.match(pattern)if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this && this.log(`Error checking log "health": ${error && error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO')try { const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN')await this && this.cleanOldLogs()await this && this.compressLogs()const compressedFiles = this && this.getCompressedFiles()compressedFiles && compressedFiles.forEach((file) => { try { const sourceFile = file && file.replace('.gz','')if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile)this && this.log(`Removed source file after "compression": ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source "file": ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log "storage": ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content && content.match(pattern)if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this && this.log(`Error checking log 'health': ${error && error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO')try { const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN')await this && this.cleanOldLogs()await this && this.compressLogs()const compressedFiles = this && this.getCompressedFiles()compressedFiles && compressedFiles.forEach((file) => { try { const sourceFile = file && file.replace('.gz','')if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile)this && this.log(`Removed source file after 'compression': ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source 'file': ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log 'storage': ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf')fs && fs.writeFileSync(configPath,logrotateConfig)this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log "rotation": ${error && error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf')fs && fs.writeFileSync(configPath,logrotateConfig)this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log 'rotation': ${error && error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;
 
@@ -786,34 +786,34 @@ const items = fs && fs.readdirSync(this && this.backupDir)items && items.forEach
 const items = fs && fs.readdirSync(dir)items && items.forEach((item) => { const fullPath = path && path.join(dir,item)const stat = fs && fs.statSync(fullPath)if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this && this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this && this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result && result.trim().split('\n';'
   const lastLine = lines[lines && lines.length - 1];
 
 const parts = lastLine && lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this && this.log(`Error getting disk "space": ${error && error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this && this.log(`Error getting disk 'space': ${error && error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k);
-  return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this && this.logStats,"diskSpace": this && this.getDiskSpace()"recommendations": this && this.generateRecommendations(;'
+  return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this && this.logStats,'diskSpace': this && this.getDiskSpace()'recommendations': this && this.generateRecommendations(;'
 }
 
-const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`)fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2))this && this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`)fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2))this && this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO')await this && this.analyzeLogs()await this && this.checkLogHealth()await this && this.rotateLogs()await this && this.cleanOldLogs()await this && this.compressLogs()await this && this.optimizeLogStorage()const report = this && this.generateReport()this && this.log('Log management automation completed','INFO')this && this.log(`"Summary": ${this && this.logStats.filesCleane,`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this && this.log(`Fatal error in log "manager": ${error && error.messag,`}`,'ERROR')throw error} } } if (require && require.main === module) {;'
+const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO')await this && this.analyzeLogs()await this && this.checkLogHealth()await this && this.rotateLogs()await this && this.cleanOldLogs()await this && this.compressLogs()await this && this.optimizeLogStorage()const report = this && this.generateReport()this && this.log('Log management automation completed','INFO')this && this.log(`'Summary': ${this && this.logStats.filesCleane,`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this && this.log(`Fatal error in log 'manager': ${error && error.messag,`}`,'ERROR')throw error} } } if (require && require.main === module) {;'
   }
-  const manager = new LogManager()manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager "failed":',error),process && process.exit(1)})} module && module.exports = LogManager;'
+  const manager = new LogManager()manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager 'failed':',error),process && process.exit(1)})} module && module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd()this && this.logsDir = path && path.join(this && this.projectRoot,'logs')this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports')this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup')this && this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this && this.setupDirectories()this && this.setupLogging(,;'
-} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd()this && this.logsDir = path && path.join(this && this.projectRoot,'logs')this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports')this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup')this && this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this && this.setupDirectories()this && this.setupLogging(,;'
+} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'log-manager && manager.log'),this && this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.log(logEntry && logEntry.trim())fs && fs.appendFileSync(this && this.logFile,logEntry)} async analyzeLogs() { this && this.log('Analyzing log files...','INFO')try { const logFiles = this && this.getLogFiles()this && this.logStats.totalFiles = logFiles && logFiles.length; let totalSize = 0;'
@@ -821,28 +821,28 @@ const { execSync } = class LogManager { constructor() { this && this.projectRoot
 
 const fileStats = []; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file;
   }
-  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size; "modified": stats && stats.mtime; "age": Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} })this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total "size": ${this && this.formatBytes(totalSize,`}`,'INFO')fileStats && fileStats.sort((a,b) => a && a.age - b && b.age)return fileStats} catch (error) { this && this.log(`Error analyzing "logs": ${error && error.messag,`}`,'ERROR')return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO')try { const logFiles = this && this.getLogFiles()const now = new Date(;'
+  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({'name': path && path.basename(file),'path': file,'size': size; 'modified': stats && stats.mtime; 'age': Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} })this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total 'size': ${this && this.formatBytes(totalSize,`}`,'INFO')fileStats && fileStats.sort((a,b) => a && a.age - b && b.age)return fileStats} catch (error) { this && this.log(`Error analyzing 'logs': ${error && error.messag,`}`,'ERROR')return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO')try { const logFiles = this && this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now && now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)const fileAge = Date && Date.now() - stats && stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats && stats.size > 10 * 1024 * 1024) { const fileName = path && path.basename(file,path && path.extname(file))const extension = path && path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path && path.join(this && this.backupDir,newName)fs && fs.renameSync(file,newPath)if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this && this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log "file": ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this && this.log(`Error during log "rotation": ${error && error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO')try { const backupFiles = this && this.getBackupFiles()const now = Date && Date.now(;'
+const newPath = path && path.join(this && this.backupDir,newName)fs && fs.renameSync(file,newPath)if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this && this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log 'file': ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this && this.log(`Error during log 'rotation': ${error && error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO')try { const backupFiles = this && this.getBackupFiles()const now = Date && Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles && backupFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)const fileAge = now - stats && stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats && stats.size; fs && fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old "log": ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning old "logs": ${error && error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats && stats.size; fs && fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old 'log': ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this && this.log(`Error cleaning old 'logs': ${error && error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this && this.log('Compressing large log files...','INFO')try { const logFiles = this && this.getLogFiles()let compressedCount = 0; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)if (stats && stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this && this.log(`Compressed log "file": ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this && this.log(`Error during log "compression": ${error && error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO')try { const logFiles = this && this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this && this.log(`Compressed log 'file': ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this && this.log(`Error during log 'compression': ${error && error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO')try { const logFiles = this && this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles && logFiles.forEach(file = > { try { const content = fs && fs.readFileSync(file,'utf8')errorPatterns && errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content && content.match(pattern)if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this && this.log(`Error checking log "health": ${error && error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO')try { const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN')await this && this.cleanOldLogs()await this && this.compressLogs()const compressedFiles = this && this.getCompressedFiles()compressedFiles && compressedFiles.forEach((file) => { try { const sourceFile = file && file.replace('.gz','')if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile)this && this.log(`Removed source file after "compression": ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source "file": ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log "storage": ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content && content.match(pattern)if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this && this.log(`Error checking log 'health': ${error && error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO')try { const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN')await this && this.cleanOldLogs()await this && this.compressLogs()const compressedFiles = this && this.getCompressedFiles()compressedFiles && compressedFiles.forEach((file) => { try { const sourceFile = file && file.replace('.gz','')if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile)this && this.log(`Removed source file after 'compression': ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source 'file': ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log 'storage': ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf')fs && fs.writeFileSync(configPath,logrotateConfig)this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log "rotation": ${error && error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf')fs && fs.writeFileSync(configPath,logrotateConfig)this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log 'rotation': ${error && error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;
 
@@ -863,34 +863,34 @@ const items = fs && fs.readdirSync(this && this.backupDir)items && items.forEach
 const items = fs && fs.readdirSync(dir)items && items.forEach((item) => { const fullPath = path && path.join(dir,item)const stat = fs && fs.statSync(fullPath)if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this && this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this && this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result && result.trim().split('\n';'
   const lastLine = lines[lines && lines.length - 1];
 
 const parts = lastLine && lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this && this.log(`Error getting disk "space": ${error && error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this && this.log(`Error getting disk 'space': ${error && error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k);
-  return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this && this.logStats,"diskSpace": this && this.getDiskSpace()"recommendations": this && this.generateRecommendations(;'
+  return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this && this.logStats,'diskSpace': this && this.getDiskSpace()'recommendations': this && this.generateRecommendations(;'
 }
 
-const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`)fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2))this && this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`)fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2))this && this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO')await this && this.analyzeLogs()await this && this.checkLogHealth()await this && this.rotateLogs()await this && this.cleanOldLogs()await this && this.compressLogs()await this && this.optimizeLogStorage()const report = this && this.generateReport()this && this.log('Log management automation completed','INFO')this && this.log(`"Summary": ${this && this.logStats.filesCleane,`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this && this.log(`Fatal error in log "manager": ${error && error.messag,`}`,'ERROR')throw error} } } if (require && require.main === module) {;'
+const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO')await this && this.analyzeLogs()await this && this.checkLogHealth()await this && this.rotateLogs()await this && this.cleanOldLogs()await this && this.compressLogs()await this && this.optimizeLogStorage()const report = this && this.generateReport()this && this.log('Log management automation completed','INFO')this && this.log(`'Summary': ${this && this.logStats.filesCleane,`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this && this.log(`Fatal error in log 'manager': ${error && error.messag,`}`,'ERROR')throw error} } } if (require && require.main === module) {;'
   }
-  const manager = new LogManager()manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager "failed":',error),process && process.exit(1)})} module && module.exports = LogManager;'
+  const manager = new LogManager()manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager 'failed':',error),process && process.exit(1)})} module && module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd()this && this.logsDir = path && path.join(this && this.projectRoot,'logs')this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports')this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup')this && this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this && this.setupDirectories()this && this.setupLogging(,;'
-} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd()this && this.logsDir = path && path.join(this && this.projectRoot,'logs')this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports')this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup')this && this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this && this.setupDirectories()this && this.setupLogging(,;'
+} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'log-manager && manager.log'),this && this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.log(logEntry && logEntry.trim())fs && fs.appendFileSync(this && this.logFile,logEntry)} async analyzeLogs() { this && this.log('Analyzing log files...','INFO')try { const logFiles = this && this.getLogFiles()this && this.logStats.totalFiles = logFiles && logFiles.length; let totalSize = 0;'
@@ -898,28 +898,28 @@ const { execSync } = class LogManager { constructor() { this && this.projectRoot
 
 const fileStats = []; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file;
   }
-  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size; "modified": stats && stats.mtime; "age": Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} })this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total "size": ${this && this.formatBytes(totalSize,`}`,'INFO')fileStats && fileStats.sort((a,b) => a && a.age - b && b.age)return fileStats} catch (error) { this && this.log(`Error analyzing "logs": ${error && error.messag,`}`,'ERROR')return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO')try { const logFiles = this && this.getLogFiles()const now = new Date(;'
+  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({'name': path && path.basename(file),'path': file,'size': size; 'modified': stats && stats.mtime; 'age': Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} })this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total 'size': ${this && this.formatBytes(totalSize,`}`,'INFO')fileStats && fileStats.sort((a,b) => a && a.age - b && b.age)return fileStats} catch (error) { this && this.log(`Error analyzing 'logs': ${error && error.messag,`}`,'ERROR')return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO')try { const logFiles = this && this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now && now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)const fileAge = Date && Date.now() - stats && stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats && stats.size > 10 * 1024 * 1024) { const fileName = path && path.basename(file,path && path.extname(file))const extension = path && path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path && path.join(this && this.backupDir,newName)fs && fs.renameSync(file,newPath)if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this && this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log "file": ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this && this.log(`Error during log "rotation": ${error && error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO')try { const backupFiles = this && this.getBackupFiles()const now = Date && Date.now(;'
+const newPath = path && path.join(this && this.backupDir,newName)fs && fs.renameSync(file,newPath)if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this && this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log 'file': ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this && this.log(`Error during log 'rotation': ${error && error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO')try { const backupFiles = this && this.getBackupFiles()const now = Date && Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles && backupFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)const fileAge = now - stats && stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats && stats.size; fs && fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old "log": ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning old "logs": ${error && error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats && stats.size; fs && fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old 'log': ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this && this.log(`Error cleaning old 'logs': ${error && error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this && this.log('Compressing large log files...','INFO')try { const logFiles = this && this.getLogFiles()let compressedCount = 0; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)if (stats && stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this && this.log(`Compressed log "file": ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this && this.log(`Error during log "compression": ${error && error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO')try { const logFiles = this && this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this && this.log(`Compressed log 'file': ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this && this.log(`Error during log 'compression': ${error && error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO')try { const logFiles = this && this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles && logFiles.forEach(file = > { try { const content = fs && fs.readFileSync(file,'utf8')errorPatterns && errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content && content.match(pattern)if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this && this.log(`Error checking log "health": ${error && error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO')try { const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN')await this && this.cleanOldLogs()await this && this.compressLogs()const compressedFiles = this && this.getCompressedFiles()compressedFiles && compressedFiles.forEach((file) => { try { const sourceFile = file && file.replace('.gz','')if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile)this && this.log(`Removed source file after "compression": ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source "file": ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log "storage": ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content && content.match(pattern)if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this && this.log(`Error checking log 'health': ${error && error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO')try { const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN')await this && this.cleanOldLogs()await this && this.compressLogs()const compressedFiles = this && this.getCompressedFiles()compressedFiles && compressedFiles.forEach((file) => { try { const sourceFile = file && file.replace('.gz','')if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile)this && this.log(`Removed source file after 'compression': ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source 'file': ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log 'storage': ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf')fs && fs.writeFileSync(configPath,logrotateConfig)this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log "rotation": ${error && error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf')fs && fs.writeFileSync(configPath,logrotateConfig)this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log 'rotation': ${error && error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;
 
@@ -940,33 +940,33 @@ const items = fs && fs.readdirSync(this && this.backupDir)items && items.forEach
 const items = fs && fs.readdirSync(dir)items && items.forEach((item) => { const fullPath = path && path.join(dir,item)const stat = fs && fs.statSync(fullPath)if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this && this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this && this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result && result.trim().split('\n';'
   const lastLine = lines[lines && lines.length - 1];
 
 const parts = lastLine && lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this && this.log(`Error getting disk "space": ${error && error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this && this.log(`Error getting disk 'space': ${error && error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k);
-  return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this && this.logStats,"diskSpace": this && this.getDiskSpace()"recommendations": this && this.generateRecommendations(;'
+  return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this && this.logStats,'diskSpace': this && this.getDiskSpace()'recommendations': this && this.generateRecommendations(;'
 }
 
-const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`)fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2))this && this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`)fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2))this && this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO')await this && this.analyzeLogs()await this && this.checkLogHealth()await this && this.rotateLogs()await this && this.cleanOldLogs()await this && this.compressLogs()await this && this.optimizeLogStorage()const report = this && this.generateReport()this && this.log('Log management automation completed','INFO')this && this.log(`"Summary": ${this && this.logStats.filesCleane,`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this && this.log(`Fatal error in log "manager": ${error && error.messag,`}`,'ERROR')throw error} } } if (require && require.main === module) {;'
+const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO')await this && this.analyzeLogs()await this && this.checkLogHealth()await this && this.rotateLogs()await this && this.cleanOldLogs()await this && this.compressLogs()await this && this.optimizeLogStorage()const report = this && this.generateReport()this && this.log('Log management automation completed','INFO')this && this.log(`'Summary': ${this && this.logStats.filesCleane,`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this && this.log(`Fatal error in log 'manager': ${error && error.messag,`}`,'ERROR')throw error} } } if (require && require.main === module) {;'
   }
-  const manager = new LogManager()manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager "failed":',error),process && process.exit(1)})} module && module.exports = LogManager;'
-#!/usr/bin/env node const fs = const path = const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd()this && this.logsDir = path && path.join(this && this.projectRoot,'logs')this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports')this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup')this && this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0, "spaceFreed": 0, "errorsFound": 0}this && this.setupDirectories()this && this.setupLogging(,'
-} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach((dir) => { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ "recursive": true })} }
+  const manager = new LogManager()manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager 'failed':',error),process && process.exit(1)})} module && module.exports = LogManager;'
+#!/usr/bin/env node const fs = const path = const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd()this && this.logsDir = path && path.join(this && this.projectRoot,'logs')this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports')this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup')this && this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0, 'spaceFreed': 0, 'errorsFound': 0}this && this.setupDirectories()this && this.setupLogging(,'
+} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach((dir) => { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'log-manager && manager.log'),this && this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.log(logEntry && logEntry.trim())fs && fs.appendFileSync(this && this.logFile,logEntry)} async analyzeLogs() { this && this.log('Analyzing log files...','INFO')try { const logFiles = this && this.getLogFiles()this && this.logStats.totalFiles = logFiles && logFiles.length; let totalSize = 0;'
@@ -974,28 +974,28 @@ const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.availabl
 
 const fileStats = []; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file;
   }
-  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size, "modified": stats && stats.mtime, "age": Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} })this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total "size": ${this && this.formatBytes(totalSize,`}`,'INFO')fileStats && fileStats.sort((a,b) => a && a.age - b && b.age)return fileStats} catch (error) { this && this.log(`Error analyzing "logs": ${error && error.messag,`}`,'ERROR')return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO')try { const logFiles = this && this.getLogFiles()const now = new Date(;'
+  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({'name': path && path.basename(file),'path': file,'size': size, 'modified': stats && stats.mtime, 'age': Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} })this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total 'size': ${this && this.formatBytes(totalSize,`}`,'INFO')fileStats && fileStats.sort((a,b) => a && a.age - b && b.age)return fileStats} catch (error) { this && this.log(`Error analyzing 'logs': ${error && error.messag,`}`,'ERROR')return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO')try { const logFiles = this && this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now && now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)const fileAge = Date && Date.now() - stats && stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats && stats.size > 10 * 1024 * 1024) { const fileName = path && path.basename(file,path && path.extname(file))const extension = path && path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path && path.join(this && this.backupDir,newName)fs && fs.renameSync(file,newPath)if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this && this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log "file": ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this && this.log(`Error during log "rotation": ${error && error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO')try { const backupFiles = this && this.getBackupFiles()const now = Date && Date.now(;'
+const newPath = path && path.join(this && this.backupDir,newName)fs && fs.renameSync(file,newPath)if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this && this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log 'file': ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this && this.log(`Error during log 'rotation': ${error && error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO')try { const backupFiles = this && this.getBackupFiles()const now = Date && Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles && backupFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)const fileAge = now - stats && stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats && stats.size; fs && fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old "log": ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning old "logs": ${error && error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats && stats.size; fs && fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old 'log': ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this && this.log(`Error cleaning old 'logs': ${error && error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this && this.log('Compressing large log files...','INFO')try { const logFiles = this && this.getLogFiles()let compressedCount = 0; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)if (stats && stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this && this.log(`Compressed log "file": ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this && this.log(`Error during log "compression": ${error && error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO')try { const logFiles = this && this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this && this.log(`Compressed log 'file': ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this && this.log(`Error during log 'compression': ${error && error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO')try { const logFiles = this && this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles && logFiles.forEach(file = > { try { const content = fs && fs.readFileSync(file,'utf8')errorPatterns && errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content && content.match(pattern)if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this && this.log(`Error checking log "health": ${error && error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO')try { const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN')await this && this.cleanOldLogs()await this && this.compressLogs()const compressedFiles = this && this.getCompressedFiles()compressedFiles && compressedFiles.forEach((file) => { try { const sourceFile = file && file.replace('.gz','')if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile)this && this.log(`Removed source file after "compression": ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source "file": ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log "storage": ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content && content.match(pattern)if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this && this.log(`Error checking log 'health': ${error && error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO')try { const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN')await this && this.cleanOldLogs()await this && this.compressLogs()const compressedFiles = this && this.getCompressedFiles()compressedFiles && compressedFiles.forEach((file) => { try { const sourceFile = file && file.replace('.gz','')if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile)this && this.log(`Removed source file after 'compression': ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source 'file': ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log 'storage': ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf')fs && fs.writeFileSync(configPath,logrotateConfig)this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log "rotation": ${error && error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf')fs && fs.writeFileSync(configPath,logrotateConfig)this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log 'rotation': ${error && error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;
 
@@ -1014,32 +1014,32 @@ const items = fs && fs.readdirSync(this && this.backupDir)items && items.forEach
 }
 
 const items = fs && fs.readdirSync(dir)items && items.forEach((item) => { const fullPath = path && path.join(dir,item)const stat = fs && fs.statSync(fullPath)if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir;'
-  return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this && this.projectRoot,"encoding": 'utf8',"stdio": 'pipe,'
+  return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this && this.projectRoot,'encoding': 'utf8','stdio': 'pipe,'
 })const lines = result && result.trim().split('\n';'
   const lastLine = lines[lines && lines.length - 1];
 
-const parts = lastLine && lastLine.split(/\s+/)return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024,"available": parseInt(parts[3]) * 1024}} catch (error) { this && this.log(`Error getting disk "space": ${error && error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine && lastLine.split(/\s+/)return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024,'available': parseInt(parts[3]) * 1024} catch (error) { this && this.log(`Error getting disk 'space': ${error && error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes === 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k);
-  return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this && this.logStats,"diskSpace": this && this.getDiskSpace(),"recommendations": this && this.generateRecommendations(;'
+  return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this && this.logStats,'diskSpace': this && this.getDiskSpace(),'recommendations': this && this.generateRecommendations(;'
 }
 
-const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`)fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2))this && this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`)fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2))this && this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO')await this && this.analyzeLogs()await this && this.checkLogHealth()await this && this.rotateLogs()await this && this.cleanOldLogs()await this && this.compressLogs()await this && this.optimizeLogStorage()const report = this && this.generateReport()this && this.log('Log management automation completed','INFO')this && this.log(`"Summary": ${this && this.logStats.filesCleane,`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this && this.log(`Fatal error in log "manager": ${error && error.messag,`}`,'ERROR')throw error} } } if (require && require.main === module) {;'
+const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO')await this && this.analyzeLogs()await this && this.checkLogHealth()await this && this.rotateLogs()await this && this.cleanOldLogs()await this && this.compressLogs()await this && this.optimizeLogStorage()const report = this && this.generateReport()this && this.log('Log management automation completed','INFO')this && this.log(`'Summary': ${this && this.logStats.filesCleane,`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this && this.log(`Fatal error in log 'manager': ${error && error.messag,`}`,'ERROR')throw error} } } if (require && require.main === module) {;'
   }
-  const manager = new LogManager()manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager "failed":',error),process && process.exit(1)})} module && module.exports = LogManager;'
-#!/usr/bin/env node const fs = const path = const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd()this && this.logsDir = path && path.join(this && this.projectRoot,'logs')this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports')this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup')this && this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0, "spaceFreed": 0, "errorsFound": 0}this && this.setupDirectories()this && this.setupLogging(,'
-} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach((dir) => { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ "recursive": true })} }
+  const manager = new LogManager()manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager 'failed':',error),process && process.exit(1)})} module && module.exports = LogManager;'
+#!/usr/bin/env node const fs = const path = const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd()this && this.logsDir = path && path.join(this && this.projectRoot,'logs')this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports')this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup')this && this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0, 'spaceFreed': 0, 'errorsFound': 0}this && this.setupDirectories()this && this.setupLogging(,'
+} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach((dir) => { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'log-manager && manager.log'),this && this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.log(logEntry && logEntry.trim())fs && fs.appendFileSync(this && this.logFile,logEntry)} async analyzeLogs() { this && this.log('Analyzing log files...','INFO')try { const logFiles = this && this.getLogFiles()this && this.logStats.totalFiles = logFiles && logFiles.length; let totalSize = 0;'
@@ -1047,28 +1047,28 @@ const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.availabl
 
 const fileStats = []; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file;
   }
-  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size, "modified": stats && stats.mtime, "age": Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} })this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total "size": ${this && this.formatBytes(totalSize,`}`,'INFO')fileStats && fileStats.sort((a,b) => a && a.age - b && b.age)return fileStats} catch (error) { this && this.log(`Error analyzing "logs": ${error && error.messag,`}`,'ERROR')return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO')try { const logFiles = this && this.getLogFiles()const now = new Date(;'
+  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({'name': path && path.basename(file),'path': file,'size': size, 'modified': stats && stats.mtime, 'age': Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} })this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total 'size': ${this && this.formatBytes(totalSize,`}`,'INFO')fileStats && fileStats.sort((a,b) => a && a.age - b && b.age)return fileStats} catch (error) { this && this.log(`Error analyzing 'logs': ${error && error.messag,`}`,'ERROR')return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO')try { const logFiles = this && this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now && now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)const fileAge = Date && Date.now() - stats && stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats && stats.size > 10 * 1024 * 1024) { const fileName = path && path.basename(file,path && path.extname(file))const extension = path && path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path && path.join(this && this.backupDir,newName)fs && fs.renameSync(file,newPath)if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this && this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log "file": ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this && this.log(`Error during log "rotation": ${error && error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO')try { const backupFiles = this && this.getBackupFiles()const now = Date && Date.now(;'
+const newPath = path && path.join(this && this.backupDir,newName)fs && fs.renameSync(file,newPath)if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this && this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log 'file': ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this && this.log(`Error during log 'rotation': ${error && error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO')try { const backupFiles = this && this.getBackupFiles()const now = Date && Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles && backupFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)const fileAge = now - stats && stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats && stats.size; fs && fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old "log": ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning old "logs": ${error && error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats && stats.size; fs && fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old 'log': ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this && this.log(`Error cleaning old 'logs': ${error && error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this && this.log('Compressing large log files...','INFO')try { const logFiles = this && this.getLogFiles()let compressedCount = 0; logFiles && logFiles.forEach(file = > { try { const stats = fs && fs.statSync(file)if (stats && stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this && this.log(`Compressed log "file": ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this && this.log(`Error during log "compression": ${error && error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO')try { const logFiles = this && this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this && this.log(`Compressed log 'file': ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} })this && this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this && this.log(`Error during log 'compression': ${error && error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO')try { const logFiles = this && this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles && logFiles.forEach(file = > { try { const content = fs && fs.readFileSync(file,'utf8')errorPatterns && errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content && content.match(pattern)if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this && this.log(`Error checking log "health": ${error && error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO')try { const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN')await this && this.cleanOldLogs()await this && this.compressLogs()const compressedFiles = this && this.getCompressedFiles()compressedFiles && compressedFiles.forEach((file) => { try { const sourceFile = file && file.replace('.gz','')if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile)this && this.log(`Removed source file after "compression": ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source "file": ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log "storage": ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content && content.match(pattern)if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} })this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this && this.log(`Error checking log 'health': ${error && error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO')try { const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN')await this && this.cleanOldLogs()await this && this.compressLogs()const compressedFiles = this && this.getCompressedFiles()compressedFiles && compressedFiles.forEach((file) => { try { const sourceFile = file && file.replace('.gz','')if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile)this && this.log(`Removed source file after 'compression': ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source 'file': ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log 'storage': ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf')fs && fs.writeFileSync(configPath,logrotateConfig)this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log "rotation": ${error && error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf')fs && fs.writeFileSync(configPath,logrotateConfig)this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log 'rotation': ${error && error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;
 
@@ -1087,32 +1087,32 @@ const items = fs && fs.readdirSync(this && this.backupDir)items && items.forEach
 }
 
 const items = fs && fs.readdirSync(dir)items && items.forEach((item) => { const fullPath = path && path.join(dir,item)const stat = fs && fs.statSync(fullPath)if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir;'
-  return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this && this.projectRoot,"encoding": 'utf8',"stdio": 'pipe,'
+  return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this && this.projectRoot,'encoding': 'utf8','stdio': 'pipe,'
 })const lines = result && result.trim().split('\n';'
   const lastLine = lines[lines && lines.length - 1];
 
-const parts = lastLine && lastLine.split(/\s+/)return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024,"available": parseInt(parts[3]) * 1024}} catch (error) { this && this.log(`Error getting disk "space": ${error && error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine && lastLine.split(/\s+/)return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024,'available': parseInt(parts[3]) * 1024} catch (error) { this && this.log(`Error getting disk 'space': ${error && error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes === 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k);
-  return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this && this.logStats,"diskSpace": this && this.getDiskSpace(),"recommendations": this && this.generateRecommendations(;'
+  return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this && this.logStats,'diskSpace': this && this.getDiskSpace(),'recommendations': this && this.generateRecommendations(;'
 }
 
-const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`)fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2))this && this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`)fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2))this && this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO')await this && this.analyzeLogs()await this && this.checkLogHealth()await this && this.rotateLogs()await this && this.cleanOldLogs()await this && this.compressLogs()await this && this.optimizeLogStorage()const report = this && this.generateReport()this && this.log('Log management automation completed','INFO')this && this.log(`"Summary": ${this && this.logStats.filesCleane,`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this && this.log(`Fatal error in log "manager": ${error && error.messag,`}`,'ERROR')throw error} } } if (require && require.main === module) {;'
+const diskSpace = this && this.getDiskSpace()if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO')await this && this.analyzeLogs()await this && this.checkLogHealth()await this && this.rotateLogs()await this && this.cleanOldLogs()await this && this.compressLogs()await this && this.optimizeLogStorage()const report = this && this.generateReport()this && this.log('Log management automation completed','INFO')this && this.log(`'Summary': ${this && this.logStats.filesCleane,`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this && this.log(`Fatal error in log 'manager': ${error && error.messag,`}`,'ERROR')throw error} } } if (require && require.main === module) {;'
   }
-  const manager = new LogManager()manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager "failed":',error),process && process.exit(1)})} module && module.exports = LogManager;#!/usr/bin/env node const fs = const path =;'
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+  const manager = new LogManager()manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager 'failed':',error),process && process.exit(1)})} module && module.exports = LogManager;#!/usr/bin/env node const fs = const path =;'
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1120,28 +1120,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -1162,34 +1162,34 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1197,28 +1197,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -1239,34 +1239,34 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1274,28 +1274,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -1316,34 +1316,34 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1351,28 +1351,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -1393,36 +1393,36 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1430,28 +1430,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -1472,34 +1472,34 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1507,28 +1507,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -1549,35 +1549,35 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1585,28 +1585,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -1627,34 +1627,34 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1662,28 +1662,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -1704,34 +1704,34 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1739,28 +1739,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -1781,34 +1781,34 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1816,28 +1816,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -1858,36 +1858,36 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1895,28 +1895,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -1937,34 +1937,34 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -1972,28 +1972,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -2014,35 +2014,35 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -2050,28 +2050,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -2092,34 +2092,34 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound": 0}this.setupDirectories()this.setupLogging(,;'
-} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd()this.logsDir = path.join(this.projectRoot,'logs')this.errorReportsDir = path.join(this.projectRoot,'error-reports')this.backupDir = path.join(this.projectRoot,'logs/backup')this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound': 0}this.setupDirectories()this.setupLogging(,;'
+} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
   }
   const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.trim())fs.appendFileSync(this.logFile,logEntry)} async analyzeLogs() { this.log('Analyzing log files...','INFO')try { const logFiles = this.getLogFiles()this.logStats.totalFiles = logFiles.length; let totalSize = 0;'
@@ -2127,28 +2127,28 @@ const { execSync } = class LogManager { constructor() { this.projectRoot = proce
 
 const fileStats = []; logFiles.forEach(file = > { try { const stats = fs.statSync(file;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} })this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO')fileStats.sort((a,b) => a.age - b.age)return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR')return []} } async rotateLogs() { this.log('Rotating log files...','INFO')try { const logFiles = this.getLogFiles()const now = new Date(;'
   }
   const timestamp = now.toISOString().replace(/[:.]/g,'-')let rotatedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = Date.now() - stats.mtime.getTime()const fileAgeDays = fileAge / (1000 * 60 * 60 * 24)if (fileAgeDays > 7 || stats.size > 10 * 1024 * 1024) { const fileName = path.basename(file,path.extname(file))const extension = path.extname(file;'
   }
   const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe' })this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
+const newPath = path.join(this.backupDir,newName)fs.renameSync(file,newPath)if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe' })this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} })this.log(`Rotated ${rotatedCount} log files`,'INFO')return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR')return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO')try { const backupFiles = this.getBackupFiles()const now = Date.now(;'
   }
   const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 0; backupFiles.forEach(file = > { try { const stats = fs.statSync(file)const fileAge = now - stats.mtime.getTime()if (fileAge > maxAge) {;
   }
-  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR')return { "cleanedCount": 0,"spaceFreed": 0 }},'
+  const size = stats.size; fs.unlinkSync(file)cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} })this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO')return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR')return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO')try { const logFiles = this.getLogFiles()let compressedCount = 0; logFiles.forEach(file = > { try { const stats = fs.statSync(file)if (stats.size > 5 * 1024 * 1024) {;'
   }
-  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','})compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
+  const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','})compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} })this.log(`Compressed ${compressedCount} log files`,'INFO')return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR')return 0} } async checkLogHealth() { this.log('Checking log health...','INFO')try { const logFiles = this.getLogFiles()let errorsFound = 0;'
 
 }
 
 const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; logFiles.forEach(file = > { try { const content = fs.readFileSync(file,'utf8')errorPatterns.forEach((pattern) => {;'
   }
-  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
+  const matches = content.match(pattern)if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} })this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO')return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR')return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO')try { const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN')await this.cleanOldLogs()await this.compressLogs()const compressedFiles = this.getCompressedFiles()compressedFiles.forEach((file) => { try { const sourceFile = file.replace('.gz','')if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile)this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO')try {;'
   }
   const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
+const configPath = path.join(this.logsDir,'logrotate.conf')fs.writeFileSync(configPath,logrotateConfig)this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() {;'
   }
   const files = []; function walkDir() { if (!fs.existsSync(dir)) return;
 
@@ -2169,31 +2169,31 @@ const items = fs.readdirSync(this.backupDir)items.forEach((item) => { const full
 const items = fs.readdirSync(dir)items.forEach((item) => { const fullPath = path.join(dir,item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir;'
   return files} getDiskSpace() { try {;
 }
-const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,;'
+const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,;'
 })const lines = result.trim().split('\n';'
   const lastLine = lines[lines.length - 1];
 
 const parts = lastLine.split(/\s+/;
-  return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN')return { "total": 0,"used": 0,"available": 0 }},'
+  return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN')return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
 const i = Math.floor(Math.log(bytes) / Math.log(k);
-  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace()"recommendations": this.generateRecommendations(;'
+  return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace()'recommendations': this.generateRecommendations(;'
 }
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report "generated": ${reportFil,`}`,'INFO';'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`)fs.writeFileSync(reportFile,JSON.stringify(report,null,2))this.log(`Report 'generated': ${reportFil,`}`,'INFO';'
   return report} generateRecommendations() {;
   }
   const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule';'
 }
 
-const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`"Summary": ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
-  return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
+const diskSpace = this.getDiskSpace()if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO')await this.analyzeLogs()await this.checkLogHealth()await this.rotateLogs()await this.cleanOldLogs()await this.compressLogs()await this.optimizeLogStorage()const report = this.generateReport()this.log('Log management automation completed','INFO')this.log(`'Summary': ${this.logStats.filesCleane,`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO';'
+  return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR')throw error} } } if (require.main === module) {;'
   }
-  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager()manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
   async run() {
     }
     try {
@@ -2214,9 +2214,9 @@ await this.optimizeLogStorage();
 
 const report = this.generateReport();
       this.log('Log management automation completed', 'INFO');'
-      this.log(`"Summary": ${this.logStats.filesCleaned} files cleaned, ${this.formatBytes(this.logStats.spaceFreed)} freed`, 'INFO');'      return report} catch (error) {
+      this.log(`'Summary': ${this.logStats.filesCleaned} files cleaned, ${this.formatBytes(this.logStats.spaceFreed)} freed`, 'INFO');'      return report} catch (error) {
       }
-      this.log(`Fatal error in log "manager": ${error.message}`, 'ERROR');'      throw error}
+      this.log(`Fatal error in log 'manager': ${error.message}`, 'ERROR');'      throw error}
   }
 
 
@@ -2233,11 +2233,11 @@ if (require.main = == module) {
       }
 
       process && process.exit(0)})
-    .catch((error) => {console && console.error('Log manager "failed": ', error),process && process.exit(1)})}'
+    .catch((error) => {console && console.error('Log manager 'failed': ', error),process && process.exit(1)})}'
 module && module.exports = LogManager;
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup'); this && this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup'); this && this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'log-manager && manager.log'),this && this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -2247,7 +2247,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.lo
 
 const fileStats = []; logFiles && logFiles.forEach(file = > { try {;
   }
-  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size; "modified": stats && stats.mtime; "age": Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} }); this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total "size": ${this && this.formatBytes(totalSize,`}`,'INFO'); fileStats && fileStats.sort((a,b) => a && a.age - b && b.age); return fileStats} catch (error) { this && this.log(`Error analyzing "logs": ${error && error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO'); try { const logFiles = this && this.getLogFiles();'
+  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({'name': path && path.basename(file),'path': file,'size': size; 'modified': stats && stats.mtime; 'age': Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} }); this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total 'size': ${this && this.formatBytes(totalSize,`}`,'INFO'); fileStats && fileStats.sort((a,b) => a && a.age - b && b.age); return fileStats} catch (error) { this && this.log(`Error analyzing 'logs': ${error && error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO'); try { const logFiles = this && this.getLogFiles();'
 
 }
 
@@ -2264,7 +2264,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path && path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path && path.join(this && this.backupDir,newName); fs && fs.renameSync(file,newPath); if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this && this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log "file": ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this && this.log(`Error during log "rotation": ${error && error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO'); try { const backupFiles = this && this.getBackupFiles();'
+const newPath = path && path.join(this && this.backupDir,newName); fs && fs.renameSync(file,newPath); if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this && this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log 'file': ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this && this.log(`Error during log 'rotation': ${error && error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO'); try { const backupFiles = this && this.getBackupFiles();'
 
 }
 
@@ -2274,10 +2274,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs && fs.statSync(file);
 
-const fileAge = now - stats && stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats && stats.size; fs && fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old "log": ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning old "logs": ${error && error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats && stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats && stats.size; fs && fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old 'log': ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this && this.log(`Error cleaning old 'logs': ${error && error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this && this.log('Compressing large log files...','INFO'); try { const logFiles = this && this.getLogFiles(); let compressedCount = 0; logFiles && logFiles.forEach(file = > { try {;'
   }
-  const stats = fs && fs.statSync(file); if (stats && stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this && this.log(`Compressed log "file": ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this && this.log(`Error during log "compression": ${error && error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO'); try { const logFiles = this && this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs && fs.statSync(file); if (stats && stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this && this.log(`Compressed log 'file': ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this && this.log(`Error during log 'compression': ${error && error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO'); try { const logFiles = this && this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -2285,14 +2285,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs && fs.readFileSync(file,'utf8'); errorPatterns && errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content && content.match(pattern); if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this && this.log(`Error checking log "health": ${error && error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO'); try { const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this && this.cleanOldLogs(); await this && this.compressLogs();'
+  const matches = content && content.match(pattern); if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this && this.log(`Error checking log 'health': ${error && error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO'); try { const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this && this.cleanOldLogs(); await this && this.compressLogs();'
 
 }
 
 const compressedFiles = this && this.getCompressedFiles(); compressedFiles && compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file && file.replace('.gz',''); if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile); this && this.log(`Removed source file after "compression": ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source "file": ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log "storage": ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf'); fs && fs.writeFileSync(configPath,logrotateConfig); this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log "rotation": ${error && error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;'
+  const sourceFile = file && file.replace('.gz',''); if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile); this && this.log(`Removed source file after 'compression': ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source 'file': ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log 'storage': ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf'); fs && fs.writeFileSync(configPath,logrotateConfig); this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log 'rotation': ${error && error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;'
 
 }
 
@@ -2316,34 +2316,34 @@ const items = fs && fs.readdirSync(dir); items && items.forEach(item = > {;
   }
   const fullPath = path && path.join(dir,item);
 
-const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this && this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this && this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result && result.trim().split('\n');'
 
 const lastLine = lines[lines && lines.length - 1];
 
-const parts = lastLine && lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this && this.log(`Error getting disk "space": ${error && error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine && lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this && this.log(`Error getting disk 'space': ${error && error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this && this.logStats,"diskSpace": this && this.getDiskSpace(); "recommendations": this && this.generateRecommendations(,;'
+const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this && this.logStats,'diskSpace': this && this.getDiskSpace(); 'recommendations': this && this.generateRecommendations(,;'
 };
 
-const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO'); await this && this.analyzeLogs(); await this && this.checkLogHealth(); await this && this.rotateLogs(); await this && this.cleanOldLogs(); await this && this.compressLogs(); await this && this.optimizeLogStorage();'
 
 }
 
-const report = this && this.generateReport(); this && this.log('Log management automation completed','INFO'); this && this.log(`"Summary": ${this && this.logStats.filesCleane,;`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in log "manager": ${error && error.messag,`}`,'ERROR'); throw error} } } if (require && require.main = == module) {;'
+const report = this && this.generateReport(); this && this.log('Log management automation completed','INFO'); this && this.log(`'Summary': ${this && this.logStats.filesCleane,;`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in log 'manager': ${error && error.messag,`}`,'ERROR'); throw error} } } if (require && require.main = == module) {;'
   }
-  const manager = new LogManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager "failed":',error),process && process.exit(1)})} module && module.exports = LogManager;'
+  const manager = new LogManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager 'failed':',error),process && process.exit(1)})} module && module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup'); this && this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup'); this && this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'log-manager && manager.log'),this && this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -2353,7 +2353,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.lo
 
 const fileStats = []; logFiles && logFiles.forEach(file = > { try {;
   }
-  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size; "modified": stats && stats.mtime; "age": Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} }); this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total "size": ${this && this.formatBytes(totalSize,`}`,'INFO'); fileStats && fileStats.sort((a,b) => a && a.age - b && b.age); return fileStats} catch (error) { this && this.log(`Error analyzing "logs": ${error && error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO'); try { const logFiles = this && this.getLogFiles();'
+  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({'name': path && path.basename(file),'path': file,'size': size; 'modified': stats && stats.mtime; 'age': Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} }); this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total 'size': ${this && this.formatBytes(totalSize,`}`,'INFO'); fileStats && fileStats.sort((a,b) => a && a.age - b && b.age); return fileStats} catch (error) { this && this.log(`Error analyzing 'logs': ${error && error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO'); try { const logFiles = this && this.getLogFiles();'
 
 }
 
@@ -2370,7 +2370,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path && path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path && path.join(this && this.backupDir,newName); fs && fs.renameSync(file,newPath); if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this && this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log "file": ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this && this.log(`Error during log "rotation": ${error && error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO'); try { const backupFiles = this && this.getBackupFiles();'
+const newPath = path && path.join(this && this.backupDir,newName); fs && fs.renameSync(file,newPath); if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this && this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log 'file': ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this && this.log(`Error during log 'rotation': ${error && error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO'); try { const backupFiles = this && this.getBackupFiles();'
 
 }
 
@@ -2380,10 +2380,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs && fs.statSync(file);
 
-const fileAge = now - stats && stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats && stats.size; fs && fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old "log": ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning old "logs": ${error && error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats && stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats && stats.size; fs && fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old 'log': ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this && this.log(`Error cleaning old 'logs': ${error && error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this && this.log('Compressing large log files...','INFO'); try { const logFiles = this && this.getLogFiles(); let compressedCount = 0; logFiles && logFiles.forEach(file = > { try {;'
   }
-  const stats = fs && fs.statSync(file); if (stats && stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this && this.log(`Compressed log "file": ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this && this.log(`Error during log "compression": ${error && error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO'); try { const logFiles = this && this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs && fs.statSync(file); if (stats && stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this && this.log(`Compressed log 'file': ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this && this.log(`Error during log 'compression': ${error && error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO'); try { const logFiles = this && this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -2391,14 +2391,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs && fs.readFileSync(file,'utf8'); errorPatterns && errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content && content.match(pattern); if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this && this.log(`Error checking log "health": ${error && error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO'); try { const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this && this.cleanOldLogs(); await this && this.compressLogs();'
+  const matches = content && content.match(pattern); if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this && this.log(`Error checking log 'health': ${error && error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO'); try { const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this && this.cleanOldLogs(); await this && this.compressLogs();'
 
 }
 
 const compressedFiles = this && this.getCompressedFiles(); compressedFiles && compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file && file.replace('.gz',''); if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile); this && this.log(`Removed source file after "compression": ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source "file": ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log "storage": ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf'); fs && fs.writeFileSync(configPath,logrotateConfig); this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log "rotation": ${error && error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;'
+  const sourceFile = file && file.replace('.gz',''); if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile); this && this.log(`Removed source file after 'compression': ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source 'file': ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log 'storage': ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf'); fs && fs.writeFileSync(configPath,logrotateConfig); this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log 'rotation': ${error && error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;'
 
 }
 
@@ -2422,34 +2422,34 @@ const items = fs && fs.readdirSync(dir); items && items.forEach(item = > {;
   }
   const fullPath = path && path.join(dir,item);
 
-const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this && this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this && this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result && result.trim().split('\n');'
 
 const lastLine = lines[lines && lines.length - 1];
 
-const parts = lastLine && lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this && this.log(`Error getting disk "space": ${error && error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine && lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this && this.log(`Error getting disk 'space': ${error && error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this && this.logStats,"diskSpace": this && this.getDiskSpace(); "recommendations": this && this.generateRecommendations(,;'
+const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this && this.logStats,'diskSpace': this && this.getDiskSpace(); 'recommendations': this && this.generateRecommendations(,;'
 };
 
-const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO'); await this && this.analyzeLogs(); await this && this.checkLogHealth(); await this && this.rotateLogs(); await this && this.cleanOldLogs(); await this && this.compressLogs(); await this && this.optimizeLogStorage();'
 
 }
 
-const report = this && this.generateReport(); this && this.log('Log management automation completed','INFO'); this && this.log(`"Summary": ${this && this.logStats.filesCleane,;`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in log "manager": ${error && error.messag,`}`,'ERROR'); throw error} } } if (require && require.main = == module) {;'
+const report = this && this.generateReport(); this && this.log('Log management automation completed','INFO'); this && this.log(`'Summary': ${this && this.logStats.filesCleane,;`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in log 'manager': ${error && error.messag,`}`,'ERROR'); throw error} } } if (require && require.main = == module) {;'
   }
-  const manager = new LogManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager "failed":',error),process && process.exit(1)})} module && module.exports = LogManager;'
+  const manager = new LogManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager 'failed':',error),process && process.exit(1)})} module && module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup'); this && this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup'); this && this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'log-manager && manager.log'),this && this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -2459,7 +2459,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.lo
 
 const fileStats = []; logFiles && logFiles.forEach(file = > { try {;
   }
-  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size; "modified": stats && stats.mtime; "age": Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} }); this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total "size": ${this && this.formatBytes(totalSize,`}`,'INFO'); fileStats && fileStats.sort((a,b) => a && a.age - b && b.age); return fileStats} catch (error) { this && this.log(`Error analyzing "logs": ${error && error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO'); try { const logFiles = this && this.getLogFiles();'
+  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({'name': path && path.basename(file),'path': file,'size': size; 'modified': stats && stats.mtime; 'age': Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} }); this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total 'size': ${this && this.formatBytes(totalSize,`}`,'INFO'); fileStats && fileStats.sort((a,b) => a && a.age - b && b.age); return fileStats} catch (error) { this && this.log(`Error analyzing 'logs': ${error && error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO'); try { const logFiles = this && this.getLogFiles();'
 
 }
 
@@ -2476,7 +2476,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path && path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path && path.join(this && this.backupDir,newName); fs && fs.renameSync(file,newPath); if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this && this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log "file": ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this && this.log(`Error during log "rotation": ${error && error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO'); try { const backupFiles = this && this.getBackupFiles();'
+const newPath = path && path.join(this && this.backupDir,newName); fs && fs.renameSync(file,newPath); if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this && this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log 'file': ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this && this.log(`Error during log 'rotation': ${error && error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO'); try { const backupFiles = this && this.getBackupFiles();'
 
 }
 
@@ -2486,10 +2486,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs && fs.statSync(file);
 
-const fileAge = now - stats && stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats && stats.size; fs && fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old "log": ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning old "logs": ${error && error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats && stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats && stats.size; fs && fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old 'log': ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this && this.log(`Error cleaning old 'logs': ${error && error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this && this.log('Compressing large log files...','INFO'); try { const logFiles = this && this.getLogFiles(); let compressedCount = 0; logFiles && logFiles.forEach(file = > { try {;'
   }
-  const stats = fs && fs.statSync(file); if (stats && stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this && this.log(`Compressed log "file": ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this && this.log(`Error during log "compression": ${error && error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO'); try { const logFiles = this && this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs && fs.statSync(file); if (stats && stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this && this.log(`Compressed log 'file': ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this && this.log(`Error during log 'compression': ${error && error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO'); try { const logFiles = this && this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -2497,14 +2497,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs && fs.readFileSync(file,'utf8'); errorPatterns && errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content && content.match(pattern); if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this && this.log(`Error checking log "health": ${error && error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO'); try { const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this && this.cleanOldLogs(); await this && this.compressLogs();'
+  const matches = content && content.match(pattern); if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this && this.log(`Error checking log 'health': ${error && error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO'); try { const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this && this.cleanOldLogs(); await this && this.compressLogs();'
 
 }
 
 const compressedFiles = this && this.getCompressedFiles(); compressedFiles && compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file && file.replace('.gz',''); if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile); this && this.log(`Removed source file after "compression": ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source "file": ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log "storage": ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf'); fs && fs.writeFileSync(configPath,logrotateConfig); this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log "rotation": ${error && error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;'
+  const sourceFile = file && file.replace('.gz',''); if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile); this && this.log(`Removed source file after 'compression': ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source 'file': ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log 'storage': ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf'); fs && fs.writeFileSync(configPath,logrotateConfig); this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log 'rotation': ${error && error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;'
 
 }
 
@@ -2528,34 +2528,34 @@ const items = fs && fs.readdirSync(dir); items && items.forEach(item = > {;
   }
   const fullPath = path && path.join(dir,item);
 
-const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this && this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this && this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result && result.trim().split('\n');'
 
 const lastLine = lines[lines && lines.length - 1];
 
-const parts = lastLine && lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this && this.log(`Error getting disk "space": ${error && error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine && lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this && this.log(`Error getting disk 'space': ${error && error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this && this.logStats,"diskSpace": this && this.getDiskSpace(); "recommendations": this && this.generateRecommendations(,;'
+const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this && this.logStats,'diskSpace': this && this.getDiskSpace(); 'recommendations': this && this.generateRecommendations(,;'
 };
 
-const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO'); await this && this.analyzeLogs(); await this && this.checkLogHealth(); await this && this.rotateLogs(); await this && this.cleanOldLogs(); await this && this.compressLogs(); await this && this.optimizeLogStorage();'
 
 }
 
-const report = this && this.generateReport(); this && this.log('Log management automation completed','INFO'); this && this.log(`"Summary": ${this && this.logStats.filesCleane,;`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in log "manager": ${error && error.messag,`}`,'ERROR'); throw error} } } if (require && require.main = == module) {;'
+const report = this && this.generateReport(); this && this.log('Log management automation completed','INFO'); this && this.log(`'Summary': ${this && this.logStats.filesCleane,;`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in log 'manager': ${error && error.messag,`}`,'ERROR'); throw error} } } if (require && require.main = == module) {;'
   }
-  const manager = new LogManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager "failed":',error),process && process.exit(1)})} module && module.exports = LogManager;'
+  const manager = new LogManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager 'failed':',error),process && process.exit(1)})} module && module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup'); this && this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0, "spaceFreed": 0, "errorsFound":  ,;'
-}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup'); this && this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0, 'spaceFreed': 0, 'errorsFound':  ,;'
+}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'log-manager && manager.log'),this && this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -2565,7 +2565,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.lo
 
 const fileStats = []; logFiles && logFiles.forEach(file = > { try {;
   }
-  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size, "modified": stats && stats.mtime, "age": Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} }); this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total "size": ${this && this.formatBytes(totalSize,`}`,'INFO'); fileStats && fileStats.sort((a,b) => a && a.age - b && b.age); return fileStats} catch (error) { this && this.log(`Error analyzing "logs": ${error && error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO'); try { const logFiles = this && this.getLogFiles();'
+  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({'name': path && path.basename(file),'path': file,'size': size, 'modified': stats && stats.mtime, 'age': Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} }); this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total 'size': ${this && this.formatBytes(totalSize,`}`,'INFO'); fileStats && fileStats.sort((a,b) => a && a.age - b && b.age); return fileStats} catch (error) { this && this.log(`Error analyzing 'logs': ${error && error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO'); try { const logFiles = this && this.getLogFiles();'
 
 }
 
@@ -2582,7 +2582,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path && path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path && path.join(this && this.backupDir,newName); fs && fs.renameSync(file,newPath); if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this && this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log "file": ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this && this.log(`Error during log "rotation": ${error && error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO'); try { const backupFiles = this && this.getBackupFiles();'
+const newPath = path && path.join(this && this.backupDir,newName); fs && fs.renameSync(file,newPath); if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this && this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log 'file': ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this && this.log(`Error during log 'rotation': ${error && error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO'); try { const backupFiles = this && this.getBackupFiles();'
 
 }
 
@@ -2592,10 +2592,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs && fs.statSync(file);
 
-const fileAge = now - stats && stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats && stats.size; fs && fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old "log": ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning old "logs": ${error && error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats && stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats && stats.size; fs && fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old 'log': ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this && this.log(`Error cleaning old 'logs': ${error && error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this && this.log('Compressing large log files...','INFO'); try { const logFiles = this && this.getLogFiles(); let compressedCount = 0; logFiles && logFiles.forEach(file = > { try {;'
   }
-  const stats = fs && fs.statSync(file); if (stats && stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this && this.log(`Compressed log "file": ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this && this.log(`Error during log "compression": ${error && error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO'); try { const logFiles = this && this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs && fs.statSync(file); if (stats && stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this && this.log(`Compressed log 'file': ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this && this.log(`Error during log 'compression': ${error && error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO'); try { const logFiles = this && this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -2603,14 +2603,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs && fs.readFileSync(file,'utf8'); errorPatterns && errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content && content.match(pattern); if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this && this.log(`Error checking log "health": ${error && error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO'); try { const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this && this.cleanOldLogs(); await this && this.compressLogs();'
+  const matches = content && content.match(pattern); if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this && this.log(`Error checking log 'health': ${error && error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO'); try { const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this && this.cleanOldLogs(); await this && this.compressLogs();'
 
 }
 
 const compressedFiles = this && this.getCompressedFiles(); compressedFiles && compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file && file.replace('.gz',''); if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile); this && this.log(`Removed source file after "compression": ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source "file": ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log "storage": ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf'); fs && fs.writeFileSync(configPath,logrotateConfig); this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log "rotation": ${error && error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;'
+  const sourceFile = file && file.replace('.gz',''); if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile); this && this.log(`Removed source file after 'compression': ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source 'file': ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log 'storage': ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf'); fs && fs.writeFileSync(configPath,logrotateConfig); this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log 'rotation': ${error && error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;'
 
 }
 
@@ -2634,40 +2634,40 @@ const items = fs && fs.readdirSync(dir); items && items.forEach(item = > {;
   }
   const fullPath = path && path.join(dir,item);
 
-const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this && this.projectRoot,"encoding": 'utf8','
+const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this && this.projectRoot,'encoding': 'utf8','
     }
-    "stdio": 'pipe,'
+    'stdio': 'pipe,'
 });
 
 const lines = result && result.trim().split('\n');'
 
 const lastLine = lines[lines && lines.length - 1];
 
-const parts = lastLine && lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024,;
+const parts = lastLine && lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024,;
     }
-    "available": parseInt(parts[3]) * 1024}} catch (error) { this && this.log(`Error getting disk "space": ${error && error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+    'available': parseInt(parts[3]) * 1024} catch (error) { this && this.log(`Error getting disk 'space': ${error && error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this && this.logStats,"diskSpace": this && this.getDiskSpace(),;'
+const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this && this.logStats,'diskSpace': this && this.getDiskSpace(),;'
     }
-    "recommendations": this && this.generateRecommendations(
+    'recommendations': this && this.generateRecommendations(
 };
 
-const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO'); await this && this.analyzeLogs(); await this && this.checkLogHealth(); await this && this.rotateLogs(); await this && this.cleanOldLogs(); await this && this.compressLogs(); await this && this.optimizeLogStorage();'
 
 }
 
-const report = this && this.generateReport(); this && this.log('Log management automation completed','INFO'); this && this.log(`"Summary": ${this && this.logStats.filesCleane,;`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in log "manager": ${error && error.messag,`}`,'ERROR'); throw error} } } if (require && require.main = == module) {;'
+const report = this && this.generateReport(); this && this.log('Log management automation completed','INFO'); this && this.log(`'Summary': ${this && this.logStats.filesCleane,;`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in log 'manager': ${error && error.messag,`}`,'ERROR'); throw error} } } if (require && require.main = == module) {;'
   }
-  const manager = new LogManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager "failed":',error),process && process.exit(1)})} module && module.exports = LogManager;'
+  const manager = new LogManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager 'failed':',error),process && process.exit(1)})} module && module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup'); this && this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0, "spaceFreed": 0, "errorsFound":  ,;'
-}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this && this.projectRoot = process && process.cwd(); this && this.logsDir = path && path.join(this && this.projectRoot,'logs'); this && this.errorReportsDir = path && path.join(this && this.projectRoot,'error-reports'); this && this.backupDir = path && path.join(this && this.projectRoot,'logs/backup'); this && this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0, 'spaceFreed': 0, 'errorsFound':  ,;'
+}; this && this.setupDirectories(); this && this.setupLogging()} setupDirectories() { [this && this.logsDir,this && this.errorReportsDir,this && this.backupDir].forEach(dir = > { if (!fs && fs.existsSync(dir)) { fs && fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this && this.logFile = path && path.join(this && this.logsDir,'log-manager && manager.log'),this && this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -2677,7 +2677,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console && console.lo
 
 const fileStats = []; logFiles && logFiles.forEach(file = > { try {;
   }
-  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({"name": path && path.basename(file),"path": file,"size": size, "modified": stats && stats.mtime, "age": Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} }); this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total "size": ${this && this.formatBytes(totalSize,`}`,'INFO'); fileStats && fileStats.sort((a,b) => a && a.age - b && b.age); return fileStats} catch (error) { this && this.log(`Error analyzing "logs": ${error && error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO'); try { const logFiles = this && this.getLogFiles();'
+  const size = stats && stats.size; totalSize += size; fileStats && fileStats.push({'name': path && path.basename(file),'path': file,'size': size, 'modified': stats && stats.mtime, 'age': Date && Date.now() - stats && stats.mtime.getTime()})} catch (error) { this && this.log(`Error reading file stats for ${file}: ${error && error.messag,`}`,'ERROR')} }); this && this.logStats.totalSize = totalSize; this && this.log(`Found ${logFiles && logFiles.length} log files,total 'size': ${this && this.formatBytes(totalSize,`}`,'INFO'); fileStats && fileStats.sort((a,b) => a && a.age - b && b.age); return fileStats} catch (error) { this && this.log(`Error analyzing 'logs': ${error && error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this && this.log('Rotating log files...','INFO'); try { const logFiles = this && this.getLogFiles();'
 
 }
 
@@ -2694,7 +2694,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path && path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path && path.join(this && this.backupDir,newName); fs && fs.renameSync(file,newPath); if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this && this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log "file": ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this && this.log(`Error during log "rotation": ${error && error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO'); try { const backupFiles = this && this.getBackupFiles();'
+const newPath = path && path.join(this && this.backupDir,newName); fs && fs.renameSync(file,newPath); if (stats && stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this && this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this && this.log(`Failed to compress ${newName}: ${error && error.message}`,'WARN')} } rotatedCount++; this && this.log(`Rotated log 'file': ${path && path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this && this.log(`Error rotating ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this && this.log(`Error during log 'rotation': ${error && error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this && this.log('Cleaning old log files...','INFO'); try { const backupFiles = this && this.getBackupFiles();'
 
 }
 
@@ -2704,10 +2704,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs && fs.statSync(file);
 
-const fileAge = now - stats && stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats && stats.size; fs && fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old "log": ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this && this.log(`Error cleaning old "logs": ${error && error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats && stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats && stats.size; fs && fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this && this.log(`Cleaned old 'log': ${path && path.basename(file)} (${this && this.formatBytes(size,`})`,'INFO')} } catch (error) { this && this.log(`Error cleaning ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.filesCleaned = cleanedCount; this && this.logStats.spaceFreed = spaceFreed; this && this.log(`Cleaned ${cleanedCount} old log files,freed ${this && this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this && this.log(`Error cleaning old 'logs': ${error && error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this && this.log('Compressing large log files...','INFO'); try { const logFiles = this && this.getLogFiles(); let compressedCount = 0; logFiles && logFiles.forEach(file = > { try {;'
   }
-  const stats = fs && fs.statSync(file); if (stats && stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this && this.log(`Compressed log "file": ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this && this.log(`Error during log "compression": ${error && error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO'); try { const logFiles = this && this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs && fs.statSync(file); if (stats && stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs && fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this && this.log(`Compressed log 'file': ${path && path.basename(file,`}`,'INFO')} } } catch (error) { this && this.log(`Error compressing ${file}: ${error && error.message}`,'ERROR')} }); this && this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this && this.log(`Error during log 'compression': ${error && error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this && this.log('Checking log health...','INFO'); try { const logFiles = this && this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -2715,14 +2715,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs && fs.readFileSync(file,'utf8'); errorPatterns && errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content && content.match(pattern); if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this && this.log(`Error checking log "health": ${error && error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO'); try { const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this && this.cleanOldLogs(); await this && this.compressLogs();'
+  const matches = content && content.match(pattern); if (matches) { errorsFound += matches && matches.length} })} catch (error) { this && this.log(`Error reading log file ${file}: ${error && error.message}`,'ERROR')} }); this && this.logStats.errorsFound = errorsFound; this && this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this && this.log(`Error checking log 'health': ${error && error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this && this.log('Optimizing log storage...','INFO'); try { const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { this && this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this && this.cleanOldLogs(); await this && this.compressLogs();'
 
 }
 
 const compressedFiles = this && this.getCompressedFiles(); compressedFiles && compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file && file.replace('.gz',''); if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile); this && this.log(`Removed source file after "compression": ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source "file": ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log "storage": ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf'); fs && fs.writeFileSync(configPath,logrotateConfig); this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log "rotation": ${error && error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;'
+  const sourceFile = file && file.replace('.gz',''); if (fs && fs.existsSync(sourceFile)) { fs && fs.unlinkSync(sourceFile); this && this.log(`Removed source file after 'compression': ${path && path.basename(sourceFile,`}`,'INFO')} } catch (error) { this && this.log(`Error removing source 'file': ${error && error.messag,`}`,'ERROR')} })} await this && this.setupLogRotation()} catch (error) { this && this.log(`Error optimizing log 'storage': ${error && error.messag,`}`,'ERROR')} } async setupLogRotation() { this && this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this && this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path && path.join(this && this.logsDir,'logrotate && logrotate.conf'); fs && fs.writeFileSync(configPath,logrotateConfig); this && this.log('Log rotation configuration created','INFO')} catch (error) { this && this.log(`Error setting up log 'rotation': ${error && error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs && fs.existsSync(dir)) return;'
 
 }
 
@@ -2746,40 +2746,40 @@ const items = fs && fs.readdirSync(dir); items && items.forEach(item = > {;
   }
   const fullPath = path && path.join(dir,item);
 
-const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this && this.projectRoot,"encoding": 'utf8','
+const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat && stat.isFile() && item && item.endsWith('.gz')) { files && files.push(fullPath)} })} walkDir(this && this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this && this.projectRoot,'encoding': 'utf8','
     }
-    "stdio": 'pipe,'
+    'stdio': 'pipe,'
 });
 
 const lines = result && result.trim().split('\n');'
 
 const lastLine = lines[lines && lines.length - 1];
 
-const parts = lastLine && lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024,;
+const parts = lastLine && lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024,;
     }
-    "available": parseInt(parts[3]) * 1024}} catch (error) { this && this.log(`Error getting disk "space": ${error && error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+    'available': parseInt(parts[3]) * 1024} catch (error) { this && this.log(`Error getting disk 'space': ${error && error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this && this.logStats,"diskSpace": this && this.getDiskSpace(),;'
+const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k)); return parseFloat((bytes / Math && Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this && this.logStats,'diskSpace': this && this.getDiskSpace(),;'
     }
-    "recommendations": this && this.generateRecommendations(
+    'recommendations': this && this.generateRecommendations(
 };
 
-const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path && path.join(this && this.errorReportsDir,`log-manager-report-${Date && Date.now()}.json`); fs && fs.writeFileSync(reportFile,JSON && JSON.stringify(report,null,2)); this && this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this && this.logStats.totalSize > 1024 * 1024 * 100) { recommendations && recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this && this.logStats.errorsFound > 100) { recommendations && recommendations.push('High number of errors in logs,investigate application issues')} if (this && this.logStats.filesCleaned = == 0) { recommendations && recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this && this.getDiskSpace(); if (diskSpace && diskSpace.available < 1024 * 1024 * 1024) { recommendations && recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this && this.log('Starting log management automation...','INFO'); await this && this.analyzeLogs(); await this && this.checkLogHealth(); await this && this.rotateLogs(); await this && this.cleanOldLogs(); await this && this.compressLogs(); await this && this.optimizeLogStorage();'
 
 }
 
-const report = this && this.generateReport(); this && this.log('Log management automation completed','INFO'); this && this.log(`"Summary": ${this && this.logStats.filesCleane,;`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in log "manager": ${error && error.messag,`}`,'ERROR'); throw error} } } if (require && require.main = == module) {;'
+const report = this && this.generateReport(); this && this.log('Log management automation completed','INFO'); this && this.log(`'Summary': ${this && this.logStats.filesCleane,;`} files cleaned,${this && this.formatBytes(this && this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this && this.log(`Fatal error in log 'manager': ${error && error.messag,`}`,'ERROR'); throw error} } } if (require && require.main = == module) {;'
   }
-  const manager = new LogManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager "failed":',error),process && process.exit(1)})} module && module.exports = LogManager;'
+  const manager = new LogManager(); manager && manager.run() .then(() => { process && process.exit(0)}) .catch((error) => {console && console.error('Log manager 'failed':',error),process && process.exit(1)})} module && module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -2789,7 +2789,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.
 
 const fileStats = []; logFiles.forEach(file = > { try {;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
 
 }
 
@@ -2806,7 +2806,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
+const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
 
 }
 
@@ -2816,10 +2816,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs.statSync(file);
 
-const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO'); try { const logFiles = this.getLogFiles(); let compressedCount = 0; logFiles.forEach(file = > { try {;'
   }
-  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -2827,14 +2827,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs.readFileSync(file,'utf8'); errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
+  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
 
 }
 
 const compressedFiles = this.getCompressedFiles(); compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
+  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
 
 }
 
@@ -2858,34 +2858,34 @@ const items = fs.readdirSync(dir); items.forEach(item = > {;
   }
   const fullPath = path.join(dir,item);
 
-const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result.trim().split('\n');'
 
 const lastLine = lines[lines.length - 1];
 
-const parts = lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace(); "recommendations": this.generateRecommendations(,;'
+const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace(); 'recommendations': this.generateRecommendations(,;'
 };
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO'); await this.analyzeLogs(); await this.checkLogHealth(); await this.rotateLogs(); await this.cleanOldLogs(); await this.compressLogs(); await this.optimizeLogStorage();'
 
 }
 
-const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`"Summary": ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
+const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`'Summary': ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
   }
-  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -2895,7 +2895,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.
 
 const fileStats = []; logFiles.forEach(file = > { try {;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
 
 }
 
@@ -2912,7 +2912,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
+const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
 
 }
 
@@ -2922,10 +2922,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs.statSync(file);
 
-const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO'); try { const logFiles = this.getLogFiles(); let compressedCount = 0; logFiles.forEach(file = > { try {;'
   }
-  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -2933,14 +2933,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs.readFileSync(file,'utf8'); errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
+  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
 
 }
 
 const compressedFiles = this.getCompressedFiles(); compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
+  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
 
 }
 
@@ -2964,34 +2964,34 @@ const items = fs.readdirSync(dir); items.forEach(item = > {;
   }
   const fullPath = path.join(dir,item);
 
-const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result.trim().split('\n');'
 
 const lastLine = lines[lines.length - 1];
 
-const parts = lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace(); "recommendations": this.generateRecommendations(,;'
+const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace(); 'recommendations': this.generateRecommendations(,;'
 };
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO'); await this.analyzeLogs(); await this.checkLogHealth(); await this.rotateLogs(); await this.cleanOldLogs(); await this.compressLogs(); await this.optimizeLogStorage();'
 
 }
 
-const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`"Summary": ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
+const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`'Summary': ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
   }
-  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -3001,7 +3001,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.
 
 const fileStats = []; logFiles.forEach(file = > { try {;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
 
 }
 
@@ -3018,7 +3018,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
+const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
 
 }
 
@@ -3028,10 +3028,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs.statSync(file);
 
-const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO'); try { const logFiles = this.getLogFiles(); let compressedCount = 0; logFiles.forEach(file = > { try {;'
   }
-  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -3039,14 +3039,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs.readFileSync(file,'utf8'); errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
+  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
 
 }
 
 const compressedFiles = this.getCompressedFiles(); compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
+  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
 
 }
 
@@ -3070,34 +3070,34 @@ const items = fs.readdirSync(dir); items.forEach(item = > {;
   }
   const fullPath = path.join(dir,item);
 
-const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result.trim().split('\n');'
 
 const lastLine = lines[lines.length - 1];
 
-const parts = lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace(); "recommendations": this.generateRecommendations(,;'
+const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace(); 'recommendations': this.generateRecommendations(,;'
 };
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO'); await this.analyzeLogs(); await this.checkLogHealth(); await this.rotateLogs(); await this.cleanOldLogs(); await this.compressLogs(); await this.optimizeLogStorage();'
 
 }
 
-const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`"Summary": ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
+const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`'Summary': ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
   }
-  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -3107,7 +3107,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.
 
 const fileStats = []; logFiles.forEach(file = > { try {;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
 
 }
 
@@ -3124,7 +3124,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
+const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
 
 }
 
@@ -3134,10 +3134,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs.statSync(file);
 
-const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO'); try { const logFiles = this.getLogFiles(); let compressedCount = 0; logFiles.forEach(file = > { try {;'
   }
-  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -3145,14 +3145,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs.readFileSync(file,'utf8'); errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
+  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
 
 }
 
 const compressedFiles = this.getCompressedFiles(); compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
+  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
 
 }
 
@@ -3176,36 +3176,36 @@ const items = fs.readdirSync(dir); items.forEach(item = > {;
   }
   const fullPath = path.join(dir,item);
 
-const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result.trim().split('\n');'
 
 const lastLine = lines[lines.length - 1];
 
-const parts = lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace(); "recommendations": this.generateRecommendations(,;'
+const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace(); 'recommendations': this.generateRecommendations(,;'
 };
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO'); await this.analyzeLogs(); await this.checkLogHealth(); await this.rotateLogs(); await this.cleanOldLogs(); await this.compressLogs(); await this.optimizeLogStorage();'
 
 }
 
-const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`"Summary": ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
+const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`'Summary': ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
   }
-  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 ursor/add-new-services-and-deploy-updates-0462,
 ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -3215,7 +3215,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.
 
 const fileStats = []; logFiles.forEach(file = > { try {;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
 
 }
 
@@ -3232,7 +3232,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
+const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
 
 }
 
@@ -3242,10 +3242,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs.statSync(file);
 
-const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO'); try { const logFiles = this.getLogFiles(); let compressedCount = 0; logFiles.forEach(file = > { try {;'
   }
-  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -3253,14 +3253,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs.readFileSync(file,'utf8'); errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
+  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
 
 }
 
 const compressedFiles = this.getCompressedFiles(); compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
+  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
 
 }
 
@@ -3284,34 +3284,34 @@ const items = fs.readdirSync(dir); items.forEach(item = > {;
   }
   const fullPath = path.join(dir,item);
 
-const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result.trim().split('\n');'
 
 const lastLine = lines[lines.length - 1];
 
-const parts = lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace(); "recommendations": this.generateRecommendations(,;'
+const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace(); 'recommendations': this.generateRecommendations(,;'
 };
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO'); await this.analyzeLogs(); await this.checkLogHealth(); await this.rotateLogs(); await this.cleanOldLogs(); await this.compressLogs(); await this.optimizeLogStorage();'
 
 }
 
-const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`"Summary": ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
+const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`'Summary': ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
   }
-  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -3321,7 +3321,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.
 
 const fileStats = []; logFiles.forEach(file = > { try {;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
 
 }
 
@@ -3338,7 +3338,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
+const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
 
 }
 
@@ -3348,10 +3348,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs.statSync(file);
 
-const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO'); try { const logFiles = this.getLogFiles(); let compressedCount = 0; logFiles.forEach(file = > { try {;'
   }
-  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -3359,14 +3359,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs.readFileSync(file,'utf8'); errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
+  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
 
 }
 
 const compressedFiles = this.getCompressedFiles(); compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
+  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
 
 }
 
@@ -3390,35 +3390,35 @@ const items = fs.readdirSync(dir); items.forEach(item = > {;
   }
   const fullPath = path.join(dir,item);
 
-const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result.trim().split('\n');'
 
 const lastLine = lines[lines.length - 1];
 
-const parts = lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace(); "recommendations": this.generateRecommendations(,;'
+const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace(); 'recommendations': this.generateRecommendations(,;'
 };
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO'); await this.analyzeLogs(); await this.checkLogHealth(); await this.rotateLogs(); await this.cleanOldLogs(); await this.compressLogs(); await this.optimizeLogStorage();'
 
 }
 
-const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`"Summary": ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
+const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`'Summary': ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
   }
-  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -3428,7 +3428,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.
 
 const fileStats = []; logFiles.forEach(file = > { try {;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
 
 }
 
@@ -3445,7 +3445,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
+const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
 
 }
 
@@ -3455,10 +3455,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs.statSync(file);
 
-const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO'); try { const logFiles = this.getLogFiles(); let compressedCount = 0; logFiles.forEach(file = > { try {;'
   }
-  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -3466,14 +3466,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs.readFileSync(file,'utf8'); errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
+  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
 
 }
 
 const compressedFiles = this.getCompressedFiles(); compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
+  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
 
 }
 
@@ -3497,34 +3497,34 @@ const items = fs.readdirSync(dir); items.forEach(item = > {;
   }
   const fullPath = path.join(dir,item);
 
-const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result.trim().split('\n');'
 
 const lastLine = lines[lines.length - 1];
 
-const parts = lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace(); "recommendations": this.generateRecommendations(,;'
+const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace(); 'recommendations': this.generateRecommendations(,;'
 };
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO'); await this.analyzeLogs(); await this.checkLogHealth(); await this.rotateLogs(); await this.cleanOldLogs(); await this.compressLogs(); await this.optimizeLogStorage();'
 
 }
 
-const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`"Summary": ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
+const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`'Summary': ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
   }
-  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'
 #!/usr/bin/env node const fs = const path =;
-const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {"totalFiles": 0,"totalSize": 0,"filesCleaned": 0; "spaceFreed": 0; "errorsFound":  ,;'
-}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ "recursive": true })} }
+const { execSync } = class LogManager { constructor() { this.projectRoot = process.cwd(); this.logsDir = path.join(this.projectRoot,'logs'); this.errorReportsDir = path.join(this.projectRoot,'error-reports'); this.backupDir = path.join(this.projectRoot,'logs/backup'); this.logStats = {'totalFiles': 0,'totalSize': 0,'filesCleaned': 0; 'spaceFreed': 0; 'errorsFound':  ,;'
+}; this.setupDirectories(); this.setupLogging()} setupDirectories() { [this.logsDir,this.errorReportsDir,this.backupDir].forEach(dir = > { if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ 'recursive': true })} }
 } setupLogging() {this.logFile = path.join(this.logsDir,'log-manager.log'),this.log('Log Manager started','INFO')} log(message,level = 'INFO') {;'
   }
   const timestamp = new Date().toISOString();
@@ -3534,7 +3534,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`; console.log(logEntry.
 
 const fileStats = []; logFiles.forEach(file = > { try {;
   }
-  const size = stats.size; totalSize += size; fileStats.push({"name": path.basename(file),"path": file,"size": size; "modified": stats.mtime; "age": Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total "size": ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing "logs": ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
+  const size = stats.size; totalSize += size; fileStats.push({'name': path.basename(file),'path': file,'size': size; 'modified': stats.mtime; 'age': Date.now() - stats.mtime.getTime()})} catch (error) { this.log(`Error reading file stats for ${file}: ${error.messag,`}`,'ERROR')} }); this.logStats.totalSize = totalSize; this.log(`Found ${logFiles.length} log files,total 'size': ${this.formatBytes(totalSize,`}`,'INFO'); fileStats.sort((a,b) => a.age - b.age); return fileStats} catch (error) { this.log(`Error analyzing 'logs': ${error.messag,`}`,'ERROR'); return []} } async rotateLogs() { this.log('Rotating log files...','INFO'); try { const logFiles = this.getLogFiles();'
 
 }
 
@@ -3551,7 +3551,7 @@ const fileAgeDays = fileAge / (1000 * 60 * 60 * 24); if (fileAgeDays > 7 || stat
 const extension = path.extname(file);
 
 const newName = `${fileName}-${timestamp}${extension}`;`
-const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip "${newPath}"`,{ "stdio": 'pipe','}); this.log(`Compressed rotated "log": ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log "file": ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log "rotation": ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
+const newPath = path.join(this.backupDir,newName); fs.renameSync(file,newPath); if (stats.size > 1024 * 1024) { try { execSync(`gzip '${newPath}'`,{ 'stdio': 'pipe','}); this.log(`Compressed rotated 'log': ${newNam,`}.gz`,'INFO')} catch (error) { this.log(`Failed to compress ${newName}: ${error.message}`,'WARN')} } rotatedCount++; this.log(`Rotated log 'file': ${path.basename(file)} -> ${newNam,`}`,'INFO')} } catch (error) { this.log(`Error rotating ${file}: ${error.message}`,'ERROR')} }); this.log(`Rotated ${rotatedCount} log files`,'INFO'); return rotatedCount} catch (error) { this.log(`Error during log 'rotation': ${error.messag,`}`,'ERROR'); return 0} } async cleanOldLogs() { this.log('Cleaning old log files...','INFO'); try { const backupFiles = this.getBackupFiles();'
 
 }
 
@@ -3561,10 +3561,10 @@ const maxAge = 30 * 24 * 60 * 60 * 1000; let cleanedCount = 0; let spaceFreed = 
   }
   const stats = fs.statSync(file);
 
-const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old "log": ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed }} catch (error) { this.log(`Error cleaning old "logs": ${error.messag,`}`,'ERROR'); return { "cleanedCount": 0,"spaceFreed": 0 }},'
+const fileAge = now - stats.mtime.getTime(); if (fileAge > maxAge) { const size = stats.size; fs.unlinkSync(file); cleanedCount++; spaceFreed += size; this.log(`Cleaned old 'log': ${path.basename(file)} (${this.formatBytes(size,`})`,'INFO')} } catch (error) { this.log(`Error cleaning ${file}: ${error.message}`,'ERROR')} }); this.logStats.filesCleaned = cleanedCount; this.logStats.spaceFreed = spaceFreed; this.log(`Cleaned ${cleanedCount} old log files,freed ${this.formatBytes(spaceFreed)}`,'INFO'); return { cleanedCount,spaceFreed } catch (error) { this.log(`Error cleaning old 'logs': ${error.messag,`}`,'ERROR'); return { 'cleanedCount': 0,'spaceFreed': 0 },'
 } async compressLogs() { this.log('Compressing large log files...','INFO'); try { const logFiles = this.getLogFiles(); let compressedCount = 0; logFiles.forEach(file = > { try {;'
   }
-  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip "${file}"`,{ "stdio": 'pipe','}); compressedCount++; this.log(`Compressed log "file": ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log "compression": ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
+  const stats = fs.statSync(file); if (stats.size > 5 * 1024 * 1024) { const compressedPath = `${file}.gz`; if (!fs.existsSync(compressedPath)) { execSync(`gzip '${file}'`,{ 'stdio': 'pipe','}); compressedCount++; this.log(`Compressed log 'file': ${path.basename(file,`}`,'INFO')} } } catch (error) { this.log(`Error compressing ${file}: ${error.message}`,'ERROR')} }); this.log(`Compressed ${compressedCount} log files`,'INFO'); return compressedCount} catch (error) { this.log(`Error during log 'compression': ${error.messag,`}`,'ERROR'); return 0} } async checkLogHealth() { this.log('Checking log health...','INFO'); try { const logFiles = this.getLogFiles(); let errorsFound = 0;'
 
 }
 
@@ -3572,14 +3572,14 @@ const errorPatterns = [/error/i,/exception/i,/fatal/i; /critical/i; /failed/i]; 
   }
   const content = fs.readFileSync(file,'utf8'); errorPatterns.forEach(pattern = > {;'
   }
-  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log "health": ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
+  const matches = content.match(pattern); if (matches) { errorsFound += matches.length} })} catch (error) { this.log(`Error reading log file ${file}: ${error.message}`,'ERROR')} }); this.logStats.errorsFound = errorsFound; this.log(`Found ${errorsFound} error patterns in log files`,'INFO'); return errorsFound} catch (error) { this.log(`Error checking log 'health': ${error.messag,`}`,'ERROR'); return 0} } async optimizeLogStorage() { this.log('Optimizing log storage...','INFO'); try { const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { this.log('Low disk space detected,performing aggressive cleanup','WARN'); await this.cleanOldLogs(); await this.compressLogs();'
 
 }
 
 const compressedFiles = this.getCompressedFiles(); compressedFiles.forEach(file = > { try {;
   }
-  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after "compression": ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source "file": ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log "storage": ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
-const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log "rotation": ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
+  const sourceFile = file.replace('.gz',''); if (fs.existsSync(sourceFile)) { fs.unlinkSync(sourceFile); this.log(`Removed source file after 'compression': ${path.basename(sourceFile,`}`,'INFO')} } catch (error) { this.log(`Error removing source 'file': ${error.messag,`}`,'ERROR')} })} await this.setupLogRotation()} catch (error) { this.log(`Error optimizing log 'storage': ${error.messag,`}`,'ERROR')} } async setupLogRotation() { this.log('Setting up log rotation schedule...','INFO'); try { const logrotateConfig = ` ${this.logsDir}/*.log { daily missingok rotate 7 compress delaycompress notifempty create 644 root root postrotate pm2 reloadLogs endscript } `;`
+const configPath = path.join(this.logsDir,'logrotate.conf'); fs.writeFileSync(configPath,logrotateConfig); this.log('Log rotation configuration created','INFO')} catch (error) { this.log(`Error setting up log 'rotation': ${error.messag,`}`,'ERROR')} } getLogFiles() { const files = []; function walkDir() { if (!fs.existsSync(dir)) return;'
 
 }
 
@@ -3603,28 +3603,28 @@ const items = fs.readdirSync(dir); items.forEach(item = > {;
   }
   const fullPath = path.join(dir,item);
 
-const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{"cwd": this.projectRoot,"encoding": 'utf8'; "stdio": 'pipe,'
+const stat = fs.statSync(fullPath); if (stat.isDirectory() && item !== 'backup') { walkDir(fullPath)} else if (stat.isFile() && item.endsWith('.gz')) { files.push(fullPath)} })} walkDir(this.logsDir); return files} getDiskSpace() { try { const result = execSync('df .',{'cwd': this.projectRoot,'encoding': 'utf8'; 'stdio': 'pipe,'
 });
 
 const lines = result.trim().split('\n');'
 
 const lastLine = lines[lines.length - 1];
 
-const parts = lastLine.split(/\s+/); return {"total": parseInt(parts[1]) * 1024,"used": parseInt(parts[2]) * 1024; "available": parseInt(parts[3]) * 1024}} catch (error) { this.log(`Error getting disk "space": ${error.messag,`}`,'WARN'); return { "total": 0,"used": 0,"available": 0 }},'
+const parts = lastLine.split(/\s+/); return {'total': parseInt(parts[1]) * 1024,'used': parseInt(parts[2]) * 1024; 'available': parseInt(parts[3]) * 1024} catch (error) { this.log(`Error getting disk 'space': ${error.messag,`}`,'WARN'); return { 'total': 0,'used': 0,'available': 0 },'
 } formatBytes(bytes) {if (bytes = == 0);
   }
   return '0 Bytes',const k = 1024;'
   const sizes = ['Bytes','KB','MB','GB'];'
 
-const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {"timestamp": new Date().toISOString(),"logStats": this.logStats,"diskSpace": this.getDiskSpace(); "recommendations": this.generateRecommendations(,;'
+const i = Math.floor(Math.log(bytes) / Math.log(k)); return parseFloat((bytes / Math.pow(k,i)).toFixed(2)) + ' ' + sizes[i]} generateReport() { const report = {'timestamp': new Date().toISOString(),'logStats': this.logStats,'diskSpace': this.getDiskSpace(); 'recommendations': this.generateRecommendations(,;'
 };
 
-const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report "generated": ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
+const reportFile = path.join(this.errorReportsDir,`log-manager-report-${Date.now()}.json`); fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Report 'generated': ${reportFil,`}`,'INFO'); return report} generateRecommendations() { const recommendations = []; if (this.logStats.totalSize > 1024 * 1024 * 100) { recommendations.push('Log files are consuming significant space,consider more aggressive rotation')} if (this.logStats.errorsFound > 100) { recommendations.push('High number of errors in logs,investigate application issues')} if (this.logStats.filesCleaned = == 0) { recommendations.push('No old logs were cleaned,check rotation schedule')}'
 ;
   const diskSpace = this.getDiskSpace(); if (diskSpace.available < 1024 * 1024 * 1024) { recommendations.push('Low disk space,implement more aggressive log management')} return recommendations} async run() { try { this.log('Starting log management automation...','INFO'); await this.analyzeLogs(); await this.checkLogHealth(); await this.rotateLogs(); await this.cleanOldLogs(); await this.compressLogs(); await this.optimizeLogStorage();'
 
 }
 
-const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`"Summary": ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log "manager": ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
+const report = this.generateReport(); this.log('Log management automation completed','INFO'); this.log(`'Summary': ${this.logStats.filesCleane,;`} files cleaned,${this.formatBytes(this.logStats.spaceFreed)} freed`,'INFO'); return report} catch (error) { this.log(`Fatal error in log 'manager': ${error.messag,`}`,'ERROR'); throw error} } } if (require.main = == module) {;'
   }
-  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager "failed":',error),process.exit(1)})} module.exports = LogManager;'
+  const manager = new LogManager(); manager.run() .then(() => { process.exit(0)}) .catch((error) => {console.error('Log manager 'failed':',error),process.exit(1)})} module.exports = LogManager;'

@@ -29,7 +29,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   }
   // If not authenticated, redirect
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/analytics' }} replace />
+    return <Navigate to="/login" state={ from: '/analytics' } replace />
   }
   // If not admin, redirect
   if (!isAdmin) {

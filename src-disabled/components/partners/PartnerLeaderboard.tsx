@@ -236,7 +236,7 @@ export function PartnerLeaderboard() {;
       referrals: 87,
       earnings: 2175,
       badges: ["newcomer"],
-}}]]
+}]]
   const renderRankBadge = (rank: number) => {;
     switch(rank) {;
       case 1:;

@@ -19,8 +19,8 @@ class ErrorReportAggregator {
     fs.mkdirSync(this.reportsDir, { recursive: true });
   }
 
-    fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
-    fs.mkdirSync(this.reportsDir, { "recursive": true });
+    fs.mkdirSync(path.dirname(this.logFile), { 'recursive': true });
+    fs.mkdirSync(this.reportsDir, { 'recursive': true });
   }
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -31,15 +31,15 @@ class ErrorReportAggregator {
   async aggregateReports() {
     this.log('Aggregating error reports...');
     const summary = {
-      "timestamp": new Date().toISOString(),
-      "reports": {},
-      "overallHealth": {
+      'timestamp': new Date().toISOString(),
+      'reports': {},
+      'overallHealth': {
         buildHealth: 0,
-        "codeQuality": 0,
-        "dependencyHealth": 0,
-        "overallScore": 0},
-      "trends": {},
-      "recommendations": []};
+        'codeQuality': 0,
+        'dependencyHealth': 0,
+        'overallScore': 0},
+      'trends': {},
+      'recommendations': []};
     try {
       // Read all report files
       const reportFiles = ['build-status.json',
@@ -58,7 +58,7 @@ class ErrorReportAggregator {
 
             this.log(`Loaded report: ${file}`);
 
-            this.log(`Loaded "report": ${file}`);
+            this.log(`Loaded 'report': ${file}`);
           } catch (error) {
             this.log(`Error reading ${file}: ${error.message}`, 'WARN');
           }
@@ -94,10 +94,10 @@ class ErrorReportAggregator {
     } catch (error) {
       this.log(`Error aggregating reports: ${error.message}`, 'ERROR');
 
-      this.log(`Error summary report "generated": ${this.summaryFile}`);
+      this.log(`Error summary report 'generated': ${this.summaryFile}`);
       return summary;
     } catch (error) {
-      this.log(`Error aggregating "reports": ${error.message}`, 'ERROR');
+      this.log(`Error aggregating 'reports': ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -133,10 +133,10 @@ class ErrorReportAggregator {
     return recommendations;
   }
 
-        "priority": 'high',
-        "type": 'build',
+        'priority': 'high',
+        'type': 'build',
 
-        "message": 'Build health is critical. Run intelligent error fixer immediately.'})
+        'message': 'Build health is critical. Run intelligent error fixer immediately.'})
     const dashboard = `
 # Project Health Dashboard
 
@@ -160,29 +160,29 @@ Generated: ${summary.timestamp}
     this.log('Health dashboard generated: health-dashboard.md');
   }
 
-"Generated": ${summary.timestamp}
-## Overall Health "Score": ${summary.overallHealth.overallScore}/100
-### Component "Scores": - 🏗️  Build Health: ${summary.overallHealth.buildHealth}/100
-- 🎯 Code "Quality": ${summary.overallHealth.codeQuality}/100
-- 📦 "Dependencies": ${summary.overallHealth.dependencyHealth}/100
-### "Recommendations": ${summary.recommendations
-  .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}")
+'Generated': ${summary.timestamp}
+## Overall Health 'Score': ${summary.overallHealth.overallScore}/100
+### Component 'Scores': - 🏗️  Build Health: ${summary.overallHealth.buildHealth}/100
+- 🎯 Code 'Quality': ${summary.overallHealth.codeQuality}/100
+- 📦 'Dependencies': ${summary.overallHealth.dependencyHealth}/100
+### 'Recommendations': ${summary.recommendations
+  .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}')
 
-"Generated": ${summary.timestamp}""
-## Overall Health "Score": ${summary.overallHealth.overallScore}/100;""
-### Component "Scores": - 🏗️  Build Health: ${summary.overallHealth.buildHealth}/100;""
-- 🎯 Code "Quality": ${summary.overallHealth.codeQuality}/100;""
-- 📦 "Dependencies": ${summary.overallHealth.dependencyHealth}/100;""
-### "Recommendations": ${summary.recommendations;""`
-  .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}")""
+'Generated': ${summary.timestamp}''
+## Overall Health 'Score': ${summary.overallHealth.overallScore}/100;''
+### Component 'Scores': - 🏗️  Build Health: ${summary.overallHealth.buildHealth}/100;''
+- 🎯 Code 'Quality': ${summary.overallHealth.codeQuality}/100;''
+- 📦 'Dependencies': ${summary.overallHealth.dependencyHealth}/100;''
+### 'Recommendations': ${summary.recommendations;''`
+  .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}')''
   .join('\n')}
 
-"
+'
     fs.writeFileSync('
       path.join(this.reportsDir, 'health-dashboard.md'),
       dashboard
     );
-    this.log('Health dashboard "generated": health-dashboard.md');
+    this.log('Health dashboard 'generated': health-dashboard.md');
   }
   async run() {
     this.log('Starting Error Report Aggregator...');
@@ -196,7 +196,7 @@ Generated: ${summary.timestamp}
 
       this.log('Error report aggregation completed successfully');
     } catch (error) {
-      this.log(`Error in report "aggregator": ${error.message}`, 'ERROR');
+      this.log(`Error in report 'aggregator': ${error.message}`, 'ERROR');
     }
   }
 

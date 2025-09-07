@@ -240,7 +240,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
             </div>;
           </CardFooter>;
         </Card>;
-      ))}}
+      ))}
       try {
         let query = supabase;
           .from ("jobs");

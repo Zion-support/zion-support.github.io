@@ -16,11 +16,11 @@ import * as TogglePrimitive from "@radix-ui/react-toggle"const toggleVariants = 
         }
         "default": "default","
     "sm": "h-9 px-2.5""
-        "lg": "h-11 px-5"}}"
+        "lg": "h-11 px-5"}"
     "defaultVariants": {
 }
 "variant": "default";"
-      "size": "default"}}"
+      "size": "default"}"
 )
 type ToggleRef = React.ElementRef<typeof TogglePrimitive.Root>
 type ToggleProps = React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &

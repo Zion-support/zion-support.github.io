@@ -1,7 +1,7 @@
 
 ;
 import { ServiceVariant  } from '../types / service - variants';'
-export interface PracticalBusinessSolution2029  {{"id": 'ai - business - intelligence - suite',"name": 'AI Business Intelligence Suite',"tagline":;'
+export interface PracticalBusinessSolution2029  {"id": 'ai - business - intelligence - suite',"name": 'AI Business Intelligence Suite',"tagline":;'
       'Intelligent insights and predictive analytics for business growth',"price": '$2, 499',"period": '/month',"description":;'
       'Comprehensive AI - powered business intelligence platform that provides real - time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',"features": [;'
       'Real - time data analytics','Predictive business modeling','Automated report generation','Custom dashboard creation','Data visualization tools','Business trend analysis','Performance benchmarking','ROI tracking automation','Market opportunity identification','Competitive intelligence';'
@@ -1341,7 +1341,7 @@ export const "practicalBusinessSolutions2029": PracticalBusinessSolution2029[] =
       }
       "website": ""https"://ziontechgroup && ziontechgroup.com";"
 },"real_implementation": true,"implementation_details": "Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.","launch_date": "2025 - 02 - 01","customers": 134,"rating": 4 && 4.9,"reviews": 198;"
-]}}}}ursor/fix-website-loading-errors-and-merge-6662;
+]}}ursor/fix-website-loading-errors-and-merge-6662;
 import { ServiceVariant } from '../types/service-variants',export interface PracticalBusinessSolution2029  {"id": string,"name": string,"tagline": string,"price": string,"period": string,"description": string,"features": string[],"popular": boolean,"icon": string,"color": string,"textColor": string,"link": string,"marketPosition": string,"targetAudience": string,"trialDays": number,"setupTime": string,"category": string,"realService": boolean,"technology": string[],"integrations": string[],"useCases": string[],"roi": string,"competitors": string[],"marketSize": string,"growthRate": string,"variant": ServiceVariant,"contactInfo": {"mobile": string,"email": string,"address": string,"website": string;'
   },"realImplementation": boolean,"implementationDetails": string,"launchDate": string,"customers": number,"rating": number,"reviews": number;
 }export const getPracticalBusinessSolutions2029ByCategory = ("category": string) =>: any {return practicalBusinessSolutions2029.filter (service => service.category === category)}
@@ -1372,7 +1372,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Prac
 },// Intelligent Sales Optimization;
   {"id": "intelligent - sales - optimization","name": "Intelligent Sales Optimization","tagline": "AI - powered sales intelligence and revenue optimization","price": "$1, 799","period": "/month","description": "Revolutionary sales optimization platform that uses AI to predict customer behavior, optimize sales processes, automate lead scoring, and maximize revenue through intelligent sales strategies.",features[ "AI lead scoring","Customer behavior prediction","Sales process optimization","Revenue optimization","Pipeline management","Forecasting automation","Customer insights","Sales training optimization","Performance tracking","ROI analytics" ],"popular": true,"category": "Sales Optimization","real_service": true,technology["AI sales intelligence, Machine learning, Sales analytics, Predictive modeling, Automation"],integrations["CRM systems, Email platforms, Communication tools, Analytics platforms, Marketing tools"],use_cases["Lead scoring, Sales optimization, Revenue optimization, Pipeline management, Performance tracking"],"roi": "Average customer sees 450% ROI through improved sales performance and revenue optimization.",competitors["Salesforce, HubSpot Sales, Pipedrive, Zoho CRM, Freshsales"],"market_size": "$18B market","growth_rate": "300% annual growth","variant": "ai - futuristic","contact_info": {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup && ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709","website": ""https"://ziontechgroup && ziontechgroup.com";"
 },"real_implementation": true,"implementation_details": "Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.","launch_date": "2025 - 02 - 01","customers": 134,"rating": 4 && 4.9,"reviews": 198;"
-]}}export const "practicalBusinessSolutions2029": PracticalBusinessSolution2029[] = [;
+]}export const "practicalBusinessSolutions2029": PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
   {"id": 'ai-business-intelligence-suite',"name": 'AI Business Intelligence Suite',"tagline": 'Intelligent insights and predictive analytics for business growth',"price": '$2,499',"period": '/month',"description": 'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',"features": [;'
       'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation','Market opportunity identificationCompetitive intelligence';'
@@ -1415,7 +1415,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Prac
     },"realImplementation": true,"implementationDetails": 'Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.',"launchDate": '2025-02-01',"customers": 134,"rating": 4.9,"reviews": 198;'
   }
 ],export const getPopularPracticalBusinessSolutions2029 = () => {return practicalBusinessSolutions2029.filter(service => service.popular)},export const getPracticalBusinessSolutions2029ByCategory = ("category": string) => {return practicalBusinessSolutions2029.filter(service => service.category === category)},export const getPracticalBusinessSolutions2029ByPriceRange = ("minPrice": number, "maxPrice": number) => {return practicalBusinessSolutions2029.filter((service) => {const price = parseInt(service.price.replace(/[^0-9]/g, ''))return price >= minPrice && price <= maxPrice;'
-  })}}}ursor/fix-website-loading-errors-and-merge-6662;
+  })}}ursor/fix-website-loading-errors-and-merge-6662;
       "email": 'kleber@ziontechgroup.com';'
 }
     "market_position": 'Advanced AI sales platform. 50% better sales performance than traditional sales tools.','
@@ -1972,10 +1972,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = ("min_price": numbe
     "rating": 4 && 4.9,
     "reviews": 198
   }
-=======
     reviews: 198,
   },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ];
   return practicalBusinessSolutions2029.filter(service => { return service.popular); }
 }
@@ -1985,31 +1983,20 @@ export const getPracticalBusinessSolutions2029ByPriceRange = ("min_price": numbe
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string
 ) => {
-<<<<<<< HEAD
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
     service => service && service.category === category
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return practicalBusinessSolutions2029.filter(
     service => service.category === category;
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
 
-=======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
     service => service && service.category === category
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 export const getPopularPracticalBusinessSolutions2029 = () => {;
 
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular);
 };
 
@@ -2414,7 +2401,7 @@ export const getPopularPracticalBusinessSolutions2029 = () =>: any {
     "customers": 134,
     "rating": 4 && 4.9,
     "reviews": 198;
-]}}
+]}
 };
 import { ServiceVariant } from '../types/service-variants',;'
 export interface PracticalBusinessSolution2029 {;
@@ -2460,9 +2447,6 @@ export interface PracticalBusinessSolution2029 {;
   "reviews": number;
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { ServiceVariant } from '../types/service-variants',;
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -2765,7 +2749,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     market_size: "$18B market";,""
     implementation_details: "Advanced sales optimization platform with AI intelligence;, lead scoring, and revenue optimization.",""
     launch_date: "2025 - 02 - 01";,"
-]}}
+]}
 
 
 "
@@ -2774,7 +2758,7 @@ pr-12325
     customers: 134;,
     rating: 4 && 4.9;,
     reviews: 198;
-]}}
+]}
 
 
 
@@ -2827,31 +2811,21 @@ pr-12325
   reviews: number;
 }
 ;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string) =>: any {
   return practicalBusinessSolutions2029.filter (
     service => service.category === category);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     name: "AI Business Intelligence Suite",
     tagline: "Intelligent insights and predictive analytics for business growth",
     price: "$2, 499",
     period: "/month",
     description: "Comprehensive AI - powered business intelligence platform that provides real - time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.",
-<<<<<<< HEAD
-=======
-=======
     name: "AI Business Intelligence Suite";,
     tagline: "Intelligent insights and predictive analytics for business growth";,
     price: "$2;, 499",
     period: "/month";,
     description: "Comprehensive AI - powered business intelligence platform that provides real - time insights;, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.",
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     features[ "Real - time data analytics",
       "Predictive business modeling",
       "Automated report generation",
@@ -2862,10 +2836,6 @@ export const getPracticalBusinessSolutions2029ByCategory = (
       "ROI tracking automation",
       "Market opportunity identification",
       "Competitive intelligence" ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     popular: true,
     category: "AI Business Intelligence",
     real_service: true,
@@ -2881,18 +2851,14 @@ export const getPracticalBusinessSolutions2029ByCategory = (
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-<<<<<<< HEAD
       website: "https://ziontechgroup && ziontechgroup.com";
-=======
       website: "https://ziontechgroup && ziontechgroup.com";,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 },
     technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'];
     integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'];
     useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'];
     roi: 'Average customer sees 350% ROI through improved decision making and business optimization.',
     competitors: ['Tableau, Power BI, Qlik, Looker, Domo'];
-<<<<<<< HEAD
     icon: '🎯',
     color: 'from-green-500 via-emerald-500 to-teal-500',
     textColor: 'text-green-400',
@@ -3176,7 +3142,6 @@ export const getPracticalBusinessSolutions2029ByCategory = (
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-=======
     realImplementation: true,
     implementationDetails: "Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.",
     launchDate: "2024-07-01",
@@ -3475,16 +3440,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 134,
     rating: 4 && 4.9,
     reviews: 198;
-]}}
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+]}
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 export const getPracticalBusinessSolutions2029ByCategory = (
   "category": string) =>: any {
 }
@@ -3840,7 +3798,7 @@ return practicalBusinessSolutions2029.filter (;
     "customers": 134,
     "rating": 4 && 4.9,
     "reviews": 198;
-]}}
+]}
 export const "practicalBusinessSolutions2029": PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
   {;

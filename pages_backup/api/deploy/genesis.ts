@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/deploy/genesis.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
@@ -13,10 +7,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return;
   }
 
-<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -252,17 +242,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       roles: ['FounderSuperadminDAO Multisig']
       export: {
         type: 'application/json'
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`};
 
     return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
-<<<<<<< HEAD
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/deploy/genesis.ts
   try {
     const body = req.body || {};
     const {
@@ -273,7 +259,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
     
-=======
 
   try {
     const body = req.body || {};
@@ -292,7 +277,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       branding
       modules = {}
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       bonusModules = {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -327,10 +311,7 @@ main
     // Simulated provisioning operations – replace with real infra hooks later
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const outputActions = {
       zionGPT: {
         initialized: true
@@ -353,7 +334,6 @@ main
       }
       publicPages: []
     };
-<<<<<<< HEAD
 
     res.status(200).json({
       success: true,
@@ -367,7 +347,6 @@ main
     return;
   }
 }
-=======
     res.status(200).json({
       success: true
       provisionId
@@ -446,7 +425,7 @@ export default async function handler(req, res) {
       governanceMode,;
       branding,;
       modules = {};
-      bonusModules = {}} = body;
+      bonusModules = {} = body;
     if (!instanceName || !deploymentRegion) {;
       return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' });
       } catch (error) {
@@ -505,7 +484,7 @@ export default async function handler(req, res) {
       roles: ['FounderSuperadminDAO Multisig'];
       export: {;
         type: 'application/json';
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`};
   }
 }
   } catch (error) {
@@ -521,4 +500,3 @@ export default async function handler(req, res) {
   }
 }
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

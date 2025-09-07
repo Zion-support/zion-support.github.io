@@ -421,7 +421,7 @@ export default function CaseStudyResourcePage(req, res) {
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
               <div
                 className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+                dangerouslySetInnerHTML={ __html: caseStudy.fullContent }
               />
             </div>
             <div className="text-center">
@@ -508,7 +508,7 @@ export default function CaseStudyResourcePage(req, res) {
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">;
               <div;
                 className="prose prose-invert max-w-none";
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
+                dangerouslySetInnerHTML={ __html: caseStudy.fullContent }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }

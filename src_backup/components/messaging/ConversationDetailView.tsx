@@ -207,7 +207,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ref={inputRef}
           />
           <Button 
-<<<<<<< HEAD:src_backup/components/messaging/ConversationDetailView.tsx
 
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
@@ -384,10 +383,8 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
             placeholder="Type a message...";
             className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500";
             disabled={isSending}
-<<<<<<< HEAD:src_backup/components/messaging/ConversationDetailView.tsx
           />
           <Button
-<<<<<<< HEAD:src_backup/components/messaging/ConversationDetailView.tsx
 
             type="submit"
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
@@ -524,9 +521,7 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
             type="submit";
             disabled={!newMessage.trim() || isSending}
           >;
-<<<<<<< HEAD:src_backup/components/messaging/ConversationDetailView.tsx
             {isSending ? 'Sending...' : 'Send'}
-<<<<<<< HEAD:src_backup/components/messaging/ConversationDetailView.tsx
           </Button>
         </form>
       </div>
@@ -592,7 +587,7 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
       </div>;
 }</div>;
     </div>;
-  )}})<AvatarImage src= {activeConversation.other user.avatar url ;
+  )})<AvatarImage src= {activeConversation.other user.avatar url ;
 }alt= {activeConversation.other user.name ;
 }/> activeConversation.other user.user type === 'employer' ? 'Employer' : activeConversation.other user.user type === 'admin' ? 'Admin' : 'User' ;
 }</div> </div> </div> </div> {activeConversation.context data && activeConversation.context data.image url && (<div className="w-16 h-16 flex-shrink-0" > <AspectRatio ratio= {1/1 ";

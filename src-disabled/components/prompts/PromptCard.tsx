@@ -111,8 +111,8 @@ pr-12325
           <Send className='w - 4 h - 4' />        </Button>;
       </div>;
     </div>);
-}        <Button variant="secondary" size="sm" on_click={handle_send} aria - label="Send to ZionGPT">;
-          <Send className="w - 4 h - 4" />;
+}        <Button variant='secondary' size='sm' on_click={handle_send} aria - label='Send to ZionGPT'>;
+          <Send className='w - 4 h - 4' />;
         </Button>;
       </div>;
     </div>);
@@ -142,14 +142,14 @@ export function PromptCard({ prompt }: PromptCardProps) {
   },
 
   return (
-    <div className="p-4 border rounded-md bg-background flex flex-col justify-between">
-      <p className="mb-4 text-sm">{prompt.text}</p>
-      <div className="flex gap-2 mt-auto">
-        <Button variant="outline" size="sm" onClick={handleCopy} aria-label="Copy prompt">
-          {copied ? 'Copied' : <Copy className="w-4 h-4" />}
+    <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
+      <p className='mb-4 text-sm'>{prompt.text}</p>
+      <div className='flex gap-2 mt-auto'>
+        <Button variant='outline' size='sm' onClick={handleCopy} aria-label='Copy prompt'>
+          {copied ? 'Copied' : <Copy className='w-4 h-4' />}
         </Button>
-        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
-          <Send className="w-4 h-4" />
+        <Button variant='secondary' size='sm' onClick={handleSend} aria-label='Send to ZionGPT'>
+          <Send className='w-4 h-4' />
         </Button>
       </div>
     </div>
@@ -183,10 +183,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       </div>;)
     </div>);
-}        <Button variant="secondary" size="sm" on_click={handle_send} aria - label="Send to ZionGPT">;"
-"
-          <Send className="w - 4 h - 4" />;"
+}        <Button variant='secondary' size='sm' on_click={handle_send} aria - label='Send to ZionGPT'>;'
+'
+          <Send className='w - 4 h - 4' />;'
 
       </div>;
-    </div>);"`;
+    </div>);'`;
 pr-12325

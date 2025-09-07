@@ -100,10 +100,10 @@ export function EducationForm({
   const handleDelete = $2;
   const handleCancel = $2;
   return (
-    <div className="space-y-6">
+    <div className='space-y-6'>
       <div>
-        <h2 className="text-xl font-semibold mb-2">Education</h2>
-        <p className="text-muted-foreground">
+        <h2 className='text-xl font-semibold mb-2'>Education</h2>
+        <p className='text-muted-foreground'>
           Add your educational background and academic achievements.
         </p>
       </div>
@@ -122,15 +122,15 @@ export function EducationForm({
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
+      <div className='bg-muted/40 p-6 rounded-lg'>
+        <h3 className='text-md font-medium mb-4'>
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
+      <div className='bg-muted/40 p-6 rounded-lg'>
+        <h3 className='text-md font-medium mb-4'>
           {editingId ? 'Update Education' : 'Add Education'}
-        </h3>        <div className="flex justify-end">;
-          <Button type="button" onClick={onComplete}>;
+        </h3>        <div className='flex justify-end'>;
+          <Button type='button' onClick={onComplete}>;
             Next;
           </Button>;
         </div>;
@@ -144,8 +144,8 @@ export function EducationForm({
         />
       </div>
       {!editingId && educationEntries.length > 0 && (
-        <div className="flex justify-end">
-          <Button type="button" onClick={onComplete}>
+        <div className='flex justify-end'>
+          <Button type='button' onClick={onComplete}>
             Next
           </Button>
         </div>

@@ -16,7 +16,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(schema) }}></script>;
+        dangerouslySetInnerHTML={ __html: JSON && JSON.stringify(schema) }></script>;
       <Header />;
       <main className='bg-background text-white py-12'>;
         <div className='container mx-auto px-4 md:px-6'>;
@@ -67,7 +67,7 @@ export default function IntegrationsFeature() {
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -186,7 +186,7 @@ export default function IntegrationsFeature() {;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
         type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>;
       <Header />;
       <main className="bg-background text-white py-12">;
@@ -249,7 +249,7 @@ function IntegrationsFeature() {
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
         type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>;
       <Header />;
       <main className="bg-background text-white py-12">;
@@ -275,7 +275,7 @@ function IntegrationsFeature() {
       {/* Use a normal script tag so JSON - LD is correctly parsed */}
       <script;
         type='application / ld + json';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify (schema) }
       ></script>;
       <Header />;
       <main className='bg - background text - white py - 12'>;
@@ -345,7 +345,7 @@ function IntegrationsFeature() {
         </div>;
       </main>;
 ;
-}})))
+})))
     </>;
   );
 }

@@ -115,10 +115,10 @@ const "navigationItems": "NavigationIte m[] = [{"label": 'Home'","path": '/',"ic
  {"label": 'Documentation',"path": '/docs',"icon": "FileTex t","color": 'bg-zion-blue'}];export const "EnhancedMobileNavigation": "React.FC = () => {const [isOpen", setIsOpen] = useState<any>(false)const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())const [activePath, setActivePath]  = useState<any>('/')useEffect(() => {// "TODO": "Add dependencies if needed;"
   }
   return () => {// Cleanup function;
-  "}}, []), [])setActivePath(location.pathname)}, [location])useEffect(() => {// "TODO": "Add dependencies if needed;"
+  "}, []), [])setActivePath(location.pathname)}, [location])useEffect(() => {// "TODO": "Add dependencies if needed;"
   }
   return () => {// Cleanup function;
-  "}}, []), [])const handleClickOutside = ("props": "any) => {if(menuRef.current && !menuRef.current.contains(event.target as Node)) {setIsOpen(false)"}"
+  "}, []), [])const handleClickOutside = ("props": "any) => {if(menuRef.current && !menuRef.current.contains(event.target as Node)) {setIsOpen(false)"}"
     }export default function EnhancedMobileNavigation() {const [isOpen, setIsOpen] = useState<any>(false)';'
   }
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)';';'
@@ -168,7 +168,7 @@ const "navigationItems": "NavigationIte m[] = [{"label": 'Home'","path": '/',"ic
   useEffect(() => {// "TODO": "Add dependencies if needed;"
   }
   return () => {// Cleanup function;
-  "}}, []), [])setIsOpen(false)setActiveSubmenu(null)}, [location.pathname])// Prevent body scroll when menu is open;"
+  "}, []), [])setIsOpen(false)setActiveSubmenu(null)}, [location.pathname])// Prevent body scroll when menu is open;"
   useEffect(() => {// "TODO": "Add dependencies if needed;"
   }
   return () => {// Cleanup function;
@@ -197,14 +197,14 @@ interface NavigationItem  {"label": string;
 export const "EnhancedMobileNavigation": React.FC = () => {const [isOpen, setIsOpen] = useState<any>(false)const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())const [activePath, setActivePath] = useState<any>('/')useEffect(() => {// "TODO": Add dependencies if needed;'
   }
   return () => {// Cleanup function;
-  }}, []), [])if(isOpen) {';'
+  }, []), [])if(isOpen) {';'
 ';';'
       }
       document.addEventListener('mousedown', handleClickOutside)';';'
     if(isOpen) {document.addEventListener('mousedown', handleClickOutside)setActivePath(location.pathname)}, [location])useEffect(() => {// "TODO": Add dependencies if needed;'
   }
   return () => {// Cleanup function;
-  }}, []), [])const handleClickOutside = ("props": any) => {if(menuRef.current && !menuRef.current.contains(event.target as Node)) {setIsOpen(false)}
+  }, []), [])const handleClickOutside = ("props": any) => {if(menuRef.current && !menuRef.current.contains(event.target as Node)) {setIsOpen(false)}
     }export default function EnhancedMobileNavigation() {const [isOpen, setIsOpen] = useState<any>(false)const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)const [searchQuery, setSearchQuery] = useState<any>('')const "navigationItems": NavigationIte m[] = [{"label": 'Home',"path": '/',"icon": Hom e;'
     },{"label": 'Services',"path": '/services',"icon": Briefcas e,"children": [;'
         { "label": 'AI Solutions', "path": '/ai-services', "icon": Brai n },{ "label": 'Cloud & DevOps', "path": '/services/cloud-devops', "icon": Clou d },{ "label": 'Cybersecurity', "path": '/services/ai-cybersecurity-suite', "icon": Shiel d },{ "label": 'Data Analytics', "path": '/services/data-analytics', "icon": TrendingU p },{ "label": 'IoT & Edge', "path": '/services/edge-computing-platform', "icon": Za p },{ "label": 'Blockchain', "path": '/services/blockchain-enterprise-solutions', "icon": Databas e }'
@@ -218,11 +218,11 @@ export const "EnhancedMobileNavigation": React.FC = () => {const [isOpen, setIsO
   useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
-  }}, []), [])setIsOpen(false)setActiveSubmenu(null)}, [location.pathname])// Prevent body scroll when menu is open;
+  }, []), [])setIsOpen(false)setActiveSubmenu(null)}, [location.pathname])// Prevent body scroll when menu is open;
   useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
-  }}, []), [])if(isOpen) {document.addEventListener('mousedown', handleClickOutside)document.body.style.overflow = 'hidden'}return () => {document.removeEventListener('mousedown', handleClickOutside)document.body.style.overflow = 'unset'}}, [isOpen])const toggleExpanded = ("props": "any) => {setExpandedItems((prev) => {const newSet = new Set(prev)if(newSet.has(label)) {newSet.delete(label)"} else {const toggleExpanded = ("props": any) => {setExpandedItems((prev) => {const newSet = new Set(prev)if(newSet.has(label)) {newSet.delete(label)} else {newSet.add(label)}"
+  }, []), [])if(isOpen) {document.addEventListener('mousedown', handleClickOutside)document.body.style.overflow = 'hidden'}return () => {document.removeEventListener('mousedown', handleClickOutside)document.body.style.overflow = 'unset'}, [isOpen])const toggleExpanded = ("props": "any) => {setExpandedItems((prev) => {const newSet = new Set(prev)if(newSet.has(label)) {newSet.delete(label)"} else {const toggleExpanded = ("props": any) => {setExpandedItems((prev) => {const newSet = new Set(prev)if(newSet.has(label)) {newSet.delete(label)} else {newSet.add(label)}"
       return newSet})}setExpandedItems(new Set())}';'
 ';';setExpandedItems(new Set())}setExpandedItems(new Set())}if(path === '/') {}return ()      <div key = {item.label} className="w-full">;"
         <motion.div;
@@ -231,8 +231,8 @@ export const "EnhancedMobileNavigation": React.FC = () => {const [isOpen, setIsO
 ';';'
   { "backgroundColor": isItemActiv e ? 'rgba(34, 221, 210,';';'
           }
-          animate = {{ "backgroundColor": "isItemActiv e ? 'rgba(34", 221, 210,animate = {{ "backgroundColor": isItemActiv e ? 'rgba(34, 221, 210,0.1)' : 'transparent' ;'
-}}
+          animate = { "backgroundColor": "isItemActiv e ? 'rgba(34", 221, 210,animate = { "backgroundColor": isItemActiv e ? 'rgba(34, 221, 210,0.1)' : 'transparent' ;'
+}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}`          <Link;
             to={item.path}
             onClick={() => handleNavigation(item.path)}`;`            className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive';'
@@ -246,7 +246,7 @@ export const "EnhancedMobileNavigation": React.FC = () => {const [isOpen, setIsO
             <div className="flex items-center gap-3">;"
               <item.icon';'
                 size={20}';';'
-          animate = {{ "backgroundColor": isItemActiv e ? 'rgba(34, 221, 210,0.1)' : 'transparent' ;}}'
+          animate = { "backgroundColor": isItemActiv e ? 'rgba(34, 221, 210,0.1)' : 'transparent' ;}'
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}`          <Link;
             to={item.path}
             onClick={() => handleNavigation(item.path)}`;`            className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive';'
@@ -286,39 +286,39 @@ export const "EnhancedMobileNavigation": React.FC = () => {const [isOpen, setIsO
         {hasChildren && (<AnimatePresence>;
             {isExpanded && (<motion.div;
                 }
-                initial = {{ "height": "0","opacity": "0;"
-"}}"
-                animate = {{ "height": 'auto',"opacity": "1;"
-"}}"
-                exit = {{ "height": "0","opacity": "0;"
-"}}"
-                transition = {{ "duration": "0.3","ease": 'easeInOut';'
-}}";"
+                initial = { "height": "0","opacity": "0;"
+"}"
+                animate = { "height": 'auto',"opacity": "1;"
+"}"
+                exit = { "height": "0","opacity": "0;"
+"}"
+                transition = { "duration": "0.3","ease": 'easeInOut';'
+}";"
                 className="overflow-hidden";"
 ";"
                 <div className="border-l border-zion-slate-light/20 ml-4">;"
           <AnimatePresence>;
             {isExpanded && (<motion.div;
                 }
-                initial = {{ "height": 0,"opacity": 0;
-}}
+                initial = { "height": 0,"opacity": 0;
+}
                 animate = {';'
 ';';'
   { "height": 'auto',"opacity": 1;'
                 }
-                animate = {{ "height": 'auto',"opacity": 1;'
+                animate = { "height": 'auto',"opacity": 1;'
                 }
-                animate = {{ "height": 'auto',"opacity": 1;'
-}}
-                exit = {{ "height": 0,"opacity": 0;
-}}
-                transition = {{ "duration": 0.3,"ease": 'easeInOut';'
-}}";"
+                animate = { "height": 'auto',"opacity": 1;'
+}
+                exit = { "height": 0,"opacity": 0;
+}
+                transition = { "duration": 0.3,"ease": 'easeInOut';'
+}";"
                 className="overflow-hidden";"
 ";"
                 <div className="border-l border-zion-slate-light/20 ml-4">;"
-                transition = {{ "duration": 0.3,"ease": 'easeInOut';'
-}}";"
+                transition = { "duration": 0.3,"ease": 'easeInOut';'
+}";"
                 className="overflow-hidden";"
 ";"
                 <div className="border-l border-zion-slate-light/20 ml-4">;"
@@ -335,18 +335,18 @@ export const "EnhancedMobileNavigation": React.FC = () => {const [isOpen, setIsO
       <AnimatePresence>;
         {isOpen && (<motion.div;
             }
-            initial={{ "opacity": "0 "}}"
-            animate={{ "opacity": "1 "}}"
-            exit={{ "opacity": "0 "}}"
-            transition={{ "duration": "0.2 "}}";"
+            initial={ "opacity": "0 "}"
+            animate={ "opacity": "1 "}"
+            exit={ "opacity": "0 "}"
+            transition={ "duration": "0.2 "}";"
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 "lg": "hidde n";"
             <motion.div;
               ref={menuRef"}"
-              initial={{ "x": '100%' }}'
-              animate={{ "x": "0 "}}"
-              exit={{ "x": '100%' }}'
-              transition = {{ "duration": "0.3","ease": 'easeOut';'
-}}";"
+              initial={ "x": '100%' }'
+              animate={ "x": "0 "}"
+              exit={ "x": '100%' }'
+              transition = { "duration": "0.3","ease": 'easeOut';'
+}";"
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl";"
               {/* Header */}";"
               <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">";"
@@ -387,18 +387,18 @@ export const "EnhancedMobileNavigation": React.FC = () => {const [isOpen, setIsO
       <AnimatePresence>;
         {isOpen && (<motion.div;
             }
-            initial={{ "opacity": 0 }}
-            animate={{ "opacity": 1 }}
-            exit={{ "opacity": 0 }}
-            transition={{ "duration": 0.2 }}";"
+            initial={ "opacity": 0 }
+            animate={ "opacity": 1 }
+            exit={ "opacity": 0 }
+            transition={ "duration": 0.2 }";"
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 "lg": hidde n";"
             <motion.div;
               ref={menuRef}
-              initial={{ "x": '100%' }}'
-              animate={{ "x": 0 }}
-              exit={{ "x": '100%' }}'
-              transition = {{ "duration": 0.3,"ease": 'easeOut';'
-}}";"
+              initial={ "x": '100%' }'
+              animate={ "x": 0 }
+              exit={ "x": '100%' }'
+              transition = { "duration": 0.3,"ease": 'easeOut';'
+}";"
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl";"
               {/* Header */}";"
               <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">";"
@@ -425,15 +425,15 @@ export const "EnhancedMobileNavigation": React.FC = () => {const [isOpen, setIsO
                   <div className="grid grid-cols-3 gap-3">;"
                     {quickActions.map(action => { return (<Link; }
             }
-            transition={{ "duration": 0.2 }}";"
+            transition={ "duration": 0.2 }";"
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 "lg": hidde n";"
             <motion.div;
               ref={menuRef}
-              initial={{ "x": '100%' }}'
-              animate={{ "x": 0 }}
-              exit={{ "x": '100%' }}'
-              transition = {{ "duration": 0.3,"ease": 'easeOut';'
-}}";"
+              initial={ "x": '100%' }'
+              animate={ "x": 0 }
+              exit={ "x": '100%' }'
+              transition = { "duration": 0.3,"ease": 'easeOut';'
+}";"
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl";"
               {/* Header */}";"
               <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">";"
@@ -561,9 +561,9 @@ export const "EnhancedMobileNavigation": React.FC = () => {const [isOpen, setIsO
             </motion.div>;
           </motion.div>;) "}</AnimatePresence>;"
     </>';'
-  )}}';';'
+  )}';';'
     </>;
-  )}}'"`;`</motion>;
+  )}'"`;`</motion>;
 </motion>;
 </motion>;
 </ChevronDown>;
@@ -578,7 +578,7 @@ export const "EnhancedMobileNavigation": React.FC = () => {const [isOpen, setIsO
 </Set>';'
 </any>;';';'
     </>;
-  )}}'"`;`
+  )}'"`;`
 </motion>;
 </motion>;
 </motion>;

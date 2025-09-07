@@ -34,7 +34,6 @@ export interface User {
   id: string;
   email: string;
   role: string;
-<<<<<<< HEAD
   isAdmin: boolean;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -94,8 +93,8 @@ export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowe
 origin/cursor/expand-services-advertise-and-build-project-c28b
 }export function parseUserFromRequest(req: NextApiRequest): User {// Mock implementation - replace with actual auth logic;
   const authHeader = req.headers.authorization;
-  if (!authHeader) {return { id: 'guest', email: 'guest@example.com', role: 'guest' }}// Simple mock for admin users;
-  if (authHeader.includes('admin')) {return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' }}return { id: 'user-1', email: 'user@zion.os', role: 'user' }}try {const user  = parseUserFromRequest(req)ensureAdmin(user)return { id: 'guest', email: 'guest@example.com', role: 'guest' }
+  if (!authHeader) {return { id: 'guest', email: 'guest@example.com', role: 'guest' }// Simple mock for admin users;
+  if (authHeader.includes('admin')) {return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' }return { id: 'user-1', email: 'user@zion.os', role: 'user' }try {const user  = parseUserFromRequest(req)ensureAdmin(user)return { id: 'guest', email: 'guest@example.com', role: 'guest' }
   }
   // Simple mock for admin users;
   if (authHeader.includes('admin')) {return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' }
@@ -110,8 +109,8 @@ export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed
   email: string;
   role: 'admin' | 'user' | 'guest';}export function parseUserFromRequest(req: NextApiRequest): User {// Mock implementation - replace with actual auth logic;
   const authHeader = req.headers.authorization;
-  if (!authHeader) {return { id: "guest", email: "guest@example.com", role: "guest" }}// Simple mock for admin users;
-  if (authHeader.includes("admin")) {return { id: "admin-1", email: "admin@zion.os", role: "admin" }}return { id: "user-1", email: "user@zion.os", role: "user" }return { id: "user-1", email: "user@zion.os", role: "user" }return { id: 'user-1', email: 'user@zion.os', role: 'user' }return { id: "user-1", email: "user@zion.os", role: "user" }return { id: "user-1", email: "user@zion.os", role: "user" }return { id: 'user-1', email: 'user@zion.os', role: 'user' }}export function ensureAdmin(user: User): void {if (user.role !== "admin") {const error  = new Error("Forbidden")(error as any).statusCode = 403;
+  if (!authHeader) {return { id: "guest", email: "guest@example.com", role: "guest" }// Simple mock for admin users;
+  if (authHeader.includes("admin")) {return { id: "admin-1", email: "admin@zion.os", role: "admin" }return { id: "user-1", email: "user@zion.os", role: "user" }return { id: "user-1", email: "user@zion.os", role: "user" }return { id: 'user-1', email: 'user@zion.os', role: 'user' }return { id: "user-1", email: "user@zion.os", role: "user" }return { id: "user-1", email: "user@zion.os", role: "user" }return { id: 'user-1', email: 'user@zion.os', role: 'user' }export function ensureAdmin(user: User): void {if (user.role !== "admin") {const error  = new Error("Forbidden")(error as any).statusCode = 403;
     throw error;
   }
 }
@@ -417,7 +416,6 @@ export function isAdminEmail(email: string | null | undefined): boolean {
   if (!email) return false,
   const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter($2);
   return admins.includes(email.toLowerCase())
-=======
 }
 
 export function getRequestUserEmail(req: NextApiRequest): string | null {
@@ -442,5 +440,4 @@ export function parseUserFromRequest(req: NextApiRequest): User | null {
 export function isAdmin(email: string): boolean {
   const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean);
   return admins.includes(email.toLowerCase());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

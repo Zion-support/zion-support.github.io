@@ -50,7 +50,6 @@ const serviceCategories = [
   name: 'Emerging Technology',icon: <Zap className="w-8 h-8" />,color: 'from-indigo-500 to-purple-500',}
   services: advancedAIServices2025,description: 'Breakthrough technologies of the future';}
 import { motion } from 'framer-motion';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
 import { 
   Brain, Zap, Shield, Circle, ArrowRight;
   Check, Star, TrendingUp, Users;}
@@ -149,13 +148,13 @@ const contactInfo = {mobile: '+1 302 464 0950'}
         <div className="max-w-7xl mx-auto text-center" />;
           <motion.h1;
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6";
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            initial={{ opacity: 0, y: 30 ,}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            initial={ opacity: 0, y: 30 ,}
 }
-            animate={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.8 }
+            animate={ opacity: 1, y: 0 }
+            transition={duration: 0.8 }
 }
            />;
             2025 V2 Comprehensive;
@@ -164,17 +163,16 @@ const contactInfo = {mobile: '+1 302 464 0950'}
           </motion.h1>;
           <motion.p;
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
           >;
             Experience the future of technology with our revolutionary portfolio of innovative micro SAAS,import { Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
   } from 'lucide-react';
 // Import our new 2025 V2 innovative services;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
 }animate= {
   {
@@ -204,16 +202,15 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
           </motion.p>;
           <motion.div;
             className="flex flex-col sm:flex-row gap-4 justify-center";
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
            />;
             <a;
               href="#services";
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg";
              />;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
 }animate= {
   {
@@ -246,17 +243,16 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
         <div className="max-w-4xl mx-auto text-center" />;
           <motion.h2;
             className="text-3xl md:text-4xl font-bold text-white mb-8";
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6 }
           >;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{duration: 0.6 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={duration: 0.6 }
 }
            />;
             Ready to Transform Your Business?;
@@ -265,12 +261,10 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             className="grid md:grid-cols-3 gap-8";
 <motion.div;
             className='grid md:grid-cols-3 gap-8';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6, delay: 0.2 }
           >;
             <div className="text-center">;
            />;
@@ -318,17 +312,15 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
         <div className='max-w-7xl mx-auto' />;
           <motion.h2;
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6 }
           >;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={once: true }
 }
 }whileInView= {
   {
@@ -379,11 +371,11 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
         <div className='max-w-7xl mx-auto' />;
           <motion.h2;
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{duration: 0.6 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={duration: 0.6 }
 }
            />;
             Our Comprehensive Service Portfolio;
@@ -392,16 +384,15 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             className="space-y-20";
 <motion.div;
             className='space-y-20';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
             variants={staggerContainer}
             initial="initial";
             whileInView="animate";
-            viewport={{ once: true }}
+            viewport={ once: true }
            />;
             {serviceCategories.map((category) => (<motion.div key={category.id} variants={fadeInUp} />;
                 <div className="text-center mb-12" />;
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`} />;
-            viewport={{once: true }
+            viewport={once: true }
 }
           >;
             {serviceCategories.map((category) => (<motion.div key={category.id} variants={fadeInUp} />;
@@ -421,13 +412,12 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
                   {category.services.map((service, index) => (<motion.div;}
                       key={('id' in service ? service.id : index)}
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105";
-                      whileHover={{ y: -5 }}
-                      whileHover={{y: -5 }
+                      whileHover={ y: -5 }
+                      whileHover={y: -5 }
 }
                      />;
                       <h4 className="text-xl font-semibold text-white mb-3" />;
                         {service.name}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
                       </h4>;
                       <p className="text-gray-300 mb-4" />;
                         {service.description}</p>;
@@ -461,7 +451,6 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
 
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />;
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
                       </p>;
                       <div className="space-y-3 mb-6" />;
                         <div className="flex items-center text-sm text-cyan-400" />;
@@ -495,12 +484,10 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
                         Learn More <ArrowRight className='w-4 h-4 ml-2' />;
                       </a>;
                     </motion.div>;
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
                   ))}
                 </div>;
               </motion.div>;
             ))}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           </motion.div>;
         </div>;
       </section>;
@@ -512,18 +499,16 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
         <div className='max-w-7xl mx-auto' />;
           <motion.h2;
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6 }
           >;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{duration: 0.6 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={duration: 0.6 }
 }
            />;
             Market Impact & Growth;
@@ -532,20 +517,18 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8";
 <motion.div;
             className='grid md:grid-cols-2 lg:grid-cols-4 gap-8';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6, delay: 0.2 }
           >;
             <div className="text-center">;
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">25+</div>;
               <div className="text-white text-lg">New Services Added</div>;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={once: true }
 }
 }viewport= {
   {
@@ -602,18 +585,16 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
         <div className='max-w-4xl mx-auto text-center' />;
           <motion.h2;
             className='text-4xl md:text-5xl font-bold text-white mb-6';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6 }
           >;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{duration: 0.6 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={duration: 0.6 }
 }
            />;
             Ready to Lead the Future?;
@@ -622,17 +603,15 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             className="text-xl text-gray-300 mb-8";
 <motion.p;
             className='text-xl text-gray-300 mb-8';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6, delay: 0.2 }
           >;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={once: true }
 }
 }whileInView= {
   {
@@ -648,22 +627,20 @@ Join thousands of businesses already transforming their operations;
           </motion.p />;
           <motion.div;
             className='flex flex-col sm:flex-row gap-4 justify-center';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.6, delay: 0.4 }
           >;
            />;
             <a;
               href={`mailto:${contactInfo.email}`}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg";
              />;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={once: true }
 }
 }> Market Impact & Growth </motion.h2> <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" initial= {
   {
@@ -695,7 +672,6 @@ Join thousands of businesses already transforming their operations;
 <a;
               href={`mailto:${contactInfo.email}`}
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
             >;
               Contact Our Team;
             </a>;

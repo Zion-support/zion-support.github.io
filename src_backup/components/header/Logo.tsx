@@ -79,7 +79,7 @@ if ( {) {
         width={32}
         height={32}
       />;
-    </Link>)}}/>;
+    </Link>)}/>;
     </Link>;
   )
         height={32}

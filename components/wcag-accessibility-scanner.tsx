@@ -20,11 +20,11 @@ return (;
 <meta name='description' content={service.description} />'
         <link,
 rel='canonical''
-          href='"https"://ziontechgroup && ziontechgroup.com/wcag-accessibility-scanner'' />;
-      <div className='min-h-screen pt-24 pb-20 px-4 "sm":px-6 "lg":px-8'>;'
+          href=''https'://ziontechgroup && ziontechgroup.com/wcag-accessibility-scanner'' />;
+      <div className='min-h-screen pt-24 pb-20 px-4 'sm':px-6 'lg':px-8'>;'
         <div className='max-w-6xl mx-auto'>;'
           <div className='text-center mb-10'>;'
-            <h1 className='text-5xl "md":text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;'
+            <h1 className='text-5xl 'md':text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;'
               <Eye className='w-10 h-10' />;'
               {service && service.name}
             </h1>;
@@ -32,11 +32,11 @@ rel='canonical''
               {service && service.tagline}
             </p>;
           </div>;
-          <div className='grid grid-cols-1 "lg":grid-cols-3 gap-6 mb-12'>;'
-            <div className='"lg":col-span-2 bg-black/30 rounded-2xl border border-blue-500/30 p-6'>;'
+          <div className='grid grid-cols-1 'lg':grid-cols-3 gap-6 mb-12'>;'
+            <div className=''lg':col-span-2 bg-black/30 rounded-2xl border border-blue-500/30 p-6'>;'
               <h2 className='text-2xl font-semibold mb-4'>Capabilities</h2>;'
               <p className='text-slate-300 mb-6'>{service && service.description}</p>;'
-              <ul className='grid grid-cols-1 "md":grid-cols-2 gap-3'>;'
+              <ul className='grid grid-cols-1 'md':grid-cols-2 gap-3'>;'
                 {service && service.features.slice(0, 12).map((feat, i) => (<li;
                     }
                     key={i}
@@ -60,7 +60,7 @@ rel='canonical''
                     {service && service.trialDays;
                       ? `${service && service.trialDays}-day free trial • `;`
                       : ''}'
-                    "Setup": {service && service.setupTim
+                    'Setup': {service && service.setupTim
 }
                   </div>;
                 </div>;
@@ -100,18 +100,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Button;
                 href='/contact';
                 variant='quantum';
                 size='lg';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='w-full'>;
                 Start Trial;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -128,11 +120,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items-center space-x-2'>;
                   <MapPin className='w-4 h-4 text-green-400' />;
                   <span className='text-xs'>{service && service.contactInfo.address}</span>;
-                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
-              <div className="mt-6 space-y-3 text-sm text-slate-300">;
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
+                </div>              </div>              <Button href='/contact' variant='quantum' size='lg' className='w-full'>Start Trial<ArrowRight className='w-5 h-5 ml-2' /></Button>;
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
+                <div className='flex items-center space-x-2'><Phone className='w-4 h-4 text-cyan-400' /><span>{service && service.contactInfo.mobile}</span></div>;
+                <div className='flex items-center space-x-2'><Mail className='w-4 h-4 text-purple-400' /><span>{service && service.contactInfo.email}</span></div>;
+                <div className='flex items-center space-x-2'><MapPin className='w-4 h-4 text-green-400' /><span className='text-xs'>{service && service.contactInfo.address}</span></div>;
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import { extra_services   } from '../data / extra - services';export default /**;
@@ -219,26 +211,22 @@ if (return null) {$2;
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{service.contact_info.address}</span>;
-                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial < ArrowRight className="w - 5 h-5 ml-2" /></Button>;
-              <div className="mt - 6 space - y-3 text - sm text-slate-300">;
-                <div className="flex items-center space-x-2"><Phone className="w - 4 h - 4 text-cyan-400" /><span>{service.contact_info.mobile}</span></div>;
-                <div className="flex items-center space-x-2"><Mail className="w - 4 h - 4 text-purple-400" /><span>{service.contact_info.email}</span></div>;
-                <div className="flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400" /><span className="text-xs">{service.contact_info.address}</span></div>;
+                </div>              </div>              <Button href='/contact' variant='quantum' size='lg' className='w-full'>Start Trial < ArrowRight className='w - 5 h-5 ml-2' /></Button>;
+              <div className='mt - 6 space - y-3 text - sm text-slate-300'>;
+                <div className='flex items-center space-x-2'><Phone className='w - 4 h - 4 text-cyan-400' /><span>{service.contact_info.mobile}</span></div>;
+                <div className='flex items-center space-x-2'><Mail className='w - 4 h - 4 text-purple-400' /><span>{service.contact_info.email}</span></div>;
+                <div className='flex items-center space-x-2'><MapPin className='w - 4 h - 4 text-green-400' /><span className='text-xs'>{service.contact_info.address}</span></div>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'))if (!service) return null;return (<UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
-              <div className="mt-6 space-y-3 text-sm text-slate-300">;
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>;
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>;
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>;
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
+                <div className='flex items-center space-x-2'><Phone className='w-4 h-4 text-cyan-400' /><span>{service.contactInfo.mobile}</span></div>;
+                <div className='flex items-center space-x-2'><Mail className='w-4 h-4 text-purple-400' /><span>{service.contactInfo.email}</span></div>;
+                <div className='flex items-center space-x-2'><MapPin className='w-4 h-4 text-green-400' /><span className='text-xs'>{service.contactInfo.address}</span></div>;
                 className='w-full';
               >;
                 Start Trial;
@@ -264,10 +252,7 @@ if (return null) {$2;
       </div>;
     </UltraAdvancedFuturisticBackground>;
 }
-<<<<<<< HEAD
 }</UltraAdvancedFuturisticBackground>)})}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
 
@@ -275,28 +260,21 @@ if (return null) {$2;
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2'><Phone className='w-4 h-4 text-cyan-400' /><span>{service.contactInfo.mobile}</span></div>
+                <div className='flex items-center space-x-2'><Mail className='w-4 h-4 text-purple-400' /><span>{service.contactInfo.email}</span></div>
+                <div className='flex items-center space-x-2'><MapPin className='w-4 h-4 text-green-400' /><span className='text-xs'>{service.contactInfo.address}</span></div>
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
 }
 }
 
     </UltraAdvancedFuturisticBackground>);
 }
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 }</UltraAdvancedFuturisticBackground>)})}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
   );
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

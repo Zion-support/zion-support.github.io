@@ -16,7 +16,6 @@ import { JobApplication, ApplicationStatus  } from '@/types/jobs';
 interface ApplicationActionsProps  {application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationActions.tsx
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
@@ -62,7 +61,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <DropdownMenuContent align='end'>;
           <DropdownMenuItem;
             onClick={() => onStatusChange(application.id, 'shortlisted')}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationActions.tsx
           >
             Shortlist
           </DropdownMenuItem>
@@ -192,7 +190,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </DropdownMenuItem>;
           <DropdownMenuItem;
             onClick={() => onStatusChange(application.id, "interview")}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationActions.tsx
 
 
           >;
@@ -281,7 +278,6 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
           </DropdownMenuItem>;
           <DropdownMenuItem;
             on_click={() => onStatusChange (application.id, "rejected")}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationActions.tsx
             className="text - red - 600";
 
 
@@ -308,7 +304,6 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
           Contact;
         </Link>;
       </Button>;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationActions.tsx
     </div>);
 
 <Button variant='default' size='sm' asChild>

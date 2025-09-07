@@ -3975,7 +3975,7 @@ export const getServicesByCategory = (category: string) => {if (category === 'Al
   'AllQuantum ComputingAI & Machine LearningCybersecurityBiomedical & HealthcareFinancial TechnologyContent & MarketingData Analytics & BI';
   'Customer Service & SupportSupply Chain & LogisticsHuman ResourcesLegal TechnologySales & MarketingBlockchain & Web3IoT & Edge ComputingCloud & Infrastructure';
   'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics';
-];;
+];
   // Map category names to match service categories;
   const categoryMapping: { [key: string]: string[] } = {'Quantum Computing': ['Quantum AI & ComputingQuantum Technology'],'AI & Machine Learning': ['AI & Content CreationAI & Customer Service', 'AI & Sales AutomationAI & Data Analytics', 'AI & Legal TechAI & HR Tech', 'AI & Market ResearchAI & Video Production', 'AI & SEOAI & Blockchain', 'AI & IoTAdvanced AI Services'],'Cybersecurity': ['Cybersecurity & PrivacyCybersecurity'],'Blockchain & Web3': ['Blockchain & DeFiAI & Blockchain'],'IoT & Smart Cities': ['Edge Computing & IoTAI & IoT', 'IoT & Smart Cities'],'Metaverse & VR/AR': ['Metaverse & VR/AR'],'Robotics & Automation': ['Robotics & AutomationAutonomous Systems'],'Energy & Sustainability': ['Energy & SustainabilityClimate Technology'],'Logistics & Supply Chain': ['Logistics & Supply Chain'],'Financial Technology': ['Financial TechnologyFinancial Technology & Trading', 'Quantum Finance & Trading'],'Biotechnology & Healthcare': ['Biotechnology & HealthcareBiomedical AI', 'Biotechnology & Healthcare AI'],'Space Technology': ['Space Technology & Aerospace'],'Content Creation': ['AI & Content CreationAI & Video Production'],'Analytics & Business Intelligence': ['AI & Data AnalyticsAI & Market Research'],'Cloud & Infrastructure': ['Cloud PlatformEdge Computing & IoT'],'Climate Technology': ['Climate Technology'];
   }// Find matching categories;
@@ -3986,7 +3986,7 @@ export const serviceCategories = [;
   'AllAI & Enterprise Automation','Quantum AI & BiotechAI & Cybersecurity','Quantum AI & FinanceAI & Supply Chain','Quantum AI & ClimateAI & Manufacturing','Quantum AI & HealthcareAI & Logistics','Quantum AI & EnergyAI & Education','Quantum AI & CybersecurityAI & Marketing','Quantum AI & ResearchAI & Legal Services','Quantum AI & Autonomous VehiclesAI & Real Estate','Quantum AI & CyberneticsQuantum AI & Space Technology',// ADDITIONAL INNOVATIVE CATEGORIES;
   'AI & Content CreationAI & Customer Service','AI & Sales AutomationAI & Data Analytics','AI & HR TechAI & Market Research','AI & Video ProductionAI & SEO','AI & BlockchainAI & IoT','AI & Machine LearningQuantum Computing & AI','Quantum Finance & TradingQuantum Technology','Autonomous ManufacturingAutonomous Systems','Quantum CybersecuritySpace Technology & Aerospace','Metaverse & VR/ARMetaverse & Virtual Reality','Biomedical AINeural Technology','Blockchain & DeFiEdge Computing & IoT','Manufacturing & Industry 4.0Cybersecurity & Privacy','Healthcare & BiotechnologyFinancial Technology','Financial Technology & TradingEnergy & Sustainability','IoT & Smart CitiesClimate Technology','Robotics & AutomationAgriculture & Food Tech';
 ];// Combined all services;
-export const allEnhancedRealMicroSaasServices  = enhancedRealMicroSaasServices;;ursor/fix-website-loading-errors-and-merge-6662;
+export const allEnhancedRealMicroSaasServices  = enhancedRealMicroSaasServices;ursor/fix-website-loading-errors-and-merge-6662;
 'Data Analytics' ];
 
 

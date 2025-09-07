@@ -18,7 +18,7 @@ function handler() {
 if ( {) {
   $2
 }
-    res.status (405).json ({ error: "Method not allowed" });
+    res.status (405).json ({ error: 'Method not allowed' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 
   }

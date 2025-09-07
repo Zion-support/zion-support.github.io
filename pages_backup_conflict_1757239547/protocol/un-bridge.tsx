@@ -99,17 +99,17 @@ export default function UNBridge() {
 
   }
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="space-y-3">
-          <label className="block">
-            <span className="text-sm">Title</span>
-            <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
+    <div className='space-y-6'>
+      <h1 className='text-2xl font-semibold'>Global Outreach: UN Bridge</h1>
+      <div className='grid md:grid-cols-2 gap-6'>
+        <div className='space-y-3'>
+          <label className='block'>
+            <span className='text-sm'>Title</span>
+            <input name='title' value={form.title} onChange={onChange} className='w-full border rounded p-2' />
           </label>
-          <label className="block">
-            <span className="text-sm">Target institution</span>
-            <input name="targetInstitution" value={form.targetInstitution} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>Target institution</span>
+            <input name='targetInstitution' value={form.targetInstitution} onChange={onChange} className='w-full border rounded p-2' />
           </label>
           <label className='block'>
             <span className='text-sm'>Type</span>
@@ -124,24 +124,24 @@ export default function UNBridge() {
               <option>Education</option>
             </select>
           </label>
-          <label className="block">
-            <span className="text-sm">Regional scope</span>
-            <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>Regional scope</span>
+            <input name='regionalScope' value={form.regionalScope} onChange={onChange} className='w-full border rounded p-2' />
           </label>
-          <label className="block">
-            <span className="text-sm">Budget / Resolution goals</span>
-            <input name="budgetOrResolution" value={form.budgetOrResolution} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>Budget / Resolution goals</span>
+            <input name='budgetOrResolution' value={form.budgetOrResolution} onChange={onChange} className='w-full border rounded p-2' />
           </label>
-          <label className="block">
-            <span className="text-sm">Supporting multiverse(s) (comma separated)</span>
-            <input name="supportingMultiverses" value={form.supportingMultiverses} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>Supporting multiverse(s) (comma separated)</span>
+            <input name='supportingMultiverses' value={form.supportingMultiverses} onChange={onChange} className='w-full border rounded p-2' />
           </label>
-          <label className="block">
-            <span className="text-sm">GPT Prompt Assist</span>
-            <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>GPT Prompt Assist</span>
+            <textarea name='promptAssist' rows={5} value={form.promptAssist} onChange={onChange} className='w-full border rounded p-2' />
           </label>
-          <div className="flex gap-3">
-            <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
+          <div className='flex gap-3'>
+            <button onClick={generate} disabled={loading} className='px-4 py-2 bg-black text-white rounded'>{loading ? 'Working…' : 'Generate Proposal'}</button>
           </div>
         </div>
         <div className='space-y-3'>
@@ -192,30 +192,30 @@ export default function UNBridge() {
             >
               Submit (Email)
             </button>
-            <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
+            <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
               {translated  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             </div>;
           )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-          <div className="flex items-center gap-2">
-            <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
-            <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
+          <div className='flex items-center gap-2'>
+            <button onClick={exportArtifacts} disabled={loading || !result} className='px-3 py-2 border rounded'>Export PDF + Sign + IPFS</button>
+            <button onClick={() => submit(['email'])} disabled={loading || !result} className='px-3 py-2 border rounded'>Submit (Email)</button>
           </div>
           {result?.meta && (
-            <div className="text-sm space-y-1">
-              <div><span className="font-medium">Status:</span> {result.meta.status}</div>
+            <div className='text-sm space-y-1'>
+              <div><span className='font-medium'>Status:</span> {result.meta.status}</div>
               {result.meta.artifacts?.markdownPath && (
-                <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</Link></div>
+                <div><a className='text-blue-600 underline' href={result.meta.artifacts.markdownPath} target='_blank' rel='noreferrer'>Markdown</Link></div>
               )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               {result.meta.artifacts?.pdfPath && (

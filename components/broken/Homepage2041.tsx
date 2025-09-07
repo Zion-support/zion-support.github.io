@@ -6,15 +6,10 @@ import { ArrowRight;
   }
   Star;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   Star;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Search;
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   Shield;
   Globe;
   TrendingUp;
@@ -30,7 +25,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Sparkles;
   Target;
   Users;
-<<<<<<< HEAD
   Award;
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';'
 
@@ -126,7 +120,7 @@ return (;
 }
 key={i}
                   className='absolute w - 2 h - 2 bg - cyan - 400 / 40 rounded - full';'
-                  animate={{
+                  animate={
 
                     }
 
@@ -134,18 +128,17 @@ key={i}
                     "y": [0, -60, 0],
                     "opacity": [0, 0.7, 0],
                     "scale": [0.5, 1, 0.5]
-                  }}
-                  transition={{
+                  }
+                  transition={
                     }
                     "duration": 5 + i * 0.3,
                     "repeat": Infinity,
                     "delay": i * 0.2,
 "ease": 'easeInOut','
-                  }}
-<<<<<<< HEAD
-                  style={{
+                  }
+                  style={
                     }
-                    "left": `${Math.random() * 10,`}%`,`                    "top": `${Math.random() * 10,`}%`,`                  }} />
+                    "left": `${Math.random() * 10,`}%`,`                    "top": `${Math.random() * 10,`}%`,`                  } />
               ))}
             </div>
           </div>
@@ -154,10 +147,10 @@ key={i}
 
 <div className='text-center max-w-7xl mx-auto relative z-10'>'
             <motion.div,
-initial={{ "opacity": 0, "y": 50 
+initial={ "opacity": 0, "y": 50 
 }
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 
 }
             >
               <h1 
@@ -196,11 +189,11 @@ mining, we're redefining what's possible.'
               {/* Search Bar */}
               <motion.div;
                 className='max-w-3xl mx-auto mb-12';'
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                animate={{ "opacity": 1, "y": 0 
+                animate={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0.8, "delay": 0.2 
+                transition={ "duration": 0.8, "delay": 0.2 
 }
               >;
 <form onSubmit={handleSearch} className='relative'>;'
@@ -223,11 +216,11 @@ mining, we're redefining what's possible.'
 
 <motion.div,
 className='flex flex-col "sm":flex-row gap-6 justify-center items-center''
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                animate={{ "opacity": 1, "y": 0 
+                animate={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.8, "delay": 0 && 0.4 
+                transition={ "duration": 0 && 0.8, "delay": 0 && 0.4 
 }>;
                 <Link,
 href='/2041-futuristic-services-showcase''
@@ -254,13 +247,13 @@ href='/contact''
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
 className='grid grid-cols-2 "md":grid-cols-4 gap-8''
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
+              whileInView={ "opacity": 1, "y": 0 }
 
 
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
             >;
               {stats.map ((stat, index) => (
@@ -270,12 +263,12 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-8''
 
 className='text-center''
 
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0.5, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  transition={ "duration": 0.5, "delay": index * 0.1 }
+                  viewport={ "once": true }
 
                 >
 
@@ -288,7 +281,6 @@ className='text-center''
                   <div className='text-gray-400'>{stat.label}</div>'
                 </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               ))}
             </motion.div>
           </div>
@@ -307,11 +299,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
 className='text-center mb-16''
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
             >
               </h2>"
@@ -328,13 +320,13 @@ className='text-center mb-16''
         <section className='py-20 px-4 bg-gradient-to-b from-black to-gray-900/50'>;'
           <div className='max-w-7xl mx-auto'>;
             <motion&& motion.div'"
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">;"
+              className='text-center mb-16'              initial={ opacity: 0, y: 30 }        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">;"
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div "
               className="text-center mb-16"
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;'
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;'
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
                 Revolutionary 2041 Services;
               </h2>;'
@@ -345,7 +337,7 @@ className='text-center mb-16''
               </p>;
             </motion && motion.div>;
             <motion&& motion.div'
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Revolutionary 2041 Services;
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={ opacity: 0, y: 30 }                Revolutionary 2041 Services;
               </h2>;"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;'
                 Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible.;
@@ -354,7 +346,7 @@ className='text-center mb-16''
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 
             <motion.div'
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={ opacity: 0, y: 30 }
 
 <h2 className='text-5xl "md":text-6xl font-bold text-white mb-6'>'
                 Revolutionary 2041 Services
@@ -368,36 +360,35 @@ boundaries of what's possible.'
             <motion.div,
 className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8''
 
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 
+              whileInView={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0 && 0.8, "delay": 0 && 0.2 }}
-              viewport={{ "once": true 
+              transition={ "duration": 0 && 0.8, "delay": 0 && 0.2 }
+              viewport={ "once": true 
 }>;
               {featuredServices && featuredServices.map((service, index) => (<motion&& motion.div;
                   }
                   key={service && service.id}
-                  initial={{ "opacity": 0, "y": 30 
+                  initial={ "opacity": 0, "y": 30 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0 && 0.5, "delay": 0 && 0.4 + index * 0 && 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0 && 0.5, "delay": 0 && 0.4 + index * 0 && 0.1 }
+                  viewport={ "once": true 
 }>;
                   <UltraFuturisticServiceCard2026 service={service} />;
                 </motion && motion.div>;
-<<<<<<< HEAD
               ))}</motion && motion.div>;
             <motion&& motion.div;
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion && motion.div;
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }            <motion && motion.div;
               className="text-center mt-12";
             <motion.div;
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}<motion.div;
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div;
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }<motion.div;
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }            <motion.div;
               className="text-center mt-12";
             <motion.div;
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}className="text-center mt-12";
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }className="text-center mt-12";
             </motion.div>;
 <motion.div;
               className='text-center mt-12';
@@ -405,26 +396,26 @@ className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8''
 
             </motion && motion.div>;
             <motion&& motion.div
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion && motion.div 
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }            <motion && motion.div 
 
               className="text-center mt-12"
 
 
             <motion.div
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }
 
             <motion.div
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div 
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }            <motion.div 
               className="text-center mt-12"
 
             <motion.div
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }
 
               className="text-center mt-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
-              viewport={{ once: true }}>;
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8, delay: 0 && 0.6 }
+              viewport={ once: true }>;
               <Link
 
 href='/2041-futuristic-services-showcase'
@@ -436,18 +427,18 @@ href='/2041-futuristic-services-showcase'
 
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true}
             >
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  viewport={{ once: true}}
+                  initial={ opacity: 0, y: 30}
+                  whileInView={ opacity: 1, y: 0}
+                  transition={ duration: 0.5, delay: 0.4 + index * 0.1 }
+                  viewport={ once: true}
                 >
                   <UltraFuturisticServiceCard2026 service={service} />
                 </motion.div>
@@ -456,10 +447,10 @@ href='/2041-futuristic-services-showcase'
 
             <motion.div 
               className="text-center mt-12"
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 20}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.8, delay: 0.6 }
+              viewport={ once: true}
             >
               <Link
                 href="/2041-futuristic-services-showcase"
@@ -468,25 +459,24 @@ href='/2041-futuristic-services-showcase'
                 <Eye className="w-5 h-5" />
                 View All 2041 Services
                 <ArrowRight className="w-5 h-5" />
-=======
               ))}
 
             </motion && motion.div>;
             <motion&& motion.div'
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion && motion.div;
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }            <motion && motion.div;
 "
               className="text-center mt-12"
 
 
             <motion.div'
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }
 
             <motion.div'
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div "
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }            <motion.div "
               className="text-center mt-12"
 
             <motion.div'
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }
 "
               className="text-center mt-12"
             </motion.div>
@@ -494,12 +484,12 @@ href='/2041-futuristic-services-showcase'
 <motion.div,
 className='text-center mt-12''
 
-              initial={{ "opacity": 0, "y": 20 
+              initial={ "opacity": 0, "y": 20 
 }
-              whileInView={{ "opacity": 1, "y": 0 
+              whileInView={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0 && 0.8, "delay": 0 && 0.6 }}
-              viewport={{ "once": true 
+              transition={ "duration": 0 && 0.8, "delay": 0 && 0.6 }
+              viewport={ "once": true 
 }>;
 
               <Link,
@@ -519,37 +509,34 @@ href='/2041-futuristic-services-showcase''
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
 className='text-center mb-16''
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
             >
               </h2>"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See how industry leaders are transforming their businesses with our revolutionary 2041 services.
               </p>
             </motion.div>
-<<<<<<< HEAD
 
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true}
             >
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.name}
             >;
               {testimonials.map((testimonial, index) => (<motion.div;
-                  key={testimonial.name}className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm";
-                  className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}initial={{ opacity: 0, y: 30 }}
-                  className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
-=======
+                  key={testimonial.name}className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={ opacity: 0, y: 30 }                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm";
+                  className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={ opacity: 0, y: 30 }initial={ opacity: 0, y: 30 }
+                  className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={ opacity: 0, y: 30 }                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
             <motion.div'
                 className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'>;'
                 <Eye className='w-5 h-5' />;
@@ -567,13 +554,13 @@ className='text-center mb-16''
         <section className='py-20 px-4'>;'
           <div className='max-w-7xl mx-auto'>;
             <motion&& motion.div'"
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">;"
+              className='text-center mb-16'              initial={ opacity: 0, y: 30 }        <section className="py-20 px-4">;"
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div "
               className="text-center mb-16"
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;'
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;'
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
                 Leading the Future;
               </h2>;'
@@ -583,7 +570,7 @@ className='text-center mb-16''
               </p>;
             </motion && motion.div>;
             <motion&& motion.div'
-              className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Leading the Future;
+              className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={ opacity: 0, y: 30 }                Leading the Future;
               </h2>;"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 See how industry leaders are transforming their businesses with our revolutionary 2041 services.;
@@ -592,7 +579,7 @@ className='text-center mb-16''
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
 
             <motion.div'
-              className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
+              className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={ opacity: 0, y: 30 }
 
 <h2 className='text-5xl "md":text-6xl font-bold text-white mb-6'>'
                 Leading the Future
@@ -605,12 +592,12 @@ our revolutionary 2041 services.
             <motion.div,
 className='grid grid-cols-1 "md":grid-cols-3 gap-8''
 
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 
+              whileInView={ "opacity": 1, "y": 0 
 }
-              transition={{ "duration": 0.8, "delay": 0.2 }}
-              viewport={{ "once": true 
+              transition={ "duration": 0.8, "delay": 0.2 }
+              viewport={ "once": true 
 }
 
             >
@@ -621,12 +608,12 @@ key={testimonial.name}
 
 className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm''
 
-                  initial={{ "opacity": 0, "y": 30 
+                  initial={ "opacity": 0, "y": 30 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0.5, "delay": 0.4 + index * 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0.5, "delay": 0.4 + index * 0.1 }
+                  viewport={ "once": true 
 }
                 >;
 <div className='text-4xl mb-4'>{testimonial.avatar}</div>;'
@@ -651,10 +638,10 @@ key={i}
                   <div className='text-gray-500 text-sm'>;'
                     {testimonial.company}
                   className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
-                  initial={{ opacity: 0, y: 30}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  viewport={{ once: true}}
+                  initial={ opacity: 0, y: 30}
+                  whileInView={ opacity: 1, y: 0}
+                  transition={ duration: 0.5, delay: 0.4 + index * 0.1 }
+                  viewport={ once: true}
                 >
                   <div className="text-4xl mb-4">{testimonial.avatar}</div>
                   <p className="text-gray-300 mb-6 leading-relaxed">{testimonial.content}</p>
@@ -662,13 +649,11 @@ key={i}
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
-=======
                     {testimonial.name}
                   </div>
                   <div className='text-cyan-400'>{testimonial.role}</div>
                   <div className='text-gray-500 text-sm'>
                     {testimonial.company}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   </div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400">{testimonial.role}</div>
@@ -690,11 +675,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-4xl mx-auto text-center'>'
             <motion.div,
 className='bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm''
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
             >
 
@@ -733,10 +718,10 @@ href='/2041-futuristic-services-showcase''
 
   Math.random () * 100 
 
-}%`;`"top": `$ {Math.random () * 100;`}%`;`}/>) )}</div> </div> <motion.div initial= {{"opacity": 0, "y": 50;
-}animate= {{"opacity": 1, "y": 0;
-}transition= {{}initial= {{"opacity": 0, "y": 30;
-}whileInView= {{"opacity": 1, "y": 0;
+}%`;`"top": `$ {Math.random () * 100;`}%`;`}/>) )}</div> </div> <motion.div initial= {"opacity": 0, "y": 50;
+}animate= {"opacity": 1, "y": 0;
+}transition= {}initial= {"opacity": 0, "y": 30;
+}whileInView= {"opacity": 1, "y": 0;
 }transition = {;
 }
 export default Homepage2041;

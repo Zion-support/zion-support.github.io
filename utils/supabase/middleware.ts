@@ -28,7 +28,7 @@ if ( {) {
     const role = request.cookies.get ('user_role')?.value || 'talent','
     const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';'
     return NextResponse.redirect (new URL (target, request.url));
-export const config = {"matcher": ['/dashboard/dashboard/']}'
+export const config = {'matcher': ['/dashboard/dashboard/']}'
 import { NextResponse } from 'next/server';'
 import type { NextRequest } from 'next/server';'
 export function middleware() {;
@@ -41,8 +41,8 @@ export function middleware() {;
     return NextResponse.redirect(new URL(target, request.url));
     } catch (error) {
     }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
+    console.error(''Error':', error);'
+    return res.status(500).json({ 'error': 'Internal server error' });'
   }
 }
 export const config = {matcher: ['/dashboard / dashboard/']}export /**;
@@ -61,7 +61,7 @@ export const config = {}export const config = {matcher: ['/dashboard / dashboard
 }
 export const config = {
   }
-  "matcher": ['/dashboard / dashboard/']}'
+  'matcher': ['/dashboard / dashboard/']}'
 
 
 import { NextResponse } from 'next / server','
@@ -84,17 +84,17 @@ if ( {) {
 }
 export const config = {
   }
-  "matcher": ['/dashboard / dashboard/']}'
+  'matcher': ['/dashboard / dashboard/']}'
 
 ;
 export const config = {;
   }
-  "matcher": ['/dashboard/dashboard/']};'
+  'matcher': ['/dashboard/dashboard/']};'
 ;
 export const config = {;
   }
-  "matcher": ['/dashboard/dashboard/']};'
+  'matcher': ['/dashboard/dashboard/']};'
 ;
 export const config = {;
   }
-  "matcher": ['/dashboard/dashboard/']};'
+  'matcher': ['/dashboard/dashboard/']};'

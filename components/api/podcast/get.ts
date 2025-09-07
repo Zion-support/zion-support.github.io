@@ -12,7 +12,7 @@ const EPISODES_PATH = path.join(;
 function ensureStorage() {
   }
   const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { "recursive": true
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { 'recursive': true
 });
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');'
@@ -21,9 +21,7 @@ export default function handler() {
 
   }
 
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ensureStorage();
 
 const { id } = req.query as { id?: string };
@@ -31,7 +29,7 @@ const { id } = req.query as { id?: string };
 const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];'
 
 const episode = episodes.find(e => { return e.id === id); }
-  if (!episode) return res.status(404).json({ "error": 'Not found','
+  if (!episode) return res.status(404).json({ 'error': 'Not found','
 });
 
   return res.status(200).json({ episode });
@@ -73,15 +71,11 @@ function handler() {}
   $2;
 }
   return res.status (200).json ({ episode });
-<<<<<<< HEAD
   return res.status(200).json({ episode });
   return res.status(200).json({ ok: true });
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   return res.status(200).json({ episode })
 }

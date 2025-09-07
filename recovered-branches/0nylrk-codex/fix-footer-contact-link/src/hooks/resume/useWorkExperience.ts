@@ -39,7 +39,7 @@ export function useWorkExperience() {
       return false    try {
       const { error } = await supabase
         .from('work_history')
-        .insert({      return showSuccessToast("Work experience added", "Your work experience has been added to your resume")          company_logo_url: work.company_logo_url,
+        .insert({      return showSuccessToast('Work experience added', 'Your work experience has been added to your resume')          company_logo_url: work.company_logo_url,
           location: work.location;
         });
 ;
@@ -47,15 +47,14 @@ export function useWorkExperience() {
 if (throw error) {
   $2
 }
-      return showSuccessToast ("Work experience added", "Your work experience has been added to your resume");
+      return showSuccessToast ('Work experience added', 'Your work experience has been added to your resume');
     } catch (e: any) {
       return handleResumeError (e, 'Could not add work experience');
     } finally {
 
       setIsLoading(false)
 
-=======      return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
-      return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
+      return showSuccessToast('Work experience added', 'Your work experience has been added to your resume')
     } catch (e: any) {
       return handleResumeError(e, 'Could not add work experience')
     } finally {
@@ -79,7 +78,7 @@ if (throw error) {
           location: work.location;
         }),;
       if (error) throw error,;
-      return showSuccessToast("Work experience added", "Your work experience has been added to your resume");
+      return showSuccessToast('Work experience added', 'Your work experience has been added to your resume');
     } catch (e: any) {;
       return handleResumeError(e, 'Could not add work experience');
     } finally {;
@@ -120,7 +119,7 @@ if (throw error) {
           start_date: formatDateForDB (work.start_date);
           end_date: work.is_current ? null : formatDateForDB (work.end_date);
           is_current: work.is_current,
-  description: work.description;      return showSuccessToast("Work experience updated", "Your work experience has been updated")          company_logo_url: work.company_logo_url,
+  description: work.description;      return showSuccessToast('Work experience updated', 'Your work experience has been updated')          company_logo_url: work.company_logo_url,
           location: work.location;
         });
         .eq ('id', work_id);
@@ -129,18 +128,17 @@ if (throw error) {
 if (throw error) {
   $2
 }
-      return showSuccessToast ("Work experience updated", "Your work experience has been updated");
+      return showSuccessToast ('Work experience updated', 'Your work experience has been updated');
     } catch (e: any) {
       return handleResumeError (e, 'Could not update work experience');
     } finally {
 
       setIsLoading(false)
 
-=======      return showSuccessToast("Work experience updated", "Your work experience has been updated")
         .eq($2);
       if (error) throw error,
       
-      return showSuccessToast("Work experience updated", "Your work experience has been updated")
+      return showSuccessToast('Work experience updated', 'Your work experience has been updated')
     } catch (e: any) {
       return handleResumeError(e, 'Could not update work experience')
     } finally {
@@ -164,7 +162,7 @@ if (throw error) {
         });
         .eq('id', workId),;
       if (error) throw error,;
-      return showSuccessToast("Work experience updated", "Your work experience has been updated");
+      return showSuccessToast('Work experience updated', 'Your work experience has been updated');
     } catch (e: any) {;
       return handleResumeError(e, 'Could not update work experience');
     } finally {;
@@ -197,7 +195,7 @@ if (throw error) {
       if (error) throw error,
       
 
-      return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume");
+      return showSuccessToast('Work experience deleted', 'Your work experience has been removed from your resume');
   const deleteWorkExperience = async (work_id: string): Promise < boolean> => {
     // Check condition
 if ( {) {
@@ -219,7 +217,7 @@ if ( {) {
         .eq($2);
       if (error) throw error,
       
-      return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
+      return showSuccessToast('Work experience deleted', 'Your work experience has been removed from your resume')
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete work experience')
     } finally {
@@ -242,7 +240,7 @@ if ( {) {
         .delete();
         .eq('id', workId),;
       if (error) throw error,;
-      return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume");
+      return showSuccessToast('Work experience deleted', 'Your work experience has been removed from your resume');
     } catch (e: any) {;
       return handleResumeError(e, 'Could not delete work experience');
     } finally {;

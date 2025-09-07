@@ -19,7 +19,7 @@ const { data, error } = await supabase;
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');'
     if (isPlaceholder) {
       }
-      return res && res.status(200).json({ "ok": true, "simulated": true });
+      return res && res.status(200).json({ 'ok': true, 'simulated': true });
 const { data, error } = await supabase;
       .from('email_signups');'
   const { email } = req.body |{}
@@ -43,20 +43,20 @@ const normalized = email && email.trim().toLowerCase();
       (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');'
     if (isPlaceholder) {
       }
-      return res && res.status(200).json({ "ok": true, "simulated": true });    }
+      return res && res.status(200).json({ 'ok': true, 'simulated': true });    }
 const { data, error } = await supabase;
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');'
     if (isPlaceholder) {
       }
-      return res && res.status(200).json({ "ok": true, "simulated": true });
+      return res && res.status(200).json({ 'ok': true, 'simulated': true });
 const { data, error } = await supabase;
       .from('email_signups');'
       .insert({
         }
-        "email": normalized,
-"source": 'mobile-launch''
-        "created_at": new Date().toISOString();
-      })      .select('*')      .insert({ "email": normalized, "source": 'mobile-launch', "created_at": new Date().toISOString() })'
+        'email': normalized,
+'source': 'mobile-launch''
+        'created_at': new Date().toISOString();
+      })      .select('*')      .insert({ 'email': normalized, 'source': 'mobile-launch', 'created_at': new Date().toISOString() })'
       .select('*');'
       .single();
 
@@ -108,22 +108,22 @@ try {
 if ( {) {
   $2
 }
-return res.status (200).json ({ "ok": true, "simulated": true });    
+return res.status (200).json ({ 'ok': true, 'simulated': true });    
 const { data, error } = await supabase;
       .from ('email_signups')    const is_placeholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes ('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes ('placeholder');'
     // Check condition,
 if ( {) {
   $2
 }
-return res.status (200).json ({ "ok": true, "simulated": true });
+return res.status (200).json ({ 'ok': true, 'simulated': true });
     
 const { data, error } = await supabase;
       .from ('email_signups');'
       .insert ({
         }
-        "email": normalized,
-        "source": 'mobile - launch','
-        "created_at": new Date ().toISOString ()})      .select ('*')      .insert ({ "email": normalized, "source": 'mobile - launch', "created_at": new Date ().toISOString () });'
+        'email': normalized,
+        'source': 'mobile - launch','
+        'created_at': new Date ().toISOString ()})      .select ('*')      .insert ({ 'email': normalized, 'source': 'mobile - launch', 'created_at': new Date ().toISOString () });'
       .select ('*');'
       .single ();
 ;
@@ -134,12 +134,12 @@ if ( {) {
 if () {) {
   $2
 }
-return res.status (200).json ({ "ok": true, "duplicate": true });
+return res.status (200).json ({ 'ok': true, 'duplicate': true });
 
       return res.status (500).send (error.message || 'Database error');'
 
-    return res.status (200).json ({ "ok": true, data });
-  } catch ("e": any) {
+    return res.status (200).json ({ 'ok': true, data });
+  } catch ('e': any) {
     }
     return res.status(500).send(e?.message |'Unexpected error');'
     return res.status(500).send(e?.message || 'Unexpected error');'
@@ -147,8 +147,8 @@ return res.status (200).json ({ "ok": true, "duplicate": true });
   }      }
       return res.status (500).send (error.message || 'Database error');'
 
-    return res.status (200).json ({ "ok": true, data });
-  } catch ("e": any) {
+    return res.status (200).json ({ 'ok': true, data });
+  } catch ('e': any) {
     }
     return res.status (500).send (e?.message || 'Unexpected error');'
 

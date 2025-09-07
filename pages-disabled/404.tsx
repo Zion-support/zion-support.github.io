@@ -20,11 +20,11 @@ export default function Custom404() {},";
       <div className="min-h-screen bg-gray-50">
 </div>
         <motion.div
-          initial={{ opacity: 0, y: 20 }},
+          initial={ opacity: 0, y: 20 },
   {
-          animate={{ opacity: 1, y: 0 }},
+          animate={ opacity: 1, y: 0 },
   {
-          transition={{ duration: 0.6 }},
+          transition={ duration: 0.6 },
   {
         >
 
@@ -32,18 +32,18 @@ export default function Custom404() {},";
 </div>
             <motion.div
               className="text-9xl font-bold text-blue-600 mb-4"
-              animate={{ },
+              animate={ },
   {
                 scale: ["1", "1.1", "1"],
                 rotate: ["0", "5", "-5", "0"]
-  }},
+  },
   {
-              transition={{ },
+              transition={ },
   {
                 duration: 2,
                 repeat: Infinity,
                 repeatType: "reverse"
-              }},
+              },
   {
             >
 </motion>

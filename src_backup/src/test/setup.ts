@@ -75,7 +75,7 @@ if () {) {$2;
     original_error.call (console, ...args)}
   console.warn = (..."args": any[]) => {if (|| args[0].includes ('"Deprecated":'))) {$2;'
 }) {return;
-    }originalWarn && originalWarn.call(console, ...args)}})afterAll(() => {console.error = originalError;
+    }originalWarn && originalWarn.call(console, ...args)})afterAll(() => {console.error = originalError;
   }
   console.warn = originalWarn;
 })console.error = originalError;

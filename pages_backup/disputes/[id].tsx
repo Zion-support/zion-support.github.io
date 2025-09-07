@@ -101,18 +101,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
-          <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-            <div className="p-3 border rounded">
-              <div className="font-medium text-gray-500">Project</div>
-              <div className="mt-1">{dispute.projectId}</div>
+          <div className='mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
+            <div className='p-3 border rounded'>
+              <div className='font-medium text-gray-500'>Project</div>
+              <div className='mt-1'>{dispute.projectId}</div>
             </div>
-            <div className="p-3 border rounded">
-              <div className="font-medium text-gray-500">Client</div>
-              <div className="mt-1">{dispute.clientUserId}</div>
+            <div className='p-3 border rounded'>
+              <div className='font-medium text-gray-500'>Client</div>
+              <div className='mt-1'>{dispute.clientUserId}</div>
             </div>
-            <div className="p-3 border rounded">
-              <div className="font-medium text-gray-500">Talent</div>
-              <div className="mt-1">{dispute.talentUserId}</div>
+            <div className='p-3 border rounded'>
+              <div className='font-medium text-gray-500'>Talent</div>
+              <div className='mt-1'>{dispute.talentUserId}</div>
             </div>
           </div>
           <div className='border-b mb-4 flex gap-4 text-sm'>
@@ -139,23 +139,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
-              <div className="p-4 border rounded">
-                <div className="font-medium mb-2">Description</div>
-                <div className="text-sm whitespace-pre-wrap">{dispute.description}</div>
+              <div className='p-4 border rounded'>
+                <div className='font-medium mb-2'>Description</div>
+                <div className='text-sm whitespace-pre-wrap'>{dispute.description}</div>
               </div>
-              <div className="p-4 border rounded">
-                <div className="font-medium mb-3">Timeline</div>
-                <ol className="relative border-l ml-2">
-                  <li className="mb-6 ml-4">
-                    <div className="absolute w-3 h-3 bg-blue-600 rounded-full -left-1.5 border border-white" />
-                    <time className="text-xs text-gray-500">Created at {new Date(dispute.createdAt).toLocaleString()}</time>
-                    <div className="text-sm">Case opened</div>
+              <div className='p-4 border rounded'>
+                <div className='font-medium mb-3'>Timeline</div>
+                <ol className='relative border-l ml-2'>
+                  <li className='mb-6 ml-4'>
+                    <div className='absolute w-3 h-3 bg-blue-600 rounded-full -left-1.5 border border-white' />
+                    <time className='text-xs text-gray-500'>Created at {new Date(dispute.createdAt).toLocaleString()}</time>
+                    <div className='text-sm'>Case opened</div>
                   </li>
                   {dispute.messages.map((m: any) => (
-                    <li key={m.id} className="mb-6 ml-4">
-                      <div className="absolute w-3 h-3 bg-gray-400 rounded-full -left-1.5 border border-white" />
-                      <time className="text-xs text-gray-500">{new Date(m.createdAt).toLocaleString()}</time>
-                      <div className="text-sm">{m.authorRole} messaged</div>
+                    <li key={m.id} className='mb-6 ml-4'>
+                      <div className='absolute w-3 h-3 bg-gray-400 rounded-full -left-1.5 border border-white' />
+                      <time className='text-xs text-gray-500'>{new Date(m.createdAt).toLocaleString()}</time>
+                      <div className='text-sm'>{m.authorRole} messaged</div>
                     </li>
                   ))}
                   {dispute.resolvedAt && (
@@ -176,9 +176,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {dispute.messages.length === 0 ? (
-                  <div className="text-sm text-gray-500">No messages yet</div>
+                  <div className='text-sm text-gray-500'>No messages yet</div>
                 ) : (
-                  <ul className="space-y-3">
+                  <ul className='space-y-3'>
                     {dispute.messages.map((m: any) => (
                       <li key={m.id} className='text-sm'>
                         <div className='text-gray-500 text-xs'>
@@ -248,12 +248,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
               ) : (
-                <ul className="divide-y">
+                <ul className='divide-y'>
                   {dispute.attachments.map((a: any) => (
-                    <li key={a.id} className="py-2 flex items-center justify-between">
-                      <div className="text-sm">
-                        <div className="font-medium">{a.fileName}</div>
-                        <div className="text-xs text-gray-500">{a.mimeType} • {(a.fileSize / 1024).toFixed(1)} KB</div>
+                    <li key={a.id} className='py-2 flex items-center justify-between'>
+                      <div className='text-sm'>
+                        <div className='font-medium'>{a.fileName}</div>
+                        <div className='text-xs text-gray-500'>{a.mimeType} • {(a.fileSize / 1024).toFixed(1)} KB</div>
                       </div>
 
 
@@ -296,8 +296,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
               )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 

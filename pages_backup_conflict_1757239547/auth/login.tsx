@@ -280,7 +280,7 @@ const LoginPage = () => {
           signInError.message?.toLowerCase().includes('email_not_confirmed') |
           signInError.message?.toLowerCase().includes('verify') |
           signInError.message?.toLowerCase().includes('confirm');
-        // As per issue description, check for a specific error code "email_not_verified"
+        // As per issue description, check for a specific error code 'email_not_verified'
         // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
         const codeIsEmailNotVerified =
           (signInError as any).code === 'email_not_verified';
@@ -294,13 +294,13 @@ const LoginPage = () => {
           setShowProactiveResendForm(false); // Hide proactive form if reactive one is triggered
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
           } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       // Listener for auth state changes
@@ -314,7 +314,7 @@ const LoginPage = () => {
         setUser(session?.user ?? null),
         // If auth state changes after initial check, ensure sessionChecked is true
         // This handles cases like login/logout in another tab.
-        if (!sessionChecked && event !== "INITIAL_SESSION") {
+        if (!sessionChecked && event !== 'INITIAL_SESSION') {
            setSessionChecked(true),
            logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.')
 ;
@@ -329,12 +329,12 @@ const LoginPage = () => {
         setUser(session?.user ?? null);
         // If auth state changes after initial check, ensure sessionChecked is true;
         // This handles cases like login/logout in another tab.;
-        if (!sessionChecked && event !== "INITIAL_SESSION") {;
+        if (!sessionChecked && event !== 'INITIAL_SESSION') {;
            setSessionChecked(true);
            logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.');
           } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       }),;
@@ -342,8 +342,8 @@ const LoginPage = () => {
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
         authListener?.subscription?.unsubscribe();
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     },;
@@ -354,8 +354,8 @@ const LoginPage = () => {
       logInfo('LoginPage: Unmounting, cleaning up auth listener.');
       unsubscribePromise.then(cleanup => cleanup && cleanup());
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   }, []), // Run only once on mount;
@@ -373,13 +373,13 @@ const LoginPage = () => {
           logWarn('Failed to decode returnTo parameter:', { data: router.query.returnTo });
           returnTo = '/dashboard';
           } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -388,8 +388,8 @@ const LoginPage = () => {
       if (authPages.includes(returnTo) || returnTo.startsWith('/auth/')) {;
         returnTo = '/dashboard';
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -397,8 +397,8 @@ const LoginPage = () => {
       if (returnTo.startsWith('http') || returnTo.includes('://')) {;
         returnTo = '/dashboard';
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -410,15 +410,15 @@ const LoginPage = () => {
           logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`);
           router.replace(returnTo), // Use replace to avoid back button issues;
           } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       }, 100), // Small delay to let session stabilize;
       return () => clearTimeout(redirectTimer);
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -430,8 +430,8 @@ const LoginPage = () => {
       setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError);
       return;
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -449,8 +449,8 @@ const LoginPage = () => {
         const data = await response.json();
         setError({ name: 'ResendError', message: data.message || 'Failed to resend verification email' } as AuthError);
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
@@ -458,8 +458,8 @@ const LoginPage = () => {
     } finally {;
       setIsResendingVerification(false);
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   },;
@@ -469,8 +469,8 @@ const LoginPage = () => {
       setProactiveResendMessage({ type: 'error', text: 'Please enter your email address.' });
       return;
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -488,8 +488,8 @@ const LoginPage = () => {
       } else {;
         setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' });
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
@@ -497,8 +497,8 @@ const LoginPage = () => {
     } finally {;
       setIsProactivelyResending(false);
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   },
@@ -520,7 +520,7 @@ const LoginPage = () => {
                                                  signInError.message?.toLowerCase().includes('email_not_confirmed') ||
                                                  signInError.message?.toLowerCase().includes('verify') ||
                                                  signInError.message?.toLowerCase().includes('confirm'),
-        // As per issue description, check for a specific error code "email_not_verified"
+        // As per issue description, check for a specific error code 'email_not_verified'
         // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
         const codeIsEmailNotVerified = (signInError as any).code === 'email_not_verified',
         if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {
@@ -611,26 +611,26 @@ const LoginPage = () => {
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
-    logInfo('LoginPage: Rendering "Checking authentication..."'),
+    logInfo('LoginPage: Rendering 'Checking authentication...''),
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Checking authentication...</p>
-          <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
+      <div className='min-h-screen flex items-center justify-center'>
+        <div className='text-center'>
+          <div className='animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4'></div>
+          <p className='text-gray-600'>Checking authentication...</p>
+          <p className='text-sm text-gray-500 mt-2'>This should only take a moment</p>
         </div>
       </div>
     );  }
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
-    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
+    logInfo('LoginPage: Rendering 'Already Logged In / Redirecting...''),
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>
-          <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
+      <div className='min-h-screen flex items-center justify-center'>
+        <div className='text-center'>
+          <div className='animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4'></div>
+          <h2 className='text-2xl font-bold mb-4'>Already Logged In</h2>
+          <p className='text-gray-600 mb-4'>Redirecting to your dashboard...</p>
         </div>
       </div>
     );  }
@@ -650,7 +650,7 @@ const LoginPage = () => {
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
-        <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
+        <meta name='description' content='Sign in to your Zion Tech Marketplace account' />
       </Head>
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
         <Card className='w-full max-w-md'>          <CardHeader>
@@ -660,10 +660,10 @@ const LoginPage = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleLogin} className="space-y-4">
+            <form onSubmit={handleLogin} className='space-y-4'>
               {error && (
-                <div className="p-3 bg-red-50 border border-red-200 rounded-md">
-                  <p className="text-sm text-red-600">{error.message}</p>
+                <div className='p-3 bg-red-50 border border-red-200 rounded-md'>
+                  <p className='text-sm text-red-600'>{error.message}</p>
                 </div>
               )}
               <div className='space-y-2'>
@@ -709,67 +709,67 @@ const LoginPage = () => {
                   href='/auth/register'
                   className='text-blue-600 hover:underline'
                 >                  Sign up
-                  id="email"
-                  type="email"
+                  id='email'
+                  type='email'
                   value={email  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   onChange={(e) => setEmail(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   required;
                   disabled={isLoading  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 />
               </div>
-              <div className="space-y-2">
-                <label htmlFor="password" className="text-sm font-medium">
+              <div className='space-y-2'>
+                <label htmlFor='password' className='text-sm font-medium'>
                   Password
                 </label>
                 <Input
-                  id="password"
-                  type="password"
+                  id='password'
+                  type='password'
                   value={password  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   onChange={(e) => setPassword(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   required;
                   disabled={isLoading  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 />
               </div>
-              <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
+              <Button type='submit' className='w-full' disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               </Button>
             </form>
-            <div className="mt-6 text-center">
-              <p className="text-sm text-gray-600">
+            <div className='mt-6 text-center'>
+              <p className='text-sm text-gray-600'>
                 Don't have an account?{' '  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                <Link href="/auth/register" className="text-blue-600 hover: underline">
+                <Link href='/auth/register' className='text-blue-600 hover: underline'>
                   Sign up
                 </Link>
               </p>

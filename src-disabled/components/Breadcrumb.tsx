@@ -43,7 +43,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
       
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(structuredData) }
       />
     </>
   );

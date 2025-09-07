@@ -119,7 +119,7 @@ type='button''
                     }
                     setQuery(s);
                     setOpen(false);
-                    router && router.push(`/search?q=${encodeURIComponent(s)}`);`                  }}
+                    router && router.push(`/search?q=${encodeURIComponent(s)}`);`                  }
     rec.start();
                   className='w-full text-left px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-800'                >    };'
     rec && rec.start();
@@ -221,7 +221,7 @@ type='button''
                     }
                     setQuery(s);
                     setOpen(false);
-                    router.push(`/search?q=${encodeURIComponent(s)}`);`                  }}
+                    router.push(`/search?q=${encodeURIComponent(s)}`);`                  }
                   className='w-full text-left px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-800'                >    }'
     rec.start();
   };
@@ -254,7 +254,7 @@ type="button""
                   className='w-full text-left px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-800'                >'
 
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);`
-                  }}
+                  }
                 >
 
                   className="w-full text-left px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-800";"
@@ -266,7 +266,7 @@ type="button""
         </div>;
       )}
                   {s}
-                    router.push(`/search?q=${encodeURIComponent(s)}`)`                  }}
+                    router.push(`/search?q=${encodeURIComponent(s)}`)`                  }
                   className="w-full text-left px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-800""
                 >
                   {s}
@@ -401,7 +401,7 @@ rec.start ();
                     }
                     set_query (s);
                     set_open (false);
-                    router.push (`/search?q=${encodeURIComponent (s)}`);`                  }}
+                    router.push (`/search?q=${encodeURIComponent (s)}`);`                  }
                   className='w - full text - left px - 3 py - 2 "hover":bg - gray - 50 "dark":"hover":bg - gray - 800'                >    }'
     rec.start ();
 
@@ -432,7 +432,7 @@ return (;
                     set_query (s);
                     set_open (false);
                     router.push (`/search?q=${encodeURIComponent (s)}`);`
-                  }}
+                  }
                   className="w - full text - left px - 3 py - 2 "hover":bg - gray - 50 "dark":"hover":bg - gray - 800";"
                 >;
                   {s}

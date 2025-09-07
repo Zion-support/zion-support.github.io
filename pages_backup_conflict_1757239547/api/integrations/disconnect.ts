@@ -3,8 +3,8 @@ import { writeState } from '[^']*';
 import { getProviderById } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   const now = Date.now();
   const updated = writeState((state) => {
@@ -14,8 +14,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       id: `${now}-${providerId}-disconnect`
       timestamp: now
       providerId: providerId as any
-      level: "info"
-      action: "disconnect"
+      level: 'info'
+      action: 'disconnect'
     });
   });
   res.status(200).json({ ok: true });
@@ -27,8 +27,8 @@ import { writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
 export default function handler(req, res) {
   try {
-    res.status(200).json({ message: "Integration disconnected successfully" });
+    res.status(200).json({ message: 'Integration disconnected successfully' });
   } catch (error) {
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: 'Internal server error' });
   }
 }

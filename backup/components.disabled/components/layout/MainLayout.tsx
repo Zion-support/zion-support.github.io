@@ -35,9 +35,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         ]}
       />
       <AccessibilityEnhancer>
-        <div className="min-h-screen flex flex-col">
+        <div className='min-h-screen flex flex-col'>
           <Header />
-          <main id="main-content" className="flex-grow" role="main">
+          <main id='main-content' className='flex-grow' role='main'>
             {children}
           </main>
           <Footer />
@@ -87,9 +87,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         ]}
       />
       <AccessibilityEnhancer>
-        <div className="min-h-screen flex flex-col">
+        <div className='min-h-screen flex flex-col'>
           <Header />
-          <main id="main-content" className="flex-grow" role="main">
+          <main id='main-content' className='flex-grow' role='main'>
             {children}
           </main>
           <Footer />
@@ -101,4 +101,3 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 
 export default MainLayout;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

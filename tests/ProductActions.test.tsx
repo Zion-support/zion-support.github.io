@@ -46,7 +46,7 @@ describe('ProductActions', () => {
     fireEvent.click($2);
     await waitFor(() => expect(addToCart).toHaveBeenCalled()),
     
-    // Wait for the "Added!" status to appear
+    // Wait for the 'Added!' status to appear
     await waitFor(() => {
       expect(button).toHaveTextContent('Added!')
     }),

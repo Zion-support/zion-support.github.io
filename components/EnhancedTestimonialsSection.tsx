@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const EnhancedTestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [ {
   const renderStars = (rating: number) => {
@@ -21,7 +18,6 @@ return (What Our Clients Say </span> </h2> <p className="text-xl text-white/70 m
 }</div> Ready to Join Our Success Stories? </h3> <p className="text-white/70 mb-6 max-w-2xl mx-auto" > Experience the same transformative results that our clients have achieved. Let's discuss how Zion Tech Group can accelerate your innovation journey. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Start Your Success Story </a> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule a Call </a> </div> </div> </div> <span>Enterprise-grade security</span> </div> <div className="flex items-center gap-2" > <TrendingUp className="w-4 h-4 text-blue-400" /> <span>Proven ROI</span> </div> <div className="flex items-center gap-2" > <Users className="w-4 h-4 text-purple-400" /> <span>Global support</span> </div> </div> </div> </div> </section>) 
 }
 export default EnhancedTestimonialsSection
-=======
 import React from 'react';
 import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
 import {
@@ -32,7 +28,6 @@ import {
   TrendingUp
   CheckCircle;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 ;
 import React from 'react';
@@ -376,7 +371,6 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
 )}export default EnhancedTestimonialsSection;
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
-<<<<<<< HEAD
             <div key={index} className="text-center group">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <stat.icon className="w-10 h-10 text-blue-400" />
@@ -478,10 +472,8 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-purple-400" />
               <span>Global support</span>
-=======
             <div key = $2;
 export default EnhancedTestimonialsSection,
-=======
 <div className='mt-16 text-center'    />
           <div className='inline-flex items-center gap-8 text-white/60 text-sm'    />
             <div className='flex items-center gap-2'    />
@@ -500,18 +492,15 @@ export default EnhancedTestimonialsSection,
             <div className='flex items-center gap-2'    />
               <Users className='w-4 h-4 text-purple-400'    />
               <span    />Global support</span>
->>>>>>> origin/main
             </div>
           </div>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   )
 };
 
 export default EnhancedTestimonialsSection;
-=======
   );
 }
 export default EnhancedTestimonialsSection;  )

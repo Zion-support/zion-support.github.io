@@ -49,10 +49,7 @@ const "EnhancedPerformanceMonitor": React.FC;
 //FCP recommendations if (metrics.fcp > 2000) {
   }
   recs.push ({
-=======
   recs.push ({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }return recs;
 }, []);
 //Wait for page to be fully loaded if (document.readyState !== 'complete') {'
@@ -60,7 +57,6 @@ const "EnhancedPerformanceMonitor": React.FC;
   await new Promise ((resolve) => {
 }//Wait a bit more for any async operations await new Promise (resolve => { return setTimeout (resolve, 1000) ); }
 if (metrics.fcp > 2000) score -= 20;
-<<<<<<< HEAD
   category: 'performance' | 'accessibility' | 'seo' | 'user-experience';
 }const EnhancedPerformanceMonitor: React.FC;
 //FCP recommendations if (metrics.fcp > 2000) {recs.push ({}return recs;
@@ -138,13 +134,10 @@ if ( {) {$2;
   }
   rec.priority
 }</span> </div> </div>) )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }</div> </div>)"
 }) : (<BarChart3 className=\"w-4 h-4\" />)
 }<span /> {}
   isMonitoring ? 'Measuring...': 'Measure Performance' }
-=======
 }</div> </div>)
 }) : (<BarChart3 className="w-4 h-4" />)"
 }<span> {
@@ -155,7 +148,6 @@ if ( {) {$2;
 };
 export default EnhancedPerformanceMonitor;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 // Check condition;
 if ( {) {}
   $2;
@@ -173,16 +165,10 @@ if ( {) {}
 }`;
 }> {}
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-<<<<<<< HEAD
 "
-=======
 }
 export default EnhancedPerformanceMonitor
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }</div> </div>)
 }) : (<BarChart3 className="w-4 h-4" />)
 }<span> {
@@ -192,9 +178,3 @@ export default EnhancedPerformanceMonitor
 }
 export default EnhancedPerformanceMonitor;
 export default EnhancedPerformanceMonitor;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

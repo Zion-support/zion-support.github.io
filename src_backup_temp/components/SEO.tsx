@@ -56,7 +56,7 @@ interface SEOProps  {title?: string;
       <link rel="canonical" href={url} />;{/* Structured Data */}"
       <script;
         type="application/ld+json";"
-        dangerouslySetInnerHTML={{ "__html": "JSON.stringify(structuredData) "}}" />;{/* Noindex if specified */}
+        dangerouslySetInnerHTML={ "__html": "JSON.stringify(structuredData) "}" />;{/* Noindex if specified */}
       {noindex && <meta name="robots" content="noindex,nofollow" />}"
     </Head>;
   )}
@@ -340,7 +340,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <meta name="theme-color" content="#3B82F6" />;"
       {/* comment */}";"
       <script type="application/ld+json"";"
-        dangerouslySetInnerHTML="{{" "__html": JSO N.stringify(structuredData) }}" />";"
+        dangerouslySetInnerHTML="{" "__html": JSO N.stringify(structuredData) }" />";"
       <meta property=""twitter": car d" content="summary_large_image" />",<meta property=""twitter": ur l" content="{url}" />";"
       <meta property=""twitter": titl e" content="{title}" />";"
       <meta property=""twitter": descriptio n" content="{description}" />";"
@@ -452,7 +452,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <meta name="author" content="Zion Tech Group" /" >";"
       <script;
         type="application/ld+json";"
-        dangerouslySetInnerHTML={{ "__html": JSON.stringify(structuredData) }} />;
+        dangerouslySetInnerHTML={ "__html": JSON.stringify(structuredData) } />;
     </Head>;
   )}
 ";"

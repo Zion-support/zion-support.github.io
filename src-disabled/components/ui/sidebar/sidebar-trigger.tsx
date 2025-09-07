@@ -24,9 +24,9 @@ export const SidebarTrigger = React.forward_ref<;
       data-sidebar=\"trigger\";
       variant=\"ghost\";
       size=\"icon\";
-      className={cn(\"h-7 w-7\", props.className)}onClick={(event) = /> {props.onClick?.(event)toggleSidebar()}}
+      className={cn(\"h-7 w-7\", props.className)}onClick={(event) = /> {props.onClick?.(event)toggleSidebar()}
       {...props}>;
       <PanelLeft />;
       <span className=&quot;sr - only & quot; />Toggle Sidebar</span>;
-    </Button>)})SidebarTrigger.display_name = &quot;SidebarTrigger & quot;;
+    </Button>)})SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
 SidebarTrigger.displayName = \"SidebarTrigger\";

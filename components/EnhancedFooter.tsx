@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const footerSections = [ {
   title: 'Services', links: [ {
   name: 'AI Business Intelligence', href: '/ai-business-intelligence' 
@@ -58,11 +55,9 @@ const footerSections = [ {
 }</div> </div> </div> </div> </footer>) 
 }
 export default EnhancedFooter
-=======
 import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 const EnhancedFooter: React.FC;
 import Link from 'next/link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
   Brain,Mail,Phone,MapPin,Globe,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
 import React from 'react';
@@ -132,7 +127,6 @@ const EnhancedFooter: React.FC = () => {
             </p>
             
             {/* Contact Info */}
-<<<<<<< HEAD
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-white/70">
                 <Mail className="w-4 h-4" />
@@ -204,13 +198,12 @@ const EnhancedFooter: React.FC = () => {
 };
 
 export default EnhancedFooter;
-=======
 
   Brain,Mail,Phone,MapPin,Globe} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';'
 import React from 'react';'
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
 }
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true 
 }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
   }
   return <div>Something went wrong.</div>;
@@ -220,9 +213,9 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 import Link from 'next/link';'
 import {Brain,Mail,Phone,MapPin,Globe,Github,Linkedin,Twitter} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';'
 import { Facebook,Twitter,Linkedin,Instagram,Mail,Phone,MapPin,ArrowUp,Globe,Shield,FileText,HelpCircle} from 'lucide-react';'
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
 }
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true 
 }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
   }
   return <div>Something went wrong.</div>;
@@ -619,8 +612,8 @@ className='"hover":text-white transition-colors';'
               {socialLinks && socialLinks.map(social => { return (        <div className="pt-8 border-t border-white/10">; }"
           <div className="flex flex-col "md":flex-row justify-between items-center space-y-4 "md":space-y-0">;"
             {/* Copyright */}<div className="text-white/60 text-sm">;"
-            </div>;{/* Social Links */}}export default EnhancedFooter;  )<div className='pt-8 border-t border-white/10'>;'
-            </div>;{/* Social Links */}}
+            </div>;{/* Social Links */}export default EnhancedFooter;  )<div className='pt-8 border-t border-white/10'>;'
+            </div>;{/* Social Links */}
 
 export default EnhancedFooter;  )<div className='pt-8 border-t border-white/10'>;'
           <div className='flex flex-col "md":flex-row justify-between items-center space-y-4 "md":space-y-0'>;'
@@ -1019,11 +1012,7 @@ company updates.;
   )}
             <div className = $2;
 export default EnhancedFooter,
-=======
         <ArrowUp className="w-5 h-5"  />;
       </button>
     </footer>
   )}"'
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

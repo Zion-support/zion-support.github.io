@@ -25,8 +25,7 @@ function findFilesWithConflicts(dir) {
             if (['.js', '.jsx', '.ts', '.tsx', '.json', '.md'].includes(ext)) {
               try {
                 const content = fs.readFileSync(fullPath, 'utf8');
-                if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
-                  files.push(fullPath);
+                if (content.includes('                  files.push(fullPath);
                 }
               } catch (error) {
                 // Skip files that can't be read

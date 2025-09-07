@@ -1,8 +1,5 @@
-<<<<<<< HEAD:src_backup/components/PerformanceOptimizer.tsx
 import React, { useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/PerformanceOptimizer.tsx
 
 ;
 import React from 'react';
@@ -53,12 +50,11 @@ interface PerformanceMetrics  {fcp: number;
     }
   }, [])useEffect(() => {preloadCriticalResources()prefetchNextRoutes()optimizeResourceHints()measurePerformance()setupLazyLoading()registerServiceWorker()// Cleanup;
     return () => {// Cleanup performance observers if needed;
-    }}, [preloadCriticalResources, prefetchNextRoutes, optimizeResourceHints, measurePerformance, setupLazyLoading, registerServiceWorker])// Route change optimization;
+    }, [preloadCriticalResources, prefetchNextRoutes, optimizeResourceHints, measurePerformance, setupLazyLoading, registerServiceWorker])// Route change optimization;
   useEffect(() => {// Prefetch next likely route based on current location;
     const currentPath  = location.pathname;if (currentPath === '/') {// Prefetch services page from home;
       const link = document.createElement('link')link.rel = 'prefetch';
       link.href = '/services';
-<<<<<<< HEAD:src_backup/components/PerformanceOptimizer.tsx
       document.head.appendChild(link);
     }
   }, [location]);
@@ -70,38 +66,33 @@ import { useEffect } from 'react'';interface PerformanceOptimizerProps {'
    children: React.ReactNode}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
   useEffect ( () => {
     // Preload critical resources;
-const preloadCriticalResources = () => {""
-      const criticalFonts = [';https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ]';criticalFonts.forEach (font => {""
-=======
+const preloadCriticalResources = () => {''
+      const criticalFonts = [';https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ]';criticalFonts.forEach (font => {''
       document.head.appendChild(link)}
   }, [location])return null; // This component doesn't render anything;
 }import { useEffect } from 'react'';interface PerformanceOptimizerProps {';
    children: React.ReactNode}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {useEffect ( () => {// Preload critical resources;
-const preloadCriticalResources = () => {"";
-      const criticalFonts = [';https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ]';criticalFonts.forEach (font => {"";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/PerformanceOptimizer.tsx
+const preloadCriticalResources = () => {'';
+      const criticalFonts = [';https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ]';criticalFonts.forEach (font => {'';
         const link = document.createElement ('link') '        link.rel = 'preload'        link.as = 'style'        link.href = font'        document.head.appendChild (link) })}
     // Optimize images;
 const optimizeImages = () => {const images = document.querySelectorAll ('img') '      images.forEach (img => {'        if (!img.loading) {img.loading = 'lazy'        }'        if (!img.decoding) {';
           img.decoding = 'async'        }'      })}// Initialize optimizations;';
     preloadCriticalResources ()optimizeImages ()// Set up intersection observer for lazy loading;
 const observer = new IntersectionObserver ( (entries) => {entries.forEach (entry => {if (entry.isIntersecting) {const target = entry.target as HTMLElement;
-            if (target.dataset.src) {"";
+            if (target.dataset.src) {'';
 target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }
-<<<<<<< HEAD:src_backup/components/PerformanceOptimizer.tsx
-          }", "
-})}, { rootMargin: '50px' }') ';// Observe lazy load elements;""
+          }', '
+})}, { rootMargin: '50px' }') ';// Observe lazy load elements;''
     const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {
       observer.disconnect () }
   }, []) 
   return <>{children}</>,
 }
-"`"
+'`'
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
-          }", ";
-})}, { rootMargin: '50px' }') ';// Observe lazy load elements;"";
+          }', ';
+})}, { rootMargin: '50px' }') ';// Observe lazy load elements;'';
     const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {observer.disconnect () }
   }, [])return <>{children}</>}
-"`";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/PerformanceOptimizer.tsx
+'`';

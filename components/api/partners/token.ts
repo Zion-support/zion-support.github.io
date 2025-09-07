@@ -83,32 +83,22 @@ return res.status(200).json({ token, "partner": { "id": partner.id, "name": part
       entity_type: partner.entity_type;,
       useCaseType: partner.useCaseType;,
     } as any,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     typeof ttl_seconds === 'number';
       ? Math.max (300, Math.min (86400, ttl_seconds));
       : 3600);
   return res;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     .status (200);
     .json ({ token, partner: { id: partner.id, name: partner.name } });      sub: partner.id;
       apiKeyId: key.id;
       name: partner.name;
       entity_type: partner.entity_type,
-<<<<<<< HEAD
       useCaseType: partner.useCaseType} as any;
-=======
       useCaseType: partner.useCaseType} as any;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     typeof ttl_seconds === "number" ? Math.max (300, Math.min (86400, ttl_seconds)) : 3600);
   return res.status (200).json ({ token, partner: { id: partner.id, name: partner.name } });
   }
   const { partner, apiKey: key } = match;
   const token = signJwt(
-<<<<<<< HEAD
     {
 
   const token = signJwt({.json({ token, partner: { id: partner.id, name: partner.name } })return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })}
@@ -126,19 +116,14 @@ return res.status(200).json({ token, "partner": { "id": partner.id, "name": part
   ),
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
-=======
-<<<<<<< HEAD
     {
 
     .json({ token, partner: { id: partner.id, name: partner.name } });
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     {}
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     .status(200)
 
     .json({ token, partner: { id: partner.id;, name: partner.name ;} });
@@ -151,5 +136,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

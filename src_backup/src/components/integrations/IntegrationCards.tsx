@@ -181,7 +181,7 @@ export function IntegrationCard() {return (<Card className="overflow-hidden">;"
         title="Microsoft Teams";"
         description="Receive updates through Microsoft Teams.";"
         icon={<Users className="h-5 w-5" />}"
-        onConnect={() => logDebug('Connect Teams clicked')}}/>;'
+        onConnect={() => logDebug('Connect Teams clicked')}/>;'
     </div>;
   )})}import { Button  } from '@/components / ui / button';'
 import { Card,CardContent,CardFooter,CardHeader} from '@/components / ui / card';'

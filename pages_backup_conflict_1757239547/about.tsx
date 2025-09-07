@@ -166,9 +166,9 @@ export default function About() {
                 {values.map((value, index) => (
                   <motion.div
                     key={value.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ delay: index * 0.1 }
                     className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
                   >
                     <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${value.color} flex items-center justify-center mb-4`}>
@@ -198,9 +198,9 @@ export default function About() {
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ delay: index * 0.1 }
                     className="text-center"
                   >
                     <div className="text-4xl md:text-5xl font-bold text-white mb-2">
@@ -227,9 +227,9 @@ export default function About() {
                 {team.map((member, index) => (
                   <motion.div
                     key={member.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ delay: index * 0.1 }
                     className="text-center"
                   >
                     <div className="w-32 h-32 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
@@ -266,8 +266,8 @@ export default function About() {
               <motion.a
                 href="/contact"
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
               >
                 Get Started Today
               </motion.a>

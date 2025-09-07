@@ -4,7 +4,7 @@ import PdfExportButton from '../../components/ui/PdfExportButton',
 import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
 import { createServerClient } from '../../utils/supabase/server';
 export type ResumePreviewPageProps = any;
-> <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) )
+> <option value='light' >Light</option> <option value='dark' >Dark</option> </select>) )
 }</select> </>)
 }</div> </div> <PdfExportButton targetRef= {
   targetRef
@@ -39,42 +39,42 @@ export default function ResumePreviewPage({
     return found?.data || initialData
   }, [selectedVersionId, initialData, versions]),
   return (
-    <div className="relative">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <label className="text-sm">Theme</label>
+    <div className='relative'>
+      <div className='flex items-center justify-between mb-4'>
+        <div className='flex items-center gap-3'>
+          <label className='text-sm'>Theme</label>
           <select
             value={theme  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
+            className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black'
           >
             <option value='light'>Light</option>
             <option value='dark'>Dark</option>          </select>
           {versions.length > 0 && (
             <>
-              <label className="text-sm ml-4">Version</label>
+              <label className='text-sm ml-4'>Version</label>
               <select
                 value={selectedVersionId  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 onChange={(e) => setSelectedVersionId(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
+                className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black'
               >
-                <option value="current">Current</option>
+                <option value='current'>Current</option>
                 {versions.map(v => (
                   <option value={v.id} key={v.id}>
                     {v.label}
@@ -174,8 +174,8 @@ return { props: { initialData, versions } }
     </div>
   )
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -188,13 +188,13 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
       redirect: {;
         destination: '/auth';
         permanent: false}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -222,8 +222,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
       { title: 'AI Marketplace', description: 'Talent dashboard with export features.' }]},;
   const versions = [] as Array<{ id: string, label: string, data: ResumeData }>;
   return { props: { initialData, versions }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 };

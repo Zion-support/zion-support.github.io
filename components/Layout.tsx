@@ -1,11 +1,11 @@
-}export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
-  static getDerivedStateFromError(error) {return { "hasError": true }}
+}export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }
+  static getDerivedStateFromError(error) {return { "hasError": true }
   componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
 
 }
 
-export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
+export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }
   static getDerivedStateFromError(error) {return { "hasError": true 
 }
   componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
@@ -17,14 +17,14 @@ export default function Layout() {class ErrorBoundary extends React.Component {c
 export default function Layout() {"
 
 
-}export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
-  static getDerivedStateFromError(error) {return { "hasError": true }}
+}export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }
+  static getDerivedStateFromError(error) {return { "hasError": true }
   componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
 
 }
 
-export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
+export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }
   static getDerivedStateFromError(error) {return { "hasError": true 
 }
   componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
@@ -243,7 +243,7 @@ interface LayoutProps {
         {/* JSON - LD */}
         <script;
           type="application / ld + json";"
-          dangerouslySetInnerHTML={{ "__html": JSON.stringify (json_ld) 
+          dangerouslySetInnerHTML={ "__html": JSON.stringify (json_ld) 
 } />;
       </Head>;
       <Header />;

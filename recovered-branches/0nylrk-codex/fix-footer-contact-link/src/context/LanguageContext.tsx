@@ -1,18 +1,18 @@
-"currentLanguage": SupportedLanguage;
-    "changeLanguage": ("lang": SupportedLanguage) => Promise<void>
-  "isRTL": boolean,
-"supportedLanguages": { "code": SupportedLanguage, "name": string, "flag": string }[]
+'currentLanguage': SupportedLanguage;
+    'changeLanguage': ('lang': SupportedLanguage) => Promise<void>
+  'isRTL': boolean,
+'supportedLanguages': { 'code': SupportedLanguage, 'name': string, 'flag': string }[]
 }const supportedLanguages = [
-  { "code": 'en' as SupportedLanguage, "name": 'English', "flag": '🇺🇸' }'
-  { "code": 'es' as SupportedLanguage, "name": 'Español', "flag": '🇪🇸' }'
-  { "code": 'pt' as SupportedLanguage, "name": 'Português', "flag": '🇧🇷' }'
-  { "code": 'ar' as SupportedLanguage, "name": 'العربية', "flag": '🇸🇦' }'
+  { 'code': 'en' as SupportedLanguage, 'name': 'English', 'flag': '🇺🇸' }'
+  { 'code': 'es' as SupportedLanguage, 'name': 'Español', 'flag': '🇪🇸' }'
+  { 'code': 'pt' as SupportedLanguage, 'name': 'Português', 'flag': '🇧🇷' }'
+  { 'code': 'ar' as SupportedLanguage, 'name': 'العربية', 'flag': '🇸🇦' }'
 ];
-const "defaultLanguageContext": LanguageContextType = {
+const 'defaultLanguageContext': LanguageContextType = {
   }
-  "currentLanguage": "currentLanguage","
-    "changeLanguage": async () => {}
-  "isRTL": false,
+  'currentLanguage': 'currentLanguage','
+    'changeLanguage': async () => {}
+  'isRTL': false,
 supportedLanguages
 }  const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
@@ -47,14 +47,14 @@ if ( {) {
 }
         try {
     }
-    "isAuthenticated": boolean,;
-    "user": { id?: string } | null;
+    'isAuthenticated': boolean,;
+    'user': { id?: string } | null;
   }
 }
-export const "LanguageProvider": React.FC<LanguageProviderProps> = ({ ;
+export const 'LanguageProvider': React.FC<LanguageProviderProps> = ({ ;
   }
   children, ;
-  authState = { "isAuthenticated": false, "user": null } ;
+  authState = { 'isAuthenticated': false, 'user': null } ;
 }) => {;
   }
   const { i18n, t } = useTranslation();
@@ -186,35 +186,35 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       const langName = supportedLanguages && supportedLanguages.find(l => { return l && l.code === lang)?.name || lang; }
       toast({
   }
-  "description": t('language && language.language_changed', { "language": langName });'
+  'description': t('language && language.language_changed', { 'language': langName });'
       });        }
       }
     } catch (err) {;
       }
-      console && console.error('Error changing "language":', err);'
+      console && console.error('Error changing 'language':', err);'
     }
 
   };
 return (;
     <LanguageContext.Provider,
-value={{
+value={
         }
         currentLanguage,
 changeLanguage
         isRTL;          const { error } = await supabase;
             .from ('profiles');'
-            .update ({ "preferred_language": current_language });
+            .update ({ 'preferred_language': current_language });
             .eq ('id', user.id);'
 ;
           // Check condition,
 if ( {) {
   $2
 }
-            console.error ('Error updating language "preference":', error);'
+            console.error ('Error updating language 'preference':', error);'
           }
         } catch (err) {
           }
-          console.error ('Error syncing language with "profile":', err);'
+          console.error ('Error syncing language with 'profile':', err);'
         }
       }
     }
@@ -222,7 +222,7 @@ if ( {) {
     syncLanguageWithProfile ();
   }, [current_language, is_authenticated, user]);
 ;
-  const change_language = async ("lang": SupportedLanguage) => {
+  const change_language = async ('lang': SupportedLanguage) => {
     // Check condition
 }
 if (return) {
@@ -238,7 +238,7 @@ if (return) {
       const lang_name = supported_languages.find (l => { return l.code === lang)?.name || lang; }
       toast ({
         }
-        "description": t ('language.language_changed', { "language": lang_name });'
+        'description': t ('language.language_changed', { 'language': lang_name });'
       });
 ;
       // If user is authenticated, update their profile;
@@ -248,31 +248,31 @@ if ( {) {
 }
         const { error } = await supabase;
           .from ('profiles');'
-          .update ({ "preferred_language": lang });
+          .update ({ 'preferred_language': lang });
           .eq ('id', user.id);'
 ;
         // Check condition,
 if ( {) {
   $2
 }
-          console.error ('Error updating language "preference":', error);'
+          console.error ('Error updating language 'preference':', error);'
         }
       }
     } catch (err) {
       }
-      console.error ('Error changing "language":', err);'
+      console.error ('Error changing 'language':', err);'
     }
   }
 ;
 return (;
     <LanguageContext.Provider;
-      value={{
+      value={
         }
         current_language,
         change_language,
         isRTL;
         supported_languages;
-      }}
+      }
     >;
       {children}
     </LanguageContext.Provider>);
@@ -280,14 +280,14 @@ return (;
 ;
   return (;
     <LanguageContext.Provider;
-      value={{;
+      value={;
         }
         currentLanguage,;
         changeLanguage,;
         isRTL;
         supportedLanguages;
 
-      }}
+      }
     >
       {children}
 };

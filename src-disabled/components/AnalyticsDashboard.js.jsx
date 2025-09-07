@@ -95,7 +95,7 @@ const formatNumber = (if (num >= 1000000;) => {
                 handleDashboardInteraction('time_range_changed', {}
                   timeRange: e.target.valu,
 })';';
-              }}'''';
+              }'''';
               className='px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50''''';
             >'''';
               <option value='1h' />1 Hour</option>'''';
@@ -293,7 +293,7 @@ const formatNumber = (if (num >= 1000000;) => {
                     <div className='w-16 bg-green-200 dark: bg-green-700 rounded-full h-2' />'''';
                       <div'''';
                         className='bg-green-500 h-2 rounded-full transition-all duration-300''';
-                        style={{}
+                        style={}
 `;
 ``;
                           width: `${(item.count / Math.max(...getEventsByCategory().map(e = /> e.count))) * 100}%`,
@@ -361,7 +361,7 @@ const formatNumber = (if (num >= 1000000;) => {
             onClick={() = /> {}
 '';
               handleDashboardInteraction('refresh_clicked')updateAnalyticsSummary()';';
-            }}'''';
+            }'''';
             className='flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2''''';
           >'''';
             <RefreshCw className='w-4 h-4' />;
@@ -371,7 +371,7 @@ const formatNumber = (if (num >= 1000000;) => {
             onClick={() = /> {}
               handleTrackConversion()'';
               handleDashboardInteraction('conversion_tracked')';';
-            }}'''';
+            }'''';
             className='px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2''''';
           >'''';
             <Target className='w-4 h-4' />;

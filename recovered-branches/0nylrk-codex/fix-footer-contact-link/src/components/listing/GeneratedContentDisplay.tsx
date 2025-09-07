@@ -205,7 +205,7 @@ function GeneratedContentDisplay() {
 
     </Card>;
   );
-}}
+}
         <Button;
 }
           onClick={onApply}

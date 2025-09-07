@@ -43,7 +43,7 @@ export default function AdminWeb3Page() {
                   <span>Web3</span>
                   <input type="checkbox" checked={u.enabled} onChange={(e) => {
                     const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next)
-                  }} />
+                  } />
                 </label>
               </li>
 import React, { useEffect, useState } from 'react';
@@ -89,7 +89,7 @@ export default function AdminWeb3Page(req, res) {
                   <span>Web3</span>;
                   <input type="checkbox" checked={u.enabled} onChange={(e) => {;
                     const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next);
-                  }} />;
+                  } />;
                 </label>;
               </li>;
             ))  } catch (error) {

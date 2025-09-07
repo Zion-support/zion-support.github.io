@@ -217,7 +217,7 @@ export default function ToolComparisonPage() {
                 href="#comparison"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40"
-                style={{ animationDelay: '0.2s' }}
+                style={ animationDelay: '0.2s' }
               >
                 Start Comparing
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -227,7 +227,7 @@ export default function ToolComparisonPage() {
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-                style={{ animationDelay: '0.4s' }}
+                style={ animationDelay: '0.4s' }
               >
                 Get Expert Advice
               </Button>
@@ -235,7 +235,7 @@ export default function ToolComparisonPage() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={ animationDelay: '0.6s' }>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
                 {allTools.length}+
@@ -426,7 +426,7 @@ export default function ToolComparisonPage() {
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex items-start space-x-4 mb-4">
                   <div className={`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${tool.color}`}>

@@ -518,7 +518,6 @@ ursor/automate-test-improve-and-merge-code-646c;
             </div>
           </div>
           {/* Services */}
-<<<<<<< HEAD
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>"
@@ -1122,8 +1121,8 @@ ursor/automate-test-improve-and-merge-code-646c;
       </div>;
     </footer>;
   )}ursor/automate-test-improve-and-merge-code-646c;
-}}export default Footer;
-}}
+}export default Footer;
+}
 
 export default Footer;
               <Link
@@ -1138,8 +1137,6 @@ export default Footer;
               >
                 Cookie Policy
               </Link>
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               <li>
                 <Link href="/" className="text-slate-400 hover:text-white transition-colors">
                   Home
@@ -1203,7 +1200,6 @@ export default Footer;
               <Link href="/terms" className="text-slate-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </div>
           </div>
 
@@ -1302,9 +1298,6 @@ export default Footer;
       </div>
     </footer>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 
 export default Footer;
@@ -1318,23 +1311,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </Link>;
               <Link
 
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
 };
 
 export default Footer;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

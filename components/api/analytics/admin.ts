@@ -69,7 +69,6 @@ const referrals =;
       { id: 32, status: 'completed' }'
       { id: 33, status: 'active' }
     ]);
-<<<<<<< HEAD
     const referralsData = mockIfEmpty(referrals, [
       { id: 41, converted: true, source: 'linkedin' },
       { id: 42, converted: false, source: 'twitter' },
@@ -78,40 +77,40 @@ const referrals =;
 
 const usersData = mockIfEmpty(users, [;
 
-      { "id": 1, "role": 'client', "country": 'US','
+      { 'id': 1, 'role': 'client', 'country': 'US','
 }
-      { "id": 2, "role": 'talent', "country": 'IN','
+      { 'id': 2, 'role': 'talent', 'country': 'IN','
 }
-      { "id": 3, "role": 'talent', "country": 'US','
+      { 'id': 3, 'role': 'talent', 'country': 'US','
 }
-      { "id": 4, "role": 'client', "country": 'GB','
+      { 'id': 4, 'role': 'client', 'country': 'GB','
 }
     ];
   const jobsData = mockIfEmpty(jobs, [;
-      { "id": 11, "status": 'posted', "category": 'AI/ML','
+      { 'id': 11, 'status': 'posted', 'category': 'AI/ML','
 }
-      { "id": 12, "status": 'filled', "category": 'Design','
+      { 'id': 12, 'status': 'filled', 'category': 'Design','
 }
-      { "id": 13, "status": 'filled', "category": 'AI/ML','
+      { 'id': 13, 'status': 'filled', 'category': 'AI/ML','
 }
     ])const quotesData = mockIfEmpty(quotes, [;
-      { "id": 21, "status": 'sent','
+      { 'id': 21, 'status': 'sent','
 }
-      { "id": 22, "status": 'accepted','
+      { 'id': 22, 'status': 'accepted','
 }
-      { "id": 23, "status": 'sent','
+      { 'id': 23, 'status': 'sent','
 }
     ])const projectsData = mockIfEmpty(projects, [;
-      { "id": 31, "status": 'active','
+      { 'id': 31, 'status': 'active','
 }
-      { "id": 32, "status": 'completed','
+      { 'id': 32, 'status': 'completed','
 }
-      { "id": 33, "status": 'active','
+      { 'id': 33, 'status': 'active','
 }
     ])const referralsData = mockIfEmpty(referrals, [;
-      { "id": 41, "converted": true, "source": 'linkedin','
-},{ "id": 42, "converted": false, "source": 'twitter','
-},{ "id": 43, "converted": true, "source": 'partner','
+      { 'id': 41, 'converted': true, 'source': 'linkedin','
+},{ 'id': 42, 'converted': false, 'source': 'twitter','
+},{ 'id': 43, 'converted': true, 'source': 'partner','
 }])const totalTalents = usersData.filter(u => { return u.role === 'talent').length; }'
 
 const totalClients = usersData.filter(u => { return u.role === 'client').length; }'
@@ -130,17 +129,17 @@ const quotesAccepted = quotesData.filter(;
 const activeProjects = projectsData.filter(p => { return p.status === 'active'; }'
     ).length;
 
-const "categoryCounts": Record<string, number> = {}
+const 'categoryCounts': Record<string, number> = {}
     jobsData.forEach((j) => {categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1;
     })const referralConversions  = referralsData.filter(r => { return r.converted).length; }
 
-const "geoCounts": Record<string, number> = {}usersData.forEach((u) => {geoCounts[u.country || 'Unknown'] =;'
+const 'geoCounts': Record<string, number> = {}usersData.forEach((u) => {geoCounts[u.country || 'Unknown'] =;'
         (geoCounts[u.country || 'Unknown'] || 0) + 1;'
 
     });
     res.status(200).json({
       }
-      "totals": {
+      'totals': {
         }
         totalUsers,
         totalTalents,
@@ -151,52 +150,52 @@ const "geoCounts": Record<string, number> = {}usersData.forEach((u) => {geoCount
         quotesAccepted,
         activeProjects
       },
-      "topCategories": Object.entries(categoryCounts)
+      'topCategories': Object.entries(categoryCounts)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value })),
       referralConversions,
-      "geo": Object.entries(geoCounts).map(([country, value]) => ({
+      'geo': Object.entries(geoCounts).map(([country, value]) => ({
         }
-        "label": country,
+        'label': country,
         value
       })),
-      "geo": [{ "label": 'US', "value": 2,'
-}, { "label": 'IN', "value": 1,'
-}, { "label": 'GB', "value": 1 }]})'
+      'geo': [{ 'label': 'US', 'value': 2,'
+}, { 'label': 'IN', 'value': 1,'
+}, { 'label': 'GB', 'value': 1 }]})'
   }
    
 });
-  } catch ("e": any) {
+  } catch ('e': any) {
     }
     res.status (200).json ({
       }
-      "totals": {
+      'totals': {
 
         }
 
-        "totalUsers": 4,
-        "totalTalents": 2,
-        "totalClients": 2,
-        "jobsPosted": 1,
-        "jobsFilled": 2,
-        "quotesSent": 2,
-        "quotesAccepted": 1,
-        "activeProjects": 2
+        'totalUsers': 4,
+        'totalTalents': 2,
+        'totalClients': 2,
+        'jobsPosted': 1,
+        'jobsFilled': 2,
+        'quotesSent': 2,
+        'quotesAccepted': 1,
+        'activeProjects': 2
       },
-      "topCategories": [
-        { "label": 'AI/ML', "value": 2,'
+      'topCategories': [
+        { 'label': 'AI/ML', 'value': 2,'
 },
-        { "label": 'Design', "value": 1,'
+        { 'label': 'Design', 'value': 1,'
 }
       ],
-      "referralConversions": 2,
-      "geo": [
-        { "label": 'US', "value": 2,'
+      'referralConversions': 2,
+      'geo': [
+        { 'label': 'US', 'value': 2,'
 },
-        { "label": 'IN', "value": 1,'
+        { 'label': 'IN', 'value': 1,'
 },
-        { "label": 'GB', "value": 1,'
+        { 'label': 'GB', 'value': 1,'
 }
       ]
     });

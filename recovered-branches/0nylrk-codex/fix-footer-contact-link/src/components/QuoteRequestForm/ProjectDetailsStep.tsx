@@ -122,7 +122,7 @@ id="company""
                   "contactInfo": {
                     ...formData.contactInfo
                     }
-                    "company": e.target.value}})
+                    "company": e.target.value})
               }
               className="bg-zion-blue border border-zion-blue-light "focus":border-zion-purple text-white""
             />
@@ -149,7 +149,7 @@ id="phone""
                   "contactInfo": {
                     ...formData.contactInfo
                     }
-                    "phone": e.target.value}})
+                    "phone": e.target.value})
               }
               className="bg-zion-blue border border-zion-blue-light "focus": border-zion-purple text-white""
             />
@@ -190,7 +190,7 @@ interface ProjectDetailsStepProps {
                   "contact_info": {
                     ...form_data.contact_info
                     }
-                    "name": e.target.value}});
+                    "name": e.target.value});
               }
               className="bg - zion - blue border border - zion - blue - light "focus":border - zion - purple text-white";"
             />;
@@ -210,7 +210,7 @@ interface ProjectDetailsStepProps {
                   "contact_info": {
                     ...form_data.contact_info
                     }
-                    "company": e.target.value}});
+                    "company": e.target.value});
               }
               className="bg - zion - blue border border - zion - blue - light "focus":border - zion - purple text-white";"
             />;
@@ -231,7 +231,7 @@ interface ProjectDetailsStepProps {
                   "contact_info": {
                     ...form_data.contact_info
                     }
-                    "email": e.target.value}});
+                    "email": e.target.value});
               }
               className="bg - zion - blue border border - zion - blue - light "focus":border - zion - purple text-white";"
             />;
@@ -251,7 +251,7 @@ interface ProjectDetailsStepProps {
                   "contact_info": {
                     ...form_data.contact_info
                     }
-                    "phone": e.target.value}});
+                    "phone": e.target.value});
               }
               className="bg - zion - blue border border - zion - blue - light "focus": border - zion - purple text-white";"
             />;

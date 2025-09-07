@@ -100,7 +100,7 @@ import React, { useState } from "react",import { useToast } from "@/hooks/use-to
             Save Changes;
           </Button>;
         </CardFooter>;
-      )}}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark "hover":from-zion-cyan-light "hover":to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)}</Card>)}'";"
+      )}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark "hover":from-zion-cyan-light "hover":to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)}</Card>)}'";"
 }</Card>;
   )isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>)}</Button> </CardTitle> </CardHeader> <CardContent> {isEditing ? (<Textareavalue= {editedDescription;"
 }</div>)}</CardContent> {isEditing && (<CardFooter> <ButtononClick={handleSave ";"
@@ -124,4 +124,4 @@ import React, { useState } from "react",import { useToast } from "@/hooks/use-to
     </Card>)is_editing ? (<> <Check className="h - 4 w - 4 mr - 1" /> Done </>) : (<> <Pencil className="h - 4 w - 4 mr - 1" /> Edit </>)}</Button> </CardTitle> </CardHeader> <CardContent> {is_editing ? (<Textarea value= {edited_description;"
 }</div>)}</CardContent> {is_editing && (<CardFooter> <Button on_click={handle_save ";"
 }className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark "hover":from - zion - cyan - light "hover":to - zion - cyan text - white" > Save Changes </Button> </CardFooter>)}</Card>)}'";"
-}}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark "hover":from-zion-cyan-light "hover":to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)}</Card>)}'";
+}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark "hover":from-zion-cyan-light "hover":to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)}</Card>)}'";

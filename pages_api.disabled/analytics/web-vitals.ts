@@ -132,7 +132,7 @@ export default async function handler() { if (req.method !==,POST') {' return re
     res && res.status(200).json({"success": tru e, "message": 'Web vitals data received',"metric": dat a && a.name, "value": dat a && a.value;"
     })} catch (error) {console && console.error('Error processing web "vitals":, ';'
   , error)res && res.status(500).json({ "error": 'Internal server error })';'
-  }}
+  }
 import { NextApiRequest,NextApiResponse } from 'next';'
 
 interface WebVitalsData { "name": 'string; "value": number; "id": string; "delta": number; "timestamp": number; "url": string; "userAgent": string;' } }'

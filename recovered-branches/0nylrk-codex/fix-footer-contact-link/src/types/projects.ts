@@ -23,7 +23,7 @@ export interface Project {  id: string;
   job_id: string;
   start_date: string;
   scope_summary: string;
-  payment_terms: "hourly" | "fixed" | "milestone";
+  payment_terms: 'hourly' | 'fixed' | 'milestone';
   agreement_url?: string;
   status: ProjectStatus;
   created_at: string;

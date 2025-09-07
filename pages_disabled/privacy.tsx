@@ -13,9 +13,9 @@ export default function PrivacyPage() {
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
@@ -32,9 +32,9 @@ export default function PrivacyPage() {
           <div className="container mx-auto px-4 max-w-4xl">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-8 md:p-12"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
             >
               <div className="prose prose-lg max-w-none">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">

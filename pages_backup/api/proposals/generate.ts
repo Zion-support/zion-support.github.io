@@ -78,7 +78,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error: any) {
     return res;
       .status (500);
-      .json ({ error: error?.message || "Failed to generate proposal" });
+      .json ({ error: error?.message || 'Failed to generate proposal' });
   }
 }
 
@@ -88,7 +88,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
     return res
       .status(500)
-      .json({ error: error?.message || "Failed to generate proposal" });
+      .json({ error: error?.message || 'Failed to generate proposal' });
   }
 
 }

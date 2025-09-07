@@ -99,7 +99,7 @@ function ChatAssistantTrigger() {
             name: 'AI Assistant',
             avatarUrl: 'https://placehold.co/64x64?text = $2;
             role: 'Virtual Assistant'
-          }}
+          }
           onSendMessage={handleSendMessage}
         />
       )}

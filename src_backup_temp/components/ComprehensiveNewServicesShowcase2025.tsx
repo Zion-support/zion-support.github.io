@@ -259,9 +259,9 @@ export default function Page() {return ()<div className="min-h-screen py-8 bg-gr
         {/* Header Section */}";"
         <div className="text-center mb-16">;"
           <motion.div;
-            initial={{ "opacity": 0, "y": 2 0 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.6 }}
+            initial={ "opacity": 0, "y": 2 0 }
+            animate={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.6 }
           >";"
             <h1 className="text-5xl font-bold text-white mb-6">;"
               Revolutionary New Services 2025;
@@ -359,9 +359,9 @@ export function ComprehensiveNewServicesShowcase2025() {const [activeTab, setAct
           {filteredServices.map((service, index)  => (<motion.div;
               }
               key={service.id}
-              initial={{ "opacity": 0, "y": 2 0 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.5, "delay": inde x * 0.1 }}";"
+              initial={ "opacity": 0, "y": 2 0 }
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.5, "delay": inde x * 0.1 }";"
               className="bg-gray-800 rounded-xl p-6 "hover": b g-gray-700 transition-all duration-300 border border-gray-700 "hover": borde r-cyan-500/30 group";"
             >;
               {/* Service Header */}";"
@@ -478,9 +478,9 @@ export function ComprehensiveNewServicesShowcase2025() {const [activeTab, setAct
         </div>;
         {/* Contact Information Section */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 2 0 }}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.6 }}";"
+          initial={ "opacity": 0, "y": 2 0 }
+          whileInView={ "opacity": 1, "y": 0 }
+          transition={ "duration": 0.6 }";"
           className="mt-20 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl p-12";"
         >";"
           <div className="text-center mb-8">";"
@@ -534,9 +534,9 @@ export function ComprehensiveNewServicesShowcase2025() {const [activeTab, setAct
         <div className="mt-20">";"
           <div className="grid grid-cols-2 "md": gri d-cols-4 gap-8">;"
             <motion.div;
-              initial={{ "opacity": 0, "y": 2 0 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.5 }}";"
+              initial={ "opacity": 0, "y": 2 0 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.5 }";"
               className="text-center";"
             >";"
               <div className="flex justify-center mb-4">";"
@@ -547,9 +547,9 @@ export function ComprehensiveNewServicesShowcase2025() {const [activeTab, setAct
               <div className="text-gray-400">New Services</div>;"
             </motion.div>;
             <motion.div;
-              initial={{ "opacity": 0, "y": 2 0 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.5, "delay": 0.1 }}";"
+              initial={ "opacity": 0, "y": 2 0 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.5, "delay": 0.1 }";"
               className="text-center";"
             >";"
               <div className="flex justify-center mb-4">";"
@@ -560,9 +560,9 @@ export function ComprehensiveNewServicesShowcase2025() {const [activeTab, setAct
               <div className="text-gray-400">AI-Powered</div>;"
             </motion.div>;
             <motion.div;
-              initial={{ "opacity": 0, "y": 2 0 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.5, "delay": 0.2 }}";"
+              initial={ "opacity": 0, "y": 2 0 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.5, "delay": 0.2 }";"
               className="text-center";"
             >";"
               <div className="flex justify-center mb-4">";"
@@ -573,9 +573,9 @@ export function ComprehensiveNewServicesShowcase2025() {const [activeTab, setAct
               <div className="text-gray-400">Uptime</div>;"
             </motion.div>;
             <motion.div;
-              initial={{ "opacity": 0, "y": 2 0 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.5, "delay": 0.3 }}";"
+              initial={ "opacity": 0, "y": 2 0 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.5, "delay": 0.3 }";"
               className="text-center";"
             >";"
               <div className="flex justify-center mb-4">";"

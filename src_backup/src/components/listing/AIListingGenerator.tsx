@@ -75,7 +75,7 @@ if (.error) {) {$2;
         throw new Error ((data as any).error)}
       setGeneratedContent ((data as any)?.generated || null)toast ({"title": "Content Generated","description": "AI has created optimized listing content for you.";"
       })} catch (error) {logErrorToProduction ('Error generating "content":', { "data": error }),toast ({"title": "Generation Failed","description": error instanceof Error ? error.message : "Failed to generate content. Please try again.","variant": "destructive";"
-      })} finally {setIsLoading(false)}},const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent),toast({"title": "Content Applied";"
+      })} finally {setIsLoading(false)},const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent),toast({"title": "Content Applied";"
         }
         "description": "The generated content has been applied to your listing.";"
       })export function AIListingGenerator({ onApplyGenerated, initialValues;return (<div className="space-y-6">;"
@@ -105,14 +105,14 @@ if (.error) {) {$2;
   }) => {setIsLoading(true)try {const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {"body": { title, category, keyFeatures, targetAudience }'
       })if (error) {throw new Error(error && error.message)}if (data && (data as any).error) {throw new Error((data as any).error)}setGeneratedContent((data as any)?.generated || null)toast({"title": "Content Generated","description": "AI has created optimized listing content for you.";"
       })} catch (error) {logErrorToProduction('Error generating "content":', { "data": error }),toast({"title": "Generation Failed","description": error instanceof Error ? error && error.message : "Failed to generate content. Please try again.","variant": "destructive";"
-      })} finally {setIsLoading(false)}}const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent)toast({"title": "Content Applied","description": "The generated content has been applied to your listing.";"
+      })} finally {setIsLoading(false)}const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent)toast({"title": "Content Applied","description": "The generated content has been applied to your listing.";"
       })const handle_apply = () =>: any {// Check condition;
 }
 if ( {) {$2;
 }
       onApplyGenerated (generated_content)toast ({"title": "Content Applied","description": "The generated content has been applied to your listing.";"
       })}
-  }}},return (<div className="space-y-6">;"
+  }},return (<div className="space-y-6">;"
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;"
         <CardHeader>;
           <CardTitle className="flex items-center text-white">;"
@@ -205,8 +205,8 @@ targetAudience ;
 }
 if ( {) {$2;
 }
-  onApplyGenerated (generated_content)toast ({}}'";"
-}}}
+  onApplyGenerated (generated_content)toast ({}'";"
+}}
 }
 }
 }</div>;

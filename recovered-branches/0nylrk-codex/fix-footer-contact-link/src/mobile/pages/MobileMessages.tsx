@@ -129,7 +129,7 @@ interface Message {;
   isMe: boolean,;
   status: "read" | "sent" | "delivered";
 }
-;;
+;
 ;
 const mockMessages: Message[] = [;
   {;
@@ -186,7 +186,7 @@ export function MobileMessages() {;
     <div className="min-h-screen flex flex-col">;
       {activeConversation ? (;
         <MobileChatView;
-          contact={{;
+          contact={;
             id: currentContact?.id || "";
             name: currentContact?.name || "";
             status: "Online";
@@ -194,7 +194,7 @@ export function MobileMessages() {;
     <div className="min-h-screen flex flex-col">
       {activeConversation ? (
         <MobileChatView
-          contact={{
+          contact={
 
             id: currentContact?.id || "",
             name: currentContact?.name || "",
@@ -224,7 +224,7 @@ export function MobileMessages() {;
         </>)}
     </div>);
 }
-          }}
+          }
           messages={messages}
           onBack={handleBack}
           onSendMessage={handleSendMessage}

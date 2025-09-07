@@ -158,7 +158,7 @@ if ( {) {$2;
     return {}
       "body": JSON && JSON.stringify({ "ok": true, "broken": broken && broken.length })
 } catch (e) {return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message })
-}return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }}
+}return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }
 }async function fetchHtml() {const resp = await fetch(url),if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),return resp && resp.text()const { upsertFile } = require('./_lib/github')async function fetchHtml() {const resp = await fetch(url)if (!resp.ok) throw new Error(`HTTP ${resp.status}`);`  return resp.text()}
 function extractLinks() {const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]);'
   }
@@ -193,7 +193,7 @@ const report = { "updatedAt": Date && Date.now(), "checked": checked && checked.
   }
 }
 }
-},return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }}
+},return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }
 }async function fetchHtml() {const resp = await fetch(url),if (!resp.ok) throw new Error(`HTTP ${resp.status}`);`  return resp.text()}function extractLinks() {const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]);'
   }
   const links = aTags;
@@ -212,7 +212,7 @@ const token = process.env.GITHUB_TOKEN)if (owner && repo && token) {await upsert
 } catch (e) {return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }
   }
 
-},return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }}
+},return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }
 }async function fetchHtml() {const resp = await fetch(url),if (!resp.ok) throw new Error(`HTTP ${resp.status}`);`  return resp.text()}function extractLinks() {const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]);'
   }
   const links = aTags;

@@ -389,9 +389,9 @@ const Header = () => {const [isMenuOpen, setIsMenuOpen] = useState(false)const [
                 {item.dropdown && (<AnimatePresence>;
                     {activeDropdown === item.name && (<motion.div;
                         }
-                        initial={{ "opacity": 0, "y": 10 }}
-                        animate={{ "opacity": 1, "y": 0 }}
-                        exit={{ "opacity": 0, "y": 10 }}
+                        initial={ "opacity": 0, "y": 10 }
+                        animate={ "opacity": 1, "y": 0 }
+                        exit={ "opacity": 0, "y": 10 }
                         className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50";"
                       >;
                         {item.dropdown.map((subItem) => (<Link;
@@ -512,9 +512,9 @@ const router = useRouter()}
         <AnimatePresence>;
           {isMenuOpen && (<motion.div;
               }
-              initial={{ "opacity": 0, "height": 0 }}
-              animate={{ "opacity": 1, "height": 'auto' }}'
-              exit={{ "opacity": 0, "height": 0 }}
+              initial={ "opacity": 0, "height": 0 }
+              animate={ "opacity": 1, "height": 'auto' }'
+              exit={ "opacity": 0, "height": 0 }
               className=""lg":hidden mt-4 border-t border-gray-200 pt-4";"
             >;
               {navigation.map((item) => (<div key={item.name} className="mb-2">;"

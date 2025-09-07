@@ -300,7 +300,7 @@ export default function PasswordCheckerPage() {
                     <div className="w-full bg-gray-700 rounded-full h-3">
                       <div 
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={{ width: `${strength}%` }}
+                        style={ width: `${strength}%` }
                       />
                     </div>
                   </div>

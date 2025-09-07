@@ -78,8 +78,6 @@ declare global {
     }
     gtag?: (..."args": any[]) => void;
     dataLayer?: any[];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> main
   }
 }
 export {};

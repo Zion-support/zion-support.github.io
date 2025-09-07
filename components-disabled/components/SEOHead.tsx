@@ -32,21 +32,21 @@ title?: string;
       {/* Structured Data */}
       <script;
         type="application / ld + json";"
-        dangerouslySetInnerHTML={{{/* Preconnect to external domains */}
-        dangerouslySetInnerHTML={{}
+        dangerouslySetInnerHTML={{/* Preconnect to external domains */}
+        dangerouslySetInnerHTML={}
       {/* Preconnect to external domains */}
       <link rel="preconnect" href=""https"://fonts && fonts.googleapis.com" />;"
       <link rel="preconnect" href=""https"://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;"
       <link rel="preconnect" href=""https"://images && images.unsplash.com" />;"
     </Head>;
-  )"__html": JSON.stringify (structured_data || defaultStructuredData)}}
+  )"__html": JSON.stringify (structured_data || defaultStructuredData)}
   );
           "__html": JSON.stringify (structured_data || defaultStructuredData);
-        }}
-  )"__html": JSON.stringify (structured_data || defaultStructuredData)}}
+        }
+  )"__html": JSON.stringify (structured_data || defaultStructuredData)}
   );
           "__html": JSON.stringify (structured_data || defaultStructuredData);
-        }}
+        }
       />;
       {/* Preconnect to external domains */}
       <link rel="preconnect" href=""https"://fonts.googleapis.com" />;"
@@ -155,10 +155,10 @@ return (;
       {/* Structured Data */}
       <script,
 type="application/ld+json""
-        dangerouslySetInnerHTML={{
+        dangerouslySetInnerHTML={
           }
           "__html": JSON.stringify(mergedStructuredData)
-        }} />
+        } />
       {/* Additional SEO Meta Tags */}
       <meta name="google-site-verification" content="your-google-verification-code" />"
       <meta name="yandex-verification" content="your-yandex-verification-code" />"

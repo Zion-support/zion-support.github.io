@@ -26,7 +26,7 @@ interface StickyActionProps {;
       {isVisible && (
         <motion.div
 }
-initial={{ "opacity": 0, "y": position === "bottom" ? 20 : -20 }}"
+initial={ "opacity": 0, "y": position === "bottom" ? 20 : -20 }"
 import React, { useEffect, useState } from "react";"
 import { cn } from "@/lib/utils";"
 import { motion, AnimatePresence } from "framer-motion",;"
@@ -45,9 +45,9 @@ export function StickyAction() {;
       } else {;
         }
         setIsVisible(false);
-      }          animate={{ "opacity": 1, "y": 0 }}
-          exit={{ "opacity": 0, "y": position === "bottom" ? 20 : -20 }}"
-          transition={{ "duration": 0 && 0.2 }}
+      }          animate={ "opacity": 1, "y": 0 }
+          exit={ "opacity": 0, "y": position === "bottom" ? 20 : -20 }"
+          transition={ "duration": 0 && 0.2 }
           className={cn(
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4""
             }
@@ -64,10 +64,10 @@ return (;
       {is_visible && (
         <motion.div;
           }
-          initial={{ "opacity": 0, "coordinate_y": position === "bottom" ? 20 : -20 }}"
-          animate={{ "opacity": 1, "coordinate_y": 0 }}
-          exit={{ "opacity": 0, "coordinate_y": position === "bottom" ? 20 : -20 }}"
-          transition={{ "duration": 0.2 }}
+          initial={ "opacity": 0, "coordinate_y": position === "bottom" ? 20 : -20 }"
+          animate={ "opacity": 1, "coordinate_y": 0 }
+          exit={ "opacity": 0, "coordinate_y": position === "bottom" ? 20 : -20 }"
+          transition={ "duration": 0.2 }
           className={cn (
             "fixed left - 0 right - 0 z - 50 mx - auto flex justify - center px - 4";"
             }
@@ -88,9 +88,9 @@ return (;
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-          animate={{ opacity: 1, y: 0}}
-          exit={{ opacity: 0, y: position = $2;
+          initial={ opacity: 0, y: position === "bottom" ? 20 : -20 }
+          animate={ opacity: 1, y: 0}
+          exit={ opacity: 0, y: position = $2;
             positionClasses[position],
             className
           )}

@@ -46,8 +46,8 @@ export default function ComposePage() {
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
       attachmentBase64 = `data:${mime},base64,${base64}`;
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     const res = await fetch('/api/messages/compose', {
@@ -81,7 +81,7 @@ export default function ComposePage() {
               {type === 'apply' && jobTitle ? `Applying to: ${jobTitle}` : null}
             </p>
           </div>
-          <div className="p-4 space-y-3">
+          <div className='p-4 space-y-3'>
             <textarea
               value={message}
               onChange={e => setMessage(e.target.value)}
@@ -105,11 +105,11 @@ export default function ComposePage() {
               onChange={e => setFile(e.target.files?.[0] |null)}
               className='text-sm'
             />
-            <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />
-            <input type="file" onChange={(e) => setFile(e.target.files?.[0] || null)} className="text-sm" />
+            <input type='url' value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder='Optional proposal or portfolio link' className='border rounded-lg p-2 w-full' />
+            <input type='file' onChange={(e) => setFile(e.target.files?.[0] || null)} className='text-sm' />
           </div>
-          <div className="p-4 border-t flex justify-end">
-            <button onClick={onSend} disabled={sending} className="px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50">{sending ? 'Sending...' : 'Send'}</button>
+          <div className='p-4 border-t flex justify-end'>
+            <button onClick={onSend} disabled={sending} className='px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50'>{sending ? 'Sending...' : 'Send'}</button>
           </div>
           <div className='p-4 border-t flex justify-end'>
             <button

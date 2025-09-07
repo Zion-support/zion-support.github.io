@@ -86,11 +86,11 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
         <div className="max-w-7xl mx-auto text-center">;"
           <motion.h1 ";"
             className="text-4xl "md": tex t-6xl font-bold mb-6";"
-            initial = {{ "opacity": 0","y": "2 0;"
-"}}"
-            whileInView = {{ "opacity": "1","y": "0;"
-"}}"
-            transition={{ "duration": "0.6 "}}"
+            initial = { "opacity": 0","y": "2 0;"
+"}"
+            whileInView = { "opacity": "1","y": "0;"
+"}"
+            transition={ "duration": "0.6 "}"
           >;
             Zion Technology Group;
             <br />";"
@@ -99,22 +99,22 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
             </span>;
           </motion.h1>;
           <motion.p;
-            className="text-xl text-gray - 300 mb-8 max-w-4xl mx -auto"            initial = {{ "opacity": "0","y": "2 0;"
-"}}"
-            whileInView = {{ "opacity": "1","y": "0;"
-"}}"
-            transition = {{ "duration": "0.6","delay": "0.2;"
-"}}"
+            className="text-xl text-gray - 300 mb-8 max-w-4xl mx -auto"            initial = { "opacity": "0","y": "2 0;"
+"}"
+            whileInView = { "opacity": "1","y": "0;"
+"}"
+            transition = { "duration": "0.6","delay": "0.2;"
+"}"
           >;
             Leading the future with revolutionary quantum computing, AI - powered solutions, blockchain innovations,and cutting - edge technology services that transform industries and create unprecedented value.</motion.p>;
           {/* Comp Highlights */}
           <motion.div;
-            className="grid grid - cols-1 "md": "gri d - cols - 4 gap-6 mb-12"            initial = {{ "opacity": 0","y": "2 0;"
-"}}"
-            whileInView = {{ "opacity": "1","y": "0;"
-"}}"
-            transition = {{ "duration": "0.6","delay": "0.4;"
-"}}"
+            className="grid grid - cols-1 "md": "gri d - cols - 4 gap-6 mb-12"            initial = { "opacity": 0","y": "2 0;"
+"}"
+            whileInView = { "opacity": "1","y": "0;"
+"}"
+            transition = { "duration": "0.6","delay": "0.4;"
+"}"
           >";"
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">";"
               <div className="text-3xl mb-2">🚀</div>";"
@@ -139,12 +139,12 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
           </motion.div>;
           {/* Contact Information */}
           <motion.div;
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx-auto border border-purple -400 / 30"            initial = {{ "opacity": "0","y": "2 0;"
-"}}"
-            whileInView = {{ "opacity": "1","y": "0;"
-"}}"
-            transition = {{ "duration": "0.6","delay": "0.6;"
-"}}"
+            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx-auto border border-purple -400 / 30"            initial = { "opacity": "0","y": "2 0;"
+"}"
+            whileInView = { "opacity": "1","y": "0;"
+"}"
+            transition = { "duration": "0.6","delay": "0.6;"
+"}"
           >";"
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;"
               🚀 Ready to Transform Your Business?;
@@ -181,11 +181,11 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
       <section className="py-12 px-4 "sm": "p x-6 "lg": p x-8">;"
         <div  className="max-w-7xl mx -auto">;"
           <motion.div;
-            className="flex flex-wrap gap-4 justify -center"            initial = {{ "opacity": 0","y": "2 0;"
-"}}"
-            whileInView = {{ "opacity": "1","y": "0;"
-"}}"
-            transition={{ "duration": "any 0.6 "}}"
+            className="flex flex-wrap gap-4 justify -center"            initial = { "opacity": 0","y": "2 0;"
+"}"
+            whileInView = { "opacity": "1","y": "0;"
+"}"
+            transition={ "duration": "any 0.6 "}"
           >;
             {categories.map((category) => (<button     key={category.id}
                 onClick={ () => setSelectedCategory(category.id) }';'
@@ -209,11 +209,11 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
         <section className="py-12 px-4 "sm": p x-6 "lg": p x-8">;";"
           <div className="max-w-7xl mx-auto"> {(() => {if(!category) return null;return (<motion.div;"
                   }
-                  className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"                  initial = {{ "opacity": 0,"y": 2 0;"
-}}
-                  whileInView = {{ "opacity": 1,"y": 0;
-}}
-                  transition={{ "duration": 0.6 }}
+                  className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"                  initial = { "opacity": 0,"y": 2 0;"
+}
+                  whileInView = { "opacity": 1,"y": 0;
+}
+                  transition={ "duration": 0.6 }
                 >";"
                   <div className="text-center mb-8">";"
                     <div className="text-6xl mb-4">{category.icon}</div>";"
@@ -239,8 +239,8 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
       <section className="py-20 px-4 "sm": p x-6 "lg": p x-8">;"
         <div  className="max-w-7xl mx -auto">;"
           <motion.h2;
-            className="text-3xl "md": tex t-4xl font - bold text-center mb-12 text-transparent bg-clip - text bg-gradient - to - r from - purple - 400 to-pink -400"            initial = {{ "opacity": 0,"y": 2 0;"
-}}
+            className="text-3xl "md": tex t-4xl font - bold text-center mb-12 text-transparent bg-clip - text bg-gradient - to - r from - purple - 400 to-pink -400"            initial = { "opacity": 0,"y": 2 0;"
+}
                 onClick={ () => setSelectedCategory(category.id) }
                 className={`px-6 py-3 rounded-xl border transition - all duration - 300 ${selectedCategory === category.id;`                    ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white shadow-lg';'
                     : 'bg-white / 10 border-white / 20 text-gray - 300 "hover": "b g-white / 20 "hover": borde r-white / 40'                "}`}`              >";"
@@ -253,15 +253,15 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
         <div className="max-w-7xl mx-auto text-center">;"
           <motion.h1 ";"
             className="text-4xl "md": tex t-6xl font-bold mb-6";"
-            initial = {{ "opacity": 0,"y": 2 0;
-}}
-            whileInView = {{ "opacity": 1,"y": 0;
-}}';'
-            transition={{ "duration": 0.6 }}';';'
+            initial = { "opacity": 0,"y": 2 0;
+}
+            whileInView = { "opacity": 1,"y": 0;
+}';'
+            transition={ "duration": 0.6 }';';'
           >'`';';'
-            whileInView = {{ "opacity": 1,"y": 0;
-}}
-            transition={{ "duration": 0.6 }}
+            whileInView = { "opacity": 1,"y": 0;
+}
+            transition={ "duration": 0.6 }
           >;
             Zion Technology Group;
             <br />";"
@@ -270,22 +270,22 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
             </span>;
           </motion.h1>;
           <motion.p;
-            className="text-xl text-gray - 300 mb-8 max-w-4xl mx -auto"            initial = {{ "opacity": 0,"y": 2 0;"
-}}
-            whileInView = {{ "opacity": 1,"y": 0;
-}}
-            transition = {{ "duration": 0.6,"delay": 0.2;
-}}
+            className="text-xl text-gray - 300 mb-8 max-w-4xl mx -auto"            initial = { "opacity": 0,"y": 2 0;"
+}
+            whileInView = { "opacity": 1,"y": 0;
+}
+            transition = { "duration": 0.6,"delay": 0.2;
+}
           >;
             Leading the future with revolutionary quantum computing, AI - powered solutions, blockchain innovations,and cutting - edge technology services that transform industries and create unprecedented value.</motion.p>;
           {/* Comp Highlights */}
           <motion.div;
-            className="grid grid - cols - 1 "md": gri d - cols-4 gap-6 mb-12"            initial = {{ "opacity": 0,"y": 2 0;"
-}}
-            whileInView = {{ "opacity": 1,"y": 0;
-}}
-            transition = {{ "duration": 0.6,"delay": 0.4;
-}}
+            className="grid grid - cols - 1 "md": gri d - cols-4 gap-6 mb-12"            initial = { "opacity": 0,"y": 2 0;"
+}
+            whileInView = { "opacity": 1,"y": 0;
+}
+            transition = { "duration": 0.6,"delay": 0.4;
+}
           >";"
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">";"
               <div className="text-3xl mb-2">🚀</div>";"
@@ -310,12 +310,12 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
           </motion.div>;
           {/* Contact Information */}
           <motion.div;
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx-auto border border-purple -400 / 30"            initial = {{ "opacity": 0,"y": 2 0;"
-}}
-            whileInView = {{ "opacity": 1,"y": 0;
-}}
-            transition = {{ "duration": 0.6,"delay": 0.6;
-}}
+            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx-auto border border-purple -400 / 30"            initial = { "opacity": 0,"y": 2 0;"
+}
+            whileInView = { "opacity": 1,"y": 0;
+}
+            transition = { "duration": 0.6,"delay": 0.6;
+}
           >";"
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;"
               🚀 Ready to Transform Your Business?;
@@ -352,11 +352,11 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
       <section className="py-12 px-4 "sm": p x-6 "lg": p x-8">;"
         <div  className="max-w-7xl mx -auto">;"
           <motion.div;
-            className="flex flex-wrap gap-4 justify -center"            initial = {{ "opacity": 0,"y": 2 0;"
-}}
-            whileInView = {{ "opacity": 1,"y": 0;
-}}
-            transition={{ "duration": any 0.6 }}
+            className="flex flex-wrap gap-4 justify -center"            initial = { "opacity": 0,"y": 2 0;"
+}
+            whileInView = { "opacity": 1,"y": 0;
+}
+            transition={ "duration": any 0.6 }
           >;
             {categories.map((category) => (<button     key={category.id}
                 onClick={ () => setSelectedCategory(category.id) }
@@ -374,11 +374,11 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
         <section className="py-12 px-4 "sm": p x-6 "lg": p x-8">;";"
           <div className="max-w-7xl mx-auto"> {(() => {if(!category) return null;return (<motion.div;"
                   }
-                  className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"                  initial = {{ "opacity": 0","y": "2 0;"
-"}}"
-                  whileInView = {{ "opacity": "1","y": "0;"
-"}}"
-                  transition={{ "duration": "0.6 "}}"
+                  className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"                  initial = { "opacity": 0","y": "2 0;"
+"}"
+                  whileInView = { "opacity": "1","y": "0;"
+"}"
+                  transition={ "duration": "0.6 "}"
                 >";"
                   <div className="text-center mb-8">";"
                     <div className="text-6xl mb-4">{category.icon}</div>";"
@@ -396,11 +396,11 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
                       <div className="bg-white/10 rounded-lg p-4">;";"
                         <div className="text-purple-400 font-semibold">Growth Rate</div>;";"
               return (<motion.div;
-                  className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"                  initial = {{ "opacity": 0,"y": 2 0;"
-}}
-                  whileInView = {{ "opacity": 1,"y": 0;
-}}
-                  transition={{ "duration": 0.6 }}
+                  className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"                  initial = { "opacity": 0,"y": 2 0;"
+}
+                  whileInView = { "opacity": 1,"y": 0;
+}
+                  transition={ "duration": 0.6 }
                 >";"
                   <div className="text-center mb-8">";"
                     <div className="text-6xl mb-4">{category.icon}</div>";"
@@ -427,54 +427,54 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
       <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;"
         <div  className="max-w-7xl mx -auto">;"
           <motion.h2;
-            className="text-3xl "md": tex t-4xl font - bold text-center mb-12 text-transparent bg-clip - text bg-gradient - to - r from - purple - 400 to - pink -400"            initial = {{ "opacity": 0","y": "2 0;"
-"}}"
-            whileInView = {{ "opacity": "1","y": "0;"
-"}}"
-            transition={{ "duration": "0.6 "}}"
+            className="text-3xl "md": tex t-4xl font - bold text-center mb-12 text-transparent bg-clip - text bg-gradient - to - r from - purple - 400 to - pink -400"            initial = { "opacity": 0","y": "2 0;"
+"}"
+            whileInView = { "opacity": "1","y": "0;"
+"}"
+            transition={ "duration": "0.6 "}"
           >'`;`            {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}`            {selectedCategory === 'all' ? 'All Revolutionary Services' : "`${categories.find(c => { return c.id === selectedCategory)?.name"} Services`}`          </motion.h2>; }
           <motion.div;
-            className="grid grid - cols-1 "md": "gri d - cols - 2 "lg": gri d - cols - 3 gap-8"            variants={{"hidden": { "opacity": 0 "},"visible": "{"opacity": 1","transition": "{"staggerChildren": 0.1","delayChildren": "0.2;"
+            className="grid grid - cols-1 "md": "gri d - cols - 2 "lg": gri d - cols - 3 gap-8"            variants={"hidden": { "opacity": 0 "},"visible": "{"opacity": 1","transition": "{"staggerChildren": 0.1","delayChildren": "0.2;"
                 "}"
               }
-            }}
+            }
             initial="hidden";"
-            whileInView="visible"            viewport={{ "once": "anytru e "}}"
+            whileInView="visible"            viewport={ "once": "anytru e "}"
           >;
             {selectedServices.map((service, index) => (<motion.div;
                 }
                 key={service.id}
-                variants = {{"hidden": "{ "opacity": 0","y": "2 0;"
+                variants = {"hidden": "{ "opacity": 0","y": "2 0;"
 "},"visible": "{"opacity": 1","y": "0","transition": "{ "duration": 0.5 "}"
                   }
-                }}";"
+                }";"
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": "borde r-white/40 transition-all duration-300 "hover": transform "hover":scale-105 group";"
               >;
                 {/* Service Header */"}";"
                 <div className="text-center mb-6">`;`                  <div className={`text-6xl mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>;"      <section className="py-20 px-4 "sm": p x-6 "lg": p x-8">;"
         <div  className="max-w-7xl mx -auto">;"
           <motion.h2;
-            className="text-3xl "md": tex t-4xl font - bold text-center mb-12 text-transparent bg-clip - text bg-gradient - to - r from - purple - 400 to-pink -400"            initial = {{ "opacity": 0,"y": 2 0;"
-}}
-            whileInView = {{ "opacity": 1,"y": 0;
-}}
-            transition={{ "duration": 0.6 }}
+            className="text-3xl "md": tex t-4xl font - bold text-center mb-12 text-transparent bg-clip - text bg-gradient - to - r from - purple - 400 to-pink -400"            initial = { "opacity": 0,"y": 2 0;"
+}
+            whileInView = { "opacity": 1,"y": 0;
+}
+            transition={ "duration": 0.6 }
           >'`;`            {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => { return c.id === selectedCategory)?.name} Services`}`          </motion.h2>; }
           <motion.div;
-            className="grid grid - cols - 1 "md": gri d - cols - 2 "lg": gri d - cols-3 gap-8"            variants={{"hidden": { "opacity": 0 },"visible": {"opacity": 1,"transition": {"staggerChildren": 0.1,"delayChildren": 0.2;"
+            className="grid grid - cols - 1 "md": gri d - cols - 2 "lg": gri d - cols-3 gap-8"            variants={"hidden": { "opacity": 0 },"visible": {"opacity": 1,"transition": {"staggerChildren": 0.1,"delayChildren": 0.2;"
                 }
               }
-            }}
+            }
             initial="hidden";"
-            whileInView="visible"            viewport={{ "once": anytru e }}"
+            whileInView="visible"            viewport={ "once": anytru e }"
           >;
             {selectedServices.map((service, index) => (<motion.div;
                 }
                 key={service.id}
-                variants = {{"hidden": { "opacity": 0,"y": 2 0;
+                variants = {"hidden": { "opacity": 0,"y": 2 0;
 },"visible": {"opacity": 1,"y": 0,"transition": { "duration": 0.5 }
                   }
-                }}";"
+                }";"
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": borde r-white/40 transition-all duration-300 "hover": transform "hover":scale-105 group";"
               >;
                 {/* Service Header */}";"
@@ -627,11 +627,11 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
       <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;"
         <div  className="max - w-4xl mx-auto text-center">;"
           <motion.div;
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"            initial = {{ "opacity": 0","y": "2 0;"
-"}}"
-            whileInView = {{ "opacity": "1","y": "0;"
-"}}"
-            transition={{ "duration": "0.6 "}}"
+            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"            initial = { "opacity": 0","y": "2 0;"
+"}"
+            whileInView = { "opacity": "1","y": "0;"
+"}"
+            transition={ "duration": "0.6 "}"
           >";"
             <h2 className="text-3xl "md": "tex t-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;"
               Ready to Lead the Future?;
@@ -727,11 +727,11 @@ const "UltimateZionServicesMarketing": "React.FC = () : JSX.(Element) => {const 
       <section className="py-20 px-4 "sm": p x-6 "lg": p x-8">;"
         <div  className="max - w-4xl mx-auto text-center">;"
           <motion.div;
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"            initial = {{ "opacity": 0,"y": 2 0;"
-}}
-            whileInView = {{ "opacity": 1,"y": 0;
-}}
-            transition={{ "duration": 0.6 }}
+            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p-8 border border-purple -400 / 30"            initial = { "opacity": 0,"y": 2 0;"
+}
+            whileInView = { "opacity": 1,"y": 0;
+}
+            transition={ "duration": 0.6 }
           >";"
             <h2 className="text-3xl "md": tex t-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;"
               Ready to Lead the Future?;

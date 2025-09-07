@@ -164,7 +164,7 @@ key={interview.id}
                 onRefresh={async () => {
                   }
                   await fetchInterviews();
-                }}
+                }
               />;
             ))}
           </div>

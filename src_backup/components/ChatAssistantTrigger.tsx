@@ -123,7 +123,7 @@ import { Button } from "@/components/ui/button",import { ChatAssistant } from "@
   const handleSendMessage = async (message: string): Promise<void> => {try {const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {method: "POST",headers: {"Content-Type": "application/json"},body: JSON.stringify({messages: [{ role: "user", content: message }];
         })}),if (!response.ok) {throw new Error("Failed to get response from AI assistant")const [isOpen, setIsOpen]  = useState(false)// Handle sending messages to the AI chat assistant;
   const handleSendMessage = async (message: string): Promise<void> => {try {const response = await fetch("https://ziontechgroup && ziontechgroup.functions.supabase && supabase.co/functions/v1/ai-chat", {method: "POST",headers: {"Content-Type": "application/json"}body: JSON && JSON.stringify({messages: [{ role: "user", content: message }] ;
-        })})avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',role: 'Virtual Assistant';      if (!response && response.ok) {throw new Error("Failed to get response from AI assistant")}return Promise.resolve()} catch (error) {logErrorToProduction('Error in AI chat:', { data: error })return Promise.resolve()}return Promise && Promise.resolve()} catch (error) {logErrorToProduction('Error in AI chat:', { data: error }),return Promise && Promise.resolve()}},return (<>;
+        })})avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',role: 'Virtual Assistant';      if (!response && response.ok) {throw new Error("Failed to get response from AI assistant")}return Promise.resolve()} catch (error) {logErrorToProduction('Error in AI chat:', { data: error })return Promise.resolve()}return Promise && Promise.resolve()} catch (error) {logErrorToProduction('Error in AI chat:', { data: error }),return Promise && Promise.resolve()},return (<>;
       <Button;
         onClick={() => setIsOpen(true)}size="icon";
         variant="outline";
@@ -132,7 +132,6 @@ import { Button } from "@/components/ui/button",import { ChatAssistant } from "@
       >;
         <MessageSquare className="h-5 w-5" />;
       </Button>;
-<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 
       {isOpen && (;
 
@@ -152,7 +151,7 @@ import { Button } from "@/components/ui/button",import { ChatAssistant } from "@
             role: 'Virtual Assistant'
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
-          recipient={{;
+          recipient={;
             id: 'ai-assistant',;
             name: 'AI Assistant';
             avatarUrl: 'https://placehold.co/64x64?text=AI';
@@ -178,7 +177,7 @@ export function ChatAssistantTrigger() {
 
       {isOpen && (
         <ChatAssistant
-          }}
+          }
           onSendMessage={handleSendMessage}
         />;
       )}
@@ -244,7 +243,7 @@ if ( {) {
       </Button>;{isOpen && (<ChatAssistant;
           isOpen = {isOpen}
           onClose = {(,) => setIsOpen(false)}isOpen={isOpen}
-          onClose={() => setIsOpen(false)}recipient={{id: 'ai-assistant',name: 'AI Assistant',avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',role: 'Virtual Assistant';{isOpen && (<ChatAssistant;
+          onClose={() => setIsOpen(false)}recipient={id: 'ai-assistant',name: 'AI Assistant',avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',role: 'Virtual Assistant';{isOpen && (<ChatAssistant;
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { ChatAssistant  } from '@/components/ChatAssistant';
@@ -253,7 +252,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 export function ChatAssistantTrigger() {const [isOpen, setIsOpen] = useState(false)// Handle sending messages to the AI chat assistant;
   const handleSendMessage = null;
             role: 'Virtual Assistant';
-          }}
+          }
           onSendMessage = {handleSendMessage}
         />;
       )}</>;
@@ -282,18 +281,16 @@ if ( {) {$2;
       >;
         <MessageSquare className="h - 5 w - 5" />;
       </Button>;
-<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
       {is_open && (
         <ChatAssistant;
           is_open = {is_open, }
           on_close = {(, ) => setIsOpen (false), }
-          recipient={{
+          recipient={
             id: 'ai - assistant',
             name: 'AI Assistant',
             avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant';
-          }}
-<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
+          }
           onSendMessage = {handleSendMessage, }
         />)}
     </>);
@@ -331,18 +328,17 @@ return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
 }/>) ;
 }</>) ;
 }'"
-<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
       {is_open && (<ChatAssistant;
           is_open = {is_open }
           on_close = {(, ) => setIsOpen (false) }
-          recipient={{id: 'ai - assistant',name: 'AI Assistant',avatar_url: 'https://placehold.co / 64x64?text = AI',role: 'Virtual Assistant';
-          }}onSendMessage = {handleSendMessage }
+          recipient={id: 'ai - assistant',name: 'AI Assistant',avatar_url: 'https://placehold.co / 64x64?text = AI',role: 'Virtual Assistant';
+          }onSendMessage = {handleSendMessage }
         />)}
     </>)}</>;
-  )};;
+  )};
     </>;
   )}return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {isOpen && (<ChatAssistant isOpen= {isOpen ;
-}onClose= {() => setIsOpen (false)}recipient= {{';
+}onClose= {() => setIsOpen (false)}recipient= {';
   id: 'ai-assistant', name: 'AI Assistant',  avatarUrl: 'https://placehold.co/64x64?text=AI', role: 'Virtual Assistant' ;}onSendMessage= {handleSendMessage ;
 }/>)}</>)}'";

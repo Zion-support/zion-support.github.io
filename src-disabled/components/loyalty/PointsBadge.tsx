@@ -128,7 +128,7 @@ export function PointsBadge() {
 
   return (
     <TooltipProvider>
-      <div className="flex items-center gap-1">
+      <div className='flex items-center gap-1'>
         <Tooltip>
           <TooltipTrigger asChild>
 :src/components/loyalty/PointsBadge.tsx
@@ -141,12 +141,12 @@ export function PointsBadge() {
               className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
               <Gift className='h-4 w-4' aria-hidden='true' />
 
-              href={isAuthenticated ? "/points" : "#"}
-              onClick={handleClick}"
-              title={isAuthenticated ? "View points" : "Earn points by participating"}"
-              className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
-            >"
-              <Gift className="h-4 w-4" aria-hidden="true" />
+              href={isAuthenticated ? '/points' : '#'}
+              onClick={handleClick}'
+              title={isAuthenticated ? 'View points' : 'Earn points by participating'}'
+              className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'
+            >'
+              <Gift className='h-4 w-4' aria-hidden='true' />
 
               <span>{`${points} pts`}</span>
             </Link>
@@ -198,25 +198,25 @@ export function PointsBadge() {
                   <br />• Refer friends: 200 pts each;
                 </p>;
 
-                <ul className="text-xs mt-1 space-y-0.5">
+                <ul className='text-xs mt-1 space-y-0.5'>
                   <li>Purchases: {breakdown.purchase}</li>
                   <li>Posts: {breakdown.post}</li>
                   <li>Referrals: {breakdown.referral}</li>
                 </ul>
-                <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
+                <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>
                   Click to view full rewards program
                 </p>
               </>
             ) : (
               <>
-                <p className="text-sm font-medium">Zion Rewards Program</p>
-                <p className="text-xs mt-1 text-muted-foreground">
+                <p className='text-sm font-medium'>Zion Rewards Program</p>
+                <p className='text-xs mt-1 text-muted-foreground'>
                   • Sign up: 50 pts<br/>
                   • First purchase: 100 pts<br/>
                   • Community posts: 25 pts each<br/>
                   • Refer friends: 200 pts each
                 </p>
-                <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
+                <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>
                   Click to learn more and join!
                 </p>
               </>
@@ -242,24 +242,24 @@ export function PointsBadge() {
           <Tooltip>
             <TooltipTrigger asChild>
 
-                variant="ghost"
+                variant='ghost'
 
-                size="sm"
+                size='sm'
                 onClick={handleRefresh}
-                disabled={isRefreshing || loading}"
-                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground""
-                aria-label="Refresh points"
+                disabled={isRefreshing || loading}'
+                className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground''
+                aria-label='Refresh points'
               >
 
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
 
-                  aria-hidden="true"
+                  aria-hidden='true'
                 />
               </Button>
             </TooltipTrigger>
 
-              <p className="text-sm">Refresh points balance</p>
+              <p className='text-sm'>Refresh points balance</p>
             </TooltipContent>
           </Tooltip>
         )}

@@ -7,7 +7,7 @@ import { Conversation } from '@/types/messaging',import { ConversationItem } fro
         <ConversationItem;
           conversation={conversation}
           isActive={activeConversation?.id === conversation.id}
-          onClick={() => {setActiveConversation(conversation)markAsRead(conversation.id)}}
+          onClick={() => {setActiveConversation(conversation)markAsRead(conversation.id)}
         />;
       </div>;
     )},import React, { useMemo } from 'react';'
@@ -63,7 +63,7 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
     </div>)}{Row}
         </List>;
       )}</div>;
-  )}}
+  )}
           width="100%";"
         >;
           {Row}

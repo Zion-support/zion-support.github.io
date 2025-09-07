@@ -135,7 +135,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 				<link rel="canonical" href={canonical} />
 				<script
 					type="application/ld+json"
-					dangerouslySetInnerHTML={{
+					dangerouslySetInnerHTML={
 						__html: JSON.stringify(
 							{
 								"@context": "https://schema.org"

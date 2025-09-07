@@ -34,7 +34,7 @@ const combinedMessages = [systemMessage, ...messages];
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.    return new Response(JSON.stringify({ "message": assistantMessage }), {
       }
-      "headers": { ...corsHeaders, 'Content-Type': 'application/json' }})'
+      "headers": { ...corsHeaders, 'Content-Type': 'application/json' })'
   } catch (error) {
     }
     console.error('Error in ai-chat "function":', error);'
@@ -64,14 +64,14 @@ throw new Error(data && data.error.message);
     console && console.log('AI chat interaction logged');'
     return new Response(JSON && JSON.stringify({ "message": assistantMessage }), {
       }
-      "headers": { ...corsHeaders, 'Content-Type': 'application/json' }})'
+      "headers": { ...corsHeaders, 'Content-Type': 'application/json' })'
   } catch (error) {
     }
     console && console.error('Error in ai-chat "function":', error);'
     return new Response(JSON && JSON.stringify({ "error": error && error.message }), {
       }
       "status": 500,
-      "headers": { ...corsHeaders, 'Content-Type': 'application/json' }})'
+      "headers": { ...corsHeaders, 'Content-Type': 'application/json' })'
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition
@@ -79,21 +79,21 @@ serve (async (req) => {
 if ( {) {
   $2
 }
-    return new Response (null, { "headers": cors_headers });;
+    return new Response (null, { "headers": cors_headers });
     // Log this interaction for analytics (in a real implementation);
     // This would track common questions, successful interactions, etc.;
     console.log ('AI chat interaction logged');'
 ;
     return new Response (JSON.stringify ({ "message": assistant_message }), {
       }
-      "headers": { ...cors_headers, 'Content - Type': 'application / json' }});'
+      "headers": { ...cors_headers, 'Content - Type': 'application / json' });'
   } catch (error) {
     }
     console.error ('Error in ai - chat "function":', error);'
     return new Response (JSON.stringify ({ "error": error.message }), {
       }
       "status": 500,
-      "headers": { ...cors_headers, 'Content - Type': 'application / json' }});'
+      "headers": { ...cors_headers, 'Content - Type': 'application / json' });'
   }
 });
   }

@@ -55,7 +55,7 @@ onClick={() => navigate("/login?redirect=/profile")}"
     )
   }
 return (;
-                    navigate("/")                  }}"
+                    navigate("/")                  }"
 variant="outline";"
                   className="border-zion-blue-light text-zion-slate-light "hover": bg-zion-blue-light "hover":text-white""
                 >
@@ -143,7 +143,7 @@ return (;
                     }
                     logout ();
                     navigate ("/");"
-                  }}
+                  }
                   variant="outline";"
                   className="border - zion - blue - light text - zion - slate - light "hover": bg - zion - blue - light "hover":text-white";"
                 >;

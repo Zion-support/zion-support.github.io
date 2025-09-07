@@ -151,13 +151,13 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
     <>
       <Head>
         <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI services, micro SAAS, IT solutions, business automation, customer success, supply chain optimization, financial planning, sales intelligence" />
-        <meta property="og:title" content="Comprehensive Services Showcase 2025 | Zion Tech Group" />
-        <meta property="og:description" content="Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms." />
-        <meta property="og:url" content="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
+        <meta name='description' content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology.' />
+        <meta name='keywords' content='AI services, micro SAAS, IT solutions, business automation, customer success, supply chain optimization, financial planning, sales intelligence' />
+        <meta property='og:title' content='Comprehensive Services Showcase 2025 | Zion Tech Group' />
+        <meta property='og:description' content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms.' />
+        <meta property='og:url' content='https://ziontechgroup.com/comprehensive-services-showcase-2025' />
+        <meta property='og:type' content='website' />
+        <link rel='canonical' href='https://ziontechgroup.com/comprehensive-services-showcase-2025' />
       </Head>
       {/* Hero Section */}
       <section className='relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden'>
@@ -171,9 +171,9 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
         </div>
         <div className='relative z-10 container mx-auto px-4 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className='text-5xl lg:text-7xl font-bold mb-6'>
               <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
@@ -201,17 +201,17 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                 <div className='text-3xl font-bold text-cyan-400 mb-2'>
                   {comprehensiveRealServices2025.length}+
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">$2.5B+</div>
-                  <div className="text-gray-400">Market Coverage</div>
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-blue-400 mb-2'>$2.5B+</div>
+                  <div className='text-gray-400'>Market Coverage</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
-                  <div className="text-gray-400">AI Accuracy</div>
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-purple-400 mb-2'>95%</div>
+                  <div className='text-gray-400'>AI Accuracy</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">400%</div>
-                  <div className="text-gray-400">Average ROI</div>
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-green-400 mb-2'>400%</div>
+                  <div className='text-gray-400'>Average ROI</div>
                 </div>
               </div>
             </div>
@@ -344,9 +344,9 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className='group'
                 >
                   <div className='bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 h-full relative overflow-hidden'>
@@ -439,9 +439,9 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, x: -30 }
+                  animate={ opacity: 1, x: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className='group'
                 >
                   <div className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'>
@@ -538,7 +538,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                         className='px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
                       >
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-2 inline" />
+                        <ArrowRight className='w-4 h-4 ml-2 inline' />
                       </Link>
                     </div>
                   </div>
@@ -562,7 +562,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                   setSelectedCategory('All Services');
                   setSelectedPriceRange('All Prices');
                   setSearchQuery('');
-                }}
+                }
                 className='px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300'
               >
                 Clear All Filters
@@ -575,10 +575,10 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='container mx-auto px-4 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className='max-w-4xl mx-auto'
           >
             <h2 className='text-4xl lg:text-6xl font-bold mb-6'>
@@ -614,38 +614,38 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                 Visit us at:{' '}
                 <a
                   href={`tel:${contactInfo.mobile}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                  className='flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className='w-5 h-5 mr-2' />
                   {contactInfo.mobile  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 </Link>
                 <a
                   href={`mailto:${contactInfo.email}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  className="flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                  className='flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                 >
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className='w-5 h-5 mr-2' />
                   {contactInfo.email  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 </Link>
               </div>
-              <div className="text-center text-gray-400">
-                <p className="mb-2">{contactInfo.address}</p>
-                <p>Visit us at: <a href={contactInfo.website} className="text-cyan-400 hover:text-cyan-300 transition-colors">{contactInfo.website}</Link></p>
+              <div className='text-center text-gray-400'>
+                <p className='mb-2'>{contactInfo.address}</p>
+                <p>Visit us at: <a href={contactInfo.website} className='text-cyan-400 hover:text-cyan-300 transition-colors'>{contactInfo.website}</Link></p>
               </div>
             </motion.div>
           </div>

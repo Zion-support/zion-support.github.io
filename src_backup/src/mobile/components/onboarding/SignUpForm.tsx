@@ -35,7 +35,7 @@ function SignUpForm() {const router = use_router ()const { sign_up, login, login
           }
           router.push("/mobile")if (result?.emailVerificationRequired) {setShowVerificationMessage(true)} else {// Only navigate if email verification is not required;if (error) {throw new Error(error)}router.push("/mobile")router.push("/mobile")}"
     } catch ("err": any) {logErrorToProduction('Signup/Login "error":', { "data": err })setError(err.message |'An unexpected error occurred. Please try again.')} finally {setIsLoading(false)}'
-  }const handleGoogleLogin = async () => {try {await loginWithGoogle()} catch ("err": any) {}},import React, { useState } from "react",import { Label } from "@/components/ui/label",import { Input } from "@/components/ui/input",import { Button } from "@/components/ui/button",import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';'
+  }const handleGoogleLogin = async () => {try {await loginWithGoogle()} catch ("err": any) {},import React, { useState } from "react",import { Label } from "@/components/ui/label",import { Input } from "@/components/ui/input",import { Button } from "@/components/ui/button",import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';'
 import { useRouter   } from 'next/router';'
 import Link from 'next/link',import { useAuth } from "@/context/auth/AuthProvider",import { Alert, AlertDescription } from "@/components/ui/alert",export function SignUpForm() {const router  = null;return (<div className="space-y-2">;"
         <Button;

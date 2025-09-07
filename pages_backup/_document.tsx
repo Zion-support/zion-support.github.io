@@ -2,11 +2,11 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang='en'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang='en'>
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import {Html, Head, Main, NextScript} from 'next/document';
@@ -15,13 +15,13 @@ import {Html, Head, Main, NextScript} from 'next/document';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang='en'>
       <Head>
-        <meta charSet="utf-8" />
-        <meta name="theme-color" content="#1e293b" />
+        <meta charSet='utf-8' />
+        <meta name='theme-color' content='#1e293b' />
 origin/cursor/automate-test-improve-and-merge-code-2533
-        <meta name="description" content="Zion Tech Group - Leading provider of innovative micro SaaS products, AI services, and IT solutions" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='Zion Tech Group - Leading provider of innovative micro SaaS products, AI services, and IT solutions' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <body>
         <Main />
@@ -84,8 +84,8 @@ function Document() {
       </body>;
   )
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 

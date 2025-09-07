@@ -318,7 +318,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </title>
         <meta
           name='description'
-          content="Discover competitive pricing for Zion Tech Group's revolutionary 2033 technology solutions. From AI consciousness evolution to quantum DNA computing and space mining automation."
+          content='Discover competitive pricing for Zion Tech Group's revolutionary 2033 technology solutions. From AI consciousness evolution to quantum DNA computing and space mining automation.'
         />
         <meta
           name='keywords'
@@ -362,9 +362,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
             <div className='text-center'>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className='mb-6'
               >
                 <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium'>
@@ -374,36 +374,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <>
       <Head>
         <title>2033 Revolutionary Technology Pricing | Zion Tech Group - AI Consciousness, Quantum DNA Computing, Space Mining</title>
-        <meta name="description" content="Discover competitive pricing for Zion Tech Group's revolutionary 2033 technology solutions. From AI consciousness evolution to quantum DNA computing and space mining automation." />
-        <meta name="keywords" content="AI consciousness pricing, quantum DNA computing cost, space mining automation price, neuromorphic computing pricing, photonic computing cost, swarm robotics pricing" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="2033 Revolutionary Technology Pricing | Zion Tech Group" />
-        <meta property="og:description" content="Competitive pricing for revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/pricing-2033" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="2033 Revolutionary Technology Pricing | Zion Tech Group" />
-        <meta name="twitter:description" content="Competitive pricing for revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions." />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing-2033" />
+        <meta name='description' content='Discover competitive pricing for Zion Tech Group's revolutionary 2033 technology solutions. From AI consciousness evolution to quantum DNA computing and space mining automation.' />
+        <meta name='keywords' content='AI consciousness pricing, quantum DNA computing cost, space mining automation price, neuromorphic computing pricing, photonic computing cost, swarm robotics pricing' />
+        <meta name='author' content='Zion Tech Group' />
+        <meta name='robots' content='index, follow' />
+        <meta property='og:title' content='2033 Revolutionary Technology Pricing | Zion Tech Group' />
+        <meta property='og:description' content='Competitive pricing for revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions.' />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://ziontechgroup.com/pricing-2033' />
+        <meta property='og:image' content='https://ziontechgroup.com/og-image.svg' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='2033 Revolutionary Technology Pricing | Zion Tech Group' />
+        <meta name='twitter:description' content='Competitive pricing for revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions.' />
+        <link rel='canonical' href='https://ziontechgroup.com/pricing-2033' />
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
+      <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white'>
+        <div className='relative overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5'></div>
+          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
+            <div className='text-center'>
               <motion.div
-                transition={{ duration: 0.6 }} className="mb-6">
-                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
-                  <Crown className="w-4 h-4" />
+                transition={ duration: 0.6 } className='mb-6'>
+                <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium'>
+                  <Crown className='w-4 h-4' />
                   <span>2033 Revolutionary Pricing</span>
                 </div>
               </motion.div>
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.6, delay: 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+transition={ duration: 0.6, delay: 0.1 }
                 className='text-4xl md:text-5xl lg:text-6xl font-bold mb-6'
               >
                 <span className='bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent'>
@@ -414,9 +414,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text-white'>Pricing</span>
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.6, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+transition={ duration: 0.6, delay: 0.2 }
                 className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8'
               >
                 Experience the future of technology with our revolutionary AI
@@ -425,9 +425,9 @@ transition={{ duration: 0.6, delay: 0.2 }}
               </motion.p>
               {/* Billing Toggle */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.6, delay: 0.3 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+transition={ duration: 0.6, delay: 0.3 }
                 className='flex items-center justify-center space-x-4 mb-8'
               >
                 <span
@@ -472,9 +472,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
 className={`relative ${tier.popular ? 'scale-105' : ''}`}
                 >
                   {tier.popular && (
@@ -557,9 +557,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+transition={ duration: 0.6, delay: index * 0.1 }
                   className='bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300'
                 >
                   <div className='flex items-center space-x-3 mb-4'>
@@ -627,9 +627,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {popularServices.map((service, index) => (
                 <motion.div
                   key={service.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+transition={ duration: 0.6, delay: index * 0.1 }
                   className='bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300'
                 >
                   <div className='flex items-start justify-between mb-4'>
@@ -644,8 +644,8 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.category}
                         {service.category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                       </div>

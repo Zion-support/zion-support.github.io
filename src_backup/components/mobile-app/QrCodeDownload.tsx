@@ -7,7 +7,6 @@ import { AppStoreButtons  } from './AppStoreButtons';
 export const QrCodeDownload: React.FC;
 :src/components/mobile-app/QrCodeDownload.tsx
 }
-<<<<<<< HEAD:src_backup/components/mobile-app/QrCodeDownload.tsx
 import React from "react"
 import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
 
@@ -71,7 +70,7 @@ return (
 },
 import React from "react",;
 import { QrCode } from 'lucide-react';
-import { AppStoreButtons  } from "./AppStoreButtons";;
+import { AppStoreButtons  } from "./AppStoreButtons";
 
 export const QrCodeDownload: React.FC = () => {;
 
@@ -161,7 +160,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </div>;
-    </section>)}}export const QrCodeDownload: React.FC = () => {// App store links - these would come from environment variables in production;
+    </section>)}export const QrCodeDownload: React.FC = () => {// App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
   const googlePlayUrl  = "#", // Replace with actual Google Play URL;return (<section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
       <div className="container mx-auto px-4">;
@@ -200,7 +199,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}";
 ";
                   {/* This would be replaced with an actual QR code in production */}
-<<<<<<< HEAD:src_backup/components/mobile-app/QrCodeDownload.tsx
                 </div>;
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">;
                   Scan to download;

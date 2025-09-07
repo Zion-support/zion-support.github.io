@@ -10,13 +10,13 @@ interface LoadingProps {
     <div className={containerClasses}>
       <motion.div
         className="text-center""
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
+        initial={ opacity: 0 }
+        animate={ opacity: 1 }
+        transition={ duration: 0.3 }
       >
         <motion.div
           className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full mx-auto mb-4""
-          animate={{ rotate: 360 }}
+          animate={ rotate: 360 }
 
         />
         <p className="text-gray-300">{text}</p>"

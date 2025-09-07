@@ -152,7 +152,7 @@ export default function ZionBrainAdmin() {
             <div className="text-sm mb-2">Logs per prompt type and module usage</div>
             <div className="grid grid-cols-5 gap-2">
               {heatCells.map(({ key, value }) => (
-                <div key={key} className="p-3 rounded text-center text-xs" style={{ background: `rgba(59,130,246,${Math.min(1, 0.2 + value / 15)})`, color: 'white' }}>
+                <div key={key} className="p-3 rounded text-center text-xs" style={ background: `rgba(59,130,246,${Math.min(1, 0.2 + value / 15)})`, color: 'white' }>
                   <div className="font-semibold">{key}</div>
                   <div>{value}</div>
                 </div>

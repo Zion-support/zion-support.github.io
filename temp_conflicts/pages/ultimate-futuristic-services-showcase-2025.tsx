@@ -180,57 +180,57 @@ export default function UltimateFuturisticServicesShowcase2025() {
   }),
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className='min-h-screen bg-black text-white'>
       <Head>
         <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title>
-        <meta name="description" content="Discover the most innovative AI, blockchain, cybersecurity, space technology, and micro SAAS services of 2025. Transform your business with cutting-edge solutions from Zion Tech Group." />
-        <meta name="keywords" content="AI services, blockchain, cybersecurity, space technology, metaverse, micro SAAS, quantum computing, Web3, DeFi, NFT, virtual reality, quantum security" />
-        <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />
-        <meta property="og:description" content="Discover the most innovative AI, blockchain, cybersecurity, space technology, and micro SAAS services of 2025." />
-        <meta property="og:url" content="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
+        <meta name='description' content='Discover the most innovative AI, blockchain, cybersecurity, space technology, and micro SAAS services of 2025. Transform your business with cutting-edge solutions from Zion Tech Group.' />
+        <meta name='keywords' content='AI services, blockchain, cybersecurity, space technology, metaverse, micro SAAS, quantum computing, Web3, DeFi, NFT, virtual reality, quantum security' />
+        <meta property='og:title' content='Ultimate Futuristic Services Showcase 2025 | Zion Tech Group' />
+        <meta property='og:description' content='Discover the most innovative AI, blockchain, cybersecurity, space technology, and micro SAAS services of 2025.' />
+        <meta property='og:url' content='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025' />
+        <meta property='og:type' content='website' />
+        <link rel='canonical' href='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025' />
       </Head>
 
       <UltraAdvancedQuantumBackground />
 
       {/* Hero Section */}
-      <section className="relative z-10 pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className='relative z-10 pt-20 pb-16 px-4'>
+        <div className='max-w-7xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
               Ultimate Futuristic Services
             </h1>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-8'>
               Showcase 2025
             </h2>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
               Discover the most innovative AI, blockchain, cybersecurity, space technology, and micro SAAS services 
               that will transform your business and propel you into the future.
             </p>
             
             {/* Contact Information */}
-            <div className="bg-black/50 backdrop-blur-lg rounded-2xl p-8 mb-12 border border-white/20">
-              <h3 className="text-2xl font-bold mb-6 text-white">Get Started Today</h3>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="flex flex-col items-center">
-                  <Phone className="w-8 h-8 text-blue-400 mb-2" />
-                  <p className="text-sm text-gray-400">Mobile</p>
-                  <p className="text-lg font-semibold text-white">{contactInfo.mobile}</p>
+            <div className='bg-black/50 backdrop-blur-lg rounded-2xl p-8 mb-12 border border-white/20'>
+              <h3 className='text-2xl font-bold mb-6 text-white'>Get Started Today</h3>
+              <div className='grid md:grid-cols-3 gap-6 text-center'>
+                <div className='flex flex-col items-center'>
+                  <Phone className='w-8 h-8 text-blue-400 mb-2' />
+                  <p className='text-sm text-gray-400'>Mobile</p>
+                  <p className='text-lg font-semibold text-white'>{contactInfo.mobile}</p>
                 </div>
-                <div className="flex flex-col items-center">
-                  <Mail className="w-8 h-8 text-green-400 mb-2" />
-                  <p className="text-sm text-gray-400">Email</p>
-                  <p className="text-lg font-semibold text-white">{contactInfo.email}</p>
+                <div className='flex flex-col items-center'>
+                  <Mail className='w-8 h-8 text-green-400 mb-2' />
+                  <p className='text-sm text-gray-400'>Email</p>
+                  <p className='text-lg font-semibold text-white'>{contactInfo.email}</p>
                 </div>
-                <div className="flex flex-col items-center">
-                  <MapPin className="w-8 h-8 text-purple-400 mb-2" />
-                  <p className="text-sm text-gray-400">Address</p>
-                  <p className="text-lg font-semibold text-white">{contactInfo.address}</p>
+                <div className='flex flex-col items-center'>
+                  <MapPin className='w-8 h-8 text-purple-400 mb-2' />
+                  <p className='text-sm text-gray-400'>Address</p>
+                  <p className='text-lg font-semibold text-white'>{contactInfo.address}</p>
                 </div>
               </div>
             </div>
@@ -239,9 +239,9 @@ export default function UltimateFuturisticServicesShowcase2025() {
       </section>
 
       {/* Category Navigation */}
-      <section className="relative z-10 px-4 pb-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+      <section className='relative z-10 px-4 pb-8'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='flex flex-wrap justify-center gap-4 mb-8'>
             <button
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
@@ -270,41 +270,41 @@ export default function UltimateFuturisticServicesShowcase2025() {
       </section>
 
       {/* Search and Filters */}
-      <section className="relative z-10 px-4 pb-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-4 mb-8">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+      <section className='relative z-10 px-4 pb-8'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='flex flex-col md:flex-row gap-4 mb-8'>
+            <div className='flex-1 relative'>
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
               <input
-                type="text"
-                placeholder="Search services..."
+                type='text'
+                placeholder='Search services...'
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className='w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500'
               />
             </div>
             
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className='px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500'
             >
-              <option value="popularity">Most Popular</option>
-              <option value="rating">Highest Rated</option>
-              <option value="customers">Most Customers</option>
-              <option value="newest">Newest</option>
-              <option value="price-low">Price: Low to High</option>
-              <option value="price-high">Price: High to Low</option>
+              <option value='popularity'>Most Popular</option>
+              <option value='rating'>Highest Rated</option>
+              <option value='customers'>Most Customers</option>
+              <option value='newest'>Newest</option>
+              <option value='price-low'>Price: Low to High</option>
+              <option value='price-high'>Price: High to Low</option>
             </select>
 
-            <div className="flex bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-1">
+            <div className='flex bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-1'>
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-2 rounded-lg transition-all duration-300 ${
                   viewMode === 'grid' ? 'bg-blue-500 text-white' : 'text-gray-400 hover:text-white'
                 }`}
               >
-                <Grid className="w-5 h-5" />
+                <Grid className='w-5 h-5' />
               </button>
               <button
                 onClick={() => setViewMode('list')}
@@ -312,7 +312,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                   viewMode === 'list' ? 'bg-blue-500 text-white' : 'text-gray-400 hover:text-white'
                 }`}
               >
-                <List className="w-5 h-5" />
+                <List className='w-5 h-5' />
               </button>
             </div>
           </div>
@@ -320,13 +320,13 @@ export default function UltimateFuturisticServicesShowcase2025() {
       </section>
 
       {/* Services Grid */}
-      <section className="relative z-10 px-4 pb-20">
-        <div className="max-w-7xl mx-auto">
+      <section className='relative z-10 px-4 pb-20'>
+        <div className='max-w-7xl mx-auto'>
           {filteredServices.length === 0 ? (
-            <div className="text-center py-20">
-              <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-              <p className="text-gray-400">Try adjusting your search or filter criteria.</p>
+            <div className='text-center py-20'>
+              <Search className='w-16 h-16 text-gray-400 mx-auto mb-4' />
+              <h3 className='text-2xl font-bold text-white mb-2'>No services found</h3>
+              <p className='text-gray-400'>Try adjusting your search or filter criteria.</p>
             </div>
           ) : (
             <div className={`grid gap-8 ${
@@ -338,10 +338,10 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 {sortedServices.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    exit={{ opacity: 0, y: -30 }}
+                    initial={ opacity: 0, y: 30 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0.5, delay: index * 0.1 }
+                    exit={ opacity: 0, y: -30 }
                   >
                     <UltraFuturisticServiceCard
                       service={service}
@@ -357,35 +357,35 @@ export default function UltimateFuturisticServicesShowcase2025() {
       </section>
 
       {/* Call to Action */}
-      <section className="relative z-10 px-4 pb-20">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className='relative z-10 px-4 pb-20'>
+        <div className='max-w-4xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20"
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
+            className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20'
           >
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className='text-xl text-gray-300 mb-8'>
               Join thousands of forward-thinking companies already using our innovative services 
               to gain competitive advantages and accelerate growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href={`mailto:${contactInfo.email}`}
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className='inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className='w-5 h-5 mr-2' />
                 Get Started Today
               </a>
               <a
                 href={`tel:${contactInfo.mobile}`}
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-lg border border-white/20 text-white font-semibold rounded-xl hover: bg-white/20 transition-all duration-300"
+                className='inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-lg border border-white/20 text-white font-semibold rounded-xl hover: bg-white/20 transition-all duration-300'
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className='w-5 h-5 mr-2' />
                 Call Now
               </a>
             </div>

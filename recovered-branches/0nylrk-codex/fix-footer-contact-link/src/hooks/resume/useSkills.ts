@@ -29,7 +29,7 @@ export function useSkills() {
         .insert($2);
       if (error) throw error,
       
-      return showSuccessToast("Skill added", "Your skill has been added to your resume")
+      return showSuccessToast('Skill added', 'Your skill has been added to your resume')
     } catch (e: any) {
       return handleResumeError(e, 'Could not add skill')
     } finally {
@@ -51,7 +51,7 @@ export function useSkills() {
           years_experience: skill.years_experience;
         }),;
       if (error) throw error,;
-      return showSuccessToast("Skill added", "Your skill has been added to your resume");
+      return showSuccessToast('Skill added', 'Your skill has been added to your resume');
     } catch (e: any) {;
       return handleResumeError(e, 'Could not add skill');
     } finally {;
@@ -85,12 +85,12 @@ export function useSkills() {
         .eq($2);
       if (error) throw error,
       
-      return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
+      return showSuccessToast('Skill deleted', 'Your skill has been removed from your resume')
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {
       setIsLoading(false)
-          return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
+          return showSuccessToast('Skill deleted', 'Your skill has been removed from your resume')
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {

@@ -3,7 +3,6 @@ import SEO from '../components/SEO';'
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';'
 import Link from 'next/link';'
 
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +23,7 @@ class ErrorBoundary extends React.Component {
     }
     
     return this.props.children;
-export default function ResourcesPage() {return (class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+export default function ResourcesPage() {return (class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -48,11 +47,11 @@ import Link from 'next/link';
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },;
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
           ].map((it) => (;
-            <Link key={it && it.href} href={it && it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover: border-cyan-500/50 transition-colors block">;
-              <div className="text-sm text-gray-400">Resource</div>;
-              <h3 className="text-xl font-semibold text-white">{it && it.name}</h3>;
-              <p className="mt-1 text-gray-300">{it && it.blurb}</p>;
-              <div className="mt-3 text-cyan-300">Open →</div>;
+            <Link key={it && it.href} href={it && it.href} className='p-6 rounded-2xl bg-black/50 border border-gray-800 hover: border-cyan-500/50 transition-colors block'>;
+              <div className='text-sm text-gray-400'>Resource</div>;
+              <h3 className='text-xl font-semibold text-white'>{it && it.name}</h3>;
+              <p className='mt-1 text-gray-300'>{it && it.blurb}</p>;
+              <div className='mt-3 text-cyan-300'>Open →</div>;
           ))}
         </div>;
       </div>;
@@ -97,11 +96,11 @@ export default ResourcesPage;
             { name: 'Case Studies', href: '/case - studies', blurb: 'Proof of value and outcomes.' },
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
           ].map ((it) => (
-            <Link key={it.href} href={it.href} className="p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover: border - cyan-500 / 50 transition-colors block">;
-              <div className="text - sm text-gray-400">Resource</div>;
-              <h3 className="text - xl font-semibold text-white">{it.name}</h3>;
-              <p className="mt - 1 text-gray-300">{it.blurb}</p>;
-              <div className="mt - 3 text-cyan-300">Open →</div>))}
+            <Link key={it.href} href={it.href} className='p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover: border - cyan-500 / 50 transition-colors block'>;
+              <div className='text - sm text-gray-400'>Resource</div>;
+              <h3 className='text - xl font-semibold text-white'>{it.name}</h3>;
+              <p className='mt - 1 text-gray-300'>{it.blurb}</p>;
+              <div className='mt - 3 text-cyan-300'>Open →</div>))}
         </div>;
       </div>;
     </UltraFuturisticBackground>))}export default ResourcesPage;<div className='mt-3 text-cyan-300'>Open →</div>;
@@ -130,12 +129,9 @@ return (;
 };
 
 export default ResourcesPage;
-=======
             <Link key = $2;
 export default ResourcesPage,
-=======
- </div> <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+ </div> <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' > {
   [ {
   name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' 
 }, {
@@ -150,13 +146,8 @@ export default ResourcesPage,
   name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' 
 }].map ( (it) => () ) 
 }</div> </div> </UltraFuturisticBackground>) 
-<<<<<<< HEAD
 }
 export default ResourcesPage
-=======
 };
 
 export default Resources;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

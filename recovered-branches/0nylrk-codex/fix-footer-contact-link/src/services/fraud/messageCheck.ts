@@ -1,8 +1,8 @@
-export const checkMessage = ("messageContent": string): (MessageAnalysisResult) => {;
+export const checkMessage = ('messageContent': string): (MessageAnalysisResult) => {;
   }
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues,
-let "severity": FraudSeverity = 'safe',;'
+let 'severity': FraudSeverity = 'safe',;'
   if (analysis && analysis.reasons.length > 0) {
     }
     severity = analysis && analysis.reasons.length > 2 || 
@@ -16,12 +16,12 @@ import {MessageAnalysisResult} from './types';'
 /**;
 * Check message for suspicious content;
 */;
-export const check_message = ("message_content": string): (MessageAnalysisResult) => {
+export const check_message = ('message_content': string): (MessageAnalysisResult) => {
   }
   const analysis = analyze_content (message_content);
 ;
   // Determine severity based on number and type of issues;
-let "severity": FraudSeverity = 'safe',;'
+let 'severity': FraudSeverity = 'safe',;'
   // Check condition,
 if ( {) {
   $2
@@ -45,11 +45,11 @@ import { MessageAnalysisResult } from './types',;'
 /**;
  * Check message for suspicious content;
  */;
-export const checkMessage = ("messageContent": string): (MessageAnalysisResult) => {;
+export const checkMessage = ('messageContent': string): (MessageAnalysisResult) => {;
   }
   const analysis = analyzeContent(messageContent),;
   // Determine severity based on number and type of issues;
-  let "severity": FraudSeverity = 'safe',;'
+  let 'severity': FraudSeverity = 'safe',;'
   if (analysis.reasons.length > 0) {;
     }
     severity = analysis.reasons.length > 2 ||;

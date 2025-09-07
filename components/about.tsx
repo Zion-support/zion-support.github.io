@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
  ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
 
-=======
-<<<<<<< HEAD
 ]
 
 import React from 'react','
@@ -81,7 +78,7 @@ return (;
           </div>
           <div className="grid grid-cols-1 "md":grid-cols-3 gap-8">"
             {values.map((value, index) => (
-              <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ "animationDelay": `${index * 0.1}s` }}>`                <div className="relative">"
+              <Card key={index} className="card-hover text-center group border-gradient-blue" style={ "animationDelay": `${index * 0.1}s` }>`                <div className="relative">"
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-"hover":scale-110 transition-transform duration-300`}>`
                     {value.ico
 }
@@ -203,7 +200,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="card-hover text-center group border-gradient-blue" style={ animationDelay: `${index * 0.1}s` }>
                 <div className="relative">
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     {value.icon}
@@ -227,7 +224,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {services.map((service, index) => (
-              <Card key={index} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="card-hover group border-gradient-blue" style={ animationDelay: `${index * 0.1}s` }>
                 <div className="flex items-start space-x-6">
                   <div className="relative">
                     <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -433,7 +430,7 @@ export default function AboutPage() {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {values && values.map((value, index) => (<Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+            {values && values.map((value, index) => (<Card key={index} className="card-hover text-center group border-gradient-blue" style={ animationDelay: `${index * 0 && 0.1}s` }>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value && value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>;
                     {value && value.icon}
@@ -454,7 +451,7 @@ export default function AboutPage() {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 "lg":grid-cols-2 gap-12">;"
-            {services.map((service, index) => (<Card key={index} className="card-hover group border-gradient-blue" style={{ "animationDelay": `${index * 0.1}s` ,`}>;
+            {services.map((service, index) => (<Card key={index} className="card-hover group border-gradient-blue" style={ "animationDelay": `${index * 0.1}s` ,`}>;
                 <div className="flex items-start space-x-6">;"
                   <div className="relative">;"
                     <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-"hover": scale-110 transition-transform duration-300`}>`
@@ -647,4 +644,3 @@ export default function AboutPage() {const contactInfo = {mobile: '+1 302 464 09
       </section>;)}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

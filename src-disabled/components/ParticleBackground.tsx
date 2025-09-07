@@ -45,7 +45,6 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
     const particles: Particle[] = [];,
     const particleCount = 50;
 
-<<<<<<< HEAD:src/components/ParticleBackground.tsx
     const createParticles = () => {
       particles.length = 0;
       for (let i = 0; i < particleCount; i++) {
@@ -98,7 +97,6 @@ particles.forEach((particle) => {
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-<<<<<<< HEAD:src/components/ParticleBackground.tsx
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
@@ -140,7 +138,6 @@ particles.forEach((particle) => {
     });
 
     return () => {
-<<<<<<< HEAD:src/components/ParticleBackground.tsx
       cancelAnimationFrame(animationId);
       window.removeEventListener('resize', resizeCanvas);
     };
@@ -150,7 +147,7 @@ particles.forEach((particle) => {
     <canvas
       ref={canvasRef}
       className={`fixed inset-0 pointer-events-none ${className}`}
-      style={{ zIndex: -1 }}
+      style={ zIndex: -1 }
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
@@ -161,8 +158,8 @@ particles.forEach((particle) => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0""
-      style={{ background: 'transparent' }}'
+      className='fixed inset-0 pointer-events-none z-0''
+      style={ background: 'transparent' }'
     />
   );
 };

@@ -219,12 +219,12 @@ export default function Page() {const "ComprehensiveServicesShowcase": React.FC 
             {filteredServices.map((service", index)  => (<motion.div;"
                 }
                 key={service.id}
-                initial = {{ "opacity": "0","y": "2 0;"
-"}}"
-                animate = {{ "opacity": "1","y": "0;"
-"}}"
-                transition = {{ "duration": "0.5","delay": "inde x * 0.1;"
-"}}";"
+                initial = { "opacity": "0","y": "2 0;"
+"}"
+                animate = { "opacity": "1","y": "0;"
+"}"
+                transition = { "duration": "0.5","delay": "inde x * 0.1;"
+"}";"
                 className="bg-white rounded-xl shadow-lg "hover": "shado w-xl transition-all duration-300 overflow-hidden border border-gray-100";"
                 {/* Service Header */"}";"
                 <div className="p-6 border-b border-gray-100">";"
@@ -339,12 +339,12 @@ export default function Page() {const "ComprehensiveServicesShowcase": React.FC 
             {filteredServices.map((service, index)  => (<motion.div;
                 }
                 key={service.id}
-                initial = {{ "opacity": 0,"y": 2 0;
-}}
-                animate = {{ "opacity": 1,"y": 0;
-}}
-                transition = {{ "duration": 0.5,"delay": inde x * 0.1;
-}}";"
+                initial = { "opacity": 0,"y": 2 0;
+}
+                animate = { "opacity": 1,"y": 0;
+}
+                transition = { "duration": 0.5,"delay": inde x * 0.1;
+}";"
                 className="bg-white rounded-xl shadow-lg "hover": shado w-xl transition-all duration-300 overflow-hidden border border-gray-100";"
                 {/* Service Header */}";"
                 <div className="p-6 border-b border-gray-100">";"
@@ -477,7 +477,7 @@ export default function Page() {const "ComprehensiveServicesShowcase": React.FC 
                   setSelectedCategory('all')';';'
                   setSelectedInnovationLevel('all')';';'
               <button;
-                onClick={() => {setSelectedCategory('all')setSelectedInnovationLevel('all')setSearchTerm('')}}"                className="text-zion-cyan "hover": "tex t-zion-cyan-light font-medium";"
+                onClick={() => {setSelectedCategory('all')setSelectedInnovationLevel('all')setSearchTerm('')}"                className="text-zion-cyan "hover": "tex t-zion-cyan-light font-medium";"
               >;
                 Clear all filters;
               </button>;
@@ -503,7 +503,7 @@ export default function Page() {const "ComprehensiveServicesShowcase": React.FC 
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg "hover": b g-white "hover": tex t-zion-blue transition-colors";"
 ";"
               <Phone className="mr-2 h-5 w-5" />              Call Now;"
-                  setSearchTerm('')}}"                className="text-zion-cyan "hover": tex t-zion-cyan-light font-medium";"
+                  setSearchTerm('')}"                className="text-zion-cyan "hover": tex t-zion-cyan-light font-medium";"
               >;
                 Clear all filters;
               </button>;
@@ -534,11 +534,11 @@ export default function Page() {const "ComprehensiveServicesShowcase": React.FC 
         </div>;
       </section>;';'
     </div>;) }';';'
-export default ComprehensiveServicesShowcase}}}}'"`;`</motion>;
+export default ComprehensiveServicesShowcase}}'"`;`</motion>;
 </string>';'
 </string>;';';'
               <button;
-                onClick={() => {setSelectedCategory('all')setSelectedInnovationLevel('all')setSearchTerm('')}}"                className="text-zion-cyan "hover": tex t-zion-cyan-light font-medium";"
+                onClick={() => {setSelectedCategory('all')setSelectedInnovationLevel('all')setSearchTerm('')}"                className="text-zion-cyan "hover": tex t-zion-cyan-light font-medium";"
               >;
                 Clear all filters;
               </button>;
@@ -568,11 +568,11 @@ export default ComprehensiveServicesShowcase}}}}'"`;`</motion>;
           </div>;
         </div>;
       </section>;
-    </div>;) "}export default ComprehensiveServicesShowcase}}}}'"`;`</motion>;
+    </div>;) "}export default ComprehensiveServicesShowcase}}'"`;`</motion>;
 </string>;
 </string>;
 </string>;
-    </div>;) }export default ComprehensiveServicesShowcase}}}}'"`;`
+    </div>;) }export default ComprehensiveServicesShowcase}}'"`;`
 </motion>;
 </string>;
 </string>;

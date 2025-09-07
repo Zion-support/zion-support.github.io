@@ -88,23 +88,23 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
         <Badge;
           key={filter.key} 
 
-          className="flex items-center gap-1 pl-2 pr-1"
-        >"
-          <span className="text-xs">
+          className='flex items-center gap-1 pl-2 pr-1'
+        >'
+          <span className='text-xs'>
             {filter.label}: {filter.value}
 
-            className="h-4 w-4 p-0 hover:bg-transparent"
+            className='h-4 w-4 p-0 hover:bg-transparent'
 
             onClick={() => removeFilter(filter.key)}
 
             aria-label={`Remove ${filter.label} filter`}
-          >"
-            <X className="h-3 w-3" />
+          >'
+            <X className='h-3 w-3' />
           </Button>
         </Badge>
       ))}
 
-        size="sm"
+        size='sm'
 
         onClick={onClearAll}
 

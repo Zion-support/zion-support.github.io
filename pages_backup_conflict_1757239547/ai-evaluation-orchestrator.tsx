@@ -10,8 +10,8 @@ const AIEvaluationOrchestrator: React.FC = () => {
     <>
       <Head>
         <title>AI Evaluation Orchestrator | Zion Tech Group</title>
-        <meta name="description" content="Define evals, run batch tests, score prompts and models, and prevent regressions." />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-evaluation-orchestrator" />
+        <meta name='description' content='Define evals, run batch tests, score prompts and models, and prevent regressions.' />
+        <link rel='canonical' href='https://ziontechgroup.com/ai-evaluation-orchestrator' />
       </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white'>
         <div className='max-w-6xl mx-auto space-y-10'>
@@ -24,7 +24,7 @@ const AIEvaluationOrchestrator: React.FC = () => {
               and CI gates.
             </p>
           </header>
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <section className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {[
               'Create datasets and scoring functions'
               'Batch runs across models and versions'
@@ -41,12 +41,12 @@ const AIEvaluationOrchestrator: React.FC = () => {
               </div>
             ))}
           </section>
-          <div className="text-center">
-            <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>
+          <div className='text-center'>
+            <Button href='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>Talk to Sales</Button>
           </div>
         </div>
-        <div className="text-center">
-          <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: opacity-90">
+        <div className='text-center'>
+          <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: opacity-90'>
             Talk to Sales
           </a>
         </div>

@@ -358,6 +358,6 @@ placeholder='Describe the project scope, deliverables, and expectations...';'
               </Popover>;
               <FormDescription>Leave empty if the end date is flexible;
               </FormDescription>;
-              <FormMessage />;;</div>;
+              <FormMessage />;</div>;
     </>;
   )}

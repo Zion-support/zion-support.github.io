@@ -81,8 +81,8 @@ interface PromptCardProps  {prompt: Prompt;export function PromptCard() {const [
           onClick={handleCopy}
           aria-label='Copy prompt';
         >;
-          {copied ? 'Copied' : <Copy className='w-4 h-4' />}}
-  )}}import type { Prompt } from '@/types / prompts';
+          {copied ? 'Copied' : <Copy className='w-4 h-4' />}
+  )}import type { Prompt } from '@/types / prompts';
 import { Button  } from '@/components / ui / button';
 interface PromptCardProps  {prompt: Prompt;
 export /**;
@@ -109,11 +109,10 @@ function PromptCard() {const [copied, set_copied] = useState (false)const handle
         >;
           <Send className='w - 4 h - 4' />        </Button>;
       </div>;
-    </div>)}        <Button variant="secondary" size="sm" on_click={handle_send} aria - label="Send to ZionGPT">;
-          <Send className="w - 4 h - 4" />;
+    </div>)}        <Button variant='secondary' size='sm' on_click={handle_send} aria - label='Send to ZionGPT'>;
+          <Send className='w - 4 h - 4' />;
         </Button>;
       </div>;
-<<<<<<< HEAD:src_backup/components/prompts/PromptCard.tsx
     </div>);
     </div>)}</Button>;
         <Button;

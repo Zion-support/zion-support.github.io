@@ -57,7 +57,7 @@ const score = calculateSEOScore(page)const issues = identifySEOIssues(page;
   const recommendations = generateSEORecommendations(issues;
   return {}
                     pageUrl: page.url, title: page.title, metaDescription: page.metaDescription, headings: page.headings, images: page.images, links: page.links, keywords: page.keywords, score, issues, recommendations;
-                }})const totalPages = pageAnalyses.length;
+                })const totalPages = pageAnalyses.length;
 
 const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages;
   const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0) .length;

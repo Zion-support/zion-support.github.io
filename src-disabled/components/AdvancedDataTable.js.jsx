@@ -219,13 +219,13 @@ const renderCell = () => {
         <AnimatePresence />;
           {showFilters && (<motion.div initial = {}
   { opacity: 0, height: 0;}
-}} animate = {}
+} animate = {}
   { opacity: 1,'';}
   height: 'auto';}
-}} exit = {}
+} exit = {}
   { opacity: 0, height: 0 '''';}
 '''';}
-}} className='mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500' />'''';
+} className='mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500' />'''';
               <h4 className='font-medium text-gray-900 dark:text-white mb-3' />Advanced Filters</h4>'''';
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4' />'''';
                 {columns.filter(col => col.filterable !== false).map(column => (<div key={String(column.key)} className='space-y-2' />'''';
@@ -260,7 +260,7 @@ const renderCell = () => {
   );
 }'`';
             '`'`;
-            {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{width: column.width }
+            {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={width: column.width }
 } />'`''`';
                 <button onClick={() = /> handleSort(column.key)} disabled={!enableSorting || !column.sortable} className={`w-full flex items-center justify-between px-2 py-1 rounded hover: bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? 'cursor-default' : 'cursor-pointer'},
 }>'''';
@@ -284,10 +284,10 @@ const renderCell = () => {
           <div {...listProps} />;
             {virtualItems.map((item, index) => (<motion.div key={String(item.id || index)} initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '`';}
 '`'`;}
-}} className={`flex items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark: bg-blue-900/20' : ''}`} onClick = ,
+} className={`flex items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark: bg-blue-900/20' : ''}`} onClick = ,
 }
   () = /> onRowClick?.(item, index)'''';
 }>'''';
@@ -300,7 +300,7 @@ const renderCell = () => {
   );
 }'`';
                 '`'`;
-                {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{width: column.width }
+                {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={width: column.width }
 } />;
                     {renderCell(column, item, index)}
                   </div>))}'''';
@@ -360,4 +360,4 @@ const page = i + 1`;'`'`'`';
   );
 }
     </div>)}''`;
-''`'"`'";
+''`''`'';

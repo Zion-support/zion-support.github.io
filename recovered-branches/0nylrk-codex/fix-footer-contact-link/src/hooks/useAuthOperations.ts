@@ -102,7 +102,7 @@ cleanupAuthState();
           }
           "variant": "destructive";"
           "title": "Error during signup""
-            "display_name": display_name}}}),
+            "display_name": display_name}}),
       if (error) {
         }
         toast({

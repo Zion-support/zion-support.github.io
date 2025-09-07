@@ -1,8 +1,8 @@
 const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null,) => void
 
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { CountryPricing, onsiteServicePricing } from '@/data/onsiteServicePricing';
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void;
 
@@ -19,7 +19,7 @@ interface CountrySelectorProps {
       .filter(item => popular.includes(item.country))
       .sort((a, b) => a.country.localeCompare(b.country))
 
-    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],
+    const popular = ['United States', 'United Kingdom', 'Canada', 'Germany', 'Australia', 'Japan', 'Singapore'],
     const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
@@ -46,14 +46,14 @@ interface CountrySelectorProps {
         onValueChange={handleCountryChange} 
         value={selectedCountry?.country}
       >
-        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
-          <SelectValue placeholder="Select a country" />
+        <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>
+          <SelectValue placeholder='Select a country' />
         </SelectTrigger>
-        <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">
-          <div className="p-2 border-b border-zion-blue-light">
-            <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
+        <SelectContent className='bg-zion-blue-dark border-zion-blue-light max-h-80'>
+          <div className='p-2 border-b border-zion-blue-light'>
+            <p className='text-sm text-zion-slate-light pb-1'>Popular Countries</p>
             {topCountries.map((item) => (
-              <SelectItem key={item.country} value={item.country} className="text-white">
+              <SelectItem key={item.country} value={item.country} className='text-white'>
 
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
@@ -133,11 +133,11 @@ function CountrySelector() {
                 className='text - white';
               >                {item.country} - ${item.pricePerIncident.to_fixed (2)}
               </SelectItem>))}
-          </div>        <SelectContent className="bg - zion - blue - dark border - zion - blue - light max - h-80">;
-          <div className="p - 2 border - b border - zion - blue - light">;
-            <p className="text - sm text - zion - slate - light pb - 1">Popular Countries</p>;
+          </div>        <SelectContent className='bg - zion - blue - dark border - zion - blue - light max - h-80'>;
+          <div className='p - 2 border - b border - zion - blue - light'>;
+            <p className='text - sm text - zion - slate - light pb - 1'>Popular Countries</p>;
             {top_countries.map ((item, ) => (
-              <SelectItem key={item.country} value={item.country} className="text - white">;
+              <SelectItem key={item.country} value={item.country} className='text - white'>;
               </SelectItem>))}
 
           </div>;
@@ -155,7 +155,7 @@ function CountrySelector() {
                 </SelectItem>))}          </div>              .map ((item) => (
               .sort ((a, b, ) => a.country.locale_compare (b.country));
               .map ((item, ) => (
-              <SelectItem key={item.country} value={item.country} className="text - white">;
+              <SelectItem key={item.country} value={item.country} className='text - white'>;
                 {item.country} - ${item.pricePerIncident.to_fixed (2)}
               </SelectItem>))}
         </SelectContent>;

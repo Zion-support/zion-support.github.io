@@ -1,31 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-import type { NextApiRequest, NextApiResponse } from "next";
-import { requireUser } from "../../../../utils/api/auth";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../../utils/api/auth';
 import {
   addMilestone
   getProject
   assertParticipantOrAdmin
   isClient
-} from "../../../../utils/api/projects";
-import { Milestone } from "../../../../utils/types/milestones";
-import type { NextApiRequest, NextApiResponse } from "next";
-import { requireUser } from "../../../../utils/api/auth";
+} from '../../../../utils/api/projects';
+import { Milestone } from '../../../../utils/types/milestones';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../../utils/api/auth';
 import {
   addMilestone
   getProject
   assertParticipantOrAdmin
   isClient,;
-} from "../../../../utils/api/projects";
-import { Milestone } from "../../../../utils/types/milestones";
+} from '../../../../utils/api/projects';
+import { Milestone } from '../../../../utils/types/milestones';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '[^']*';
@@ -42,40 +32,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const { projectId } = req.query as { projectId: string };
   const project = getProject(projectId);
   if (!project) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    res.status(404).json({ error: "Project not found" });
+    res.status(404).json({ error: 'Project not found' });
     return;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -84,20 +53,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const project = getProject(projectId);
   if (!project) {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
   if (req.method === 'POST') {
 
-=======
   if (req.method === 'POST') {
 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!isClient(project, user)) {
 
 
@@ -107,7 +67,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { projectId } = req && req.query as { projectId: string };
   const project = getProject(projectId);
   if (!project) {
-if (req && req.method === "GET") {
+if (req && req.method === 'GET') {
     res && res.status(200).json({ milestones: project && project.milestones });
     return;
     res.status(404).json({ error: 'Project not found' });
@@ -126,19 +86,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
-=======
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 ;
@@ -147,16 +98,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       res.status( error: 'Only client (or admin) can add milestones' ).json({$2});
       return;
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
   }
 
@@ -164,41 +115,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (!isClient(project, user)) {
 res
         .status(403)
-        .json({ error: "Only client (or admin) can add milestones" });
+        .json({ error: 'Only client (or admin) can add milestones' });
 origin/cursor/automate-test-improve-and-merge-code-2533
       return;
     }
     const body = req.body as Partial<Milestone>;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     });
     res && res.status(201).json({ milestone: created });
     return;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 
@@ -226,29 +155,20 @@ if (return) {
   // Check condition
 if ( {) {
   $2
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
 
 }
-    res.status (404).json ({ error: "Project not found" });
+    res.status (404).json ({ error: 'Project not found' });
     return;
   }
   if () {) {
   $2
 }
-    res.status (403).json ({ error: "Forbidden" });
+    res.status (403).json ({ error: 'Forbidden' });
     return;
   }
   // Check condition
@@ -267,7 +187,7 @@ if ( {) {
 }
       res;
         .status (403);
-        .json ({ error: "Only client (or admin) can add milestones" });
+        .json ({ error: 'Only client (or admin) can add milestones' });
       return;
     }
     const body = req.body as Partial < Milestone>;
@@ -277,7 +197,7 @@ if ( {) {
 }
       res;
         .status (400);
-        .json ({ error: "Missing required fields: title, due_date, amount_usd" });
+        .json ({ error: 'Missing required fields: title, due_date, amount_usd' });
       return;
     }
     const created = add_milestone (project, {
@@ -291,18 +211,10 @@ if ( {) {
     return;
   }
 
-  res.setHeader("Allow", "GET, POST");
-  res.status(405).end("Method Not Allowed");
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 
@@ -310,11 +222,5 @@ if ( {) {
   res.status(405).end('Method Not Allowed');
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

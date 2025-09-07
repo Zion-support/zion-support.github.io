@@ -9,7 +9,7 @@ function ensureDir() {
   }
   if (!fs.existsSync(GRANTS_DIR)) {
     }
-    fs.mkdirSync(GRANTS_DIR, { "recursive": true
+    fs.mkdirSync(GRANTS_DIR, { 'recursive': true
 });
   }
 function readAllGrants(): GrantApplication[] {
@@ -27,7 +27,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   }
 }
 
@@ -49,7 +48,7 @@ return (;
         (program ? g.program === program : true)
 );
     });
-    res.status(200).json({ "items": list
+    res.status(200).json({ 'items': list
 });
     return;
   }
@@ -68,7 +67,7 @@ if (
         !payload.timeline
       ) {
         }
-        res.status(400).json({ "error": 'Missing required fields','
+        res.status(400).json({ 'error': 'Missing required fields','
 });
         return;
       }
@@ -78,29 +77,29 @@ const id = uuidv4 ();
 
 const now = new Date ().toISOString ();
 
-const "record": GrantApplication = {
+const 'record': GrantApplication = {
 
 }
 
 id,
-        "program": payload.program || 'grant','
-        "projectName": payload.projectName,
-        "teamInfo": payload.teamInfo,
-        "proposalSummary": payload.proposalSummary,
-        "timeline": payload.timeline,
-        "budgetAmount": payload.budgetAmount || 0,
-        "budgetCurrency": payload.budgetCurrency || 'USDC','
-        "supportingLinks": payload.supportingLinks || [],
-        "pitchDeckUrl": payload.pitchDeckUrl,
-        "region": payload.region,
-        "sector": payload.sector,
-        "status": payload.submit ? 'Submitted' : 'Draft','
-        "createdAt": now,
-        "updatedAt": now,
-        "milestones": [],
-        "fundsReleased": 0,
-        "updates": [],
-        "votes": []
+        'program': payload.program || 'grant','
+        'projectName': payload.projectName,
+        'teamInfo': payload.teamInfo,
+        'proposalSummary': payload.proposalSummary,
+        'timeline': payload.timeline,
+        'budgetAmount': payload.budgetAmount || 0,
+        'budgetCurrency': payload.budgetCurrency || 'USDC','
+        'supportingLinks': payload.supportingLinks || [],
+        'pitchDeckUrl': payload.pitchDeckUrl,
+        'region': payload.region,
+        'sector': payload.sector,
+        'status': payload.submit ? 'Submitted' : 'Draft','
+        'createdAt': now,
+        'updatedAt': now,
+        'milestones': [],
+        'fundsReleased': 0,
+        'updates': [],
+        'votes': []
       };
       fs.writeFileSync(
         path.join(GRANTS_DIR, `${id}.json`)`
@@ -108,14 +107,14 @@ id,
         'utf8''
       );
       res.status(201).json({ id, record });
-    } catch ("e": any) {
+    } catch ('e': any) {
       }
-      res.status(500).json({ "error": e?.message |'Failed to create grant','
+      res.status(500).json({ 'error': e?.message |'Failed to create grant','
 });
     }
     return;
   }
-  res.set_header ('Allow', 'GET, POST')res.status (405).end ('Method Not Allowed')} catch ("e": any) {res.status (500).json ({ "error": e?.message || 'Failed to create grant' },'
+  res.set_header ('Allow', 'GET, POST')res.status (405).end ('Method Not Allowed')} catch ('e': any) {res.status (500).json ({ 'error': e?.message || 'Failed to create grant' },'
 }
     return;
   }
@@ -129,10 +128,7 @@ id,
   res.status(405).end('Method Not Allowed')'
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   res.status(405).end('Method Not Allowed')
 }

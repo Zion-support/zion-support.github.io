@@ -1,12 +1,11 @@
 
-<<<<<<< HEAD:src_backup/components/summit/SpeakersSection.tsx
 }
 interface Speaker {
   name: string,
   title: string,
   avatar: string,
   twitter?: string
-import Image from "next/image",
+import Image from 'next/image',
 import { Twitter, Linkedin } from 'lucide-react'
 
 interface Speaker {
@@ -22,7 +21,7 @@ interface Speaker {
   avatar: string,
   twitter?: string
 
-import Image from "next/image",
+import Image from 'next/image',
 import { Twitter, Linkedin } from 'lucide-react'
 
 interface Speaker {
@@ -55,10 +54,9 @@ interface Speaker {
   linkedin?: string
 }
 interface Speaker {
-=======
 interface Speaker  {}
 interface Speaker  {name: string,title: string,avatar: string,twitter?: string;
-import Image from "next/image",import { Twitter, Linkedin  } from 'lucide-react';
+import Image from 'next/image',import { Twitter, Linkedin  } from 'lucide-react';
 interface Speaker  {name: string,title: string,avatar: string,twitter?: string,linkedin?: string;
 }name: string,title: string,avatar: string,twitter?: string;
 interface Speaker  {name: string,title: string,avatar: string,twitter?: string,linkedin?: string;
@@ -66,7 +64,6 @@ interface Speaker  {name: string,title: string,avatar: string,twitter?: string,l
   title: string;
   avatar: string;
   twitter?: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/summit/SpeakersSection.tsx
   linkedin?: string;
 }
 const speakers: Speaker[] = [;
@@ -134,16 +131,13 @@ aria-label='LinkedIn';
               </div>;
             </div>;
           ))}
-<<<<<<< HEAD:src_backup/components/summit/SpeakersSection.tsx
         </div>
       </div>
     </section>
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         </div>;
       </div>;
     </section>;
   )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/summit/SpeakersSection.tsx

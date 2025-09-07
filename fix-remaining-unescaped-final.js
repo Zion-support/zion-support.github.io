@@ -3,10 +3,10 @@
 const fs = require('fs';'
   const path  = require('path')function fixUnescapedEntities() {try {let content = fs.readFileSync(filePath, 'utf8')let modified  = false;// Replace ' with single quotes;'
     }
-    if (content.includes(''')) {content = content.replace(/'/g, "'")modified = true;"
-    }// Replace " with double quotes;"
-    if (content.includes('"')) {content = content.replace(/"/g, '"')modified = true;'
-    }if (modified) {fs.writeFileSync(filePath, content, 'utf8')console.log(`Fixed unescaped entities "in": ${filePat,`}`)return true;`    }return false;
+    if (content.includes(''')) {content = content.replace(/'/g, ''')modified = true;'
+    }// Replace ' with double quotes;'
+    if (content.includes(''')) {content = content.replace(/'/g, ''')modified = true;'
+    }if (modified) {fs.writeFileSync(filePath, content, 'utf8')console.log(`Fixed unescaped entities 'in': ${filePat,`}`)return true;`    }return false;
   } catch (error) {console.error(`Error processing ${filePath}:`, error.message)return false;`  }
 }function findTSXFiles() {const files  = [];function walkDir() {try {const items = fs.readdirSync(currentPath)for (const item of items) ;
   }

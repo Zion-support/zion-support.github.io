@@ -7,7 +7,6 @@ return (;
     if (!targetRef.current) return;
     const element = targetRef.current;
     const html2pdf = (await import('html2pdf.js')).default;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     const opt = {
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
 
@@ -19,13 +18,13 @@ const opt = {
 
 }
 
-"margin": [10, 10, 10, 10],
-      "filename": fileName,
-      "image": { "type": 'jpeg', "quality": 0.98,'
+'margin': [10, 10, 10, 10],
+      'filename': fileName,
+      'image': { 'type': 'jpeg', 'quality': 0.98,'
 },
-      "html2canvas": { "scale": 2, "useCORS": true
+      'html2canvas': { 'scale': 2, 'useCORS': true
 },
-      "jsPDF": { "unit": 'mm', "format": 'a4', "orientation": 'portrait','
+      'jsPDF': { 'unit': 'mm', 'format': 'a4', 'orientation': 'portrait','
 }
     } as any;
 
@@ -51,7 +50,6 @@ export default function PdfExportButton({ targetRef, fileName = $2;
     const opt = {
       margin: [10, 10, 10, 10],
 
-<<<<<<< HEAD
       margin: [10, 10, 10, 10],
       filename: fileName,
       image: { type: 'jpeg', quality: 0.98 },
@@ -61,7 +59,6 @@ export default function PdfExportButton({ targetRef, fileName = $2;
 
 
 
-=======
       filename: fileName,
       image: { type: 'jpeg'}
   quality: 0.98}
@@ -73,7 +70,6 @@ export default function PdfExportButton({ targetRef, fileName = $2;
 
     html2pdf().set(opt).from(element).save();
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     >
       Download as PDF;
@@ -90,10 +86,10 @@ export default function PdfExportButton({ targetRef, fileName = $2;
 }
     <button,
 onClick={onClick}
-      className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow "hover": bg-blue-700 "focus":outline-none""
-      aria-label="Download as PDF""
+      className='no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow 'hover': bg-blue-700 'focus':outline-none''
+      aria-label='Download as PDF''
 
-    const opt = {jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+    const opt = {jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }
     return this.props.children;
@@ -118,8 +114,8 @@ export type PdfExportButtonProps = any;
     </button>;
   )}  return (}<button;
       onClick={onClick}
-      className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none";
-      aria-label="Download as PDF";html2pdf ().set (opt).from (element).save ()}>;
+      className='no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none';
+      aria-label='Download as PDF';html2pdf ().set (opt).from (element).save ()}>;
       Download as PDF;
     </button>)}  return (<button;
 ;
@@ -132,8 +128,8 @@ export type PdfExportButtonProps = any;
 }  return (
     <button;
       on_click={on_click}
-      className="no - print fixed right - 4 top - 20 z - 50 inline - flex items - center gap - 2 rounded - md bg - blue - 600 text - white px - 4 py - 2 shadow hover: bg - blue - 700 focus:outline - none";
-      aria - label="Download as PDF";
+      className='no - print fixed right - 4 top - 20 z - 50 inline - flex items - center gap - 2 rounded - md bg - blue - 600 text - white px - 4 py - 2 shadow hover: bg - blue - 700 focus:outline - none';
+      aria - label='Download as PDF';
       Download as PDF;
     </button>);
     </button>)Download as PDF;
@@ -144,17 +140,9 @@ export type PdfExportButtonProps = any;
     </button>
   )
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-"
-=======
+'
 html2pdf () .set (opt) .from (element) .save () 
 }
-return (<button aria-label="Download as PDF" 
+return (<button aria-label='Download as PDF' 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

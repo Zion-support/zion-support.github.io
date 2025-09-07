@@ -195,9 +195,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div className='relative z-10 text-center px-6 max-w-7xl mx-auto'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
 <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
               Ultimate 2026
@@ -298,9 +298,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-6'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -320,9 +320,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {featuredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+transition={ duration: 0.8, delay: index * 0.1 }
                 className='group relative'
               >
                 <div className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105'>
@@ -387,9 +387,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-6'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -446,14 +446,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {priceRanges.map(range => (
                     <option key={range.id} value={range.id}>
                       {range.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                     </option>;
                   ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 </select>
@@ -506,9 +506,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                 key={service.id}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.05 }}
+                initial={ opacity: 0, coordinate_y: 30 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.8, delay: index * 0.05 }
 className={
                   viewMode === 'grid'
                     ? 'group relative'
@@ -618,8 +618,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           {filteredServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-animate={{ opacity: 1 }}
+              initial={ opacity: 0 }
+animate={ opacity: 1 }
               className='text-center py-20'
             >
               <div className='text-6xl mb-4'>🔍</div>
@@ -638,19 +638,19 @@ animate={{ opacity: 1 }}
         <div className='max-w-4xl mx-auto text-center px-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+            initial={ opacity: 0, y: 30 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+            whileInView={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+            transition={ duration: 0.8 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           >
@@ -696,28 +696,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                <Phone className="w-5 h-5 mr-2" />
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link href='/contact' className='inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105'>
+                <Phone className='w-5 h-5 mr-2' />
                 Get Started Today
               </Link>
-              <Link href="/pricing" className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300">
-                <DollarSign className="w-5 h-5 mr-2" />
+              <Link href='/pricing' className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300'>
+                <DollarSign className='w-5 h-5 mr-2' />
                 View Pricing
               </Link>
             </div>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">500%+</div>
-                <div className="text-white/80">Average ROI</div>
+            <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-8'>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-white mb-2'>500%+</div>
+                <div className='text-white/80'>Average ROI</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                <div className="text-white/80">Support Available</div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-white mb-2'>24/7</div>
+                <div className='text-white/80'>Support Available</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-                <div className="text-white/80">Uptime Guarantee</div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-white mb-2'>99.9%</div>
+                <div className='text-white/80'>Uptime Guarantee</div>
               </div>
             </div>
           </motion.div>

@@ -1,41 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:components.disabled/components/ContactFormEnhanced.tsx
 origin/main
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export {};
 
 origin/main
-=======
 
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 
 // Auto-generated module
 export {};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:components.disabled/components/ContactFormEnhanced.tsx
 
 
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 
 
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -47,7 +25,6 @@ import {
   MessageSquare,
 } from 'lucide-react';
 
-<<<<<<< HEAD
 ;
 // Auto-generated module;
 export {}// Auto-generated module;
@@ -65,9 +42,9 @@ const ContactFormEnhanced: React.FC = () => {const [formData, setFormData] = use
       await new Promise(resolve => setTimeout(resolve, 2000))setSubmitStatus('success')setFormData({ name: '', email: '', subject: '', message: '' })} catch (error) {setSubmitStatus('error')} finally {setIsSubmitting(false)}
   }return (<div className="max-w-2xl mx-auto p-6">;
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial={ opacity: 0, y: 20 }
+        animate={ opacity: 1, y: 0 }
+        transition={ duration: 0.6 }
         className="bg-white rounded-xl shadow-lg p-8";
       >;
         <div className="text-center mb-8">;
@@ -166,8 +143,8 @@ const ContactFormEnhanced: React.FC = () => {const [formData, setFormData] = use
           <motion.button;
             type="submit";
             disabled={isSubmitting}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={ scale: 1.02 }
+            whileTap={ scale: 0.98 }
             className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed";
           >;
             {isSubmitting ? (<div className="flex items-center justify-center gap-2">;
@@ -181,8 +158,8 @@ const ContactFormEnhanced: React.FC = () => {const [formData, setFormData] = use
             )}
           </motion.button>;
           {submitStatus === 'success' && (<motion.div;
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 10 }
+              animate={ opacity: 1, y: 0 }
               className="flex items-center gap-2 text-green-600 bg-green-50 p-3 rounded-lg";
             >;
               <CheckCircle className="w-5 h-5" />;
@@ -190,8 +167,8 @@ const ContactFormEnhanced: React.FC = () => {const [formData, setFormData] = use
               </span>;
             </motion.div>;
           )}{submitStatus === 'error' && (<motion.div;
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 10 }
+              animate={ opacity: 1, y: 0 }
               className="flex items-center gap-2 text-red-600 bg-red-50 p-3 rounded-lg";
             >;
               <AlertCircle className="w-5 h-5" />;
@@ -209,7 +186,6 @@ export {}
 // Auto-generated module
 export {};
 
-=======
 const ContactFormEnhanced: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -252,9 +228,9 @@ const ContactFormEnhanced: React.FC = () => {
   return (
     <div className="max-w-2xl mx-auto p-6">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial={ opacity: 0, y: 20 }
+        animate={ opacity: 1, y: 0 }
+        transition={ duration: 0.6 }
         className="bg-white rounded-xl shadow-lg p-8"
       >
         <div className="text-center mb-8">
@@ -358,8 +334,8 @@ const ContactFormEnhanced: React.FC = () => {
           <motion.button
             type="submit"
             disabled={isSubmitting}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={ scale: 1.02 }
+            whileTap={ scale: 0.98 }
             className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? (
@@ -377,8 +353,8 @@ const ContactFormEnhanced: React.FC = () => {
 
           {submitStatus === 'success' && (
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 10 }
+              animate={ opacity: 1, y: 0 }
               className="flex items-center gap-2 text-green-600 bg-green-50 p-3 rounded-lg"
             >
               <CheckCircle className="w-5 h-5" />
@@ -390,8 +366,8 @@ const ContactFormEnhanced: React.FC = () => {
 
           {submitStatus === 'error' && (
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 10 }
+              animate={ opacity: 1, y: 0 }
               className="flex items-center gap-2 text-red-600 bg-red-50 p-3 rounded-lg"
             >
               <AlertCircle className="w-5 h-5" />
@@ -405,31 +381,11 @@ const ContactFormEnhanced: React.FC = () => {
 };
 
 export default ContactFormEnhanced;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Auto-generated module
 export {};
-=======
 
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 // Auto-generated module
 export {};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:components.disabled/components/ContactFormEnhanced.tsx
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

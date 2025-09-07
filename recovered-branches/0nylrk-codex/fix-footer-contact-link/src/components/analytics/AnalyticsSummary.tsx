@@ -49,7 +49,7 @@ interface StatCardProps {;
   "title": string;
   "value": React.ReactNode;
   "icon": React.ReactNode;
-}}
+}
 return (;
     <Card className="bg-zion-blue-dark border-zion-blue-light">;"
       <CardContent className="p-6">;"

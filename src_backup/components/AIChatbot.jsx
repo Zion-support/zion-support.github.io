@@ -69,24 +69,24 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' })}, [isMinimized, trackChatbotInteraction])// Clear conversation;
     const clearConversation = useCallback(() => {setMessages([])// setConversationContext([])// This line was removed"";
         trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction])// Get typing indicator"";
-    const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">"";
+    const TypingIndicator = () => (<motion.div initial={ opacity: 0 } animate={ opacity: 1 } className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">"";
       <Bot className="w-5 h-5 text-blue-500"/" >";
       <div className="flex space-x-1">"";
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}" ></div>";
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}" ></div>";
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}" ></div>";
+        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={ animationDelay: '0ms' }" ></div>";
+        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={ animationDelay: '150ms' }" ></div>";
+        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={ animationDelay: '300ms' }" ></div>";
       </div>"";
       <span className="text-sm text-gray-600 dark:text-gray-400">AI is typing...</span>;
     </motion.div>)// Get message suggestions;
-    const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {{ opacity: 0, y: 10;
-}} animate = {{ opacity: 1,y: 0;
-}} className="flex flex-wrap gap-2 mt-3">;
+    const MessageSuggestions = ({ suggestions }) => (<motion.div initial = { opacity: 0, y: 10;
+} animate = { opacity: 1,y: 0;
+} className="flex flex-wrap gap-2 mt-3">;
       {suggestions.map((suggestion, index) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">;
           {suggestion}
         </button>))}
     </motion.div>)return (<>;
       {/* Chatbot Toggle Button */}
-      <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Open AI chatbot">;
+      <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={ scale: 1.1 } whileTap={ scale: 0.9 } aria-label="Open AI chatbot">;
         <MessageCircle className="w-6 h-6"/>;
         {messages.length > 0 && (<div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">;
             {Math.min(messages.length, 9)}
@@ -94,9 +94,9 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
       </motion.button>;
       {/* Chatbot Interface */}
       <AnimatePresence>;
-        {isOpen && (<motion .div initial = {{ opacity: 0, scale: 0.9,y: 20 }} animate = {{ opacity: 1, scale: 1, y: 0}} exit = {{ opacity: 0, scale: 0.9,y: 20;
+        {isOpen && (<motion .div initial = { opacity: 0, scale: 0.9,y: 20 } animate = { opacity: 1, scale: 1, y: 0} exit = { opacity: 0, scale: 0.9,y: 20;
 ", `";
-}} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}" >";
+} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}" >";
             {/* Header */}"";
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"";
               <div className="flex items-center justify-between">"";
@@ -122,10 +122,10 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
             {!isMinimized && (<>;
                 {/* Messages */}"";
                 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">;
-                  {messages.map((message) => (<motion.div key={message.id} initial = {{ opacity: 0, x: message.type === 'user' ? 20 : -20;
-}} animate = {{ opacity: 1,x: 0;
+                  {messages.map((message) => (<motion.div key={message.id} initial = { opacity: 0, x: message.type === 'user' ? 20 : -20;
+} animate = { opacity: 1,x: 0;
 ", `";
-}} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}" >"`;
+} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}" >"`;
                       <div className={`flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}" >"`;
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === 'user';
                         ? 'bg-blue-500 text-white'`;

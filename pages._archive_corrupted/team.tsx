@@ -28,7 +28,7 @@ export default function Team() {export default function Team() {export default f
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-}}}}
+}}
 }
 }
 ursor/add-new-services-and-deploy-updates-0462;
@@ -36,7 +36,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/automate-test-improve-and-merge-code-646c;
 }
-  )}}
+  )}
 
 
 interface TeamProps {

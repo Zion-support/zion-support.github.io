@@ -18,7 +18,6 @@ import {
   Shield;
   BarChart3;
   ArrowRight;
-<<<<<<< HEAD
   Zap
   ArrowRight,
   Zap,;
@@ -146,7 +145,7 @@ return (;
 
 const card_variants = {"hidden": { "opacity": 0, "coordinate_y": 20,;
 },"visible": { "opacity": 1, "coordinate_y": 0
-}}
+}
   }
 ;
 const cardVariants = {"hidden": { "opacity": 0, "y": 20,;
@@ -157,18 +156,18 @@ const cardVariants = {"hidden": { "opacity": 0, "y": 20,;
       {/* Background Elements */}
     "hidden": { "opacity": 0, "y": 20
 },"visible": { "opacity": 1, "y": 0
-}}
+}
 
 const cardVariants = {"hidden": { "opacity": 0, "y": 20,;
 },{/* Section Header */}<motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0 && 0.8 }}
-          viewport={{ "once": true 
+          whileInView={ "opacity": 1, "y": 0 }
+          transition={ "duration": 0 && 0.8 }
+          viewport={ "once": true 
 }>;
           <motion.div;
-        "stagger_children": 0.1}}  }
+        "stagger_children": 0.1}  }
 
 const card_variants = {"hidden": { "opacity": 0, "coordinate_y": 20,;
 },"visible": { "opacity": 1, "coordinate_y": 0
@@ -179,9 +178,9 @@ const card_variants = {"hidden": { "opacity": 0, "coordinate_y": 20,;
 
 const card_variants = {"hidden": { "opacity": 0, "coordinate_y": 20,;
 },"visible": { "opacity": 1, "coordinate_y": 0
-}}
+}
     "hidden": { "opacity": 0, "y": 20
-}}
+}
 ;
 const cardVariants = {"hidden": { "opacity": 0, "y": 20,;
 },"visible": { "opacity": 1, "y": 0
@@ -190,23 +189,23 @@ const cardVariants = {"hidden": { "opacity": 0, "y": 20,;
       {/* Background Elements */}return (<section className="py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden">;"
       {/* Background Elements */}
         <motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.8 }}
+          whileInView={ "opacity": 1, "y": 0 }
+          transition={ "duration": 0.8 }
 
-          viewport={{ "once": true 
+          viewport={ "once": true 
 }
 
 className='text-center mb-16''
         >
           <motion.div,
-initial={{ "opacity": 0, "scale": 0.8 
+initial={ "opacity": 0, "scale": 0.8 
 }
-            whileInView={{ "opacity": 1, "scale": 1 
+            whileInView={ "opacity": 1, "scale": 1 
 }
-            transition={{ "duration": 0.6, "delay": 0.2 }}
-            viewport={{ "once": true 
+            transition={ "duration": 0.6, "delay": 0.2 }
+            viewport={ "once": true 
 }
 
 className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6''
@@ -246,16 +245,14 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
 
 
         {/* Services Grid */}
-<<<<<<< HEAD
         <motion&& motion.div
           variants={containerVariants}
-<<<<<<< HEAD
           </p>
         </motion.div>
 
 initial='hidden''
           whileInView='visible''
-          viewport={{ "once": true 
+          viewport={ "once": true 
 }
 
           className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-16''
@@ -265,7 +262,7 @@ initial='hidden''
 }
 key={service.title}
               variants={cardVariants}
-              whileHover={{ "y": -10 }}
+              whileHover={ "y": -10 }
 className='group relative''
             >
               <div className='relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 "hover":border-gray-700 transition-all duration-300 overflow-hidden'>'
@@ -292,7 +289,6 @@ className='group relative''
                       <span className='text-sm'>{feature}</span>;'
                     </li>;
                   ))}
-=======
 className='group relative'
             >
               <div className='relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden'>
@@ -323,12 +319,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span className="font-medium">Learn More</span>"
                   <ArrowRight className="w-4 h-4" />
                 </Link>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </ul>;
 
                 {/* CTA */}
                 <Link;
-<<<<<<< HEAD
                   href={service.href}
 className='inline-flex items-center space-x-2 text-blue-400 "hover":text-blue-300 transition-colors duration-300 group-"hover":translate-x-1'>'
 
@@ -348,7 +342,6 @@ className='inline-flex items-center space-x-2 text-blue-400 "hover":text-blue-30
               </div>;
             </motion && motion.div>;
           ))}
-=======
 
           )
 
@@ -358,16 +351,15 @@ className='inline-flex items-center space-x-2 text-blue-400 "hover":text-blue-30
             </motion && motion.div>
           ))}
         </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         {/* Bottom CTA */}
         <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
+          initial={ "opacity": 0, "y": 30 
 }
-          whileInView={{ "opacity": 1, "y": 0 
+          whileInView={ "opacity": 1, "y": 0 
 }
-          transition={{ "duration": 0 && 0.8, "delay": 0 && 0.4 }}
+          transition={ "duration": 0 && 0.8, "delay": 0 && 0.4 }
 
-          viewport={{ "once": true 
+          viewport={ "once": true 
 }
 
 className='text-center''
@@ -396,10 +388,5 @@ href='/contact''
 };
 export default ServicesSection;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

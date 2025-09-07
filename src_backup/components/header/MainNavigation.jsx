@@ -19,9 +19,9 @@ export function MainNavigation() {const location = useLocation()const [activeDro
         { name: 'Help Center', href: '/support' }, { name: 'Documentation', href: '/docs' }, { name: 'Training', href: '/training' }, { name: 'Contact', href: '/contact' }
       ];
     }
-  ];const handleDropdownToggle = (index) => {setActiveDropdown(activeDropdown === index ? null : index)}return (<nav className="flex space-x-8">;
-      {navigationItems.map((item, index) => (<div key={item.name} className="relative">;
-          {item.children ? (<div className="relative">;
+  ];const handleDropdownToggle = (index) => {setActiveDropdown(activeDropdown === index ? null : index)}return (<nav className='flex space-x-8'>;
+      {navigationItems.map((item, index) => (<div key={item.name} className='relative'>;
+          {item.children ? (<div className='relative'>;
               <button;
                 onClick={() => handleDropdownToggle(index)}
                 className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${item.current;
@@ -35,12 +35,12 @@ export function MainNavigation() {const location = useLocation()const [activeDro
                   }`}/>;
               </button>;
               {/* Dropdown Menu */}
-              {activeDropdown === index && (<div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
-                  <div className="py-2">;
+              {activeDropdown === index && (<div className='absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50'>;
+                  <div className='py-2'>;
                     {item.children.map((child) => (<Link;
                         key={child.name}
                         to={child.href}
-                        className="block px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors";
+                        className='block px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors';
                         onClick={() => setActiveDropdown(null)}
                       >;
                         {child.name}

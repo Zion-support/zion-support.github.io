@@ -51,7 +51,7 @@ import React from 'react',import { Button } from "@/components/ui/button",interf
 }
       )}
     </div>;
-  )}}interface UploadSectionProps  {"customFile": File | null;
+  )}interface UploadSectionProps  {"customFile": File | null;
   }
   "onFileUpload": ("e": React.ChangeEvent<HTMLInputElement>) => void;
   "onRemoveFile": () => void;

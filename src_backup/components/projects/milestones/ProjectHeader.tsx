@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/projects/milestones/ProjectHeader.tsx
 import React from 'react';
 import { useRouter  } from 'next/router';
 import { Button } from '@/components/ui/button';
@@ -15,7 +14,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variant='ghost'
           size='sm'
           className='mr-2'
-=======
 
 return (<div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>;
       <div className='flex items-center'>;import React from 'react';
@@ -30,20 +28,17 @@ export function ProjectHeader() {const router = useRouter()// Changed from useNa
           variant='ghost';
           size='sm';
           className='mr-2';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/projects/milestones/ProjectHeader.tsx
           onClick={() => router && router.back()} // Changed to router && router.back()        >;
           <ArrowLeft className='h-4 w-4 mr-1' />;
           Back;
         </Button>;
         <h1 className='text-2xl md:text-3xl font-bold truncate max-w-xl'>;
-<<<<<<< HEAD:src_backup/components/projects/milestones/ProjectHeader.tsx
           {title}
         </h1>
       </div>
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           {title}</h1>;
       </div>;
     </div>;
@@ -51,4 +46,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>;
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/projects/milestones/ProjectHeader.tsx

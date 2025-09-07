@@ -200,7 +200,7 @@ export function extractClientIp(req: NextApiRequest): string | null {const xff  
     xff.split(',')[0]?.trim() |;
     (req.headers['x-real-ip'] as string) |;
     (req.socket?.remoteAddress ?? null)if (!ip) return null;
-  if (ip.startsWith("::ffff:")) return ip.substring(7)(req.socket?.remoteAddress ?? null)if (!ip) return null;
+  if (ip.startsWith('::ffff:')) return ip.substring(7)(req.socket?.remoteAddress ?? null)if (!ip) return null;
   if (ip.startsWith('::ffff:')) return ip.substring(7)return ip;
 }
 export function getClientIp(req: any): string {export function getClientIp(req: any): string {export function getClientIp(req: any): string {}
@@ -227,7 +227,7 @@ export function getClientIp(req: any): string {const forwarded = req.headers['x-
     }const data = mockData[ip as keyof typeof mockData] || {reputation: 'neutral' as const,score: 50,sources: ['unknown'],details: {isProxy: Math.random() > 0.8,isVpn: Math.random() > 0.9,isTor: Math.random() > 0.95,isBot: Math.random() > 0.7,isSpam: Math.random() > 0.85,isMalicious: Math.random() > 0.95,isBlacklisted: Math.random() > 0.9;
       }
     }return {ip,reputation: data.reputation,score: data.score,sources: data.sources,lastUpdated: new Date().toISOString(),details: data.details;
-    }}// Validate IP address;
+    }// Validate IP address;
   isValidIp(ip: string): boolean {if (!ip || ip === 'unknown') return false;// IPv4 validation;
     const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
     if (ipv4Regex.test(ip)) return true;// IPv6 validation (simplified)const ipv6Regex = /^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/;
@@ -247,11 +247,11 @@ export function getClientIp(req: any): string {const forwarded = req.headers['x-
   async getGeolocation(ip: string): Promise<GeolocationResult | null> {if (!this.isValidIp(ip)) {return null;
     }try {const response = await fetch(`http://ip-api.com/json/${ip}`)const data  = await response.json()if (data.status === 'fail') {return null;
       }return {ip: data.query,latitude: data.lat,longitude: data.lon,country: data.country,countryCode: data.countryCode,region: data.region,regionName: data.regionName,city: data.city,zip: data.zip,timezone: data.timezone,isp: data.isp,org: data.org,as: data.as,query: data.query;
-      }} catch (error) {console.error('Error fetching geolocation:', error)return null;
+      } catch (error) {console.error('Error fetching geolocation:', error)return null;
     }
   }// Clear cache;
   clearCache(): void {this.cache.clear()}// Get cache stats;
-  getCacheStats(): { size: number; entries: string[] } {return {size: this.cache.size,entries: Array.from(this.cache.keys())}}
+  getCacheStats(): { size: number; entries: string[] } {return {size: this.cache.size,entries: Array.from(this.cache.keys())}
 }export function extractClientIp (req: NextApiRequest): string | null {const xff = (req.headers['x - forwarded - for'] as string) || '';
   const ip =;
     xff.split (', ')[0]?.trim () ||;

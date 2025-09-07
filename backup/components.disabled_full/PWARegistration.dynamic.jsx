@@ -1,6 +1,6 @@
-const PWARegistration = dynamic(() => import("./PWARegistration"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PWARegistration' ,'
+const PWARegistration = dynamic(() => import('./PWARegistration'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default PWARegistration' ,'
 
-const PWARegistration = dynamic(() => import("./PWARegistration"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PWARegistration' ,'
+const PWARegistration = dynamic(() => import('./PWARegistration'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default PWARegistration' ,'
 </p>'
 </p>'
 </p>'
@@ -24,14 +24,14 @@ const PWARegistration = dynamic(() => import("./PWARegistration"),{'; "loading":
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default PWARegistration\' ,const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default PWARegistration\" ,\"\"\";
-const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PWARegistration' ,';
+const PWARegistration = dynamic(() => import(\'./PWARegistration\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default PWARegistration\' ,const PWARegistration = dynamic(() => import(\'./PWARegistration\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default PWARegistration\' ,\'\'\';
+const PWARegistration = dynamic(() => import(\'./PWARegistration\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PWARegistration' ,';
 </p>';
 </p>';
 </p>';
 </p>';
 ;
-const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PWARegistration' ,';
+const PWARegistration = dynamic(() => import(\'./PWARegistration\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PWARegistration' ,';
 </p>';
 </p>';
 </p>';
@@ -53,7 +53,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
-const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PWARegistration' ,';
+const PWARegistration = dynamic(() => import(\'./PWARegistration\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PWARegistration' ,';
 </p>';
 </p>';
 </p>';
@@ -62,9 +62,9 @@ const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{'; \"loadin
 </p>';
 </p>';
 </p>';
-const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PWARegistration' ,';
+const PWARegistration = dynamic(() => import(\'./PWARegistration\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PWARegistration' ,';
 </p>'</p>';
-const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PWARegistration' ,'
+const PWARegistration = dynamic(() => import(\'./PWARegistration\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PWARegistration' ,'
 </p>'
 </p>'
 </p>'
@@ -89,7 +89,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 </p>'
 
 </p>'
-const PWARegistration = dynamic(() => import("./PWARegistration"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PWARegistration' ,'
+const PWARegistration = dynamic(() => import('./PWARegistration'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default PWARegistration' ,'
 </p>'
 </p>'
 </p>'

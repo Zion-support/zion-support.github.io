@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 }
 
       return (
@@ -43,7 +40,6 @@ if ( {) {$2;
         return this.props.fallback;
 
       }
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
       return (<div className='flex min - h-screen items - center justify - center p - 4'>;
           <div className='w - full max - w-md space - y-4'>;
             <Alert variant='destructive'>;
@@ -56,53 +52,46 @@ if ( {) {$2;
                     : 'Something went wrong'}'
                 </AlertTitle>;
               </div>;</AlertDescription>;
-            </Alert>;<div className="flex min-h-screen items-center justify-center p-4">;
-          <div className="w-full max-w-md space-y-4">;
-            <Alert variant="destructive">;
-              <div className="flex items-center gap-2">;
-                {isNetworkError ? (<WifiOff className="h-4 w-4" />;
-                ) : (<RefreshCw className="h-4 w-4" />;
+            </Alert>;<div className='flex min-h-screen items-center justify-center p-4'>;
+          <div className='w-full max-w-md space-y-4'>;
+            <Alert variant='destructive'>;
+              <div className='flex items-center gap-2'>;
+                {isNetworkError ? (<WifiOff className='h-4 w-4' />;
+                ) : (<RefreshCw className='h-4 w-4' />;
                 )}
                 <AlertTitle>{isNetworkError ? 'Connection Problem' : 'Something went wrong'}</AlertTitle>;
               </div>;
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-              <AlertDescription className="mt-2">;
+              <AlertDescription className='mt-2'>;
                 {isNetworkError ? (!this.state.isOnline ? ('You appear to be offline. Please check your internet connection.';
                   ) : ('Unable to connect to our servers. This might be a temporary network issue.';
                   )) : ('An unexpected error occurred while loading the page.';
                 )}
               </AlertDescription>;
             </Alert>;
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
       }
 
       return (
-        <div className="flex min-h-screen items-center justify-center p-4">
+        <div className='flex min-h-screen items-center justify-center p-4'>
 
-          <div className="w-full max-w-md space-y-4">
-            <Alert variant="destructive">
-              <div className="flex items-center gap-2">
+          <div className='w-full max-w-md space-y-4'>
+            <Alert variant='destructive'>
+              <div className='flex items-center gap-2'>
                 {isNetworkError ? (
-                  <WifiOff className="h-4 w-4" />
+                  <WifiOff className='h-4 w-4' />
                 ) : (
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
 
-                  <RefreshCw className="h-4 w-4" />
+                  <RefreshCw className='h-4 w-4' />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
                 </AlertTitle>
               </div>
-              <AlertDescription className="mt-2">
+              <AlertDescription className='mt-2'>
                 {isNetworkError ? (
                   !this.state.isOnline ? (
                     'You appear to be offline. Please check your internet connection.'
@@ -114,8 +103,6 @@ if ( {) {$2;
                 )}
               </AlertDescription>
             </Alert>
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
 
             <div className='flex flex-col gap-2'>;
@@ -126,37 +113,34 @@ if ( {) {$2;
                 onClick={this.handleRetry}
 
                 disabled={this.state.isRetrying}
-                className="w-full"
+                className='w-full'
               >
 
                 {this.state.isRetrying ? (
                   <>
-                    <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
+                    <RefreshCw className='mr-2 h-4 w-4 animate-spin' />
                     Retrying...
                   </>
                 ) : (
                   <>
-                    <RefreshCw className="mr-2 h-4 w-4" />"
+                    <RefreshCw className='mr-2 h-4 w-4' />'
                     Try Again
                   </>
                 )}
-                variant="outline""
+                variant='outline''
                 onClick={() => window.location.reload()}
-                className="w-full""
-                    <RefreshCw className="mr-2 h-4 w-4" />
+                className='w-full''
+                    <RefreshCw className='mr-2 h-4 w-4' />
                     Try Again
                   </>
                 )}
 
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-                variant="outline"
+                variant='outline'
                 onClick={() => window.location.reload()}
-                className="w-full"
+                className='w-full'
               >
 
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
 
                 Reload Page
@@ -165,32 +149,30 @@ if ( {) {$2;
             </div>
 
             {!this.state.isOnline && (
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
                 <WifiOff className='h-4 w-4' />
                 <span>Offline</span>
               </div>
             )}
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
               <AlertDescription className='mt - 2'>;
             <div className='flex flex-col gap-2'>;
               <Button;
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
-                className="w-full";
+                className='w-full';
               >;
                 {this.state.isRetrying ? (<>;
-                    <RefreshCw className="mr-2 h-4 w-4 animate-spin" />;
+                    <RefreshCw className='mr-2 h-4 w-4 animate-spin' />;
                     Retrying...;
                   </>;
                 ) : (<>;
-                    <RefreshCw className="mr-2 h-4 w-4" />;
+                    <RefreshCw className='mr-2 h-4 w-4' />;
                     Try Again;
                   </>;
-                )}variant="outline";
+                )}variant='outline';
                 onClick={() => window.location.reload()}
-                className="w-full";
+                className='w-full';
               >;
                 Reload Page;
               </Button>;
@@ -231,7 +213,6 @@ if ( {) {$2;
                 <WifiOff className='h - 4 w - 4' />;
                 <span > Offline</span>;
               </div>)}
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
             {process.env.NODE_ENV === 'development' && this.state.error && (return this.props.children;
   }
 // Hook for accessing query client in function components;
@@ -262,7 +243,6 @@ export const useApiErrorHandler = () =>: any {
                 className='w-full'              >;
                 Reload Page;
               </Button>;
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
             </div>;{!this && this.state.isOnline && (<div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
                 <WifiOff className='h-4 w-4' />;
                 <span>Offline</span>;
@@ -287,28 +267,24 @@ export const useApiErrorHandler = () =>: any {
                   {this && this.state.errorInfo?.componentStack}
                 </pre>;
               </details>;
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
             )}
 
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4 rounded border p-2 text-xs">
-                <summary className="cursor-pointer font-medium">
+              <details className='mt-4 rounded border p-2 text-xs'>
+                <summary className='cursor-pointer font-medium'>
                   Debug Info (Development Only)
                 </summary>
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
 
-                <pre className="mt-2 whitespace-pre-wrap break-all">
+                <pre className='mt-2 whitespace-pre-wrap break-all'>
 
 
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 
-            )}<details className="mt-4 rounded border p-2 text-xs">;
-                <summary className="cursor-pointer font-medium">;
+            )}<details className='mt-4 rounded border p-2 text-xs'>;
+                <summary className='cursor-pointer font-medium'>;
                   Debug Info (Development Only)</summary>;
-                <pre className="mt-2 whitespace-pre-wrap break-all">;
-                <summary className="cursor-pointer font-medium">
+                <pre className='mt-2 whitespace-pre-wrap break-all'>;
+                <summary className='cursor-pointer font-medium'>
                   Debug Info (Development Only)
                 </summary>
 
@@ -316,20 +292,17 @@ export const useApiErrorHandler = () =>: any {
                   {this.state.errorInfo?.componentStack}
                 </pre>;
               </details>;
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-            )}},return { handleApiError }</div>;
+            )},return { handleApiError }</div>;
             )}
 
           </div>;
         </div>;
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
       );
     }
 
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {;
   const handleApiError = (error: Error) => {;
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
     Sentry && Sentry.withScope(scope => {;
       scope && scope.setTag('source', 'useApiErrorHandler');
       scope && scope.setLevel('error');
@@ -338,7 +311,6 @@ export const useApiErrorHandler = () => {;
   };
   return { handleApiError };
 };
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
   return { handleApiError }
 
 
@@ -356,8 +328,8 @@ import React, { Component, ReactNode } from 'react';
 import { QueryClient  } from '@tanstack/react-query';
       )}return this && this.props.children;
   }// Hook for accessing query client in function components;
-export const useApiErrorHandler = () => {const handleApiError = (error: Error) => {Sentry && Sentry.withScope(scope => {scope && scope.setTag('source', 'useApiErrorHandler')scope && scope.setLevel('error')Sentry && Sentry.captureException(error)})}return { handleApiError }}return { handleApiError }},return { handleApiError }
-}}import React, { Component, ReactNode } from 'react';
+export const useApiErrorHandler = () => {const handleApiError = (error: Error) => {Sentry && Sentry.withScope(scope => {scope && scope.setTag('source', 'useApiErrorHandler')scope && scope.setLevel('error')Sentry && Sentry.captureException(error)})}return { handleApiError }return { handleApiError },return { handleApiError }
+}import React, { Component, ReactNode } from 'react';
 import { QueryClient   } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button   } from '@/components/ui/button';
@@ -368,7 +340,6 @@ interface ApiErrorBoundaryProps  {children: ReactNode;
   queryClient?: QueryClient;
   fallback?: ReactNode;
 }
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
       scope.setTag('source', 'useApiErrorHandler');
       scope.setLevel('error');
       Sentry.captureException(error);
@@ -377,9 +348,8 @@ interface ApiErrorBoundaryProps  {children: ReactNode;
 
   return { handleApiError };
 };
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
-      scope.setTag('source', 'useApiErrorHandler')scope.setLevel('error')Sentry.captureException(error)})}return { handleApiError }}
+      scope.setTag('source', 'useApiErrorHandler')scope.setLevel('error')Sentry.captureException(error)})}return { handleApiError }
 
     });
   };

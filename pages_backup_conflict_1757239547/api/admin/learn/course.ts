@@ -74,7 +74,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2));
     res.json({ success: true });
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

@@ -1,7 +1,7 @@
 
 import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
-import { useIsMobile } from "@/hooks/use-mobile",;
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",;
+import { useIsMobile } from '@/hooks/use-mobile',;
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';

@@ -78,7 +78,7 @@ const content = JSON.stringify({ "updatedAt": Date.now(), top }, null, 2)if (own
 }"statusCode": 200,"body": JSON && JSON.stringify({ "ok": true, "topCount": top && top.length
 })"body": JSON && JSON.stringify({ "ok": true, "topCount": top && top.length })
 } catch (e) ;
-  return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }}
+  return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }
 }try {// Demo "ranking": based on certifications and progress;
 
 }

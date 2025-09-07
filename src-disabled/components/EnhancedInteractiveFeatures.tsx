@@ -6,10 +6,10 @@ import React, { useState, useEffect } from 'react' import { motion, AnimatePrese
 
 export const EnhancedInteractiveFeatures: React.FC = () => { const [isVisible, setIsVisible] =;
   useState(false);
-  const [feedback, setFeedback] = useState<FeedbackData []"  />([]) const [showFeedbackForm, setShowFeedbackForm] = useState(false);
+  const [feedback, setFeedback] = useState<FeedbackData []'  />([]) const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [feedbackMessage, setFeedbackMessage] = useState('');
   const [feedbackType, setFeedbackType] = useState<'positive' | 'negative' | 'suggestion'>('positive') const [isBookmarked, setIsBookmarked] = useState(false);
   const [rating, setRating] = useState(0);
-  const [showRating, setShowRating] = useState(false)  useEffect(() => {}"
-";"";}
-}}"
+  const [showRating, setShowRating] = useState(false)  useEffect(() => {}'
+';'';}
+}'

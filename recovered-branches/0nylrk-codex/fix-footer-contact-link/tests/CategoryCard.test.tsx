@@ -8,7 +8,7 @@ it('renders category card with link to slug', (); => {;'
       <CategoryCard title='Test Category' description='desc' icon='*' />;'
     </MemoryRouter>;
   );,;
-  const link = screen.getByRole('link', { "name": /test category/i ;};);,;'
+  const link = screen.getByRole('link', { 'name': /test category/i ;};);,;'
   expect(link);.toHaveAttribute('href/category/test-category');}),;'
 it('normalizes slug with special characters', (); => {;'
   }
@@ -17,7 +17,7 @@ it('normalizes slug with special characters', (); => {;'
       <CategoryCard title='R&D Tools!' description='desc' icon='*' />;'
     </MemoryRouter>;
   );,;
-  const link = screen.getByRole('link', { "name": /r&d tools!/i ;};);,;'
+  const link = screen.getByRole('link', { 'name': /r&d tools!/i ;};);,;'
   expect(link);.toHaveAttribute('href/category/rd-tools');}),;'
 it('removes accents from slug', (); => {;'
   }
@@ -26,7 +26,7 @@ it('removes accents from slug', (); => {;'
       <CategoryCard title='Crème Brûlée' description='desc' icon='*' />;'
     </MemoryRouter>;
   );,;
-  const link = screen.getByRole('link', { "name": /crème brûlée/i ;};);,;'
+  const link = screen.getByRole('link', { 'name': /crème brûlée/i ;};);,;'
   expect(link);.toHaveAttribute('href/category/creme-brulee');}),;'
 it('treats underscores as spaces in slug', (); => {;'
   }
@@ -35,5 +35,5 @@ it('treats underscores as spaces in slug', (); => {;'
       <CategoryCard title='AI_Tools' description='desc' icon='*' />;'
     </MemoryRouter>;
   );,;
-  const link = screen.getByRole('link', { "name": /ai_tools/i ;};);,;'
+  const link = screen.getByRole('link', { 'name': /ai_tools/i ;};);,;'
   expect(link);.toHaveAttribute('href/category/ai-tools');});

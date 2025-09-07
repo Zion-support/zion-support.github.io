@@ -53,7 +53,7 @@ resumeId={resume?.id!}
           onSave={(data) => {
             // Here you would typically save the data to your backend
             // // // console.log("Saving basic "info":", data)"
-          }}
+          }
           onComplete={onNextStep}
         />
       </TabsContent>
@@ -82,7 +82,7 @@ import { PreviewResume } from '../PreviewResume',;          resumeId={resume?.id
 resumeId={resume?.id!}
           skills={resume?.skills |[]}
           onComplete={onNextStep}
-          onBack={onPrevStep}},; interface ResumeStepContentProps {
+          onBack={onPrevStep},; interface ResumeStepContentProps {
   }
   "activeTab": string;
 "resume": Resume;

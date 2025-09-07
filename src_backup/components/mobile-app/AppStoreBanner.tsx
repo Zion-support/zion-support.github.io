@@ -139,7 +139,6 @@ export const AppStoreBanner: React.FC = () => {const [isVisible, setIsVisible] =
           <p className="text-xs text-gray-300">Get the full experience on our app</p>;
         </div>;
         <div className="flex items-center gap-3">;
-<<<<<<< HEAD:src_backup/components/mobile-app/AppStoreBanner.tsx
 
           <a;
             href="/open-app";
@@ -164,7 +163,7 @@ export const AppStoreBanner: React.FC = () => {const [isVisible, setIsVisible] =
         </div>;
       </div>;
     </div>;
-  )}'"}}// Only render on mobile devices;
+  )}'"}// Only render on mobile devices;
   // Check condition;
 if (return null) {$2;
 }
@@ -211,13 +210,12 @@ if (return null) {
           </button>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/AppStoreBanner.tsx
     </div>);
 }
 '"},
 }
     </div>)}
-'"}}))}'";
+'"}))}'";
   );
 };
 '"

@@ -2,4 +2,4 @@ import React, { useState, useEffect } from 'react' import { Code, Search, Filter
   title: 'React Custom Hook for API Calls', description: 'A reusable hook for making API calls with loading and error states',
   language: 'typescript', code: `import {;}
   useState,;}
-  useEffect } from 'react'  interface UseApiOptions  {url: string;"";}
+  useEffect } from 'react'  interface UseApiOptions  {url: string;'';}

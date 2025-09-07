@@ -325,7 +325,7 @@ export const advancedITInfrastructureExpansion2025V2 = [;
   },{name: 'Space Resource Intelligence',description: 'AI - powered space resource intelligence',category: 'Space Technology',pricing: '$749 / month',features: [;
       'Resource mapping','Intelligence analysis','Planning tools','Performance optimization';
     ];
-  },{{name: 'Autonomous IT Operations',description: 'AI-powered IT operations automation',category: 'Cloud & FinOps',pricing: '$499/month',features: [;
+  },{name: 'Autonomous IT Operations',description: 'AI-powered IT operations automation',category: 'Cloud & FinOps',pricing: '$499/month',features: [;
       'Incident automation','Predictive maintenance','Resource optimization','Performance monitoring';
     ];
   },{name: 'Autonomous Vehicle AI',description: 'AI-powered autonomous vehicle systems',category: 'Transportation',pricing: '$899/month',features: [;
@@ -648,11 +648,11 @@ export const advancedITInfrastructureExpansion2025V2 = [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
   }
-];;
+];
   }
 ];ursor/fix-website-loading-errors-and-merge-6662;
   }
-];;
+];
 export const advancedITInfrastructureExpansion2025V2 = [;
   {name: 'Autonomous DevOps Platform',description: 'Self-managing DevOps automation platform',category: 'Cloud & FinOps',pricing: '$399/month',features: [;
       'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';

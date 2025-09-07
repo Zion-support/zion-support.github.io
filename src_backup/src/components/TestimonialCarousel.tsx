@@ -55,7 +55,7 @@ interface Testimonial  {"id": number;
                 onError={(e) => {const target = e.target as HTMLImageElement;
                   }
                   target.style.display = 'none';'
-                }}
+                }
               />;
             </div>;
             {/* Author Details */}

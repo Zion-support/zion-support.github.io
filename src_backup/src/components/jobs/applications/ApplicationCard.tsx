@@ -444,7 +444,7 @@ import { ApplicationProgress } from "./ApplicationProgress",import { toast } fro
   }
   application.match score && (<div> <h4 className="text - sm font - medium mb - 1" >Match Score</h4> <div className="flex items - center" > <div className="h - 6 w - 6 rounded - full bg - blue - 100 text - blue - 800 flex items - center justify - center text - xs font - medium" > {application.match score ";"
 }% </div> <span className="ml - 2 text - xs text - muted - foreground" >Relevance to job requirements</span> </div> </div>)}</div>) ";"
-}</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>)}";}}<Button variant='secondary' size='sm' className='w-full' asChild>;'
+}</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>)}";}<Button variant='secondary' size='sm' className='w-full' asChild>;'
           <Link href={`/messages?jobId=${application.job_id}`}>;`
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client;'
           </Link>;

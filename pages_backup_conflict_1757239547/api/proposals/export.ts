@@ -9,26 +9,26 @@ import path from 'path';
 function buildIpfsClient() {
   const projectId = null;
     return res.status(200).json({ meta: updated })
-import type { NextApiRequest, NextApiResponse } from "next";
-import { PDFDocument, StandardFonts } from "pdf-lib";
-import crypto from "crypto";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { PDFDocument, StandardFonts } from 'pdf-lib';
+import crypto from 'crypto';
 import {
   updateArtifacts
   getProposal
   savePdf
-} from "../../../utils/data/proposals";
-import { create as createIpfsClient } from "ipfs-http-client";
-import { ethers } from "ethers";
-import fs from "fs";
-import path from "path";
+} from '../../../utils/data/proposals';
+import { create as createIpfsClient } from 'ipfs-http-client';
+import { ethers } from 'ethers';
+import fs from 'fs';
+import path from 'path';
 function buildIpfsClient() {
   const projectId = process.env.IPFS_PROJECT_ID;
   const projectSecret = process.env.IPFS_PROJECT_SECRET;
   const apiUrl =
-    process.env.IPFS_API_URL |"https: //ipfs.infura.io:5001/api/v0";
+    process.env.IPFS_API_URL |'https: //ipfs.infura.io:5001/api/v0';
   if (!projectId |!projectSecret) return null;
   const auth =
-    "Basic " + Buffer.from(projectId + ":" + projectSecret).toString("base64");
+    'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
   return createIpfsClient({
     url: apiUrl
     headers: { authorization: auth } as any
@@ -59,10 +59,10 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
   const margin = 40;
   const maxWidth = page.getWidth() - margin * 2;
   const lines = markdown
-    .replace(/\r\n/g, "\n")
-    .split("\n")
+    .replace(/\r\n/g, '\n')
+    .split('\n')
     .flatMap((line) => {
-      const words = line.split(" ");
+      const words = line.split(' ');
       const wrapped: string[] = [];
       let current = '';
       for (const word of words) {
@@ -76,7 +76,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
         }
       }
       if (current) wrapped.push(current);
-      return wrapped.length ? wrapped : [" "];
+      return wrapped.length ? wrapped : [' '];
     });
   let y = page.getHeight() - margin;
   page.drawText(title, { x: margin, y, size: 16, font });
@@ -95,7 +95,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST") return res.status($1).json({ $2 });
+  if (req.method !== 'POST') return res.status($1).json({ $2 });
   try {
     const { id } = req.body |{}
     if (!id) return res.status($1).json({ $2 });
@@ -103,12 +103,12 @@ export default async function handler(
     if (!meta) return res.status($1).json({ $2 });
     const markdownPath = path.join(
       process.cwd()
-      "public"
-      meta.artifacts.markdownPath |""
+      'public'
+      meta.artifacts.markdownPath |''
     );
     const markdown = fs.existsSync(markdownPath)
-      ? fs.readFileSync(markdownPath, "utf8")
-      : "# Proposal";
+      ? fs.readFileSync(markdownPath, 'utf8')
+      : '# Proposal';
     const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
     const pdfUrl = savePdf(id, pdfBytes);
     const hasher = crypto.createHash('sha256');
@@ -135,7 +135,7 @@ export default async function handler(
     });
     return res.status(200).json({ meta: updated });
   } catch (error: any) {
-    return res.status(500).json({ error: error?.message |"Export failed" });
+    return res.status(500).json({ error: error?.message |'Export failed' });
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
   } catch (error: any) {

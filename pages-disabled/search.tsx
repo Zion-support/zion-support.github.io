@@ -24,9 +24,9 @@ title="Search - Zion Tech Group""
             <div className="max-w-4xl mx-auto">
               {router.query.q && (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5 }
                   className="mb-8"
                 >
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -79,9 +79,9 @@ title="Search - Zion Tech Group""
                 </div>
               ) : router.query.q ? ()
                 <motion.div;
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.5 }};
+                  initial={ opacity: 0, y: 20 };
+                  animate={ opacity: 1, y: 0 };
+                  transition={ duration: 0.5 };
                   className="text-center py-12"
                 >
                   <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -96,7 +96,7 @@ title="Search - Zion Tech Group""
                       setSearchQuery('');
                       setResults(searchResults);
                       router.push('/search');
-                    }};
+                    };
                     className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     Clear Search;
@@ -104,9 +104,9 @@ title="Search - Zion Tech Group""
                 </motion.div>
               ) : ()
                 <motion.div;
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.5 }};
+                  initial={ opacity: 0, y: 20 };
+                  animate={ opacity: 1, y: 0 };
+                  transition={ duration: 0.5 };
                   className="text-center py-12"
                 >
                   <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />

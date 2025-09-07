@@ -12,10 +12,10 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
 
   return (
     <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
+      type='application/ld+json'
+      dangerouslySetInnerHTML={
         __html: JSON.stringify(structuredData, null, 2),
-      }}
+      }
     />
   );
 }

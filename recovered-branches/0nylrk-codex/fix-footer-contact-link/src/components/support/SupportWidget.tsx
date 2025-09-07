@@ -87,7 +87,7 @@ import { useTheme } from "@/hooks/useTheme",;"
               ? "bg-zion-blue-dark border border-zion-blue-light" "
               : "bg-white border border-gray-200""
           )}
-          style={{ "height": "600px", "maxHeight": "80vh" }}>;"
+          style={ "height": "600px", "maxHeight": "80vh" }>;"
           <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;"
             <div className="flex items-center">;"
               <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;"

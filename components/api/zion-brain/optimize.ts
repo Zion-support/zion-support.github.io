@@ -57,14 +57,12 @@ function handler() {if (return res.status (405).json ({ error: "Method not allow
       const status =;
         result.optimized.length > String (prompt || "").length * 0.5;
           ? "ok";
-=======
       const { prompt, userIntent } = req.body |{}
       const result = await optimizePrompt(String(prompt |""), userIntent);
       const latencyMs = Date.now() - started;
       const status =
         result.optimized.length > String(prompt |"").length * 0.5
           ? "ok"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           : "laggy";
 ;
       append_log ({
@@ -98,7 +96,6 @@ function handler() {if (return res.status (405).json ({ error: "Method not allow
   }
   export default async /**
  * handler - Function description
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  */
 function handler() {}
     if ("
@@ -151,15 +148,9 @@ function handler() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
-<<<<<<< HEAD
           : "laggy";append_log ({module: "optimizer",type: "optimize",status: status as any,latency_ms,payload: {user_intent,original_length: String (prompt || "").length,optimized_length: result.optimized.length,},})return res.status (200).json (result)} catch (e: any) {append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})return res.status (500).json ({ error: "Optimization failure" })}
-    append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})}}
+    append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})}
   }
 }
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 "
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

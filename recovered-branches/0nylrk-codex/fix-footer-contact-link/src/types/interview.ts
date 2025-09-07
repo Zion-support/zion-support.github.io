@@ -26,11 +26,11 @@ export type InterviewStatus =
   | 'rescheduled' 
   | 'completed' ;
 export type MeetingPlatform =
-  | "zoom"
-  | "google-meet"
-  | "teams"
-  | "other"
-  | "in-app";
+  | 'zoom'
+  | 'google-meet'
+  | 'teams'
+  | 'other'
+  | 'in-app';
 
 export interface Interview {;
 

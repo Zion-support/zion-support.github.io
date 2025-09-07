@@ -26,11 +26,9 @@ const serviceLinks = ["
 },{ name: \"Security\", href: \"/security\", icon: Shield}"
 },{ name: \"Cloud Solutions\", href: \"/cloud-solutions\", icon: Cloud}"
 },{ name: \"Database Solutions\", href: \"/database-solutions\", icon: Database}
-<<<<<<< HEAD
 }]
     { name: "Contact", href: "/contact", icon: Phone },
   ]
-=======
 }];
 
 }
@@ -69,18 +67,18 @@ const companyLinks = [;
       {/* Overlay */}
       {isOpen && (<motion.div;
           }
-          initial={{ "opacity": 0 }}
-          animate={{ "opacity": 1 }}
-          exit={{ "opacity": 0 
+          initial={ "opacity": 0 }
+          animate={ "opacity": 1 }
+          exit={ "opacity": 0 
 }
           className="fixed inset-0 bg-black bg-opacity-50 z-40";"
           onClick={onClose} />;
       )}{/* Sidebar */}
       <motion.div;
-        initial={{ "x": "-100%" }}"
-        animate={{ "x": isOpen ? 0 : "-100%" ,"
+        initial={ "x": "-100%" }"
+        animate={ "x": isOpen ? 0 : "-100%" ,"
 }
-        transition={{ "type": "spring", "damping": 25, "stiffness": 200 ,"
+        transition={ "type": "spring", "damping": 25, "stiffness": 200 ,"
 }
         className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto">"
 
@@ -175,8 +173,6 @@ const companyLinks = [;
                   <link.icon className="h-5 w-5 mr-3 text-blue-500" />;"
                   <span className="font-medium">{link.name}</span>;"
                 </Link>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               ))}
             </div>;
           </div>;

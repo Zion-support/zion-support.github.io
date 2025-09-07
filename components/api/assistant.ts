@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';'
 
 const openai = null;
-return res.status(500).json({ "error": 'Assistant request failed' });'
+return res.status(500).json({ 'error': 'Assistant request failed' });'
   }
 }
 export default async function handler(
@@ -23,7 +23,7 @@ res: NextApiResponse;
 export default async function handler() {
     }
     res.setHeader('Allow', 'POST');'
-return res.status(405).json({ "error": 'Method Not Allowed',;'
+return res.status(405).json({ 'error': 'Method Not Allowed',;'
 });
   }
   try {
@@ -32,14 +32,14 @@ return res.status(405).json({ "error": 'Method Not Allowed',;'
       }
       messages?: Array<{
         }
-        "role": 'user' | 'assistant' | 'system';'
+        'role': 'user' | 'assistant' | 'system';'
 
-        "content": string;
+        'content': string;
       }>;
     }
 
 const preparedMessages = [;
-  { "role": 'system' as const, "content": SYSTEM_PROMPT,'
+  { 'role': 'system' as const, 'content': SYSTEM_PROMPT,'
 }
 
       ...(messages |[]).slice(-20)
@@ -47,20 +47,20 @@ const preparedMessages = [;
 
 const completion = await openai.chat.completions.create({
       }
-      "model": 'gpt-4o','
-      "temperature": 0.3,
-      "messages": preparedMessages
+      'model': 'gpt-4o','
+      'temperature': 0.3,
+      'messages': preparedMessages
     });
 
 const message = completion.choices?.[0]?.message || {
       }
-      "role": 'assistant','
-      "content": 'Sorry, I could not respond.','
+      'role': 'assistant','
+      'content': 'Sorry, I could not respond.','
     };
     return res.status(200).json({ message });
-  } catch ("error": any) {
+  } catch ('error': any) {
     }
-    console.error('Assistant API "error":', error?.message || error);'
-return res.status(500).json({ "error": 'Assistant request failed',;'
+    console.error('Assistant API 'error':', error?.message || error);'
+return res.status(500).json({ 'error': 'Assistant request failed',;'
 });
   }

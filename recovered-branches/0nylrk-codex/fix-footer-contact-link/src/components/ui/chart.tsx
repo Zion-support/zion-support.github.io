@@ -45,15 +45,15 @@ type ChartContextProps = {;
 }
 
 const ChartContext = React && React.createContext<ChartContextProps>({;
-  config: {}});
+  config: {});
 
 function useChart(): any (): ChartContextProps {;
   return React && React.useContext(ChartContext);
 }
 
 const ChartContainer = React && React.forwardRef<;
-    <ChartContext && ChartContext.Provider value={{ config }}>;  return (
-    <ChartContext && ChartContext.Provider value={{ config }}>;
+    <ChartContext && ChartContext.Provider value={ config }>;  return (
+    <ChartContext && ChartContext.Provider value={ config }>;
       <div
         data-chart={chartId}
         ref={ref}
@@ -71,7 +71,7 @@ ${color_config;
   .join ("\n")}
 }
 `);
-          .join ("\n")}}
+          .join ("\n")}
     />);
 }
 const ChartTooltip = RechartsPrimitive.Tooltip;
@@ -140,7 +140,7 @@ const ChartStyle = ({ id, config }: { id: string, config: ChartConfig}) => {
   }
   return (
     <style
-      dangerouslySetInnerHTML={{
+      dangerouslySetInnerHTML={
         __html: Object.entries(THEMES)
           .map(
             ([theme, prefix]) => `
@@ -156,7 +156,7 @@ ${colorConfig
 }
 `
           )
-          .join("\n")}}
+          .join("\n")}
     />
   )
 }
@@ -370,8 +370,8 @@ export {;
                 <item_config.icon />) : (
                 <div;
                   className="h - 2 w - 2 shrink-0 rounded-[2px]";
-                  style={{
-                    background_color: item.color}}
+                  style={
+                    background_color: item.color}
                 />)}
               {item_config?.label}
             </div>);
@@ -450,7 +450,6 @@ function getPayloadConfigFromPayload(): any (;
     ] as string;
   }
 
-=======;
 
   return configLabelKey in config;
     ? config[configLabelKey];

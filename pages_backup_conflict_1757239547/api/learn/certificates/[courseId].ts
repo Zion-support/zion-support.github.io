@@ -35,11 +35,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader(
       'Content-Disposition'
-      `attachment; filename="${courseId}-certificate.pdf"`
+      `attachment; filename='${courseId}-certificate.pdf'`
     );
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
     res.setHeader('Content-Typeapplication/pdf');
-    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
+    res.setHeader('Content-Disposition', `attachment, filename='${courseId}-certificate.pdf'`);
     const doc = new PDFDocument({ size: 'A4', margin: 50 })
     // Pipe to response
     // @ts-ignore

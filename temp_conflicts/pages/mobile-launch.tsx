@@ -89,7 +89,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>
             <button
               aria-label="Dismiss"
-              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
+              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
             >
               ✕
@@ -230,7 +230,7 @@ export default function MobileLaunchPage() {
         </div>
         <h2 className="mt-2 text-xl font-semibold">Why people love the Zion app</h2>
         <div className="relative mt-4 overflow-hidden">
-          <div className="flex transition-transform duration-700" style={{ transform: `translateX(-${idx * 100}%)`, width: `${testimonials.length * 100}%` }}>
+          <div className="flex transition-transform duration-700" style={ transform: `translateX(-${idx * 100}%)`, width: `${testimonials.length * 100}%` }>
             {testimonials.map((t) => (
               <div key={t.name} className="w-full md:w-1/3 flex-shrink-0 pr-4">
                 <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full">

@@ -4,7 +4,7 @@ import { readJson } from '[^']*';
 import { HelpArticle, matchIntent } from '[^']*';
 import { logSupportEventToOperator } from '[^']*';
 const SYSTEM_PROMPT = null;
-        links: matchedArticles.map((a) => ({ title: a.title, href: `/help/${a.slug}` }))}})
+        links: matchedArticles.map((a) => ({ title: a.title, href: `/help/${a.slug}` }))})
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 import { readJson } from "../../../utils/fsDb";

@@ -33,8 +33,8 @@ export default function EditJobPage() {
       setDescription(job.description || '');
       setCategory(job.category || '');
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   }, [job]),;
@@ -45,28 +45,28 @@ export default function EditJobPage() {
       body: JSON.stringify({ title, description, category })});
     router.push('/client/dashboard');
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   if (!job) return <div>Loading…</div>,
   return (
-    <div className="max-w-2xl mx-auto space-y-4">
-      <h1 className="text-2xl font-semibold">Edit Job</h1>
+    <div className='max-w-2xl mx-auto space-y-4'>
+      <h1 className='text-2xl font-semibold'>Edit Job</h1>
       <div>
-        <label className="block text-sm font-medium">Title</label>
-        <input className="mt-1 w-full border rounded p-2" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <label className='block text-sm font-medium'>Title</label>
+        <input className='mt-1 w-full border rounded p-2' value={title} onChange={(e) => setTitle(e.target.value)} />
       </div>
       <div>
-        <label className="block text-sm font-medium">Description</label>
-        <textarea className="mt-1 w-full border rounded p-2" rows={6} value={description} onChange={(e) => setDescription(e.target.value)} />
+        <label className='block text-sm font-medium'>Description</label>
+        <textarea className='mt-1 w-full border rounded p-2' rows={6} value={description} onChange={(e) => setDescription(e.target.value)} />
       </div>
       <div>
-        <label className="block text-sm font-medium">Category</label>
-        <input className="mt-1 w-full border rounded p-2" value={category} onChange={(e) => setCategory(e.target.value)} />
+        <label className='block text-sm font-medium'>Category</label>
+        <input className='mt-1 w-full border rounded p-2' value={category} onChange={(e) => setCategory(e.target.value)} />
       </div>
-      <div className="pt-2">
-        <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
+      <div className='pt-2'>
+        <button className='px-4 py-2 rounded bg-black text-white' onClick={save}>Save</button>
       </div>
     </div>
 );

@@ -121,7 +121,7 @@ function highlight(text: string, term:,  string) {
               const searchTerm = suggestion.text.trim();
               setQuery(searchTerm);
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);`
-            }}
+            }
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects...""
           />
@@ -133,7 +133,7 @@ function highlight(text: string, term:,  string) {
             onSelectSuggestion={(suggestion) => {;
               const searchTerm = suggestion && suggestion.text.trim();
               setQuery(searchTerm);              router && router.push(`/search?q=${encodeURIComponent(searchTerm)}`);`
-            }}
+            }
             searchSuggestions = {suggestions,}
             placeholder="Search talent, jobs, and projects...";
           />;
@@ -268,7 +268,7 @@ if (data && data.results && Array.isArray (data.results) ) {
             onSelectSuggestion={(suggestion) => {
               const search_term = suggestion.text.trim ();
               set_query (search_term);              router.push (`/search?q=${encodeURIComponent (search_term)}`);`
-            }}
+            }
             search_suggestions = {suggestions, }
             placeholder="Search talent, jobs, and projects...";
           />;
@@ -476,9 +476,9 @@ router.push (`/search?q=$ {`
         </motion.div>
         {/* Search Results */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.4 }
           className="max - w-6xl mx -auto">"
           {/* Results Count */}
 ;
@@ -740,7 +740,7 @@ export default function SearchPage() {;
               const searchTerm = suggestion.text.trim();
               setQuery(searchTerm);
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
-            }}
+            }
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
           />
@@ -783,7 +783,7 @@ interface SearchResult {
 }
 function highlight(text: string, term: string) {
 
-            }}
+            }
             searchSuggestions = {suggestions,}
 origin/cursor/automate-test-improve-and-merge-code-2533
             placeholder="Search talent, jobs, and projects..."
@@ -982,9 +982,9 @@ if (data && data.results && Array.isArray (data.results) ) {
         </motion.div>;
         {/* Search Results */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={ opacity: 0, coordinate_y: 20 }
+          animate={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.6, delay: 0.4 }
           className="max - w - 6xl mx -auto">;
           {/* Results Count */}
           <div  className="mb-6">

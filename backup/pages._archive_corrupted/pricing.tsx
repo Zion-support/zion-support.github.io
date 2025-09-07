@@ -569,7 +569,7 @@ export default function PricingPage() { const plans = [ { name: "Starter",descri
 }
 };
 export default PricingPage;
-}}
+}
 
 };
 export default PricingPage;

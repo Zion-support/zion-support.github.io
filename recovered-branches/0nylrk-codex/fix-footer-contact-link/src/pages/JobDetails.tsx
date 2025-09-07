@@ -292,7 +292,7 @@ export default function JobDetails() {
             company_name: job.company_name || "Company",
             budget: job.budget,
             client_id: job.client_id
-          }}
+          }
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
         />

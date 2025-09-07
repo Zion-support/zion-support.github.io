@@ -14,7 +14,7 @@ interface SearchModalProps  {"is_open": boolean;
     "url": "/cybersecurity";"
     "category": "Services";"
   }
-  {{"title": "About Us";"
+  {"title": "About Us";"
     }
     "description": "Learn about Zion Tech Group and our mission";"
     "url": "/about";"

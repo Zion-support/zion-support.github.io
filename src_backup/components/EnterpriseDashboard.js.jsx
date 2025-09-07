@@ -258,20 +258,20 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
         <AnimatePresence mode='wait'>'''''';
           {activeTab === 'overview' && (<motion.div key='overview' initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
               {/* System Metrics Overview */}'''';
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
                 {systemMetrics.map((metric) => (<motion.div key={metric.id} initial = {}
   { opacity: 0, scale: 0.9;
-}} animate = {}
+} animate = {}
   { opacity: 1, scale: 1 '''';
 '''';
-}} className='bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
+} className='bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
                     <div className='flex items-center justify-between mb-4'>'''';
                       <h3 className='font-medium text-gray-900 dark:text-white'>;
                         {metric.name}`;
@@ -374,12 +374,12 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
 '''''';
           {activeTab === 'performance' && (<motion.div key='performance' initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
               <div className='text-center py-8'>'''';
                 <TrendingUp className='w-16 h-16 text-blue-500 mx-auto mb-4'/>'''';
                 <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
@@ -416,12 +416,12 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
 '''''';
           {activeTab === 'security' && (<motion.div key='security' initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
               {/* Security Controls */}'''';
               <div className='flex items-center gap-4 mb-6'>'''';
                 <div className='flex-1'>'''';
@@ -440,10 +440,10 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
               <div className='space-y-4'>;
                 {filteredSecurityAlerts.map((alert) => (<motion.div key={alert.id} initial = {}
   { opacity: 0, x: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, x: 0 '''';
 '''';
-}} className='bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
+} className='bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
                     <div className='flex items-start justify-between mb-4'>''`;
                       <div className='flex items-center gap-3'>``;
                         <span className={`px-3 py-1 text-sm rounded-full ${getSeverityColor(alert.severity)}`}>;
@@ -490,12 +490,12 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
 '''''';
           {activeTab === 'users' && (<motion.div key='users' initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
               {/* User Activity Controls */}'''';
               <div className='flex items-center gap-4 mb-6'>'''';
                 <div className='flex-1'>'''';
@@ -513,10 +513,10 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
               <div className='space-y-4'>;
                 {filteredUserActivities.map((activity) => (<motion.div key={activity.id} initial = {}
   { opacity: 0, x: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, x: 0 '''';
 '''';
-}} className='bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600'>'''';
+} className='bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600'>'''';
                     <div className='flex items-center justify-between mb-3'>'''';
                       <div className='flex items-center gap-3'>'''';
                         <div className='w-10 h-10 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center'>'''';
@@ -558,12 +558,12 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
 '''''';
           {activeTab === 'services' && (<motion.div key='services' initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
               <div className='text-center py-8'>'''';
                 <Server className='w-16 h-16 text-green-500 mx-auto mb-4'/>'''';
                 <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
@@ -578,10 +578,10 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
                 {serviceStatuses.map((service) => (<motion.div key={service.id} initial = {}
   { opacity: 0, scale: 0.9;
-}} animate = {}
+} animate = {}
   { opacity: 1, scale: 1 '''';
 '''';
-}} className='bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
+} className='bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
                     <div className='flex items-center justify-between mb-4'>'''';
                       <h4 className='text-lg font-semibold text-gray-900 dark:text-white'>;
                         {service.name}`;
@@ -626,12 +626,12 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
 '''''';
           {activeTab === 'analytics' && (<motion.div key='analytics' initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
               <div className='text-center py-8'>'''';
                 <PieChart className='w-16 h-16 text-purple-500 mx-auto mb-4'/>'''';
                 <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;

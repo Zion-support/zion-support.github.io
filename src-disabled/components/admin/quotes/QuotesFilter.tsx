@@ -1,12 +1,12 @@
 interface QuotesFilterProps {;
 
-import React from "react",
+import React from 'react',
 
-import type { QuoteStatus } from "@/types/quotes",
+import type { QuoteStatus } from '@/types/quotes',
 
-import { format } from "date-fns";
-import type { DateRange } from "react-day-picker";
-import type { QuoteStatus } from "@/types/quotes";
+import { format } from 'date-fns';
+import type { DateRange } from 'react-day-picker';
+import type { QuoteStatus } from '@/types/quotes';
 import {
   Select
   SelectContent
@@ -139,63 +139,63 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   dateRange;
   setDateRange;
 
-          <div className="relative">
-            <Input"
-              placeholder="Search quotes...""
-              className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+          <div className='relative'>
+            <Input'
+              placeholder='Search quotes...''
+              className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
           
-          <div>"
-            <p className="text-zion-slate-light text-sm mb-2">Status</p>
-            <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>"
-              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">"
-                <SelectValue placeholder="Status" />
-              </SelectTrigger>"
-              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">"
-                <SelectItem value="all">All Statuses</SelectItem>"
-                <SelectItem value="new">New</SelectItem>"
-                <SelectItem value="in_review">In Review</SelectItem>"
-                <SelectItem value="responded">Responded</SelectItem>"
-                <SelectItem value="accepted">Accepted</SelectItem>"
-                <SelectItem value="closed">Closed</SelectItem>
+          <div>'
+            <p className='text-zion-slate-light text-sm mb-2'>Status</p>
+            <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>'
+              <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>'
+                <SelectValue placeholder='Status' />
+              </SelectTrigger>'
+              <SelectContent className='bg-zion-blue-dark border-zion-blue-light text-white'>'
+                <SelectItem value='all'>All Statuses</SelectItem>'
+                <SelectItem value='new'>New</SelectItem>'
+                <SelectItem value='in_review'>In Review</SelectItem>'
+                <SelectItem value='responded'>Responded</SelectItem>'
+                <SelectItem value='accepted'>Accepted</SelectItem>'
+                <SelectItem value='closed'>Closed</SelectItem>
               </SelectContent>
             </Select>
           </div>
           
-          <div>"
-            <p className="text-zion-slate-light text-sm mb-2">Archive</p>
-            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>"
-              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">"
-                <SelectValue placeholder="Archive Status" />
-              </SelectTrigger>"
-              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">"
-                <SelectItem value="active">Active Only</SelectItem>"
-                <SelectItem value="archived">Archived Only</SelectItem>"
-                <SelectItem value="all">All Quotes</SelectItem>
+          <div>'
+            <p className='text-zion-slate-light text-sm mb-2'>Archive</p>
+            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>'
+              <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>'
+                <SelectValue placeholder='Archive Status' />
+              </SelectTrigger>'
+              <SelectContent className='bg-zion-blue-dark border-zion-blue-light text-white'>'
+                <SelectItem value='active'>Active Only</SelectItem>'
+                <SelectItem value='archived'>Archived Only</SelectItem>'
+                <SelectItem value='all'>All Quotes</SelectItem>
               </SelectContent>
             </Select>
           </div>
           
-          <div>"
-            <p className="text-zion-slate-light text-sm mb-2">Date Range</p>
+          <div>'
+            <p className='text-zion-slate-light text-sm mb-2'>Date Range</p>
             <Popover>
               <PopoverTrigger asChild>
-                <Button"
-                  variant="outline""
-                  className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white"
-                >"
-                  <Calendar className="mr-2 h-4 w-4 text-zion-slate-light" />
+                <Button'
+                  variant='outline''
+                  className='w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white'
+                >'
+                  <Calendar className='mr-2 h-4 w-4 text-zion-slate-light' />
                   {dateRange?.from ? (
                     dateRange.to ? (
-                      <>"
-                        {format(dateRange.from, "LLL dd, y")} -{" "}"
-                        {format(dateRange.to, "LLL dd, y")}
+                      <>'
+                        {format(dateRange.from, 'LLL dd, y')} -{' '}'
+                        {format(dateRange.to, 'LLL dd, y')}
                       </>
-                    ) : ("
-                      format(dateRange.from, "LLL dd, y")
+                    ) : ('
+                      format(dateRange.from, 'LLL dd, y')
   onReset: () => void
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                       format(dateRange.from, 'LLL dd, y')
@@ -206,10 +206,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                 </Button>
 
-              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
+              <PopoverContent className='w-auto p-0 bg-zion-blue-dark border-zion-blue-light' align='start'>
                 <CalendarComponent;
-                  initialFocus"
-                  mode="range"
+                  initialFocus'
+                  mode='range'
 
 <PopoverContent
                 className='w-auto p-0 bg-zion-blue-dark border-zion-blue-light'
@@ -230,7 +230,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-                  mode="range";
+                  mode='range';
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}

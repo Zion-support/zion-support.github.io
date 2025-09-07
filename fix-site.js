@@ -12,7 +12,7 @@ const nextConfig = {reactStrictMode: true;
   eslint: { ignoreDuringBuilds: true }
   typescript: { ignoreBuildErrors: true }
   pageExtensions: ['tsxtsjsxjs'];
-  images: {domains: ["localhost", "ziontechgroup.com"];
+  images: {domains: ['localhost', 'ziontechgroup.com'];
   }
   output: 'standalone';
   trailingSlash: false;
@@ -48,9 +48,9 @@ const nextConfig = {;
   pageExtensions: ['tsxtsjsxjs'],;
   images: {;
 
-    domains: ["localhost", "ziontechgroup.com"];
+    domains: ['localhost', 'ziontechgroup.com'];
 
-    domains: ["localhost", "ziontechgroup.com"];
+    domains: ['localhost', 'ziontechgroup.com'];
 const fs = require($2);
 console.log($2);
 // Fix Next.js configuration
@@ -59,7 +59,7 @@ const nextConfig = $2;
   typescript: { ignoreBuildErrors: true},
   pageExtensions: ['tsxtsjsxjs'],
   images: {
-    domains: ["localhost", "ziontechgroup.com"]
+    domains: ['localhost', 'ziontechgroup.com']
   },
   output: 'standalone',
   trailingSlash: false,

@@ -89,7 +89,7 @@ const testimonials = [
     role: 'CEO, GrowthTech Solutions',
     company: 'GrowthTech Solutions',
 content:
-      "Zion Tech Group's business intelligence platform has transformed our decision-making process. We now have real-time insights that have increased our revenue by 300%.",
+      'Zion Tech Group's business intelligence platform has transformed our decision-making process. We now have real-time insights that have increased our revenue by 300%.',
     rating: 5,
     avatar: '👨‍💼',
   },
@@ -98,7 +98,7 @@ content:
     role: 'Marketing Director, DigitalFlow Agency',
     company: 'DigitalFlow Agency',
 content:
-      "The AI marketing automation platform has revolutionized our campaigns. We've seen conversion rates increase by 150% while reducing costs by 40%.",
+      'The AI marketing automation platform has revolutionized our campaigns. We've seen conversion rates increase by 150% while reducing costs by 40%.',
     rating: 5,
     avatar: '👩‍💼',
   },
@@ -151,32 +151,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20'></div>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
 
       {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className='relative py-20 lg:py-32 overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+            initial={ opacity: 0, y: 20 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+            animate={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+            transition={ duration: 0.8 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           >
@@ -187,14 +187,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Transform your business operations with AI-powered intelligence
               automation, and analytics that drive growth and efficiency
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency
             </p>
             <div className='flex flex-wrap justify-center gap-4 mb-12'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               {heroStats.map((stat, index) => (
                 <motion.div
-            transition={{ duration: 0 && 0.8 }}>;
+            transition={ duration: 0 && 0.8 }>;
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6'>;
               Innovative Business Solutions;
             </h1>;
@@ -250,9 +250,9 @@ function InnovativeBusinessSolutions() {
       <section className='relative py - 20 lg:py - 32 overflow - hidden'>;
         <div className='absolute inset - 0 bg - gradient - to - br from - teal - 900 / 20 via - green - 900 / 20 to - emerald - 900 / 20'></div>;
         <div className='relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
           >;
             <h1 className='text - 4xl lg:text - 6xl font - bold bg - gradient - to - r from - teal - 400 via - green - 400 to - emerald - 400 bg - clip - text text - transparent mb - 6'>;
               Innovative Business Solutions;
@@ -264,21 +264,21 @@ function InnovativeBusinessSolutions() {
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map ((stat, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, scale: 0 && 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
 className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   {stat.icon}
-                  <span className="text-teal-400 font-semibold">{stat.value}</span>
-                  <span className="text-gray-300 text-sm">{stat.label}</span>
+                  <span className='text-teal-400 font-semibold'>{stat.value}</span>
+                  <span className='text-gray-300 text-sm'>{stat.label}</span>
                 </motion.div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link href='#services' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                 Explore Solutions
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className='ml-2 w-5 h-5' />
               </Link>
               <Link
                 href={`tel:${contactInfo.mobile}`}
@@ -297,17 +297,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
               Why Choose Our Business Solutions?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results
             </p>
           </motion.div>
@@ -317,18 +317,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
 className='relative group'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
-                  <div className="bg-gray-900 rounded-xl p-6 h-full">
-                    <div className="text-center">
+                  <div className='bg-gray-900 rounded-xl p-6 h-full'>
+                    <div className='text-center'>
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
-                        <feature.icon className="w-8 h-8 text-white" />
+                        <feature.icon className='w-8 h-8 text-white' />
                       </div>
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
@@ -340,8 +340,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
             ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -351,17 +351,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
               Business Solution Categories
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Comprehensive business solutions covering every aspect of modern business operations
             </p>
           </motion.div>
@@ -371,44 +371,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                 key={categoryIndex}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }
+                viewport={ once: true }
 className='relative'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                <div className="text-center mb-12">
+                <div className='text-center mb-12'>
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
-                    <category.icon className="w-10 h-10 text-white" />
+                    <category.icon className='w-10 h-10 text-white' />
                   </div>
-                  <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
-                  <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
+                  <h3 className='text-3xl font-bold text-white mb-4'>{category.title}</h3>
+                  <p className='text-xl text-gray-300 max-w-2xl mx-auto'>{category.description}</p>
                 </div>
 
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
+                      initial={ opacity: 0, scale: 0.9 }
+                      whileInView={ opacity: 1, scale: 1 }
+                      transition={ duration: 0.5, delay: serviceIndex * 0.1 }
+                      viewport={ once: true }
 className='relative group'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
-                        <div className="bg-gray-900 rounded-xl p-6 h-full">
-                          <div className="flex items-center justify-between mb-4">
-                            <span className="text-3xl">{service.icon}</span>
+                        <div className='bg-gray-900 rounded-xl p-6 h-full'>
+                          <div className='flex items-center justify-between mb-4'>
+                            <span className='text-3xl'>{service.icon}</span>
                             {service.popular && (
                               <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                                 Popular
                               </span>
                             )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                           </div>
@@ -427,29 +427,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
-                          <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                          <div className="space-y-2 mb-6">
+                          <p className='text-gray-300 text-sm mb-4'>{service.description}</p>
+                          <div className='space-y-2 mb-6'>
                             {service.features.slice(0, 3).map((feature, featureIndex) => (
-                              <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                                <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                              <div key={featureIndex} className='flex items-center text-sm text-gray-300'>
+                                <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
                                 {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                               </div>;
                             ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                           </div>
-                          <div className="flex items-center justify-between">
+                          <div className='flex items-center justify-between'>
                             <Link
-                              className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors duration-300"
+                              className='inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors duration-300'
                             >
                               Learn More
-                              <ArrowRight className="ml-1 w-4 h-4" />
+                              <ArrowRight className='ml-1 w-4 h-4' />
                             </Link>
                             <Link
                               href={`tel:${contactInfo.mobile}`}
@@ -467,17 +467,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Real feedback from businesses that have transformed their operations with our innovative solutions
             </p>
           </motion.div>
@@ -486,24 +486,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-3">{testimonial.avatar}</span>
+                <div className='flex items-center mb-4'>
+                  <span className='text-3xl mr-3'>{testimonial.avatar}</span>
                   <div>
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                    <p className="text-teal-400 text-sm">{testimonial.role}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                    <h4 className='text-white font-semibold'>{testimonial.name}</h4>
+                    <p className='text-teal-400 text-sm'>{testimonial.role}</p>
+                    <p className='text-gray-400 text-sm'>{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4">{testimonial.content}</p>
-                <div className="flex items-center">
-                  <div className="flex text-yellow-400">
+                <p className='text-gray-300 mb-4'>{testimonial.content}</p>
+                <div className='flex items-center'>
+                  <div className='flex text-yellow-400'>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className='w-4 h-4 fill-current' />
                     ))}
@@ -519,10 +519,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
             </h2>;
@@ -545,10 +545,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               >
                 <Phone className='mr-2 w-5 h-5' />
                 Call Now: {contactInfo.mobile}
@@ -573,7 +573,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (<Layout> <Head> <title>Innovative Business Solutions - Zion Tech Group</title> </Head> {
   /* Hero Section */
-}<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div initial= {
+}<section className='relative py-20 lg:py-32 overflow-hidden' > <div className='absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20' ></div> <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center' > <motion.div initial= {
 
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300'>;
@@ -592,7 +592,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (<Layout> <Head> <title>Innovative Business Solutions - Zion Tech Group</title> </Head> {;
   /* Hero Section */ ;
-}<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion&& motion.div initial= {
+}<section className='relative py-20 lg:py-32 overflow-hidden' > <div className='absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20' ></div> <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center' > <motion&& motion.div initial= {
 
   {
   opacity: 0, y: 20
@@ -603,13 +603,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
   duration: 0 && 0.8 
 
-}> <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6" > Innovative Business Solutions </h1> </motion && motion.div>) ) ;
-}</div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Explore Solutions <ArrowRight className="ml-2 w-5 h-5" /> </Link> Get Started </Link> </div> </motion && motion.div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Why Choose Our Business Solutions? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion && motion.div> </div> </div> </div> </motion && motion.div>) ) ;
-}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Business Solution Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion && motion.div> Popular </span>) ;
+}> <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6' > Innovative Business Solutions </h1> </motion && motion.div>) ) ;
+}</div> <div className='flex flex-col sm:flex-row gap-4 justify-center' > <Link href='#services' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30' > Explore Solutions <ArrowRight className='ml-2 w-5 h-5' /> </Link> Get Started </Link> </div> </motion && motion.div> </div> </section> > <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4' > Why Choose Our Business Solutions? </h2> <p className='text-xl text-gray-300 max-w-3xl mx-auto' > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion && motion.div> </div> </div> </div> </motion && motion.div>) ) ;
+}</div> </div> </section> > <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4' > Business Solution Categories </h2> <p className='text-xl text-gray-300 max-w-3xl mx-auto' > Comprehensive business solutions covering every aspect of modern business operations </p> </motion && motion.div> Popular </span>) ;
 }</div> </div>) ) ;
-}</div> <div className="flex items-center justify-between" > <Link > Learn More <ArrowRight className="ml-1 w-4 h-4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion && motion.div>) ) ;
+}</div> <div className='flex items-center justify-between' > <Link > Learn More <ArrowRight className='ml-1 w-4 h-4' /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion && motion.div>) ) ;
 }</div> </motion && motion.div>) ) ;
-}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > What Our Clients Say </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion && motion.div>) ) ;
+}</div> </div> </section> > <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4' > What Our Clients Say </h2> <p className='text-xl text-gray-300 max-w-3xl mx-auto' > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion && motion.div>) ) ;
 }</div> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
   {
@@ -621,7 +621,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
   once: true 
 
-}> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion && motion.div> </div> </section> </Layout>) ;
+}> <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6' > Ready to Transform Your Business? </h2> <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto' > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className='flex flex-col sm:flex-row gap-4 justify-center' > <Link > <Mail className='mr-2 w-5 h-5' /> Email Us </Link> </div> </div> </motion && motion.div> </div> </section> </Layout>) ;
 
 
                       className='relative group';
@@ -688,10 +688,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Testimonials Section */}
       <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
             className='text - center mb - 16';
           >;
             <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 4'>;
@@ -705,10 +705,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {testimonials.map ((testimonial, index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, coordinate_y: 20 }
+                whileInView={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                viewport={ once: true }
                 className='bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - teal - 500 / 20';
               >;
                 <div className='flex items - center mb - 4'>;
@@ -737,10 +737,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* CTA Section */}
       <section className='py - 20 bg - gradient - to - r from - teal - 900 / 20 via - green - 900 / 20 to - emerald - 900 / 20'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
             <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 6'>;
               Ready to Transform Your Business?;
@@ -774,7 +774,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
   return (<Layout> <Head> <title > Innovative Business Solutions - Zion Tech Group</title> </Head> {
   /* Hero Section */;
-}<section className="relative py - 20 lg:py - 32 overflow - hidden" > <div className="absolute inset - 0 bg - gradient - to - br from - teal - 900 / 20 via - green - 900 / 20 to - emerald - 900 / 20" ></div> <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center" > <motion.div initial= {
+}<section className='relative py - 20 lg:py - 32 overflow - hidden' > <div className='absolute inset - 0 bg - gradient - to - br from - teal - 900 / 20 via - green - 900 / 20 to - emerald - 900 / 20' ></div> <div className='relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center' > <motion.div initial= {
   {
   opacity: 0, coordinate_y: 20;
 }animate= {
@@ -783,13 +783,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }transition= {
   {
   duration: 0.8;
-}> <h1 className="text - 4xl lg:text - 6xl font - bold bg - gradient - to - r from - teal - 400 via - green - 400 to - emerald - 400 bg - clip - text text - transparent mb - 6" > Innovative Business Solutions </h1> </motion.div>) );
-}</div> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link href="#services" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - teal - 500 to - green - 600 text - white font - semibold rounded - lg hover:from - teal - 600 hover:to - green - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30" > Explore Solutions <ArrowRight className="ml - 2 w - 5 h - 5" /> </Link> Get Started </Link> </div> </motion.div> </div> </section> > <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 4" > Why Choose Our Business Solutions? </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Our business solutions combine cutting - edge AI technology with proven business processes to deliver unprecedented results </p> </motion.div> </div> </div> </div> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 4" > Business Solution Categories </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion.div> Popular </span>);
+}> <h1 className='text - 4xl lg:text - 6xl font - bold bg - gradient - to - r from - teal - 400 via - green - 400 to - emerald - 400 bg - clip - text text - transparent mb - 6' > Innovative Business Solutions </h1> </motion.div>) );
+}</div> <div className='flex flex - col sm:flex - row gap - 4 justify - center' > <Link href='#services' className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - teal - 500 to - green - 600 text - white font - semibold rounded - lg hover:from - teal - 600 hover:to - green - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30' > Explore Solutions <ArrowRight className='ml - 2 w - 5 h - 5' /> </Link> Get Started </Link> </div> </motion.div> </div> </section> > <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 4' > Why Choose Our Business Solutions? </h2> <p className='text - xl text - gray - 300 max - w-3xl mx - auto' > Our business solutions combine cutting - edge AI technology with proven business processes to deliver unprecedented results </p> </motion.div> </div> </div> </div> </motion.div>) );
+}</div> </div> </section> > <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 4' > Business Solution Categories </h2> <p className='text - xl text - gray - 300 max - w-3xl mx - auto' > Comprehensive business solutions covering every aspect of modern business operations </p> </motion.div> Popular </span>);
 }</div> </div>) );
-}</div> <div className="flex items - center justify - between" > <Link > Learn More <ArrowRight className="ml - 1 w - 4 h - 4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion.div>) );
+}</div> <div className='flex items - center justify - between' > <Link > Learn More <ArrowRight className='ml - 1 w - 4 h - 4' /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion.div>) );
 }</div> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 4" > What Our Clients Say </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion.div>) );
+}</div> </div> </section> > <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 4' > What Our Clients Say </h2> <p className='text - xl text - gray - 300 max - w-3xl mx - auto' > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion.div>) );
 }</div> </div> </motion.div>) );
 }</div> </div> </section> <motion.div initial= {
   {
@@ -804,5 +804,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
   once: true 
 
-}> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>)
+}> <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6' > Ready to Transform Your Business? </h2> <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto' > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className='flex flex-col sm:flex-row gap-4 justify-center' > <Link > <Mail className='mr-2 w-5 h-5' /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>)
 origin/cursor/automate-test-improve-and-merge-code-2533

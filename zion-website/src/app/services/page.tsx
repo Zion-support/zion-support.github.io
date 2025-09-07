@@ -46,7 +46,7 @@ export default function ServicesPage() {return (<div className="min-h-screen bg-
         </div>;
       </div>;
     </div>;
-  )}import {{"step": '01';'
+  )}import {"step": '01';'
     }
     "title": 'Discovery & Assessment';'
     "description": 'We begin by understanding your business challenges, current technology stack, and AI objectives.';'
@@ -70,11 +70,11 @@ export default function ServicesPage() {return (<div className="min-h-screen bg-
     "description": 'Seamless deployment with comprehensive training to maximize adoption and value.';'
     "icon": AcademicCapIco
 }
-  {{"name": 'Proven Track Record';'
+  {"name": 'Proven Track Record';'
     }
     "description": 'Successfully delivered 500+ AI solutions across diverse industries worldwide.';'
     "icon": ChartBarIcon}
-  {{/* Hero section *
+  {/* Hero section *
 }
       <div className=&quot;relative isolate px - 6 pt - 14 "lg":px - 8&quot>
 

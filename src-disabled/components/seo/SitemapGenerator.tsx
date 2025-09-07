@@ -1,7 +1,7 @@
  interface SitemapUrl {
   loc: string;
    lastmod: string;
-   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';"";}
+   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';'';}
    priority: number}
 }
 
@@ -18,4 +18,4 @@ interface SitemapUrl {
 }
 
 const SitemapGenerator: React.FC = () => {;}
-  const baseUrl = 'https:''';}"
+  const baseUrl = 'https:''';}'

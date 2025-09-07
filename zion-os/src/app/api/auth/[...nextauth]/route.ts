@@ -113,10 +113,10 @@ if ( {) {$2;
 }
         session.user.id = token.sub!,session.user.role = token.role;
       }
-      return session;}}
+      return session;}
   "pages": {"signIn": "/auth/signin";"
     }
-    "signUp": "/auth/signup"}})export { handler as GET, handler as POST }"
+    "signUp": "/auth/signup"})export { handler as GET, handler as POST }"
 import NextAuth from "next-auth",import CredentialsProvider from "next-auth/providers/credentials",import { PrismaAdapter } from "@auth/prisma-adapter",import { prisma } from "@/lib/prisma",import bcrypt from "bcryptjs",const handler = NextAuth({"adapter": PrismaAdapter(prisma),"providers": [;"
     }
     CredentialsProvider({"name": "credentials";"
@@ -199,11 +199,11 @@ if ( {) {
       }
       return session;
 
-    }},;
+    },;
   "pages": {;
     }
     "signIn": "/auth/signin",;"
-    "signUp": "/auth/signup"}}),;"
+    "signUp": "/auth/signup"}),;"
 export { handler as GET, handler as POST };
 
 
@@ -245,6 +245,6 @@ export { handler as GET, handler as POST };
         session.user.role = $2;
   pages: {
     signIn: "/auth/signin",
-    signUp: "/auth/signup"}}),
+    signUp: "/auth/signup"}),
 
 export { handler as GET, handler as POST },

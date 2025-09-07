@@ -63,7 +63,7 @@ interface MetadataFormProps  {form: UseFormReturn<AppMetadataValues>;
 }
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {const { control, register, watch, setValue } = form;
   const keywords = watch("keywords")const platform = watch("platform")const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>,) => {if (e.key === "Enter" |e.key === ",") {e.preventDefault()const value = e.currentTarget.value.trim()if (value && !keywords.includes(value)) {setValue("keywords", [...keywords, value])e.currentTarget.value = "";
-      }}}const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
+      }}const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
 }const removeKeyword = (keyword: string,) => {setValue("keywords";
       keywords.filter((k,) => k !== keyword))}
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
@@ -123,7 +123,6 @@ if ( {) {$2;
                   <FormControl>;
                     <Input;
                       placeholder="Enter app title";
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
                       max_length = {platform === "ios" ? 30 : 50, }
                       {...field}
                     />;
@@ -180,7 +179,6 @@ if ( {) {$2;
               name="longDescription";
               render={({ field }: { field: any },) => (<FormItem>;
                   <FormLabel>Long Description</FormLabel>;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
                   <FormControl>;
 
 
@@ -267,7 +265,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                       {...field}
                     />;
                   </FormControl>;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
                   <FormDescription>;
 
                     <Textarea
@@ -322,7 +319,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
               render={({ field }: { field: any },) => (<FormItem>;
                   <FormLabel>App Version</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
                     <Input
                       placeholder="e && e.g., 1 && 1.0.0"
     </Card>);
@@ -387,7 +383,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                 </FormItem>)}/>;
           </div>;
         </Form>;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
       </CardContent>;
 
 
@@ -411,7 +406,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 '"
 origin/cursor/automate-test-improve-and-merge-code-2533
       </CardContent>;</Card>)},;
-  )}}/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>)}/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {longDescription.length ;
+  )}/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>)}/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {longDescription.length ;
 }/ {maxDescriptionLength ;
 }characters </FormDescription> </FormItem>)}/> <div> <FormLabel htmlFor="keywords" >Keywords</FormLabel> <Input className="mb-2" /> <div className="flex flex-wrap gap-2 mt-2"> > <X className="h-3 w-3" /> </button> </Badge>) ) ";
 }</div> <FormDescription className="mt-2" > Add keywords to improve discoverability (max 100 characters total) </FormDescription> </div> <FormField <FormItem> <FormLabel>App Version</FormLabel> <FormControl> <Input /> </FormControl> </FormItem>)}/> </div> </Form> </CardContent> </Card>)}'";

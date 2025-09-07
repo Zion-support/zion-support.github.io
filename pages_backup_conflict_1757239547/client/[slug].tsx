@@ -28,16 +28,16 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {
     await fetch('/api/reviews/report', {;
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reviewId: id, reason: 'Inappropriate content' })});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto py-8">
-        <h1 className="text-2xl font-bold mb-6">Page</h1>
-        <div className="bg-white rounded-lg shadow p-6">
-          <p className="text-gray-600">Content coming soon.</p>
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto py-8'>
+        <h1 className='text-2xl font-bold mb-6'>Page</h1>
+        <div className='bg-white rounded-lg shadow p-6'>
+          <p className='text-gray-600'>Content coming soon.</p>
         </div>
       </div>
     </div>
@@ -55,8 +55,8 @@ export default ClientPage;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string },
   return { props: { clientId: slug }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 };

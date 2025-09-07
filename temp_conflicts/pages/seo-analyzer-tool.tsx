@@ -231,7 +231,7 @@ export default function SEOAnalyzerToolPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-green"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex items-start space-x-6">
                   <div className="relative">
@@ -272,7 +272,7 @@ export default function SEOAnalyzerToolPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-green"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex items-center mb-6">
                   <div className="text-3xl mr-4">{category.icon}</div>
@@ -430,7 +430,7 @@ export default function SEOAnalyzerToolPage() {
               <Card
                 key={index}
                 className={`card-hover border-gradient-green ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">

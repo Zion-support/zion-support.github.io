@@ -25,8 +25,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {c
           }
           // Reset the form and bulk input;
           setBulkSkills('')// Refresh the skills;'
-          await onSuccess()} catch (err) {setError('Failed to parse categorized skills. Please try again.')}}'
-    } catch ("err": any) {setError(err && err.message || 'Failed to categorize skills')}},return (<div className="bg-muted/40 p-6 rounded-lg">;"
+          await onSuccess()} catch (err) {setError('Failed to parse categorized skills. Please try again.')}'
+    } catch ("err": any) {setError(err && err.message || 'Failed to categorize skills')},return (<div className="bg-muted/40 p-6 rounded-lg">;"
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>;"
       <div className="space-y-4">;"
         <div className="space-y-2">;"

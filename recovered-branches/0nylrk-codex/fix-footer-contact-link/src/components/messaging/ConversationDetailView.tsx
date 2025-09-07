@@ -81,9 +81,9 @@ import {DateDivider} from './DateDivider';'
 
   const scrollToBottom = () => {
     }
-    messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' })'
+    messagesEndRef.current?.scrollIntoView({ 'behavior': 'smooth' })'
   },
-  const handleSendMessage = async ("e": React.FormEvent) => {
+  const handleSendMessage = async ('e': React.FormEvent) => {
     }
     e.preventDefault(),
     if (!messageText.trim() || !activeConversation) return,
@@ -99,9 +99,9 @@ import {DateDivider} from './DateDivider';'
 
   const scrollToBottom = () => {;
     }
-    messagesEndRef && messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' })'
+    messagesEndRef && messagesEndRef.current?.scrollIntoView({ 'behavior': 'smooth' })'
 };
-  const handleSendMessage = async ("e": React && React.FormEvent) => {;
+  const handleSendMessage = async ('e': React && React.FormEvent) => {;
     }
     e && e.preventDefault();
     if (!messageText && messageText.trim() || !activeConversation) return,;
@@ -115,17 +115,17 @@ import {DateDivider} from './DateDivider';'
   if (!activeConversation) {
 }
 return (;
-      <div className="flex-1 flex flex-col items-center justify-center p-8">;"
-        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;"
-        <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>;"
-        <p className="text-zion-slate text-center max-w-md">;"
+      <div className='flex-1 flex flex-col items-center justify-center p-8'>;'
+        <MessageSquare className='h-16 w-16 text-zion-purple/40 mb-4' />;'
+        <h3 className='text-xl font-medium text-white mb-2'>No Conversation Selected</h3>;'
+        <p className='text-zion-slate text-center max-w-md'>;'
           Select a conversation from the list to view and send messages.;
         </p>;
       </div>;
     );
   }
   // Group messages by date,
-const "groupedMessages": { "date": string, "messages": any[] }[] = [];
+const 'groupedMessages': { 'date': string, 'messages': any[] }[] = [];
   activeMessages.forEach((message) => {
     }
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');'
@@ -137,12 +137,12 @@ const "groupedMessages": { "date": string, "messages": any[] }[] = [];
       }
       groupedMessages.push({
         }
-        "date": messageDate;
-    "messages": [message]
+        'date': messageDate;
+    'messages': [message]
       })
     }
-  });        "date": messageDate,;
-        "messages": [message];
+  });        'date': messageDate,;
+        'messages': [message];
       });
     }
 
@@ -150,7 +150,7 @@ const "groupedMessages": { "date": string, "messages": any[] }[] = [];
 const hasContextData = activeConversation.context_data &&;
     (activeConversation.context_data.title || activeConversation.context_data.description),
 return (;
-    <div className="flex-1 flex flex-col h-full">;"
+    <div className='flex-1 flex flex-col h-full'>;'
       {/* Header */}            </div>;
           </div>;
         </div>;
@@ -174,10 +174,10 @@ return (;
 } /> activeConversation.other user.user type === 'employer' ? 'Employer' : activeConversation.other user.user type === 'admin' ? 'Admin' : 'User''
 }</div> </div> </div> </div> {
   }
-  activeConversation.context data.image url && (<div className="w-16 h-16 flex-shrink-0" > <AspectRatio ratio= {"
+  activeConversation.context data.image url && (<div className='w-16 h-16 flex-shrink-0' > <AspectRatio ratio= {'
   }
   1/1
-}className="rounded bg-zion-blue-dark/30 overflow-hidden" > <img /> </AspectRatio> </div>)"
+}className='rounded bg-zion-blue-dark/30 overflow-hidden' > <img /> </AspectRatio> </div>)'
 }<div> {
   }
   activeConversation.context data.description
@@ -200,7 +200,7 @@ return (;
 }<div ref= {
   }
   messagesEndRef
-} /> </div> placeholder="Type a message..." className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white "focus": outline-none "focus":ring-2 "focus":ring-zion-cyan" submit"className=" bg-zion-purple "hover":bg-zion-purple-dark text-white" > Send </Button> </form> </div> </div>)"
+} /> </div> placeholder='Type a message...' className='flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white 'focus': outline-none 'focus':ring-2 'focus':ring-zion-cyan' submit'className=' bg-zion-purple 'hover':bg-zion-purple-dark text-white' > Send </Button> </form> </div> </div>)'
 }
     </div>;
   );

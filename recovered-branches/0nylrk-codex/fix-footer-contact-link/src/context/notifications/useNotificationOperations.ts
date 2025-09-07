@@ -20,7 +20,7 @@ if (return) {
         .from ('notifications');'
         .select ('*');'
         .eq ('user_id', user_id);'
-        .order ('created_at', { "ascending": false });'
+        .order ('created_at', { 'ascending': false });'
 ;
       // Check condition,
 if (throw error) {
@@ -29,7 +29,7 @@ if (throw error) {
       set_notifications (data || []);
     } catch (err) {
       }
-      console.error ('Error fetching "notifications":', err);'
+      console.error ('Error fetching 'notifications':', err);'
     } finally {
       }
       set_loading (false);
@@ -56,32 +56,32 @@ export const useNotificationOperations = (userId?: string): (NotificationContext
         .from('notifications');'
         .select('*');'
         .eq('user_id', userId);'
-        .order('created_at', { "ascending": false }),;'
+        .order('created_at', { 'ascending': false }),;'
       if (error) throw error,;
       setNotifications(data || []);
     } catch (err) {;
       }
-      console.error('Error fetching "notifications":', err);'
+      console.error('Error fetching 'notifications':', err);'
     } finally {;
       }
       setLoading(false);
     }
   }, [userId]),;
-  const markAsRead = useCallback(async ("id": string) => {;
+  const markAsRead = useCallback(async ('id': string) => {;
     }
     if (!userId) return,;
     try {;
       }
       const { error } = await supabase;
         .from('notifications');'
-        .update({ "read": true });
+        .update({ 'read': true });
         .eq('id', id);'
         .eq('user_id', userId),;'
       if (error) throw error,;
       await fetchNotifications();
     } catch (err) {;
       }
-      console.error('Error marking notification as "read":', err);'
+      console.error('Error marking notification as 'read':', err);'
     }
   }, [userId, fetchNotifications]),;
   const markAllAsRead = useCallback(async () => {;
@@ -91,17 +91,17 @@ export const useNotificationOperations = (userId?: string): (NotificationContext
       }
       const { error } = await supabase;
         .from('notifications');'
-        .update({ "read": true });
+        .update({ 'read': true });
         .eq('user_id', userId);'
         .eq('read', false),;'
       if (error) throw error,;
       await fetchNotifications();
     } catch (err) {;
       }
-      console.error('Error marking all notifications as "read":', err);'
+      console.error('Error marking all notifications as 'read':', err);'
     }
   }, [userId, fetchNotifications]),;
-  const dismissNotification = useCallback(async ("id": string) => {;
+  const dismissNotification = useCallback(async ('id': string) => {;
     }
     if (!userId) return,;
     try {;
@@ -115,7 +115,7 @@ export const useNotificationOperations = (userId?: string): (NotificationContext
       await fetchNotifications();
     } catch (err) {;
       }
-      console.error('Error dismissing "notification":', err);'
+      console.error('Error dismissing 'notification':', err);'
     }
   }, [userId, fetchNotifications]),;
   const filteredNotifications = notifications.filter((notification) => {;
@@ -130,7 +130,7 @@ export const useNotificationOperations = (userId?: string): (NotificationContext
         return notification.type === 'onboarding',;'
       case 'system':;'
         return notification.type === 'system',;'
-      "default": return true;
+      'default': return true;
     }
   }),;
   const unreadCount = notifications.filter(n => { return !n.read).length,; }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
@@ -95,7 +94,7 @@ const testimonials = [
     role: 'CTO, QuantumTech Industries',
     company: 'QuantumTech Industries',
 content:
-      "Zion Tech Group's quantum cloud infrastructure has revolutionized our research capabilities. We've achieved computational breakthroughs that were previously impossible.",
+      'Zion Tech Group's quantum cloud infrastructure has revolutionized our research capabilities. We've achieved computational breakthroughs that were previously impossible.',
     rating: 5,
     avatar: '👩‍🔬',
   },
@@ -153,12 +152,12 @@ const contactInfo = {;
   website: 'https://ziontechgroup.com';
 };
 const heroStats = [;
-  { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },;
-  { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },;
-  { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },;
-  { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  { label: 'Infrastructure Projects', value: '150+', icon: <Server className='w-5 h-5' /> },;
+  { label: 'Enterprise Clients', value: '300+', icon: <Building className='w-5 h-5' /> },;
+  { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className='w-5 h-5' /> },;
+  { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className='w-5 h-5' />   } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ],;
@@ -203,8 +202,8 @@ const serviceCategories = [;
     color: 'from-purple-500 to-pink-600',;
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring'];
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ],;
@@ -233,8 +232,8 @@ const heroFeatures = [;
     icon: Shield,;
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600';
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ],;
@@ -263,24 +262,21 @@ const testimonials = [;
     rating: 5,;
     avatar: '👩‍🔒';
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ],
 export default function AdvancedITInfrastructureServices() {
 
-=======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 const AdvancedITInfrastructureServices: React.FC = () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/advanced-it-infrastructure-services.tsx
   return (
     <Layout>
       <Head>
         <title>Advanced IT Infrastructure Services - Zion Tech Group</title>
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
 <meta
           name='description'
           content='Revolutionary IT infrastructure services including quantum cloud computing, edge computing, zero-trust security, and autonomous data centers. Transform your infrastructure with cutting-edge technology.'
@@ -313,32 +309,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20'></div>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
 
       {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className='relative py-20 lg:py-32 overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+            initial={ opacity: 0, y: 20 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+            animate={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+            transition={ duration: 0.8 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           >
@@ -349,14 +345,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionary infrastructure solutions with quantum computing
               edge computing, and AI-powered automation for the future
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
             </p>
             <div className='flex flex-wrap justify-center gap-4 mb-12'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               {heroStats.map((stat, index) => (
                 <motion.div
-            transition={{ duration: 0 && 0.8 }}>;
+            transition={ duration: 0 && 0.8 }>;
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>;
               Advanced IT Infrastructure Services;
             </h1>;
@@ -412,9 +408,9 @@ function AdvancedITInfrastructureServices() {
       <section className='relative py - 20 lg:py - 32 overflow - hidden'>;
         <div className='absolute inset - 0 bg - gradient - to - br from - indigo - 900 / 20 via - blue - 900 / 20 to - cyan - 900 / 20'></div>;
         <div className='relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
           >;
             <h1 className='text - 4xl lg:text - 6xl font - bold bg - gradient - to - r from - indigo - 400 via - blue - 400 to - cyan - 400 bg - clip - text text - transparent mb - 6'>;
               Advanced IT Infrastructure Services;
@@ -426,21 +422,21 @@ function AdvancedITInfrastructureServices() {
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map ((stat, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, scale: 0 && 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
 className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   {stat.icon}
-                  <span className="text-blue-400 font-semibold">{stat.value}</span>
-                  <span className="text-gray-300 text-sm">{stat.label}</span>
+                  <span className='text-blue-400 font-semibold'>{stat.value}</span>
+                  <span className='text-gray-300 text-sm'>{stat.label}</span>
                 </motion.div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link href='#services' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                 Explore Services
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className='ml-2 w-5 h-5' />
               </Link>
               <Link
                 href={`tel:${contactInfo.mobile}`}
@@ -458,17 +454,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
               Why Choose Our IT Infrastructure Services?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our infrastructure services combine cutting-edge technology with intelligent automation to deliver unprecedented performance and reliability
             </p>
           </motion.div>
@@ -478,18 +474,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
 className='relative group'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
-                  <div className="bg-gray-900 rounded-xl p-6 h-full">
-                    <div className="text-center">
+                  <div className='bg-gray-900 rounded-xl p-6 h-full'>
+                    <div className='text-center'>
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
-                        <feature.icon className="w-8 h-8 text-white" />
+                        <feature.icon className='w-8 h-8 text-white' />
                       </div>
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
@@ -508,17 +504,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
               IT Infrastructure Service Categories
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Comprehensive infrastructure solutions covering quantum computing, edge computing, security, and data centers
             </p>
           </motion.div>
@@ -528,10 +524,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                 key={categoryIndex}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }
+                viewport={ once: true }
 className='relative'
               >
                 <div className='text-center mb-12'>
@@ -552,11 +548,11 @@ className='relative'
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, scale: 0.9 }}
+                      initial={ opacity: 0, scale: 0.9 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0 && 0.5, delay: serviceIndex * 0 && 0.1 }}
-                      viewport={{ once: true }}
+                      whileInView={ opacity: 1, scale: 1 }
+                      transition={ duration: 0 && 0.5, delay: serviceIndex * 0 && 0.1 }
+                      viewport={ once: true }
 className='relative group'
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
@@ -616,90 +612,90 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                     </motion && motion.div>;
 
-                className="relative"
+                className='relative'
 
               >
-                <div className="text-center mb-12">
+                <div className='text-center mb-12'>
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
-                    <category.icon className="w-10 h-10 text-white" />
+                    <category.icon className='w-10 h-10 text-white' />
                   </div>
-                  <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
-                  <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
+                  <h3 className='text-3xl font-bold text-white mb-4'>{category.title}</h3>
+                  <p className='text-xl text-gray-300 max-w-2xl mx-auto'>{category.description}</p>
                 </div>
                     <motion.div
 
                       key={service.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                      initial={{ opacity: 0, scale: 0.9 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                      initial={ opacity: 0, scale: 0.9 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                      whileInView={{ opacity: 1, scale: 1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                      whileInView={ opacity: 1, scale: 1 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                      transition={{ duration: 0.5, delay: serviceIndex * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                      transition={ duration: 0.5, delay: serviceIndex * 0.1 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                      viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                      viewport={ once: true }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                      className="relative group"
+                      className='relative group'
 
 
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
-                        <div className="bg-gray-900 rounded-xl p-6 h-full">
-                          <div className="flex items-center justify-between mb-4">
-                            <span className="text-3xl">{service.icon}</span>
+                        <div className='bg-gray-900 rounded-xl p-6 h-full'>
+                          <div className='flex items-center justify-between mb-4'>
+                            <span className='text-3xl'>{service.icon}</span>
                             {service.popular && (
-                              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                              <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
                                 Popular
                               </span>
                             )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                           </div>
-                          <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
-                          <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
-                          <div className="flex items-center justify-between mb-4">
-                            <span className="text-2xl font-bold text-white">{service.price}</span>
-                            <span className="text-gray-400">{service.period}</span>
+                          <h4 className='text-xl font-semibold text-white mb-2'>{service.name}</h4>
+                          <p className='text-gray-300 text-sm mb-4'>{service.tagline}</p>
+                          <div className='flex items-center justify-between mb-4'>
+                            <span className='text-2xl font-bold text-white'>{service.price}</span>
+                            <span className='text-gray-400'>{service.period}</span>
                           </div>
-                          <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                          <div className="space-y-2 mb-6">
+                          <p className='text-gray-300 text-sm mb-4'>{service.description}</p>
+                          <div className='space-y-2 mb-6'>
                             {service.features.slice(0, 3).map((feature, featureIndex) => (
-                              <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                                <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                              <div key={featureIndex} className='flex items-center text-sm text-gray-300'>
+                                <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
                                 {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                               </div>;
                             ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                           </div>
-                          <div className="flex items-center justify-between">
+                          <div className='flex items-center justify-between'>
                             <Link
-                              className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                              className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300'
                             >
                               Learn More
-                              <ArrowRight className="ml-1 w-4 h-4" />
+                              <ArrowRight className='ml-1 w-4 h-4' />
                             </Link>
                             <Link
                               href={`tel:${contactInfo.mobile}`}
@@ -717,17 +713,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Real feedback from organizations that have transformed their infrastructure with our advanced services
             </p>
           </motion.div>
@@ -736,24 +732,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.5, delay: index * 0 && 0.1 }
+                viewport={ once: true }
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-3">{testimonial.avatar}</span>
+                <div className='flex items-center mb-4'>
+                  <span className='text-3xl mr-3'>{testimonial.avatar}</span>
                   <div>
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                    <p className="text-blue-400 text-sm">{testimonial.role}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                    <h4 className='text-white font-semibold'>{testimonial.name}</h4>
+                    <p className='text-blue-400 text-sm'>{testimonial.role}</p>
+                    <p className='text-gray-400 text-sm'>{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4">{testimonial.content}</p>
-                <div className="flex items-center">
-                  <div className="flex text-yellow-400">
+                <p className='text-gray-300 mb-4'>{testimonial.content}</p>
+                <div className='flex items-center'>
+                  <div className='flex text-yellow-400'>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className='w-4 h-4 fill-current' />
                     ))}
@@ -769,10 +765,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
               Ready to Transform Your Infrastructure?;
             </h2>;
@@ -794,10 +790,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Transform Your Infrastructure?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Join hundreds of organizations that have already revolutionized their IT infrastructure with our advanced services
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               >
                 <Phone className='mr-2 w-5 h-5' />
                 Call Now: {contactInfo.mobile}
@@ -820,24 +816,23 @@ className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
     </Layout>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        <meta name="description" content="Comprehensive IT infrastructure solutions for modern enterprises" />
+        <meta name='description' content='Comprehensive IT infrastructure solutions for modern enterprises' />
       </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Advanced IT Infrastructure Services</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      <main className='max-w-7xl mx-auto px-4 py-8'>
+        <div className='text-center mb-12'>
+          <h1 className='text-4xl font-bold mb-4'>Advanced IT Infrastructure Services</h1>
+          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
             Build, manage, and optimize your IT infrastructure with our comprehensive solutions designed for scalability and reliability.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Cloud Architecture</h3>
-            <p className="text-gray-600 mb-4">
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>
+          <div className='bg-white rounded-lg shadow-lg p-6'>
+            <h3 className='text-xl font-semibold mb-4'>Cloud Architecture</h3>
+            <p className='text-gray-600 mb-4'>
               Design and implement scalable cloud solutions that grow with your business needs.
             </p>
-            <ul className="text-sm text-gray-500 space-y-2">
+            <ul className='text-sm text-gray-500 space-y-2'>
               <li>• AWS, Azure, GCP expertise</li>
               <li>• Multi-cloud strategies</li>
               <li>• Cost optimization</li>
@@ -845,12 +840,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ul>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Network Security</h3>
-            <p className="text-gray-600 mb-4">
+          <div className='bg-white rounded-lg shadow-lg p-6'>
+            <h3 className='text-xl font-semibold mb-4'>Network Security</h3>
+            <p className='text-gray-600 mb-4'>
               Protect your infrastructure with advanced security measures and monitoring systems.
             </p>
-            <ul className="text-sm text-gray-500 space-y-2">
+            <ul className='text-sm text-gray-500 space-y-2'>
               <li>• Firewall configuration</li>
               <li>• Intrusion detection</li>
               <li>• VPN setup</li>
@@ -858,12 +853,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ul>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Database Management</h3>
-            <p className="text-gray-600 mb-4">
+          <div className='bg-white rounded-lg shadow-lg p-6'>
+            <h3 className='text-xl font-semibold mb-4'>Database Management</h3>
+            <p className='text-gray-600 mb-4'>
               Optimize database performance and ensure data integrity with expert management.
             </p>
-            <ul className="text-sm text-gray-500 space-y-2">
+            <ul className='text-sm text-gray-500 space-y-2'>
               <li>• Performance tuning</li>
               <li>• Backup strategies</li>
               <li>• Data migration</li>
@@ -871,12 +866,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ul>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">DevOps & CI/CD</h3>
-            <p className="text-gray-600 mb-4">
+          <div className='bg-white rounded-lg shadow-lg p-6'>
+            <h3 className='text-xl font-semibold mb-4'>DevOps & CI/CD</h3>
+            <p className='text-gray-600 mb-4'>
               Streamline development workflows with automated deployment and monitoring.
             </p>
-            <ul className="text-sm text-gray-500 space-y-2">
+            <ul className='text-sm text-gray-500 space-y-2'>
               <li>• Pipeline automation</li>
               <li>• Container orchestration</li>
               <li>• Infrastructure as Code</li>
@@ -884,12 +879,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ul>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Server Management</h3>
-            <p className="text-gray-600 mb-4">
+          <div className='bg-white rounded-lg shadow-lg p-6'>
+            <h3 className='text-xl font-semibold mb-4'>Server Management</h3>
+            <p className='text-gray-600 mb-4'>
               Maintain and optimize server infrastructure for maximum uptime and performance.
             </p>
-            <ul className="text-sm text-gray-500 space-y-2">
+            <ul className='text-sm text-gray-500 space-y-2'>
               <li>• Server provisioning</li>
               <li>• Performance monitoring</li>
               <li>• Patch management</li>
@@ -897,12 +892,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ul>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Backup & Recovery</h3>
-            <p className="text-gray-600 mb-4">
+          <div className='bg-white rounded-lg shadow-lg p-6'>
+            <h3 className='text-xl font-semibold mb-4'>Backup & Recovery</h3>
+            <p className='text-gray-600 mb-4'>
               Ensure business continuity with comprehensive backup and disaster recovery solutions.
             </p>
-            <ul className="text-sm text-gray-500 space-y-2">
+            <ul className='text-sm text-gray-500 space-y-2'>
               <li>• Automated backups</li>
               <li>• Disaster recovery planning</li>
               <li>• Data replication</li>
@@ -911,16 +906,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 
-        <div className="bg-gray-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Infrastructure That Scales</h2>
-          <p className="text-lg text-gray-700 mb-6">
+        <div className='bg-gray-50 rounded-lg p-8 text-center'>
+          <h2 className='text-2xl font-bold mb-4'>Infrastructure That Scales</h2>
+          <p className='text-lg text-gray-700 mb-6'>
             Our infrastructure solutions are designed to grow with your business, ensuring reliability and performance at every stage.
           </p>
-          <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+          <div className='flex justify-center gap-4'>
+            <a href='/contact' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700'>
               Get Consultation
             </a>
-            <a href="/about" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
+            <a href='/about' className='border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50'>
               View Case Studies
             </a>
           </div>
@@ -930,4 +925,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
 export default AdvancedITInfrastructureServices
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/advanced-it-infrastructure-services.tsx

@@ -297,7 +297,7 @@ import { Input } from "@/components/ui/input",import { Textarea } from "@/compon
             Generate Optimized Content;
           </>;
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)}</Button> </div>)}'";"
-}}
+}
 }
 }<Sparkles className="h-4 w-4 mr-2" />;"
             Generate Optimized Content;

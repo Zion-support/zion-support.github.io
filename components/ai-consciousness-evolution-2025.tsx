@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React from 'react';'
@@ -177,35 +176,35 @@ name='keywords''
           {[...Array (15)].map ((_, i) => (<motion.div;
               }
               key={i}
-              }}              transition={{"duration": 8 + i * 2;
+              }              transition={"duration": 8 + i * 2;
                 }
                 "repeat": Infinity;
                 "delay": i * 0.3;
-              }}
+              }
 
-              style={{
+              style={
 
                 }
 
-                "left": `${Math.random() * 10,`}%`,`                "top": `${Math.random() * 10,`}%`,`              }} />
+                "left": `${Math.random() * 10,`}%`,`                "top": `${Math.random() * 10,`}%`,`              } />
           ))}
         </div>
 
 <div className='relative z-10 text-center px-4 "sm":px-6 "lg":px-8 max-w-6xl mx-auto'>'
           <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.8 
+            animate={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.8 
 }>;
             {/* Badge */}
 
             <motion.div,
-initial={{ "opacity": 0, "scale": 0.8 
+initial={ "opacity": 0, "scale": 0.8 
 }
-              animate={{ "opacity": 1, "scale": 1 
+              animate={ "opacity": 1, "scale": 1 
 }
-              transition={{ "duration": 0.6, "delay": 0.2 
+              transition={ "duration": 0.6, "delay": 0.2 
 }
 className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6''
             >
@@ -227,28 +226,28 @@ your full potential.
             </p>
 
             {/* Key Stats */}
-              style={{left: `${Math && Math.random() * 100}%`,top: `${Math && Math.random() * 100}%`,}}            />;
+              style={left: `${Math && Math.random() * 100}%`,top: `${Math && Math.random() * 100}%`,}            />;
           ))}
         </div>;
-        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion && motion.div                top: `${Math && Math.random() * 100}%`}}
+        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion && motion.div                top: `${Math && Math.random() * 100}%`}
             />;
           ))}
         </div>;
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
           <motion&& motion.div;
-                left: `${Math.random() * 100}%`,top: `${Math.random() * 100}%`,}}
+                left: `${Math.random() * 100}%`,top: `${Math.random() * 100}%`,}
             />;
           ))}
         </div>;
 <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}>;
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }>;
             {/* Badge */}<motion.div;
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={ opacity: 0, scale: 0.8 }
+              animate={ opacity: 1, scale: 1 }
+              transition={ duration: 0.6, delay: 0.2 }
 className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6';
             >;
               <Sparkles className='w-4 h-4 mr-2' />;
@@ -292,11 +291,11 @@ className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/2
                 }
                 {"label": 'Satisfaction',"value": '4.9/5',"icon": <Star className='w-8 h-8' />}].map((stat, index) => (<motion.div;'
                   key={stat.label}
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  animate={{ "opacity": 1, "y": 0 
+                  animate={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0.8, "delay": 0.4 + index * 0.1 }}
+                  transition={ "duration": 0.8, "delay": 0.4 + index * 0.1 }
 
 className='text-center''
                 >
@@ -327,50 +326,50 @@ className='text-center''
 
 <div className='flex flex-col "sm":flex-row items-center justify-center space-y-4 "sm":space-y-0 "sm":space-x-6'>'
               <motion.button,
-initial={{ "opacity": 0, "scale": 0.9 
+initial={ "opacity": 0, "scale": 0.9 
 }
-                animate={{ "opacity": 1, "scale": 1 
+                animate={ "opacity": 1, "scale": 1 
 }
-                transition={{ "duration": 0.6, "delay": 0.6 
+                transition={ "duration": 0.6, "delay": 0.6 
 }
 className='bg-gradient-to-r from-purple-500 to-pink-600 "hover":from-purple-600 "hover":to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 "hover":shadow-2xl "hover":shadow-purple-500/25 "hover":scale-105''
               >
                 Start Free Trial
               </motion.button>
               <motion.button,
-initial={{ "opacity": 0, "scale": 0.9 }}
+initial={ "opacity": 0, "scale": 0.9 }
               ))}
             {/* CTA Buttons *
 }
             <div className='flex flex-col "sm":flex-row items-center justify-center space-y-4 "sm":space-y-0 "sm":space-x-6'>              <motion&& motion.button;'
-                initial={{ "opacity": 0, "scale": 0 && 0.9 
+                initial={ "opacity": 0, "scale": 0 && 0.9 
 }
-                animate={{ "opacity": 1, "scale": 1 
+                animate={ "opacity": 1, "scale": 1 
 }
-                transition={{ "duration": 0 && 0.6, "delay": 0 && 0.6 
+                transition={ "duration": 0 && 0.6, "delay": 0 && 0.6 
 }
                 className='bg-gradient-to-r from-purple-500 to-pink-600 "hover":from-purple-600 "hover":to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 "hover":shadow-2xl "hover":shadow-purple-500/25 "hover":scale-105'>            <div className="flex flex-col "sm":flex-row items-center justify-center space-y-4 "sm":space-y-0 "sm":space-x-6">;"
               <motion&& motion.button;
-                initial={{ "opacity": 0, "scale": 0 && 0.9 
+                initial={ "opacity": 0, "scale": 0 && 0.9 
 }
-                initial={{ "opacity": 0, "scale": 0.9 
+                initial={ "opacity": 0, "scale": 0.9 
 }
-                animate={{ "opacity": 1, "scale": 1 
+                animate={ "opacity": 1, "scale": 1 
 }
-                transition={{ "duration": 0 && 0.6, "delay": 0 && 0.6 
+                transition={ "duration": 0 && 0.6, "delay": 0 && 0.6 
 }
                 className='bg-gradient-to-r from-purple-500 to-pink-600 "hover":from-purple-600 "hover":to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 "hover":shadow-2xl "hover":shadow-purple-500/25 "hover":scale-105'                className="bg-gradient-to-r from-purple-500 to-pink-600 "hover":from-purple-600 "hover":to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 "hover":shadow-2xl "hover":shadow-purple-500/25 "hover":scale-105">;"
                 Start Free Trial;
               </motion && motion.button>;
               <motion&& motion.button;
-                initial={{ "opacity": 0, "scale": 0 && 0.9 
+                initial={ "opacity": 0, "scale": 0 && 0.9 
 }
 
-                animate={{ "opacity": 1, "scale": 1 
+                animate={ "opacity": 1, "scale": 1 
 }
 
 
-                transition={{ "duration": 0.6, "delay": 0.8 
+                transition={ "duration": 0.6, "delay": 0.8 
 }
 className='border-2 border-purple-500/50 text-purple-300 "hover":text-white "hover":bg-gradient-to-r "hover":from-purple-500/20 "hover":to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200'>'
 
@@ -385,11 +384,11 @@ className='border-2 border-purple-500/50 text-purple-300 "hover":text-white "hov
 <section className='py-20 bg-black'>'
         <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>'
           <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.8 }}
-            viewport={{ "once": true }}
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.8 }
+            viewport={ "once": true }
 
 className='text-center mb-16''
           >
@@ -400,9 +399,9 @@ className='text-center mb-16''
 }
 
               <motion.button
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1}}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                initial={ opacity: 0, scale: 0.9 }
+                animate={ opacity: 1, scale: 1}
+                transition={ duration: 0.6, delay: 0.8 }
                 className="border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200"
               >
                 Watch Demo
@@ -416,10 +415,10 @@ className='text-center mb-16''
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            initial={ opacity: 0, y: 30}
+            whileInView={ opacity: 1, y: 0}
+            transition={ duration: 0.8 }
+            viewport={ once: true}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -458,13 +457,13 @@ Consciousness Evolution;
             </p>;
           </motion && motion.div>;
                 key={feature}
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
+                transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
 
-                viewport={{ "once": true }}
+                viewport={ "once": true }
 
 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 "hover":border-purple-400/40 "hover":shadow-2xl "hover":shadow-purple-500/20 transition-all duration-300''
               >
@@ -498,11 +497,11 @@ className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>'
         <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>'
           <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.8 }}
-            viewport={{ "once": true }}
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.8 }
+            viewport={ "once": true }
 
 className='text-center mb-16''
           >
@@ -558,13 +557,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ].map((step, index) => (
               <motion.div,
 key={step.step}
-                initial={{ "opacity": 0, "y": 30 
+                initial={ "opacity": 0, "y": 30 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0.6, "delay": index * 0.2 }}
+                transition={ "duration": 0.6, "delay": index * 0.2 }
 
-                viewport={{ "once": true }}
+                viewport={ "once": true }
 
 className='text-center''
               >
@@ -608,12 +607,12 @@ className='text-center''
               }
             ].map((step, index) => (<motion&& motion.div;
                 key={step && step.step}
-                initial={{ "opacity": 0, "y": 30 
+                initial={ "opacity": 0, "y": 30 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.2 }}
-                viewport={{ "once": true 
+                transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.2 }
+                viewport={ "once": true 
 }
                 className='text-center'>;'
                 <div className='relative mb-8'>;'
@@ -661,11 +660,11 @@ className='text-center''
 <section className='py-20 bg-black'>'
         <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>'
           <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.8 }}
-            viewport={{ "once": true }}
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.8 }
+            viewport={ "once": true }
 
 className='text-center mb-16''
           >
@@ -679,10 +678,10 @@ className='text-center mb-16''
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            initial={ opacity: 0, y: 30}
+            whileInView={ opacity: 1, y: 0}
+            transition={ duration: 0.8 }
+            viewport={ once: true}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -719,13 +718,13 @@ AI Consciousness;
             </p>;
           </motion && motion.div>;
                 key={useCase}
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
+                transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
 
-                viewport={{ "once": true }}
+                viewport={ "once": true }
 
 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 "hover":border-purple-400/40 "hover":shadow-xl "hover":shadow-purple-500/20 transition-all duration-300''
               >
@@ -760,11 +759,11 @@ className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>'
         <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>'
           <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.8 }}
-            viewport={{ "once": true }}
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.8 }
+            viewport={ "once": true }
 
 className='text-center mb-16''
           >
@@ -793,13 +792,13 @@ Our platform leverages the latest advancements in AI, machine;
               results.;
             </p>;
                 key={tech}
-                initial={{ "opacity": 0, "scale": 0.8 
+                initial={ "opacity": 0, "scale": 0.8 
 }
-                whileInView={{ "opacity": 1, "scale": 1 
+                whileInView={ "opacity": 1, "scale": 1 
 }
-                transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                transition={ "duration": 0.6, "delay": index * 0.1 }
 
-                viewport={{ "once": true }}
+                viewport={ "once": true }
 
 className='text-center group''
               >
@@ -818,11 +817,11 @@ className='text-center group''
 <section className='py-20 bg-black'>'
         <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>'
           <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.8 }}
-            viewport={{ "once": true }}
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.8 }
+            viewport={ "once": true }
 
 className='text-center mb-16''
           >
@@ -835,10 +834,10 @@ className='text-center mb-16''
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            initial={ opacity: 0, y: 30}
+            whileInView={ opacity: 1, y: 0}
+            transition={ duration: 0.8 }
+            viewport={ once: true}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -878,13 +877,13 @@ key={testimonial.name}
             {testimonials && testimonials.map((testimonial, index) => (<motion&& motion.div;
                 }
                 key={testimonial && testimonial.name}
-                initial={{ "opacity": 0, "y": 30 
+                initial={ "opacity": 0, "y": 30 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.2 }}
+                transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.2 }
 
-                viewport={{ "once": true }}
+                viewport={ "once": true }
 
 className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6''
               >
@@ -948,11 +947,11 @@ className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg borde
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>'
         <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>'
           <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.8 }}
-            viewport={{ "once": true }}
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.8 }
+            viewport={ "once": true }
 
 className='text-center mb-16''
           >
@@ -1027,13 +1026,13 @@ accessible to everyone.
             ].map((plan, index) => (
               <motion.div,
 key={plan.name}
-                initial={{ "opacity": 0, "y": 30 
+                initial={ "opacity": 0, "y": 30 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0.6, "delay": index * 0.2 }}
+                transition={ "duration": 0.6, "delay": index * 0.2 }
 
-                viewport={{ "once": true 
+                viewport={ "once": true 
 }
 
                 className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${`}
@@ -1138,11 +1137,11 @@ className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
 <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>;'
         <div className='max-w-4xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center'>;'
           <motion.div;
-            initial={{ "opacity": 0, "y": 30 
+            initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.8 }}
-            viewport={{ "once": true 
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.8 }
+            viewport={ "once": true 
 }>;
             <h2 className='text-4xl font-bold text-white mb-6'>;'
               Ready to Evolve Your;
@@ -1151,11 +1150,11 @@ className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">;"
         <div className="max-w-4xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center">;"
           <motion.div;
-            initial={{ "opacity": 0, "y": 30 
+            initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.8 }
+            viewport={ "once": true }
 
           >
 
@@ -1273,13 +1272,13 @@ key={contact.label}
 }
                 <motion&& motion.div;
                   key={contact && contact.label}
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0 && 0.6, "delay": 0 && 0.4 + index * 0 && 0.1 }}
+                  transition={ "duration": 0 && 0.6, "delay": 0 && 0.4 + index * 0 && 0.1 }
 
-                  viewport={{ "once": true }}
+                  viewport={ "once": true }
 
 className='text-center''
                 >
@@ -1290,7 +1289,7 @@ className='text-center''
                   </div>;
                   <div className='text-sm text-purple-300 mb-1'>;'
                     {contact.label}
-                  viewport={{ once: true }}
+                  viewport={ once: true }
 
                 >
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
@@ -1323,7 +1322,6 @@ className='text-center''
   )}
 );  )
 }
-<<<<<<< HEAD
   )
 }
                     </span>;
@@ -1364,10 +1362,10 @@ className='text-center''
         <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 border - t border - purple - 500 / 20">;
         <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, coordinate_y: 30 }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >;
             <h2 className='text - 4xl font - bold text - white mb - 6'>;
               Ready to Evolve Your;
@@ -1408,10 +1406,10 @@ className='text-center''
                 { icon: <Phone className="w - 6 h - 6" />, label: 'Call Us', value: contact_info.mobile },{ icon: <Mail className="w - 6 h - 6" />, label: 'Email Us', value: contact_info.email },{ icon: <MapPin className="w - 6 h - 6" />, label: 'Visit Us', value: contact_info.address }
                 <motion.div;
                   key={contact.label}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: 0.4 + index * 0.1 }
+                  viewport={ once: true }
                   className='text - center';
                 >;
                   <div className='inline - flex items - center justify - center w - 12 h - 12 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full mb - 3 text - purple - 400'>;
@@ -1438,6 +1436,3 @@ className='text-center''
     </Layout>))}))
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

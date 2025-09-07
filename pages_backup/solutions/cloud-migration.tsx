@@ -1,5 +1,4 @@
 
-=======
 import React from 'react';
 import Link from 'next/link';';
 
@@ -22,7 +21,6 @@ import { Cloud,
 import Layout from "../../components/Layout";";
 
 
-=======
 
 const phases = [;
   {}
@@ -136,8 +134,8 @@ const benefits = [;
 
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
 
               className="text-center mb-16""
             >;"
@@ -154,10 +152,10 @@ const benefits = [;
               {services.map((service, index) => (,
                 <motion.div}),
                   key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
 
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={ duration: 0.6, delay: index * 0.1 }
 
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8""
                 >;"
@@ -191,8 +189,8 @@ const benefits = [;
 
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
 
               className="text-center mb-16""
             >;"
@@ -209,9 +207,9 @@ const benefits = [;
               {benefits.map((benefit, index) => (,
                 <motion.div}),
                   key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }"
                   className="text-center""
                 >;"
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">";"
@@ -230,11 +228,10 @@ const benefits = [;
 
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
 
-=======
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?

@@ -46,7 +46,7 @@ export function ApiDocsLayout() {;
   );
 }
 
-export default ApiDocsLayout;;
+export default ApiDocsLayout;
 export default ApiDocsLayout;
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const location = useLocation($2);

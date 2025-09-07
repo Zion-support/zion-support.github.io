@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"
+import { cn } from '@/lib/utils'
 
 const ToastProvider = ToastPrimitives.Provider
 const ToastViewport = React.forwardRef<
@@ -13,7 +13,7 @@ import {X} from 'lucide-react';
 import {cn} from '@/lib/utils';
 const ToastProvider = ToastPrimitives.Provider;
 
-import { cn } from "@/lib/utils"
+import { cn } from '@/lib/utils'
 
 const ToastProvider = $2;
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
@@ -28,14 +28,14 @@ const ToastProvider = $2;
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName
 
 const toastVariants = cva(
-  "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
+  'group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full',
   {
     variants: {
       variant: {
-        default: "border bg-background text-foreground",
+        default: 'border bg-background text-foreground',
         destructive:
-          "destructive group border-destructive bg-destructive text-destructive-foreground",
-        success: "border bg-background text-foreground"}},
+          'destructive group border-destructive bg-destructive text-destructive-foreground',
+        success: 'border bg-background text-foreground'},
 ))
 ToastViewport.displayName = $2;
   {
@@ -48,7 +48,7 @@ ToastViewport.displayName = $2;
       }
     }
     defaultVariants: {
-      variant: "default"}}
+      variant: 'default'}
 )
 
 const Toast = React.forwardRef<
@@ -286,7 +286,7 @@ const ToastDescription = React.forwardRef<;
 ));
 ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
-      // // // console.log("Toast:", props)
+      // // // console.log('Toast:', props)
 ;
 // Add useToast hook export;
 export function useToast() {;
@@ -294,6 +294,6 @@ export function useToast() {;
     // Accept a loosely typed props object to allow custom fields like `description`;
     toast: (props: any) => {;
       // Implementation of toast functionality;
-      // // // console.log("Toast:", props);
-    }}
+      // // // console.log('Toast:', props);
+    }
 }

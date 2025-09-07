@@ -15,31 +15,31 @@ title="Zion Tech Group - Leading AI & Technology Solutions""
     {/* Hero Section */}
     <motion.div
 className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"",
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+      initial={ opacity: 0, y: 20 }
+      animate={ opacity: 1, y: 0 }
+      transition={ duration: 0.8 }
     >
 <div className="text-center mb-16">"
         <motion.h1
           className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"",
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={ opacity: 0, y: 30 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.2 }
         >
           Zion Tech Group
         </motion.h1>
         <motion.p
 className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto"",
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.4 }
         >
           Leading AI & Technology Solutions for a Smarter Future
         </motion.p>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8, delay: 0.6 }
         >
           <Button variant="primary" size="lg" onClick={() => alert('Learn More!')}>'
             Explore Our Services
@@ -49,13 +49,13 @@ className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto"
       {/* Services Grid */}
       <motion.div
 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-20"",
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
+        initial={ opacity: 0, y: 40 }
+        animate={ opacity: 1, y: 0 }
+        transition={ duration: 0.8, delay: 0.8 }
       >
         <motion.div
-          whileHover={{ scale: 1.05, y: -10 }}
-          transition={{ duration: 0.3 }}
+          whileHover={ scale: 1.05, y: -10 }
+          transition={ duration: 0.3 }
         >
           <ServiceCard
             title="AI Services""
@@ -65,8 +65,8 @@ className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-20""
           />
         </motion.div>
         <motion.div
-          whileHover={{ scale: 1.05, y: -10 }}
-          transition={{ duration: 0.3 }}
+          whileHover={ scale: 1.05, y: -10 }
+          transition={ duration: 0.3 }
         >
           <ServiceCard
             title="Cybersecurity""
@@ -76,8 +76,8 @@ className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-20""
           />
         </motion.div>
         <motion.div
-          whileHover={{ scale: 1.05, y: -10 }}
-          transition={{ duration: 0.3 }}
+          whileHover={ scale: 1.05, y: -10 }
+          transition={ duration: 0.3 }
         >
           <ServiceCard
             title="Cloud Infrastructure""
@@ -90,9 +90,9 @@ className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-20""
       {/* Why Choose Us Section */}
       <motion.div
 className="text-center""
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.0 }}
+        initial={ opacity: 0, y: 40 }
+        animate={ opacity: 1, y: 0 }
+        transition={ duration: 0.8, delay: 1.0 }
       >
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">",
           Why Choose Us?
@@ -108,10 +108,10 @@ className="text-center""
           ].map((item, index) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.5, delay: 1.2 + index * 0.1 }
+              whileHover={ scale: 1.05, y: -5 }
             >
               <Card
                 title={item.title}

@@ -151,7 +151,7 @@ export async function getTalentRateSuggestion ("params": TalentRateParams): Prom
   }
   try {
     }
-    const { skills, years_experience, location } = params;;
+    const { skills, years_experience, location } = params;
     // Simulate API call delay;
     await new Promise (resolve => { return set_timeout (resolve, 1000)); }
 ;

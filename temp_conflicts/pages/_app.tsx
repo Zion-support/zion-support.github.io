@@ -38,9 +38,7 @@ import {
   validateProductionEnvironment,
   initializeServices} from '@/utils/environmentConfig',
 
-// ============================================================// DYNAMIC IMPORTS - Load heavy providers only when needed
-// =====================================================// Load non-critical providers dynamically to reduce initial bundle
-const WhitelabelProvider = dynamic(() => 
+// // const WhitelabelProvider = dynamic(() => 
   import('@/context/WhitelabelContext').then(mod => ({ default: mod.WhitelabelProvider })), {
   ssr: true,
   loading: () => null
@@ -80,8 +78,8 @@ const AppLayout = dynamic(() =>
   import('@/layout/AppLayout').then(mod => ({ default: mod.AppLayout })), {
   ssr: true,
   loading: () => (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="animate-pulse text-lg">Loading layout...</div>
+    <div className='flex items-center justify-center min-h-screen'>
+      <div className='animate-pulse text-lg'>Loading layout...</div>
     </div>
   )
 }),
@@ -111,9 +109,7 @@ const RouteSEO = dynamic(() =>
   loading: () => null
 }),
 
-// ============================================================// FONT CONFIGURATION - Optimized loading
-// =====================================================const inter = Inter({
-  subsets: ['latin'],
+// //   subsets: ['latin'],
   weight: ['400600700'],
   display: 'swap',
   fallback: ['system-uiarial'],
@@ -130,9 +126,7 @@ const poppins = Poppins({
   variable: '--font-poppins',
   preload: true}),
 
-// ============================================================// LIGHTWEIGHT LANGUAGE WRAPPER
-// =====================================================const LanguageProviderWrapper: React.FC<{ children: React.ReactNode }> = ({
-  children}) => {
+// //   children}) => {
   const { user, isAuthenticated } = useAuth(),
   const [isClient, setIsClient] = React.useState(false),
 
@@ -152,15 +146,13 @@ const poppins = Poppins({
   )
 },
 
-// ============================================================// MAIN APP COMPONENT - FIXED: Optimized with fallback safety
-// =====================================================function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter(),
+// //   const router = useRouter(),
   const [queryClient] = React.useState(() => new QueryClient({
     defaultOptions: {
       queries: {
         staleTime: 5 * 60 * 1000,
         gcTime: 10 * 60 * 1000,
-        retry: false}}})),
+        retry: false}})),
   const [isInitialized, setIsInitialized] = React.useState(false),
   const [initError, setInitError] = React.useState<string | null>(null),
 
@@ -291,14 +283,14 @@ const poppins = Poppins({
   // FIXED: Enhanced loading screen with error display
   if (!isInitialized) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-purple-900">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-2 border-cyan-400 border-t-transparent mx-auto mb-4"></div>
-          <p className="text-white text-lg font-medium">Initializing Zion App...</p>
-          <p className="text-blue-200 text-sm mt-2">
+      <div className='flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-purple-900'>
+        <div className='text-center'>
+          <div className='animate-spin rounded-full h-12 w-12 border-2 border-cyan-400 border-t-transparent mx-auto mb-4'></div>
+          <p className='text-white text-lg font-medium'>Initializing Zion App...</p>
+          <p className='text-blue-200 text-sm mt-2'>
             {initError ? `Error: ${initError}` : 'Optimizing performance...'}
           </p>
-          <p className="text-blue-300 text-xs mt-2">This should complete in a few seconds</p>
+          <p className='text-blue-300 text-xs mt-2'>This should complete in a few seconds</p>
         </div>
       </div>
     )
@@ -342,8 +334,8 @@ const poppins = Poppins({
             <HydrationErrorBoundary>
               <React.Suspense
                 fallback={
-                  <div className="flex items-center justify-center min-h-screen">
-                    <div className="animate-pulse text-lg">Loading app...</div>
+                  <div className='flex items-center justify-center min-h-screen'>
+                    <div className='animate-pulse text-lg'>Loading app...</div>
                   </div>
                 }
               >
@@ -355,9 +347,9 @@ const poppins = Poppins({
                           <ErrorProvider>
                             <AuthProvider>
                               <ErrorBoundary fallback={
-                                <div className="flex items-center justify-center min-h-screen">
-                                  <div className="text-center">
-                                    <h2 className="text-xl mb-4">Loading providers...</h2>
+                                <div className='flex items-center justify-center min-h-screen'>
+                                  <div className='text-center'>
+                                    <h2 className='text-xl mb-4'>Loading providers...</h2>
                                     <p>If this takes too long, there may be a provider issue.</p>
                                   </div>
                                 </div>

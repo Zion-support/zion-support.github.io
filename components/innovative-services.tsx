@@ -41,25 +41,25 @@ const [sortBy, setSortBy] = useState('innovation');'
 
 const [showFilters, setShowFilters] = useState(false);
 
-    { "value": 'All', "label": 'All Prices','
+    { 'value': 'All', 'label': 'All Prices','
 },
-{ "value": '0-1000', "label": '$0 - $1,000' },'
-    { "value": '1001-2000', "label": '$1,001 - $2,000' },'
-    { "value": '2001-3000', "label": '$2,001 - $3,000' },'
-    { "value": '3001-5000', "label": '$3,001 - $5,000' },'
-    { "value": '5001+', "label": '$5,001+' },'
+{ 'value': '0-1000', 'label': '$0 - $1,000' },'
+    { 'value': '1001-2000', 'label': '$1,001 - $2,000' },'
+    { 'value': '2001-3000', 'label': '$2,001 - $3,000' },'
+    { 'value': '3001-5000', 'label': '$3,001 - $5,000' },'
+    { 'value': '5001+', 'label': '$5,001+' },'
   ];
 
 const sortOptions = [;
-    { "value": 'innovation', "label": 'Innovation Level','
+    { 'value': 'innovation', 'label': 'Innovation Level','
 },
-    { "value": 'price', "label": 'Price Low-High','
+    { 'value': 'price', 'label': 'Price Low-High','
 },
-    { "value": 'popularity', "label": 'Most Popular','
+    { 'value': 'popularity', 'label': 'Most Popular','
 },
-    { "value": 'category', "label": 'Category','
+    { 'value': 'category', 'label': 'Category','
 },
-{ "value": 'roi', "label": 'Highest ROI','
+{ 'value': 'roi', 'label': 'Highest ROI','
 }
   ];
   // Filter and sort services,
@@ -167,11 +167,11 @@ const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');'
 return bRoi - aRoi;
 
       }
-      "default": {// Innovation level sorting;
+      'default': {// Innovation level sorting;
 
 }
 
-const innovationOrder = { "Breakthrough": 3, "Advanced": 2, "Standard": 1,;
+const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1,;
 }
 ;
   const aLevel = a.innovationLevel.split(' - ')[0];'
@@ -196,10 +196,10 @@ const bLevel = b.innovationLevel.split(' - ')[0];'
 
 const contactInfo = {
     }
-    "mobile": '+1 302 464 0950','
-    "email": 'kleber@ziontechgroup.com','
-    "address": '364 E Main St STE 1008 Middletown DE 19709','
-"website": '"https"://ziontechgroup.com','
+    'mobile': '+1 302 464 0950','
+    'email': 'kleber@ziontechgroup.com','
+    'address': '364 E Main St STE 1008 Middletown DE 19709','
+'website': ''https'://ziontechgroup.com','
   };
 
 const popularServices = getPopularInnovativeServices();
@@ -217,31 +217,31 @@ name='description''
 name='keywords''
           content='quantum AI, blockchain, cybersecurity, autonomous systems, micro SAAS, innovation, quantum computing, AI services'' />
         <meta,
-property='"og":title''
+property=''og':title''
           content='Innovative Micro SAAS Services - Zion Tech Group'' />
         <meta,
-property='"og":description''
+property=''og':description''
           content='Revolutionary quantum AI, blockchain, and autonomous systems. Breakthrough micro SAAS services with unprecedented innovation.'' />
         <meta,
-property='"og": url''
-          content='"https"://ziontechgroup.com/innovative-services'' />
-        <meta property='"og":type' content='website' />'
+property=''og': url''
+          content=''https'://ziontechgroup.com/innovative-services'' />
+        <meta property=''og':type' content='website' />'
         <link,
 rel='canonical''
-          href='"https"://ziontechgroup.com/innovative-services'' />
+          href=''https'://ziontechgroup.com/innovative-services'' />
       </Head>
 
       <QuantumHolographicBackground>
         <div className='min-h-screen'>'
           {/* Hero Section *
 }
-          <section className='relative py-20 px-4 "sm":px-6 "lg":px-8'>'
+          <section className='relative py-20 px-4 'sm':px-6 'lg':px-8'>'
             <div className='max-w-7xl mx-auto text-center'>'
               <div className='mb-8'>'
-                <h1 className='text-5xl "md":text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>'
+                <h1 className='text-5xl 'md':text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>'
                   Revolutionary Innovation
                 </h1>
-                <p className='text-xl "md":text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>'
+                <p className='text-xl 'md':text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>'
                   Discover the future of technology with our breakthrough micro,
 SAAS services. From quantum AI to autonomous systems, we're'
                   redefining what's possible.'
@@ -249,27 +249,27 @@ SAAS services. From quantum AI to autonomous systems, we're'
               </div>
 
               {/* Innovation Stats */}
-<div className='grid grid-cols-2 "md": grid-cols-4 gap-6 mb-12'>'
+<div className='grid grid-cols-2 'md': grid-cols-4 gap-6 mb-12'>'
                 <div className='text-center'>'
-                  <div className='text-3xl "md":text-4xl font-bold text-cyan-400 mb-2'>'
+                  <div className='text-3xl 'md':text-4xl font-bold text-cyan-400 mb-2'>'
                     10
                   </div>
                   <div className='text-gray-400'>Breakthrough Services</div>'
                 </div>
                 <div className='text-center'>'
-                  <div className='text-3xl "md":text-4xl font-bold text-purple-400 mb-2'>'
+                  <div className='text-3xl 'md':text-4xl font-bold text-purple-400 mb-2'>'
                     $25B+
                   </div>
                   <div className='text-gray-400'>Market Value</div>'
                 </div>
                 <div className='text-center'>'
-                  <div className='text-3xl "md":text-4xl font-bold text-pink-400 mb-2'>'
+                  <div className='text-3xl 'md':text-4xl font-bold text-pink-400 mb-2'>'
                     2500%
                   </div>
                   <div className='text-gray-400'>Average ROI</div>'
                 </div>
                 <div className='text-center'>'
-                  <div className='text-3xl "md":text-4xl font-bold text-green-400 mb-2'>'
+                  <div className='text-3xl 'md':text-4xl font-bold text-green-400 mb-2'>'
                     99.99%
                   </div>
                   <div className='text-gray-400'>Accuracy Rate</div>'
@@ -281,7 +281,7 @@ SAAS services. From quantum AI to autonomous systems, we're'
                 <h3 className='text-2xl font-bold text-white mb-4'>'
                   Ready to Transform Your Business?
                 </h3>
-                <div className='grid grid-cols-1 "md":grid-cols-3 gap-4 text-sm'>'
+                <div className='grid grid-cols-1 'md':grid-cols-3 gap-4 text-sm'>'
                   <div className='flex items-center justify-center space-x-2'>'
                     <Phone className='w-5 h-5 text-cyan-400' />'
                     <span className='text-gray-300'>{contactInfo.mobile}</span>'
@@ -301,10 +301,10 @@ SAAS services. From quantum AI to autonomous systems, we're'
 
           {/* Filters and Search *
 }
-<section className='px-4 "sm":px-6 "lg":px-8 mb-12'>;'
+<section className='px-4 'sm':px-6 'lg':px-8 mb-12'>;'
             <div className='max-w-7xl mx-auto'>;'
               <div className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10'>;'
-                <div className='flex flex-col "lg":flex-row gap-6'>;'
+                <div className='flex flex-col 'lg':flex-row gap-6'>;'
                   {/* Search */}
                   <div className='flex-1'>;'
                     <div className='relative'>;'
@@ -314,7 +314,7 @@ SAAS services. From quantum AI to autonomous systems, we're'
                         placeholder='Search innovative services...';'
                         value={searchQuery}
                         onChange={e => { return setSearchQuery(e.target.value)}
-                        className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 "focus":outline-none "focus":ring-2 "focus":ring-cyan-500 "focus":border-transparent'; }'
+                        className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 'focus':outline-none 'focus':ring-2 'focus':ring-cyan-500 'focus':border-transparent'; }'
                       />;
                     </div>;
                   </div>;
@@ -323,7 +323,7 @@ SAAS services. From quantum AI to autonomous systems, we're'
                     <select;
                       value={selectedCategory}
                       onChange={e => { return setSelectedCategory(e.target.value)}
-                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white "focus":outline-none "focus":ring-2 "focus":ring-cyan-500 "focus":border-transparent'>'
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white 'focus':outline-none 'focus':ring-2 'focus':ring-cyan-500 'focus':border-transparent'>'
 
                       <option value='All'>All Categories</option>; }'
                       {categories.map(category => (<option key={category.name} value={category.name}>;
@@ -337,7 +337,7 @@ SAAS services. From quantum AI to autonomous systems, we're'
                     <select,
 value={priceRange}
                       onChange={e => setPriceRange(e.target.value)}
-                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white "focus": outline-none "focus":ring-2 "focus":ring-cyan-500 "focus":border-transparent'>'
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white 'focus': outline-none 'focus':ring-2 'focus':ring-cyan-500 'focus':border-transparent'>'
 
                       {priceRanges.map(range => (<option key={range.value} value={range.valu
 }>;
@@ -353,7 +353,7 @@ value={priceRange}
                     <select,
 value={sortBy}
                       onChange={e => setSortBy(e.target.value)}
-                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white "focus": outline-none "focus":ring-2 "focus":ring-cyan-500 "focus":border-transparent'>'
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white 'focus': outline-none 'focus':ring-2 'focus':ring-cyan-500 'focus':border-transparent'>'
 
                       {sortOptions.map(option => (<option key={option.value} value={option.valu
 }>;
@@ -366,8 +366,8 @@ value={sortBy}
                   </div>;
                   {/* View Mode Toggle */}<div className='flex-shrink-0'>;'
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;{/* View Mode Toggle */}'
-                  <div className="flex-shrink-0">;"
-                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">;"
+                  <div className='flex-shrink-0'>;'
+                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;'
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>;
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
@@ -378,11 +378,11 @@ value={sortBy}
                   </div>
 
                   {/* Price Range Filter */}
-                  <div className="flex-shrink-0">
+                  <div className='flex-shrink-0'>
                     <select
                       value={priceRange}
                       onChange={(e) => setPriceRange(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
                       {priceRanges.map((range) => (
                         <option key={range.value} value={range.value}>
@@ -398,7 +398,7 @@ value={sortBy}
                       <button,
 onClick={() => setViewMode('grid')}'
                         className={`px-3 py-2 rounded-lg transition-all ${viewMode === 'grid';'                            ? 'bg-cyan-500 text-white';'
-                            : 'text-gray-400 "hover":text-white';'
+                            : 'text-gray-400 'hover':text-white';'
                         }`}>`
                         <Grid className='w-5 h-5' />;'
                       </button>;
@@ -406,7 +406,7 @@ onClick={() => setViewMode('grid')}'
                         onClick={() => setViewMode('list')}'
                         className={`px-3 py-2 rounded-lg transition-all ${viewMode === 'list';'
                             ? 'bg-cyan-500 text-white';'
-                            : 'text-gray-400 "hover":text-white';'
+                            : 'text-gray-400 'hover':text-white';'
                         }`}`
 
                       >
@@ -417,7 +417,7 @@ onClick={() => setViewMode('list')}'
                         className={`px-3 py-2 rounded-lg transition-all ${`}
 viewMode === 'list''
                             ? 'bg-cyan-500 text-white''
-                            : 'text-gray-400 "hover": text-white''
+                            : 'text-gray-400 'hover': text-white''
                         }`}`                      >
                         <List className='w-5 h-5' />'
                       </button>
@@ -432,7 +432,7 @@ viewMode === 'list''
 
           {/* Services Grid/List *
 }
-<section className='px-4 "sm":px-6 "lg":px-8 mb-20'>;'
+<section className='px-4 'sm':px-6 'lg':px-8 mb-20'>;'
             <div className='max-w-7xl mx-auto'>;'
               {filteredServices.length === 0 ? (<div className='text-center py-20'>;'
                   <div className='text-6xl mb-4'>🔍</div>;'
@@ -446,7 +446,7 @@ viewMode === 'list''
                 </div>;
               ) : (<div;
                   className={viewMode === 'grid';'
-                      ? 'grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8';'
+                      ? 'grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-3 gap-8';'
                       : 'space-y-6';'
                   }
                 >;
@@ -457,7 +457,7 @@ viewMode === 'list''
                           <div className='flex items-center space-x-3'>;'
                             <div className='text-3xl'>{service.icon}</div>;'
                             <div>;
-                              <h3 className='text-xl font-bold text-white group-"hover":text-cyan-400 transition-colors'>;'
+                              <h3 className='text-xl font-bold text-white group-'hover':text-cyan-400 transition-colors'>;'
                                 {service.name}
                               </h3>;
                               <p className='text-sm text-gray-400'>;'
@@ -474,32 +474,32 @@ viewMode === 'list''
 
 
           {/* Services Grid/List */}
-          <section className="px-4 sm:px-6 lg:px-8 mb-20">
-            <div className="max-w-7xl mx-auto">
+          <section className='px-4 sm:px-6 lg:px-8 mb-20'>
+            <div className='max-w-7xl mx-auto'>
               {filteredServices.length === 0 ? (
-                <div className="text-center py-20">
-                  <div className="text-6xl mb-4">🔍</div>
-                  <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-                  <p className="text-gray-400">Try adjusting your search criteria or filters</p>
+                <div className='text-center py-20'>
+                  <div className='text-6xl mb-4'>🔍</div>
+                  <h3 className='text-2xl font-bold text-white mb-2'>No services found</h3>
+                  <p className='text-gray-400'>Try adjusting your search criteria or filters</p>
                 </div>
               ) : (
                 <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
                   {filteredServices.map((service) => (
-                    <QuantumHolographicCard key={service.id} className="group">
-                      <div className="p-6">
+                    <QuantumHolographicCard key={service.id} className='group'>
+                      <div className='p-6'>
                         {/* Service Header */}
-                        <div className="flex items-start justify-between mb-4">
-                          <div className="flex items-center space-x-3">
-                            <div className="text-3xl">{service.icon}</div>
+                        <div className='flex items-start justify-between mb-4'>
+                          <div className='flex items-center space-x-3'>
+                            <div className='text-3xl'>{service.icon}</div>
                             <div>
-                              <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                              <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors'>
                                 {service.name}
                               </h3>
-                              <p className="text-sm text-gray-400">{service.category}</p>
+                              <p className='text-sm text-gray-400'>{service.category}</p>
                             </div>
                           </div>
                           {service.popular && (
-                            <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
+                            <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>
                               POPULAR
                             </div>
                           )}
@@ -601,14 +601,14 @@ viewMode === 'list''
                         </div>;
                         {/* CTA Buttons */}
                         <div className='flex space-x-3'>                          <div>;
-                        <div className="grid grid-cols-2 gap-4 mb-6 text-xs">;
+                        <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>;
                           <div>;
-                            <div className="text-gray-400">Market Size</div>;
-                            <div className="text-white font-medium">{service.marketSize}</div>;
+                            <div className='text-gray-400'>Market Size</div>;
+                            <div className='text-white font-medium'>{service.marketSize}</div>;
                           </div>;
                           <div>;
-                            <div className="text-gray-400">Growth Rate</div>;
-                            <div className="text-white font-medium">{service.growthRate}</div>;
+                            <div className='text-gray-400'>Growth Rate</div>;
+                            <div className='text-white font-medium'>{service.growthRate}</div>;
                           </div>;
                         </div>;
                         {/* Market Info */}
@@ -625,21 +625,21 @@ viewMode === 'list''
                               {service && service.growthRate}
                             </div>                          </div>;
                         </div>;
-                            variant="primary";
-                            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">;
+                            variant='primary';
+                            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700'>;
                             Learn More;
-                            <ArrowRight className="w-4 h-4 ml-2" />;
+                            <ArrowRight className='w-4 h-4 ml-2' />;
                           </Button>;
                           <Button;
                             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
-                            variant="secondary";
+                            variant='secondary';
                         {/* Contact Info */}
                         <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>;
                           <div>Contact: {contactInfo && contactInfo.mobile} | {contactInfo && contactInfo.email}
                           </div>;
-                          <div className='mt-1'>{contactInfo && contactInfo.website}</div>                        </div>                        <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">;
+                          <div className='mt-1'>{contactInfo && contactInfo.website}</div>                        </div>                        <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>;
                           <div>Contact: {contactInfo && contactInfo.mobile} | {contactInfo && contactInfo.email}</div>;
-                          <div className="mt-1">{contactInfo && contactInfo.website}</div>;
+                          <div className='mt-1'>{contactInfo && contactInfo.website}</div>;
                         </div>;
                       </div>;
                     </QuantumHolographicCard>;</div>;
@@ -650,13 +650,13 @@ viewMode === 'list''
                           <Button;
                             href={service.link}
                             variant='primary';'
-                            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 "hover":from-cyan-600 "hover":to-blue-700'>'
+                            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 'hover':from-cyan-600 'hover':to-blue-700'>'
 
                             Learn More;
                             <ArrowRight className='w-4 h-4 ml-2' />;'
                           </Button>;
                           <Button;
-                            href={`"mailto": ${contactInfo.email}?subject=Inquiry about ${service.name},`}
+                            href={`'mailto': ${contactInfo.email}?subject=Inquiry about ${service.name},`}
                             variant='secondary';'
                             className='px-4'>'
 
@@ -672,11 +672,11 @@ viewMode === 'list''
                       </div>;
                     </QuantumHolographicCard>;
                     </QuantumHolographicCard>;
-                        <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service.description}</p>
+                        <p className='text-gray-400 text-sm mb-6 leading-relaxed'>{service.description}</p>
 
 <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>'
                           <div>
-                            "Contact": {contactInfo.mobile} | {contactInfo.email}
+                            'Contact': {contactInfo.mobile} | {contactInfo.email}
                           </div>
                           <div className='mt-1'>{contactInfo.website}</div>'
                         </div>
@@ -691,10 +691,10 @@ viewMode === 'list''
           </section>
 
           {/* Call to Action */}
-<section className='px-4 "sm":px-6 "lg":px-8 mb-20'>;'
+<section className='px-4 'sm':px-6 'lg':px-8 mb-20'>;'
             <div className='max-w-4xl mx-auto text-center'>;'
               <EnhancedFuturisticCard className='p-12'>;'
-                <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>;'
+                <h2 className='text-4xl 'md':text-5xl font-bold text-white mb-6'>;'
                   Ready to Lead the Future?;
                 </h2>;
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;'
@@ -702,33 +702,33 @@ viewMode === 'list''
                   Transform your business with quantum AI, autonomous systems;
                   and cutting-edge technology.;
                 </p>;
-                <div className='flex flex-col "sm":flex-row gap-4 justify-center'>;'
+                <div className='flex flex-col 'sm':flex-row gap-4 justify-center'>;'
             </div>;
           </section>;{/* Call to Action */}
-          <section className='px-4 "sm":px-6 "lg":px-8 mb-20'>;'
+          <section className='px-4 'sm':px-6 'lg':px-8 mb-20'>;'
             <div className='max-w-4xl mx-auto text-center'>;'
               <EnhancedFuturisticCard className='p-12'>;'
-                <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>;'
+                <h2 className='text-4xl 'md':text-5xl font-bold text-white mb-6'>;'
                   Ready to Lead the Future?;
                 </h2>;
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;'
                   Join the revolution with our breakthrough micro SAAS services.;
                   Transform your business with quantum AI, autonomous systems,and cutting-edge technology.;
                 </p>;
-                <div className='flex flex-col "sm":flex-row gap-4 justify-center'>;'
+                <div className='flex flex-col 'sm':flex-row gap-4 justify-center'>;'
 
                   <Button,
 variant='primary';'
 
-                    className='bg-gradient-to-r from-cyan-500 to-blue-600 "hover": from-cyan-600 "hover":to-blue-700 px-8 py-4 text-lg''
+                    className='bg-gradient-to-r from-cyan-500 to-blue-600 'hover': from-cyan-600 'hover':to-blue-700 px-8 py-4 text-lg''
                   >
                     <Phone className='w-5 h-5 mr-2' />'
 
-                    Call "Now": {contactInfo.mobil
+                    Call 'Now': {contactInfo.mobil
 }
                   </Button>;
                   <Button;
-                    href={`"mailto": ${contactInfo.email}`}`
+                    href={`'mailto': ${contactInfo.email}`}`
 
 variant='secondary';'
                     className='px-8 py-4 text-lg''
@@ -738,8 +738,8 @@ variant='secondary';'
                   </Button>
                 </div>
                 <div className='mt-8 text-sm text-gray-400'>'
-                  <div>"Address": {contactInfo.address}</div>
-                  <div className='mt-1'>"Website": {contactInfo.websit,'
+                  <div>'Address': {contactInfo.address}</div>
+                  <div className='mt-1'>'Website': {contactInfo.websit,'
 }</div>
                 </div>
               </EnhancedFuturisticCard>
@@ -774,13 +774,13 @@ variant='secondary';
                 <div className='mt-8 text-sm text-gray-400'>;
                   <div>Address: {contactInfo && contactInfo.address}</div>;
                   <div className='mt-1'>Website: {contactInfo && contactInfo.website}</div>                </div>                  >;
-                    <Mail className="w-5 h-5 mr-2" />;
+                    <Mail className='w-5 h-5 mr-2' />;
                     Email Us;
                   </Button>;
                 </div>;
-                <div className="mt-8 text-sm text-gray-400">;
+                <div className='mt-8 text-sm text-gray-400'>;
                   <div>Address: {contactInfo && contactInfo.address}</div>;
-                  <div className="mt-1">Website: {contactInfo && contactInfo.website}</div>;
+                  <div className='mt-1'>Website: {contactInfo && contactInfo.website}</div>;
                         <p className='text - gray - 300 mb - 4 font - medium'>;
                           {service.tagline}
                         </p>;
@@ -798,14 +798,14 @@ variant='secondary';
                           </div>;
                           <div className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 3 py - 1 rounded - lg text - xs font - bold text - center'>                            {service.innovation_level}
                         {/* Description */}
-                        <p className="text - gray - 400 text - sm mb - 6 leading - relaxed">{service.description}</p>;
+                        <p className='text - gray - 400 text - sm mb - 6 leading - relaxed'>{service.description}</p>;
                         {/* Innovation Level */}
-                        <div className="mb - 4">;
-                          <div className="flex items - center space - x-2 mb - 2">;
-                            <Sparkles className="w - 4 h - 4 text - yellow - 400" />;
-                            <span className="text - sm font - medium text - yellow - 400">Innovation Level</span>;
+                        <div className='mb - 4'>;
+                          <div className='flex items - center space - x-2 mb - 2'>;
+                            <Sparkles className='w - 4 h - 4 text - yellow - 400' />;
+                            <span className='text - sm font - medium text - yellow - 400'>Innovation Level</span>;
                           </div>;
-                          <div className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 3 py - 1 rounded - lg text - xs font - bold text - center">;
+                          <div className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 3 py - 1 rounded - lg text - xs font - bold text - center'>;
                             {service.innovation_level}
                           </div>;
                         </div>;
@@ -827,14 +827,14 @@ variant='secondary';
                               average ROI;
                             </div>                          </div>;
                         </div>;
-                        {/* Key Features */}                        <div className="grid grid - cols - 2 gap - 4 mb - 6">;
-                          <div className="text - center">;
-                            <div className="text - 2xl font - bold text - cyan - 400">${service.price.monthly.toLocaleString ()}</div>;
-                            <div className="text - xs text - gray - 400">per month</div>;
+                        {/* Key Features */}                        <div className='grid grid - cols - 2 gap - 4 mb - 6'>;
+                          <div className='text - center'>;
+                            <div className='text - 2xl font - bold text - cyan - 400'>${service.price.monthly.toLocaleString ()}</div>;
+                            <div className='text - xs text - gray - 400'>per month</div>;
                           </div>;
-                          <div className="text - center">;
-                            <div className="text - lg font - bold text - green - 400">{service.roi.split (' ')[0]}</div>;
-                            <div className="text - xs text - gray - 400">average ROI</div>;
+                          <div className='text - center'>;
+                            <div className='text - lg font - bold text - green - 400'>{service.roi.split (' ')[0]}</div>;
+                            <div className='text - xs text - gray - 400'>average ROI</div>;
                         </div>;
                         {/* Key Features */}
                         <div className='mb - 6'>;
@@ -852,14 +852,14 @@ variant='secondary';
                                     {feature}
                                   </span>;
                                 </div>))}
-                            {service.features.length > 3 && (<div className='text - xs text - cyan - 400 text - center pt - 2'>                                +{service.features.length - 3} more features                        <div className="mb - 6">;
-                          <h4 className="text - sm font - semibold text - white mb - 3">Key Features</h4>;
-                          <div className="space - y-2">;
-                            {service.features.slice (0, 3).map ((feature, index) => (<div key={index} className="flex items - center space - x-2">;
-                                <Check className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
-                                <span className="text - xs text - gray - 300">{feature}</span>;
+                            {service.features.length > 3 && (<div className='text - xs text - cyan - 400 text - center pt - 2'>                                +{service.features.length - 3} more features                        <div className='mb - 6'>;
+                          <h4 className='text - sm font - semibold text - white mb - 3'>Key Features</h4>;
+                          <div className='space - y-2'>;
+                            {service.features.slice (0, 3).map ((feature, index) => (<div key={index} className='flex items - center space - x-2'>;
+                                <Check className='w - 4 h - 4 text - green - 400 flex - shrink - 0' />;
+                                <span className='text - xs text - gray - 300'>{feature}</span>;
                               </div>))}
-                            {service.features.length > 3 && (<div className="text - xs text - cyan - 400 text - center pt - 2">;
+                            {service.features.length > 3 && (<div className='text - xs text - cyan - 400 text - center pt - 2'>;
                               </div>)}
                           </div>;
                         </div>;
@@ -879,12 +879,12 @@ variant='secondary';
                         </div>;
                         {/* CTA Buttons */}
                         <div className='flex space - x-3'>                          <div>;
-                            <div className="text - gray - 400">Market Size</div>;
-                            <div className="text - white font - medium">{service.market_size}</div>;
+                            <div className='text - gray - 400'>Market Size</div>;
+                            <div className='text - white font - medium'>{service.market_size}</div>;
                           </div>;
                           <div>;
-                            <div className="text - gray - 400">Growth Rate</div>;
-                            <div className="text - white font - medium">{service.growth_rate}</div>;
+                            <div className='text - gray - 400'>Growth Rate</div>;
+                            <div className='text - white font - medium'>{service.growth_rate}</div>;
                           </div>;
                         </div>;
                         {/* CTA Buttons */}
@@ -906,27 +906,27 @@ variant='secondary';
                         </div>;
                         {/* Contact Info */}                          <Button;
                             href={service.link}
-                            variant="primary";
-                            className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700";
+                            variant='primary';
+                            className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700';
                           >;
                             Learn More;
-                            <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                            <ArrowRight className='w - 4 h - 4 ml - 2' />;
                           </Button>;
                           <Button;
                             href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}
-                            variant="secondary";
-                            className="px - 4";
+                            variant='secondary';
+                            className='px - 4';
                           >;
-                            <Mail className="w - 4 h - 4" />;
+                            <Mail className='w - 4 h - 4' />;
                           </Button>;
                         </div>;
                         {/* Contact Info */}
                         <div className='mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center'>;
                           <div>Contact: {contact_info.mobile} | {contact_info.email}
                           </div>;
-                          <div className='mt - 1'>{contact_info.website}</div>                        </div>                        <div className="mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center">;
+                          <div className='mt - 1'>{contact_info.website}</div>                        </div>                        <div className='mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center'>;
                           <div > Contact: {contact_info.mobile} | {contact_info.email}</div>;
-                          <div className="mt - 1">{contact_info.website}</div>;
+                          <div className='mt - 1'>{contact_info.website}</div>;
                         </div>;
                       </div>;
                     </QuantumHolographicCard>))}
@@ -957,17 +957,17 @@ variant='secondary';
                     variant='secondary';
                     className='px - 8 py - 4 text - lg'                  Ready to Lead the Future?;
                 </h2>;
-                <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
+                <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
                   Join the revolution with our breakthrough micro SAAS services.;
                   Transform your business with quantum AI, autonomous systems, and cutting - edge technology.;
                 </p>;
-                <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
                   <Button;
                     href={`tel:${contact_info.mobile}`}
-                    variant="primary";
-                    className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 px - 8 py - 4 text - lg";
+                    variant='primary';
+                    className='bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 px - 8 py - 4 text - lg';
                   >;
-                    <Phone className="w - 5 h - 5 mr - 2" />;
+                    <Phone className='w - 5 h - 5 mr - 2' />;
                     Call Now: {contact_info.mobile}
                   </Button>;
                   <Button;
@@ -982,13 +982,13 @@ variant='secondary';
                 <div className='mt - 8 text - sm text - gray - 400'>;
                   <div > Address: {contact_info.address}</div>;
                   <div className='mt - 1'>Website: {contact_info.website}</div>                </div>                  >;
-                    <Mail className="w - 5 h - 5 mr - 2" />;
+                    <Mail className='w - 5 h - 5 mr - 2' />;
                     Email Us;
                   </Button>;
                 </div>;
-                <div className="mt - 8 text - sm text - gray - 400">;
+                <div className='mt - 8 text - sm text - gray - 400'>;
                   <div > Address: {contact_info.address}</div>;
-                  <div className="mt - 1">Website: {contact_info.website}</div>;</div>;
+                  <div className='mt - 1'>Website: {contact_info.website}</div>;</div>;
               </EnhancedFuturisticCard>;
             </div>;
           </section>;
@@ -1005,4 +1005,3 @@ variant='secondary';
 })</>))}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

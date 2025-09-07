@@ -37,7 +37,7 @@ export interface ContractTemplate {;
   "updated_at": string;
 }
 ;
-}}
+}
 ;
 }
 ;

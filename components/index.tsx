@@ -124,10 +124,10 @@ const stats = [;
         </div>;
         <div className='relative z-10 text-center max-w-6xl mx-auto'>;'
           <motion.div;
-            initial={{ "opacity": 0, "y": 30 
+            initial={ "opacity": 0, "y": 30 
 }
-            animate={{ "opacity": isVisible ? 1 : 0, "y": isVisible ? 0 : 30 }}
-            transition={{ "duration": 0.8 
+            animate={ "opacity": isVisible ? 1 : 0, "y": isVisible ? 0 : 30 }
+            transition={ "duration": 0.8 
 }
 className='mb-8'>'
 
@@ -140,11 +140,11 @@ className='mb-8'>'
             </p>;
           </motion.div>;
           <motion.div;
-            initial={{ "opacity": 0, "y": 30 
+            initial={ "opacity": 0, "y": 30 
 }
-            animate={{ "opacity": isVisible ? 1 : 0, "y": isVisible ? 0 : 30 
+            animate={ "opacity": isVisible ? 1 : 0, "y": isVisible ? 0 : 30 
 }
-            transition={{ "duration": 0.8, "delay": 0.2 
+            transition={ "duration": 0.8, "delay": 0.2 
 }
 
 className='mb-12''
@@ -197,18 +197,18 @@ href=""mailto": kleber@ziontechgroup.com""
 }
 <div className='absolute inset-0 pointer-events-none'>;'
           <motion.div;
-            animate={{ "y": [0, -20, 0] }}
-            transition={{ "duration": 6, "repeat": Infinity, "ease": 'easeInOut' ,'
+            animate={ "y": [0, -20, 0] }
+            transition={ "duration": 6, "repeat": Infinity, "ease": 'easeInOut' ,'
 }
             className='absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60';' />;
           <motion.div;
-            animate={{ "y": [0, 20, 0] }}
-            transition={{ "duration": 8, "repeat": Infinity, "ease": 'easeInOut' ,'
+            animate={ "y": [0, 20, 0] }
+            transition={ "duration": 8, "repeat": Infinity, "ease": 'easeInOut' ,'
 }
             className='absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full opacity-60';' />;
           <motion.div;
-            animate={{ "y": [0, -15, 0] }}
-            transition={{ "duration": 7, "repeat": Infinity, "ease": 'easeInOut' }}'
+            animate={ "y": [0, -15, 0] }
+            transition={ "duration": 7, "repeat": Infinity, "ease": 'easeInOut' }'
 
             className='absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60'' />
 
@@ -227,12 +227,12 @@ href=""mailto": kleber@ziontechgroup.com""
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-6">;"
         <div className="max-w-7xl mx-auto">;"
           <motion&& motion.div;
-            initial={{ "opacity": 0, "y": 30 
+            initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.8 }}
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.8 }
 
-            viewport={{ "once": true 
+            viewport={ "once": true 
 }
 
 className='text-center mb-16''
@@ -255,10 +255,10 @@ industries and driving the future of technology
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            initial={ opacity: 0, y: 30}
+            whileInView={ opacity: 1, y: 0}
+            transition={ duration: 0.8 }
+            viewport={ once: true}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -296,13 +296,13 @@ key={service.title}
             {services && services.map((service, index) => (<motion&& motion.div;
                 }
                 key={service && service.title}
-                initial={{ "opacity": 0, "y": 30 
+                initial={ "opacity": 0, "y": 30 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ "opacity": 1, "y": 0 
 }
-                transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
+                transition={ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }
 
-                viewport={{ "once": true }}
+                viewport={ "once": true }
 
 className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl "hover":border-cyan-400/30 transition-all duration-300 transform "hover":scale-105 "hover":shadow-2xl''
               >
@@ -443,10 +443,10 @@ const stats = [;
           <div className='absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (168, 85, 247, 0.1), transparent_50%)]' />;'
         </div>;
         <div className='relative z - 10 text - center max - w-6xl mx - auto'>          <motion.div;'
-            initial={{ "opacity": 0, "coordinate_y": 30 
+            initial={ "opacity": 0, "coordinate_y": 30 
 }
-            animate={{ "opacity": is_visible ? 1 : 0, "coordinate_y": is_visible ? 0 : 30 }}
-            transition={{ "duration": 0.8 }}
+            animate={ "opacity": is_visible ? 1 : 0, "coordinate_y": is_visible ? 0 : 30 }
+            transition={ "duration": 0.8 }
             className='mb - 8'        {/* Animated Background *,'
 }
         <div className="absolute inset - 0 bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">;"
@@ -455,10 +455,10 @@ const stats = [;
         </div>;
         <div className="relative z - 10 text - center max - w-6xl mx - auto">;"
           <motion.div;
-            initial={{ "opacity": 0, "coordinate_y": 30 
+            initial={ "opacity": 0, "coordinate_y": 30 
 }
-            animate={{ "opacity": is_visible ? 1 : 0, "coordinate_y": is_visible ? 0 : 30 }}
-            transition={{ "duration": 0.8 
+            animate={ "opacity": is_visible ? 1 : 0, "coordinate_y": is_visible ? 0 : 30 }
+            transition={ "duration": 0.8 
 }
             className='mb - 8'>'
 
@@ -476,11 +476,11 @@ const stats = [;
             </p>;
           </motion.div>;
           <motion.div;
-            initial={{ "opacity": 0, "coordinate_y": 30 
+            initial={ "opacity": 0, "coordinate_y": 30 
 }
-            animate={{ "opacity": is_visible ? 1 : 0, "coordinate_y": is_visible ? 0 : 30 
+            animate={ "opacity": is_visible ? 1 : 0, "coordinate_y": is_visible ? 0 : 30 
 }
-            transition={{ "duration": 0.8, "delay": 0.2 
+            transition={ "duration": 0.8, "delay": 0.2 
 }
             className='mb - 12'>'
 
@@ -522,32 +522,32 @@ const stats = [;
         {/* Floating Elements */}
         <div className='absolute inset - 0 pointer - events - none'>;'
           <motion.div;
-            animate={{ "coordinate_y": [0, -20, 0] }}
-            transition={{ "duration": 6, "repeat": Infinity, "ease": 'easeInOut' ,'
+            animate={ "coordinate_y": [0, -20, 0] }
+            transition={ "duration": 6, "repeat": Infinity, "ease": 'easeInOut' ,'
 }
             className='absolute top - 20 left - 20 w - 2 h - 2 bg - cyan - 400 rounded - full opacity - 60';' />;
           <motion.div;
-            animate={{ "coordinate_y": [0, 20, 0] }}
-            transition={{ "duration": 8, "repeat": Infinity, "ease": 'easeInOut' ,'
+            animate={ "coordinate_y": [0, 20, 0] }
+            transition={ "duration": 8, "repeat": Infinity, "ease": 'easeInOut' ,'
 }
             className='absolute top - 40 right - 20 w - 3 h - 3 bg - purple - 400 rounded - full opacity - 60';' />;
           <motion.div;
-            animate={{ "coordinate_y": [0, -15, 0] }}
-            transition={{ "duration": 7, "repeat": Infinity, "ease": 'easeInOut' ,'
+            animate={ "coordinate_y": [0, -15, 0] }
+            transition={ "duration": 7, "repeat": Infinity, "ease": 'easeInOut' ,'
 }
             className='absolute bottom - 40 left - 1/4 w - 2 h - 2 bg - blue - 400 rounded - full opacity - 60' />          <motion.div;'
-            animate={{ "coordinate_y": [0, -20, 0] }}
-            transition={{ "duration": 6, "repeat": Infinity, "ease": "easeInOut" ,"
+            animate={ "coordinate_y": [0, -20, 0] }
+            transition={ "duration": 6, "repeat": Infinity, "ease": "easeInOut" ,"
 }
             className="absolute top - 20 left - 20 w - 2 h - 2 bg - cyan - 400 rounded - full opacity - 60";" />;
           <motion.div;
-            animate={{ "coordinate_y": [0, 20, 0] }}
-            transition={{ "duration": 8, "repeat": Infinity, "ease": "easeInOut" ,"
+            animate={ "coordinate_y": [0, 20, 0] }
+            transition={ "duration": 8, "repeat": Infinity, "ease": "easeInOut" ,"
 }
             className="absolute top - 40 right - 20 w - 3 h - 3 bg - purple - 400 rounded - full opacity - 60";" />;
           <motion.div;
-            animate={{ "coordinate_y": [0, -15, 0] }}
-            transition={{ "duration": 7, "repeat": Infinity, "ease": "easeInOut" ,"
+            animate={ "coordinate_y": [0, -15, 0] }
+            transition={ "duration": 7, "repeat": Infinity, "ease": "easeInOut" ,"
 }
             className="absolute bottom - 40 left - 1/4 w - 2 h - 2 bg - blue - 400 rounded - full opacity - 60";" />;
         </div>;
@@ -557,11 +557,11 @@ const stats = [;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="py - 20 px - 6">;"
         <div className="max - w-7xl mx - auto">;"
           <motion.div;
-            initial={{ "opacity": 0, "coordinate_y": 30 
+            initial={ "opacity": 0, "coordinate_y": 30 
 }
-            whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true 
+            whileInView={ "opacity": 1, "coordinate_y": 0 }
+            transition={ "duration": 0.8 }
+            viewport={ "once": true 
 }
             className='text - center mb - 16'>'
 
@@ -586,13 +586,13 @@ const stats = [;
             {services.map ((service, index) => (<motion.div;
                 }
                 key={service.title}
-                initial={{ "opacity": 0, "coordinate_y": 30 
+                initial={ "opacity": 0, "coordinate_y": 30 
 }
-                whileInView={{ "opacity": 1, "coordinate_y": 0 
+                whileInView={ "opacity": 1, "coordinate_y": 0 
 }
-                transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                transition={ "duration": 0.6, "delay": index * 0.1 }
 
-                viewport={{ "once": true }}
+                viewport={ "once": true }
 
 className='text-center''
               >
@@ -610,10 +610,10 @@ className='text-center''
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30}}
-                whileInView={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true}}
+                initial={ opacity: 0, y: 30}
+                whileInView={ opacity: 1, y: 0}
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true}
                 className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -661,11 +661,11 @@ className='text-center''
 <section className='py-20 px-6'>'
         <div className='max-w-7xl mx-auto'>'
           <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.8 }}
-            viewport={{ "once": true 
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.8 }
+            viewport={ "once": true 
 }
 
 className='text-center mb-16''
@@ -729,11 +729,11 @@ href='/reports/updates/update-2025-08-15-0457''
 <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>'
         <div className='max-w-7xl mx-auto'>'
           <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0 && 0.8 }}
-            viewport={{ "once": true 
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0 && 0.8 }
+            viewport={ "once": true 
 }
 
 className='text-center mb-16''
@@ -748,10 +748,10 @@ className='text-center mb-16''
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            initial={ opacity: 0, y: 30}
+            whileInView={ opacity: 1, y: 0}
+            transition={ duration: 0.8 }
+            viewport={ once: true}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -791,10 +791,10 @@ className='text-center mb-16''
 <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}className='text-center mb-16';
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }className='text-center mb-16';
           >;
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Ready to Get Started?;

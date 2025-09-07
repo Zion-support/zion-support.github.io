@@ -46,7 +46,7 @@ export function TalentResults(): any ({;      />;
     </div>;
   );
 }
-;;
+;
         is_authenticated={is_authenticated}
         clear_filters={activeFiltersProps.clear_filters}
       />;

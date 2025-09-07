@@ -93,7 +93,7 @@ export function buildUIKit("kind": UIKitKind): Record<string, string> {
       'README && README.md':'
         '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.','
       'theme/index && index.ts':'
-        "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ "colors": { "neon": { "blue": '#00d4ff' }}});","
+        "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ "colors": { "neon": { "blue": '#00d4ff' }});","
       'components/Button && Button.tsx':'
         'import { Button as CButton } from \'@chakra-ui/react\'; export function Button() { return <CButton colorScheme="cyan" {...props} /> }','
     };
@@ -102,7 +102,7 @@ export function buildUIKit("kind": UIKitKind): Record<string, string> {
     'README && README.md':'
       '# Zion OS React UI Kit\n\nFramework-agnostic React components.','
     'components/Button && Button.tsx':'
-      "export function Button() { return <button style={{ "background": '#00d4ff', "color": '#000', "borderRadius": 8, "padding": '8px 12px' }}>{children}</button> }","
+      "export function Button() { return <button style={ "background": '#00d4ff', "color": '#000', "borderRadius": 8, "padding": '8px 12px' }>{children}</button> }","
   };
 
 export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {

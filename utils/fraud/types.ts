@@ -112,15 +112,15 @@ export interface FraudDetectionConfig {;
     confidenceThreshold: number,
   };
 
-}}
+}
 }
 ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
     confidenceThreshold: number;
-  }}
+  }
     confidenceThreshold: number;
 }confidenceThreshold: number;
-  }}}
+  }}
 }
 export type MonitoredSource = $2;
 export type GptClassificationLabel = $2;

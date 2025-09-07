@@ -1,16 +1,12 @@
 let animationFrameId: number;
-=======
 let animationFrameId: number
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 let particles: Array< {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   resizeCanvas ();
 window && window.addEventListener ('resize', resizeCanvas);
 //Color schemes Math && Math.random () > 0 && 0.5 ? 'holographic' : Math && Math.random () > 0 && 0.3 ? 'neon' : 'fusion';
 particles && particles.push ({;
   x: Math && Math.random () * canvas && canvas.width, y: Math && Math.random () * canvas && canvas.height, vx: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, vy: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, size: Math && Math.random () * 3 + 1, opacity: Math && Math.random () * 0 && 0.8 + 0 && 0.2, color: type === 'quantum' ? colors && colors.quantum : type === 'holographic' ? colors && colors.holographic : ;
 
-<<<<<<< HEAD
 const UltraAdvancedFuturisticBackground: React.FC<;
   UltraAdvancedFuturisticBackgroundProps;
 > = ({;
@@ -58,8 +54,6 @@ if (return) {$2;
 }
     const ctx = canvas.get_context ('2d')// Check condition;
 if (return) {$2;
-=======
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -90,11 +84,9 @@ window && window.addEventListener ('resize', resizeCanvas);'
 //Color schemes Math && Math.random () > 0 && 0.5 ? 'holographic' : Math && Math.random () > 0 && 0.3 ? 'neon' : 'fusion';
 particles && particles.push ({;'
   x: Math && Math.random () * canvas && canvas.width, y: Math && Math.random () * canvas && canvas.height, vx: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, vy: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, size: Math && Math.random () * 3 + 1, opacity: Math && Math.random () * 0 && 0.8 + 0 && 0.2, color: type === 'quantum' ? colors && colors.quantum : type === 'holographic' ? colors && colors.holographic : ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-let "animationFrameId": number;
-let "particles": Array< {
+let 'animationFrameId': number;
+let 'particles': Array< {
   }
   resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);'
@@ -122,10 +114,10 @@ particles.push ({ intensity = 'high','
   animationSpeed?: number;
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
-  "children": React.ReactNode;
+  'children': React.ReactNode;
 }
 
-const "UltraAdvancedFuturisticBackground": React.FC<UltraAdvancedFuturisticBackgroundProps> = ({intensity;
+const 'UltraAdvancedFuturisticBackground': React.FC<UltraAdvancedFuturisticBackgroundProps> = ({intensity;
 
 }
 
@@ -138,12 +130,12 @@ const canvasRef = useRef<HTMLCanvasElement>(null)const containerRef =;
 const ctx = canvas.getContext('2d');'
     if (!ctx) return;
 
-let "animationFrameId": number;
-    let "particles": Array<{
+let 'animationFrameId': number;
+    let 'particles': Array<{
       }
-      "x": number;
+      'x': number;
 
-      "y": number;
+      'y': number;
   children;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const container_ref = useRef < HTMLDivElement>(null);
@@ -157,18 +149,18 @@ if (return) {$2;
 const ctx = canvas.get_context ('2d')// Check condition;'
 if (return) {$2;
 }
-    let "animationFrameId": number;
-    let "particles": Array<{"coordinate_x": number;
+    let 'animationFrameId': number;
+    let 'particles': Array<{'coordinate_x': number;
       }
-      "coordinate_y": number;
-      "vx": number;
-      "vy": number;
-      "size": number;
-      "opacity": number;
+      'coordinate_y': number;
+      'vx': number;
+      'vy': number;
+      'size': number;
+      'opacity': number;
 
-      "color": string;
+      'color': string;
 
-      "type": 'quantum' | 'holographic' | 'neon' | 'fusion';'
+      'type': 'quantum' | 'holographic' | 'neon' | 'fusion';'
     }> = [];
 
     // Set canvas size,
@@ -202,13 +194,13 @@ const type =;
                 : 'fusion';'
         particles.push({
           }
-          "x": Math.random() * canvas.width,
-          "y": Math.random() * canvas.height,
-          "vx": (Math.random() - 0.5) * 2 * animationSpeed,
-          "vy": (Math.random() - 0.5) * 2 * animationSpeed,
-          "size": Math.random() * 3 + 1,
-          "opacity": Math.random() * 0.8 + 0.2,
-"color":
+          'x': Math.random() * canvas.width,
+          'y': Math.random() * canvas.height,
+          'vx': (Math.random() - 0.5) * 2 * animationSpeed,
+          'vy': (Math.random() - 0.5) * 2 * animationSpeed,
+          'size': Math.random() * 3 + 1,
+          'opacity': Math.random() * 0.8 + 0.2,
+'color':
             type === 'quantum''
               ? colors.quantum
               : type === 'holographic''
@@ -219,7 +211,6 @@ const type =;
           type
         });
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       }
     },
 
@@ -326,7 +317,6 @@ if (return) {$2;
           const distance  = Math.sqrt (dx * dx + dy * dy)// Check condition;
 if ( {) {$2;
 }
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
             ctx.strokeStyle = `rgba(0, 255, 136, ${0.3 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
@@ -402,21 +392,17 @@ if (return) {}
 if ( {) {}
   $2;
 }`
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             ctx.stroke_style = `rgba (0, 255, 136, ${0.3 * (1 - distance / 100)})`;
             ctx.line_width = 1;
             ctx.move_to (particles[i].x, particles[i].y);
             ctx.line_to (particles[j].x, particles[j].y);
             ctx.stroke ();          }            ctx.stroke ();
 
-<<<<<<< HEAD
           }
             ctx.move_to (particles[i].x, particles[i].y)ctx.line_to (particles[j].x, particles[j].y)ctx.stroke ()}            ctx.stroke ()ctx.stroke()}
-=======
 ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
           }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       }
     }
@@ -426,7 +412,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }
       }
     }
-<<<<<<< HEAD
     }// Holographic grid effect;
 
 const createHolographicGrid = () => {// Initialize particles;
@@ -446,7 +431,7 @@ const initParticles = () => {particles = [];
                 : 'fusion';      for (let i = 0, i < particleCount, i++) ;'
   const type = Math && Math.random() > 0 && 0.7 ? 'quantum' : ;'
                     Math && Math.random() > 0 && 0.5 ? 'holographic' : ;'
-                    Math && Math.random() > 0 && 0.3 ? 'neon' : 'fusion';"x": Math && Math.random() * canvas && canvas.width,"y": Math && Math.random() * canvas && canvas.height,"vx": (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,"vy": (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,"size": Math && Math.random() * 3 + 1,"opacity": Math && Math.random() * 0 && 0.8 + 0 && 0.2,"color":;'
+                    Math && Math.random() > 0 && 0.3 ? 'neon' : 'fusion';'x': Math && Math.random() * canvas && canvas.width,'y': Math && Math.random() * canvas && canvas.height,'vx': (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,'vy': (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,'size': Math && Math.random() * 3 + 1,'opacity': Math && Math.random() * 0 && 0.8 + 0 && 0.2,'color':;'
 
 type === 'quantum';'
               ? colors && colors.quantum;
@@ -454,7 +439,7 @@ type === 'quantum';'
                 ? colors && colors.holographic;
                 : type === 'neon';'
                   ? colors && colors.primary;
-                  : colors && colors.secondary,type})}          "color": type === 'quantum' ? colors && colors.quantum :;'
+                  : colors && colors.secondary,type})}          'color': type === 'quantum' ? colors && colors.quantum :;'
 
 type === 'holographic' ? colors && colors.holographic :;'
 
@@ -518,7 +503,6 @@ for (let y = offset; y < canvas.height; y += gridSize) {
             ctx.stroke()
           }
         }
-=======
     };
 
     // Holographic grid effect;
@@ -619,7 +603,6 @@ const distance = Math.sqrt(dx * dx + dy * dy)if (distance < 150) ;
             ctx.lineTo(nodes[j].x, nodes[j].y);
 ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           }
         }
       }
@@ -670,7 +653,6 @@ if (particle.x < 0) particle.x = canvas.width;
 // Draw particle,
 ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-<<<<<<< HEAD
 
         // Create glow effect,
 const glowGradient = ctx.createRadialGradient(;
@@ -718,7 +700,6 @@ ctx.strokeStyle = `${particle.color}${Math.floor(`            }
         if (particle && particle.type === 'holographic' && Math && Math.random() > 0 && 0.95) {;'
           }
           ctx && ctx.beginPath();
-<<<<<<< HEAD
           ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size * 2, 0, Math && Math.PI * 2);
           ctx && ctx.strokeStyle = `${particle && particle.color}${Math && Math.floor(;`            }
             particle && particle.opacity * 255;
@@ -730,9 +711,7 @@ ctx.strokeStyle = `${particle.color}${Math.floor(`            }
       });          ctx && ctx.lineWidth = 2;
           ctx && ctx.stroke();
         }
-<<<<<<< HEAD
           );
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
       });
       // Add intensity-based effects,
@@ -761,16 +740,11 @@ Math.PI * 2
       }
 
       animationFrameId = requestAnimationFrame(animate)
-<<<<<<< HEAD
-=======
 
     initParticles();
     animate();
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     return () => {
       }
       window.removeEventListener('resize', resizeCanvas);'
@@ -790,7 +764,7 @@ return (;
       <canvas,
 ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none';'
-        style={{ "zIndex": -1 }}
+        style={ 'zIndex': -1 }
       {/* Additional CSS-based effects *
 }
       <div className='absolute inset-0 pointer-events-none'>;'
@@ -799,7 +773,6 @@ ref={canvasRef}
         <div className='absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000'></div>
         <div className='absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500'></div>
         {/* Quantum particles */}
-<<<<<<< HEAD
         {enableQuantumEffects && (
           <>
             <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping'></div>
@@ -812,14 +785,14 @@ ref={canvasRef}
           <>
             <div
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin'
-              style={{ animationDuration: '20s' }}
+              style={ animationDuration: '20s' }
             ></div>
             <div
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
-              style={{
+              style={
                 animationDuration: '15s'
                 animationDirection: 'reverse'
-              }}
+              }
             ></div>
           </>
         )}
@@ -828,10 +801,7 @@ ref={canvasRef}
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
         {enableQuantumEffects && (;
           <>;'
             <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping'></div>;'
@@ -844,63 +814,62 @@ ref={canvasRef}
           <>;
             <div'
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin''
-              style={{ animationDuration: '20s' }}></div>;
+              style={ animationDuration: '20s' }></div>;
             <div'
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
-              style={{}
+              style={}
       {children}
     </div>;
   );
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default UltraAdvancedFuturisticBackground;
   return (
-    <div ref={containerRef} className="relative w-full h-full overflow-hidden">;
+    <div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
       <canvas;
-        ref={canvasRef}"
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: -1 }}
+        ref={canvasRef}'
+        className='absolute inset-0 w-full h-full pointer-events-none'
+        style={ zIndex: -1 }
         {/* Quantum particles */}
         {enableQuantumEffects && (;
-          <>;"
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>;"
-            <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300"></div>;"
-            <div className="absolute bottom-1/4 right-1/3 w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full animate-ping delay-700"></div>;
+          <>;'
+            <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping'></div>;'
+            <div className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300'></div>;'
+            <div className='absolute bottom-1/4 right-1/3 w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full animate-ping delay-700'></div>;
           </>;
         )}
         {/* Holographic elements */}
         {enableHolographic && (;
-          <>;'"
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>;'"
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>;
+          <>;''
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin' style={ animationDuration: '20s' }></div>;''
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin' style={ animationDuration: '15s', animationDirection: 'reverse' }></div>;
           </>;
         )}
 export default UltraAdvancedFuturisticBackground;
-  return ("
-    <div ref={container_ref} className="relative w - full h - full overflow - hidden">;
+  return ('
+    <div ref={container_ref} className='relative w - full h - full overflow - hidden'>;
       <canvas;
-        ref={canvas_ref}"
-        className="absolute inset - 0 w - full h - full pointer - events - none";
-        style={{ z_index: -1 }}
+        ref={canvas_ref}'
+        className='absolute inset - 0 w - full h - full pointer - events - none';
+        style={ z_index: -1 }
       />;
-      {/* Additional CSS - based effects */}"
-      <div className="absolute inset - 0 pointer - events - none">;
-        {/* Floating geometric shapes */}"
-        <div className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 500 / 20 rounded - full animate - pulse"></div>;"
-        <div className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 500 / 20 rounded - full animate - pulse delay - 1000"></div>;"
-        <div className="absolute bottom - 32 left - 32 w - 28 h - 28 border border - green - 500 / 20 rounded - full animate - pulse delay - 500"></div>;
+      {/* Additional CSS - based effects */}'
+      <div className='absolute inset - 0 pointer - events - none'>;
+        {/* Floating geometric shapes */}'
+        <div className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 500 / 20 rounded - full animate - pulse'></div>;'
+        <div className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 500 / 20 rounded - full animate - pulse delay - 1000'></div>;'
+        <div className='absolute bottom - 32 left - 32 w - 28 h - 28 border border - green - 500 / 20 rounded - full animate - pulse delay - 500'></div>;
         {/* Quantum particles */}
         {enableQuantumEffects && (
-          <>;"
-            <div className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full animate - ping"></div>;"
-            <div className="absolute top - 3/4 right - 1/4 w - 1 h - 1 bg - purple - 400 rounded - full animate - ping delay - 300"></div>;"
-            <div className="absolute bottom - 1/4 right - 1/3 w - 1.5 h - 1.5 bg - green - 400 rounded - full animate - ping delay - 700"></div>;
+          <>;'
+            <div className='absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full animate - ping'></div>;'
+            <div className='absolute top - 3/4 right - 1/4 w - 1 h - 1 bg - purple - 400 rounded - full animate - ping delay - 300'></div>;'
+            <div className='absolute bottom - 1/4 right - 1/3 w - 1.5 h - 1.5 bg - green - 400 rounded - full animate - ping delay - 700'></div>;
           </>)}
         {/* Holographic elements */}
         {enable_holographic && (
-          <>;'"
-            <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 border border - pink - 500 / 10 rounded - full animate - spin" style={{ animation_duration: '20s' }}></div>;'"
-            <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 48 h - 48 border border - cyan - 500 / 10 rounded - full animate - spin" style={{ animation_duration: '15s', animation_direction: 'reverse' }}></div>;
+          <>;''
+            <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 border border - pink - 500 / 10 rounded - full animate - spin' style={ animation_duration: '20s' }></div>;''
+            <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 48 h - 48 border border - cyan - 500 / 10 rounded - full animate - spin' style={ animation_duration: '15s', animation_direction: 'reverse' }></div>;
           </>)}
       </div>;
       {children}
@@ -913,8 +882,6 @@ export default UltraAdvancedFuturisticBackground;
     </div>
   );
 
-<<<<<<< HEAD
-=======
 }
 }
 //Animation loop //Create effects createHolographicGrid ()
@@ -943,7 +910,7 @@ animate ()
 {
   /* Quantum particles */ 
 }{
-  enableQuantumEffects && (<> <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping" ></div> <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300" ></div> <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700" ></div> </>) 
+  enableQuantumEffects && (<> <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping' ></div> <div className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300' ></div> <div className='absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700' ></div> </>) 
 }{
   /* Holographic elements */ 
 }{
@@ -953,54 +920,44 @@ animate ()
 }</div>) 
 }
 export default UltraAdvancedFuturisticBackground
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 export default UltraAdvancedFuturisticBackground;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
+    <div ref={containerRef} className='relative w-full h-full overflow-hidden'>
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: -1 }}
+        className='absolute inset-0 w-full h-full pointer-events-none'
+        style={ zIndex: -1 }
       />
-<<<<<<< HEAD
       
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Additional CSS-based effects */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className='absolute inset-0 pointer-events-none'>
         {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500"></div>
-<<<<<<< HEAD
+        <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse'></div>
+        <div className='absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000'></div>
+        <div className='absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500'></div>
         
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         {/* Quantum particles */}
         {enableQuantumEffects && (
           <>
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
-            <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300"></div>
-            <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700"></div>
+            <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping'></div>
+            <div className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300'></div>
+            <div className='absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700'></div>
           </>
         )}
-<<<<<<< HEAD
         
         {/* Holographic elements */}
   )}
-export default UltraAdvancedFuturisticBackground;return (<div ref={containerRef} className="relative w-full h-full overflow-hidden">;
+export default UltraAdvancedFuturisticBackground;return (<div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
       <canvas;
   return (
-    <div ref={containerRef} className="relative w-full h-full overflow-hidden">;
+    <div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
       <canvas
   )}
-export default UltraAdvancedFuturisticBackground;return (<div ref={containerRef} className="relative w-full h-full overflow-hidden">;
+export default UltraAdvancedFuturisticBackground;return (<div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
       <canvas;
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none";
-        style={{ zIndex: -1 }}
+        className='absolute inset-0 w-full h-full pointer-events-none';
+        style={ zIndex: -1 }
         {/* Quantum particles */}
         {enableQuantumEffects && (<>;
             <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping'></div>;'
@@ -1013,11 +970,11 @@ export default UltraAdvancedFuturisticBackground;return (<div ref={containerRef}
             <div;
               }
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin';'
-              style={{ "animationDuration": '20s' ,'
+              style={ 'animationDuration': '20s' ,'
 }></div>;
             <div;
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin';'
-              style={{{children}
+              style={{children}
     </div />;
 
   );

@@ -82,10 +82,10 @@ export default function ComprehensiveServicesShowcase2025() {
   const ServiceCard = ({ service, index }: { service: Service; index: number }) => (
     <motion.div
       key={service.id}
-      initial={{ opacity: 0, y: 30, scale: 0.9 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -30, scale: 0.9 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      initial={ opacity: 0, y: 30, scale: 0.9 }
+      animate={ opacity: 1, y: 0, scale: 1 }
+      exit={ opacity: 0, y: -30, scale: 0.9 }
+      transition={ duration: 0.5, delay: index * 0.1 }
       className="group"
     >
       <div className="bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 h-full hover:border-blue-300 transition-all duration-300 transform hover:shadow-xl hover:shadow-blue-500/20 shadow-lg">
@@ -198,9 +198,9 @@ export default function ComprehensiveServicesShowcase2025() {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
@@ -339,7 +339,7 @@ export default function ComprehensiveServicesShowcase2025() {
                     setSearchTerm('');
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
-                  }}
+                  }
                   className="w-full px-4 py-3 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-all duration-300"
                 >
                   Clear Filters
@@ -364,8 +364,8 @@ export default function ComprehensiveServicesShowcase2025() {
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }
               className="text-center py-20"
             >
               <div className="text-6xl mb-4">🔍</div>
@@ -380,7 +380,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   setSearchTerm('');
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
-                }}
+                }
                 className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
               >
                 Clear Filters

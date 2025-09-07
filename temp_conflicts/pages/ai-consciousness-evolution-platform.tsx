@@ -113,9 +113,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="pt-20 pb-16 px-4 relative overflow-hidden">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full text-purple-400 text-sm font-medium mb-6">
                 <Brain className="w-4 h-4" />
@@ -166,9 +166,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -183,9 +183,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-purple-500/20 rounded-2xl p-8 hover:border-purple-500/40 transition-all duration-300"
                 >
                   <div className="text-purple-400 mb-4">
@@ -203,9 +203,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-purple-500/5 to-blue-500/5">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -220,9 +220,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-blue-500/20 rounded-2xl p-8"
                 >
                   <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
@@ -248,9 +248,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -265,9 +265,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               {pricing.map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className={`bg-gradient-to-br from-gray-900/50 to-gray-800/30 border rounded-2xl p-8 ${
                     plan.name === 'Professional' 
                       ? 'border-purple-500/40 scale-105' 
@@ -319,9 +319,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-purple-500/10 to-blue-500/10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Evolve AI Consciousness?
@@ -352,10 +352,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={ duration: 0.8 }
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Evolve AI Consciousness?
@@ -364,8 +364,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration.
             </p>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ scale: 1.05 }
+              whileTap={ scale: 0.95 }
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover: from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-2xl shadow-purple-500/25"
             >
               Start Your Journey Today
@@ -453,7 +453,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             className="max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.div
@@ -494,7 +494,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             className="max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.h2 
@@ -510,8 +510,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                   key={index}
                   className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-xl rounded-xl p-6 border border-purple-500/30 text-center"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  transition={{ duration: 0.3 }}
+                  whileHover={ scale: 1.05, y: -5 }
+                  transition={ duration: 0.3 }
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Brain className="w-8 h-8 text-white" />
@@ -529,7 +529,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             className="max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.h2 
@@ -562,7 +562,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             className="max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.h2 
@@ -578,8 +578,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                   key={index}
                   className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-xl p-6 border border-slate-600/30 text-center"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  transition={{ duration: 0.3 }}
+                  whileHover={ scale: 1.05, y: -5 }
+                  transition={ duration: 0.3 }
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Target className="w-8 h-8 text-white" />
@@ -597,7 +597,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             className="max-w-6xl mx-auto text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.h2 
@@ -644,7 +644,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             className="max-w-4xl mx-auto text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={ once: true }
             variants={containerVariants}
           >
             <motion.h2 

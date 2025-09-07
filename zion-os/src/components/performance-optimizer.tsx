@@ -26,7 +26,7 @@ export function LoadingSpinner() {const sizeClasses = {"sm": "w-4 h-4","md": "w-
 export function Skeleton() {return (<div className={`animate-pulse ${className}`}>;`      {Array.from({ "length": lines }).map((_, i) => (return (<div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;`  )}<div className={`animate-pulse ${className}`}>;`      {Array.from({ "length": lines }).map((_, i) => (<div;
           key={i}
           className="h - 4 bg-[var (--border)] rounded mb - 2 "last":mb - 0";"
-          style={{ "width": `${Math.random () * 40 + 60}%` }}` />))}    </div>)}export /**;
+          style={ "width": `${Math.random () * 40 + 60}%` }` />))}    </div>)}export /**;
  * usePerformanceMonitor - Function description;
  */;
 function usePerformanceMonitor() {const start_time = window.window.window.performance.now (),return {"end_measure": () => {const end_time = window.window.window.performance.now (),const duration = end_time - start_time,// Log performance metrics in development;
@@ -46,7 +46,7 @@ export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryS
   }
   static getDerivedStateFromError ("error": Error): ErrorBoundaryState {return { "has_error": true, error }
   }
-  componentDidCatch ("error": Error, "error_info": React.ErrorInfo) {console.error ("Error caught by "boundary":", error, error_info)}}"
+  componentDidCatch ("error": Error, "error_info": React.ErrorInfo) {console.error ("Error caught by "boundary":", error, error_info)}"
 // Skeleton loading component;
 export /**;
  * Skeleton - Function description;
@@ -125,7 +125,7 @@ if ( {) {
   return (;
     <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;`  );
 }
-  }}
+  }
 // Skeleton loading component;
 export /**
  * Skeleton - Function description
@@ -138,7 +138,7 @@ function Skeleton() {
         <div;
           key={i}
           className="h - 4 bg-[var (--border)] rounded mb - 2 "last":mb - 0";"
-          style={{ "width": `${Math.random () * 40 + 60}%` }}` />))}    </div>)}      // Log performance metrics in development;
+          style={ "width": `${Math.random () * 40 + 60}%` }` />))}    </div>)}      // Log performance metrics in development;
       // Check condition;
 if ( {) {$2;
 }
@@ -161,7 +161,7 @@ function useIntersectionObserver() {const [is_intersecting, setIsIntersecting] =
 }
 if (return, ) {$2;
 }
-    const observer = new IntersectionObserver (([entry]) => {setIsIntersecting (entry.is_intersecting)}, options),observer.observe (element),return () => observer.disconnect ()}, [ref, options]),return is_intersecting;;
+    const observer = new IntersectionObserver (([entry]) => {setIsIntersecting (entry.is_intersecting)}, options),observer.observe (element),return () => observer.disconnect ()}, [ref, options]),return is_intersecting;
 // Intersection observer hook for lazy loading;
 export function useIntersectionObserver() {const [isIntersecting, setIsIntersecting] = useState(false),useEffect(() => {const element = ref.current;
     }
@@ -248,7 +248,7 @@ export function Skeleton({ className = "", lines = $2;
         <div
           key={i}
           className="h-4 bg-[var(--border)] rounded mb-2 last:mb-0"
-          style={{ width: `${Math.random() * 40 + 60}%` }}
+          style={ width: `${Math.random() * 40 + 60}%` }
         />
       ))}
     </div>

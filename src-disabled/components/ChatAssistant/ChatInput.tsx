@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 :src/components/ChatAssistant/ChatInput.tsx
 import React, {
   useState
@@ -32,7 +32,7 @@ interface ChatInputProps {
   onSend: (message: string) => void,
   disabled?: boolean
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
-import { Button } from "@/components/ui/button",;
+import { Button } from '@/components/ui/button',;
 import { Send } from 'lucide-react';
 
 interface ChatInputProps {;
@@ -90,7 +90,7 @@ setMessage('');
         disabled={!message.trim() |disabled}
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-end gap-2">
+    <form onSubmit={handleSubmit} className='flex items-end gap-2'>
       <textarea
         ref={inputRef}
 :src/components/ChatAssistant/ChatInput.tsx
@@ -104,8 +104,8 @@ setMessage('');
       <Button
         type='submit'
         className='bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center'        onChange={(e) => setMessage(e.target.value)}
-        className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
-        placeholder="Type your message..."
+        className='flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light'
+        placeholder='Type your message...'
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         onChange={e => setMessage(e.target.value)}
@@ -121,8 +121,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         disabled={!message.trim() |disabled}      >
         <Send className='h-5 w-5' />
 
-        className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
-        placeholder="Type your message..."
+        className='flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light'
+        placeholder='Type your message...'
         value={message}
         onChange={(e) => setMessage(e.target.value)}
 
@@ -132,12 +132,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       />
 
       <Button 
-        type="submit" 
-        className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
+        type='submit' 
+        className='bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center'
         disabled={!message.trim() || disabled}
 
       >
-        <Send className="h-5 w-5" />
+        <Send className='h-5 w-5' />
 
       </Button>
 
@@ -150,7 +150,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         disabled={!message.trim() || disabled}
 
       >
-        <Send className="h-5 w-5" />
+        <Send className='h-5 w-5' />
       </Button>
     </form>
   )
@@ -167,7 +167,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
         disabled={!message.trim () || disabled}
       >;
-        <Send className="h - 5 w-5" />;
+        <Send className='h - 5 w-5' />;
       </Button>;
     </form>);
 

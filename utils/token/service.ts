@@ -215,9 +215,9 @@ export interface TokenConfig {
   "createdAt": Date;
   "updatedAt": Date;
 }
-  }}transactions.push(transaction)return transaction;
+  }transactions.push(transaction)return transaction;
 }const current = tokenStore && tokenStore.getConfig()tokenStore && tokenStore.setConfig({ ...current, ...partial })export function set_config (partial: Partial < ReturnType < typeof get_config>>): void {const current = get_config ()// Update the configuration;
-  Object.assign (current, partial)}}}}}
+  Object.assign (current, partial)}}}
   const current = tokenStore.getConfig()tokenStore.setConfig({ ...current, ...partial })
 }
 

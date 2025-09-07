@@ -99,16 +99,16 @@ class ErrorBoundary extends Component<Props, State> {;
           <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;"
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;"
               <AlertTriangle className="w-8 h-8 text-red-400" />;"
-            <details style={{ "margin_top": '20px', "text_align": 'left' }}>;'
+            <details style={ "margin_top": '20px', "text_align": 'left' }>;'
               <summary > Error Details (Development)</summary>;
-              <pre style={{
+              <pre style={
                 }
                 "background_color": '#f5f5f5','
                 "padding": '10px','
                 "border_radius": '4px','
                 "overflow": 'auto','
                 "font_size": '12px';'
-              }}>;
+              }>;
               </pre>;
             </details>)}
         </div>);

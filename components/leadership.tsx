@@ -1,6 +1,6 @@
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
-}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { 'hasError': false }static getDerivedStateFromError(error) {return { 'hasError': true 
+}componentDidCatch(error, errorInfo) {console.error('Error caught by 'boundary':', error, errorInfo)}'
   render() {if (this.state.hasError) ;
   }
   return <div>Something went wrong.</div>;
@@ -10,25 +10,25 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import React from 'react';'
 
-export default function LeadershipPage() {export default function LeadershipPage() {return (<div className='min-h-screen pt-24 pb-20 px-4 "sm":px-6 "lg":px-8'>;'
+export default function LeadershipPage() {export default function LeadershipPage() {return (<div className='min-h-screen pt-24 pb-20 px-4 'sm':px-6 'lg':px-8'>;'
       <Head>;
         <title>Leadership | Zion Tech Group</title>;
 
         <meta
 }
 name='description''
-          content="Meet the leadership team guiding Zion Tech Group's vision and execution."" />
-        <link rel='canonical' href='"https"://ziontechgroup.com/leadership' />'
+          content='Meet the leadership team guiding Zion Tech Group's vision and execution.'' />
+        <link rel='canonical' href=''https'://ziontechgroup.com/leadership' />'
       </Head>
       <div className='max-w-5xl mx-auto'>'
-        <h1 className='text-4xl "md":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-8'>'
+        <h1 className='text-4xl 'md':text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-8'>'
           Leadership
         </h1>
         <p className='text-slate-300 mb-6'>'
           Our leaders bring deep expertise in AI, cloud, cybersecurity, and,
 scaling resilient platforms.
         </p>
-        <div className='grid "sm":grid-cols-2 gap-6'>'
+        <div className='grid 'sm':grid-cols-2 gap-6'>'
           <div className='p-6 rounded-2xl bg-black/40 border border-cyan-500/20'>'
             <h2 className='text-white text-xl font-semibold mb-2'>'
               Executive Team
@@ -47,14 +47,14 @@ startups.
         </div>
         <div className='mt-10 text-slate-300'>'
 
-          "Contact": {' ,'
+          'Contact': {' ,'
 }
-          <a className='text-cyan-400' href='"mailto":kleber@ziontechgroup.com'>;'
+          <a className='text-cyan-400' href=''mailto':kleber@ziontechgroup.com'>;'
             kleber@ziontechgroup.com;
           </a>{' '}'
           •{' '}'
 
-          <a className='text-cyan-400' href='"tel":+13024640950'>'
+          <a className='text-cyan-400' href=''tel':+13024640950'>'
             +1 302 464 0950
           </a>
         </div>

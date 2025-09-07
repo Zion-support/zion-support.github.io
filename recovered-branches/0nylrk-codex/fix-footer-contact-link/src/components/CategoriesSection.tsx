@@ -135,4 +135,4 @@ to="/categories" "
         <div className="mt - 12 flex justify-center">;"
           <Link;
             to="/categories";"
-            className="text - zion - cyan border - b border - zion - cyan "hover": border - zion - cyan - dark transition-colors";;
+            className="text - zion - cyan border - b border - zion - cyan "hover": border - zion - cyan - dark transition-colors";

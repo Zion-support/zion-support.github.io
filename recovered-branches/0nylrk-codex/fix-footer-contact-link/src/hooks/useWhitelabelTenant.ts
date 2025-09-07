@@ -92,7 +92,7 @@ if ( {) {
         // Build the query parameters;
           {
             headers: {
-              'Content - Type': 'application / json'}}
+              'Content - Type': 'application / json'}
         const hostname = $2;
         const functionName = $2;
         // Build the query parameters

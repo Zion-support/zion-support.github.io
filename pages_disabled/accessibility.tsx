@@ -72,10 +72,10 @@ export default function AccessibilityPage() {return (<MainLayout;
           <div className="container mx-auto px-4">;"
           </div>;
             <motion.div;
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 
 }
               className="text-center max-w-4xl mx-auto">"
 
@@ -100,11 +100,11 @@ export default function AccessibilityPage() {return (<MainLayout;
           <div className="container mx-auto px-4">;"
             <motion.div;
               className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
             >;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
@@ -120,12 +120,12 @@ export default function AccessibilityPage() {return (<MainLayout;
                 return (<motion.div;
                     key={index}
                     className="bg-white p-8 rounded-xl shadow-lg "hover":shadow-xl transition-all duration-300";"
-                    initial={{ "opacity": 0, "y": 30 
+                    initial={ "opacity": 0, "y": 30 
 }
-                    whileInView={{ "opacity": 1, "y": 0 
+                    whileInView={ "opacity": 1, "y": 0 
 }
-                    transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                    viewport={{ "once": true 
+                    transition={ "duration": 0.8, "delay": index * 0.1 }
+                    viewport={ "once": true 
 }
                   >;
                     <div className="flex items-start space-x-4">;"
@@ -157,11 +157,11 @@ export default function AccessibilityPage() {return (<MainLayout;
           <div className="container mx-auto px-4">;"
             <motion.div;
               className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
             >;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
@@ -177,12 +177,12 @@ export default function AccessibilityPage() {return (<MainLayout;
                 return (<motion.div;
                     key={index}
                     className="bg-gray-50 p-6 rounded-xl text-center "hover":shadow-lg transition-all duration-300";"
-                    initial={{ "opacity": 0, "y": 30 
+                    initial={ "opacity": 0, "y": 30 
 }
-                    whileInView={{ "opacity": 1, "y": 0 
+                    whileInView={ "opacity": 1, "y": 0 
 }
-                    transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                    viewport={{ "once": true 
+                    transition={ "duration": 0.8, "delay": index * 0.1 }
+                    viewport={ "once": true 
 }
                   >;
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">;"
@@ -196,7 +196,7 @@ export default function AccessibilityPage() {return (<MainLayout;
                     </p>;
                     <div className="space-y-2">;"
                       <span className={`px-3 py-1 text-xs rounded-full ${standard.status === 'Compliant' ? "bg-green-100 text-green-800" : 'bg-yellow-100 text-yellow-800';'
-                      }}>;
+                      }>;
                         {standard.status}
                       </span>;
                       <div className="text-sm text-gray-500">;"
@@ -213,11 +213,11 @@ export default function AccessibilityPage() {return (<MainLayout;
           <div className="container mx-auto px-4">;"
             <motion.div;
               className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
             >;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
@@ -232,11 +232,11 @@ export default function AccessibilityPage() {return (<MainLayout;
                   }
                   key={index}
                   className="bg-white p-6 rounded-xl shadow-lg "hover":shadow-xl transition-all duration-300";"
-                  initial={{ "opacity": 0, "y": 30 
+                  initial={ "opacity": 0, "y": 30 
 }
-                  animate={{ "opacity": 1, "y": 0 
+                  animate={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0.6, "delay": index * 0.1 
+                  transition={ "duration": 0.6, "delay": index * 0.1 
 }
                 >;
                   <div className="flex items-start space-x-4">;"
@@ -266,11 +266,11 @@ export default function AccessibilityPage() {return (<MainLayout;
           <div className="container mx-auto px-4">;"
             <motion.div;
               className="text-center mb-16";"
-              initial={{ "opacity": 0, "y": 30 
+              initial={ "opacity": 0, "y": 30 
 }
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true 
 }
             >;
               <h2 className="text-3xl "md":text-4xl font-bold text-gray-900 mb-4">;"
@@ -285,12 +285,12 @@ export default function AccessibilityPage() {return (<MainLayout;
                   }
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl "hover":shadow-lg transition-all duration-300";"
-                  initial={{ "opacity": 0, "y": 30 
+                  initial={ "opacity": 0, "y": 30 
 }
-                  whileInView={{ "opacity": 1, "y": 0 
+                  whileInView={ "opacity": 1, "y": 0 
 }
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true 
+                  transition={ "duration": 0.8, "delay": index * 0.1 }
+                  viewport={ "once": true 
 }
                 >;
                   <h3 className="text-lg font-bold text-gray-900 mb-4">;"
@@ -324,11 +324,11 @@ export default function AccessibilityPage() {return (<MainLayout;
             <div className="max-w-4xl mx-auto">;"
               <motion.div;
                 className="bg-white p-8 rounded-xl shadow-lg";"
-                initial={{ "opacity": 0, "y": 30 
+                initial={ "opacity": 0, "y": 30 
 }
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.8 }}
-                viewport={{ "once": true 
+                whileInView={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.8 }
+                viewport={ "once": true 
 }
               >;
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">;"
@@ -381,10 +381,10 @@ export default function AccessibilityPage() {return (<MainLayout;
         <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">"
           <div className="container mx-auto px-4 text-center">"
             <motion.div,
-initial={{ "opacity": 0, "y": 30 
+initial={ "opacity": 0, "y": 30 
 }
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 
+              animate={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 
 }
             >;
               <h2 className="text-3xl "md":text-4xl font-bold mb-6">;"

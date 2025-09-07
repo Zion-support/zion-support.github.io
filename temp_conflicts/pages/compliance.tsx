@@ -68,27 +68,27 @@ export default function Compliance() {
         <section className="pt-32 pb-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="flex items-center justify-center mb-6"
             >
               <Scale className="w-16 h-16 text-cyan-400" />
             </motion.div>
             
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.1 }
               className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent mb-6"
             >
               Regulatory Compliance
             </motion.h1>
             
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
               className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
             >
               We maintain the highest standards of regulatory compliance to protect your data and ensure business continuity across global markets.
@@ -100,9 +100,9 @@ export default function Compliance() {
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Compliance Program</h2>
@@ -116,9 +116,9 @@ export default function Compliance() {
               {complianceFrameworks.map((framework, index) => (
                 <motion.div
                   key={framework.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
                 >
                   <div className="flex items-center mb-6">
@@ -143,9 +143,9 @@ export default function Compliance() {
 
             {/* Additional Compliance Standards */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.5 }
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16"
             >
               <h3 className="text-3xl font-bold text-white mb-6 text-center">Additional Compliance Standards</h3>
@@ -154,9 +154,9 @@ export default function Compliance() {
                 {additionalCompliance.map((standard, index) => (
                   <motion.div
                     key={standard.name}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    initial={ opacity: 0, scale: 0.9 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ duration: 0.5, delay: index * 0.1 }
                     className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10"
                   >
                     <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
@@ -169,9 +169,9 @@ export default function Compliance() {
 
             {/* Compliance Process */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.6 }
               className="mb-16"
             >
               <h3 className="text-3xl font-bold text-white mb-6">Our Compliance Process</h3>
@@ -214,9 +214,9 @@ export default function Compliance() {
 
             {/* Data Protection Rights */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.7 }
               className="mb-16"
             >
               <h3 className="text-3xl font-bold text-white mb-6">Your Data Protection Rights</h3>
@@ -258,9 +258,9 @@ export default function Compliance() {
 
             {/* International Compliance */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.8 }
               className="mb-16"
             >
               <h3 className="text-3xl font-bold text-white mb-6">Global Compliance Coverage</h3>
@@ -289,9 +289,9 @@ export default function Compliance() {
 
             {/* Contact Compliance Team */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.9 }
               className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-2xl p-8 border border-purple-500/20"
             >
               <h3 className="text-3xl font-bold text-white mb-6 flex items-center">

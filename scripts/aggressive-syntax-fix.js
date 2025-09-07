@@ -112,7 +112,7 @@ const fs = require('fs')const path = require('path');'
 }
 
 const files = await glob('src/**/*.{ts,tsx,js,jsx}', {"ignore": ['node_modules/**.next/**dist/**build/**'];'
-            }),this.log(`📁 Found ${files.length} files to check`),for (const file of files) {await this.fixFile(file)}this.log(`✅ Fixed ${this.fixedFiles.length} files`),if (this.errors.length > 0) {this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`)}return {"fixedFiles": this.fixedFiles,"errors": this.errors;`            }} catch (error) {this.log(`❌ Error fixing "syntax": ${error.messag,`}`),throw error;`        }
+            }),this.log(`📁 Found ${files.length} files to check`),for (const file of files) {await this.fixFile(file)}this.log(`✅ Fixed ${this.fixedFiles.length} files`),if (this.errors.length > 0) {this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`)}return {"fixedFiles": this.fixedFiles,"errors": this.errors;`            } catch (error) {this.log(`❌ Error fixing "syntax": ${error.messag,`}`),throw error;`        }
     }async fixFile(filePath) {try {const fullPath = path.join(this.projectRoot, filePath),const content = fs.readFileSync(fullPath, 'utf8');'
   }
   const originalContent = content,// Check if this file has syntax errors;
@@ -810,7 +810,7 @@ const ${validFileName} = {}`;`    }
                 }
                 "totalErrors": this.errors.length;
                 "successRate": this.fixedFiles.length / (this.fixedFiles.length + this.errors.length) * 100;
-            }}
+            }
 
 const reportPath = path.join(this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date.now()}.json`)fs.writeFileSync(reportPath, JSON.stringify(report, null, 2);`  const reportPath = path && path.join(this && this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date && Date.now()}.json`),fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));`  return report;
     }
@@ -870,7 +870,7 @@ const fs = require('fs'),const path = require('path');'
 }
 
 const files = await glob('src/**/*.{ts,tsx,js,jsx}', {"ignore":['node_modules/**.next/**', 'dist/**build/**'];'
-            }),this.log(`📁 Found ${files.length} files to check`),for (const file of files) {await this.fixFile(file)}this.log(`✅ Fixed ${this.fixedFiles.length} files`),if (this.errors.length > 0) {this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`)}return {"fixedFiles":this.fixedFiles,"errors":this.errors;`            }} catch (error) {this.log(`❌ Error fixing "syntax": ${error.messag,`}`),throw error}`    }async fixFile(filePath) {try {const fullPath = path.join(this.projectRoot, filePath),const content = fs.readFileSync(fullPath, 'utf8');'
+            }),this.log(`📁 Found ${files.length} files to check`),for (const file of files) {await this.fixFile(file)}this.log(`✅ Fixed ${this.fixedFiles.length} files`),if (this.errors.length > 0) {this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`)}return {"fixedFiles":this.fixedFiles,"errors":this.errors;`            } catch (error) {this.log(`❌ Error fixing "syntax": ${error.messag,`}`),throw error}`    }async fixFile(filePath) {try {const fullPath = path.join(this.projectRoot, filePath),const content = fs.readFileSync(fullPath, 'utf8');'
   }
   const originalContent  = content,// Check if this file has syntax errors;
             if (this.hasSyntaxErrors(content)) {const fixedContent = this.createValidFile(filePath),fs.writeFileSync(fullPath, fixedContent),this.fixedFiles.push(filePath),this.log(`✅ "Fixed": ${filePath}`),`} catch (error) {this.errors.push({ "file":filePath, "error": error.message

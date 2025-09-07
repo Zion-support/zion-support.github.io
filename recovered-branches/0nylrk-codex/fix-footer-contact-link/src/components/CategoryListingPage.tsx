@@ -364,7 +364,7 @@ key={listing && listing.id}
                 onClick={() => {
                   setSearchQuery($2);
                   setSelectedFilter(filterOptions[0].value)
-                }}
+                }
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
@@ -388,7 +388,7 @@ key={listing && listing.id}
                   }
                   setSearchQuery ("");"
                   setSelectedFilter (filter_options[0].value);
-                }}
+                }
                 className="border - zion - purple text - zion - purple "hover":bg - zion-purple / 10";"
               >;
                 Clear all filters;

@@ -15,9 +15,9 @@ export default function Custom404() {
 
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
           className="text-center max-w-md mx-auto px-4"
         >
           <div className="text-6xl font-bold text-gray-300 mb-4">404</div>

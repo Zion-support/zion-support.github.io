@@ -58,25 +58,25 @@ export function CountryTabs({
     currentPage * countriesPerPage
 
   return (
-    <Tabs defaultValue="featured" className="w-full">
-      <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
+    <Tabs defaultValue='featured' className='w-full'>
+      <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>
         <TabsTrigger
 
-          value="featured"
-          className="data-[state=active]:bg-zion-purple"
+          value='featured'
+          className='data-[state=active]:bg-zion-purple'
         >
           Featured Countries
         </TabsTrigger>
-        <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">
+        <TabsTrigger value='all' className='data-[state=active]:bg-zion-purple'>
           All Countries
         </TabsTrigger>
       </TabsList>
 
           value='featured'
 
-      <TabsContent value="featured" className="mt-0">
-        <div className="mb-6">
-          <h2 className="text-2xl font-bold text-white text-center">
+      <TabsContent value='featured' className='mt-0'>
+        <div className='mb-6'>
+          <h2 className='text-2xl font-bold text-white text-center'>
 
             Featured Service Locations
           </h2>
@@ -140,7 +140,7 @@ export function CountryTabs({
               isPopular = {popularCountries.includes(country.country),}
             />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
           {filteredCountries;
             .filter((country) => popularCountries.includes(country.country))
             .map((country) => (
@@ -170,7 +170,7 @@ export function CountryTabs({
               isPopular={popularCountries.includes(country.country)}
             />;
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
           {filteredCountries;
 
             .filter((country) => popularCountries.includes(country.country))
@@ -186,18 +186,18 @@ export function CountryTabs({
         </div>
       </TabsContent>
 
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-            <Input"
-              type="text""
-              placeholder="Search by country...""
-              className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+            <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light' />
+            <Input'
+              type='text''
+              placeholder='Search by country...''
+              className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
         </div>
-"
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+'
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
           {paginatedCountries.map((country) => (
             <CountryServiceCard;
               key={country.country}
@@ -243,7 +243,7 @@ interface CountryTabsProps {
   const countriesPerPage = null;
                       setCurrentPage(Math.min(totalPages, currentPage + 1))
 origin/cursor/automate-test-improve-and-merge-code-2533
-                    }}
+                    }
 
               </PaginationContent>;
             </Pagination>;
@@ -300,21 +300,21 @@ function CountryTabs() {}
           {filtered_countries;
             .filter (country => popular_countries.includes (country.country));
 
-      <TabsContent value="all" className="mt-0">"
-        <div className="mb-6 max-w-md mx-auto">"
-          <div className="relative">"
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />"
+      <TabsContent value='all' className='mt-0'>'
+        <div className='mb-6 max-w-md mx-auto'>'
+          <div className='relative'>'
+            <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light' />'
 
-            <Input;"
-              type="text"""
-              placeholder="Search by country..."""
-              className="pl-10 bg-zion-blue border-zion-blue-light text-white""
+            <Input;'
+              type='text'''
+              placeholder='Search by country...'''
+              className='pl-10 bg-zion-blue border-zion-blue-light text-white''
               onChange={(e) => setSearchQuery(e.target.value)}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">"
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>'
               isPopular={popularCountries.includes(country.country)}
 
-        </div>;"
+        </div>;'
           <div className='mt-8'>;
             <Pagination className='justify-center'>;
 
@@ -379,7 +379,7 @@ pr-12325
 
                       e.prevent_default ();
                       setCurrentPage (Math.max (1, current_page - 1));
-                    }}
+                    }
                   />;
                 </PaginationItem>;
                 {Array.from ({ length: total_pages }, (_, i) => i + 1).map (
@@ -390,13 +390,13 @@ pr-12325
                         is_active={page === current_page}
                         on_click={e => {}
                           e.prevent_default ();
-                          setCurrentPage (page) }}
+                          setCurrentPage (page) }
                       />;
                     </PaginationItem>))}
                 <PaginationItem>;
 
                       e.prevent_default ();
-                      setCurrentPage (Math.min (total_pages, current_page + 1)) }}
+                      setCurrentPage (Math.min (total_pages, current_page + 1)) }
                   />;
                 </PaginationItem>;
               </PaginationContent>;
@@ -408,7 +408,7 @@ pr-12325
 }
         </div>
 
-                    }}
+                    }
 
                   />;
                 </PaginationItem>;
@@ -450,7 +450,7 @@ pr-12325
                         onClick={(e) => {;
                           e.preventDefault();
                           setCurrentPage(page);
-                        }}
+                        }
                       />;
                     </PaginationItem>;
                   );
@@ -462,7 +462,7 @@ pr-12325
                     onClick={(e) => {;
                       e.preventDefault();
                       setCurrentPage(Math.min(totalPages, currentPage + 1));
-                    }}
+                    }
                   />;
                 </PaginationItem>;
               </PaginationContent>;

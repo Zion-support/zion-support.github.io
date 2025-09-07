@@ -48,7 +48,7 @@ const "About": NextPage = () => {"
 ursor/fix-website-loading-errors-and-merge-6662;
 const \"About\": NextPage = () => {ursor/automate-test-improve-and-merge-code-646c;"
 }
-const \"About\": NextPage = () => {const \"About\": NextPage = () => {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+const \"About\": NextPage = () => {const \"About\": NextPage = () => {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }
@@ -1222,7 +1222,7 @@ href=\"/services\""
       </div>;
     </>;
   )}
-}}}
+}}
 ursor/automate-test-improve-and-merge-code-646c;
 }
       <section className=\"py-20 bg-gray-50\" id=\"team\">;"
@@ -1472,7 +1472,7 @@ ursor/automate-test-improve-and-merge-code-646c;
         </section>;
       </div>;
     </>;
-  )}}origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+  )}origin/cursor/integrate-build-improve-and-re-verify-c7b5;
   );
 
 
@@ -1482,7 +1482,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 }
-}}}ursor/automate-test-improve-and-merge-code-646c;
+}}ursor/automate-test-improve-and-merge-code-646c;
 }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }

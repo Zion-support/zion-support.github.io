@@ -56,7 +56,6 @@ const TALENTS_FILE = path.join (process.cwd (),'data','talents','talents.json')e
 function handler() {const auth = await authenticate_request (req)// Check condition;
 }
 if ( {) {$2;
-=======
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -71,7 +70,6 @@ export default async function handler(
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });
  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 return res.status (401).json ({ "error": 'Unauthorized' },;'
 }
@@ -190,13 +188,9 @@ created_at: now,
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
 }
-<<<<<<< HEAD
   return res.status(201).json({ id: record.id });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 return res.status(201).json({ "id": record.id,;
 });

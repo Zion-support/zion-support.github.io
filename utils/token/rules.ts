@@ -11,4 +11,4 @@ export const DEFAULT_TOKEN_CONFIG: TokenConfig = $2;
     boost_profile: 100,
     promote_job: 150,
     resume_ai_optimization: 80,
-    featured_badge: 200}},
+    featured_badge: 200},

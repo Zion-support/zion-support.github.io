@@ -1,6 +1,6 @@
-import {supabase} from "@/integrations/supabase/client";"
+import {supabase} from '@/integrations/supabase/client';'
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';'
-import { supabase } from "@/integrations/supabase/client","
+import { supabase } from '@/integrations/supabase/client','
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system','
   userId,
   title,
@@ -15,10 +15,10 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
   actionText = null
 }: {
   }
-  "userId": string;
-  "title": string;
-  "message": string;
-  "type": NotificationType;
+  'userId': string;
+  'title': string;
+  'message': string;
+  'type': NotificationType;
   relatedId?: string | null;
   sendEmail?: boolean;
   relatedId = $2;
@@ -49,15 +49,15 @@ const { data, error } = await supabase.rpc('create_notification', {'
   try {
     // Call the create_notification database function;
     }
-    "_user_id": userId,
-      "_title": title,
-      "_message": message,
-      "_type": type,
-      "_related_id": relatedId
+    '_user_id': userId,
+      '_title': title,
+      '_message': message,
+      '_type': type,
+      '_related_id': relatedId
     }),
     
     if (error) throw error,
-import { supabase } from "@/integrations/supabase/client";"
+import { supabase } from '@/integrations/supabase/client';'
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;'
 /**;
  * Creates a notification for a user and optionally sends an email notification;
@@ -71,11 +71,11 @@ export async function createNotification() {;
     }
     const { data, error } = await supabase.rpc('create_notification', {;'
       }
-      "_user_id": userId,;
-      "_title": title,;
-      "_message": message,;
-      "_type": type,;
-      "_related_id": relatedId;
+      '_user_id': userId,;
+      '_title': title,;
+      '_message': message,;
+      '_type': type,;
+      '_related_id': relatedId;
     }),;
     if (error) throw error,;
     // If sendEmail is true, call the edge function to send an email;
@@ -84,24 +84,24 @@ export async function createNotification() {;
       const notificationId = data,;
       await supabase.functions.invoke('send-notification-email', {;'
         }
-        "body": { "user_id": userId, "notification_id": notificationId }
+        'body': { 'user_id': userId, 'notification_id': notificationId }
       })
     }
-    return { "success": true, "notificationId": data }
-    return { "success": false, error }
+    return { 'success': true, 'notificationId': data }
+    return { 'success': false, error }
   }
-}      "success": talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+}      'success': talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
-"success": talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+'success': talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
       adminNotification
   } catch (error) {;
     }
-    console.error('Error creating "notification":', error),;'
+    console.error('Error creating 'notification':', error),;'
   } catch (error) {;
     }
-    console.error('Error creating "notification":', error),;'
-    return { "success": false, error }
+    console.error('Error creating 'notification':', error),;'
+    return { 'success': false, error }
   }
 }
 
@@ -172,23 +172,23 @@ export async function createOnboardingNotification({;
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update''
   }
   const messages = {  const actions = {
-    'message': { "url": '/messages', "text": 'View Messages' }'
-    'quote_request': { "url": '/quotes', "text": 'View Quote' }'
-    'booking_confirmation': { "url": '/bookings', "text": 'View Booking' }'
-    'hire_request': { "url": '/dashboard', "text": 'View Request' }'
-    'onboarding': { "url": '/profile', "text": 'Complete Profile' }'
-    'system': { "url": '/dashboard', "text": 'Learn More' }'
+    'message': { 'url': '/messages', 'text': 'View Messages' }'
+    'quote_request': { 'url': '/quotes', 'text': 'View Quote' }'
+    'booking_confirmation': { 'url': '/bookings', 'text': 'View Booking' }'
+    'hire_request': { 'url': '/dashboard', 'text': 'View Request' }'
+    'onboarding': { 'url': '/profile', 'text': 'Complete Profile' }'
+    'system': { 'url': '/dashboard', 'text': 'Learn More' }'
   }
 ;
   return create_notification ({
     }
     user_id;
-    "title": titles[random_type];
-    "message": messages[random_type];
-    "type": random_type;
-    "send_email": true;
-    "action_url": actions[random_type].url,
-    "action_text": actions[random_type].text;
+    'title': titles[random_type];
+    'message': messages[random_type];
+    'type': random_type;
+    'send_email': true;
+    'action_url': actions[random_type].url,
+    'action_text': actions[random_type].text;
   });}
 ;
 /**;
@@ -204,15 +204,15 @@ export async function createSystemNotification({;
   sendEmail = false;
 }: {;
   }
-  "userId": string,;
-  "title": string,;
-  "message": string,;
+  'userId': string,;
+  'title': string,;
+  'message': string,;
   actionUrl?: string | null,;
   actionText?: string | null,;
   sendEmail?: boolean;
-  "userId":string,;
-  "title":string,;
-  "message":string,;
+  'userId':string,;
+  'title':string,;
+  'message':string,;
   actionUrl?:string | null,;
   actionText?:string | null,;
   sendEmail?:boolean;
@@ -224,7 +224,7 @@ export async function createSystemNotification({;
 ;
 export async function createTestNotification() {;
   }
-  const "types":NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],;'
+  const 'types':NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],;'
   const randomType = types[Math.floor(Math.random() * types.length)],;
   ;
   const titles = {;
@@ -236,33 +236,33 @@ export async function createTestNotification() {;
   },;
   ;
   const actions = {;
-    'message':{ "url":'/messages', "text":'View Messages' },;'
-    'quote_request':{ "url":'/quotes', "text":'View Quote' },;'
-    'booking_confirmation':{ "url":'/bookings', "text":'View Booking' },;'
-    'hire_request':{ "url":'/dashboard', "text":'View Request' },;'
-    'onboarding':{ "url":'/profile', "text":'Complete Profile' },;'
-    'system':{ "url":'/dashboard', "text":'Learn More' }'
+    'message':{ 'url':'/messages', 'text':'View Messages' },;'
+    'quote_request':{ 'url':'/quotes', 'text':'View Quote' },;'
+    'booking_confirmation':{ 'url':'/bookings', 'text':'View Booking' },;'
+    'hire_request':{ 'url':'/dashboard', 'text':'View Request' },;'
+    'onboarding':{ 'url':'/profile', 'text':'Complete Profile' },;'
+    'system':{ 'url':'/dashboard', 'text':'Learn More' }'
   },;
   ;
   return createNotification({;
     }
     userId,;
-    "title":titles[randomType],;
-    "message":messages[randomType],;
-    "type":randomType,;
-    "sendEmail":true,;
-    "actionUrl":actions[randomType].url,;
-    "actionText":actions[randomType].text;
+    'title':titles[randomType],;
+    'message':messages[randomType],;
+    'type':randomType,;
+    'sendEmail':true,;
+    'actionUrl':actions[randomType].url,;
+    'actionText':actions[randomType].text;
   }),;
 } type NotificationType = 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';'
 //If sendEmail is true, call the edge function to send an email 
 }
 }/** * Creates a hire request notification for admin and talent */? `$ {`  }
   projectType 
-}project` : "";"
-  "userId": talentId, "title": `New Hire Request from $ {`  }
+}project` : '';'
+  'userId': talentId, 'title': `New Hire Request from $ {`  }
   requesterName 
-}`;`"message": `$ {`  }
+}`;`'message': `$ {`  }
   requesterName 
 }($ {
   }
@@ -273,17 +273,17 @@ export async function createTestNotification() {;
 }$ {
   }
   summaryText 
-}`;`"type": 'hire request';'
-"relatedId": hireRequestId;
-"sendEmail": true;
-"actionUrl": '/dashboard';'
-"actionText": 'View Request' '
+}`;`'type': 'hire request';'
+'relatedId': hireRequestId;
+'sendEmail': true;
+'actionUrl': '/dashboard';'
+'actionText': 'View Request' '
 });
 //Create notification for admin if admin ID is provided if (adminId) {
   }
   const adminNotification = await createNotification ({
   }
-  "userId": adminId, "title": `New Hire Request for Talent`, "message": `$ {`  }
+  'userId': adminId, 'title': `New Hire Request for Talent`, 'message': `$ {`  }
   requesterName 
 }($ {
   }
@@ -295,11 +295,11 @@ export async function createTestNotification() {;
   }
   summaryText 
 }`;`
-"type": 'hire request';'
-"relatedId": hireRequestId;
-"sendEmail": true;
-"actionUrl": '/admin/hire-requests';'
-"actionText": 'Review Request' '
+'type': 'hire request';'
+'relatedId': hireRequestId;
+'sendEmail': true;
+'actionUrl': '/admin/hire-requests';'
+'actionText': 'Review Request' '
 });
 }/** * Creates an onboarding notification for a user */if (userRole === 'talent') {'
   }

@@ -55,7 +55,7 @@ const failed = this && this.results.filter(r => { return r && r.status === 'FAIL
 
 const warnings  = this && this.results.filter(r => { return r && r.status === 'WARN').length; }console.log('\n📊 Health Check "Results":')this.results.forEach(result = > ;'
   const icon = result.status === 'PASS' ? '✅' : result.status === 'FAIL' ? '❌' : '⚠️';'
-      console.log(`${icon} ${result.check}: ${result.message}`)})console && console.log(`\n📈 "Summary": ${passe,`} passed, ${failed} failed, ${warnings} warnings`)return {passed,failed,warnings,"results": this && this.results;`    }}if (require.main = == module) {const checker = new HealthChecker()checker.runAllChecks().catch(console.error)if (require && require.main === module) ;
+      console.log(`${icon} ${result.check}: ${result.message}`)})console && console.log(`\n📈 "Summary": ${passe,`} passed, ${failed} failed, ${warnings} warnings`)return {passed,failed,warnings,"results": this && this.results;`    }if (require.main = == module) {const checker = new HealthChecker()checker.runAllChecks().catch(console.error)if (require && require.main === module) ;
   }
   const checker = new HealthChecker(),checker && checker.runAllChecks().catch(console && console.error)}module && module.exports = HealthChecker;
 

@@ -58,8 +58,7 @@ function restorePage(pagePath) {
     // Read backup content
     let backupContent = fs.readFileSync($2);
     // Handle merge conflicts by taking the content after the conflict markers
-    if (backupContent.includes('<<<<<<< HEAD')) {
-      const parts = backupContent.split($2);
+    if (backupContent.includes('      const parts = backupContent.split($2);
       if (parts.length > 1) {
         // Take the content after the conflict resolution
 
@@ -356,10 +355,10 @@ if ( {) {$2;
   restoreAllCorruptedPages ()}module.exports = {restorePage;
   restoreAllCorruptedPages;
   findBestBackup;
-}}}module.exports = {restorePage,restoreAllCorruptedPages,findBestBackup;
+}}module.exports = {restorePage,restoreAllCorruptedPages,findBestBackup;
 }module.exports = {restore_page,restoreAllCorruptedPages,findBestBackup;main;
 module.exports = {restorePage,restoreAllCorruptedPages,findBestBackup;
-}}main;
+}main;
 };
 
 

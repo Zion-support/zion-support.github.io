@@ -16,7 +16,6 @@ interface ReportingData {
   }>
 }
 
-<<<<<<< HEAD
 const FILE = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
@@ -31,11 +30,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     timeToHireDays: number;
     costPerHireUsd?: number;
     updatedAt: string;
-=======
     updatedAt: string
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }>
-<<<<<<< HEAD
 }
   >;
 
@@ -124,7 +120,6 @@ return res.status(405).json({ "error": 'Method not allowed',;'
         updatedAt: new Date().toISOString()},
       return { byTenant: next}
     }, FALLBACK),
-=======
       FALLBACK;
     );
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);

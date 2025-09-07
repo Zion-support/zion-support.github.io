@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
-<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
 import { Star } from 'lucide-react';
 
 
@@ -33,7 +31,6 @@ export const CommunityTrust: React.FC = () => {
     { value: '12M+', label: 'Matches Made' },
   ];
 
-<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className='py-16 bg-zion-blue'>;
@@ -41,7 +38,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='text-center mb-12'>;
           <h2 className='text-3xl md:text-4xl font-bold text-white'>;
             Trusted by the{' '}
-<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
 
 
 import { Star  } from 'lucide-react';
@@ -61,7 +57,6 @@ export const CommunityTrust: React.FC = () => {// Stats display with social proo
           <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;
 import React from 'react'; import { Star  } from 'lucide-react';
 import React from './react';
-<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
             <span className='text-zion-cyan'>Tech Community</span>;
           </h2>;'
           <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;'
@@ -114,7 +109,6 @@ export const CommunityTrust: React.FC = () => {// Stats display with social proo
                 key={star}'
                 className='w - 6 h - 6 text - zion - cyan';'
                 fill='current_color';
-<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
               />            ))}
 
 
@@ -186,9 +180,7 @@ import React from "react",export const CommunityTrust: React.FC = () => {// Stat
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;"
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
           ))}
-<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
 
         </div>;
 
@@ -208,7 +200,6 @@ import React from "react",export const CommunityTrust: React.FC = () => {// Stat
           <div className="text-center">"
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>"
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
-<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
           </div>
           <blockquote className='text-center text-lg text-white italic mb-4'>
             "The Zion app has completely changed how I find tech talent. The AI
@@ -268,8 +259,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
-  )}</div>) ))}}</div>) )}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>)}'"  )})}}</div>;
+  )}</div>) ))}</div>) )}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>)}'"  )})}</div>;
           <blockquote className='text - center text - lg text - white italic mb - 4'>;
             "The Zion app has completely changed how I find tech talent. The AI;
             matching is spot on and I can manage everything from anywhere.";
@@ -315,7 +305,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/CommunityTrust.tsx
     </section>);
 }</div>) );
 }</div> <blockquote className="text - center text - lg text - white italic mb - 4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text - center" > <div className="font - semibold text - zion - cyan" >Sarah Johnson</div> <div className="text - sm text - zion - slate - light" >CTO at TechFlow</div> </div> </div> </div> </section>);

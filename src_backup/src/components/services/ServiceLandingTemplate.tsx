@@ -415,7 +415,7 @@ className='rounded-full mr-4';'
           </a>;
         </div>;
       </section>;
-    </div>)}}}
+    </div>)}}
 },<section className='py-12 bg-zion-blue-dark text-center'>;'
         <Button;
           size='lg';'

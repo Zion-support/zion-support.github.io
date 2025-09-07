@@ -31,7 +31,7 @@ const highlightMatch = ("text": string, "searchTerm": string): (SearchHighlight)
     "before": text.substring (0, index);
     "match": text.substring (index, index + search_term.length);
     "after": text.substring (index + search_term.length);
-  }};
+  };
 export function AutocompleteSuggestions({
   }
   suggestions,

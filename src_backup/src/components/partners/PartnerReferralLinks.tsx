@@ -36,7 +36,7 @@ export function PartnerReferralLinks() {const {referralCode;
       if (customParam) {"name": `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,"link": url.toString()},setGeneratedLinks(prev => [...prev, newLink]),setIsDialogOpen(false),setCustomParam("")}"  },const handleDownloadLinks = () => {const allLinks = [;
       { "name": "Default", "link": baseLink },...generatedLinks;"
     ],const csvContent = [;
-      "Name,Link",...allLinks.map(l => `${l.name},${l.link}`)].join("\n"),const blob = new Blob([csvContent], { "type": 'text/csv,charset=utf-8,' }),const url = URL.createObjectURL(blob),const link = document.createElement("a"),link.setAttribute("href", url),link.setAttribute("download", "zion_referral_links.csv"),link.style.visibility = 'hidden',document.body.appendChild(link),link.click(),document.body.removeChild(link)}}return (<div className="space-y-6">;"      <Card className="bg-zion-blue-dark border-zion-blue-light">;"
+      "Name,Link",...allLinks.map(l => `${l.name},${l.link}`)].join("\n"),const blob = new Blob([csvContent], { "type": 'text/csv,charset=utf-8,' }),const url = URL.createObjectURL(blob),const link = document.createElement("a"),link.setAttribute("href", url),link.setAttribute("download", "zion_referral_links.csv"),link.style.visibility = 'hidden',document.body.appendChild(link),link.click(),document.body.removeChild(link)}return (<div className="space-y-6">;"      <Card className="bg-zion-blue-dark border-zion-blue-light">;"
         <CardHeader>;
           <CardTitle className="flex items-center justify-between">;"
             <span>Your Referral Link</span>;
@@ -256,7 +256,7 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
     </div>;
   )}//Add custom parameter if provided if (customParam) {;
 }const newLink = {"name": `$ {selectedCampaign ;`}$ {customParam ? `-$ {customParam ;`}`: "" ;"
-}`;`}}...generatedLinks ];link && link.style.visibility = 'hidden';'
+}`;`}...generatedLinks ];link && link.style.visibility = 'hidden';'
 document && document.body.appendChild (link)link && link.click ()document && document.body.removeChild (link)}";"
   baseLink ";"
 }readOnly className="font-mono text-sm"/> <Copy className="h-4 w-4" /> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card> <div className="flex justify-between items-center"> <DialogTrigger asChild> <Button variant=" outline"size=" sm"className="flex items-center gap-2"> <Plus className="h-4 w-4" /> Create New Link </Button> </DialogTrigger> <DialogContent className=""sm":max-w-md bg-zion-blue border-zion-blue-light"> <DialogHeader> <DialogTitle>Create Custom Campaign Link</DialogTitle> <DialogDescription> Generate a trackable link for specific marketing campaigns </DialogDescription> </DialogHeader> <div className="grid gap-4 py-4"> <div className="grid gap-2"> <Label htmlFor=" campaign">Campaign Type</Label> <Selectvalue= {selectedCampaign;"
@@ -288,7 +288,7 @@ document && document.body.appendChild (link)link && link.click ()document && doc
         )}
       </div>;
     </div>;
-  )}}const new_link = {"name": `$ {selected_campaign;`}$ {custom_param ? `-$ {custom_param;`}`: "";"
+  )}const new_link = {"name": `$ {selected_campaign;`}$ {custom_param ? `-$ {custom_param;`}`: "";"
 }`;`
 }
 }

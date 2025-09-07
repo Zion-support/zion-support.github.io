@@ -32,7 +32,7 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({,
   const y = direction === 'up' || direction === 'down' ? getTransform() : 0;
   const x = direction === 'left' || direction === 'right' ? getTransform() : 0;
   return (
-    <motion.div ref={ref} style={{ y, x }} className={className}>
+    <motion.div ref={ref} style={ y, x } className={className}>
       {children}
     </motion.div>
   );

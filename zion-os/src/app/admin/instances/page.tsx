@@ -101,7 +101,7 @@ export default function InstancesPage() {const "instances": any[] = [], // Tempo
                   </div>;
                   {inst.region && (<div className="flex items - center gap - 2 text - sm text - white / 70">;"
                       <span className="w - 4 h - 4">📍</span>;"
-                      <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;;<div className="flex items-center gap-2 text-sm text-white/70">;"                    <span className="w-4 h-4">🔧</span>;"
+                      <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;<div className="flex items-center gap-2 text-sm text-white/70">;"                    <span className="w-4 h-4">🔧</span>;"
                     <span>"Token": {getTokenSystemLabel(inst.tokenSystem)}</span>;</div>;
                 </div>;
                 <div className="flex items - center justify - between text - xs text - white / 60">;"
@@ -387,7 +387,7 @@ export default function InstancesPage() {const "instances": any[] = [], // Tempo
                 </div>;
                 {inst.region && (<div className="flex items - center space - x-2 text - sm text - white / 70">;"
                     <span>📍</span>;
-                    <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;;<div className="flex items-center space-x-2 text-sm text-white/70">;<div className="flex items - center space - x-2 text - sm text-white / 70">;"                {inst.region && (
+                    <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;<div className="flex items-center space-x-2 text-sm text-white/70">;<div className="flex items - center space - x-2 text - sm text-white / 70">;"                {inst.region && (
                   <div className="flex items - center space - x-2 text - sm text - white / 70">;"
                     <span>📍</span>;
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;'                <div className="flex items-center space-x-2 text-sm text-white/70">;"

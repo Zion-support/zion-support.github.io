@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
 
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
@@ -228,7 +227,7 @@ export default function UpdatePassword() {;
     resolver: zodResolver(updatePasswordSchema),;
     defaultValues: {;
       password: "",;
-      confirmPassword: ""}}),;
+      confirmPassword: ""}),;
   useEffect(() => {;
     // Extract access token from URL hash on the client;
     const hash = typeof window !== 'undefined' ? window.location.hash : "",;
@@ -442,7 +441,6 @@ export default function UpdatePassword() {;
                   </form>
                 </Form>
               )}
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
 :src/pages/UpdatePassword.tsx
 
             </div>

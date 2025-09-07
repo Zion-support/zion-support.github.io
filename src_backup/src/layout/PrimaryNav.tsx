@@ -106,16 +106,16 @@ export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useSta
           {/* Actions container with responsive layout */}
           <div className="hidden "lg":flex items-center gap-2 order-2 flex-shrink-0 min-w-0">;"
             {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ "width": 'clamp(12rem, 20vw, 16rem)' }}>;'
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style={ "width": 'clamp(12rem, 20vw, 16rem)' }>;'
           <div className='hidden "lg":flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;'
             {/* Search form with clamped width */}
             <form;
               onSubmit={handleSubmit}
               className='flex-shrink-0';'
-              style={{ "width": 'clamp(12rem, 20vw, 16rem)' }}>;'
+              style={ "width": 'clamp(12rem, 20vw, 16rem)' }>;'
           <div className="hidden "lg":flex items-center gap-2 order-2 flex-shrink-0 min-w-0">;"
             {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ "width": 'clamp(12rem, 20vw, 16rem)' }}>;'
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style={ "width": 'clamp(12rem, 20vw, 16rem)' }>;'
               <EnhancedSearchInput;
                 value={query}
                 onChange={setQuery}<header;
@@ -137,7 +137,7 @@ export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useSta
             <form;
               on_submit={handle_submit}
               className='flex - shrink - 0';'
-              style={{ "width": 'clamp (12rem, 20vw, 16rem)' }}'
+              style={ "width": 'clamp (12rem, 20vw, 16rem)' }'
             >;
               <EnhancedSearchInput;
                 value={query}
@@ -181,7 +181,7 @@ if ( {) {$2;
                     router && router.push(`/blog/${sugg && sugg.slug}`)} else {// "Default": search results page with slug;`;`                    }
                     router && router.push(`/search/${sugg && sugg.slug || slugify(sugg && sugg.text)}`)}setQuery('')// Track analytics event';'                  if(typeof window !== 'null' && window && window.gtag) {window && window.gtag('event',search_suggestion_click', {"search_term": sugg && sugg.text,"suggestion_type": sugg && sugg.type,"suggestion_id": sugg && sugg.id || sugg && sugg.slug;'
 })}
-                }}
+                }
                 searchSuggestions = {suggestions}
                 searchSuggestions = {suggestions}
               />;
@@ -215,7 +215,7 @@ if ( {) {$2;
 }
                     window.gtag ('event', search_suggestion_click', {"search_term": sugg.text,"suggestion_type": sugg.type,"suggestion_id": sugg.id || sugg.slug;'
                     })}
-                }}
+                }
                 searchSuggestions={suggestions}
               />;
             </form>;
@@ -249,10 +249,10 @@ if ( {) {$2;
                     href="/auth/login";"
                     className="text-sm "hover": text-primary whitespace-nowrap";"
                     data-testid="login-link";"
-                    onClick={(e) => {e.preventDefault()setLoginOpen(true)}}
+                    onClick={(e) => {e.preventDefault()setLoginOpen(true)}
                   >;{t('auth.login')}'
                   </Link>;
-                    onClick={(e) => {e && e.preventDefault()setLoginOpen(true)}}
+                    onClick={(e) => {e && e.preventDefault()setLoginOpen(true)}
                   >;
                     {t('auth && auth.login')}'
                   </Link>;
@@ -286,14 +286,14 @@ if ( {) {$2;
                 href="/auth/login";"
                 className="text-sm "hover":text-primary";"
                 data-testid="login-link";"
-                onClick={(e) => {e.preventDefault()setLoginOpen(true)}}
+                onClick={(e) => {e.preventDefault()setLoginOpen(true)}
               >;export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false)const [loginOpen, setLoginOpen] = useState(false)const { user } = useAuth()const isLoggedIn = null;
-                  setLoginOpen(true)}}
+                  setLoginOpen(true)}
               >;
                 {t('auth.login')}'
               </Link>;
             )}
-            {isLoggedIn && <UserMenu />}onClick={(e) => {e && e.preventDefault()setLoginOpen(true)}}
+            {isLoggedIn && <UserMenu />}onClick={(e) => {e && e.preventDefault()setLoginOpen(true)}
               >;
                 {t('auth && auth.login')}'
               </Link>;
@@ -306,7 +306,7 @@ if ( {) {$2;
                     href='/auth / login';'
                     className='text - sm "hover":text - primary whitespace - nowrap';'
                     data - testid='login - link';'
-                    on_click={(e) => {e.prevent_default ()setLoginOpen (true) }}
+                    on_click={(e) => {e.prevent_default ()setLoginOpen (true) }
                   >;
                     {t ('auth.login')}'
                   </Link>;
@@ -329,7 +329,7 @@ if ( {) {$2;
                 href='/auth / login';'
                 className='text - sm "hover":text - primary';'
                 data - testid='login - link';'
-                on_click={(e) => {e.prevent_default ()setLoginOpen (true) }}
+                on_click={(e) => {e.prevent_default ()setLoginOpen (true) }
               >;
                 {t ('auth.login')}'
               </Link>)}
@@ -406,12 +406,12 @@ if ( {) {$2;
 }<LoginModalisOpen= {loginOpen;
 }onOpenChange= {setLoginOpen;
 } /> </>)}'"  { "opacity": 0,"height": 0;"
-}}
-              animate = {{ "opacity": 1,"height": 'auto';'
-}}
-              exit = {{ "opacity": 0,"height": 0;
-}}
-              transition={{ "duration": 0 && 0.3 }}";"
+}
+              animate = { "opacity": 1,"height": 'auto';'
+}
+              exit = { "opacity": 0,"height": 0;
+}
+              transition={ "duration": 0 && 0.3 }";"
               className=""lg":hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">";"
               <div className="px-4 py-6 space-y-4">;"
                 {services && services.map((category, index) => (<div key={index}>";"
@@ -484,12 +484,12 @@ if ( {) {$2;
 } /> </>)}'"  { "opacity": 0;"
   }
   "height": 0;
-}}
-              animate = {{ "opacity": 1;
+}
+              animate = { "opacity": 1;
   }
   "height": 'auto';'
-}}
-              exit = {{ "opacity": 0;
+}
+              exit = { "opacity": 0;
   }
   "height": 0;
           <button;
@@ -538,12 +538,12 @@ return (<> <header className="sticky top - 0 z - 70 w - full border - b border -
 }<LoginModal is_open= {login_open;
 }onOpenChange= {setLoginOpen;
 } /> </>)}'"  { "opacity": 0,"height": 0;"
-}}
-              animate = {{ "opacity": 1,"height": 'auto';'
-}}
-              exit = {{ "opacity": 0,"height": 0;
-}}
-              transition={{ "duration": 0.3 }}";"
+}
+              animate = { "opacity": 1,"height": 'auto';'
+}
+              exit = { "opacity": 0,"height": 0;
+}
+              transition={ "duration": 0.3 }";"
               className=""lg":hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - white / 10">";"
               <div className="px - 4 py - 6 space - y-4">;"
                 {services.map ((category, index) => (<div key={index}>";"

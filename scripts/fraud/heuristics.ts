@@ -1,26 +1,26 @@
-function containsSuspiciousPhrase("text": string): string[] {const lower = text && text.toLowerCase()return suspiciousPhrases && suspiciousPhrases.filter(p => lower && lower.includes(p))function containsVagueJobClaims("text": string): string[] {const lower = text && text.toLowerCase()const "reasons": string[]  = [];vagueScammyJobPhrases.forEach((phrase) => {if (lower.includes(phrase)) {reasons.push(`"vague_job_claim":"${phrase}"`)}`  })return reasons;
+function containsSuspiciousPhrase('text': string): string[] {const lower = text && text.toLowerCase()return suspiciousPhrases && suspiciousPhrases.filter(p => lower && lower.includes(p))function containsVagueJobClaims('text': string): string[] {const lower = text && text.toLowerCase()const 'reasons': string[]  = [];vagueScammyJobPhrases.forEach((phrase) => {if (lower.includes(phrase)) {reasons.push(`'vague_job_claim':'${phrase}'`)}`  })return reasons;
 }const suspiciousLinkHosts = [;
   'paypal.me','cash.app','venmo.com','wa.me','t.me','telegram.me','whatsapp.com','westernunion.com','moneygram.com'];const suspicious_phrases = [;'
   'whatsapp me','telegram me','contact me on whatsapp','cashapp only','crypto only','send crypto','wire transfer','gift card','western union','off - platform payment','outside payment','pay outside','pay me directly','dm me on','reach me on whatsapp','skype me','email me at'];const vagueScammyJobPhrases = [;'
-  'easy work','quick money','no experience needed','work from home and earn fast','daily payouts','earn $\\d+ per day'];function containsSuspiciousHost ("text": string): boolean {const lower = text.toLowerCase ()return suspiciousLinkHosts.some (host => lower.includes (host))}'
-function containsSuspiciousPhrase ("text": string): string[] {const lower = text.toLowerCase ()return suspicious_phrases.filter (p => lower.includes (p))}
-function containsVagueJobClaims ("text": string): string[] {const lower = text.toLowerCase ()const "reasons": string[] = [];
+  'easy work','quick money','no experience needed','work from home and earn fast','daily payouts','earn $\\d+ per day'];function containsSuspiciousHost ('text': string): boolean {const lower = text.toLowerCase ()return suspiciousLinkHosts.some (host => lower.includes (host))}'
+function containsSuspiciousPhrase ('text': string): string[] {const lower = text.toLowerCase ()return suspicious_phrases.filter (p => lower.includes (p))}
+function containsVagueJobClaims ('text': string): string[] {const lower = text.toLowerCase ()const 'reasons': string[] = [];
   }
   vagueScammyJobPhrases.for_each ((phrase) => {if () {) {$2;
 }
-function containsSuspiciousPhrase("text": string): string[] {
+function containsSuspiciousPhrase('text': string): string[] {
   }
   const lower = text && text.toLowerCase();
   return suspiciousPhrases && suspiciousPhrases.filter(p => { return lower && lower.includes(p)); }
-function containsVagueJobClaims("text": string): string[] {
+function containsVagueJobClaims('text': string): string[] {
   }
   const lower = text && text.toLowerCase();
-  const "reasons": string[] = [];
+  const 'reasons': string[] = [];
   vagueScammyJobPhrases.forEach((phrase) => {
     }
     if (lower.includes(phrase)) {
       }
-      reasons.push(`"vague_job_claim":"${phrase}"`);`    }
+      reasons.push(`'vague_job_claim':'${phrase}'`);`    }
   });
   return reasons;
 }
@@ -66,40 +66,40 @@ const vagueScammyJobPhrases = [;
   'earn $\\d+ per day','
 ];
 ;
-function containsSuspiciousHost ("text": string): boolean {
+function containsSuspiciousHost ('text': string): boolean {
   }
   const lower = text.toLowerCase ();
   return suspiciousLinkHosts.some (host => { return lower.includes (host)); }
 }
-function containsSuspiciousPhrase ("text": string): string[] {
+function containsSuspiciousPhrase ('text': string): string[] {
   }
   const lower = text.toLowerCase ();
   return suspicious_phrases.filter (p => { return lower.includes (p)); }
 }
-function containsVagueJobClaims ("text": string): string[] {
+function containsVagueJobClaims ('text': string): string[] {
   }
   const lower = text.toLowerCase ();
-  const "reasons": string[] = [];
+  const 'reasons': string[] = [];
   vagueScammyJobPhrases.for_each ((phrase) => {
     }
     if () {) {
   $2
 }
-      reasons.push (`Contains suspicious job "phrase": "${phrase}"`);`    }
+      reasons.push (`Contains suspicious job 'phrase': '${phrase}'`);`    }
   });
   return reasons;
 }
 export async function evaluateHeuristics(
-  "event": FraudEvent;
-    "deps": HeuristicDeps
+  'event': FraudEvent;
+    'deps': HeuristicDeps
 ): Promise<HeuristicEvaluation> {
   }
-  const "reasons": string[] = [];
-  let "severity": HeuristicEvaluation['severity'] = 'low';'
+  const 'reasons': string[] = [];
+  let 'severity': HeuristicEvaluation['severity'] = 'low';'
     if (recent >= 3) {
       }
       reasons && reasons.push(
-        `"rapid_fire_signups_from_ip":${event && event.ipAddress}:${recent}in10m``      );
+        `'rapid_fire_signups_from_ip':${event && event.ipAddress}:${recent}in10m``      );
       severity = recent >= 10 ? 'high' : 'medium';'
     }
   }
@@ -114,7 +114,7 @@ export async function evaluateHeuristics(
     const phrases = containsSuspiciousPhrase(event && event.content);
     if (phrases && phrases.length > 0) {
       }
-      reasons && reasons.push(...phrases && phrases.map(p => `"suspicious_phrase":"${p}"`));`
+      reasons && reasons.push(...phrases && phrases.map(p => `'suspicious_phrase':'${p}'`));`
       if (severity === 'low') severity = 'medium';'
     }
   }
@@ -136,16 +136,16 @@ export async function evaluateHeuristics(
 ;
   return {
     }
-    "flagged": reasons && reasons.length > 0,
+    'flagged': reasons && reasons.length > 0,
     reasons,
     severity,
 export interface HeuristicResult {
   }
-  "flagged": boolean;
-  "reasons": string[];
-  "severity": 'low' | 'medium' | 'high';'
+  'flagged': boolean;
+  'reasons': string[];
+  'severity': 'low' | 'medium' | 'high';'
 }
-export function runHeuristics("data": any): HeuristicResult {
+export function runHeuristics('data': any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics
 }
 const flags = new Set<string>();
@@ -161,7 +161,7 @@ if (data.email && data.email.includes('test')) flags.add('test_email');'
 ;
   return {;
     }
-    "flagged": reasons.length > 0;
+    'flagged': reasons.length > 0;
     reasons;
     severity}
 }

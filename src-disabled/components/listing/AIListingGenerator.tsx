@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,7 +9,6 @@ import { LoadingContentSkeleton } from './LoadingContentSkeleton';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface GeneratedContent {
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
@@ -29,7 +27,6 @@ interface GeneratedContent {
     min: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
     max: number
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
   description: string,
   tags: string[],
   suggested_price: {
@@ -44,13 +41,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 interface AIListingGeneratorProps {
 
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 interface GeneratedContent {;
   description: string,;
   tags: string[],;
   suggestedPrice: {;
     min: number,;
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
     max: number;
   };
   keyPoints: string[];
@@ -96,12 +91,10 @@ interface AIListingGeneratorProps  {interface GeneratedContent  {description: st
   initialValues?: {title?: string;
     category?: string;
     keyFeatures?: string;
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
     targetAudience?: string;
     targetAudience?: string
 
   }
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 }
 
 
@@ -129,9 +122,7 @@ function AIListingGenerator() {const { toast } = use_toast ()const [is_loading, 
     category;
     key_features;
     target_audience;
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
   }: {
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
     title: string,
     category: string,
     key_features: string,
@@ -152,7 +143,6 @@ function AIListingGenerator() {const { toast } = use_toast ()const [is_loading, 
         throw new Error(error.message)
       }
 
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 
 
 
@@ -194,7 +184,6 @@ if (.error) {) {
       setGeneratedContent((data as any)?.generated || null),
       toast({
         title: "Content Generated",
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
   }: {title: string,category: string,key_features: string,target_audience: string;}) => {setIsLoading(true)try {const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {body: { title, category, key_features, target_audience }
       })// Check condition;
 if ( {) {$2;
@@ -206,7 +195,6 @@ if ( {) {$2;
       })} catch (error) {logErrorToProduction('Error generating content:', { data: error })toast({title: "Generation Failed";
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.";
         variant: "destructive";
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
       });
         description: "AI has created optimized listing content for you."
       })
@@ -221,7 +209,6 @@ if ( {) {$2;
       setIsLoading(false)
     }
 
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 
   },
 
@@ -229,7 +216,6 @@ if ( {) {$2;
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
 
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 
 
       toast({
@@ -351,7 +337,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         throw new Error((data as any).error);
       }
 
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
       setGeneratedContent((data as any)?.generated || null);
 
       toast({;
@@ -361,7 +346,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     } catch (error) {;
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
         title: "Generation Failed",;
         description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
 
@@ -390,9 +374,8 @@ if (.error) {) {$2;
         throw new Error ((data as any).error)}
       setGeneratedContent ((data as any)?.generated || null)toast ({title: "Content Generated",description: "AI has created optimized listing content for you.";
       })} catch (error) {logErrorToProduction ('Error generating content:', { data: error }),toast ({title: "Generation Failed",description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",variant: "destructive";
-      })} finally {setIsLoading(false)}},const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent),toast({title: "Content Applied";
+      })} finally {setIsLoading(false)},const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent),toast({title: "Content Applied";
         description: "The generated content has been applied to your listing.";
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
       });
     }
   },
@@ -421,10 +404,8 @@ if (.error) {) {$2;
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing;
           </p>;
         </CardHeader>;
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
         <CardContent>;
 
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
@@ -435,7 +416,6 @@ if (.error) {) {$2;
             isLoading = {isLoading,}
             initialValues = {initialValues,}
 
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 
           <AIListingForm 
 
@@ -447,7 +427,6 @@ if (.error) {) {$2;
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
 
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
     <div className="space - y-6">;
         <CardContent>onSubmit = {handleGenerate}
             isLoading = {isLoading}
@@ -463,13 +442,13 @@ if (.error) {) {$2;
   }) => {setIsLoading(true)try {const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {body: { title, category, keyFeatures, targetAudience }
       })if (error) {throw new Error(error && error.message)}if (data && (data as any).error) {throw new Error((data as any).error)}setGeneratedContent((data as any)?.generated || null)toast({title: "Content Generated",description: "AI has created optimized listing content for you.";
       })} catch (error) {logErrorToProduction('Error generating content:', { data: error }),toast({title: "Generation Failed",description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",variant: "destructive";
-      })} finally {setIsLoading(false)}}const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent)toast({title: "Content Applied",description: "The generated content has been applied to your listing.";
+      })} finally {setIsLoading(false)}const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent)toast({title: "Content Applied",description: "The generated content has been applied to your listing.";
       })const handle_apply = () =>: any {// Check condition;
 if ( {) {$2;
 }
       onApplyGenerated (generated_content)toast ({title: "Content Applied",description: "The generated content has been applied to your listing.";
       })}
-  }}},return (<div className="space-y-6">;
+  }},return (<div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
           <CardTitle className="flex items-center text-white">;
@@ -510,7 +489,6 @@ if ( {) {$2;
         </CardContent>;
       </Card>;
       {is_loading && <LoadingContentSkeleton />}
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
       {generated_content && !is_loading && (<GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
     </div>)}: AIListingGeneratorProps) {const {toast;
 }= use_toast ()const [is_loading, setIsLoading] = useState (false)const [generated_content, setGeneratedContent] = useState < GeneratedContent | null> (null)const handle_generate = async ({title;
@@ -520,7 +498,6 @@ target_audience;
 }: {title: string;
 category: string;
 key_features: string;
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
       {generated_content && !is_loading && (
         <GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
     </div>);
@@ -548,7 +525,6 @@ try {
   const {
 
   data, error;
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 }= await supabase.functions.invoke ('ai - listing - generator', {
   body: {
 }= await supabase.functions.invoke ('ai - listing - generator', {'
@@ -558,7 +534,6 @@ try {
 // Check condition
 if ( {) {
   $2
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 target_audience: string;}) => {setIsLoading (true)try {const {}catch (error) {';
   logErrorToProduction ('Error generating content:', {data, error;
 }= await supabase.functions.invoke ('ai - listing - generator', {body: {title, category,  key_features, target_audience;
@@ -583,7 +558,6 @@ targetAudience ;
 category: string;
 keyFeatures: string;
 targetAudience: string ;
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 }) => {;
   setIsLoading (true);
 try {;
@@ -663,7 +637,6 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   isLoading && <LoadingContentSkeleton /> ;
 }{;
   generatedContent && !isLoading && (<GeneratedContentDisplaycontent= {
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
   generatedContent 
 }onApply= {
   handleApply 
@@ -674,7 +647,6 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }</div>) ;
 }'";
 
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 
   data: error;
 
@@ -714,7 +686,6 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   handleApply
 }/>)
 }</div>)
-<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
 }) => {setIsLoading (true)try {const {data, error ;
@@ -730,8 +701,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 })toast ({}finally {setIsLoading (false)}const handle_apply = () =>: any {// Check condition;
 if ( {) {$2;
 }
-  onApplyGenerated (generated_content)toast ({}}'";
-}}}
+  onApplyGenerated (generated_content)toast ({}'";
+}}
 }
 }
 }</div>;

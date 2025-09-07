@@ -13,165 +13,162 @@ const contactInfo = null;
 const serviceCategories = [;
   {
     }
-    "title": 'AI & Consciousness''
-    "icon": Brain,
-"services": [
+    'title': 'AI & Consciousness''
+    'icon': Brain,
+'services': [
 
 {
         }
-        "name": 'AI Consciousness Evolution','
-        "href": '/ai-consciousness-evolution-2029','
+        'name': 'AI Consciousness Evolution','
+        'href': '/ai-consciousness-evolution-2029','
       },
-        { "name": 'Quantum AI Fusion', "href": '/quantum-ai-fusion','
+        { 'name': 'Quantum AI Fusion', 'href': '/quantum-ai-fusion','
 },
 
       {
         }
-        "name": 'Multimodal AI Orchestrator','
-        "href": '/multimodal-ai-orchestrator','
+        'name': 'Multimodal AI Orchestrator','
+        'href': '/multimodal-ai-orchestrator','
       },
-        { "name": 'AI Autonomous Ecosystem', "href": '/ai-autonomous-ecosystem','
+        { 'name': 'AI Autonomous Ecosystem', 'href': '/ai-autonomous-ecosystem','
 },
 
-        { "name": 'AI Ethics & Governance', "href": '/ai-ethics-governance','
+        { 'name': 'AI Ethics & Governance', 'href': '/ai-ethics-governance','
 }
 
     ]
   },
   {
     }
-    "title": 'Quantum & Emerging Tech','
-    "icon": Atom,
-    "services": [
-        { "name": 'Space Mining Platform', "href": '/space-mining-platform','
+    'title': 'Quantum & Emerging Tech','
+    'icon': Atom,
+    'services': [
+        { 'name': 'Space Mining Platform', 'href': '/space-mining-platform','
 },
 
-        { "name": 'Quantum Bio-Computing', "href": '/quantum-bio-computing','
+        { 'name': 'Quantum Bio-Computing', 'href': '/quantum-bio-computing','
 },
 
-        { "name": 'Brain-Computer Interface', "href": '/brain-computer-interface','
+        { 'name': 'Brain-Computer Interface', 'href': '/brain-computer-interface','
 },
 
-        { "name": 'Quantum Energy Platform', "href": '/quantum-energy-platform','
+        { 'name': 'Quantum Energy Platform', 'href': '/quantum-energy-platform','
 },
 
-  { "name": 'Autonomous Vehicle AI', "href": '/autonomous-vehicle-ai','
+  { 'name': 'Autonomous Vehicle AI', 'href': '/autonomous-vehicle-ai','
 }
 
     ]
   },
   {
     }
-    "title": 'Enterprise IT','
-    "icon": Shield,
-    "services": [
+    'title': 'Enterprise IT','
+    'icon': Shield,
+    'services': [
 {
         }
-        "name": 'Quantum Cloud Infrastructure','
-        "href": '/quantum-cloud-infrastructure','
+        'name': 'Quantum Cloud Infrastructure','
+        'href': '/quantum-cloud-infrastructure','
       },
       {
         }
-        "name": 'Edge Computing Orchestrator','
-        "href": '/edge-computing-orchestrator','
+        'name': 'Edge Computing Orchestrator','
+        'href': '/edge-computing-orchestrator','
       },
       {
         }
-        "name": 'Zero Trust Security Platform','
-        "href": '/zero-trust-security-platform','
+        'name': 'Zero Trust Security Platform','
+        'href': '/zero-trust-security-platform','
       },
       {
         }
-        "name": 'Blockchain Enterprise Platform','
-        "href": '/blockchain-enterprise-platform','
+        'name': 'Blockchain Enterprise Platform','
+        'href': '/blockchain-enterprise-platform','
       },
-        { "name": 'AI-Powered DevOps', "href": '/ai-powered-devops','
+        { 'name': 'AI-Powered DevOps', 'href': '/ai-powered-devops','
 }
 
     ]
   },
   {
     }
-    "title": 'Micro SAAS','
-    "icon": Target,
-    "services": [
-        { "name": 'AI Content Factory Pro', "href": '/ai-content-factory','
+    'title': 'Micro SAAS','
+    'icon': Target,
+    'services': [
+        { 'name': 'AI Content Factory Pro', 'href': '/ai-content-factory','
 },
 
-        { "name": 'Quantum CRM Suite', "href": '/quantum-crm','
+        { 'name': 'Quantum CRM Suite', 'href': '/quantum-crm','
 },
 
-        { "name": 'CyberShield Pro', "href": '/cyber-shield-pro','
+        { 'name': 'CyberShield Pro', 'href': '/cyber-shield-pro','
 },
 
-        { "name": 'DataVault Hub', "href": '/data-vault-hub','
+        { 'name': 'DataVault Hub', 'href': '/data-vault-hub','
 },
 
-  { "name": 'DevOps Automation Studio', "href": '/devops-automation-studio','
+  { 'name': 'DevOps Automation Studio', 'href': '/devops-automation-studio','
 }
 
     ]
   }
 ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const companyLinks = [;
-    { "name": 'About Us', "href": '/about','
+    { 'name': 'About Us', 'href': '/about','
 },
 
-    { "name": 'Careers', "href": '/careers','
+    { 'name': 'Careers', 'href': '/careers','
 },
 
-    { "name": 'News', "href": '/news','
+    { 'name': 'News', 'href': '/news','
 },
 
-    { "name": 'Case Studies', "href": '/case-studies','
+    { 'name': 'Case Studies', 'href': '/case-studies','
 },
 
-    { "name": 'Blog', "href": '/blog','
+    { 'name': 'Blog', 'href': '/blog','
 },
 
-  { "name": 'Resources', "href": '/resources','
+  { 'name': 'Resources', 'href': '/resources','
 }
 
 ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const legalLinks = [;
-    { "name": 'Privacy Policy', "href": '/privacy','
+    { 'name': 'Privacy Policy', 'href': '/privacy','
 },
 
-    { "name": 'Terms of Service', "href": '/terms','
+    { 'name': 'Terms of Service', 'href': '/terms','
 },
 
-    { "name": 'Cookie Policy', "href": '/cookies','
+    { 'name': 'Cookie Policy', 'href': '/cookies','
 },
 
-  { "name": 'GDPR Compliance', "href": '/gdpr','
+  { 'name': 'GDPR Compliance', 'href': '/gdpr','
 }
 
 ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const socialLinks = [;
-  { "name": 'Twitter', "href": '#', "icon": Twitter, "color": '"hover":text-blue-400','
+  { 'name': 'Twitter', 'href': '#', 'icon': Twitter, 'color': ''hover':text-blue-400','
 },
-  { "name": 'LinkedIn', "href": '#', "icon": Linkedin, "color": '"hover":text-blue-600','
+  { 'name': 'LinkedIn', 'href': '#', 'icon': Linkedin, 'color': ''hover':text-blue-600','
 },
-  { "name": 'GitHub', "href": '#', "icon": Github, "color": '"hover":text-gray-400','
+  { 'name': 'GitHub', 'href': '#', 'icon': Github, 'color': ''hover':text-gray-400','
 },
-  { "name": 'YouTube', "href": '#', "icon": Youtube, "color": '"hover":text-red-400','
+  { 'name': 'YouTube', 'href': '#', 'icon': Youtube, 'color': ''hover':text-red-400','
 },
 {
     }
-    "name": 'Instagram','
-    "href": '#','
-    "icon": Instagram,
-    "color": '"hover":text-pink-400','
+    'name': 'Instagram','
+    'href': '#','
+    'icon': Instagram,
+    'color': ''hover':text-pink-400','
   }
 ];
 
-const "EnhancedFooter2025": React.FC = () => {
+const 'EnhancedFooter2025': React.FC = () => {
  ;
 }
 const currentYear = new Date().getFullYear();
@@ -182,11 +179,11 @@ return (;
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'></div>'
       <div className='relative z-10'>'
         {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-16">;"
-          <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-8 "lg":gap-12">;"
+        <div className='max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8 py-16'>;'
+          <div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-4 gap-8 'lg':gap-12'>;'
             {/* Company Info */}
 
-            <div className='"lg":col-span-1'>'
+            <div className=''lg':col-span-1'>'
               <div className='flex items-center space-x-3 mb-6'>'
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center'>'
                   <Star className='w-7 h-7 text-white' />'
@@ -268,8 +265,8 @@ const EnhancedFooter2025: React.FC = () => {const currentYear = new Date().getFu
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'></div>;
       <div className='relative z-10'>;
         {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12'>;
             {/* Company Info */}<div className='lg:col-span-1'>;
               <div className='flex items-center space-x-3 mb-6'>;
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center'>;
@@ -295,39 +292,37 @@ const EnhancedFooter2025: React.FC = () => {const currentYear = new Date().getFu
 const EnhancedFooter2025: React.FC = () => {
   const currentYear = new Date().getFullYear($2);
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50">
+    <footer className='relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50'>
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
+      <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'></div>
       
-      <div className="relative z-10">
+      <div className='relative z-10'>
         {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12'>
             {/* Company Info */}
-            <div className="lg:col-span-1">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
-                  <Star className="w-7 h-7 text-white" />
+            <div className='lg:col-span-1'>
+              <div className='flex items-center space-x-3 mb-6'>
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center'>
+                  <Star className='w-7 h-7 text-white' />
                 </div>
                 <div>
-                  <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
                     Zion Tech Group
                   </div>
-                  <div className="text-sm text-gray-400">Future Technology Solutions</div>
+                  <div className='text-sm text-gray-400'>Future Technology Solutions</div>
                 </div>
               </div>
               
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <p className='text-gray-400 mb-6 leading-relaxed'>
                 Leading the future with revolutionary AI, quantum computing, and emerging technology solutions that transform businesses worldwide.
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </p>
               {/* Contact Info */}
               <div className='space-y-3'>;'
                 <div className='flex items-center space-x-3 text-gray-300'>;'
                   <Phone className='w-4 h-4 text-cyan-400' />;'
                   <a;
-                    href={`"tel": ${contactInfo.mobile}`}`                    className='"hover":text-cyan-400 transition-colors'>'
+                    href={`'tel': ${contactInfo.mobile}`}`                    className=''hover':text-cyan-400 transition-colors'>'
 
                     {contactInfo.mobil
 }
@@ -336,11 +331,10 @@ const EnhancedFooter2025: React.FC = () => {
                 <div className='flex items-center space-x-3 text-gray-300'>;'
                   <Mail className='w-4 h-4 text-purple-400' />;'
                   <a;
-                    href={`"mailto": ${contactInfo.email}`}`                    className='"hover":text-purple-400 transition-colors'>'
+                    href={`'mailto': ${contactInfo.email}`}`                    className=''hover':text-purple-400 transition-colors'>'
 
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;
-=======
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
                   <Phone className='w-4 h-4 text-cyan-400' />
@@ -372,13 +366,13 @@ const EnhancedFooter2025: React.FC = () => {
             {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;
                 }
                 key={category && category.title}
-                initial={{ "opacity": 0, "y": 20 
+                initial={ 'opacity': 0, 'y': 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ 'opacity': 1, 'y': 0 
 }
-                transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
+                transition={ 'duration': 0 && 0.6, 'delay': index * 0 && 0.1 }
 
-                viewport={{ "once": true }}
+                viewport={ 'once': true }
 
 className='space-y-4''
               >
@@ -396,17 +390,17 @@ className='space-y-4''
                   {category.services.map(service => { return (<Link; }
                       }
                       key={service.name}
-                      href={service.href}<div className="flex items-center space-x-3">;
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;
-                    <category.icon className="w-4 h-4 text-white" />;
+                      href={service.href}<div className='flex items-center space-x-3'>;
+                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
+                    <category.icon className='w-4 h-4 text-white' />;
                   </div>;
-                  <h3 className="text-lg font-semibold text-white">{category.title}</h3>;
+                  <h3 className='text-lg font-semibold text-white'>{category.title}</h3>;
                 </div>;
-                <div className="space-y-2">;
+                <div className='space-y-2'>;
                   {category.services.map((service) => (className='space-y-4'>;
                       href={service.href}
 
-                      className='block text-gray-400 "hover": text-cyan-400 transition-colors duration-200 text-sm''
+                      className='block text-gray-400 'hover': text-cyan-400 transition-colors duration-200 text-sm''
                     >
 
                       {service.nam
@@ -418,18 +412,14 @@ className='space-y-4''
                     >;
                       {service.name}
                     </Link>;
-=======
-<<<<<<< HEAD
 className='space-y-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='flex items-center space-x-3'>
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
-=======
               >'
                 <div className='flex items-center space-x-3'>'
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <category.icon className='w-4 h-4 text-white' />
                   </div>'
                   <h3 className='text-lg font-semibold text-white'>
@@ -440,14 +430,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {category.services.map(service => (
                     <Link;
                       key={service.name}
-                      href={service.href}"
-                <div className="flex items-center space-x-3">"
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">"
-                    <category.icon className="w-4 h-4 text-white" />
-                  </div>"
-                  <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                </div>"
-                <div className="space-y-2">
+                      href={service.href}'
+                <div className='flex items-center space-x-3'>'
+                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>'
+                    <category.icon className='w-4 h-4 text-white' />
+                  </div>'
+                  <h3 className='text-lg font-semibold text-white'>{category.title}</h3>
+                </div>'
+                <div className='space-y-2'>
                   {category.services.map((service) => ('
                 className='space-y-4'>;'
                 <div className='flex items-center space-x-3'>;'
@@ -463,7 +453,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                       {service.name}
                     </Link>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   ))}
                 </div>
               </motion.div>
@@ -481,7 +470,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Link
                       key={service.name}
                       href={service.href}
-                      className="block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                      className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'
                     >
                       {service.name}
                     </Link>
@@ -491,10 +480,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Additional Links */}
 
-<div className='grid grid-cols-1 "md": grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>'
+<div className='grid grid-cols-1 'md': grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>'
 
             {/* Company Links *
 }
@@ -507,9 +495,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 key={link.name}
                     href={link.href}
-                    className='block text-gray-400 "hover": text-white transition-colors duration-200 text-sm''
+                    className='block text-gray-400 'hover': text-white transition-colors duration-200 text-sm''
                   >
-                    className='block text-gray-400 "hover":text-white transition-colors duration-200 text-sm'                  >'
+                    className='block text-gray-400 'hover':text-white transition-colors duration-200 text-sm'                  >'
 
                   >
 
@@ -526,7 +514,7 @@ key={link.name}
               </div>;
             </div>;
                     {link.name}</div>;
-            </div>;className="block text - gray - 400 "hover": text - white transition - colors duration - 200 text - sm">"
+            </div>;className='block text - gray - 400 'hover': text - white transition - colors duration - 200 text - sm'>'
 
                 ))}
 
@@ -539,12 +527,11 @@ key={link.name}
                   <Link;}
 key={link.name}
                     href={link.href}
-                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
                   >
                     {link.name}
                   </Link>
                 ))}
-<<<<<<< HEAD
             {/* Legal Links */}
             <div>;
               <h4 className='text-white font-semibold mb-4'>Legal</h4>;
@@ -553,8 +540,8 @@ key={link.name}
                   <Link
                     key={link && link.name}
                     href={link && link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className="text-white font-semibold mb-4">Legal</h4>;
-              <div className="space-y-2">;
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className='text-white font-semibold mb-4'>Legal</h4>;
+              <div className='space-y-2'>;
                 {legalLinks && legalLinks.map((link) => (;
                   <Link
             {/* Legal Links */}<div>;
@@ -563,8 +550,8 @@ key={link.name}
                 {legalLinks && legalLinks.map(link => (<Link;
                     key={link && link.name}
                     href={link && link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className="text-white font-semibold mb-4">Legal</h4>;
-              <div className="space-y-2">;
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className='text-white font-semibold mb-4'>Legal</h4>;
+              <div className='space-y-2'>;
                 {legalLinks && legalLinks.map((link) => (<div>;
 <h4 className='text-white font-semibold mb-4'>Legal</h4>;
               <div className='space-y-2'>;
@@ -572,24 +559,21 @@ key={link.name}
               </div>
             </div>
 
-=======
               </div>
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             {/* Legal Links */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Legal</h4>
-              <div className="space-y-2">
+              <h4 className='text-white font-semibold mb-4'>Legal</h4>
+              <div className='space-y-2'>
                 {legalLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
                   >
                     {link.name}
                   </Link>
                 ))}
-=======
                     {link.name}
                   </Link>
                 ))}
@@ -606,8 +590,8 @@ key={link.name}
               </div>;
             </div>;
 
-"
-                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
+'
+                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm';
                   >;
                 ))}
             {/* Legal Links */}
@@ -617,11 +601,10 @@ key={link.name}
                 {legalLinks && legalLinks.map(link => (;
                   <Link;
                     key={link && link.name}
-                    href={link && link.href}'"
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className="text-white font-semibold mb-4">Legal</h4>;"
-              <div className="space-y-2">;
+                    href={link && link.href}''
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className='text-white font-semibold mb-4'>Legal</h4>;'
+              <div className='space-y-2'>;
                 {legalLinks && legalLinks.map((link) => (;
-<<<<<<< HEAD
             <div>
 <h4 className='text-white font-semibold mb-4'>Legal</h4>'
               <div className='space-y-2'>'
@@ -631,7 +614,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 key={link.name}
                     href={link.href}
-                    className='block text-gray-400 "hover":text-white transition-colors duration-200 text-sm'>'
+                    className='block text-gray-400 'hover':text-white transition-colors duration-200 text-sm'>'
 
                     {link.nam
 }
@@ -646,38 +629,32 @@ key={link.name}
                 {socialLinks.map(social => { return (<a; }
             {/* Social Links */}key={social.name}
                     href={social.href}
-                    className={`w-10 h-10 bg-gray-800/50 "hover": bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 "hover":border-gray-600`}`
+                    className={`w-10 h-10 bg-gray-800/50 'hover': bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 'hover':border-gray-600`}`
                     aria-label={social.name}
 
                   >
-=======
                   <Link;
                     key={link.name}
-                    href={link.href}'"
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >              <h4 className="text-white font-semibold mb-4">Legal</h4>"
-              <div className="space-y-2">
+                    href={link.href}''
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >              <h4 className='text-white font-semibold mb-4'>Legal</h4>'
+              <div className='space-y-2'>
                 {legalLinks.map((link) => (
                   <Link;
                     key={link.name}
-                    href={link.href}"
-                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                    href={link.href}'
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
                     {link.name}
                   </Link>
                 ))}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
             </div>
 
             {/* Social Links */}
-<<<<<<< HEAD
             <div>
-              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
+              <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
+              <div className='flex space-x-4'>
                 {socialLinks.map((social) => (
                   <a
-=======
-<<<<<<< HEAD
             <div>
 <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
               <div className='flex space-x-4'>
@@ -687,36 +664,30 @@ key={link.name}
 
 
 
-=======
             <div>'
               <h4 className='text-white font-semibold mb-4'>Follow Us</h4>'
-              <div className='flex space-x-4'>"
-                {socialLinks.map(social => (                  <a              <h4 className="text-white font-semibold mb-4">Follow Us</h4>"
-              <div className="flex space-x-4">
+              <div className='flex space-x-4'>'
+                {socialLinks.map(social => (                  <a              <h4 className='text-white font-semibold mb-4'>Follow Us</h4>'
+              <div className='flex space-x-4'>
                 {socialLinks.map((social) => (
                   <a;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {/* Social Links */}
 
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     key={social.name}
                     href={social.href}
                     className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
                     aria-label={social.name}
                   >
-<<<<<<< HEAD
 
 <social.icon className='w-5 h-5' />'
                   </a>
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon className='w-5 h-5' />
                   </a>
-=======
 <social.icon className='w-5 h-5' />
                   </a>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 ))}
               </div>
             </div>
@@ -726,27 +697,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Newsletter Section *
 }
 <div className='border-t border-gray-800/50'>'
-          <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-12'>'
+          <div className='max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8 py-12'>'
             <div className='text-center'>'
               <motion.h3,
-initial={{ "opacity": 0, "y": 20 
+initial={ 'opacity': 0, 'y': 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6 }}
-                viewport={{ "once": true 
+                whileInView={ 'opacity': 1, 'y': 0 }
+                transition={ 'duration': 0 && 0.6 }
+                viewport={ 'once': true 
 }
 
-className='text-2xl "md":text-3xl font-bold text-white mb-4''
+className='text-2xl 'md':text-3xl font-bold text-white mb-4''
               >
                 Stay Ahead of the Future
               </motion.h3>
               <motion.p,
-initial={{ "opacity": 0, "y": 20 
+initial={ 'opacity': 0, 'y': 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ 'opacity': 1, 'y': 0 
 }
-                transition={{ "duration": 0 && 0.6, "delay": 0 && 0.1 }}
-                viewport={{ "once": true 
+                transition={ 'duration': 0 && 0.6, 'delay': 0 && 0.1 }
+                viewport={ 'once': true 
 }
 
 className='text-gray-400 mb-6 max-w-2xl mx-auto''
@@ -754,7 +725,7 @@ className='text-gray-400 mb-6 max-w-2xl mx-auto''
                 Get the latest insights on AI, quantum computing, and emerging,
 technologies delivered to your inbox.
               </motion.p>
-                className="text-gray-400 mb-6 max-w-2xl mx-auto""
+                className='text-gray-400 mb-6 max-w-2xl mx-auto''
               >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
@@ -766,21 +737,21 @@ className='text-gray-400 mb-6 max-w-2xl mx-auto'>;'
               </motion && motion.p>              >;
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.;
               </motion && motion.p>;
-                initial={{ "opacity": 0, "y": 20 
+                initial={ 'opacity': 0, 'y': 20 
 }
-                whileInView={{ "opacity": 1, "y": 0 
+                whileInView={ 'opacity': 1, 'y': 0 
 }
-                transition={{ "duration": 0 && 0.6, "delay": 0 && 0.2 }}
+                transition={ 'duration': 0 && 0.6, 'delay': 0 && 0.2 }
 
-                viewport={{ "once": true }}
+                viewport={ 'once': true }
 
-className='flex flex-col "sm":flex-row gap-4 max-w-md mx-auto''
+className='flex flex-col 'sm':flex-row gap-4 max-w-md mx-auto''
               >
                 <input,
 type='email''
                   placeholder='Enter your email''
-                  className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 "focus":outline-none "focus":ring-2 "focus":ring-cyan-500 "focus":border-transparent'' />
-                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 "hover":from-cyan-600 "hover":to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30'>'
+                  className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 'focus':outline-none 'focus':ring-2 'focus':ring-cyan-500 'focus':border-transparent'' />
+                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 'hover':from-cyan-600 'hover':to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30'>'
                   Subscribe
                 </button>
               </motion.div>
@@ -789,8 +760,8 @@ type='email''
         </div>
         {/* Bottom Bar */}
 <div className='border-t border-gray-800/50'>'
-          <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-6'>'
-            <div className='flex flex-col "md":flex-row items-center justify-between space-y-4 "md":space-y-0'>'
+          <div className='max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8 py-6'>'
+            <div className='flex flex-col 'md':flex-row items-center justify-between space-y-4 'md':space-y-0'>'
               <div className='text-gray-400 text-sm'>'
                 © {currentYear} Zion Tech Group. All rights reserved.
               </div>
@@ -814,11 +785,6 @@ type='email''
 };
 export default EnhancedFooter2025;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+''`
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

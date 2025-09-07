@@ -119,7 +119,7 @@ import { Badge } from "@/components/ui/badge",;"
 }
 ;
     </Card>);
-}}
+}
     </Card>);
     </Card>;
   ); export function RecentActivity() {

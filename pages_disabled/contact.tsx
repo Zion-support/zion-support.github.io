@@ -28,9 +28,9 @@ export default function ContactPage() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div,
-    initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+    initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -49,17 +49,17 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto">
 {/* Contact Information Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              viewport={{ once:true }}
+              viewport={ once:true }
 
       {/* Contact Information */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Contact Information
@@ -122,10 +122,10 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 Send Us a Message
@@ -136,10 +136,10 @@ export default function ContactPage() {
             </motion.div>
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.1 }
+              viewport={ once: true }
             >
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-green-600" />
@@ -150,10 +150,10 @@ export default function ContactPage() {
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 text-center"
               className="bg-white rounded-lg shadow-xl p-8"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true }
             >
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-purple-600" />
@@ -168,10 +168,10 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-8"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, x: -30 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
               <form className="space-y-6">
@@ -294,10 +294,10 @@ export default function ContactPage() {
             </motion.div>
             <motion.div
               className="bg-white rounded-lg shadow-lg p-8"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, x: 30 }
+              whileInView={ opacity: 1, x: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
               <div className="space-y-6">
@@ -344,10 +344,10 @@ export default function ContactPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Get Started?

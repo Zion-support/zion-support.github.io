@@ -52,7 +52,7 @@ export function WorkExperienceItemForm({
       end_date: initialData ?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData ?.is_current || false,
       description: initialData ?.description || "",
-      location: initialData ?.location || ""}}),
+      location: initialData ?.location || ""}),
   
   const { isSubmitting } = form.formState,
   const watchIsCurrent = form.watch($2);
@@ -196,7 +196,7 @@ function WorkExperienceItemForm() {
       end_date: initial_data?.end_date ? new Date (initial_data.end_date) : undefined,
       is_current: initial_data?.is_current || false,
       description: initial_data?.description || "",
-      location: initial_data?.location || ""}}),
+      location: initial_data?.location || ""}),
   const { is_submitting } = form.form_state;
   const watchIsCurrent = form.watch ("is_current");
   const watchRoleTitle = form.watch ("role_title");
@@ -296,7 +296,7 @@ function WorkExperienceItemForm() {
                   <FormLabel>Description</FormLabel>;
                   <div className="flex gap-2">;
                     <AIEnhancementButton
-                      options={{
+                      options={
 
                         enhancementType: "work-description",
               )}
@@ -351,7 +351,7 @@ function WorkExperienceItemForm() {
                             <CalendarIcon className = $2;
                         content: field.value || "",
                         context: `${watchRoleTitle} at ${watchCompanyName}`
-                      }}
+                      }
                       onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true})}
                       buttonText="Enhance with AI"
                     />
@@ -379,10 +379,10 @@ function WorkExperienceItemForm() {
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
-        defaultOptions={{;
+        defaultOptions={;
           enhancementType:"work-description",;
           content:form.getValues("description") || "",;
-          context:`${watchRoleTitle} at ${watchCompanyName}`}}
+          context:`${watchRoleTitle} at ${watchCompanyName}`}
         initialContent={form.getValues("description") || ""}
       />;
     </>;
@@ -428,7 +428,7 @@ setIsEnhancementDialogOpen (false)
                     placeholder="Describe your responsibilities, achievements, and skills used in this role..."
                     className = $2;
           content: form.getValues("description") || "",
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+          context: `${watchRoleTitle} at ${watchCompanyName}`}
         initialContent={form.getValues("description") |""}
       />
     </>

@@ -40,35 +40,35 @@ const PostPage: NextPage<Props> = ({ post, all }) => {
     image: post.seo.ogImageUrl || post.coverImageUrl,
     datePublished: post.publishDate,
     author: [{ '@type': 'Person', name: post.author }],
-    mainEntityOfPage: { '@type': 'WebPage@id': `/blog/${post.slug}` }},
+    mainEntityOfPage: { '@type': 'WebPage@id': `/blog/${post.slug}` },
 
   return (
     <div>
       <Head>
         <title>{post.seo.metaTitle || post.title}</title>
-        <meta name="description" content={post.seo.metaDescription} />
+        <meta name='description' content={post.seo.metaDescription} />
         {post.seo.ogImageUrl || post.coverImageUrl ? (
-          <meta property="og:image" content={post.seo.ogImageUrl || post.coverImageUrl} />
+          <meta property='og:image' content={post.seo.ogImageUrl || post.coverImageUrl} />
         ) : null}
-        <meta property="og:title" content={post.seo.metaTitle || post.title} />
-        <meta property="og:description" content={post.seo.metaDescription} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.seo.metaTitle || post.title} />
-        <meta name="twitter:description" content={post.seo.metaDescription} />
-        {(post.seo.ogImageUrl || post.coverImageUrl) && <meta name="twitter:image" content={post.seo.ogImageUrl || post.coverImageUrl} />}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <meta property='og:title' content={post.seo.metaTitle || post.title} />
+        <meta property='og:description' content={post.seo.metaDescription} />
+        <meta property='og:type' content='article' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content={post.seo.metaTitle || post.title} />
+        <meta name='twitter:description' content={post.seo.metaDescription} />
+        {(post.seo.ogImageUrl || post.coverImageUrl) && <meta name='twitter:image' content={post.seo.ogImageUrl || post.coverImageUrl} />}
+        <script type='application/ld+json' dangerouslySetInnerHTML={ __html: JSON.stringify(jsonLd) } />
       </Head>
 
-      <article className="mx-auto max-w-3xl">
-        <h1 className="text-3xl font-bold">{post.title}</h1>
-        <div className="text-gray-600 dark:text-gray-300 mt-1">
+      <article className='mx-auto max-w-3xl'>
+        <h1 className='text-3xl font-bold'>{post.title}</h1>
+        <div className='text-gray-600 dark:text-gray-300 mt-1'>
           {new Date(post.publishDate).toLocaleDateString()} • {post.author}
         </div>
         {toc.length > 0 && (
-          <nav className="mt-6 p-4 border rounded bg-gray-50 dark:bg-zinc-900">
-            <div className="font-semibold mb-2">On this page</div>
-            <ul className="space-y-1">
+          <nav className='mt-6 p-4 border rounded bg-gray-50 dark:bg-zinc-900'>
+            <div className='font-semibold mb-2'>On this page</div>
+            <ul className='space-y-1'>
               {toc.map((h, i) => (
                 <li key={i} className={h.level === 1 ? '' : h.level === 2 ? 'ml-3' : 'ml-6'}>
                   <a href={`#${encodeURIComponent(h.id)}`}>
@@ -80,11 +80,11 @@ const PostPage: NextPage<Props> = ({ post, all }) => {
           </nav>
         )}
 
-        <div className="mt-6">
+        <div className='mt-6'>
           <PostContent body={post.body} />
         </div>
 
-        <div className="mt-8 flex items-center gap-4">
+        <div className='mt-8 flex items-center gap-4'>
           <ShareButtons title={post.title} url={pageUrl || `/blog/${post.slug}`} description={post.seo.metaDescription} onShare={() => fetch(`/api/blog/metrics/${post.id}/shares`, { method: 'POST' }).catch(() => {})} />
           <LikeButton postId={post.id} initialLikes={post.metrics?.likes || 0} />
         </div>

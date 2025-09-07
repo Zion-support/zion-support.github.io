@@ -99,7 +99,7 @@ function WhitelabelRequestForm() {
       "theme_preset": 'light','
       "headline": 'AI Marketplace','
       "subtitle": 'Find the best AI talent','
-      "cta": 'Get Started'}}),'
+      "cta": 'Get Started'}),'
   const on_submit = async ("values": FormValues) => {
     }
     try {

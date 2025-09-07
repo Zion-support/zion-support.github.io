@@ -1,5 +1,5 @@
 return (
-    <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
+    <motion.div initial={ opacity: 0, y: 4 } animate={ opacity: 1, y: 0 } className="relative">
 origin/cursor/automate-test-improve-and-merge-code-2533
       <input
 
@@ -51,8 +51,8 @@ function InteractiveSearch() {}
       </div>;
     </form>;
   );
-}});
-}}
+});
+}
 "
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
 
@@ -79,9 +79,9 @@ function InteractiveSearch() {}
         </button>;
       </div>;
     </form>);
-}});
-}});
-}}
+});
+});
+}
 
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />

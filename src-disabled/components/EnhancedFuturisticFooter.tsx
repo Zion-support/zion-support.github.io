@@ -362,76 +362,76 @@ const scrollToTop = () => {
 };
 
   return (
-    <footer className=\"bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50\" />
+    <footer className=\'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50\' />
       {/* Main Footer Content */}
-      <div className=\"container-responsive py-16\" />
-        <div className=\"grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-12\" />
+      <div className=\'container-responsive py-16\' />
+        <div className=\'grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-12\' />
           {/* Company Info & Contact *,}
 }
-          <div className=\"lg:col-span-1 xl:col-span-1\" />
-            <div className=\"mb-8\" />
-              <Link href=\"/\" className=\"inline-flex items-center space-x-3 group\" />
-                <div className=\"relative\" />
-                  <div className=\"w-12 h-12 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300\" />
-                    <Zap className=\"w-7 h-7 text-white\" />
+          <div className=\'lg:col-span-1 xl:col-span-1\' />
+            <div className=\'mb-8\' />
+              <Link href=\'/\' className=\'inline-flex items-center space-x-3 group\' />
+                <div className=\'relative\' />
+                  <div className=\'w-12 h-12 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300\' />
+                    <Zap className=\'w-7 h-7 text-white\' />
                   </div>
-                  <div className=\"absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300\" /></div>
+                  <div className=\'absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300\' /></div>
                 </div>
                 <div />
-                  <h3 className=\"text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300\" />
+                  <h3 className=\'text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300\' />
                     Zion Tech Group;
                   </h3>
-                  <p className=\"text-sm text-gray-400\" />Revolutionary AI Solutions</p>
+                  <p className=\'text-sm text-gray-400\' />Revolutionary AI Solutions</p>
                 </div>
               </Link>
             </div>
 
-            <p className=\"text-gray-300 mb-8 leading-relaxed\" />
+            <p className=\'text-gray-300 mb-8 leading-relaxed\' />
               Leading the future of technology with cutting-edge AI, quantum computing, and innovative solutions that transform businesses and drive innovation across industries.
             </p>
 
             {/* Contact Information */}
-            <div className=\"space-y-4 mb-8\" />
+            <div className=\'space-y-4 mb-8\' />
               <a;
 href={`tel: ${contactInfo.phone}`}
-                className=\"flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors group\"
+                className=\'flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors group\'
                />
-                <div className=\"p-2 bg-slate-700/50 rounded-lg group-hover:bg-cyan-500/20 transition-colors\" />
-                  <Phone className=\"w-4 h-4\" />
+                <div className=\'p-2 bg-slate-700/50 rounded-lg group-hover:bg-cyan-500/20 transition-colors\' />
+                  <Phone className=\'w-4 h-4\' />
                 </div>
                 <span />{contactInfo.phone}</span>
               </a>
               
               <a;
 href={`mailto:${contactInfo.email}`}
-                className=\"flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors group\"
+                className=\'flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors group\'
                />
-                <div className=\"p-2 bg-slate-700/50 rounded-lg group-hover:bg-cyan-500/20 transition-colors\" />
-                  <Mail className=\"w-4 h-4\" />
+                <div className=\'p-2 bg-slate-700/50 rounded-lg group-hover:bg-cyan-500/20 transition-colors\' />
+                  <Mail className=\'w-4 h-4\' />
                 </div>
                 <span />{contactInfo.email}</span>
               </a>
               
-              <div className=\"flex items-start gap-3 text-gray-300\" />
-                <div className=\"p-2 bg-slate-700/50 rounded-lg mt-0.5\" />
-                  <MapPin className=\"w-4 h-4\" />
+              <div className=\'flex items-start gap-3 text-gray-300\' />
+                <div className=\'p-2 bg-slate-700/50 rounded-lg mt-0.5\' />
+                  <MapPin className=\'w-4 h-4\' />
                 </div>
-                <span className=\"text-sm leading-relaxed\" />{contactInfo.address}</span>
+                <span className=\'text-sm leading-relaxed\' />{contactInfo.address}</span>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className=\"flex items-center space-x-4\" />
+            <div className=\'flex items-center space-x-4\' />
               {socialLinks.map((social) => (}
                 <a;}
 key={social.name}
                   href={social.href}
-                  target=\"_blank\"
-                  rel=\"noopener noreferrer\"
+                  target=\'_blank\'
+                  rel=\'noopener noreferrer\'
                   className={`p-2 bg-slate-700/50 rounded-lg text-gray-400 transition-all duration-300 hover:bg-slate-600/50 ${social.color}`}
                   aria-label={social.name}
                  />
-                  <social.icon className=\"w-5 h-5\" />
+                  <social.icon className=\'w-5 h-5\' />
                 </a>
               ))}
             </div>
@@ -439,27 +439,27 @@ key={social.name}
 
           {/* Footer Sections *,}
 }
-          <div className=\"lg:col-span-1 xl:col-span-2\" />
-            <div className=\"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8\" />
+          <div className=\'lg:col-span-1 xl:col-span-2\' />
+            <div className=\'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8\' />
               {footerSections.map((section, index) => (}
                 <motion.div;}
 key={section.title}
-                  initial={{ opacity: 0, y: 20 ,}
+                  initial={ opacity: 0, y: 20 ,}
 }
-                  whileInView={{ opacity: 1, y: 0 ,}
+                  whileInView={ opacity: 1, y: 0 ,}
 }
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className=\"space-y-4\"
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
+                  className=\'space-y-4\'
                  />
                   <h4 className={`text-lg font-semibold text-white flex items-center gap-2 ${}
                     section.featured ? 'text-cyan-400' : ''}
                   }`} />
-                    {section.featured && <Star className=\"w-4 h-4 text-cyan-400\" />}
+                    {section.featured && <Star className=\'w-4 h-4 text-cyan-400\' />}
                     {section.title}
                   </h4>
                   
-                  <ul className=\"space-y-2\" />
+                  <ul className=\'space-y-2\' />
                     {section.links.map((link) => (}
                       <li key={link.name} />
                         <Link;
@@ -472,7 +472,7 @@ href={link.href}
                          />
                           <span />{link.name}</span>
                           {link.featured && (}
-                            <ArrowUpRight className=\"w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200\" />}
+                            <ArrowUpRight className=\'w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200\' />}
                           )}
                         </Link>
                       </li>
@@ -485,15 +485,15 @@ href={link.href}
         </div>
 
         {/* Quick Actions Section */}
-        <div className=\"mt-16 pt-12 border-t border-slate-700/50\" />
-          <div className=\"text-center mb-8\" />
-            <h3 className=\"text-2xl font-bold text-white mb-4\" />Ready to Get Started?</h3>
-            <p className=\"text-gray-400 max-w-2xl mx-auto\" />
+        <div className=\'mt-16 pt-12 border-t border-slate-700/50\' />
+          <div className=\'text-center mb-8\' />
+            <h3 className=\'text-2xl font-bold text-white mb-4\' />Ready to Get Started?</h3>
+            <p className=\'text-gray-400 max-w-2xl mx-auto\' />
               Transform your business with our cutting-edge AI solutions. Get in touch today to learn how we can help you achieve your goals.
             </p>
           </div>
           
-          <div className=\"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4\" />
+          <div className=\'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4\' />
             {quickActions.map((action) => (}
               <Link;}
 key={action.name}
@@ -509,7 +509,7 @@ key={action.name}
                     ? 'bg-cyan-500/20 text-cyan-400'}
                     : 'bg-slate-700/50 text-gray-400 group-hover:text-cyan-400'}
                 }`} />
-                  <action.icon className=\"w-5 h-5\" />
+                  <action.icon className=\'w-5 h-5\' />
                 </div>
                 <span className={`text-sm font-medium ${}
                   action.featured ? 'text-cyan-400' : 'text-gray-300 group-hover:text-white'}
@@ -522,61 +522,61 @@ key={action.name}
         </div>
 
         {/* Contact Information Footer */}
-        <section className=\"py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50\" />
-          <div className=\"max-w-7xl mx-auto\" />
-            <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8 text-center\" />
+        <section className=\'py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50\' />
+          <div className=\'max-w-7xl mx-auto\' />
+            <div className=\'grid grid-cols-1 md:grid-cols-3 gap-8 text-center\' />
               <div />
-                <div className=\"w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4\" />
-                  <Phone className=\"w-6 h-6 text-white\" />
+                <div className=\'w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4\' />
+                  <Phone className=\'w-6 h-6 text-white\' />
                 </div>
-                <h3 className=\"text-lg font-semibold text-white mb-2\" />Call Us</h3>
-                <a href=\"tel:+13024640950\" className=\"text-cyan-400 hover:text-cyan-300 transition-colors\" />
+                <h3 className=\'text-lg font-semibold text-white mb-2\' />Call Us</h3>
+                <a href=\'tel:+13024640950\' className=\'text-cyan-400 hover:text-cyan-300 transition-colors\' />
                   +1 302 464 0950;
                 </a>
-                <p className=\"text-sm text-slate-400 mt-2\" />Available 24/7 for urgent support</p>
+                <p className=\'text-sm text-slate-400 mt-2\' />Available 24/7 for urgent support</p>
               </div>
               <div />
-                <div className=\"w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4\" />
-                  <MailIcon className=\"w-6 h-6 text-white\" />
+                <div className=\'w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4\' />
+                  <MailIcon className=\'w-6 h-6 text-white\' />
                 </div>
-                <h3 className=\"text-lg font-semibold text-white mb-2\" />Email Us</h3>
-                <a href=\"mailto:kleber@ziontechgroup.com\" className=\"text-cyan-400 hover:text-cyan-300 transition-colors\" />
+                <h3 className=\'text-lg font-semibold text-white mb-2\' />Email Us</h3>
+                <a href=\'mailto:kleber@ziontechgroup.com\' className=\'text-cyan-400 hover:text-cyan-300 transition-colors\' />
                   kleber@ziontechgroup.com;
                 </a>
-                <p className=\"text-sm text-slate-400 mt-2\" />Response within 2 hours</p>
+                <p className=\'text-sm text-slate-400 mt-2\' />Response within 2 hours</p>
               </div>
               <div />
-                <div className=\"w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4\" />
-                  <MapPin className=\"w-6 h-6 text-white\" />
+                <div className=\'w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4\' />
+                  <MapPin className=\'w-6 h-6 text-white\' />
                 </div>
-                <h3 className=\"text-lg font-semibold text-white mb-2\" />Visit Us</h3>
-                <p className=\"text-slate-300\" />
+                <h3 className=\'text-lg font-semibold text-white mb-2\' />Visit Us</h3>
+                <p className=\'text-slate-300\' />
                   364 E Main St STE 1008<br />
                   Middletown DE 19709;
                 </p>
-                <p className=\"text-sm text-slate-400 mt-2\" />Global remote support available</p>
+                <p className=\'text-sm text-slate-400 mt-2\' />Global remote support available</p>
               </div>
             </div>
             
             {/* Additional Contact Methods *,}
 }
-            <div className=\"mt-12 pt-8 border-t border-slate-700\" />
-              <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center\" />
+            <div className=\'mt-12 pt-8 border-t border-slate-700\' />
+              <div className=\'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center\' />
                 <div />
-                  <h4 className=\"text-sm font-semibold text-slate-400 mb-2\" />Emergency Support</h4>
-                  <p className=\"text-sm text-slate-500\" />Critical issues: +1 302 464 0950</p>
+                  <h4 className=\'text-sm font-semibold text-slate-400 mb-2\' />Emergency Support</h4>
+                  <p className=\'text-sm text-slate-500\' />Critical issues: +1 302 464 0950</p>
                 </div>
                 <div />
-                  <h4 className=\"text-sm font-semibold text-slate-400 mb-2\" />Business Hours</h4>
-                  <p className=\"text-sm text-slate-500\" />Mon-Fri: 9AM-6PM EST</p>
+                  <h4 className=\'text-sm font-semibold text-slate-400 mb-2\' />Business Hours</h4>
+                  <p className=\'text-sm text-slate-500\' />Mon-Fri: 9AM-6PM EST</p>
                 </div>
                 <div />
-                  <h4 className=\"text-sm font-semibold text-slate-400 mb-2\" />Response Time</h4>
-                  <p className=\"text-sm text-slate-500\" />Urgent: 1 hour, Normal: 4 hours</p>
+                  <h4 className=\'text-sm font-semibold text-slate-400 mb-2\' />Response Time</h4>
+                  <p className=\'text-sm text-slate-500\' />Urgent: 1 hour, Normal: 4 hours</p>
                 </div>
                 <div />
-                  <h4 className=\"text-sm font-semibold text-slate-400 mb-2\" />Global Support</h4>
-                  <p className=\"text-sm text-slate-500\" />24/7 availability worldwide</p>
+                  <h4 className=\'text-sm font-semibold text-slate-400 mb-2\' />Global Support</h4>
+                  <p className=\'text-sm text-slate-500\' />24/7 availability worldwide</p>
                 </div>
               </div>
             </div>
@@ -586,20 +586,20 @@ key={action.name}
 
       {/* Bottom Footer *,}
 }
-      <div className=\"border-t border-slate-700/50\" />
-        <div className=\"container-responsive py-6\" />
-          <div className=\"flex flex-col md:flex-row items-center justify-between gap-4\" />
-            <div className=\"flex items-center space-x-6 text-sm text-gray-400\" />
+      <div className=\'border-t border-slate-700/50\' />
+        <div className=\'container-responsive py-6\' />
+          <div className=\'flex flex-col md:flex-row items-center justify-between gap-4\' />
+            <div className=\'flex items-center space-x-6 text-sm text-gray-400\' />
               <span />&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
             </div>
             
-            <div className=\"flex items-center space-x-4\" />
+            <div className=\'flex items-center space-x-4\' />
               <button;
 onClick={scrollToTop}
-                className=\"p-2 bg-slate-700/50 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110\"
-                aria-label=\"Scroll to top\"
+                className=\'p-2 bg-slate-700/50 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110\'
+                aria-label=\'Scroll to top\'
                />
-                <ArrowUpRight className=\"w-5 h-5 rotate-45\" />
+                <ArrowUpRight className=\'w-5 h-5 rotate-45\' />
               </button>
             </div>
           </div>

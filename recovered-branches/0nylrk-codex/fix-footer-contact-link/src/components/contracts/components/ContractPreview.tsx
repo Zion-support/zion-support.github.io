@@ -48,7 +48,6 @@ export function ContractPreview({
   onDeploy, ;
   onSign;
   onClose;
-=======          <Badge
 export function ContractPreview({
   contractContent;
 

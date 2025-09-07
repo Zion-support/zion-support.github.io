@@ -46,22 +46,22 @@ export default function AnalyticsPage() {
 export default function AnalyticsPage() {
   const features = [
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
+      icon: <BarChart3 className='w-8 h-8 text-white' />,
       title: 'Real-time Dashboards',
       description: 'Live monitoring and visualization of your key metrics'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-white" />,
+      icon: <TrendingUp className='w-8 h-8 text-white' />,
       title: 'Predictive Analytics',
       description: 'AI-powered forecasting and trend analysis'
     },
     {
-      icon: <PieChart className="w-8 h-8 text-white" />,
+      icon: <PieChart className='w-8 h-8 text-white' />,
       title: 'Custom Reports',
       description: 'Build and schedule personalized reports'
     },
     {
-      icon: <Activity className="w-8 h-8 text-white" />,
+      icon: <Activity className='w-8 h-8 text-white' />,
       title: 'Performance Monitoring',
       description: 'Track system performance and user behavior',
     },;
@@ -74,7 +74,7 @@ export default function AnalyticsPage() {
     <>
       <Head>
         <title>Analytics - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities." />
+        <meta name='description' content='Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities.' />
       </Head>
       <div className='min-h-screen bg-black'>
         {/* Hero Section */}
@@ -108,7 +108,7 @@ export default function AnalyticsPage() {
               >                View Demo
               Analytics Platform
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
               Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities.
             </p>
             <div className='flex flex-col sm:flex-row gap-6 justify-center'>
@@ -117,12 +117,12 @@ export default function AnalyticsPage() {
                 <ArrowRight className='w-5 h-5 ml-2' />
               </a>
               <a
-                href="/contact" className="shadow-2xl shadow-blue-500/25">
+                href='/contact' className='shadow-2xl shadow-blue-500/25'>
                 Start Analyzing
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className='w-5 h-5 ml-2' />
               </Link>
               <a
-                href="/contact" className="border-white/20 hover:border-white/40">
+                href='/contact' className='border-white/20 hover:border-white/40'>
                 View Demo
               </Link>
             </div>
@@ -141,18 +141,18 @@ export default function AnalyticsPage() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {features.map((feature, index) => (
                 <div
-                  key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
-                  <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                  key={index} className='p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>
+                  <div className='w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center'>
                     {feature.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">
+                  <h3 className='text-xl font-bold text-white mb-4'>
                     {feature.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   </h3>
@@ -168,14 +168,14 @@ export default function AnalyticsPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
               <div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+                <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
                   Transform Data into Action
                 </h2>
-                <div className="space-y-6">
+                <div className='space-y-6'>
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1">
-                        <Check className="w-4 h-4 text-blue-500" />
+                    <div key={index} className='flex items-start'>
+                      <div className='w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1'>
+                        <Check className='w-4 h-4 text-blue-500' />
                       </div>
                       <span className='text-gray-300 text-lg'>{benefit}</span>                    </div>
                   ))}
@@ -188,7 +188,7 @@ export default function AnalyticsPage() {
                     <h3 className='text-2xl font-bold text-white mb-4'>
                       Visual Insights
                     </h3>
-                    <p className="text-gray-300 mb-6">
+                    <p className='text-gray-300 mb-6'>
                       Beautiful charts and graphs that make complex data easy to understand
                     </p>
                     <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm'>
@@ -206,12 +206,12 @@ export default function AnalyticsPage() {
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
               Ready to Unlock Your Data?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className='text-xl text-blue-100 mb-8'>
               Start gaining insights from your data today
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
-                href="/contact" className="bg-white text-blue-600 hover:bg-gray-100">
+                href='/contact' className='bg-white text-blue-600 hover:bg-gray-100'>
                 Start Free Trial
               </Link>
               <a

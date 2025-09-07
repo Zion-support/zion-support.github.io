@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type DisputeStatus = $2;
 export type DisputeReason = $2;
 export type DisputeAttachment = $2;
@@ -28,27 +27,27 @@ export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',export type Dis
   | 'Payment Issue';'
   | 'Communication Breakdown';'
 
-export type DisputeAttachment = {"id": string;
+export type DisputeAttachment = {'id': string;
   }
-  "orderId": string;
-  "userId": string;
-  "reason": string;
-  "description": string;
-  "status": 'open' | 'in_progress' | 'resolved' | 'closed';'
-  "createdAt": Date;
-  "updatedAt": Date;
+  'orderId': string;
+  'userId': string;
+  'reason': string;
+  'description': string;
+  'status': 'open' | 'in_progress' | 'resolved' | 'closed';'
+  'createdAt': Date;
+  'updatedAt': Date;
   resolution?: string;
   resolvedAt?: Date;
 
 }
 
-export interface DisputeResolution  {"disputeId": string;
+export interface DisputeResolution  {'disputeId': string;
   }
-  "resolution": string;
-  "resolvedBy": string;
-  "resolvedAt": Date;
+  'resolution': string;
+  'resolvedBy': string;
+  'resolvedAt': Date;
   refundAmount?: number;
-}"role": 'admin' | 'client' | 'talent';'
+}'role': 'admin' | 'client' | 'talent';'
 }
 
 export type DisputeListItem = Pick<DisputeCase, 'id' | 'status' | 'reason' | 'createdAt'> & {
@@ -81,4 +80,3 @@ export type DisputeMessage = {
   entityType?: 'milestone' | 'contract' | 'thread';
   entityId?: string;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

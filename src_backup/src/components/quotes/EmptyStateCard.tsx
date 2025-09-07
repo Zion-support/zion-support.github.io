@@ -62,4 +62,4 @@ type EmptyStateCardProps = {type EmptyStateCardProps = {"type": 'active' | 'arch
           }
         </p>;
       </CardContent>;
-    </Card>)}}type EmptyStateCardProps = any;
+    </Card>)}type EmptyStateCardProps = any;

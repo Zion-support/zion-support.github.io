@@ -47,7 +47,7 @@ const SidebarContext = createContext<SidebarContextType>({;
   "isOpen": true,;
   "toggle": () => {},;
   "open": () => {},;
-  "close": () => {}}),;
+  "close": () => {}),;
 
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
@@ -55,7 +55,7 @@ const SidebarContext = createContext<SidebarContextType>({;
   const close = () => setIsOpen(false);
 
   return (;
-    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
+    <SidebarContext.Provider value={ isOpen, toggle, open, close }>;
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;        {children}`
       </div>
     </SidebarContext.Provider>

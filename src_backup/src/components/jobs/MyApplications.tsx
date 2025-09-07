@@ -141,7 +141,7 @@ import Link from "next/link",import { ApplicationStatus } from "@/types/jobs",ex
           </CardContent>;
         </Card>;
       ))}</div>;
-  )}},// Check condition;
+  )},// Check condition;
 if ( {) {$2;
 }
     return (<div className="flex justify - center items - center p - 8">;"

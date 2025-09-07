@@ -100,11 +100,11 @@ customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
         customTheme={effectiveTheme} />
       <main,
 className="min-h-screen""
-        style={{
+        style={
           }
           "backgroundColor":
             effectiveTheme?.backgroundColor || "var(--background)","
-        }}
+        }
       >
         <CompanyDashboard company={company} />
       </main>
@@ -168,12 +168,12 @@ return (;
       <Header;
         custom_logo={is_whitelabel ? tenant?.logo_url : company.logo_url}
         custom_theme={effective_theme} />;
-      <main className="min-h-screen" style={{ "background_color": effective_theme?.background_color || 'var (--background)' }}>;'
+      <main className="min-h-screen" style={ "background_color": effective_theme?.background_color || 'var (--background)' }>;'
         <CompanyDashboard company={company} />;
       </main>;
       <Footer />;
     </ProtectedRoute>);
-}}
+}
 }
 
   )

@@ -109,18 +109,18 @@ export default function InnovationsPage() {
             <div className="text-center">
               <motion.div
 
-                initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+                initial={ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                animate={{ opacity: 1, scale: 1 }  } catch (error) {"
+                animate={ opacity: 1, scale: 1 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 1 }  } catch (error) {"
+                transition={ duration: 1 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -203,9 +203,9 @@ export default function InnovationsPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center'>
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
+                initial={ opacity: 0, scale: 0.8 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 1 }
 className='mb-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -214,9 +214,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
               <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
 className='text-5xl md:text-7xl font-bold mb-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -237,18 +237,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Experience the future today with our revolutionary innovations in AI consciousness,
 
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
+                initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                animate={{ opacity: 1, y: 0 }  } catch (error) {"
+                animate={ opacity: 1, y: 0 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {"
+                transition={ duration: 0.8, delay: 0.4 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -263,17 +263,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.p>
               <motion.div
 
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
+                initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
+                animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 0.8, delay: 0.6 }  } catch (error) {
+                transition={ duration: 0.8, delay: 0.6 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -293,9 +293,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Mail className="w-5 h-5 mr-2" />
 
               <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.4 }
 className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12'
               >
                 Experience the future today with our revolutionary innovations
@@ -304,9 +304,9 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed m
                 unprecedented possibilities.
               </motion.p>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.6 }
 className='flex flex-col sm:flex-row gap-6 justify-center items-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -344,22 +344,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div;
-              initial={{ opacity: 0, y: 30 }  } catch (error) {"
+              initial={ opacity: 0, y: 30 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+              whileInView={ opacity: 1, y: 0 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {"
+              transition={ duration: 0.8 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              viewport={{ once: true }  } catch (error) {"
+              viewport={ once: true }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -374,10 +374,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -510,10 +510,10 @@ description:
         {/* Comprehensive Services Showcase */}
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
                       </p>
                     </div>
@@ -577,22 +577,22 @@ description:
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div;
-              initial={{ opacity: 0, y: 30 }  } catch (error) {"
+              initial={ opacity: 0, y: 30 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+              whileInView={ opacity: 1, y: 0 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {"
+              transition={ duration: 0.8 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              viewport={{ once: true }  } catch (error) {"
+              viewport={ once: true }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -656,10 +656,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div;
 
                   key={item.title}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
 
                   className="text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500"
                 >"
@@ -699,10 +699,10 @@ className='text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 bor
 <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >

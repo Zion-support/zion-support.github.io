@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 import React, { useEffect, useState } from 'react';'
@@ -64,7 +63,7 @@ return (<div className={className || ',;'
   }, [])//Filter services by category //Animation variants const container_variants = {"hidden": {"opacity": 0;
 }
 "visible": {"opacity": 1, "transition": {"duration": 0.8, "stagger_children": 0.1;
-}}}}}
+}}}
 
 export default EnhancedHomepage;import EnhancedServiceCard from './ui / EnhancedServiceCard';'
 // Import service data;
@@ -173,9 +172,9 @@ const allRevolutionaryServices = [;
                   onClick={() => handleCategoryChange(category.id)}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform "hover":scale-105 ${selectedCategory === category.id;`                      ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl';'
                       : 'bg-gray-800/50 text-gray-300 "hover":bg-gray-700/50 border border-gray-600';'
-                  }`}`                  whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
-                  whileTap={{ "scale": 0.95 
+                  }`}`                  whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 }
+                  whileTap={ "scale": 0.95 
 }
                 >;
                   <category.icon className="inline-block w-5 h-5 mr-2" />;"
@@ -195,9 +194,9 @@ const allRevolutionaryServices = [;
                   onClick={() => handleCategoryChange(category.id)}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform "hover":scale-105 ${selectedCategory === category.id;`                      ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl';'
                       : 'bg-gray-800/50 text-gray-300 "hover":bg-gray-700/50 border border-gray-600';'
-                  }`}`                  whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
-                  whileTap={{ "scale": 0.95 
+                  }`}`                  whileHover={ "scale": 1.05 }
+                  whileTap={ "scale": 0.95 }
+                  whileTap={ "scale": 0.95 
 }
                 >;
                   <category.icon className="inline-block w-5 h-5 mr-2" />;"
@@ -258,9 +257,9 @@ const allRevolutionaryServices = [;
                 <Link href="/services">;"
                   <motion.button;
                     className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg "hover":bg-cyan-400 "hover":text-black transition-all duration-300";"
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ "scale": 0.95 }}
-                    whileTap={{ "scale": 0.95 
+                    whileHover={ "scale": 1.05 }
+                    whileTap={ "scale": 0.95 }
+                    whileTap={ "scale": 0.95 
 }
                   >;
                     View All Services;
@@ -305,21 +304,21 @@ const allRevolutionaryServices = [;
               <AnimatePresence mode="wait">;"
                 <motion&& motion.div;
                   key={currentServiceIndex}
-                  initial={{ "opacity": 0, "x": 20 }}
-                  animate={{ "opacity": 1, "x": 0 }}
-                  exit={{ "opacity": 0, "x": -20 }}<Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>;`                      <motion.button;
+                  initial={ "opacity": 0, "x": 20 }
+                  animate={ "opacity": 1, "x": 0 }
+                  exit={ "opacity": 0, "x": -20 }<Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>;`                      <motion.button;
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg "hover": from-cyan-600 "hover":to-blue-700 transition-all duration-300";"
-                        whileHover={{ "scale": 1.05 }}
-                        whileTap={{ "scale": 0.95 }}
-                  initial={{ "opacity": 0, "x": 20 
+                        whileHover={ "scale": 1.05 }
+                        whileTap={ "scale": 0.95 }
+                  initial={ "opacity": 0, "x": 20 
 }
-                  animate={{ "opacity": 1, "x": 0 
+                  animate={ "opacity": 1, "x": 0 
 }
-                  exit={{ "opacity": 0, "x": -20 }}<Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id},`}>;
+                  exit={ "opacity": 0, "x": -20 }<Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id},`}>;
                       <motion.button;
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg "hover": from-cyan-600 "hover":to-blue-700 transition-all duration-300";"
-                        whileHover={{ "scale": 1.05 }}
-                        whileTap={{ "scale": 0.95 
+                        whileHover={ "scale": 1.05 }
+                        whileTap={ "scale": 0.95 
 }
                       >;
                         Learn More;
@@ -358,8 +357,8 @@ const allRevolutionaryServices = [;
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>;`
                       <motion&& motion.button;
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg "hover": from-cyan-600 "hover":to-blue-700 transition-all duration-300";"
-                        whileHover={{ "scale": 1 && 1.05 }}
-                        whileTap={{ "scale": 0 && 0.95 
+                        whileHover={ "scale": 1 && 1.05 }
+                        whileTap={ "scale": 0 && 0.95 
 }>;
                         Learn More;
                         <ArrowRight className="inline-block ml-2 w-4 h-4" />;"
@@ -384,9 +383,9 @@ const allRevolutionaryServices = [;
                     </div>;
                       <motion.button;
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg "hover": from-cyan-600 "hover":to-blue-700 transition-all duration-300";"
-                        whileHover={{ "scale": 1.05 }}
-                        whileTap={{ "scale": 0.95 }}
-                        whileTap={{ "scale": 0.95 
+                        whileHover={ "scale": 1.05 }
+                        whileTap={ "scale": 0.95 }
+                        whileTap={ "scale": 0.95 
 }
                       >;
                         Learn More;
@@ -428,8 +427,8 @@ const allRevolutionaryServices = [;
       <AnimatePresence>;
         {showPerformanceMonitor && (<PerformanceMonitor />;
         )}"duration": 0.8, "staggerChildren": 0.1;
-}}}}}export default EnhancedHomepage;
-}}}}}
+}}}export default EnhancedHomepage;
+}}}
 
 export default EnhancedHomepage;
 // Import service data;

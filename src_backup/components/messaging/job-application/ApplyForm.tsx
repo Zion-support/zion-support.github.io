@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/messaging/job-application/ApplyForm.tsx
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -201,7 +200,6 @@ interface ApplyFormProps  {job: Job,onClose: () => void,onApplySuccess?: (jobId:
           <ResumeTab;
             selectedResume={selectedResume}
             onResumeSelect={setSelectedResume}
-<<<<<<< HEAD:src_backup/components/messaging/job-application/ApplyForm.tsx
 
             message={message}
             setMessage={setMessage}
@@ -371,7 +369,6 @@ return (<> <Tabs value= {activeTab;
 }/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {handleResumeSelected;
 }selectedResumeId= {selectedResumeId ";
 }/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {'";
-<<<<<<< HEAD:src_backup/components/messaging/job-application/ApplyForm.tsx
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') ;
 }</Button> </div> </>) ;
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application')}</Button> </div> </>)}'"}

@@ -14,10 +14,10 @@ interface NavigationItem {;
   "name": string, "href": string,;
   submenu?: NavigationItem[];
 }
-                initial={{ "opacity": 0, "y": 10 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                exit={{ "opacity": 0, "y": 10 }}
-                transition={{ "duration": 0 && 0.2 }}
+                initial={ "opacity": 0, "y": 10 }
+                animate={ "opacity": 1, "y": 0 }
+                exit={ "opacity": 0, "y": 10 }
+                transition={ "duration": 0 && 0.2 }
                 className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border z-50""
                 onMouseEnter={() => setActiveItem(item && item.name)}
                 onMouseLeave={() => setActiveItem(null)}
@@ -96,10 +96,10 @@ return (;
             {item.submenu && active_item === item.name && (
               <motion.div;
                 }
-                initial={{ "opacity": 0, "coordinate_y": 10 }}
-                animate={{ "opacity": 1, "coordinate_y": 0 }}
-                exit={{ "opacity": 0, "coordinate_y": 10 }}
-                transition={{ "duration": 0.2 }}
+                initial={ "opacity": 0, "coordinate_y": 10 }
+                animate={ "opacity": 1, "coordinate_y": 0 }
+                exit={ "opacity": 0, "coordinate_y": 10 }
+                transition={ "duration": 0.2 }
                 className="absolute top - full left - 0 mt - 2 w - 64 bg - white rounded - lg shadow - lg border z - 50";"
                 onMouseEnter={() => setActiveItem (item.name)}
                 onMouseLeave={() => setActiveItem (null)}

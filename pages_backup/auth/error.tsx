@@ -26,8 +26,8 @@ const errorMessages: Record<string, string> = {;'
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';'
   default: 'There was an issue with your authentication request.';
   } catch (error) {}
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 
 }
@@ -37,8 +37,8 @@ const errorMessages: Record<string, string> = {;'
       <Head>
         <title>Authentication Error - Zion Tech Marketplace</title>;
         <meta name=&quot;description&quot; content=&quot;Authentication error page&quot; />
-        <title>Authentication Error - Zion Tech Marketplace</title>"
-        <meta name="description" content="Authentication error page" />
+        <title>Authentication Error - Zion Tech Marketplace</title>'
+        <meta name='description' content='Authentication error page' />
 
       </Head>
       <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
@@ -66,9 +66,9 @@ const errorMessages: Record<string, string> = {;'
     </>
   )
 
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;

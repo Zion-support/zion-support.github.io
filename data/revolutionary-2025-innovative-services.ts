@@ -300,7 +300,6 @@ export const "revolutionary2025Services": Revolutionary2025Service[] = [
   }
 ;
   // 🧬 DNA Computing & Biotech Services;
-<<<<<<< HEAD
   {
     }
     "id": 'dna - computing - platform';'
@@ -680,14 +679,11 @@ export const "revolutionary2025Services": Revolutionary2025Service[] = [
   }
 ;
   // 🏦 Financial Technology Revolution Services;
-<<<<<<< HEAD
   {'
     id: 'fintech - revolution - platform';'
     name: 'FinTech Revolution Platform';'
     tagline: 'Next - Generation Financial Technology with AI - Powered Trading & Risk Management';'
     price: '$699';
-<<<<<<< HEAD
-=======
   {
     }
     "id": 'fintech - revolution - platform';'
@@ -785,14 +781,11 @@ export const "revolutionary2025Services": Revolutionary2025Service[] = [
   }
 ;
   // 🏭 Industrial IoT & Smart Manufacturing Services;
-<<<<<<< HEAD
   {'
     id: 'industrial - iot - revolution';'
     name: 'Industrial IoT Revolution Platform';'
     tagline: 'Smart Manufacturing with Zero Downtime & Predictive Maintenance';'
     price: '$299';
-<<<<<<< HEAD
-=======
   {
     }
     "id": 'industrial - iot - revolution';'
@@ -886,7 +879,6 @@ export const "revolutionary2025Services": Revolutionary2025Service[] = [
   }
 ;
   // 🎓 Education Technology Revolution Services;
-<<<<<<< HEAD
   {'
     id: 'edtech - revolution - platform';'
     name: 'EdTech Revolution Platform';'
@@ -895,8 +887,6 @@ export const "revolutionary2025Services": Revolutionary2025Service[] = [
 '
     period: '/month''
     description: 'Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.';
-<<<<<<< HEAD
-=======
   {
     }
     "id": 'edtech - revolution - platform';'
@@ -995,7 +985,6 @@ export const "revolutionary2025Services": Revolutionary2025Service[] = [
   }
 ;
   // 🌱 Sustainability & Green Technology Services;
-<<<<<<< HEAD
   {'
     id: 'sustainability - tech - platform';'
     name: 'Sustainability Technology Platform';'
@@ -1004,8 +993,6 @@ export const "revolutionary2025Services": Revolutionary2025Service[] = [
 '
     period: '/month''
     description: 'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.';
-<<<<<<< HEAD
-=======
   {
     }
     "id": 'sustainability - tech - platform';'
@@ -1163,7 +1150,6 @@ export default revolutionary2025Services;
     "customers": 150;
     "rating": 4.8,"reviews": 112;
   }
-<<<<<<< HEAD
 ];export default revolutionary2025Services;
     "growth_rate": '1000%+ annual growth expected',"contact_info": {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup && ziontechgroup.com';'
     },"real_implementation": true,"implementation_details":;
@@ -1448,7 +1434,7 @@ export default revolutionary2025Services;"id": 'logistics-revolution-platform', 
     "popular": true, "icon": '🚛',"color": 'from-orange-600 to-red-700', "textColor": 'text-orange-400',"link": '"https"://ziontechgroup.com/logistics-revolution-platform', "marketPosition": 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.',"targetAudience": 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers',"trialDays": 30, "setupTime": '8 hours',"category": 'Logistics & Supply Chain', "realService": true,"technology": ['AI/MLIoTBlockchainPythonLogistics APIsCloud Computing'], "integrations": ['ERP systemsWarehouse managementTransportation systemsE-commerce platforms'],"useCases": ['Supply chain optimizationLast-mile deliveryInventory managementDemand forecastingSupplier collaboration'], "roi": 'Logistics companies see 3000%+ ROI through waste reduction and improved efficiency.',"competitors": ['FedExUPSDHL'], "marketSize": '$250B logistics tech market',"growthRate": '500% annual growth',"contactInfo": {"mobile": '+1 302 464 0950', "email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
     },"realImplementation": true,"implementationDetails": 'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.',"launchDate": '2025-03-01', "customers": 150,"rating": 4.8,"reviews": 112;'
   }
-];;
+];
 export interface Revolutionary2025Service  {export default revolutionary2025Services;export interface Revolutionary2025Service  {ursor/fix-website-loading-errors-and-merge-6662;
 }
 export default revolutionary2025Services;"email": 'kleber@ziontechgroup.com';'
@@ -1827,18 +1813,9 @@ export const "revolutionary2025Services": Revolutionary2025Service[] = [
 export default revolutionary2025Services;
 export default revolutionary2025Services;
 ;
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 export const "revolutionary2025Services": Revolutionary2025Service[] = [
   // 🧠 AI Consciousness & Emotional Intelligence Services

@@ -52,7 +52,7 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
 // (`vi`).  The shim only runs in the test environment and has no effect on;`
 // production bundles.;
 // deliberately attaching to global for test environment setup;
-  "SnapshotSerializer": () => {}}
+  'SnapshotSerializer': () => {}
 // eslint - disable - next - line @typescript - eslint / no - explicit - any;
 (global_this as any).jest = {// Core mocking utilities;
   fn: vi.fn.bind (vi),mock: vi.mock.bind (vi),spy_on: vi.spy_on.bind (vi),// Timing helpers;
@@ -72,14 +72,14 @@ afterEach(() => {cleanup()vi.restoreAllMocks()})
 (global_this as any).jest = {
   // Core mocking utilities;
   }
-  "fn": vi.fn.bind (vi),
-  "mock": vi.mock.bind (vi),
-  "spy_on": vi.spy_on.bind (vi),
+  'fn': vi.fn.bind (vi),
+  'mock': vi.mock.bind (vi),
+  'spy_on': vi.spy_on.bind (vi),
   // Timing helpers;
-  "useFakeTimers": vi.useFakeTimers.bind (vi),
-  "useRealTimers": vi.useRealTimers.bind (vi),
-  "advanceTimersByTime": vi.advanceTimersByTime.bind (vi),
-  "runAllTimers": vi.runAllTimers.bind (vi),
+  'useFakeTimers': vi.useFakeTimers.bind (vi),
+  'useRealTimers': vi.useRealTimers.bind (vi),
+  'advanceTimersByTime': vi.advanceTimersByTime.bind (vi),
+  'runAllTimers': vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
 import React from 'react';'
 export default function Setup() {

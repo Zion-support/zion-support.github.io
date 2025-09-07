@@ -36,9 +36,6 @@ if (return) {$2;
     const particles: Array<{coordinate_x: number;
       coordinate_y: number;x: number;
       y: number;vx: number;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const resize_canvas = () =>: any {canvas.width = window.inner_width;
       }
@@ -79,7 +76,6 @@ const colors = [;
         'rgba(0, 255, 127, 0.8)', // Spring green'
         'rgba(255, 215, 0, 0.8)', // Gold'
       ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       return {
         }
@@ -116,7 +112,6 @@ ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';'
         if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
         // Update life;
         particle.life--;
-<<<<<<< HEAD
         if (particle.life <= 0) {
 
 }
@@ -193,104 +188,103 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
   return ('
     <div className='fixed inset - 0 -z - 10 overflow - hidden'>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       {/* Canvas background */}
       <canvas;
         ref={canvas_ref}
         className='absolute inset - 0 w - full h - full';'
-        style={{{/* Enhanced floating orbs */}
+        style={{/* Enhanced floating orbs */}
       <div className='absolute inset-0'>;'
         {/* Primary orb */}
         <motion&& motion.div;
           className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl';'
           "background":;
-            'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)'}}' />;
+            'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)'}' />;
       {/* Enhanced floating orbs */}
       <div className='absolute inset - 0'>;'
         {/* Primary orb */}
         <motion.div;
           className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - full blur - 3xl';'
 
-          animate={{
+          animate={
       {/* Canvas background */}
       <canvas
-          animate={{{/* Canvas background */}
+          animate={{/* Canvas background */}
       <canvas;
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
+        style={ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }
 
             }
 
             "scale": [1, 1.2, 1],
             "opacity": [0.3, 0.6, 0.3]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 8,
             "repeat": Infinity,
             "ease": 'easeInOut','
-          }} />
+          } />
 
         {/* Secondary orb */}
         <motion.div,
 className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl''
-          animate={{
+          animate={
             }
             "scale": [1.2, 1, 1.2],
             "opacity": [0.4, 0.7, 0.4]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 10,
             "repeat": Infinity,
             "ease": 'easeInOut','
             "delay": 2
-          }} />
+          } />
 
         {/* Tertiary orb */}
         <motion.div,
 className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl''
-          animate={{
+          animate={
             }
             "scale": [1, 1.3, 1],
             "opacity": [0.2, 0.5, 0.2]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 12,
             "repeat": Infinity,
             "ease": 'easeInOut','
             "delay": 4
 
-          }} />
+          } />
 
         {/* Additional orbs */}
         <motion.div,
 className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl''
-          animate={{
+          animate={
             }
             "scale": [1.3, 1, 1.3],
             "opacity": [0.3, 0.6, 0.3]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 9,
             "repeat": Infinity,
             "ease": 'easeInOut','
             "delay": 1
-          }} />
+          } />
         <motion.div,
 className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl''
-          animate={{
+          animate={
             }
             "scale": [1, 1.4, 1]
             "opacity": [0.4, 0.7, 0.4]
-          animate={{
+          animate={
             }
             "scale": [1.3, 1, 1.3];
-            "opacity": [0.3, 0.6, 0.3]}}
-          transition={{
+            "opacity": [0.3, 0.6, 0.3]}
+          transition={
 
             }
 
@@ -298,124 +292,120 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
             "repeat": Infinity,
             "ease": 'easeInOut','
             "delay": 3
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 11,
 "repeat": Infinity,
 "ease": 'easeInOut''
-            "delay": 3          }} />
+            "delay": 3          } />
       </div>
       {/* Enhanced grid pattern */}
 <div className='absolute inset-0 opacity-10'>'
         <div,
 className='absolute inset-0''
-          style={{
+          style={
             }
             "backgroundImage": ``              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-<<<<<<< HEAD
-          style={{
+          style={
             backgroundImage: `
 
             `,`            "backgroundSize": '50px 50px','
-          }} />;
+          } />;
       </div>;
 
         />
       </div>
       {/* Floating geometric shapes */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          animate={{{/* Canvas background */}
+          animate={{/* Canvas background */}
       <canvas;
         ref={canvasRef}
         className="absolute inset-0 w-full h-full";
-        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}duration: 8,repeat: Infinity,ease: "easeInOut";
-          }}{/* Secondary orb */}
+        style={ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }duration: 8,repeat: Infinity,ease: "easeInOut";
+          }{/* Secondary orb */}
         <motion&& motion.div;
           className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl';
-          animate={{scale: [1.2, 1, 1.2];
-            opacity: [0.4, 0.7, 0.4]}}
-            scale: [1 && 1.2, 1, 1 && 1.2],opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          animate={{scale: [1 && 1.2, 1, 1 && 1.2];
-            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]}}
-          transition={{}}
+          animate={scale: [1.2, 1, 1.2];
+            opacity: [0.4, 0.7, 0.4]}
+            scale: [1 && 1.2, 1, 1 && 1.2],opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          animate={scale: [1 && 1.2, 1, 1 && 1.2];
+            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]}
+          transition={}
         {/* Tertiary orb */}
         <motion&& motion.div;
           className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl';
-          animate={{scale: [1, 1.3, 1];
-            opacity: [0.2, 0.5, 0.2]}}scale: [1, 1.2, 1],opacity: [0.3, 0.6, 0.3],}}
-          transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',}}
+          animate={scale: [1, 1.3, 1];
+            opacity: [0.2, 0.5, 0.2]}scale: [1, 1.2, 1],opacity: [0.3, 0.6, 0.3],}
+          transition={duration: 8,repeat: Infinity,ease: 'easeInOut',}
         />;
         {/* Secondary orb */}
         <motion.div;
 className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl';
-          animate={{scale: [1.2, 1, 1.2],opacity: [0.4, 0.7, 0.4],}}
-          transition={{duration: 10,repeat: Infinity,ease: 'easeInOut',delay: 2,}}
+          animate={scale: [1.2, 1, 1.2],opacity: [0.4, 0.7, 0.4],}
+          transition={duration: 10,repeat: Infinity,ease: 'easeInOut',delay: 2,}
         />;
         {/* Tertiary orb */}
         <motion.div;
 className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl';
-          animate={{scale: [1, 1.3, 1],opacity: [0.2, 0.5, 0.2],}}
-          transition={{duration: 12,repeat: Infinity,ease: 'easeInOut',delay: 4,}}
+          animate={scale: [1, 1.3, 1],opacity: [0.2, 0.5, 0.2],}
+          transition={duration: 12,repeat: Infinity,ease: 'easeInOut',delay: 4,}
         />;
         {/* Additional orbs */}
         <motion.div;
 className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl';
-          animate={{scale: [1.3, 1, 1.3],opacity: [0.3, 0.6, 0.3],}}
-          transition={{duration: 9,repeat: Infinity,ease: 'easeInOut',delay: 1,}}
+          animate={scale: [1.3, 1, 1.3],opacity: [0.3, 0.6, 0.3],}
+          transition={duration: 9,repeat: Infinity,ease: 'easeInOut',delay: 1,}
         />;
         <motion.div;
 className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl';
-          animate={{scale: [1, 1.4, 1];
+          animate={scale: [1, 1.4, 1];
             opacity: [0.4, 0.7, 0.4];
-          animate={{scale: [1.3, 1, 1.3];
-            opacity: [0.3, 0.6, 0.3]}}
-          transition={{duration: 9;
+          animate={scale: [1.3, 1, 1.3];
+            opacity: [0.3, 0.6, 0.3]}
+          transition={duration: 9;
             repeat: Infinity;
             ease: "easeInOut";
             delay: 1;
-          }}
-          transition={{duration: 11;
+          }
+          transition={duration: 11;
             repeat: Infinity;
             ease: 'easeInOut';
             delay: 3,            ease: "easeInOut";
             delay: 3;
-            duration: 11,repeat: Infinity,ease: 'easeInOut',delay: 4,          }}
-        />;scale: [1, 1 && 1.3, 1],opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          animate={{scale: [1, 1 && 1.3, 1];
-            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}}
+            duration: 11,repeat: Infinity,ease: 'easeInOut',delay: 4,          }
+        />;scale: [1, 1 && 1.3, 1],opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          animate={scale: [1, 1 && 1.3, 1];
+            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}
             duration: 12,repeat: Infinity,ease: 'easeInOut',delay: 4,            ease: "easeInOut",{/* Additional orbs */}
         <motion&& motion.div;
           className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl';
-          animate={{animate={{scale: [1 && 1.3, 1, 1 && 1.3];
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-          transition={{animate={{scale: [1.3, 1, 1.3];
-            opacity: [0.3, 0.6, 0.3]}}
-          transition={{duration: 9,repeat: Infinity,ease: "easeInOut",delay: 1;
-          }}
-          animate={{scale: [1, 1 && 1.4, 1],opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],animate={{scale: [1 && 1.3, 1, 1 && 1.3];
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-          transition={{duration: 11,repeat: Infinity,ease: 'easeInOut',delay: 3,}}
-          transition={{duration: 11;
+          animate={animate={scale: [1 && 1.3, 1, 1 && 1.3];
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}
+          transition={animate={scale: [1.3, 1, 1.3];
+            opacity: [0.3, 0.6, 0.3]}
+          transition={duration: 9,repeat: Infinity,ease: "easeInOut",delay: 1;
+          }
+          animate={scale: [1, 1 && 1.4, 1],opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],animate={scale: [1 && 1.3, 1, 1 && 1.3];
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}
+          transition={duration: 11,repeat: Infinity,ease: 'easeInOut',delay: 3,}
+          transition={duration: 11;
             repeat: Infinity;
             ease: 'easeInOut';
-            delay: 3,          }}/>;
+            delay: 3,          }/>;
       </div>;
       {/* Enhanced grid pattern */}
 <div className='absolute inset-0 opacity-10'>;
         <div;
           className='absolute inset-0';
-          style={{backgroundImage: `;
-              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)style={{backgroundImage: `;
-              linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px),linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)`,backgroundSize: '50px 50px',          }}          style={{backgroundImage: `;
+          style={backgroundImage: `;
+              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)style={backgroundImage: `;
+              linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px),linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)`,backgroundSize: '50px 50px',          }          style={backgroundImage: `;
               linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)`;
             backgroundSize: '50px 50px';
-            `,backgroundSize: '50px 50px',}}/>;
+            `,backgroundSize: '50px 50px',}/>;
       </div>;/>;
       </div>;
       {/* Floating geometric shapes */}<div className='absolute inset-0'>;
 
-=======
 
 <div className='absolute inset-0'>'
 
@@ -423,22 +413,21 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
         <motion&& motion.div;
           className='absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45';' />;
       </div>;
-<<<<<<< HEAD
       {/* Enhanced grid pattern */}
       <div className='absolute inset - 0 opacity - 10'>;'
         <div;
           className='absolute inset - 0';'
-          style={{"background_image": `;`              }
-              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`,"background_size": '50px 50px'          }}          style={{"background_image": `;`              }
+          style={"background_image": `;`              }
+              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`,"background_size": '50px 50px'          }          style={"background_image": `;`              }
               linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px)linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`;`            "background_size": '50px 50px';'
-          }} />;
+          } />;
       </div>;
       {/* Floating geometric shapes */}
       <div className='absolute inset - 0'>;'
         {/* Triangle */}
         <motion.div;
           className='absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan - 500 / 20 rotate - 45';'
-          animate={{<motion.div;
+          animate={<motion.div;
             }
             "rotate": [45, 405],"opacity": [0 && 0.2, 0 && 0.6, 0 && 0.2],        {/* Triangle */}
         <motion && motion.div;
@@ -446,80 +435,77 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
         <motion.div;
           className="absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan-500 / 20 rotate-45";"
 
-          animate={{
-=======
+          animate={
         <motion.div;"
           className="absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan - 500 / 20 rotate - 45";
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          animate={}
             rotate: [45, 405]
-            opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
-          transition={{}
+            opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}
+          transition={}
             duration: 20,
             repeat: Infinity,"
             ease: "linear";
-          }}
+          }
 
             }
 
             "rotate": [45, 405],
             "opacity": [0.2, 0.6, 0.2]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 20,
             "repeat": Infinity,
             "ease": 'linear','
-          }} />
+          } />
 
         {/* Square */}
         <motion.div,
 className='absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20''
-          animate={{
+          animate={
             }
             "rotate": [0, 360],
             "scale": [1, 1.2, 1]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 15,
             "repeat": Infinity,
             "ease": 'easeInOut','
-          }}
+          }
         />
 
         {/* Circle */}
-<<<<<<< HEAD
         <motion.div
           className="absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full"
-          animate={{
+          animate={
             scale: [1, 1.5, 1],
-          animate={{
+          animate={
             rotate: [45, 405]
-          animate={{rotate: [45, 405];
-            opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
-          transition={{
+          animate={rotate: [45, 405];
+            opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}
+          transition={
 
         <motion.div,
 className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full''
-          animate={{
+          animate={
             }
             "scale": [1, 1.5, 1],
             "opacity": [0.3, 0.8, 0.3]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 8,
             "repeat": Infinity,
             "ease": 'easeInOut','
             "delay": 2
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 8,
 "repeat": Infinity,
 "ease": 'easeInOut''
-            "delay": 2          }} />
+            "delay": 2          } />
       </div>
 
       {/* Energy waves */}
@@ -529,37 +515,36 @@ className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rou
 }
 key={i}
             className='absolute inset - 0 border border - cyan - 500 / 10 rounded - full';'
-            animate={{
+            animate={
 
               }
 
               "scale": [1, 1.5, 2, 2.5],
               "opacity": [0.3, 0.2, 0.1, 0]
-            }}
-            transition={{
+            }
+            transition={
               }
               "duration": 6,
               "repeat": Infinity,
               "ease": 'easeOut','
               "delay": i * 2
-            }}
-            transition={{
+            }
+            transition={
               }
               "duration": 6,
               "repeat": Infinity,
               "ease": 'easeOut','
-              "delay": i * 2            }} />
+              "delay": i * 2            } />
         ))}
       </div>
 
-<<<<<<< HEAD
       {/* Quantum particles */}
       <div className='absolute inset-0'>
 
               "duration": 6,
               "repeat": Infinity,
               "ease": 'easeOut','
-              "delay": i * 2            }}
+              "delay": i * 2            }
           />
         ))}
       </div>
@@ -572,7 +557,7 @@ key={i}
 }
 key={i}
             className='absolute w - 1 h - 1 bg - cyan - 400 / 60 rounded - full';'
-            animate={{
+            animate={
 
               }
 
@@ -580,82 +565,72 @@ key={i}
               "y": [0, Math.random() * 200 - 100],
               "opacity": [0, 1, 0],
               "scale": [0, 1, 0]
-            }}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-            transition={{
+            }
+            transition={
               }
               "duration": 4 + Math.random() * 4,
               "repeat": Infinity,
               "delay": Math.random() * 4,
 "ease": 'easeInOut','
-            }}
+            }
             style = $2;
-              top: `${Math.random() * 100}%`}}
-=======
+              top: `${Math.random() * 100}%`}
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
-            }}
-<<<<<<< HEAD
-            style={{
+            }
+            style={
               }
               "left": `${Math.random() * 10,`}%`,`              "top": `${Math.random() * 10,`}%`,`
-            }} />
+            } />
         ))}
       </div>;
       {/* Consciousness energy field */}
       <div className='absolute inset - 0'>;
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to - cyan - 500 / 5';
-          animate={{
+          animate={
             opacity: [0.3, 0.6, 0.3],        <motion.div;
           className="absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to-cyan-500 / 5";
-          animate={{
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-          transition={{
-<<<<<<< HEAD
+          animate={
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}
+          transition={
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut";
-          }}
+          }
 };
 export default UltraFuturisticBackground2043;
 
 <div className='absolute inset-0'>'
         <motion.div,
 className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5''
-          animate={{
+          animate={
             }
             "opacity": [0.3, 0.6, 0.3]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 10,
             "repeat": Infinity,
             "ease": 'easeInOut','
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 10,
 "repeat": Infinity,
-"ease": 'easeInOut'          }}' />
+"ease": 'easeInOut'          }' />
       </div>
     </div>
 );
 };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default UltraFuturisticBackground2043;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-<<<<<<< HEAD
 }
 }
 }
 }
-<<<<<<< HEAD
 }
 }
 }
@@ -663,11 +638,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<div className='absolute inset-0'>;
         <motion.div;
           className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5';
-          animate={{opacity: [0.3, 0.6, 0.3],}}
-          transition={{duration: 10,repeat: Infinity,ease: 'easeInOut',}}
-          transition={{duration: 10;
+          animate={opacity: [0.3, 0.6, 0.3],}
+          transition={duration: 10,repeat: Infinity,ease: 'easeInOut',}
+          transition={duration: 10;
             repeat: Infinity;
-            ease: 'easeInOut',          }}
+            ease: 'easeInOut',          }
         />;
       </div>;
     </div>;
@@ -676,12 +651,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 },
 
 export default UltraFuturisticBackground2043,
-=======
 export default UltraFuturisticBackground2043
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

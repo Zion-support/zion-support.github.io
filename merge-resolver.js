@@ -13,7 +13,7 @@ const fs = require('fs'); const path = require('path');  function fixMergeConfli
   } catch (error) {
     console.log(`❌ Error fixing ${filePath}: ${error.message}`);
     return false;
-  }}
+  }
 }//Function to get all files recursively function getAllFiles (dir, extensions) {
   let files = [];
 try {
@@ -38,7 +38,7 @@ let fixedCount = 0;
 # Resolved merge conflict - kept HEAD version
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed merge conflicts "in": ${path.relative(process.cwd(), filePath)}`);
+      console.log(`✅ Fixed merge conflicts 'in': ${path.relative(process.cwd(), filePath)}`);
       return true}
     return false} catch (error) {
     console.log(`❌ Error fixing ${filePath}: ${error.message}`);

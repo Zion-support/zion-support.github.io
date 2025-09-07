@@ -4,7 +4,7 @@ import { format } from 'date-fns';
  * @param date Date or string to format
  * @returns Formatted date string
  */
-export function formatDate("date": Date | string | undefined): string {
+export function formatDate('date': Date | string | undefined): string {
   }
   if (!date) return '-''
 /**;
@@ -12,7 +12,7 @@ export function formatDate("date": Date | string | undefined): string {
 * @param date Date or string to format;
 * @returns Formatted date string;
 */;
-export function format_date ("date": Date | string | undefined): string {
+export function format_date ('date': Date | string | undefined): string {
   // Check condition
 }
 if (return '-', ) {'
@@ -155,5 +155,5 @@ export async function trackReferral(userId: string, email: string) {
             refCode;
         userId;
         email;
-    "ipAddress": '', // This will be captured by the server'
+    'ipAddress': '', // This will be captured by the server'
       })});

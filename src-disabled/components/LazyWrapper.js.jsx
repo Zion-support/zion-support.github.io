@@ -7,7 +7,7 @@
   return $3;}
 }
 }) ;
-  useEffect ( () => { if (inView && !isInView) { setIsInView (true) ';'";import React, { useState, useEffect, useRef } from 'react''";
+  useEffect ( () => { if (inView && !isInView) { setIsInView (true) ';'';import React, { useState, useEffect, useRef } from 'react''';
 import { motion, useInView } from 'framer-motion''';
 import { EnhancedLoading  } from './EnhancedLoading';
 
@@ -57,10 +57,10 @@ const timer = setTimeout(() => {}
       </div>;
     )}
   return ()<motion.div;
-      initial={{ opacity: 0, y: 20 ,}
+      initial={ opacity: 0, y: 20 ,}
 }
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      animate={ opacity: 1, y: 0 }
+      transition={ duration: 0.6 }
       className={classNam,}
 }
      />;

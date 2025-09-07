@@ -199,7 +199,7 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
       </div>;
 }</div>;
     </div>;
-  )}})<AvatarImage src= {activeConversation.other user.avatar url ;
+  )})<AvatarImage src= {activeConversation.other user.avatar url ;
 }alt= {activeConversation.other user.name ;
 } /> activeConversation.other user.user type === 'employer' ? 'Employer' : activeConversation.other user.user type === 'admin' ? 'Admin' : 'User' ;'
 }</div> </div> </div> </div> {activeConversation.context data && activeConversation.context data.image url && (<div className="w-16 h-16 flex-shrink-0" > <AspectRatio ratio= {1/1 ";"

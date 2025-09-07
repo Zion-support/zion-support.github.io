@@ -7,7 +7,7 @@ type EnhancementType =
   | 'job-post''
   | 'proposal''
   | 'general';'
-  "enhancementType": EnhancementType;
+  'enhancementType': EnhancementType;
   content?: string;
   context?: string,
 instructions?: string
@@ -31,14 +31,14 @@ instructions
       if (error) {
 }
 return data && data.enhancedContent;
-    } catch ("err": any) {
+    } catch ('err': any) {
       }
       const errorMessage = err && err.message || 'Failed to enhance content';'
       setError(errorMessage);
       toast({
         }
-        "title": "AI Enhancement Failed","
-  "description": errorMessageimport { useState } from 'react';'
+        'title': 'AI Enhancement Failed','
+  'description': errorMessageimport { useState } from 'react';'
 import { supabase } from '@/integrations/supabase/client';'
 import { toast } from '@/hooks/use-toast',;'
 type EnhancementType =;
@@ -49,7 +49,7 @@ type EnhancementType =;
   | 'general',;'
 export interface AIEnhancementOptions {;
   }
-  "enhancementType": EnhancementType,;
+  'enhancementType': EnhancementType,;
   content?: string,;
   context?: string,;
   instructions?: string;
@@ -73,7 +73,7 @@ export function useAIContentEnhancer() {;
       }
       const { data, error } = await supabase.functions.invoke('ai-content-enhancer', {;'
         }
-        "body": {;
+        'body': {;
           }
           content,;
           enhancementType,;
@@ -83,9 +83,9 @@ export function useAIContentEnhancer() {;
       }),;
       if (error) {;
 }
-throw new Error(error.message);        "variant": "destructive";"
+throw new Error(error.message);        'variant': 'destructive';'
       });
-      console && console.error('Enhancement "error":', err);'
+      console && console.error('Enhancement 'error':', err);'
 return null;
     } finally {
       }

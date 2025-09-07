@@ -930,7 +930,7 @@ key={deployment.id}
                   <div className='w-full bg-white/10 rounded-full h-2'>;'
                     <div;
                       className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out';'
-                      style={{ "width": `${deployment.progress}%` }}`                    ></div>;
+                      style={ "width": `${deployment.progress}%` }`                    ></div>;
                   </div>;
                 </div>;
         ))}
@@ -957,12 +957,12 @@ className={`text-sm font-medium ${getStatusColor(deployment.status)}`}`         
                   </div>
                   <div className='w-full bg-white/10 rounded-full h-2'>'
                     <div,
-className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'                      style={{ "width": `${deployment.progress}%` }}                    <span>Deployment Progress</span>`                    <span>{deployment.progress}%</span>
+className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'                      style={ "width": `${deployment.progress}%` }                    <span>Deployment Progress</span>`                    <span>{deployment.progress}%</span>
                   </div>
                   <div className="w-full bg-white/10 rounded-full h-2">"
                     <div,
 className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out""
-                      style={{ "width": `${deployment.progress}%` }}`                    ></div>
+                      style={ "width": `${deployment.progress}%` }`                    ></div>
                   </div>
                 </div>
       <div className="grid grid-cols-1 "xl":grid-cols-2 gap-6">;"
@@ -1525,14 +1525,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                   <div className='w-full bg-white/10 rounded-full h-2'>;'
                     <div;
                     <div,
-className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'                      style={{ "width": `${deployment && deployment.progress}%` }}                    <span>Deployment Progress</span>;`                    <span>{deployment && deployment.progress}%</span>;
+className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'                      style={ "width": `${deployment && deployment.progress}%` }                    <span>Deployment Progress</span>;`                    <span>{deployment && deployment.progress}%</span>;
                   </div>;
                   <div className="w-full bg-white/10 rounded-full h-2">;"
                     <div;
                       className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out";"
                     <div,
 className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out""
-                      style={{ "width": `${deployment && deployment.progress}%` }}></div>;`                  </div>;
+                      style={ "width": `${deployment && deployment.progress}%` }></div>;`                  </div>;
                 </div>;
               )}
             </div>
@@ -1557,7 +1557,7 @@ className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out""
                     </span>                  </div>              {/* Domain & Location */})}
             </div>;
             {/* Deployment Details */}</span>                  </div>              {/* Domain & Location */}
-                      style={{ "width": `${deployment.progress}%` }}`                <div className="flex items-center gap-2">;"
+                      style={ "width": `${deployment.progress}%` }`                <div className="flex items-center gap-2">;"
                   {getStatusIcon(deployment.status)}
                   <span className={`text-sm font-medium ${getStatusColor(deployment.status)}`}>;`                    {deployment.status.charAt(0).toUpperCase() + deployment.status.slice(1)}
                   </span>;
@@ -1591,12 +1591,12 @@ className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out""
                   </div>;
                   <div className='w - full bg - white / 10 rounded - full h - 2'>;'
                     <div;
-                      className='bg - blue - 500 h - 2 rounded - full transition - all duration - 500 ease - out'                      style={{ "width": `${deployment.progress}%` }}                    <span > Deployment Progress</span>;`                    <span>{deployment.progress}%</span>;
+                      className='bg - blue - 500 h - 2 rounded - full transition - all duration - 500 ease - out'                      style={ "width": `${deployment.progress}%` }                    <span > Deployment Progress</span>;`                    <span>{deployment.progress}%</span>;
                   </div>;
                   <div className="w - full bg - white / 10 rounded - full h - 2">;"
                     <div;
                       className="bg - blue - 500 h - 2 rounded - full transition - all duration - 500 ease - out";"
-                      style={{ "width": `${deployment.progress}%` }}></div>;`            </div>
+                      style={ "width": `${deployment.progress}%` }></div>;`            </div>
             {/* Deployment Details */}
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>'
@@ -1617,7 +1617,7 @@ className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out""
                         .filter(Boolean)
                         .join(', ')}'
                     </span>                  </div>              {/* Domain & Location */}
-                      style={{ "width": `${deployment.progress}%` }}`                    ></div>;
+                      style={ "width": `${deployment.progress}%` }`                    ></div>;
                   </div>;
                 </div>)}
             </div>;
@@ -1771,7 +1771,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="w-full bg-white/10 rounded-full h-2">;"
                     <div;
                       className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out";"
-                      style={{ "width": `${deployment.progress}%` }}`                    ></div>;
+                      style={ "width": `${deployment.progress}%` }`                    ></div>;
                   </div>;
                 </div>;
                   )}

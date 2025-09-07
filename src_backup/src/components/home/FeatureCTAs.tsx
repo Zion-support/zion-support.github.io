@@ -129,7 +129,7 @@ export function FeatureCTAs() {const { t } = useTranslation()const features = nu
                 </Button>;
               </CardFooter>;
             </Card>;
-          ))}}
+          ))}
 }</div>;
       </div>;
     </section>;

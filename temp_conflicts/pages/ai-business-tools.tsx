@@ -217,7 +217,7 @@ export default function AIBusinessToolsPage() {
                 href="#tools"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-green-500/25 hover:shadow-green-500/40"
-                style={{ animationDelay: '0.2s' }}
+                style={ animationDelay: '0.2s' }
               >
                 Explore AI Tools
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -227,7 +227,7 @@ export default function AIBusinessToolsPage() {
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-                style={{ animationDelay: '0.4s' }}
+                style={ animationDelay: '0.4s' }
               >
                 Get AI Consultation
               </Button>
@@ -235,7 +235,7 @@ export default function AIBusinessToolsPage() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={ animationDelay: '0.6s' }>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
                 {aiTools.length}+
@@ -305,7 +305,7 @@ export default function AIBusinessToolsPage() {
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="flex items-start space-x-6">
                   <div className="relative">

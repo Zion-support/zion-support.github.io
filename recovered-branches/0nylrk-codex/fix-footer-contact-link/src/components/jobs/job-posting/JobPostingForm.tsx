@@ -315,7 +315,7 @@ if ( {) {
             Remote;
           </Label>;
         </div>;
-}}
+}
 }
 
 }

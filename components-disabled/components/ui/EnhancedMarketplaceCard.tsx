@@ -150,7 +150,7 @@ interface MarketplaceCardProps {
   "image": string;
   onAddToCart?: () => void;
   onFavorite?: () => void;
-}}
+}
 export default EnhancedMarketplaceCard;
 const "EnhancedMarketplaceCard": React.FC<MarketplaceCardProps> = ({ title,description,price,rating,image,onAddToCart,onFavorite;
    }) => {

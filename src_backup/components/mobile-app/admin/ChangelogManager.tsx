@@ -200,14 +200,12 @@ interface ChangelogManagerProps  {platform: AppPlatform;
         <div className="space-y-4">;"
           <div className="flex flex-col md:flex-row gap-3">;"
             <div className="flex-1 grid grid-cols-2 gap-3">;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 
               <Input;
                 placeholder="Version (e.g. 1.0.1)";
 
                 name="version";
                 value={newEntry.version}
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
                 onChange={handleInputChange}
               />;
 
@@ -244,7 +242,6 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
             </div>;
             <Button;
               onClick={handleAddEntry}
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
               disabled={!newEntry.version || !newEntry.changes}
 
             >
@@ -253,7 +250,6 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
               Add;
             </Button>
           </div>
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
               />;
             </div>;
             <Button
@@ -278,7 +274,6 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
             value={newEntry.changes}
             onChange={handleInputChange}
             rows={3}
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
           />
           
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
@@ -327,7 +322,6 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
                     <span className="text-zion-cyan font-semibold">v{entry && entry.version}</span>;
                     <span className="text-sm text-gray-400">{entry && entry.date}</span>;
                   </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
                   <Button
                     variant="ghost"
                     size="sm"
@@ -371,7 +365,6 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 
                   <Button;
                     variant="ghost";
@@ -383,8 +376,8 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
                 </div>;
                 <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>;
               </div>;
-            ))}}{entries && entries.length === 0 && (<p className="text-center text-gray-400 py-4">No changelog entries yet</p>;
-            )}}</div>;
+            ))}{entries && entries.length === 0 && (<p className="text-center text-gray-400 py-4">No changelog entries yet</p>;
+            )}</div>;
         </div>;
       </CardContent>;
     </Card>;
@@ -450,12 +443,10 @@ import { AppPlatform } from "./MetadataManager",interface ChangelogManagerProps 
           </div>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
     </Card>);
 },
 ;
 };
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 
 import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -474,7 +465,7 @@ import { Plus, Trash2 } from 'lucide-react'
 import { AppPlatform } from "./MetadataManager";
 interface ChangelogManagerProps {
   platform: AppPlatform
-    </Card>)}}import React, { useState } from 'react';
+    </Card>)}import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -485,7 +476,6 @@ interface ChangelogManagerProps  {platform: AppPlatform;
   )}setEntries ([entry, ...entries])setNewEntry ({version: "";
 date: new Date () .toISOString () .split ('T') [0] || new Date () .toLocaleDateString ('en-CA')}";
   handleAddEntry ;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/ChangelogManager.tsx
 import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';

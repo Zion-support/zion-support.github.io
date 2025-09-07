@@ -7,12 +7,12 @@ import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs'
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 const ReactPlayer = null;
   return (
-    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
-      <Tabs defaultValue="images" className="w-full">
-      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
-        <TabsTrigger value="images">Images</TabsTrigger>
-        {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
-        {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
+    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }>
+      <Tabs defaultValue='images' className='w-full'>
+      <TabsList className='grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>
+        <TabsTrigger value='images'>Images</TabsTrigger>
+        {videoUrl && <TabsTrigger value='video'>Video</TabsTrigger>}
+        {modelUrl && <TabsTrigger value='model'>3D</TabsTrigger>}
       </TabsList>
 }
 });
@@ -25,12 +25,12 @@ import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs'
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 const ReactPlayer = null;
   return (
-    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
-      <Tabs defaultValue="images" className="w-full">
-      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
-        <TabsTrigger value="images">Images</TabsTrigger>
-        {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
-        {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
+    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }>
+      <Tabs defaultValue='images' className='w-full'>
+      <TabsList className='grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>
+        <TabsTrigger value='images'>Images</TabsTrigger>
+        {videoUrl && <TabsTrigger value='video'>Video</TabsTrigger>}
+        {modelUrl && <TabsTrigger value='model'>3D</TabsTrigger>}
       </TabsList>
 
 
@@ -96,7 +96,7 @@ function ProductGallery() {
         if (set_zoomed (false)) {
   $2
 }
-      }}
+      }
     >;
       <Tabs default_value='images' className='w - full'>;
         <TabsList className='grid grid - cols - 3 bg - zion - blue - dark border border - zion - blue - light'>;
@@ -169,7 +169,7 @@ function ProductGallery() {
                   src={model_url}
                   alt='3d model';
                   camera - controls;
-                  style={{ width: '100%', height: '100%' }}'
+                  style={ width: '100%', height: '100%' }'
                 />;
               </Suspense>;
             </AspectRatio>;
@@ -242,26 +242,26 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
   const poster = images[0],
 
   return (
-    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
-      <Tabs defaultValue="images" className="w-full">
-      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
-        <TabsTrigger value="images">Images</TabsTrigger>
-        {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
-        {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
+    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }>
+      <Tabs defaultValue='images' className='w-full'>
+      <TabsList className='grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>
+        <TabsTrigger value='images'>Images</TabsTrigger>
+        {videoUrl && <TabsTrigger value='video'>Video</TabsTrigger>}
+        {modelUrl && <TabsTrigger value='model'>3D</TabsTrigger>}
       </TabsList>
 
-      <TabsContent value="images" className="pt-4">
-        <div className="aspect-video w-full relative">
+      <TabsContent value='images' className='pt-4'>
+        <div className='aspect-video w-full relative'>
           <DialogTrigger asChild>
             <img
               src={images[selected] || images[0] || ''}
               alt={`Product image ${selected + 1}`}
-              className="w-full h-full object-contain bg-zion-blue-light/10 p-4 cursor-zoom-in"
+              className='w-full h-full object-contain bg-zion-blue-light/10 p-4 cursor-zoom-in'
             />
           </DialogTrigger>
         </div>
         {images.length > 1 && (
-          <div className="flex p-4 gap-2 overflow-x-auto">
+          <div className='flex p-4 gap-2 overflow-x-auto'>
             {images.map((img, idx) => (
               <div
 ;
@@ -271,25 +271,25 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
   const [zoomed, setZoomed] = useState(false);
   const poster = images[0];
   return (;
-    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>;
-      <Tabs defaultValue="images" className="w-full">;
-      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">;
-        <TabsTrigger value="images">Images</TabsTrigger>;
-        {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
-        {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
+    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }>;
+      <Tabs defaultValue='images' className='w-full'>;
+      <TabsList className='grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>;
+        <TabsTrigger value='images'>Images</TabsTrigger>;
+        {videoUrl && <TabsTrigger value='video'>Video</TabsTrigger>}
+        {modelUrl && <TabsTrigger value='model'>3D</TabsTrigger>}
       </TabsList>;
-      <TabsContent value="images" className="pt-4">;
-        <div className="aspect-video w-full relative">;
+      <TabsContent value='images' className='pt-4'>;
+        <div className='aspect-video w-full relative'>;
           <DialogTrigger asChild>;
             <img;
               src={images[selected] || images[0] || ''}
               alt={`Product image ${selected + 1}`}
-              className="w-full h-full object-contain bg-zion-blue-light/10 p-4 cursor-zoom-in";
+              className='w-full h-full object-contain bg-zion-blue-light/10 p-4 cursor-zoom-in';
             />;
           </DialogTrigger>;
         </div>;
         {images.length > 1 && (;
-          <div className="flex p-4 gap-2 overflow-x-auto">;
+          <div className='flex p-4 gap-2 overflow-x-auto'>;
             {images.map((img, idx) => (;
               <div;
                 key={idx}
@@ -299,7 +299,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
                 <img;
                   src={img}
                   alt={`Thumbnail image ${idx + 1}`}
-                  className="w-full h-full object-cover"
+                  className='w-full h-full object-cover'
                 />
               </div>
             ))}
@@ -308,48 +308,48 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
       </TabsContent>
 
       {videoUrl && (
-        <TabsContent value="video" className="pt-4">
+        <TabsContent value='video' className='pt-4'>
           <AspectRatio ratio={16 / 9}>
             <Suspense fallback={
               <img
-                src="/images/video-placeholder.svg"
-                alt="Video preview"
-                className="w-full h-full object-cover"
-                loading="lazy"
+                src='/images/video-placeholder.svg'
+                alt='Video preview'
+                className='w-full h-full object-cover'
+                loading='lazy'
               />
             }>
-              <ReactPlayer url={videoUrl} width="100%" height="100%" controls />
+              <ReactPlayer url={videoUrl} width='100%' height='100%' controls />
             </Suspense>
           </AspectRatio>
         </TabsContent>
       )}
 
       {modelUrl && (
-        <TabsContent value="model" className="pt-4">
+        <TabsContent value='model' className='pt-4'>
           <AspectRatio ratio={16 / 9}>
             <Suspense fallback={
               <img
-                src="/images/model-placeholder.svg"
-                alt="3D model preview"
-                className="w-full h-full object-cover"
-                loading="lazy"
+                src='/images/model-placeholder.svg'
+                alt='3D model preview'
+                className='w-full h-full object-cover'
+                loading='lazy'
               />
             }>
-              <ModelViewer src={modelUrl} alt="3d model" camera-controls style={{ width: '100%', height: '100%' }} />
+              <ModelViewer src={modelUrl} alt='3d model' camera-controls style={ width: '100%', height: '100%' } />
             </Suspense>
           </AspectRatio>
         </TabsContent>
       )}
     </Tabs>
     {images.length > 0 && (
-      <DialogContent className="max-w-3xl p-0">
+      <DialogContent className='max-w-3xl p-0'>
         <div
           className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
           onClick={() => setZoomed(!zoomed)}
         >
           <img
-            src={images[selected] || images[0] || ""}
-            alt="Zoomed view"
+            src={images[selected] || images[0] || ''}
+            alt='Zoomed view'
             className={`w-full h-full object-contain transition-transform ${zoomed ? 'scale-150' : ''}`}
           />;
         </div>;

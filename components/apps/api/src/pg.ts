@@ -1,15 +1,14 @@
 
 
 import { Pool, PoolClient } from 'pg';'
-let "pool": Pool | null;
+let 'pool': Pool | null;
 throw err;
 export async function withUser<T>(
-  "userId": string,
-"fn": ("client": PoolClient) => Promise<T>
+  'userId': string,
+'fn': ('client': PoolClient) => Promise<T>
 ): Promise<T> {
   }
   const client = await getPool().connect();
-<<<<<<< HEAD
   try {
 
     }
@@ -27,9 +26,7 @@ const result = await fn(client);
     await client.query('ROLLBACK');'
     throw err;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } finally {
     }
     client.release ();

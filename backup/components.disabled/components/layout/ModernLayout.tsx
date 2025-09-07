@@ -81,7 +81,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         {/* Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
@@ -110,7 +110,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 'https://github.com/ziontechgroup',
               ],
             }),
-          }}
+          }
         />
       </Helmet>
 
@@ -209,7 +209,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         {/* Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
@@ -238,7 +238,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 'https://github.com/ziontechgroup',
               ],
             }),
-          }}
+          }
         />
       </Helmet>
 
@@ -253,4 +253,3 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
 
 export default ModernLayout;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

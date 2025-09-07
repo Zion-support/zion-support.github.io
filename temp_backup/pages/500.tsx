@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 
 const Custom500 = () => {
@@ -19,7 +18,6 @@ const Custom500 = () => {
             <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
               Internal Server Error
             </h2>
-<<<<<<< HEAD:temp_backup/pages/500.tsx
             <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
               Something went wrong on our end. We&apos,re working to fix it. 
               Please try again in a few moments.
@@ -29,7 +27,6 @@ const Custom500 = () => {
             <Link 
               href="/" 
               className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
-=======
             <p className="mt-2 text-sm text-gray-600">
               Something went wrong on our end. We're working to fix this issue.
             </p>
@@ -39,11 +36,9 @@ const Custom500 = () => {
             <Link
               href="/"
               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/500.tsx
             >
               Go back home
             </Link>
-<<<<<<< HEAD:temp_backup/pages/500.tsx
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/about" 
@@ -64,7 +59,6 @@ const Custom500 = () => {
                 Contact
               </Link>
             </div>
-=======
             
             <button
               onClick={() => window.location.reload()}
@@ -76,20 +70,16 @@ const Custom500 = () => {
           
           <div className="mt-8 text-xs text-gray-500">
             <p>If this problem persists, please contact our support team.</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/500.tsx
           </div>
         </div>
       </div>
     </>
-<<<<<<< HEAD:temp_backup/pages/500.tsx
   )
 }
-=======
   );
 };
 
 export default Custom500;
-=======
 import Layout from '../components/layout/Layout';
 
 export default function 500() {
@@ -111,5 +101,3 @@ export default function 500() {
     </Layout>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/500.tsx

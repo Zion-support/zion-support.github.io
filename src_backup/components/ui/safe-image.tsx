@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/ui/safe-image.tsx
 interface SafeImageProps {
 
   src: string;
@@ -13,15 +12,13 @@ interface SafeImageProps {
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
-        role="img"
+        style={ width, height }
+        role='img'
         aria-label = {alt,}
       >
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/safe-image.tsx
 
 ;
 import { ImageIcon  } from 'lucide-react';
@@ -30,8 +27,8 @@ interface SafeImageProps  {interface SafeImageProps  {interface SafeImageProps  
   }// If we have an error and no fallback, show a placeholder;
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {return (<div;
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
-        role="img";
+        style={ width, height }
+        role='img';
         aria-label = {alt}
       >;
         <ImageIcon className='w-6 h-6' />      </div>;
@@ -54,7 +51,6 @@ interface SafeImageProps  {src: string;
   fallbackSrc?: string;
   priority?: boolean;
   sizes?: string;
-<<<<<<< HEAD:src_backup/components/ui/safe-image.tsx
 
 
     }
@@ -119,8 +115,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
-        role="img"
+        style={ width, height }
+        role='img'
 
   quality?: number
 }
@@ -159,12 +155,12 @@ export function SafeImage({
       <div;
 
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
-        role="img"
+        style={ width, height }
+        role='img'
         aria-label={alt}
 
       >
-        <ImageIcon className="w-6 h-6" />
+        <ImageIcon className='w-6 h-6' />
       </div>
     )
   }
@@ -176,7 +172,6 @@ export function SafeImage({
     />
   ); return (
         aria-label = {alt,}>;
-=======
   quality?: number;
 export function SafeImage() {const [hasError, setHasError] = useState(false)const [currentSrc, setCurrentSrc]  = useState(src)const handleError = () => {if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {setCurrentSrc(fallbackSrc)setHasError(true)} else if (!hasError && src.startsWith('/')) {// Try serving the image directly through our custom API route;
       const fallbackUrl = `/api/image${src}`;
@@ -187,11 +182,10 @@ export function SafeImage() {const [hasError, setHasError] = useState(false)cons
   // If we have an error and no fallback, show a placeholder;
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {return (<div;
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
-        role="img";
+        style={ width, height }
+        role='img';
         aria-label = {alt}
       >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/safe-image.tsx
         <ImageIcon className='w-6 h-6' />      </div>;
     )}
   )aria-label={alt}
@@ -200,10 +194,10 @@ export function SafeImage() {const [hasError, setHasError] = useState(false)cons
       const fallbackUrl = `/api/image${src}`,setCurrentSrc(fallbackUrl)setHasError(true)} else if (!hasError) {setHasError(true)}
   }// If we have an error and no fallback, show a placeholder;
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {return (<div;className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
-        role="img";
+        style={ width, height }
+        role='img';
         aria-label={alt}>;
-        <ImageIcon className="w-6 h-6" />;
+        <ImageIcon className='w-6 h-6' />;
       </div>;
     )}/>;
   )return (/>;
@@ -212,7 +206,7 @@ export function SafeImage() {const [hasError, setHasError] = useState(false)cons
     )}/>;
   )aria-label={alt}
       >;
-        <ImageIcon className="w-6 h-6" />;
+        <ImageIcon className='w-6 h-6' />;
       </div>;
     )}/>;
   )return (<Image;
@@ -224,9 +218,8 @@ export function SafeImage() {const [hasError, setHasError] = useState(false)cons
       onError = {handleError}
       priority = {priority}
       // Add unoptimized as fallback for problematic images;
-      unoptimized = {hasError}}
+      unoptimized = {hasError}
     />;
-<<<<<<< HEAD:src_backup/components/ui/safe-image.tsx
   );  return (
 
 
@@ -259,11 +252,9 @@ interface SafeImageProps {
   src: string,
   alt: string,
   width?: number;
-=======
-  )}}}
+  )}}
     />;
   )src: string,alt: string,interface SafeImageProps  {src: string,alt: string,width?: number;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/safe-image.tsx
   height?: number;
   class_name?: string;
   fallback_src?: string;
@@ -288,24 +279,21 @@ if ( {) {$2;
 }
         return (<div;
         className={`flex items - center justify - center bg - gray - 100 text - gray - 400 ${class_name}`}
-        style={{ width, height }}
-        role="img";
+        style={ width, height }
+        role='img';
         aria - label = {alt }
       >;
         <ImageIcon className='w - 6 h - 6' />      </div>)}
     />)aria - label={alt}
       >;
-        <ImageIcon className="w - 6 h - 6" />;
-<<<<<<< HEAD:src_backup/components/ui/safe-image.tsx
+        <ImageIcon className='w - 6 h - 6' />;
       </div>);
   }
     />); return (
 
     <Image;
-=======
       </div>)}
     />)return (<Image;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/safe-image.tsx
       src={currentSrc}
       alt={alt}
       width={width}
@@ -313,7 +301,6 @@ if ( {) {$2;
       className={className}
       onError={handleError}
       priority={priority}
-<<<<<<< HEAD:src_backup/components/ui/safe-image.tsx
       // Add unoptimized as fallback for problematic images;
       unoptimized = {has_error, }
     />);
@@ -324,11 +311,9 @@ if ( {) {$2;
 />
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       // Add unoptimized as fallback for problematic images;unoptimized={hasError}
     />;
   )}unoptimized = {has_error }
     />)}
 }/>;
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/safe-image.tsx

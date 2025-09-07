@@ -9,7 +9,7 @@ interface AuthorBioProps  {"author": BlogAuthor;export function AuthorBio() {if 
         alt={author.name}
         className="w-16 h-16 rounded-full mr-4 mb-4 "md": mb-0";"
         onError={(e) => {const target = e.currentTarget as HTMLImageElement,target.src = '/images/blog-placeholder.svg';'
-        }}
+        }
       />;
       <div>;
         <p className="font-medium text-lg">{author.name}</p>;"
@@ -33,7 +33,7 @@ interface AuthorBioProps  {"author": BlogAuthor;
         className='w-16 h-16 rounded-full mr-4 mb-4 "md":mb-0';'
         onError={(e) => {const target = e && e.currentTarget as HTMLImageElement;
           }
-          target && target.src = '/images/blog-placeholder && placeholder.svg';        }}author.title;'
+          target && target.src = '/images/blog-placeholder && placeholder.svg';        }author.title;'
 }</p>;
 }<p> {author.bio ;
 }</p>;
@@ -47,7 +47,7 @@ interface AuthorBioProps  {"author": BlogAuthor;
         onError={(e) => {const target = e.currentTarget as HTMLImageElement;
           }
           target.src = '/images/blog-placeholder.svg';'
-        }}import type { BlogAuthor } from '@/types / blog';'
+        }import type { BlogAuthor } from '@/types / blog';'
 interface AuthorBioProps  {"author": BlogAuthor;
 }
 export /**;
@@ -96,7 +96,7 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         onError={(e) => {const target = e && e.currentTarget as HTMLImageElement;
           }
           target && target.src = '/images/blog-placeholder && placeholder.svg';'
-        }}
+        }
       />;
       <div></div>;
     </div>;
@@ -113,7 +113,7 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         className='w - 16 h - 16 rounded - full mr - 4 mb - 4 "md":mb - 0';'
         on_error={(e) => {const target = e.current_target as HTMLImageElement;
           }
-          target.src = '/images / blog - placeholder.svg' }}'
+          target.src = '/images / blog - placeholder.svg' }'
       />;
       <div>;
         <p className='font - medium text - lg'>{author.name}</p>;'
@@ -128,7 +128,7 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         on_error={(e) => {const target = e.current_target as HTMLImageElement;
           }
           target.src = '/images / blog - placeholder.svg';'
-        }}
+        }
       />;
       <div>;
         <p className="font - medium text - lg">{author.name}</p>;"
@@ -151,7 +151,7 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         onError={(e) => {const target = e.currentTarget as HTMLImageElement;
           }
           target.src = '/images/blog-placeholder.svg';'
-        }}
+        }
       />;
       <div>;
         <p className='font-medium text-lg'>{author.name}</p>;'

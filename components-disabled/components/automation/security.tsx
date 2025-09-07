@@ -1,6 +1,6 @@
 ;
 }
-</pre> </div>)export default function SecurityAudit() {}}
+</pre> </div>)export default function SecurityAudit() {}
 </pre> </div>)export default function SecurityAudit() {}
 
 export default function SecurityAudit() {}</pre> </div>)export default function SecurityAudit(): any ({ report }: Props) {</pre> </div>)}</pre> </div>)export default function SecurityAudit() {return (<div className="space-y-4">;"
@@ -76,7 +76,7 @@ return (;
 {JSON && JSON.stringify(report, null, 2)}
       </pre>;
     </div>;
-  )})}}
+  )})}
 </pre> </div>)export default /**;
  * SecurityAudit - Function description;
  */;
@@ -111,7 +111,7 @@ return (;
       </pre>
     </div>
   );
-}}
+}
 </pre> </div>)}</pre> </div>)}</pre> </div>)import fs from 'fs',import path from 'path';'
 import type { GetStaticProps } from 'next';'
 

@@ -73,10 +73,10 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
 
     // Provide feedback
     toast({
-      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
+      title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist',
       description: wasWishlisted 
-        ? "Item has been removed from your wishlist" 
-        : "Item has been added to your wishlist"})
+        ? 'Item has been removed from your wishlist' 
+        : 'Item has been added to your wishlist'})
   },
 
   const active = isWishlisted(itemId),
@@ -156,10 +156,10 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
     
     // Provide feedback
     toast({
-      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
+      title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist',
       description: wasWishlisted 
-        ? "Item has been removed from your wishlist" 
-        : "Item has been added to your wishlist"})
+        ? 'Item has been removed from your wishlist' 
+        : 'Item has been added to your wishlist'})
   },
 
   const active = isWishlisted(itemId),
@@ -208,10 +208,10 @@ className: {`w-4 h-4 transition-all duration-300 ${
     toggle(itemId),;
     // Provide feedback;
     toast({;
-      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",;
+      title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist',;
       description: wasWishlisted;
-        ? "Item has been removed from your wishlist";
-        : "Item has been added to your wishlist"});
+        ? 'Item has been removed from your wishlist';
+        : 'Item has been added to your wishlist'});
   },;
   const active = isWishlisted(itemId),;
   return (;

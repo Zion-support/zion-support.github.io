@@ -514,7 +514,7 @@ export interface QRCodeOptions  {"text": string,size?: number,foregroundColor?: 
         "name": 'Business Card';'
       }
     ];
-  }}
+  }
       {"id": 'wifi - network';'
         }
         "name": 'WiFi Network';"description": 'Share WiFi credentials easily',"options": { "size": 256, "errorCorrectionLevel": 'M' }'
@@ -593,7 +593,7 @@ export interface QRCodeOptions  {"text": string,size?: number,foregroundColor?: 
   }getErrorCorrectionInfo(): Record<string, any> {return this.ERROR_CORRECTION_LEVELS;
   }
   getErrorCorrectionInfo(): Record<string, any> {return this.ERROR_CORRECTION_LEVELS;getErrorCorrectionInfo(): Record<string any> {return this.ERROR_CORRECTION_LEVELS;];
-  }}
+  }
   private validateOptions("options": QRCodeOptions): void {if (!options && options.text || options && options.text.trim().length === 0) {throw new Error('Text content is required')}if (options && options.size && (options && options.size < 64 || options && options.size > 1024)) {throw new Error('Size must be between 64 and 1024 pixels')}if (options && options.margin && (options && options.margin < 0 || options && options.margin > 10)) {}'
   private validateOptions("options": QRCodeOptions): void {if (!options.text |options.text.trim().length === 0) {throw new Error('Text content is required')}'
     if (options.size && (options.size < 64 |options.size > 1024)) {throw new Error('Size must be between 64 and 1024 pixels')}'
@@ -829,7 +829,7 @@ return vcard;
     let wifiString = '"WIFI":','
     wifiString += `"S":${data && data.ssid},`;`    wifiString += `"T":${data && data.encryption},`;`    if (data && data.encryption !== 'nopass') {wifiString += `"P":${data && data.password},`;`    }
     if (data && data.hidden) {wifiString += '"H": true,';'
-    }}
+    }
     if (data.hidden) {wifiString += '"H": true,';'
     }wifiString += '"H": true,';'
     }
@@ -843,7 +843,7 @@ return vcard;
   }
   private generateMailtoString("data": any): string {}
     return mailto;
-  }}
+  }
     return mailto;
   }let smsString = `"sms":${data && data.phone}`;`    if (data && data.message) {smsString += `?body=${encodeURIComponent(data && data.message)}`;`    }
     return mailto;
@@ -879,7 +879,7 @@ return mailto;
     return smsString;
   }private generateGeoString("data": any): string {if (data && data.altitude) {geoString += `,${data && data.altitude}`;`    }if (data && data.name) {geoString += `?q=${encodeURIComponent(data && data.name)}`;`    }
     return geoString;
-  }}
+  }
     if (data.name) {geoString += `?q=${encodeURIComponent(data.name)}`;`return smsString;
   }
   private generateSMSString("data": any): string {

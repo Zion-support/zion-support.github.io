@@ -158,7 +158,7 @@ export const "NotificationProvider": React.FC<NotificationProviderProps> = ({ ch
   };
 
 return (;
-    <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
+    <NotificationContext.Provider value={ notifications, addNotification, removeNotification }>
 
       <NotificationContainer />
 

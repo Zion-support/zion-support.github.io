@@ -4,7 +4,7 @@
 import { switchNetlifySite } from '../../../scripts/switch-netlify-site.js';'
 interface SlackCommand {;
   }
-  "text": string;
+  'text': string;
 }
 
 interface SlackRespond {
@@ -12,33 +12,33 @@ interface SlackRespond {
 }
 ;
 interface SlackRespond {;
-  ("text": string): Promise<void>;
+  ('text': string): Promise<void>;
 }
 ;
 // Define console type to avoid TypeScript errors;
 interface SafeConsole {;
   }
-  "log": ("message": string) => void;
+  'log': ('message': string) => void;
 }
 ;
 // Declare available globals;
-declare const "globalThis": {;
+declare const 'globalThis': {;
   }
   console?: SafeConsole,;
   process?: {;
     }
-    "env": {;
+    'env': {;
       }
       PORT?: string,;
-      ["key": string]: string | undefined;
+      ['key': string]: string | undefined;
     }
   }
 },;
-type CommandHandler = ("args": { command?: SlackCommand, "ack": SlackAck, "respond": SlackRespond }) => Promise<void>,;
+type CommandHandler = ('args': { command?: SlackCommand, 'ack': SlackAck, 'respond': SlackRespond }) => Promise<void>,;
 class MockApp {;
   }
-  private "commandHandlers": Record<string CommandHandler> = {},;
-  command("commandName": string, "handler": CommandHandler) {;
+  private 'commandHandlers': Record<string CommandHandler> = {},;
+  command('commandName': string, 'handler': CommandHandler) {;
     }
     this.commandHandlers[commandName] = handler,;
     return this;
@@ -57,16 +57,16 @@ class MockApp {;
 ;
 // Create a mock app instance;
 const app = new MockApp(),;
-async function askZionGPT("prompt": string): Promise<string> {;
+async function askZionGPT('prompt': string): Promise<string> {;
   // Safely log without direct console reference;
   }
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;'
   if (safeConsole && safeConsole.log) {;
     }
-    safeConsole.log(`ZionGPT was "asked": ${prompt}`);`  }
-  return `AI response "to": ${prompt}`;`}
+    safeConsole.log(`ZionGPT was 'asked': ${prompt}`);`  }
+  return `AI response 'to': ${prompt}`;`}
 ;
-app.command('/zion', async ({ command, ack, respond }: { command?: SlackCommand, "ack": SlackAck, "respond": SlackRespond }) => {;'
+app.command('/zion', async ({ command, ack, respond }: { command?: SlackCommand, 'ack': SlackAck, 'respond': SlackRespond }) => {;'
   }
   await ack(),;
   const [action, ...args] = command?.text.split(/\s+/) || [],;
@@ -87,22 +87,22 @@ app.command('/zion', async ({ command, ack, respond }: { command?: SlackCommand,
       await respond(`Tracking project **${project}** - feature coming soon.`),;`      break;
     }
     case 'help':;'
-    "default": await respond(;
-        '"Commands":\n' +;'
+    'default': await respond(;
+        ''Commands':\n' +;'
           '`/zion post-job` - post a new job\n' +;'          '`/zion suggest-talent [skills]` - AI talent suggestions\n' +;'          '`/zion track-project [name]` - project status\n' +;'          '`/zion help` - show this list';'      );
   }
 }),;
-app.command('/zion-rollback', async ({ ack, respond }: { "ack": SlackAck, "respond": SlackRespond }) => {;'
+app.command('/zion-rollback', async ({ ack, respond }: { 'ack': SlackAck, 'respond': SlackRespond }) => {;'
   }
   await ack(),;
   try {;
     }
     await switchNetlifySite(),;
     await respond('Rollback complete. DNS switched to the previous site.');'
-  } catch ("err": unknown) {;
+  } catch ('err': unknown) {;
     }
     const message = err instanceof Error ? err.message : String(err),;
-    await respond(`Rollback "failed": ${message}`);`  }
+    await respond(`Rollback 'failed': ${message}`);`  }
 }),;
 // Mock startup with safer environment access;
 (async () => {;
@@ -114,16 +114,16 @@ app.command('/zion-rollback', async ({ ack, respond }: { "ack": SlackAck, "respo
   await app.start(port);
 })(),;
 // Add this function either inside MockApp or as an exported function;
-async function sendSlackAlert("message": string): Promise<void> {;
+async function sendSlackAlert('message': string): Promise<void> {;
   // Safely log without direct console reference;
   }
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;'
   if (safeConsole && safeConsole.log) {;
     }
-    safeConsole.log(`"SLACK_ALERT": ${message}`);`
+    safeConsole.log(`'SLACK_ALERT': ${message}`);`
   }
   // In a real scenario, this would use the Slack API to send a message;
-  // For "example": await app.client.chat.postMessage({ "channel": '#alerts', "text": message }),;'
+  // For 'example': await app.client.chat.postMessage({ 'channel': '#alerts', 'text': message }),;'
   return Promise.resolve();
 }
 ;

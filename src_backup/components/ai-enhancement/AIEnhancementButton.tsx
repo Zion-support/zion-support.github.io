@@ -157,7 +157,6 @@ export function AIEnhancementButton({;
   variant = "ghost",;
   size = "sm",;
   contentLength = 10;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementButton.tsx
 }: AIEnhancementButtonProps) {;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
   const [showActions, setShowActions] = useState(false),;
@@ -213,8 +212,8 @@ interface AIEnhancementButtonProps {
 }: AIEnhancementButtonProps) {const { enhanceContent, isEnhancing } = useAIContentEnhancer()const [showActions, setShowActions] = useState(false)const [generatedContent, setGeneratedContent]  = useState<string | null>(null)const handleEnhance = async () => {if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
         (!options && options.context || options && options.context.trim().length < contentLength)) {toast({title: "Not enough content",description: `Please enter at least ${contentLength} characters before enhancing.`,variant: "destructive";
       })return;
-    }const enhancedContent  = await enhanceContent(options)if (enhancedContent) {setGeneratedContent(enhancedContent)setShowActions(true)}},const handleAccept = () => {if (generatedContent) {onEnhanced(generatedContent),setShowActions(false),setGeneratedContent(null),toast({title: "Content applied";
-        description: "AI-enhanced content has been applied."})}},const handleRegenerate = async () => {await handleEnhance()},const handleCancel = () => {setShowActions(false),setGeneratedContent(null)},if (showActions) {return (<div className="flex gap-2 items-center">;import { useState   } from 'react';
+    }const enhancedContent  = await enhanceContent(options)if (enhancedContent) {setGeneratedContent(enhancedContent)setShowActions(true)},const handleAccept = () => {if (generatedContent) {onEnhanced(generatedContent),setShowActions(false),setGeneratedContent(null),toast({title: "Content applied";
+        description: "AI-enhanced content has been applied."})},const handleRegenerate = async () => {await handleEnhance()},const handleCancel = () => {setShowActions(false),setGeneratedContent(null)},if (showActions) {return (<div className="flex gap-2 items-center">;import { useState   } from 'react';
 import { Button   } from '@/components/ui/button';
 import { useAIContentEnhancer, AIEnhancementOptions   } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementButtonProps  {options: AIEnhancementOptions;
@@ -387,14 +386,12 @@ export function AIEnhancementButton() {return (<div className="flex gap-2 items-
         <Button;
           type="button";
           variant="ghost";
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementButton.tsx
           size="sm";
           on_click = {handle_regenerate, }
           size="sm";on_click = {handle_regenerate }
           className="text - blue - 500 hover:text - blue - 700 hover:bg - blue - 100 / 20";
           disabled = {is_enhancing }
         >;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementButton.tsx
           {is_enhancing ? (
             <Loader2 className="h - 4 w - 4 mr - 1 animate - spin" />) : (
             <RefreshCw className="h - 4 w - 4 mr - 1" />)}

@@ -868,9 +868,9 @@ export const "advancedFintechSolutions2025": AdvancedFintechSolution2025[] = [;
     "customers": 89;
     "rating": 4.5,"reviews": 52;
 ];}
-  }}
+  }
 ursor/fix-website-loading-errors-and-merge-6662;
-];;
+];
   }
 ];
 export interface AdvancedFintechSolution2025  {"id": string,"name": string,"tagline": string,"price": string,"period": string,"description": string,"features": string[],"popular": boolean,"icon": string,"color": string,"textColor": string,"link": string,"marketPosition": string,"targetAudience": string,"trialDays": number,"setupTime": string,"category": string,"realService": boolean,"technology": string[],"integrations": string[],"useCases": string[],"roi": string,"competitors": string[],"marketSize": string,"growthRate": string,"variant": ServiceVariant,"contactInfo": {"mobile": string,"email": string,"address": string,"website": string;
@@ -899,7 +899,6 @@ export interface AdvancedFintechSolution2025  {"id": string,"name": string,"tagl
     "reviews": 52;
   }
 ];
-<<<<<<< HEAD
   }
 ];];
     "rating": 4.5,
@@ -909,7 +908,6 @@ export interface AdvancedFintechSolution2025  {"id": string,"name": string,"tagl
 ;
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }
 ];
 

@@ -26,7 +26,7 @@ export default function MainFrontIndex() {
         <meta property="og:image" content="/og-image.png" />
       </Head>
       {/* Scroll progress bar */}
-      <motion.div style={{ scaleX: progressX }} className="fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400" />
+      <motion.div style={ scaleX: progressX } className="fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400" />
       {/* Animated Background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         {/* Aurora orbs */}
@@ -86,16 +86,16 @@ export default function MainFrontIndex() {
         {/* Mobile overlay menu */}
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            exit={ opacity: 0 }
             className="fixed inset-0 z-40 bg-slate-950/80 backdrop-blur"
             onClick={() => setMobileOpen(false)}
           >
             <motion.div
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.2 }}
+              initial={ y: -20, opacity: 0 }
+              animate={ y: 0, opacity: 1 }
+              transition={ duration: 0.2 }
               className="mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl"
               onClick={(e) => e.stopPropagation()}
             >
@@ -141,9 +141,9 @@ export default function MainFrontIndex() {
       {/* Hero */}
       <div role="main" className="relative z-10">
         <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
           className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
         >
           <div className="text-center">
@@ -237,10 +237,10 @@ export default function MainFrontIndex() {
                  {/* Showcase */}
          <motion.section
            id="showcase"
-           initial={{ opacity: 0, y: 24 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true, amount: 0.2 }}
-           transition={{ duration: 0.5 }}
+           initial={ opacity: 0, y: 24 }
+           whileInView={ opacity: 1, y: 0 }
+           viewport={ once: true, amount: 0.2 }
+           transition={ duration: 0.5 }
            className="mx-auto max-w-7xl px-6 pb-14"
          >
            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Showcase: Features, Capabilities, Benefits</h2>
@@ -340,10 +340,10 @@ export default function MainFrontIndex() {
         {/* Engines: Alternative Automation Runtimes */}
         <motion.section
           id="engines"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Engines (Beyond GitHub Actions)</h2>
@@ -469,10 +469,10 @@ export default function MainFrontIndex() {
         {/* Autonomous Innovations */}
         <motion.section
           id="innovations"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Innovations</h2>
@@ -547,10 +547,10 @@ export default function MainFrontIndex() {
         {/* Netlify Automations */}
         <motion.section
           id="netlify-automations"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Netlify Automations</h2>
@@ -602,10 +602,10 @@ export default function MainFrontIndex() {
 
         {/* Feature Spotlight */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Spotlight</h2>
@@ -653,10 +653,10 @@ export default function MainFrontIndex() {
 
         {/* Outcome Benefits */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Outcome‑Focused Benefits</h2>
@@ -682,10 +682,10 @@ export default function MainFrontIndex() {
         {/* Suites */}
         <motion.section
           id="suites"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Suites</h2>
@@ -718,10 +718,10 @@ export default function MainFrontIndex() {
 
         {/* Superpowers */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Superpowers</h2>
@@ -742,10 +742,10 @@ export default function MainFrontIndex() {
 
         {/* Get Started */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Get Started in Minutes</h2>
@@ -784,10 +784,10 @@ export default function MainFrontIndex() {
         {/* Features */}
         <motion.section
           id="features"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
@@ -843,10 +843,10 @@ export default function MainFrontIndex() {
 
         {/* Outcomes */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Outcomes</h2>
@@ -883,10 +883,10 @@ export default function MainFrontIndex() {
         {/* Feature Map */}
         <motion.section
           id="feature-map"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Map</h2>
@@ -954,10 +954,10 @@ export default function MainFrontIndex() {
         {/* Platform Modules */}
         <motion.section
            id="modules"
-           initial={{ opacity: 0, y: 24 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true, amount: 0.2 }}
-           transition={{ duration: 0.5 }}
+           initial={ opacity: 0, y: 24 }
+           whileInView={ opacity: 1, y: 0 }
+           viewport={ once: true, amount: 0.2 }
+           transition={ duration: 0.5 }
            className="mx-auto max-w-7xl px-6 pb-16"
          >
            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Platform Modules</h2>
@@ -989,10 +989,10 @@ export default function MainFrontIndex() {
 
         {/* Neural Feature Matrix */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Neural Feature Matrix</h2>
@@ -1039,10 +1039,10 @@ export default function MainFrontIndex() {
 
         {/* Extended Feature Directory */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Extended Feature Directory</h2>
@@ -1081,10 +1081,10 @@ export default function MainFrontIndex() {
 
         {/* Capability Deep Links */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-16"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capability Deep Links</h2>
@@ -1123,10 +1123,10 @@ export default function MainFrontIndex() {
         {/* Use Cases */}
         <motion.section
           id="use-cases"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Use Cases</h2>
@@ -1149,10 +1149,10 @@ export default function MainFrontIndex() {
 
         {/* Stats */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <div className="neon-divider mx-auto mb-8 h-px w-full max-w-5xl" />
@@ -1185,10 +1185,10 @@ export default function MainFrontIndex() {
         {/* Capabilities */}
         <motion.section
           id="capabilities"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
@@ -1224,10 +1224,10 @@ export default function MainFrontIndex() {
 
         {/* Why Zion */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Why Zion</h2>
@@ -1248,10 +1248,10 @@ export default function MainFrontIndex() {
         {/* Value Pillars */}
         <motion.section
           id="pillars"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Value Pillars</h2>
@@ -1279,10 +1279,10 @@ export default function MainFrontIndex() {
         {/* Benefits */}
         <motion.section
           id="benefits"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-20"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits</h2>
@@ -1323,10 +1323,10 @@ export default function MainFrontIndex() {
 
         {/* Benefits in Practice */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-16"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits in Practice</h2>
@@ -1380,10 +1380,10 @@ export default function MainFrontIndex() {
         {/* Ecosystem & Integrations */}
         <motion.section
           id="reports"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Ecosystem & Integrations</h2>
@@ -1430,10 +1430,10 @@ export default function MainFrontIndex() {
         {/* Quality Gates & Guardrails */}
         <motion.section
           id="guardrails"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-16"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quality Gates & Guardrails</h2>
@@ -1456,10 +1456,10 @@ export default function MainFrontIndex() {
 
         {/* Tech */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-16"
         >
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md">
@@ -1495,10 +1495,10 @@ export default function MainFrontIndex() {
 
         {/* CTA */}
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-24"
         >
           <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">
@@ -1681,10 +1681,10 @@ export default function MainFrontIndex() {
         {/* AI Agents Gallery */}
         <motion.section
           id="agents"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">AI Agents Gallery</h2>
@@ -1715,10 +1715,10 @@ export default function MainFrontIndex() {
         {/* Capabilities Matrix */}
         <motion.section
           id="capability-matrix"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-16"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities Matrix</h2>
@@ -1761,10 +1761,10 @@ export default function MainFrontIndex() {
         {/* Benefits Directory */}
         <motion.section
           id="benefits-directory"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-16"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits Directory</h2>
@@ -1814,10 +1814,10 @@ export default function MainFrontIndex() {
         {/* Feature Highlights (new) */}
         <motion.section
           id="feature-highlights"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Highlights</h2>

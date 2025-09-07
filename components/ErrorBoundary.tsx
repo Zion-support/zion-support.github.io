@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 ;
@@ -122,7 +121,7 @@ class ErrorBoundary extends Component<Props, State> {constructor("props": Props)
       }
       console.error('ErrorBoundary caught an "error":', error, errorInfo)}'
       error;
-}class ErrorBoundary extends Component<Props, State> {constructor("props": Props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError("error": Error): State {return { "hasError": true, error }}export class ErrorBoundary extends Component<Props, State> {public "state": State = {"hasError": false;
+}class ErrorBoundary extends Component<Props, State> {constructor("props": Props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError("error": Error): State {return { "hasError": true, error }export class ErrorBoundary extends Component<Props, State> {public "state": State = {"hasError": false;
 }class ErrorBoundary extends Component<Props, State> {constructor("props": Props) {super(props)this.state = { "hasError": false 
 }static getDerivedStateFromError("error": Error): State ;
   return { "hasError": true, error ;
@@ -131,7 +130,7 @@ class ErrorBoundary extends Component<Props, State> {constructor("props": Props)
 export class ErrorBoundary extends Component<Props, State> {public "state": State = {"hasError": false;
   }static getDerivedStateFromError("error": Error): State {return { "hasError": true, error }"hasError": false;
   }
-  public static getDerivedStateFromError("error": Error): State {return { "hasError": true, error }}componentDidCatch("error": Error, "errorInfo": ErrorInfo) {console.error('ErrorBoundary caught an "error":', error, errorInfo)this.setState({error,errorInfo;'
+  public static getDerivedStateFromError("error": Error): State {return { "hasError": true, error }componentDidCatch("error": Error, "errorInfo": ErrorInfo) {console.error('ErrorBoundary caught an "error":', error, errorInfo)this.setState({error,errorInfo;'
     })// Call custom error handler if provided;
     if (this.props.onError) {this.props.onError(error, errorInfo)}
 // Log to external service in production;
@@ -186,7 +185,7 @@ export class ErrorBoundary extends Component<Props, State> {public "state": Stat
 }
   } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
 }
-class ErrorBoundary extends Component<Props, State> {constructor("props": Props) {super(props)this.state = { "hasError": false }} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}// Log error to external service (e.g., Sentry)if (typeof window !== 'undefined' && (window as any).Sentry) {(window as any).Sentry.captureException(error, { "extra": errorInfo })}// Call custom error handler if provided;'
+class ErrorBoundary extends Component<Props, State> {constructor("props": Props) {super(props)this.state = { "hasError": false } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}// Log error to external service (e.g., Sentry)if (typeof window !== 'undefined' && (window as any).Sentry) {(window as any).Sentry.captureException(error, { "extra": errorInfo })}// Call custom error handler if provided;'
   } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" },"
 } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
 }
@@ -286,7 +285,7 @@ return res.status(500).json({ "error": "Internal server error" },;"
   } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
 }
 export default class ErrorBoundary extends Component<Props, State> {public "state": State = {"hasError": false;
-  }public static getDerivedStateFromError("_": Error): State {return { "hasError": true }} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
+  }public static getDerivedStateFromError("_": Error): State {return { "hasError": true } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
 }
   } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
 }
@@ -571,7 +570,6 @@ onClick={() => this.setState({ "hasError": false })}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
               className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
             >
               Reload Page
@@ -597,7 +595,7 @@ main
   }
 }return this && this.props.children;
   }
-}class ErrorBoundary extends Component<Props, State> {constructor("props": Props) {super(props)this && this.state = { "hasError": false }}
+}class ErrorBoundary extends Component<Props, State> {constructor("props": Props) {super(props)this && this.state = { "hasError": false }
   handleRetry = () => {this.setState({ "hasError": false, "error": undefined, "errorInfo": undefined })}
 }class ErrorBoundary extends Component<Props, State> {constructor("props": Props) {super(props)this && this.state = { "hasError": false 
 }
@@ -607,11 +605,11 @@ main
           <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;"
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;"
               <AlertTriangle className="w-8 h-8 text-red-400" />;"
-            <details style={{ "margin_top": '20px', "text_align": 'left' ,'
+            <details style={ "margin_top": '20px', "text_align": 'left' ,'
 }>;
               <summary > Error Details (Development)</summary>;
-              <pre style={{"background_color": '#f5f5f5',"padding": '10px',"border_radius": '4px',"overflow": 'auto',"font_size": '12px';'
-              }}>;
+              <pre style={"background_color": '#f5f5f5',"padding": '10px',"border_radius": '4px',"overflow": 'auto',"font_size": '12px';'
+              }>;
                 {this.state.error.to_string ()}
                 {this.state.error_info?.component_stack}
               </pre>;
@@ -758,6 +756,3 @@ main
 main
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

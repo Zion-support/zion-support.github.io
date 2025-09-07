@@ -1,6 +1,6 @@
 
 ;
-export type EnterpriseITSolution = {starter: string; // e.g. "$2, 999 / mo";export type EnterpriseITSolution = {export type EnterpriseITSolution = {id: string;
+export type EnterpriseITSolution = {starter: string; // e.g. '$2, 999 / mo';export type EnterpriseITSolution = {export type EnterpriseITSolution = {id: string;
   name: string;
   tagline?: string;
   description: string;
@@ -14,11 +14,11 @@ export type EnterpriseITSolution = any;name: string;
     | 'Data & Analytics';
     | 'Cloud Services';
     | 'Cybersecurity';
-  pricing: {starter: string; // e.g. "$2, 999 / mo";professional?: string;
+  pricing: {starter: string; // e.g. '$2, 999 / mo';professional?: string;
     enterprise?: string;}category:;
   category:;features: string[];
 export type EnterpriseITSolution = {
-    starter: string; // e.g. "$2, 999 / mo";
+    starter: string; // e.g. '$2, 999 / mo';
 
 export type EnterpriseITSolution = {
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -232,10 +232,10 @@ ursor/fix-website-loading-errors-and-merge-6662;
 	name: string;id: string, name: string,tagline?: string;
 	description: string;}];	id: string;
 	name: string;id: string, name: string,tagline?: string;
-	description: string;export type EnterpriseITSolution = {id: string,name: string,tagline?: string,description: string,category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',pricing: {starter: string, // e.g. "$2,999/mo";
+	description: string;export type EnterpriseITSolution = {id: string,name: string,tagline?: string,description: string,category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',pricing: {starter: string, // e.g. '$2,999/mo';
 		professional?: string,enterprise?: string;
 	pricing: {enterprise?: string;
-	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',pricing: {starter: string, // e && e.g. "$2,999/mo";
+	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',pricing: {starter: string, // e && e.g. '$2,999/mo';
 		professional?: string;
 		enterprise?: string;
 	}
@@ -243,9 +243,9 @@ ursor/fix-website-loading-errors-and-merge-6662;
 	integrations?: string[];
 	useCases?: string[];
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',ursor/fix-website-loading-errors-and-merge-6662;
-	pricing: {starter: string, // e && e.g. "$2,999/mo";
+	pricing: {starter: string, // e && e.g. '$2,999/mo';
 		professional?: string;
-		starter: string, // e.g. "$2,999/mo";
+		starter: string, // e.g. '$2,999/mo';
 		professional?: string,enterprise?: string;
 	},features: string[],integrations?: string[],useCases?: string[],link: string, // canonical internal link under /services/*;
 	realService?: boolean;
@@ -333,7 +333,7 @@ real_service: true;
 name: string;
 tagline?: string;
 description: string;
-category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',pricing: {starter: string, // e.g. "$2, 999 / mo";
+category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',pricing: {starter: string, // e.g. '$2, 999 / mo';
   professional?: string;
   enterprise?: string;
 }
@@ -410,12 +410,12 @@ launch_date?: string;
   integrations: ['OktaAzure ADGoogle Workspace'];
   use_cases: ['Audit readiness_insider risk reduction'];
   link: 'https://ziontechgroup.com / services / sso - and - user - lifecycle - hub',real_service: true;
-}},export const enterpriseITSolutions: EnterpriseITSolution[] = [;
-];;
+},export const enterpriseITSolutions: EnterpriseITSolution[] = [;
+];
 },export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 	}
 ursor/fix-website-loading-errors-and-merge-6662;
-];;
+];
 },export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 	{id: 'zero-trust-network-architecture';
 		name: 'Zero Trust Network Architecture';
@@ -428,7 +428,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 	},{id: 'cost-governance-suite',name: 'Cloud Cost Governance Suite',description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',category: 'Cloud Services',pricing: { starter: '$2,499/mo' },features: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],integrations: ['AWS CURAzure CostGCP Billing'],useCases: ['Cost optimizationBudget adherence'],link: 'https://ziontechgroup.com/cloud-cost-optimizer',realService: true;
 	},{id: 'identity-governance-administration',name: 'Identity Governance & Administration',description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',category: 'Enterprise Security',pricing: { starter: '$3,499/mo' },features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],integrations: ['OktaAzure ADGoogle Workspace'],useCases: ['Audit readinessInsider risk reduction'],link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',realService: true;
 	}
-];export type EnterpriseITSolution = {id: string,name: string,tagline?: string,description: string,category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',pricing: {starter: string, // e.g. "$2,999/mo";
+];export type EnterpriseITSolution = {id: string,name: string,tagline?: string,description: string,category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',pricing: {starter: string, // e.g. '$2,999/mo';
 		professional?: string,enterprise?: string;
 	},features: string[],integrations?: string[],useCases?: string[],link: string, // canonical internal link under /services/*;
 	realService?: boolean,rating?: number,launchDate?: string;
@@ -957,7 +957,7 @@ export type EnterpriseITSolution = {
 
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	pricing: {
-		starter: string, // e && e.g. "$2,999/mo"
+		starter: string, // e && e.g. '$2,999/mo'
 		professional?: string;
 		enterprise?: string
 	}
@@ -968,7 +968,7 @@ export type EnterpriseITSolution = {
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 
 	pricing: {
-		starter: string, // e && e.g. "$2,999/mo"
+		starter: string, // e && e.g. '$2,999/mo'
 		professional?: string;
 		enterprise?: string
 
@@ -980,7 +980,7 @@ export type EnterpriseITSolution = $2;
 	description: string,
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	pricing: {
-		starter: string, // e.g. "$2,999/mo"
+		starter: string, // e.g. '$2,999/mo'
 		professional?: string,
 		enterprise?: string
 
@@ -1146,7 +1146,7 @@ tagline?: string;
 description: string;
 category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 pricing: {
-  starter: string, // e.g. "$2, 999 / mo";
+  starter: string, // e.g. '$2, 999 / mo';
   professional?: string;
   enterprise?: string;
 }
@@ -1392,7 +1392,7 @@ export type EnterpriseITSolution = {;
 	description: string,;
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',;
 	pricing: {;
-		starter: string, // e.g. "$2,999/mo";
+		starter: string, // e.g. '$2,999/mo';
 		professional?: string,;
 		enterprise?: string;
 	},;
@@ -1525,10 +1525,10 @@ real_service: true;
 name: string;
 tagline?: string;
 description: string;
-category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',pricing: {starter: string, // e.g. "$2, 999 / mo";
+category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',pricing: {starter: string, // e.g. '$2, 999 / mo';
 category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 pricing: {
-  starter: string, // e.g. "$2, 999 / mo";
+  starter: string, // e.g. '$2, 999 / mo';
   professional?: string;
   enterprise?: string;
 }

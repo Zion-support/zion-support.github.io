@@ -7,13 +7,13 @@ import type {;
   GrantStatus,;
 } from '../../types/grants';'
 
-const "categories": GrantCategory[] = [;
+const 'categories': GrantCategory[] = [;
   'Ecosystem Tools',;'
   'Talent Development',;'
   'Regional Expansion',;'
   'Research Grants',;'
 ];
-const "statuses": GrantStatus[] = [;
+const 'statuses': GrantStatus[] = [;
   'Draft',;'
   'Submitted',;'
   'Under Review',;'
@@ -62,8 +62,8 @@ return (;
     if (filters.status) params.set('status', filters.status);'
     if (filters.region) params.set('region', filters.region);'
     if (filters.program) params.set('program', filters.program);'
-    fetch(`/api/grants?${params.toString()}`)`const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
-const "statuses": GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;'
+    fetch(`/api/grants?${params.toString()}`)`const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
+const 'statuses': GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;'
 export default function GrantsPage() {;
   }
   const [items, setItems] = useState<GrantApplication[]>([]);
@@ -96,13 +96,13 @@ return (;
             </a>
           </Link>
       </div>
-      <div className='grid "md":grid-cols-4 gap-4 mb-6'>'
+      <div className='grid 'md':grid-cols-4 gap-4 mb-6'>'
         <select,
 className='border rounded p-2''
           value={filters.sector |''}'
           onChange={e =>
             }
-            setFilters(f => ({ ...f, "sector": e.target.value |undefined }))
+            setFilters(f => ({ ...f, 'sector': e.target.value |undefined }))
 
         >
           <option value=''>All Sectors</option>'
@@ -117,7 +117,7 @@ className='border rounded p-2''
           value={filters.status |''}'
           onChange={e =>
             }
-            setFilters(f => ({ ...f, "status": e.target.value |undefined }))
+            setFilters(f => ({ ...f, 'status': e.target.value |undefined }))
 export default /**
  * GrantsPage - Function description
  */
@@ -170,19 +170,19 @@ className='border rounded p-2''
           value={filters && filters.region || ''}'
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "region": e && e.target.value || undefined }));
+            setFilters(f => ({ ...f, 'region': e && e.target.value || undefined }));
 
         />
         <select,
 className='border rounded p-2''
 
-      <div className='grid "md":grid - cols - 4 gap - 4 mb - 6'>;'
+      <div className='grid 'md':grid - cols - 4 gap - 4 mb - 6'>;'
         <select;
           className='border rounded p - 2';'
           value={filters.sector || ''}'
           on_change={e =>;
             }
-            set_filters (function => ({ ...f, "sector": e.target.value || undefined }));
+            set_filters (function => ({ ...f, 'sector': e.target.value || undefined }));
 
         >;
           <option value=''>All Sectors</option>;'
@@ -209,7 +209,7 @@ className='border rounded p-2''
           value={filters.program || ''}'
           on_change={e =>;
             }
-            set_filters (function => ({ ...f, "program": e.target.value || undefined }));
+            set_filters (function => ({ ...f, 'program': e.target.value || undefined }));
 
         >;
           <option value=''>All Programs</option>;'
@@ -222,7 +222,7 @@ className='border rounded p-2''
           <div; }
             }
             key={g.id}
-            className='border rounded p - 4 bg - white / 70 "dark":bg - black / 40';'
+            className='border rounded p - 4 bg - white / 70 'dark':bg - black / 40';'
           >;
             <div className='flex items - center justify - between'>;'
               <div>;
@@ -230,7 +230,7 @@ className='border rounded p-2''
                   <Link href={`/grants/${g.id}`}>;`                    <a>{g.project_name}</a>;
                   </Link>;
                 </h3>;
-                <div className='text - xs text - gray - 600 "dark":text - gray - 400'>;'
+                <div className='text - xs text - gray - 600 'dark':text - gray - 400'>;'
                   {g.sector || 'General'} • {g.region || 'Global'} •{' '}'
         <select,
 className='border rounded p-2''
@@ -245,7 +245,7 @@ className='border rounded p-2''
           value={filters && filters.program || ''}'
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "program": e && e.target.value || undefined }));
+            setFilters(f => ({ ...f, 'program': e && e.target.value || undefined }));
 
         >;
           <option value=''>All Programs</option>;'
@@ -253,11 +253,11 @@ className='border rounded p-2''
           <option value='incubator'>Incubator</option>;'
         </select>;
       </div>;
-      <div className="flex items-center justify-between mb-6">"
-        <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>"
-        <div className="flex gap-2">"
-          <Link href="/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded">Apply</a></Link>"
-          <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>"
+      <div className='flex items-center justify-between mb-6'>'
+        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>'
+        <div className='flex gap-2'>'
+          <Link href='/grants/apply'><a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a></Link>'
+          <Link href='/incubator'><a className='px-3 py-2 bg-purple-600 text-white rounded'>Incubator</a></Link>'
         </div>
       </div>
 
@@ -266,7 +266,7 @@ className='border rounded p-2''
           <div
 }
 key={g && g.id}
-            className='border rounded p-4 bg-white/70 "dark":bg-black/40'>;'
+            className='border rounded p-4 bg-white/70 'dark':bg-black/40'>;'
             <div className='flex items-center justify-between'>;'
               <div>;
                 <h3 className='text-lg font-medium'>;'
@@ -274,7 +274,7 @@ key={g && g.id}
                     <a>{g && g.projectName}</a>;
                   </Link>;
                 </h3>;
-                <div className='text-xs text-gray-600 "dark":text-gray-400'>;'
+                <div className='text-xs text-gray-600 'dark':text-gray-400'>;'
                   {g && g.program === 'incubator' ? 'Incubator' : 'Grant'}'
                 </div>;
               </div>;
@@ -294,16 +294,16 @@ key={g && g.id}
                     Grant Winner;
                   </span>;
                 )}
-                <span className='px-2 py-1 text-xs rounded bg-gray-100 "dark":bg-gray-800'>;'
+                <span className='px-2 py-1 text-xs rounded bg-gray-100 'dark':bg-gray-800'>;'
                   {g && g.status}
                 </span>;
               </div>;
             </div>;
-            <p className='mt-2 text-sm text-gray-700 "dark":text-gray-300 line-clamp-3'>;'
+            <p className='mt-2 text-sm text-gray-700 'dark':text-gray-300 line-clamp-3'>;'
               {g && g.proposalSummary}
             </p>;
-            <div className='mt-3 text-sm text-gray-600 "dark":text-gray-400'>;'
-              "Budget": {g && g.budgetAmount} {g && g.budgetCurrency}
+            <div className='mt-3 text-sm text-gray-600 'dark':text-gray-400'>;'
+              'Budget': {g && g.budgetAmount} {g && g.budgetCurrency}
             </div>;
           </div>;
         ))}
@@ -328,16 +328,16 @@ return (;
                     }
                     Grant Winner;
                   </span>)}
-                <span className='px - 2 py - 1 text - xs rounded bg - gray - 100 "dark":bg - gray - 800'>;'
+                <span className='px - 2 py - 1 text - xs rounded bg - gray - 100 'dark':bg - gray - 800'>;'
                   {g.status}
                 </span>;
               </div>;
             </div>;
-            <p className='mt - 2 text - sm text - gray - 700 "dark":text - gray - 300 line - clamp - 3'>;'
+            <p className='mt - 2 text - sm text - gray - 700 'dark':text - gray - 300 line - clamp - 3'>;'
               {g.proposal_summary}
             </p>;
-            <div className='mt - 3 text - sm text - gray - 600 "dark":text - gray - 400'>;'
-              "Budget": {g.budget_amount} {g.budget_currency}
+            <div className='mt - 3 text - sm text - gray - 600 'dark':text - gray - 400'>;'
+              'Budget': {g.budget_amount} {g.budget_currency}
             </div>;
           </div>))}
         {items.length === 0 && (

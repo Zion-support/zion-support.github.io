@@ -140,7 +140,7 @@ export default function ForgotPassword() {;
     "resolver": zodResolver(forgotPasswordSchema),;
     "defaultValues": {;
       }
-      "email": ""}}) as UseFormReturn<ForgotPasswordFormValues>,;"
+      "email": ""}) as UseFormReturn<ForgotPasswordFormValues>,;"
   // Form submission handler;
   const onSubmit = async ("data": ForgotPasswordFormValues) => {;
     }

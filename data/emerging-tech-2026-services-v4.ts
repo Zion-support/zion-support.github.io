@@ -45,7 +45,7 @@
     "rating": 4.9;
     "reviews": 12;
   },import { ServiceVariant  } from '../types / service - variants';'
-export interface EmergingTech2026ServiceV4  {{"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup && ziontechgroup.com';'
+export interface EmergingTech2026ServiceV4  {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup && ziontechgroup.com';'
       }
       "website": '"https"://ziontechgroup && ziontechgroup.com';'
     },"real_implementation": true,"implementation_details":;
@@ -165,10 +165,10 @@ export interface EmergingTech2026ServiceV4  {{"mobile": '+1 302 464 0950',"email
     ],"popular": false,"icon": '🏙️',"color": 'from-gray-600 to-slate-600',"textColor": 'text-gray-400',"link": '"https"://ziontechgroup.com/digital-twin-smart-cities',"marketPosition": 'First comprehensive smart city digital twin platform. Competitive "advantage": Complete city modeling, real-time data, and predictive analytics.',"targetAudience": 'City governments, Urban planners, Infrastructure companies, Technology companies, Real estate developers',"trialDays": 21,"setupTime": '2 months',"category": 'Digital Twin',"realService": true,"technology": ['3D ModelingIoTAI/MLReactPythonPostgreSQLAWSGIS'],"integrations": ['IoT sensorsTraffic systemsUtility networksGovernment databases'],"useCases": ['Urban planningTraffic managementInfrastructure monitoringCitizen servicesEmergency response'],"roi": 'Reduce infrastructure costs by 30%, improve traffic flow by 40%, enhance citizen satisfaction by 60%',"competitors": ['Bentley SystemsAutodeskSiemens'],"marketSize": '$30B smart city market',"growthRate": '90% annual growth',"variant": 'ai-futuristic',"contactInfo": {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
     },"realImplementation": true,"implementationDetails": 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',"launchDate": '2026-05-15',"customers": 30,"rating": 4.8;'
     "reviews": 25;}
-];;}
+];}
 ];ursor/fix-website-loading-errors-and-merge-6662;
   }
-];;"id": 'quantum-internet-security-gateway',"name": 'Quantum Internet Security Gateway',"tagline": 'Unbreakable quantum encryption for the future internet',"price": '$899',"period": '/month',"description":;'
+];"id": 'quantum-internet-security-gateway',"name": 'Quantum Internet Security Gateway',"tagline": 'Unbreakable quantum encryption for the future internet',"price": '$899',"period": '/month',"description":;'
       'Next-generation quantum internet security gateway that provides unbreakable encryption using quantum key distribution, quantum-resistant algorithms, and post-quantum cryptography for ultra-secure communications.',"features": [;'
       'Quantum key distribution','Post-quantum cryptography','Quantum-resistant algorithms','Real-time encryption','Quantum random number generation','Secure key management','Network monitoring','Threat detection','Compliance reporting','API integration';'
     ],"popular": true,"icon": '🔐',"color": 'from-green-600 to-emerald-600',"textColor": 'text-green-400',"link": '"https"://ziontechgroup.com/quantum-internet-security-gateway',"marketPosition":;'

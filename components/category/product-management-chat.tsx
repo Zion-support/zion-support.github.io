@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<main> <h1>ProductManagementChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div>) 
+<main> <h1>ProductManagementChat</h1> <p>Blog content coming soon...</p> <a href='/blog' >Back to Blog</a> </main> </div>) 
 }
 export default ProductManagementChat
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextPage } from 'next';
   return (import Link from 'next/link';
 import Seo from '../../components/seo/Seo';
@@ -39,16 +34,15 @@ import Seo from '../../components/seo/Seo';
 
   return (
     <div>
-      <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />
+      <Seo title='Product Management' description='Product management strategy and insights by Zion.' openGraph={ title: 'Product Management', description: 'Product management strategy and insights by Zion.' } />
       <main>
         <h1>ProductManagementChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href='/blog'>Back to Blog</a>
       </main>
     </div>
   )
 }
-<<<<<<< HEAD
 
 
 
@@ -63,11 +57,11 @@ import Seo from '../../components/seo/Seo';
 
 
     <div>;
-      <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
+      <Seo title='Product Management' description='Product management strategy and insights by Zion.' openGraph={ title: 'Product Management', description: 'Product management strategy and insights by Zion.' } />;
       <main>;
         <h1>ProductManagementChat</h1>;
         <p>Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
+        <a href='/blog'>Back to Blog</a>;
       </main>;
     </div>;
   );
@@ -80,11 +74,11 @@ import Link from 'next / link';
 import Seo from '../../components / seo / Seo';
   return (
     <div>;
-      <Seo title="Product Management" description="Product management strategy and insights by Zion." open_graph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
+      <Seo title='Product Management' description='Product management strategy and insights by Zion.' open_graph={ title: 'Product Management', description: 'Product management strategy and insights by Zion.' } />;
       <main>;
         <h1 > ProductManagementChat</h1>;
         <p > Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
+        <a href='/blog'>Back to Blog</a>;
       </main>;
     </div>);
 }
@@ -127,7 +121,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const ProductManagementChat: NextPage;
 
 
-=======
 export default ProductManagementChat;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

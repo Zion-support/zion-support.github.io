@@ -54,19 +54,19 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
         {/* Hero Section */}
         <motion.div
-          className="text-center mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          className='text-center mb-20'
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
         >
-          <h1 className="text-5xl font-bold text-white mb-6">
+          <h1 className='text-5xl font-bold text-white mb-6'>
             About Zion Tech Group
           </h1>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
             We are a leading technology solutions provider specializing in AI, 
             cybersecurity, cloud infrastructure, and digital transformation services.
           </p>
@@ -74,14 +74,14 @@ const About: React.FC = () => {
 
         {/* Mission Section */}
         <motion.div
-          className="mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          className='mb-20'
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.2 }
         >
-          <Card className="text-center p-12 bg-slate-800/50 backdrop-blur-sm">
-            <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
-            <p className="text-lg text-gray-300 leading-relaxed">
+          <Card className='text-center p-12 bg-slate-800/50 backdrop-blur-sm'>
+            <h2 className='text-3xl font-bold text-white mb-6'>Our Mission</h2>
+            <p className='text-lg text-gray-300 leading-relaxed'>
               To empower businesses with cutting-edge technology solutions that drive 
               innovation, enhance security, and accelerate digital transformation. We 
               believe in the power of technology to solve complex challenges and create 
@@ -92,18 +92,18 @@ const About: React.FC = () => {
 
         {/* Values Section */}
         <motion.div
-          className="mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          className='mb-20'
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.4 }
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className='text-3xl font-bold text-white text-center mb-12'>Our Values</h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {values.map((value, index) => (
-              <Card key={index} className="text-center p-6 bg-slate-800/50 backdrop-blur-sm">
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
+              <Card key={index} className='text-center p-6 bg-slate-800/50 backdrop-blur-sm'>
+                <div className='text-4xl mb-4'>{value.icon}</div>
+                <h3 className='text-xl font-semibold text-white mb-3'>{value.title}</h3>
+                <p className='text-gray-300'>{value.description}</p>
               </Card>
             ))}
           </div>
@@ -111,20 +111,20 @@ const About: React.FC = () => {
 
         {/* Team Section */}
         <motion.div
-          className="mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          className='mb-20'
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.6 }
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className='text-3xl font-bold text-white text-center mb-12'>Our Team</h2>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {teamMembers.map((member, index) => (
-              <Card key={index} className="text-center p-8 bg-slate-800/50 backdrop-blur-sm">
-                <div className="text-6xl mb-4">{member.image}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                <p className="text-cyan-400 font-medium mb-2">{member.role}</p>
-                <p className="text-blue-200 text-sm mb-4">{member.expertise}</p>
-                <p className="text-gray-300 text-sm">{member.description}</p>
+              <Card key={index} className='text-center p-8 bg-slate-800/50 backdrop-blur-sm'>
+                <div className='text-6xl mb-4'>{member.image}</div>
+                <h3 className='text-xl font-semibold text-white mb-2'>{member.name}</h3>
+                <p className='text-cyan-400 font-medium mb-2'>{member.role}</p>
+                <p className='text-blue-200 text-sm mb-4'>{member.expertise}</p>
+                <p className='text-gray-300 text-sm'>{member.description}</p>
               </Card>
             ))}
           </div>
@@ -132,19 +132,19 @@ const About: React.FC = () => {
 
         {/* CTA Section */}
         <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          className='text-center'
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.8 }
         >
-          <Card className="bg-gradient-to-r from-cyan-600 to-blue-600 p-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          <Card className='bg-gradient-to-r from-cyan-600 to-blue-600 p-12'>
+            <h2 className='text-3xl font-bold text-white mb-4'>
               Ready to Work With Us?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className='text-xl text-blue-100 mb-8'>
               Let's discuss how we can help transform your business with our technology solutions.
             </p>
-            <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className='bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'>
               Get In Touch
             </button>
           </Card>

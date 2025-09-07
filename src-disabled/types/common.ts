@@ -1,5 +1,4 @@
 // Common type definitions;
-<<<<<<< HEAD:src_backup/types/common.ts
 export interface ApiResponse<T = any>  {data: T;
   message: string;
   success: boolean;
@@ -12,7 +11,7 @@ export interface ApiResponse<T = any>  {data: T;
     limit: number;
     total: number;
     totalPages: number;
-  }}export interface User  {id: string;
+  }export interface User  {id: string;
 
 export interface ApiResponse<T = any />  {data: T;
   message: string;
@@ -32,7 +31,7 @@ export interface PaginatedResponse<T /> extends ApiResponse<T[] />  {pagination:
     limit: number;
     total: number;}
     totalPages: number;}
-  }}
+  }
 
 export interface User {
   id: string;
@@ -40,7 +39,6 @@ export interface User {
   name: string;
   role: 'admin' | 'user' | 'moderator';
   createdAt: string;
-<<<<<<< HEAD:src_backup/types/common.ts
   updatedAt: string;
 }export interface Service  {id: string;
   updatedAt: string;}
@@ -52,7 +50,6 @@ export interface Service  {id: string;
   description: string;
   category: string;
   pricing: {starter: number;
-<<<<<<< HEAD:src_backup/types/common.ts
     professional: number;
     enterprise: number;
     professional: number;}
@@ -65,7 +62,6 @@ export interface Service  {id: string;
   company?: string;
   phone?: string;
   message: string;
-<<<<<<< HEAD:src_backup/types/common.ts
   service?: string;
 }export interface Testimonial  {id: string;
   service?: string;}
@@ -80,7 +76,6 @@ export interface Testimonial {
   content: string;
   rating: number;
   service: string;
-<<<<<<< HEAD:src_backup/types/common.ts
   createdAt: string;
 }export interface CaseStudy  {id: string;
   createdAt: string;}
@@ -96,7 +91,6 @@ export interface CaseStudy {
   solution: string;
   results: string[];
   timeline: string;
-<<<<<<< HEAD:src_backup/types/common.ts
   service: string;
 }export interface FAQ  {id: string;
   question: string;

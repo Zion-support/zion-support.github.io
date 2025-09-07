@@ -25,22 +25,21 @@ export default async function handler() {
 }
 const { data, error } = await supabaseClient;
           .from('talent_profiles')'
-          .order('created_at', { "ascending": false,'
+          .order('created_at', { 'ascending': false,'
 });
         if (error) throw error;
-return res && res.status(200).json({ "items": data as TalentProfile[],;
+return res && res.status(200).json({ 'items': data as TalentProfile[],;
 });
       }
-return res && res.status(200).json({ "items": LOCAL,;
+return res && res.status(200).json({ 'items': LOCAL,;
 });
-    } catch ("e": any) {
+    } catch ('e': any) {
 
 }
 
-return res.status(500).json({ "error": e.message,;
+return res.status(500).json({ 'error': e.message,;
 });
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   }
   if (req.method = == 'POST') {try ;'
   }
@@ -50,21 +49,21 @@ const slug =;
         (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') +;'
         '-' +;'
         uuid().slice(0, 6)...payload;
-        "id": uuid()slug;
-        "verified": false;
-        "rating": 0;
-        "reviewsCount": 0;
-        "createdAt": new Date().toISOString()"summary": payload.summary |'';'
-        "skills": payload.skills |[];
-        "name": payload.name |'Unnamed';'
-        "title": payload.title |'Professional';'
-        "location": payload.location |'Remote';'
-        "availability": (payload.availability as any) |'Open';'
+        'id': uuid()slug;
+        'verified': false;
+        'rating': 0;
+        'reviewsCount': 0;
+        'createdAt': new Date().toISOString()'summary': payload.summary |'';'
+        'skills': payload.skills |[];
+        'name': payload.name |'Unnamed';'
+        'title': payload.title |'Professional';'
+        'location': payload.location |'Remote';'
+        'availability': (payload.availability as any) |'Open';'
       } as TalentProfile;
       // Auto-translate;
       const originalLang =;
         payload.originalLanguage |;
-        detectLanguageSimple([item.title, item.summary, item.bio |''].join('\n'))const "translations": TalentProfile['translations'] = {}'
+        detectLanguageSimple([item.title, item.summary, item.bio |''].join('\n'))const 'translations': TalentProfile['translations'] = {}'
         translations.summary = translations.summary |{}
         translations.bio = translations.bio |
 }
@@ -82,7 +81,6 @@ const slug =;
             lang;
             originalLang;
           )}
-<<<<<<< HEAD
       }
       item.originalLanguage = originalLang;
       item.translations = translations;
@@ -143,48 +141,47 @@ if (throw error) {
         }
         const { error } = await supabaseClient.from('talent_profiles').insert({'
 }
-"id": item.id,
-          "slug": item.slug,
-          "name": item.name,
-          "title": item.title,
-          "category": item.category,
-          "location": item.location,
-          "timezone": item.timezone,
-          "region": item.region,
-          "skills": item.skills,
-          "summary": item.summary,
-          "bio": item.bio,
-          "hourly_rate_usd": item.hourlyRateUsd ?? null,
-          "request_quote": item.requestQuote ?? null,
-          "availability": item.availability,
-          "profile_image_url": item.profileImageUrl ?? null,
-          "video_url": item.videoUrl ?? null,
-          "portfolio": item.portfolio ?? null,
-          "verified": item.verified ?? null,
-          "rating": item.rating ?? null,
-          "reviews_count": item.reviewsCount ?? null,
-          "created_at": item.createdAt,
+'id': item.id,
+          'slug': item.slug,
+          'name': item.name,
+          'title': item.title,
+          'category': item.category,
+          'location': item.location,
+          'timezone': item.timezone,
+          'region': item.region,
+          'skills': item.skills,
+          'summary': item.summary,
+          'bio': item.bio,
+          'hourly_rate_usd': item.hourlyRateUsd ?? null,
+          'request_quote': item.requestQuote ?? null,
+          'availability': item.availability,
+          'profile_image_url': item.profileImageUrl ?? null,
+          'video_url': item.videoUrl ?? null,
+          'portfolio': item.portfolio ?? null,
+          'verified': item.verified ?? null,
+          'rating': item.rating ?? null,
+          'reviews_count': item.reviewsCount ?? null,
+          'created_at': item.createdAt,
           // i18n,
-"original_language": item.originalLanguage,
-          "translations": item.translations as any
+'original_language': item.originalLanguage,
+          'translations': item.translations as any
         } as any);
         if (error) throw error;
-return res.status(201).json({ "slug": item.slug,;
+return res.status(201).json({ 'slug': item.slug,;
 });
       }
-      // "Fallback": return the slug as if saved;
-return res.status (201).json ({ "slug": item.slug,;
+      // 'Fallback': return the slug as if saved;
+return res.status (201).json ({ 'slug': item.slug,;
 });
-    } catch ("e": any) {
+    } catch ('e': any) {
 }
-return res.status (500).json ({ "error": e.message,;
+return res.status (500).json ({ 'error': e.message,;
 });
     }
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 return res;
     .setHeader('Allow', 'GET, POST')'

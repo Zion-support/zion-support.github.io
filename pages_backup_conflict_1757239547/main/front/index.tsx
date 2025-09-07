@@ -7,10 +7,10 @@ export default function FrontLanding() {
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
 export default function FrontLanding() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+    <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
-        <meta name="description" content="Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously." />
+        <meta name='description' content='Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously.' />
       </Head>
       {/* Animated background layers */}
       <div aria-hidden className='pointer-events-none absolute inset-0 -z-10'>
@@ -50,50 +50,50 @@ export default function FrontLanding() {
       <main className='relative z-10'>
         <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'>
           <div className='text-center'>            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 10 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
               className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'
             >
               <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />              Autonomous agents running continuous improvements
             </motion.div>
             <motion.h1
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.05 }}
+              initial={ opacity: 0, y: 8 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.7, delay: 0.05 }
               className='mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl'
             >
               <span className='gradient-text'>
                 Autonomous Cloud Automations
               </span>            </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
+              initial={ opacity: 0, y: 8 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.7, delay: 0.1 }
               className='mx-auto mt-5 max-w-3xl text-lg text-white/80'
             >
               Self-improving, cloud-native agents that invent, generate, and run
               new automation factories—fixing, optimizing, and syncing changes
               to the repository continuously.            </motion.p>
             <motion.div
-              initial={{ opacity: 0, y: 10 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              initial={ opacity: 0, y: 10 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              animate={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              transition={ duration: 0.6 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md"
+              className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'
             >
-              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
+              <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
               Autonomous agents running continuous improvements
             </motion.div>
             {/* Quick stats */}
@@ -105,10 +105,10 @@ export default function FrontLanding() {
                 ['Safety', 'Guardrails']
               ].map(([k, v]) => (                <motion.div
                   key={k}
-                  initial={{ opacity: 0, y: 6 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
+                  initial={ opacity: 0, y: 6 }
+                  whileInView={ opacity: 1, y: 0 }
+                  viewport={ once: true }
+                  transition={ duration: 0.5 }
                   className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left'
                 >
                   <div className='text-lg font-bold text-white'>{k}</div>
@@ -150,10 +150,10 @@ export default function FrontLanding() {
               }
             ].map(f => (              <motion.article
                 key={f.title}
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 8 }
+                whileInView={ opacity: 1, y: 0 }
+                viewport={ once: true }
+                transition={ duration: 0.6 }
                 className='group glow-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30'
               >
                 <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -183,10 +183,10 @@ export default function FrontLanding() {
               }
             ].map(c => (              <motion.article
                 key={c.title}
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 8 }
+                whileInView={ opacity: 1, y: 0 }
+                viewport={ once: true }
+                transition={ duration: 0.6 }
                 className='relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl'
               >
                 <div className='absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl' />
@@ -208,10 +208,10 @@ export default function FrontLanding() {
               'Fewer regressions via layered checks and reports'
             ].map(b => (              <motion.div
                 key={b}
-                initial={{ opacity: 0, y: 6 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+                initial={ opacity: 0, y: 6 }
+                whileInView={ opacity: 1, y: 0 }
+                viewport={ once: true }
+                transition={ duration: 0.5 }
                 className='flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md'
               >
                 <span className='mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
@@ -221,10 +221,10 @@ export default function FrontLanding() {
         </section>
         {/* CTA */}
         <section className='mx-auto max-w-7xl px-6 pb-24'>          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, scale: 0.98 }
+            whileInView={ opacity: 1, scale: 1 }
+            viewport={ once: true }
+            transition={ duration: 0.6 }
             className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'
           >
             <h3 className='text-2xl font-bold'>

@@ -184,10 +184,10 @@ return (;
       {!isOpen && (;
         <motion.button;
           }
-          initial={{ "scale": 0 }}
-          animate={{ "scale": 1 }}
-          whileHover={{ "scale": 1.1 }}
-          whileTap={{ "scale": 0.95 }}
+          initial={ "scale": 0 }
+          animate={ "scale": 1 }
+          whileHover={ "scale": 1.1 }
+          whileTap={ "scale": 0.95 }
           onClick={() => setIsOpen(true)}
           className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl "hover":shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center";"
         >;
@@ -200,9 +200,9 @@ return (;
         {isOpen && (;
           <motion.div;
             }
-            initial={{ "opacity": 0, "scale": 0.8, "y": 20 }}
-            animate={{ "opacity": 1, "scale": 1, "y": 0 }}
-            exit={{ "opacity": 0, "scale": 0.8, "y": 20 }}
+            initial={ "opacity": 0, "scale": 0.8, "y": 20 }
+            animate={ "opacity": 1, "scale": 1, "y": 0 }
+            exit={ "opacity": 0, "scale": 0.8, "y": 20 }
             className="absolute bottom-16 right-0 w-96 bg-gray-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden";"
           >;
             {/* Chat Header */}
@@ -244,8 +244,8 @@ return (;
                     <motion.div;
                       }
                       key={message.id}
-                      initial={{ "opacity": 0, "y": 10 }}
-                      animate={{ "opacity": 1, "y": 0 }}
+                      initial={ "opacity": 0, "y": 10 }
+                      animate={ "opacity": 1, "y": 0 }
                       className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}`                    >;
                       {message.type === 'bot' && (;'
                         <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">;"
@@ -278,8 +278,8 @@ return (;
                   {isTyping && (;
                     <motion.div;
                       }
-                      initial={{ "opacity": 0, "y": 10 }}
-                      animate={{ "opacity": 1, "y": 0 }}
+                      initial={ "opacity": 0, "y": 10 }
+                      animate={ "opacity": 1, "y": 0 }
                       className="flex gap-3 justify-start";"
                     >;
                       <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">;"
@@ -288,8 +288,8 @@ return (;
                       <div className="bg-white/10 border border-white/20 rounded-2xl p-3">;"
                         <div className="flex items-center gap-1">;"
                           <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>;"
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ "animationDelay": '0.1s' }}></div>;'
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ "animationDelay": '0.2s' }}></div>;'
+                          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={ "animationDelay": '0.1s' }></div>;'
+                          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={ "animationDelay": '0.2s' }></div>;'
                         </div>;
                       </div>;
                     </motion.div>;

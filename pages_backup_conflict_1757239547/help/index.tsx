@@ -9,12 +9,12 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map(a => a.category)));
 
   return (
-    <div className="space-y-8">
-      <h1 className="text-2xl font-semibold">Help Center</h1>
+    <div className='space-y-8'>
+      <h1 className='text-2xl font-semibold'>Help Center</h1>
       {categories.map((cat) => (
-        <div key={cat} className="space-y-3">
-          <h2 className="text-xl font-medium">{cat}</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div key={cat} className='space-y-3'>
+          <h2 className='text-xl font-medium'>{cat}</h2>
+          <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
             {articles
               .filter((a) => a.category === (cat as any))
               .map((a) => (

@@ -8,6 +8,6 @@ import React, { useState } from 'react' import { Link } from 'react-router-dom' 
   icon: <Lightbulb className = 'w-5 h-5'/>, href: '/category/innovation',}
 }  ] export function MobileNavigation() { const [isOpen, setIsOpen] =;
   useState(false);
-  const toggleMenu = ( setIsOpen(!isOpen)';"";) => {
+  const toggleMenu = ( setIsOpen(!isOpen)';'';) => {
   return $3;}
 }

@@ -57,4 +57,4 @@ export function SeverityIndicator ({severity,show_icon = true,show_text = true,s
       {show_icon && getSeverityIcon ()}
       {show_text && <span className="capitalize text - sm">{severity}</span>}"
     </div>)}
-  )}}
+  )}

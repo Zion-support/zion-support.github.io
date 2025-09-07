@@ -28,10 +28,10 @@ if ( {) {
         throw new Error (error.message);
       }
       return data.enhanced_content;
-    } catch ("err": any) {
+    } catch ('err': any) {
       }
       set_error (err.message || 'Failed to enhance content'),'
-      console.error ('Enhancement "error":', err);'
+      console.error ('Enhancement 'error':', err);'
       return null;
     } finally {
       }
@@ -58,8 +58,8 @@ export function useResumeEnhancer() {;
   const [error, setError] = useState<string | null>(null),;
   ;
   const enhanceContent = async (;
-    "content":string, ;
-    "type":EnhancementType = 'general',;'
+    'content':string, ;
+    'type':EnhancementType = 'general',;'
     context?:string;
   ):Promise<string | null> => {;
     }
@@ -70,10 +70,10 @@ export function useResumeEnhancer() {;
       }
       const { data, error } = await supabase.functions.invoke('resume-enhancer', {;'
         }
-        "body":{ ;
+        'body':{ ;
           }
           content, ;
-          "enhancementType":type,;
+          'enhancementType':type,;
           context;
         }
       }),;
@@ -84,10 +84,10 @@ export function useResumeEnhancer() {;
       }
       ;
       return data.enhancedContent,;
-    } catch ("err":any) {;
+    } catch ('err':any) {;
       }
       setError(err.message || 'Failed to enhance content'),;'
-      console.error('Enhancement "error":', err),;'
+      console.error('Enhancement 'error':', err),;'
       return null,;
     } finally {;
       }
@@ -101,7 +101,7 @@ export function useResumeEnhancer() {;
     isEnhancing,;
     error;
   },;
-} const enhanceContent = async ("content": string, "type": EnhancementType = 'general', context?: string) : Promise<string | null> => {'
+} const enhanceContent = async ('content': string, 'type': EnhancementType = 'general', context?: string) : Promise<string | null> => {'
   }
   setIsEnhancing (true);
 setError (null);
@@ -117,10 +117,10 @@ try {
       }
 ;
       return data.enhancedContent;
-    } catch ("err": any) {;
+    } catch ('err': any) {;
       }
       setError(err.message || 'Failed to enhance content'),;'
-      console.error('Enhancement "error":', err),;'
+      console.error('Enhancement 'error':', err),;'
       return null;
     } finally {;
       }

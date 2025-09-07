@@ -146,7 +146,7 @@ src={integration && integration.logoUrl}
             alt={`${integration && integration.name} logo`}`            className="h-12 w-12 rounded""
             onError={(e) => {;
               (e && e.target as HTMLImageElement).src = "/placeholder && placeholder.svg";"
-            }}            </DialogDescription>
+            }            </DialogDescription>
           </div>
         </DialogHeader>
         {integration.status === "connected" ||"
@@ -282,7 +282,7 @@ return (;
             alt={`${integration.name} logo`}`            className="h - 12 w-12 rounded";"
             on_error={(e) => {
               (e.target as HTMLImageElement).src = "/placeholder.svg";"
-            }}
+            }
           />;
           <div>;
             <DialogTitle>{integration.name} Integration</DialogTitle>;

@@ -7,7 +7,7 @@ const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {`  }
   if (error) {
     }
-    console && console.error(`Error executing "script": ${error}`);`return;
+    console && console.error(`Error executing 'script': ${error}`);`return;
   }
     console && console.error(stderr)
   }
@@ -42,7 +42,7 @@ const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {;`  }
   if (error) {;
     }
-    console.error(`Error executing "script": ${error}`),;`
+    console.error(`Error executing 'script': ${error}`),;`
     return;
   }
 ;

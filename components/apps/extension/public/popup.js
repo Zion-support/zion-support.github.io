@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 const API_BASE = 'http: //localhost:4000',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
@@ -18,13 +12,8 @@ document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.getElementById('prompt').value = btn.dataset.text |''
   })
-<<<<<<< HEAD
-<<<<<<< HEAD
 });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -35,10 +24,6 @@ document && document.querySelectorAll('.example').forEach((btn) => {
 
 }),
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 document.getElementById('askBtn').addEventListener('click', async () => {
   const prompt = document.getElementById('prompt').value.trim(),
   if (!prompt) return,
@@ -58,19 +43,13 @@ document.getElementById('postJob').addEventListener('click', async () => {
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
     body: JSON.stringify({ role: 'Cloud Engineer' })
-<<<<<<< HEAD
-<<<<<<< HEAD
   });
   const data = await res.json();
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }),
   const data = await res.json(),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   }),
   const data = await res.json(),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   document.getElementById('result').textContent = data.description || 'Draft saved.'
 }),
 
@@ -94,8 +73,6 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
   document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2)
 }),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
   const id = crypto.randomUUID();
@@ -103,9 +80,6 @@ document.getElementById('signIn').addEventListener('click', async () => {
   document.getElementById('result').textContent = 'Signed in (local).'
 });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -157,7 +131,3 @@ document && document.getElementById('viewNotifications').addEventListener('click
   setUserId(id),
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -276,23 +276,10 @@ const "v1": ApiDocsSpec = {
             { "language": 'curl', "code": `curl '${baseUrl}/v1/wallet/balance' -H '"Authorization": Bearer <token>'` },`            { "language": 'javascript', "code": `await fetch('${baseUrl}/v1/wallet/balance', { "headers": { "Authorization": 'Bearer <token>' } }).then(r => r && r.json())` },`            { "language": 'python', "code": `import requests\nrequests ;`
   ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   ];
 
@@ -303,7 +290,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 export default v1;
   ];

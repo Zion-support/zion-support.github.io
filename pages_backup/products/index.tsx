@@ -1,22 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/products/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/products/index.tsx
 import React from 'react';
 import MainLayout from '../../components/layout/MainLayout';
 
 const Page = () => {
   return (
     <MainLayout
-      title="Products - Zion Tech Group"
-      description="Our products and solutions"
+      title='Products - Zion Tech Group'
+      description='Our products and solutions'
     >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Products</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
+      <div className='min-h-screen bg-gray-50'>
+        <div className='container mx-auto px-4 py-16'>
+          <h1 className='text-4xl font-bold text-gray-900 mb-6'>Products</h1>
+          <p className='text-xl text-gray-600'>Coming soon...</p>
         </div>
       </div>
     </MainLayout>
@@ -24,10 +18,6 @@ const Page = () => {
 };
 
 export default Page;
-<<<<<<< HEAD:pages_backup/products/index.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 class ErrorBoundary extends React.Component {
@@ -69,29 +59,29 @@ import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search
 import Layout from '../../components/Layout';
 
     <Layout
-      title="Products - Zion Tech Group"
-      description="Discover our comprehensive suite of technology products designed to transform your business operations."
-      keywords="products, technology solutions, AI, cloud, security, automation, collaboration">;
-      <div className="min-h-screen bg-gray-50">;
+      title='Products - Zion Tech Group'
+      description='Discover our comprehensive suite of technology products designed to transform your business operations.'
+      keywords='products, technology solutions, AI, cloud, security, automation, collaboration'>;
+      <div className='min-h-screen bg-gray-50'>;
         {/* Hero Section */}
 
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
-          <div className="absolute inset-0">;
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
+        <section className='relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden'>;
+          <div className='absolute inset-0'>;
+            <div className='absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse'></div>;
+            <div className='absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000'></div>;
+            <div className='absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000'></div>;
           </div>;
 
-          <div className="container mx-auto px-4 relative z-10">;
+          <div className='container mx-auto px-4 relative z-10'>;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Products</span>;
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              className='text-center'>;
+              <h1 className='text-4xl md:text-6xl font-bold mb-6'>;
+                Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>Products</span>;
               </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
                 Comprehensive technology products designed to transform your business operations and drive growth.;
               </p>;
             </motion && motion.div>;
@@ -100,27 +90,27 @@ import Layout from '../../components/Layout';
 
 
         {/* Search and Filter Section */}
-        <section className="py-12 bg-white">;
-          <div className="container mx-auto px-4">;
-            <div className="max-w-4xl mx-auto">;
+        <section className='py-12 bg-white'>;
+          <div className='container mx-auto px-4'>;
+            <div className='max-w-4xl mx-auto'>;
               {/* Search Bar */}
-              <div className="mb-8">;
-                <div className="relative">;
+              <div className='mb-8'>;
+                <div className='relative'>;
                   <input
-                    type="text"
-                    placeholder="Search products..."
+                    type='text'
+                    placeholder='Search products...'
                     value={searchTerm}
 
                     onChange={(e) => setSearchTerm(e && e.target.value)}
-                    className="w-full px-6 py-4 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+                    className='w-full px-6 py-4 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
                   />;
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+                  <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
                 </div>;
               </div>;
 
 
               {/* Category Filter */}
-              <div className="flex flex-wrap gap-2 justify-center mb-8">;
+              <div className='flex flex-wrap gap-2 justify-center mb-8'>;
                 {categories && categories.map((category) => (;
                   <button
                     key={category}
@@ -137,15 +127,15 @@ import Layout from '../../components/Layout';
 
               </div>;
 
-              <div className="text-center">;
+              <div className='text-center'>;
 
                 <button
                   onClick={() => {;
                     setSearchTerm('');
                     setSelectedCategory('All');
-                  }}
+                  }
 
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold";
+                  className='px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold';
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -245,53 +235,53 @@ const ProductsIndex: NextPage = () => {
 ;
   return (
     <Layout;
-      title="Products - Zion Tech Group";
-      description="Discover our comprehensive suite of technology products designed to transform your business operations.";
-      keywords="products, technology solutions, AI, cloud, security, automation, collaboration";
+      title='Products - Zion Tech Group';
+      description='Discover our comprehensive suite of technology products designed to transform your business operations.';
+      keywords='products, technology solutions, AI, cloud, security, automation, collaboration';
     >;
-      <div className="min - h-screen bg - gray - 50">;
+      <div className='min - h-screen bg - gray - 50'>;
         {/* Hero Section */}
-        <section className="relative bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900 text - white py - 20 overflow - hidden">;
-          <div className="absolute inset - 0">;
-            <div className="absolute top - 20 left - 10 w - 72 h - 72 bg - blue - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse"></div>;
-            <div className="absolute top - 40 right - 10 w - 72 h - 72 bg - purple - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse animation - delay - 2000"></div>;
-            <div className="absolute -bottom - 8 left - 20 w - 72 h - 72 bg - indigo - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse animation - delay - 4000"></div>;
+        <section className='relative bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900 text - white py - 20 overflow - hidden'>;
+          <div className='absolute inset - 0'>;
+            <div className='absolute top - 20 left - 10 w - 72 h - 72 bg - blue - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse'></div>;
+            <div className='absolute top - 40 right - 10 w - 72 h - 72 bg - purple - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse animation - delay - 2000'></div>;
+            <div className='absolute -bottom - 8 left - 20 w - 72 h - 72 bg - indigo - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse animation - delay - 4000'></div>;
           </div>;
-          <div className="container mx - auto px - 4 relative z - 10">;
+          <div className='container mx - auto px - 4 relative z - 10'>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center";
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              className='text - center';
             >;
-              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
-                Our <span className="text - transparent bg - clip - text bg - gradient - to - r from - blue - 400 to - purple - 400">Products</span>;
+              <h1 className='text - 4xl md:text - 6xl font - bold mb - 6'>;
+                Our <span className='text - transparent bg - clip - text bg - gradient - to - r from - blue - 400 to - purple - 400'>Products</span>;
               </h1>;
-              <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
+              <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
                 Comprehensive technology products designed to transform your business operations and drive growth.;
               </p>;
             </motion.div>;
           </div>;
         </section>;
         {/* Search and Filter Section */}
-        <section className="py - 12 bg - white">;
-          <div className="container mx - auto px - 4">;
-            <div className="max - w-4xl mx - auto">;
+        <section className='py - 12 bg - white'>;
+          <div className='container mx - auto px - 4'>;
+            <div className='max - w-4xl mx - auto'>;
               {/* Search Bar */}
-              <div className="mb - 8">;
-                <div className="relative">;
+              <div className='mb - 8'>;
+                <div className='relative'>;
                   <input;
-                    type="text";
-                    placeholder="Search products...";
+                    type='text';
+                    placeholder='Search products...';
                     value={search_term}
                     on_change={(e) => setSearchTerm (e.target.value)}
-                    className="w - full px - 6 py - 4 pl - 12 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+                    className='w - full px - 6 py - 4 pl - 12 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent';
                   />;
-                  <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
+                  <Search className='absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5' />;
                 </div>;
               </div>;
               {/* Category Filter */}
-              <div className="flex flex - wrap gap - 2 justify - center mb - 8">;
+              <div className='flex flex - wrap gap - 2 justify - center mb - 8'>;
                 {categories.map ((category) => (
                   <button;
                     key={category}
@@ -305,13 +295,13 @@ const ProductsIndex: NextPage = () => {
                     {category}
                   </button>))}
               </div>;
-              <div className="text - center">;
+              <div className='text - center'>;
                 <button;
                   on_click={() => {
                     setSearchTerm ('');
                     setSelectedCategory ('All');
-                  }}
-                  className="px - 6 py - 3 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors font - semibold";
+                  }
+                  className='px - 6 py - 3 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors font - semibold';
 
                 >;
                   Clear Filters;
@@ -327,25 +317,25 @@ const ProductsIndex: NextPage = () => {
                           </li>;
                         ))}
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
-          <div className="container mx-auto px-4 text-center">;
+        <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>;
+          <div className='container mx-auto px-4 text-center'>;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }>;
+              <h2 className='text-3xl md:text-4xl font-bold mb-6'>;
                 Ready to Transform Your Business?;
               </h2>;
-              <p className="text-xl mb-8 max-w-2xl mx-auto">;
+              <p className='text-xl mb-8 max-w-2xl mx-auto'>;
                 Discover how our products can help you achieve your business goals and drive growth.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center">;
-                  <ArrowRight className="w-5 h-5 mr-2" />;
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+                <button className='px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center'>;
+                  <ArrowRight className='w-5 h-5 mr-2' />;
                   Get Started;
                 </button>;
                 <Link
-                  href="/contact"
+                  href='/contact'
 
 
 export default Index;
@@ -386,103 +376,103 @@ export default Index,
 
 
         {/* Products Grid */}
-        <section className="py - 16">;
-          <div className="container mx - auto px - 4">;
-            <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+        <section className='py - 16'>;
+          <div className='container mx - auto px - 4'>;
+            <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
               {filtered_products.map ((product, index) => (
                 <motion.div;
                   key={product.id}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 overflow - hidden group";
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  className='bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 overflow - hidden group';
                 >;
-                  <div className="p - 6">;
-                    <div className="flex items - center mb - 4">;
-                      <div className="w - 12 h - 12 bg - blue - 100 rounded - lg flex items - center justify - center mr - 4">;
-                        <product.icon className="w - 6 h - 6 text - blue - 600" />;
+                  <div className='p - 6'>;
+                    <div className='flex items - center mb - 4'>;
+                      <div className='w - 12 h - 12 bg - blue - 100 rounded - lg flex items - center justify - center mr - 4'>;
+                        <product.icon className='w - 6 h - 6 text - blue - 600' />;
                       </div>;
                       <div>;
-                        <span className="px - 3 py - 1 bg - blue - 100 text - blue - 800 rounded - full text - sm font - medium">;
+                        <span className='px - 3 py - 1 bg - blue - 100 text - blue - 800 rounded - full text - sm font - medium'>;
                           {product.category}
                         </span>;
                         {product.popular && (
-                          <span className="ml - 2 px - 3 py - 1 bg - yellow - 100 text - yellow - 800 rounded - full text - sm font - medium">;
+                          <span className='ml - 2 px - 3 py - 1 bg - yellow - 100 text - yellow - 800 rounded - full text - sm font - medium'>;
                             Popular;
                           </span>)}
                       </div>;
                     </div>;
-                    <h3 className="text - xl font - bold text - gray - 900 mb - 3 group - hover:text - blue - 600 transition - colors">;
+                    <h3 className='text - xl font - bold text - gray - 900 mb - 3 group - hover:text - blue - 600 transition - colors'>;
                       {product.name}
                     </h3>;
-                    <p className="text - gray - 600 mb - 4 leading - relaxed">;
+                    <p className='text - gray - 600 mb - 4 leading - relaxed'>;
                       {product.description}
                     </p>;
-                    <div className="space - y-2 mb - 4">;
-                      <h4 className="font - semibold text - gray - 900 text - sm">Key Features:</h4>;
-                      <ul className="space - y-1">;
+                    <div className='space - y-2 mb - 4'>;
+                      <h4 className='font - semibold text - gray - 900 text - sm'>Key Features:</h4>;
+                      <ul className='space - y-1'>;
                         {product.features.map ((feature, idx) => (
-                          <li key={idx} className="flex items - center text - sm text - gray - 600">;
-                            <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0" />;
+                          <li key={idx} className='flex items - center text - sm text - gray - 600'>;
+                            <CheckCircle className='w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0' />;
                             {feature}
                           </li>))}
                       </ul>;
                     </div>;
-                    <div className="space - y-2 mb - 6">;
-                      <h4 className="font - semibold text - gray - 900 text - sm">Benefits:</h4>;
-                      <ul className="space - y-1">;
+                    <div className='space - y-2 mb - 6'>;
+                      <h4 className='font - semibold text - gray - 900 text - sm'>Benefits:</h4>;
+                      <ul className='space - y-1'>;
                         {product.benefits.map ((benefit, idx) => (
-                          <li key={idx} className="flex items - center text - sm text - gray - 600">;
-                            <Star className="w - 3 h - 3 text - yellow - 500 mr - 2 flex - shrink - 0" />;
+                          <li key={idx} className='flex items - center text - sm text - gray - 600'>;
+                            <Star className='w - 3 h - 3 text - yellow - 500 mr - 2 flex - shrink - 0' />;
                             {benefit}
                           </li>))}
                       </ul>;
                     </div>;
-                    <div className="space - y-2 mb - 6">;
-                      <div className="flex justify - between items - center">;
-                        <span className="text - sm font - medium text - gray - 900">Pricing:</span>;
-                        <span className="text - lg font - bold text - blue - 600">{product.pricing}</span>;
+                    <div className='space - y-2 mb - 6'>;
+                      <div className='flex justify - between items - center'>;
+                        <span className='text - sm font - medium text - gray - 900'>Pricing:</span>;
+                        <span className='text - lg font - bold text - blue - 600'>{product.pricing}</span>;
                       </div>;
                     </div>;
-                    <button className="w - full bg - blue - 600 hover:bg - blue - 700 text - white px - 4 py - 3 rounded - lg font - medium transition - colors duration - 200 flex items - center justify - center group">;
+                    <button className='w - full bg - blue - 600 hover:bg - blue - 700 text - white px - 4 py - 3 rounded - lg font - medium transition - colors duration - 200 flex items - center justify - center group'>;
                       Learn More;
-                      <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" />;
+                      <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform' />;
                     </button>;
                   </div>;
                 </motion.div>))}
             </div>;
             {filtered_products.length === 0 && (
-              <div className="text - center py - 12">;
-                <div className="text - gray - 400 mb - 4">;
-                  <Search className="w - 16 h - 16 mx - auto" />;
+              <div className='text - center py - 12'>;
+                <div className='text - gray - 400 mb - 4'>;
+                  <Search className='w - 16 h - 16 mx - auto' />;
                 </div>;
-                <h3 className="text - xl font - semibold text - gray - 900 mb - 2">No products found</h3>;
-                <p className="text - gray - 600">Try adjusting your search or filter criteria.</p>;
+                <h3 className='text - xl font - semibold text - gray - 900 mb - 2'>No products found</h3>;
+                <p className='text - gray - 600'>Try adjusting your search or filter criteria.</p>;
               </div>)}
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
-          <div className="container mx - auto px - 4 text - center">;
+        <section className='py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white'>;
+          <div className='container mx - auto px - 4 text - center'>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
+              <h2 className='text - 3xl md:text - 4xl font - bold mb - 6'>;
                 Ready to Transform Your Business?;
               </h2>;
-              <p className="text - xl mb - 8 max - w-2xl mx - auto">;
+              <p className='text - xl mb - 8 max - w-2xl mx - auto'>;
                 Discover how our products can help you achieve your business goals and drive growth.;
               </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <button className="px - 8 py - 4 bg - white text - blue - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold inline - flex items - center justify - center">;
-                  <ArrowRight className="w - 5 h - 5 mr - 2" />;
+              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+                <button className='px - 8 py - 4 bg - white text - blue - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold inline - flex items - center justify - center'>;
+                  <ArrowRight className='w - 5 h - 5 mr - 2' />;
                   Get Started;
                 </button>;
                 <Link;
-                  href="/contact";
-                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300 font - semibold";
+                  href='/contact';
+                  className='px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300 font - semibold';
                 >;
                   Contact Sales;
                 </Link>;
@@ -498,10 +488,4 @@ export default Index,
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const Index: NextPage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/products/index.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

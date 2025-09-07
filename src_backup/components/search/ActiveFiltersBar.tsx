@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src_backup/components/search/ActiveFiltersBar.tsx
 
-<<<<<<< HEAD
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -73,9 +71,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 }
 
 import { X } from 'lucide-react'
-=======
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }import { X  } from 'lucide-react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/search/ActiveFiltersBar.tsx
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 interface SearchFilters  {types: string[],category: string,minPrice: number,maxPrice: number,minRating: number,sort: string;
@@ -86,7 +82,7 @@ import React from 'react',import { Button } from '@/components/ui/button',import
     },activeFilters.push({key: `type-${type}`,label: 'Type',value: labels[type] || type;
     })}),// Add category filter;
   if (filters.category) {activeFilters.push({key: 'category',label: 'Category',value: filters.category;
-    })}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    })}static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }import { Button   } from '@/components/ui/button';
@@ -109,35 +105,35 @@ interface SearchFilters  {types: string[],category: string,minPrice: number,maxP
   return (<Badge;
           key = {filter.key}
           key = {filter.key}{activeFilters.map(filter => (<Badge;
-          key={filter.key}variant="secondary";
-          className="flex items-center gap-1 pl-2 pr-1";
+          key={filter.key}variant='secondary';
+          className='flex items-center gap-1 pl-2 pr-1';
         >;
-          <span className="text-xs">;
+          <span className='text-xs'>;
             {filter.label}: {filter.value}
           </span>;
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
-      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;{activeFilters && activeFilters.map(filter => (<Badge;
+      <span className='text-sm font-medium text-muted-foreground'>Active filters:</span>;{activeFilters && activeFilters.map(filter => (<Badge;
           key = {filter && filter.key}
           key = {filter && filter.key}
-          variant="secondary";
-          className="flex items-center gap-1 pl-2 pr-1">;
-          <span className="text-xs">;
+          variant='secondary';
+          className='flex items-center gap-1 pl-2 pr-1'>;
+          <span className='text-xs'>;
             {filter && filter.label}: {filter && filter.value}
           </span>;
           <Button;
-            variant="ghost";
-            size="sm";
-            className="h-4 w-4 p-0 hover:bg-transparent";
+            variant='ghost';
+            size='sm';
+            className='h-4 w-4 p-0 hover:bg-transparent';
             onClick={() => removeFilter(filter.key)}aria-label={`Remove ${filter.label} filter`}
           >;
-            <X className="h-3 w-3" />;
+            <X className='h-3 w-3' />;
           </Button>;
         </Badge>;
       ))}
       <Button;
-        variant="ghost";
-        size="sm";
-        onClick={onClearAll}className="text-xs h-6 px-2";
+        variant='ghost';
+        size='sm';
+        onClick={onClearAll}className='text-xs h-6 px-2';
       >;
         Clear all;
       </Button>;
@@ -198,37 +194,37 @@ if ( {) {$2;
     return null;
   }
   return (<div className={`flex items - center gap - 2 flex - wrap ${class_name}`}>;
-      <span className="text - sm font - medium text - muted - foreground">Active filters:</span>;
+      <span className='text - sm font - medium text - muted - foreground'>Active filters:</span>;
       {active_filters.map (filter => (<Badge;
           key = {filter.key }
           key = {filter.key }
-          variant="secondary";
-          className="flex items - center gap - 1 pl - 2 pr - 1";
+          variant='secondary';
+          className='flex items - center gap - 1 pl - 2 pr - 1';
         >;
-          <span className="text - xs">;
+          <span className='text - xs'>;
             {filter.label}: {filter.value}
           </span>;
           <Button;
-            variant="ghost";
-            size="sm";
-            className="h - 4 w - 4 p - 0 hover:bg - transparent";
+            variant='ghost';
+            size='sm';
+            className='h - 4 w - 4 p - 0 hover:bg - transparent';
             on_click = {(, ) => remove_filter (filter.key) }
             on_click = {(, ) => remove_filter (filter.key) }
             aria - label={`Remove ${filter.label} filter`}
           >;
-            <X className="h - 3 w - 3" />;
+            <X className='h - 3 w - 3' />;
           </Button>;
         </Badge>))}
       <Button;
-        variant="ghost";
-        size="sm";
+        variant='ghost';
+        size='sm';
         on_click = {onClearAll }
         on_click = {onClearAll }
-        className="text - xs h - 6 px - 2";
+        className='text - xs h - 6 px - 2';
       >;
         Clear all;
       </Button>;
-    </div>)},export default ActiveFiltersBar,className="text-xs h-6 px-2">;
+    </div>)},export default ActiveFiltersBar,className='text-xs h-6 px-2'>;
         Clear all;
       </Button>;
     </div>;
@@ -237,30 +233,22 @@ if ( {) {$2;
   label: string;
 }interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {filters: Filter[];
   onRemoveFilter: key: string void;onClearAll: : unknown void}
-        className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline";
+        className='text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline';
       >;
         Clear all;
       </button>;
     </div>;
   )}
-'";
+'';
   filters: Filter[];
   onRemoveFilter: key: string void;
   onClearAll: : unknown void}
-        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
+        className='text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline';
       >;
         Clear all;
       </button>;
     </div>)}
-'";
-<<<<<<< HEAD:src_backup/components/search/ActiveFiltersBar.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/search/ActiveFiltersBar.tsx
+'';
 import React from 'react';
 export default ActiveFiltersBar; import React from 'react';
 interface SearchFilters  {types: string[];
@@ -275,9 +263,6 @@ interface ActiveFiltersBarProps  {filters: SearchFilters;
   onClearAll: () => void;
   className?: string;
 }
-<<<<<<< HEAD:src_backup/components/search/ActiveFiltersBar.tsx
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/search/ActiveFiltersBar.tsx

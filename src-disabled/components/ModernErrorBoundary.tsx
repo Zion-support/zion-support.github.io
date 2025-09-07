@@ -10,4 +10,4 @@ export class ModernErrorBoundary extends Component<Props , State"  /> { construc
 } static getDerivedStateFromError(error: Error): State {;}
   return { hasError: true, error, errorInfo: null, showDetails: false },"
 } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo })  if(this.props.onError) { this.props.onError(error, errorInfo) }";"";
-}}"
+}"

@@ -9,7 +9,7 @@ import React from 'react',import { Button } from '@/components/ui/button',import
   filters.types.forEach((type) => {const "labels": Record<string string> = {"product": 'Products',"talent": 'Talent',"service": 'Services',"blog": 'Blog Posts',"doc": 'Documentation';'
     },activeFilters.push({"key": `type-${type}`,"label": 'Type',"value": labels[type] || type;'    })}),// Add category filter;
   if (filters.category) {activeFilters.push({"key": 'category',"label": 'Category',"value": filters.category;'
-    })}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+    })}static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }import { Button   } from '@/components/ui/button';'

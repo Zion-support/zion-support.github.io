@@ -22,9 +22,9 @@ export default function Custom404() {
       <div className="max-w-4xl mx-auto text-center">
         {/* 404 Icon and Title */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={ opacity: 0, scale: 0.8 }
+          animate={ opacity: 1, scale: 1 }
+          transition={ duration: 0.6 }
           className="mb-8"
         >
           <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/30 flex items-center justify-center">
@@ -44,9 +44,9 @@ export default function Custom404() {
 
         {/* Quick Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.2 }
           className="mb-12"
         >
           <h3 className="text-xl font-semibold text-white mb-6">
@@ -56,9 +56,9 @@ export default function Custom404() {
             {quickLinks.map((link, index) => (
               <motion.div
                 key={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.4, delay: 0.3 + index * 0.1 }
               >
                 <Link
                   href={link.href}
@@ -74,9 +74,9 @@ export default function Custom404() {
 
         {/* Popular Services Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.4 }
           className="mb-12"
         >
           <h3 className="text-xl font-semibold text-white mb-6">
@@ -89,9 +89,9 @@ export default function Custom404() {
               { href: '/edge-computing-orchestration', label: 'Edge Computing', desc: 'Advanced edge optimization platform' }].map((service, index) => (
               <motion.div
                 key={service.href}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.4, delay: 0.5 + index * 0.1 }
               >
                 <Link
                   href={service.href}
@@ -107,9 +107,9 @@ export default function Custom404() {
 
         {/* Action Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.6 }
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Link
@@ -130,9 +130,9 @@ export default function Custom404() {
 
         {/* Help Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.8 }
           className="mt-12 pt-8 border-t border-white/10"
         >
           <p className="text-white/60 mb-4">

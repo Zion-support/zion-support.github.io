@@ -107,7 +107,7 @@ export function ContractForm({
       startDate: new Date($2);
       paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
-      additionalClauses: ["nda", "ip"]}}),
+      additionalClauses: ["nda", "ip"]}),
   
   // Update form when initialValues change
   useEffect(() => {

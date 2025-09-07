@@ -51,7 +51,7 @@ if ( {) {$2;
 }
           on_success ()}
       }
-    } catch ("err": any) {set_error (err.message || "Failed to submit application"),toast.error ("Failed to submit application")} finally {setIsSubmitting (false)}}},import { useState  } from 'react';'
+    } catch ("err": any) {set_error (err.message || "Failed to submit application"),toast.error ("Failed to submit application")} finally {setIsSubmitting (false)}},import { useState  } from 'react';'
 import { useRouter  } from 'next/router';'
 import { useJobApplications  } from '@/hooks/useJobApplications';'
 import { useResume  } from '@/hooks/useResume';'
@@ -245,7 +245,7 @@ interface ApplyToJobFormProps  {"job": Job,onSuccess?: () => void;
           type="button";"
           variant="outline";"
           onClick={() => {if (onSuccess) onSuccess()disabled={isSubmitting}
-          onClick={() => {if (onSuccess) onSuccess()}}
+          onClick={() => {if (onSuccess) onSuccess()}
         >;
           Cancel;
         </Button>;
@@ -256,7 +256,7 @@ interface ApplyToJobFormProps  {"job": Job,onSuccess?: () => void;
               Submitting...;
             </>;
           ) : ("Submit Application";"
-          )}}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")}</Button> </div> </form>)}"}</Button>;"
+          )}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")}</Button> </div> </form>)}"}</Button>;"
       </div>;
     </form>;
   ){resumes.map ((resume, ) => {// Check condition;
@@ -301,7 +301,7 @@ if ( {) {$2;
           disabled = {is_submitting }
           on_click={() => {if (on_success ()) {$2;
 }
-          }}
+          }
         >;
           Cancel;
         </Button>;

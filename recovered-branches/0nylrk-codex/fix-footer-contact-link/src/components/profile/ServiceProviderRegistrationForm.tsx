@@ -87,7 +87,7 @@ const form = useForm<ServiceFormValues>({
       "hourlyRate": """
       "availability": "available""
       "enhancedProfile": true;
-    "website": ""}})"
+    "website": ""})"
   // Handle adding service tags,
 const handleAddService = () => {
     }
@@ -166,7 +166,7 @@ export function ServiceProviderRegistrationForm() {;
       "hourlyRate": "",;"
       "availability": "available",;"
       "enhancedProfile": true,;
-      "website": ""}}),;"
+      "website": ""}),;"
   // Handle adding service tags;
   const handleAddService = () => {;
     }

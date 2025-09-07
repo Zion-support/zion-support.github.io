@@ -8,14 +8,14 @@ function ensureDir() {
   }
   if (!fs.existsSync(GRANTS_DIR)) {
     }
-    fs.mkdirSync(GRANTS_DIR, { "recursive": true
+    fs.mkdirSync(GRANTS_DIR, { 'recursive': true
 });
   }
 function grantPath() {
   }
   return path.join(GRANTS_DIR, `${id}.json`);`
 
-function readGrant("id": string): GrantApplication | null {
+function readGrant('id': string): GrantApplication | null {
   }
   ensureDir();
 
@@ -32,10 +32,10 @@ function writeGrant() {
 
 export default function handler() {
   }
-  const { id } = req.query as { "id": string }
+  const { id } = req.query as { 'id': string }
   if (!id) {
     }
-    res.status(400).json({ "error": 'Missing id','
+    res.status(400).json({ 'error': 'Missing id','
 });
 return;
   }
@@ -45,11 +45,11 @@ const g = readGrant(id);
 
       }
 
-      res.status(404).json({ "error": 'Not found','
+      res.status(404).json({ 'error': 'Not found','
 });
 return;
     }
-    res.status(200).json({ "record": g
+    res.status(200).json({ 'record': g
 });
     return;
   }
@@ -60,12 +60,12 @@ return;
   const existing = readGrant(id);
     if (!existing) {
       }
-      res.status(404).json({ "error": 'Not found','
+      res.status(404).json({ 'error': 'Not found','
 });
 return;
 
     }
-    res.status (200).json ({ "record": g
+    res.status (200).json ({ 'record': g
 })return;
   // Check condition;
 if ( {) {$2;
@@ -74,22 +74,22 @@ if ( {) {$2;
 const existing = read_grant (id)// Check condition;
 if ( {) {$2;
 }
-      res.status (404).json ({ "error": 'Not found','
+      res.status (404).json ({ 'error': 'Not found','
 })return;
     }
 
 const payload = req && req.body as UpdateGrantPayload;
 
-const "next": GrantApplication = {
+const 'next': GrantApplication = {
 
       ...existing,
       ...payload
       }
-      "status": payload.submit ? 'Submitted' : existing.status,'
-      "updatedAt": new Date().toISOString()
+      'status': payload.submit ? 'Submitted' : existing.status,'
+      'updatedAt': new Date().toISOString()
     } as GrantApplication;
     writeGrant(next);
-    res && res.status(200).json({ "record": next
+    res && res.status(200).json({ 'record': next
 });
     return;
   }
@@ -121,17 +121,13 @@ if ( {) {}
       ...existing;
       ...payload,    }
     const payload = req && req.body as UpdateGrantPayload;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       ...existing,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       ...payload,
       status: payload.submit ? 'Submitted' : existing.status,
-<<<<<<< HEAD
       updatedAt: new Date().toISOString()} as GrantApplication,
     writeGrant($2);
     res.status(200).json($2);
     return
-<<<<<<< HEAD
   }
 
   res.setHeader('Allow', 'GET, PUT');'

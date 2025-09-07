@@ -30,7 +30,7 @@ export function ProfileBadge() {
       }
       "icon": Award,
       "text": "Top Rated","
-      "colors": "bg-purple-500/20 text-purple-400"}},"
+      "colors": "bg-purple-500/20 text-purple-400"},"
       className
     )}>
       <Icon className="w-3 h-3" />"

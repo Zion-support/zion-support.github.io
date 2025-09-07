@@ -81,10 +81,10 @@ title="Page - Zion Tech Group""
           <div className="container mx-auto px-4">
             <motion.div;
               className="text-center mb-12 md:mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={ opacity: 0, y: 30 };
+              whileInView={ opacity: 1, y: 0 };
+              transition={ duration: 0.8 };
+              viewport={ once: true };
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Training Programs;
@@ -100,11 +100,11 @@ title="Page - Zion Tech Group""
                 <motion.div
                   key={index}
                   className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
-                  whileHover={{ y: -5 }};
+                  initial={ opacity: 0, y: 30 };
+                  whileInView={ opacity: 1, y: 0 };
+                  transition={ duration: 0.8, delay: index * 0.1 };
+                  viewport={ once: true };
+                  whileHover={ y: -5 };
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-2">
@@ -161,10 +161,10 @@ title="Page - Zion Tech Group""
           <div className="container mx-auto px-4">
             <motion.div;
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={ opacity: 0, y: 30 };
+              whileInView={ opacity: 1, y: 0 };
+              transition={ duration: 0.8 };
+              viewport={ once: true };
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Certification Paths;
@@ -180,10 +180,10 @@ title="Page - Zion Tech Group""
                 <motion.div
                   key={index}
                   className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-lg border border-blue-200"
-                  initial={{ opacity: 0, x: -20 }};
-                  whileInView={{ opacity: 1, x: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
+                  initial={ opacity: 0, x: -20 };
+                  whileInView={ opacity: 1, x: 0 };
+                  transition={ duration: 0.8, delay: index * 0.1 };
+                  viewport={ once: true };
                 >
                   <div className="flex items-center mb-4">
                     <Award className="w-8 h-8 text-blue-600 mr-3" />
@@ -220,10 +220,10 @@ title="Page - Zion Tech Group""
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={ opacity: 0, y: 30 };
+              whileInView={ opacity: 1, y: 0 };
+              transition={ duration: 0.8 };
+              viewport={ once: true };
             >
               <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Ready to Start Learning?

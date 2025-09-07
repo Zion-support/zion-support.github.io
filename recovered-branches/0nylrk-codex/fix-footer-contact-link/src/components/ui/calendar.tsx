@@ -26,10 +26,10 @@ return (;
         "day_disabled": "text-muted-foreground opacity-50""
         "day_range_middle": "aria-"selected":bg-accent aria-"selected":text-accent-foreground""
         "day_hidden": "invisible""
-        ...classNames}}
-      components={{
+        ...classNames}
+      components={
         }
-        "IconRight": ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}"
+        "IconRight": ({ ..._props }) => <ChevronRight className="h-4 w-4" />}"
 import * as React from "react";"
 import { ChevronLeft, ChevronRight } from "lucide-react";"
 import { DayPicker } from "react-day-picker",;"
@@ -42,7 +42,7 @@ function Calendar() {;
     <DayPicker;
       showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}"
-      classNames={{;
+      classNames={;
         }
         "months": "flex flex-col "sm":flex-row space-y-4 "sm":space-x-4 "sm":space-y-0",;"
         "month": "space-y-4",;"
@@ -75,8 +75,8 @@ function Calendar() {;
         "day_range_middle":;
           "aria-"selected":bg-accent aria-"selected":text-accent-foreground",;"
         "day_hidden": "invisible",;"
-        ...classNames}}
-      components={{;
+        ...classNames}
+      components={;
         }
         "IconLeft": ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;  return ("
     <DayPicker;
@@ -89,8 +89,8 @@ function Calendar() {;
         "table": "w-full border-collapse space-y-1","
         "head_row": "flex","
         "IconLeft": ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;"
-        "IconRight": ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}"
-        "IconRight": ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}"
+        "IconRight": ({ ..._props }) => <ChevronRight className="h-4 w-4" />}"
+        "IconRight": ({ ..._props }) => <ChevronRight className="h-4 w-4" />}"
       {...props}
     />;
   );
@@ -100,7 +100,7 @@ export { Calendar },
 Calendar.displayName = "Calendar";"
 export { Calendar };
       className={cn ("p - 3", class_name)}"
-      class_names={{
+      class_names={
         }
         "months": "flex flex - col "sm":flex - row space - y-4 "sm":space - x-4 "sm":space - y-0","
         "month": "space - y-4","
@@ -127,11 +127,11 @@ export { Calendar };
         "day_disabled": "text - muted - foreground opacity - 50","
         "day_range_middle": "aria - "selected":bg - accent aria - "selected":text - accent - foreground","
         "day_hidden": "invisible","
-        ...class_names}}
-      components={{
+        ...class_names}
+      components={
         }
         "IconLeft": ({ ..._props }) => <ChevronLeft className="h - 4 w-4" />,"
-        "IconRight": ({ ..._props }) => <ChevronRight className="h - 4 w-4" />}}"
+        "IconRight": ({ ..._props }) => <ChevronRight className="h - 4 w-4" />}"
       {...props}
     />);
 }

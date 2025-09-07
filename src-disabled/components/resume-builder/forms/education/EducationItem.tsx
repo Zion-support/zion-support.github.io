@@ -81,18 +81,18 @@ import { EducationItemProps } from './types';
       </CardContent>;
     </Card>;
   );
-}              <Trash2 className="h-4 w-4" />;
+}              <Trash2 className='h-4 w-4' />;
             </Button>;
           </div>;
         </div>;
         {education && education.description && (;
-          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
+          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>;
 
     </Card>;
   );
 };
 
-          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
+          <p className='text-sm mt-3 line-clamp-2'>{education.description}</p>
         )}
       </CardContent>;
     </Card>;
@@ -167,12 +167,12 @@ function EducationItem() {
           <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>        )}
       </CardContent>;
     </Card>);
-}              <Trash2 className="h - 4 w - 4" />;
+}              <Trash2 className='h - 4 w - 4' />;
             </Button>;
           </div>;
         </div>;
         {education.description && (
-          <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>          <p className="text - sm mt - 3 line - clamp - 2">{education.description}</p>)}
+          <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>          <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>)}
       </CardContent>;
     </Card>);
 }

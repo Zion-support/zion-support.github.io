@@ -33,7 +33,7 @@ export function AdminHeader() {;
           </Button>;
         </div>;
       </div>;
-}}
+}
 ;
 
 }

@@ -96,7 +96,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(405).end('Method Not Allowed');
     }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

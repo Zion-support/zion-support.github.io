@@ -91,7 +91,7 @@ import React, { useState, useRef } from 'react',import { Input } from '@/compone
 ursor/integrate-build-improve-and-re-verify-9d47;
         onChange={e => setHoneypot(e && e.target.value)}tabIndex={-1}
         autoComplete='off';'
-        style={{ "display": 'none' }}'
+        style={ "display": 'none' }'
       />;
       <Button;
         type="submit";"
@@ -117,7 +117,7 @@ ursor/automate-test-improve-and-merge-code-646c;
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
         autoComplete='off';'
-        style={{ "display": 'none' }}'
+        style={ "display": 'none' }'
       />;
       <Button;
         type='submit';'
@@ -137,7 +137,7 @@ ursor/automate-test-improve-and-merge-code-646c;
         onChange={e => setHoneypot(e && e.target.value)}
         tabIndex={-1}
         autoComplete='off';'
-        style={{ "display": 'none' }}'
+        style={ "display": 'none' }'
       />;<Button;
         type="submit";"
         disabled={isSubmitting}<Button;
@@ -152,7 +152,7 @@ ursor/automate-test-improve-and-merge-code-646c;
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
         autoComplete='off';'
-        style={{ "display": 'none' }}'
+        style={ "display": 'none' }'
       />;
       <Button;
         type='submit';'
@@ -176,7 +176,7 @@ ursor/automate-test-improve-and-merge-code-646c;
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}autoComplete="off";"
-        style={{ "display": 'none' }}'
+        style={ "display": 'none' }'
       />;
       <Button;
         type="submit";"
@@ -224,7 +224,7 @@ ursor/automate-test-improve-and-merge-code-646c;
         onChange={(e) => setHoneypot(e.target.value)}
         tabIndex={-1}
         autoComplete="off";"
-        style={{ "display":'none' }}'
+        style={ "display":'none' }'
       />;
       <Button;
         type="submit";"
@@ -251,7 +251,7 @@ import { use_toast  } from '@/hooks / use - toast';'
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
         autoComplete="off";"
-        style={{ "display": 'none' }}'
+        style={ "display": 'none' }'
       />;
       <Button;
         type="submit";"
@@ -296,7 +296,7 @@ import { use_toast  } from '@/hooks / use - toast';'
         onChange={(e) => setHoneypot(e.target.value)}
         tabIndex={-1}
         autoComplete="off";"
-        style={{ "display":'none' }}'
+        style={ "display":'none' }'
       />;
       <Button;
         type="submit";"
@@ -314,7 +314,7 @@ import { use_toast  } from '@/hooks / use - toast';'
         )}
       </Button>;
     </form>;
-  )}})})})}}import { logErrorToProduction  } from '@/utils / production_logger';'
+  )})})})}import { logErrorToProduction  } from '@/utils / production_logger';'
 export function FooterNewsletter (): React.ReactElement {const [email, set_email] = useState ('')const [honeypot, set_honeypot] = useState ('')const [is_submitting, setIsSubmitting] = useState (false)const [email_error, setEmailError] = useState ('')const { toast } = use_toast ()// // // // // // // console.error ('Newsletter subscription "failed":', error)} finally {setIsSubmitting (false)// console.error ('Newsletter subscription "failed":', error)} finally {const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;'
   }
   const last_submit = useRef (0)const handle_submit = async ("e": React.FormEvent) => {e.prevent_default ()// Check condition;
@@ -366,7 +366,7 @@ if ( {) {$2;
         on_change={e => set_honeypot (e.target.value)}
         tab_index={-1}
         auto_complete='off';'
-        style={{ "display": 'none' }}'
+        style={ "display": 'none' }'
       />;
       <Button;
         type='submit';'
@@ -381,16 +381,16 @@ if ( {) {$2;
       </Button>;
     </form>)}
 }
-}}
-}}return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubmit= {handleSubmit ";"
+}
+}return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubmit= {handleSubmit ";"
 }className="flex flex-col space-y-3 "sm":flex-row "sm":space-y-0 "sm":space-x-2" newsletter-email"className="sr-only"> Email address for newsletter subscription </label> <Input className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white "hover":from-zion-purple-light "hover":to-zion-purple"> {'";"
   }
   isSubmitting ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Subscribing... </>) : ('Subscribe')}</Button> </form>)}'";"
-  )}}}
+  )}}
 }ursor/integrate-build-improve-and-re-verify-9d47;
 ursor/automate-test-improve-and-merge-code-646c;
   )}
 }
-}}
+}
 }
 }))}

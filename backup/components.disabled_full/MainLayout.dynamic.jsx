@@ -1,6 +1,6 @@
-const MainLayout = dynamic(() => import("./MainLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainLayout' ,'
+const MainLayout = dynamic(() => import('./MainLayout'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default MainLayout' ,'
 
-const MainLayout = dynamic(() => import("./MainLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainLayout' ,'
+const MainLayout = dynamic(() => import('./MainLayout'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default MainLayout' ,'
 </p>'
 </p>'
 </p>'
@@ -24,14 +24,14 @@ const MainLayout = dynamic(() => import("./MainLayout"),{'; "loading": () => <p>
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const MainLayout = dynamic(() => import(\"./MainLayout\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default MainLayout\' ,const MainLayout = dynamic(() => import(\"./MainLayout\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default MainLayout\" ,\"\"\";
-const MainLayout = dynamic(() => import(\"./MainLayout\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default MainLayout' ,';
+const MainLayout = dynamic(() => import(\'./MainLayout\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default MainLayout\' ,const MainLayout = dynamic(() => import(\'./MainLayout\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default MainLayout\' ,\'\'\';
+const MainLayout = dynamic(() => import(\'./MainLayout\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default MainLayout' ,';
 </p>';
 </p>';
 </p>';
 </p>';
 ;
-const MainLayout = dynamic(() => import(\"./MainLayout\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default MainLayout' ,';
+const MainLayout = dynamic(() => import(\'./MainLayout\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default MainLayout' ,';
 </p>';
 </p>';
 </p>';
@@ -53,7 +53,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
-const MainLayout = dynamic(() => import(\"./MainLayout\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default MainLayout' ,';
+const MainLayout = dynamic(() => import(\'./MainLayout\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default MainLayout' ,';
 </p>';
 </p>';
 </p>';
@@ -62,9 +62,9 @@ const MainLayout = dynamic(() => import(\"./MainLayout\"),{'; \"loading\": () =>
 </p>';
 </p>';
 </p>';
-const MainLayout = dynamic(() => import(\"./MainLayout\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default MainLayout' ,';
+const MainLayout = dynamic(() => import(\'./MainLayout\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default MainLayout' ,';
 </p>'</p>';
-const MainLayout = dynamic(() => import(\"./MainLayout\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default MainLayout' ,'
+const MainLayout = dynamic(() => import(\'./MainLayout\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default MainLayout' ,'
 </p>'
 </p>'
 </p>'
@@ -89,7 +89,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 </p>'
 
 </p>'
-const MainLayout = dynamic(() => import("./MainLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainLayout' ,'
+const MainLayout = dynamic(() => import('./MainLayout'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default MainLayout' ,'
 </p>'
 </p>'
 </p>'

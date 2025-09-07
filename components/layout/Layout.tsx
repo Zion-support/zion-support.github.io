@@ -51,7 +51,7 @@ type LayoutProps = { "children": React.ReactNode;
 }
 
 export default function Layout() { return <div>{children}</div> } " ;"
-}}
+}
     <div className="min-h-screen bg-white">;"
 
 export default /**;
@@ -105,7 +105,7 @@ export default /**;
  * Layout - Function description;
  */;
 function Layout() { return <div>{children}</div> } " ;"
-}}ursor/automate-test-improve-and-merge-code-646c;
+}ursor/automate-test-improve-and-merge-code-646c;
 
 interface LayoutProps {
   }
@@ -157,7 +157,7 @@ return (<div className="min-h-screen flex flex-col">;"
   )}
 
 export default Layout;ursor/automate-test-improve-and-merge-code-646c;
-}}
+}
 
 interface LayoutProps {
   }

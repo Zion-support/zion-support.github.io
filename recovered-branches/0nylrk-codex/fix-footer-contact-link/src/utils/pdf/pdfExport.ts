@@ -9,32 +9,32 @@ import { addWorkExperienceSection  } from './sections/workExperienceSection';'
 import { addEducationSection  } from './sections/educationSection';'
 import { addCertificationsSection  } from './sections/certificationsSection';'
 import { addPortfolioSection } from './sections/portfolioSection';'
-export interface ExportOptions {  "theme": 'light' | 'dark';'
+export interface ExportOptions {  'theme': 'light' | 'dark';'
   }
   includePortfolio?: boolean;
   maxProjects?: number,
 fontFamily?: FontFamily
 }
-const "defaultOptions": ExportOptions = {
+const 'defaultOptions': ExportOptions = {
   }
-  "theme": 'light';'
-  "includePortfolio": true;
-  "maxProjects": 2;
-    "fontFamily": 'default''
+  'theme': 'light';'
+  'includePortfolio': true;
+  'maxProjects': 2;
+    'fontFamily': 'default''
 }
 export async function exportResumeToPDF(
-  "resume": Resume,
-"options": Partial<ExportOptions> = {}
+  'resume': Resume,
+'options': Partial<ExportOptions> = {}
 ): Promise<Blob> {;
   }
-  const "mergedOptions": ExportOptions = { ...defaultOptions, ...options };
+  const 'mergedOptions': ExportOptions = { ...defaultOptions, ...options };
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({
     }
-    "orientation": 'portrait';'
-    "unit": "unit","
-    "format": 'a4''
+    'orientation': 'portrait';'
+    'unit': 'unit','
+    'format': 'a4''
   });
   // Load custom fonts if specified,
 await loadCustomFonts(doc, fontFamily);
@@ -43,19 +43,19 @@ const colors = getPdfThemeColors(theme);
   // Set background color}
 ;
 export async function exportResumeToPDF (
-  "resume": Resume,
-  "options": Partial < ExportOptions> = {}
+  'resume': Resume,
+  'options': Partial < ExportOptions> = {}
 ): Promise < Blob> {
   }
-  const "merged_options": ExportOptions = { ...default_options, ...options }
+  const 'merged_options': ExportOptions = { ...default_options, ...options }
   const { theme, include_portfolio, max_projects, font_family } = merged_options;
 ;
   // Create new PDF document (A4);
   const doc = new jsPDF ({
     }
-    "orientation": 'portrait';'
-    "unit": 'mm','
-    "format": 'a4';'
+    'orientation': 'portrait';'
+    'unit': 'mm','
+    'format': 'a4';'
   });
 ;
   // Load custom fonts if specified;

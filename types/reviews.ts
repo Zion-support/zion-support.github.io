@@ -64,7 +64,7 @@ export type Review = {"id": string;
     "3": number;
     "4": number;
     "5": number;
-  }}"totalCompletedProjects": number;
+  }"totalCompletedProjects": number;
   "mostRecent": PublicReview[];
 
 export type ProjectStatus = 'InProgress' | 'Completed',export type Project = {"id": string,"client_id": string, // slug for client / user;'

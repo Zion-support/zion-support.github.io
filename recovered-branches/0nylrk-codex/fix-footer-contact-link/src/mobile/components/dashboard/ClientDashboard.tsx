@@ -43,7 +43,7 @@ return (;
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">"
                   <div,
 className="h-full bg-primary rounded-full""
-                    style={{ "width": "60%" }}"
+                    style={ "width": "60%" }"
                   ></div>
                 </div>
               </div>
@@ -64,8 +64,6 @@ className="h-full bg-primary rounded-full""
           </CardContent>
         </Card>
       </section>
-<<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
 <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Suggested Talents</h2>
@@ -165,8 +163,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
         </div>
       </section>
-<<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
 <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Recent Updates</h2>
@@ -257,11 +253,11 @@ import { Link } from "react-router-dom";"
                   <span className="font-medium">60%</span>;"
                 </div>;
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">;"
-                  <div className="h-full bg-primary rounded-full" style={{"width":'60%'}}></div>;'
+                  <div className="h-full bg-primary rounded-full" style={"width":'60%'}></div>;'
                 </div>;
               </div>;
               ;
-                  <div className="h-full bg-primary rounded-full" style={{"width": '60%'}}></div>;'
+                  <div className="h-full bg-primary rounded-full" style={"width": '60%'}></div>;'
                 </div>;
               </div>;
               <div className="flex justify-between items-center">;"
@@ -420,7 +416,7 @@ export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24"
                   <span className="font-medium">60%</span>;
                 </div>;
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">;
-                  <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>;
+                  <div className="h-full bg-primary rounded-full" style={width: '60%'}></div>;
                 </div>;
               </div>;
               <div className="flex justify-between items-center">;
@@ -477,7 +473,7 @@ function ClientDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
                 <div className='h - 2 bg - primary / 20 rounded - full overflow - hidden'>;
                   <div;
                     className='h - full bg - primary rounded - full';
-                    style={{ width: '60%' }}
+                    style={ width: '60%' }
                   ></div>;
                 </div>;
               </div>;
@@ -527,7 +523,7 @@ function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">
                   <span className="font - medium">60%</span>;
                 </div>;
                 <div className="h - 2 bg - primary / 20 rounded - full overflow - hidden">;
-                  <div className="h - full bg - primary rounded - full" style={{width: '60%'}}></div>;
+                  <div className="h - full bg - primary rounded - full" style={width: '60%'}></div>;
                 </div>;
               </div>;
               <div className="flex justify - between items - center">;
@@ -626,7 +622,6 @@ function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">
             </CardContent>;
           </Card>;
         </div>;
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
       </section>;
 
   );
@@ -696,7 +691,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardContent>;
         </Card>;
       </section>;
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
     </div>)})}
     </div>);
 }

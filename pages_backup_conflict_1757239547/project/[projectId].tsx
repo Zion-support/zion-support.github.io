@@ -197,7 +197,7 @@ export default function ProjectPage() {
       <FeedbackModal
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
-        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
+        defaultContext={ actionType: 'chatbot_use', metadata: { projectId } }
         userHeaders={headers}
       />
     </div>

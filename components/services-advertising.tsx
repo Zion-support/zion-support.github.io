@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 
                   </a>;
                 </li>;
                 <li>;import React from 'react';
-=======
-<<<<<<< HEAD
 )
 
 import React from 'react';'
@@ -4961,4 +4958,3 @@ returns-center/pricing');'
 		</div>
 	)
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

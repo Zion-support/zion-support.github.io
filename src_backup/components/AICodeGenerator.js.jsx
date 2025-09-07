@@ -116,12 +116,12 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
         <AnimatePresence mode='wait'>'''''';
           {activeTab === 'generate' && (<motion.div key='generate' initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
               {/* Generation Form */}'''';
               <form onSubmit={handleSubmit} className='space-y-4'>'''';
                 <div>'''';
@@ -213,13 +213,13 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                 {/* Advanced Options */}
                 {showAdvanced && (<motion.div initial = {}
   { opacity: 0, height: 0;
-}} animate = {}
+} animate = {}
   { opacity: 1,'';
   height: 'auto';
-}} exit = {}
+} exit = {}
   { opacity: 0, height: 0 '''';
 '''';
-}} className='grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg'>'';
+} className='grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg'>'';
                     {['';
                     { key: 'includeTests', label: 'Tests', icon: TestTube },'';
                     { key: 'includeDocs', label: 'Docs', icon: FileText }, '';
@@ -249,10 +249,10 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
               {/* Generated Code Display */}
               {generatedCode && (<motion.div initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} className='space-y-4'>'''';
+} className='space-y-4'>'''';
                   <div className='flex items-center justify-between'>'''';
                     <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>;
                       Generated Code'''';
@@ -279,12 +279,12 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
 '''''';
           {activeTab === 'analyze' && (<motion.div key='analyze' initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
               <div>'''';
                 <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>;
                   Paste code to analyze'''';
@@ -304,10 +304,10 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
               {/* Analysis Results */}
               {codeAnalysis && (<motion.div initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
                   {/* Metrics Overview */}'''';
                   <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>'';
                     {['';
@@ -368,12 +368,12 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
 '''''';
           {activeTab === 'optimize' && (<motion.div key='optimize' initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
               <div className='text-center py-8'>'''';
                 <Zap className='w-16 h-16 text-yellow-500 mx-auto mb-4'/>'''';
                 <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
@@ -401,12 +401,12 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
 '''''';
           {activeTab === 'tests' && (<motion.div key='tests' initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
               <div className='text-center py-8'>'''';
                 <TestTube className='w-16 h-16 text-green-500 mx-auto mb-4'/>'''';
                 <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
@@ -425,12 +425,12 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
 '''''';
           {activeTab === 'docs' && (<motion.div key='docs' initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0;
-}} exit = {}
+} exit = {}
   { opacity: 0, y: -20 '''';
 '''';
-}} className='space-y-6'>'''';
+} className='space-y-6'>'''';
               <div className='text-center py-8'>'''';
                 <FileText className='w-16 h-16 text-indigo-500 mx-auto mb-4'/>'''';
                 <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
@@ -450,20 +450,20 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
         {/* Suggestions Panel */}
         {suggestions.length > 0 && (<motion.div initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} className='mt-8 border-t border-gray-200 dark:border-gray-700 pt-6'>'''';
+} className='mt-8 border-t border-gray-200 dark:border-gray-700 pt-6'>'''';
             <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>;
               AI Suggestions ({suggestions.length})'''';
             </h3>'''';
             <div className='grid gap-4'>;
               {suggestions.map((suggestion) => (<motion.div key={suggestion.id} initial = {}
   { opacity: 0, x: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, x: 0 '''';
 '''';
-}} className='p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600'>'''';
+} className='p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600'>'''';
                   <div className='flex items-start justify-between mb-3'>'''`';
                     <div className='flex items-center gap-2'>'`'`;
                       <span className={`px-2 py-1 text-xs rounded-full ${suggestion.type === 'security' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :'';
@@ -507,10 +507,10 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
           </motion.div>) }{/* History Panel */}
         {history.length > 0 && (<motion.div initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} className='mt-8 border-t border-gray-200 dark:border-gray-700 pt-6'>'''';
+} className='mt-8 border-t border-gray-200 dark:border-gray-700 pt-6'>'''';
             <div className='flex items-center justify-between mb-4'>'''';
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>;
                 Generation History ({history.length})'''';

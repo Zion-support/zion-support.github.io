@@ -15,7 +15,7 @@ interface AiseoauditorProps  {// Add props here as needed;
 }
 export default function Aiseoauditor() {ursor/automate-test-improve-and-merge-code-646c;
 }
-export default function Aiseoauditor() {export default function Aiseoauditor() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+export default function Aiseoauditor() {export default function Aiseoauditor() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }
@@ -32,7 +32,7 @@ export default function Aiseoauditor(): any ({}: AiseoauditorProps) {return (<di
       <h1>Aiseoauditor</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  )}}ursor/fix-syntax-push-and-merge-to-main-40de;
-}}ursor/automate-test-improve-and-merge-code-646c;
+  )}ursor/fix-syntax-push-and-merge-to-main-40de;
+}ursor/automate-test-improve-and-merge-code-646c;
 }
 }

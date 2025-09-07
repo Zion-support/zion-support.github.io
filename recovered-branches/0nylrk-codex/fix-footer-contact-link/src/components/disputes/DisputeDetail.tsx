@@ -1026,7 +1026,7 @@ className="w-full p-2 border rounded""
                                 setMessage("")
                               })
                             }
-                          }}
+                          }
                         >
                           Add Admin Note
                         </Button>

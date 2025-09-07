@@ -56,7 +56,7 @@ import { useAuth } from "@/hooks/useAuth",;  const form = useForm<TalentFormValu
       "skills": """
       "hourlyRate": """
       "availability": "available""
-      "enhancedProfile": true}})
+      "enhancedProfile": true})
   // Handle adding skill tags,
 const handleAddSkill = () => {
     }

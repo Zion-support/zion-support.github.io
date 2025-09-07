@@ -134,7 +134,7 @@ export function TalentOnboardingForm() {
         "timezone": """
         "hourlyRate": """
         "portfolioLinks": [{ "url": "" }]"
-        "cv": undefined}}
+        "cv": undefined}
     "mode": "onChange"})"
 const { "fields": projectFields, "append": appendProject, "remove": removeProject } =;
     useFieldArray({
@@ -184,7 +184,7 @@ throw new Error("Failed to upload CV");"
         "timezone": "",;"
         "hourlyRate": "",;"
         "portfolioLinks": [{ "url": "" }],;"
-        "cv": undefined}},;
+        "cv": undefined},;
     "mode": "onChange"}),;"
     if (!file) return,;
     ;
@@ -320,7 +320,7 @@ function TalentOnboardingForm() {
         "timezone": "","
         "hourly_rate": "","
         "portfolio_links": [{ "url": "" }],"
-        "cv": undefined}},
+        "cv": undefined},
     "mode": "on_change"}),"
   const { "fields": project_fields, "append": append_project, "remove": remove_project } =;
     useFieldArray ({

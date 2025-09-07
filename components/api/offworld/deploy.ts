@@ -7,30 +7,29 @@ import path from 'path';'
 import fs from 'fs';'
 import { addDirectory  } from '@/utils/offworld/ipfs';'
 
-export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ "error": 'Method not allowed','
+export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ 'error': 'Method not allowed','
 })try {// Ensure export;
 
 }
 
 const outDir = null;
-    return res.status(200).json({ cid, provider })export default async function handler() {if (req.method !== 'POST')return res.status(405).json({ "error": 'Method not allowed','
+    return res.status(200).json({ cid, provider })export default async function handler() {if (req.method !== 'POST')return res.status(405).json({ 'error': 'Method not allowed','
 })try {// Ensure export;
 
 }
 
-const outDir = path.resolve(process.cwd(), 'out')try {execSync('npm run export', { "stdio": 'inherit' },'
+const outDir = path.resolve(process.cwd(), 'out')try {execSync('npm run export', { 'stdio': 'inherit' },'
 } catch (e) {// attempt minimal static export;
       }
-      try {execSync('next build && next export', { "stdio": 'inherit' })} catch (e2) {}'
+      try {execSync('next build && next export', { 'stdio': 'inherit' })} catch (e2) {}'
    
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (!fs.existsSync(outDir)) {
 }
 return res;
         .status(500)
-        .json({ "error": 'Export failed, no out/ directory found' });'
+        .json({ 'error': 'Export failed, no out/ directory found' });'
     }
   try {
     // Ensure export
@@ -38,8 +37,6 @@ return res;
 import { execSync } from 'child_process';
 import path from 'path';
 import fs from 'fs';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { addDirectory } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -51,8 +48,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e) {
       // attempt minimal static export
       try {
-<<<<<<< HEAD
-=======
         execSync('next build && next export', { stdio: 'inherit' });      } catch (e2) {}
     }
     if (!fs.existsSync(outDir)) {
@@ -61,81 +56,77 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .json({ error: 'Export failed, no out/ directory found' });    }      execSync('npm run export', { stdio: 'inherit' })
     } catch (e) {
       // attempt minimal static export try {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         execSync('next build && next export', { stdio: 'inherit' })
       } catch (e2) {}
     }
-<<<<<<< HEAD
 
 const { cid, provider } = await addDirectory(outDir);
-    if (!cid) return res.status(500).json({ "error": 'IPFS upload failed','
+    if (!cid) return res.status(500).json({ 'error': 'IPFS upload failed','
 });
 
 return res.status(200).json({ cid, provider });
-  } catch ("error": any) {
+  } catch ('error': any) {
 }
-return res.status(500).json({ "error": error?.message || 'Unknown error',;'
+return res.status(500).json({ 'error': error?.message || 'Unknown error',;'
 });
   }
-  } catch ("error": any) {
+  } catch ('error': any) {
 }
-return res.status(500).json({ "error": error?.message |'Unknown error',;'
+return res.status(500).json({ 'error': error?.message |'Unknown error',;'
 })
 
 return res.status(200).json({ cid, provider });
 
-  } catch ("error": any) {
+  } catch ('error': any) {
 }
-return res.status(500).json({ "error": error?.message |'Unknown error',;'
+return res.status(500).json({ 'error': error?.message |'Unknown error',;'
 })
     return res && res.status(200).json({ cid, provider });
-  } catch ("error": any) {
+  } catch ('error': any) {
 }
-return res && res.status(500).json({ "error": error?.message || 'Unknown error',;'
+return res && res.status(500).json({ 'error': error?.message || 'Unknown error',;'
 });
   }    return res && res.status(200).json({ cid, provider })
-  } catch ("error": any) {
+  } catch ('error': any) {
 }
-return res && res.status(500).json({ "error": error?.message || 'Unknown error' });'
+return res && res.status(500).json({ 'error': error?.message || 'Unknown error' });'
  
 };
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
   try {// Ensure export;
 
 }
 
-const out_dir = path.resolve (process.cwd (), 'out')try {exec_sync ('npm run export', { "stdio": 'inherit' },'
+const out_dir = path.resolve (process.cwd (), 'out')try {exec_sync ('npm run export', { 'stdio': 'inherit' },'
 } catch (e) {// attempt minimal static export;
       }
-      try {exec_sync ('next build && next export', { "stdio": 'inherit' })} catch (e2) {}'
+      try {exec_sync ('next build && next export', { 'stdio': 'inherit' })} catch (e2) {}'
    
 }
     if () {) {$2;
 }
       return res;
-        .status (500).json ({ "error": 'Export failed, no out/ directory found' })}      exec_sync ('npm run export', { "stdio": 'inherit' },'
+        .status (500).json ({ 'error': 'Export failed, no out/ directory found' })}      exec_sync ('npm run export', { 'stdio': 'inherit' },'
 } catch (e) {// attempt minimal static export;
       }
-      try {exec_sync ('next build && next export', { "stdio": 'inherit' },'
+      try {exec_sync ('next build && next export', { 'stdio': 'inherit' },'
 }
     if () {) {$2;
 }
       return res;
-        .status (500).json ({ "error": 'Export failed, no out/ directory found' })return res.status (500).json ({ "error": 'Export failed, no out/ directory found' })}'
+        .status (500).json ({ 'error': 'Export failed, no out/ directory found' })return res.status (500).json ({ 'error': 'Export failed, no out/ directory found' })}'
 
-const { cid, provider } = await add_directory (out_dir)if (return res.status (500).json ({ "error": 'IPFS upload failed','
+const { cid, provider } = await add_directory (out_dir)if (return res.status (500).json ({ 'error': 'IPFS upload failed','
 })) {$2;
 }
-    return res.status (200).json ({ cid, provider })} catch ("error": any) {return res.status (500).json ({ "error": error?.message || 'Unknown error' },'
-}    return res.status (200).json ({ cid, provider })} catch ("error": any) {return res.status (500).json ({ "error": error?.message || 'Unknown error' })}'
+    return res.status (200).json ({ cid, provider })} catch ('error': any) {return res.status (500).json ({ 'error': error?.message || 'Unknown error' },'
+}    return res.status (200).json ({ cid, provider })} catch ('error': any) {return res.status (500).json ({ 'error': error?.message || 'Unknown error' })}'
 }
-    return res.status(500).json({ "error": error?.message || 'Unknown error' })}}'
+    return res.status(500).json({ 'error': error?.message || 'Unknown error' })}'
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
-}}
+}
 }
 import {exec_sync} from 'child_process';
 import path from 'path';

@@ -907,10 +907,10 @@ export const advancedMicroSaasExpansion2025V2 = [;
 
 
 ursor/fix-website-loading-errors-and-merge-6662
-  }}];      'Real - time monitoring_threat intelligence_automated response_incident management';
+  }];      'Real - time monitoring_threat intelligence_automated response_incident management';
     ];}
   }
-];;
+];
   }
 ];export const advancedMicroSaasExpansion2025V2 = [;
   {name: 'AI Content Factory Pro',description: 'Advanced AI-powered content creation and management platform',category: 'AI & Data',pricing: '$299/month',features: [;
@@ -973,7 +973,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 ];ursor/fix-website-loading-errors-and-merge-6662;
   }
-];;
+];
 export const advancedMicroSaasExpansion2025V2 = [;
   {name: 'AI Content Factory Pro',description: 'Advanced AI-powered content creation and management platform',category: 'AI & Data',pricing: '$299/month',features: [;
       'Multi-format content generationBrand voice customizationContent calendar managementPerformance analytics';

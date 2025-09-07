@@ -1,4 +1,4 @@
-import * as React from "react""
+import * as React from 'react''
 
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>,
@@ -9,13 +9,13 @@ const InputOTP = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof OTPInput>;
 ></typeof>(({ className, containerClassName, ...props }, ref) => (;
 
-      "flex items-center gap-2 [&:has([disabled])]:opacity-50",
+      'flex items-center gap-2 [&:has([disabled])]:opacity-50',
 
       containerClassName
 
     )}
 
-    className={cn("disabled:cursor-not-allowed", className)}
+    className={cn('disabled:cursor-not-allowed', className)}
     {...props}
 
 const InputOTPGroup = React && React.forwardRef<;
@@ -28,37 +28,37 @@ const InputOTPGroup = React && React.forwardRef<;
 InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
 
 const InputOTPGroup = React.forwardRef<
-  React.ElementRef<"div">,
+  React.ElementRef<'div'>,
 
-  React.ComponentPropsWithoutRef<"div">
+  React.ComponentPropsWithoutRef<'div'>
 >(({ className, ...props }, ref) => (
 
-  React.ElementRef<"div">,
+  React.ElementRef<'div'>,
 
-  React.ComponentPropsWithoutRef<"div"> & { index: number }
+  React.ComponentPropsWithoutRef<'div'> & { index: number }
 >(({ index, className, ...props }, ref) => {}
   const inputOTPContext = React.useContext(OTPInputContext) as any;
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
 
       )}
 
-InputOTPSlot.displayName = "InputOTPSlot"
+InputOTPSlot.displayName = 'InputOTPSlot'
 
-InputOTPSlot.displayName = "InputOTPSlot"
+InputOTPSlot.displayName = 'InputOTPSlot'
 
-InputOTPSlot.displayName = "InputOTPSlot"
+InputOTPSlot.displayName = 'InputOTPSlot'
 
 const InputOTPSeparator = React.forwardRef<
 
-  React.ElementRef<"div">,
+  React.ElementRef<'div'>,
 
-  React.ComponentPropsWithoutRef<"div">
->(({ ...props }, ref) => ("
-  <div ref={ref} role="separator" {...props}>
+  React.ComponentPropsWithoutRef<'div'>
+>(({ ...props }, ref) => ('
+  <div ref={ref} role='separator' {...props}>
     <Dot />
   </div>
 ))
-InputOTPSeparator.displayName = "InputOTPSeparator"
+InputOTPSeparator.displayName = 'InputOTPSeparator'
 
     </div>;
   );

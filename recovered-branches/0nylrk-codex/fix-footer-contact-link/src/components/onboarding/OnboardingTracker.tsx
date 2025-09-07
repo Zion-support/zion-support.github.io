@@ -36,7 +36,7 @@ export function OnboardingTracker({
       </div>
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
-import {Link} from "react-router-dom";;
+import {Link} from "react-router-dom";
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 ;
@@ -64,7 +64,7 @@ export function OnboardingTracker({;
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 
-          style={{ width: `${progress}%` }}
+          style={ width: `${progress}%` }
         ></div>
       </div>
       <div className="space-y-3">;
@@ -78,7 +78,7 @@ export function OnboardingTracker({;
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
         <div;
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";
-          style={{ width: `${progress}%` }}
+          style={ width: `${progress}%` }
         ></div>
       </div>
       {/* Steps list */}

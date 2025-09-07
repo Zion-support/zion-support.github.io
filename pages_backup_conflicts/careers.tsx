@@ -16,7 +16,7 @@ export default function Careers({ }: CareersProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+}
 }
 }
 }

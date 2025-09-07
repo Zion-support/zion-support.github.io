@@ -23,7 +23,7 @@ export default function Equipment({ }: EquipmentProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+}
 }
 }
 }
@@ -55,14 +55,14 @@ export default function Equipment() {return (<div>;
       <p>This component is currently under development.</p>;
     </div>;
   )}
-}}
+}
 }export default function Equipment() {ursor/automate-test-improve-and-merge-code-646c;
 interface EquipmentProps  {// Add props here as needed;
 }
 }
 }
-export default function Equipment({}: EquipmentProps) {}}
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+export default function Equipment({}: EquipmentProps) {}
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -88,8 +88,8 @@ export default function Equipment(): any ({}: EquipmentProps) {return (<div>;
       <h1>Equipment</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  )}}
-}}
+  )}
+}
 }ursor/automate-test-improve-and-merge-code-646c;
 }
 }

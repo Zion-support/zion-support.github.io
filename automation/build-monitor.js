@@ -350,12 +350,12 @@ class BuildMonitor {
           let content = fs.readFileSync(file, 'utf8')
           let modified = false
           // Fix common issues'
-          if (content.includes("'") && !content.includes("'")) {'"
-            content = content.replace(/'/g, "'")
+          if (content.includes(''') && !content.includes(''')) {''
+            content = content.replace(/'/g, ''')
             modified = true
-          }'"
-          if (content.includes('"') && !content.includes('"')) {'"
-            content = content.replace(/"/g, '"')
+          }''
+          if (content.includes(''') && !content.includes(''')) {''
+            content = content.replace(/'/g, ''')
             modified = true
           // Fix missing semicolons'
           if (content.includes('export const') && !content.includes(';')) {'
@@ -391,16 +391,16 @@ class BuildMonitor {
   generateBuildSuggestions($2) {}
     const suggestions = []
     const errorText = errors.toLowerCase();'
-    if (errorText.includes('typescript')) {'"
-      suggestions.push('Run "npm run type-check" to identify TypeScript errors');'
+    if (errorText.includes('typescript')) {''
+      suggestions.push('Run 'npm run type-check' to identify TypeScript errors');'
       suggestions.push('Check for missing type annotations')
     }'
-    if (errorText.includes('eslint')) {'"
-      suggestions.push('Run "npm run lint:fix" to auto-fix linting issues');'
+    if (errorText.includes('eslint')) {''
+      suggestions.push('Run 'npm run lint:fix' to auto-fix linting issues');'
       suggestions.push('Check for unused variables and imports')
     }'
-    if (errorText.includes('module not found')) {'"
-      suggestions.push('Run "npm install" to install missing dependencies');'
+    if (errorText.includes('module not found')) {''
+      suggestions.push('Run 'npm install' to install missing dependencies');'
       suggestions.push('Check import paths and file locations')
     }'
     if (errorText.includes('syntax')) {'

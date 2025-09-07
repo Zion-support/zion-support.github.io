@@ -97,7 +97,7 @@ if (Object.values(requirements).some(val => val) && Object.values(requirements).
       }
       await Promise.all(promises)
     }
-  }};
+  };
   },
 return (;
     <form onSubmit={handleSubmit} className="space-y-6">"

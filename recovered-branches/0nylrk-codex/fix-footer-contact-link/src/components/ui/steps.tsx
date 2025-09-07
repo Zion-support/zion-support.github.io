@@ -109,25 +109,25 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
-            style={{
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+            style={
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}
           />
         </div>
       </div>
     </div>
   )
 }
-            style={{;
+            style={;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
   return (;        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
           <div;
             className="h-full bg-zion-purple transition-all";
-            style={{;
+            style={;
 
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}
 
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}
           />;
         </div>;
       </div>;
@@ -155,8 +155,8 @@ if (status = "current") {
         <div className="ml-[18px] w-[calc (100%-36px)] h - 0.5 bg - zion - blue-light">;
           <div;
             className="h - full bg - zion - purple transition-all";
-            style={{
-              width: `${(current_step / (children_array.length - 1)) * 100}%`}}
+            style={
+              width: `${(current_step / (children_array.length - 1)) * 100}%`}
           />;
         </div>;
       </div>;

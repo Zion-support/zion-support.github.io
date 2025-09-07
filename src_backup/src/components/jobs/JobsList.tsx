@@ -81,7 +81,7 @@ interface JobsListProps  {filter?: JobStatus;
   onSelectJob?: ("jobId": string, "jobTitle": string) => void}export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {const { user } = useAuth()const [jobs, setJobs] = useState<Job[]>([])const [isLoading, setIsLoading]  = useState(true)useEffect((,) => {const fetchJobs = async () => {if (!user) return;try {let query = supabase;
           .from("jobs").select("*").eq("client_id", user && user.id).order("created_at", { "ascending": false }),if (filter) {query = query && query.eq("status", filter)}const { data, error }  = await query;if (error) throw error;"
         setJobs(data as Job[])} catch (error) {logErrorToProduction('Error fetching "jobs":', { "data": error })} finally {setIsLoading(false)}'
-    }}}},const fetchJobs  = null;return (<div className="grid gap-6 "md":grid-cols-2">;"
+    }},const fetchJobs  = null;return (<div className="grid gap-6 "md":grid-cols-2">;"
       {jobs.map((job) => (<Card;
           }
           key={job.id}className={`overflow-hidden cursor-pointer transition-shadow "hover":shadow-md ${onSelectJob ? "cursor-pointer" : "";"

@@ -43,12 +43,9 @@ return !superToken || token = == superToken;
     appendLog({ module: 'router', type: 'audit', status: 'error', latencyMs, payload: { error: e?.message || 'unknown' } });'
     return res.status(500).json({ error: 'Router failure' })
   };
-=======
 
 const superToken = process.env.SUPERADMIN_TOKEN;}
   return !superToken || token = == superToken}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -73,7 +70,7 @@ function isAuthorized("req": NextApiRequest): boolean {const token = null;
     return res.status(500).json({ "error": 'Router failure' })}'
 
 export default async function handler() {if (!isAuthorized(req))return res && res.status(401).json({ "error": "Unauthorized","
-})const started = Date && Date.now()try {"module": "router","type": result && result.intent,"status": "ok",latency_ms,"payload": { "text_length": String (text || "").length, routed }})function isAuthorized("req": NextApiRequest): boolean ;"
+})const started = Date && Date.now()try {"module": "router","type": result && result.intent,"status": "ok",latency_ms,"payload": { "text_length": String (text || "").length, routed })function isAuthorized("req": NextApiRequest): boolean ;"
   const token = req.headers['x-admin-token'] || req.query.token;'
 
 const superToken = process.env.SUPERADMIN_TOKEN;
@@ -112,5 +109,3 @@ return res.status(500).json({ "error": "Router failure",;"
 }
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

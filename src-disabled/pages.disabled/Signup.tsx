@@ -678,20 +678,20 @@ const SignupSchema = Yup.object({;
   }
   return (
     <AuthLayout>
-      <div className="flex min-h-screen items-center justify-center p-4">"
-        <div className="w-full max-w-sm space-y-4">"
+      <div className='flex min-h-screen items-center justify-center p-4'>'
+        <div className='w-full max-w-sm space-y-4'>'
           {isPartnerSignup && (
-            <div className="text-center mb-6">"
-              <h1 className="text-2xl font-bold text-foreground">Partner Application</h1>"
-              <p className="text-sm text-muted-foreground mt-2">"
+            <div className='text-center mb-6'>'
+              <h1 className='text-2xl font-bold text-foreground'>Partner Application</h1>'
+              <p className='text-sm text-muted-foreground mt-2'>'
                 Join the Zion AI Partner Program and start earning rewards
               </p>
             </div>
           )}
               <Button
-                type="button""
-                variant="ghost""
-                className="w-full text-sm""
+                type='button''
+                variant='ghost''
+                className='w-full text-sm''
                 onClick={() => {
                   setEmailVerificationRequired(false),
                   setSuccessMessage('')'
@@ -699,10 +699,10 @@ const SignupSchema = Yup.object({;
   if (healthCheckLoading) {
     return (
       <AuthLayout>
-        <div className="flex min-h-screen items-center justify-center p-4">
-          <div className="text-center space-y-4">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-            <p className="text-muted-foreground">Initializing signup...</p>
+        <div className='flex min-h-screen items-center justify-center p-4'>
+          <div className='text-center space-y-4'>
+            <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto'></div>
+            <p className='text-muted-foreground'>Initializing signup...</p>
           </div>
         </div>
       </AuthLayout>
@@ -714,9 +714,9 @@ const SignupSchema = Yup.object({;
         <div className='w - full max - w-sm space - y-4'>;
           {isPartnerSignup && (
               <Button
-                type="button"
-                variant="outline"
-                className="w-full"
+                type='button'
+                variant='outline'
+                className='w-full'
                 onClick={() =>
                   router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
                 }
@@ -724,13 +724,13 @@ const SignupSchema = Yup.object({;
                 Check Verification Status
               </Button>
               <Button
-                type="button"
-                variant="ghost"
-                className="w-full text-sm"
+                type='button'
+                variant='ghost'
+                className='w-full text-sm'
                 onClick={() => {
                   setEmailVerificationRequired(false),
                   setSuccessMessage('')
-                }}
+                }
               >;
                 Try Different Email;
               </Button>;
@@ -739,13 +739,13 @@ const SignupSchema = Yup.object({;
 ;
           {/* Additional help text when service issues are detected */}
           {healthCheckError && (
-            <div className="text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded">"
+            <div className='text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded'>'
 import { toast  } from '@/hooks/use-toast';
 import { AuthLayout  } from '@/layout';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 const SignupSchema = null;
                   setSuccessMessage('')
-                }}
+                }
               >
                 Try Different Email
               </Button>
@@ -754,7 +754,7 @@ const SignupSchema = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Additional help text when service issues are detected */}
           {healthCheckError && (
-            <div className="text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded">
+            <div className='text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded'>
               <p>⚠️ We detected some authentication service issues.</p>
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
@@ -811,7 +811,7 @@ request: err && err.request ? 'Request made but no response': 'No request';
 }return undefined;
 }, [emailVerificationRequired, formik && formik.values.email, router]);
 //Show loading state only during initial health check if (healthCheckLoading) {;
-  return (<AuthLayout> <div className="flex min-h-screen items-center justify-center p-4" > <div className="text-center space-y-4" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto" ></div> <p className="text-muted-foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>) ;
+  return (<AuthLayout> <div className='flex min-h-screen items-center justify-center p-4' > <div className='text-center space-y-4' > <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto' ></div> <p className='text-muted-foreground' >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>) ;
 }> {';
   healthCheckLoading ? 'Checking...': 'Retry' ;
 }</Button> </AlertDescription> </Alert>) ;
@@ -820,11 +820,11 @@ request: err && err.request ? 'Request made but no response': 'No request';
 }</AlertDescription> </Alert>) ;
 }<AlertDescription> Before you can log in, please click the verification link in the email we sent to <strong> {;
   formik && formik.values.email ;
-}</strong>. </AlertDescription> </Alert>) ";
-}<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input ) ""
-}</div /> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input ) ""
-}</div /> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input ) ""
-}</div /> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input ) ""
+}</strong>. </AlertDescription> </Alert>) ';
+}<div> <label htmlFor='name' className='block text-sm font-medium' > Full Name </label> <Input ) ''
+}</div /> <div> <label htmlFor='email' className='block text-sm font-medium' > Email address </label> <Input ) ''
+}</div /> <div> <label htmlFor='password' className='block text-sm font-medium' > Password </label> <Input ) ''
+}</div /> <div> <label htmlFor='confirm' className='block text-sm font-medium' > Confirm Password </label> <Input ) ''
               </div />)}
           </form>;
           {!emailVerificationRequired && (
@@ -856,7 +856,7 @@ request: err.request ? 'Request made but no response': 'No request';
 if ( {) {
   $2
 }
-  return (<AuthLayout> <div className="flex min - h-screen items - center justify - center p - 4" > <div className="text - center space - y-4" > <div className="animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600 mx - auto" ></div> <p className="text - muted - foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>);
+  return (<AuthLayout> <div className='flex min - h-screen items - center justify - center p - 4' > <div className='text - center space - y-4' > <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600 mx - auto' ></div> <p className='text - muted - foreground' >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>);
 }> {';
   healthCheckLoading ? 'Checking...': 'Retry';
 }</Button> </AlertDescription> </Alert>);
@@ -865,17 +865,17 @@ if ( {) {
 }</AlertDescription> </Alert>);
 }<AlertDescription> Before you can log in, please click the verification link in the email we sent to <strong> {
   formik.values.email;
-}</strong>. </AlertDescription> </Alert>) ";
-}<div> <label html_for="name" className="block text - sm font - medium" > Full Name </label> <Input ) ";
-}</div /> <div> <label html_for="email" className="block text - sm font - medium" > Email address </label> <Input ) ";
-}</div /> <div> <label html_for="password" className="block text - sm font - medium" > Password </label> <Input ) ";
-}</div /> <div> <label html_for="confirm" className="block text - sm font - medium" > Confirm Password </label> <Input ) ";
-}</div /> <div className="flex items - center space - x-2" > <input);
-}{";
-  !emailVerificationRequired ? (<Button type="submit" disabled= {"
+}</strong>. </AlertDescription> </Alert>) ';
+}<div> <label html_for='name' className='block text - sm font - medium' > Full Name </label> <Input ) ';
+}</div /> <div> <label html_for='email' className='block text - sm font - medium' > Email address </label> <Input ) ';
+}</div /> <div> <label html_for='password' className='block text - sm font - medium' > Password </label> <Input ) ';
+}</div /> <div> <label html_for='confirm' className='block text - sm font - medium' > Confirm Password </label> <Input ) ';
+}</div /> <div className='flex items - center space - x-2' > <input);
+}{';
+  !emailVerificationRequired ? (<Button type='submit' disabled= {'
   loading;
-}> {'";
-  loading ? (<> <LoadingSpinner size="sm" className="mr - 2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account');
+}> {'';
+  loading ? (<> <LoadingSpinner size='sm' className='mr - 2' /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account');
 }</Button> > Go to Login </Button> <Button router.push (`/verify - status?email=$ {`
   encodeURIComponent (formik.values.email);
 }`);`
@@ -883,7 +883,7 @@ if ( {) {
 }<p>⚠️ We detected some authentication service issues.</p> <p > If signup fails, please try again in a few minutes or contact support.</p> </div>);
 }</form> </div>);
 }</div> </div> </AuthLayout>);
-}'";
+}'';
 }
 import { useState  } from './react';
 import { Link, Navigate, use_navigate  } from './react-router-dom';
@@ -900,19 +900,19 @@ import { Checkbox  } from '@/components / ui / checkbox';
 import { Alert, AlertDescription  } from '@/components / ui / alert';
 import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
 import {
-      displayName: ","
-      email: ","
-      password: ","
-      confirmPassword: ","
+      displayName: ','
+      email: ','
+      password: ','
+      confirmPassword: ','
 
-}<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input) "
-}</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) "
-}</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) "
-}</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) "
-      displayName: ",
-      email: ",
-      password: ",
-      confirmPassword: ",
+}<div> <label htmlFor='name' className='block text-sm font-medium' > Full Name </label> <Input) '
+}</div> <div> <label htmlFor='email' className='block text-sm font-medium' > Email address </label> <Input) '
+}</div> <div> <label htmlFor='password' className='block text-sm font-medium' > Password </label> <Input) '
+}</div> <div> <label htmlFor='confirm' className='block text-sm font-medium' > Confirm Password </label> <Input) '
+      displayName: ',
+      email: ',
+      password: ',
+      confirmPassword: ',
       termsAccepted: false,,
 },,;
 }) as UseFormReturn<SignupFormValues>;
@@ -921,8 +921,8 @@ import {
   const onSubmit = async (data: SignupFormValues) => {;
           </form>
           {!emailVerificationRequired && (
-            <div className="mt-6">
-              <AuthButtons providers={["google", "github"]} />
+            <div className='mt-6'>
+              <AuthButtons providers={['google', 'github']} />
             </div>
           )}
     if (isSubmitting) return; // Prevent multiple submissions
@@ -956,8 +956,8 @@ import {
         // Set the session directly if verification is not required
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
-          console.error("Error setting session:", sessionError)"
-          console.error("Error setting session:", sessionError)
+          console.error('Error setting session:', sessionError)'
+          console.error('Error setting session:', sessionError)
 
   Form,
   FormControl,
@@ -969,36 +969,36 @@ import {
 // Form validation schema;
 const signup_schema = z;
   .object ({
-    display_name: z.string ().min (2, "Name must be at least 2 characters"),"
-    email: z.string ().email ("Please enter a valid email"),"
+    display_name: z.string ().min (2, 'Name must be at least 2 characters'),'
+    email: z.string ().email ('Please enter a valid email'),'
     password: z.string ();
-      .min (8, "Password must be at least 8 characters");,
-      .regex (/[A - Z]/, "Password must contain at least one uppercase letter");,
-      .regex (/[a - z]/, "Password must contain at least one lowercase letter");,
-      .regex (/[0 - 9]/, "Password must contain at least one number"),"
+      .min (8, 'Password must be at least 8 characters');,
+      .regex (/[A - Z]/, 'Password must contain at least one uppercase letter');,
+      .regex (/[a - z]/, 'Password must contain at least one lowercase letter');,
+      .regex (/[0 - 9]/, 'Password must contain at least one number'),'
     confirm_password: z.string (),
     terms_accepted: z.boolean ().refine (val => val === true, {
-      message: "You must accept the terms and conditions", ,"
+      message: 'You must accept the terms and conditions', ,'
 }), ,
 });
   .refine (data => data.password === data.confirm_password, {
-    message: "Passwords do not match",",
-    path: ["confirm_password"], ,"
-    display_name: z.string ().min (2, "Name must be at least 2 characters"),
-    email: z.string ().email ("Please enter a valid email"),
+    message: 'Passwords do not match',',
+    path: ['confirm_password'], ,'
+    display_name: z.string ().min (2, 'Name must be at least 2 characters'),
+    email: z.string ().email ('Please enter a valid email'),
     password: z.string ();
-      .min (8, "Password must be at least 8 characters");
-      .regex (/[A - Z]/, "Password must contain at least one uppercase letter");
-      .regex (/[a - z]/, "Password must contain at least one lowercase letter");
-      .regex (/[0 - 9]/, "Password must contain at least one number"),
+      .min (8, 'Password must be at least 8 characters');
+      .regex (/[A - Z]/, 'Password must contain at least one uppercase letter');
+      .regex (/[a - z]/, 'Password must contain at least one lowercase letter');
+      .regex (/[0 - 9]/, 'Password must contain at least one number'),
     confirm_password: z.string (),
     terms_accepted: z.boolean ().refine (val => val === true, {
-      message: "You must accept the terms and conditions", ,
+      message: 'You must accept the terms and conditions', ,
 }), ,
 });
   .refine (data => data.password === data.confirm_password, {
-    message: "Passwords do not match",
-    path: ["confirm_password"], ,
+    message: 'Passwords do not match',
+    path: ['confirm_password'], ,
 });
 type SignupFormValues = z.infer < typeof signup_schema>;
 export default /**
@@ -1011,22 +1011,22 @@ function Signup() {
   const [show_password, setShowPassword] = useState (false);
   const [showConfirmPassword, setShowConfirmPassword] = useState (false);
   // Track confirm password locally to prevent it from clearing on blur;
-  const [confirmPasswordValue, setConfirmPasswordValue] = useState ("");
-  const password_value = form.watch ("password");
+  const [confirmPasswordValue, setConfirmPasswordValue] = useState ('');
+  const password_value = form.watch ('password');
   const [is_submitting, setIsSubmitting] = useState (false);
   // Initialize react - hook - form;
   const form = use_form ({
     resolver: zod_resolver (signup_schema),
     default_values: {,
-      display_name: ","
-      email: ","
-      password: ","
-      confirm_password: ","
+      display_name: ','
+      email: ','
+      password: ','
+      confirm_password: ','
     default_values: {
-      display_name: ",
-      email: ",
-      password: ",
-      confirm_password: ",
+      display_name: ',
+      email: ',
+      password: ',
+      confirm_password: ',
       terms_accepted: false, ,
 }, ,
 }) as UseFormReturn < SignupFormValues>;
@@ -1047,11 +1047,11 @@ if (return) {
       // Check condition
 if ( {) {
   $2
-          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })"
-          toast.error(sessionError.message || "Failed to set session. Please try logging in.")"
+          form.setError('root', { message: sessionError.message || 'Failed to set session. Please try logging in.' })'
+          toast.error(sessionError.message || 'Failed to set session. Please try logging in.')'
 
-          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
-          toast.error(sessionError.message || "Failed to set session. Please try logging in.")
+          form.setError('root', { message: sessionError.message || 'Failed to set session. Please try logging in.' })
+          toast.error(sessionError.message || 'Failed to set session. Please try logging in.')
           return;
 }
         form.set_error ('email', { message: res_data.message });
@@ -1084,21 +1084,21 @@ if ( {) {
 if ( {) {
   $2
 }
-          console.error ("Error setting session:", session_error);
-          form.set_error ("root", { message: session_error.message || "Failed to set session. Please try logging in." });
-          toast.error (session_error.message || "Failed to set session. Please try logging in.");
+          console.error ('Error setting session:', session_error);
+          form.set_error ('root', { message: session_error.message || 'Failed to set session. Please try logging in.' });
+          toast.error (session_error.message || 'Failed to set session. Please try logging in.');
           return;
 }
         // The onAuthStateChange listener in AuthProvider should now handle
         // updating user state and navigating if necessary for other cases.
         // For direct signup with session, we can navigate.
-        toast.success("Welcome to ZionAI 🎉")"
-        navigate("/dashboard")"
+        toast.success('Welcome to ZionAI 🎉')'
+        navigate('/dashboard')'
 } else {
         // This case might indicate an unexpected response from the API
-        console.error("Registration response did not include session or emailVerificationRequired flag.", resData)"
-        form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." })"
-        toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.")"
+        console.error('Registration response did not include session or emailVerificationRequired flag.', resData)'
+        form.setError('root', { message: 'Registration complete, but an unexpected issue occurred. Please try logging in.' })'
+        toast.error('Registration complete, but an unexpected issue occurred. Please try logging in manually.')'
         // Potentially navigate to login or show a more specific error
         return;
 }
@@ -1121,18 +1121,18 @@ if ( {) {
       // Toast and navigation are handled above if session is present
       // If emailVerificationRequired, no toast/navigation here, message is shown
 } catch (err:,  any) {,
-      const message = err.message ?? "Registration failed""
-      form.setError("root", { message })"
+      const message = err.message ?? 'Registration failed''
+      form.setError('root', { message })'
       toast.error(message)
 } finally {
       setIsSubmitting(false) }
   }
-}</div> <div className="flex items-center space-x-2" > <input) "
-}{""
-  !emailVerificationRequired ? (<Button type="submit" disabled= {"
+}</div> <div className='flex items-center space-x-2' > <input) '
+}{''
+  !emailVerificationRequired ? (<Button type='submit' disabled= {'
   loading
-}> {'";
-  loading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account') ;
+}> {'';
+  loading ? (<> <LoadingSpinner size='sm' className='mr-2' /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account') ;
 }</Button> > Go to Login </Button> <Buttonrouter && router.push (`/verify-status?email=$ {`
   encodeURIComponent (formik && formik.values.email)
 }`) `
@@ -1140,22 +1140,22 @@ if ( {) {
 }<p>⚠️ We detected some authentication service issues.</p> <p>If signup fails, please try again in a few minutes or contact support.</p> </div>) ;
 }</form> </div>) ;
 }</div> </div> </AuthLayout>) ;
-}'";
+}'';
 }
-import { useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
-import { register } from "@/services/auth";
-import { toast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import { useState } from 'react';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { useForm, type UseFormReturn } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { register } from '@/services/auth';
+import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
 import {;
   Form,;
   FormControl,;
@@ -1163,25 +1163,25 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage,,;
-} from "@/components/ui/form";
+} from '@/components/ui/form';
 // Form validation schema;
 const signupSchema = z;
   .object({;
-    displayName: z && z.string().min(2, "Name must be at least 2 characters"),;
-    email: z && z.string().email("Please enter a valid email"),;
+    displayName: z && z.string().min(2, 'Name must be at least 2 characters'),;
+    email: z && z.string().email('Please enter a valid email'),;
     password: z && z.string();
-      .min(8, "Password must be at least 8 characters");,
-      .regex(/[A-Z]/, "Password must contain at least one uppercase letter");,
-      .regex(/[a-z]/, "Password must contain at least one lowercase letter");,
-      .regex(/[0-9]/, "Password must contain at least one number"),;
+      .min(8, 'Password must be at least 8 characters');,
+      .regex(/[A-Z]/, 'Password must contain at least one uppercase letter');,
+      .regex(/[a-z]/, 'Password must contain at least one lowercase letter');,
+      .regex(/[0-9]/, 'Password must contain at least one number'),;
     confirmPassword: z && z.string(),;
     termsAccepted: z && z.boolean().refine(val => val === true, {;
-      message: "You must accept the terms and conditions",,;
+      message: 'You must accept the terms and conditions',,;
 }),,;
 });
   .refine(data => data && data.password === data && data.confirmPassword, {;
-    message: "Passwords do not match",;,
-    path: ["confirmPassword"],,;
+    message: 'Passwords do not match',;,
+    path: ['confirmPassword'],,;
 });
 type SignupFormValues = z && z.infer<typeof signupSchema>;
 export default function Signup() {;
@@ -1190,17 +1190,17 @@ export default function Signup() {;
   const [showPassword, setShowPassword] = useState(false);,
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   // Track confirm password locally to prevent it from clearing on blur;
-  const [confirmPasswordValue, setConfirmPasswordValue] = useState("");
-  const passwordValue = form && form.watch("password");
+  const [confirmPasswordValue, setConfirmPasswordValue] = useState('');
+  const passwordValue = form && form.watch('password');
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Initialize react-hook-form;
   const form = useForm({;
     resolver: zodResolver(signupSchema),;
     defaultValues: {;,
-      displayName: ",;
-      email: ",;
-      password: ",;
-      confirmPassword: ",;
+      displayName: ',;
+      email: ',;
+      password: ',;
+      confirmPassword: ',;
       termsAccepted: false,,;
 },,;
 }) as UseFormReturn<SignupFormValues>;
@@ -1234,21 +1234,21 @@ export default function Signup() {;
         // Set the session directly if verification is not required;
         const { error: sessionError } = await supabase && supabase.auth.setSession(resData && resData.session);
         if (sessionError) {;
-          console && console.error("Error setting session:", sessionError);
-          form && form.setError("root", { message: sessionError && sessionError.message || "Failed to set session. Please try logging in." });
-          toast && toast.error(sessionError && sessionError.message || "Failed to set session. Please try logging in.");
+          console && console.error('Error setting session:', sessionError);
+          form && form.setError('root', { message: sessionError && sessionError.message || 'Failed to set session. Please try logging in.' });
+          toast && toast.error(sessionError && sessionError.message || 'Failed to set session. Please try logging in.');
           return;
 }
         // The onAuthStateChange listener in AuthProvider should now handle;
         // updating user state and navigating if necessary for other cases.;
         // For direct signup with session, we can navigate.;
-        toast && toast.success("Welcome to ZionAI 🎉");
-        navigate("/dashboard");
+        toast && toast.success('Welcome to ZionAI 🎉');
+        navigate('/dashboard');
 } else {;
         // This case might indicate an unexpected response from the API;
-        console && console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
-        form && form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
-        toast && toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
+        console && console.error('Registration response did not include session or emailVerificationRequired flag.', resData);
+        form && form.setError('root', { message: 'Registration complete, but an unexpected issue occurred. Please try logging in.' });
+        toast && toast.error('Registration complete, but an unexpected issue occurred. Please try logging in manually.');
         // Potentially navigate to login or show a more specific error;
         return;
 }
@@ -1268,8 +1268,8 @@ export default function Signup() {;
       // Toast and navigation are handled above if session is present;
       // If emailVerificationRequired, no toast/navigation here, message is shown;
 } catch (err:,  any) {;,
-      const message = err && err.message ?? "Registration failed";
-      form && form.setError("root", { message });
+      const message = err && err.message ?? 'Registration failed';
+      form && form.setError('root', { message });
       toast && toast.error(message);
 } finally {;
       setIsSubmitting(false);    }
@@ -1285,18 +1285,18 @@ if ( {) {
   $2
 }
       form.set_focus (first_error);
-          form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
-          toast.error(sessionError.message |"Failed to set session. Please try logging in.")
+          form.setError('root', { message: sessionError.message |'Failed to set session. Please try logging in.' })
+          toast.error(sessionError.message |'Failed to set session. Please try logging in.')
           return
-          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
-          toast.error(sessionError.message || "Failed to set session. Please try logging in.")
+          form.setError('root', { message: sessionError.message || 'Failed to set session. Please try logging in.' })
+          toast.error(sessionError.message || 'Failed to set session. Please try logging in.')
           return;
 }
 } else {
         // This case might indicate an unexpected response from the API;
-        console.error ("Registration response did not include session or emailVerificationRequired flag.", res_data);
-        form.set_error ("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
-        toast.error ("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
+        console.error ('Registration response did not include session or emailVerificationRequired flag.', res_data);
+        form.set_error ('root', { message: 'Registration complete, but an unexpected issue occurred. Please try logging in.' });
+        toast.error ('Registration complete, but an unexpected issue occurred. Please try logging in manually.');
         // Potentially navigate to login or show a more specific error;
         return;
 }
@@ -1305,8 +1305,8 @@ if ( {) {
       // Toast and navigation are handled above if session is present;
       // If emailVerificationRequired, no toast / navigation here, message is shown;
 } catch (err: any) {
-      const message = err.message ?? "Registration failed";
-      form.set_error ("root", { message });
+      const message = err.message ?? 'Registration failed';
+      form.set_error ('root', { message });
       toast.error (message);
 } finally {
       setIsSubmitting (false) }
@@ -1322,43 +1322,43 @@ if ( {) {
   }
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />"
+    return <Navigate to='/' />'
 }
 import React from 'react';
-import Head from "next/head";
-import Link from "next/link";
+import Head from 'next/head';
+import Link from 'next/link';
 const Signup = () => {;
   return (
     <>;
       <Head>;
         <title>Signup - Zion Tech Group</title>;
-        <meta name="description" content="Professional Signup services"  />;
+        <meta name='description' content='Professional Signup services'  />;
       </Head>;
-      <div className="min-h-screen bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
-          <div className="text-center">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+      <div className='min-h-screen bg-gray-50'>;
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>;
+          <div className='text-center'>;
+            <h1 className='text-4xl font-bold text-gray-900 mb-8'>;
               Signup;
             </h1>;
-            <p className="text-xl text-gray-600 mb-12">;
+            <p className='text-xl text-gray-600 mb-12'>;
               Professional Signup services and solutions;
             </p>;
-            <div className="grid md:grid-cols-2 gap-8 mb-12">;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
-                <ul className="text-gray-600 space-y-2">;
+            <div className='grid md:grid-cols-2 gap-8 mb-12'>;
+              <div className='bg-white p-6 rounded-lg shadow-md'>;
+                <h2 className='text-2xl font-semibold mb-4'>Our Services</h2>;
+                <ul className='text-gray-600 space-y-2'>;
                   <li>• Professional Solutions</li>;
                   <li>• Expert Implementation</li>;
                   <li>• 24/7 Support</li>;
                   <li>• Custom Development</li>;
                 </ul>;
               </div>;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
-                <ul className="text-gray-600 space-y-2">;
-    return <Navigate to="/" />;
+              <div className='bg-white p-6 rounded-lg shadow-md'>;
+                <h2 className='text-2xl font-semibold mb-4'>Why Choose Us</h2>;
+                <ul className='text-gray-600 space-y-2'>;
+    return <Navigate to='/' />;
 }
-}};
+};
 };
         </div>;
       </div>;
@@ -1592,10 +1592,10 @@ export default function Signup() {;
   if (healthCheckLoading) {
     return (
       <AuthLayout>
-        <div className="flex min-h-screen items-center justify-center p-4">
-          <div className="text-center space-y-4">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-            <p className="text-muted-foreground">Initializing signup...</p>
+        <div className='flex min-h-screen items-center justify-center p-4'>
+          <div className='text-center space-y-4'>
+            <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto'></div>
+            <p className='text-muted-foreground'>Initializing signup...</p>
           </div>
         </div>
       </AuthLayout>
@@ -1604,29 +1604,29 @@ export default function Signup() {;
 
   return (
     <AuthLayout>
-      <div className="flex min-h-screen items-center justify-center p-4">
-        <div className="w-full max-w-sm space-y-4">
+      <div className='flex min-h-screen items-center justify-center p-4'>
+        <div className='w-full max-w-sm space-y-4'>
           {isPartnerSignup && (
-            <div className="text-center mb-6">
-              <h1 className="text-2xl font-bold text-foreground">Partner Application</h1>
-              <p className="text-sm text-muted-foreground mt-2">
+            <div className='text-center mb-6'>
+              <h1 className='text-2xl font-bold text-foreground'>Partner Application</h1>
+              <p className='text-sm text-muted-foreground mt-2'>
                 Join the Zion AI Partner Program and start earning rewards
               </p>
             </div>
           )}
-          <form onSubmit={handleFormSubmit} className="space-y-4" noValidate>
+          <form onSubmit={handleFormSubmit} className='space-y-4' noValidate>
           {/* Show Health Check Warning */}
           {healthCheckError && (
-            <Alert variant="destructive" className="border-yellow-500 bg-yellow-50 text-yellow-900">
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription className="flex items-center justify-between">
+            <Alert variant='destructive' className='border-yellow-500 bg-yellow-50 text-yellow-900'>
+              <AlertCircle className='h-4 w-4' />
+              <AlertDescription className='flex items-center justify-between'>
                 <span>{healthCheckError}. You can still try to sign up, but it may fail.</span>
                 <Button 
-                  variant="outline" 
-                  size="sm" 
+                  variant='outline' 
+                  size='sm' 
                   onClick={performHealthCheck}
                   disabled={healthCheckLoading}
-                  className="ml-2 text-xs"
+                  className='ml-2 text-xs'
                 >
                   {healthCheckLoading ? 'Checking...' : 'Retry'}
                 </Button>;
@@ -1636,23 +1636,23 @@ export default function Signup() {;
 ;
           {/* Show Success message */}
           {successMessage && (
-            <Alert className="border-green-500 bg-green-50 text-green-900" data-testid="success-alert">
-              {emailVerificationRequired ? <Mail className="h-4 w-4" /> : <CheckCircle className="h-4 w-4" />}
+            <Alert className='border-green-500 bg-green-50 text-green-900' data-testid='success-alert'>
+              {emailVerificationRequired ? <Mail className='h-4 w-4' /> : <CheckCircle className='h-4 w-4' />}
               <AlertDescription>{successMessage}</AlertDescription>
             </Alert>
           )}
 ;
           {/* Show Error message */}
           {errorMessage && (
-            <Alert variant="destructive" data-testid="error-alert">
-              <AlertCircle className="h-4 w-4" />
+            <Alert variant='destructive' data-testid='error-alert'>
+              <AlertCircle className='h-4 w-4' />
               <AlertDescription>{errorMessage}</AlertDescription>
             </Alert>
           )}
           
           {emailVerificationRequired && (
-            <Alert className="border-blue-500 bg-blue-50 text-blue-900">
-              <Mail className="h-4 w-4" />
+            <Alert className='border-blue-500 bg-blue-50 text-blue-900'>
+              <Mail className='h-4 w-4' />
               <AlertDescription>
                 Before you can log in, please click the verification link in the email we sent to <strong>{formik.values.email}</strong>.
               </AlertDescription>
@@ -1660,108 +1660,108 @@ export default function Signup() {;
           )}
           
           <div>
-            <label htmlFor="name" className="block text-sm font-medium">
+            <label htmlFor='name' className='block text-sm font-medium'>
               Full Name
             </label>
             <Input
-              id="name"
-              name="name"
-              data-testid="name-input"
+              id='name'
+              name='name'
+              data-testid='name-input'
               value={formik.values.name}
               onChange={formik.handleChange}
               disabled={loading || emailVerificationRequired}
             />
             {formik.touched.name && formik.errors.name && (
-              <div className="text-red-500 text-sm">{formik.errors.name}</div>
+              <div className='text-red-500 text-sm'>{formik.errors.name}</div>
             )}
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-sm font-medium">
+            <label htmlFor='email' className='block text-sm font-medium'>
               Email address
             </label>
             <Input
-              id="email"
-              type="email"
-              name="email"
-              data-testid="email-input"
+              id='email'
+              type='email'
+              name='email'
+              data-testid='email-input'
               value={formik.values.email}
               onChange={formik.handleChange}
               disabled={loading || emailVerificationRequired}
             />
             {formik.touched.email && formik.errors.email && (
-              <div className="text-red-500 text-sm">{formik.errors.email}</div>
+              <div className='text-red-500 text-sm'>{formik.errors.email}</div>
             )}
           </div>
           
           <div>
-            <label htmlFor="password" className="block text-sm font-medium">
+            <label htmlFor='password' className='block text-sm font-medium'>
               Password
             </label>
           <Input
-            id="password"
-            type="password"
-            name="password"
-            data-testid="password-input"
+            id='password'
+            type='password'
+            name='password'
+            data-testid='password-input'
             value={formik.values.password}
             onChange={formik.handleChange}
             disabled={loading || emailVerificationRequired}
           />
           <PasswordStrengthMeter password={formik.values.password} />
           {formik.touched.password && formik.errors.password && (
-            <div className="text-red-500 text-sm">{formik.errors.password}</div>
+            <div className='text-red-500 text-sm'>{formik.errors.password}</div>
           )}
         </div>
           
           <div>
-            <label htmlFor="confirm" className="block text-sm font-medium">
+            <label htmlFor='confirm' className='block text-sm font-medium'>
               Confirm Password
             </label>
             <Input
-              id="confirm"
-              type="password"
-              name="confirm"
-              data-testid="confirm-password-input"
+              id='confirm'
+              type='password'
+              name='confirm'
+              data-testid='confirm-password-input'
               value={formik.values.confirm}
               onChange={formik.handleChange}
               disabled={loading || emailVerificationRequired}
             />
             {formik.touched.confirm && formik.errors.confirm && (
-              <div className="text-red-500 text-sm">{formik.errors.confirm}</div>
+              <div className='text-red-500 text-sm'>{formik.errors.confirm}</div>
             )}
           </div>
           
-          <div className="flex items-center space-x-2">
+          <div className='flex items-center space-x-2'>
             <input
-              id="terms"
-              name="terms"
-              type="checkbox"
-              data-testid="terms-checkbox"
+              id='terms'
+              name='terms'
+              type='checkbox'
+              data-testid='terms-checkbox'
               checked={formik.values.terms}
               onChange={formik.handleChange}
               disabled={loading || emailVerificationRequired}
             />
-            <label htmlFor="terms" className="text-sm">
+            <label htmlFor='terms' className='text-sm'>
               I agree to the{' '}
-              <Link href="/terms" className="underline">Terms of Service</Link>{' '}
+              <Link href='/terms' className='underline'>Terms of Service</Link>{' '}
               and{' '}
-              <Link href="/privacy" className="underline">Privacy Policy</Link>
+              <Link href='/privacy' className='underline'>Privacy Policy</Link>
             </label>
           </div>
           {formik.touched.terms && formik.errors.terms && (
-            <div className="text-red-500 text-sm">{formik.errors.terms}</div>
+            <div className='text-red-500 text-sm'>{formik.errors.terms}</div>
           )}
           
           {!emailVerificationRequired ? (
             <Button 
-              type="submit" 
+              type='submit' 
               disabled={loading} 
-              data-testid="signup-submit"
+              data-testid='signup-submit'
               className={healthCheckError ? 'bg-yellow-600 hover:bg-yellow-700' : ''}
             >
               {loading ? (
                 <>
-                  <LoadingSpinner size="sm" className="mr-2" />
+                  <LoadingSpinner size='sm' className='mr-2' />
                   Creating Account...
                 </>
               ) : (
@@ -1769,19 +1769,19 @@ export default function Signup() {;
               )}
             </Button>
           ) : (
-            <div className="space-y-2">
+            <div className='space-y-2'>
               <Button
-                type="button"
-                variant="outline"
-                className="w-full"
+                type='button'
+                variant='outline'
+                className='w-full'
                 onClick={() => router.push('/login')}
               >
                 Go to Login
               </Button>
               <Button
-                type="button"
-                variant="outline"
-                className="w-full"
+                type='button'
+                variant='outline'
+                className='w-full'
                 onClick={() =>
                   router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
                 }
@@ -1789,13 +1789,13 @@ export default function Signup() {;
                 Check Verification Status
               </Button>
               <Button
-                type="button"
-                variant="ghost"
-                className="w-full text-sm"
+                type='button'
+                variant='ghost'
+                className='w-full text-sm'
                 onClick={() => {
                   setEmailVerificationRequired(false),
                   setSuccessMessage('')
-                }}
+                }
               >;
                 Try Different Email;
               </Button>;
@@ -1804,22 +1804,22 @@ export default function Signup() {;
 ;
           {/* Additional help text when service issues are detected */}
           {healthCheckError && (
-            <div className="text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded">
+            <div className='text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded'>
               <p>⚠️ We detected some authentication service issues.</p>
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
           </form>
           {!emailVerificationRequired && (
-            <div className="mt-6">
-              <AuthButtons providers={["google", "github"]} />
+            <div className='mt-6'>
+              <AuthButtons providers={['google', 'github']} />
             </div>
           )}
-    return <Navigate to="/" />
+    return <Navigate to='/' />
 }
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
-    return <Navigate to="/onboarding" />
+    return <Navigate to='/onboarding' />
 }
         </div>;
       </div>;
@@ -1827,12 +1827,12 @@ export default function Signup() {;
   );
 }
 ;
-}</div> <div className="flex items-center space-x-2" > <input)
-}{"
-  !emailVerificationRequired ? (<Button type="submit" disabled= {
+}</div> <div className='flex items-center space-x-2' > <input)
+}{'
+  !emailVerificationRequired ? (<Button type='submit' disabled= {
   loading
-}> {'"
-  loading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account')
+}> {''
+  loading ? (<> <LoadingSpinner size='sm' className='mr-2' /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account')
 }</Button> > Go to Login </Button> <Button router.push (`/verify-status?email=$ {
   encodeURIComponent (formik.values.email)
 }`)
@@ -1840,5 +1840,5 @@ export default function Signup() {;
 }<p>⚠️ We detected some authentication service issues.</p> <p>If signup fails, please try again in a few minutes or contact support.</p> </div>)
 }</form> </div>)
 }</div> </div> </AuthLayout>)
-}'"
+}''
 origin/cursor/automate-test-improve-and-merge-code-2533

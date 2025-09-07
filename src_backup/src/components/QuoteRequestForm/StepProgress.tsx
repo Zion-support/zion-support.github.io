@@ -18,7 +18,7 @@ return (<div className='relative'>;'
       <div className='absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light'>;'
         <div;
           className='absolute h-full bg-zion-purple transition-all duration-500';'
-          style={{"currentStep": QuoteRequestSteps;
+          style={"currentStep": QuoteRequestSteps;
 }
 export function StepProgress() {const "steps": { "id": QuoteRequestSteps; "label": string }[] = [;
     { "id": 'service', "label": 'Service' },{ "id": 'details', "label": 'Details' },{ "id": 'timeline', "label": 'Timeline' },{ "id": 'budget', "label": 'Budget' },{ "id": 'summary', "label": 'Summary' }  ];  const "steps": { "id": QuoteRequestSteps, "label": string }[] = [;'
@@ -31,10 +31,10 @@ import { cn } from "@/lib/utils",interface StepProgressProps  {"currentStep": Qu
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">;"
         <div;
           className="absolute h-full bg-zion-purple transition-all duration-500";"
-          style={{"width": `${(steps.findIndex(s => { return s.id === currentStep) / (steps.length - 1)) * 100}%`; }`          }}
+          style={"width": `${(steps.findIndex(s => { return s.id === currentStep) / (steps.length - 1)) * 100}%`; }`          }
         />;
       </div>;
-            "width": `${(steps && steps.findIndex(s => { return s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`}}`        />; }
+            "width": `${(steps && steps.findIndex(s => { return s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`}`        />; }
       </div>;<div className='flex justify-between relative'>;'
         {steps && steps.map((step) => {const status  = getStepStatus(step && step.id)return (<div key={step && step.id} className='flex flex-col items-center relative'>;'
               <div;
@@ -91,7 +91,7 @@ interface StepProgressProps  {"currentStep": QuoteRequestSteps;
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">;"
         <div;
           className="absolute h-full bg-zion-purple transition-all duration-500";"
-          style={{"width": `${(steps.findIndex(s => { return s.id === currentStep) / (steps.length - 1)) * 100}%`; }`          }}
+          style={"width": `${(steps.findIndex(s => { return s.id === currentStep) / (steps.length - 1)) * 100}%`; }`          }
         />;
       </div>;
       <div className="flex justify-between relative">;"
@@ -148,7 +148,7 @@ if (return "current", ) {$2;"
       <div className='absolute top - 4 left - 0 right - 0 h - 0.5 bg - zion - blue - light'>;'
         <div;
           className='absolute h - full bg - zion - purple transition - all duration - 500';'
-          style={{"width": `${(steps.find_index (string => { return s.id === current_step) / (steps.length - 1)) * 100}%`}}`        />; }
+          style={"width": `${(steps.find_index (string => { return s.id === current_step) / (steps.length - 1)) * 100}%`}`        />; }
       </div>;
       <div className='flex justify - between relative'>;'
         {steps.map ((step) => {const status = getStepStatus (step.id)return (<div key={step.id} className='flex flex - col items - center relative'>;'

@@ -222,7 +222,7 @@ on_select (api);
       }
 return (;
       <CarouselContext.Provider;
-        value={{          canScrollNext}}
+        value={          canScrollNext}
 
     const handleKeyDown = $2;
       [scrollPrev, scrollNext]
@@ -259,7 +259,7 @@ onSelect(api)
           scrollPrev,
           scrollNext,
           canScrollPrev,
-          canScrollNext}}
+          canScrollNext}
       >;
         <div;
           ref={ref}

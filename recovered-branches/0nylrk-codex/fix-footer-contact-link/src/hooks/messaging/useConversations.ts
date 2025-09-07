@@ -187,9 +187,9 @@ export function useConversations(
     } catch (error) {
       console.error($2);
       toast({
-        title: "Failed to create conversation";
-        description: "Please try again later"
-        variant: "destructive"
+        title: 'Failed to create conversation';
+        description: 'Please try again later'
+        variant: 'destructive'
       })
     }
       toast({}

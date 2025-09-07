@@ -28,7 +28,6 @@ export default function TalentGrid() {
 const items = React.useMemo(;
     () =>
       TALENT_PROFILES.filter(
-=======
   if (!region) return true;
   const r = region.toLowerCase();
 return profile.location.toLowerCase().includes(r);
@@ -86,7 +85,6 @@ return (;
             ))}
           </div>;
           <div className="mt-3 text-sm">;
-=======
       <div className='text-sm text-gray-400'    />
         No matching talent found. Try broadening filters.
       </div>
@@ -94,10 +92,7 @@ return (;
 origin/cursor/automate-test-improve-and-merge-code-2533
       </div>}
     );}
-<<<<<<< HEAD
-=======
   }
-<<<<<<< HEAD
   return ("
     <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
       {items.map ((p) => (
@@ -125,7 +120,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={sk}"
                 className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text - gray - 300";
               >;
-=======
   return (
     <div className=\"grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4\" />;
       {items.map ((p) => (
@@ -152,19 +146,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {p.skills.slice (0, 6).map ((sk) => (<span;}
                 key={sk}"
                 className=\"text - xs px - 2 py - 1 rounded bg - gray - 100 dark: bg - gray - 800 text - gray - 600 dark:text - gray - 300\" />
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {sk}
               </span>))}
           </div>;"
-<<<<<<< HEAD
           <div className="mt - 3 text - sm">
-=======
           <div className="mt - 3 text - sm">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
               </span>
 
@@ -187,13 +174,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s))
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-<<<<<<< HEAD
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
@@ -227,12 +209,8 @@ export default function TalentGrid({ region, service }: Props) {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 "
-=======
 }return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" > {
   items.map ( (p) => (<div key= {
   p.slug 
@@ -257,11 +235,4 @@ export default function TalentGrid({ region, service }: Props) {
 }</div> 
 }</div>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

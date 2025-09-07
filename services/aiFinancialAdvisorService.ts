@@ -421,7 +421,7 @@ export interface FinancialPlan {
     "monthly_contribution": number,"projected_value": number;
   }
   "created_at": Date,"updated_at": Date;
-}}
+}
 export interface FinancialRequest  {"user_id": string;
   }
   "request_type": 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',"parameters": Record < string, any>;'
@@ -429,7 +429,7 @@ export interface FinancialRequest  {"user_id": string;
 export interface FinancialResponse  {export interface FinancialResponse  {export interface FinancialResponse  {"userId": string;"requestType": 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking';'
   }
   "parameters": Record<string, any>;preferences?: Record<string, any>;
-}}
+}
 export interface FinancialResponse  {"success": boolean;
   }
   "data": {portfolio?: InvestmentPortfolio;
@@ -450,9 +450,9 @@ export interface FinancialResponse  {"success": boolean;
     }
     this.baseUrl = baseUrl;
   }
-  async analyzePortfolio("portfolioId": string): Promise<InvestmentPortfolio> {try {const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {"headers": {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.portfolio;`          'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}`      const data = await response && response.json()return data && data.portfolio;
+  async analyzePortfolio("portfolioId": string): Promise<InvestmentPortfolio> {try {const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {"headers": {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.portfolio;`          'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}`      const data = await response && response.json()return data && data.portfolio;
     } catch (error) {console && console.error('Error analyzing "portfolio":', error)}'
-  async analyzePortfolio("portfolioId": string): Promise<InvestmentPortfolio> {try {const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}})if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}`      const data = await response.json()return data.portfolio;
+  async analyzePortfolio("portfolioId": string): Promise<InvestmentPortfolio> {try {const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {"headers": {'Authorization': `Bearer ${this.apiKey}`})if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}`      const data = await response.json()return data.portfolio;
     } catch (error) {console.error('Error analyzing "portfolio":', error)} catch (error) {console && console.error('Error analyzing "portfolio":', error)} catch (error) {console && console.error('Error analyzing "portfolio":', error)throw error;'
 }export interface FinancialRequest  {"user_id": string;
   }
@@ -472,8 +472,8 @@ export interface FinancialResponse  {"success": boolean;
     } catch (error) {console.error('Error creating financial "plan":', error)} catch (error) {console && console.error('Error creating financial "plan":', error)throw error;'
     }
   }
-  async trackFinancialGoals("userId": string): Promise<FinancialGoal[]> {try {if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.goals || [];`    } catch (error) {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}`      const data = await response && response.json()return data && data.goals || [];
-    } catch (error) {console && console.error('Error tracking financial "goals":', error)const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}})if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}`      const data = await response.json()return data.goals |[];
+  async trackFinancialGoals("userId": string): Promise<FinancialGoal[]> {try {if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.goals || [];`    } catch (error) {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}`      const data = await response && response.json()return data && data.goals || [];
+    } catch (error) {console && console.error('Error tracking financial "goals":', error)const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`})if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}`      const data = await response.json()return data.goals |[];
     } catch (error) {console.error('Error tracking financial "goals":', error)} catch (error) {console && console.error('Error tracking financial "goals":', error)throw error;'
     }
   }
@@ -537,7 +537,7 @@ constructor("apiKey": string, "baseUrl": string = '"https"://api && api.ziontech
       }
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+          'Authorization': `Bearer ${this && this.apiKey}`});`      if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
       const data = await response && response.json();
@@ -624,7 +624,7 @@ throw error;
       }
       const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+          'Authorization': `Bearer ${this && this.apiKey}`});`      if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
       const data = await response && response.json();
@@ -644,7 +644,7 @@ throw error;
       }
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+          'Authorization': `Bearer ${this && this.apiKey}`});`      if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
       const data = await response && response.json();
@@ -665,7 +665,7 @@ throw error;
       }
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+          'Authorization': `Bearer ${this && this.apiKey}`});`      if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
       const data = await response && response.json();
@@ -676,10 +676,10 @@ return data && data.analysis;
 throw error;
     }
   }
-  async trackFinancialGoals("userId": string): Promise<FinancialGoal[]> {try {const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {"headers": {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.analysis;`    } catch (error) {} catch (error) {console && console.error('Error getting market "analysis":', error)"headers": {'Authorization': `Bearer ${this && this.apiKey}`}})} catch (error) {console && console.error('Error tracking financial "goals":', error)throw error;'    }
+  async trackFinancialGoals("userId": string): Promise<FinancialGoal[]> {try {const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {"headers": {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.analysis;`    } catch (error) {} catch (error) {console && console.error('Error getting market "analysis":', error)"headers": {'Authorization': `Bearer ${this && this.apiKey}`})} catch (error) {console && console.error('Error tracking financial "goals":', error)throw error;'    }
   }
-  async getMarketAnalysis("market": string): Promise<MarketAnalysis> {try {const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {"headers": {const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {        "headers": {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.analysis;`    } catch (error) {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}`      const data = await response && response.json()return data && data.analysis;
-    } catch (error) {console && console.error('Error getting market "analysis":', error)const response = await fetch(`${this.baseUrl}/api/financial/market-analysis/${market}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}})if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}`      const data = await response.json()return data.analysis;
+  async getMarketAnalysis("market": string): Promise<MarketAnalysis> {try {const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {"headers": {const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {        "headers": {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.analysis;`    } catch (error) {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}`      const data = await response && response.json()return data && data.analysis;
+    } catch (error) {console && console.error('Error getting market "analysis":', error)const response = await fetch(`${this.baseUrl}/api/financial/market-analysis/${market}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`})if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}`      const data = await response.json()return data.analysis;
     } catch (error) {console.error('Error getting market "analysis":', error)console && console.error('Error getting market "analysis":', error)} catch (error) {console && console.error('Error getting market "analysis":', error)console && console.error('Error getting market "analysis":', error)throw error;'
     }
   }
@@ -751,7 +751,7 @@ export class AIFinancialAdvisorService {private "api_key": string;
   }
   private "base_url": string,constructor ("api_key": string, "base_url": string = '"https"://api.ziontechgroup.com') {this.api_key = api_key,this.base_url = base_url;'
   }
-  async analyze_portfolio ("portfolio_id": string): Promise < InvestmentPortfolio> {try {const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/analyze`, {"headers": {'Authorization': `Bearer ${this.api_key}`}})// Check condition;`if ( {) {$2;
+  async analyze_portfolio ("portfolio_id": string): Promise < InvestmentPortfolio> {try {const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/analyze`, {"headers": {'Authorization': `Bearer ${this.api_key}`})// Check condition;`if ( {) {$2;
 }
         throw new Error (`HTTP error! "status": ${response.status}`)}`    } catch (error) {console.error ('Error getting investment "recommendations":', error)throw error;'
     }
@@ -807,7 +807,7 @@ export class AIFinancialAdvisorService {
       }
       const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/analyze`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this.api_key}`}});`;
+          'Authorization': `Bearer ${this.api_key}`});`;
       // Check condition,
 if ( {) {
   $2
@@ -848,7 +848,7 @@ if ( {) {
       }
       const response = await fetch (`${this.base_url}/api / financial / goals/${user_id}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this.api_key}`}});`;
+          'Authorization': `Bearer ${this.api_key}`});`;
       // Check condition,
 if ( {) {
   $2
@@ -868,7 +868,7 @@ if ( {) {
       }
       const response = await fetch (`${this.base_url}/api / financial / market - analysis/${market}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this.api_key}`}});`;
+          'Authorization': `Bearer ${this.api_key}`});`;
       // Check condition,
 if ( {) {
   $2
@@ -943,13 +943,13 @@ if ( {) {$2;
     } catch (error) {console.error ('Error creating financial "plan":', error)throw error;'
     }
   }
-  async trackFinancialGoals ("user_id": string): Promise < FinancialGoal[]> {try {const response = await fetch (`${this.base_url}/api / financial / goals/${user_id}`, {"headers": {'Authorization': `Bearer ${this.api_key}`}})// Check condition;`if ( {) {$2;
+  async trackFinancialGoals ("user_id": string): Promise < FinancialGoal[]> {try {const response = await fetch (`${this.base_url}/api / financial / goals/${user_id}`, {"headers": {'Authorization': `Bearer ${this.api_key}`})// Check condition;`if ( {) {$2;
 }
         throw new Error (`HTTP error! "status": ${response.status}`)}`      const data = await response.json ()return data.goals || [];
     } catch (error) {console.error ('Error tracking financial "goals":', error)throw error;'
     }
   }
-  async getMarketAnalysis ("market": string): Promise < MarketAnalysis> {try {const response = await fetch (`${this.base_url}/api / financial / market - analysis/${market}`, {"headers": {'Authorization': `Bearer ${this.api_key}`}})// Check condition;`if ( {) {$2;
+  async getMarketAnalysis ("market": string): Promise < MarketAnalysis> {try {const response = await fetch (`${this.base_url}/api / financial / market - analysis/${market}`, {"headers": {'Authorization': `Bearer ${this.api_key}`})// Check condition;`if ( {) {$2;
 }
         throw new Error (`HTTP error! "status": ${response.status}`)}`      const data = await response.json ()return data.analysis;
     } catch (error) {console.error ('Error getting market "analysis":', error)throw error;'
@@ -1027,7 +1027,7 @@ if ( {) {$2;
 }export interface PortfolioAsset  {"id":string,"symbol":string,"name":string,"type":'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity',"quantity":number,"currentPrice":number,"marketValue":number,"allocation":number, // percentage of portfolio;'
   }
   "purchasePrice":number,"purchaseDate":Date,"performance":{"dailyReturn":number,"weeklyReturn":number,"monthlyReturn":number,"yearlyReturn":number,"totalReturn":number;
-  }}export interface PortfolioPerformance  {"totalReturn":number,"annualizedReturn":number,"volatility":number,"sharpeRatio":number,"maxDrawdown":number,"beta":number,"alpha":number,"trackingError":number,"informationRatio":number,"sortinoRatio":number;
+  }export interface PortfolioPerformance  {"totalReturn":number,"annualizedReturn":number,"volatility":number,"sharpeRatio":number,"maxDrawdown":number,"beta":number,"alpha":number,"trackingError":number,"informationRatio":number,"sortinoRatio":number;
 }export interface InvestmentRecommendation  {"id":string,"userId":string,"type":'buy' | 'sell' | 'hold' | 'rebalance',"asset":{"symbol":string,"name":string,"type":string,"currentPrice":number;'
   },"confidence":number,"reasoning":string[],"expectedReturn":number,"riskLevel":'low' | 'medium' | 'high',"timeHorizon":number, // in months;'
   "alternatives":string[],"createdAt":Date,"expiresAt":Date;
@@ -1066,15 +1066,15 @@ if ( {) {$2;
 }export interface FinancialResponse  {"success": boolean,"data": {portfolio?: InvestmentPortfolio,recommendations?: InvestmentRecommendation[],plan?: FinancialPlan,analysis?: MarketAnalysis,goals?: FinancialGoal[];
   },"insights": string[],"nextSteps": string[],"riskWarnings": string[],"estimatedFees": number;
 }export class AIFinancialAdvisorService {private "apiKey": string,private "baseUrl": string,constructor("apiKey": string, "baseUrl": string = '"https"://api.ziontechgroup.com') {this.apiKey = apiKey,this.baseUrl = baseUrl;'
-  }async analyzePortfolio("portfolioId": string): Promise<InvestmentPortfolio> {try {const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}}),if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}const data = await response.json()return data.portfolio;`    } catch (error) {console.error('Error analyzing "portfolio":', error),throw error;'
+  }async analyzePortfolio("portfolioId": string): Promise<InvestmentPortfolio> {try {const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}),if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}const data = await response.json()return data.portfolio;`    } catch (error) {console.error('Error analyzing "portfolio":', error),throw error;'
     }
   }async getInvestmentRecommendations("userId": string, "riskTolerance": string, "investmentHorizon": number): Promise<InvestmentRecommendation[]> {try {const response = await fetch(`${this.baseUrl}/api/financial/recommendations`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this.apiKey}`,'Content-Type': 'application/json'},"body": JSON.stringify({ userId, riskTolerance, investmentHorizon })}),if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}const data = await response.json()return data.recommendations || [];`    } catch (error) {console.error('Error getting investment "recommendations":', error),throw error;'
     }
   }async createFinancialPlan("request": FinancialRequest): Promise<FinancialPlan> {try {const response = await fetch(`${this.baseUrl}/api/financial/plan`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this.apiKey}`,'Content-Type': 'application/json'},"body": JSON.stringify(request)}),if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}const data = await response.json(),return data.plan;`    } catch (error) {console.error('Error creating financial "plan":', error),throw error;'
     }
-  }async trackFinancialGoals("userId": string): Promise<FinancialGoal[]> {try {const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}}),if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}const data = await response.json(),return data.goals || [];`    } catch (error) {console.error('Error tracking financial "goals":', error),throw error;'
+  }async trackFinancialGoals("userId": string): Promise<FinancialGoal[]> {try {const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}),if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}const data = await response.json(),return data.goals || [];`    } catch (error) {console.error('Error tracking financial "goals":', error),throw error;'
     }
-  }async getMarketAnalysis("market": string): Promise<MarketAnalysis> {try {const response = await fetch(`${this.baseUrl}/api/financial/market-analysis/${market}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}}),if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}const data = await response.json(),return data.analysis;`    } catch (error) {console.error('Error getting market "analysis":', error),throw error;'
+  }async getMarketAnalysis("market": string): Promise<MarketAnalysis> {try {const response = await fetch(`${this.baseUrl}/api/financial/market-analysis/${market}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}),if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}const data = await response.json(),return data.analysis;`    } catch (error) {console.error('Error getting market "analysis":', error),throw error;'
     }
   }async rebalancePortfolio("portfolioId": string, "targetAllocation": Record<string number>): Promise<{"currentAllocation": Record<string number>,"targetAllocation": Record<string number>,"rebalancingActions": Array<{"action": 'buy' | 'sell',"symbol": string,"quantity": number,"estimatedCost": number;'
     }>,"estimatedFees": number,"expectedImpact": string;
@@ -1567,7 +1567,7 @@ export class AIFinancialAdvisorService {;
       }
       const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {;`        }
         "headers": {;
-          'Authorization': `Bearer ${this.apiKey}`}}),;`      if (!response.ok) {;
+          'Authorization': `Bearer ${this.apiKey}`}),;`      if (!response.ok) {;
         }
         throw new Error(`HTTP error! "status": ${response.status}`);`      }
 ;
@@ -1630,7 +1630,7 @@ export class AIFinancialAdvisorService {;
       }
       const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {;`        }
         "headers": {;
-          'Authorization': `Bearer ${this.apiKey}`}}),;`      if (!response.ok) {;
+          'Authorization': `Bearer ${this.apiKey}`}),;`      if (!response.ok) {;
         }
         throw new Error(`HTTP error! "status": ${response.status}`);`      }
 ;
@@ -1649,7 +1649,7 @@ export class AIFinancialAdvisorService {;
       }
       const response = await fetch(`${this.baseUrl}/api/financial/market-analysis/${market}`, {;`        }
         "headers": {;
-          'Authorization': `Bearer ${this.apiKey}`}}),;`      if (!response.ok) {;
+          'Authorization': `Bearer ${this.apiKey}`}),;`      if (!response.ok) {;
         }
         throw new Error(`HTTP error! "status": ${response.status}`);`      }
 ;

@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
 
@@ -19,7 +17,6 @@ import { Button } from "@/components/ui/button";
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
 
 
 
@@ -55,7 +52,6 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
       isDefault: false,
     },
   ];
@@ -68,7 +64,6 @@ export function PaymentMethods() {
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
 
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
 
@@ -81,7 +76,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {paymentMethods.map((method,) => (
           <div
             key = {method.id,}
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
 
 ;
 import { CreditCard, Plus, Trash  } from 'lucide-react';
@@ -177,7 +171,6 @@ export function PaymentMethods() {// Mock payment methods;
       <CardContent className='space-y-4'>;
         {paymentMethods && paymentMethods.map(method => (<div            key={method && method.id}
       <CardContent className="space-y-4">;
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
         {paymentMethods && paymentMethods.map((method,) => (<div;
             key = {method && method.id}<CardDescription>Manage your payment methods for automatic billing</CardDescription>;
       </CardHeader>;
@@ -224,10 +217,8 @@ export function PaymentMethods() {// Mock payment methods;
                   {method.isDefault && (Default;
                     </span>;
                   )}
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
                 </p>
 
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
 
                 <p className="text-sm text-muted-foreground">
 
@@ -236,7 +227,6 @@ export function PaymentMethods() {// Mock payment methods;
               </div>
             </div>
 
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
 
             <div className="flex gap-2">
               {!method.isDefault && (
@@ -262,7 +252,6 @@ export function PaymentMethods() {// Mock payment methods;
 
         <Button className="gap-1">
 
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
         <Button className="gap-1">
 
           <Plus className="h-4 w-4" />
@@ -291,7 +280,6 @@ export function PaymentMethods() {// Mock payment methods;
         </Button>;
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
   )}<Button className="gap-1">;
           <Plus className="h-4 w-4" />;
           Add Payment Method;
@@ -321,7 +309,6 @@ export function PaymentMethods() {// Mock payment methods;
               <div>;
                 <p className='font-medium'>;
                   {method.brand} •••• {method.last4}
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
                   {method.isDefault && (
                     <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -399,7 +386,6 @@ export function PaymentMethods() {;
   );
 });
 }
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
 
 import React from 'react';
 import {
@@ -452,7 +438,6 @@ import { CreditCard, Plus, Trash } from 'lucide-react';
     </Card>;
   )})}import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
 import React from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle   } from '@/components / ui / card';
 import { Button   } from '@/components / ui / button';
@@ -594,7 +579,6 @@ pr-12325
               <div>;
                 <p className="font-medium">;
                   {method.brand} •••• {method.last4}
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
                   {method.is_default && (<span className='ml - 2 text - xs rounded - full bg - primary / 20 text - primary px - 2 py - 0.5'>                      Default;
                     </span>)}
                 </p>;
@@ -613,7 +597,6 @@ pr-12325
                 </p>;
               </div>;
             </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
             <div className='flex gap - 2'>;
               {!method.is_default && (<Button size='sm' variant='ghost'>;
                   Set Default;
@@ -634,8 +617,6 @@ pr-12325
           Add Payment Method;
         </Button>;
       </CardFooter>;
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
     </Card>);
     </Card>;
   );
@@ -651,7 +632,6 @@ pr-12325
       </CardFooter>
     </Card>
   );
-<<<<<<< HEAD:src_backup/components/enterprise/billing/PaymentMethods.tsx
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>)}</CardContent>;

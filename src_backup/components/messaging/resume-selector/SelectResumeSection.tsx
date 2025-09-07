@@ -11,7 +11,6 @@ interface SelectResumeSectionProps  {resumeOptions: ResumeOption[];
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/SelectResumeSection.tsx
   isLoading: boolean
 export function SelectResumeSection({
   resumeOptions;
@@ -100,7 +99,7 @@ export function SelectResumeSection() {return (<div className="space-y-2">;
           )}
         </>;
       )}
-  )}}}</div>;
+  )}}</div>;
   )}interface ResumeOption  {id: string;
   title: string;
   description: string;
@@ -122,7 +121,6 @@ export function SelectResumeSection() {return (<div className="space-y-2">;
           : 'border-gray-200 hover:border-gray-300';
       }`}
       onClick={() => onSelect(resume)}
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/SelectResumeSection.tsx
     >
       <div className="flex items-start space-x-3">
         <FileText className="h-8 w-8 text-gray-400" />
@@ -184,7 +182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       )}
     </div>;
-  )}}
+  )}
     </div>
   )
 }

@@ -10,7 +10,6 @@ const Revolutionary2027Hero = null;
 
 const containerVariants = {}
     hidden: { opacity: 0}
-=======
 const containerVariants = {
     }
     "hidden": { "opacity": 0
@@ -44,7 +43,6 @@ const itemVariants = {
       }
     }
   };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 return (;
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>;'
@@ -61,7 +59,6 @@ return (;
       {/* Animated Grid Pattern */}<div className="absolute inset-0 opacity-20">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
       </div>;<div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  }return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
-=======
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]'></div>
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]'></div>
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]'></div>
@@ -70,10 +67,7 @@ return (;
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  }
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
-=======
-=======
   return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>;
       {/* Enhanced Background Effects */}'
       <div className='absolute inset-0 opacity-20'>;'
@@ -128,7 +122,6 @@ return (;
 
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]"></div>;
@@ -152,20 +145,20 @@ return (;
           }
           key={index}
           className={`absolute ${item && item.position} text-purple-400/30`}`
-          animate={{
+          animate={
 
 }
 
 "y": [0, -20, 0],
             "rotate": [0, 5, -5, 0]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 4,
             "delay": item.delay,
             "repeat": Infinity,
 "ease": 'easeInOut','
-          }}
+          }
         >
           <item.icon className='w-8 h-8' />'
         </motion.div>
@@ -362,7 +355,6 @@ variants={containerVariant,;
                 <TestTube className='w-6 h-6 text-white' />;
               </div>;
               <h3 className='text-lg font-semibold text-white mb-2'>Biotech</h3>;
-=======
           {/* Subtitle */}'
           <motion && motion.div variants={itemVariants} className='max-w-4xl mx-auto'>;'
             <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed'>;
@@ -421,7 +413,6 @@ variants={containerVariant,;
                 <TestTube className='w-6 h-6 text-white' />;
               </div>;'
               <h3 className='text-lg font-semibold text-white mb-2'>Biotech</h3>;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               <p className='text-gray-300 text-sm'>;
                 DNA computing and molecular biology;
               </p>            </div>;
@@ -444,7 +435,6 @@ variants={containerVariant,;
               <h3 className="text-lg font-semibold text-white mb-2">Biotech</h3>;"
               <p className="text-gray-300 text-sm">DNA computing and molecular biology</p>;
             </div>;
-<<<<<<< HEAD
           </motion.div>;
           {/* CTA Buttons */}
 <motion.div;
@@ -477,7 +467,6 @@ variants={containerVariant,;
               </div>
               <div className='text-gray-400 text-sm'>'
                 Revolutionary Services
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Quantum AI</h3>
               <p className="text-gray-300 text-sm">Consciousness simulation and neural computing</p>
@@ -509,13 +498,13 @@ variants={containerVariant,;
 }
       <motion.div;
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2';'
-        animate={{"y": [0, 10, 0];
-        }}
-        transition={{"duration": 2;
+        animate={"y": [0, 10, 0];
+        }
+        transition={"duration": 2;
           }
           "repeat": Infinity;
           "ease": 'easeInOut';'
-        }}
+        }
 
       >
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>'
@@ -527,23 +516,23 @@ className='w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-
           <motion.div;
             className='w - 1 h - 3 bg - gradient - to - b from - cyan - 400 to - purple - 400 rounded - full mt - 2';'
 
-            animate={{
+            animate={
 
               }
 
               "y": [0, 12, 0]
-            }}
-            transition={{
+            }
+            transition={
               }
               "duration": 2,
               "repeat": Infinity,
               "ease": 'easeInOut','
-            }}
-            transition={{
+            }
+            transition={
               }
               "duration": 2,
 "repeat": Infinity,
-"ease": 'easeInOut'            }}' />;
+"ease": 'easeInOut'            }' />;
         </div>;
       </motion && motion.div>;
 
@@ -559,45 +548,39 @@ className='w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-
 }
 key={i}
             className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';'
-            style={{"left": `${Math.random() * 10,`}%`;`              "top": `${Math.random() * 10,`}%`;`              "left": `${Math.random() * 10,`}%`,"top": `${Math.random() * 10,`}%`,key={i}`
+            style={"left": `${Math.random() * 10,`}%`;`              "top": `${Math.random() * 10,`}%`;`              "left": `${Math.random() * 10,`}%`,"top": `${Math.random() * 10,`}%`,key={i}`
             className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';'
-            style={{}}            animate={{"y": [0, -100];
+            style={}            animate={"y": [0, -100];
               }
               "opacity": [0, 1, 0];
-            }}
-            transition={{}
+            }
+            transition={}
         ))}
       </div>;
     </section>;
   );
 
-            transition={{
+            transition={
 
               }
 
               "duration": 3 + Math.random() * 2,
               "repeat": Infinity,
               "delay": Math.random() * 2
-            }} />
+            } />
         ))}
       </div>
     </section>
-<<<<<<< HEAD
   )
 },
-=======
 );
 };
 export default Revolutionary2027Hero;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 "
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 ;
-export default Revolutionary2027Hero;              delay: Math.random () * 2}}
+export default Revolutionary2027Hero;              delay: Math.random () * 2}
           />))}
       </div>;
     </section>);
@@ -605,13 +588,11 @@ export default Revolutionary2027Hero;              delay: Math.random () * 2}}
 ;
 export default Revolutionary2027Hero);
 }
-<<<<<<< HEAD
 ;
 export default Revolutionary2027Hero;
 ;
 )}export default Revolutionary2027Hero;
 export default Revolutionary2027Hero,
-=======
 return (</div> {
   /* Floating Icons */ 
 }{
@@ -639,15 +620,5 @@ top: `$ {
 }</div> </section>) 
 }
 export default Revolutionary2027Hero
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -64,7 +64,7 @@ export interface CustomerProfile  {export interface AIResponse  {"id": string;
   "response": string;
   "confidence": number;"suggested_actions": string[];
   "next_steps": string[];
-  "requiresHumanReview": boolean,"generated_at": Date;}}
+  "requiresHumanReview": boolean,"generated_at": Date;}
 export interface CustomerServiceMetrics  {"total_tickets": number;
   }
   "open_tickets": number;
@@ -298,7 +298,7 @@ throw error;
   async getTicket("ticketId": string): Promise<CustomerTicket> {
     }
     try {
-          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+          'Authorization': `Bearer ${this && this.apiKey}`});`      if (!response && response.ok) {
 }
 throw new Error(`Get ticket API "error": ${response && response.statusText}`);`      }
       const data = await response && response.json();
@@ -317,7 +317,7 @@ throw new Error(`Get ticket API "error": ${response && response.statusText}`);` 
       console && console.error('Error getting "ticket":', error);'
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this.apiKey}`}});`      if (!response.ok) {
+          'Authorization': `Bearer ${this.apiKey}`});`      if (!response.ok) {
 }
 throw new Error(`Get ticket API "error": ${response.statusText}`);`      }
       const data = await response.json();
@@ -344,7 +344,7 @@ throw error;
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {`        }
         "method": 'PATCH','
         "headers": {
-          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+          'Authorization': `Bearer ${this && this.apiKey}`});`      if (!response && response.ok) {
 }
 throw new Error(`Update ticket API "error": ${response && response.statusText}`);`      }
       const data = await response && response.json();
@@ -427,7 +427,7 @@ throw error;
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {`        }
         "method": 'POST','
         "headers": {
-          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+          'Authorization': `Bearer ${this && this.apiKey}`});`      if (!response && response.ok) {
 }
 throw new Error(`AI response API "error": ${response && response.statusText}`);`      }
       const data = await response && response.json();
@@ -448,7 +448,7 @@ throw error;
       }
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+          'Authorization': `Bearer ${this && this.apiKey}`});`      if (!response && response.ok) {
 }
 throw new Error(`Get customer profile API "error": ${response && response.statusText}`);`      }
       const data = await response && response.json();
@@ -468,7 +468,7 @@ throw error;
       }
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+          'Authorization': `Bearer ${this && this.apiKey}`});`      if (!response && response.ok) {
 }
 throw new Error(`Get metrics API "error": ${response && response.statusText}`);`      }
 return await response && response.json();
@@ -491,7 +491,7 @@ throw error;
       const params = new URLSearchParams({ query, ...filters });
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+          'Authorization': `Bearer ${this && this.apiKey}`});`      if (!response && response.ok) {
 }
 throw new Error(`Search tickets API "error": ${response && response.statusText}`);`      }
       const data = await response && response.json();
@@ -524,7 +524,7 @@ throw error;
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/auto-assign`, {`        }
         "method": 'POST','
         "headers": {
-          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+          'Authorization': `Bearer ${this && this.apiKey}`});`      if (!response && response.ok) {
 }
 throw new Error(`Auto assign tickets API "error": ${response && response.statusText}`);`      }
 return await response && response.json();
@@ -626,7 +626,7 @@ if ( {) {
       }
       const response = await fetch (`${this.base_url}/api / customer - service / tickets/${ticket_id}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this.api_key}`}});`;
+          'Authorization': `Bearer ${this.api_key}`});`;
       // Check condition,
 if ( {) {
   $2
@@ -712,7 +712,7 @@ if ( {) {
       const response = await fetch (`${this.base_url}/api / customer - service / tickets/${ticket_id}/ai - response`, {`        }
         "method": 'POST','
         "headers": {
-          'Authorization': `Bearer ${this.api_key}`}});`;
+          'Authorization': `Bearer ${this.api_key}`});`;
       // Check condition,
 if ( {) {
   $2
@@ -735,7 +735,7 @@ if ( {) {
       }
       const response = await fetch (`${this.base_url}/api / customer - service / customers/${customer_id}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this.api_key}`}});`;
+          'Authorization': `Bearer ${this.api_key}`});`;
       // Check condition,
 if ( {) {
   $2
@@ -758,7 +758,7 @@ if ( {) {
       }
       const response = await fetch (`${this.base_url}/api / customer - service / metrics?timeframe=${timeframe}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this.api_key}`}});`;
+          'Authorization': `Bearer ${this.api_key}`});`;
       // Check condition,
 if ( {) {
   $2
@@ -778,7 +778,7 @@ if ( {) {
       const params = new URLSearchParams ({ query, ...filters });
       const response = await fetch (`${this.base_url}/api / customer - service / tickets / search?${params}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this.api_key}`}});`;
+          'Authorization': `Bearer ${this.api_key}`});`;
       // Check condition,
 if ( {) {
   $2
@@ -808,7 +808,7 @@ if ( {) {
       const response = await fetch (`${this.base_url}/api / customer - service / tickets / auto - assign`, {`        }
         "method": 'POST','
         "headers": {
-          'Authorization': `Bearer ${this.api_key}`}});`;
+          'Authorization': `Bearer ${this.api_key}`});`;
       // Check condition,
 if ( {) {
   $2
@@ -1083,12 +1083,12 @@ export interface CustomerServiceResponse  {"ticket_id": string;
     } catch (error) {console && console.error('Error creating "ticket":', error)throw error;'
     }
   }
-  async getTicket("ticketId": string): Promise<CustomerTicket> {try {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`Get ticket API "error": ${response && response.statusText}`)}const data = await response && response.json()return {...data;`        }
+  async getTicket("ticketId": string): Promise<CustomerTicket> {try {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`Get ticket API "error": ${response && response.statusText}`)}const data = await response && response.json()return {...data;`        }
         "createdAt": new Date(data && data.createdAt)"updatedAt": new Date(data && data.updatedAt)"resolvedAt": data && data.resolvedAt ? new Date(data && data.resolvedAt) : undefined;
-        "conversationHistory": data && data.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg && msg.timestamp)}))}} catch (error) {console && console.error('Error getting "ticket":', error)const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {"method": 'PATCH',"headers": {if (!response && response.ok) {throw new Error(`Update ticket API "error": ${response && response.statusText}`)}const data = await response && response.json()return {...data;`        }
+        "conversationHistory": data && data.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg && msg.timestamp)}))} catch (error) {console && console.error('Error getting "ticket":', error)const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {"method": 'PATCH',"headers": {if (!response && response.ok) {throw new Error(`Update ticket API "error": ${response && response.statusText}`)}const data = await response && response.json()return {...data;`        }
         "createdAt": new Date(data && data.createdAt)"updatedAt": new Date(data && data.updatedAt)"resolvedAt": data && data.resolvedAt ? new Date(data && data.resolvedAt) : undefined;
         "conversationHistory": data && data.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg && msg.timestamp)}))}
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}})if (!response.ok) {throw new Error(`Get ticket API "error": ${response.statusText}`)}`      const data = await response.json()return {...data;
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`})if (!response.ok) {throw new Error(`Get ticket API "error": ${response.statusText}`)}`      const data = await response.json()return {...data;
         }
         "createdAt": new Date(data.createdAt)"updatedAt": new Date(data.updatedAt)"resolvedAt": data.resolvedAt ? new Date(data.resolvedAt) : undefined;
         "conversationHistory": data.conversationHistory.map(("msg": any) => ({...msg;
@@ -1097,9 +1097,9 @@ export interface CustomerServiceResponse  {"ticket_id": string;
     } catch (error) {console.error('Error getting "ticket":', error)throw error;'
     }
   }
-  async updateTicket("ticketId": string, "updates": Partial<CustomerTicket>): Promise<CustomerTicket> {try {const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {"method": 'PATCH',"headers": {'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`}"body": JSON && JSON.stringify(updates)})const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {"method": 'PATCH',"headers": {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`Update ticket API "error": ${response && response.statusText}`)}const data = await response && response.json()return {...data;`        }
+  async updateTicket("ticketId": string, "updates": Partial<CustomerTicket>): Promise<CustomerTicket> {try {const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {"method": 'PATCH',"headers": {'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`}"body": JSON && JSON.stringify(updates)})const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {"method": 'PATCH',"headers": {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`Update ticket API "error": ${response && response.statusText}`)}const data = await response && response.json()return {...data;`        }
         "createdAt": new Date(data && data.createdAt)"updatedAt": new Date(data && data.updatedAt)"resolvedAt": data && data.resolvedAt ? new Date(data && data.resolvedAt) : undefined;
-        "conversationHistory": data && data.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg && msg.timestamp)}))}} catch (error) {console && console.error('Error updating "ticket":', error)} catch (error) {console && console.error('Error getting "ticket":', error)} catch (error) {console && console.error('Error updating "ticket":', error)} catch (error) {console && console.error('Error updating "ticket":', error)throw error;'
+        "conversationHistory": data && data.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg && msg.timestamp)}))} catch (error) {console && console.error('Error updating "ticket":', error)} catch (error) {console && console.error('Error getting "ticket":', error)} catch (error) {console && console.error('Error updating "ticket":', error)} catch (error) {console && console.error('Error updating "ticket":', error)throw error;'
     }
   }
   async addMessage("ticketId": string, "message": Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {try {const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {"method": 'POST',"headers": {'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`}"body": JSON && JSON.stringify(message)})if (!response && response.ok) {throw new Error(`Add message API "error": ${response && response.statusText}`)}const data  = await response && response.json()if (!response && response.ok) {throw new Error(`Add message API "error": ${response && response.statusText}`)}`      const data  = await response && response.json()return {...data;
@@ -1112,31 +1112,31 @@ export interface CustomerServiceResponse  {"ticket_id": string;
     } catch (error) {console.error('Error adding "message":', error)throw error;'
     }
   }
-  async generateAIResponse("ticketId": string): Promise<AIResponse> {try {const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`AI response API "error": ${response && response.statusText}`)}const data  = await response && response.json()if (!response && response.ok) {throw new Error(`AI response API "error": ${response && response.statusText}`)}`      const data  = await response && response.json()return {try {      return {...data;
+  async generateAIResponse("ticketId": string): Promise<AIResponse> {try {const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`AI response API "error": ${response && response.statusText}`)}const data  = await response && response.json()if (!response && response.ok) {throw new Error(`AI response API "error": ${response && response.statusText}`)}`      const data  = await response && response.json()return {try {      return {...data;
         }
         "generatedAt": new Date(data && data.generatedAt)}
     } catch (error) {console && console.error('Error generating AI "response":', error)const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {"method": 'POST';'        }
-        "headers": {'Authorization': `Bearer ${this.apiKey}`}})if (!response.ok) {throw new Error(`AI response API "error": ${response.statusText}`)}`      const data = await response.json()return {...data;
+        "headers": {'Authorization': `Bearer ${this.apiKey}`})if (!response.ok) {throw new Error(`AI response API "error": ${response.statusText}`)}`      const data = await response.json()return {...data;
         }
         "generatedAt": new Date(data.generatedAt)}
     } catch (error) {console.error('Error generating AI "response":', error)throw error;'
     }
   }
-  async getCustomerProfile("customerId": string): Promise<CustomerProfile> {try {const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {"headers": {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`Get customer profile API "error": ${response && response.statusText}`)}const data  = await response && response.json()'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`Get customer profile API "error": ${response && response.statusText}`)}`      const data  = await response && response.json()return {...data;
+  async getCustomerProfile("customerId": string): Promise<CustomerProfile> {try {const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {"headers": {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`Get customer profile API "error": ${response && response.statusText}`)}const data  = await response && response.json()'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`Get customer profile API "error": ${response && response.statusText}`)}`      const data  = await response && response.json()return {...data;
         }
         "lastContact": new Date(data && data.lastContact)}
-    } catch (error) {console && console.error('Error getting customer "profile":', error)const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}})if (!response.ok) {throw new Error(`Get customer profile API "error": ${response.statusText}`)}`      const data = await response.json()return {...data;
+    } catch (error) {console && console.error('Error getting customer "profile":', error)const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`})if (!response.ok) {throw new Error(`Get customer profile API "error": ${response.statusText}`)}`      const data = await response.json()return {...data;
         }
         "lastContact": new Date(data.lastContact)}
     } catch (error) {console.error('Error getting customer "profile":', error)throw error;'
     }
   }
-  async getMetrics("timeframe": string = '30d'): Promise<CustomerServiceMetrics> {try {const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {"headers": {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`Get metrics API "error": ${response && response.statusText}`)}return await response && response.json()'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`Get metrics API "error": ${response && response.statusText}`)}`      return await response && response.json()} catch (error) {console && console.error('Error getting "metrics":', error)const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}})if (!response.ok) {throw new Error(`Get metrics API "error": ${response.statusText}`)}`      return await response.json()} catch (error) {console.error('Error getting "metrics":', error)} catch (error) {console && console.error('Error getting "metrics":', error)} catch (error) {console && console.error('Error getting "metrics":', error)throw error;'
+  async getMetrics("timeframe": string = '30d'): Promise<CustomerServiceMetrics> {try {const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {"headers": {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`Get metrics API "error": ${response && response.statusText}`)}return await response && response.json()'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`Get metrics API "error": ${response && response.statusText}`)}`      return await response && response.json()} catch (error) {console && console.error('Error getting "metrics":', error)const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`})if (!response.ok) {throw new Error(`Get metrics API "error": ${response.statusText}`)}`      return await response.json()} catch (error) {console.error('Error getting "metrics":', error)} catch (error) {console && console.error('Error getting "metrics":', error)} catch (error) {console && console.error('Error getting "metrics":', error)throw error;'
     }
   }
-  async searchTickets("query": string, filters?: Record<string, any>): Promise<CustomerTicket[]> {try {const params  = new URLSearchParams({ query, ...filters })const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {"headers": {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`Search tickets API "error": ${response && response.statusText}`)}'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`Search tickets API "error": ${response && response.statusText}`)}const data = await response && response.json()return data && data.tickets.map(("ticket": any) => ({...ticket;`        }
+  async searchTickets("query": string, filters?: Record<string, any>): Promise<CustomerTicket[]> {try {const params  = new URLSearchParams({ query, ...filters })const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {"headers": {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`Search tickets API "error": ${response && response.statusText}`)}'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`Search tickets API "error": ${response && response.statusText}`)}const data = await response && response.json()return data && data.tickets.map(("ticket": any) => ({...ticket;`        }
         "createdAt": new Date(ticket && ticket.createdAt)"updatedAt": new Date(ticket && ticket.updatedAt)"resolvedAt": ticket && ticket.resolvedAt ? new Date(ticket && ticket.resolvedAt) : undefined;
-        "conversationHistory": ticket && ticket.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg && msg.timestamp)}))}))} catch (error) {console && console.error('Error searching "tickets":', error)const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}})if (!response.ok) {throw new Error(`Search tickets API "error": ${response.statusText}`)}`      const data = await response.json()return data.tickets.map(("ticket": any) => ({...ticket;
+        "conversationHistory": ticket && ticket.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg && msg.timestamp)}))}))} catch (error) {console && console.error('Error searching "tickets":', error)const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`})if (!response.ok) {throw new Error(`Search tickets API "error": ${response.statusText}`)}`      const data = await response.json()return data.tickets.map(("ticket": any) => ({...ticket;
         }
         "createdAt": new Date(ticket.createdAt)"updatedAt": new Date(ticket.updatedAt)"resolvedAt": ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined;
         "conversationHistory": ticket.conversationHistory.map(("msg": any) => ({...msg;
@@ -1144,8 +1144,8 @@ export interface CustomerServiceResponse  {"ticket_id": string;
           "timestamp": new Date(msg.timestamp)}))}))} catch (error) {console.error('Error searching "tickets":', error)} catch (error) {console && console.error('Error searching "tickets":', error)} catch (error) {console && console.error('Error searching "tickets":', error)throw error;'
     }
   }
-  async autoAssignTickets(): Promise<{ "assigned": number, "failed": number }> {try {const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/auto-assign`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`Auto assign tickets API "error": ${response && response.statusText}`)}return await response && response.json()if (!response && response.ok) {throw new Error(`Auto assign tickets API "error": ${response && response.statusText}`)}`      return await response && response.json()} catch (error) {console && console.error('Error auto-assigning "tickets":', error)const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {"method": 'POST';'        }
-        "headers": {'Authorization': `Bearer ${this.apiKey}`}})if (!response.ok) {throw new Error(`Auto assign tickets API "error": ${response.statusText}`)}`      return await response.json()} catch (error) {console.error('Error auto-assigning "tickets":', error)} catch (error) {console && console.error('Error auto-assigning "tickets":', error)} catch (error) {console && console.error('Error auto-assigning "tickets":', error)throw error;'
+  async autoAssignTickets(): Promise<{ "assigned": number, "failed": number }> {try {const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/auto-assign`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this && this.apiKey}`})if (!response && response.ok) {throw new Error(`Auto assign tickets API "error": ${response && response.statusText}`)}return await response && response.json()if (!response && response.ok) {throw new Error(`Auto assign tickets API "error": ${response && response.statusText}`)}`      return await response && response.json()} catch (error) {console && console.error('Error auto-assigning "tickets":', error)const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {"method": 'POST';'        }
+        "headers": {'Authorization': `Bearer ${this.apiKey}`})if (!response.ok) {throw new Error(`Auto assign tickets API "error": ${response.statusText}`)}`      return await response.json()} catch (error) {console.error('Error auto-assigning "tickets":', error)} catch (error) {console && console.error('Error auto-assigning "tickets":', error)} catch (error) {console && console.error('Error auto-assigning "tickets":', error)throw error;'
       }
       console && console.error('Error searching "tickets":', error)} catch (error) {console && console.error('Error searching "tickets":', error)console && console.error('Error auto-assigning "tickets":', error)}'
   }
@@ -1169,7 +1169,7 @@ if ( {) {$2;
     } catch (error) {console.error ('Error creating "ticket":', error)throw error;'
     }
   }
-  async get_ticket ("ticket_id": string): Promise < CustomerTicket> {try {const response = await fetch (`${this.base_url}/api / customer - service / tickets/${ticket_id}`, {"headers": {'Authorization': `Bearer ${this.api_key}`}})// Check condition;`if ( {) {$2;
+  async get_ticket ("ticket_id": string): Promise < CustomerTicket> {try {const response = await fetch (`${this.base_url}/api / customer - service / tickets/${ticket_id}`, {"headers": {'Authorization': `Bearer ${this.api_key}`})// Check condition;`if ( {) {$2;
 }
         throw new Error (`Get ticket API "error": ${response.status_text}`)}`      const data = await response.json ()return {...data;
         }
@@ -1197,7 +1197,7 @@ if ( {) {$2;
     } catch (error) {console.error ('Error adding "message":', error)throw error;'
     }
   }
-  async generateAIResponse ("ticket_id": string): Promise < AIResponse> {try {const response = await fetch (`${this.base_url}/api / customer - service / tickets/${ticket_id}/ai - response`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this.api_key}`}})// Check condition;`if ( {) {$2;
+  async generateAIResponse ("ticket_id": string): Promise < AIResponse> {try {const response = await fetch (`${this.base_url}/api / customer - service / tickets/${ticket_id}/ai - response`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this.api_key}`})// Check condition;`if ( {) {$2;
 }
         throw new Error (`AI response API "error": ${response.status_text}`)}`      const data = await response.json ()return {...data;
         }
@@ -1205,7 +1205,7 @@ if ( {) {$2;
     } catch (error) {console.error ('Error generating AI "response":', error)throw error;'
     }
   }
-  async getCustomerProfile ("customer_id": string): Promise < CustomerProfile> {try {const response = await fetch (`${this.base_url}/api / customer - service / customers/${customer_id}`, {"headers": {'Authorization': `Bearer ${this.api_key}`}})// Check condition;`if ( {) {$2;
+  async getCustomerProfile ("customer_id": string): Promise < CustomerProfile> {try {const response = await fetch (`${this.base_url}/api / customer - service / customers/${customer_id}`, {"headers": {'Authorization': `Bearer ${this.api_key}`})// Check condition;`if ( {) {$2;
 }
         throw new Error (`Get customer profile API "error": ${response.status_text}`)}`      const data = await response.json ()return {...data;
         }
@@ -1213,12 +1213,12 @@ if ( {) {$2;
     } catch (error) {console.error ('Error getting customer "profile":', error)throw error;'
     }
   }
-  async get_metrics ("timeframe": string = '30d'): Promise < CustomerServiceMetrics> {try {const response = await fetch (`${this.base_url}/api / customer - service / metrics?timeframe=${timeframe}`, {"headers": {'Authorization': `Bearer ${this.api_key}`}})// Check condition;`if ( {) {$2;
+  async get_metrics ("timeframe": string = '30d'): Promise < CustomerServiceMetrics> {try {const response = await fetch (`${this.base_url}/api / customer - service / metrics?timeframe=${timeframe}`, {"headers": {'Authorization': `Bearer ${this.api_key}`})// Check condition;`if ( {) {$2;
 }
         throw new Error (`Get metrics API "error": ${response.status_text}`)}`      return await response.json ()} catch (error) {console.error ('Error getting "metrics":', error)throw error;'
     }
   }
-  async search_tickets ("query": string, filters?: Record < string, any>): Promise < CustomerTicket[]> {try {const params = new URLSearchParams ({ query, ...filters })const response = await fetch (`${this.base_url}/api / customer - service / tickets / search?${params}`, {"headers": {'Authorization': `Bearer ${this.api_key}`}})// Check condition;`if ( {) {$2;
+  async search_tickets ("query": string, filters?: Record < string, any>): Promise < CustomerTicket[]> {try {const params = new URLSearchParams ({ query, ...filters })const response = await fetch (`${this.base_url}/api / customer - service / tickets / search?${params}`, {"headers": {'Authorization': `Bearer ${this.api_key}`})// Check condition;`if ( {) {$2;
 }
         throw new Error (`Search tickets API "error": ${response.status_text}`)}`      const data = await response.json ()return data.tickets.map (("ticket": any) => ({...ticket;
         }
@@ -1226,7 +1226,7 @@ if ( {) {$2;
         "conversation_history": ticket.conversation_history.map (("msg": any) => ({...msg,"timestamp": new Date (msg.timestamp)}))}))} catch (error) {console.error ('Error searching "tickets":', error)throw error;'
     }
   }
-  async autoAssignTickets (): Promise<{ "assigned": number, "failed": number }> {try {const response = await fetch (`${this.base_url}/api / customer - service / tickets / auto - assign`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this.api_key}`}})// Check condition;`if ( {) {$2;
+  async autoAssignTickets (): Promise<{ "assigned": number, "failed": number }> {try {const response = await fetch (`${this.base_url}/api / customer - service / tickets / auto - assign`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this.api_key}`})// Check condition;`if ( {) {$2;
 }
         throw new Error (`Auto assign tickets API "error": ${response.status_text}`)}`      return await response.json ()} catch (error) {console.error ('Error auto - assigning "tickets":', error)throw error;'
     }
@@ -1258,19 +1258,19 @@ export const aiCustomerServiceService  = new AICustomerServiceService (process.e
 }export class AICustomerServiceService {private "apiKey": string,private "baseUrl": string,constructor("apiKey": string, "baseUrl": string = '"https"://api.ziontechgroup.com') {this.apiKey = apiKey,this.baseUrl = baseUrl;'
   }async createTicket("request": CustomerServiceRequest): Promise<CustomerServiceResponse> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {"method": 'POST',"headers": {'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`},"body": JSON.stringify(request)}),if (!response.ok) {throw new Error(`Create ticket API "error": ${response.statusText}`)}const data = await response.json()const data = await response.json()return data;`    } catch (error) {console.error('Error creating "ticket":', error),throw error;'
     }
-  }async getTicket("ticketId": string): Promise<CustomerTicket> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}}),if (!response.ok) {throw new Error(`Get ticket API "error": ${response.statusText}`)}const data = await response.json(),return {...data,"createdAt": new Date(data.createdAt),"updatedAt": new Date(data.updatedAt),"resolvedAt": data.resolvedAt ? new Date(data.resolvedAt) : undefined,"conversationHistory": data.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg.timestamp)}))}`    } catch (error) {console.error('Error getting "ticket":', error),throw error;'
+  }async getTicket("ticketId": string): Promise<CustomerTicket> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}),if (!response.ok) {throw new Error(`Get ticket API "error": ${response.statusText}`)}const data = await response.json(),return {...data,"createdAt": new Date(data.createdAt),"updatedAt": new Date(data.updatedAt),"resolvedAt": data.resolvedAt ? new Date(data.resolvedAt) : undefined,"conversationHistory": data.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg.timestamp)}))}`    } catch (error) {console.error('Error getting "ticket":', error),throw error;'
     }
   }async updateTicket("ticketId": string, "updates": Partial<CustomerTicket>): Promise<CustomerTicket> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {"method": 'PATCH',"headers": {'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`},"body": JSON.stringify(updates)}),if (!response.ok) {throw new Error(`Update ticket API "error": ${response.statusText}`)}const data = await response.json(),return {...data,"createdAt": new Date(data.createdAt),"updatedAt": new Date(data.updatedAt),"resolvedAt": data.resolvedAt ? new Date(data.resolvedAt) : undefined,"conversationHistory": data.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg.timestamp)}))}`    } catch (error) {console.error('Error updating "ticket":', error),throw error;'
     }
   }async addMessage("ticketId": string, "message": Omit<CustomerMessage 'id' | 'timestamp'>): Promise<CustomerMessage> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {"method": 'POST',"headers": {'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`},"body": JSON.stringify(message)}),if (!response.ok) {throw new Error(`Add message API "error": ${response.statusText}`)}const data = await response.json(),return {...data,"timestamp": new Date(data.timestamp)}`    } catch (error) {console.error('Error adding "message":', error),throw error;'
     }
-  }async generateAIResponse("ticketId": string): Promise<AIResponse> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this.apiKey}`}}),if (!response.ok) {throw new Error(`AI response API "error": ${response.statusText}`)}const data = await response.json(),return {...data,"generatedAt": new Date(data.generatedAt)}`    } catch (error) {console.error('Error generating AI "response":', error),throw error;'
+  }async generateAIResponse("ticketId": string): Promise<AIResponse> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this.apiKey}`}),if (!response.ok) {throw new Error(`AI response API "error": ${response.statusText}`)}const data = await response.json(),return {...data,"generatedAt": new Date(data.generatedAt)}`    } catch (error) {console.error('Error generating AI "response":', error),throw error;'
     }
-  }async getCustomerProfile("customerId": string): Promise<CustomerProfile> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}}),if (!response.ok) {throw new Error(`Get customer profile API "error": ${response.statusText}`)}const data = await response.json(),return {...data,"lastContact": new Date(data.lastContact)}`    } catch (error) {console.error('Error getting customer "profile":', error),throw error;'
+  }async getCustomerProfile("customerId": string): Promise<CustomerProfile> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}),if (!response.ok) {throw new Error(`Get customer profile API "error": ${response.statusText}`)}const data = await response.json(),return {...data,"lastContact": new Date(data.lastContact)}`    } catch (error) {console.error('Error getting customer "profile":', error),throw error;'
     }
-  }async getMetrics("timeframe": string = '30d'): Promise<CustomerServiceMetrics> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}}),if (!response.ok) {throw new Error(`Get metrics API "error": ${response.statusText}`)}return await response.json()} catch (error) {console.error('Error getting "metrics":', error),throw error;'    }
-  }async searchTickets("query": string, filters?: Record<string any>): Promise<CustomerTicket[]> {try {const params = new URLSearchParams({ query, ...filters }),const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}}),if (!response.ok) {throw new Error(`Search tickets API "error": ${response.statusText}`)}const data = await response.json(),return data.tickets.map(("ticket": any) => ({...ticket,"createdAt": new Date(ticket.createdAt),"updatedAt": new Date(ticket.updatedAt),"resolvedAt": ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined,"conversationHistory": ticket.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg.timestamp)}))}))} catch (error) {console.error('Error searching "tickets":', error),throw error;'    }
-  }async autoAssignTickets(): Promise<{ "assigned": number, "failed": number }> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this.apiKey}`}}),if (!response.ok) {throw new Error(`Auto assign tickets API "error": ${response.statusText}`)}return await response.json()} catch (error) {console.error('Error auto-assigning "tickets":', error),throw error;'    }
+  }async getMetrics("timeframe": string = '30d'): Promise<CustomerServiceMetrics> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}),if (!response.ok) {throw new Error(`Get metrics API "error": ${response.statusText}`)}return await response.json()} catch (error) {console.error('Error getting "metrics":', error),throw error;'    }
+  }async searchTickets("query": string, filters?: Record<string any>): Promise<CustomerTicket[]> {try {const params = new URLSearchParams({ query, ...filters }),const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}),if (!response.ok) {throw new Error(`Search tickets API "error": ${response.statusText}`)}const data = await response.json(),return data.tickets.map(("ticket": any) => ({...ticket,"createdAt": new Date(ticket.createdAt),"updatedAt": new Date(ticket.updatedAt),"resolvedAt": ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined,"conversationHistory": ticket.conversationHistory.map(("msg": any) => ({...msg,"timestamp": new Date(msg.timestamp)}))}))} catch (error) {console.error('Error searching "tickets":', error),throw error;'    }
+  }async autoAssignTickets(): Promise<{ "assigned": number, "failed": number }> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this.apiKey}`}),if (!response.ok) {throw new Error(`Auto assign tickets API "error": ${response.statusText}`)}return await response.json()} catch (error) {console.error('Error auto-assigning "tickets":', error),throw error;'    }
   }async generateCustomerServiceReport("timeframe": string, "format": 'pdf' | 'csv' | 'excel'): Promise<string> {try {const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {"method": 'POST',"headers": {'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`},"body": JSON.stringify({ timeframe, format })}),if (!response.ok) {throw new Error(`Generate report API "error": ${response.statusText}`)}const data = await response.json(),return data.downloadUrl;`
     } catch (error) {console.error('Error generating "report":', error),throw error;'
     }

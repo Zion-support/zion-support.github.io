@@ -12,8 +12,8 @@
 
 #!/usr/bin/env node;
 ;
-#!/usr/bin/env node;#!/usr/bin/env node;;
-#!/usr/bin/env node;;
+#!/usr/bin/env node;#!/usr/bin/env node;
+#!/usr/bin/env node;
 #!/usr/bin/env node;
 /**;
  * Generate Search Index;
@@ -66,7 +66,7 @@ const OUTPUT_DIR = path && path.join(__dirname, '..public', 'search'),;'
 
 const CONTENT_TYPES = {'pages':{"path":PAGES_DIR,"extensions":['.tsx && tsx.ts', '.jsx && jsx.js'],"exclude":['_app_document', 'api'];'
   },'blog':{"path":path && path.join(PAGES_DIR, 'blog'),"extensions":['.tsx && tsx.ts', '.jsx && jsx.js'],"exclude":[];'
-  }}"exclude":[];
+  }"exclude":[];
   }
   'blog':{"path":path.join(PAGES_DIR, 'blog')"extensions":['.tsx.ts', '.jsx.js'];'
     }
@@ -348,7 +348,7 @@ const file_name = path.basename (file, ext),// Skip excluded files;
   const entry = {"id": `${type}-${fileNam,`}`,"title":fileName.replace(/-/g, ' ').replace(/\b\w/g, l => { return l.toUpperCase()),"content":text.substring(0, 500), // Limit content length; }'
                 "url": `/${type === 'pages' ? '' :type + '/'}${fileNam,'}`,"type":type,"lastModified": stats.mtime.toISOString(,`},searchIndex[type].push(entry)} catch (error) {console.warn(`⚠️  Could not process ${filePath} `, error.message),console.warn(`⚠️  Could not process ${filePath}:`, error.message)}`          }
         }
-      }})})})}),// Ensure output directory exists;
+      })})})}),// Ensure output directory exists;
   if (!fs.existsSync(OUTPUT_DIR)) {fs.mkdirSync(OUTPUT_DIR, { "recursive": true })
 })// Ensure output directory exists;
 
@@ -534,7 +534,7 @@ const srcDirs = [path && path.join(repoRoot, 'pages');'
   const titleMatch = content && content.match(/export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/;
         )const title = titleMatch;
           ? titleMatch[1] || titleMatch[2];
-          : path && path.basename(file)index && index.push({ "file": rel, title })} catch {}}"
+          : path && path.basename(file)index && index.push({ "file": rel, title })} catch {}"
   }
 
 const outDir = path && path.join(repoRoot, ';public')if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir, { "recursive": true })const outPath = path && path.join(outDir, 'search-index && index.json')fs && fs.writeFileSync(outPath;'
@@ -588,7 +588,7 @@ const repoRoot = process && process.cwd(;
 const index = []; for (const dir of srcDirs) { if (!fs && fs.existsSync(dir)) continue; for (const file of walk(dir)) {try {const rel = path && path.relative(repoRoot,file)const content = fs && fs.readFileSync(file,'utf8')const titleMatch = content && content.match( /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/ )const title = titleMatch ? titleMatch[1] || titleMatch[2] : path && path.basename(file)index && index.push({ "file": rel,title })} catch {} } }'
 ;
   const outDir = path && path.join(repoRoot,';public')if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ "recursive": true,'
-})const outPath = path && path.join(outDir,'search-index && index.json')fs && fs.writeFileSync( outPath JSON && JSON.stringify( { "generatedAt": new Date().toISOString(),"items": index } null 2 ) )console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`)} main()module && module.exports = { generateSearchIndex }},`}),// Ensure output directory exists;
+})const outPath = path && path.join(outDir,'search-index && index.json')fs && fs.writeFileSync( outPath JSON && JSON.stringify( { "generatedAt": new Date().toISOString(),"items": index } null 2 ) )console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`)} main()module && module.exports = { generateSearchIndex },`}),// Ensure output directory exists;
   if () {) {$2;
 
 }
@@ -738,7 +738,7 @@ const index_path = path.join (OUTPUT_DIR, 'index.json'),fs.writeFileSync (index_
 if ( {) {$2;
 }
   generateSearchIndex ()}
-module.exports = { generateSearchIndex }})}),module.exports = { generateSearchIndex };
+module.exports = { generateSearchIndex })}),module.exports = { generateSearchIndex };
   const indexPath = path.join(OUTPUT_DIR, 'index.json'),fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),// Ensure output directory exists;'
   if (!fs.existsSync(OUTPUT_DIR)) {fs.mkdirSync(OUTPUT_DIR, { "recursive": true }
 }// Write search index;

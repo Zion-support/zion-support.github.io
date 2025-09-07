@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -1402,36 +1402,36 @@ const itServices = [
 export default function ITServicesPage() {},
   {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <Head>
         <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud solutions, cybersecurity, infrastructure management, and digital transformation." />
-        <meta name="keywords" content="IT services, cloud solutions, cybersecurity, infrastructure, digital transformation, IT consulting" />
+        <meta name='description' content='Comprehensive IT services including cloud solutions, cybersecurity, infrastructure management, and digital transformation.' />
+        <meta name='keywords' content='IT services, cloud solutions, cybersecurity, infrastructure, digital transformation, IT consulting' />
       </Head>
 
       {/* Hero Section */},
   {
-      <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+      <section className='relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden'>
+        <div className='absolute inset-0'>
+          <div className='absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse'>
           </div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+          <div className='absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000'>
           </div>
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className='container mx-auto px-4 relative z-10'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }},
+            initial={ opacity: 0, y: 30 },
   {
-            animate={{ opacity: 1, y: 0 }},
+            animate={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            className="text-center"
+            className='text-center'
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className='text-4xl md:text-6xl font-bold mb-6'>
               IT Services;
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Comprehensive IT solutions to power your digital transformation;
             </p>
           </motion.div>
@@ -1440,50 +1440,50 @@ export default function ITServicesPage() {},
 
       {/* Services Grid */},
   {
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section className='py-20 bg-white'>
+        <div className='container mx-auto px-4'>
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }},
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 },
   {
-            whileInView={{ opacity: 1, y: 0 }},
+            whileInView={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            viewport={{ once: true }},
+            viewport={ once: true },
   {
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
               Our IT Solutions;
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               End-to-end IT services designed to optimize your technology infrastructure;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
   {itServices.map((service, index) => {},
   {
               const IconComponent = service.icon;
               
                 >
-                  <div className="flex items-center mb-4">
-                    <IconComponent className="h-12 w-12 text-green-600 mr-4" />
+                  <div className='flex items-center mb-4'>
+                    <IconComponent className='h-12 w-12 text-green-600 mr-4' />
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-                      <p className="text-sm text-green-600 font-semibold">{service.category}</p>
+                      <h3 className='text-xl font-bold text-gray-900'>{service.title}</h3>
+                      <p className='text-sm text-green-600 font-semibold'>{service.category}</p>
                     </div>
                   </div>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
-                  <div className="mb-4">
-                    <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
+                  <p className='text-gray-600 mb-4 leading-relaxed'>{service.description}</p>
+                  <div className='mb-4'>
+                    <span className='text-lg font-semibold text-green-600'>{service.pricing}</span>
                   </div>
                   <Link
-                    href="/contact"
-                    className="inline-flex items-center text-green-600 hover:text-green-800 font-semibold transition-colors duration-200"
+                    href='/contact'
+                    className='inline-flex items-center text-green-600 hover:text-green-800 font-semibold transition-colors duration-200'
                   >
                     Learn More;
-                    <ArrowRight className="w-4 h-4 ml-1" />
+                    <ArrowRight className='w-4 h-4 ml-1' />
                   </Link>
                 </motion.div>
               )
@@ -1495,34 +1495,34 @@ export default function ITServicesPage() {},
 
       {/* CTA Section */},
   {
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section className='py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white'>
+        <div className='container mx-auto px-4 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }},
+            initial={ opacity: 0, y: 30 },
   {
-            whileInView={{ opacity: 1, y: 0 }},
+            whileInView={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            viewport={{ once: true }},
+            viewport={ once: true },
   {
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className='text-3xl md:text-4xl font-bold mb-6'>
               Ready to Optimize Your IT Infrastructure?
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+            <p className='text-xl mb-8 max-w-2xl mx-auto'>
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
-                href="/contact"
-                className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                href='/contact'
+                className='px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold'
               >
                 Get IT Assessment;
               </Link>
               <Link
-                href="/services"
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
+                href='/services'
+                className='px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold'
               >
                 View All Services;
               </Link>

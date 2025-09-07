@@ -182,7 +182,7 @@ export function AppHeader() {
                   // For consistency with how sub - menus now set it:;'
                   router.push ({ pathname: '/auth / login', query: { return_to: router.as_path } }, undefined, { shallow: true }),
                   openLoginModal (router.as_path);
-                }}
+                }
               >;'
                 {t ('auth.login')}
               </Link>;
@@ -275,10 +275,10 @@ export function AppHeader() {
 
                 {activeDropdown === 'services' && (;
                   <motion&& motion.div;
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0 && 0.2 }}"
+                    initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: -10 }
+                    transition={ duration: 0 && 0.2 }"
                     className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;"
                     <div className="p-4">;"
                       <div className="grid grid-cols-1 gap-2">;
@@ -321,16 +321,16 @@ export function AppHeader() {
                 {active_dropdown === 'solutions' && (
 
                   <motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -10 }}
+                    initial={ opacity: 0, coordinate_y: -10 }
+                    animate={ opacity: 1, coordinate_y: 0 }
+                    exit={ opacity: 0, coordinate_y: -10 }
 
                 {activeDropdown === 'solutions' && (;
                   <motion&& motion.div;
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0 && 0.2 }}"
+                    initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: -10 }
+                    transition={ duration: 0 && 0.2 }"
                     className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;"
                     <div className="p-4">;"
                       <div className="grid grid-cols-1 gap-2">;
@@ -373,16 +373,16 @@ export function AppHeader() {
                 {active_dropdown === 'resources' && (
 
                   <motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -10 }}
+                    initial={ opacity: 0, coordinate_y: -10 }
+                    animate={ opacity: 1, coordinate_y: 0 }
+                    exit={ opacity: 0, coordinate_y: -10 }
 
                 {activeDropdown === 'resources' && (;
                   <motion&& motion.div;
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0 && 0.2 }}"
+                    initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: -10 }
+                    transition={ duration: 0 && 0.2 }"
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;"
                     <div className="p-4">;"
                       <div className="grid grid-cols-1 gap-2">;
@@ -417,16 +417,16 @@ export function AppHeader() {
                 {active_dropdown === 'company' && (
 
                   <motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -10 }}
+                    initial={ opacity: 0, coordinate_y: -10 }
+                    animate={ opacity: 1, coordinate_y: 0 }
+                    exit={ opacity: 0, coordinate_y: -10 }
 
                 {activeDropdown === 'company' && (;
                   <motion&& motion.div;
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0 && 0.2 }}"
+                    initial={ opacity: 0, y: -10 }
+                    animate={ opacity: 1, y: 0 }
+                    exit={ opacity: 0, y: -10 }
+                    transition={ duration: 0 && 0.2 }"
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;"
                     <div className="p-4">;"
                       <div className="grid grid-cols-1 gap-2">;
@@ -471,9 +471,9 @@ export function AppHeader() {
                 </button>;
 
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: -10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: -10 }}
+                      initial={ opacity: 0, coordinate_y: -10 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: -10 }
 
                     <User className="w-4 h-4 text-white" />;
                   </div>;"
@@ -483,10 +483,10 @@ export function AppHeader() {
 
                   {activeDropdown === 'user' && (;
                     <motion&& motion.div;
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0 && 0.2 }}"
+                      initial={ opacity: 0, y: -10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: -10 }
+                      transition={ duration: 0 && 0.2 }"
                       className="absolute top-full right-0 mt-2 w-48 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;"
                       <div className="p-2">;
 
@@ -498,7 +498,7 @@ export function AppHeader() {
                           onClick={() => {;
                             logout();
                             setActiveDropdown(null);
-}}"
+}"
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;"
                           <LogOut className="w-4 h-4 mr-3" />;
                           Logout;

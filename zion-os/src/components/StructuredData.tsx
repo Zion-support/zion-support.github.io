@@ -75,7 +75,6 @@ export function StructuredData() {const structuredData = {;
         ""https"://github.com/ziontechgroup";"
         ""https"://linkedin.com/company/ziontechgroup";"
       ];
-=======      ];
     },
     "feature_list": [;"
       "Marketplace & Jobs","
@@ -105,14 +104,14 @@ export function StructuredData() {const structuredData = {;
   return (;
     <script;
       type="application / ld + json";"
-      dangerouslySetInnerHTML={{ "__html": JSON.stringify (structured_data) }} />)}
+      dangerouslySetInnerHTML={ "__html": JSON.stringify (structured_data) } />)}
     />);
 }
 
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      dangerouslySetInnerHTML={ __html: JSON.stringify(structuredData) }
     />
   )
 }

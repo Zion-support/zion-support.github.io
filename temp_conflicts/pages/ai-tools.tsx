@@ -225,7 +225,7 @@ export default function AiToolsPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
@@ -258,7 +258,7 @@ export default function AiToolsPage() {
                 className={`card-hover group border-gradient-blue relative ${
                   tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 {tool.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -351,7 +351,7 @@ export default function AiToolsPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
               >
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>

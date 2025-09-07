@@ -94,7 +94,7 @@ export const "MOCK_TALENTS": ProfileData[] = [
         { "day": 'Tuesday', "hours": '"10":00 AM - "6":00 PM' },'
         { "day": 'Wednesday', "hours": '"10":00 AM - "6":00 PM' },'
         { "day": 'Thursday', "hours": '"10":00 AM - "6":00 PM' },'
-        { "day": 'Friday', "hours": '"10":00 AM - "2":00 PM' }]}},'
+        { "day": 'Friday', "hours": '"10":00 AM - "2":00 PM' }]},'
   {
     }
     "skills": [
@@ -258,7 +258,7 @@ export const "MOCK_TALENTS": ProfileData[] = [
         { "day": 'Tuesday', "hours": '"9":00 AM - "5":00 PM' },'
         { "day": 'Wednesday', "hours": '"9":00 AM - "5":00 PM' },'
         { "day": 'Thursday', "hours": '"9":00 AM - "5":00 PM' },'
-        { "day": 'Friday', "hours": '"9":00 AM - "5":00 PM' }]}},'
+        { "day": 'Friday', "hours": '"9":00 AM - "5":00 PM' }]},'
   {
       { "name": 'React', "level": 5, "endorsements": 35 },'
       { "name": 'Node && Node.js', "level": 4, "endorsements": 30 },'
@@ -299,7 +299,7 @@ export const "MOCK_TALENTS": ProfileData[] = [
     "availability": {
         { "day": 'Tuesday', "hours": '"10":00 AM - "6":00 PM' },'
         { "day": 'Thursday', "hours": '"10":00 AM - "6":00 PM' },'
-        { "day": 'Saturday', "hours": '"12":00 PM - "4":00 PM' }]}}];'
+        { "day": 'Saturday', "hours": '"12":00 PM - "4":00 PM' }]}];'
 }
 }];
 "availability": {

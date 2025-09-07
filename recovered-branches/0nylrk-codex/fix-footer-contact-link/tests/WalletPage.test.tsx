@@ -8,18 +8,17 @@ describe('WalletPage', (); => {;'
     }
     vi.spyOn(useWalletHook, 'useWallet');.mockReturnValue({;'
       }
-      "wallet": { "user_id": '1;', "balance": 10;0, "updated_at": '' ;},;'
-      "transactions": [;],;
-      "loading": fals;e,;
-      "fetchWallet": vi.fn(;;);,;
-      "fetchTransactions": vi.fn(;;);,;
-      "earnTokens": vi.fn(;;);,;
-      "spendTokens": vi.fn();;} as any),;
+      'wallet': { 'user_id': '1;', 'balance': 10;0, 'updated_at': '' ;},;'
+      'transactions': [;],;
+      'loading': fals;e,;
+      'fetchWallet': vi.fn(;);,;
+      'fetchTransactions': vi.fn(;);,;
+      'earnTokens': vi.fn(;);,;
+      'spendTokens': vi.fn();} as any),;
     render(<WalletPage />);,;
     expect(;
-      screen.getByRole('heading', { "name": /balance/i ;});'
+      screen.getByRole('heading', { 'name': /balance/i ;});'
     ).toBeInTheDocument();
   });
 });
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

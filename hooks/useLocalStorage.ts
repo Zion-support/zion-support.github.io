@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-=======
 
 ;
     try {}
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [storedValue, setStoredValue] = useState<T>(() => {try {const item = window.localStorage.getItem(key)return item ? JSON.parse(item) :initialValue} catch (error) {console.error(`Error reading localStorage key "${key}":`, error)return initialValue}
   })const setValue = (valu:e:T | ((va:l:T) => T)) => {try {const valueToStore = value instanceof Function ? value(storedValue) :value;import { useState, useEffect  } from 'react';
 import { useState } from &apos;react&apos;export const useLocalStorage = <T>(key: string,initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key)return item ? JSON.parse(item) : initialValue} catch (error) { return initialValue} })const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value; setStoredValue(valueToStore)window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) {} }return [storedValue,setValue] as const}export default useLocalStorage;
-import { useState } from &apos;react&apos;; export const useLocalStorage = <T>(key: string,initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key); return item ? JSON.parse(item) : initialValue} catch (error) { return initialValue} }); const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value; setStoredValue(valueToStore); window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) {} }; return [storedValue,setValue] as const}; export default useLocalStorage;
+import { useState } from &apos;react&apos; export const useLocalStorage = <T>(key: string,initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key); return item ? JSON.parse(item) : initialValue} catch (error) { return initialValue} }); const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value; setStoredValue(valueToStore); window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) {} }; return [storedValue,setValue] as const}; export default useLocalStorage;
 import React from 'react';
 };
 
@@ -22,7 +20,7 @@ export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [stor
   });
   const setValue = (valu:e:T | ((va:l:T) => T)) => {try {;
       const valueToStore = value instanceof Function ? value(storedValue) :value;import { useState, useEffect } from 'react';
-  // Get from local storage then parse stored json or return initialValueimport { useState } from &apos;react&apos;; export const useLocalStorage = <T>(key: string,initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key); return item ? JSON.parse(item) : initialValue} catch (error) { return initialValue} }); const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value; setStoredValue(valueToStore); window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) { } }; return [storedValue,setValue] as const}; export default useLocalStorage;
+  // Get from local storage then parse stored json or return initialValueimport { useState } from &apos;react&apos; export const useLocalStorage = <T>(key: string,initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key); return item ? JSON.parse(item) : initialValue} catch (error) { return initialValue} }); const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value; setStoredValue(valueToStore); window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) { } }; return [storedValue,setValue] as const}; export default useLocalStorage;
 export function useLocalStorage<T>(key: string, initialValue: T) {
   // Get from local storage then parse stored json or return initialValue
 const { useState } from "react"; export const useLocalStorage = <T>(key: string,initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key); return item ? JSON.parse(item) : initialValue} catch (error) { return initialValue} }); const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value; setStoredValue(valueToStore); window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) {} }; return [storedValue,setValue] as const}; export default useLocalStorage;''"
@@ -83,7 +81,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {try {const 
       setStoredValue(valueToStore)// Save to local storage;
       if (typeof window !== 'undefined') {window && window.localStorage.setItem(key, JSON && JSON.stringify(valueToStore))}
     } catch (error) {// eslint-disable-next-line no-console;
-}}}}}}}
+}}}}
 }console.error(`Error setting localStorage key "${key}":`, error)}
 };
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
@@ -132,23 +130,22 @@ export const useLocalStorage = <T>(ke: string, initialValu: T) => {,
 }ursor/automate-test-improve-and-merge-code-646c;
       console && console.error(`Error setting localStorage key "${key}":`, error)}return [storedValue, setValue] as const;
 }
-=======}
 };
 }
 };      console.error(`Error setting localStorage key "${key}":`, error)}
-      console && console.error(`Error setting localStorage key "${key}":`, error)}}return [storedValue, setValue] as const}ursor/fix-website-loading-errors-and-merge-6662;
-}}}}}}ursor/automate-test-improve-and-merge-code-646c;
+      console && console.error(`Error setting localStorage key "${key}":`, error)}return [storedValue, setValue] as const}ursor/fix-website-loading-errors-and-merge-6662;
+}}}ursor/automate-test-improve-and-merge-code-646c;
 }
 }import { useState,useEffect } from 'react'; export const useLocalStorage = <T>(key: 'string',initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key)return item ? JSON.parse(item) : initialValue} catch (error) { console.error(`Error reading localStorage key "${key}":`,error)return initialValue} })const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value; setStoredValue(valueToStore)window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) { console.error(`Error setting localStorage key "${key}":`,error)} }return [storedValue,setValue] as const}export default useLocalStorage;ursor/fix-website-loading-errors-and-merge-6662;
       console.error(`Error setting localStorage key "${key}":`, error)}
   }
-  return [storedValue, setValue] as const}}
+  return [storedValue, setValue] as const}
 }
-ursor/add-new-services-and-deploy-updates-0462;;
-}console.error(`Error setting localStorage key "${key}":`, error)}}return [storedValue, setValue] as const}}}}}export default useLocalStorage;ursor/fix-website-loading-errors-and-merge-6662;
+ursor/add-new-services-and-deploy-updates-0462;
+}console.error(`Error setting localStorage key "${key}":`, error)}return [storedValue, setValue] as const}}}export default useLocalStorage;ursor/fix-website-loading-errors-and-merge-6662;
 export const useLocalStorage = <T>(key: string, initialValue: T) => {import { useState  } from 'react';
 export function useLocalStorage<T>() {const [storedValue, setStoredValue] = useState<T>(() => {}
-}}
+}
 }console.error(`Error setting localStorage key "${key}":`, error)}
   }
   return [storedValue, setValue] as const}
@@ -156,7 +153,7 @@ export function useLocalStorage<T>() {const [storedValue, setStoredValue] = useS
 }
       console.error(`Error setting localStorage key "${key}":`, error)}
 }return [storedValue, setValue] as const}
-}}
+}
 }export const useLocalStorage = <T>(key: string, initialValue: T) => {  const [storedValue, setStoredValue] = useState<T>(() => {if (typeof window === 'undefined') {return initialValue;
     }try {const item = window.localStorage.getItem(key)return item ? JSON.parse(item) : initialValue;
     } catch (error) {// Error reading localStorage key;
@@ -173,13 +170,13 @@ export default function UseLocalStorage() {export default function UseLocalStora
       <h1>UseLocalStorage</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  )}}}}
+  )}}
 }
 }return [storedValue, setValue] as const;
 }ursor/automate-test-improve-and-merge-code-646c;
 }
 }
-}}
+}
 
 };
 };
@@ -215,20 +212,16 @@ export default function UseLocalStorage() {export default function UseLocalStora
 };
 };
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
->>>>>>> origin/main
 import { useState } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
-<<<<<<< HEAD
-=======
       console.error(`Error setting localStorage key "${key}":`, error)}
 };
   return [storedValue, setValue] as const}
 };
 }
 };export const useLocalStorage = <T>(key: string, initialValue: T) => {  const [storedValue, setStoredValue] = useState<T>(() => {
->>>>>>> origin/main
     if (typeof window === 'undefined') {
       return initialValue;
     }
@@ -236,21 +229,15 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     try {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
-<<<<<<< HEAD
     } catch (_error) {
-=======
     } catch (error) {
->>>>>>> origin/main
       // Error reading localStorage key
       return initialValue;
     }
   });
 
-<<<<<<< HEAD
   const setValue = (value: T | ((_val: T) => T)) => {
-=======
   const setValue = (value: T | ((val: T) => T)) => {
->>>>>>> origin/main
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
@@ -258,7 +245,6 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       if (typeof window !== 'undefined') {
         window.localStorage.setItem(key, JSON.stringify(valueToStore));
       }
-<<<<<<< HEAD
     } catch (_error) {
       // Error setting localStorage key
     }
@@ -266,7 +252,6 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
 
   return [storedValue, setValue] as const;
 }
-=======
     } catch (error) {
       // Error setting localStorage key
     }
@@ -285,9 +270,8 @@ export default function UseLocalStorage({}: UseLocalStorageProps) {
     </div>
   );
 }
-}}
+}
 }
 }
 }
 },
->>>>>>> origin/main

@@ -27,7 +27,6 @@ interface LoadingSpinnerProps {size?: "small" | "medium" | "large";"
   }
   className?: string;
 }
-=======}
 export /**
  * LoadingSpinner - Function description
  */

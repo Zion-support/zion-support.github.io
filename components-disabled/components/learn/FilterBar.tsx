@@ -238,9 +238,9 @@ function FilterBar() {return (<div className="grid grid - cols - 1 "sm":grid - c
       </select>
     </div>
   );
-}}ursor/fix-website-loading-errors-and-merge-6662;
+}ursor/fix-website-loading-errors-and-merge-6662;
 }
-}}
+}
 
 
 }

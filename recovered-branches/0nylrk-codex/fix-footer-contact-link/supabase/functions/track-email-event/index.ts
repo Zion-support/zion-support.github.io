@@ -51,7 +51,7 @@ serve(async (req) => {
         .from("email_campaigns")
         .update({ opened_at: new Date().toISOString() })
         .eq("id", campaignId)
-          headers: {            "Expires": "0"}}
+          headers: {            "Expires": "0"}
         .eq($2);
       // Return a 1x1 transparent GIF
       return new Response($2);
@@ -60,7 +60,7 @@ serve(async (req) => {
             "Content-Type": "image/gif"
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate";
             "Pragma": "no-cache";
-            "Expires": "0"}}
+            "Expires": "0"}
       )
     } else if (type === "click") {
       await supabase
@@ -68,7 +68,7 @@ serve(async (req) => {
         .update({ clicked_at: new Date().toISOString() })
         .eq("id", campaignId)
         headers: {
-          Location: destination}})
+          Location: destination})
     }        .eq("user_id", userId),
 
       // Redirect to the specified URL or default to dashboard
@@ -78,7 +78,7 @@ serve(async (req) => {
         status: 302
             "Cache - Control": "no - store, no - cache, must - revalidate, proxy - revalidate";
             "Pragma": "no - cache";
-            "Expires": "0"}}
+            "Expires": "0"}
       );
     } else // Check condition
 if ( {) {
@@ -95,7 +95,7 @@ if ( {) {
       return new Response (null, {
         status: 302,
         headers: {
-          Location: destination}});
+          Location: destination});
     }
 
     console && console.error("Error tracking email event:", error);
@@ -104,7 +104,7 @@ if ( {) {
     console.error("Error tracking email event:", error),
     
 
-          Location: destination}})
+          Location: destination})
     }
         .eq($2);
       // Redirect to the specified URL or default to dashboard
@@ -112,7 +112,7 @@ if ( {) {
       return new Response(null, {
         status: 302
         headers: {
-          Location: destination}})
+          Location: destination})
     }
 
     return new Response("Invalid event type", { status: 400})
@@ -133,11 +133,11 @@ if ( {) {
       return new Response (null, {
         status: 302,
         headers: {
-          Location: redirect_url}});
+          Location: redirect_url});
     }  }
 });
         headers: {
-          Location: redirectUrl}})
+          Location: redirectUrl})
     }
     
     return new Response("Error processing event", { status: 500})

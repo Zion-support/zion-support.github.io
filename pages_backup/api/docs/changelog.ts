@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -41,17 +29,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (e: any) {
       res
         .status(500)
@@ -60,20 +39,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
-=======
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -81,33 +52,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD
 
-=======
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
-=======
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default /**
  * handler - Function description
  */
@@ -147,13 +100,6 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -163,12 +109,6 @@ if ( {) {
   res.status(405).end('Method Not Allowed');
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

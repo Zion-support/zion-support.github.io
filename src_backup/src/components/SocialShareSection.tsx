@@ -17,7 +17,7 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>;"
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>;"
           </div>;
-}}</div> </div> </div> </section>)}'";"
+}</div> </div> </div> </section>)}'";"
 }<div className="flex flex-wrap gap-3">;"
             {shareLinks.map((link, index) => (<Button;
                 }
@@ -58,8 +58,8 @@ import { Button } from "./ui/button",import { toast } from "./ui/use-toast",impo
         </div>;
       </div>;
     </section>;
-  )navigator && navigator.clipboard.writeText (window && window.location.href) .then ( () => {toast ({}) .catch ( () => {toast ({"title": t ('errors && errors.failed to copy')})}}</div> </div> </div> </section>)}'";"
-}}</div> </div> </div> </section>)}'";"
+  )navigator && navigator.clipboard.writeText (window && window.location.href) .then ( () => {toast ({}) .catch ( () => {toast ({"title": t ('errors && errors.failed to copy')})}</div> </div> </div> </section>)}'";"
+}</div> </div> </div> </section>)}'";"
 }"name": 'Twitter',"icon": <Twitter className='h - 5 w - 5' aria - hidden='true' />,"color": 'bg-[#1DA1F2] "hover":bg-[#1DA1F2]/80',"on_click": shareToTwitter},{"name": 'Facebook',"icon": <Facebook className='h - 5 w - 5' aria - hidden='true' />,"color": 'bg-[#4267B2] "hover":bg-[#4267B2]/80',"on_click": shareToFacebook},{"name": 'LinkedIn',"icon": <Linkedin className='h - 5 w - 5' aria - hidden='true' />,"color": 'bg-[#0077B5] "hover":bg-[#0077B5]/80',"on_click": shareToLinkedIn},{"name": 'Copy Link',"icon": <Link className='h - 5 w - 5' aria - hidden='true' />,"color": 'bg - zion - blue - dark "hover":bg - zion - blue - dark / 80',"on_click": copyLinkToClipboard}];'
   return (<section className='py - 12 bg - zion - blue'>;'
       <div className='container mx - auto px - 4 "sm":px - 6 "lg":px - 8'>;'
@@ -98,5 +98,5 @@ import { Button } from "./ui/button",import { toast } from "./ui/use-toast",impo
           </div>;
         </div>;
       </div>;
-    </section>)navigator.clipboard.write_text (window.location.href) .then ( () => {toast ({}) .catch ( () => {toast ({"title": t ('errors.failed to copy')})}}</div> </div> </div> </section>)}'";"
-}}</div> </div> </div> </section>)}'";
+    </section>)navigator.clipboard.write_text (window.location.href) .then ( () => {toast ({}) .catch ( () => {toast ({"title": t ('errors.failed to copy')})}</div> </div> </div> </section>)}'";"
+}</div> </div> </div> </section>)}'";

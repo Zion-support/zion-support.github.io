@@ -185,7 +185,7 @@ function BasicInfoForm() {
       "linkedin": "","
       "github": "","
       "hourly_rate": 0,
-      ...initial_data}});
+      ...initial_data});
 ;
 
   )

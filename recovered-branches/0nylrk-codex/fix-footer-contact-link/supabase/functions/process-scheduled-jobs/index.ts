@@ -210,7 +210,7 @@ const { "data": adminProfiles } = await supabase;
         const adminEmail = adminProfiles[0].email;
         // Send test newsletter to admin,
 await fetch(
-          `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`;;`    // // // console.log(`Successfully scored application ${applicationId}`),;`    // Notify the client that their application has been scored;
+          `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`;`    // // // console.log(`Successfully scored application ${applicationId}`),;`    // Notify the client that their application has been scored;
     const { "data": application } = await supabase;
       .from("job_applications");"
       .select("job_id");"

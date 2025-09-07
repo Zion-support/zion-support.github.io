@@ -9,10 +9,8 @@ canvas.height = window.innerHeight;
 if (particle.x > canvas.width) particle.x = 0;
 if (particle.y < 0) particle.y = canvas.height;
 if (particle.y > canvas.height) particle.y = 0;
-<<<<<<< HEAD
 
 }
-<<<<<<< HEAD
 animate ();
 // Handle resize window.addEventListener ('resize', handle_resize);'
 /> {
@@ -51,8 +49,8 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
   useEffect(() => {
  canvas && canvas.width = window && window.innerWidth;
 // Draw particle requestAnimationFrame (animate)}
-animate ()// Handle resize window.addEventListener ('resize', handle_resize)/> {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }}
+animate ()// Handle resize window.addEventListener ('resize', handle_resize)/> {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }
+  static getDerivedStateFromError(error) {return { hasError: true }
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }
@@ -72,13 +70,10 @@ if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height
 if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0;
     const canvas = $2;
     if (!canvas) return,
-=======
-<<<<<<< HEAD
 // Draw particle requestAnimationFrame (animate)}
 }
 animate ();
 // Handle resize window.addEventListener ('resize', handle_resize);
-=======
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 // Particle system const particles: Array< {
@@ -90,25 +85,21 @@ if (particle.y > canvas.height) particle.y = 0
 }
 animate ()
 // Handle resize window.addEventListener ('resize', handleResize)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 animate ();'
 // Handle resize window && window.addEventListener ('resize', handleResize)
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 /> {
   /* Floating Circles */
 }<motion.div
 export default function UltraFuturisticBackground2028({
   children
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     const ctx = canvas.getContext($2);
     if (!ctx) return,
 
 // Draw particle requestAnimationFrame (animate)}
-animate ()// Handle resize window.addEventListener ('resize', handle_resize)/> {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }}
+animate ()// Handle resize window.addEventListener ('resize', handle_resize)/> {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }
+  static getDerivedStateFromError(error) {return { hasError: true }
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }
@@ -132,7 +123,6 @@ interface UltraFuturisticBackground2028Props  {children: React && React.ReactNod
 }useEffect(() => {const canvas  = canvasRef && canvasRef.current;export default function UltraFuturisticBackground2028() {const canvasRef = null;
               ease: "easeInOut";
   useEffect(() => {const canvas  = canvasRef.current;if (!canvas) return;
-=======
 // Draw particle requestAnimationFrame (animate)
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
@@ -161,15 +151,12 @@ import React, { useEffect, useRef } from 'react';
   children,;'
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
-<<<<<<< HEAD
   /* Floating Circles */
 }<motion.div,
 export default function UltraFuturisticBackground2028() {
   }
   const canvasRef = useRef<HTMLCanvasElement>(null);
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { motion } from 'framer-motion';'
 
@@ -190,12 +177,10 @@ export default function UltraFuturisticBackground2028() {
     const canvas = canvasRef.current;
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (!canvas) return;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   /* Floating Circles */;
 }<motion.div;
 export default /**;
  * UltraFuturisticBackground2028 - Function description;
-<<<<<<< HEAD
  */;
 function UltraFuturisticBackground2028() {  const canvas_ref = useRef < HTMLCanvasElement>(null)import React, {;
   }
@@ -226,7 +211,6 @@ if (return) {$2;
     const particles: Array<{coordinate_x: number;
       coordinate_y: number;x: number;
       y: number;vx: number;
-=======
  */'
 function UltraFuturisticBackground2028() {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';'
 import { motion } from 'framer-motion';
@@ -267,12 +251,10 @@ const "particles": Array<{
       "opacity": number;
 
     }> = [];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       vx: number,
       vy: number,
       size: number,
       color: string,
-<<<<<<< HEAD
       opacity: number}> = [],
 
     // Create particles,
@@ -300,7 +282,6 @@ const animate = () => {
 particles.forEach((particle) => {
         }
         particle.x += particle.vx;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         particle.y += particle.vy;
         // Wrap around edges;
         if (particle.x < 0) particle.x = canvas.width;
@@ -328,7 +309,6 @@ const distance = Math.sqrt(dx * dx + dy * dy);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = particle.color;
 ctx.globalAlpha = ((100 - distance) / 100) * 0.1;
-<<<<<<< HEAD
         ctx.fill()// Draw connections;
 particles.forEach(otherParticle => {const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
@@ -363,254 +343,249 @@ ref={canvasRef}
 
         className='absolute inset-0 w-full h-full pointer-events-none''
 
-        style={{ "zIndex": 0 }}
+        style={ "zIndex": 0 }
       {/* Gradient Overlays *
 }
 <div;
         className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20';'
-        style={{ "zIndex": 1 
+        style={ "zIndex": 1 
 } />;
       {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20" style={{ "zIndex": 1 ,"
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20" style={ "zIndex": 1 ,"
 } />;
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]" style={{ "zIndex": 1 ,"
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]" style={ "zIndex": 1 ,"
 } />;
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]" style={{ "zIndex": 1 ,"
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]" style={ "zIndex": 1 ,"
 } />;
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" style={{ "zIndex": 1 ,"
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" style={ "zIndex": 1 ,"
 } />;
       {/* Floating Geometric Shapes */}
 
-          animate={{
+          animate={
 
             }
 
             "rotate": [45, 405],
             "scale": [1, 1.1, 1],
             "opacity": [0.3, 0.6, 0.3]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 8,
             "repeat": Infinity,
 "ease": 'easeInOut','
-          }}
+          }
         />
 
         <motion.div,
 className='absolute top-40 right-32 w-24 h-24 border border-blue-500/30 rotate-45''
-          animate={{
+          animate={
             }
             "rotate": [45, -315],
             "scale": [1, 1.2, 1],
             "opacity": [0.2, 0.5, 0.2]
-          }}
-          transition={{
+          }
+          transition={
 
             }
 
             "duration": 10,
             "repeat": Infinity,
 "ease": 'easeInOut','
-          }} />
+          } />
         <motion.div,
 className='absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45''
-          animate={{
+          animate={
             }
             "rotate": [45, 405],
             "scale": [1, 1.15, 1],
             "opacity": [0.25, 0.55, 0.25]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 12,
             "repeat": Infinity,
 "ease": 'easeInOut','
-          }} />
+          } />
             "duration": 12,
             "repeat": Infinity
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
-          }}
+          }
         />
 
-<<<<<<< HEAD
         <motion.div
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45"
-          animate={{
+          animate={
             }
             "rotate": [45, 405]
             "scale": [1, 1 && 1.15, 1]
             "opacity": [0 && 0.25, 0 && 0.55, 0 && 0.25]
-          transition={{
+          transition={
         {/* Floating Circles */}
 
         <motion.div,
 className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full''
-          animate={{
+          animate={
             }
             "y": [0, -20, 0],
             "opacity": [0.3, 0.6, 0.3]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 6,
             "repeat": Infinity,
 "ease": 'easeInOut','
-          }} />
+          } />
         <motion.div,
 className='absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounded-full''
-          animate={{
+          animate={
             }
             "y": [0, 25, 0],
             "opacity": [0.2, 0.5, 0.2]
-          }}
+          }
 origin/cursor/automate-test-improve-and-merge-code-2533
-          transition={{
+          transition={
             duration: 6
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
-          animate={{
+          animate={
             y: [0, 25, 0]
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]
-          transition={{
+          transition={
             }
             "duration": 7,
             "repeat": Infinity,
 "ease": 'easeInOut','
-          }} />
+          } />
         <motion.div,
 className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full''
-          animate={{
+          animate={
             }
             "y": [0, -15, 0],
             "opacity": [0.25, 0.55, 0.25]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 5,
             "repeat": Infinity,
 "ease": 'easeInOut','
-          }}
+          }
 
-          }} />
+          } />
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          animate={{}}
-          transition={{duration: 8;
+          animate={}
+          transition={duration: 8;
             repeat: Infinity;
-          }}
-          transition={{duration: 8,repeat: Infinity,<motion.div;
+          }
+          transition={duration: 8,repeat: Infinity,<motion.div;
           className="absolute top-40 right-32 w-24 h-24 border border-blue-500/30 rotate-45";
-            ease: 'easeInOut',          }}
+            ease: 'easeInOut',          }
         />;
         <motion.div;
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - blue - 500 / 30 rotate - 45";
-          animate={{rotate: [45, -315];
+          animate={rotate: [45, -315];
             scale: [1, 1.2, 1];
             opacity: [0.2, 0.5, 0.2],            rotate: [45, -315];
-            scale: [1, 1.2, 1];rotate: [45, 405],scale: [1, 1.1, 1],opacity: [0.3, 0.6, 0.3],}}
-          transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',}}
+            scale: [1, 1.2, 1];rotate: [45, 405],scale: [1, 1.1, 1],opacity: [0.3, 0.6, 0.3],}
+          transition={duration: 8,repeat: Infinity,ease: 'easeInOut',}
         />;
         <motion.div;
           className='absolute top-40 right-32 w-24 h-24 border border-blue-500/30 rotate-45';
-          animate={{rotate: [45, -315],scale: [1, 1.2, 1],opacity: [0.2, 0.5, 0.2],}}
-          transition={{duration: 10;
+          animate={rotate: [45, -315],scale: [1, 1.2, 1],opacity: [0.2, 0.5, 0.2],}
+          transition={duration: 10;
             repeat: Infinity;
-            ease: 'easeInOut',          }}
-          animate={{rotate: [45, 405];
+            ease: 'easeInOut',          }
+          animate={rotate: [45, 405];
             scale: [1, 1.15, 1];
-            opacity: [0.25, 0.55, 0.25],          }}
+            opacity: [0.25, 0.55, 0.25],          }
         />;
         <motion&& motion.div;
           className='absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45';
-          animate={{rotate: [45, 405],scale: [1, 1 && 1.15, 1],opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25],          }}
-          transition={{ease: 'easeInOut',            ease: "easeInOut";
-            duration: 10,repeat: Infinity,ease: 'easeInOut',}}
+          animate={rotate: [45, 405],scale: [1, 1 && 1.15, 1],opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25],          }
+          transition={ease: 'easeInOut',            ease: "easeInOut";
+            duration: 10,repeat: Infinity,ease: 'easeInOut',}
         />;
         <motion.div;
 className='absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45';
-          animate={{rotate: [45, 405],scale: [1, 1.15, 1],opacity: [0.25, 0.55, 0.25],}}
-          transition={{duration: 12,repeat: Infinity,ease: 'easeInOut',}}
+          animate={rotate: [45, 405],scale: [1, 1.15, 1],opacity: [0.25, 0.55, 0.25],}
+          transition={duration: 12,repeat: Infinity,ease: 'easeInOut',}
         />;
-            duration: 12,repeat: Infinity,}}animate={{rotate: [45, 405];
+            duration: 12,repeat: Infinity,}animate={rotate: [45, 405];
             scale: [1, 1 && 1.15, 1];
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25];
-          transition={{{/* Floating Circles */}<motion&& motion.div;
+          transition={{/* Floating Circles */}<motion&& motion.div;
           className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full';
-          animate={{transition={{duration: 6;
+          animate={transition={duration: 6;
             repeat: Infinity;
-            ease: 'easeInOut',          }}
-          animate={{coordinate_y: [0, -20, 0];
+            ease: 'easeInOut',          }
+          animate={coordinate_y: [0, -20, 0];
             opacity: [0.3, 0.6, 0.3];
-          }}
-          transition={{duration: 6,repeat: Infinity,transition={{duration: 7;
+          }
+          transition={duration: 6,repeat: Infinity,transition={duration: 7;
             repeat: Infinity;
-            ease: 'easeInOut',          }}
-          transition={{duration: 5;
+            ease: 'easeInOut',          }
+          transition={duration: 5;
             repeat: Infinity;
-            ease: 'easeInOut',          }}          className="absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full";
-          animate={{y: [0, -20, 0];
+            ease: 'easeInOut',          }          className="absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full";
+          animate={y: [0, -20, 0];
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3];
-          }}
-          transition={{duration: 6;
+          }
+          transition={duration: 6;
             repeat: Infinity;
             ease: 'easeInOut',            ease: "easeInOut";
-          animate={{y: [0, 25, 0];
+          animate={y: [0, 25, 0];
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2];
         <motion.div;
 className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full';
-          animate={{y: [0, -20, 0],opacity: [0.3, 0.6, 0.3],}}
-          transition={{duration: 6,repeat: Infinity,ease: 'easeInOut',}}
+          animate={y: [0, -20, 0],opacity: [0.3, 0.6, 0.3],}
+          transition={duration: 6,repeat: Infinity,ease: 'easeInOut',}
         />;
         <motion.div;
 className='absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounded-full';'
-          animate={{"y": [0, 25, 0],"opacity": [0.2, 0.5, 0.2]}}transition={{"duration": 7,"repeat": Infinity,"ease": 'easeInOut'}}animate={{"y": [0, -15, 0];'
+          animate={"y": [0, 25, 0],"opacity": [0.2, 0.5, 0.2]}transition={"duration": 7,"repeat": Infinity,"ease": 'easeInOut'}animate={"y": [0, -15, 0];'
             }
             "opacity": [0 && 0.25, 0 && 0.55, 0 && 0.25];
-          transition={{"duration": 5,"repeat": Infinity}}"duration": 5,"repeat": Infinity,"ease": 'easeInOut',            "ease": "easeInOut";" />;
+          transition={"duration": 5,"repeat": Infinity}"duration": 5,"repeat": Infinity,"ease": 'easeInOut',            "ease": "easeInOut";" />;
         <motion.div;
 className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full';'
-          animate={{"y": [0, -15, 0],"opacity": [0.25, 0.55, 0.25]}}
-          transition={{"duration": 5,"repeat": Infinity,"ease": 'easeInOut'}}}} />;'
+          animate={"y": [0, -15, 0],"opacity": [0.25, 0.55, 0.25]}
+          transition={"duration": 5,"repeat": Infinity,"ease": 'easeInOut'}} />;'
       </div>;
             opacity: [0.3, 0.6, 0.3]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
-=======
         />;
       </div>;
 
       {/* Energy Waves */}
       <div;'
         className='absolute inset - 0 pointer - events - none';
-        style={{ z_index: 3 }}
+        style={ z_index: 3 }
       >;
         <motion.div;'
           className='absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - purple - 500 to - transparent';
-          animate={{}
+          animate={}
             coordinate_y: [0, 1000],
-            opacity: [0, 1, 0],          }}
-          transition={{}
+            opacity: [0, 1, 0],          }
+          transition={}
             duration: 4,
             repeat: Infinity,'
             ease: 'linear',        <motion.div;"
           className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - purple - 500 to - transparent";
-          animate={{}
+          animate={}
             coordinate_y: [0, 1000];
             opacity: [0, 1, 0];
-          }}
-          transition={{}
+          }
+          transition={}
             opacity: [0, 1, 0]
-          }}
-          transition={{}
+          }
+          transition={}
             duration: 6;
             repeat: Infinity'
             ease: 'linear'"
@@ -619,17 +594,17 @@ className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rou
         />;
         <motion.div;"
           className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - blue - 500 to - transparent";
-          animate={{}
+          animate={}
             coordinate_y: [0, 1000],
             opacity: [0, 1, 0],            coordinate_y: [0, 1000];
             opacity: [0, 1, 0];
-          }}
-          transition={{"
-            delay: 4,          }}          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
-          animate={{}
+          }
+          transition={"
+            delay: 4,          }          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
+          animate={}
             y: [0, 1000]
             opacity: [0, 1, 0]
-          transition={{}
+          transition={}
             duration: 8;
             repeat: Infinity'
             ease: 'linear'"
@@ -637,55 +612,55 @@ className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rou
 
 <div,
 className='absolute inset-0 pointer-events-none''
-        style={{ "zIndex": 3 
+        style={ "zIndex": 3 
 }
       >
         <motion.div,
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent''
-          animate={{
+          animate={
             }
             "y": [0, 1000],
             "opacity": [0, 1, 0]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 4,
             "repeat": Infinity,
 "ease": 'linear','
-          }} />
+          } />
 
         <motion.div,
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent''
-          animate={{
+          animate={
             }
             "y": [0, 1000],
             "opacity": [0, 1, 0]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 6,
             "repeat": Infinity,
 "ease": 'linear','
             "delay": 2
-          }} />
+          } />
         <motion.div,
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent''
-          animate={{
+          animate={
             }
             "y": [0, 1000],
             "opacity": [0, 1, 0]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 8,
             "repeat": Infinity,
 "ease": 'linear','
             "delay": 4
-          }}
+          }
             "duration": 8,
             "repeat": Infinity
 
-          }}
+          }
 
             "duration": 8,
             "repeat": Infinity,
@@ -694,44 +669,44 @@ className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent vi
       </div>
         />;
       </div>;{/* Energy Waves */}className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent';
-          animate={{y: [0, 1000];
-            opacity: [0, 1, 0],          }}
+          animate={y: [0, 1000];
+            opacity: [0, 1, 0],          }
             ease: 'easeInOut',            ease: "easeInOut";
-          }}
+          }
         />;
         <motion.div;
           className='absolute top - 2/3 right - 1/4 w - 20 h - 20 border border - blue - 400 / 40 rounded - full';
-          animate={{coordinate_y: [0, 25, 0],opacity: [0.2, 0.5, 0.2],          className="absolute top - 2/3 right - 1/4 w - 20 h - 20 border border - blue - 400 / 40 rounded - full";
-          animate={{coordinate_y: [0, 25, 0];
+          animate={coordinate_y: [0, 25, 0],opacity: [0.2, 0.5, 0.2],          className="absolute top - 2/3 right - 1/4 w - 20 h - 20 border border - blue - 400 / 40 rounded - full";
+          animate={coordinate_y: [0, 25, 0];
             opacity: [0.2, 0.5, 0.2];
-          transition={{duration: 7,repeat: Infinity,ease: 'easeInOut',            ease: "easeInOut";
-          }}
+          transition={duration: 7,repeat: Infinity,ease: 'easeInOut',            ease: "easeInOut";
+          }
         />;
         <motion.div;
           className='absolute bottom - 1/3 right - 1/3 w - 12 h - 12 border border - cyan - 400 / 40 rounded - full';
-          animate={{coordinate_y: [0, -15, 0],opacity: [0.25, 0.55, 0.25],          className="absolute bottom - 1/3 right - 1/3 w - 12 h - 12 border border - cyan - 400 / 40 rounded - full";
-          animate={{coordinate_y: [0, -15, 0];
+          animate={coordinate_y: [0, -15, 0],opacity: [0.25, 0.55, 0.25],          className="absolute bottom - 1/3 right - 1/3 w - 12 h - 12 border border - cyan - 400 / 40 rounded - full";
+          animate={coordinate_y: [0, -15, 0];
             opacity: [0.25, 0.55, 0.25];
-          transition={{duration: 5,repeat: Infinity,ease: 'easeInOut',            ease: "easeInOut";
-          }}
+          transition={duration: 5,repeat: Infinity,ease: 'easeInOut',            ease: "easeInOut";
+          }
         />;
       </div>;
       {/* Energy Waves */}
       <div;
         className='absolute inset - 0 pointer - events - none';
-        style={{ z_index: 3 }}
+        style={ z_index: 3 }
       >;
         <motion.div;
           className='absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - purple - 500 to - transparent';
-          animate={{coordinate_y: [0, 1000],opacity: [0, 1, 0],          }}
-          transition={{duration: 4,repeat: Infinity,ease: 'linear',        <motion.div;
+          animate={coordinate_y: [0, 1000],opacity: [0, 1, 0],          }
+          transition={duration: 4,repeat: Infinity,ease: 'linear',        <motion.div;
           className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - purple - 500 to - transparent";
-          animate={{coordinate_y: [0, 1000];
+          animate={coordinate_y: [0, 1000];
             opacity: [0, 1, 0];
-          }}
-          transition={{opacity: [0, 1, 0];
-          }}
-          transition={{duration: 6;
+          }
+          transition={opacity: [0, 1, 0];
+          }
+          transition={duration: 6;
             repeat: Infinity;
             ease: 'linear';
             delay: 2,            ease: "linear";
@@ -739,86 +714,86 @@ className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent vi
         />;
         <motion.div;
           className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - blue - 500 to - transparent";
-          animate={{coordinate_y: [0, 1000],opacity: [0, 1, 0],            coordinate_y: [0, 1000];
+          animate={coordinate_y: [0, 1000],opacity: [0, 1, 0],            coordinate_y: [0, 1000];
             opacity: [0, 1, 0];
-          }}
-          transition={{delay: 4,          }}          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent";
-          animate={{y: [0, 1000];
+          }
+          transition={delay: 4,          }          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent";
+          animate={y: [0, 1000];
             opacity: [0, 1, 0];
-          transition={{duration: 8;
+          transition={duration: 8;
             repeat: Infinity;
             ease: 'linear';
             delay: 4,            ease: "linear";
             delay: 4;
 <div;
         className='absolute inset-0 pointer-events-none';
-        style={{ zIndex: 3 }}
+        style={ zIndex: 3 }
       >;
         <motion.div;
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent';
-          animate={{y: [0, 1000],opacity: [0, 1, 0],}}
-          transition={{duration: 4,repeat: Infinity,ease: 'linear',}}
+          animate={y: [0, 1000],opacity: [0, 1, 0],}
+          transition={duration: 4,repeat: Infinity,ease: 'linear',}
         />;
         <motion.div;
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent';
-          animate={{y: [0, 1000],opacity: [0, 1, 0],}}
-          transition={{duration: 6,repeat: Infinity,ease: 'linear',delay: 2,}}
+          animate={y: [0, 1000],opacity: [0, 1, 0],}
+          transition={duration: 6,repeat: Infinity,ease: 'linear',delay: 2,}
         />;
         <motion.div;
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent';
-          animate={{y: [0, 1000],opacity: [0, 1, 0],}}
-          transition={{duration: 8,repeat: Infinity,ease: 'linear',delay: 4,}}
-            duration: 8,repeat: Infinity,}}duration: 8,repeat: Infinity,ease: 'linear',delay: 4,            ease: "linear",/>;
+          animate={y: [0, 1000],opacity: [0, 1, 0],}
+          transition={duration: 8,repeat: Infinity,ease: 'linear',delay: 4,}
+            duration: 8,repeat: Infinity,}duration: 8,repeat: Infinity,ease: 'linear',delay: 4,            ease: "linear",/>;
       </div>;
         />;
       </div>;
       {/* Quantum Particles */}
 <div;
         className='absolute inset-0 pointer-events-none';'
-        style={{ "zIndex": 4 
+        style={ "zIndex": 4 
 }
       >;
         {[...Array(20)].map((_, i) => (<motion.div;
             }
             key={i}
             className='absolute w - 2 h - 2 bg - purple - 400 rounded - full';'
-            style={{"left": `${Math.random() * 10,`}%`;`              "top": `${Math.random() * 10,`}%`;`
-            }}
-            animate={{
+            style={"left": `${Math.random() * 10,`}%`;`              "top": `${Math.random() * 10,`}%`;`
+            }
+            animate={
               scale: [0, 1, 0]
-              opacity: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (
+              opacity: [0, 1, 0],            }        {[...Array(20)].map((_, i) => (
             opacity: [0, 1, 0]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: "linear"
-          }}
+          }
         />
         
         <motion.div
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"
-          animate={{
+          animate={
             y: [0, 1000],
             opacity: [0, 1, 0]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: "linear",
-            delay: 2}}
+            delay: 2}
         />
 
               }
 
               "scale": [0, 1, 0],
               "opacity": [0, 1, 0]
-            }}
-            transition={{
+            }
+            transition={
               }
               "duration": 3 + Math.random() * 2,
               "repeat": Infinity,
               "delay": Math.random() * 3,
 "ease": 'easeInOut','
-            }} />
+            } />
         ))}
       </div>
 
@@ -826,64 +801,61 @@ className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent vi
         ))}
       </div>
 
-<<<<<<< HEAD
       {/* Content */}'
-      <div className='relative' style={{ zIndex: 10 }}>        {children}
+      <div className='relative' style={ zIndex: 10 }>        {children}
       </div>"
-      {/* Bottom Glow */}      <div className="relative" style={{ zIndex: 10 }}>
+      {/* Bottom Glow */}      <div className="relative" style={ zIndex: 10 }>
               delay: Math.random() * 3,"
               ease: "easeInOut"`
               left: `${Math.random () * 100}%`,`
               top: `${Math.random () * 100}%`;
-            }}
-            animate={{}
+            }
+            animate={}
               scale: [0, 1, 0];
               opacity: [0, 1, 0];
-            }}
-            transition={{}
+            }
+            transition={}
               duration: 3 + Math.random () * 2,
               repeat: Infinity,
               delay: Math.random () * 3,'"
-              ease: 'easeInOut',            }}              ease: "easeInOut";
-=======
+              ease: 'easeInOut',            }              ease: "easeInOut";
       {/* Content */}
-<<<<<<< HEAD
-            animate={{scale: [0, 1, 0];
-              opacity: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (<motion.div;
-              left: `${Math.random () * 100}%`,top: `${Math.random () * 100}%`,}}
-            animate={{scale: [0, 1, 0],opacity: [0, 1, 0],            }}        {[...Array (20)].map ((_, i) => (<motion.div;
-      <div className='relative' style={{ zIndex: 10 }}>        {children}
+            animate={scale: [0, 1, 0];
+              opacity: [0, 1, 0],            }        {[...Array(20)].map((_, i) => (<motion.div;
+              left: `${Math.random () * 100}%`,top: `${Math.random () * 100}%`,}
+            animate={scale: [0, 1, 0],opacity: [0, 1, 0],            }        {[...Array (20)].map ((_, i) => (<motion.div;
+      <div className='relative' style={ zIndex: 10 }>        {children}
       </div>
-      {/* Bottom Glow */}      <div className="relative" style={{ zIndex: 10 }}>
+      {/* Bottom Glow */}      <div className="relative" style={ zIndex: 10 }>
               delay: Math.random() * 3,
               ease: "easeInOut"
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`;
-            }}
-            animate={{scale: [0, 1, 0];
+            }
+            animate={scale: [0, 1, 0];
               opacity: [0, 1, 0];
-            }}
-            transition={{duration: 3 + Math.random() * 2;
+            }
+            transition={duration: 3 + Math.random() * 2;
               repeat: Infinity;
               delay: Math.random() * 3;
-              ease: 'easeInOut',            }}              ease: "easeInOut";
-            }}
-          />;ease: 'easeInOut',            }}              ease: "easeInOut";
-            }}
+              ease: 'easeInOut',            }              ease: "easeInOut";
+            }
+          />;ease: 'easeInOut',            }              ease: "easeInOut";
+            }
           />;
-            transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 3,scale: [0, 1, 0],opacity: [0, 1, 0],}}
-            transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 3,ease: 'easeInOut',}}
+            transition={duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 3,scale: [0, 1, 0],opacity: [0, 1, 0],}
+            transition={duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 3,ease: 'easeInOut',}
           />;
             transition = $2;
               repeat: Infinity,
               delay: Math.random() * 3,
               ease: "easeInOut"
-            }}
+            }
           />
         ))}
       </div>
 
-<div className='relative' style={{ "zIndex": 10 }}>'
+<div className='relative' style={ "zIndex": 10 }>'
         {childre
 }
       </div>;
@@ -891,18 +863,14 @@ className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent vi
 
 <div,
 className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none''
-        style={{ "zIndex": 5 
+        style={ "zIndex": 5 
 } />
     </div>
   );
 
-<<<<<<< HEAD
       {/* Bottom Glow */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none" style={{ zIndex: 5}} />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none" style={ zIndex: 5} />
     </div>
   )
 }
-=======
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

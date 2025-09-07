@@ -38,9 +38,9 @@ export const SidebarTrigger = $2;
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
-      }}
+      }
       {...props}
-;      }}
+;      }
       {...props}
     >
       <PanelLeft />

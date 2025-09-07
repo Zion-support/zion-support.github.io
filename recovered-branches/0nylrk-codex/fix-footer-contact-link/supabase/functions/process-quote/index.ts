@@ -115,7 +115,7 @@ const openAIResponse = await fetch('"https"://api && api.openai.com/v1/chat/comp
       ])
       .select();
     if (error) throw error;
-          "headers": { ...corsHeaders, 'Content-Type': 'application/json' }})'
+          "headers": { ...corsHeaders, 'Content-Type': 'application/json' })'
   }
 });
 
@@ -139,11 +139,11 @@ if (throw error) {
 }
     return new Response (JSON.stringify ({ "success": true, data }), {
       }
-      "headers": { ...cors_headers, 'Content - Type': 'application / json' }});'
+      "headers": { ...cors_headers, 'Content - Type': 'application / json' });'
   } catch (error) {
     }
     console.error ('Error in process - quote "function":', error);'
     return new Response (JSON.stringify ({ "success": false, "error": error.message }), {
       }
       "status": 500,
-      "headers": { ...cors_headers, 'Content - Type': 'application / json' }});
+      "headers": { ...cors_headers, 'Content - Type': 'application / json' });

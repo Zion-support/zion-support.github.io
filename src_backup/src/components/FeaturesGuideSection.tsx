@@ -954,7 +954,7 @@ function FeaturesGuideSection() {const features = [;
         </div>;
       </div>;
     </section>)})}
-  {{Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3,  Plus, HelpCircle ;
+  {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3,  Plus, HelpCircle ;
   } from 'lucide-react';'
 const features = [ {return (<section className="py-20 bg-zion-blue-dark" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <GradientHeading>Your Complete Guide to Zion</GradientHeading> <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto" > Discover all the powerful tools and features available to help you navigate the world of AI and tech services </p> </div> > {feature.title ;"
 }</TabsTrigger>) )}</TabsList> > {feature.title ;
@@ -972,7 +972,7 @@ const features = [ {return (<section className="py-20 bg-zion-blue-dark" > <div 
         </div>;
       </div>;
     </section>;
-  )})}}
+  )})}
 }
 }
   )}

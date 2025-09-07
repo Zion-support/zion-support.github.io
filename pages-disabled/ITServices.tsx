@@ -105,9 +105,9 @@ title="IT Services - Zion Tech Group""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
         <div className="container mx-auto px-4 py-16">"
           <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.6 }}
+initial={ "opacity": 0, "y": 20 }
+            animate={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.6 }
             className="text-center mb-16""
           >
             <h1 className="text-5xl font-bold text-white mb-6">"
@@ -124,9 +124,9 @@ initial={{ "opacity": 0, "y": 20 }}
               <motion.div
 }
 key={index}
-                initial={{ "opacity": 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.6, "delay": index * 0.1 }
                 className="text-center""
               >
                 <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>"
@@ -140,9 +140,9 @@ key={index}
               <motion.div
 }
 key={index}
-                initial={{ "opacity": 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.6, "delay": index * 0.1 }
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20""
               >
                 <div className="flex items-center mb-4">"
@@ -191,9 +191,9 @@ href="/contact""
           </div>
 
           <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.6, "delay": 0.8 }}
+initial={ "opacity": 0, "y": 20 }
+            animate={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.6, "delay": 0.8 }
             className="bg-blue-600 rounded-xl p-8 text-center""
           >
             <h2 className="text-3xl font-bold text-white mb-4">"

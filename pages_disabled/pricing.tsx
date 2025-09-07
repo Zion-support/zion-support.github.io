@@ -46,10 +46,10 @@ import React from 'react';'
             {plans.map((plan, index) => (<motion.div;
                 }
                 key={index}
-                initial={{ "opacity": 0, "y": 20 
+                initial={ "opacity": 0, "y": 20 
 }
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "delay": index * 0.1 
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "delay": index * 0.1 
 }
                 className={`relative bg-white rounded-lg shadow-md p-8 ${plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : '';'                }`}>`
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;"
@@ -96,10 +96,10 @@ import React from 'react';'
               {addOns.map((addOn, index) => (<motion.div;
                   }
                   key={index}
-                  initial={{ "opacity": 0, "y": 20 
+                  initial={ "opacity": 0, "y": 20 
 }
-                  animate={{ "opacity": 1, "y": 0 }}
-                  transition={{ "delay": index * 0.1 }}
+                  animate={ "opacity": 1, "y": 0 }
+                  transition={ "delay": index * 0.1 }
                   className="bg-white rounded-lg shadow-md p-6">"
 
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{addOn.nam,"

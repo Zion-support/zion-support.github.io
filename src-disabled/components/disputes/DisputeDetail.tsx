@@ -253,7 +253,7 @@ import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
 
-                          }}
+                          }
                         >
                           Add Admin Note
                         </Button>

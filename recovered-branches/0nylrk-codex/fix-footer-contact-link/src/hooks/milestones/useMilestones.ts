@@ -14,14 +14,14 @@ import { MilestoneStatus } from './types',;'
 export const useMilestones = (projectId?: string) => {;
   }
   const { milestones, activities, isLoading, error, refetch } = useLoadMilestones(projectId),;
-  const { createMilestone, "isSubmitting": isCreating } = useCreateMilestone(projectId),;
-  const { updateMilestoneStatus, updateMilestone, "isSubmitting": isUpdating } = useUpdateMilestone(),;
-  const { deleteMilestone, "isSubmitting": isDeleting } = useDeleteMilestone(),;
-  const { uploadDeliverable, "isSubmitting": isUploading } = useUploadDeliverable(),;
+  const { createMilestone, 'isSubmitting': isCreating } = useCreateMilestone(projectId),;
+  const { updateMilestoneStatus, updateMilestone, 'isSubmitting': isUpdating } = useUpdateMilestone(),;
+  const { deleteMilestone, 'isSubmitting': isDeleting } = useDeleteMilestone(),;
+  const { uploadDeliverable, 'isSubmitting': isUploading } = useUploadDeliverable(),;
   // Combine all loading states;
   const isSubmitting = isCreating || isUpdating || isDeleting || isUploading,;
   // Function to upload deliverable with project_id;
-  const handleUploadDeliverable = async ("milestoneId": string, "file": File) => {;
+  const handleUploadDeliverable = async ('milestoneId': string, 'file': File) => {;
     }
     if (!projectId) return null,;
     return await uploadDeliverable(milestoneId, projectId, file);
@@ -37,7 +37,7 @@ export const useMilestones = (projectId?: string) => {;
     updateMilestoneStatus,;
     updateMilestone,;
     deleteMilestone,;
-    "uploadDeliverable": handleUploadDeliverable;
+    'uploadDeliverable': handleUploadDeliverable;
     refetch;
   }
 };
@@ -52,16 +52,16 @@ import { MilestoneStatus } from './types',;'
 export const useMilestones = (projectId?:string) => {;
   }
   const { milestones, activities, isLoading, error, refetch } = useLoadMilestones(projectId),;
-  const { createMilestone, "isSubmitting":isCreating } = useCreateMilestone(projectId),;
-  const { updateMilestoneStatus, updateMilestone, "isSubmitting":isUpdating } = useUpdateMilestone(),;
-  const { deleteMilestone, "isSubmitting":isDeleting } = useDeleteMilestone(),;
-  const { uploadDeliverable, "isSubmitting":isUploading } = useUploadDeliverable(),;
+  const { createMilestone, 'isSubmitting':isCreating } = useCreateMilestone(projectId),;
+  const { updateMilestoneStatus, updateMilestone, 'isSubmitting':isUpdating } = useUpdateMilestone(),;
+  const { deleteMilestone, 'isSubmitting':isDeleting } = useDeleteMilestone(),;
+  const { uploadDeliverable, 'isSubmitting':isUploading } = useUploadDeliverable(),;
   ;
   // Combine all loading states;
   const isSubmitting = isCreating || isUpdating || isDeleting || isUploading,;
   ;
   // Function to upload deliverable with project_id;
-  const handleUploadDeliverable = async ("milestoneId":string, "file":File) => {;
+  const handleUploadDeliverable = async ('milestoneId':string, 'file':File) => {;
     }
     if (!projectId) return null,;
     return await uploadDeliverable(milestoneId, projectId, file),;
@@ -78,7 +78,7 @@ export const useMilestones = (projectId?:string) => {;
     updateMilestoneStatus,;
     updateMilestone,;
     deleteMilestone,;
-    "uploadDeliverable":handleUploadDeliverable,;
+    'uploadDeliverable':handleUploadDeliverable,;
     refetch;
   },;
 },; 

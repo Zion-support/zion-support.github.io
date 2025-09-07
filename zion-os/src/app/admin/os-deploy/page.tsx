@@ -34,7 +34,7 @@ setTimeout(() => {
   const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');'
   // Mock feature keys and functions,
 const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];'
-  const labelFor = ("key": string) => {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+  const labelFor = ("key": string) => {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }
@@ -158,7 +158,6 @@ const FeatureKeys = ["ai", "blockchain", "governance", "treasury"];"
     return descriptions[key] || "Feature description";"
   };
 
-<<<<<<< HEAD
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
       ai: 'Advanced AI capabilities',
@@ -169,7 +168,6 @@ const FeatureKeys = ["ai", "blockchain", "governance", "treasury"];"
     return descriptions[key] || 'Feature description';
   };
 
-=======
 
 
         {/* Header */}
@@ -1067,7 +1065,7 @@ id="partnerships""
                 }`}`              >;
                 }`}`              >;
                 }`}`              >;
-"use client",import { useState } from "react",import { FeatureKeys } from "@/lib/zod",import LoadingSpinner from "@/app/components/LoadingSpinner",export default function AdminDeployPage() {const [loading, setLoading] = useState(false),const [message, setMessage] = useState<string | null>(null),const [messageType, setMessageType] = useState<'success' | 'error'>('success'),async function onSubmit() {event.preventDefault(),setLoading(true),setMessage(null),const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const "features": Record<string boolean> = {},FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on")),const payload = {"instanceName": String(formData.get("instanceName") || ""),"domain": String(formData.get("domain") || "" ) || undefined,"subdomain": String(formData.get("subdomain") || "" ) || undefined,"vertical": String(formData.get("vertical") || "GENERAL"),"defaultLanguage": String(formData.get("defaultLanguage") || "en"),"tokenSystem": String(formData.get("tokenSystem") || "SHARED"),"governanceType": String(formData.get("governanceType") || "ADMIN"),"region": String(formData.get("region") || "") || undefined,"country": String(formData.get("country") || "") || undefined,features,"addons": {"paymentGateway": String(formData.get("paymentGateway") || "") || undefined,"sovereignTreasury": formData.get("sovereignTreasury") === "on","dualGovernance": formData.get("dualGovernance") === "on","aiModeration": formData.get("aiModeration") === "on","affiliatePanel": formData.get("affiliatePanel") === "on"}},try {const res = await fetch("/api/deploy", { "method": "POST", "body": JSON.stringify(payload) })const res = await fetch("/api/deploy", { "method": "POST", "body": JSON.stringify(payload) }),const data = await res.json(),if (!res.ok) {setMessageType('error'),setMessage(data.error || "Deployment failed"),return;"
+"use client",import { useState } from "react",import { FeatureKeys } from "@/lib/zod",import LoadingSpinner from "@/app/components/LoadingSpinner",export default function AdminDeployPage() {const [loading, setLoading] = useState(false),const [message, setMessage] = useState<string | null>(null),const [messageType, setMessageType] = useState<'success' | 'error'>('success'),async function onSubmit() {event.preventDefault(),setLoading(true),setMessage(null),const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const "features": Record<string boolean> = {},FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on")),const payload = {"instanceName": String(formData.get("instanceName") || ""),"domain": String(formData.get("domain") || "" ) || undefined,"subdomain": String(formData.get("subdomain") || "" ) || undefined,"vertical": String(formData.get("vertical") || "GENERAL"),"defaultLanguage": String(formData.get("defaultLanguage") || "en"),"tokenSystem": String(formData.get("tokenSystem") || "SHARED"),"governanceType": String(formData.get("governanceType") || "ADMIN"),"region": String(formData.get("region") || "") || undefined,"country": String(formData.get("country") || "") || undefined,features,"addons": {"paymentGateway": String(formData.get("paymentGateway") || "") || undefined,"sovereignTreasury": formData.get("sovereignTreasury") === "on","dualGovernance": formData.get("dualGovernance") === "on","aiModeration": formData.get("aiModeration") === "on","affiliatePanel": formData.get("affiliatePanel") === "on"},try {const res = await fetch("/api/deploy", { "method": "POST", "body": JSON.stringify(payload) })const res = await fetch("/api/deploy", { "method": "POST", "body": JSON.stringify(payload) }),const data = await res.json(),if (!res.ok) {setMessageType('error'),setMessage(data.error || "Deployment failed"),return;"
       }setMessageType('success'),setMessage(`✅ Deployment queued successfully! "ID": ${data.deploymentId}`),(event.target as HTMLFormElement).reset()} catch (error) {setMessageType('error'),setMessage("Network error occurred. Please try again.")} finally {setLoading(false)}"  }const getVerticalIcon = ("vertical": string) => {switch (vertical) {case "HEALTH": return <Shield className="w-5 h-5 text-blue-400" />,case "EDUCATION": return <Building2 className="w-5 h-5 text-green-400" />,case "LAW": return <Shield className="w-5 h-5 text-purple-400" />,case "GOV": return <Users className="w-5 h-5 text-red-400" />,"default": return <Globe className="w-5 h-5 text-gray-400" />;"
           <div className="text-center">"
             <button
@@ -1128,7 +1126,7 @@ export default function AdminDeployPage() {;
           "sovereignTreasury": formData.get("sovereignTreasury") === "on",;"
           "dualGovernance": formData.get("dualGovernance") === "on",;"
           "aiModeration": formData.get("aiModeration") === "on",;"
-          "affiliatePanel": formData.get("affiliatePanel") === "on"}},;"
+          "affiliatePanel": formData.get("affiliatePanel") === "on"},;"
     try {;
       }
       const res = await fetch("/api/deploy", { "method": "POST", "body": JSON.stringify(payload) }),;"
@@ -1153,7 +1151,7 @@ export default function AdminDeployPage() {;
           sovereignTreasury: formData.get("sovereignTreasury") === "on",
           dualGovernance: formData.get("dualGovernance") === "on",
           aiModeration: formData.get("aiModeration") === "on",
-          affiliatePanel: formData.get("affiliatePanel") === "on"}},
+          affiliatePanel: formData.get("affiliatePanel") === "on"},
 
     try {
       const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) }),
@@ -1568,7 +1566,7 @@ export default function AdminDeployPage() {;
         </form>;
       </div>;
     </div>;
-  )}}`}>;`                {message}
+  )}`}>;`                {message}
               </div>;
             )}
           </div>;

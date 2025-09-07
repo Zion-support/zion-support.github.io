@@ -18,14 +18,14 @@ export const "ThemeToggle": Reac t.FC<ThemeToggleProps> = ({ className = '' }) =
 export const "ThemeToggle": React.FC<ThemeToggleProps> = ({ className = '' }) => {const [theme, setTheme] = useState<Theme>('system')const [mounted, setMounted] = useState<any>(false)useEffect(() => {// "TODO": Add dependencies if needed;'
   }
   return () => {// Cleanup function;
-  }}, []), [])setMounted(true)if(savedTheme) {setTheme(savedTheme)}
+  }, []), [])setMounted(true)if(savedTheme) {setTheme(savedTheme)}
   }, [])useEffect(() => {// "TODO": "Add dependencies if needed;"
   }
   return () => {// Cleanup function;
   "}useEffect(() => {// "TODO": Add dependencies if needed;"
   }
   return () => {// Cleanup function;
-  }}, []), [])if(!mounted) return;';'
+  }, []), [])if(!mounted) return;';'
 ';';'
     if(!mounted) return;
       root.classList.toggle('dark', theme === 'dark')}'
@@ -46,14 +46,14 @@ export const "ThemeToggle": React.FC<ThemeToggleProps> = ({ className = '' }) =>
       <AnimatePresence>;
         {isOpen && (<motion.div;
             }
-            initial={{ "opacity": "0", "y": "-10", "scale": "0.95 "}}"
-            animate={{ "opacity": "1", "y": "0", "scale": "1 "}}"
-            exit={{ "opacity": "0", "y": "-10", "scale": "0.95 "}}"
-            transition={{ "duration": "0.15 "}}";"
+            initial={ "opacity": "0", "y": "-10", "scale": "0.95 "}"
+            animate={ "opacity": "1", "y": "0", "scale": "1 "}"
+            exit={ "opacity": "0", "y": "-10", "scale": "0.95 "}"
+            transition={ "duration": "0.15 "}";"
             className="absolute top-full right-0 mt-2 w-32 bg-white "dark": "b g-gray-800 border border-gray-200 "dark": borde r-gray-700 rounded-lg shadow-lg z-50";"
           >;
             {themes.map((themeOption) => (<button      key={themeOption.value"}"
-                onClick={ () => {setTheme(themeOption.value)setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm "hover": "b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors ${theme === themeOption.value';'                    ? 'bg-blue-50 "dark": b g-blue-900/20 text-blue-600 "dark": tex t-blue-400'';'
+                onClick={ () => {setTheme(themeOption.value)setIsOpen(false) }                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm "hover": "b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors ${theme === themeOption.value';'                    ? 'bg-blue-50 "dark": b g-blue-900/20 text-blue-600 "dark": tex t-blue-400'';'
                     : 'text-gray-700 "dark": tex t-gray-300'`;`                "}`}`              >";"
                 <themeOption.icon className="w-4 h-4" />;"
                 <span>{themeOption.label}</span>;
@@ -93,23 +93,23 @@ export const "ThemeToggle": React.FC<ThemeToggleProps> = ({ className = '' }) =>
       <AnimatePresence>;
         {isOpen && (<motion.div;
             }
-            initial={{ "opacity": 0, "y": -10, "scale": 0.95 }}
-            animate={{ "opacity": 1, "y": 0, "scale": 1 }}
-            exit={{ "opacity": 0, "y": -10, "scale": 0.95 }}
-            transition={{ "duration": 0.15 }}";"
+            initial={ "opacity": 0, "y": -10, "scale": 0.95 }
+            animate={ "opacity": 1, "y": 0, "scale": 1 }
+            exit={ "opacity": 0, "y": -10, "scale": 0.95 }
+            transition={ "duration": 0.15 }";"
             className="absolute top-full right-0 mt-2 w-32 bg-white "dark": b g-gray-800 border border-gray-200 "dark": borde r-gray-700 rounded-lg shadow-lg z-50";"
           >;
             {themes.map((themeOption) => (<button      key={themeOption.value}
                 onClick={ () => {';'
                   }
                   setTheme(themeOption.value)';';'
-                  setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm "hover": b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors ${theme === themeOption.value'';';'
+                  setIsOpen(false) }                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm "hover": b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors ${theme === themeOption.value'';';'
                     ? 'bg-blue-50 "dark": b g-blue-900/20 text-blue-600 "dark": tex t-blue-400''';';'
                     : 'text-gray-700 "dark": tex t-gray-300'`;`                }
-                onClick={ () => {setTheme(themeOption.value)setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm "hover": b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors ${theme === themeOption.value';'
+                onClick={ () => {setTheme(themeOption.value)setIsOpen(false) }                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm "hover": b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors ${theme === themeOption.value';'
                     ? 'bg-blue-50 "dark": b g-blue-900/20 text-blue-600 "dark": tex t-blue-400'';'
                     : 'text-gray-700 "dark": tex t-gray-300'`;`                }
-                onClick={ () => {setTheme(themeOption.value)setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm "hover": b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors ${theme === themeOption.value';'
+                onClick={ () => {setTheme(themeOption.value)setIsOpen(false) }                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm "hover": b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors ${theme === themeOption.value';'
                     ? 'bg-blue-50 "dark": b g-blue-900/20 text-blue-600 "dark": tex t-blue-400'';'
                     : 'text-gray-700 "dark": tex t-gray-300'`;`                }`}`              >";"
                 <themeOption.icon className="w-4 h-4" />;"
@@ -155,9 +155,9 @@ export const "ThemeToggle": React.FC<ThemeToggleProps> = ({ className = '' }) =>
     { "value": 'light', "label": 'Light theme', "icon": "Su n "},{ "value": 'dark', "label": 'Dark theme', "icon": "Moo n "},{ "value": 'system', "label": 'System theme', "icon": "Monito r "}"
   ];if(!mounted) {return ()`;`      <div className={`w-12 h-12 bg-gray-200 "dark": "b g-gray-700 rounded-lg animate-pulse ${className"}`} />;`    )}return ()`;`    <div className={`relative ${className}`}>;`      <motion.div";"
         className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1";"
-        initial={{ "opacity": "0", "scale": "0.9 "}}"
-        animate={{ "opacity": "1", "scale": "1 "}}"
-        transition={{ "duration": "0.3 "}}"
+        initial={ "opacity": "0", "scale": "0.9 "}"
+        animate={ "opacity": "1", "scale": "1 "}"
+        transition={ "duration": "0.3 "}"
       >;
         {themes.map((themeOption) => {const "themes": { "value": Them e; "label": string; "icon": React.ComponentType<any> }[] = [';'
     { "value": 'light', "label": 'Light theme', "icon": Su n },{ "value": 'dark', "label": 'Dark theme', "icon": Moo n },{ "value": 'system', "label": 'System theme', "icon": Monito r }'
@@ -165,9 +165,9 @@ export const "ThemeToggle": React.FC<ThemeToggleProps> = ({ className = '' }) =>
   if(!mounted) {return ()`;`      <div className={`w-12 h-12 bg-gray-200 "dark": b g-gray-700 rounded-lg animate-pulse ${className}`} />;`    )}
   return ()`;`    <div className={`relative ${className}`}>;`      <motion.div";"
         className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1";"
-        initial={{ "opacity": 0, "scale": 0.9 }}
-        animate={{ "opacity": 1, "scale": 1 }}
-        transition={{ "duration": 0.3 }}
+        initial={ "opacity": 0, "scale": 0.9 }
+        animate={ "opacity": 1, "scale": 1 }
+        transition={ "duration": 0.3 }
       >;
         {themes.map((themeOption) => {const Icon = themeOption.icon;
           }
@@ -177,10 +177,10 @@ export const "ThemeToggle": React.FC<ThemeToggleProps> = ({ className = '' }) =>
               className={`relative p-2 rounded-lg transition-all duration-200 ${isActive'';';'                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg''';';'
                   : 'text-gray-300 "hover": tex t-white "hover": b g-white/10'`;return (<motion.button              key={themeOption.value}`              onClick={() => handleThemeChange(themeOption.value)}`;`              className={`relative p-2 rounded-lg transition-all duration-200 ${isActive';'
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'';'
-                  : 'text-gray-300 "hover": tex t-white "hover": b g-white/10'`;`              }`}`              whileHover={{ "scale": 1.05 }}
-              whileTap={{ "scale": 0.95 }}
-                  : 'text-gray-300 "hover": "tex t-white "hover": b g-white/10'`;`              "}`}`              whileHover={{ "scale": "1.05 "}}"
-              whileTap={{ "scale": "0.95 "}}"
+                  : 'text-gray-300 "hover": tex t-white "hover": b g-white/10'`;`              }`}`              whileHover={ "scale": 1.05 }
+              whileTap={ "scale": 0.95 }
+                  : 'text-gray-300 "hover": "tex t-white "hover": b g-white/10'`;`              "}`}`              whileHover={ "scale": "1.05 "}"
+              whileTap={ "scale": "0.95 "}"
               aria-label={themeOption.label}
               title={themeOption.label}
             >";"
@@ -188,11 +188,11 @@ export const "ThemeToggle": React.FC<ThemeToggleProps> = ({ className = '' }) =>
                   }
                   className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500";"
                   layoutId="activeTheme";"
-                  transition={{ "type": "spring", "bounce": "0.2", "duration": "0.6 "}}"
+                  transition={ "type": "spring", "bounce": "0.2", "duration": "0.6 "}"
               onClick={() => handleThemeChange(themeOption.value)}`;`              className={`relative p-2 rounded-lg transition-all duration-200 ${isActive';'
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'';'
-                  : 'text-gray-300 "hover": tex t-white "hover": b g-white/10'`;`              }`}`              whileHover={{ "scale": 1.05 }}
-              whileTap={{ "scale": 0.95 }}
+                  : 'text-gray-300 "hover": tex t-white "hover": b g-white/10'`;`              }`}`              whileHover={ "scale": 1.05 }
+              whileTap={ "scale": 0.95 }
               aria-label={themeOption.label}
               title={themeOption.label}
             >";"
@@ -200,7 +200,7 @@ export const "ThemeToggle": React.FC<ThemeToggleProps> = ({ className = '' }) =>
                   }
                   className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500";"
                   layoutId="activeTheme";"
-                  transition={{ "type": "spring", "bounce": 0.2, "duration": 0.6 }}" />) }
+                  transition={ "type": "spring", "bounce": 0.2, "duration": 0.6 }" />) }
             </motion.button>) }) }
       </motion.div>;
     </div>) }export default ThemeToggle;

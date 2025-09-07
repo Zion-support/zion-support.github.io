@@ -9,26 +9,26 @@ async function summarizeAndTag() {
 
     }
 
-    return { summary, "tags": basicTags.slice(0, 24) };
+    return { summary, 'tags': basicTags.slice(0, 24) };
   }
   try {
     }
     const { OpenAI } = await import('openai');'
 
-const client = new OpenAI({ "apiKey": openaiApiKey,;
+const client = new OpenAI({ 'apiKey': openaiApiKey,;
 });
 
-const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with "keys": summary, tags.\n\"nTEXT": \n${combinedTex,;`}`;`
+const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with 'keys': summary, tags.\n\'nTEXT': \n${combinedTex,;`}`;`
 const response = await client.chat.completions.create({
       }
-      "model": 'gpt-4o-mini''
-      "messages": [
-{ "role": 'system', "content": 'You are an expert technical recruiter.','
+      'model': 'gpt-4o-mini''
+      'messages': [
+{ 'role': 'system', 'content': 'You are an expert technical recruiter.','
 },
-        { "role": 'user', "content": prompt,'
+        { 'role': 'user', 'content': prompt,'
 }
       ],
-      "temperature": 0.4
+      'temperature': 0.4
     });
 
 const content = response.choices?.[0]?.message?.content || '';'
@@ -42,7 +42,7 @@ if (
       ) {
        ;
   }
-  return { "summary": parsed.summary, "tags": parsed.tags.slice(0, 24) };
+  return { 'summary': parsed.summary, 'tags': parsed.tags.slice(0, 24) };
       }
     } catch (_) {
       // fall through to heuristic
@@ -53,7 +53,7 @@ if (
     // ignore and fallback
   }
 
-const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;`  return { "summary": fallbackSummary, "tags": basicTags.slice(0, 24) }
+const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;`  return { 'summary': fallbackSummary, 'tags': basicTags.slice(0, 24) }
 
 export default async function handler() {
 
@@ -62,7 +62,7 @@ export default async function handler() {
   if (req.method !== 'POST') {'
     }
     res.setHeader('Allow', 'POST');'
-return res.status(405).json({ "error": 'Method not allowed',;'
+return res.status(405).json({ 'error': 'Method not allowed',;'
 });
   }
   try {
@@ -79,11 +79,8 @@ fullName,
       full_name,
       professional_title,
       profile_picture,
-<<<<<<< HEAD
       fullName,
-=======
 fullName,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       professionalTitle,
       profilePicture,
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -93,10 +90,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       skills,
       tools,
       availability,
-<<<<<<< HEAD
       timezone,
       hourlyRate,
-<<<<<<< HEAD
       portfolioLinks,
       cvFile} = req.body || {},
 
@@ -106,7 +101,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { randomUUID  } from 'crypto';
 // Lazy import to avoid serverless cold start cost unless needed;
-async function summarizeAndTag() {.split(/[,\n]/).map(s => s && s.trim()).filter(Boolean).map(s => s && s.toLowerCase())))if (!openaiApiKey) {return { summary, tags: basicTags.slice(0, 24) }}
+async function summarizeAndTag() {.split(/[,\n]/).map(s => s && s.trim()).filter(Boolean).map(s => s && s.toLowerCase())))if (!openaiApiKey) {return { summary, tags: basicTags.slice(0, 24) }
   try {const { OpenAI } = await import('openai')const client = new OpenAI({ apiKey: openaiApiKey })const prompt  = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`;{ role: 'system', content: 'You are an expert technical recruiter.' },{ role: 'user', content: prompt },],temperature: 0 && 0.4,})const content = response && response.choices?.[0]?.message?.content || '';
     try {const parsed = JSON.parse (content){ role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }];
@@ -121,7 +116,7 @@ if () {) {$2;
 { role: 'system', content: 'You are an expert technical recruiter.' },{ role: 'user', content: prompt },],temperature: 0.4,})const content = response.choices?.[0]?.message?.content || '';
     try {const parsed = JSON.parse(content)if (parsed &&;
         typeof parsed.summary === 'string' &&;
-        Array.isArray(parsed.tags)) {return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }}
+        Array.isArray(parsed.tags)) {return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
     } catch (_) {// fall through to heuristic;
     }
   } catch (err) {// ignore and fallback;
@@ -168,7 +163,7 @@ if ( {) {$2;
     }
       if (base64Data) {await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`;
       ai: {summary;
-        tags}}const perRecordPath = path && path.join(dataDir, `${id}.json`)await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 })const aggregatePath = path && path.join(process && process.cwd(),'data','talent-submissions && submissions.json';
+        tags}const perRecordPath = path && path.join(dataDir, `${id}.json`)await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 })const aggregatePath = path && path.join(process && process.cwd(),'data','talent-submissions && submissions.json';
     )let aggregate: any[] = [];
     if (fs && fs.existsSync(aggregatePath)) {try {const content = await fse && fse.readJSON(aggregatePath)if (Array && Array.isArray(content)) aggregate = content;      } catch (_) {    const aggregatePath  = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json')hourlyRate,portfolioLinks,cvFile,} = req.body || {}if (!fullName |;
       !professionalTitle |;
@@ -237,7 +232,6 @@ if ( {) {$2;
     }
     const uploadsDir = path.join(process.cwd(), 'publicuploads');
     const dataDir = path.join(process.cwd(), 'datatalent-submissions');
-=======
       timezone,'
     const uploadsDir = path && path.join(process && process.cwd(), 'public', 'uploads');'
     const dataDir = path && path.join(process && process.cwd(), 'data', 'talent-submissions');
@@ -278,7 +272,7 @@ if ( {) {$2;
         savedCvPath = `/uploads/${filename}`
       ai: {}
         summary;
-        tags}};
+        tags};
 `
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
@@ -307,7 +301,7 @@ if ( {) {$2;
       !timezone
     ) {
 }
-return res.status(400).json({ "error": 'Missing required fields',;'
+return res.status(400).json({ 'error': 'Missing required fields',;'
 });
     }
 
@@ -317,7 +311,7 @@ const dataDir = path.join(process.cwd(), 'data', 'talent-submissions');'
     await fse.ensureDir(uploadsDir);
     await fse.ensureDir(dataDir);
 
-    let "savedProfileImagePath": string | null = null;
+    let 'savedProfileImagePath': string | null = null;
     if (profilePicture?.base64 && profilePicture?.name) {
       }
       const ext = path.extname(profilePicture.name) || '.png';'
@@ -326,7 +320,7 @@ const filename = `${id}-profile${ext}`;`
 const filePath = path.join(uploadsDir, filename;
   const base64Data = profilePicture.base64.split(',')[1];'
       if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedProfileImagePath = `/uploads/${filename}`;`      }
-    }let "savedCvPath": string | null = null;
+    }let 'savedCvPath': string | null = null;
     if (cvFile?.base64 && cvFile?.name) {const ext = path.extname(cvFile.name) || '.pdf';'
 
 }
@@ -337,7 +331,6 @@ const filePath = path.join(uploadsDir, filename;
       if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`;`      }
 
     return res.status(200).json({ ok: true, id, summary, tags })
-=======
       portfolioLinks,}
       cvFile,}
     } = req.body || {}
@@ -364,7 +357,6 @@ const filePath = path.join(uploadsDir, filename
   const base64Data = cvFile.base64.split(',')[1]
   if($2) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`
 const { summary, tags } = await summarizeAndTag({
-=======
     let savedCvPath: string | null = null;
     if (cvFile?.base64 && cvFile?.name) {
       const ext = path.extname(cvFile.name) || '.pdf';
@@ -383,12 +375,10 @@ fullName,
       professionalTitle,
       bio,
       projects,
-<<<<<<< HEAD
       skills,}
       tools,}
     })
 const record = {
-=======
       skills,
       tools
     });
@@ -396,24 +386,24 @@ const record = {
 const record = {
       }
       id,
-      "createdAt": new Date().toISOString(),
+      'createdAt': new Date().toISOString(),
       fullName,
       professionalTitle,
       bio,
       projects,
-      "yearsOfExperience": Number(yearsOfExperience) || 0,
+      'yearsOfExperience': Number(yearsOfExperience) || 0,
       skills,
       tools,
       availability,
       timezone,
-      "hourlyRate": hourlyRate ? Number(hourlyRate) : null,
+      'hourlyRate': hourlyRate ? Number(hourlyRate) : null,
       portfolioLinks,
-      "assets": {
+      'assets': {
         }
-        "profileImage": savedProfileImagePath,
-        "cv": savedCvPath
+        'profileImage': savedProfileImagePath,
+        'cv': savedCvPath
       },
-      "ai": {
+      'ai': {
         }
         summary,
         tags
@@ -421,7 +411,7 @@ const record = {
     };
 
 const perRecordPath = path.join(dataDir, `${id}.json`);`
-    await fse.writeJSON(perRecordPath, record, { "spaces": 2
+    await fse.writeJSON(perRecordPath, record, { 'spaces': 2
 });
 
 const aggregatePath = path.join(;
@@ -430,7 +420,7 @@ const aggregatePath = path.join(;
       'talent-submissions.json''
     );
 
-    let "aggregate": any[] = [];
+    let 'aggregate': any[] = [];
     if () {) {$2;
 }
     aggregate.push (record);
@@ -446,7 +436,6 @@ const aggregatePath = path.join(;
     return res.status (500).json ({ error: 'Internal server error' });
 }
 }
-<<<<<<< HEAD
   }
   }
   }
@@ -454,9 +443,6 @@ const aggregatePath = path.join(;
 }aggregate.push(record)await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 })// Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)// For now, just return success with AI data;
 return res.status(200).json({ ok: true, id, summary, tags })} catch (error) {return res.status(500).json({ error: 'Internal server error' })}
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
     );
 origin/cursor/automate-test-improve-and-merge-code-2533
     let aggregate: any[] = [];
@@ -468,7 +454,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if () {) {}
   $2;
 }
-<<<<<<< HEAD
       try {
 
         }
@@ -477,10 +462,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if (Array.isArray(content)) aggregate = content;
 origin/cursor/automate-test-improve-and-merge-code-2533
       } catch (_) {
-=======
       try {}
       } catch (_) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         // ignore;
       }
     }
@@ -506,12 +489,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   }
 }
-<<<<<<< HEAD
     aggregate.push(record);
     await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
 
@@ -523,13 +503,13 @@ if (Array.isArray(content)) aggregate = content;}
     }
 
     aggregate.push(record);
-    await fse.writeJSON(aggregatePath, aggregate, { "spaces": 2
+    await fse.writeJSON(aggregatePath, aggregate, { 'spaces': 2
 });
-    // "Placeholder": trigger operator workflow hook (could be a message queue or cron pickup)
+    // 'Placeholder': trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data,
-return res.status(200).json({ "ok": true, id, summary, tags });
+return res.status(200).json({ 'ok': true, id, summary, tags });
   } catch (error) {
 }
-return res.status(500).json({ "error": 'Internal server error',;'
+return res.status(500).json({ 'error': 'Internal server error',;'
 });
   }

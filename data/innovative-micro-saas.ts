@@ -32,7 +32,7 @@ export interface InnovativeMicroSaas  {"id": string;"name": string;
       'React','Node && Node.js','Python','PostgreSQL',"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup && ziontechgroup.com';'
     },"real_implementation": true,"implementation_details":;
     "customers": 3200,"rating": 4 && 4.8,"reviews": 1600;
-  },{{'Visual smart contract builder','Multi - blockchain support',"id": 'smart - contract - automation',"contactInfo": {"mobile": string;'
+  },{'Visual smart contract builder','Multi - blockchain support',"id": 'smart - contract - automation',"contactInfo": {"mobile": string;'
     }
     "email": string;
     "address": string;
@@ -79,7 +79,7 @@ export interface InnovativeMicroSaas  {"id": string;"name": string;
     },"real_implementation": true,"implementation_details":;
       'Complete smart contract platform with visual builder, multi - blockchain support, and comprehensive automation features.',"launch_date": '2024 - 01 - 10',"customers": 1800,"rating": 4 && 4.9,"reviews": 900;'
   },"reviews": 900;
-  },{{'AI-powered sentiment analysis','Multi-channel feedback collection',"id": 'ai - powered - customer - feedback - analyzer',"name": 'AI - Powered Customer Feedback Analyzer',"tagline": 'Transform feedback into actionable insights',"price": '$89',"period": '/month',"description":;'
+  },{'AI-powered sentiment analysis','Multi-channel feedback collection',"id": 'ai - powered - customer - feedback - analyzer',"name": 'AI - Powered Customer Feedback Analyzer',"tagline": 'Transform feedback into actionable insights',"price": '$89',"period": '/month',"description":;'
       'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.',"features": [;'
       'AI - powered sentiment analysis','Multi - channel feedback collection','Automatic categorization','Trend identification','Real - time alerts','Automatic categorization','Trend identification','Real - time alerts',"marketSize": '$1.2B smart contract market',"growthRate": '200% annual growth',"variant": 'quantum-blockchain',"contactInfo": {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
     },"realImplementation": true,"implementationDetails":;
@@ -111,7 +111,7 @@ export interface InnovativeMicroSaas  {"id": string;"name": string;
     },"real_implementation": true,"implementation_details":;
       'Complete feedback analysis platform with AI - powered insights, real - time processing, and comprehensive analytics.',"launch_date": '2024 - 01 - 20',"customers": 2800,"rating": 4 && 4.7,"reviews": 1400;'
   },{'AI-powered scheduling',"reviews": 1400;'
-  },{{'AI-powered scheduling',"id": 'automated - social - media - scheduler',"name": 'Automated Social Media Scheduler',"tagline": 'AI - powered social media management',"price": '$59',"period": '/month',"description":;'
+  },{'AI-powered scheduling',"id": 'automated - social - media - scheduler',"name": 'Automated Social Media Scheduler',"tagline": 'AI - powered social media management',"price": '$59',"period": '/month',"description":;'
       'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.',"features": [;'
       'AI - powered scheduling','Content generation suggestions','Multi - platform support','Content generation suggestions','Multi - platform support',"marketSize": '$3.5B feedback management market',"growthRate": '160% annual growth',"variant": 'ai-futuristic',"contactInfo": {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
     },"realImplementation": true,"implementationDetails":;
@@ -532,13 +532,9 @@ export const "innovativeMicroSaas": InnovativeMicroSaas[] = [
     "rating": 4.8,
     "reviews": 1600;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];
-=======
 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface InnovativeMicroSaas {;
 ];
 export interface InnovativeMicroSaas {;

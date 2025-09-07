@@ -85,7 +85,7 @@ const CarouselContext = $2;
           scrollNext,
           canScrollPrev,
 
-          canScrollNext}}
+          canScrollNext}
       >;
         <div;
           ref={ref}

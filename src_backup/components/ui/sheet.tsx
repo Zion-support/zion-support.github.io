@@ -25,7 +25,7 @@ const Sheet = $2;
         right:
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state = $2;
     defaultVariants: {
-      side: "right"}}
+      side: "right"}
 )
 
 interface SheetContentProps

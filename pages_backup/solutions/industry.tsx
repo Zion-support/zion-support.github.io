@@ -1,5 +1,4 @@
 
-=======
 import React from 'react';
 import Link from 'next/link';';
 
@@ -9,7 +8,6 @@ import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Hea
 import Layout from "../../components/Layout";";
 
 
-=======
 
 const industries = [;
   {}
@@ -75,9 +73,9 @@ export default function IndustrySolutionsPage() {
 
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }"
               className="text-center max-w-4xl mx-auto""
 
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -116,8 +114,8 @@ export default function IndustrySolutionsPage() {
                 <motion.div}),
                   key={stat.label}
 
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}"
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }"
                   className="text-center""
                 >;"
                   <div className="text-4xl md:text-5xl font-bold text-indigo-600 mb-2">{stat.number}</div>""
@@ -133,10 +131,10 @@ export default function IndustrySolutionsPage() {
 
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
 
-              transition={{ duration: 0.8 }}
+              transition={ duration: 0.8 }
 
               className="text-center mb-16""
             >;"
@@ -154,8 +152,8 @@ export default function IndustrySolutionsPage() {
               {industries.map((industry, index) => (,
                 <motion.div}),
                   key={industry.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
 
                   className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300""
                 >;"
@@ -190,10 +188,10 @@ export default function IndustrySolutionsPage() {
 
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
 
-              transition={{ duration: 0.8 }}
+              transition={ duration: 0.8 }
 
               className="text-center mb-16""
             >;"
@@ -211,8 +209,8 @@ export default function IndustrySolutionsPage() {
               {capabilities.map((capability, index) => (,
                 <motion.div}),
                   key={capability.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
 
                   className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300""
                 >;"
@@ -231,10 +229,10 @@ export default function IndustrySolutionsPage() {
 
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
 
-              transition={{ duration: 0.8 }}
+              transition={ duration: 0.8 }
             >,"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready for Industry-Specific Solutions?;

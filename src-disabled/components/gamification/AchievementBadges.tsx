@@ -5,7 +5,7 @@ export interface Achievement {
   description: string
   achieved: boolean
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 
 export interface Achievement {
   id: string,
@@ -59,7 +59,7 @@ interface AchievementBadgesProps {;
   achievements: Achievement[];
 
 import { BadgeCheck } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 
 export interface Achievement {
   id: string,
@@ -82,7 +82,7 @@ interface AchievementBadgesProps {;,
   achievements: Achievement[];,
   achievements: Achievement[];,
 import { BadgeCheck } from 'lucide-react''
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 export interface Achievement {
   id: string,
   title: string,
@@ -107,16 +107,16 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
       <CardHeader>
         <CardTitle>Achievements</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-3">
+      <CardContent className='space-y-3'>
         {achievements.map((a) => (
-          <div key={a.id} className="flex items-start gap-3">
+          <div key={a.id} className='flex items-start gap-3'>
             <BadgeCheck
-              className={`h-5 w-5 mt-1 ${a.achieved ? "text-green-600" : "text-muted-foreground"}`}
+              className={`h-5 w-5 mt-1 ${a.achieved ? 'text-green-600' : 'text-muted-foreground'}`}
             />
             <div>
 
-              <p className="font-medium">{a.title}</p>
-              <p className="text-sm text-muted-foreground">{a.description}</p>
+              <p className='font-medium'>{a.title}</p>
+              <p className='text-sm text-muted-foreground'>{a.description}</p>
             </div>
           </div>
         ))}
@@ -148,14 +148,14 @@ function AchievementBadges() {
             <div>;
               <p className='font - medium'>{a.title}</p>;
               <p className='text - sm text - muted - foreground'>{a.description}</p>            </div>;
-              <p className="font-medium">{a.title}</p>;
-              <p className="text - sm text - muted-foreground">{a.description}</p>;
+              <p className='font-medium'>{a.title}</p>;
+              <p className='text - sm text - muted-foreground'>{a.description}</p>;
             <BadgeCheck;
-              className={`h - 5 w - 5 mt - 1 ${a.achieved ? "text - green - 600" : "text - muted - foreground"}`}`
+              className={`h - 5 w - 5 mt - 1 ${a.achieved ? 'text - green - 600' : 'text - muted - foreground'}`}`
             />;
             <div>;
-              <p className="font-medium">{a.title}</p>;
-              <p className="text - sm text - muted-foreground">{a.description}</p>;
+              <p className='font-medium'>{a.title}</p>;
+              <p className='text - sm text - muted-foreground'>{a.description}</p>;
             </div>;
           </div>))}
       </CardContent>;

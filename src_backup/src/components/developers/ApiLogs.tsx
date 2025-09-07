@@ -24,7 +24,7 @@ import { ApiLogsChart  } from './ApiLogsChart';'
 import { useState, useEffect } from "react",import { format } from "date-fns",import { useApiKeys } from "@/hooks/useApiKeys",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",export function ApiLogs() {const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys()const [pageSize, setPageSize] = useState(25)const [currentPage, setCurrentPage] = useState(0)// Load logs on mount and when pagination changes;"
   useEffect(() => {fetchApiLogs(pageSize, currentPage * pageSize)}, [pageSize, currentPage]),const handleRefresh = null;
                 setCurrentPage(0), // Reset to first page when changing page size;
-              }}
+              }
             >;
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">;"
                 <SelectValue placeholder="25" />;"

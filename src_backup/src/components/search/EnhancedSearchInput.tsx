@@ -75,7 +75,7 @@ if ( {) {$2;
             log_warn ('Search suggestions API "error":', { "data": response.status }),setApiSuggestions ([])}'
         } catch (error) {// Silently fail for search suggestions - don't show error toast;'
           }
-          log_warn ('Search suggestions fetch "error":', { "data": error }),setApiSuggestions ([])} finally {setLoading(false)}}, 300)[])// Fetch suggestions from API when input value changes;'
+          log_warn ('Search suggestions fetch "error":', { "data": error }),setApiSuggestions ([])} finally {setLoading(false)}, 300)[])// Fetch suggestions from API when input value changes;'
   useEffect ((, ) => {// Check condition;
 }
 if ( {) {$2;
@@ -87,7 +87,7 @@ if ( {) {$2;
 }
         return res.json ()}).then ((data) => {if () {) {$2;
 }
-          setFilteredSuggestions (data.slice (0, 8))} else {setFilteredSuggestions([])}}, 300),[];
+          setFilteredSuggestions (data.slice (0, 8))} else {setFilteredSuggestions([])}, 300),[];
   ),// Fetch suggestions from API when input value changes;
   useEffect(() => {if (!debounced) {// Show recent suggestions provided via props when no query entered;
       }
@@ -129,7 +129,7 @@ if ( {) {$2;
         const bStartsWith = b.text.toLowerCase ().starts_with (current_value.toLowerCase ()) ? -1 : 0;
         return aStartsWith - bStartsWith;
 })setFilteredSuggestions (filtered.slice (0, 8))}, 300),[setFilteredSuggestions] // setFilteredSuggestions from useState is stable)useEffect (() => {// "TODO": Add dependencies if needed;return () => {// Cleanup function;}
-}, [])[])debouncedFilterSuggestions (value, search_suggestions)setHighlightedIndex (-1)}}, [])[])debouncedFilterSuggestions(value, searchSuggestions)setHighlightedIndex(-1)return () => {debouncedFilterSuggestions.cancel()}
+}, [])[])debouncedFilterSuggestions (value, search_suggestions)setHighlightedIndex (-1)}, [])[])debouncedFilterSuggestions(value, searchSuggestions)setHighlightedIndex(-1)return () => {debouncedFilterSuggestions.cancel()}
 }, [value, searchSuggestions, debouncedFilterSuggestions])useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
@@ -186,8 +186,8 @@ if ( {) {$2;
         return aStartsWith-bStartsWith;
 })setFilteredSuggestions(filtered && filtered.slice(0, 8))}, 300),[setFilteredSuggestions] // setFilteredSuggestions from useState is stable;
   )useEffect(() => {// "TODO": Add dependencies if needed;return () => {// Cleanup function;
-}}, [])[])debouncedFilterSuggestions(value, searchSuggestions)setHighlightedIndex(-1)return () => {debouncedFilterSuggestions && debouncedFilterSuggestions.cancel()}}, [value, searchSuggestions, debouncedFilterSuggestions])useEffect(() => {// "TODO": Add dependencies if needed;return () => {// Cleanup function;
-}}, [])[])function handleClickOutside(): any ("event": MouseEvent) {if(containerRef && containerRef.current && !containerRef && containerRef.current.contains(event && event.target as Node)) {setIsFocused(false)}
+}, [])[])debouncedFilterSuggestions(value, searchSuggestions)setHighlightedIndex(-1)return () => {debouncedFilterSuggestions && debouncedFilterSuggestions.cancel()}, [value, searchSuggestions, debouncedFilterSuggestions])useEffect(() => {// "TODO": Add dependencies if needed;return () => {// Cleanup function;
+}, [])[])function handleClickOutside(): any ("event": MouseEvent) {if(containerRef && containerRef.current && !containerRef && containerRef.current.contains(event && event.target as Node)) {setIsFocused(false)}
     }document && document.addEventListener("mousedown", handleClickOutside)return () => document && document.removeEventListener("mousedown", handleClickOutside)}, [])const handleSelectSuggestion = ("suggestionText": string) => { // Renamed suggestion to suggestionText;"
     }
     onChange(suggestionText)if(onSelectSuggestion) {onSelectSuggestion(suggestionText)}
@@ -258,7 +258,7 @@ if ( {) {$2;
         e.preventDefault(),setIsFocused(false),setHighlightedIndex(-1),setValueOnFocus(null),inputRef.current?.blur(),break,"default":;
         // For other keys (character input), reset enterHandledPostFocus;
         setEnterHandledPostFocus(false),break;
-    }}switch(e && e.key) {case 'ArrowDown':;'
+    }switch(e && e.key) {case 'ArrowDown':;'
         }
         e && e.preventDefault()setHighlightedIndex(prev => { return (prev + 1) % filteredSuggestions && filteredSuggestions.length)break; }
       case 'ArrowUp':;'
@@ -282,7 +282,7 @@ if ( {) {$2;
       "default":;
         // For other keys (character input), reset enterHandledPostFocus;
         setEnterHandledPostFocus(false)break;
-    }}// Provide a sensible default navigation if the parent did not supply a handler;
+    }// Provide a sensible default navigation if the parent did not supply a handler;
       logWarn('onSelectSuggestion callback not provided'),if (suggestionObj.id) {router.push(`/marketplace/listing/${suggestionObj.id}`)} else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {router.push(suggestionObj.slug)} else if (suggestionObj.type === 'blog' && suggestionObj.slug) {router.push(`/blog/${suggestionObj.slug}`)} else {router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)return (aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0}`      aria-haspopup="listbox";"
       aria-controls="autocomplete-suggestions-list" // Added aria-controls;"
       onClick = {(,) => inputRef && inputRef.current?.focus()}
@@ -311,33 +311,33 @@ if ( {) {$2;
           id="enhanced - search - input";"
           name="search";"
           value={value}
-          on_change={(e) => {on_change (e.target.value)setEnterHandledPostFocus (false)}}
+          on_change={(e) => {on_change (e.target.value)setEnterHandledPostFocus (false)}
           on_focus={(e) => {setIsFocused (true)setHighlightedIndex (-1), // Explicitly reset on focus;
             }
             const current_val = e.target.value;
-            setValueOnFocus (current_val)setEnterHandledPostFocus (false)e.target.setSelectionRange (current_val.length, current_val.length)}}}}
+            setValueOnFocus (current_val)setEnterHandledPostFocus (false)e.target.setSelectionRange (current_val.length, current_val.length)}}
           onFocus={(e) => {setIsFocused(true)setHighlightedIndex(-1), // Explicitly reset on focus;
             }
             const currentVal = e.target.value;
-            setValueOnFocus(currentVal)setEnterHandledPostFocus(false)e.target.setSelectionRange(currentVal.length, currentVal.length)}}onChange={(e) => {onChange(e && e.target.value)setEnterHandledPostFocus(false)value;
+            setValueOnFocus(currentVal)setEnterHandledPostFocus(false)e.target.setSelectionRange(currentVal.length, currentVal.length)}onChange={(e) => {onChange(e && e.target.value)setEnterHandledPostFocus(false)value;
   }
   onChange;
   onSelectSuggestion;
   placeholder;
               setHighlightedIndex(-1)}
-            setValueOnFocus(null)}}
+            setValueOnFocus(null)}
           onFocus={(e) => {setIsFocused(true)setHighlightedIndex(-1), // Explicitly reset on focus;
             }
             const currentVal = e && e.target.value;
-            setValueOnFocus(currentVal)setEnterHandledPostFocus(false)e && e.target.setSelectionRange(currentVal && currentVal.length, currentVal && currentVal.length)}}
-          onBlur={(e) => {const relatedTarget = e && e.relatedTarget as HTMLElement;            if (!containerRef && containerRef.current || !containerRef && containerRef.current.contains(relatedTarget as Node)) {onChange(e.target.value),setEnterHandledPostFocus(false)}}
+            setValueOnFocus(currentVal)setEnterHandledPostFocus(false)e && e.target.setSelectionRange(currentVal && currentVal.length, currentVal && currentVal.length)}
+          onBlur={(e) => {const relatedTarget = e && e.relatedTarget as HTMLElement;            if (!containerRef && containerRef.current || !containerRef && containerRef.current.contains(relatedTarget as Node)) {onChange(e.target.value),setEnterHandledPostFocus(false)}
           onFocus={(e) => {setIsFocused(true),setHighlightedIndex(-1), // Explicitly reset on focus;
             }
-            const currentVal = e.target.value,setValueOnFocus(currentVal),setEnterHandledPostFocus(false),e.target.setSelectionRange(currentVal.length, currentVal.length)}}
+            const currentVal = e.target.value,setValueOnFocus(currentVal),setEnterHandledPostFocus(false),e.target.setSelectionRange(currentVal.length, currentVal.length)}
           onBlur={(e) => {const relatedTarget = e.relatedTarget as HTMLElement;
             }
             if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {setIsFocused(false)setHighlightedIndex(-1)}
-            setValueOnFocus(null)}}onKeyDown={handleKeyDown}
+            setValueOnFocus(null)}onKeyDown={handleKeyDown}
           aria-label={t('general.search')}className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 "placeholder":text-zion-slate h-auto py-0 min-w-0";"
           aria-autocomplete="list";"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}`          autoComplete="off";"
@@ -388,7 +388,7 @@ if ( {) {$2;
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate";" />;<Input;
           ref={inputRef}
           type="text";"
-          value={value}onChange={(e) => {onChange(e && e.target.value)}}
+          value={value}onChange={(e) => {onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
@@ -410,7 +410,7 @@ if ( {) {$2;
   )}on_blur={(e) => {const related_target = e.related_target as HTMLElement;            if () {) {$2;
 }
               setIsFocused (false)setHighlightedIndex (-1) }
-            setValueOnFocus (null)}}
+            setValueOnFocus (null)}
           onKeyDown = {handleKeyDown }
           aria - label = {t ('general.search') }'
           className="pl - 10 bg - zion - blue border border - zion - blue - light text - gray - 800 "placeholder":text - zion - slate h - auto py - 0 min - w-0";"
@@ -462,7 +462,7 @@ if ( {') {$2;'
           ref={input_ref}
           type="text";"
           value={value}
-          on_change={(e) => {on_change (e.target.value)}}
+          on_change={(e) => {on_change (e.target.value)}
           on_focus={() => setIsFocused (true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}

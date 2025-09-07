@@ -132,7 +132,7 @@ function DisputeForm() {
       }
       "reason_code": "","
       "description": "","
-      "attachments": []}}),
+      "attachments": []}),
   const handleFileChange = ("e": React.ChangeEvent < HTMLInputElement>) =>: any {
     // Check condition
 }

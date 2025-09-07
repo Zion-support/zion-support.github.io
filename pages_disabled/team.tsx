@@ -161,18 +161,18 @@ export default function TeamPage() {
           <div className="text-center max-w-4xl mx-auto">
             <motion.h1 
               className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               Meet Our 
               <span className="text-purple-400"> Expert Team</span>
             </motion.h1>
             <motion.p 
               className="text-xl mb-8 text-purple-100"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8, delay: 0.2 }
             >
               Our diverse team of technology professionals brings together decades of experience 
               in AI, cloud computing, cybersecurity, and business transformation.
@@ -189,9 +189,9 @@ export default function TeamPage() {
               <motion.div 
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
               >
                 <div className="text-4xl font-bold text-purple-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600">{stat.label}</div>
@@ -214,9 +214,9 @@ export default function TeamPage() {
               <motion.div 
                 key={member.id}
                 className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
               >
                 <div className="text-center mb-4">
                   <img 
@@ -265,9 +265,9 @@ export default function TeamPage() {
               <motion.div 
                 key={member.id}
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
               >
                 <div className="text-center mb-4">
                   <img 
@@ -317,9 +317,9 @@ export default function TeamPage() {
               <motion.div 
                 key={dept.name}
                 className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: index * 0.1 }
               >
                 <div className="text-4xl mb-4">{dept.icon}</div>
                 <h3 className="text-lg font-semibold mb-2">{dept.name}</h3>

@@ -30,8 +30,6 @@ import { formatDistanceToNow } from "date-fns",import { Card, CardContent, CardF
         <div className="flex-1">;
           <div className="flex items-center">;
             <span className="font-medium">;
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
 
 import { formatDistanceToNow } from 'date-fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
@@ -46,7 +44,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ForumReply } from '@/types/community';
 import { cn } from '@/lib/utils';
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { formatDistanceToNow } from "date-fns",
@@ -68,7 +65,6 @@ import { Badge } from "@/components/ui/badge",
             )}
           </div>;
           <div className="text-xs text-muted-foreground">;
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
             {timeAgo}
 
 
@@ -258,10 +254,8 @@ export const ReplyCard = ({reply;
             Mark as Answer;
           </Button>)}
       </CardFooter>;
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
     </Card>);
 }
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
 export default ReplyCard;
 
 import { ForumReply } from "@/types/community";

@@ -45,7 +45,7 @@
     "rating": 4.8;
     "reviews": 48;
   },import { ServiceVariant  } from '../types / service - variants';'
-export interface EnterpriseIT2026ServiceV4  {{"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup && ziontechgroup.com';'
+export interface EnterpriseIT2026ServiceV4  {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup && ziontechgroup.com';'
       }
       "website": '"https"://ziontechgroup && ziontechgroup.com';'
     },"real_implementation": true,"implementation_details":;
@@ -165,10 +165,10 @@ export interface EnterpriseIT2026ServiceV4  {{"mobile": '+1 302 464 0950',"email
     ],"popular": false,"icon": '💾',"color": 'from-indigo-600 to-purple-600',"textColor": 'text-indigo-400',"link": '"https"://ziontechgroup.com/quantum-safe-cloud-storage-platform',"marketPosition": 'First quantum-safe cloud storage platform. Competitive "advantage": Quantum-resistant encryption, distributed storage, and AI security.',"targetAudience": 'Financial institutions, Government agencies, Healthcare organizations, Technology companies, Enterprise companies',"trialDays": 14,"setupTime": '2 weeks',"category": 'Quantum Storage',"realService": true,"technology": ['Quantum-Resistant EncryptionDistributed StorageAI/MLReactPythonPostgreSQLAWS'],"integrations": ['Cloud platformsStorage systemsSecurity toolsCompliance systemsBackup solutions'],"useCases": ['Secure data storageComplianceDisaster recoveryData sovereigntyFuture-proofing'],"roi": 'Ensure long-term data security, maintain compliance, protect against quantum threats',"competitors": ['AWS S3Azure BlobGoogle Cloud Storage'],"marketSize": '$80B cloud storage market',"growthRate": '65% annual growth',"variant": 'quantum-futuristic',"contactInfo": {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
     },"realImplementation": true,"implementationDetails": 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',"launchDate": '2026-05-01',"customers": 40,"rating": 4.9;'
     "reviews": 32;}
-];;}
+];}
 ];ursor/fix-website-loading-errors-and-merge-6662;
   }
-];;"id": 'ai-powered-it-operations-center',"name": 'AI-Powered IT Operations Center',"tagline": 'Automate IT operations with intelligent AI',"price": '$899',"period": '/month',"description":;'
+];"id": 'ai-powered-it-operations-center',"name": 'AI-Powered IT Operations Center',"tagline": 'Automate IT operations with intelligent AI',"price": '$899',"period": '/month',"description":;'
       'Next-generation IT operations center that uses AI and machine learning to automate incident response, predict system failures, optimize performance, and provide intelligent insights for enterprise IT management.',"features": [;'
       'AI incident response','Predictive maintenance','Performance optimization','Automated troubleshooting','Intelligent monitoring','Root cause analysis','Capacity planning','Cost optimization','Compliance automation','Real-time dashboards';'
     ],"popular": true,"icon": '⚙️',"color": 'from-green-600 to-emerald-600',"textColor": 'text-green-400',"link": '"https"://ziontechgroup.com/ai-powered-it-operations-center',"marketPosition":;'

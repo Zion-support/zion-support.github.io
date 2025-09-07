@@ -97,28 +97,28 @@ export default function SearchPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className='min-h-screen bg-gray-50'>
       {/* Search Header */}
-      <section className="bg-white border-b py-8">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className='bg-white border-b py-8'>
+        <div className='max-w-7xl mx-auto px-4'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-2xl mx-auto"
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            className='max-w-2xl mx-auto'
           >
-            <h1 className="text-3xl font-bold text-gray-900 mb-6">Search</h1>
-            <form onSubmit={handleSearch} className="relative">
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Search className="h-5 w-5 text-gray-400" />
+            <h1 className='text-3xl font-bold text-gray-900 mb-6'>Search</h1>
+            <form onSubmit={handleSearch} className='relative'>
+              <div className='relative'>
+                <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
+                  <Search className='h-5 w-5 text-gray-400' />
                 </div>
                 <input
-                  type="text"
+                  type='text'
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Search for services, products, or solutions..."
+                  className='block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                  placeholder='Search for services, products, or solutions...'
                 />
               </div>
             </form>
@@ -127,28 +127,28 @@ export default function SearchPage() {
       </section>
 
       {/* Filters */}
-      <section className="bg-white border-b py-6">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-wrap gap-4">
-            <div className="flex items-center gap-2">
-              <Filter className="w-4 h-4 text-gray-500" />
-              <span className="text-sm font-medium text-gray-700">Category:</span>
+      <section className='bg-white border-b py-6'>
+        <div className='max-w-7xl mx-auto px-4'>
+          <div className='flex flex-wrap gap-4'>
+            <div className='flex items-center gap-2'>
+              <Filter className='w-4 h-4 text-gray-500' />
+              <span className='text-sm font-medium text-gray-700'>Category:</span>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="border border-gray-300 rounded-md px-3 py-1 text-sm"
+                className='border border-gray-300 rounded-md px-3 py-1 text-sm'
               >
                 {categories.map(category => (
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-gray-700">Type:</span>
+            <div className='flex items-center gap-2'>
+              <span className='text-sm font-medium text-gray-700'>Type:</span>
               <select
                 value={selectedType}
                 onChange={(e) => setSelectedType(e.target.value)}
-                className="border border-gray-300 rounded-md px-3 py-1 text-sm"
+                className='border border-gray-300 rounded-md px-3 py-1 text-sm'
               >
                 {types.map(type => (
                   <option key={type} value={type}>{type}</option>
@@ -160,50 +160,50 @@ export default function SearchPage() {
       </section>
 
       {/* Search Results */}
-      <section className="py-8">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="mb-6">
-            <p className="text-gray-600">
+      <section className='py-8'>
+        <div className='max-w-7xl mx-auto px-4'>
+          <div className='mb-6'>
+            <p className='text-gray-600'>
               {filteredResults.length} result{filteredResults.length !== 1 ? 's' : ''} found
-              {query && ` for "${query}"`}
+              {query && ` for '${query}'`}
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className='space-y-6'>
             {filteredResults.map((result, index) => (
               <motion.div
                 key={result.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6"
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.5, delay: index * 0.1 }
+                className='bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6'
               >
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-xl font-semibold text-gray-900">{result.title}</h3>
-                      <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
+                <div className='flex items-start justify-between'>
+                  <div className='flex-1'>
+                    <div className='flex items-center gap-2 mb-2'>
+                      <h3 className='text-xl font-semibold text-gray-900'>{result.title}</h3>
+                      <span className='bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full'>
                         {result.type}
                       </span>
                     </div>
-                    <p className="text-gray-600 mb-4">{result.description}</p>
-                    <div className="flex items-center gap-4 text-sm text-gray-500">
-                      <div className="flex items-center gap-1">
-                        <Tag className="w-4 h-4" />
+                    <p className='text-gray-600 mb-4'>{result.description}</p>
+                    <div className='flex items-center gap-4 text-sm text-gray-500'>
+                      <div className='flex items-center gap-1'>
+                        <Tag className='w-4 h-4' />
                         <span>{result.category}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
+                      <div className='flex items-center gap-1'>
+                        <Clock className='w-4 h-4' />
                         <span>{result.date}</span>
                       </div>
                     </div>
                   </div>
                   <Link
                     href={result.url}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                    className='inline-flex items-center text-blue-600 hover:text-blue-700 font-medium'
                   >
                     View Details
-                    <ArrowRight className="ml-1 w-4 h-4" />
+                    <ArrowRight className='ml-1 w-4 h-4' />
                   </Link>
                 </div>
               </motion.div>
@@ -212,22 +212,22 @@ export default function SearchPage() {
 
           {filteredResults.length === 0 && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center py-12"
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              className='text-center py-12'
             >
-              <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">No results found</h3>
-              <p className="text-gray-600 mb-6">
+              <Search className='w-16 h-16 text-gray-400 mx-auto mb-4' />
+              <h3 className='text-xl font-semibold text-gray-900 mb-2'>No results found</h3>
+              <p className='text-gray-600 mb-6'>
                 Try adjusting your search terms or filters to find what you're looking for.
               </p>
               <Link
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                href='/contact'
+                className='inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'
               >
                 Contact Us
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className='ml-2 w-4 h-4' />
               </Link>
             </motion.div>
           )}

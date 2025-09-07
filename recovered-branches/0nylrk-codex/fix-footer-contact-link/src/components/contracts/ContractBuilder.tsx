@@ -149,7 +149,7 @@ export function ContractBuilder() {;
           }
           setShowSmartContractBuilder(false);
           onClose();
-        }}
+        }
         talent={talent}
         client_name={client_name}
         onContractGenerated={onContractGenerated}                variant="secondary""

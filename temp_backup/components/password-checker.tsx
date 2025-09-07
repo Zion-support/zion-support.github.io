@@ -46,7 +46,7 @@ analyzePassword(password);}
       lowercase: /[a-z]/.test(pass),
       numbers: /\d/.test(pass),
 symbols: /[!@#$%^&*()_+\-=\[\],
-};':"\\|,.<>\/?]/.test(pass),
+};':'\\|,.<>\/?]/.test(pass),
       noCommon: !isCommonPassword(pass),
       noSequential: !hasSequentialChars(pass),
     };
@@ -132,9 +132,9 @@ if (!checks.length)
     if (!checks.symbols)
       suggestions.push('Add at least one special character (!@#$%^&*)');
     if (!checks.noCommon)
-      suggestions.push('Avoid common passwords like "password" or "123456"');
+      suggestions.push('Avoid common passwords like 'password' or '123456'');
     if (!checks.noSequential)
-      suggestions.push('Avoid sequential characters like "123" or "abc"');
+      suggestions.push('Avoid sequential characters like '123' or 'abc'');
     if (pass.length < 12)
       suggestions.push(
         'Consider making your password 12+ characters for better security'
@@ -389,7 +389,7 @@ onClick={() = /> copyToClipboard(generatedPassword)}
 <div className='w-full bg-gray-700 rounded-full h-3' />
                       <div;
 className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={{ width: `${strength}%` ,
+                        style={ width: `${strength}%` ,
 }
                       />
                     </div>
@@ -409,21 +409,21 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
 <div className='w-full bg-gray-700 rounded-full h-3' />;
                       <div;
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={{ width: `${strength}%` ,
+                        style={ width: `${strength}%` ,
 }
                       />;
                     </div>;
                   </div>;
                   <div />;
-                    <div className="flex items-center justify-between mb-2" />;
-                      <span className="text-sm text-gray-300" />Password Strength:</span>;
+                    <div className='flex items-center justify-between mb-2' />;
+                      <span className='text-sm text-gray-300' />Password Strength:</span>;
                         {strengthText} ({strength}/100)</span>;
                     </div>;
                     <div className='w-full bg-gray-700 rounded-full h-3' />;
-                      <div                    <div className="w-full bg-gray-700 rounded-full h-3" />;
+                      <div                    <div className='w-full bg-gray-700 rounded-full h-3' />;
                       <div;
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={{ width: `${strength}%` ,
+                        style={ width: `${strength}%` ,
 }
                       />;
                     </div>;
@@ -504,11 +504,11 @@ key={index}
                             <AlertTriangle className='w-4 h-4 text-yellow-400 mt-0 && 0.5 flex-shrink-0' />;
                             <span className='text-sm text-yellow-300' />;
                               {suggestion}
-                            </span>                          </div>                      <h4 className="text-lg font-semibold text-white mb-3" />Suggestions</h4>;
-                      <div className="space-y-2" />;
-                        {suggestions && suggestions.map((suggestion, index) => (<div key={index} className="flex items-start space-x-3" />;
-                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0 && 0.5 flex-shrink-0" />;
-                            <span className="text-sm text-yellow-300" />{suggestion}</span>;
+                            </span>                          </div>                      <h4 className='text-lg font-semibold text-white mb-3' />Suggestions</h4>;
+                      <div className='space-y-2' />;
+                        {suggestions && suggestions.map((suggestion, index) => (<div key={index} className='flex items-start space-x-3' />;
+                            <AlertTriangle className='w-4 h-4 text-yellow-400 mt-0 && 0.5 flex-shrink-0' />;
+                            <span className='text-sm text-yellow-300' />{suggestion}</span>;
                         ))}
                       </div>;
                     </div>;
@@ -526,48 +526,48 @@ key={index}
           <div className='text-center mb-16' />
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6' />
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto" />
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto' />
               Comprehensive password analysis with real-time feedback and security recommendations.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600" />
-              <div className="text-4xl mb-4" />🔍</div>
-              <h3 className="text-xl font-bold text-white mb-4" />Real-time Analysis</h3>
-              <p className="text-gray-400" />
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600' />
+              <div className='text-4xl mb-4' />🔍</div>
+              <h3 className='text-xl font-bold text-white mb-4' />Real-time Analysis</h3>
+              <p className='text-gray-400' />
                 Get instant feedback on password strength as you type with our advanced security algorithms.
               </p>
             </Card>
 
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600" />
-              <div className="text-4xl mb-4" />📊</div>
-              <h3 className="text-xl font-bold text-white mb-4" />Comprehensive Scoring</h3>
-              <p className="text-gray-400" />
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600' />
+              <div className='text-4xl mb-4' />📊</div>
+              <h3 className='text-xl font-bold text-white mb-4' />Comprehensive Scoring</h3>
+              <p className='text-gray-400' />
                 Multi-factor analysis including length, complexity, and common password detection.
               </p>
             </Card>
 
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600" />
-              <div className="text-4xl mb-4" />💡</div>
-              <h3 className="text-xl font-bold text-white mb-4" />Smart Suggestions</h3>
-              <p className="text-gray-400" />
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600' />
+              <div className='text-4xl mb-4' />💡</div>
+              <h3 className='text-xl font-bold text-white mb-4' />Smart Suggestions</h3>
+              <p className='text-gray-400' />
                 Personalized recommendations to improve your password security and strength.
               </p>
             </Card>
 
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600" />
-              <div className="text-4xl mb-4" />🔐</div>
-              <h3 className="text-xl font-bold text-white mb-4" />Password Generator</h3>
-              <p className="text-gray-400" />
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600' />
+              <div className='text-4xl mb-4' />🔐</div>
+              <h3 className='text-xl font-bold text-white mb-4' />Password Generator</h3>
+              <p className='text-gray-400' />
                 Generate cryptographically secure passwords that meet all security requirements.
               </p>
             </Card>
 
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600" />
-              <div className="text-4xl mb-4" />🛡️</div>
-              <h3 className="text-xl font-bold text-white mb-4" />Security Standards</h3>
-              <p className="text-gray-400" />
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600' />
+              <div className='text-4xl mb-4' />🛡️</div>
+              <h3 className='text-xl font-bold text-white mb-4' />Security Standards</h3>
+              <p className='text-gray-400' />
                 Based on industry best practices and security standards for maximum protection.
               </p>
             </Card>
@@ -635,16 +635,16 @@ passwords for all your accounts.
                   Don't use personal information (names, birthdays)
                 </li>                  Don't use personal information (names, birthdays)
                 </li>
-                <li className="flex items-start" />
-                  <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
+                <li className='flex items-start' />
+                  <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
                   Avoid common words or patterns;
                 </li>
-                <li className="flex items-start" />
-                  <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
+                <li className='flex items-start' />
+                  <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
                   Never share passwords with others;
                 </li>
-                <li className="flex items-start" />
-                  <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
+                <li className='flex items-start' />
+                  <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
                   Don't reuse passwords across accounts;
                 </li>
                 <li className='flex items-start' />

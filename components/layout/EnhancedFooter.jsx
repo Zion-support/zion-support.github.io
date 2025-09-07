@@ -66,7 +66,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
           {/* Company */}
-<<<<<<< HEAD
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
@@ -74,9 +73,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li><Link href="/talent" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
               <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div>
 <h3 className='text-lg font-semibold mb-4'>Company</h3>'
             <ul className='space-y-2'>'
@@ -109,9 +105,7 @@ href='/contact''
 href='/blog''
                   className='text-gray-300 "hover":text-white transition-colors''
                 >
-<<<<<<< HEAD
                   Blog
-=======
           <div />
 <h3 className='text-lg font-semibold mb-4' />Company</h3>
             <ul className='space-y-2' />
@@ -145,12 +139,9 @@ href='/blog'
                   className='text-gray-300 hover:text-white transition-colors'
                  />
                   Blog;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Link>
               </li>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </ul>
-=======
                   Blog;
                 </Link>"
               </li>            </ul>            <h3 className="text-lg font-semibold mb-4">Company</h3>"
@@ -159,11 +150,9 @@ href='/blog'
               <li><Link href="/talent" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>"
               <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>"
               <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Bottom Footer */}
 const EnhancedFooter = () => {return (<footer className='bg - gray - 900 text - white'>;
@@ -393,7 +382,6 @@ const EnhancedFooter = () => {return (<footer className='bg - gray - 900 text - 
 }
 export default EnhancedFooter;}
 export default EnhancedFooter;
-<<<<<<< HEAD
     </footer>)}
 export default EnhancedFooter;})}export default EnhancedFooter;
       <div className="border-t border-gray-700 py-6">
@@ -408,10 +396,7 @@ export default EnhancedFooter;})}export default EnhancedFooter;
 },
 
 export default EnhancedFooter,
-=======
-<<<<<<< HEAD
 
-=======
 return (<footer className="bg-gray-900 text-white" > {
   /* Main Footer Content */ 
 }</div> <span className="text-xl font-bold" >Zion Tech Group</span> </div> <p className="text-gray-300 mb-6 max-w-md" > Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services. </p> </div> {
@@ -421,12 +406,6 @@ return (<footer className="bg-gray-900 text-white" > {
 }<div> <h3 className="text-lg font-semibold mb-4" >Company</h3> <ul className="space-y-2" > <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors" >About Us</Link></li> <li><Link href="/talent" className="text-gray-300 hover:text-white transition-colors" >Careers</Link></li> <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors" >Contact</Link></li> <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors" >Blog</Link></li> </ul> </div> </div> </div> 
 }
 export default EnhancedFooter
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
       {/* Bottom Footer */}"
           <div className="lg:col - span - 2">;"
             <div className="flex items - center space - x-2 mb - 4">;"
@@ -544,7 +523,6 @@ export default EnhancedFooter;}
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default EnhancedFooter;
 '"
-=======
       {/* Bottom Footer */}
 
   )

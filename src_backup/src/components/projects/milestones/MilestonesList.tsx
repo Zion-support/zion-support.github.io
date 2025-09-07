@@ -10,7 +10,7 @@ if (isLoading) {return ())}
           "No milestones have been created for this project yet."}"
         action={isClient ?;
           {"text": "Create First Milestone","onClick": () => setShowAddForm(true)} : undefined;"
-        }}if (milestones && milestones.length === 0 && !showAddForm) {return (<EmptyState;
+        }if (milestones && milestones.length === 0 && !showAddForm) {return (<EmptyState;
         }
         icon = {<span className="text-3xl">📊</span>}"
         title="No Milestones Yet";"

@@ -89,9 +89,9 @@ const PWARegistration: React.FC = () => {
     <AnimatePresence>
       {showInstallPrompt && (
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 100 }}
+          initial={ opacity: 0, y: 100 }
+          animate={ opacity: 1, y: 0 }
+          exit={ opacity: 0, y: 100 }
           className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-sm z-50"
         >
           <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4">
@@ -241,9 +241,9 @@ const PWARegistration: React.FC = () => {
     <AnimatePresence>
       {showInstallPrompt && (
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 100 }}
+          initial={ opacity: 0, y: 100 }
+          animate={ opacity: 1, y: 0 }
+          exit={ opacity: 0, y: 100 }
           className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-sm z-50"
         >
           <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4">
@@ -301,4 +301,3 @@ const PWARegistration: React.FC = () => {
 
 export default PWARegistration;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

@@ -68,10 +68,10 @@ return new Response(        "message": "Retention emails processed successfully"
       {
         }
         "status": 200;
-    "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+    "headers": { "Content-Type": "application/json", ...corsHeaders }"
     )
   } catch (error) {      });        "status": 500,
-"headers": { "Content-Type": "application/json", ...corsHeaders }}"
+"headers": { "Content-Type": "application/json", ...corsHeaders }"
     )
                 "Content - Type": "application / json","
                 "Authorization": `Bearer ${supabaseServiceKey}`}`              "body": JSON.stringify (job)}
@@ -189,7 +189,7 @@ serve(async (req) => {;
       {;
         }
         "status": 200,;
-        "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+        "headers": { "Content-Type": "application/json", ...corsHeaders }"
     );
   } catch (error) {;
     }
@@ -203,7 +203,7 @@ serve(async (req) => {;
       {;
         }
         "status": 500,;
-        "headers": { "Content-Type": "application/json", ...corsHeaders }}"
+        "headers": { "Content-Type": "application/json", ...corsHeaders }"
     );
   }
 });

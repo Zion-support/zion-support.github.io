@@ -16,7 +16,7 @@ import {
       "jobs": { "variant": "default" },"
       "candidates": { "variant": "outline" },"
       "team": { "variant": "secondary" },"
-      "billing": { "variant": "destructive" }}"
+      "billing": { "variant": "destructive" }"
 ;
     return <Badge variant={category_styles[category].variant}>{category}</Badge>;
   }

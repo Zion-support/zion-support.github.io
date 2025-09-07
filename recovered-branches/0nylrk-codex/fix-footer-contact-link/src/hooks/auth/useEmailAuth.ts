@@ -71,7 +71,7 @@ try {
           // Only store a simple display name in the profile data;
           }
           "data": {
-          }}}),
+          }}),
 
       if (error) {
         }
@@ -139,7 +139,7 @@ if ( {) {
         return { error }
       }
             "display_name": userData?.displayName ?? userData?.name ?? """
-          }}}),
+          }}),
 
       if (error) {
         }

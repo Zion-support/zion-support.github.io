@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React, { useState } from 'react';'
@@ -93,17 +91,11 @@ interface FormData {
   "service": string;
   "message": string;
 
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import LoadingSpinner from './LoadingSpinner'
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 interface FormData {
   name: string;
   email: string;
@@ -127,10 +119,8 @@ const "ContactForm": React.FC = () => {
  
 });
 
-<<<<<<< HEAD
   service: string
   message: string
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -152,7 +142,6 @@ const handleInputChange = ("e": React.ChangeEvent<HTMLInputElement | HTMLTextAre
       [name]: value
     }));
   };
-<<<<<<< HEAD
 
 
 const handleSubmit = async ("e": React.FormEvent) => {
@@ -770,4 +759,3 @@ type="submit""
 };
 
 export default ContactForm;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

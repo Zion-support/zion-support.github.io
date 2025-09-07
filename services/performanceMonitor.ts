@@ -187,7 +187,7 @@ return this && this.generateMockMetrics(url);
       }
       const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {;`        }
         "headers": {;
-          'Authorization': `Bearer ${this.apiKey}`}}),;`      if (!response.ok) {;
+          'Authorization': `Bearer ${this.apiKey}`}),;`      if (!response.ok) {;
         }
         throw new Error(`Failed to fetch historical "data": ${response.statusText}`);`
 
@@ -200,7 +200,7 @@ return await response.json();
 return await response.json();
       }
 return await response.json();
-          'Authorization': `Bearer ${this && this.apiKey}`}});`
+          'Authorization': `Bearer ${this && this.apiKey}`});`
       if (!response && response.ok) {
 }
 throw new Error(`Failed to fetch historical "data": ${response && response.statusText}`);`      }
@@ -293,7 +293,7 @@ throw error;
       }
       const params = url ? `?url=${encodeURIComponent(url)}` : '',;'      const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {;`        }
         "headers": {;
-          'Authorization': `Bearer ${this.apiKey}`}}),;`      if (!response.ok) {;
+          'Authorization': `Bearer ${this.apiKey}`}),;`      if (!response.ok) {;
         }
         throw new Error(`Failed to fetch "alerts": ${response.statusText}`);`
 
@@ -302,7 +302,7 @@ throw error;
 return await response.json();
       }
 return await response.json();
-          'Authorization': `Bearer ${this && this.apiKey}`}});`
+          'Authorization': `Bearer ${this && this.apiKey}`});`
       if (!response && response.ok) {
 }
 throw new Error(`Failed to fetch "alerts": ${response && response.statusText}`);`      }
@@ -721,7 +721,7 @@ if ( {) {
       }
       const response = await fetch (`${this.base_url}/performance / history?url=${encodeURIComponent (url)}&days=${days}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this.api_key}`}});`;
+          'Authorization': `Bearer ${this.api_key}`});`;
       // Check condition,
 if ( {) {
   $2
@@ -761,7 +761,7 @@ if ( {) {
       }
       const params = url ? `?url=${encodeURIComponent (url)}` : '';'      const response = await fetch (`${this.base_url}/performance / alerts${params}`, {`        }
         "headers": {
-          'Authorization': `Bearer ${this.api_key}`}});`;
+          'Authorization': `Bearer ${this.api_key}`});`;
       // Check condition,
 if ( {) {
   $2
@@ -1147,7 +1147,7 @@ export const PERFORMANCE_MONITOR_PRICING = {;
     ];  }
   enterprise: {name: 'Enterprise';
     price: 149;
-    period: '/month';;
+    period: '/month';
   private generateMockAlerts(url?: string): PerformanceAlert[] {const alerts: PerformanceAlert[] = [;
       {id: '1',url: url || 'https://example.com',type: 'warning',message: 'Load time exceeded threshold',metric: 'loadTime',threshold: 2000,currentValue: 2500,timestamp: new Date(),resolved: false;
       },{id: '2',url: url || 'https://example.com',type: 'info',message: 'Performance score improved',metric: 'performanceScore',threshold: 80,currentValue: 85,timestamp: new Date(),resolved: true;

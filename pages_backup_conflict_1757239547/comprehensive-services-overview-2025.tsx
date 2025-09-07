@@ -103,17 +103,17 @@ export default function ComprehensiveServicesOverviewPage() {
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
+              initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
+              animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
+              transition={ duration: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -169,9 +169,9 @@ export default function ComprehensiveServicesOverviewPage() {
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
             >
               {/* Search */}
@@ -231,9 +231,9 @@ export default function ComprehensiveServicesOverviewPage() {
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
               className="flex flex-wrap justify-center gap-3"
             >
               {categories.map((category) => (
@@ -263,10 +263,10 @@ export default function ComprehensiveServicesOverviewPage() {
                   {filteredServices.map((service, index) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -30 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      initial={ opacity: 0, y: 30 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: -30 }
+                      transition={ duration: 0.6, delay: index * 0.1 }
                       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     >
                       {/* Popular Badge */  } catch (error) {
@@ -340,10 +340,10 @@ export default function ComprehensiveServicesOverviewPage() {
                   {filteredServices.map((service, index) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, x: -30 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 30 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      initial={ opacity: 0, x: -30 }
+                      animate={ opacity: 1, x: 0 }
+                      exit={ opacity: 0, x: 30 }
+                      transition={ duration: 0.6, delay: index * 0.1 }
                       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6"
                     >
                       <div className="flex flex-col lg:flex-row gap-6">
@@ -422,8 +422,8 @@ export default function ComprehensiveServicesOverviewPage() {
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -437,10 +437,10 @@ export default function ComprehensiveServicesOverviewPage() {
         <section className="px-6 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">

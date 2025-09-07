@@ -22,7 +22,7 @@ function InteractiveFeatures() {const [open_index, setOpenIndex] = React.useStat
         'Discover professional tech and AI services for your business.',"details":;'
         'From on - demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.',"icon": <Zap className='h - 8 w - 8 text - cyan - 700' />,"link": '/services'},{"title": 'Equipment Catalog',"description": 'Find specialized hardware for development and research.',"details":;'
         'Access cutting - edge technology with flexible options to buy, rent or lease the gear you need.',"icon": <Settings className='h - 8 w - 8 text - amber - 700' />,"link": '/equipment'}];'
-  const handle_toggle = ("index": number) =>: any {setOpenIndex (prev => (prev === index ? null : index))}class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+  const handle_toggle = ("index": number) =>: any {setOpenIndex (prev => (prev === index ? null : index))}class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }

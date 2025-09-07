@@ -76,7 +76,7 @@ export function ConversationsList({
 
               onClick={() => {;
                 setActiveConversation(conversation);
-              }}
+              }
             />;
           ))}
         </div>;
@@ -87,7 +87,7 @@ export function ConversationsList({
               onClick={() => {
                 setActiveConversation($2);
                 markAsRead(conversation.id)
-              }}
+              }
             />
           ))}
         </div>

@@ -280,7 +280,7 @@ export default function TalentDirectory() {
                 viewProfile={viewProfile}
                 handleRequestHire={handleRequestHire}
                 isAuthenticated={isAuthenticated}
-                activeFiltersProps={{
+                activeFiltersProps={
                   selectedSkills;
                   toggleSkill;
                   selectedAvailability;
@@ -291,7 +291,7 @@ export default function TalentDirectory() {
                   setPriceRange;
                   experienceRange;
                   setExperienceRange;
-                  clearFilters}}
+                  clearFilters}
               />
 
               {totalPages > 1 && (
@@ -304,7 +304,7 @@ export default function TalentDirectory() {
                           onClick={(e) => {
                             e.preventDefault();
                             setCurrentPage(Math.max(1, currentPage - 1))
-                          }}
+                          }
                         />
                       </PaginationItem>
                       {Array.from({ length: totalPages }, (_, i) => i + 1).map(
@@ -316,7 +316,7 @@ export default function TalentDirectory() {
                               onClick={(e) => {
                                 e.preventDefault();
                                 setCurrentPage(page)
-                              }}
+                              }
                             />
                           </PaginationItem>
                         )
@@ -329,7 +329,7 @@ export default function TalentDirectory() {
                             setCurrentPage(
                               Math.min(totalPages, currentPage + 1)
                             )
-                          }}
+                          }
                         />
                       </PaginationItem>
                     </PaginationContent>

@@ -32,13 +32,8 @@ onClick={() => setOpen(true)}
         defaultType={defaultType}
       />;
     </>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   )const [open, setOpen] = useState(false)return (<>;

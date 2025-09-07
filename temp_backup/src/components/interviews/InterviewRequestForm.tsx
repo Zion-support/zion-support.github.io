@@ -21,7 +21,6 @@ async function onSubmit (values: z.infer<typeof formSchema>) {;
   if (!userDetails?.id) {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }setIsSubmitting (true);
 }catch (error) {;
   logErrorToProduction ('Failed to schedule interview:', {;

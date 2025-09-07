@@ -99,7 +99,7 @@ interface ApplicationProgressProps  {"status": ApplicationStatus,className?: str
   } else {// This step is upcoming;
     }
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;"
-  }}<div className={cn ("w - full space - y-2", class_name)}>;"
+  }<div className={cn ("w - full space - y-2", class_name)}>;"
       <Progress value={progress_value} className="h - 2" />;"
       <div className="flex justify - between text - xs text - muted - foreground">;"
         <div className="flex flex - col items - center">;"
@@ -147,4 +147,4 @@ if ( {) {$2;
   }
 }// This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;"
-  }}";
+  }";

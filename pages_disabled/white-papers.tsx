@@ -51,9 +51,9 @@ export default function WhitePapersPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 White Papers
@@ -82,10 +82,10 @@ export default function WhitePapersPage() {
                 <motion.div
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <div className="flex items-center mb-4">
                     <FileText className="h-6 w-6 text-blue-600 mr-3" />
@@ -128,10 +128,10 @@ export default function WhitePapersPage() {
         <section className="py-20 bg-blue-600">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl font-bold text-white mb-6">
                 Stay Updated with Latest Research

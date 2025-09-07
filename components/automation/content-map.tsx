@@ -1,8 +1,5 @@
 import fs from 'fs';,
-=======
 import fs from 'fs',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Entry = { route: string, file: string },
@@ -19,9 +16,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   } catch {
     return { props: { report: null }, revalidate: 21600 }
   }
-=======
 export default function ContentMap({ report }: Props) {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
@@ -69,7 +64,6 @@ export default function ContentMap(): any ({ report }: Props) {;
         <ul className="text-sm space-y-1">;
           {sections && sections.map(([sec, n]) => (;'"
             <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>;
-=======
   if (!report) return <div />No content map yet. Check back later.</div>;
 
 const sections = Object && Object.entries(report && report.bySection).sort((a, b) => b[1] - a[1]);
@@ -97,12 +91,9 @@ return (;
 }</ul> </section> <section    />) )
 }</ul> </section> </div>)
 export default function ContentMap(): any ({ report }: Props) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           ))}
         </ul>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section>
         <h2 className="font-semibold mb-2">All Pages</h2>"
         <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 "dark":border-gray-800">"
@@ -110,21 +101,17 @@ export default function ContentMap(): any ({ report }: Props) {
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>"
           ))}
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           ))}
-=======
       <section>"
         <h2 className="font-semibold mb-2">All Pages</h2>"
         <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
           {report.pages.map((p, i) => ("
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
-=======
       <section />"
         <h2 className=\"font-semibold mb-2\" />All Pages</h2>"
         <ul className=\"text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800\" />
           {report.pages.map((p, i) => (}"
             <li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{p.route}</span><span className=\"text-gray-500 truncate\" />{p.file}</span></li>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           ))}
 }
 ) );
@@ -139,7 +126,6 @@ if (return <div > No content map yet. Check back later.</div>) {}
   $2;
 }
   const sections = Object.entries (report.by_section).sort ((a, b) => b[1] - a[1]);
-<<<<<<< HEAD
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -165,37 +151,21 @@ if (return <div > No content map yet. Check back later.</div>) {}
         </ul>;
       </section>;
     </div>);
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         </ul>
       </section>
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 "
-=======
 }
 }
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
   return ("
     <div className="space - y-6">;"
       <header className="space - y-1">;"
@@ -222,9 +192,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
     </div>);
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

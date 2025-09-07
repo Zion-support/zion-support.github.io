@@ -17,7 +17,7 @@ interface SearchFilter  {"type": string[];
   "dateRange": {"start": Date | null;
     }
     "end": Date | null;
-  }}
+  }
 
 interface SearchSuggestion {
   }
@@ -31,7 +31,7 @@ export default function AdvancedSearch() {const [query, setQuery] = useState('')
   }
   const [isSearching, setIsSearching] = useState(false);
 const [results, setResults] = useState<SearchResult[]>([])const [filters, setFilters] = useState<SearchFilter>({"type": [],"tags": [],"dateRange": { "start": null, "end": null,;
-}})const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])const [showFilters, setShowFilters] = useState(false);
+})const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])const [showFilters, setShowFilters] = useState(false);
   const [selectedResult, setSelectedResult]  = useState<number>(-1)// Mock data - in production, this would come from your backend;
 
 const mockData = useMemo<SearchResult[]>(() => [;
@@ -99,7 +99,7 @@ const toggleFilter = ("filterType": 'type' | 'tags', "value": string) => {setFil
 }
 
 const clearFilters = () => {setFilters({"type": [],"tags": [],"dateRange": { "start": null, "end": null
-}})}
+})}
 ;
   const getResultIcon = ("type": string) => {switch (type) {case 'service':;'
         }
@@ -141,11 +141,11 @@ const clearFilters = () => {setFilters({"type": [],"tags": [],"dateRange": { "st
         <AnimatePresence>;
           {suggestions.length > 0 && query && (<motion.div;
               }
-              initial={{ "opacity": 0, "y": -10 
+              initial={ "opacity": 0, "y": -10 
 }
-              animate={{ "opacity": 1, "y": 0 
+              animate={ "opacity": 1, "y": 0 
 }
-              exit={{ "opacity": 0, "y": -10 
+              exit={ "opacity": 0, "y": -10 
 }
               className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-10">"
 
@@ -178,11 +178,11 @@ const clearFilters = () => {setFilters({"type": [],"tags": [],"dateRange": { "st
       <AnimatePresence>;
         {showFilters && (<motion.div;
             }
-            initial={{ "opacity": 0, "height": 0 
+            initial={ "opacity": 0, "height": 0 
 }
-            animate={{ "opacity": 1, "height": 'auto' ,'
+            animate={ "opacity": 1, "height": 'auto' ,'
 }
-            exit={{ "opacity": 0, "height": 0 
+            exit={ "opacity": 0, "height": 0 
 }
             className="mt-4 bg-white border border-gray-200 rounded-lg p-4 shadow-sm">"
 
@@ -236,11 +236,11 @@ const clearFilters = () => {setFilters({"type": [],"tags": [],"dateRange": { "st
       <AnimatePresence>;
         {results.length > 0 && (<motion.div;
             }
-            initial={{ "opacity": 0, "y": 20 
+            initial={ "opacity": 0, "y": 20 
 }
-            animate={{ "opacity": 1, "y": 0 
+            animate={ "opacity": 1, "y": 0 
 }
-            exit={{ "opacity": 0, "y": 20 
+            exit={ "opacity": 0, "y": 20 
 }
             className="mt-6 space-y-3">"
 
@@ -255,10 +255,10 @@ const clearFilters = () => {setFilters({"type": [],"tags": [],"dateRange": { "st
             {results.map((result, index) => (<motion.div;
                 }
                 key={result.id}
-                initial={{ "opacity": 0, "x": -20 
+                initial={ "opacity": 0, "x": -20 
 }
-                animate={{ "opacity": 1, "x": 0 }}
-                transition={{ "delay": index * 0.1 
+                animate={ "opacity": 1, "x": 0 }
+                transition={ "delay": index * 0.1 
 }
                 className={`bg-white border-2 rounded-lg p-4 cursor-pointer transition-all duration-200 ${selectedResult === index;`                    ? 'border-blue-500 bg-blue-50';'
                     : 'border-gray-200 "hover":border-gray-300 "hover":shadow-md';'
@@ -300,8 +300,8 @@ const clearFilters = () => {setFilters({"type": [],"tags": [],"dateRange": { "st
       {/* No Results */}
       {query && results.length === 0 && !isSearching && (<motion.div;
           }
-          initial={{ "opacity": 0 }}
-          animate={{ "opacity": 1 
+          initial={ "opacity": 0 }
+          animate={ "opacity": 1 
 }
           className="mt-6 text-center py-8">"
 

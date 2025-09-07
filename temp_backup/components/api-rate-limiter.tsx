@@ -404,7 +404,7 @@ limit of {rateLimit} requests per {timeWindow}
                   <div className='text-6xl mb-4' />📊</div>
                   <p className='text-gray-400' />
                     Test results will appear here. Configure your settings and;
-click "Test Rate Limiting" to see how it works.
+click 'Test Rate Limiting' to see how it works.
                   </p>
                 </div>
               )}
@@ -589,12 +589,12 @@ print('Rate Limit Info:', {
 'limit': response.headers.get('x-ratelimit-limit'),
     'remaining': response.headers.get('x-ratelimit-remaining'),
     'reset': response.headers.get('x-ratelimit-reset')
-                variant="outline";
+                variant='outline';
 
-                size="sm";
-                className="mt-4 border-gray-600 text-gray-300 hover: bg-gray-700">
+                size='sm';
+                className='mt-4 border-gray-600 text-gray-300 hover: bg-gray-700'>
 
-                <Copy className="w-4 h-4 mr-2" />;
+                <Copy className='w-4 h-4 mr-2' />;
               </Button>;
             </Card>;
             <Card className='p-6 bg-gray-800 border border-gray-700' />;
@@ -605,13 +605,13 @@ print('Rate Limit Info:', {
               <div className='bg-gray-900 p-4 rounded-lg overflow-x-auto' />;
                 <pre className='text-sm text-gray-300' />;
                   {`import requests;
-            <Card className="p-6 bg-gray-800 border border-gray-700" />;
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center" />;
-                <Code className="w-5 h-5 mr-2 text-blue-400" />;
+            <Card className='p-6 bg-gray-800 border border-gray-700' />;
+              <h3 className='text-xl font-bold text-white mb-4 flex items-center' />;
+                <Code className='w-5 h-5 mr-2 text-blue-400' />;
                 Python Example;
               </h3>;
-              <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto" />;
-                <pre className="text-sm text-gray-300" />;}
+              <div className='bg-gray-900 p-4 rounded-lg overflow-x-auto' />;
+                <pre className='text-sm text-gray-300' />;}
 {`import requests;}
 api_key = '${apiKey || 'your_api_key_here'}';
 endpoint = '${endpoint || '/api/users'}';
@@ -669,7 +669,7 @@ print('Rate Limit Info:', {
       {/* CTA Section *,}
 }
 })
-w-4 h-4 mr-2" /> Copy Code </Button> </Card> <Card className="p-6 bg-gray-800 border border-gray-700" > <h3 className="text-xl font-bold text-white mb-4 flex items-center" > <Code className="w-5 h-5 mr-2 text-blue-400" /> Python Example </h3> api key = '$ {
+w-4 h-4 mr-2' /> Copy Code </Button> </Card> <Card className='p-6 bg-gray-800 border border-gray-700' > <h3 className='text-xl font-bold text-white mb-4 flex items-center' > <Code className='w-5 h-5 mr-2 text-blue-400' /> Python Example </h3> api key = '$ {
   apiKey || 'your api key here' 
 }' endpoint = '$ {
   endpoint || '/api/users' 
@@ -689,5 +689,5 @@ headers=headers) print ('Response:', response.json () ) print ('Rate Limit Info:
 }response = requests.get (f'https://api.zion.tech {
   endpoint 
 }'
-headers=headers) print ('Response:', response.json () ) > <Copy className="w-4 h-4 mr-2" /> Copy Code </Button> </Card> </div> </div> </section> <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600"> <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6"> text-xl text-green-100 mb-8"> Join thousands of developers and companies who trust our rate limiting service to protect their APIs. </p> <div className=" flex flex-col sm:flex-row gap-4 justify-center"> <Button href=" /contact"size=" lg"className=" bg-white text-green-600 hover:bg-gray-100"> Get Started Today <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /pricing"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-green-600" > View Pricing </Button> </div> </div> </section> </>) 
+headers=headers) print ('Response:', response.json () ) > <Copy className='w-4 h-4 mr-2' /> Copy Code </Button> </Card> </div> </div> </section> <section className='py-20 bg-gradient-to-r from-green-600 to-blue-600'> <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'> <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'> text-xl text-green-100 mb-8'> Join thousands of developers and companies who trust our rate limiting service to protect their APIs. </p> <div className=' flex flex-col sm:flex-row gap-4 justify-center'> <Button href=' /contact'size=' lg'className=' bg-white text-green-600 hover:bg-gray-100'> Get Started Today <ArrowRight className=' w-5 h-5 ml-2'/> </Button> <Button href=' /pricing'variant=' outline'size=' lg'className=' border-white text-white hover:bg-white hover:text-green-600' > View Pricing </Button> </div> </div> </section> </>) 
 }

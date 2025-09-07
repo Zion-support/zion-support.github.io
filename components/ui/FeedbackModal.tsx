@@ -19,8 +19,8 @@ defaultKind = 'general''
   userHeaders
 }: {;
   }
-  "isOpen": boolean;
-  "onClose": ("submitted": boolean) => void;
+  'isOpen': boolean;
+  'onClose': ('submitted': boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';'
 
@@ -67,20 +67,19 @@ export default function FeedbackModal({
       }
       await fetch('/api/feedback', {'
         }
-        "method": 'POST','
-"headers": { 'Content-Type': 'application/json', ...(userHeaders || {}) },'
-        "body": JSON.stringify({
+        'method': 'POST','
+'headers': { 'Content-Type': 'application/json', ...(userHeaders || {}) },'
+        'body': JSON.stringify({
           }
           rating,
 comment
           kind,
-"context": defaultContext |{}
+'context': defaultContext |{}
         })
      
 });
     setLoading(false);
     onClose(true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     setLoading(false);
     onClose(true);
 
@@ -120,10 +119,10 @@ export type FeedbackContext = any;
   defaultKind = 'general';userHeaders?: Record<string, string>;
 }) {const [rating, setRating] = useState<number>(0)const [hover, setHover] = useState<number>(0)const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind)const [comment, setComment] = useState('')const [loading, setLoading] = useState(false)if (!isOpen) return null;setLoading(false)onClose(true)method: 'POST',headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) }body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})} catch {}
     setLoading(false)onClose(true)}
-  return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">;
-      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">;
-        <div className="text-lg font-medium">Was this helpful?</div>;
-        <div className="flex gap-2">;
+  return (<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'>;
+      <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'>;
+        <div className='text-lg font-medium'>Was this helpful?</div>;
+        <div className='flex gap-2'>;
           {[1,2,3,4,5].map(n => (async function submit() {if (rating < 1) return onClose(false)setLoading(true)try {await fetch('/api/feedback', {method: 'POST',headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },body: JSON.stringify({rating;
           comment;
           kind;
@@ -148,7 +147,7 @@ className={
               ★;
             </button>;
           ))}
-          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>;
+          <button onClick={submit} disabled={loading || rating<1} className='px-3 py-2 rounded bg-gray-900 text-white'>{loading? 'Submitting…' : 'Submit'}</button>;
         </div>;
         <div className='text-sm'>;'
           <label className='block mb-1'>Optional comment</label>;'
@@ -186,9 +185,9 @@ className={
 }
 export type FeedbackContext = { action_type?: string; metadata?: any }
 
-export default function FeedbackModal ({is_open,on_close,default_context,default_kind = 'general',user_headers}: {"is_open": boolean;'
+export default function FeedbackModal ({is_open,on_close,default_context,default_kind = 'general',user_headers}: {'is_open': boolean;'
   }
-  "on_close": ("submitted": boolean) => void;
+  'on_close': ('submitted': boolean) => void;
   default_context?: FeedbackContext;
   default_kind?: 'general' | 'bug' | 'feature';'
   user_headers?: Record < string, string>;}) {export default function FeedbackModal ({is_open;
@@ -196,7 +195,7 @@ export default function FeedbackModal ({is_open,on_close,default_context,default
   on_close;
   default_context;
   default_kind = 'general';'
-  user_headers}: {"is_open": boolean,"on_close": ("submitted": boolean) => void,default_context?: FeedbackContext;
+  user_headers}: {'is_open': boolean,'on_close': ('submitted': boolean) => void,default_context?: FeedbackContext;
   }
   default_kind?: 'general' | 'bug' | 'feature';'
   user_headers?: Record < string, string>;
@@ -209,16 +208,16 @@ if (return null) {$2;
  */;
 function submit() {if (return on_close (false)) {$2;}
 }
-    set_loading (true)try {await fetch ('/api / feedback', {"method": 'POST',"headers": { 'Content - Type': 'application / json', ...(user_headers || {}) },"body": JSON.stringify ({rating,comment,kind,"context": default_context || ,'
-}})})set_loading (false)on_close (true)}
+    set_loading (true)try {await fetch ('/api / feedback', {'method': 'POST','headers': { 'Content - Type': 'application / json', ...(user_headers || {}) },'body': JSON.stringify ({rating,comment,kind,'context': default_context || ,'
+})})set_loading (false)on_close (true)}
   return (<div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 40'>;'
       <div className='bg - white w - full max - w-md rounded shadow - lg p - 5 space - y-4'>;'
         <div className='text - lg font - medium'>Was this helpful?</div>;'
         <div className='flex gap - 2'>;'
-          {[1, 2, 3, 4, 5].map (number => { return (            <button    <div className="fixed inset - 0 z - 50 flex items - center justify-center bg-black / 40">; }"
-      <div className="bg - white w - full max - w-md rounded shadow - lg p-5 space-y-4">;"
-        <div className="text-lg font-medium">Was this helpful?</div>;"
-        <div className="flex gap-2">;"
+          {[1, 2, 3, 4, 5].map (number => { return (            <button    <div className='fixed inset - 0 z - 50 flex items - center justify-center bg-black / 40'>; }'
+      <div className='bg - white w - full max - w-md rounded shadow - lg p-5 space-y-4'>;'
+        <div className='text-lg font-medium'>Was this helpful?</div>;'
+        <div className='flex gap-2'>;'
           {[1, 2, 3, 4, 5].map (number => (key={n}
               onMouseEnter={() => set_hover (n)}
               onMouseLeave={() => set_hover (0)}
@@ -270,7 +269,7 @@ function submit() {if (return on_close (false)) {$2;}
         </div>;
           ))}
 
-          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>'
+          <button onClick={submit} disabled={loading || rating<1} className='px-3 py-2 rounded bg-gray-900 text-white'>{loading? 'Submitting…' : 'Submit'}</button>'
         </div>
 
         <div className='flex justify-end gap-2'>'
@@ -299,4 +298,4 @@ onClick={() => onClose(false)}
     </div>;
   )}<div className='flex justify - end gap - 2'>;
 
-"
+'

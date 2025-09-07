@@ -7,28 +7,28 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';'
 import { useRouter   } from 'next/router';'
 import type { GrantCategory } from '../../types/grants';'
 
-const "categories": GrantCategory[] = [;
+const 'categories': GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants''
 ];
 
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {import { useState   } from 'react';'
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {import { useState   } from 'react';'
   'Research Grants''
 ];
 
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {'Research Grants''
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {'Research Grants''
 ];
 
 
 }
 
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;'
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;'
 
 }
 
-const "categories": GrantCategory[] = [;
+const 'categories': GrantCategory[] = [;
   'Ecosystem Tools';'
   'Talent Development';'
   'Regional Expansion';'
@@ -36,20 +36,20 @@ const "categories": GrantCategory[] = [;
 ];
 
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
 
 export default function ApplyGrantPage() {const router  = null;
 
 }
 
-export default function ApplyGrantPage() {const "categories": GrantCategory[] = [;
+export default function ApplyGrantPage() {const 'categories': GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];'
 
 }
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {const router = useRouter()const [program, setProgram] = useState<'grant' | 'incubator'>('grant')const [projectName, setProjectName] =;'
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {const router = useRouter()const [program, setProgram] = useState<'grant' | 'incubator'>('grant')const [projectName, setProjectName] =;'
   }
   useState('');'
   const [teamInfo, setTeamInfo] = useState('');'
@@ -65,38 +65,38 @@ const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegiona
 import { use_router } from 'next / router';'
 import type { GrantCategory } from '../../types / grants';'
 
-const "categories": GrantCategory[] = [;
+const 'categories': GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants''
 ];
 
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default /**;'
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default /**;'
  * ApplyGrantPage - Function description;
  */;
 function ApplyGrantPage() {const router = use_router ()const [program, set_program] = useState<'grant' | 'incubator'>('grant')const [project_name, setProjectName] = useState ('')const [team_info, setTeamInfo] = useState ('')const [proposal_summary, setProposalSummary] = useState ('')const [timeline, set_timeline] = useState ('')const [budget_amount, setBudgetAmount] = useState < number>(0)const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [supporting_links, setSupportingLinks] = useState < string>('')const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [supporting_links, setSupportingLinks] = useState < string>('')const [pitchDeckUrl, setPitchDeckUrl] = useState ('')const [region, set_region] = useState ('')const [sector, set_sector] = useState < string>('')const [loading, set_loading] = useState (false)const [error, set_error]  =;'
   }
-  useState < string | null>(null)const save = async ("submit": boolean) => {try {set_loading (true)set_error (null);
+  useState < string | null>(null)const save = async ('submit': boolean) => {try {set_loading (true)set_error (null);
 }
-const resp = await fetch ('/api / grants', {"method": 'POST',"headers": { 'Content - Type': 'application / json',;'
-},"body": JSON.stringify ({program,project_name,team_info,proposal_summary,timeline,"budget_amount": Number (budget_amount || 0),budget_currency,"supporting_links": supporting_links;
-            .split ('\n').map (string => { return s.trim ()).filter (Boolean),pitchDeckUrl,region,"sector": (sector as any) || undefined,submit; }'
+const resp = await fetch ('/api / grants', {'method': 'POST','headers': { 'Content - Type': 'application / json',;'
+},'body': JSON.stringify ({program,project_name,team_info,proposal_summary,timeline,'budget_amount': Number (budget_amount || 0),budget_currency,'supporting_links': supporting_links;
+            .split ('\n').map (string => { return s.trim ()).filter (Boolean),pitchDeckUrl,region,'sector': (sector as any) || undefined,submit; }'
         })})const data = await resp.json ()if (throw new Error (data?.error || 'Failed')) {$2;'
 }
-      router.push (`/grants/${data.id}`)} catch ("e": any) {set_error (e.message)} finally {} catch ("e": any) {set_error (e.message,`} finally {const save = async ("submit": boolean) => {try {setLoading(true)setError(null);
+      router.push (`/grants/${data.id}`)} catch ('e': any) {set_error (e.message)} finally {} catch ('e': any) {set_error (e.message,`} finally {const save = async ('submit': boolean) => {try {setLoading(true)setError(null);
 }
-const resp = await fetch('/api/grants', {"method": 'POST',"headers": { 'Content-Type': 'application/json',;'
-},"body": JSON && JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,"budgetAmount": Number(budgetAmount || 0),budgetCurrency,"supportingLinks": supportingLinks;
-            .split('\n').map(s = > s && s.trim()).filter(Boolean),pitchDeckUrl,region,"sector": (sector as any) || undefined,submit})};'
-  const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch ("e": any) {setError(e && e.message)} finally {setLoading(false,`}          "budgetAmount": Number(budgetAmount || 0),program;
+const resp = await fetch('/api/grants', {'method': 'POST','headers': { 'Content-Type': 'application/json',;'
+},'body': JSON && JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,'budgetAmount': Number(budgetAmount || 0),budgetCurrency,'supportingLinks': supportingLinks;
+            .split('\n').map(s = > s && s.trim()).filter(Boolean),pitchDeckUrl,region,'sector': (sector as any) || undefined,submit})};'
+  const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch ('e': any) {setError(e && e.message)} finally {setLoading(false,`}          'budgetAmount': Number(budgetAmount || 0),program;
 
-const "categories": GrantCategory[] = [;
+const 'categories': GrantCategory[] = [;
   'Ecosystem Tools','
   'Talent Development','
   'Regional Expansion','
   'Research Grants''
 ];
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
 export default function ApplyGrantPage() {;
 
 }
@@ -104,17 +104,17 @@ export default function ApplyGrantPage() {;
 import { useState  } from 'react';'
 import { useRouter  } from 'next/router';'
 
-const "categories": GrantCategory[] = [;
+const 'categories': GrantCategory[] = [;
   'Ecosystem Tools''
   'Talent Development''
   'Regional Expansion''
   'Research Grants''
 ];
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
 export default function ApplyGrantPage() {
 }
-const "categories": GrantCategory[] = [;
+const 'categories': GrantCategory[] = [;
   'Ecosystem Tools',;'
   'Talent Development',;'
   'Regional Expansion',;'
@@ -122,20 +122,14 @@ const "categories": GrantCategory[] = [;
 ];
 
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
 
 export default function ApplyGrantPage() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 pr-12243
-=======
-<<<<<<< HEAD
 
 }
 
 const router = useRouter();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const [program, setProgram] = useState<'grant' | 'incubator'>('grant');'
 
@@ -169,7 +163,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
->>>>>>> origin/main
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
@@ -177,7 +170,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-<<<<<<< HEAD
   const save = async (submit: boolean) => {
     try {
       setLoading(true);
@@ -186,7 +178,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-=======
 
 
 import EnhancedLayout from '../../components / layout / EnhancedLayout';'
@@ -194,14 +185,14 @@ import {use_router} from 'next / router';'
 import type { GrantCategory } from '../../types / grants';'
 ;
 
-const "categories": GrantCategory[] = [;
+const 'categories': GrantCategory[] = [;
   'Ecosystem Tools','
   'Talent Development','
   'Regional Expansion','
   'Research Grants''
 ];
 
-const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
+const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
 export default /**
  * ApplyGrantPage - Function description
  */
@@ -241,7 +232,7 @@ const [loading, set_loading] = useState (false);
 const [error, set_error] = useState < string | null>(null);
 ;
 
-const save = async ("submit": boolean) => {
+const save = async ('submit': boolean) => {
     }
     try {
       }
@@ -249,30 +240,28 @@ const save = async ("submit": boolean) => {
       set_error (null),
       const resp = await fetch ('/api / grants', {'
         }
-        "method": 'POST','
-        "headers": { 'Content - Type': 'application / json','
+        'method': 'POST','
+        'headers': { 'Content - Type': 'application / json','
 },
-        "body": JSON.stringify ({
+        'body': JSON.stringify ({
           }
           program,
           project_name,
           team_info,
           proposal_summary,
           timeline,
-          "budget_amount": Number (budget_amount || 0),
+          'budget_amount': Number (budget_amount || 0),
           budget_currency,
-          "supporting_links": supporting_links;
+          'supporting_links': supporting_links;
             .split ('\n');'
             .map (string => { return s.trim ()); }
             .filter (Boolean),
           pitchDeckUrl,
           region,
-          "sector": (sector as any) || undefined,
+          'sector': (sector as any) || undefined,
           submit
-=======
           sector: (sector as any) || undefined;}
           submit}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         })
       });
 
@@ -281,7 +270,7 @@ const data = await resp.json ();
   $2
 }
       router.push (`/grants/${data.id}`);`
-    } catch ("e": any) {
+    } catch ('e': any) {
       }
       set_error (e.message);
     } finally {
@@ -290,21 +279,17 @@ const data = await resp.json ();
   }
 
 
-  const save = async ("submit": boolean) => {;
+  const save = async ('submit': boolean) => {;
     }
     try {;
       }
       setLoading(true);
       setError(null),;
-<<<<<<< HEAD
       const resp = await fetch('/api/grants', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
-=======
-<<<<<<< HEAD
       const resp = await fetch('/api/grants', {;
         method: 'POST',;
-=======
 export default function ApplyGrantPage() { return null; }
 export default function ApplyGrantPage() {};
 const categories: GrantCategory[] = [;'
@@ -314,64 +299,49 @@ const categories: GrantCategory[] = [;'
   'Research Grants',;'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 export default function ApplyGrantPage() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         headers: { 'Content-Type': 'application/json' },;
-=======
 
 const resp = await fetch('/api/grants', {;'
         }
-        "method": 'POST',;'
-        "headers": { 'Content-Type': 'application/json','
+        'method': 'POST',;'
+        'headers': { 'Content-Type': 'application/json','
 },;
-        "body": JSON && JSON.stringify({;
+        'body': JSON && JSON.stringify({;
           }
           program,;
           projectName,;
           teamInfo,;
           proposalSummary,;
           timeline,;
-          "budgetAmount": Number(budgetAmount || 0),;
+          'budgetAmount': Number(budgetAmount || 0),;
           budgetCurrency,;
-          "supportingLinks": supportingLinks;
+          'supportingLinks': supportingLinks;
             .split('\n');'
             .map(s => { return s && s.trim()); }
             .filter(Boolean),;
           pitchDeckUrl,;
           region,;
-          "sector": (sector as any) || undefined,;
+          'sector': (sector as any) || undefined,;
           submit,;
         }),;
       });
       const data = await resp && resp.json();
-=======
           sector: (sector as any) || undefined;,;}
           submit,;}
         }),;
       });
-<<<<<<< HEAD
       const data = await resp && resp.json();'
-=======
 
 const data = await resp && resp.json();
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');'
-      router && router.push(`/grants/${data && data.id}`);`    } catch ("e": any) {;
+      router && router.push(`/grants/${data && data.id}`);`    } catch ('e': any) {;
       }
       setError(e && e.message);
     } finally {;
       }
-      setLoading(false);    }          "budgetAmount": Number(budgetAmount || 0),;
+      setLoading(false);    }          'budgetAmount': Number(budgetAmount || 0),;
 
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 program;
     } catch (e: any) {;}
@@ -379,21 +349,19 @@ program;
     } finally {;}
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0);,;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           program;
           projectName;
           teamInfo;
           proposalSummary;
           timeline;
-          "budgetAmount": Number(budgetAmount || 0),budgetCurrency;
-          "budgetAmount": Number(budgetAmount || 0),
+          'budgetAmount': Number(budgetAmount || 0),budgetCurrency;
+          'budgetAmount': Number(budgetAmount || 0),
           budgetCurrency;
-          "supportingLinks": supportingLinks;
-            .split('\n').map((s) => s && s.trim()).filter(Boolean)set_loading (false)}          "budget_amount": Number (budget_amount || 0),budget_currency;'
-          "supporting_links": supporting_links;
+          'supportingLinks': supportingLinks;
+            .split('\n').map((s) => s && s.trim()).filter(Boolean)set_loading (false)}          'budget_amount': Number (budget_amount || 0),budget_currency;'
+          'supporting_links': supporting_links;
             .split ('\n').map ((s) => s.trim ()).filter (Boolean)pitchDeckUrl;'
-          region;"sector": (sector as any) || undefined,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch ("e": any) {setError(e && e.message)} finally {setLoading(false)}}`    }
+          region;'sector': (sector as any) || undefined,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch ('e': any) {setError(e && e.message)} finally {setLoading(false)}`    }
  
 }<textarea;
             className='mt-1 w-full border rounded p-2';'
@@ -403,36 +371,24 @@ program;
           pitchDeckUrl;
           region;
 
-          "sector": (sector as any) || undefined,;
+          'sector': (sector as any) || undefined,;
           submit})});
-<<<<<<< HEAD
       const data = await resp && resp.json();'
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');`
-=======
 
 const data = await resp && resp.json();
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');'
-      router && router.push(`/grants/${data && data.id}`);`    } catch ("e": any) {;
+      router && router.push(`/grants/${data && data.id}`);`    } catch ('e': any) {;
       }
       setError(e && e.message);
     } finally {;
       }
       setLoading(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
 pr-12243
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
 
-=======
     }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
@@ -455,7 +411,6 @@ pr-12243
 
 '
         {error && <div className='text-sm text-red-600'>{error}</div>}'
-=======
 
     }
     }
@@ -496,7 +451,6 @@ className='mt-1 w-full border rounded p-2''
             onClick={() => save(false)}'
             className='px-4 py-2 border rounded disabled:opacity-50';
           >;
-=======
         </label>;
         <label className='text-sm' />;
           Pitch Deck URL;
@@ -506,26 +460,25 @@ className='mt-1 w-full border rounded p-2''
           <button;
             disabled={loading}
             onClick={() => save(false)}
-            className='px-4 py-2 border rounded "disabled":opacity-50'>'
+            className='px-4 py-2 border rounded 'disabled':opacity-50'>'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             Save Draft;
           </button>;
           <button;
             disabled={loading}
             onClick={() => save(true)}
-            className='px-4 py-2 bg-blue-600 text-white rounded "disabled":opacity-50'>'
+            className='px-4 py-2 bg-blue-600 text-white rounded 'disabled':opacity-50'>'
 
             Submit for Review;
           </button>        </div>;
       </div>;
     </EnhancedLayout>;
   )<EnhancedLayout />;
-      <h1 className=\"text-2xl font-semibold mb-4\" />Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>;"
-      <div className=\"grid gap-4 max-w-3xl\" />;"
-        <div className=\"grid md:grid-cols-2 gap-3\" />;"
-          <label className=\"text-sm\" />Program;"
-            <select className=\"mt-1 w-full border rounded p-2\" value={program} onChange={(e) = /> setProgram(e.target.value as any)}>;
+      <h1 className=\'text-2xl font-semibold mb-4\' />Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>;'
+      <div className=\'grid gap-4 max-w-3xl\' />;'
+        <div className=\'grid md:grid-cols-2 gap-3\' />;'
+          <label className=\'text-sm\' />Program;'
+            <select className=\'mt-1 w-full border rounded p-2\' value={program} onChange={(e) = /> setProgram(e.target.value as any)}>;
 
 const _save = async (_submit: boolean) => {try {setLoading(true);,setError(null);
   const resp = await fetch('/api/grants', {method: 'POST';}
@@ -574,7 +527,6 @@ const data = await resp.json();
       setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
           budgetCurrency;
           supportingLinks: supportingLinks;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             .split('\n')
             .map((s) => s.trim())
             .filter(Boolean);
@@ -582,17 +534,14 @@ const data = await resp.json();
           region;
           sector: (sector as any) || undefined,
           submit})});
-<<<<<<< HEAD
       const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error || 'Failed');
       router.push(`/grants/${data.id}`)
-<<<<<<< HEAD
     } catch (e: any) {
       setError(e.message)
     } finally {
       setLoading(false)
     }
-=======
       const data = await resp && resp.json();
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');
       router && router.push(`/grants/${data && data.id}`);
@@ -609,18 +558,15 @@ const data = await resp.json();
 
 
 
-=======
     } catch (e: any) {;}
       setError(e.message)}
     } finally {}
       setLoading(false)}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
   }
 
 };
 
-<<<<<<< HEAD
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
             onChange={e => setSupportingLinks(e && e.target.value)}
@@ -636,48 +582,48 @@ const data = await resp.json();
       </div>;
     </EnhancedLayout>;
   )<EnhancedLayout>;
-      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>;'
-      <div className="grid gap-4 max-w-3xl">;"
-        <div className="grid "md":grid-cols-2 gap-3">;"
-          <label className="text-sm">Program;"
-            <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>;"
+      <h1 className='text-2xl font-semibold mb-4'>Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>;'
+      <div className='grid gap-4 max-w-3xl'>;'
+        <div className='grid 'md':grid-cols-2 gap-3'>;'
+          <label className='text-sm'>Program;'
+            <select className='mt-1 w-full border rounded p-2' value={program} onChange={(e) => setProgram(e.target.value as any)}>;'
 
-const _save = async ("_submit": boolean) => {try {setLoading(true),setError(null);
+const _save = async ('_submit': boolean) => {try {setLoading(true),setError(null);
 }
-const resp = await fetch('/api/grants', {"method": 'POST',"headers": { 'Content-Type': 'application/json',;'
-},"body": JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,"budgetAmount": Number(budgetAmount || 0),budgetCurrency,"supportingLinks": supportingLinks;
-            .split('\n').map((s) => s.trim()).filter(Boolean),pitchDeckUrl,region,"sector": (sector as any) || undefined,submit})}),const data = await resp.json()if (!resp.ok) throw new Error(data?.error || 'Failed'),const save = async ("submit": boolean) => {try {setLoading(true)setError(null;'
+const resp = await fetch('/api/grants', {'method': 'POST','headers': { 'Content-Type': 'application/json',;'
+},'body': JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,'budgetAmount': Number(budgetAmount || 0),budgetCurrency,'supportingLinks': supportingLinks;
+            .split('\n').map((s) => s.trim()).filter(Boolean),pitchDeckUrl,region,'sector': (sector as any) || undefined,submit})}),const data = await resp.json()if (!resp.ok) throw new Error(data?.error || 'Failed'),const save = async ('submit': boolean) => {try {setLoading(true)setError(null;'
   }
-  const resp = await fetch('/api/grants', {"method": 'POST';'
+  const resp = await fetch('/api/grants', {'method': 'POST';'
         }
-        "headers": { 'Content-Type': 'application/json','
+        'headers': { 'Content-Type': 'application/json','
 }
-        "body": JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,"budgetAmount": Number(budgetAmount || 0),budgetCurrency,"supportingLinks": supportingLinks;
+        'body': JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,'budgetAmount': Number(budgetAmount || 0),budgetCurrency,'supportingLinks': supportingLinks;
             .split('\n').map(s => { return s.trim()).filter(Boolean)pitchDeckUrl; }'
           }
           region;
-          "sector": (sector as any) |undefined;
+          'sector': (sector as any) |undefined;
           submit;
-        })})const data = await resp.json()if (!resp.ok) throw new Error(data?.error |'Failed')router.push(`/grants/${data.id}`)} catch ("e": any) {setError(e.message)} finally {setLoading(false)}` 
+        })})const data = await resp.json()if (!resp.ok) throw new Error(data?.error |'Failed')router.push(`/grants/${data.id}`)} catch ('e': any) {setError(e.message)} finally {setLoading(false)}` 
 };
   return (<EnhancedLayout>;
 <h1 className='text-2xl font-semibold mb-4'>;'
-        "body": JSON.stringify({
+        'body': JSON.stringify({
           }
           program,
 projectName
           teamInfo,
 proposalSummary
           timeline,
-"budgetAmount": Number(budgetAmount |0)
+'budgetAmount': Number(budgetAmount |0)
           budgetCurrency,
-"supportingLinks": supportingLinks
+'supportingLinks': supportingLinks
             .split('\n')'
             .map(s => { return s.trim())
             .filter(Boolean)
           pitchDeckUrl,
 region
-          "sector": (sector as any) |undefined,
+          'sector': (sector as any) |undefined,
 submit
         })
      
@@ -685,27 +631,27 @@ submit
 
 const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error |'Failed');'
-      router.push(`/grants/${data.id}`);`    } catch ("e": any) {
+      router.push(`/grants/${data.id}`);`    } catch ('e': any) {
       }
       setError(e.message);
     } finally {
       }
-      setLoading(false);    }          "budgetAmount": Number(budgetAmount |0)
+      setLoading(false);    }          'budgetAmount': Number(budgetAmount |0)
           budgetCurrency;
-          "supportingLinks": supportingLinks
+          'supportingLinks': supportingLinks
             .split('\n')'
             .map((s) => s.trim())
             .filter(Boolean);
           pitchDeckUrl;
           region;
-          "sector": (sector as any) |undefined,
+          'sector': (sector as any) |undefined,
 submit}
 });
 
 const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error |'Failed');'
       router.push(`/grants/${data.id}`)`
-    } catch ("e": any) {
+    } catch ('e': any) {
       }
       setError(e.message)
     } finally {
@@ -723,7 +669,7 @@ return (;
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}'
       </h1>;
       <div className='grid gap-4 max-w-3xl'>;'
-        <div className='grid "md":grid-cols-2 gap-3'>;'
+        <div className='grid 'md':grid-cols-2 gap-3'>;'
           <label className='text-sm'>;'
             Program;
             <select;
@@ -734,18 +680,16 @@ return (;
               <option value='grant'>Grant</option>;'
               <option value='incubator'>Incubator</option>;'
             </select>;
-<<<<<<< HEAD
-          </label>;"
-          <label className="text-sm">Region;"
-            <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e && e.target.value)} placeholder="e && e.g., LATAM, EU, Global" />;
+          </label>;'
+          <label className='text-sm'>Region;'
+            <input className='mt-1 w-full border rounded p-2' value={region} onChange={(e) => setRegion(e && e.target.value)} placeholder='e && e.g., LATAM, EU, Global' />;
           </label>;
-        </div>;"
-        <label className="text-sm">Supporting Links (one per line);"
-          <textarea className="mt-1 w-full border rounded p-2" rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e && e.target.value)} />;
-        </label>;"
-        <label className="text-sm">Pitch Deck URL;"
-          <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
-=======
+        </div>;'
+        <label className='text-sm'>Supporting Links (one per line);'
+          <textarea className='mt-1 w-full border rounded p-2' rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e && e.target.value)} />;
+        </label>;'
+        <label className='text-sm'>Pitch Deck URL;'
+          <input className='mt-1 w-full border rounded p-2' value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
           </label>;
           <label className='text-sm'>;'
             Sector;
@@ -796,7 +740,7 @@ return (;
             onChange={e => { return setTimeline(e.target.value)}
           />; }
         </label>;
-        <div className='grid "md":grid-cols-3 gap-3'>;'
+        <div className='grid 'md':grid-cols-3 gap-3'>;'
           <label className='text-sm'>;'
             Budget Amount;
             <input;
@@ -844,7 +788,7 @@ return (;
           />; }
         </label>;
   }
-    }}return ({error && <div className='text-sm text-red-600'>{error}</div>}'
+    }return ({error && <div className='text-sm text-red-600'>{error}</div>}'
         <div className='flex gap-3'>;'
           <button; />
         </label>
@@ -854,73 +798,58 @@ return (;
 );
 
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
   );
 }            </select>
           </label>
-          <label className="text-sm">Sector
-            <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>
-              <option value="">Select sector</option>
+          <label className='text-sm'>Sector
+            <select className='mt-1 w-full border rounded p-2' value={sector} onChange={(e) => setSector(e.target.value)}>
+              <option value=''>Select sector</option>
               {categories.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
           </label>
         </div>
-        <label className="text-sm">Project Name
-          <input className="mt-1 w-full border rounded p-2" value={projectName} onChange={(e) => setProjectName(e.target.value)} />
+        <label className='text-sm'>Project Name
+          <input className='mt-1 w-full border rounded p-2' value={projectName} onChange={(e) => setProjectName(e.target.value)} />
         </label>
-        <label className="text-sm">Team Info
-          <textarea className="mt-1 w-full border rounded p-2" rows={3} value={teamInfo} onChange={(e) => setTeamInfo(e.target.value)} />
+        <label className='text-sm'>Team Info
+          <textarea className='mt-1 w-full border rounded p-2' rows={3} value={teamInfo} onChange={(e) => setTeamInfo(e.target.value)} />
         </label>
-        <label className="text-sm">Proposal Summary
-          <textarea className="mt-1 w-full border rounded p-2" rows={6} value={proposalSummary} onChange={(e) => setProposalSummary(e.target.value)} />
+        <label className='text-sm'>Proposal Summary
+          <textarea className='mt-1 w-full border rounded p-2' rows={6} value={proposalSummary} onChange={(e) => setProposalSummary(e.target.value)} />
         </label>
-        <label className="text-sm">Timeline
-          <input className="mt-1 w-full border rounded p-2" value={timeline} onChange={(e) => setTimeline(e.target.value)} />
+        <label className='text-sm'>Timeline
+          <input className='mt-1 w-full border rounded p-2' value={timeline} onChange={(e) => setTimeline(e.target.value)} />
         </label>
-        <div className="grid md:grid-cols-3 gap-3">
-          <label className="text-sm">Budget Amount
-            <input type="number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value))} />
+        <div className='grid md:grid-cols-3 gap-3'>
+          <label className='text-sm'>Budget Amount
+            <input type='number' className='mt-1 w-full border rounded p-2' value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value))} />
           </label>
-          <label className="text-sm">Currency
-            <select className="mt-1 w-full border rounded p-2" value={budgetCurrency} onChange={(e) => setBudgetCurrency(e.target.value as any)}>
-              <option value="USDC">USDC</option>
-              <option value="ZION$">ZION$</option>
+          <label className='text-sm'>Currency
+            <select className='mt-1 w-full border rounded p-2' value={budgetCurrency} onChange={(e) => setBudgetCurrency(e.target.value as any)}>
+              <option value='USDC'>USDC</option>
+              <option value='ZION$'>ZION$</option>
             </select>
           </label>
-          <label className="text-sm">Region
-            <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g., LATAM, EU, Global" />
+          <label className='text-sm'>Region
+            <input className='mt-1 w-full border rounded p-2' value={region} onChange={(e) => setRegion(e.target.value)} placeholder='e.g., LATAM, EU, Global' />
           </label>
         </div>
-        <label className="text-sm">Supporting Links (one per line)
-          <textarea className="mt-1 w-full border rounded p-2" rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e.target.value)} />
+        <label className='text-sm'>Supporting Links (one per line)
+          <textarea className='mt-1 w-full border rounded p-2' rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e.target.value)} />
         </label>
-        <label className="text-sm">Pitch Deck URL
-          <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e.target.value)} />
+        <label className='text-sm'>Pitch Deck URL
+          <input className='mt-1 w-full border rounded p-2' value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e.target.value)} />
         </label>
-        {error && <div className="text-sm text-red-600">{error}</div>}
-        <div className="flex gap-3">
-          <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>
-          <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>
+        {error && <div className='text-sm text-red-600'>{error}</div>}
+        <div className='flex gap-3'>
+          <button disabled={loading} onClick={() => save(false)} className='px-4 py-2 border rounded disabled:opacity-50'>Save Draft</button>
+          <button disabled={loading} onClick={() => save(true)} className='px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50'>Submit for Review</button>
         </div>
   };
 
@@ -944,14 +873,14 @@ disabled={loading}
           <button,
 disabled={loading}
             onClick={() => save(false)}
-            className='px-4 py-2 border rounded "disabled":opacity-50'>'
+            className='px-4 py-2 border rounded 'disabled':opacity-50'>'
 
             Save Draft;
           </button>;
           <button;
             disabled={loading}
             onClick={() => save(true)}
-            className='px-4 py-2 bg-blue-600 text-white rounded "disabled":opacity-50'>'
+            className='px-4 py-2 bg-blue-600 text-white rounded 'disabled':opacity-50'>'
 
             Submit for Review;
           </button>        </div>;
@@ -961,10 +890,9 @@ disabled={loading}
         </div>;
       </div>;
     </EnhancedLayout>;
-  )<option value="USDC">USDC</option>;"
-            className='px-4 py-2 bg-blue-600 text-white rounded "disabled":opacity-50''
+  )<option value='USDC'>USDC</option>;'
+            className='px-4 py-2 bg-blue-600 text-white rounded 'disabled':opacity-50''
           >
-<<<<<<< HEAD
             Submit for Review
           </button>        </div>
       </div>
@@ -972,24 +900,24 @@ disabled={loading}
   );
 
 
-              <option value="USDC">USDC</option>;"
-              <option value="ZION$">ZION$</option>;"
+              <option value='USDC'>USDC</option>;'
+              <option value='ZION$'>ZION$</option>;'
             </select>;
           </label>;
-          <label className="text-sm">Region;"
-            <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e && e.target.value)} placeholder="e && e.g., LATAM, EU, Global" />;"
+          <label className='text-sm'>Region;'
+            <input className='mt-1 w-full border rounded p-2' value={region} onChange={(e) => setRegion(e && e.target.value)} placeholder='e && e.g., LATAM, EU, Global' />;'
           </label>;
         </div>;
-        <label className="text-sm">Supporting Links (one per line)<textarea className="mt-1 w-full border rounded p-2" rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e && e.target.value)} />;"
+        <label className='text-sm'>Supporting Links (one per line)<textarea className='mt-1 w-full border rounded p-2' rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e && e.target.value)} />;'
         </label>;
-        <label className="text-sm">Pitch Deck URL;"
-          <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;"
+        <label className='text-sm'>Pitch Deck URL;'
+          <input className='mt-1 w-full border rounded p-2' value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;'
         </label>;))ursor/fix-website-loading-errors-and-merge-6662;
   )}            </select>;
           </label>;
-          <label className="text-sm">Sector;"
-            <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>;"
-              <option value="">Select sector</option>;"
+          <label className='text-sm'>Sector;'
+            <select className='mt-1 w-full border rounded p-2' value={sector} onChange={(e) => setSector(e.target.value)}>;'
+              <option value=''>Select sector</option>;'
         </label>;
 
   );
@@ -997,48 +925,48 @@ disabled={loading}
   );
 }            </select>
           </label>
-          <label className="text-sm">Sector"
-            <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>"
-              <option value="">Select sector</option>"
+          <label className='text-sm'>Sector'
+            <select className='mt-1 w-full border rounded p-2' value={sector} onChange={(e) => setSector(e.target.value)}>'
+              <option value=''>Select sector</option>'
               {categories.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>;
           </label>;
         </div>;
-        <label className="text-sm">Project Name;"
-          <input className="mt-1 w-full border rounded p-2" value={projectName} onChange={(e) => setProjectName(e.target.value)} />;"
+        <label className='text-sm'>Project Name;'
+          <input className='mt-1 w-full border rounded p-2' value={projectName} onChange={(e) => setProjectName(e.target.value)} />;'
         </label>;
-        <label className="text-sm">Team Info;"
-          <textarea className="mt-1 w-full border rounded p-2" rows={3} value={teamInfo} onChange={(e) => setTeamInfo(e.target.value)} />;"
+        <label className='text-sm'>Team Info;'
+          <textarea className='mt-1 w-full border rounded p-2' rows={3} value={teamInfo} onChange={(e) => setTeamInfo(e.target.value)} />;'
         </label>;
-        <label className="text-sm">Proposal Summary;"
-          <textarea className="mt-1 w-full border rounded p-2" rows={6} value={proposalSummary} onChange={(e) => setProposalSummary(e.target.value)} />;"
+        <label className='text-sm'>Proposal Summary;'
+          <textarea className='mt-1 w-full border rounded p-2' rows={6} value={proposalSummary} onChange={(e) => setProposalSummary(e.target.value)} />;'
         </label>;
-        <label className="text-sm">Timeline;"
-          <input className="mt-1 w-full border rounded p-2" value={timeline} onChange={(e) => setTimeline(e.target.value)} />;"
+        <label className='text-sm'>Timeline;'
+          <input className='mt-1 w-full border rounded p-2' value={timeline} onChange={(e) => setTimeline(e.target.value)} />;'
         </label>;
-        <div className="grid "md":grid-cols-3 gap-3">;"
-          <label className="text-sm">Budget Amount;"
-            <input type="number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value))} />;"
+        <div className='grid 'md':grid-cols-3 gap-3'>;'
+          <label className='text-sm'>Budget Amount;'
+            <input type='number' className='mt-1 w-full border rounded p-2' value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value))} />;'
           </label>;
-          <label className="text-sm">Currency;"
-            <select className="mt-1 w-full border rounded p-2" value={budgetCurrency} onChange={(e) => setBudgetCurrency(e.target.value as any)}>;"
-              <option value="USDC">USDC</option>;"
-              <option value="ZION$">ZION$</option>;"
+          <label className='text-sm'>Currency;'
+            <select className='mt-1 w-full border rounded p-2' value={budgetCurrency} onChange={(e) => setBudgetCurrency(e.target.value as any)}>;'
+              <option value='USDC'>USDC</option>;'
+              <option value='ZION$'>ZION$</option>;'
             </select>;
           </label>;
-          <label className="text-sm">Region;"
-            <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g., LATAM, EU, Global" />;"
+          <label className='text-sm'>Region;'
+            <input className='mt-1 w-full border rounded p-2' value={region} onChange={(e) => setRegion(e.target.value)} placeholder='e.g., LATAM, EU, Global' />;'
           </label>;
         </div>;
-        <label className="text-sm">Supporting Links (one per line)<textarea className="mt-1 w-full border rounded p-2" rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e.target.value)} />;"
+        <label className='text-sm'>Supporting Links (one per line)<textarea className='mt-1 w-full border rounded p-2' rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e.target.value)} />;'
         </label>;
-        <label className="text-sm">Pitch Deck URL;"
-          <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e.target.value)} />;"
+        <label className='text-sm'>Pitch Deck URL;'
+          <input className='mt-1 w-full border rounded p-2' value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e.target.value)} />;'
         </label>;
-        {error && <div className="text-sm text-red-600">{error}</div>}"
-        <div className="flex gap-3">;"
-          <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded "disabled":opacity-50">Save Draft</button>;"
-          <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded "disabled": opacity-50">Submit for Review</button>;"
+        {error && <div className='text-sm text-red-600'>{error}</div>}'
+        <div className='flex gap-3'>;'
+          <button disabled={loading} onClick={() => save(false)} className='px-4 py-2 border rounded 'disabled':opacity-50'>Save Draft</button>;'
+          <button disabled={loading} onClick={() => save(true)} className='px-4 py-2 bg-blue-600 text-white rounded 'disabled': opacity-50'>Submit for Review</button>;'
         </div>;
       </div>;
     </EnhancedLayout>;
@@ -1048,12 +976,9 @@ disabled={loading}
 }
   )}
 }
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   );
 
 }
@@ -1064,20 +989,12 @@ disabled={loading}
 );
 }
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 }
   );
 }
-<<<<<<< HEAD
 
 
 }
@@ -1094,12 +1011,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 
-=======
 
       </div>
     </EnhancedLayout>
   )
-              <option value="ZION$">ZION$</option>
+              <option value='ZION$'>ZION$</option>
               onChange={e = /> setProgram(e.target.value as any)}
             >
               <option value='grant'    />Grant</option>
@@ -1170,7 +1086,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onChange={e =    /> setPitchDeckUrl(e.target.value)}
           />
         </label>
-    }}return ({error && <div className='text-sm text-red-600'    />{error}</div>}
+    }return ({error && <div className='text-sm text-red-600'    />{error}</div>}
         <div className='flex gap-3'    />
           <button
              />
@@ -1181,64 +1097,62 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
   )
 }            </select>
-          </label>"
-          <label className=\"text-sm\"    />Sector;"
-            <select className=\"mt-1 w-full border rounded p-2\" value={sector} onChange={(e) =    /> setSector(e.target.value)}>"
-              <option value=\"\"    />Select sector</option>
+          </label>'
+          <label className=\'text-sm\'    />Sector;'
+            <select className=\'mt-1 w-full border rounded p-2\' value={sector} onChange={(e) =    /> setSector(e.target.value)}>'
+              <option value=\'\'    />Select sector</option>
               {categories.map((c) => <option key={c} value={c}    />{c}</option>)}
             </select>
           </label>
-        </div>;"
-        <label className=\"text-sm\"    />Project Name;"
-          <input className=\"mt-1 w-full border rounded p-2\" value={projectName} onChange={(e) =    /> setProjectName(e.target.value)} />
-        </label>;"
-        <label className=\"text-sm\"    />Team Info;"
-          <textarea className=\"mt-1 w-full border rounded p-2\" rows={3} value={teamInfo} onChange={(e) =    /> setTeamInfo(e.target.value)} />
-        </label>;"
-        <label className=\"text-sm\"    />Proposal Summary;"
-          <textarea className=\"mt-1 w-full border rounded p-2\" rows={6} value={proposalSummary} onChange={(e) =    /> setProposalSummary(e.target.value)} />
-        </label>;"
-        <label className=\"text-sm\"    />Timeline;"
-          <input className=\"mt-1 w-full border rounded p-2\" value={timeline} onChange={(e) =    /> setTimeline(e.target.value)} />
-        </label>;"
-        <div className=\"grid md:grid-cols-3 gap-3\"    />;"
-          <label className=\"text-sm\"    />Budget Amount;"
-            <input type=\"number\" className=\"mt-1 w-full border rounded p-2\" value={budgetAmount} onChange={(e) =    /> setBudgetAmount(Number(e.target.value))} />
-          </label>;"
-          <label className=\"text-sm\"    />Currency;"
-            <select className=\"mt-1 w-full border rounded p-2\" value={budgetCurrency} onChange={(e) =    /> setBudgetCurrency(e.target.value as any)}>;"
-              <option value=\"USDC\"    />USDC</option>;"
-              <option value=\"ZION$\"    />ZION$</option>
+        </div>;'
+        <label className=\'text-sm\'    />Project Name;'
+          <input className=\'mt-1 w-full border rounded p-2\' value={projectName} onChange={(e) =    /> setProjectName(e.target.value)} />
+        </label>;'
+        <label className=\'text-sm\'    />Team Info;'
+          <textarea className=\'mt-1 w-full border rounded p-2\' rows={3} value={teamInfo} onChange={(e) =    /> setTeamInfo(e.target.value)} />
+        </label>;'
+        <label className=\'text-sm\'    />Proposal Summary;'
+          <textarea className=\'mt-1 w-full border rounded p-2\' rows={6} value={proposalSummary} onChange={(e) =    /> setProposalSummary(e.target.value)} />
+        </label>;'
+        <label className=\'text-sm\'    />Timeline;'
+          <input className=\'mt-1 w-full border rounded p-2\' value={timeline} onChange={(e) =    /> setTimeline(e.target.value)} />
+        </label>;'
+        <div className=\'grid md:grid-cols-3 gap-3\'    />;'
+          <label className=\'text-sm\'    />Budget Amount;'
+            <input type=\'number\' className=\'mt-1 w-full border rounded p-2\' value={budgetAmount} onChange={(e) =    /> setBudgetAmount(Number(e.target.value))} />
+          </label>;'
+          <label className=\'text-sm\'    />Currency;'
+            <select className=\'mt-1 w-full border rounded p-2\' value={budgetCurrency} onChange={(e) =    /> setBudgetCurrency(e.target.value as any)}>;'
+              <option value=\'USDC\'    />USDC</option>;'
+              <option value=\'ZION$\'    />ZION$</option>
             </select>
-          </label>;"
-          <label className=\"text-sm\"    />Region;"
-            <input className=\"mt-1 w-full border rounded p-2\" value={region} onChange={(e) =    /> setRegion(e.target.value)} placeholder=\"e.g., LATAM, EU, Global\" />
+          </label>;'
+          <label className=\'text-sm\'    />Region;'
+            <input className=\'mt-1 w-full border rounded p-2\' value={region} onChange={(e) =    /> setRegion(e.target.value)} placeholder=\'e.g., LATAM, EU, Global\' />
           </label>
-        </div>;"
-        <label className=\"text-sm\"    />Supporting Links (one per line)<textarea className=\"mt-1 w-full border rounded p-2\" rows={3} value={supportingLinks} onChange={(e) =    /> setSupportingLinks(e.target.value)} />
-        </label>;"
-        <label className=\"text-sm\"    />Pitch Deck URL;"
-          <input className=\"mt-1 w-full border rounded p-2\" value={pitchDeckUrl} onChange={(e) =    /> setPitchDeckUrl(e.target.value)} />
-        </label>;"
-        {error && <div className=\"text-sm text-red-600\"    />{error}</div>}"
-        <div className=\"flex gap-3\"    />;"
-          <button disabled={loading} onClick={() =    /> save(false)} className=\"px-4 py-2 border rounded disabled:opacity-50\">Save Draft</button>;"
-          <button disabled={loading} onClick={() =    /> save(true)} className=\"px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50\">Submit for Review</button>
+        </div>;'
+        <label className=\'text-sm\'    />Supporting Links (one per line)<textarea className=\'mt-1 w-full border rounded p-2\' rows={3} value={supportingLinks} onChange={(e) =    /> setSupportingLinks(e.target.value)} />
+        </label>;'
+        <label className=\'text-sm\'    />Pitch Deck URL;'
+          <input className=\'mt-1 w-full border rounded p-2\' value={pitchDeckUrl} onChange={(e) =    /> setPitchDeckUrl(e.target.value)} />
+        </label>;'
+        {error && <div className=\'text-sm text-red-600\'    />{error}</div>}'
+        <div className=\'flex gap-3\'    />;'
+          <button disabled={loading} onClick={() =    /> save(false)} className=\'px-4 py-2 border rounded disabled:opacity-50\'>Save Draft</button>;'
+          <button disabled={loading} onClick={() =    /> save(true)} className=\'px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50\'>Submit for Review</button>
         </div>
       </div>
     </EnhancedLayout>
 );
 }
-<<<<<<< HEAD
   );
 }
   );
 }
-"
-=======
+'
 const save = async (submit: boolean) => {
   try {
-  <option value="">Select sector</option> {
+  <option value=''>Select sector</option> {
   categories.map ( (c) => <option key= {
   c 
 }value= {
@@ -1246,64 +1160,47 @@ const save = async (submit: boolean) => {
 }> {
   c 
 }</option>) 
-}</select> </label> </div> <label className="text-sm">Project Name <input className="mt-1 w-full border rounded p-2" value= {
+}</select> </label> </div> <label className='text-sm'>Project Name <input className='mt-1 w-full border rounded p-2' value= {
   projectName 
 }onChange= {
   (e) => setProjectName (e.target.value) 
-}/> </label> <label className="text-sm">Team Info <textarea className="mt-1 w-full border rounded p-2" rows= {
+}/> </label> <label className='text-sm'>Team Info <textarea className='mt-1 w-full border rounded p-2' rows= {
   3 
 }value= {
   teamInfo 
 }onChange= {
   (e) => setTeamInfo (e.target.value) 
-}/> </label> <label className="text-sm">Proposal Summary <textarea className="mt-1 w-full border rounded p-2" rows= {
+}/> </label> <label className='text-sm'>Proposal Summary <textarea className='mt-1 w-full border rounded p-2' rows= {
   6 
 }value= {
   proposalSummary 
 }onChange= {
   (e) => setProposalSummary (e.target.value) 
-}/> </label> <label className="text-sm">Timeline <input className="mt-1 w-full border rounded p-2" value= {
+}/> </label> <label className='text-sm'>Timeline <input className='mt-1 w-full border rounded p-2' value= {
   timeline 
 }onChange= {
   (e) => setTimeline (e.target.value) 
-}/> </label> <div className="grid md:grid-cols-3 gap-3"> </label> </div> <label className="text-sm">Supporting Links (one per line) <textarea className="mt-1 w-full border rounded p-2" rows= {
+}/> </label> <div className='grid md:grid-cols-3 gap-3'> </label> </div> <label className='text-sm'>Supporting Links (one per line) <textarea className='mt-1 w-full border rounded p-2' rows= {
   3 
 }value= {
   supportingLinks 
 }onChange= {
   (e) => setSupportingLinks (e.target.value) 
-}/> </label> <label className="text-sm">Pitch Deck window.URL <input className="mt-1 w-full border rounded p-2" value= {
+}/> </label> <label className='text-sm'>Pitch Deck window.URL <input className='mt-1 w-full border rounded p-2' value= {
   pitchDeckUrl 
 }onChange= {
   (e) => setPitchDeckUrl (e.target.value) 
 }/> </label> {
-  error && <div className="text-sm text-red-600"> {
+  error && <div className='text-sm text-red-600'> {
   error 
 }</div> 
-}<div className="flex gap-3"> </div> </div> </EnhancedLayout>) 
+}<div className='flex gap-3'> </div> </div> </EnhancedLayout>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 pr-12243
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
+''`
 }
   );
 }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+'

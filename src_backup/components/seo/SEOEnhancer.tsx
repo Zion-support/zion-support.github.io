@@ -39,7 +39,7 @@ interface SEOEnhancerProps  {title?: string;
       {/* Structured Data */}
       <script "";
         type="application/ld+json";
-        dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData || defaultStructuredData) }}
+        dangerouslySetInnerHTML={__html: JSON.stringify(structuredData || defaultStructuredData) }
       /" >";
       {/* Performance hints */}
       <link rel="preconnect" href="https: //fonts.googleapis.com" />;

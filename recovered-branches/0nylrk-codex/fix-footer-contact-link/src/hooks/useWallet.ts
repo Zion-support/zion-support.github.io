@@ -57,22 +57,22 @@ if ( {) {
         throw error;
       }
       set_wallet (data);
-    } catch ("err": any) {
+    } catch ('err': any) {
       }
-      console.error ('Error fetching "wallet":', err);'
+      console.error ('Error fetching 'wallet':', err);'
       set_error (err.message);        amount;
-        "transaction_type": 'earn';'
-        "reason": reason |null;
-    "created_at": new Date().toISOString()}
+        'transaction_type': 'earn';'
+        'reason': reason |null;
+    'created_at': new Date().toISOString()}
       ...prev])
   }
   async function spendTokens() {
     }
     if (!user?.id) return;
     setWallet(prev => { return amount; }
-        "transaction_type": 'burn';'
-        "reason": reason |null,
-"created_at": new Date().toISOString()}
+        'transaction_type': 'burn';'
+        'reason': reason |null,
+'created_at': new Date().toISOString()}
       ...prev])
   }
   useEffect(() => {
@@ -98,16 +98,16 @@ if ( {) {
         .from ('token_transactions');'
         .select ('*');'
         .eq ('user_id', user.id);'
-        .order ('created_at', { "ascending": false });'
+        .order ('created_at', { 'ascending': false });'
 ;
       // Check condition,
 if (throw error) {
   $2
 }
       set_transactions ((data || []) as TokenTransaction[]);
-    } catch ("err": any) {
+    } catch ('err': any) {
       }
-      console.error ('Error fetching "transactions":', err);'
+      console.error ('Error fetching 'transactions':', err);'
     }
   }
   async /**
@@ -119,16 +119,16 @@ function earn_tokens() {
 if (return) {
   $2
 }
-    set_wallet (prev => prev ? { ...prev, "balance": prev.balance + amount } : prev);
+    set_wallet (prev => prev ? { ...prev, 'balance': prev.balance + amount } : prev);
     set_transactions (prev => { return [; }
       {
         }
-        "id": crypto.randomUUID ();
-        "user_id": user.id;
+        'id': crypto.randomUUID ();
+        'user_id': user.id;
         amount;
-        "transaction_type": 'earn';'
-        "reason": reason || null,
-        "created_at": new Date ().toISOString ()}
+        'transaction_type': 'earn';'
+        'reason': reason || null,
+        'created_at': new Date ().toISOString ()}
       ...prev]);
   }
   async /**
@@ -141,16 +141,16 @@ if (return) {
   $2
 }
     set_wallet (prev =>;
-      prev ? { ...prev, "balance": Math.max (0, prev.balance - amount) } : prev);
+      prev ? { ...prev, 'balance': Math.max (0, prev.balance - amount) } : prev);
     set_transactions (prev => { return [; }
       {
         }
-        "id": crypto.randomUUID ();
-        "user_id": user.id;
+        'id': crypto.randomUUID ();
+        'user_id': user.id;
         amount;
-        "transaction_type": 'burn';'
-        "reason": reason || null,
-        "created_at": new Date ().toISOString ()}
+        'transaction_type': 'burn';'
+        'reason': reason || null,
+        'created_at': new Date ().toISOString ()}
       ...prev]);
   }
   useEffect (() => {
@@ -192,9 +192,9 @@ export function useWallet() {;
       }
 ;
       setWallet(data);
-    } catch ("err": any) {;
+    } catch ('err': any) {;
       }
-      console.error('Error fetching "wallet":', err),;'
+      console.error('Error fetching 'wallet':', err),;'
       setError(err.message);
     } finally {;
       }
@@ -215,28 +215,28 @@ export function useWallet() {;
         .from('token_transactions');'
         .select('*');'
         .eq('user_id', user.id);'
-        .order('created_at', { "ascending": false }),;'
+        .order('created_at', { 'ascending': false }),;'
       if (error) throw error,;
       setTransactions((data || []) as TokenTransaction[]);
-    } catch ("err": any) {;
+    } catch ('err': any) {;
       }
-      console.error('Error fetching "transactions":', err);'
+      console.error('Error fetching 'transactions':', err);'
     }
   }
 ;
   async function earnTokens() {;
     }
     if (!user?.id) return,;
-    setWallet(prev => prev ? { ...prev, "balance": prev.balance + amount } : prev),;
+    setWallet(prev => prev ? { ...prev, 'balance': prev.balance + amount } : prev),;
     setTransactions(prev => { return [; }
       {;
         }
-        "id": crypto.randomUUID(),;
-        "user_id": user.id,;
+        'id': crypto.randomUUID(),;
+        'user_id': user.id,;
         amount,;
-        "transaction_type": 'earn',;'
-        "reason": reason || null,;
-        "created_at": new Date().toISOString()},;
+        'transaction_type': 'earn',;'
+        'reason': reason || null,;
+        'created_at': new Date().toISOString()},;
       ...prev]);
   }
 ;
@@ -244,17 +244,17 @@ export function useWallet() {;
     }
     if (!user?.id) return,;
     setWallet(prev =>;
-      prev ? { ...prev, "balance": Math.max(0, prev.balance - amount) } : prev;
+      prev ? { ...prev, 'balance': Math.max(0, prev.balance - amount) } : prev;
     ),;
     setTransactions(prev => { return [; }
       {;
         }
-        "id": crypto.randomUUID(),;
-        "user_id": user.id,;
+        'id': crypto.randomUUID(),;
+        'user_id': user.id,;
         amount,;
-        "transaction_type": 'burn',;'
-        "reason": reason || null,;
-        "created_at": new Date().toISOString()},;
+        'transaction_type': 'burn',;'
+        'reason': reason || null,;
+        'created_at': new Date().toISOString()},;
       ...prev]);
   }
 ;
@@ -274,7 +274,7 @@ export function useWallet() {;
     fetchTransactions;
     earnTokens;
 
-    spendTokens}}
+    spendTokens}
 import { useEffect, useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';

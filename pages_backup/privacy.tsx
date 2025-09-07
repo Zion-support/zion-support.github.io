@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -15,7 +12,6 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 origin/automation-improvements-final
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -44,11 +40,8 @@ class ErrorBoundary extends React.Component {
 }
 
 
-<<<<<<< HEAD
-=======
 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -62,11 +55,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 origin/automation-improvements-final
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -80,13 +70,10 @@ import { motion } from "framer-motion";
   MapPin,
   Users,;
 
-<<<<<<< HEAD
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
 import React from 'react';
@@ -99,10 +86,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 } from 'lucide-react';
 
 
@@ -138,10 +122,7 @@ import {
     }
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ];
 
   const rights = [
@@ -149,10 +130,7 @@ import {
       title: 'Access',
       description: 'Request access to your personal information',
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       icon: <Eye className='w-6 h-6' />,
     },
@@ -181,10 +159,7 @@ import {
       description: 'Request restriction of processing activities',
       icon: <Settings className='w-6 h-6' />,
     },
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Eye className="w-6 h-6" />
     };
     {
@@ -212,14 +187,11 @@ import {
       description: 'Request restriction of processing activities',
       icon: <Settings className="w-6 h-6" />
     }
-<<<<<<< HEAD
   ];
 
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -238,18 +210,14 @@ import {
   Users
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
-<<<<<<< HEAD
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/automation-improvements-final
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 origin/automation-improvements-final
 
-<<<<<<< HEAD
 export default function PrivacyPage() {
 export default function PrivacyPage() {;
   return (
@@ -262,7 +230,6 @@ export default function PrivacyPage() {;
       </div>
     </MainLayout>
 
-=======
 
 export default function PrivacyPage() {
 export default function PrivacyPage() {;
@@ -272,22 +239,18 @@ export default function PrivacyPage() {;
 
 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-<<<<<<< HEAD
-  return (
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-=======
-
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  return (
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -298,12 +261,10 @@ origin/automation-improvements-final
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
 
 
-=======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Privacy Policy
               </h1>
@@ -335,8 +296,7 @@ return (
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Privacy Policy;
@@ -348,26 +308,12 @@ return (
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-=======
 
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
 
-=======
+
+
 
 
 
@@ -376,29 +322,20 @@ return (
 ursor/fix-website-loading-errors-and-merge-6662
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEOOptimizer from '../components/SEOOptimizer',
@@ -598,9 +535,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <section className='py-20 px-4'>
             <div className='max-w-6xl mx-auto text-center'>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
 <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                   Privacy Policy
@@ -623,9 +560,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='max-w-6xl mx-auto'>
               <div className='grid lg:grid-cols-2 gap-12 items-center'>
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={ opacity: 0, x: -20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6 }
                 >
 <h2 className='text-4xl font-bold mb-6 text-white'>
                     Our Commitment to Privacy
@@ -650,9 +587,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={ opacity: 0, x: 20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6, delay: 0.2 }
 className='relative'
                 >
                   <div className='bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30'>
@@ -688,8 +625,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
           {/* Privacy Principles */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -698,17 +633,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
+                initial={ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+                whileInView={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 0.6 }  } catch (error) {
+                transition={ duration: 0.6 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -726,17 +661,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    initial={{ opacity: 0, y: 20 }  } catch (error) {
+                    initial={ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+                    whileInView={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+                    transition={ duration: 0.6, delay: index * 0.1 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -782,17 +717,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
+                initial={ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+                whileInView={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 0.6 }  } catch (error) {
+                transition={ duration: 0.6 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -810,17 +745,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    initial={{ opacity: 0, y: 20 }  } catch (error) {
+                    initial={ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+                    whileInView={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+                    transition={ duration: 0.6, delay: index * 0.1 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -855,17 +790,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
+                initial={ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+                whileInView={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 0.6 }  } catch (error) {
+                transition={ duration: 0.6 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -994,17 +929,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
+                initial={ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+                whileInView={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 0.6 }  } catch (error) {
+                transition={ duration: 0.6 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1014,53 +949,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Questions About Privacy?
 
 
-<<<<<<< HEAD:pages_backup/privacy.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           {/* Privacy Principles */}
 <section className='py-20 px-4'>
             <div className='max-w-6xl mx-auto'>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
 className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
                   Our Privacy Principles
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as
                   when you create an account, use our services, or contact us
                   for support.
                 </p>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -1069,37 +979,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className="text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
                 
                 <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
 
 
 
-=======
 
 
                 <h3 className="text-xl font-semibold mb-4">
@@ -1108,24 +1001,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
 origin/automation-improvements-final
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <ul className="list-disc pl-6 mb-6">
                   <li>Name and contact information</li>
                   <li>Email address</li>
@@ -1138,28 +1021,12 @@ origin/automation-improvements-final
                   Usage Information
                 </h3>
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
 origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
-<<<<<<< HEAD:pages_backup/privacy.tsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -1171,25 +1038,13 @@ origin/automation-improvements-final
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 ursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
               </motion.div>
@@ -1198,9 +1053,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {privacySections.map((section, index) => (
                   <motion.div
                     key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50'
                   >
                     <div
@@ -1229,9 +1084,9 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 bor
 <section className='py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50'>
             <div className='max-w-6xl mx-auto'>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
 className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
@@ -1243,36 +1098,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   improve our services.
                 </p>
 
-<<<<<<< HEAD
 
 
                 <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and improve our services.
                 </p>
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
                 
 
 origin/automation-improvements-final
-<<<<<<< HEAD:pages_backup/privacy.tsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 origin/automation-improvements-final
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -1285,25 +1123,13 @@ origin/automation-improvements-final
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 ursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -1311,43 +1137,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+
+
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
 
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
@@ -1366,10 +1168,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
                 <p className="mb-6">
-<<<<<<< HEAD:pages_backup/privacy.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
@@ -1395,44 +1193,19 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
 
 origin/automation-improvements-final
-<<<<<<< HEAD:pages_backup/privacy.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 origin/automation-improvements-final
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
@@ -1451,13 +1224,6 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
 
 
 
@@ -1480,17 +1246,8 @@ origin/automation-improvements-final
                 <p className="mb-6">
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
-<<<<<<< HEAD:pages_backup/privacy.tsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -1508,9 +1265,9 @@ origin/automation-improvements-final
                 {rights.map((right, index) => (
                   <motion.div
                     key={right.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center'
                   >
                     <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4'>
@@ -1530,9 +1287,9 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 bord
 <section className='py-20 px-4'>
             <div className='max-w-4xl mx-auto'>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
 className='space-y-12'
               >
                 <div>
@@ -1698,31 +1455,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
 
 
 <p className="text-sm text-gray-600 mt-8">
                 <p className="text-sm text-gray-600 mt-8">
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1731,7 +1467,6 @@ main
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   Last updated: January 2024
                 </p>
               </div>
@@ -1739,16 +1474,12 @@ main
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-=======
     </MainLayout>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   );
 }
 
 
-<<<<<<< HEAD
   const privacySections = [
     {
       title: 'Information We Collect',
@@ -1842,9 +1573,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           {/* Hero Section */}
           <section className='py-20 px-4'>
             <div className='max-w-6xl mx-auto text-center'>              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
                 <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                   Privacy Policy
@@ -1861,9 +1592,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           </section>
     </MainLayout>
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
               <div className="prose prose-lg max-w-none">;
                 <h2 className="text-2xl font-bold mb-6">;
@@ -1890,13 +1619,6 @@ export default /**
  */
 function PrivacyPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
     <MainLayout;
       title="Privacy Policy - Zion Tech Group";
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information.";
@@ -1908,9 +1630,9 @@ function PrivacyPage() {
         <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
           <div className="max - w-7xl mx - auto px - 4">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center";
             >;
               <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -1927,9 +1649,9 @@ function PrivacyPage() {
         <section className="py - 16 px - 4">;
           <div className="max - w-4xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="bg - white rounded - 2xl shadow - lg p - 8 md:p - 12";
             >;
               <div className="prose prose - lg max - w-none">;
@@ -1938,33 +1660,13 @@ function PrivacyPage() {
                 </h2>;
                 <p className="mb - 6">;
 
-<<<<<<< HEAD:pages_backup/privacy.tsx
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   We collect information you provide directly to us, such as;
                   when you create an account, use our services, or contact us;
                   for support.;
                 </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 <h3 className="text - xl font - semibold mb - 4">;
                   Personal Information;
@@ -2006,33 +1708,12 @@ function PrivacyPage() {
                 </h2>;
                 <p className="mb - 6">;
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   We do not sell, trade, or otherwise transfer your personal;
                   information to third parties without your consent, except as;
                   described in this policy.;
                 </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
                 <p className="mb - 6">;
@@ -2043,33 +1724,13 @@ function PrivacyPage() {
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
                 <p className="mb - 6">;
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   You have the right to access, update, or delete your personal;
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -2079,9 +1740,9 @@ function PrivacyPage() {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Privacy Policy
@@ -2174,9 +1835,9 @@ icon: <Settings className=&quot;w-6 h-6&quot; />
           <section className=&quot;py-20 px-4&quot;>
             <div className=&quot;max-w-6xl mx-auto text-center&quot;>
               <motion.div
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6}}
+                initial={_{ opacity: 0, _y: 20}
+                animate={_{ opacity: 1, _y: 0}
+                transition={_{ duration: 0.6}
               >
                 <h1 className=&quot;text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
                   Privacy Policy
@@ -2220,9 +1881,9 @@ export default function PrivacyPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center"
             >
 <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -2240,9 +1901,9 @@ export default function PrivacyPage() {
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
             >
               <div className="prose prose-lg max-w-none">
@@ -2389,9 +2050,9 @@ If you have any questions about this Privacy Policy, please
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={ opacity: 0, x: -20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6 }
                 >
 <h2 className="text-4xl font-bold mb-6 text-white">
                     Our Commitment to Privacy
@@ -2411,9 +2072,9 @@ If you have any questions about this Privacy Policy, please
                   </div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={ opacity: 0, x: 20 }
+                  whileInView={ opacity: 1, x: 0 }
+                  transition={ duration: 0.6, delay: 0.2 }
 className="relative"
                 >
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
@@ -2443,9 +2104,9 @@ className="relative"
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
@@ -2455,9 +2116,9 @@ className="text-center mb-16"
                 {privacySections.map((section, index) => (
                   <motion.div
                     key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -2483,9 +2144,9 @@ className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 bor
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
@@ -2495,9 +2156,9 @@ className="text-center mb-16"
                 {rights.map((right, index) => (
                   <motion.div
                     key={right.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
                   >
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -2516,9 +2177,9 @@ className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 bord
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
 className="space-y-12"
               >
                 <div>
@@ -2676,9 +2337,9 @@ className="space-y-12"
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
@@ -2695,9 +2356,9 @@ className="space-y-12"
 <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
             <div className='max-w-4xl mx-auto text-center'>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
 <h2 className='text-4xl font-bold mb-6 text-white'>
                   Questions About Privacy?
@@ -2719,20 +2380,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href='/contact'
                     className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2'
                   >
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <User className='w-5 h-5' />                    Contact Form
                   </a>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     </MainLayout>;
   );
 }
@@ -2752,13 +2404,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <User className="w-5 h-5" />
                     Contact Form
                   </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
                   <a
                     href=&quot;/contact&quot;
                     className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2&quot;
@@ -2767,25 +2412,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Contact Form
                   </Link>
 
-<<<<<<< HEAD:pages_backup/privacy.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
                     <User className='w-5 h-5' />
                     Contact Form
                   </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
                     <User className='w-5 h-5' />
                     Contact Form
                   </a>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </div>
               </motion.div>
             </div>
@@ -2793,34 +2428,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </main>
       </Layout>
     </ErrorBoundary>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
   );
 };
 export default PrivacyPage;
 
 
-<<<<<<< HEAD:pages_backup/privacy.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   )
 };
 
@@ -2831,12 +2449,9 @@ export default PrivacyPage;
 
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
-<<<<<<< HEAD
-=======
 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <p className="mb - 6">;
                   If you have any questions about this Privacy Policy, please;
                   contact us at:;
@@ -2862,14 +2477,6 @@ export default PrivacyPage;
 <p className="text - sm text - gray - 600 mt - 8">;
                   Last updated: January 2024;
                 </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
               </div>;
             </motion.div>;
           </div>;
@@ -2877,8 +2484,6 @@ export default PrivacyPage;
       </div>;
     </MainLayout>);
 }
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">;
                   <a;
                     href="mailto:kleber@ziontechgroup.com";
@@ -2904,23 +2509,9 @@ export default PrivacyPage;
   );
 },;
 export default PrivacyPage;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/privacy.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 );
 };
 export default PrivacyPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
-=======
 
 main
 
@@ -2930,4 +2521,3 @@ main
 };
 export default PrivacyPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

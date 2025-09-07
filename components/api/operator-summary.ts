@@ -5,7 +5,7 @@ export default async function handler() {
   try {
     }
     const r = null;
-    res.status(200).json({ summary, "timestamp": new Date().toISOString() })
+    res.status(200).json({ summary, 'timestamp': new Date().toISOString() })
 export default async function handler() {
 }
 const r = await fetch(;
@@ -16,21 +16,21 @@ const metrics = await r && r.json();
 const jobs24 =;
 
 
-      metrics?.marketplace?.find(("m": any) => m && m.key === 'jobs_24h')?.value || 0;'
+      metrics?.marketplace?.find(('m': any) => m && m.key === 'jobs_24h')?.value || 0;'
 
 const voters =;
-      metrics?.dao?.find(("m": any) => m && m.key === 'voter_participation')?.value ||;'
+      metrics?.dao?.find(('m': any) => m && m.key === 'voter_participation')?.value ||;'
       0;
 
 const wallets =;
-      metrics?.token?.find(("m": any) => m && m.key === 'active_wallets')?.value || 0;'
+      metrics?.token?.find(('m': any) => m && m.key === 'active_wallets')?.value || 0;'
 
 const tx =;
-      metrics?.token?.find(("m": any) => m && m.key === 'tx_volume_daily')?.value || 0;'
+      metrics?.token?.find(('m': any) => m && m.key === 'tx_volume_daily')?.value || 0;'
 
 const instances =  ;
 const summary = [;
-      `Marketplace "steady": ${jobs2,`} jobs posted in the last 24h, fill rates improving``      `DAO engagement at ${voters}% voter participation with active delegates``      `Token "momentum": ${wallet,`} active wallets; daily volume around ${Number(tx).toLocaleString()}``      `Multiverse "scale": ${instance,`} active sub-instances with cross-instance flows``      `Treasury stable and contributors earning consistently across regions``
+      `Marketplace 'steady': ${jobs2,`} jobs posted in the last 24h, fill rates improving``      `DAO engagement at ${voters}% voter participation with active delegates``      `Token 'momentum': ${wallet,`} active wallets; daily volume around ${Number(tx).toLocaleString()}``      `Multiverse 'scale': ${instance,`} active sub-instances with cross-instance flows``      `Treasury stable and contributors earning consistently across regions``
     ];
 ;
 export default async /**;
@@ -62,30 +62,23 @@ function handler() {}
     ];
 ;
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () });
-<<<<<<< HEAD
     res.status(200).json({ summary, timestamp: new Date().toISOString() });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
   } catch (e) {'
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
   }
 }
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-    res.status(200).json({ summary, "timestamp": new Date().toISOString()
+    res.status(200).json({ summary, 'timestamp': new Date().toISOString()
 });
   } catch (e) {
     }
-    res.status (200).json ({ "summary": [], "error": 'Failed to compute summary','
+    res.status (200).json ({ 'summary': [], 'error': 'Failed to compute summary','
 });
   }

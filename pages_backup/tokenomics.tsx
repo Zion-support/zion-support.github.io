@@ -243,8 +243,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       alert('Failed to create share link');
       return;
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 
 
@@ -280,48 +280,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               <span>Admin</span>
             </label>
-            <label className="inline-flex items-center gap-2">
-              <input type="checkbox" checked={publicPreview} onChange={(e) => setPublicPreview(e.target.checked)} />
+            <label className='inline-flex items-center gap-2'>
+              <input type='checkbox' checked={publicPreview} onChange={(e) => setPublicPreview(e.target.checked)} />
               <span>Public after launch</span>
             </label>
-            <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
+            <button onClick={handleShareableLink} className='px-3 py-1 rounded-md bg-indigo-600 text-white'>Create Share Link</button>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="space-y-6">
-            <div className="rounded-lg border p-4 space-y-4">
-              <h2 className="font-medium">Builder Inputs</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
+          <div className='space-y-6'>
+            <div className='rounded-lg border p-4 space-y-4'>
+              <h2 className='font-medium'>Builder Inputs</h2>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 
 
 
                 <div>
-                  <label className="text-xs opacity-70">Token name</label>
-                  <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
+                  <label className='text-xs opacity-70'>Token name</label>
+                  <input className='w-full border rounded-md px-3 py-2' value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
                 </div>
                 <div>
-                  <label className="text-xs opacity-70">Token supply</label>
-                  <input className="w-full border rounded-md px-3 py-2" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} />
+                  <label className='text-xs opacity-70'>Token supply</label>
+                  <input className='w-full border rounded-md px-3 py-2' value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} />
                 </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Use cases</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={useCases} onChange={(e) => setUseCases(e.target.value)} />
+                <div className='md:col-span-2'>
+                  <label className='text-xs opacity-70'>Use cases</label>
+                  <textarea className='w-full border rounded-md px-3 py-2' rows={2} value={useCases} onChange={(e) => setUseCases(e.target.value)} />
                 </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Rewards logic</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} />
+                <div className='md:col-span-2'>
+                  <label className='text-xs opacity-70'>Rewards logic</label>
+                  <textarea className='w-full border rounded-md px-3 py-2' rows={2} value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} />
                 </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Governance logic</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={governance} onChange={(e) => setGovernance(e.target.value)} />
+                <div className='md:col-span-2'>
+                  <label className='text-xs opacity-70'>Governance logic</label>
+                  <textarea className='w-full border rounded-md px-3 py-2' rows={2} value={governance} onChange={(e) => setGovernance(e.target.value)} />
                 </div>
                 <div>
-                  <label className="text-xs opacity-70">Legal jurisdiction</label>
-                  <select className="w-full border rounded-md px-3 py-2" value={jurisdiction} onChange={(e) => setJurisdiction(e.target.value)}>
-                    <option value="US">US</option>
-                    <option value="EU">EU</option>
-                    <option value="SG">Singapore</option>
-                    <option value="AE">UAE</option>
+                  <label className='text-xs opacity-70'>Legal jurisdiction</label>
+                  <select className='w-full border rounded-md px-3 py-2' value={jurisdiction} onChange={(e) => setJurisdiction(e.target.value)}>
+                    <option value='US'>US</option>
+                    <option value='EU'>EU</option>
+                    <option value='SG'>Singapore</option>
+                    <option value='AE'>UAE</option>
                   </select>
                 </div>
                 <div className='flex items-center gap-2'>
@@ -410,7 +410,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Clear AI Draft
                 </button>
-                <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
+                <button onClick={() => setGeneratedMarkdown('')} className='px-4 py-2 rounded-md border'>Clear AI Draft</button>
               </div>
             </div>
             <div className='rounded-lg border p-4 space-y-2'>
@@ -447,7 +447,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
 origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
-              <span className="text-xs opacity-60">Auto-updating preview</span>
+              <span className='text-xs opacity-60'>Auto-updating preview</span>
             </div>
             <MarkdownPreview
               markdown={previewMarkdown}
@@ -552,11 +552,11 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
 <div className='space-y-1 text-sm'>
 origin/cursor/automate-test-improve-and-merge-code-2533
       {data.map((d, idx) => (
-        <div key={idx} className="flex items-center gap-2">
-          <div className="h-2 bg-gray-200 rounded w-full">
-            <div className="h-2 bg-indigo-600 rounded" style={{ width: `${(d.percent / total) * 100}%` }} />
+        <div key={idx} className='flex items-center gap-2'>
+          <div className='h-2 bg-gray-200 rounded w-full'>
+            <div className='h-2 bg-indigo-600 rounded' style={ width: `${(d.percent / total) * 100}%` } />
           </div>
-          <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
+          <span className='w-48 truncate'>{d.label} ({d.percent}%)</span>
         </div>
       ))}
     </div>

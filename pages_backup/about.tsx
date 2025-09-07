@@ -1,16 +1,9 @@
 
-<<<<<<< HEAD
 
 import React from "react";
 import Layout from "../components/Layout";
 
 import React from 'react';
-<<<<<<< HEAD:pages_backup/about.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/about.tsx
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -121,9 +114,9 @@ export default function AboutPage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
             className="text-center mb-16"
           >
             <h1 className="text-5xl font-bold text-white mb-6">
@@ -139,9 +132,9 @@ export default function AboutPage() {
             {achievements.map((achievement, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
                 className="text-center"
               >
                 <div className="text-4xl font-bold text-blue-400 mb-2">{achievement.stat}</div>
@@ -155,9 +148,9 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
               >
                 <div className="flex items-center mb-4">
@@ -170,9 +163,9 @@ export default function AboutPage() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.8 }
             className="bg-blue-600 rounded-xl p-8 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -199,11 +192,6 @@ export default function AboutPage() {
         </div>
       </div>
     </MainLayout>
-<<<<<<< HEAD:pages_backup/about.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 import Head from 'next/head';
@@ -232,8 +220,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Lock,
   TrendingUp;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
@@ -362,16 +348,16 @@ export default function About() {;
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
                 className="text-4xl md:text-6xl font-bold text-white mb-6"
               >
                 About Zion Tech Group
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ delay: 0.2 }
                 className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
               >
                 We're a team of passionate technologists dedicated to transforming businesses through innovative software solutions and cutting-edge technology.
@@ -405,9 +391,9 @@ export default function About() {;
                 {values.map((value, index) => (
                   <motion.div
                     key={value.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ delay: index * 0.1 }
                     className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
                   >
                     <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${value.color} flex items-center justify-center mb-4`}>
@@ -437,9 +423,9 @@ export default function About() {;
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ delay: index * 0.1 }
                     className="text-center"
                   >
                     <div className="text-4xl md:text-5xl font-bold text-white mb-2">
@@ -466,9 +452,9 @@ export default function About() {;
                 {team.map((member, index) => (
                   <motion.div
                     key={member.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ delay: index * 0.1 }
                     className="text-center"
                   >
                     <div className="w-32 h-32 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
@@ -505,8 +491,8 @@ export default function About() {;
               <motion.a
                 href="/contact"
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
               >
                 Get Started Today
               </motion.a>
@@ -515,9 +501,6 @@ export default function About() {;
         </section>
       </div>
     </>
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/about.tsx
   );
       name: 'Kleber',
       role: 'Founder & CEO',
@@ -671,9 +654,6 @@ function About() {
       </div>;
     </Layout>);
 }
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ];
 
   const team = [
@@ -729,9 +709,9 @@ name: "John Smith",
                 {values.map((value, index) => (
                   <motion.div
                     key={value.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ delay: index * 0.1 }
                     className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
                   >
                     <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${value.color} flex items-center justify-center mb-4`}>
@@ -761,9 +741,9 @@ name: "John Smith",
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1 }}
+                    initial={ opacity: 0, scale: 0.8 }
+                    animate={ opacity: 1, scale: 1 }
+                    transition={ delay: index * 0.1 }
                     className="text-center"
                   >
                     <div className="text-4xl md:text-5xl font-bold text-white mb-2">
@@ -790,9 +770,9 @@ name: "John Smith",
                 {team.map((member, index) => (
                   <motion.div
                     key={member.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ delay: index * 0.1 }
                     className="text-center"
                   >
                     <div className="w-32 h-32 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
@@ -829,8 +809,8 @@ name: "John Smith",
               <motion.a
                 href="/contact"
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
               >
                 Get Started Today
               </motion.a>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 'use client';
 
@@ -52,9 +51,9 @@ const Navigation = () => {
                     </button>;
                     <AnimatePresence>;
                       {activeDropdown === item.name && (<motion.div;
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
+                          initial={ opacity: 0, y: -10 }
+                          animate={ opacity: 1, y: 0 }
+                          exit={ opacity: 0, y: -10 }
                           className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50";
                         >;
                           {item.dropdown.map((dropdownItem) => (<Link;
@@ -103,9 +102,9 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isOpen && (<motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
               className="md:hidden border-t border-gray-800";
             >;
               <div className="py-4 space-y-2">;
@@ -123,7 +122,7 @@ const Navigation = () => {
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
                                 className="block px-4 py-2 text-gray-400 hover:text-white transition-colors";
-                                onClick={() => {setIsOpen(false)setActiveDropdown(null)}}
+                                onClick={() => {setIsOpen(false)setActiveDropdown(null)}
                               >;
                                 {dropdownItem.name}
                               </Link>;
@@ -203,7 +202,7 @@ export default function Navigation() {export default function Navigation() {expo
       description: "Scalable startup platforms";
       icon: Zap;
     }
-    {{name: "Training";
+    {name: "Training";
       href: "/training";
       description: "Professional development";
     }
@@ -343,9 +342,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isServicesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
@@ -374,9 +373,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isServicesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: 10 }
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
@@ -400,9 +399,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isSolutionsOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsSolutionsOpen(true)}
                       onMouseLeave={() => setIsSolutionsOpen(false)}
@@ -450,9 +449,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isSolutionsOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: 10 }
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
@@ -476,9 +475,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isIndustriesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
@@ -513,9 +512,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isResourcesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsResourcesOpen(true)}
                       onMouseLeave={() => setIsResourcesOpen(false)}
@@ -590,9 +589,9 @@ export default function Navigation() {;
           <AnimatePresence>;
             {isMenuOpen && (;
               <motion&& motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={ opacity: 0, height: 0 }
+                animate={ opacity: 1, height: "auto" }
+                exit={ opacity: 0, height: 0 }
                 className="lg:hidden border-t border-gray-200">;
                 <div className="py-4 space-y-2">;
                   <Link
@@ -718,9 +717,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isIndustriesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: 10 }
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsIndustriesOpen (true)}
                       onMouseLeave={() => setIsIndustriesOpen (false)}
@@ -756,9 +755,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isResourcesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: 10 }
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsResourcesOpen (true)}
                       onMouseLeave={() => setIsResourcesOpen (false)}
@@ -824,9 +823,9 @@ export default function Navigation() {;
           <AnimatePresence>;
             {isMenuOpen && (
               <motion.div;
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={ opacity: 0, height: 0 }
+                animate={ opacity: 1, height: "auto" }
+                exit={ opacity: 0, height: 0 }
                 className="lg:hidden border - t border - gray - 200";
               >;
                 <div className="py - 4 space - y-2">;
@@ -987,9 +986,9 @@ const Navigation = () => {
                     </button>;
                     <AnimatePresence>;
                       {activeDropdown === item.name && (<motion.div;
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
+                          initial={ opacity: 0, y: -10 }
+                          animate={ opacity: 1, y: 0 }
+                          exit={ opacity: 0, y: -10 }
                           className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50";
                         >;
                           {item.dropdown.map((dropdownItem) => (<Link;
@@ -1038,9 +1037,9 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isOpen && (<motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={ opacity: 0, height: 0 }
+              animate={ opacity: 1, height: 'auto' }
+              exit={ opacity: 0, height: 0 }
               className="md:hidden border-t border-gray-800";
             >;
               <div className="py-4 space-y-2">;
@@ -1058,7 +1057,7 @@ const Navigation = () => {
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
                                 className="block px-4 py-2 text-gray-400 hover:text-white transition-colors";
-                                onClick={() => {setIsOpen(false)setActiveDropdown(null)}}
+                                onClick={() => {setIsOpen(false)setActiveDropdown(null)}
                               >;
                                 {dropdownItem.name}
                               </Link>;
@@ -1138,7 +1137,7 @@ export default function Navigation() {export default function Navigation() {expo
       description: "Scalable startup platforms";
       icon: Zap;
     }
-    {{name: "Training";
+    {name: "Training";
       href: "/training";
       description: "Professional development";
     }
@@ -1236,15 +1235,15 @@ export default function Navigation() {
                 </button>;
                 <AnimatePresence>;
                   {isServicesOpen && (<motion&& motion.div;
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4";
                   {isServicesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
@@ -1275,9 +1274,9 @@ export default function Navigation() {
                   {isServicesOpen && (<motion.div;
                   {isServicesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: 10 }
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
@@ -1307,15 +1306,15 @@ export default function Navigation() {
                 </button>;
                 <AnimatePresence>;
                   {isSolutionsOpen && (<motion&& motion.div;
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4";
                   {isSolutionsOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsSolutionsOpen(true)}
                       onMouseLeave={() => setIsSolutionsOpen(false)}
@@ -1366,9 +1365,9 @@ export default function Navigation() {
                   {isSolutionsOpen && (<motion.div;
                   {isSolutionsOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={ opacity: 0, coordinate_y: 10 }
+                      animate={ opacity: 1, coordinate_y: 0 }
+                      exit={ opacity: 0, coordinate_y: 10 }
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
@@ -1398,15 +1397,15 @@ export default function Navigation() {
                 </button>;
                 <AnimatePresence>;
                   {isIndustriesOpen && (<motion&& motion.div;
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4";
                   {isIndustriesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
@@ -1443,15 +1442,15 @@ export default function Navigation() {
                 </button>;
                 <AnimatePresence>;
                   {isResourcesOpen && (<motion&& motion.div;
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4";
                   {isResourcesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={ opacity: 0, y: 10 }
+                      animate={ opacity: 1, y: 0 }
+                      exit={ opacity: 0, y: 10 }
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsResourcesOpen(true)}
                       onMouseLeave={() => setIsResourcesOpen(false)}
@@ -1596,9 +1595,9 @@ const Navigation = () => {
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
+                          initial={ opacity: 0, y: -10 }
+                          animate={ opacity: 1, y: 0 }
+                          exit={ opacity: 0, y: -10 }
                           className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
                         >
                           {item.dropdown.map((dropdownItem) => (
@@ -1640,14 +1639,9 @@ const Navigation = () => {
               </div>
 import React, { useState } from 'react';
 import Link from 'next/link';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -1835,9 +1829,9 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isServicesOpen && (
                     <motion&& motion.div
-                      initial={{ opacity: 0;, y: 10 ;}}
-                      animate={{ opacity: 1;, y: 0 ;}}
-                      exit={{ opacity: 0;, y: 10 ;}}
+                      initial={ opacity: 0;, y: 10 ;}
+                      animate={ opacity: 1;, y: 0 ;}
+                      exit={ opacity: 0;, y: 10 ;}
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
@@ -1866,9 +1860,9 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isServicesOpen && (
                     <motion.div
-                      initial={{ opacity: 0;, coordinate_y: 10 ;}}
-                      animate={{ opacity: 1;, coordinate_y: 0 ;}}
-                      exit={{ opacity: 0;, coordinate_y: 10 ;}}
+                      initial={ opacity: 0;, coordinate_y: 10 ;}
+                      animate={ opacity: 1;, coordinate_y: 0 ;}
+                      exit={ opacity: 0;, coordinate_y: 10 ;}
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4"
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
@@ -1892,9 +1886,9 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isSolutionsOpen && (
                     <motion&& motion.div
-                      initial={{ opacity: 0;, y: 10 ;}}
-                      animate={{ opacity: 1;, y: 0 ;}}
-                      exit={{ opacity: 0;, y: 10 ;}}
+                      initial={ opacity: 0;, y: 10 ;}
+                      animate={ opacity: 1;, y: 0 ;}
+                      exit={ opacity: 0;, y: 10 ;}
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsSolutionsOpen(true)}
                       onMouseLeave={() => setIsSolutionsOpen(false)}
@@ -1942,9 +1936,9 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isSolutionsOpen && (
                     <motion.div
-                      initial={{ opacity: 0;, coordinate_y: 10 ;}}
-                      animate={{ opacity: 1;, coordinate_y: 0 ;}}
-                      exit={{ opacity: 0;, coordinate_y: 10 ;}}
+                      initial={ opacity: 0;, coordinate_y: 10 ;}
+                      animate={ opacity: 1;, coordinate_y: 0 ;}
+                      exit={ opacity: 0;, coordinate_y: 10 ;}
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4"
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
@@ -1968,9 +1962,9 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isIndustriesOpen && (
                     <motion&& motion.div
-                      initial={{ opacity: 0;, y: 10 ;}}
-                      animate={{ opacity: 1;, y: 0 ;}}
-                      exit={{ opacity: 0;, y: 10 ;}}
+                      initial={ opacity: 0;, y: 10 ;}
+                      animate={ opacity: 1;, y: 0 ;}
+                      exit={ opacity: 0;, y: 10 ;}
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
@@ -2005,9 +1999,9 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isResourcesOpen && (
                     <motion&& motion.div
-                      initial={{ opacity: 0;, y: 10 ;}}
-                      animate={{ opacity: 1;, y: 0 ;}}
-                      exit={{ opacity: 0;, y: 10 ;}}
+                      initial={ opacity: 0;, y: 10 ;}
+                      animate={ opacity: 1;, y: 0 ;}
+                      exit={ opacity: 0;, y: 10 ;}
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsResourcesOpen(true)}
                       onMouseLeave={() => setIsResourcesOpen(false)}
@@ -2072,9 +2066,9 @@ export default function Navigation() {
           <AnimatePresence>
             {isMenuOpen && (
               <motion&& motion.div
-                initial={{ opacity: 0;, height: 0 ;}}
-                animate={{ opacity: 1;, height: "auto" ;}}
-                exit={{ opacity: 0;, height: 0 ;}}
+                initial={ opacity: 0;, height: 0 ;}
+                animate={ opacity: 1;, height: "auto" ;}
+                exit={ opacity: 0;, height: 0 ;}
                 className="lg:hidden border-t border-gray-200">
                 <div className="py-4 space-y-2">
                   <Link
@@ -2200,9 +2194,9 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isIndustriesOpen && (
                     <motion.div
-                      initial={{ opacity: 0;, coordinate_y: 10 ;}}
-                      animate={{ opacity: 1;, coordinate_y: 0 ;}}
-                      exit={{ opacity: 0;, coordinate_y: 10 ;}}
+                      initial={ opacity: 0;, coordinate_y: 10 ;}
+                      animate={ opacity: 1;, coordinate_y: 0 ;}
+                      exit={ opacity: 0;, coordinate_y: 10 ;}
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4"
                       onMouseEnter={() => setIsIndustriesOpen (true)}
                       onMouseLeave={() => setIsIndustriesOpen (false)}
@@ -2238,9 +2232,9 @@ export default function Navigation() {
                 <AnimatePresence>
                   {isResourcesOpen && (
                     <motion.div
-                      initial={{ opacity: 0;, coordinate_y: 10 ;}}
-                      animate={{ opacity: 1;, coordinate_y: 0 ;}}
-                      exit={{ opacity: 0;, coordinate_y: 10 ;}}
+                      initial={ opacity: 0;, coordinate_y: 10 ;}
+                      animate={ opacity: 1;, coordinate_y: 0 ;}
+                      exit={ opacity: 0;, coordinate_y: 10 ;}
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4"
                       onMouseEnter={() => setIsResourcesOpen (true)}
                       onMouseLeave={() => setIsResourcesOpen (false)}
@@ -2306,9 +2300,9 @@ export default function Navigation() {
           <AnimatePresence>
             {isMenuOpen && (
               <motion.div
-                initial={{ opacity: 0;, height: 0 ;}}
-                animate={{ opacity: 1;, height: "auto" ;}}
-                exit={{ opacity: 0;, height: 0 ;}}
+                initial={ opacity: 0;, height: 0 ;}
+                animate={ opacity: 1;, height: "auto" ;}
+                exit={ opacity: 0;, height: 0 ;}
                 className="lg:hidden border - t border - gray - 200"
               >
                 <div className="py - 4 space - y-2">
@@ -2467,9 +2461,9 @@ const Navigation = () => {
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0;, y: -10 ;}}
-                          animate={{ opacity: 1;, y: 0 ;}}
-                          exit={{ opacity: 0;, y: -10 ;}}
+                          initial={ opacity: 0;, y: -10 ;}
+                          animate={ opacity: 1;, y: 0 ;}
+                          exit={ opacity: 0;, y: -10 ;}
                           className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
                         >
                           {item.dropdown.map((dropdownItem) => (
@@ -2524,9 +2518,9 @@ const Navigation = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0;, height: 0 ;}}
-              animate={{ opacity: 1;, height: 'auto' ;}}
-              exit={{ opacity: 0;, height: 0 ;}}
+              initial={ opacity: 0;, height: 0 ;}
+              animate={ opacity: 1;, height: 'auto' ;}
+              exit={ opacity: 0;, height: 0 ;}
               className="md:hidden border-t border-gray-800"
             >
               <div className="py-4 space-y-2">
@@ -2551,7 +2545,7 @@ const Navigation = () => {
                                 onClick={() => {
                                   setIsOpen(false)
                                   setActiveDropdown(null)
-                                }}
+                                }
                               >
                                 {dropdownItem.name}
                               </Link>
@@ -2584,7 +2578,6 @@ const Navigation = () => {
           )}
         </AnimatePresence>
       </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -2605,7 +2598,6 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
@@ -2702,21 +2694,20 @@ const Navigation: React.FC = () => {
 export default Navigation;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-=======
           {/* Mobile Menu Button */}
           <motion.button
             className="md:hidden p-2 rounded-lg transition-colors duration-200"
             onClick={() => setIsOpen(!isOpen)}
-            whileTap={{ scale: 0.95 }}
+            whileTap={ scale: 0.95 }
           >
             <AnimatePresence mode="wait">
               {isOpen ? (
                 <motion.div
                   key="close"
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
+                  initial={ rotate: -90, opacity: 0 }
+                  animate={ rotate: 0, opacity: 1 }
+                  exit={ rotate: 90, opacity: 0 }
+                  transition={ duration: 0.2 }
                 >
                   <X className={`w-6 h-6 ${
                     scrolled ? 'text-gray-700' : 'text-white'
@@ -2725,10 +2716,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               ) : (
                 <motion.div
                   key="menu"
-                  initial={{ rotate: 90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: -90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
+                  initial={ rotate: 90, opacity: 0 }
+                  animate={ rotate: 0, opacity: 1 }
+                  exit={ rotate: -90, opacity: 0 }
+                  transition={ duration: 0.2 }
                 >
                   <Menu className={`w-6 h-6 ${
                     scrolled ? 'text-gray-700' : 'text-white'
@@ -2741,7 +2732,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       )}
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-<<<<<<< HEAD
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
@@ -2769,7 +2759,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 <motion.button
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 group mt-4"
                   variants={mobileItemVariants}
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={ scale: 0.95 }
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -2784,12 +2774,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 };
 
 export default Navigation;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
     </nav>
   )
 }
 export default Navigation
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

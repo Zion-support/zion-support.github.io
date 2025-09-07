@@ -23,7 +23,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
   if (!tutorial) {
 origin/cursor/automate-test-improve-and-merge-code-2533
     return (
-      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
+      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>
         Tutorial not found.
       </div>
     )

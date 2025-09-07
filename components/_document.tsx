@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';'
@@ -20,11 +19,11 @@ export default function Document() {return (<Html lang='en'>;
         <meta;
           name='viewport';'
           content='width=device-width, initial-scale=1, viewport-fit=cover';' />;
-        <link rel='preconnect' href='"https"://fonts && fonts.googleapis.com' />;'
+        <link rel='preconnect' href=''https'://fonts && fonts.googleapis.com' />;'
 
         <link,
 rel='preconnect''
-          href='"https"://fonts && fonts.gstatic.com''
+          href=''https'://fonts && fonts.gstatic.com''
           crossOrigin='''
           rel='stylesheet'' />
       </Head>
@@ -35,8 +34,4 @@ rel='preconnect''
     </Html>
   )
 }
-<<<<<<< HEAD
-  )}}
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+  )}

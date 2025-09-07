@@ -88,7 +88,7 @@ return { "props": { vendors } },;
 };
 
 
-}}export const getServerSideProps: GetServerSideProps<Props> = async () => {const { listVendors } = await import('../../utils/vendor-store')const vendors = listVendors()return { props: { vendors } }}
+}export const getServerSideProps: GetServerSideProps<Props> = async () => {const { listVendors } = await import('../../utils/vendor-store')const vendors = listVendors()return { props: { vendors } }
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -130,11 +130,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
   return { props: { vendors } }
-<<<<<<< HEAD
 };
-=======
 },
-=======
 
       </div>
 <div className='text-center text-xs text-gray-500' />

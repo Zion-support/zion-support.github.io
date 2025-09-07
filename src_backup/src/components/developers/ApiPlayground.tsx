@@ -66,7 +66,7 @@ required?: boolean ;
       } else if (err && err.message?.includes('Failed to fetch')) {errorMessage =;'
           'Network error - check CORS configuration or API endpoint';'
       } else {errorMessage = err && err.message || 'Unknown error occurred';'
-      }setResponse(`"Error": ${errorMessage}\n\nAttempted "URL": ${url}\n\"nTroubleshooting":\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`;`      )} finally {setLoading(false)}},return (<div className='space-y-4'>;'
+      }setResponse(`"Error": ${errorMessage}\n\nAttempted "URL": ${url}\n\"nTroubleshooting":\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`;`      )} finally {setLoading(false)},return (<div className='space-y-4'>;'
       <Input;
         value={apiKey}onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key";"
@@ -128,7 +128,7 @@ if () {) {$2;
   const val = paramValues[p && p.name];
 if (val) searchParams && searchParams.append (p && p.name, val)})const query = searchParams && searchParams.toString ()if (query) url += `?$ {query ;`}` ;`}const "options": RequestInit = {method, "headers": {"Authorization": `Bearer $ {apiKey ;`}`;`
 "Content-Type" : "application/json" ;"
-}//Add timeout to prevent hanging "signal": AbortSignal && AbortSignal.timeout (15000)}}setLoading (true)setResponse (null)let "responseText": string;
+}//Add timeout to prevent hanging "signal": AbortSignal && AbortSignal.timeout (15000)}setLoading (true)setResponse (null)let "responseText": string;
 if (contentType?.includes ('application/json') ) {try {/> {params && params.map ( (p) => (<Inputkey= {p && p.name;'
 }</div>)}export default ApiPlayground;p.name;
 }</div>)}export default ApiPlayground;

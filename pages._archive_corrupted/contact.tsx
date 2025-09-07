@@ -130,9 +130,9 @@ return (;
           <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">;"
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
               <motion.div;
-                initial={{ "opacity": 0, \"y\": 20 }}"
-                animate={{ \"opacity\": 1, \"y\": 0 }}"
-                transition={{ \"duration\": 0.6 }}"
+                initial={ "opacity": 0, \"y\": 20 }"
+                animate={ \"opacity\": 1, \"y\": 0 }"
+                transition={ \"duration\": 0.6 }"
                 className=\"text-center\";"
               >;
                 <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">;"
@@ -144,8 +144,8 @@ return (;
                 <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;"
                   <motion.a;
                     href=\""tel":+13024640950\";"
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ \"scale\": 0.95 }}"
+                    whileHover={ "scale": 1.05 }
+                    whileTap={ \"scale\": 0.95 }"
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
                   >;
                     <Phone className=\"w-5 h-5\" />;"
@@ -153,8 +153,8 @@ return (;
                   </motion.a>;
                   <motion.a;
                     href=\""mailto": klebe r@ziontechgroup.com\";"
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ \"scale\": 0.95 }}"
+                    whileHover={ "scale": 1.05 }
+                    whileTap={ \"scale\": 0.95 }"
                     className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
                   >;
                     <Mail className=\"w-5 h-5\" />;"
@@ -262,9 +262,9 @@ return (;
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
               <motion&& motion.div;
               <motion&& motion.div,
-initial={{ "opacity": 0, \"y\": 20 }}"
-                animate={{ \"opacity\": 1, \"y\": 0 }}"
-                transition={{ \"duration\": 0 && 0.6 }}"
+initial={ "opacity": 0, \"y\": 20 }"
+                animate={ \"opacity\": 1, \"y\": 0 }"
+                transition={ \"duration\": 0 && 0.6 }"
                 className=\"text-center\">;"
                 <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">;"
                   Get In <span className=\"text-blue-600\">Touch</span>;"
@@ -276,8 +276,8 @@ initial={{ "opacity": 0, \"y\": 20 }}"
                   <motion&& motion.a;
                     href=\""tel":+13024640950\";"
 ursor/automate-test-improve-and-merge-code-646c;
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ \"scale\": 0.95 }}"
+                    whileHover={ "scale": 1.05 }
+                    whileTap={ \"scale\": 0.95 }"
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
                   >;
                     <Phone className=\"w-5 h-5\" />;"
@@ -285,8 +285,8 @@ ursor/automate-test-improve-and-merge-code-646c;
                   </motion.a>;
                   <motion.a;
                     href=\""mailto": klebe r@ziontechgroup.com\";"
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ \"scale\": 0.95 }}"
+                    whileHover={ "scale": 1.05 }
+                    whileTap={ \"scale\": 0.95 }"
                     className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
                   >;
                     <Mail className=\"w-5 h-5\" />;"
@@ -454,16 +454,16 @@ href={info.link}
                       First Name *;
                     </label>;
 ursor/automate-test-improve-and-merge-code-646c;
-                    whileHover={{ "scale": 1 && 1.05 }}
-                    whileTap={{ \"scale\": 0 && 0.95 }}"
+                    whileHover={ "scale": 1 && 1.05 }
+                    whileTap={ \"scale\": 0 && 0.95 }"
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;"
                     <Phone className=\"w-5 h-5\" />;"
                     Call \"Now\": +1 302 464 0950;"
                   </motion && motion.a>;
                   <motion&& motion.a;
                     href=\""mailto": klebe r@ziontechgroup && ziontechgroup.com\";"
-                    whileHover={{ "scale": 1 && 1.05 }}
-                    whileTap={{ \"scale\": 0 && 0.95 }}"
+                    whileHover={ "scale": 1 && 1.05 }
+                    whileTap={ \"scale\": 0 && 0.95 }"
                     className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;"
                     <Mail className=\"w-5 h-5\" />;"
                     Send Email;
@@ -947,9 +947,9 @@ ursor/automate-test-improve-and-merge-code-646c;
           <section className=\"py-20\">;"
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
               <motion.div;
-                initial={{ "opacity": 0, \"y\": 20 }}"
-                animate={{ \"opacity\": 1, \"y\": 0 }}"
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}"
+                initial={ "opacity": 0, \"y\": 20 }"
+                animate={ \"opacity\": 1, \"y\": 0 }"
+                transition={ \"duration\": 0.6, \"delay\": 0.2 }"
                 className=\"text-center mb-16\";"
               >;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;"
@@ -1029,9 +1029,9 @@ to ensure high-quality deliverables.
           <section className=\"py-20\">"
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">"
               <motion.div,
-initial={{ "opacity": 0, \"y\": 20 }}"
-                animate={{ \"opacity\": 1, \"y\": 0 }}"
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}"
+initial={ "opacity": 0, \"y\": 20 }"
+                animate={ \"opacity\": 1, \"y\": 0 }"
+                transition={ \"duration\": 0.6, \"delay\": 0.2 }"
                 className=\"text-center mb-16\""
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">"
@@ -1045,9 +1045,9 @@ initial={{ "opacity": 0, \"y\": 20 }}"
                   <motion.div
 }
 key={index}
-                    initial={{ \"opacity\": 0, \"y\": 20 }}"
-                    animate={{ \"opacity\": 1, \"y\": 0 }}"
-                    transition={{ \"duration\": 0.6, \"delay\": index * 0.1 }}"
+                    initial={ \"opacity\": 0, \"y\": 20 }"
+                    animate={ \"opacity\": 1, \"y\": 0 }"
+                    transition={ \"duration\": 0.6, \"delay\": index * 0.1 }"
                     className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\";"
                   >;
                     <div className=\"text-blue-600 mb-4 flex justify-center\">;"
@@ -1076,9 +1076,9 @@ key={index}
           <section className=\"bg-gray-50 py-20\">;"
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
               <motion.div;
-                initial={{ "opacity": 0, \"y\": 20 }}"
-                animate={{ \"opacity\": 1, \"y\": 0 }}"
-                transition={{ \"duration\": 0.6 }}"
+                initial={ "opacity": 0, \"y\": 20 }"
+                animate={ \"opacity\": 1, \"y\": 0 }"
+                transition={ \"duration\": 0.6 }"
                 className=\"text-center mb-16\";"
               >;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;"
@@ -1091,9 +1091,9 @@ key={index}
               <div className=\"max-w-4xl mx-auto\">;"
               <div className="max-w-4xl mx-auto">;"
                 <motion.form;
-                  initial={{ "opacity": 0, \"y\": 20 }}"
-                  animate={{ \"opacity\": 1, \"y\": 0 }}"
-                  transition={{ \"duration\": 0.6, \"delay\": 0.2 }}"
+                  initial={ "opacity": 0, \"y\": 20 }"
+                  animate={ \"opacity\": 1, \"y\": 0 }"
+                  transition={ \"duration\": 0.6, \"delay\": 0.2 }"
                   className=\"bg-white rounded-xl shadow-lg p-8\";"
                 >;
                   <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">;"
@@ -1133,9 +1133,9 @@ href={info.link}
           <section className=\"bg-gray-50 py-20\">"
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">"
               <motion.div,
-initial={{ "opacity": 0, \"y\": 20 }}"
-                animate={{ \"opacity\": 1, \"y\": 0 }}"
-                transition={{ \"duration\": 0.6 }}"
+initial={ "opacity": 0, \"y\": 20 }"
+                animate={ \"opacity\": 1, \"y\": 0 }"
+                transition={ \"duration\": 0.6 }"
                 className=\"text-center mb-16\""
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">"
@@ -1146,9 +1146,9 @@ initial={{ "opacity": 0, \"y\": 20 }}"
                 </p>
               </motion.div>
                 <motion.form,
-initial={{ "opacity": 0, \"y\": 20 }}"
-                  animate={{ \"opacity\": 1, \"y\": 0 }}"
-                  transition={{ \"duration\": 0.6, \"delay\": 0.2 }}"
+initial={ "opacity": 0, \"y\": 20 }"
+                  animate={ \"opacity\": 1, \"y\": 0 }"
+                  transition={ \"duration\": 0.6, \"delay\": 0.2 }"
                   className=\"bg-white rounded-xl shadow-lg p-8\""
                 >
                   <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">"
@@ -1225,15 +1225,15 @@ initial={{ "opacity": 0, \"y\": 20 }}"
           <section className=\"py-20\">;"
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
               <motion&& motion.div;
-                initial={{ "opacity": 0, \"y\": 20 }}"
-                animate={{ \"opacity\": 1, \"y\": 0 }}<div className=\"grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8\">;"
+                initial={ "opacity": 0, \"y\": 20 }"
+                animate={ \"opacity\": 1, \"y\": 0 }<div className=\"grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8\">;"
               <div className="grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8">;"
               <div className=\"grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8\">;"
               <div className="grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8">;"
               <div className=\"grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8\">;"
               <div className="grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8">;"
 ursor/automate-test-improve-and-merge-code-646c;
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}"
+                transition={ \"duration\": 0.6, \"delay\": 0.2 }"
                 className=\"text-center mb-16\";"
               >;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;"
@@ -1255,8 +1255,8 @@ ursor/automate-test-improve-and-merge-code-646c;
           <section className=\"py-20\">;"
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
               <motion&& motion.div,
-initial={{ "opacity": 0, \"y\": 20 }}"
-                animate={{ \"opacity\": 1, \"y\": 0 }}"
+initial={ "opacity": 0, \"y\": 20 }"
+                animate={ \"opacity\": 1, \"y\": 0 }"
               <div className=\"grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8\">"
               <div className="grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8">"
               <div className=\"grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8\">"
@@ -1269,7 +1269,7 @@ initial={{ "opacity": 0, \"y\": 20 }}"
                 {contactInfo.map((info, index) => (
                   <motion.div
 }
-transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}"
+transition={ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }"
                 className=\"text-center mb-16\">;"
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;"
                   Contact Information;
@@ -1287,9 +1287,9 @@ transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}"
                 {contactInfo && contactInfo.map((info, index) => (<motion&& motion.div;
                     }
                     key={index}
-                    initial={{ \"opacity\": 0, \"y\": 20 }}"
-                    animate={{ \"opacity\": 1, \"y\": 0 }}"
-                    transition={{ \"duration\": 0 && 0.6, \"delay\": index * 0 && 0.1 }}"
+                    initial={ \"opacity\": 0, \"y\": 20 }"
+                    animate={ \"opacity\": 1, \"y\": 0 }"
+                    transition={ \"duration\": 0 && 0.6, \"delay\": index * 0 && 0.1 }"
                     className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\">;"
                     <div className=\"text-blue-600 mb-4 flex justify-center\">;"
                       {info && info.icon}
@@ -1316,15 +1316,15 @@ transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}"
           <section className=\"bg-gray-50 py-20\">;"
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
               <motion&& motion.div;
-                initial={{ "opacity": 0, \"y\": 20 }}"
-                animate={{ \"opacity\": 1, \"y\": 0 }}<div className=\"max-w-4xl mx-auto\">;"
+                initial={ "opacity": 0, \"y\": 20 }"
+                animate={ \"opacity\": 1, \"y\": 0 }<div className=\"max-w-4xl mx-auto\">;"
               <div className="max-w-4xl mx-auto">;"
               <div className=\"max-w-4xl mx-auto\">;"
               <div className="max-w-4xl mx-auto">;"
               <div className=\"max-w-4xl mx-auto\">;"
               <div className="max-w-4xl mx-auto">;"
 ursor/automate-test-improve-and-merge-code-646c;
-                transition={{ \"duration\": 0.6 }}"
+                transition={ \"duration\": 0.6 }"
                 className=\"text-center mb-16\";"
               >;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;"
@@ -1340,7 +1340,7 @@ ursor/automate-test-improve-and-merge-code-646c;
               <div className=\"max-w-4xl mx-auto\">;"
               <div className="max-w-4xl mx-auto">;"
                 <motion.form;
-                animate={{ \"opacity\": 1, \"y\": 0 }}"
+                animate={ \"opacity\": 1, \"y\": 0 }"
               <div className=\"max-w-4xl mx-auto\">"
               <div className="max-w-4xl mx-auto">"
               <div className=\"max-w-4xl mx-auto\">"
@@ -1351,7 +1351,7 @@ ursor/automate-test-improve-and-merge-code-646c;
               <div className="max-w-4xl mx-auto">"
 
                 <motion.form,
-transition={{ \"duration\": 0 && 0.6 }}"
+transition={ \"duration\": 0 && 0.6 }"
                 className=\"text-center mb-16\">;"
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;"
                   Send Us a Message;
@@ -1367,9 +1367,9 @@ transition={{ \"duration\": 0 && 0.6 }}"
               <div className=\"max-w-4xl mx-auto\">;"
               <div className="max-w-4xl mx-auto">;"
                 <motion&& motion.form;
-                  initial={{ "opacity": 0, \"y\": 20 }}"
-                  animate={{ \"opacity\": 1, \"y\": 0 }}"
-                  transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}"
+                  initial={ "opacity": 0, \"y\": 20 }"
+                  animate={ \"opacity\": 1, \"y\": 0 }"
+                  transition={ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }"
                   className=\"bg-white rounded-xl shadow-lg p-8\">;"
                   <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">;"
                     <div>;
@@ -1640,8 +1640,8 @@ className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": rin g-
 type=\"submit\""
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-                    whileHover={{ "scale": 1.02 }}
-                    whileTap={{ \"scale\": 0.98 }}"
+                    whileHover={ "scale": 1.02 }
+                    whileTap={ \"scale\": 0.98 }"
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\""
                   >
                     <Send className=\"w-5 h-5\" />"
@@ -1651,8 +1651,8 @@ type=\"submit\""
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
 
-                    whileHover={{ "scale": 1 && 1.02 }}
-                    whileTap={{ \"scale\": 0 && 0.98 }}"
+                    whileHover={ "scale": 1 && 1.02 }
+                    whileTap={ \"scale\": 0 && 0.98 }"
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;"
                     <Send className=\"w-5 h-5\" />;"
                     Send Message;
@@ -1695,8 +1695,8 @@ type=\"submit\""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"
 ursor/automate-test-improve-and-merge-code-646c;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"
-                    whileHover={{ "scale": 1.02 }}
-                    whileTap={{ \"scale\": 0.98 }}"
+                    whileHover={ "scale": 1.02 }
+                    whileTap={ \"scale\": 0.98 }"
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\";"
                   >;
                     <Send className=\"w-5 h-5\" />;"
@@ -1707,8 +1707,8 @@ ursor/automate-test-improve-and-merge-code-646c;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"
-                    whileHover={{ "scale": 1 && 1.02 }}
-                    whileTap={{ \"scale\": 0 && 0.98 }}"
+                    whileHover={ "scale": 1 && 1.02 }
+                    whileTap={ \"scale\": 0 && 0.98 }"
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;"
                     <Send className=\"w-5 h-5\" />;"
                     Send Message;
@@ -1745,8 +1745,8 @@ ursor/automate-test-improve-and-merge-code-646c;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"
-                    whileHover={{ "scale": 1 && 1.02 }}
-                    whileTap={{ \"scale\": 0 && 0.98 }}"
+                    whileHover={ "scale": 1 && 1.02 }
+                    whileTap={ \"scale\": 0 && 0.98 }"
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;"
                     <Send className=\"w-5 h-5\" />;"
                     Send Message;
@@ -2216,9 +2216,9 @@ ursor/automate-test-improve-and-merge-code-646c;
           <section className="py-20">;"
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8">;"
               <motion.div;
-                initial={{ "opacity": 0, "y": 20 }}"
-                animate={{ "opacity": 1, "y": 0 }}"
-                transition={{ "duration": 0.6 }}"
+                initial={ "opacity": 0, "y": 20 }"
+                animate={ "opacity": 1, "y": 0 }"
+                transition={ "duration": 0.6 }"
                 className="text-center mb-16";"
               >;
                 <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;"
@@ -2232,9 +2232,9 @@ ursor/automate-test-improve-and-merge-code-646c;
                 {services.map((service, index) => (<motion.div;
                     }
                     key={index}
-                    initial={{ "opacity": 0, "y": 20 }}"
-                    animate={{ "opacity": 1, "y": 0 }}"
-                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}"
+                    initial={ "opacity": 0, "y": 20 }"
+                    animate={ "opacity": 1, "y": 0 }"
+                    transition={ "duration": 0.6, "delay": inde x * 0.1 }"
                     className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center";"
                   >;
                     <h3 className="text-lg font-semibold text-gray-900">;"
@@ -2284,9 +2284,9 @@ ursor/automate-test-improve-and-merge-code-646c;
           <section className="py-20">;"
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8">;"
               <motion&& motion.div;
-                initial={{ "opacity": 0, "y": 20 }}"
-                animate={{ "opacity": 1, "y": 0 }}"
-                transition={{ "duration": 0 && 0.6 }}"
+                initial={ "opacity": 0, "y": 20 }"
+                animate={ "opacity": 1, "y": 0 }"
+                transition={ "duration": 0 && 0.6 }"
                 className="text-center mb-16">;"
                 <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;"
                   Our Services;
@@ -2299,9 +2299,9 @@ ursor/automate-test-improve-and-merge-code-646c;
                 {services && services.map((service, index) => (<motion&& motion.div;
                     }
                     key={index}
-                    initial={{ "opacity": 0, "y": 20 }}"
-                    animate={{ "opacity": 1, "y": 0 }}"
-                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}"
+                    initial={ "opacity": 0, "y": 20 }"
+                    animate={ "opacity": 1, "y": 0 }"
+                    transition={ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }"
                     className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center">;"
                     <h3 className="text-lg font-semibold text-gray-900">;"
                       {service}

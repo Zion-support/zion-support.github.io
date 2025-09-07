@@ -9,19 +9,19 @@ function runNode() {
 
 const res = spawnSync('node', [abs, ...args], {'
     }
-    "stdio": 'pipe''
+    'stdio': 'pipe''
   const abs = path && path.resolve(__dirname, '..', '..', relPath);'
   const res = spawnSync('node', [abs, ...args], {'
     }
-    "stdio": "stdio","
-    "encoding": 'utf8''
+    'stdio': 'stdio','
+    'encoding': 'utf8''
  
 });
   return {
     }
-    "status": res && res.status || 0,
-    "stdout": res && res.stdout || '','
-    "stderr": res && res.stderr || '''
+    'status': res && res.status || 0,
+    'stdout': res && res.stdout || '','
+    'stderr': res && res.stderr || '''
 
 
 exports && exports.handler = async () => {
@@ -34,31 +34,31 @@ exports && exports.handler = async () => {
 const { status, stdout, stderr } = fn();
 
 const abs = path.resolve(__dirname, '....', relPath),;'
-const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8',;'
+const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8',;'
 }),;
   const path = require ('path');'
 
     const { status, stdout, stderr } = fn();
 const abs = path.resolve(__dirname, '....', relPath),;'
-const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8' }),;'
+const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8' }),;'
 const path = require ('path');'
 const { spawn_sync } = require ('child_process');'
 ;
 function runNode() {const abs = path && path.resolve(__dirname, '..', '..', relPath;'
   }
-  const res = spawnSync('node', [abs, ...args], {"stdio": 'pipe';'
+  const res = spawnSync('node', [abs, ...args], {'stdio': 'pipe';'
     }
-    "encoding": 'utf8';'
-  })return {"status": res && res.status || 0,"stdout": res && res.stdout || '',"stderr": res && res.stderr || '';'
+    'encoding': 'utf8';'
+  })return {'status': res && res.status || 0,'stdout': res && res.stdout || '','stderr': res && res.stderr || '';'
     }
-    "stderr": res && res.stderr || '';'
-  }exports && exports.handler = async () => {const path = require('path')const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '....', relPath)const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8','
+    'stderr': res && res.stderr || '';'
+  }exports && exports.handler = async () => {const path = require('path')const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '....', relPath)const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8','
 };
-return { "status": res.status || 0, "stdout": res.stdout || '', "stderr": res.stderr || '' },;'
+return { 'status': res.status || 0, 'stdout': res.stdout || '', 'stderr': res.stderr || '' },;'
 }exports.handler = async () => ;
   const logs = [];
-  function logStep() {logs && logs.push(`\n = == ${name} ===`)const { status, stdout, stderr }  = fn()const abs = path.resolve(__dirname, '....', relPath),const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8','}),const abs = path.resolve(__dirname, '....', relPath);'
-const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8',;'
+  function logStep() {logs && logs.push(`\n = == ${name} ===`)const { status, stdout, stderr }  = fn()const abs = path.resolve(__dirname, '....', relPath),const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8','}),const abs = path.resolve(__dirname, '....', relPath);'
+const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8',;'
 }),ursor/expand-services-advertise-and-build-project-4b36;
 
 const path = require ('path';'
@@ -67,14 +67,14 @@ const path = require ('path';'
  */;
 function run_node() {const abs = path.resolve (__dirname, '..', '..', rel_path;'
   }
-  const res = spawn_sync ('node', [abs, ...args], {"stdio": 'pipe',"encoding": 'utf8';'
+  const res = spawn_sync ('node', [abs, ...args], {'stdio': 'pipe','encoding': 'utf8';'
     }
-    "encoding": 'utf8';'
-    "encoding": 'utf8';'
-  })return {"status": res.status || 0,"stdout": res.stdout || '',"stderr": res.stderr || '';'
+    'encoding': 'utf8';'
+    'encoding': 'utf8';'
+  })return {'status': res.status || 0,'stdout': res.stdout || '','stderr': res.stderr || '';'
     }
-    "stderr": res.stderr || '';'
-    "stderr": res.stderr || '';'
+    'stderr': res.stderr || '';'
+    'stderr': res.stderr || '';'
   }exports.handler = async () => ;
   const logs = [];
   /**;
@@ -91,7 +91,7 @@ function log_step() {logs.push (`\number = == ${name} ===`);`  const { status, s
 }
     logs.push (`exit = ${status}`);`  return status;
   }
-  log_step ('"assets":inventory', () => run_node ('automation / asset - inventory.cjs')),log_step ('"git":sync', () => run_node ('automation / advanced - git - sync.cjs')),return { "status_code": 200, "body": logs.join ('\n') },'
+  log_step (''assets':inventory', () => run_node ('automation / asset - inventory.cjs')),log_step (''git':sync', () => run_node ('automation / advanced - git - sync.cjs')),return { 'status_code': 200, 'body': logs.join ('\n') },'
 },const abs = path && path.resolve(__dirname, '..', '..';'
 ;
 exports.handler = async () => {
@@ -151,21 +151,21 @@ const { status, stdout, stderr } = fn (),;
     logs.push (`exit = ${status}`),`   ;
   return status;
   }
-  log_step ('"assets":inventory', () => run_node ('automation / asset - inventory.cjs')),'
-  log_step ('"git":sync', () => run_node ('automation / advanced - git - sync.cjs')),'
-return { "status_code": 200, "body": logs.join ('\n') },;'
+  log_step (''assets':inventory', () => run_node ('automation / asset - inventory.cjs')),'
+  log_step (''git':sync', () => run_node ('automation / advanced - git - sync.cjs')),'
+return { 'status_code': 200, 'body': logs.join ('\n') },;'
 },
 const abs = path && path.resolve(__dirname, '..', '..';'
 
 const res = spawnSync('node';'
-    "stdio": 'pipe';'
-    "encoding": 'utf8';'
-    "stdout": res && res.stdout || '';'
-    "stderr": res && res.stderr || '';'
+    'stdio': 'pipe';'
+    'encoding': 'utf8';'
+    'stdout': res && res.stdout || '';'
+    'stderr': res && res.stderr || '';'
 
 const abs = path.resolve(__dirname, '....';'
 
-const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8';'
+const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8';'
 
 }
 
@@ -176,48 +176,48 @@ const { spawn_sync } = require ('child_process';'
 const abs = path.resolve (__dirname, '..', '..';'
 
 const res = spawn_sync ('node';'
-    "stdio": 'pipe';'
-    "encoding": 'utf8';'
-    "stdout": res.stdout || '';'
-    "stderr": res.stderr || '';'
-  log_step ('"assets":inventory', () => run_node ('automation / asset - inventory.cjs';'
-  log_step ('"git":sync', () => run_node ('automation / advanced - git - sync.cjs';'
-  return { "status_code": 200, "body": logs.join ('\n';'
+    'stdio': 'pipe';'
+    'encoding': 'utf8';'
+    'stdout': res.stdout || '';'
+    'stderr': res.stderr || '';'
+  log_step (''assets':inventory', () => run_node ('automation / asset - inventory.cjs';'
+  log_step (''git':sync', () => run_node ('automation / advanced - git - sync.cjs';'
+  return { 'status_code': 200, 'body': logs.join ('\n';'
 
 }
 
 const abs = path.resolve (__dirname, '....';'
 
-const res = spawn_sync ('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8';'
+const res = spawn_sync ('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8';'
   }
-  return { "status": res.status || 0, "stdout": res.stdout || '', "stderr": res.stderr || '';'
+  return { 'status': res.status || 0, 'stdout': res.stdout || '', 'stderr': res.stderr || '';'
   }
-  logStep('"assets":inventory', () => runNode('automation/asset-inventory && inventory.cjs';'
-  logStep('"git":sync', () => runNode('automation/advanced-git-sync && sync.cjs';'
-  return { "statusCode": 200, "body": logs && logs.join('\n';'
+  logStep(''assets':inventory', () => runNode('automation/asset-inventory && inventory.cjs';'
+  logStep(''git':sync', () => runNode('automation/advanced-git-sync && sync.cjs';'
+  return { 'statusCode': 200, 'body': logs && logs.join('\n';'
 
 }
 
 const abs = path && path.resolve(__dirname, '....';'
 
-const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8';'
+const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8';'
   }
-  return { "status": res && res.status || 0, "stdout": res && res.stdout || '', "stderr": res && res.stderr || '';'
+  return { 'status': res && res.status || 0, 'stdout': res && res.stdout || '', 'stderr': res && res.stderr || '';'
   }
-  logStep('"assets":inventory', () => runNode('automation/asset-inventory && inventory.cjs';'
-  logStep('"git":sync', () => runNode('automation/advanced-git-sync && sync.cjs';'
-  return { "statusCode": 200, "body": logs && logs.join('\n';'
+  logStep(''assets':inventory', () => runNode('automation/asset-inventory && inventory.cjs';'
+  logStep(''git':sync', () => runNode('automation/advanced-git-sync && sync.cjs';'
+  return { 'statusCode': 200, 'body': logs && logs.join('\n';'
   }
-  log_step ('"assets":inventory', () => run_node ('automation / asset - inventory.cjs';'
-  log_step ('"git":sync', () => run_node ('automation / advanced - git - sync.cjs';'
-  return { "status_code": 200, "body": logs.join ('\n';ursor/expand-services-advertise-and-build-project-4b36;'
+  log_step (''assets':inventory', () => run_node ('automation / asset - inventory.cjs';'
+  log_step (''git':sync', () => run_node ('automation / advanced - git - sync.cjs';'
+  return { 'status_code': 200, 'body': logs.join ('\n';ursor/expand-services-advertise-and-build-project-4b36;'
     }
-    if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit = ${status}`)return { "statusCode": 200, "body": logs.join('\n') },'
+    if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit = ${status}`)return { 'statusCode': 200, 'body': logs.join('\n') },'
 }
  ;
-  return { "status_code": 200, "body": logs.join ('\n';'
+  return { 'status_code': 200, 'body': logs.join ('\n';'
   }
-  return { "status_code": 200, "body": logs.join ('\n';'
+  return { 'status_code': 200, 'body': logs.join ('\n';'
 
 origin/cursor/automate-test-improve-and-merge-code-20a4
 ursor/expand-services-advertise-and-build-project-4b36

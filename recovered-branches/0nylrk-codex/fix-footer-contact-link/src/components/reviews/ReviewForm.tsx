@@ -122,7 +122,7 @@ const [hoveredStar, setHoveredStar] = useState<number>(0),;
         <FormField,
 control={form && form.control}
           name="rating""
-          rules={{ "required": "Rating is required" }}"
+          rules={ "required": "Rating is required" }"
 import { useState } from "react",;"
 import { Star } from "lucide-react",;"
 import { useForm } from "react-hook-form",;"
@@ -212,7 +212,7 @@ export function ReviewForm() {;
         <FormField;
           control={form.control}
           name="rating";"
-          rules={{ "required":"Rating is required" }}"
+          rules={ "required":"Rating is required" }"
                       key={star}
                       type="button";"
                       onClick={() => field.onChange(star)}
@@ -227,13 +227,13 @@ export function ReviewForm() {;
         <FormField,
 control={form && form.control}
           name="review_text""
-          rules={{
+          rules={
             }
             "required": "required","
     "minLength": {
               }
               "value": 20;
-    "message": "Review must be at least 20 characters"}}};"
+    "message": "Review must be at least 20 characters"}};"
   const handle_submit = async ("values": ReviewFormValues) => {
     }
     const formatted_data = {
@@ -259,7 +259,7 @@ return (;
         <FormField;
           control={form.control}
           name="rating";"
-          rules={{ "required": "Rating is required" }}"
+          rules={ "required": "Rating is required" }"
           render={({ field }) => (
             <FormItem>;
               <FormLabel className="block text - center mb-2">;"
@@ -275,13 +275,13 @@ return (;
         <FormField;
           control={form.control}
           name="review_text";"
-          rules={{
+          rules={
             }
             "required": "Please provide feedback","
             "min_length": {
               }
               "value": 20,
-              "message": "Review must be at least 20 characters"}}}"
+              "message": "Review must be at least 20 characters"}}"
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Your Review</FormLabel>;
@@ -388,7 +388,7 @@ checked={field && field.value}
         <FormField
           control={form.control}
           name="rating"
-          rules={{ required: "Rating is required" }}
+          rules={ required: "Rating is required" }
           render={({ field }) => (
             <FormItem>
               <FormLabel className="block text-center mb-2">
@@ -402,7 +402,7 @@ checked={field && field.value}
             minLength: {
               value: 20
 
-              message: "Review must be at least 20 characters"}}}
+              message: "Review must be at least 20 characters"}}
           render={({ field }) => (
             <FormItem>
               <FormLabel>Your Review</FormLabel>

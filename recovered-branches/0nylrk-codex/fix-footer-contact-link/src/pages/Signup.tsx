@@ -147,7 +147,7 @@ export default function Signup() {;
       "email": "",;"
       "password": "",;"
       "confirmPassword": "",;"
-      "termsAccepted": false}}) as UseFormReturn<SignupFormValues>,;
+      "termsAccepted": false}) as UseFormReturn<SignupFormValues>,;
   // Form submission handler;
   const onSubmit = async ("data": SignupFormValues) => {;
     }
@@ -215,7 +215,7 @@ function Signup() {
       "email": "","
       "password": "","
       "confirm_password": "","
-      "terms_accepted": false}}) as UseFormReturn < SignupFormValues>,
+      "terms_accepted": false}) as UseFormReturn < SignupFormValues>,
   // Form submission handler;
   const on_submit = async ("data": SignupFormValues) => {
     // Check condition

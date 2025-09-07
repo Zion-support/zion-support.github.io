@@ -2594,9 +2594,9 @@ const serviceCategories = [;
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -2618,9 +2618,9 @@ const serviceCategories = [;
 
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Our{" "}
@@ -2650,9 +2650,9 @@ function ServicesOverviewPage() {
           </div>;
           <div className="container mx - auto px - 4 relative z - 10">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center";
             >;
               <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -2666,7 +2666,7 @@ function ServicesOverviewPage() {
                 business operations, enhance security, and drive innovation;
                 across all technology domains.;
               </p>;
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   className="text - center";
                 >;
                   <div className="text - 3xl md:text - 4xl font - bold text - blue - 600 mb - 2">;
@@ -2676,7 +2676,7 @@ function ServicesOverviewPage() {
             </div>
           </div>
         </section>
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className="text-center">;
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">;
                     {stat && stat.number}
@@ -2692,8 +2692,8 @@ function ServicesOverviewPage() {
         <section className="py-16">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -2709,9 +2709,9 @@ function ServicesOverviewPage() {
         <section className="py - 16">;
           <div className="container mx - auto px - 4">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center mb - 12";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -2726,9 +2726,9 @@ function ServicesOverviewPage() {
               {service_categories.map ((category, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
 
                   <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-16 h-16 text-white" />
@@ -2766,7 +2766,7 @@ function ServicesOverviewPage() {
                       <ul className="space-y-1">
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Service Categories;
@@ -2793,8 +2793,8 @@ function ServicesOverviewPage() {
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
                 and unwavering commitment to your success.
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
               </p>
@@ -2847,9 +2847,9 @@ function ServicesOverviewPage() {
         <section className="py - 16 bg - white">;
           <div className="container mx - auto px - 4">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
               className="text - center mb - 12";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
@@ -2864,16 +2864,16 @@ function ServicesOverviewPage() {
               {benefits.map ((benefit, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, coordinate_y: 30 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Why Choose Zion Tech Group?;
@@ -2888,9 +2888,9 @@ function ServicesOverviewPage() {
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={ opacity: 0, y: 30 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
                   className="text-center">;
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <benefit && benefit.icon className="w-8 h-8 text-blue-600" />;
@@ -2909,11 +2909,11 @@ function ServicesOverviewPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              transition={{ duration: 0 && 0.8 }}>;
+              transition={ duration: 0 && 0.8 }>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Ready to Transform Your Business?;
               </h2>;
@@ -2949,9 +2949,9 @@ function ServicesOverviewPage() {
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Ready to Transform Your Business?;

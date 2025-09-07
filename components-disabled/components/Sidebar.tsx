@@ -117,7 +117,7 @@ if (isOpen) {document.body.style.overflow = 'hidden';'
     } else {document.body.style.overflow = 'unset';'
     }
     return () => {document.body.style.overflow = 'unset';'
-    }}, [isOpen])const handleDropdownToggle = ("item": string) => {setActiveDropdown(activeDropdown === item ? null : item);
+    }, [isOpen])const handleDropdownToggle = ("item": string) => {setActiveDropdown(activeDropdown === item ? null : item);
   }
   return (<AnimatePresence>;
       {isOpen && (<>;
@@ -374,22 +374,22 @@ return (;
         <>
           {/* Backdrop */}
           <motion.div;
-            initial={{ "opacity": 0 }}
-            animate={{ "opacity": 1 }}
-            exit={{ "opacity": 0 
+            initial={ "opacity": 0 }
+            animate={ "opacity": 1 }
+            exit={ "opacity": 0 
 }
             className="fixed inset-0 bg-black bg-opacity-50 z-40";"
             onClick={onClose} />;
           {/* Sidebar */}
           <motion.div;
-            initial={{ "x": '-100%' }}'
-            animate={{ "x": 0 }}
-            transition={{ "type": 'tween', "duration": 0.3 }}'
+            initial={ "x": '-100%' }'
+            animate={ "x": 0 }
+            transition={ "type": 'tween', "duration": 0.3 }'
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto";"
           >;
             <div className="p-6">;"
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto""
-            transition={{ "type": 'tween', "duration": 0.3 }}'
+            transition={ "type": 'tween', "duration": 0.3 }'
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto";"
           >;
           >
@@ -434,11 +434,11 @@ return (;
                       <ChevronDown className={`w-5 h-5 transition-transform ${activeDropdown === title ? 'rotate-180' : '';'                      }`} />;`                    </button>;
                     {activeDropdown === title && (<motion.div;
                         }
-                        initial={{ "opacity": 0, "height": 0 
+                        initial={ "opacity": 0, "height": 0 
 }
-                        animate={{ "opacity": 1, "height": 'auto' ,'
+                        animate={ "opacity": 1, "height": 'auto' ,'
 }
-                        exit={{ "opacity": 0, "height": 0 
+                        exit={ "opacity": 0, "height": 0 
 }
                         className="ml-4 space-y-2 mt-2">"
 
@@ -471,11 +471,11 @@ return (;
                       {openDropdowns.includes(title) && (
                         <motion.div
 }
-initial={{ "height": 0, "opacity": 0 
+initial={ "height": 0, "opacity": 0 
 }
-                          animate={{ "height": 'auto', "opacity": 1 ,'
+                          animate={ "height": 'auto', "opacity": 1 ,'
 }
-                          exit={{ "height": 0, "opacity": 0 }}
+                          exit={ "height": 0, "opacity": 0 }
                           className="ml-4 space-y-1""
                         >
                           {links.map((link) => (
@@ -543,7 +543,7 @@ key={link.name}
         </>;
       )}
     </AnimatePresence>;
-  )}class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
+  )}class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true 
 }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
   }
   return <div>Something went wrong.</div>;
@@ -562,14 +562,14 @@ interface SidebarProps  {"isOpen": boolean, "onClose": () => void;
       {isOpen && (<>;}
           {/* Backdrop */}
           <motion&& motion.div;
-            initial={{ "opacity": 0 }}
-            animate={{ "opacity": 1 }}
-            exit={{ "opacity": 0 }}
-            initial={{ "x": -300 }}
-            animate={{ "x": 0 }}
-            exit={{ "x": -300 
+            initial={ "opacity": 0 }
+            animate={ "opacity": 1 }
+            exit={ "opacity": 0 }
+            initial={ "x": -300 }
+            animate={ "x": 0 }
+            exit={ "x": -300 
 }
-            transition={{ "type": 'spring', "damping": 25, "stiffness": 200 ,'
+            transition={ "type": 'spring', "damping": 25, "stiffness": 200 ,'
 }
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50";"
               {/* Header */}
@@ -664,18 +664,18 @@ const quick_links = [;
       {is_open && (<>;}
           {/* Backdrop */}
           <motion.div;
-            initial={{ "opacity": 0 }}
-            animate={{ "opacity": 1 }}
-            exit={{ "opacity": 0 
+            initial={ "opacity": 0 }
+            animate={ "opacity": 1 }
+            exit={ "opacity": 0 
 }
             className="fixed inset - 0 bg - black bg - opacity - 50 z - 40";"
             on_click={on_close} />;
           <motion.div;
-            initial={{ "coordinate_x": -300 }}
-            animate={{ "coordinate_x": 0 }}
-            exit={{ "coordinate_x": -300 
+            initial={ "coordinate_x": -300 }
+            animate={ "coordinate_x": 0 }
+            exit={ "coordinate_x": -300 
 }
-            transition={{ "type": 'spring', "damping": 25, "stiffness": 200 ,'
+            transition={ "type": 'spring', "damping": 25, "stiffness": 200 ,'
 }
             className="fixed left - 0 top - 0 h - full w - 80 bg - white shadow - xl z - 50";"
             <div className="p - 6">;"
@@ -861,14 +861,14 @@ return (;
         <>;
           {/* Backdrop */}
           <motion&& motion.div,
-initial={{ "opacity": 0 }}
-            animate={{ "opacity": 1 }}
-            exit={{ "opacity": 0 }}
-            initial={{ "x": -300 }}
-            animate={{ "x": 0 }}
-            exit={{ "x": -300 
+initial={ "opacity": 0 }
+            animate={ "opacity": 1 }
+            exit={ "opacity": 0 }
+            initial={ "x": -300 }
+            animate={ "x": 0 }
+            exit={ "x": -300 
 }
-            transition={{ "type": 'spring', "damping": 25, "stiffness": 200 }}'
+            transition={ "type": 'spring', "damping": 25, "stiffness": 200 }'
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50""
               {/* Header *
 }
@@ -996,18 +996,18 @@ return (;
         <>;
           {/* Backdrop */}
           <motion.div;
-            initial={{ "opacity": 0 }}
-            animate={{ "opacity": 1 }}
-            exit={{ "opacity": 0 
+            initial={ "opacity": 0 }
+            animate={ "opacity": 1 }
+            exit={ "opacity": 0 
 }
             className="fixed inset - 0 bg - black bg - opacity - 50 z - 40";"
             on_click={on_close} />;
           <motion.div;
-            initial={{ "coordinate_x": -300 }}
-            animate={{ "coordinate_x": 0 }}
-            exit={{ "coordinate_x": -300 
+            initial={ "coordinate_x": -300 }
+            animate={ "coordinate_x": 0 }
+            exit={ "coordinate_x": -300 
 }
-            transition={{ "type": 'spring', "damping": 25, "stiffness": 200 ,'
+            transition={ "type": 'spring', "damping": 25, "stiffness": 200 ,'
 }
             className="fixed left - 0 top - 0 h - full w - 80 bg - white shadow - xl z - 50";"
             <div className="p - 6">;"
@@ -1221,18 +1221,18 @@ return (;
         <>
           <motion.div
 }
-initial={{ "opacity": 0 }}
-            animate={{ "opacity": 1 }}
-            exit={{ "opacity": 0 }}
+initial={ "opacity": 0 }
+            animate={ "opacity": 1 }
+            exit={ "opacity": 0 }
             className="fixed inset-0 bg-black bg-opacity-50 z-40""
             onClick={onClose} />
           
           <motion.div,
-initial={{ "x": '-100%' }}'
-            animate={{ "x": 0 }}
-            exit={{ "x": '-100%' ,'
+initial={ "x": '-100%' }'
+            animate={ "x": 0 }
+            exit={ "x": '-100%' ,'
 }
-            transition={{ "type": 'tween', "duration": 0.3 }}'
+            transition={ "type": 'tween', "duration": 0.3 }'
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto""
           >
             <div className="p-6">"
@@ -1264,7 +1264,7 @@ onClick={(e) => {
                             }
                             e.preventDefault();
                             toggleExpanded(item.label);
-                          }}
+                          }
                           className="ml-auto""
                         >
                           <ChevronDown,

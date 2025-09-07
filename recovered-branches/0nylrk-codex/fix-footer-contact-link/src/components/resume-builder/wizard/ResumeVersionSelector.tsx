@@ -7,14 +7,14 @@ import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';'
 import {Resume} from '@/types/resume';'
 import {useResume} from '@/hooks/useResume';interface ResumeVersionSelectorProps {'
   }
-  "currentResume": Resume;
-  "onResumeChange": ("resumeId": string) => void;
+  'currentResume': Resume;
+  'onResumeChange': ('resumeId': string) => void;
 }
 export function ResumeVersionSelector() {
   }
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
-  const [newResumeTitle, setNewResumeTitle] = useState("");"
+  const [newResumeTitle, setNewResumeTitle] = useState('');'
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const handleCreateNewVersion = async () => {
@@ -22,7 +22,7 @@ export function ResumeVersionSelector() {
     if (newResumeTitle.trim()) {
       }
       setIsLoading(true);
-      const resumeId = await createResume({ "title": newResumeTitle.trim() });
+      const resumeId = await createResume({ 'title': newResumeTitle.trim() });
       if (resumeId) {
         }
         await fetchResume(resumeId);
@@ -46,8 +46,8 @@ import { Resume } from '@/types/resume',;'
 import { useResume } from '@/hooks/useResume',;'
 interface ResumeVersionSelectorProps {;
   }
-  "currentResume": Resume,;
-  "onResumeChange": ("resumeId": string) => void;
+  'currentResume': Resume,;
+  'onResumeChange': ('resumeId': string) => void;
 }
 ;
 export function ResumeVersionSelector() {;
@@ -62,16 +62,16 @@ export function ResumeVersionSelector() {;
     if (newResumeTitle.trim()) {;
       }
       setIsLoading(true),;
-      const resumeId = await createResume({ "title": newResumeTitle.trim() }),;
+      const resumeId = await createResume({ 'title': newResumeTitle.trim() }),;
       if (resumeId) {;
         }
         await fetchResume(resumeId),;
         onResumeChange(resumeId),;
         setSaveDialogOpen(false);
-        setNewResumeTitle('');              className="gap-2""
+        setNewResumeTitle('');              className='gap-2''
             >
-              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}"
-              <Save className="h-4 w-4" />"
+              {isLoading && <Loader2 className='h-4 w-4 animate-spin' />}'
+              <Save className='h-4 w-4' />'
               Save
             </Button>
           </DialogFooter>

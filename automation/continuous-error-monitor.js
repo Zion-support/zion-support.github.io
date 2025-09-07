@@ -30,7 +30,7 @@ this.logFile = path.join(__dirname, '..', 'reports', 'monitor.log');'
 const reportsDir = path.join(__dirname, '..', 'reports');'
     if (!fs.existsSync(reportsDir)) {
       }
-      fs.mkdirSync(reportsDir, { "recursive": true });
+      fs.mkdirSync(reportsDir, { 'recursive': true });
     }
   }
 
@@ -44,47 +44,47 @@ const reportsDir = path.join(__dirname, '..', 'reports');'
       }
     } catch (error) {
       }
-      this.log('Failed to load "config":', error.message);'
+      this.log('Failed to load 'config':', error.message);'
     }
     
     // Default configuration,
 return {
       }
-      "project": 'Zion Tech Group Website','
-      "version": '1.0.0','
-      "urls": {
+      'project': 'Zion Tech Group Website','
+      'version': '1.0.0','
+      'urls': {
         }
-        "localhost": [
-          '"http"://"localhost":3000','
-          '"http"://"localhost":3000/services','
-          '"http"://"localhost":3000/about','
-          '"http"://"localhost":3000/contact''
+        'localhost': [
+          ''http'://'localhost':3000','
+          ''http'://'localhost':3000/services','
+          ''http'://'localhost':3000/about','
+          ''http'://'localhost':3000/contact''
         ],
-        "production": [
-          '"https"://ziontechgroup.com','
-          '"https"://ziontechgroup.com/services','
-          '"https"://ziontechgroup.com/about','
-          '"https"://ziontechgroup.com/contact''
+        'production': [
+          ''https'://ziontechgroup.com','
+          ''https'://ziontechgroup.com/services','
+          ''https'://ziontechgroup.com/about','
+          ''https'://ziontechgroup.com/contact''
         ]
       },
-      "errorCapture": {
+      'errorCapture': {
         }
-        "maxErrors": 200,
-        "autoReport": true,
-        "reportInterval": 300000, // 5 minutes,
-"captureInterval": 600000, // 10 minutes,
-"captureConsole": true,
-        "captureNetwork": true,
-        "captureUnhandled": true,
-        "captureResource": true
+        'maxErrors': 200,
+        'autoReport': true,
+        'reportInterval': 300000, // 5 minutes,
+'captureInterval': 600000, // 10 minutes,
+'captureConsole': true,
+        'captureNetwork': true,
+        'captureUnhandled': true,
+        'captureResource': true
       },
-      "monitoring": {
+      'monitoring': {
         }
-        "enabled": true,
-        "daemonMode": true,
-        "logLevel": 'info','
-        "maxLogSize": 10 * 1024 * 1024, // 10MB,
-"rotateLogs": true
+        'enabled': true,
+        'daemonMode': true,
+        'logLevel': 'info','
+        'maxLogSize': 10 * 1024 * 1024, // 10MB,
+'rotateLogs': true
       }
     };
   }
@@ -112,7 +112,7 @@ if (this.config.monitoring.rotateLogs) {
       }
     } catch (error) {
       }
-      console.error('Failed to write to log "file":', error.message);'
+      console.error('Failed to write to log 'file':', error.message);'
     }
   }
 
@@ -122,9 +122,9 @@ if (this.config.monitoring.rotateLogs) {
       }
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');'
       const oldLogFile = `${this.logFile}.${timestamp}`;`      fs.renameSync(this.logFile, oldLogFile);
-      this.log(`Logs rotated "to": ${oldLogFile}`);`    } catch (error) {
+      this.log(`Logs rotated 'to': ${oldLogFile}`);`    } catch (error) {
       }
-      this.log('Failed to rotate "logs":', error.message, 'error');'
+      this.log('Failed to rotate 'logs':', error.message, 'error');'
     }
   }
 
@@ -143,9 +143,9 @@ if (this.config.monitoring.rotateLogs) {
 try {
       }
       fs.writeFileSync(this.pidFile, process.pid.toString());
-      this.log(`PID file "created": ${this.pidFile}`);`    } catch (error) {
+      this.log(`PID file 'created': ${this.pidFile}`);`    } catch (error) {
       }
-      this.log('Failed to create PID "file":', error.message, 'error');'
+      this.log('Failed to create PID 'file':', error.message, 'error');'
     }
 
     // Start monitoring,
@@ -158,7 +158,7 @@ this.startPeriodicCapture();
 this.startHealthCheck();
 
     this.log('✅ Continuous Error Monitor started successfully');'
-    this.log(`📊 Monitoring "interval": ${this.config.monitoring.reportInterval / 1000}s`);`    this.log(`🔍 Capture "interval": ${this.config.monitoring.captureInterval / 1000}s`);`    this.log(`📝 Log "file": ${this.logFile}`);`  }
+    this.log(`📊 Monitoring 'interval': ${this.config.monitoring.reportInterval / 1000}s`);`    this.log(`🔍 Capture 'interval': ${this.config.monitoring.captureInterval / 1000}s`);`    this.log(`📝 Log 'file': ${this.logFile}`);`  }
 
   startMonitoring() {
     }
@@ -206,7 +206,7 @@ if (fs.existsSync(this.pidFile)) {
       this.restart();
     } catch (error) {
       }
-      this.log('❌ Health check "error":', error.message, 'error');'
+      this.log('❌ Health check 'error':', error.message, 'error');'
     }
   }
 
@@ -233,7 +233,7 @@ let urls = this.config.urls.localhost;
           // Check if localhost is available,
 try {
             }
-            await capture.page.goto('"http"://"localhost":3000', { "timeout": 5000 });'
+            await capture.page.goto(''http'://'localhost':3000', { 'timeout': 5000 });'
             this.log('🌐 Using localhost URLs for capture');'
           } catch (e) {
             }
@@ -253,7 +253,7 @@ if (this.config.errorCapture.autoReport) {
           
         } catch (error) {
           }
-          this.log('❌ Error capture "failed":', error.message, 'error');'
+          this.log('❌ Error capture 'failed':', error.message, 'error');'
         } finally {
           }
           await capture.cleanup();
@@ -264,7 +264,7 @@ if (this.config.errorCapture.autoReport) {
       
     } catch (error) {
       }
-      this.log('❌ Failed to run error "capture":', error.message, 'error');'
+      this.log('❌ Failed to run error 'capture':', error.message, 'error');'
     }
   }
 
@@ -286,7 +286,7 @@ const report = this.generateAutoReport(errors);
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-');'
       const reportFile = path.join(__dirname, '..', 'reports', `auto-report-${timestamp}.md`);`      fs.writeFileSync(reportFile, report);
       
-      this.log(`📝 Auto-report "saved": ${reportFile}`);`      
+      this.log(`📝 Auto-report 'saved': ${reportFile}`);`      
       // Send to API if configured,
 if (this.config.errorCapture.autoReport) {
         }
@@ -297,7 +297,7 @@ if (this.config.errorCapture.autoReport) {
       
     } catch (error) {
       }
-      this.log('❌ Auto-report "failed":', error.message, 'error');'
+      this.log('❌ Auto-report 'failed':', error.message, 'error');'
     }
   }
 
@@ -336,20 +336,20 @@ const errorsByType = errors.reduce((acc, error) => {
     try {
       // Check if Next.js API is available
 }
-const apiUrl = '"http"://"localhost":3000/api/error-capture';'
+const apiUrl = ''http'://'localhost':3000/api/error-capture';'
       
       const response = await fetch(apiUrl, {
         }
-        "method": 'POST','
-        "headers": {
+        'method': 'POST','
+        'headers': {
           'Content-Type': 'application/json','
         },
-        "body": JSON.stringify({
+        'body': JSON.stringify({
           }
-          "errors": errors,
-          "timestamp": new Date().toISOString(),
-          "source": 'continuous-monitor','
-          "autoGenerated": true
+          'errors': errors,
+          'timestamp': new Date().toISOString(),
+          'source': 'continuous-monitor','
+          'autoGenerated': true
         })
       });
       
@@ -358,11 +358,11 @@ const apiUrl = '"http"://"localhost":3000/api/error-capture';'
         this.log('✅ Auto-report sent to API successfully');'
       } else {
         }
-        this.log(`⚠️ API returned "status": ${response.status}`);`      }
+        this.log(`⚠️ API returned 'status': ${response.status}`);`      }
       
     } catch (error) {
       }
-      this.log('❌ Failed to send to "API":', error.message, 'error');'
+      this.log('❌ Failed to send to 'API':', error.message, 'error');'
     }
   }
 
@@ -400,7 +400,7 @@ try {
       }
     } catch (error) {
       }
-      this.log('Failed to remove PID "file":', error.message, 'error');'
+      this.log('Failed to remove PID 'file':', error.message, 'error');'
     }
 
     this.log('✅ Continuous Error Monitor stopped');'
@@ -419,12 +419,12 @@ await this.start();
     }
     return {
       }
-      "isRunning": this.isRunning,
-      "uptime": this.isRunning ? Date.now() - this.startTime : 0,
-      "lastReport": this.lastReportTime,
-      "config": this.config,
-      "logFile": this.logFile,
-      "pidFile": this.pidFile
+      'isRunning': this.isRunning,
+      'uptime': this.isRunning ? Date.now() - this.startTime : 0,
+      'lastReport': this.lastReportTime,
+      'config': this.config,
+      'logFile': this.logFile,
+      'pidFile': this.pidFile
     };
   }
 }
@@ -440,9 +440,9 @@ const args = process.argv.slice(2);
   if (args.includes('--help') || args.includes('-h')) {'
     }
     console.log(``Continuous Error Monitor Daemon,
-"Usage": node continuous-error-monitor.js [options]
+'Usage': node continuous-error-monitor.js [options]
 
-"Options":
+'Options':
   --help, -h     Show this help message
   --start        Start the monitor daemon
   --stop         Stop the monitor daemon
@@ -451,7 +451,7 @@ const args = process.argv.slice(2);
   --daemon       Run in daemon mode (background)
   --foreground   Run in foreground mode
   --config       Path to config file,
-"Examples":
+'Examples':
   node continuous-error-monitor.js --start,
 node continuous-error-monitor.js --status,
 node continuous-error-monitor.js --daemon
@@ -491,8 +491,8 @@ process.stdin.resume();
 monitor.start();
       break;
       
-    "default":
-      console.log(`Unknown "command": ${command}`);`
+    'default':
+      console.log(`Unknown 'command': ${command}`);`
       console.log('Use --help for usage information');'
       process.exit(1);
   }
@@ -514,14 +514,14 @@ process.on('SIGINT', async () => {'
 
   process.on('uncaughtException', async (error) => {'
     }
-    console.error('❌ Uncaught "exception":', error);'
+    console.error('❌ Uncaught 'exception':', error);'
     await monitor.stop();
     process.exit(1);
   });
 
   process.on('unhandledRejection', async (reason, promise) => {'
     }
-    console.error('❌ Unhandled "rejection":', reason);'
+    console.error('❌ Unhandled 'rejection':', reason);'
     await monitor.stop();
     process.exit(1);
   });

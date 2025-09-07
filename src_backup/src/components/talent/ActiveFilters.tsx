@@ -111,7 +111,7 @@ import { ClickableBadge } from "@/components/ui/clickable-badge",import { Button
         onClick={clearFilters}Clear All;
       </Button>;
     </div>;
-  )}}<Button;
+  )}<Button;
         variant="ghost";"
         size="sm";"
         onClick={clearFilters}

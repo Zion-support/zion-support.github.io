@@ -123,16 +123,16 @@ const KitPage = () => {
     drawText('Assets:', 50, y), y -= 16,;
     assets.slice(0, 8).forEach(a => { drawText(`- ${a.filename}`, 60, y), y -= 14 }),;
     if (y < 120) { pdfDoc.addPage([612, 792])   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     if (timeline.length) {;
       y -= 6, drawText('Timeline:', 50, y), y -= 16,;
       timeline.forEach(t => { drawText(`- ${t.label}: ${t.date}`, 60, y), y -= 14 });
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     const pdfBytes = await pdfDoc.save(),
@@ -147,19 +147,19 @@ const KitPage = () => {
     const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName }),
     const onCopy = () => navigator.clipboard.writeText(text),
     return (
-      <div className="p-4 border rounded-lg space-y-2">
-        <div className="flex items-center justify-between">
-          <h4 className="font-semibold">{title}</h4>
-          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200" onClick={onCopy}>Copy</button>
+      <div className='p-4 border rounded-lg space-y-2'>
+        <div className='flex items-center justify-between'>
+          <h4 className='font-semibold'>{title}</h4>
+          <button className='text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200' onClick={onCopy}>Copy</button>
         </div>
-        <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
+        <pre className='whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto'>{text}</pre>
       </div>
     );  }
   return (
     <div>
       <Head>
         <title>Media Kit - Zion</title>
-        <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
+        <meta name='description' content='Zion media kit: brand, assets, legal, and rollout playbooks.' />
       </Head>
       <div className='space-y-8'>
         <header className='flex items-center justify-between'>
@@ -195,21 +195,21 @@ const KitPage = () => {
                 )
               )}
             </div>
-            <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
+            <p className='text-xs text-gray-500 mt-2'>Toggle to tailor assets and legal docs.</p>
           </div>
-          <div className="p-4 border rounded-lg">
-            <h3 className="font-semibold mb-2">Organization</h3>
-            <div className="space-y-2">
-              <input className="w-full border rounded px-2 py-1" value={companyName} onChange={e=>setCompanyName(e.target.value)} placeholder="Company name" />
-              <input className="w-full border rounded px-2 py-1" value={raiseAmount} onChange={e=>setRaiseAmount(e.target.value)} placeholder="Seed raise amount" />
-              <input className="w-full border rounded px-2 py-1" value={tokenName} onChange={e=>setTokenName(e.target.value)} placeholder="Token name" />
+          <div className='p-4 border rounded-lg'>
+            <h3 className='font-semibold mb-2'>Organization</h3>
+            <div className='space-y-2'>
+              <input className='w-full border rounded px-2 py-1' value={companyName} onChange={e=>setCompanyName(e.target.value)} placeholder='Company name' />
+              <input className='w-full border rounded px-2 py-1' value={raiseAmount} onChange={e=>setRaiseAmount(e.target.value)} placeholder='Seed raise amount' />
+              <input className='w-full border rounded px-2 py-1' value={tokenName} onChange={e=>setTokenName(e.target.value)} placeholder='Token name' />
             </div>
           </div>
-          <div className="p-4 border rounded-lg">
-            <h3 className="font-semibold mb-2">Rollout Timeline</h3>
-            <div className="space-y-2">
-              <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className="w-full border rounded px-2 py-1" />
-              <button onClick={onGenerateTimeline} className="px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700">Generate</button>
+          <div className='p-4 border rounded-lg'>
+            <h3 className='font-semibold mb-2'>Rollout Timeline</h3>
+            <div className='space-y-2'>
+              <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className='w-full border rounded px-2 py-1' />
+              <button onClick={onGenerateTimeline} className='px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700'>Generate</button>
             </div>
             {timeline.length > 0 && (
               <ul className='mt-3 text-sm list-disc list-inside space-y-1'>

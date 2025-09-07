@@ -109,7 +109,7 @@ return matchesSearch && matchesCategory && matchesPrice && matchesRating;
         <div className="text-center mb-12">;"
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;"
-                  }}
+                  }
                 >
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">"
                     <SelectValue placeholder="Select Category" />"
@@ -252,11 +252,11 @@ value={selectedCategory}
                   onValueChange={("value": string) => {
                     // // // console.log("Category "selected":", value),"
                     }
-                    setSelectedCategory(value)                  }}
+                    setSelectedCategory(value)                  }
                   value={selectedCategory} 
                   onValueChange={_("value": string) => {
                     }
-                    setSelectedCategory(value)}}
+                    setSelectedCategory(value)}
                 >
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white&quot;>"
                     <SelectValue placeholder=&quot;Select Category" />"
@@ -281,7 +281,7 @@ value={selectedCategory}
                         // // // console.log("Rating "selected":", rating),;"
                         }
                         setSelectedRating(rating),;
-                      }}
+                      }
                       className={`${;`                        }
                         selectedRating === rating ;
                           ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;"
@@ -290,12 +290,12 @@ value={selectedCategory}
                         // // // console.log("Rating "selected":", rating),;"
                         }
                         setSelectedRating(rating);
-                      }}
+                      }
                       className={`${;`                        }
                         selectedRating === rating;
                           ? "bg-zion-purple/20 border-zion-purple text-zion-purple";"
                           : "border-zion-blue-light text-zion-slate-light";"
-                      }}
+                      }
                       }`}`                    >;
                       {rating === null ? (;
                         "Any";"
@@ -354,7 +354,7 @@ variant="outline";"
                   setSelectedCategory($2);
                   setCurrentPriceFilter($2);
                   setSelectedRating(null)
-                }}
+                }
               >
                 Reset Filters
               </Button>
@@ -456,7 +456,7 @@ variant="outline";"
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
                     setSelectedRating(null);
 
-                  }}
+                  }
                   className="border - zion - purple text - zion - purple "hover":bg - zion-purple / 10";"
                 >;
                   Clear all filters;
@@ -469,7 +469,7 @@ variant="outline";"
                     setSelectedCategory($2);
                     setCurrentPriceFilter($2);
                     setSelectedRating(null)
-                  }}
+                  }
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                 >
                   Clear all filters

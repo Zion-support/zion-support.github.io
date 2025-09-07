@@ -97,7 +97,7 @@ if ( {) {$2;
         "type": 'landing - page';'
         "preview": 'Turn visitors into customers with compelling copy...',"price": 59;}'
     ];
-  }}
+  }
     ];
   }
   private generateMockContent("request": ContentGenerationRequest): ContentGenerationResponse {const mockContent = `# ${request.topic}This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;`## Key Points;
@@ -142,7 +142,7 @@ export interface ContentTemplate  {export interface ContentTemplate  {"id": stri
       ];
       "metadata": {export interface ContentGenerationRequest  {"type":'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',"topic":string,"tone":'professional' | 'casual' | 'friendly' | 'formal',"length":'short' | 'medium' | 'long',keywords?:string[],targetAudience?:string;'
 }export interface ContentGenerationResponse  {"content":string,"wordCount":number,"seoScore":number,"readabilityScore":number,"suggestions":string[],"metadata":{"title":string,"description":string,"tags":string[];
-  }}export interface ContentTemplate  {"id":string,"name":string,"description":string,"type":string,"preview":string,"price":number;
+  }export interface ContentTemplate  {"id":string,"name":string,"description":string,"type":string,"preview":string,"price":number;
 }export class AIContentGeneratorService {private "apiKey":string,private "baseUrl":string,constructor("apiKey":string, "baseUrl":string = '"https"://api.ziontech.ai') {this.apiKey = apiKey,this.baseUrl = baseUrl;'
   }async generateContent("request":ContentGenerationRequest):Promise<ContentGenerationResponse> {try {// In a real implementation, this would call OpenAI, Claude, or similar API;
       }
@@ -157,7 +157,7 @@ export interface ContentTemplate  {export interface ContentTemplate  {"id": stri
 - Point "3":Best practices for ${request.topic} implementation;## Conclusion;${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`,return {"content":mockContent,"wordCount":mockContent.split(' ').length,"seoScore":85,"readabilityScore":78,"suggestions":[;'
         'Add more specific examplesInclude relevant statistics','Optimize for target keywords';'
       ],"metadata":{"title":`${request.topic} - Complete Guide`,"description":`Learn everything about ${request.topic} and how to implement it effectively.`,"tags":[request.topic, request.type, 'guidetutorial'];'      }
-    }}
+    }
         "title": `${request.topic} - Complete Guide`;`        "description": `Learn everything about ${request.topic} and how to implement it effectively.`;`        "tags": [request.topic, request.type, 'guidetutorial'];'
       }
     }
@@ -523,7 +523,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'Add more headings for better structure_include internal links to related content_optimize meta description';'
       ];
       "keyword_density": {'content': 2.1;'
-        'seo': 1.8,'marketing': 1.5;;'
+        'seo': 1.8,'marketing': 1.5;'
   }
   async analyzeContent("content": string): Promise<{"seoScore": number,"readabilityScore": number,"suggestions": string[],"keywordDensity": Record<string number>;
   }> {// Mock content analysis;
@@ -540,7 +540,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'Add more headings for better structureInclude internal links to related content','Optimize meta description';'
       ],"keywordDensity":{'content':2.1,'seo':1.8,'marketing':1.5;'
       }
-    }}
+    }
 }// Pricing tiers for the AI Content Generator;
 // Pricing tiers for the AI Content Generator;// Pricing tiers for the AI Content Generator;
 // Pricing tiers for the AI Content Generator;
@@ -677,7 +677,7 @@ export const AI_CONTENT_PRICING = {;
     "price": 299;"period": '/month',"period": '/month',// Pricing tiers for the AI Content Generator;'
 export const AI_CONTENT_PRICING = {"starter": {"name": 'Starter',"price": 29,"period": '/month',"period": '/month',"period": '/month',"features": [;'
       'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';'
-    ];;
+    ];
 // Pricing tiers for the AI Content Generator;
 }
 export const AI_CONTENT_PRICING = {"starter":{"name":'Starter',"price":29,"period":'/month',"features":[;'
@@ -700,8 +700,8 @@ export const AI_CONTENT_PRICING = {"starter":{"name":'Starter',"price":29,"perio
 }
 }// Pricing tiers for the AI Content Generator;
   }
-}}
-}}
+}
+}
   }
-}}
+}
 }

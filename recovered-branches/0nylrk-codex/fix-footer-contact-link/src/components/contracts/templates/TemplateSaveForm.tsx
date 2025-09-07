@@ -34,7 +34,7 @@ export function TemplateSaveForm({
     resolver: zodResolver($2);
     defaultValues: {
       title: editTemplate ?.title || "",
-      isDefault: editTemplate ?.is_default || false}}),
+      isDefault: editTemplate ?.is_default || false}),
   
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {

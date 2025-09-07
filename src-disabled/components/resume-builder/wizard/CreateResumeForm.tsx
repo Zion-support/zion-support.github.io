@@ -1,9 +1,9 @@
-import { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
+import { useState } from 'react',
+import { Card, CardContent } from '@/components/ui/card',
 
-import { Button } from "@/components/ui/button";
-import { Loader2 } from 'lucide-react'"
-import { CreateResumeFormProps } from "./types",
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react''
+import { CreateResumeFormProps } from './types',
 export const CreateResumeForm = ({}
   onCreateResume,
   onCancel,
@@ -29,8 +29,8 @@ export const CreateResumeForm = ({}
           <div className='flex gap-2 max-w-md mx-auto'>;
 
             <input'
-              type='text''"
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')"'
+              type='text'''
+              placeholder='Resume Title (e.g. 'AI Engineer Resume')''
               className='flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm'
               value={newResumeTitle}
               onChange={e => setNewResumeTitle(e.target.value)}
@@ -42,13 +42,13 @@ export const CreateResumeForm = ({}
   },
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardContent className="py-8">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>
-          <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>
+    <Card className='w-full max-w-2xl mx-auto'>
+      <CardContent className='py-8'>
+        <div className='text-center'>
+          <h2 className='text-2xl font-bold mb-2'>Create New Resume</h2>
+          <p className='text-muted-foreground mb-6'>Give your resume a title to get started</p>
           
-          <div className="flex gap-2 max-w-md mx-auto">
+          <div className='flex gap-2 max-w-md mx-auto'>
 
               {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
               Create;
@@ -59,20 +59,20 @@ export const CreateResumeForm = ({}
 
   const handleSubmit = async () => {;
 
-    <Card className="w-full max-w-2xl mx-auto">;
-      <CardContent className="py-8">;
-        <div className="text-center">;
-          <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>;
-          <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;
-          <div className="flex gap-2 max-w-md mx-auto">;
+    <Card className='w-full max-w-2xl mx-auto'>;
+      <CardContent className='py-8'>;
+        <div className='text-center'>;
+          <h2 className='text-2xl font-bold mb-2'>Create New Resume</h2>;
+          <p className='text-muted-foreground mb-6'>Give your resume a title to get started</p>;
+          <div className='flex gap-2 max-w-md mx-auto'>;
 
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+              className='flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm'
               value={newResumeTitle}
 
           <Button
-            variant="ghost"
+            variant='ghost'
             onClick = {onCancel,}
-            className="mt-4"
+            className='mt-4'
           >
 
             Cancel
@@ -86,7 +86,7 @@ export const CreateResumeForm = ({}
 
 },
 
-'"},;
+''},;
 
   )
 };
@@ -114,8 +114,8 @@ export const CreateResumeForm = ({}
           </p>;'
           <div className='flex gap - 2 max - w-md mx - auto'>;
             <input;'
-              type='text';'"
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')";'
+              type='text';''
+              placeholder='Resume Title (e.g. 'AI Engineer Resume')';'
               className='flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm';
               value={newResumeTitle}
               on_change={e => setNewResumeTitle (e.target.value)}
@@ -145,8 +145,8 @@ export const CreateResumeForm = ({}
               Create;
             </Button>;
           </div>;
-          <Button;"
-            variant="ghost";
+          <Button;'
+            variant='ghost';
 
           >;
           </Button>;
@@ -158,6 +158,6 @@ export const CreateResumeForm = ({}
 }disabled= {}
   !newResumeTitle.trim () || is_loading;
 }> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>);
-}'"
-'"},
+}''
+''},
   );

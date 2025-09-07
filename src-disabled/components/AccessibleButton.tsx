@@ -42,8 +42,8 @@ const AccessibleButton: React.FC<AccessibleButtonProps> = ({
     >
       {loading ? (
         <>
-          <span className="sr-only">{loadingText}</span>
-          <span aria-hidden="true">⏳</span>
+          <span className='sr-only'>{loadingText}</span>
+          <span aria-hidden='true'>⏳</span>
         </>
       ) : (
         children

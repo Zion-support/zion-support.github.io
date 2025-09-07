@@ -293,7 +293,7 @@ export default function ProfileDetail() {
                 full_name: profileData ?.full_name || '',
                 professional_title: profileData ?.professional_title || '',
                 hourly_rate: profileData ?.hourly_rate || 0
-              }}
+              }
             />
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
@@ -326,7 +326,7 @@ export default function ProfileDetail() {
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
 
-              }}
+              }
             />;
             {/* Contact Information */}
                 )}
@@ -426,12 +426,12 @@ export default function ProfileDetail() {
           {/* Sidebar with HireNowCTA */}
           <div className="col - span - 4 lg:col - span-1">;
             <HireNowCTA;
-              talent_profile={{
+              talent_profile={
                 id: profile_data?.id || '',
                 full_name: profile_data?.full_name || '',
                 professional_title: profile_data?.professional_title || '',
                 hourly_rate: profile_data?.hourly_rate || 0;
-              }}
+              }
             />;
             {/* Contact Information */}
             <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mt-6">;

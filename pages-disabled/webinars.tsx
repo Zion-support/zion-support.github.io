@@ -174,9 +174,9 @@ export default function WebinarsPage() {}
               <motion.article;
                 key={webinar.id};
                 className="bg-white rounded-lg shadow-lg overflow-hidden mb-8"
-                initial={{ opacity: 0, y: 20 }};
-                animate={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.6 }};
+                initial={ opacity: 0, y: 20 };
+                animate={ opacity: 1, y: 0 };
+                transition={ duration: 0.6 };
               >
 </motion>"
                 <div className="md:flex">"
@@ -324,10 +324,10 @@ export default function WebinarsPage() {}
                 <motion.article;
                   key={webinar.id};
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ delay: index * 0.1 }};
-                  whileHover={{ y: -5 }};
+                  initial={ opacity: 0, y: 20 };
+                  animate={ opacity: 1, y: 0 };
+                  transition={ delay: index * 0.1 };
+                  whileHover={ y: -5 };
                 >
 </motion>"
                   <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">"

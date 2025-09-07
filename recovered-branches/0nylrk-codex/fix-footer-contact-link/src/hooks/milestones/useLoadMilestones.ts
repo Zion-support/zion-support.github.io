@@ -21,11 +21,11 @@ export const useLoadMilestones = (projectId?: string) => {;
       }
       setIsLoading (true);
 ;
-      const { "data": milestones_data, "error": milestones_error } = await supabase;
+      const { 'data': milestones_data, 'error': milestones_error } = await supabase;
         .from ('project_milestones');'
         .select ('*');'
         .eq ('project_id', project_id);'
-        .order ('due_date', { "ascending": true });'
+        .order ('due_date', { 'ascending': true });'
 ;
       // Check condition,
 if (throw milestones_error) {
@@ -34,12 +34,12 @@ if (throw milestones_error) {
       set_milestones (milestones_data);
 ;
       // Fetch activities for each milestone;
-      const "activities_map": Record < string, MilestoneActivity[]> = {}
+      const 'activities_map': Record < string, MilestoneActivity[]> = {}
 ;
       for (const milestone of milestones_data) {
         }
-        const { "data": activities_data, "error": activities_error } = await supabase;
+        const { 'data': activities_data, 'error': activities_error } = await supabase;
           .from ('milestone_activities');'
           .select (`;`
             *;
-            "created_by_profile":profiles ! user_id (display_name, avatar_url);
+            'created_by_profile':profiles ! user_id (display_name, avatar_url);

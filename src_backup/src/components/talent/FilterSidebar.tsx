@@ -1,5 +1,5 @@
 import { Filter  } from 'lucide-react';'
-import { SearchFilter } from "./filters/SearchFilter",import { SortFilter } from "./filters/SortFilter",import { SkillsFilter } from "./filters/SkillsFilter",import { AvailabilityFilter } from "./filters/AvailabilityFilter",import { RegionFilter } from "./filters/RegionFilter",import { ExperienceFilter } from "./filters/ExperienceFilter",import React from 'react';'
+import { SearchFilter } from './filters/SearchFilter',import { SortFilter } from './filters/SortFilter',import { SkillsFilter } from './filters/SkillsFilter',import { AvailabilityFilter } from './filters/AvailabilityFilter',import { RegionFilter } from './filters/RegionFilter',import { ExperienceFilter } from './filters/ExperienceFilter',import React from 'react';'
 import { Button  } from '@/components/ui/button';'
 import { SearchFilter  } from './filters/SearchFilter';'
 import { SortFilter  } from './filters/SortFilter';'
@@ -31,26 +31,26 @@ export function FilterSidebar(): any ({searchTerm,setSearchTerm,selectedSkills,t
   sortOption;
   setSortOption;
   clearFilters;return (<>;
-      {/* Filter header */}<div className="flex items-center justify-between mb-6">;"
-        <h3 className="text-lg font-semibold text-white flex items-center">;"
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />;"
+      {/* Filter header */}<div className='flex items-center justify-between mb-6'>;'
+        <h3 className='text-lg font-semibold text-white flex items-center'>;'
+          <Filter className='h-4 w-4 mr-2 text-zion-purple' />;'
           Filters;
         </h3>;
         <Button;
-          variant="ghost";"
-          size="sm";"
-import { PriceFilter } from "./filters/PriceFilter",import { FilterSidebarProps } from "@/types/filters",export function FilterSidebar() {return (<>;"
+          variant='ghost';'
+          size='sm';'
+import { PriceFilter } from './filters/PriceFilter',import { FilterSidebarProps } from '@/types/filters',export function FilterSidebar() {return (<>;'
       {/* Filter header */}
-      <div className="flex items-center justify-between mb-6">;"
-        <h3 className="text-lg font-semibold text-white flex items-center">;"
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />;"
+      <div className='flex items-center justify-between mb-6'>;'
+        <h3 className='text-lg font-semibold text-white flex items-center'>;'
+          <Filter className='h-4 w-4 mr-2 text-zion-purple' />;'
           Filters;
         </h3>;
         <Button;
-          variant="ghost";"
-          size="sm";"
+          variant='ghost';'
+          size='sm';'
           onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple "hover":text-zion-purple-light "hover":bg-transparent";"
+          className='h-7 text-xs text-zion-purple 'hover':text-zion-purple-light 'hover':bg-transparent';'
   isMobileFilterOpen;
 }: FilterSidebarProps) {searchTerm;
   }
@@ -103,23 +103,23 @@ import { PriceFilter } from "./filters/PriceFilter",import { FilterSidebarProps 
           variant='ghost';'
           size='sm';'
           onClick={clearFilters}
-          className='h-7 text-xs text-zion-purple "hover":text-zion-purple-light "hover":bg-transparent';'
+          className='h-7 text-xs text-zion-purple 'hover':text-zion-purple-light 'hover':bg-transparent';'
         >;
           Clear All;
         </Button>;
       </div>;
-import React from "react",import { Button } from "@/components/ui/button",export function FilterSidebar() {return (<>;"
+import React from 'react',import { Button } from '@/components/ui/button',export function FilterSidebar() {return (<>;'
       {/* Filter header */}
-      <div className="flex items-center justify-between mb-6">;"
-        <h3 className="text-lg font-semibold text-white flex items-center">;"
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />;"
+      <div className='flex items-center justify-between mb-6'>;'
+        <h3 className='text-lg font-semibold text-white flex items-center'>;'
+          <Filter className='h-4 w-4 mr-2 text-zion-purple' />;'
           Filters;
         </h3>;
         <Button;
-          variant="ghost";"
-          size="sm";"
+          variant='ghost';'
+          size='sm';'
           onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple "hover":text-zion-purple-light "hover":bg-transparent";"
+          className='h-7 text-xs text-zion-purple 'hover':text-zion-purple-light 'hover':bg-transparent';'
         >;
           Clear All;
         </Button>;
@@ -127,18 +127,18 @@ import React from "react",import { Button } from "@/components/ui/button",export
 {/* Search */}<SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
-          className='h-7 text-xs text-zion-purple "hover":text-zion-purple-light "hover":bg-transparent'>;'
+          className='h-7 text-xs text-zion-purple 'hover':text-zion-purple-light 'hover':bg-transparent'>;'
           Clear All;
         </Button>;
       </div>;
-          className="h-7 text-xs text-zion-purple "hover":text-zion-purple-light "hover":bg-transparent";"
+          className='h-7 text-xs text-zion-purple 'hover':text-zion-purple-light 'hover':bg-transparent';'
           Filters;
         </h3>;
         <Button;
-          variant="ghost";"
-          size="sm";"
+          variant='ghost';'
+          size='sm';'
           onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple "hover":text-zion-purple-light "hover":bg-transparent">;"
+          className='h-7 text-xs text-zion-purple 'hover':text-zion-purple-light 'hover':bg-transparent'>;'
           Clear All;
         </Button>;
       </div>;{/* Search */}
@@ -217,18 +217,18 @@ function FilterSidebar() {return (<>;
           variant='ghost';'
           size='sm';'
           on_click={clear_filters}
-          className='h - 7 text - xs text - zion - purple "hover":text - zion - purple - light "hover":bg - transparent'        >;'
+          className='h - 7 text - xs text - zion - purple 'hover':text - zion - purple - light 'hover':bg - transparent'        >;'
           Clear All;
         </Button>;
       </div>;
-          className="h - 7 text - xs text - zion - purple "hover":text - zion - purple - light "hover":bg - transparent";"
+          className='h - 7 text - xs text - zion - purple 'hover':text - zion - purple - light 'hover':bg - transparent';'
           Filters;
         </h3>;
         <Button;
-          variant="ghost";"
-          size="sm";"
+          variant='ghost';'
+          size='sm';'
           on_click={clear_filters}
-          className="h - 7 text - xs text - zion - purple "hover":text - zion - purple - light "hover":bg - transparent";"
+          className='h - 7 text - xs text - zion - purple 'hover':text - zion - purple - light 'hover':bg - transparent';'
         >;
           Clear All;
         </Button>;
@@ -274,11 +274,11 @@ function FilterSidebar() {return (<>;
           on_click={() =>;
             }
             window.dispatch_event (new CustomEvent ('closeMobileFilter'))}'
-          className='w - full bg - zion - purple "hover":bg - zion - purple - dark text - white mt - 4'        >;'
+          className='w - full bg - zion - purple 'hover':bg - zion - purple - dark text - white mt - 4'        >;'
         <Button;
           on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')) }'
           on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')) }'
-          className="w - full bg - zion - purple "hover":bg - zion - purple - dark text - white mt - 4";"
+          className='w - full bg - zion - purple 'hover':bg - zion - purple - dark text - white mt - 4';'
       {/* Search */}
       <SearchFilter search_term={search_term} setSearchTerm={setSearchTerm} />;
       {/* Sorting */}
@@ -291,21 +291,21 @@ function FilterSidebar() {return (<>;
         toggle_section={() => toggle_section ('skills')}'
         isMobileFilterOpen={isMobileFilterOpen}
       />;{isMobileFilterOpen && (<Button;onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}'
-          className="w-full bg-zion-purple "hover":bg-zion-purple-dark text-white mt-4";"
+          className='w-full bg-zion-purple 'hover':bg-zion-purple-dark text-white mt-4';'
         <Button;
           onClick={() =>;
             }
             window.dispatchEvent(new CustomEvent('closeMobileFilter'))}'
-          className='w-full bg-zion-purple "hover":bg-zion-purple-dark text-white mt-4';'
+          className='w-full bg-zion-purple 'hover':bg-zion-purple-dark text-white mt-4';'
         >;
           Apply Filters;
         </Button>;
-      )}className='w-full bg-zion-purple "hover":bg-zion-purple-dark text-white mt-4'        >;'
+      )}className='w-full bg-zion-purple 'hover':bg-zion-purple-dark text-white mt-4'        >;'
         <Button;
-          onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}className='w-full bg-zion-purple "hover":bg-zion-purple-dark text-white mt-4'        >;'
+          onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}className='w-full bg-zion-purple 'hover':bg-zion-purple-dark text-white mt-4'        >;'
         <Button;
           onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}'
-          className="w-full bg-zion-purple "hover":bg-zion-purple-dark text-white mt-4";"
+          className='w-full bg-zion-purple 'hover':bg-zion-purple-dark text-white mt-4';'
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;{/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;{/* Skills */}
@@ -331,7 +331,7 @@ function FilterSidebar() {return (<>;
       />;{isMobileFilterOpen && (<Button;
           }
           onClick={() => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}'
-          className="w-full bg-zion-purple "hover":bg-zion-purple-dark text-white mt-4";"
+          className='w-full bg-zion-purple 'hover':bg-zion-purple-dark text-white mt-4';'
         >;
           Apply Filters;
         </Button>;
@@ -340,7 +340,7 @@ function FilterSidebar() {return (<>;
   )})}
         <Button;
           on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}'
-          className="w - full bg - zion - purple "hover":bg - zion - purple - dark text - white mt - 4";"
+          className='w - full bg - zion - purple 'hover':bg - zion - purple - dark text - white mt - 4';'
         >;
           Apply Filters;
         </Button>)}

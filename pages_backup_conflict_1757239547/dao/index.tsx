@@ -72,7 +72,7 @@ export default function DaoMetrics(req, res) {
                   <span>{d.percent.toFixed(2)}%</span>
                 </div>
                 <div className="w-full h-2 bg-gray-200 dark:bg-gray-800 rounded">
-                  <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
+                  <div className="h-2 bg-emerald-600 rounded" style={ width: `${Math.min(100, d.percent)}%` } />
                 </div>
               </div>
             ))  } catch (error) {
@@ -127,7 +127,7 @@ export default function DaoMetrics(req, res) {
           <div className="font-medium mb-2">Governance Participation Rate</div>
           <div className="text-3xl font-semibold">{data.governanceParticipationRate}%</div>
           <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded mt-2">
-            <div className="h-3 bg-indigo-600 rounded" style={{ width: `${Math.min(100, data.governanceParticipationRate)}%` }} />
+            <div className="h-3 bg-indigo-600 rounded" style={ width: `${Math.min(100, data.governanceParticipationRate)}%` } />
           </div>
           <div className="text-xs text-gray-500 mt-1">Weekly updates via Etherscan</div>
         </div>

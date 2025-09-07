@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';'
 import {Resume} from '@/types/resume';'
-export const useResumeProgress = ("resume": Resume | null) => {;  const [progress, setProgress] = useState(0);
+export const useResumeProgress = ('resume': Resume | null) => {;  const [progress, setProgress] = useState(0);
   }
   useEffect(() => {
     // Calculate progress based on completed sections
@@ -12,7 +12,7 @@ if (!resume) {
     }
 import { useState, useEffect } from 'react';'
 import { Resume } from '@/types/resume';'
-export const useResumeProgress = ("resume": Resume | null) => {;
+export const useResumeProgress = ('resume': Resume | null) => {;
   }
   const [progress, setProgress] = useState(0),;
   useEffect(() => {;
@@ -71,11 +71,11 @@ if ( {) {
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       }
       completed += 1
-    }};
+    };
 import { useState, useEffect } from 'react',;'
 import { Resume } from '@/types/resume',;'
 ;
-export const useResumeProgress = ("resume":Resume | null) => {;
+export const useResumeProgress = ('resume':Resume | null) => {;
   }
   const [progress, setProgress] = useState(0),;
   ;

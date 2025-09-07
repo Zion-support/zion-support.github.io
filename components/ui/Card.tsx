@@ -9,14 +9,10 @@ interface CardProps {
 
 export default function Card() {return (<div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>`
       {children}
-<<<<<<< HEAD
     </div>
   );
 }
 pr-12243
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </div>;
   )}
 import { cn  } from '../../lib/utils';'
@@ -24,7 +20,6 @@ import { cn  } from '../../lib/utils';'
 interface HTMLDivElement extends HTMLElement  {"tagName": "DIV";"
 }
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import { cn } from "../../lib/utils";
 
@@ -85,7 +80,6 @@ interface HTMLHeadingElement extends HTMLElement  {tagName: 'H1' | 'H2' | 'H3' |
 
 const Card = null;
       className;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     )}
     {...props}
   />
@@ -104,7 +98,6 @@ const CardHeader = React.forwardRef<
 ));
 CardHeader.displayName = "CardHeader";
 
-<<<<<<< HEAD
 const CardTitle = React.forwardRef<
   HTMLParagraphElement;
   React.HTMLAttributes<HTMLHeadingElement>
@@ -114,12 +107,10 @@ const CardTitle = React.forwardRef<
     className={cn(
       "text-2xl font-semibold leading-none tracking-tight";
       className
-=======
 const CardTitle = null;
       className
 origin/cursor/automate-test-improve-and-merge-code-2533
       className;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     )}
     {...props}
   />
@@ -127,20 +118,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 CardTitle.displayName = "CardTitle";
 
 const CardDescription = React.forwardRef<
-<<<<<<< HEAD
   HTMLParagraphElement;
-=======
   HTMLParagraphElement,
 const CardDescription = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
-<<<<<<< HEAD
-=======
     {...props}
   />;
 ));
@@ -155,7 +141,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
 CardContent && CardContent.displayName = "CardContent";
-<<<<<<< HEAD
 
 
 const CardFooter = React && React.forwardRef<;
@@ -182,21 +167,17 @@ const CardFooter = React.forward_ref<;
   <div;
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
-=======
 const CardDescription = React.forwardRef<;
   HTMLParagraphElement,const CardDescription = React.forwardRef<;
   HTMLParagraphElement,const CardDescription  = null;React.HTMLAttributes<HTMLParagraphElement />;
 >(({ className, ...props }, ref) => (<p;
     ref={ref}"
     className={cn(\"text-sm text-muted-foreground\", className)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     {...props}
   />
 ));
 CardDescription.displayName = "CardDescription";
 
-<<<<<<< HEAD
 const CardContent = React.forwardRef<
   HTMLDivElement;
   React.HTMLAttributes<HTMLDivElement>
@@ -210,16 +191,12 @@ const CardFooter = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
-=======
-<<<<<<< HEAD
 import React from 'react';
-=======
 
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
   onClick?: () = /> void;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 interface CardProps  {children: React.ReactNode;
   className?: string;
@@ -299,7 +276,6 @@ const CardHeader = null;
 ))CardHeader.displayName = "CardHeader";"
 
 
-=======
      />;"
 ))Card.displayName = \'Card\'
 const CardHeader = null
@@ -316,7 +292,6 @@ const CardTitle = null
     {...props}
   />;"
 ))CardTitle.displayName = \'CardTitle\'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 const CardDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
@@ -406,7 +381,6 @@ const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}
 interface CardProps  {"children": React.ReactNode,class_name?: string,style?: React.CSSProperties,on_click?: () => void,hover?: boolean;
 }
   return (className={classes}
->>>>>>> origin/main
     ref={ref}
     className={cn("flex items-center p-6 pt-0", className)}
     {...props}
@@ -414,9 +388,7 @@ interface CardProps  {"children": React.ReactNode,class_name?: string,style?: Re
 ));
 CardFooter.displayName = "CardFooter";
 
-<<<<<<< HEAD
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-=======
 import React from 'react';
 interface CardProps {
   children: React.ReactNode
@@ -448,10 +420,7 @@ interface CardProps {
   on_click?: () => void,
   hover?: boolean;
 }
-=======
 }
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return (
       className={classes}
       style={style}
@@ -531,14 +500,11 @@ const Card: React.FC<CardProps> = ({
     </div>
   )
 }
-<<<<<<< HEAD
 "
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }<div className=\"absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none\" />
 }"
     </div>)CardContent.displayName = \"CardContent\";
-=======
 CardContent.displayName = "CardContent";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const CardFooter = null;
   React.HTMLAttributes<HTMLDivElement>
@@ -557,7 +523,6 @@ const "Card": React.FC<CardProps> = ({export {Card,CardHeader,CardFooter,CardTit
     </div>
   );
 }
-<<<<<<< HEAD
 
 
 export {
@@ -570,9 +535,7 @@ export {
 };
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-=======
 "
-=======
 return (<div className= {
   classes 
 }style= {
@@ -583,14 +546,8 @@ return (<div className= {
 }</div>) 
 }
 export default Card
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 export default Card;
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
 export default function Card({ children, className = '' }: CardProps) {
   return (
     <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
@@ -598,10 +555,5 @@ export default function Card({ children, className = '' }: CardProps) {
     </div>
   );
 }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

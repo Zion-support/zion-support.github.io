@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
 
 import React from 'react';''
 import Link from 'next/link';''
@@ -345,13 +344,13 @@ export default function TalentPage() {;
           <div className="container mx-auto px-4">"
 </div>
             <motion.div,"
-    initial={{ "opacity": 0, "y": 30 }}""
-              animate={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0.8 }}"
+    initial={ "opacity": 0, "y": 30 }""
+              animate={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0.8 }"
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }"
     <div className="min-h-screen bg-gray-50">;"
 </motion>
       <Head>;
@@ -398,13 +397,13 @@ export default function TalentPage() {;
       <div className="min-h-screen bg-gray-50">;"
 </div>
             <motion.div,"
-    initial={{ "opacity": 0, "y": 30 }}""
-              animate={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0 && 0.8 }}"
+    initial={ "opacity": 0, "y": 30 }""
+              animate={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0 && 0.8 }"
             <motion && motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }"
               className="text-center max-w-4xl mx-auto""
             >
 </motion>"
@@ -422,15 +421,12 @@ export default function TalentPage() {;
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">"
 </Link>
 
-=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 
-=======
-=======
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
@@ -438,8 +434,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   {
 
 
-=======
-=======
       "Knowledge of cloud deployment and DevOps"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
@@ -447,8 +441,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   {
 
 
-=======
-=======
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
@@ -456,8 +448,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   {
 
 
-=======
-=======
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
@@ -465,8 +455,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   {
 
 
-=======
-=======
       "Knowledge of monitoring and logging tools"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
@@ -474,8 +462,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   {
 
 
-=======
-=======
       "Strong portfolio demonstrating design skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
@@ -483,7 +469,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
 ];
 
 
-=======
 
 
   "Client success focus"
@@ -492,8 +477,6 @@ export default function TalentPage() {
   return (
 
 
-=======
-=======
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
       <div className="min-h-screen bg-gray-50">;
@@ -502,8 +485,6 @@ export default function TalentPage() {
           <div className="container mx-auto px-4">
 
 
-=======
-=======
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -518,12 +499,10 @@ export default function TalentPage() {
                 </Link>
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                   Get In Touch
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
                 </Link>
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
 
         </section>"
         <section className="py-20 bg-white">"
@@ -532,17 +511,17 @@ export default function TalentPage() {
 </div>
             <motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0.8 }""
+              viewport={ "once": true }"
             <motion.div;"
               className="text-center mb-16""
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
         {/* Benefits Section */}"
         <section className="py-20 bg-white">"
@@ -550,7 +529,7 @@ export default function TalentPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div,
-              transition={{ duration: 0 && 0.8 }}"
+              transition={ duration: 0 && 0.8 }"
               className="text-center max-w-4xl mx-auto">;"
 </motion>"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;"
@@ -579,14 +558,14 @@ export default function TalentPage() {
 </div>
             <motion&& motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0 && 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0 && 0.8 }""
+              viewport={ "once": true }"
             <motion && motion.div;"
               className="text-center mb-16""
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -602,16 +581,16 @@ export default function TalentPage() {
     key={index}"
                     className="text-center p-6""
 
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }} />;
-                    viewport={{ once: true }}                  >;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true } />;
+                    viewport={ once: true }                  >;
                     <div className=\"text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center\" />;
                       <IconComponent className=\"w-8 h-8\" />;
                     </div>;
                     <h3 className=\"text-xl font-bold text-gray-900 mb-3\" />;
-                    viewport={{ once: true }}
+                    viewport={ once: true }
                   >
 
 </motion>"
@@ -627,7 +606,6 @@ export default function TalentPage() {
 </p>
                     </p>
                   </motion.div>)
-=======
         </section>
 
         {/* Benefits Section */}
@@ -635,8 +613,6 @@ export default function TalentPage() {
           <div className="container mx-auto px-4">
 
 
-=======
-=======
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -652,10 +628,10 @@ export default function TalentPage() {
                   <motion.div,
     key={index}
                     className="text-center p-6"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }
                   >
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8" />
@@ -674,22 +650,22 @@ export default function TalentPage() {
 
             <motion.div,
     className="text-center mb-16"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
 
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
             >
 
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
             >
 
@@ -707,10 +683,10 @@ export default function TalentPage() {
                   <motion.div,
     key={index}
                     className="text-center p-6"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}                  >
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }                  >
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8" />
                     </div>
@@ -721,12 +697,10 @@ export default function TalentPage() {
                       {benefit.description}
                     </p>
                   </motion.div>
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
                 );
               })}
             </div>
           </div>
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
         </section>"
         <section className="py-20 bg-gray-50">"
 </section>"
@@ -734,17 +708,17 @@ export default function TalentPage() {
 </div>
             <motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0.8 }""
+              viewport={ "once": true }"
             <motion.div;"
               className="text-center mb-16""
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
             >
 </motion>"
@@ -769,8 +743,8 @@ export default function TalentPage() {
 </p>
                     </p>
                   </motion.div>
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;"
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;"
 </h2>
               </h2>;"
@@ -783,14 +757,13 @@ export default function TalentPage() {
                   <motion&& motion.div,
     key={index}"
                     className="text-center p-6""
-=======
         </section>
 
         {/* Values Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}            >
+              transition={ duration: 0.8 }
+              viewport={ once: true }            >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
               </h2>
@@ -814,8 +787,8 @@ export default function TalentPage() {
                     </p>
                   </motion.div>
 
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Why Work With Us?;
               </h2>;
@@ -830,12 +803,10 @@ export default function TalentPage() {
                   <motion&& motion.div,
     key={index}
                     className="text-center p-6"
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                    viewport={ once: true }>;
 </motion>"
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;"
 </div>"
@@ -857,15 +828,15 @@ export default function TalentPage() {
 
             <motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0 && 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0 && 0.8 }""
+              viewport={ "once": true }"
             <motion && motion.div;"
               className="text-center mb-16""
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }} />;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 } />;
               <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />;
                 Our Values;
               </h2>;
@@ -874,8 +845,8 @@ export default function TalentPage() {
               </p>;
             </motion.div>;
             <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;
-              {values.map((value, index) => (<motion.div,transition={{ duration: 0 && 0.8 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              {values.map((value, index) => (<motion.div,transition={ duration: 0 && 0.8 }
+              whileInView={ opacity: 1, y: 0 }
 
             >
 </motion>"
@@ -891,10 +862,10 @@ export default function TalentPage() {
                 <motion.div,
     key={index}"
                   className="bg-white p-6 rounded-lg shadow-lg""
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}"
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }"
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow""
                 >
 </motion>"
@@ -961,14 +932,13 @@ export default function TalentPage() {
 </div>
             <motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0.8 }""
+              viewport={ "once": true }"
             <motion.div;"
               className="text-center mb-16""
 
-=======
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;
                       <IconComponent className="w-8 h-8" />;
                     </div>;
@@ -988,25 +958,20 @@ export default function TalentPage() {
         {/* Values Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
 
 
-=======
-=======
             <motion.div,
     className="text-center mb-16"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
+              initial={ "opacity": 0, "y": 30 }
+              whileInView={ "opacity": 1, "y": 0 }
+              transition={ "duration": 0.8 }
+              viewport={ "once": true }
             <motion.div
               className="text-center mb-16"
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
             >
 </motion>"
@@ -1020,8 +985,8 @@ export default function TalentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
 </div>
                 <motion.div,
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;"
 </h2>
@@ -1035,10 +1000,10 @@ export default function TalentPage() {
                 <motion&& motion.div,
     key={index}"
                   className="bg-white p-6 rounded-lg shadow-lg""
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}"
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }"
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">;"
 </motion>"
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">;"
@@ -1100,14 +1065,14 @@ export default function TalentPage() {
 </motion>
             <motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0 && 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0 && 0.8 }""
+              viewport={ "once": true }"
             <motion && motion.div;"
               className="text-center mb-16""
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -1122,10 +1087,10 @@ export default function TalentPage() {
                 <motion.div,
     key={job.id}"
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300""
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}"
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }"
                   className="bg-white rounded-lg shadow-lg p-6 text-center""
                 >
 </motion>"
@@ -1163,8 +1128,6 @@ export default function TalentPage() {
                         </div>"
                         <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">"
 </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -1177,10 +1140,10 @@ export default function TalentPage() {
               {values.map((value, index) => (
                 <motion.div,
                   className="bg-white p-6 rounded-lg shadow-lg"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -1240,8 +1203,6 @@ export default function TalentPage() {
           <div className="container mx-auto px-4">
 
 
-=======
-=======
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
@@ -1256,10 +1217,10 @@ export default function TalentPage() {
     key={job.id}
 
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="bg-white rounded-lg shadow-lg p-6 text-center"
                 >
                   <benefit.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
@@ -1290,12 +1251,10 @@ export default function TalentPage() {
                         </div>
                         <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">
                           {job.department}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
                         </span>
                       </div>
                     </div>
                     <Link,
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
     href={`/talent/${job.id}`}"
                       className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center""
                     >
@@ -1331,7 +1290,6 @@ export default function TalentPage() {
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />"
 </CheckCircle>
                           </li>
-=======
     href={`/talent/${job.id}`}
                       className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
                     >
@@ -1363,7 +1321,6 @@ export default function TalentPage() {
                             {benefit}
                           </li>
                         ))}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
                       </ul>
                     </div>
                   </div>
@@ -1372,7 +1329,6 @@ export default function TalentPage() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
       </section>"
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
 </section>"
@@ -1388,7 +1344,6 @@ export default function TalentPage() {
             </p>"
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">"
 </button>
-=======
       </section>
 
       {/* CTA Section */}
@@ -1403,28 +1358,26 @@ export default function TalentPage() {
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Send Resume
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
             </button>
           </div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
         </section>"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
 </section>"
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div,"
-    initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0.8 }}""
-              viewport={{ "once": true }}"
+    initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0.8 }""
+              viewport={ "once": true }"
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -1438,8 +1391,8 @@ export default function TalentPage() {
 </div>
                 <motion.div,
     key={job.id}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;"
 </h2>
@@ -1453,10 +1406,10 @@ export default function TalentPage() {
                 <motion&& motion.div,
     key={job && job.id}"
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300""
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}"
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }"
                   className="bg-white rounded-lg shadow-lg p-6 text-center">;"
 </motion>"
                   <benefit && benefit.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />;"
@@ -1567,16 +1520,16 @@ export default function TalentPage() {
         </section>;
 
             <motion.div,"
-    initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0 && 0.8 }}""
-              viewport={{ "once": true }}"
+    initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0 && 0.8 }""
+              viewport={ "once": true }"
             <motion && motion.div;
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}
-              viewport={{ once: true }}transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }transition={ duration: 0.8 }
+              viewport={ once: true }transition={ duration: 0.8 }
+              viewport={ once: true }
              />;
               <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />;
                 Open Positions;
@@ -1588,21 +1541,21 @@ export default function TalentPage() {
             <div className=\"space-y-8\" />;
               {jobOpenings.map((job, index) => (<motion.div,key={job.id}
 ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ duration: 0 && 0.8 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }              transition={ duration: 0 && 0.8 }
         <section className=\"py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white\" />
           <div className=\"container mx-auto px-4 text-center\" />
             <motion.div,
-    initial={{ \"opacity\": 0, \"y\": 30 }}
-              whileInView={{ \"opacity\": 1, \"y\": 0 }}
-              transition={{ \"duration\": 0.8 }}
-              viewport={{ \"once\": true }}
+    initial={ \"opacity\": 0, \"y\": 30 }
+              whileInView={ \"opacity\": 1, \"y\": 0 }
+              transition={ \"duration\": 0.8 }
+              viewport={ \"once\": true }
             <motion.div;
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
              />
               <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />
                 Open Positions;
@@ -1615,8 +1568,8 @@ initial={{ opacity: 0, y: 30 }}
               {jobOpenings.map((job, index) => (}
                 <motion.div,}
     key={job.id}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }} />;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true } />;
               <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />;
                 Open Positions;
               </h2>;
@@ -1627,10 +1580,10 @@ initial={{ opacity: 0, y: 30 }}
             <div className=\"space-y-8\" />;
               {jobOpenings && jobOpenings.map((job, index) => (<motion&& motion.div,key={job && job.id}
                   className=\"bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300\";
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
                   className=\"bg-white rounded-lg shadow-lg p-6 text-center\" />;
                   <benefit && benefit.icon className=\"w-12 h-12 text-blue-600 mx-auto mb-4\" />;
                   <h3 className=\"text-xl font-semibold text-gray-900 mb-2\" />;
@@ -1722,22 +1675,22 @@ initial={{ opacity: 0, y: 30 }}
         <section className=\"py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white\" />;
           <div className=\"container mx-auto px-4 text-center\" />;
             <motion&& motion.div,<motion.div,ursor/automate-test-improve-and-merge-code-646c;
-            <motion.div,initial={{ \"opacity\": 0, \"y\": 30 }}
-        {/* CTA Section */}    initial={{ \"opacity\": 0, \"y\": 30 }}
+            <motion.div,initial={ \"opacity\": 0, \"y\": 30 }
+        {/* CTA Section */}    initial={ \"opacity\": 0, \"y\": 30 }
         {/* CTA Section */}
             <motion.div,
-    initial={{ \"opacity\": 0, \"y\": 30 }}
-              whileInView={{ \"opacity\": 1, \"y\": 0 }}
-              transition={{ \"duration\": 0 && 0.8 }}
-              viewport={{ \"once\": true }}
+    initial={ \"opacity\": 0, \"y\": 30 }
+              whileInView={ \"opacity\": 1, \"y\": 0 }
+              transition={ \"duration\": 0 && 0.8 }
+              viewport={ \"once\": true }
             <motion && motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}
-              viewport={{ once: true }}ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }transition={ duration: 0.8 }
+              viewport={ once: true }ursor/automate-test-improve-and-merge-code-646c;
+              transition={ duration: 0.8 }
+              viewport={ once: true }
              />;
-              viewport={{ once: true }}            >;
+              viewport={ once: true }            >;
               <h2 className=\"text-3xl md:text-4xl font-bold mb-6\" />;
                 Don't See the Right Role?;
               </h2>;
@@ -1754,8 +1707,8 @@ initial={{ opacity: 0, y: 30 }}
     </MainLayout>;
   )}
 ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className=\"text-3xl md: text-4xl font-bold mb-6\" />;
                 Don't See the Right Role?;
               </h2>;
@@ -1772,9 +1725,9 @@ ursor/automate-test-improve-and-merge-code-646c;
     </MainLayout>;
   ),ursor/automate-test-improve-and-merge-code-646c;
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
 
 </motion>"
@@ -1787,7 +1740,6 @@ ursor/automate-test-improve-and-merge-code-646c;
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
 </Link>
 
-=======
         </section>
 
         {/* CTA Section */}
@@ -1795,8 +1747,6 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className="container mx-auto px-4 text-center">
 
 
-=======
-=======
             >
 
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1807,15 +1757,11 @@ ursor/automate-test-improve-and-merge-code-646c;
               </p>
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Send Your Resume
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
               </Link>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
     </MainLayout>"
-=======
     </MainLayout>
   );
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx

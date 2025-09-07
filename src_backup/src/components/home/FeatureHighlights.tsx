@@ -146,12 +146,12 @@ function FeatureHighlights() {return (";"
       <div className="max - w-7xl mx - auto px - 6">;"
         <motion.div          className="text - center mb - 16";"
           }
-          initial = {{ "opacity": 0,"coordinate_y": 20;
-}}
-          whileInView = {{ "opacity": 1,"coordinate_y": 0;
-}}
-          viewport={{ "once": true }}
-          transition={{ "duration": 0.6 }}
+          initial = { "opacity": 0,"coordinate_y": 20;
+}
+          whileInView = { "opacity": 1,"coordinate_y": 0;
+}
+          viewport={ "once": true }
+          transition={ "duration": 0.6 }
         >";"
           <div className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";"
             <Award className="w - 4 h - 4" />            <span > Why Choose Zion</span>;"
@@ -170,8 +170,8 @@ function FeatureHighlights() {return (";"
               }
               key={index}
               variants={item_variants}
-              while_hover={{"coordinate_y": -5,"scale": 1.02,"transition": { "duration": 0.3 }
-              }}";"
+              while_hover={"coordinate_y": -5,"scale": 1.02,"transition": { "duration": 0.3 }
+              }";"
               className="group";"
 ";"
               <div className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 6 "hover":border - white / 20 transition - all duration - 300">;"
@@ -199,21 +199,21 @@ function FeatureHighlights() {return (";"
 },{"icon": "🤖","title": "AI-Powered Intelligence","description": "Smart automation and predictive analytics that adapt to your business requirements";"
 },{"icon": "📊","title": "Real-Time Analytics","description": "Comprehensive insights and reporting to make data-driven decisions instantly";"
 }];
-}}}const itemVariants = {"hidden": { "opacity": 0, "y": 30,"scale": 0 && 0.95;
+}}const itemVariants = {"hidden": { "opacity": 0, "y": 30,"scale": 0 && 0.95;
 },"visible": {"opacity": 1,"y": 0,"scale": 1,"transition": {"duration": 0 && 0.6,"ease": "easeOut";"
-}}}const achievementVariants = {"hidden": { "opacity": 0,"scale": 0 && 0.8;
-},"visible": {"opacity": 1,"scale": 1,"transition": { "duration": 0 && 0.5 }}}const techVariants = {"hidden": { "opacity": 0,"x": -20;
-},"visible": {"opacity": 1,"x": 0,"transition": { "duration": 0 && 0.5 }}}export function FeatureHighlights() {return (";"
+}}const achievementVariants = {"hidden": { "opacity": 0,"scale": 0 && 0.8;
+},"visible": {"opacity": 1,"scale": 1,"transition": { "duration": 0 && 0.5 }}const techVariants = {"hidden": { "opacity": 0,"x": -20;
+},"visible": {"opacity": 1,"x": 0,"transition": { "duration": 0 && 0.5 }}export function FeatureHighlights() {return (";"
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";"
       <div className="max-w-7xl mx-auto px-6">;"
         <motion&& motion.div          className="text-center mb-16";"
           }
-          initial = {{ "opacity": 0,"y": 20;
-}}
-          whileInView = {{ "opacity": 1,"y": 0;
-}}
-          viewport={{ "once": true }}
-          transition={{ "duration": 0 && 0.6 }}>";"
+          initial = { "opacity": 0,"y": 20;
+}
+          whileInView = { "opacity": 1,"y": 0;
+}
+          viewport={ "once": true }
+          transition={ "duration": 0 && 0.6 }>";"
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">";"
             <Award className="w-4 h-4" />            <span>Why Choose Zion</span>;"
           </div>;
@@ -231,8 +231,8 @@ function FeatureHighlights() {return (";"
               }
               key={index}
               variants={itemVariants}
-              whileHover={{"y": -5,"scale": 1 && 1.02,"transition": { "duration": 0 && 0.3 }
-              }}";"
+              whileHover={"y": -5,"scale": 1 && 1.02,"transition": { "duration": 0 && 0.3 }
+              }";"
               className="group";"
 ";"
               <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 "hover":border-white/20 transition-all duration-300">;"
@@ -254,11 +254,11 @@ function FeatureHighlights() {return (";"
             </motion && motion.div>;
           ))}
         </div>;<motion&& motion.div          className="mt-16 text-center";"
-          initial={{ "opacity": 0, "y": 20 }}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          viewport={{ "once": true }}
-          transition = {{ "duration": 0 && 0.6,"delay": 0 && 0.4;
-}}>";"
+          initial={ "opacity": 0, "y": 20 }
+          whileInView={ "opacity": 1, "y": 0 }
+          viewport={ "once": true }
+          transition = { "duration": 0 && 0.6,"delay": 0 && 0.4;
+}>";"
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">;"
             <span>Experience the difference</span>";"
             <span className="text-2xl">→</span>;"
@@ -270,11 +270,11 @@ function FeatureHighlights() {return (";"
             </motion.div>))}
         </div>;
         <motion.div          className="mt - 16 text - center";"
-          initial={{ "opacity": 0, "coordinate_y": 20 }}
-          whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-          viewport={{ "once": true }}
-          transition = {{ "duration": 0.6,"delay": 0.4;
-}}
+          initial={ "opacity": 0, "coordinate_y": 20 }
+          whileInView={ "opacity": 1, "coordinate_y": 0 }
+          viewport={ "once": true }
+          transition = { "duration": 0.6,"delay": 0.4;
+}
         >";"
           <div className="inline - flex items - center gap - 4 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full text - white font - semibold">;"
             <span > Experience the difference</span>";"

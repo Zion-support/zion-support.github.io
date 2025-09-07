@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {// Mobile Navigation T
     const navToggle = document.getElementById('nav-toggle')const navMenu = document.getElementById('nav-menu'),if (navToggle && navMenu) {navToggle.addEventListener('click', function() {navMenu.classList.toggle('active'),navToggle.classList.toggle('active')})}// Close mobile menu when clicking outside;
     document.addEventListener('click', function(event) {if (!event.target.closest('.nav') && navMenu && navMenu.classList.contains('active')) {navMenu.classList.remove('active'),navToggle.classList.remove('active')}
     }),// Smooth scrolling for anchor links;
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {anchor.addEventListener('click', function (e) {e.preventDefault(),const target = document.querySelector(this.getAttribute('href')),if (target) {target.scrollIntoView({behavior: 'smooth',block: 'start';
+    document.querySelectorAll('a[href^='#']').forEach(anchor => {anchor.addEventListener('click', function (e) {e.preventDefault(),const target = document.querySelector(this.getAttribute('href')),if (target) {target.scrollIntoView({behavior: 'smooth',block: 'start';
                 })}
         })}),// Add scroll effects to elements;
     const observerOptions = {threshold: 0.1,rootMargin: '0px 0px -50px 0px';
@@ -53,14 +53,14 @@ document.addEventListener('DOMContentLoaded', function() {// Mobile Navigation T
     document.querySelectorAll('.service-card, .solution-card, .stat-item').forEach(el => {observer.observe(el)}),// Header scroll effect;
     const header = document.querySelector('.header'),let lastScrollTop = 0,window.addEventListener('scroll', function() {const scrollTop = window.pageYOffset || document.documentElement.scrollTop,if (scrollTop > 100) {header.classList.add('scrolled')} else {header.classList.remove('scrolled')}lastScrollTop = scrollTop;
     }),// Form handling for contact forms;
-    const contactForms = document.querySelectorAll('form[data-contact]'),contactForms.forEach(form => {form.addEventListener('submit', function(e) {e.preventDefault(),const formData = new FormData(form),const submitBtn = form.querySelector('button[type="submit"]'),const originalText = submitBtn.textContent,// Show loading state;
+    const contactForms = document.querySelectorAll('form[data-contact]'),contactForms.forEach(form => {form.addEventListener('submit', function(e) {e.preventDefault(),const formData = new FormData(form),const submitBtn = form.querySelector('button[type='submit']'),const originalText = submitBtn.textContent,// Show loading state;
             submitBtn.textContent = 'Sending...',submitBtn.disabled = true,// Simulate form submission (replace with actual API call)setTimeout(() => {submitBtn.textContent = 'Message Sent!',submitBtn.style.background = '#10b981',// Reset form;
                 form.reset(),// Reset button after delay;
                 setTimeout(() => {submitBtn.textContent = originalText,submitBtn.disabled = false,submitBtn.style.background = '';
                 }, 3000)}, 2000)})}),// Lazy loading for images;
     if ('IntersectionObserver' in window) {const imageObserver = new IntersectionObserver((entries, observer) => {entries.forEach(entry => {if (entry.isIntersecting) {const img = entry.target,img.src = img.dataset.src,img.classList.remove('lazy'),imageObserver.unobserve(img)lastScrollTop = scrollTop;
     }),// Form handling for contact forms;
-    const contactForms = document.querySelectorAll('form[data-contact]'),contactForms.forEach(form => {form.addEventListener('submit', function(e) {e.preventDefault(),const formData = new FormData(form),const submitBtn = form.querySelector('button[type="submit"]'),const originalText = submitBtn.textContent,// Show loading state;
+    const contactForms = document.querySelectorAll('form[data-contact]'),contactForms.forEach(form => {form.addEventListener('submit', function(e) {e.preventDefault(),const formData = new FormData(form),const submitBtn = form.querySelector('button[type='submit']'),const originalText = submitBtn.textContent,// Show loading state;
             submitBtn.textContent = 'Sending...',submitBtn.disabled = true,// Simulate form submission (replace with actual API call)setTimeout(() => {submitBtn.textContent = 'Message Sent!',submitBtn.style.background = '#10b981',// Reset form;
                 form.reset(),// Reset button after delay;
                 setTimeout(() => {submitBtn.textContent = originalText,submitBtn.disabled = false,submitBtn.style.background = '';
@@ -71,12 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {// Mobile Navigation T
                 }
             }
         })}// Newsletter subscription;
-    const newsletterForm = document.querySelector('.newsletter-form'),if (newsletterForm) {newsletterForm.addEventListener('submit', function(e) {e.preventDefault(),const email = this.querySelector('input[type="email"]').value,const submitBtn = this.querySelector('button[type="submit"]'),const originalText = submitBtn.textContent,// Show loading state;
+    const newsletterForm = document.querySelector('.newsletter-form'),if (newsletterForm) {newsletterForm.addEventListener('submit', function(e) {e.preventDefault(),const email = this.querySelector('input[type='email']').value,const submitBtn = this.querySelector('button[type='submit']'),const originalText = submitBtn.textContent,// Show loading state;
             submitBtn.textContent = 'Subscribing...',submitBtn.disabled = true,// Simulate subscription (replace with actual API call)setTimeout(() => {submitBtn.textContent = 'Subscribed!',submitBtn.style.background = '#10b981',// Reset form;
                 this.reset(),// Reset button after delay;
                 setTimeout(() => {submitBtn.textContent = originalText,submitBtn.disabled = false,submitBtn.style.background = '';
                 }, 3000)}, 1500)})// Newsletter subscription;
-    const newsletterForm = document.querySelector('.newsletter-form'),if (newsletterForm) {newsletterForm.addEventListener('submit', function(e) {e.preventDefault(),const email = this.querySelector('input[type="email"]').value,const submitBtn = this.querySelector('button[type="submit"]'),const originalText = submitBtn.textContent,// Show loading state;
+    const newsletterForm = document.querySelector('.newsletter-form'),if (newsletterForm) {newsletterForm.addEventListener('submit', function(e) {e.preventDefault(),const email = this.querySelector('input[type='email']').value,const submitBtn = this.querySelector('button[type='submit']'),const originalText = submitBtn.textContent,// Show loading state;
             submitBtn.textContent = 'Subscribing...',submitBtn.disabled = true,// Simulate subscription (replace with actual API call)setTimeout(() => {submitBtn.textContent = 'Subscribed!',submitBtn.style.background = '#10b981',// Reset form;
                 this.reset(),// Reset button after delay;
                 setTimeout(() => {submitBtn.textContent = originalText,submitBtn.disabled = false,submitBtn.style.background = '';
@@ -113,7 +113,7 @@ function performSearch() {// This would typically make an API call to search you
     }),
     
     // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^='#']').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault($2);
             const target = $2;
@@ -340,9 +340,9 @@ pr-12325
         }
     }),
     // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^='#']').forEach(anchor => {
     // Smooth scrolling for anchor links;
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {')
+    document.querySelectorAll('a[href^='#']').forEach(anchor => {')
 pr-12325
         anchor.addEventListener('click', function (e) {
             e.preventDefault(),
@@ -405,7 +405,7 @@ pr-12325
         form.addEventListener('submit', function(e) {
 pr-12325
             const formData = new FormData(form),
-            const submitBtn = form.querySelector('button[type="submit"]'),
+            const submitBtn = form.querySelector('button[type='submit']'),
             const originalText = submitBtn.textContent,
             // Show loading state
             // Show loading state;
@@ -461,7 +461,7 @@ pr-12325
         form.addEventListener('submit', function(e) {;
             e.preventDefault(),;
             const formData = new FormData(form),;
-            const submitBtn = form.querySelector('button[type="submit"]'),;
+            const submitBtn = form.querySelector('button[type='submit']'),;
             const originalText = submitBtn.textContent,;
             // Show loading state;
             submitBtn.textContent = 'Sending...',;
@@ -531,8 +531,8 @@ pr-12325
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault(),
-            const email = this.querySelector('input[type="email"]').value,
-            const submitBtn = this.querySelector('button[type="submit"]'),
+            const email = this.querySelector('input[type='email']').value,
+            const submitBtn = this.querySelector('button[type='submit']'),
             const originalText = submitBtn.textContent,
             // Show loading state
             submitBtn.textContent = 'Subscribing...',
@@ -557,8 +557,8 @@ pr-12325
     const newsletterForm = document.querySelector('.newsletter-form'),
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
-            const email = this.querySelector('input[type="email"]').value,
-            const submitBtn = this.querySelector('button[type="submit"]'),
+            const email = this.querySelector('input[type='email']').value,
+            const submitBtn = this.querySelector('button[type='submit']'),
             // Show loading state;
             submitBtn.textContent = 'Subscribing...',
             // Simulate subscription (replace with actual API call)
@@ -573,8 +573,8 @@ pr-12325
     if (newsletterForm) {;
         newsletterForm.addEventListener('submit', function(e) {;
             e.preventDefault(),;
-            const email = this.querySelector('input[type="email"]').value,;
-            const submitBtn = this.querySelector('button[type="submit"]'),;
+            const email = this.querySelector('input[type='email']').value,;
+            const submitBtn = this.querySelector('button[type='submit']'),;
             const originalText = submitBtn.textContent,;
             // Show loading state;
             submitBtn.textContent = 'Subscribing...',;
@@ -618,8 +618,8 @@ pr-12325
     statNumbers.forEach(stat => {;
         statsObserver.observe(stat);
     }),;
-            const email = this.querySelector('input[type="email"]').value,;
-            const submitBtn = this.querySelector('button[type="submit"]'),;
+            const email = this.querySelector('input[type='email']').value,;
+            const submitBtn = this.querySelector('button[type='submit']'),;
             // Show loading state;
             submitBtn.textContent = 'Subscribing...',;
             // Simulate subscription (replace with actual API call);
@@ -703,7 +703,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`
+                `<a href='${result.url}' class='search-result-item'>${result.title}</a>`
 
     }));
     // Initialize tooltips
@@ -727,13 +727,13 @@ function performSearch(query) {
         ].filter(item = $2;
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`
+                `<a href='${result.url}' class='search-result-item'>${result.title}</a>`
             ).join($2);
             searchResults.style.display = $2;
             searchResults.style.display = 'block'
         if (results && results.length > 0) {
             searchResults && searchResults.innerHTML = results && results.map(result => 
-                `<a href="${result && result.url}" class="search-result-item">${result && result.title}</a>`
+                `<a href='${result && result.url}' class='search-result-item'>${result && result.title}</a>`
             ).join(''),
             searchResults && searchResults.style.display = 'block'
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -743,7 +743,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
             searchResults.style.display = 'block'
         } else {
-            searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
+            searchResults && searchResults.innerHTML = '<div class='search-result-item no-results'>No results found</div>',
             searchResults && searchResults.style.display = 'block'
 
         }
@@ -881,13 +881,13 @@ function initializeModals() {}
         
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`
+                `<a href='${result.url}' class='search-result-item'>${result.title}</a>`
         ].filter(item =>;
             item.title.toLowerCase().includes(query);
         ),;
         if (results.length > 0) {;
             searchResults.innerHTML = results.map(result =>;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`;
+                `<a href='${result.url}' class='search-result-item'>${result.title}</a>`;
             ).join('')}))// Initialize tooltips;
     initializeTooltips()// Initialize modals;
     initializeModals()})})// Search function;
@@ -897,12 +897,12 @@ function performSearch() {// This would typically make an API call to search you
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },{ title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },{ title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }{ title: 'Quantum Computing Services', url: '/services/quantum-computing' }
         ].filter(item =>;
             item.title.toLowerCase().includes(query)))if (results.length > 0) {searchResults.innerHTML = results.map(result =>;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`;
+                `<a href='${result.url}' class='search-result-item'>${result.title}</a>`;
             ).join('')searchResults.style.display = 'block';
         if (results && results.length > 0) {searchResults && searchResults.innerHTML = results && results.map(result =>;
-                `<a href="${result && result.url}" class="search-result-item">${result && result.title}</a>`;
+                `<a href='${result && result.url}' class='search-result-item'>${result && result.title}</a>`;
             ).join(''),searchResults && searchResults.style.display = 'block';
-        } else {searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',searchResults && searchResults.style.display = 'block';
+        } else {searchResults && searchResults.innerHTML = '<div class='search-result-item no-results'>No results found</div>',searchResults && searchResults.style.display = 'block';
         }
     }
 }
@@ -944,21 +944,21 @@ function initializeModals() {const modalTriggers = document.querySelectorAll('[d
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
         ].filter(item =>;
             item.title.toLowerCase().includes(query)),if (results.length > 0) {searchResults.innerHTML = results.map(result =>;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`;
+                `<a href='${result.url}' class='search-result-item'>${result.title}</a>`;
         ].filter(item =>;
             item.title.toLowerCase().includes(query)),if (results.length > 0) {searchResults.innerHTML = results.map(result =>;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`;
+                `<a href='${result.url}' class='search-result-item'>${result.title}</a>`;
             ).join(''),searchResults.style.display = 'block';
-        } else {searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',searchResults.style.display = 'block';
+        } else {searchResults.innerHTML = '<div class='search-result-item no-results'>No results found</div>',searchResults.style.display = 'block';
         }
     }
 }// Counter animation;
 function animateCounter() {const target = parseInt(element.textContent.replace(/\D/g, '')),const duration = 2000,const step = target / (duration / 16),let current = 0,const timer = setInterval(() => {current += step,if (current >= target) {current = target,clearInterval(timer)}
         ].filter(item =>;
             item.title.toLowerCase().includes(query)),if (results.length > 0) {searchResults.innerHTML = results.map(result =>;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`;
+                `<a href='${result.url}' class='search-result-item'>${result.title}</a>`;
             ).join(''),searchResults.style.display = 'block';
-        } else {searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',searchResults.style.display = 'block';
+        } else {searchResults.innerHTML = '<div class='search-result-item no-results'>No results found</div>',searchResults.style.display = 'block';
         }
     }
 }// Counter animation;
@@ -1015,8 +1015,8 @@ if ( {) {
 if ( {) {$2;
 }
             search_results.innerHTML = results.map (result =>;
-                `<a href="${result.url}" class="search - result - item">${result.title}</a>`).join (''),search_results.style.display = 'block';
-        } else {search_results.innerHTML = '<div class="search - result - item no - results">No results found</div>',search_results.style.display = 'block';
+                `<a href='${result.url}' class='search - result - item'>${result.title}</a>`).join (''),search_results.style.display = 'block';
+        } else {search_results.innerHTML = '<div class='search - result - item no - results'>No results found</div>',search_results.style.display = 'block';
         }
     }
 }
@@ -1142,7 +1142,7 @@ if ( {) {$2;
 }
   const image_observer = new IntersectionObserver ( (entries, observer) => {entries.for_each (entry => {// Check condition;
 if ( {) {$2;
-}})}//Newsletter subscription submit_btn.disabled = true;
+})}//Newsletter subscription submit_btn.disabled = true;
 //Simulate subscription (replace with actual API call) //Reset form this.reset ()//Reset button after delay //Initialize tooltips initialize_tooltips ()//Initialize modals initialize_modals ()})//Search /**;
  * if - Function description;
  */;

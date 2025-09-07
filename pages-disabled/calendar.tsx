@@ -113,9 +113,9 @@ return (;
       <section className="relative py-20 px-4">"
         <div className="max-w-7xl mx-auto">"
           <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "y": 20 }
+            animate={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.8 }
             className="text-center""
           >
             <h1 className="text-5xl "md":text-6xl font-bold text-gray-900 mb-6">"
@@ -146,9 +146,9 @@ initial={{ "opacity": 0, "y": 20 }}
       <section className="py-20 px-4 bg-white">"
         <div className="max-w-7xl mx-auto">"
           <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "y": 20 }
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.8 }
             className="text-center mb-16""
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Choose Your Consultation Type</h2>"
@@ -161,9 +161,9 @@ initial={{ "opacity": 0, "y": 20 }}
               <motion.div
 }
 key={index}
-                initial={{ "opacity": 0, "y": 20 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                whileInView={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.8, "delay": index * 0.1 }
                 className={`rounded-2xl p-8 shadow-lg "hover":shadow-xl transition-shadow ${`                  }
                   index === 0 ? 'bg-gradient-to-br from-blue-600 to-purple-600 text-white' : 'bg-white''
                 }`}`              >
@@ -197,9 +197,9 @@ key={index}
       <section className="py-20 px-4 bg-gray-50">"
         <div className="max-w-7xl mx-auto">"
           <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "y": 20 }
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.8 }
             className="text-center mb-16""
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Experts</h2>"
@@ -212,9 +212,9 @@ initial={{ "opacity": 0, "y": 20 }}
               <motion.div
 }
 key={index}
-                initial={{ "opacity": 0, "y": 20 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                initial={ "opacity": 0, "y": 20 }
+                whileInView={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0.8, "delay": index * 0.1 }
                 className="bg-white rounded-xl p-6 shadow-lg "hover":shadow-xl transition-shadow text-center""
               >
                 <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">"
@@ -239,9 +239,9 @@ key={index}
       <section className="py-20 px-4 bg-white">"
         <div className="max-w-4xl mx-auto">"
           <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "y": 20 }
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.8 }
             className="text-center mb-16""
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Available Time Slots</h2>"
@@ -254,9 +254,9 @@ initial={{ "opacity": 0, "y": 20 }}
               <motion.button
 }
 key={index}
-                initial={{ "opacity": 0, "scale": 0.8 }}
-                whileInView={{ "opacity": 1, "scale": 1 }}
-                transition={{ "duration": 0.8, "delay": index * 0.05 }}
+                initial={ "opacity": 0, "scale": 0.8 }
+                whileInView={ "opacity": 1, "scale": 1 }
+                transition={ "duration": 0.8, "delay": index * 0.05 }
                 disabled={!slot.available}
                 className={`p-4 rounded-lg text-center transition-all ${`                  }
                   slot.available
@@ -280,9 +280,9 @@ key={index}
         <div className="max-w-7xl mx-auto">"
           <div className="grid "md":grid-cols-2 gap-12">"
             <motion.div,
-initial={{ "opacity": 0, "x": -20 }}
-              whileInView={{ "opacity": 1, "x": 0 }}
-              transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "x": -20 }
+              whileInView={ "opacity": 1, "x": 0 }
+              transition={ "duration": 0.8 }
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Need Immediate Assistance?</h2>"
               <p className="text-lg text-gray-600 mb-8">"
@@ -313,9 +313,9 @@ initial={{ "opacity": 0, "x": -20 }}
               </div>
             </motion.div>
             <motion.div,
-initial={{ "opacity": 0, "x": 20 }}
-              whileInView={{ "opacity": 1, "x": 0 }}
-              transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "x": 20 }
+              whileInView={ "opacity": 1, "x": 0 }
+              transition={ "duration": 0.8 }
               className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white""
             >
               <h3 className="text-2xl font-bold mb-6">Quick Contact</h3>"
@@ -360,9 +360,9 @@ href="/contact""
       <section className="py-20 px-4 bg-white">"
         <div className="max-w-4xl mx-auto text-center">"
           <motion.div,
-initial={{ "opacity": 0, "y": 20 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
+initial={ "opacity": 0, "y": 20 }
+            whileInView={ "opacity": 1, "y": 0 }
+            transition={ "duration": 0.8 }
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">"
               Ready to Get Started?

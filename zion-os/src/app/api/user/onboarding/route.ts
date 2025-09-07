@@ -1,14 +1,12 @@
-<<<<<<< HEAD
 import { NextRequest, NextResponse } from 'next/server';
 
-=======
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
 import { NextRequest, NextResponse  } from 'next/server';'
 import { getServerSession  } from 'next-auth';'
 import { prisma  } from '@/lib/prisma';'
-export async function POST() {try {const session  = await getServerSession(){"message": "Onboarding completed successfully","user": {{"message": 'Onboarding completed successfully';'
+export async function POST() {try {const session  = await getServerSession(){"message": "Onboarding completed successfully","user": {"message": 'Onboarding completed successfully';'
         }
         "user": {ursor/automate-test-improve-and-merge-code-646c;
           }
@@ -29,11 +27,11 @@ export async function POST() {try {const session  = await getServerSession(){"me
       },{ "status": 200 }
     )} catch (error) {console.error ('Onboarding completion "error":', error)return NextResponse.json ({ "error": 'Internal server error' },{ "error": 'Internal server error' },import { NextRequest, NextResponse } from "next/server",import { getServerSession } from "next-auth",import { prisma } from "@/lib/prisma",export async function POST() {try {const session = await getServerSession()const session = await getServerSession()const session = await getServerSession()if (!session?.user?.email) {return NextResponse.json({ "error": "Unauthorized" },{ "status": 401 }"
       )}// Update user's onboarding status;'
-    const updatedUser = await prisma.user.update({"where": { "email": session.user.email },"data": { "onboardingCompleted": true }}),return NextResponse.json({"message": "Onboarding completed successfully","user": {"id": updatedUser.id,"name": updatedUser.name,"email": updatedUser.email,"role": updatedUser.role,"onboardingCompleted": updatedUser.onboardingCompleted}"
+    const updatedUser = await prisma.user.update({"where": { "email": session.user.email },"data": { "onboardingCompleted": true }),return NextResponse.json({"message": "Onboarding completed successfully","user": {"id": updatedUser.id,"name": updatedUser.name,"email": updatedUser.email,"role": updatedUser.role,"onboardingCompleted": updatedUser.onboardingCompleted}"
       },{ "status": 200 }
     )} catch (error) {console.error("Onboarding completion "error":", error)return NextResponse.json({ "error": "Internal server error" }{"message": 'Onboarding completed successfully';'
         }
-        "user": {{ "error": 'Internal server error' },{ "status": 500 }'
+        "user": { "error": 'Internal server error' },{ "status": 500 }'
     )}ursor/fix-website-loading-errors-and-merge-6662;
 ursor/fix-website-loading-errors-and-merge-6662;
       { "status": 500 }
@@ -134,7 +132,7 @@ export async function POST() {;
     const updatedUser = await prisma.user.update({;
       }
       "where": { "email": session.user.email },;
-      "data": { "onboardingCompleted": true }}),;
+      "data": { "onboardingCompleted": true }),;
     return NextResponse.json(;
       {;
         }
@@ -210,6 +208,5 @@ const updatedUser = {
       { error: "Internal server error" },
       { status: 500}
     )
->>>>>>> origin/main
   }
 }

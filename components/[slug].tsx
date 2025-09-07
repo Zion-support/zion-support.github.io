@@ -40,9 +40,9 @@ return undefined;
 }
 return (;
       <UltraAdvancedFuturisticBackground>
-<div className='min-h-screen pt-28 pb-20 px-4 "sm":px-6 "lg":px-8'>'
+<div className='min-h-screen pt-28 pb-20 px-4 'sm':px-6 'lg':px-8'>'
           <div className='max-w-3xl mx-auto text-center'>'
-            <h1 className='text-4xl "md":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>'
+            <h1 className='text-4xl 'md':text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>'
               Service not found
             </h1>
             <p className='text-gray-300 mb-8'>'
@@ -136,18 +136,18 @@ export default function DynamicServicePage() {
   if (!service) {
     return (
       <UltraAdvancedFuturisticBackground>
-        <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
-            <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>
-            <Button href="/services" variant="quantum" size="lg">Browse Services</Button>
+        <div className='min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8'>
+          <div className='max-w-3xl mx-auto text-center'>
+            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>Service not found</h1>
+            <p className='text-gray-300 mb-8'>We couldn't find the service you were looking for. Explore all services below.</p>
+            <Button href='/services' variant='quantum' size='lg'>Browse Services</Button>
           </div>
         </div>
       </UltraAdvancedFuturisticBackground>
     )
   }
 
-const canonicalUrl = `"https": //ziontechgroup.com/${slu,;`}`;`
+const canonicalUrl = `'https': //ziontechgroup.com/${slu,;`}`;`
 return (;
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -155,10 +155,10 @@ return (;
 
 <meta name='description' content={service.description} />'
         <link rel='canonical' href={canonicalUrl} />'
-      <div className='min-h-screen pt-24 pb-20 px-4 "sm": px-6 "lg":px-8'>'
+      <div className='min-h-screen pt-24 pb-20 px-4 'sm': px-6 'lg':px-8'>'
         <div className='max-w-6xl mx-auto'>'
           <div className='text-center mb-10'>'
-            <h1 className='text-5xl "md":text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>'
+            <h1 className='text-5xl 'md':text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>'
               <span className='text-5xl' aria-hidden>'
 
                 {service.ico
@@ -167,10 +167,10 @@ return (;
     const all: any[] = ([] as any[]).concat(enhancedRealMicroSaasServices as any,extraServices as any,additionalEnhancedServices as any,innovativeAIServices as any,quantumSpaceServices as any,enterpriseITServices as any,newRealServices as any,marketReadyServices as any,realMarketServices as any,new2025Services as any,newRealInnovations as any,emergingTechnologyServices as any,comprehensiveITSolutions as any,marketValidatedServices as any,curatedMarketServices as any,cuttingEdgeITServices as any,nextGenerationAIServices as any,nextGenAIServices as any,industryRealServices as any,professionalServices as any,realEnterpriseServices2025 as any,augmentedServicesBatch3 as any,real2025Q3Additions as any,realQ4Services2025 as any,real2026Q1Additions as any,ultimateFuturisticServices2025 as any;
     )const byLink = all && all.find(s => {try {const url = new URL(s && s.link)return url && url.pathname.replace(/^\/+|\/+$/g, '') === slug && slug.replace(/^\/+|\/+$/g, '')} catch {return false;        return false;const router  = null;}
     })if (byLink) return byLink;
-    const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id === slug)if (byId) return byId;}, [slug])<div className="max-w-3xl mx-auto text-center">;
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>;
-            <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>;
-            <Button href="/services" variant="quantum" size="lg">Browse Services</Button>;
+    const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id === slug)if (byId) return byId;}, [slug])<div className='max-w-3xl mx-auto text-center'>;
+            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>Service not found</h1>;
+            <p className='text-gray-300 mb-8'>We couldn't find the service you were looking for. Explore all services below.</p>;
+            <Button href='/services' variant='quantum' size='lg'>Browse Services</Button>;
           </div>;
         </div>;
       </UltraAdvancedFuturisticBackground>;
@@ -228,7 +228,7 @@ return (;
                     </span>;
                   </div>;
                   <div className='text-slate-400'>;'
-                    {service && service.trialDays}-day free trial • "Setup": {' '}'
+                    {service && service.trialDays}-day free trial • 'Setup': {' '}'
                     {service && service.setupTim
 }
                   </div>;
@@ -274,7 +274,7 @@ variant='quantum';'
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-// Static export "support": generate root-level pages for service slugs,
+// Static export 'support': generate root-level pages for service slugs,
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 function collectAllServices(): Svc[] {
 }
@@ -294,7 +294,7 @@ return enhancedRealMicroSaasServices.concat(;
     realMarketServices as Svc[]
     realVerifiedServices as unknown as Svc[]
   );
-function normalizeSlug("value": string): string {
+function normalizeSlug('value': string): string {
 }
 return value;
     .toLowerCase()
@@ -302,17 +302,17 @@ return value;
 
     .replace(/(^-|-$)/g, '');'
 
-export const "getStaticPaths": GetStaticPaths = async () => {
+export const 'getStaticPaths': GetStaticPaths = async () => {
 }
 export;
-  const "getStaticPaths": GetStaticPaths = async () => {;
+  const 'getStaticPaths': GetStaticPaths = async () => {;
 
 }
 
-export const "getStaticPaths": GetStaticPaths = async () => {
+export const 'getStaticPaths': GetStaticPaths = async () => {
 }
 export;
-  const "getStaticPaths": GetStaticPaths = async () => {;
+  const 'getStaticPaths': GetStaticPaths = async () => {;
 }
 
 function collectAllServices(): any (): Svc[] {;
@@ -332,12 +332,12 @@ function collectAllServices(): any (): Svc[] {;
     newRealInnovations as Svc[],;
     realMarketServices as Svc[],;
     realVerifiedServices as unknown as Svc[];
-  )function normalizeSlug("value": string): string {return value;
+  )function normalizeSlug('value': string): string {return value;
     .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')function extractRootSlugFromLink(link?: string): string | null {if (!link) return null;'
   }
   try {const url = new URL(link;
   }
-  const path = url.pathname.replace(/^\/+|\/+$/g, '')// Accept root-level slugs like "/ai-energy-management", ignore nested like "services/...";"
+  const path = url.pathname.replace(/^\/+|\/+$/g, '')// Accept root-level slugs like '/ai-energy-management', ignore nested like 'services/...';'
     if (path && !path.includes('/')) return path;'
     return null;
   } catch {return null;
@@ -363,7 +363,7 @@ export const getStaticPaths: GetStaticPaths = async () => {const services = coll
   }
 }
 export const getStaticProps: GetStaticProps = async ({ params }) => {// No dynamic fetching needed; the component resolves the service client-side.;
-  return { props: {} }}
+  return { props: {} }
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug))return {paths: uniqueNonConflicting.map((slug) => ({ params: { slug } }))fallback: true;
   }
@@ -384,7 +384,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {// No dynam
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array.from (candidate_slugs).filter (slug => !static_slugs.has (slug))return {paths: uniqueNonConflicting.map (slug => ({ params: { slug } })),fallback: true,}
 }export const getStaticProps: GetStaticProps = async ({ params }) => {// No dynamic fetching needed; the component resolves the service client - side.;
-  return { props: {} }}
+  return { props: {} }
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting  = Array.from (candidate_slugs).filter ((slug) => !static_slugs.has (slug))return {paths: uniqueNonConflicting.map ((slug) => ({ params: { slug } })),fallback: true;
   }
@@ -398,9 +398,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
   return { props: {} }
 }
 }export const getStaticProps: GetStaticProps = async ({ params }) => {// No dynamic fetching needed; the component resolves the service client-side.;
-  return { props: {} }}
+  return { props: {} }
     if (path && !path.includes('/')) return path,
->>>>>>> origin/main
     return null
   } catch {
     return null
@@ -414,7 +413,7 @@ const staticSlugs = new Set<string>();
   const staticSlugs = new Set<string>();
   try {
 }
-const entries = fs.readdirSync(pagesDir, { "withFileTypes": true,;
+const entries = fs.readdirSync(pagesDir, { 'withFileTypes': true,;
 });
       }
     }
@@ -426,26 +425,20 @@ const uniqueNonConflicting = Array.from(candidateSlugs).filter(;
   ); }
   return {
     }
-    "paths": uniqueNonConflicting.map(slug => ({ "params": { slug }
+    'paths': uniqueNonConflicting.map(slug => ({ 'params': { slug }
 })),
-    "fallback": true
+    'fallback': true
   }
 };
 
-export const "getStaticProps": GetStaticProps = async ({ params   
+export const 'getStaticProps': GetStaticProps = async ({ params   
 }) => {
 
 
 
   // No dynamic fetching needed; the component resolves the service client-side.
 }
-return { "props": {} },;
+return { 'props': {} },;
 };
-=======
-<<<<<<< HEAD
 },
-=======
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

@@ -1,6 +1,6 @@
 function setUserId() {
   }
-  chrome.storage.local.set({ "user_id": id })
+  chrome.storage.local.set({ 'user_id': id })
 }
 
 document.querySelectorAll('.example').forEach((btn) => {
@@ -24,10 +24,10 @@ document.getElementById('askBtn').addEventListener('click', async () => {'
   const res = await fetch(`${API_BASE}/ai/ask`, {`
     }
 
-    "method": 'POST''
-    "headers": { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) }'
+    'method': 'POST''
+    'headers': { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) }'
 
-    "body": JSON.stringify({ prompt })
+    'body': JSON.stringify({ prompt })
  
 }));
 
@@ -52,9 +52,9 @@ document && document.getElementById('askBtn').addEventListener('click', async ()
 const userId = await new Promise((r) => getUserId(r));
 
 const res = await fetch(`${API_BASE}/ai/ask`, {`    }
-    "method": 'POST','
-    "headers": { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },'
-    "body": JSON && JSON.stringify({ prompt })
+    'method': 'POST','
+    'headers': { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },'
+    'body': JSON && JSON.stringify({ prompt })
  
 });
 
@@ -74,7 +74,7 @@ document.getElementById('resumeSearch').addEventListener('click', async () => {'
 });
 
 document.getElementById('signIn').addEventListener('click', async () => {'
-  // Placeholder sign-"in": generate a random user id and store it.
+  // Placeholder sign-'in': generate a random user id and store it.
   }
   const id = crypto.randomUUID();
   setUserId(id);
@@ -100,7 +100,7 @@ function getUserId() {
  */
 function setUserId() {
   }
-  chrome.storage.local.set ({ "user_id": id
+  chrome.storage.local.set ({ 'user_id': id
 });
 }
 document.querySelectorAll ('.example').for_each ((btn) => {'
@@ -121,9 +121,9 @@ const prompt = document.getElementById('prompt').value.trim(),;'
 const userId = await new Promise((r) => getUserId(r)),;
 
 const res = await fetch(`${API_BASE}/ai/ask`, {;`    }
-    "method": 'POST',;'
-    "headers": { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },;'
-    "body": JSON.stringify({ prompt
+    'method': 'POST',;'
+    'headers': { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },;'
+    'body': JSON.stringify({ prompt
 });
   }),;
 
@@ -137,9 +137,9 @@ document.getElementById('postJob').addEventListener('click', async () => {;'
 const userId = await new Promise((r) => getUserId(r)),;
 
 const res = await fetch(`${API_BASE}/jobs/generate`, {;`    }
-    "method": 'POST',;'
-    "headers": { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },;'
-    "body": JSON.stringify({ "role": 'Cloud Engineer','
+    'method': 'POST',;'
+    'headers': { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },;'
+    'body': JSON.stringify({ 'role': 'Cloud Engineer','
 });
   }),;
 
@@ -154,7 +154,7 @@ const userId = await new Promise((r) => getUserId(r)),;
   if (!userId) return (document.getElementById('result').textContent = 'Sign in first.'),;'
 
 const res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Brazil`, {;`    }
-    "headers": { ...(userId ? { 'x-user-id': userId } : {}) }'
+    'headers': { ...(userId ? { 'x-user-id': userId } : {}) }'
  
 }),;
 
@@ -170,7 +170,7 @@ const userId = await new Promise((r) => getUserId(r)),;
 
 const res = await fetch(`${API_BASE}/notifications`, {;`
     }
-    "headers": { 'x-user-id': userId }'
+    'headers': { 'x-user-id': userId }'
  
 }),;
 
@@ -178,7 +178,7 @@ const data = await res.json(),;
   document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2);'
 }),;
 document.getElementById('signIn').addEventListener('click', async () => {;'
-  // Placeholder sign-"in": generate a random user id and store it.;
+  // Placeholder sign-'in': generate a random user id and store it.;
 
 }
 

@@ -47,12 +47,12 @@ export default UserBadges;
 :src/components/community/UserBadges.tsx
                 <div
 
-                  style={{ backgroundColor: badge.color + '20' }}
+                  style={ backgroundColor: badge.color + '20' }
                   className='w-8 h-8 rounded-full flex items-center justify-center cursor-pointer'
                 >
 :src/components/community/UserBadges.tsx
                   <IconComponent
-                    style={{ color: badge.color }}
+                    style={ color: badge.color }
                     className='w-4 h-4'
                   />
                 </div>
@@ -64,7 +64,7 @@ export default UserBadges;
                     {badge.description}
                   </div>
                   <IconComponent;
-                    style={{ color: badge.color }} "
+                    style={ color: badge.color } "
                     className="w-4 h-4" 
 
                   />
@@ -98,11 +98,11 @@ const iconMap = {;
             <Tooltip>;
               <TooltipTrigger asChild>;
                 <div;
-                  style={{ backgroundColor: badge.color + '20' }}
+                  style={ backgroundColor: badge.color + '20' }
                   className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer";
                 >;
                   <IconComponent;
-                    style={{ color: badge.color }} ;
+                    style={ color: badge.color } ;
                     className="w-4 h-4";
                   />;
                 </div>;

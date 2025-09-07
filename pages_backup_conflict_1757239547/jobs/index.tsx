@@ -29,12 +29,12 @@ export default function JobsListPage() {
     { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
     { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
   return (
-    <div className="space-y-4">
-      <InteractiveSearch placeholder="Search jobs, keywords, or companies..." />
+    <div className='space-y-4'>
+      <InteractiveSearch placeholder='Search jobs, keywords, or companies...' />
       {loading ? (
         <EnhancedLoading lines={4} />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           {jobs.map((j) => (
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>

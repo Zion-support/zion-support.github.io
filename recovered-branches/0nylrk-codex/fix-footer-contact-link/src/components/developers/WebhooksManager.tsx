@@ -236,7 +236,7 @@ id={event && event.value}
                 <Button variant="outline" onClick={() => {
                   setShowCreateDialog($2);
                   resetWebhookForm()
-                }}>
+                }>
                   Cancel
                 </Button>
                 <Button onClick={handleCreateWebhook} disabled={
@@ -333,7 +333,7 @@ id={event && event.value}
                   }
                   setShowCreateDialog(false);
                   resetWebhookForm();
-                }}>;
+                }>;
                   Cancel;
                 </Button>;
                 <ButtononClick={handleCreateWebhook} disabled={
@@ -433,7 +433,7 @@ open={showTestDialog !== null}
               clearTestResult();
 
           }
-        }}
+        }
 
       >;
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;"
@@ -450,7 +450,7 @@ open={showTestDialog !== null}
                   <Label htmlFor="test-event-type">Event Type</Label>;"
                   <Select            }
           }
-        }}
+        }
                   <Select,
 value={testEventType}
                     onValueChange={(value) => setTestEventType(value as WebhookEventType)}
@@ -465,7 +465,7 @@ value={testEventType}
               </div>;                  clearTestResult()
                   setShowTestResult($2);
                   clearTestResult()
-                }}>
+                }>
                   Test Another Event
                 </Button>
               </DialogFooter>

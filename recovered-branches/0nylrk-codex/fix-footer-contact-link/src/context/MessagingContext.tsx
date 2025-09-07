@@ -17,7 +17,7 @@ const "defaultContext": MessagingContextType = {;
   "setActiveConversation": () => {},;
   "fetchConversations": async () => {},;
   "loadMessages": async () => {}
-}}
+}
 // Provider component,
 export function MessagingProvider() {;
   }

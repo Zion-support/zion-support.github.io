@@ -63,7 +63,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 return prev.direction === 'asc''''';
                     ? { key, direction: 'desc' }'';
                     : null}'''';
-            return { key, direction: 'asc' }})';';
+            return { key, direction: 'asc' })';';
         trackEvent('table', column_sorted', String(key))}, [enableSorting, trackEvent])';
     // Handle filter change;
     const handleFilterChange = useCallback((key, value, operator) => {}
@@ -161,13 +161,13 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         <AnimatePresence>;
           {showFilters && (<motion.div initial = {}
   { opacity: 0, height: 0;
-}} animate = {}
+} animate = {}
   { opacity: 1,'';
   height: 'auto';
-}} exit = {}
+} exit = {}
   { opacity: 0, height: 0 '''';
 '''';
-}} className='mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500'>'''';
+} className='mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500'>'''';
               <h4 className='font-medium text-gray-900 dark:text-white mb-3'>Advanced Filters</h4>'''';
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>'''';
                 {columns.filter(col => col.filterable !== false).map(column => (<div key={String(column.key)} className='space-y-2'>'''';
@@ -200,7 +200,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 <input type='checkbox' checked={selectedItems.size === paginatedData.length && paginatedData.length > 0} onChange={(e) => handleSelectAll(e.target.checked)} className='w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500'/>;
               </div>)}'`';
             '`'`;
-            {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>'`''`';
+            {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={ width: column.width }>'`''`';
                 <button onClick={() => handleSort(column.key)} disabled={!enableSorting || !column.sortable} className={`w-full flex items-center justify-between px-2 py-1 rounded hover: bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? 'cursor-default' : 'cursor-pointer'}`}>'''';
                   <span className='font-medium text-gray-700 dark:text-gray-300 text-sm'>;
                     {column.header}
@@ -220,10 +220,10 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
           <div {...listProps}>;
             {virtualItems.map((item, index) => (<motion.div key={String(item.id || index)} initial = {}
   { opacity: 0, y: 20;
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '`';
 '`'`;
-}} className={`flex items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark: bg-blue-900/20' : ''}`} onClick = {}
+} className={`flex items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark: bg-blue-900/20' : ''}`} onClick = {}
   () => onRowClick?.(item, index)'''';
 }>'''';
                 {enableSelection && (<div className='w-8 mr-2'>'''';
@@ -233,7 +233,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 } onClick={(e) => e.stopPropagation()} className='w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500'/>;
                   </div>)}'`';
                 '`'`;
-                {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>;
+                {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={ width: column.width }>;
                     {renderCell(column, item, index)}
                   </div>))}'''';
                 '''';
@@ -286,4 +286,4 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
           </div>;
         </div>)}
     </div>)}''`;
-''`'"`'";
+''`''`'';

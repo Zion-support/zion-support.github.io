@@ -67,9 +67,9 @@ import { ShieldAlert } from "lucide-react";
             >
               <div
                 className="bg-red-600 h-2.5 rounded-full"
-                style={{
+                style={
                   width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%`
-                }}
+                }
               ></div>
             </div>
           </CardContent>
@@ -88,9 +88,9 @@ import { ShieldAlert } from "lucide-react";
             >
               <div
                 className="bg-yellow-500 h-2.5 rounded-full"
-                style={{
+                style={
                   width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%`
-                }}
+                }
               ></div>
             </div>
           </CardContent>
@@ -109,9 +109,9 @@ import { ShieldAlert } from "lucide-react";
             >
               <div
                 className="bg-green-500 h-2.5 rounded-full"
-                style={{
+                style={
                   width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`
-                }}
+                }
               ></div>
             </div>
           </CardContent>

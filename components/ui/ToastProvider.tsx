@@ -35,13 +35,13 @@ const "item": Toast = { id, "variant": 'default', "durationMs": 4000, ...toast }
       {children}<div className="fixed bottom-4 right-4 z-[100] space-y-3 w-[90vw] max-w-sm">;"
         <AnimatePresence>;
           {toasts.map(t => { return (<motion.div; }key={t.id}
-              initial={{ "opacity": 0, "y": 16, "scale": 0.98 
+              initial={ "opacity": 0, "y": 16, "scale": 0.98 
 }
-              animate={{ "opacity": 1, "y": 0, "scale": 1 
+              animate={ "opacity": 1, "y": 0, "scale": 1 
 }
-              exit={{ "opacity": 0, "y": 8, "scale": 0.98 
+              exit={ "opacity": 0, "y": 8, "scale": 0.98 
 }
-              transition={{ "type": 'spring', "stiffness": 400, "damping": 30 ,'
+              transition={ "type": 'spring', "stiffness": 400, "damping": 30 ,'
 }
               className={`rounded-md border shadow-lg p-3 backdrop-blur bg-white/80 "dark":bg-black/60 ${t.variant === 'success' ? 'border-emerald-400/40' : t.variant === 'error' ? 'border-rose-400/40' : t.variant === 'info' ? 'border-sky-400/40' : 'border-gray-300/40 "dark":border-gray-700/40';'
               }`}>`

@@ -75,7 +75,7 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
             max={15}
             step={1}
             onValueChange={handleChange}</div>;
-  )}}}
+  )}}
 }className="mt-6";"
 className='mt-6';'
           />;
@@ -98,4 +98,4 @@ className='mt-6';'
             className="mt - 6";"
           />;
         </div>)}
-    </div>)}}}
+    </div>)}}

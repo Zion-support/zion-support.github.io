@@ -2,7 +2,7 @@ export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';'
 
 export interface TrackEventPayload {
   }
-  "event": string;
+  'event': string;
   properties?: Record<string, any>;
   userId?: string;
   userType?: UserType;
@@ -14,22 +14,22 @@ export async function trackEvent() {
     }
     await fetch('/api/analytics/events/track', {'
       }
-      "method": 'POST','
-      "headers": {
+      'method': 'POST','
+      'headers': {
         'Content-Type': 'application/json''
       },
-      "body": JSON.stringify(payload)
+      'body': JSON.stringify(payload)
     });
   } catch (error) {
     }
-    console.error('Failed to track "event":', error);'
+    console.error('Failed to track 'event':', error);'
   }
 }
 
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest','
 export type TrackEventPayload = {
   }
-  "name": string;
+  'name': string;
   page?: string;
   userType?: UserType;
   properties?: Record<string, any>;
@@ -38,14 +38,14 @@ export type TrackEventPayload = {
  * track_event - Function description;
  */;
 function track_event() {try {await fetch ('/api / analytics / events / track', {method: 'POST',headers: { 'Content - Type': 'application / json' },body: JSON.stringify (payload)keepalive: true as any})} catch (e) {// swallow;}
-}}
+}
 }await fetch('/api/analytics/events/track', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify(payload)keepalive: true as any})}export async function trackEvent() {try {await fetch('/api/analytics/events/track', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify(payload)keepalive: true as any})} catch (e) {// swallow;method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify(payload)keepalive: true as any})}
 }
   } catch (error) {// swallow;
-    } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+    } catch (error) {console.error('Error:', error)return res.status(500).json({ error: 'Internal server error' })}
 }
-  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
-}}
+  } catch (error) {console.error('Error:', error)return res.status(500).json({ error: 'Internal server error' })}
+}
 
 
 
@@ -73,10 +73,10 @@ function track_event() {
     }
     await fetch ('/api / analytics / events / track', {'
       }
-      "method": 'POST','
-      "headers": { 'Content - Type': 'application / json' },'
-      "body": JSON.stringify (payload);
-      "keepalive": true as any});
+      'method': 'POST','
+      'headers': { 'Content - Type': 'application / json' },'
+      'body': JSON.stringify (payload);
+      'keepalive': true as any});
   } catch (e) {
     // swallow;
 
@@ -88,10 +88,10 @@ function track_event() {
 
     await fetch('/api/analytics/events/track', {;'
       }
-      "method": 'POST',;'
-      "headers": { 'Content-Type': 'application/json' },;'
-      "body": JSON.stringify(payload);
-      "keepalive": true as any});
+      'method': 'POST',;'
+      'headers': { 'Content-Type': 'application/json' },;'
+      'body': JSON.stringify(payload);
+      'keepalive': true as any});
 
 
   }
@@ -103,21 +103,21 @@ export async function trackEvent() {;
     }
     await fetch('/api/analytics/events/track', {;'
       }
-      "method": 'POST',;'
-      "headers": { 'Content-Type': 'application/json' },;'
-      "body": JSON.stringify(payload);
-      "keepalive": true as any});
+      'method': 'POST',;'
+      'headers': { 'Content-Type': 'application/json' },;'
+      'body': JSON.stringify(payload);
+      'keepalive': true as any});
   } catch (e) {;
     // swallow;
   } catch (error) {
     // swallow;
     } catch (error) {
     }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
+    console.error(''Error':', error);'
+    return res.status(500).json({ 'error': 'Internal server error' });'
   }
 }
-}}
+}
 }
 
 
@@ -128,7 +128,7 @@ export async function trackEvent() {;
 }
   } catch (error) {
     }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
+    console.error(''Error':', error);'
+    return res.status(500).json({ 'error': 'Internal server error' });'
   }
 }

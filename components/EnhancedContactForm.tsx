@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 setErrors (newErrors)
 return Object.keys (newErrors) .length === 0 
 }
@@ -33,7 +32,6 @@ const handleInputBlur = (name: keyof FormData) => {
 }</button> </form> </div> </div> </section>) 
 }
 export default EnhancedContactForm
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
@@ -69,8 +67,8 @@ const EnhancedContactForm: React.FC = () => {
 setIsSubmitting (true)const handleInputBlur = (name: keyof FormData) => {//Validate individual field on blur if (formData[name] && errors[name]) {}> <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center" > <CheckCircle className="w-10 h-10 text-green-400" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Message Sent Successfully!</h3> <p className="text-white/70 mb-6" > Thank you for reaching out. We'll get back to you within 24 hours. </p> <button;
 }return (<div> <h3 className="text-2xl font-bold text-white mb-6" >Get in Touch</h3> <p className="text-white/70 leading-relaxed mb-8" > Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth. </p> </div> <div className="space-y-6" > <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-3 flex items-center justify-center" > <Mail className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Email</h4> <p className="text-white/70" >contact@ziontechgroup && ziontechgroup.com</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-3 flex items-center justify-center" > <Phone className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Phone</h4> <p className="text-white/70" >+1 (555) 123-4567</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 flex items-center justify-center" > <MapPin className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Location</h4> <p className="text-white/70" >San Francisco, CA</p> </div> </div> </div> </div> <div> <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2" > Full Name * </label> <input /> {errors && errors.name && (<motion && motion.p </motion && motion.p>)}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2" > Email Address * </label> <input /> {errors && errors.email && (<motion && motion.p </motion && motion.p>)}</div> </div> <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" > <div> <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2" > Company </label> <input /> </div> <div> <label htmlFor="service" className="block text-sm font-medium text-white/80 mb-2" > Service Interest </label> <select </option>) )}</select> </div> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" > Message * </label> <textareaerrors && errors.message ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
 }text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`;
-}placeholder="Tell us about your project and requirements..." /> {errors && errors.message && (<motion&& motion.p initial= {{opacity: 0, y: -10;
-}animate= {{import React, { useState } from 'react';
+}placeholder="Tell us about your project and requirements..." /> {errors && errors.message && (<motion&& motion.p initial= {opacity: 0, y: -10;
+}animate= {import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { Send,CheckCircle,AlertCircle,User,Mail,Phone,Building,MapPin,MessageSquare,Clock,Calendar,Globe,} from 'lucide-react';
 import Link from 'next/link';
@@ -79,8 +77,8 @@ import Link from 'next/link';
  setErrors (newErrors)}
 setIsSubmitting (true)const handleInputBlur = ("name": keyof FormData) => {//Validate individual field on blur if (formData[name] && errors[name]) {}> <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center" > <CheckCircle className="w-10 h-10 text-green-400" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Message Sent Successfully!</h3> <p className="text-white/70 mb-6" > Thank you for reaching out. We'll get back to you within 24 hours. </p> <button;'
 }return (<div> <h3 className="text-2xl font-bold text-white mb-6" >Get in Touch</h3> <p className="text-white/70 leading-relaxed mb-8" > Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth. </p> </div> <div className="space-y-6" > <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-3 flex items-center justify-center" > <Mail className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Email</h4> <p className="text-white/70" >contact@ziontechgroup && ziontechgroup.com</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-3 flex items-center justify-center" > <Phone className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Phone</h4> <p className="text-white/70" >+1 (555) 123-4567</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 flex items-center justify-center" > <MapPin className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Location</h4> <p className="text-white/70" >San Francisco, CA</p> </div> </div> </div> </div> <div> <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2" > Full Name * </label> <input /> {errors && errors.name && (<motion && motion.p </motion && motion.p>)}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2" > Email Address * </label> <input /> {errors && errors.email && (<motion && motion.p </motion && motion.p>)}</div> </div> <div className="grid grid-cols-1 "sm":grid-cols-2 gap-6" > <div> <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2" > Company </label> <input /> </div> <div> <label htmlFor="service" className="block text-sm font-medium text-white/80 mb-2" > Service Interest </label> <select </option>) )}</select> </div> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" > Message * </label> <textareaerrors && errors.message ? 'border-red-500/50 bg-red-500/10 "focus":border-red-400 "focus":bg-red-500/20' : 'border-white/20 bg-white/5 "focus":border-cyan-400 "focus":bg-white/10';'
-}text-white placeholder-white/40 "focus":outline-none "focus":ring-2 "focus":ring-cyan-400/20`;`}placeholder="Tell us about your project and requirements..." /> {errors && errors.message && (<motion&& motion.p initial= {{"opacity": 0, "y": -10;"
-}animate= {{import React, { useState } from 'react';'
+}text-white placeholder-white/40 "focus":outline-none "focus":ring-2 "focus":ring-cyan-400/20`;`}placeholder="Tell us about your project and requirements..." /> {errors && errors.message && (<motion&& motion.p initial= {"opacity": 0, "y": -10;"
+}animate= {import React, { useState } from 'react';'
 import { motion  } from 'framer-motion';'
 import { Send,CheckCircle,AlertCircle,User,Mail,Phone,Building,MapPin,MessageSquare,Clock,Calendar,Globe} from 'lucide-react';'
 import Link from 'next/link';'
@@ -91,8 +89,8 @@ setIsSubmitting (true)const handleInputBlur = ("name": keyof FormData) => {//Val
 }> <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center" > <CheckCircle className="w-10 h-10 text-green-400" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Message Sent Successfully!</h3> <p className="text-white/70 mb-6" > Thank you for reaching out. We'll get back to you within 24 hours. </p> <button;'
 }return (<div> <h3 className="text-2xl font-bold text-white mb-6" >Get in Touch</h3> <p className="text-white/70 leading-relaxed mb-8" > Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth. </p> </div> <div className="space-y-6" > <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-3 flex items-center justify-center" > <Mail className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Email</h4> <p className="text-white/70" >contact@ziontechgroup && ziontechgroup.com</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-3 flex items-center justify-center" > <Phone className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Phone</h4> <p className="text-white/70" >+1 (555) 123-4567</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 flex items-center justify-center" > <MapPin className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Location</h4> <p className="text-white/70" >San Francisco, CA</p> </div> </div> </div> </div> <div> <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2" > Full Name * </label> <input /> {errors && errors.name && (<motion && motion.p </motion && motion.p>)}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2" > Email Address * </label> <input /> {errors && errors.email && (<motion && motion.p </motion && motion.p>)}</div> </div> <div className="grid grid-cols-1 "sm": grid-cols-2 gap-6" > <div> <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2" > Company </label> <input /> </div> <div> <label htmlFor="service" className="block text-sm font-medium text-white/80 mb-2" > Service Interest </label> <select </option>) ,"
 }</select> </div> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" > Message * </label> <textareaerrors && errors.message ? 'border-red-500/50 bg-red-500/10 "focus":border-red-400 "focus":bg-red-500/20' : 'border-white/20 bg-white/5 "focus":border-cyan-400 "focus":bg-white/10';'
-}text-white placeholder-white/40 "focus":outline-none "focus":ring-2 "focus":ring-cyan-400/20`;`}placeholder="Tell us about your project and requirements..." /> {errors && errors.message && (<motion&& motion.p initial= {{"opacity": 0, "y": -10;"
-}animate = {{import React, {;
+}text-white placeholder-white/40 "focus":outline-none "focus":ring-2 "focus":ring-cyan-400/20`;`}placeholder="Tell us about your project and requirements..." /> {errors && errors.message && (<motion&& motion.p initial= {"opacity": 0, "y": -10;"
+}animate = {import React, {;
   }
   useState } from 'react';'
 import { motion  } from 'framer-motion';'
@@ -131,10 +129,10 @@ const "newErrors": FormErrors = ,;
   ) => {const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }))// Clear error when user starts typing;
     if (errors[name]) {setErrors(prev => ({ ...prev, [name]: '' }))}'
-  }const containerVariants = {"hidden": { "opacity": 0 },"visible": {"opacity": 1,"transition": {"staggerChildren": 0.1,"delayChildren": 0.2}}}const itemVariants = {"hidden": { "opacity": 0, "y": 30 },"visible": {"opacity": 1,"y": 0,"transition": { "duration": 0.6 }}}if (isSubmitted) {return (<motion&& motion.div;
+  }const containerVariants = {"hidden": { "opacity": 0 },"visible": {"opacity": 1,"transition": {"staggerChildren": 0.1,"delayChildren": 0.2}}const itemVariants = {"hidden": { "opacity": 0, "y": 30 },"visible": {"opacity": 1,"y": 0,"transition": { "duration": 0.6 }}if (isSubmitted) {return (<motion&& motion.div;
         }
-        initial={{ "opacity": 0, "scale": 0 && 0.9 }}
-        animate={{ "opacity": 1, "scale": 1 }}className="text-center py-12">;"
+        initial={ "opacity": 0, "scale": 0 && 0.9 }
+        animate={ "opacity": 1, "scale": 1 }className="text-center py-12">;"
 }
 
 const handleSubmit = async ("e": React && React.FormEvent) => {e && e.preventDefault()if (!validateForm()) {showError('Validation ErrorPlease fix the errors in the form';'
@@ -155,15 +153,15 @@ const handleChange = ("e": React.ChangeEvent<;
 }
 
 const containerVariants = {"hidden": { "opacity": 0,;
-},"visible": {"opacity": 1,"transition": {"staggerChildren": 0.1,"delayChildren": 0.2}}}
+},"visible": {"opacity": 1,"transition": {"staggerChildren": 0.1,"delayChildren": 0.2}}
 ;
 const itemVariants = {"hidden": { "opacity": 0, "y": 30,;
 },"visible": {"opacity": 1,"y": 0,"transition": { "duration": 0.6
-}}}if (isSubmitted) ;
+}}if (isSubmitted) ;
   return (<motion&& motion.div;
-        initial={{ "opacity": 0, "scale": 0 && 0.9 
+        initial={ "opacity": 0, "scale": 0 && 0.9 
 }
-        animate={{ "opacity": 1, "scale": 1 
+        animate={ "opacity": 1, "scale": 1 
 }className="text-center py-12">;"
         <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">;"
           <CheckCircle className="w-10 h-10 text-green-400" />;"
@@ -227,11 +225,11 @@ const itemVariants = {"hidden": { "opacity": 0, "y": 30,;
                 />;
                 {errors && errors.name && (<motion&& motion.p;
                     }
-                    initial={{ "opacity": 0, "y": -10 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    initial={{ "opacity": 0, "y": -10 
+                    initial={ "opacity": 0, "y": -10 }
+                    animate={ "opacity": 1, "y": 0 }
+                    initial={ "opacity": 0, "y": -10 
 }
-                    animate={{ "opacity": 1, "y": 0 
+                    animate={ "opacity": 1, "y": 0 
 }
                     className="mt-2 text-sm text-red-400 flex items-center gap-2">;"
                     <AlertCircle className="w-4 h-4" />;"
@@ -255,11 +253,11 @@ const itemVariants = {"hidden": { "opacity": 0, "y": 30,;
                 />;
                 {errors && errors.email && (<motion&& motion.p;
                     }
-                    initial={{ "opacity": 0, "y": -10 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    initial={{ "opacity": 0, "y": -10 
+                    initial={ "opacity": 0, "y": -10 }
+                    animate={ "opacity": 1, "y": 0 }
+                    initial={ "opacity": 0, "y": -10 
 }
-                    animate={{ "opacity": 1, "y": 0 
+                    animate={ "opacity": 1, "y": 0 
 }
                     className="mt-2 text-sm text-red-400 flex items-center gap-2">;"
                     <AlertCircle className="w-4 h-4" />;"
@@ -310,11 +308,11 @@ const itemVariants = {"hidden": { "opacity": 0, "y": 30,;
               />;
               {errors && errors.message && (<motion&& motion.p;
                   }
-                  initial={{ "opacity": 0, "y": -10 }}
-                  animate={{ "opacity": 1, "y": 0 }}
-                  initial={{ "opacity": 0, "y": -10 
+                  initial={ "opacity": 0, "y": -10 }
+                  animate={ "opacity": 1, "y": 0 }
+                  initial={ "opacity": 0, "y": -10 
 }
-                  animate={{ "opacity": 1, "y": 0 
+                  animate={ "opacity": 1, "y": 0 
 }
                   className="mt-2 text-sm text-red-400 flex items-center gap-2">;"
                   <AlertCircle className="w-4 h-4" />;"
@@ -347,8 +345,8 @@ const "EnhancedContactForm": React.FC;<section className="py-20 bg-gradient-to-b
           variants={containerVariants}
           initial="hidden";"
           whileInView="visible";"
-          viewport={{ "once": true }}
-          viewport={{ "once": true 
+          viewport={ "once": true }
+          viewport={ "once": true 
 }
         >;
           {/* Header */}
@@ -581,7 +579,7 @@ const "EnhancedContactForm": React.FC;<section className="py-20 bg-gradient-to-b
                         key={service.id}
                         type="button";"
                         onClick={() => {setFormData(prev => ({...prev,"service": service.id}))setSelectedService(service.id)if (errors.service) {setErrors(prev => ({ ...prev, "service": '' }))}'
-                        }}
+                        }
                         className={`p-3 rounded-xl border-2 transition-all duration-300 text-left ${selectedService === service.id;`                            ? 'border-blue-500 bg-blue-50 text-blue-700';'
                             : 'border-gray-200 "hover":border-gray-300 "hover":bg-gray-50';'
                         }`}`                      >;
@@ -718,12 +716,10 @@ const "EnhancedContactForm": React.FC;<section className="py-20 bg-gradient-to-b
     </section>;
   )}export default EnhancedContactForm;
   )}export default EnhancedContactForm;
-                  animate={{ opacity: 1, y: 0}}
+                  animate={ opacity: 1, y: 0}
                   className = $2;
 export default EnhancedContactForm,
-=======
->>>>>>> origin/main
-                  animate={{ opacity: 1, y: 0 }}
+                  animate={ opacity: 1, y: 0 }
                   className="mt-2 text-sm text-red-400 flex items-center gap-2"
                 >
                   <AlertCircle className="w-4 h-4" />
@@ -731,21 +727,15 @@ export default EnhancedContactForm,
                 </motion.p>
               )}
             </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
             <button
               type="submit"
               disabled={isSubmitting}
               className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
-<<<<<<< HEAD
                 isSubmitting 
                   ? 'bg-gray-600 cursor-not-allowed' 
-=======
                 isSubmitting
                   ? 'bg-gray-600 cursor-not-allowed'
->>>>>>> origin/main
                   : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
               } flex items-center justify-center gap-3`}
             >
@@ -766,13 +756,8 @@ export default EnhancedContactForm,
       </div>
     </section>
   )
-<<<<<<< HEAD
 };
 
 export default EnhancedContactForm;
-=======
 }
 export default EnhancedContactForm;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

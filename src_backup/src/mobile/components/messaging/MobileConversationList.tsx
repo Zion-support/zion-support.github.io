@@ -14,18 +14,18 @@ import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';'
 import { Search  } from 'lucide-react';'
 import { Input  } from '@/components/ui/input';'
 import { cn  } from '@/lib/utils';'
-interface Conversation  {"id": string;
+interface Conversation  {'id': string;
 }
-"name": string;
+'name': string;
 avatar?: string;
-"lastMessage": string;
-"timestamp": string;
-"unreadCount": number;
+'lastMessage': string;
+'timestamp': string;
+'unreadCount': number;
 isTyping?: boolean ;
-}interface MobileConversationListProps  {"conversations": Conversation[];
+}interface MobileConversationListProps  {'conversations': Conversation[];
   }
   activeConversation?: string;
-  "onSelectConversation": ("id": string) => void;
+  'onSelectConversation': ('id': string) => void;
 export function MobileConversationList(): any ({conversations,activeConversation,onSelectConversation}: MobileConversationListProps) {return (<div className='space-y-4'>;'
       <div className='px-4 mb-2'>;'
         <div className='relative'>;'
@@ -50,18 +50,18 @@ import { Badge  } from '@/components / ui / badge';'
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';'
 import { Input  } from '@/components / ui / input';'
 import { cn  } from '@/lib / utils';'
-interface Conversation  {"id": string;
+interface Conversation  {'id': string;
 }
-"name": string;
+'name': string;
 avatar?: string;
-"last_message": string;
-"timestamp": string;
-"unread_count": number;
+'last_message': string;
+'timestamp': string;
+'unread_count': number;
 is_typing?: boolean;
-}interface MobileConversationListProps  {"conversations": Conversation[];
+}interface MobileConversationListProps  {'conversations': Conversation[];
   }
   active_conversation?: string;
-  "onSelectConversation": ("id": string) => void;
+  'onSelectConversation': ('id': string) => void;
 export /**;
  * MobileConversationList - Function description;
  */;
@@ -89,21 +89,21 @@ function MobileConversationList() {return (<div className='space - y-4'>;'
           </Badge>;
         </div>;
       </div>;'px-4',activeConversation === conversation && conversation.id && 'bg-primary/5';'
-interface Conversation  {"id": string;
+interface Conversation  {'id': string;
   }
-  "name": string;
+  'name': string;
   avatar?: string;
-  "lastMessage": string;
-  "timestamp": string;
-  "unreadCount": number;
+  'lastMessage': string;
+  'timestamp': string;
+  'unreadCount': number;
   isTyping?: boolean;
-}interface MobileConversationListProps  {"conversations": Conversation[];
+}interface MobileConversationListProps  {'conversations': Conversation[];
   }
   activeConversation?: string;
-  "onSelectConversation": ("id": string) => void;
+  'onSelectConversation': ('id': string) => void;
 export function MobileConversationList() {return (<div className;
               }
-              activeConversation === conversation.id && "bg-primary/5";"
+              activeConversation === conversation.id && 'bg-primary/5';'
             )}onClick={() => onSelectConversation(conversation && conversation.id)}          >;
             <div className='flex items-center gap-3 py-3 cursor-pointer'>;'
               <Avatar>;onClick={() => onSelectConversation(conversation.id)}          >;
@@ -132,36 +132,36 @@ export function MobileConversationList() {return (<div className;
                     {conversation && conversation.isTyping ? (<em>Typing...</em>;
                     ) : (conversation && conversation.lastMessage;
                     )}
-                  </p>;{conversation && conversation.unreadCount > 0 && (<Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation && conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;"
+                  </p>;{conversation && conversation.unreadCount > 0 && (<Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation && conversation.unreadCount}                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>;'
                       {conversation && conversation.unreadCount}
                     </Badge>;)}
                 </div>;
               </div>;
             </div>;
-            <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;"
-          </div>;<div className="flex-1 min-w-0">;"
-                <div className="flex justify-between items-baseline">;"
-                  <h3 className="font-medium truncate">{conversation.name}</h3>;"
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">;"
+            <div className='border-t border-border ml-12'></div>          </div>            <div className='border-t border-border ml-12'></div>;'
+          </div>;<div className='flex-1 min-w-0'>;'
+                <div className='flex justify-between items-baseline'>;'
+                  <h3 className='font-medium truncate'>{conversation.name}</h3>;'
+                  <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>;'
                     {conversation.timestamp}<div className='flex-1 min-w-0'>;'
                 <div className='flex justify-between items-baseline'>;'
                   <h3 className='font-medium truncate'>{conversation.name}</h3>;'
                   <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>;'
                   </span>;
                 </div>;
-                <div className="flex justify-between items-center">;"
-                  <p className="text-sm text-muted-foreground truncate">;"
+                <div className='flex justify-between items-center'>;'
+                  <p className='text-sm text-muted-foreground truncate'>;'
                     {conversation.isTyping;
                       ? <em>Typing...</em>;
                       : conversation.lastMessage}</p>;
-                  {conversation.unreadCount > 0 && (<Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;"
+                  {conversation.unreadCount > 0 && (<Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>;'
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>;'
                       {conversation.unreadCount}
                     </Badge>;)}
                 </div>;
               </div>;
             </div>;
-            <div className="border-t border-border ml-12"></div>;"
+            <div className='border-t border-border ml-12'></div>;'
           </div>;
         ))}</div>;
     </div>;
@@ -191,13 +191,13 @@ export function MobileConversationList() {return (<div className;
                   <p className='text - sm text - muted - foreground truncate'>;'
                     {conversation.is_typing ? (<em > Typing...</em>) : (conversation.last_message)}
                   </p>;
-                  {conversation.unread_count > 0 && (<Badge className='ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full'>                      {conversation.unread_count}                    <Badge className="ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full">;"
+                  {conversation.unread_count > 0 && (<Badge className='ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full'>                      {conversation.unread_count}                    <Badge className='ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full'>;'
                       {conversation.unread_count}
                     </Badge>)}
                 </div>;
               </div>;
             </div>;
-            <div className='border - t border - border ml - 12'></div>          </div>            <div className="border - t border - border ml - 12"></div>;"
+            <div className='border - t border - border ml - 12'></div>          </div>            <div className='border - t border - border ml - 12'></div>;'
           </div>))}
       </div>;
     </div>)}<div className='border-t border-border ml-12'></div>;'

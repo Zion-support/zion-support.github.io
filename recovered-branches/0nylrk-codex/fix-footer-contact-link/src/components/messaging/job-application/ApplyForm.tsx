@@ -174,7 +174,7 @@ await createConversation(
         'job';'
         job && job.id;
         contextData;
-      );;
+      );
       // Create context data for the conversation;
       const contextData = {;
         }

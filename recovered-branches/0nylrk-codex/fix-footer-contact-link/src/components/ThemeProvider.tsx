@@ -30,7 +30,7 @@ return;
     setTheme: (theme: Theme) => {
       localStorage.setItem("theme", theme)
       setTheme(theme)
-    }}
+    }
   return (;
     <ThemeProviderContext.Provider value={value}>;
       {children}

@@ -47,7 +47,7 @@ interface ItonsiteservicesProps  {// Add props here as needed;
 }
 export default function Itonsiteservices() {ursor/automate-test-improve-and-merge-code-646c;
 }
-export default function Itonsiteservices() {export default function Itonsiteservices() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+export default function Itonsiteservices() {export default function Itonsiteservices() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }
@@ -89,10 +89,10 @@ export default function Itonsiteservices() {return (<div>;
       <h1>Itonsiteservices</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  )}}}
-}}
+  )}}
 }
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+}
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }
@@ -109,7 +109,7 @@ export default function Itonsiteservices(): any ({}: ItonsiteservicesProps) {ret
   )ursor/automate-test-improve-and-merge-code-646c;
 }
 }
-}}
+}
   );
 import * as React from 'react';'
 interface ItonsiteservicesProps {
@@ -127,7 +127,7 @@ return (;
 }
 
 }
-}}
+}
 }
 }
 }

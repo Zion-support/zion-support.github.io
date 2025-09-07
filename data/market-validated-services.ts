@@ -469,7 +469,7 @@ export interface MarketValidatedService {;
 	variant?: ServiceVariant;
 	rating?: number;
 	customers?: number;
-}}
+}
 	setupTime?: string;
 
 
@@ -480,7 +480,7 @@ export interface MarketValidatedService {;
 	setupTime?: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
 	trialDays?: number;
-}}
+}
 import { ServiceVariant } from '../types/service-variants';
 export interface MarketValidatedService {
 	id: string,
@@ -530,15 +530,15 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		trialDays: 14,
 		setupTime: '30 minutes',
 		contactInfo
-	trialDays?: number;setupTime?: string;}}
-}}
+	trialDays?: number;setupTime?: string;}
+}
 	setupTime?: string;"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup && ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709";"
   "website": ""https"://ziontechgroup && ziontechgroup.com";,"contactInfo": {"mobile": string;"
 		}
 		"email": string;
 		"address": string;
 		website?: string;
-	}}
+	}
 export const "marketValidatedServices": MarketValidatedService[] = [;
 	// AI and Assistants;
 	{"id": "ai-assistant-pro","name": "AI Assistant Pro","tagline": "Branded copilot with RAG, guardrails, and analytics","price": "$149","period": "/month","description": "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.",features[ "RAG over your docs with hybrid search",""Guardrails": PII/PHI redaction, jailbreak detection","Human handoff + conversation analytics","Slack/Teams/Widget channels";"
@@ -626,7 +626,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;
 },// Search and Knowledge;
 {"id": "vector - search - starter","name": "Vector Search Starter","tagline": "Deploy a production - grade vector database and APIs","price": "$89","period": "/month","description": "Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.",features["Managed vector DB", "Ingestion pipelines", "Metadata filters", "Access controls"],"category": "AI & Search","link": ""https"://ziontechgroup.com / vector - search - starter","variant": "quantum","rating": 4.6,"customers": 410,"trial_days": 14,"setup_time": "2 hours",contact_info;}"
 ];
-}}// Search and Knowledge;
+}// Search and Knowledge;
 {"id": 'vector - search - starter';'
   }
   "name": 'Vector Search Starter';'
@@ -643,8 +643,6 @@ export const "marketValidatedServices": MarketValidatedService[] = [;
   "trial_days": 14;
   "setup_time": '2 hours';'
   contact_info;
-<<<<<<< HEAD
-=======
 }];
 ;
 ;
@@ -660,15 +658,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}}
+}
   "mobile": "+1 302 464 0950","
 	"email": "kleber@ziontechgroup && ziontechgroup.com","
 	"address": "364 E Main St STE 1008 Middletown DE 19709";"

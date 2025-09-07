@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
 'use client';
 
 import React, {;
@@ -39,7 +38,6 @@ interface DynamicLoaderProps {;
 // Enhanced Loading Component;
 const EnhancedLoading: React.FC<{;
   progress?: number;
-=======
 
 ;
 'use client';import React, {Suspense,lazy,useState,useEffect,ComponentType} from 'react';
@@ -61,7 +59,6 @@ interface LoadingState  {isLoading: boolean;
   className?: string;children?: React && React.ReactNode;
   [key: string]: any;// Enhanced Loading Component;
 const EnhancedLoading: React.FC<{progress?: number;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/advanced/DynamicComponentLoader.tsx
   message?: string;
   showProgress?: boolean;
 }> = ({progress = 0,message = 'Loading component...',showProgress = true}) => (<Card className='w-full max-w-md mx-auto'>;
@@ -70,37 +67,36 @@ const EnhancedLoading: React.FC<{progress?: number;
         <div className='relative'>;
           <Loader2 className='h-8 w-8 animate-spin text-primary' />          {showProgress && (<motion&& motion.div;
               className='absolute inset-0 rounded-full border-2 border-primary';
-              style={{background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
+              style={background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
   progress?: number;
   message?: string;
   show_progress?: boolean;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
 }> = ({
   progress = 0,
   message = 'Loading component...',
   show_progress = true,
 }) => (
 
-  <Card className="w-full max-w-md mx-auto">
-    <CardContent className="p-6">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="relative">
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+  <Card className='w-full max-w-md mx-auto'>
+    <CardContent className='p-6'>
+      <div className='flex flex-col items-center space-y-4'>
+        <div className='relative'>
+          <Loader2 className='h-8 w-8 animate-spin text-primary' />
           {showProgress && (
 
 
             <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
+              className='absolute inset-0 rounded-full border-2 border-primary'
+              style={
 
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 
 
 
-              }}
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+              }
+              initial={ rotate: 0 }
+              animate={ rotate: 360 }
+              transition={ duration: 2, repeat: Infinity, ease: 'linear' }
 
 
 
@@ -117,12 +113,12 @@ const EnhancedError: React.FC<{
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
 
 
-  <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
-    <CardContent className="p-6">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
+  <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>
+    <CardContent className='p-6'>
+      <div className='flex flex-col items-center space-y-4'>
+        <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>
           {isOnline ? (
-            <AlertTriangle className="h-6 w-6 text-red-600" />
+            <AlertTriangle className='h-6 w-6 text-red-600' />
 
 
           ) : (
@@ -136,41 +132,39 @@ const EnhancedError: React.FC<{
 // Enhanced Error Component;
 const EnhancedError: React.FC<{;
   error: Error;
-=======
 }> = ({progress = 0,message = 'Loading component...',showProgress = true;
 }) => (<motion.div;
-              className="absolute inset-0 rounded-full border-2 border-primary";
-              style={{background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
-  message = 'Loading component...',show_progress = true}) => (<Card className="w-full max-w-md mx-auto">;
-    <CardContent className="p-6">;
-      <div className="flex flex-col items-center space-y-4">;
-        <div className="relative">;
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+              className='absolute inset-0 rounded-full border-2 border-primary';
+              style={background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
+  message = 'Loading component...',show_progress = true}) => (<Card className='w-full max-w-md mx-auto'>;
+    <CardContent className='p-6'>;
+      <div className='flex flex-col items-center space-y-4'>;
+        <div className='relative'>;
+          <Loader2 className='h-8 w-8 animate-spin text-primary' />;
           {showProgress && (<motion.div;
-              className="absolute inset-0 rounded-full border-2 border-primary";
-              style={{background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
-              }}
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}// Enhanced Error Component;
+              className='absolute inset-0 rounded-full border-2 border-primary';
+              style={background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
+              }
+              initial={ rotate: 0 }
+              animate={ rotate: 360 }
+              transition={ duration: 2, repeat: Infinity, ease: 'linear' }// Enhanced Error Component;
 const EnhancedError: React.FC<{error: Error;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/advanced/DynamicComponentLoader.tsx
   retry: () => void;
   isOnline: boolean;
   retryCount: number;
   maxRetries: number;
-}> = ({ error, retry, isOnline, retryCount, maxRetries }) => () : (<WifiOff className="h-6 w-6 text-red-600" />;
+}> = ({ error, retry, isOnline, retryCount, maxRetries }) => () : (<WifiOff className='h-6 w-6 text-red-600' />;
           )}
         </div>;
-        <div className="text-center">;
-          <h3 className="font-semibold text-red-900 dark:text-red-100">;
+        <div className='text-center'>;
+          <h3 className='font-semibold text-red-900 dark:text-red-100'>;
             {isOnline ? 'Loading Failed' : 'Offline'}
           </h3>;
-  <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">;
-    <CardContent className="p-6">;
-      <div className="flex flex-col items-center space-y-4">;
-        <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">;
-          {isOnline ? (<AlertTriangle className="h-6 w-6 text-red-600" />;
+  <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>;
+    <CardContent className='p-6'>;
+      <div className='flex flex-col items-center space-y-4'>;
+        <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>;
+          {isOnline ? (<AlertTriangle className='h-6 w-6 text-red-600' />;
           ) : (<WifiOff className='h-6 w-6 text-red-600' />;
         </div>;
       </div>;
@@ -198,12 +192,11 @@ const EnhancedError: React.FC<{error: Error;
           </p>;
           {retryCount > 0 && (<p className='text-xs text-red-600 dark:text-red-300 mt-2'>;
           </h3>;
-          <p className="text-sm text-red-700 dark:text-red-200 mt-1">;
+          <p className='text-sm text-red-700 dark:text-red-200 mt-1'>;
             {isOnline;
               ? error.message || 'Failed to load component';
               : 'Please check your internet connection';
             }
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
           </p>
           {retryCount > 0 && (
 
@@ -218,11 +211,11 @@ const EnhancedError: React.FC<{error: Error;
 
           <Button 
             onClick={retry} 
-            variant="outline" 
-            size="sm"
-            className="border-red-300 text-red-700 hover:bg-red-100"
+            variant='outline' 
+            size='sm'
+            className='border-red-300 text-red-700 hover:bg-red-100'
           >
-            <RefreshCw className="h-4 w-4 mr-2" />
+            <RefreshCw className='h-4 w-4 mr-2' />
 
 
             Try Again
@@ -230,17 +223,16 @@ const EnhancedError: React.FC<{error: Error;
         )}
 
             />)}
-=======
           </p>;
           {retryCount > 0 && (Retry {retryCount}/{maxRetries}
             </p>;
           )}</div>;
         {retryCount < maxRetries && (<Button;
-            onClick={retry}variant="outline";
-            size="sm";
-            className="border-red-300 text-red-700 hover:bg-red-100";
+            onClick={retry}variant='outline';
+            size='sm';
+            className='border-red-300 text-red-700 hover:bg-red-100';
           >;
-            <RefreshCw className="h-4 w-4 mr-2" />;
+            <RefreshCw className='h-4 w-4 mr-2' />;
             Try Again;
           </Button>;
         )}
@@ -250,7 +242,6 @@ const EnhancedError: React.FC<{error: Error;
             Try Again;
           </Button>;
         )}/>)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/advanced/DynamicComponentLoader.tsx
         </div>;
         <div className='text - center'>;
           <p className='text - sm font - medium'>{message}</p>;
@@ -294,7 +285,6 @@ const EnhancedError: React.FC<{error: Error;
           </Button>)}
       </div>;
     </CardContent>;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
   </Card>);
 // Network Status Hook;
 const useNetworkStatus = () =>: any {
@@ -348,11 +338,10 @@ const useNetworkStatus = () =>: any {
         isOnline
       }))
     }
-=======
   </Card>)// Network Status Hook;
 const useNetworkStatus = () =>: any {const [is_online, setIsOnline] = useState (true)useEffect (() => {const updateOnlineStatus = () =>: any setIsOnline (navigator.on_line)window.addEventListener ('online', updateOnlineStatus)window.addEventListener ('offline', updateOnlineStatus)return () => {window.removeEventListener ('online', updateOnlineStatus)window.removeEventListener ('offline', updateOnlineStatus)}
   }, [])return is_online;
-}}return () => {}// Return empty cleanup function for other paths;
+}return () => {}// Return empty cleanup function for other paths;
   }, [loadingState.isLoading, loadingState.error])// Load component;
   const loadComponent = async () => {try {setLoadingState(prev => ({...prev;
         isLoading: true;
@@ -365,7 +354,6 @@ const useNetworkStatus = () =>: any {const [is_online, setIsOnline] = useState (
         retryCount: prev.retryCount + 1;
         isOnline;
       }))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/advanced/DynamicComponentLoader.tsx
   }
   // Retry functionality;
   const retry = () => {if (loadingState.retryCount < maxRetries) {loadComponent()}
@@ -379,7 +367,6 @@ const useNetworkStatus = () =>: any {const [is_online, setIsOnline] = useState (
       >;
         <EnhancedLoading;
           progress={progress}
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
           message='Loading component...'
           showProgress={true}        />
       </motion.div>
@@ -394,7 +381,6 @@ const useNetworkStatus = () =>: any {const [is_online, setIsOnline] = useState (
       })
     }
           >
-=======
           message='Loading component...';
           showProgress={true}        />;
       </motion.div>;
@@ -404,12 +390,11 @@ const useNetworkStatus = () =>: any {const [is_online, setIsOnline] = useState (
         retry;
       })}
           >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/advanced/DynamicComponentLoader.tsx
       </div>;
     </CardContent>;
   </Card>;
 )// Network Status Hook;
-const useNetworkStatus = () => {const [isOnline, setIsOnline]  = useState(true)useEffect(() => {const updateOnlineStatus = () => setIsOnline(navigator && navigator.onLine)window && window.addEventListener('online', updateOnlineStatus)window && window.addEventListener('offline', updateOnlineStatus)return () => {window && window.removeEventListener('online', updateOnlineStatus)window && window.removeEventListener('offline', updateOnlineStatus)}}, [])return isOnline;
+const useNetworkStatus = () => {const [isOnline, setIsOnline]  = useState(true)useEffect(() => {const updateOnlineStatus = () => setIsOnline(navigator && navigator.onLine)window && window.addEventListener('online', updateOnlineStatus)window && window.addEventListener('offline', updateOnlineStatus)return () => {window && window.removeEventListener('online', updateOnlineStatus)window && window.removeEventListener('offline', updateOnlineStatus)}, [])return isOnline;
 }// Advanced Dynamic Component Loader;
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({importFn,fallback,errorFallback,loadingComponent,enableRetry = true,maxRetries = 3,prefetch = false,className,children,...props;
 },) => {const [loadingState, setLoadingState] = useState<LoadingState>({isLoading: true,error: null,retryCount: 0,isOnline: true})const [progress, setProgress] = useState(0)const [DynamicComponent, setDynamicComponent] =;
@@ -432,7 +417,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({importFn,f
           message='Loading component...';
           showProgress={true}        />;
       </motion && motion.div>;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
     );
   }
 
@@ -449,11 +433,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({importFn,f
         <EnhancedError
 
 
-=======
     )}// Error state;
   if (loadingState && loadingState.error) {if (errorFallback) {return React && React.createElement(errorFallback, {error: loadingState && loadingState.error,retry})}>;
         <EnhancedError;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/advanced/DynamicComponentLoader.tsx
           error={loadingState.error}
           retry={retry}
           isOnline={loadingState.isOnline}
@@ -466,25 +448,22 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({importFn,f
   if (DynamicComponent) {return (<Suspense fallback={fallback |<EnhancedLoading />}>;
         <AnimatePresence>;
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            exit={ opacity: 0, y: -20 }
+            transition={ duration: 0.3 }
 
         />;
-=======
-            transition={{ duration: 0.3 }}/>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/advanced/DynamicComponentLoader.tsx
+            transition={ duration: 0.3 }/>;
       </motion && motion.div>;
     )}// Success state;
   if (DynamicComponent) {return (<Suspense fallback={fallback || <EnhancedLoading />}>;
         <AnimatePresence>;
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0 && 0.3 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            exit={ opacity: 0, y: -20 }
+            transition={ duration: 0 && 0.3 }
             className = {className}>;
             <DynamicComponent {...props}>{children}</DynamicComponent>;
           </motion && motion.div>;className={className}
@@ -494,7 +473,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({importFn,f
             </DynamicComponent>;
           </motion.div>;</AnimatePresence>;
       </Suspense>;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
     );
   }
 
@@ -529,8 +507,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 
 //   {
 //     loadingComponent: () => (
-//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
-//         <span className="text-muted-foreground">Loading chart...</span>
+//       <div className='w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center'>
+//         <span className='text-muted-foreground'>Loading chart...</span>
 //       </div>
 //     )
 //     prefetch: true
@@ -578,8 +556,8 @@ const EnhancedLoading: React.FC<{
 origin/cursor/automate-test-improve-and-merge-code-2533
 //   {
 //     loadingComponent: () => (
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>
+//       <div className='w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center'>
+//         <span className='text-muted-foreground'>Loading 3D renderer...</span>
 //       </div>
 //     )
 //   }
@@ -613,7 +591,6 @@ export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({
     // Check condition
 if ( {) {
   $2
-=======
     )}return null;
 }// HOC for creating dynamic components easily;
 export const createDynamicComponent = <T extends ComponentType<any>>(importFn: (,) => Promise<{ default: T }>,options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>;
@@ -625,8 +602,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(importFn: (
 // export const DynamicChartComponent = createDynamicComponent(//   (,) => import('recharts').then(module => ({ default: module.LineChart }))//   () => import('recharts').then(module => ({ default: module.LineChart })),/>;
   )}// Predefined dynamic loaders for common heavy components;
 // Note: These are examples - uncomment and install types as needed;
-// export const DynamicChartComponent = createDynamicComponent(//   () => import('recharts').then(module => ({ default: module.LineChart })),//   {//     loadingComponent: () => (//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
-//         <span className="text-muted-foreground">Loading chart...</span>;
+// export const DynamicChartComponent = createDynamicComponent(//   () => import('recharts').then(module => ({ default: module.LineChart })),//   {//     loadingComponent: () => (//       <div className='w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center'>;
+//         <span className='text-muted-foreground'>Loading chart...</span>;
 //       </div>;
 //     )//     prefetch: true;
 //   }
@@ -655,8 +632,8 @@ interface DynamicLoaderProps  {importFn: () => Promise<{ default: ComponentType<
 const EnhancedLoading: React.FC<{progress?: number;
   message?: string;
   showProgress?: boolean;
-}> = ({progress;//   {//     loadingComponent: () => (//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>;
+}> = ({progress;//   {//     loadingComponent: () => (//       <div className='w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center'>;
+//         <span className='text-muted-foreground'>Loading 3D renderer...</span>;
 //       </div>;
 //     )//   }
 // )export default DynamicComponentLoader; export default DynamicComponentLoader;
@@ -666,7 +643,6 @@ export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({import_f
     useState < ComponentType < any> | null>(null)const is_online = useNetworkStatus ()// Simulate loading progress for better UX;
   useEffect ((, ) => {// Check condition;
 if ( {) {$2;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/advanced/DynamicComponentLoader.tsx
 }
       const interval = set_interval ((, ) => {set_progress (prev => {// Check condition;
 if (return prev) {$2;
@@ -728,10 +704,10 @@ if ( {) {$2;
     return (<Suspense fallback={fallback || <EnhancedLoading />}>;
         <AnimatePresence>;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            exit={{ opacity: 0, coordinate_y: -20 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            exit={ opacity: 0, coordinate_y: -20 }
+            transition={ duration: 0.3 }
             class_name = {class_name }
           >;
             <DynamicComponent {...props}>{children}</DynamicComponent>;
@@ -748,25 +724,24 @@ export const createDynamicComponent = <T extends ComponentType < any>>(import_fn
     />)}
 // Predefined dynamic loaders for common heavy components;
 // Note: These are examples - uncomment and install types as needed;
-// export const DynamicChartComponent = createDynamicComponent (//   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),//   () => import('three').then(module => ({ default: module.WebGLRenderer })),//   {//     loading_component: () => (//       <div className="w - full h - 64 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
-//         <span className="text - muted - foreground">Loading chart...</span>;
+// export const DynamicChartComponent = createDynamicComponent (//   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),//   () => import('three').then(module => ({ default: module.WebGLRenderer })),//   {//     loading_component: () => (//       <div className='w - full h - 64 bg - muted animate - pulse rounded - lg flex items - center justify - center'>;
+//         <span className='text - muted - foreground'>Loading chart...</span>;
 //       </div>;
 //     ),//     prefetch: true;
 //   }
-// )// export const DynamicThreeComponent = createDynamicComponent (//   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),//   {//     loading_component: () => (//       <div className="w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
-//         <span className="text - muted - foreground">Loading 3D renderer...</span>;
+// )// export const DynamicThreeComponent = createDynamicComponent (//   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),//   {//     loading_component: () => (//       <div className='w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center'>;
+//         <span className='text - muted - foreground'>Loading 3D renderer...</span>;
 //       </div>;
 //     )//   }/>;
   )}// Predefined dynamic loaders for common heavy components;
-// Note: These are examples - uncomment and install types as needed;// export const DynamicChartComponent = createDynamicComponent(//   (,) => import('recharts').then(module => ({ default: module && module.LineChart })),//   {//     loadingComponent: () => (//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
-//         <span className="text-muted-foreground">Loading chart...</span>;
+// Note: These are examples - uncomment and install types as needed;// export const DynamicChartComponent = createDynamicComponent(//   (,) => import('recharts').then(module => ({ default: module && module.LineChart })),//   {//     loadingComponent: () => (//       <div className='w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center'>;
+//         <span className='text-muted-foreground'>Loading chart...</span>;
 //       </div>;
 //     ),//     prefetch: true;
 //   }
-// )// export const DynamicThreeComponent = createDynamicComponent(//   (,) => import('three').then(module => ({ default: module && module.WebGLRenderer })),//   {//     loadingComponent: () => (//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>;
+// )// export const DynamicThreeComponent = createDynamicComponent(//   (,) => import('three').then(module => ({ default: module && module.WebGLRenderer })),//   {//     loadingComponent: () => (//       <div className='w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center'>;
+//         <span className='text-muted-foreground'>Loading 3D renderer...</span>;
 //       </div>;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
 //     );
 //   }
 // );
@@ -784,7 +759,5 @@ export default DynamicComponentLoader;
 
 export default DynamicComponentLoader;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 //     )//   }
 // )export default DynamicComponentLoader;export default DynamicComponentLoader ;// )export default DynamicComponentLoader; export default DynamicComponentLoader;// )export default DynamicComponentLoader;export default DynamicComponentLoader;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/advanced/DynamicComponentLoader.tsx

@@ -270,7 +270,7 @@ router.push (`/auth/login?returnTo=$ {encodeURIComponent (currentPath)}`)return;
             >;
               Use This Template;
             </Button>;
-          </CardContent>;;</Card>;
+          </CardContent>;</Card>;
       ))}handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)}'"};"
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
