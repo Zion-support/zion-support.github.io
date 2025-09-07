@@ -1,17 +1,17 @@
-import React from \"react\";
+import React from \'react\';
 
 interface MainLayoutProps {
   className?: string;}
   children?: React.ReactNode;}
 }
 
-const MainLayout: React.FC<MainLayoutProps /> = ({
+const MainLayout: React.FC<MainLayoutProps    /> = ({
   className = \"\",}
   children,}
 }) => {}
   return (}
-    <div data-testid=\"ainlayout\" className={className} />
-      {children || <div />MainLayout Component</div>}
+    <div data-testid=\"ainlayout\" className={className}    />
+      {children || <div    />MainLayout Component</div>}
     </div>
   );
 };

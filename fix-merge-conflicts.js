@@ -90,32 +90,11 @@ function findFilesWithMergeConflicts(dir, fileList = []) {}
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); const cleanedLines = []; const seenImports = new Set(); for (let i = 0; i < lines.length; i++) { const line = lines[i].trim(); if (line === '' || line.startsWith('import') && seenImports.has(line)) { continue} if (line.startsWith('import')) { seenImports.add(line)} const cleanedLine = line .replace(/,,+/g,',') .replace(/;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .trim(); if (cleanedLine) { cleanedLines.push(cleanedLine)} } const finalContent = cleanedLines.join('\n'); fs.writeFileSync(filePath,finalContent,'utf8'); } catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } function findFilesWithConflicts(dir) { const files = []; function traverse(currentDir) { const items = fs.readdirSync(currentDir); for (const item of items) { const fullPath = path.join(currentDir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { traverse(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) { const content = fs.readFileSync(fullPath,'utf8');
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-
-// Function to resolve merge conflicts by keeping the HEAD version
-function resolveMergeConflicts(content) {
-  // Remove all merge conflict markers and keep only the HEAD version
-  let resolved = content;
-  
-  // Handle simple conflicts (<<<<<<< HEAD ... ======= ... >>>>>>> branch)
-  resolved = resolved.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-  
-  // Handle nested conflicts
-  resolved = resolved.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-  
-  // Remove any remaining conflict markers
-  resolved = resolved.replace(/^[<>=]{7}.*$/gm, '');
-  
-  // Clean up extra newlines
-  resolved = resolved.replace(/\n{3,}/g, '\n\n');
-  
-  return resolved;
-}
-
-// Function to process a file
-function processFile(filePath) {
+import { execSync } from 'child_process';
+// Function to recursively find all files with merge conflict markers
+function findFilesWithMergeConflicts(dir, fileList = []) {
   try {
     const files = fs.readdirSync(dir);
     for (const file of files) {

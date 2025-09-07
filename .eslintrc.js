@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint - env node */;
 /* eslint-env node */
 module.exports = {
@@ -187,3 +188,15 @@ module.exports = {
   },
 }
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+=======
+
+          module.exports = {
+            extends: ['next/core-web-vitals'],
+            rules: {
+              'no-unused-vars': 'warn',
+              'no-console': 'warn',
+              'prefer-const': 'error'
+            }
+          };
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-94b9
