@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 export const metadata = {
   title: 'AI Email Optimizer | Zion Tech Group',
   description: 'AI-powered email optimization tool that analyzes, improves, and A/B tests your email campaigns for maximum engagement and conversion rates.',
@@ -33,7 +31,6 @@ interface PricingTierProps {
   popular?: boolean;
   cta: string;
 }
-
 
 function PricingTier({
   name,

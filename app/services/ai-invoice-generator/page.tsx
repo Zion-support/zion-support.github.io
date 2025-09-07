@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 export const metadata = {
   title: 'AI Invoice Generator | Zion Tech Group',
   description: 'Intelligent invoice generation with AI-powered data extraction, automated billing, payment tracking, and smart expense categorization for streamlined financial management.',
@@ -33,7 +31,6 @@ interface PricingTierProps {
   popular?: boolean;
   cta: string;
 }
-
 
 function PricingTier({
   name,

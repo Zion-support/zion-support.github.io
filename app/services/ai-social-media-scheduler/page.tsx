@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 export const metadata = {
   title: 'AI Social Media Scheduler | Zion Tech Group',
   description: 'Intelligent social media scheduling tool with AI-powered content optimization, hashtag suggestions, and optimal posting times for maximum engagement.',
@@ -33,7 +31,6 @@ interface PricingTierProps {
   popular?: boolean;
   cta: string;
 }
-
 
 function PricingTier({
   name,
