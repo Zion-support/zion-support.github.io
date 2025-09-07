@@ -43,5 +43,5 @@ const serviceCategories: ServiceCategory[] = [ { id: 'ai-ml',
   const [userBehavior, setUserBehavior] = useState<UserBehavior />({ pageViews: [], timeSpent: 0, interactions: [], interests: [], compSize: 'medium',
   industry: 'technology', budget: 'medium'}
   timeline: '6-12 months', painPoints: []}
-}) const [recommendations, setRecommendations] = useState<ServiceRecommendation []"  />([]) const [selectedService, setSelectedService] = useState<ServiceRecommendation | null"  />(null) const [analysisProgress, setAnalysisProgress] = useState(0)"";
+}) const [recommendations, setRecommendations] = useState<ServiceRecommendation []\"  />([]) const [selectedService, setSelectedService] = useState<ServiceRecommendation | null\"  />(null) const [analysisProgress, setAnalysisProgress] = useState(0)\"\";
 }"

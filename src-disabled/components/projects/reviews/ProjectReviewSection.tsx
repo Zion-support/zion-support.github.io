@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/projects/reviews/ProjectReviewSection.tsx
 import { Project  } from '@/types/projects';
 import { useState } from "react",
@@ -15,7 +16,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const isCompleted = null;
-import { Star } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -49,6 +49,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     : clientProfile?.full_name |'Client'
   const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview
   const hasLeftReview = userReview != null
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 
   const { user } = useAuth(),
@@ -69,26 +71,13 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     : clientProfile?.full_name || "Client",
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {}
-  const { user } = useAuth(),
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
 
-  const isCompleted = project.status === "completed",
-  const isClient = user?.id === project.client_id,
-  const isTalent = user?.id === project.talent_id,
-  const clientProfile = project?.talent_profile,
-  const talentProfile = project.talent_profile,
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
 import { useReviews } from "@/hooks/useReviews",
 import { useAuth } from "@/hooks/useAuth",
 interface ProjectReviewSectionProps {
   project: Project
 }
-  const revieweeName = isClient 
     ? talentProfile?.full_name || "Talent" 
     : clientProfile?.full_name || "Client",
 
@@ -98,12 +87,9 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReviewsList } from "@/components/reviews/ReviewsList",;
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",;
-import { useReviews } from "@/hooks/useReviews";
-import { useAuth } from "@/hooks/useAuth";
 interface ProjectReviewSectionProps {
   project: Project
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth();
 
   return (
     <Card className='mt-6'>
@@ -120,13 +106,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       </CardHeader>
 
       <CardContent>
-:src/components/projects/reviews/ProjectReviewSection.tsx
-        {isCompleted ? (
-          <div className='space-y-6'>
-            {(isClient |isTalent) && (
-              <div className='border-b pb-4 mb-4'>
-      <CardContent>
-        {isCompleted ? (
         {isCompleted ? ("
           <div className="space-y-6">
             {(isClient || isTalent) && ("
@@ -137,13 +116,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     <p className="text-sm text-muted-foreground mb-3">
                       Your review is {userReview.status === "approved" ? "published" : "pending approval"}
                     </p>
-:src/components/projects/reviews/ProjectReviewSection.tsx
-                    {userReview.status === 'pending' && (
-                      <Button
-                        variant='outline'
-                        onClick={() => setIsReviewModalOpen(true)}
-                      >                        Edit Review
-                      </Button>
 
                     {userReview.status === "pending" && (
 
@@ -154,10 +126,6 @@ import { Project } from '@/types/projects',;"
 import { useState } from "react",;
 
 import { Star } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReviewsList } from "@/components/reviews/ReviewsList",;
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",;
 import { useReviews } from "@/hooks/useReviews",;
 import { useAuth } from "@/hooks/useAuth",;
 interface ProjectReviewSectionProps {;
@@ -168,7 +136,6 @@ export function ProjectReviewSection({ project }:,  ProjectReviewSectionProps) {
   const { user } = useAuth(),;
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),;,
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
-  const { user } = useAuth(),;
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),;
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),;
   const isCompleted = project.status === "completed",;
@@ -244,22 +211,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                 ) : null}
               </div>
             )}
-:src/components/projects/reviews/ProjectReviewSection.tsx
-            <ReviewsList
-              reviews = {reviews,}
-              isLoading = {isLoading,}
-              onReportReview = {reportReview,}
-            />
-          </div>
-        ) : (
-          <div className="bg-muted/20 rounded-lg p-6 text-center">
-            <h3 className="font-medium mb-2">Reviews will be available once the project is completed</h3>
-            <p className="text-sm text-muted-foreground">
-              After the project is marked as completed, both parties will be able to leave reviews
-            </p>
-          </div>
-        )}
-      </CardContent>
 
               reviews = {reviews,}
               isLoading = {isLoading,}
@@ -275,10 +226,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
           onClose = {(,) => setIsReviewModalOpen(false),}
 
       )}
-:src/components/projects/reviews/ProjectReviewSection.tsx
-    </Card>
-  )
-}
 
     </Card>;
   );

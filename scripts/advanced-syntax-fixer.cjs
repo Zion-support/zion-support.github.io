@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 <<<<<<< HEAD
 =======
@@ -80,6 +81,20 @@ const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const fs = require("$1")
+const path = require("$1")
+const { execSync } = require("child_process")
+  "reset": "\x1b[0m"]
+  "red": "\x1b[31m"]
+  "green": "\x1b[32m"]
+  "yellow": "\x1b[33m"]
+  "blue": "\x1b[34m"]
+  "magenta": "\x1b[35m"]
+  "cyan": "\x1b[36m"]
+function log(message, color = "reset")
+const { execSync } = require("child_process")
+>>>>>>> merged-prs-20250907-203621
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -167,6 +182,7 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
   if($2) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
     log(\nℹ  No syntax issues found that could be automatically fixed.")
 <<<<<<< HEAD
+<<<<<<< HEAD
       "blue"
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", blue),"`}
 
@@ -178,3 +194,6 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      "blue"
+>>>>>>> merged-prs-20250907-203621

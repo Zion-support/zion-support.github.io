@@ -12,7 +12,6 @@ import {
   MapPin,;
 } from 'lucide-react';
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import {
   generateAITalents,
   getTalentMarketStats,
   getRecommendedTalents,;

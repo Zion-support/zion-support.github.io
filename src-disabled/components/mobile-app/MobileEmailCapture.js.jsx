@@ -3,6 +3,6 @@ import React, { useState } from 'react'';'' import { Button } from '@/components
   const [isSuccess, setIsSuccess] = useState(false);
   const enqueueSnackbar = useEnqueueSnackbar();
   const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting);
-  return setIsSubmitting(true) try {';'"";) => {
+  return setIsSubmitting(true) try {';'\"\";) => {
   return $3;}
 }

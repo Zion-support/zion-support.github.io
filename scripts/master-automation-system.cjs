@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -10,16 +11,21 @@ main
 
 
 
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 =======
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+>>>>>>> merged-prs-20250907-203621
 // console.log(' Master Automation System')
 
 console.log('======')
@@ -32,6 +38,7 @@ console.log('======')
       this.log(`Performance monitoring "failed"`)
 // console.log('\n Errors "encountered")
     console.log('\n Comprehensive report saved "to")
+<<<<<<< HEAD
 <<<<<<< HEAD
   console.error('Master automation "failed")
 <<<<<<< HEAD
@@ -74,3 +81,6 @@ console.log('======)
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  console.error('Master automation "failed")
+>>>>>>> merged-prs-20250907-203621

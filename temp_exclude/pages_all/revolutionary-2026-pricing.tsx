@@ -63,8 +63,11 @@ export default function Revolutionary2026Pricing() {
         return priceA - priceB
       }
       if (sortBy === 'price-high') {
+<<<<<<< HEAD:temp_exclude/pages_all/revolutionary-2026-pricing.tsx
         const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
         const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
+=======
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/revolutionary-2026-pricing.tsx
         return priceB - priceA
       }
       if (sortBy === 'rating') return b.rating - a.rating;

@@ -8,6 +8,7 @@
 // Define safe defaults for environment variables;
 const defaultEnv = {;
   NODE_ENV:'production', // Default to production for safety;
+<<<<<<< HEAD
   NEXT_PUBLIC_APP_URL:'',;
   NEXT_PUBLIC_SUPABASE_URL:'',;
   NEXT_PUBLIC_SUPABASE_ANON_KEY:''},;
@@ -20,10 +21,14 @@ const createProcessObject = () => ({;
   arch:'x64',;
   version:'18.0.0',;
   browser:true}),;
+=======
+
+>>>>>>> merged-prs-20250907-203621
 ;
 // Ensure process is available on globalThis;
 if (typeof globalThis !== 'undefined') {;
   if (typeof (globalThis as any).process === 'undefined') {;
+<<<<<<< HEAD
     (globalThis as any).process = createProcessObject(),;
   } else if (typeof (globalThis as any).process.env === 'undefined') {;
     (globalThis as any).process.env = { ...defaultEnv },;
@@ -91,6 +96,87 @@ version: '18.0.0';
 browser: true ;
 });
 //Ensure process is available on globalThis ;
+=======
+
+  }
+>>>>>>> merged-prs-20250907-203621
 }
+;
+// Ensure process is available on window;
+if (typeof window !== 'undefined') {;
+  if (typeof (window as any).process === 'undefined') {;
+
+  }
+}
+;
+// Ensure process is available globally;
+if (typeof (globalThis as any).process === 'undefined') {;
+
+}
+;
+// Export a safe environment accessor;
+export const safeEnv = {;
+
+  NODE_ENV:(typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NODE_ENV) || 'production';
+  NEXT_PUBLIC_APP_URL:(typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_APP_URL) || '';
+  NEXT_PUBLIC_SUPABASE_URL:(typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_URL) || '';
+  NEXT_PUBLIC_SUPABASE_ANON_KEY:(typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_ANON_KEY) || ''} as const;
+
+;
+// Safe environment getter function;
+export function getEnv(key:string, defaultValue = ''):string {;
+  if (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env && typeof (globalThis as any).process.env[key] === 'string') {;
+
+}
+;
+// Check if we're in development mode safely;
+export function isDevelopment():boolean {;
+
+}
+;
+// Check if we're in production mode safely;
+export function isProduction():boolean {;
+
+}
+;
+// Export the polyfilled process object;
+export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env :{;
+
+  NODE_ENV:'production';
+  NEXT_PUBLIC_APP_URL:'';
+  NEXT_PUBLIC_SUPABASE_URL:'';
+  NEXT_PUBLIC_SUPABASE_ANON_KEY:''};
+
+;
+// // // console.log('✅ Environment polyfill loaded successfully');
+;export default safeEnv,
+/** * Environment Polyfill for Browser * * This polyfill ensures that process.env is always available in the browser environment. * It prevents the "Cannot read properties of undefined (reading 'env') " error. */ //Define safe defaults for environment variables //Create a safe process object const createProcessObject = () => ({;
+  env: {;
+  ...defaultEnv ;
+};
+
+};';
+platform: 'browser';';
+arch: 'x64';';
+version: '18.0.0';
+browser: true ;
+});
+//Ensure process is available on globalThis ;
+}
+<<<<<<< HEAD
 }//Ensure process is available on window ;
+=======
+}//Ensure process is available on window ;
+<<<<<<< HEAD
+:temp_broken_files/utils/env-polyfill.ts
 }"}// Ensure process is available globally '"
+}
+}// Ensure process is available globally '"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/env-polyfill.ts
+=======
+
+}
+}// Ensure process is available globally '"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

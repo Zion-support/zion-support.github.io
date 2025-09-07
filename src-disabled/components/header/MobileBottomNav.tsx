@@ -41,7 +41,6 @@ import {
   ShoppingCart
   User
 } from 'lucide-react'
-import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
 interface MobileBottomNavProps {
   unreadCount?: number
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {

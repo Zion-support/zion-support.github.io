@@ -48,5 +48,6 @@ export async function classifyWithGPT(_text: string, _source: MonitoredSource): 
     return { label, reason: parsed.reason || 'No reason provided', confidence } as GptClassification
   } catch {
     return { label: 'SUSPICIOUS', reason: 'Invalid JSON from GPT', confidence: 0.5 }
+
   }
 }

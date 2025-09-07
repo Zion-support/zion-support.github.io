@@ -8,12 +8,16 @@ console.log('🔧 Fixing remaining syntax errors...');
 // List of files with known syntax errors
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
 const filesToFix = [
   '/workspace/app/about/page.tsx',
   '/workspace/app/services/automation/page.tsx',
   '/workspace/app/services/consulting/page.tsx',
   '/workspace/pages/api/admin/partners/fraud-flags.ts',
   '/workspace/pages/api/admin/partners/update.ts'
+<<<<<<< HEAD
 =======
 const filesToFix = [;
 =======
@@ -26,16 +30,22 @@ const filesToFix = [
   '/workspace/src/components/Navigation.tsx',
   '/workspace/src/components/ServicesSection.tsx'
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+>>>>>>> merged-prs-20250907-203621
 ];
 
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.log(`⚠️ File not found: ${filePath}`);
 =======
       console.log(`⚠️  File not found: ${filePath}`);
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+      console.log(`⚠️ File not found: ${filePath}`);
+>>>>>>> merged-prs-20250907-203621
       return false;
     }
 

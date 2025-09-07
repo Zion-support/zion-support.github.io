@@ -1,7 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD:temp_exclude/pages_all/automation/contract-builder.tsx
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
 type PaymentType = $2;
+=======
+type PaymentType = 'hourly' | 'fixed'
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/automation/contract-builder.tsx
 export default function ContractBuilderPage() {
   const router = useRouter($2);
   const [talentName, setTalentName] = useState($2);

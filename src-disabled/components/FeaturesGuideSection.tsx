@@ -39,7 +39,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from "./ui/button";
 import { fireEvent } from '@/lib/analytics';
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
-import { Zap } from 'lucide-react'
 export function FeaturesGuideSection() {
   const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -764,7 +763,6 @@ import { GradientHeading } from './GradientHeading';'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'
 import { Button } from './ui/button';'
 
-import { fireEvent } from '@/lib/analytics';
 import {;
   Users,;
   Zap,;
@@ -777,7 +775,6 @@ import {;
   HelpCircle,;'
 } from 'lucide-react';
 
-import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
 
       icon: <Users className='h-10 w-10 text-zion-purple' />,;
       instructions: [;'

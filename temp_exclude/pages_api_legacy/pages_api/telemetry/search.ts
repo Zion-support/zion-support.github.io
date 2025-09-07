@@ -20,6 +20,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:temp_exclude/pages_api_legacy/pages_api/telemetry/search.ts
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+const memoryStore: { q: string, ts: number }[] = [];
+export default function handler(req, res) {
+  try {
+    res.status(200).json({ message: 'API endpoint working' })
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/api/telemetry/search.ts
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

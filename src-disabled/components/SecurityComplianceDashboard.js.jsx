@@ -27,15 +27,15 @@ const getStatusColor = ( switch(status) { case 'compliant': return 'text-green-6
 },
 }`;
   return (<div className={`bg-white dark: bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`} /> {}' <div className='flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700' />' <div className='flex items-center space-x-3' />' <div className='p-2 bg-blue-100 dark:bg-blue-900 rounded-lg' />' <Shield className='w-6 h-6 text-blue-600 dark:text-blue-400'/> </div> <div />' <h2 className='text-lg font-semibold text-gray-900 dark:text-white' /> Security & Compliance </h2>' <p className='text-sm text-gray-500 dark:text-gray-400' /> Real-time monitoring and compliance management </p> </div> </div> ' <div className='flex items-center space-x-2' />' <button onClick={handleCheckCompliance} disabled={isComplianceChecking} className='flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50' />' {isComplianceChecking ? (<Loader2 className='w-4 h-4 animate-spin'/>) : (<RefreshCw className='w-4 h-4'/>)} <span />Check Compliance</span> </button> ' <button onClick={() = /> setShowSettings(!showSettings)} className='p-2 text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800'>' <Settings className='w-5 h-5'/> </button> </div> </div> {}' <div className='p-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border-b border-gray-200 dark:border-gray-700' />' <div className='flex items-center justify-between' />' <div className='flex items-center space-x-4' />' <div className='flex items-center space-x-2' />'` <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}/>' <span className='text-sm font-medium text-gray-700 dark:text-gray-300' /> {isMonitoring ? 'Monitoring Active' : 'Monitoring Inactive'} </span> </div> ' <div className='flex items-center space-x-2' />' <Clock className='w-4 h-4 text-gray-500'/>' <span className='text-sm text-gray-600 dark:text-gray-400' /> Last Check: {new Date().toLocaleTimeString()} </span> </div> </div> ' <div className='flex space-x-2' />' {!isMonitoring ? (<button onClick={handleStartMonitoring} className='flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700' />' <Play className='w-4 h-4'/> <span />Start Monitoring</span>' </button>) : (<button onClick={handleStopMonitoring} className='flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700' />' <Square className='w-4 h-4'/> <span />Stop Monitoring</span> </button>)} </div> </div> </div> ,
-}' <div className='flex border-b border-gray-200 dark: border-gray-700' /> {[' {id: 'overview'}
+}' <div className='flex border-b border-gray-200 dark: border-gray-700' /> {[' { id: 'overview',}
   label: 'Overview', icon: BarChart3,}
-}, {id: 'events'}
+}, { id: 'events',}
   label: 'Security Events', icon: AlertTriangle,}
-}, {id: 'compliance'}
+}, { id: 'compliance',}
   label: 'Compliance', icon: CheckCircle,}
-}, {id: 'threats'}
+}, { id: 'threats',}
   label: 'Threats', icon: Shield,}
-}, {id: 'reports'}
+}, { id: 'reports',}
   label: 'Reports', icon: FileText,}
 }` ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() = /> setActiveTab(id)} className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id' ? 'border-blue-500 text-blue-600 dark: text-blue-400'` : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}>' <Icon className='w-4 h-4'/> <span />{label}</span> </button>) ) } </div> ,
 }' <div className='p-4' />' <AnimatePresence mode='wait' />' {activeTab === 'overview' && (<motion.div key='overview' initial = { { opacity: 0, y: 20 ,}

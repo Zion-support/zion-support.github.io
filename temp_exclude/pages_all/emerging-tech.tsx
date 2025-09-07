@@ -4,9 +4,22 @@ import Layout from '../components/layout/Layout';
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react';
 export default function EmergingTechPage() {
   const features = [
+<<<<<<< HEAD:temp_exclude/pages_all/emerging-tech.tsx
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
 
   const solutions = [
+=======
+    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation']
+  const solutions = [
+    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
+    { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' }
+    { name: '5G Private Networks', href: '/5g-private-network-solutions' }
+    { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }]
+  return (
+    <Layout>
+export default function EmergingTechPage() {
+    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/emerging-tech.tsx
     { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
     { name: '5G Private Networks', href: '/5g-private-network-solutions' },

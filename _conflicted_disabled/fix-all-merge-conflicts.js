@@ -1,6 +1,11 @@
+<<<<<<< HEAD:_conflicted_disabled/fix-all-merge-conflicts.js
 #!/usr/bin/env node
 
 import fs from 'fs';
+=======
+#!/usr/bin/env node,
+  import fs from 'fs';
+>>>>>>> merged-prs-20250907-203621:fix-all-merge-conflicts.js
 import path from 'path';
 import { execSync } from 'child_process';
 console.log('🔧 Starting comprehensive merge conflict resolution...');
@@ -54,6 +59,7 @@ console.log('Starting comprehensive merge conflict resolution...');
   function removeMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD:_conflicted_disabled/fix-all-merge-conflicts.js
     
     // Remove all merge conflict markers
     // Clean up any remaining conflict markers
@@ -63,6 +69,25 @@ console.log('Starting comprehensive merge conflict resolution...');
 
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
+=======
+    // Remove all merge conflict markers,
+  content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    
+    // Clean up any remaining conflict markers,
+  content = content.replace(//g, '');
+    content = content.replace(/    
+    // Remove empty lines that might be left behind,
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+// Function to find all files with merge conflicts,
+  function findFilesWithConflicts(dir) {
+>>>>>>> merged-prs-20250907-203621:fix-all-merge-conflicts.js
   const files = [];
   function scanDirectory(currentDir) {
     try {
@@ -87,8 +112,11 @@ function findFilesWithConflicts(dir) {
         }
       }
     } catch (error) {
+<<<<<<< HEAD:_conflicted_disabled/fix-all-merge-conflicts.js
       // Skip directories that can't be read
 function findConflictedFiles(dir) {
+=======
+>>>>>>> merged-prs-20250907-203621:fix-all-merge-conflicts.js
       // Skip directories that can't be read,
   function findConflictedFiles(dir) {
   const conflictedFiles = [];
@@ -115,12 +143,20 @@ function findConflictedFiles(dir) {
     }
   }
   scanDirectory(dir);
+<<<<<<< HEAD:_conflicted_disabled/fix-all-merge-conflicts.js
   return files;
   return conflictedFiles;
 }
 
 // Main execution
 try {
+=======
+  return conflictedFiles;
+  return conflictedFiles;
+}
+// Main execution,
+  try {
+>>>>>>> merged-prs-20250907-203621:fix-all-merge-conflicts.js
   console.log('🔍 Scanning for files with merge conflicts...');
   const conflictFiles = findFilesWithConflicts('.');
   if (conflictFiles.length === 0) {
@@ -171,8 +207,11 @@ console.log('🎯 Merge conflict resolution completed!');
   console.error('Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
+<<<<<<< HEAD:_conflicted_disabled/fix-all-merge-conflicts.js
 }
 =======
 
 console.log('🎯 Merge conflict resolution completed!');
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621:fix-all-merge-conflicts.js

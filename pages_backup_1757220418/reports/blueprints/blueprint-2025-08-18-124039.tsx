@@ -63,7 +63,6 @@ const Blueprint20250818124039: React.FC = () => {
       benefit: 'Advanced scientific research capabilities'
       status: 'development'
     }
-  const quantumComponents = [
     {
       name: 'Quantum Simulator',
       description: 'Classical simulation of quantum algorithms',
@@ -93,7 +92,6 @@ const Blueprint20250818124039: React.FC = () => {
   }
 }
   ];
-  const features = [
     {
       feature: 'Quantum Algorithm Optimization',
       description: 'Optimization algorithms using quantum principles',

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD:temp_exclude/pages_all/2025-advanced-services-showcase.tsx
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -6,12 +7,17 @@ import {
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,
+=======
+import {
+  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
+  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/2025-advanced-services-showcase.tsx
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
 import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion';
-import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations';
 export default function AdvancedServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState($2);
   const [selectedCategory, setSelectedCategory] = useState($2);
@@ -77,9 +83,13 @@ export default function AdvancedServicesShowcase2025() {
       }
     }
   },
+<<<<<<< HEAD:temp_exclude/pages_all/2025-advanced-services-showcase.tsx
 
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find($2);
+=======
+    const categoryData = categories.find(cat => cat.id === category),
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/2025-advanced-services-showcase.tsx
     return categoryData?.icon || '🚀'
   },
 

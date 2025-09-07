@@ -7,4 +7,4 @@
   const handleMouseMove = ( setMousePosition ({ x: e.clientX, y: e.clientY ) => {
   return $3;}
 }),
-} window.addEventListener ('mousemove', handleMouseMove) ';'"'";
+} window.addEventListener ('mousemove', handleMouseMove) ';'\"'\";

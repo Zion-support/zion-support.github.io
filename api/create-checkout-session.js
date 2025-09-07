@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export default function handler(req, res) {
@@ -254,7 +255,86 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
+<<<<<<< HEAD
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+=======
+
+=======
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}
+import Stripe from 'stripe';
+import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+  apiVersion: '2023-10-16',
+});
+
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  try {
+    const { priceId, quantity = 1 } = req.body || {};
+    
+    if (!priceId) {
+      res.statusCode = 400;
+      res.json({ error: 'Price ID is required' });
+      return;
+    }
+
+    const session = await stripe.checkout.sessions.create({
+      mode: 'subscription',
+      payment_method_types: ['card'],
+      line_items: [
+        {
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+          price: priceId,
+          quantity: quantity,
+        },
+      ],
+      success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${req.headers.origin}/cancel`,
+    });
+    res.statusCode = 200;
+    res.json({ 
+      success: true, 
+      sessionId: session.id,
+      url: session.url 
+    });
+  } catch (err) {
+    // console.error('Checkout session API error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message || 'Checkout session creation failed' });
+  }
+export default withErrorLogging(handler);
+ursor/fix-syntax-push-and-merge-to-main-40de
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+  res.status(200).json({ message: 'Checkout session created' });
+}
+export default function handler(req, res) {
+  res.status(200).json({ "message": 'Checkout session created' });
+}
+
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
       url: session.url
 
     })
@@ -268,6 +348,7 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 }
 
 export default withErrorLogging(handler),
+<<<<<<< HEAD
 
 }
 
@@ -304,3 +385,7 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> main
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+=======
+,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

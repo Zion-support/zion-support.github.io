@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 <<<<<<< HEAD
 const path = require(path');
 const glob = require('glob);
 
 
+<<<<<<< HEAD
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -45,6 +45,155 @@ function fixSyntaxErrors(filePath) {
           modified = true;
         }
 
+=======
+  try {
+    let content = fs.readFileSync(filePath, utf8');
+    let modified = false;
+    
+
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath});
+      return true;
+    }
+
+      // Files with incomplete syntax
+      /^[\s\n]*\}[\s\n]*res\.setHeader[\s\S]*$/,
+      // Files with just a return statement
+      /^[\s\n]*return;[\s\S]*$/];
+    
+    let shouldReplace = false;
+    for (const pattern of patterns) {
+      if (pattern.test(content)) {
+        shouldReplace = true;
+        break;
+      }
+    }
+    
+    if (shouldReplace) {
+      const newContent = `import { NextApiRequest, NextApiResponse } from 'next;
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== GET') {
+    res.setHeader('Allow, [GET']);
+    return res.status(405).end('Method Not Allowed);
+  }
+  
+  res.status(200).json({ message: Endpoint working' });
+}`;
+      
+      fs.writeFileSync(filePath, newContent);
+      console.log(`Fixed: ${filePath}`);
+=======
+const path = require('path');
+
+console.log('🔧 Fixing syntax errors in all TypeScript/JavaScript files...');
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  // Fix malformed import statements
+  content = content.replace(/import\s+([^"]*)\s+from\s+"([^"]*)"\s*;/g, (match, imports, module) => {
+    return `import ${imports} from '${module}';`;
+  });
+  
+  // Fix malformed string literals
+  content = content.replace(/"([^"]*)"\s*;/g, (match, str) => {
+    return `'${str}';`;
+  });
+  
+  // Fix malformed JSX
+  content = content.replace(/<([^>]*)\s*\/>/g, (match, tag) => {
+    return `<${tag} />`;
+  });
+  
+  // Fix malformed function declarations
+  content = content.replace(/const\s+(\w+)\s*=\s*\(\s*const\s+/g, 'const $1 = (');
+  
+  // Fix malformed object destructuring
+  content = content.replace(/useState<string\s*\|\s*null\s*\/>/g, 'useState<string | null>');
+  
+  // Fix malformed try-catch blocks
+  content = content.replace(/}\s*catch\s*\([^)]*\)\s*{\s*}/g, '} catch (e) {');
+  
+  // Fix malformed JSX closing tags
+  content = content.replace(/<([^>]*)\s*\/>/g, (match, tag) => {
+    return `<${tag} />`;
+  });
+  
+  // Fix malformed Head component
+  content = content.replace(/<Head\s*\/>\s*<title\s*\/>/g, '<Head><title>');
+  
+  // Fix malformed closing tags
+  content = content.replace(/<\/title>\s*<\/Head>/g, '</title></Head>');
+  
+  return content;
+}
+
+// Function to process a file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixSyntaxErrors(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`✅ Fixed: ${filePath}`);
+      return true;
+>>>>>>> origin/chore/fix-lint-and-merge
+    }
+    return false;
+  } catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+  
+<<<<<<< HEAD
+  try {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      
+      try {
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          // Skip node_modules, .git, and other common directories
+          if (!['node_modules, .git', 'dist, build', '.next, coverage'].includes(item)) {
+            fixedCount += walkDirectory(fullPath);
+          }
+        } else if (stat.isFile()) {
+          // Only process JavaScript/TypeScript files
+          if (/\.(js|jsx|ts|tsx)$/.test(item)) {
+            totalFiles++;
+            if (fixFile(fullPath)) {
+              fixedCount++;
+            }
+          }
+        }
+      } catch (error) {
+        // Skip files that can't be accessed
+        if (error.code !== ENOENT && error.code !== 'EACCES') {
+          console.error(`Error accessing ${fullPath}:`, error.message);
+        }
+      }
+
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      fixedCount += findAndFixApiFiles(filePath);
+    } else if (file.endsWith(.ts) && !file.endsWith('.d.ts')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+    // Fix merge conflict markers
+>>>>>>> merged-prs-20250907-203621
     // Fix import statements with commas instead of semicolons
     const importRegex = /^import\s+.*?,\s*$/gm;
     const matches = content.match(importRegex);
@@ -58,7 +207,7 @@ function fixSyntaxErrors(filePath) {
     // Fix interface properties with commas instead of semicolons
     const interfaceRegex = /interface\s+\w+\s*\{[^}]*\}/gs;
     content = content.replace(interfaceRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
+      const fixed = match.replace(/(\w+)\s*:\s*([^]+),\s*$/gm, '$1: $2;');
       if (fixed !== match) {
         modified = true;
         return fixed;
@@ -69,7 +218,7 @@ function fixSyntaxErrors(filePath) {
     // Fix type definitions with commas instead of semicolons
     const typeRegex = /type\s+\w+\s*=\s*\{[^}]*\}/gs;
     content = content.replace(typeRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
+      const fixed = match.replace(/(\w+)\s*:\s*([^]+),\s*$/gm, $1: $2;);
       if (fixed !== match) {
         modified = true;
         return fixed;
@@ -80,7 +229,6 @@ function fixSyntaxErrors(filePath) {
     // Fix object properties with commas instead of semicolons
     const objectRegex = /const\s+\w+\s*=\s*\{[^}]*\}/gs;
     content = content.replace(objectRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
       if (fixed !== match) {
         modified = true;
         return fixed;
@@ -91,7 +239,7 @@ function fixSyntaxErrors(filePath) {
     // Fix function parameters with commas instead of semicolons
     const functionRegex = /function\s+\w+\s*\([^)]*\)/g;
     content = content.replace(functionRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,)]+),\s*/g, '$1: $2, ');
+      const fixed = match.replace(/(\w+)\s*:\s*([^,)]+),\s*/g, $1: $2, );
       if (fixed !== match) {
         modified = true;
         return fixed;
@@ -113,7 +261,7 @@ function fixSyntaxErrors(filePath) {
     // Fix destructuring with commas instead of semicolons
     const destructuringRegex = /const\s+\{[^}]*\}\s*=/g;
     content = content.replace(destructuringRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,}]+),\s*/g, '$1: $2, ');
+      const fixed = match.replace(/(\w+)\s*:\s*([^}]+),\s*/g, $1: $2, );
       if (fixed !== match) {
         modified = true;
         return fixed;
@@ -135,7 +283,6 @@ function fixSyntaxErrors(filePath) {
     // Fix React component props with commas instead of semicolons
     const componentPropsRegex = /interface\s+\w+Props\s*\{[^}]*\}/gs;
     content = content.replace(componentPropsRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
       if (fixed !== match) {
         modified = true;
         return fixed;
@@ -157,7 +304,7 @@ function fixSyntaxErrors(filePath) {
     // Fix export statements with commas instead of semicolons
     const exportRegex = /^export\s+.*?,\s*$/gm;
     content = content.replace(exportRegex, (match) => {
-      return match.replace(/,\s*$/, ';');
+      return match.replace(/,\s*$/, ;);
     });
 
     // Fix variable declarations with commas instead of semicolons
@@ -167,7 +314,7 @@ function fixSyntaxErrors(filePath) {
     });
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, utf8);
       console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
@@ -188,10 +335,17 @@ function fixFile(filePath) {
   
   files.forEach(file => {
 
-    const filePath = path.join(dir, file);
+    
+    if (stat.isDirectory()) {
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
+<<<<<<< HEAD
       fixedCount += findAndFixFiles(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       if (fixSyntaxErrors(filePath)) {
@@ -203,11 +357,25 @@ function fixFile(filePath) {
 
   console.log(`\nProcessed ${totalFiles} files`);
   console.log(`Fixed syntax errors in ${fixedFiles} files`);
+=======
+      // Skip node_modules and other common directories
+      if (!['node_modules', '.next', 'dist', 'out'].includes(file)) {
+        fixedCount += processDirectory(filePath);
+      }
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (processFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+  
+  return fixedCount;
+>>>>>>> merged-prs-20250907-203621
 }
 
-console.log('Starting syntax error fixes...');
-const fixedCount = findAndFixFiles('./app');
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
+// Process the workspace
+const workspacePath = process.cwd();
+console.log(`📁 Processing workspace: ${workspacePath}`);
 
 const fixedCount = processDirectory(workspacePath);
 console.log(`🎉 Fixed ${fixedCount} files with syntax errors`);

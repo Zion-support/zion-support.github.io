@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ProjectPage() {
   const router = useRouter($2);
   const { projectId } = router.query as { projectId?: string },
   const [project, setProject] = useState<any | null>(null),
   const [loading, setLoading] = useState($2);
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD:temp_exclude/pages_all/project/[projectId].tsx
   const [note, setNote] = useState($2);
   const headers = $2;
+=======
+  const [note, setNote] = useState(""),
+    "x-demo-user-role": "client",
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/project/[projectId].tsx
     "x-demo-user-id": "client-1",
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent",
@@ -35,19 +38,38 @@ export default function ProjectPage() {
   const [showFeedback, setShowFeedback] = useState($2);
   async function addNote() {
     const res = await fetch(`/api/marketplace/projects`, {
+<<<<<<< HEAD:temp_exclude/pages_all/project/[projectId].tsx
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
       body: JSON.stringify({ id: projectId, action: "add_note", content: note})}),
     const json = await res.json($2);
+=======
+      method: "PATCH"
+      headers: { "Content-Type": "application/json", ...headers }
+      body: JSON.stringify({ id: projectId, action: "add_note", content: note })})
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/project/[projectId].tsx
     if (json.ok) {
       setProject($2);
       setNote($2);
       setShowFeedback(true)
     }
   }
+<<<<<<< HEAD:temp_exclude/pages_all/project/[projectId].tsx
 
+=======
   async function markCompleted() {
-    const res = await fetch(`/api/marketplace/projects`, {
+      method: "PATCH"
+      headers: { "Content-Type": "application/json", ...headers }
+      body: JSON.stringify({ id: projectId, action: "mark_completed" })})
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/project/[projectId].tsx
+  async function markCompleted() {
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
       body: JSON.stringify({ id: projectId, action: "mark_completed" })}),

@@ -114,7 +114,6 @@ const InnovationPage: React.FC = () => {
   }
 }
   ];
-  const recentInnovations = [
     {
       id: 'ai-content-factory-2025-01-17',
       title: 'AI Content Factory Launch',
@@ -144,7 +143,6 @@ const InnovationPage: React.FC = () => {
   }
 }
   ];
-  const upcomingInnovations = [
     {
       name: 'Quantum Computing Integration',
       description: 'Exploring quantum algorithms for optimization problems',

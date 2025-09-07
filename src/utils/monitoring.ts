@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Monitoring and analytics setup
 export const setupAnalytics = () => {
@@ -42,3 +43,52 @@ export const trackErrors = () => {
   })
 },
 
+=======
+// Monitoring utilities;
+export const log_event = (event: string) =>: any {
+  console.log ('Event logged:', event);
+}
+;
+export const track_performance = () =>: any {
+  console.log ('Tracking performance...');
+}
+;
+// Monitoring utilities
+export const logEvent = (event: string) => {;
+  console.log('Event logged:', event);
+}
+export const trackPerformance = () => {
+  console.log('Tracking performance...');
+}
+  });
+};
+
+ursor/fix-website-loading-errors-and-merge-6662
+// Monitoring utilities
+export const logEvent = (event: string) => {
+  console.log('Event logged:', event);
+};
+
+export const trackPerformance = () => {
+  console.log('Tracking performance...');
+};
+}
+export const trackPerformance = () => {
+};
+
+export const trackPerformance = () => {;
+  console.log('Tracking performance...');
+<<<<<<< HEAD
+}
+};
+  });
+};
+
+  });
+};
+};
+=======
+
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> merged-prs-20250907-203621

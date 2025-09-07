@@ -19,7 +19,10 @@ class ExecuteAllScripts {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
   async run() {
     console.log('🚀 Executing all automation scripts...');
     const scripts = [
@@ -27,6 +30,7 @@ class ExecuteAllScripts {
       'final-automation-suite-fixed.cjs',
       'master-automation-orchestrator.cjs'
     ];
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 
     for (const script of scripts) {
@@ -95,6 +99,8 @@ async function runAll() {
   async run() {
     console.log('🚀 Executing all automation scripts...');
     const scripts = ['comprehensive-automation-suite.cjs', 'final-automation-suite-fixed.cjs', 'ultimate-automation-orchestrator.cjs'];
+=======
+>>>>>>> merged-prs-20250907-203621
 
     for (const script of scripts) {
       try {
@@ -111,6 +117,7 @@ async function runAll() {
 const executor = new ExecuteAllScripts();
 <<<<<<< HEAD
 executor.run().catch(console.error);
+<<<<<<< HEAD
 ;
 runAll().catch(console.error);
 =======
@@ -188,3 +195,5 @@ executor.run().catch(console.error);
 =======
 executor.run().catch(console.error);
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621

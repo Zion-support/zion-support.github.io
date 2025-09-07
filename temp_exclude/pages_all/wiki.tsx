@@ -22,6 +22,41 @@ function CopyButton({ text, label }: { text: string, label: string}) {
   )
 }
 
+<<<<<<< HEAD:temp_exclude/pages_all/wiki.tsx
+=======
+import {;
+  generateZionWiki,;
+  buildMarkdownFromWiki,;
+  buildWikitextFromWiki,;
+  operatorPrompt,;
+  slugify} from '../utils/data/zionContent',;
+function CopyButton({ text, label }: { text: string, label: string }) {;
+  return (;
+    <button;
+      onClick={async () => {;
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
+    >
+      {copied ? 'Copied' : label  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </button>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/wiki.tsx
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), []),
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),

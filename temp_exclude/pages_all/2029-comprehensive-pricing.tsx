@@ -17,7 +17,48 @@ const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+<<<<<<< HEAD:temp_exclude/pages_all/2029-comprehensive-pricing.tsx
 },
+=======
+}
+export default function ComprehensivePricing2029() {
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [billingCycle, setBillingCycle] = useState('monthly')
+  const allServices = [
+    ...aiAutonomousEcosystemServices2029
+    ...emergingTechBreakthroughServices2029
+    ...practicalBusinessSolutionServices2029
+  ]
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length }
+    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices2029.length }
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length }
+    { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
+  ]
+  const filteredServices = selectedCategory === 'all'
+    ? allServices
+    : allServices.filter(service => {
+        if (selectedCategory === 'ai-autonomous') {
+          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))
+        } else if (selectedCategory === 'emerging-tech') {
+          return service.category.some(cat => cat.includes('Quantum') |cat.includes('Biotech') |cat.includes('Space'))
+        } else if (selectedCategory === 'business-solutions') {
+          return service.category.some(cat => cat.includes('Business') |cat.includes('Marketing') |cat.includes('Education'))
+        }
+        return true
+      })
+  const getPrice = (price: string) => {
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
+    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
+  }
+  const getBillingText = (price: string) => {
+    if (billingCycle === 'monthly') {
+      return `$${numericPrice.toLocaleString()}/month`
+    } else {
+      return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`
+    }
+  }
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/2029-comprehensive-pricing.tsx
 
 export default function ComprehensivePricing2029() {
   const [selectedCategory, setSelectedCategory] = useState($2);

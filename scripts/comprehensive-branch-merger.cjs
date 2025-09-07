@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -11,6 +12,8 @@
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 
 
@@ -25,11 +28,14 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+>>>>>>> merged-prs-20250907-203621
 // console.log('� Comprehensive Branch Merger')
 
 console.log('==')
@@ -51,6 +57,7 @@ console.log('==')
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
@@ -70,3 +77,6 @@ const { execSync } = require('child_process')
 // console.log('� Comprehensive Branch Merger')
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+    console.error(' Comprehensive branch merger "failed")
+>>>>>>> merged-prs-20250907-203621

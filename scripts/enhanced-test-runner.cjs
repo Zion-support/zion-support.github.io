@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -13,10 +14,13 @@
 
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require(path');
 const { execSync, spawn } = require('child_process');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -52,6 +56,8 @@ const { execSync, spawn } = require('child_process');
 
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
   "summary": {}"
     total: 0,"
     "passed": 0,
@@ -63,6 +69,7 @@ const { execSync, spawn } = require('child_process');
   "recommendations": [];"
 }
 function log(level, message) {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +86,8 @@ async function runJestTests() {}"
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
   log('info', 'Running Jest tests');
@@ -100,6 +109,7 @@ async function runJestTests() {}
     }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
@@ -107,12 +117,15 @@ async function runJestTests() {}
 
       "result": result;"
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
     testReport.summary.total += result.numTotalTests;
     testReport.summary.passed += result.numPassedTests;
     testReport.summary.failed += result.numFailedTests;
     testReport.summary.skipped += result.numPendingTests;
     testReport.summary.duration += endTime - startTime;
     if (result.coverageMap) {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +173,11 @@ async function runJestTests() {}"
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+    "
+      "result": { passed: false, "error": error.message };"
+    testReport.summary.failed++;"
+>>>>>>> merged-prs-20250907-203621
       testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct};
     log('info', `Jest tests "completed": ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {`}
     log('warn', 'Jest tests failed or not configured', error.message)};
@@ -270,6 +288,7 @@ async function runTypeTests() {}
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -294,12 +313,17 @@ function generateRecommendations() {}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
 function generateRecommendations() {}
   const recommendations = []
   const { total, passed, failed, coverage } = testReport.summary,
   if($2) {}
     recommendations.push({})
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
       "priority": 'high',
       "message": 'No tests found',
       "action": 'Implement comprehensive test suite'
@@ -333,6 +357,7 @@ async function main() {}
   try {}
     log('info', 'Starting enhanced test runner');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
   return recommendations}
@@ -345,6 +370,8 @@ async function main() {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
     await runJestTests();
     await runPlaywrightTests();
     await runCypressTests();
@@ -385,6 +412,7 @@ main();
     process.exit(1)};
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 main();
 <<<<<<< HEAD
 await runJestTests()
@@ -414,3 +442,6 @@ main();
 main();
 `;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+main();
+>>>>>>> merged-prs-20250907-203621

@@ -14,89 +14,89 @@ export function Sidebar() {const location = useLocation()const [expandedSections
 const navigationSections = [
   {title: 'Main',
   items: [;
-        {name: 'Home'}
+        { name: 'Home',}
   href: '/', icon: Home,}
-},{name: 'About'}
+},{ name: 'About',}
   href: '/about', icon: Building,}
-}, {name: 'Services'}
+}, { name: 'Services',}
   href: '/services', icon: Briefcase,}
-},{name: 'Solutions'}
+},{ name: 'Solutions',}
   href: '/solutions', icon: Target,}
-}, {name: 'AI Solutions'}
+}, { name: 'AI Solutions',}
   href: '/ai-solutions', icon: Brain,}
-},{name: 'Case Studies'}
+},{ name: 'Case Studies',}
   href: '/case-studies', icon: FileText,}
-}, {name: 'Research'}
+}, { name: 'Research',}
   href: '/research-development', icon: TestTube,}
-},{name: 'Events'}
+},{ name: 'Events',}
   href: '/events', icon: Video,}
-}, {name: 'News'}
+}, { name: 'News',}
   href: '/news', icon: Newspaper,}
-},{name: 'Contact'}
+},{ name: 'Contact',}
   href: '/contact', icon: Mail,}
-}, {name: 'Blog'}
+}, { name: 'Blog',}
   href: '/blog', icon: FileText,}
 }
       ];
     }, {title: 'Core Services',
   items: [;
-        {name: 'Cloud & DevOps'}
+        { name: 'Cloud & DevOps',}
   href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation',}
-},{name: 'Digital Twin'}
+},{ name: 'Digital Twin',}
   href: '/services/digital-twin', icon: Globe, description: 'Simulation & Monitoring',}
-},{name: 'AI & Machine Learning'}
+},{ name: 'AI & Machine Learning',}
   href: '/services/ai-ml', icon: Brain, description: 'Intelligent Solutions',}
-},{name: 'Cybersecurity'}
+},{ name: 'Cybersecurity',}
   href: '/services/cybersecurity', icon: Shield, description: 'Protection & Compliance',}
-},{name: 'IT Infrastructure'}
+},{ name: 'IT Infrastructure',}
   href: '/services/infrastructure', icon: Server, description: 'Hardware & Networks',}
-},{name: 'Digital Transformation'}
+},{ name: 'Digital Transformation',}
   href: '/services/transformation', icon: Rocket, description: 'Business Evolution',}
 }
       ];
     }, {title: 'Industry Solutions',
   items: [;
-        {name: 'Manufacturing'}
+        { name: 'Manufacturing',}
   href: '/solutions/manufacturing', icon: Cpu, description: 'Smart Factory Solutions',}
-},{name: 'Financial Services'}
+},{ name: 'Financial Services',}
   href: '/solutions/financial', icon: DollarSign, description: 'FinTech & Banking',}
-},{name: 'Healthcare'}
+},{ name: 'Healthcare',}
   href: '/solutions/healthcare', icon: Heart, description: 'Digital Health',}
-},{name: 'Retail'}
+},{ name: 'Retail',}
   href: '/solutions/retail', icon: ShoppingCart, description: 'E-commerce & Omnichannel',}
-},{name: 'Education'}
+},{ name: 'Education',}
   href: '/solutions/education', icon: BookOpen, description: 'EdTech & Learning',}
-},{name: 'Energy'}
+},{ name: 'Energy',}
   href: '/solutions/energy', icon: Zap, description: 'Renewable & Smart Grid',}
 }
       ];
     }, {title: 'Resources',
   items: [;
-        {name: 'White Papers'}
+        { name: 'White Papers',}
   href: '/white-papers', icon: FileText, description: 'Industry Insights',}
-},{name: 'Webinars'}
+},{ name: 'Webinars',}
   href: '/webinars', icon: Video, description: 'Expert Knowledge',}
-},{name: 'Training'}
+},{ name: 'Training',}
   href: '/training', icon: Award, description: 'Skill Development',}
-},{name: 'Documentation'}
+},{ name: 'Documentation',}
   href: '/docs', icon: BookOpen, description: 'Technical Guides',}
-},{name: 'API Reference'}
+},{ name: 'API Reference',}
   href: '/api', icon: Code, description: 'Developer Resources',}
-},{name: 'Status Page'}
+},{ name: 'Status Page',}
   href: '/status', icon: BarChart3, description: 'System Health',}
 }
       ];
     }, {title: 'Support',
   items: [;
-        {name: 'Help Center'}
+        { name: 'Help Center',}
   href: '/support', icon: HelpCircle, description: 'Self-Service Support',}
-},{name: 'Contact Us'}
+},{ name: 'Contact Us',}
   href: '/contact', icon: MessageCircle, description: 'Get in Touch',}
-},{name: 'Request Quote'}
+},{ name: 'Request Quote',}
   href: '/request-quote', icon: DollarSign, description: 'Custom Pricing',}
-},{name: 'Partnership'}
+},{ name: 'Partnership',}
   href: '/partners', icon: Users, description: 'Become a Partner',}
-},{name: 'Careers'}
+},{ name: 'Careers',}
   href: '/careers', icon: Briefcase, description: 'Join Our Team',}
 }
       ];
@@ -111,7 +111,7 @@ const isActive = (if (href === '/') ;
     return location.pathname.startsWith(href)}return (<>;
       {/* Overlay */}
       {isOpen && (<div;}
-          className="fixed inset-0 bg-black/50 z-40 lg: hidden";}
+          className=\"fixed inset-0 bg-black/50 z-40 lg: hidden\";}
           onClick={onClose}
         />;
       )}{/* Sidebar */}
@@ -124,27 +124,27 @@ const isActive = (if (href === '/') ;
       `} />
 
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-zion-purple/20" />;
-          <div className="flex items-center space-x-2" />;
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center" />;
-              <span className="text-white font-bold text-lg" />Z</span>;
+        <div className=\"flex items-center justify-between p-4 border-b border-zion-purple/20\" />;
+          <div className=\"flex items-center space-x-2\" />;
+            <div className=\"w-8 h-8 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center\" />;
+              <span className=\"text-white font-bold text-lg\" />Z</span>;
             </div>;
-            <span className="text-white font-semibold" />Zion Tech</span>;
+            <span className=\"text-white font-semibold\" />Zion Tech</span>;
           </div>;
           <button;
             onClick={onClose}
-            className="lg:hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded" />
+            className=\"lg:hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded\" />
 
-            <X className="h-5 w-5" />;
+            <X className=\"h-5 w-5\" />;
           </button>;
         </div>;
         {/* Navigation */}
-        <div className="flex-1 overflow-y-auto py-4" />;
-          {navigationSections.map((section, sectionIndex) => (<div key={section.title} className="mb-6" />;
-              <h3 className="px-4 text-xs font-semibold text-zion-cyan uppercase tracking-wider mb-3" />;
+        <div className=\"flex-1 overflow-y-auto py-4\" />;
+          {navigationSections.map((section, sectionIndex) => (<div key={section.title} className=\"mb-6\" />;
+              <h3 className=\"px-4 text-xs font-semibold text-zion-cyan uppercase tracking-wider mb-3\" />;
                 {section.title}
               </h3>;
-              <div className="space-y-1" />;
+              <div className=\"space-y-1\" />;
                 {section.items.map((item, itemIndex) => (<div key={item.name} />;
                     {item.href ? (<Link;}
                         to={item.href}
@@ -156,23 +156,23 @@ const isActive = (if (href === '/') ;
                         `}
                         onClick={onClose}
                        />;
-                        <item.icon className="h-4 w-4 mr-3 flex-shrink-0" />;
-                        <span className="flex-1" />{item.name}</span>;
-                        {item.description && (<span className="text-xs text-zion-slate-light opacity-0 group-hover:opacity-100 transition-opacity" />;}
+                        <item.icon className=\"h-4 w-4 mr-3 flex-shrink-0\" />;
+                        <span className=\"flex-1\" />{item.name}</span>;
+                        {item.description && (<span className=\"text-xs text-zion-slate-light opacity-0 group-hover:opacity-100 transition-opacity\" />;}
                             {item.description}
                           </span>;
                         )}
                       </Link>;
                     ) : (<button;
                         onClick={() = /> toggleSection(item.name.toLowerCase())}
-                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors">
+                        className=\"w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors\">
 
-                        <div className="flex items-center" />;
-                          <item.icon className="h-4 w-4 mr-3 flex-shrink-0" />;
+                        <div className=\"flex items-center\" />;
+                          <item.icon className=\"h-4 w-4 mr-3 flex-shrink-0\" />;
                           <span />{item.name}</span>;
                         </div>;
-                        {expandedSections.includes(item.name.toLowerCase()) ? (<ChevronDown className="h-4 w-4" />;}
-                        ) : (<ChevronRight className="h-4 w-4" />;}
+                        {expandedSections.includes(item.name.toLowerCase()) ? (<ChevronDown className=\"h-4 w-4\" />;}
+                        ) : (<ChevronRight className=\"h-4 w-4\" />;}
                         )}
                       </button>;
                     )}
@@ -183,17 +183,17 @@ const isActive = (if (href === '/') ;
           ))}
         </div>;
         {/* Footer */}
-        <div className="p-4 border-t border-zion-purple/20" />;
-          <div className="text-center" />;
-            <p className="text-xs text-zion-slate-light mb-2" />;
+        <div className=\"p-4 border-t border-zion-purple/20\" />;
+          <div className=\"text-center\" />;
+            <p className=\"text-xs text-zion-slate-light mb-2\" />;
               Need help? Contact our support team;
             </p>;
             <Link;
-              to="/contact";
-              className="inline-flex items-center text-xs text-zion-cyan hover: text-white transition-colors";
+              to=\"/contact\";
+              className=\"inline-flex items-center text-xs text-zion-cyan hover: text-white transition-colors\";
               onClick={onClose}
              />;
-              <MessageCircle className="h-3 w-3 mr-1" />;
+              <MessageCircle className=\"h-3 w-3 mr-1\" />;
               Get Support;
             </Link>;
           </div>;

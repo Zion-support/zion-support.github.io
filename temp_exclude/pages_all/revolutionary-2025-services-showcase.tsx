@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD:temp_exclude/pages_all/revolutionary-2025-services-showcase.tsx
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -9,17 +10,34 @@ import {
   Package, Bot, Car, Building2, Monitor, Cpu, 
   Zap, Atom, Database, Cloud, Lock, Code,
   Phone, Mail, MapPin, ExternalLink, ChevronDown,
+=======
+import {
+  Search, Filter, Star, Users, TrendingUp
+  DollarSign, Clock, CheckCircle, ArrowRight
+  Brain, Rocket, Dna, Globe, Shield, Wifi
+  Package, Bot, Car, Building2, Monitor, Cpu
+  Zap, Atom, Database, Cloud, Lock, Code
+  Phone, Mail, MapPin, ExternalLink, ChevronDown
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/revolutionary-2025-services-showcase.tsx
   Award, Target, Zap as ZapIcon, Globe as GlobeIcon
 } from 'lucide-react',
 
 // Import the new revolutionary services
 import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
+<<<<<<< HEAD:temp_exclude/pages_all/revolutionary-2025-services-showcase.tsx
 import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],
 
 const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+=======
+const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices]
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/revolutionary-2025-services-showcase.tsx
   website: 'https://ziontechgroup.com'
 },
 

@@ -1,4 +1,4 @@
-interface EnhancedLoadingSpinnerProps {"";}
+interface EnhancedLoadingSpinnerProps {\"\";}
 import { motion      } from 'framer-motion';
 
 interface EnhancedLoadingSpinnerProps {

@@ -5,6 +5,7 @@ const path = require(path');
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 const { execSync } = require('child_process');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     // Check if file has merge conflict markers
@@ -43,6 +44,8 @@ ursor/fix-lint-push-and-merge-to-main-28da
       let keepContent = false;
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
 class MergeConflictResolver {
   constructor() {
     this.projectRoot = process.cwd();
@@ -127,12 +130,15 @@ class MergeConflictResolver {
       const content = fs.readFileSync(filePath, 'utf8');
 <<<<<<< HEAD
       return content.includes('') || 
+<<<<<<< HEAD
              content.includes('>>>>>>>');
 =======
       return content.includes(<<<<<<< HEAD) || 
              content.includes('=======') || 
              content.includes(>>>>>>>);
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+>>>>>>> merged-prs-20250907-203621
     } catch (error) {
       return false;
     }
@@ -141,6 +147,7 @@ class MergeConflictResolver {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         if (line.includes(
@@ -221,6 +228,11 @@ ursor/fix-lint-push-and-merge-to-main-28da
   content = content.replace(
         /\n(.*?)\n        '$1'
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+      // Remove merge conflict markers and keep HEAD version,
+  content = content.replace(
+        /\n(.*?)\n        '$1'
+>>>>>>> merged-prs-20250907-203621
       );
       // Clean up any remaining markers,
   content = content.replace(/\n/g, '');

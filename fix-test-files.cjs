@@ -3,6 +3,9 @@
 const fs = require('fs');
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
 <<<<<<< HEAD
 const path = require(path');
 
@@ -289,11 +292,18 @@ function walkDir(dir) {
   }
 }
 
+<<<<<<< HEAD
 // Run if called directly
 if (require.main === module) {
   const fixer = new TestFileFixer();
   fixer.run().catch(console.error);
 }
+=======
+console.log(Fixing test files...');
+findAndFixTestFiles('./src);
+console.log(Done fixing test files.');
+=======
+>>>>>>> merged-prs-20250907-203621
 
 <<<<<<< HEAD
     // Add styling tests here;
@@ -349,6 +359,9 @@ console.log('Starting to fix test files...');
 const fixedCount = walkDir(testDir);
 console.log(`Fixed ${fixedCount} test files.`);
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 module.exports = TestFileFixer;
 >>>>>>> pr/11282
+=======
+>>>>>>> merged-prs-20250907-203621

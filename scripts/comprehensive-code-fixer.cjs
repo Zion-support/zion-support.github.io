@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -11,6 +12,8 @@
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 
 
@@ -26,6 +29,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 console.log()
 
@@ -34,6 +38,8 @@ console.log()
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
 console.log('')
   console.log('� Fixing common linting issues...')
   const filesToFix = ['components/ContactForm.tsx']
@@ -73,6 +79,7 @@ console.log('')
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error(' Comprehensive Code Fixer "failed")
 <<<<<<< HEAD
 console.log()
@@ -106,3 +113,6 @@ const { execSync } = require('child_process')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+    console.error(' Comprehensive Code Fixer "failed")
+>>>>>>> merged-prs-20250907-203621

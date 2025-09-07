@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -6,9 +7,12 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
@@ -17,6 +21,8 @@ const path = require('path');
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
 // console.log(' Ultimate Syntax Fixer...')
 console.log('======')
 const filesToFix = ['pages/api/health.ts']
@@ -35,6 +41,7 @@ const filesToFix = ['pages/api/health.ts']
     content = content.replace(/\{"([^"]*?)\"\s*"\}/g, '{"$1"}
     content = content.replace(/"([^"]*?)"\s*"([^"]*?)"/g, '"$1$2"
     content = content.replace(/(\w+):\s*'([^']*?)',\s*(\w+):\s*'([^']*?)'/g, '$"1": \'$2\',\n    $"3"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
@@ -63,3 +70,6 @@ const filesToFix = ['pages/api/health.ts']
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+    content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
+>>>>>>> merged-prs-20250907-203621

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages.disabled/careers.tsx
 import React from 'react';
 <<<<<<< HEAD:pages/careers.tsx
 import Head from 'next/head';
@@ -20,10 +21,21 @@ export default function Careers() {
 =======
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
 
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
+<<<<<<< HEAD:pages.disabled/careers.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
 
 import React from 'react';
 
@@ -44,6 +56,34 @@ const Page = () => {
   );
 };
 
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+import React from 'react';
+ursor/integrate-build-improve-and-re-verify-8f7d
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+origin/main
+origin/automation-improvements-final
+import {
+  Users
+  MapPin
+  Clock
+  DollarSign
+  ArrowRight
+  Heart
+  Star
+  Award
+  Coffee
+  Zap
+  Shield
+  Briefcase
+  GraduationCap
+  Globe
+  CheckCircle
   Users,
   MapPin,
   Clock,
@@ -59,7 +99,10 @@ const Page = () => {
   GraduationCap,
   Globe,
   CheckCircle,;
+<<<<<<< HEAD:pages.disabled/careers.tsx
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -181,20 +224,27 @@ const values = [
     description:
 ];
 
+<<<<<<< HEAD:pages.disabled/careers.tsx
+=======
+
+
+
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -283,7 +333,6 @@ export default function Careers() {
       icon: Award
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
-    
     return this.props.children;
   }
 }
@@ -306,6 +355,7 @@ import {;
   GraduationCap,;
   Globe,;
   CheckCircle,;
+<<<<<<< HEAD:pages.disabled/careers.tsx
 
 import {
 
@@ -316,11 +366,46 @@ const jobOpenings = [;
   {;
     id: 1,;
     title: "Senior AI Engineer",
+=======
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+import React from 'react';
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+import {
+  Users,
+  MapPin,
+  Clock,
+  DollarSign,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,
+  Coffee,
+  Zap,
+  Shield,
+  Briefcase,
+  GraduationCap,
+  Globe,
+  CheckCircle,;
+} from "lucide-react";
+<<<<<<< HEAD
+const jobOpenings = [;
+  {;
+    id: 1,;
+    title: "Senior AI Engineer",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
     department: "AI & Machine Learning",;
     location: "Remote",;
     type: "Full-time",;
     experience: "5+ years",;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     description:
+=======
+    description:;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
       "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",;
     requirements: [;
       "Master's degree in Computer Science or related field",;
@@ -338,12 +423,20 @@ const jobOpenings = [;
   },;
   {;
     id: 2,;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     title: "Full-Stack Developer",
+=======
+    title: "Full-Stack Developer",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
     department: "Micro SaaS",;
     location: "New York, NY",;
     type: "Full-time",;
     experience: "3+ years",;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     description:
+=======
+    description:;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
       "Build scalable web applications and microservices for our SaaS solutions.",;
     requirements: [;
       "3+ years experience in full-stack development",;
@@ -360,12 +453,20 @@ const jobOpenings = [;
   },;
   {;
     id: 3,;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     title: "Cloud Solutions Architect",
+=======
+    title: "Cloud Solutions Architect",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
     department: "IT Services",;
     location: "Remote",;
     type: "Full-time",;
     experience: "7+ years",;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     description:
+=======
+    description:;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
       "Design and implement cloud infrastructure solutions for enterprise clients.",;
     requirements: [;
       "7+ years experience in cloud architecture",;
@@ -384,42 +485,72 @@ const jobOpenings = [;
 const benefits = [;
   {;
     icon: Heart,;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     title: "Health & Wellness",
     description:
+=======
+    title: "Health & Wellness",;
+    description:;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
       "Comprehensive health insurance, mental health support, and wellness programs",;
   },;
   {;
     icon: DollarSign,;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     title: "Competitive Compensation",
     description:
+=======
+    title: "Competitive Compensation",;
+    description:;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
       "Competitive salaries, performance bonuses, and equity participation",;
   },;
   {;
     icon: GraduationCap,;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     title: "Learning & Development",
     description:
+=======
+    title: "Learning & Development",;
+    description:;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
       "Professional development budget, conference attendance, and training programs",;
   },;
   {;
     icon: Globe,;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     title: "Flexible Work",
+=======
+    title: "Flexible Work",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
     description: "Remote work options, flexible hours, and work-life balance",;
   },;
   {;
     icon: Coffee,;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     title: "Great Culture",
     description:
+=======
+    title: "Great Culture",;
+    description:;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
       "Collaborative environment, team events, and inclusive workplace",;
   },;
   {;
     icon: Award,;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     title: "Career Growth",
     description:
+=======
+    title: "Career Growth",;
+    description:;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
       "Clear career paths, mentorship programs, and advancement opportunities",;
   },;
 ];
 const values = [;
   {;
+<<<<<<< HEAD:pages.disabled/careers.tsx
     title: "Innovation",
     description:
       "We encourage creative thinking and embrace new technologies to solve complex problems.",;
@@ -440,7 +571,42 @@ const values = [;
       "We conduct business with honesty, transparency, and ethical practices.",;
   },;
 ];
+=======
+    title: "Innovation",;
+    description:;
+      "We encourage creative thinking and embrace new technologies to solve complex problems.",;
+  },;
+  {;
+    title: "Collaboration",;
+    description:;
+      "We believe in the power of teamwork and open communication across all levels.",;
+  },;
+  {;
+    title: "Excellence",;
+    description:;
+      "We strive for the highest quality in everything we do and continuously improve.",;
+  },;
+  {;
+    title: "Integrity",;
+    description:;
+      "We conduct business with honesty, transparency, and ethical practices.",;
+  },;
+];
+export default function CareersPage() {
 
+interface CareersProps {
+  className?: string;
+}
+
+const Careers: React.FC<CareersProps> = ({ className }) => {
+=======
+
+
+const Careers: React.FC<CareersProps> = ({ className }) => {
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -450,16 +616,51 @@ const values = [;
         {/* Hero Section */}
 
 import Head from 'next/head';
+<<<<<<< HEAD:pages.disabled/careers.tsx
 
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
 
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
 
+=======
+import Layout from '../components/Layout';
+export default function CareersPage() {
+    >
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center text-white">
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
+<<<<<<< HEAD:pages.disabled/careers.tsx
 
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
@@ -540,6 +741,8 @@ import Head from 'next/head';
         </section>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -740,13 +943,29 @@ function CareersPage() {
                 We're looking for passionate individuals who want to make a;
                 difference.;
               </p>;
+<<<<<<< HEAD:pages.disabled/careers.tsx
 className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
                   See Benefits;
                 </a>;
               </div>;
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD:pages.disabled/careers.tsx
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
         {/* Why Join Us */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -754,7 +973,15 @@ className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:pages.disabled/careers.tsx
 transition={{ duration: 0 && 0.8 }}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              transition={{ duration: 0 && 0.8 }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 Why Join Zion Tech Group?;
@@ -770,6 +997,13 @@ transition={{ duration: 0 && 0.8 }}
                 {benefits && benefits.map((benefit, index) => (;
                   <motion&& motion.div
                     key={benefit && benefit.title}
+<<<<<<< HEAD:pages.disabled/careers.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
                     className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -784,7 +1018,16 @@ transition={{ duration: 0 && 0.8 }}
                     <p className="text-gray-600">{benefit && benefit.description}</p>;
                   </motion && motion.div>;
                 ))}
+<<<<<<< HEAD:pages.disabled/careers.tsx
 <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
                 <a;
                   href="#open - positions";
                   className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
@@ -839,11 +1082,26 @@ transition={{ duration: 0 && 0.8 }}
                     </h3>;
                     <p className="text - gray - 600">{benefit.description}</p>;
                   </motion.div>))}
+<<<<<<< HEAD:pages.disabled/careers.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD:pages.disabled/careers.tsx
 transition={{ duration: 0 && 0.8 }}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              transition={{ duration: 0 && 0.8 }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 Our Values;
@@ -858,6 +1116,13 @@ transition={{ duration: 0 && 0.8 }}
                 {values && values.map((value, index) => (;
                   <motion&& motion.div
                     key={value && value.title}
+<<<<<<< HEAD:pages.disabled/careers.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
                     className="bg-white p-6 rounded-lg shadow-lg"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -869,7 +1134,16 @@ transition={{ duration: 0 && 0.8 }}
                     <p className="text-gray-600">{value && value.description}</p>;
                   </motion && motion.div>;
                 ))}
+<<<<<<< HEAD:pages.disabled/careers.tsx
 {/* Our Values */}
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        {/* Our Values */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
             <motion.div;
@@ -903,12 +1177,23 @@ transition={{ duration: 0 && 0.8 }}
                     </h3>;
                     <p className="text - gray - 600">{value.description}</p>;
                   </motion.div>))}
+<<<<<<< HEAD:pages.disabled/careers.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Open Positions */}
+<<<<<<< HEAD:pages.disabled/careers.tsx
 
         <section id="positions" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -999,6 +1284,243 @@ transition={{ duration: 0 && 0.8 }}
       </main>
 </>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+        <section id="open - positions" className="py - 20 bg - white">;
+          <div className="container mx - auto px - 4">;
+            <motion.div;
+              className="text - center mb - 16";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
+                Open Positions;
+              </h2>;
+              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+                Explore our current job openings and find the perfect role for;
+                you.;
+              </p>;
+            </motion.div>;
+            <div className="max - w-6xl mx - auto">;
+              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+                {job_openings.map ((job, index) => (
+                  <motion.div;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    key={job.id}
+                    className="bg - white border border - gray - 200 rounded - lg p - 6 hover:shadow - lg transition - shadow duration - 300";
+                    initial={{ opacity: 0, coordinate_y: 30 }}
+                    whileInView={{ opacity: 1, coordinate_y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >;
+                    <div className="flex items - center justify - between mb - 4">;
+                      <span className="bg - blue - 100 text - blue - 800 px - 3 py - 1 rounded - full text - sm font - semibold">;
+                        {job.department}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                      </span>;
+                      <span className="text - gray - 500 text - sm">{job.type}</span>;
+                    </div>;
+                    <h3 className="text - xl font - bold text - gray - 900 mb - 2">;
+                      {job.title}
+                    </h3>;
+                    <p className="text - gray - 600 mb - 4">{job.description}</p>;
+                    <div className="space - y-2 mb - 6">;
+                      <div className="flex items - center text - sm text - gray - 600">;
+                        <MapPin className="w - 4 h - 4 mr - 2" />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                        {job.location}
+                      </div>;
+                      <div className="flex items - center text - sm text - gray - 600">;
+                        <Clock className="w - 4 h - 4 mr - 2" />;
+                        {job.experience}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                Open Positions;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                Explore our current job openings and find the perfect role for;
+                you.;
+              </p>;
+            </motion && motion.div>;
+            <div className="max-w-6xl mx-auto">;
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+                {jobOpenings && jobOpenings.map((job, index) => (;
+                  <motion&& motion.div
+                    key={job && job.id}
+                    className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    viewport={{ once: true }}>;
+                    <div className="flex items-center justify-between mb-4">;
+                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">;
+                        {job && job.department}
+                      </span>;
+                      <span className="text-gray-500 text-sm">{job && job.type}</span>;
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">;
+                      {job && job.title}
+                    </h3>;
+                    <p className="text-gray-600 mb-4">{job && job.description}</p>;
+                    <div className="space-y-2 mb-6">;
+                      <div className="flex items-center text-sm text-gray-600">;
+                        <MapPin className="w-4 h-4 mr-2" />;
+                        {job && job.location}
+                      </div>;
+                      <div className="flex items-center text-sm text-gray-600">;
+                        <Clock className="w-4 h-4 mr-2" />;
+                        {job && job.experience}
+                      </div>;
+                    </div>;
+                    <div className="mb-6">;
+                      <h4 className="font-semibold text-gray-900 mb-2">;
+                        Key Requirements:;
+                      </h4>;
+                      <ul className="space-y-1">;
+                        {job && job.requirements;
+                          .slice(0, 3);
+                          .map((requirement, idx) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                            <li
+                              key={idx}
+                              className="flex items-center text-sm text-gray-600">;
+                              <CheckCircle className="w-3 h-3 text-green-500 mr-2" />;
+                              {requirement}
+                            </li>;
+                          ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                      </ul>;
+                    </div>;
+                    <div className="mb-6">;
+                      <h4 className="font-semibold text-gray-900 mb-2">;
+                        Benefits:;
+                      </h4>;
+                      <div className="flex flex-wrap gap-2">;
+                        {job && job.benefits.map((benefit, idx) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                          <span
+                            key={idx}
+                            className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">;
+                            {benefit}
+                          </span>;
+                        ))}
+<<<<<<< HEAD
+                      </div>;
+                    </div>;
+=======
+
+                      </div>;
+                    </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    <a
+                      href={`/careers/${job && job.id}`}
+                      className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center">;
+                      Apply Now;
+                      <ArrowRight className="w-4 h-4 ml-2" />;
+                    </a>;
+                  </motion && motion.div>;
+                ))}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                      </div>;
+                    </div>;
+                    <div className="mb - 6">;
+                      <h4 className="font - semibold text - gray - 900 mb - 2">;
+                        Key Requirements:;
+                      </h4>;
+                      <ul className="space - y-1">;
+                        {job.requirements;
+                          .slice (0, 3);
+                          .map ((requirement, idx) => (
+                            <li;
+                              key={idx}
+                              className="flex items - center text - sm text - gray - 600";
+                            >;
+                              <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2" />;
+                              {requirement}
+                            </li>))}
+                      </ul>;
+                    </div>;
+                    <div className="mb - 6">;
+                      <h4 className="font - semibold text - gray - 900 mb - 2">;
+                        Benefits:;
+                      </h4>;
+                      <div className="flex flex - wrap gap - 2">;
+                        {job.benefits.map ((benefit, idx) => (
+                          <span;
+                            key={idx}
+                            className="bg - gray - 100 text - gray - 700 px - 2 py - 1 rounded text - xs";
+                          >;
+                            {benefit}
+                          </span>))}
+                      </div>;
+                    </div>;
+                    <a;
+                      href={`/careers/${job.id}`}
+                      className="w - full bg - gradient - to - r from - blue - 500 to - purple - 600 text - white py - 3 rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold flex items - center justify - center";
+                    >;
+                      Apply Now;
+                      <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                    </a>;
+                  </motion.div>))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+
+
+<<<<<<< HEAD
+    </Layout>
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
+                  Learn More About Us;
+                </a>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </MainLayout>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
   );
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
@@ -1036,7 +1558,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         </section>;
       </div>;
     </MainLayout>);
+<<<<<<< HEAD:pages.disabled/careers.tsx
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See Your Dream Job?
@@ -1044,6 +1569,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 We're always looking for talented individuals. Send us your
                 resume and let us know how you'd like to contribute to our team.
+<<<<<<< HEAD:pages.disabled/careers.tsx
 
               </p>
             </div>
@@ -1075,4 +1601,37 @@ const Page = () => {
           <p className="text-xl text-gray-600">Join our innovative team! Check back soon for exciting career opportunities.</p>
 
         </div>
+<<<<<<< HEAD
 >>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/careers.tsx
+=======
+=======
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                >
+                  Send Resume
+                </a>
+                <a
+                  href="/about"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  Learn More About Us
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+    </MainLayout>
+    </Layout>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+    </MainLayout>;
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/careers.tsx
+>>>>>>> merged-prs-20250907-203621

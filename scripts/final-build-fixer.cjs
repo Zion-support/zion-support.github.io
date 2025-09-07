@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -6,9 +7,12 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
@@ -17,6 +21,8 @@ const path = require('path');
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
 // console.log(' Final Build Fixer')
 console.log('=====')
       const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx']
@@ -27,6 +33,7 @@ console.log('=====')
           "replacement"
         {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1"}
           "replacement": 'const Layout = dynamic(() => import("../components/Layout"), { "ssr"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -61,3 +68,6 @@ console.log('=====')
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+          "pattern"
+>>>>>>> merged-prs-20250907-203621

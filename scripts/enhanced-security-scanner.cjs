@@ -2,6 +2,7 @@
 #!/usr/bin/env node;
 main();#!/usr/bin/env node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 main();
 =======
 
@@ -79,6 +80,12 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+///usr/bin/env node,
+  const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+>>>>>>> merged-prs-20250907-203621
 // console.log('� Enhanced Security Scanner v2.0')
 console.log('======')
   log('info', 'Checking dependencies for vulnerabilities')
@@ -105,6 +112,7 @@ console.log('======')
     "message"
     "action"
       log('warn', 'Vulnerabilities "found")
+<<<<<<< HEAD
 <<<<<<< HEAD
       log('info', 'Security "Recommendations")
 <<<<<<< HEAD
@@ -168,3 +176,6 @@ console.log('======)
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      log('info', 'Security "Recommendations")
+>>>>>>> merged-prs-20250907-203621

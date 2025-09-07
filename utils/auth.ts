@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export function authenticateRequest(req: NextApiRequest, res: NextApiResponse): boolean {
@@ -19,6 +20,9 @@ export function getUserId(req: NextApiRequest): string | null {
 	return token === 'valid-token' ? 'user-123' : null;
 }
 
+=======
+import type { NextApiRequest } from 'next';
+>>>>>>> merged-prs-20250907-203621
 export function getRequestUserEmail(req: NextApiRequest): string | null {
 	const emailHeader = (req.headers['x-user-email'] as string | string[] | undefined) || null;
 	if (Array.isArray(emailHeader)) return emailHeader[0] || null;
@@ -26,6 +30,7 @@ export function getRequestUserEmail(req: NextApiRequest): string | null {
 }
 
 export function isAdminEmail(email: string | null | undefined): boolean {
+<<<<<<< HEAD
 	if (!email) return false;
 	const admins = (process.env.ADMIN_EMAILS || '')
 		.split(',')
@@ -46,3 +51,9 @@ export function ensureAdmin(req: NextApiRequest): { allowed: boolean } {
 export function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
   return Promise.resolve(ensureAdmin(req));
 }
+=======
+  if (!email) return false,
+  const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter($2);
+  return admins.includes(email.toLowerCase())
+}
+>>>>>>> merged-prs-20250907-203621

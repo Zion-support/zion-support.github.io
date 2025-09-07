@@ -1,8 +1,8 @@
 // Ultimate Build Guardian Function
-exports.handler = async function() {
+
   try {
 exports.handler = async function() {  try {
-exports.handler = async function() {  try {
+
     // Enhanced build health check with ultimate redundancy
     const buildHealth = await checkUltimateBuildHealth();
 

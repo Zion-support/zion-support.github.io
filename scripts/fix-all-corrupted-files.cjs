@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -6,9 +7,12 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
@@ -17,6 +21,8 @@ const path = require('path');
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
 // console.log(' Fixing All Corrupted Files...')
 console.log('=====')
 const corruptedFiles = ['pages/docs/api-reference.tsx']
@@ -31,6 +37,7 @@ const corruptedFiles = ['pages/docs/api-reference.tsx']
     "address"
     "site"
         <meta name="description" content="
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -51,3 +58,5 @@ const corruptedFiles = ['pages/docs/api-reference.tsx']
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621

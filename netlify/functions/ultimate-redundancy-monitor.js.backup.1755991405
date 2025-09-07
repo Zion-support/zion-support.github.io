@@ -1,8 +1,8 @@
 // Ultimate Redundancy Monitor Function
-exports.handler = async function() {
+
   try {
 exports.handler = async function() {  try {
-exports.handler = async function() {  try {
+
     // Enhanced health check with ultimate redundancy
     const healthStatus = await checkUltimateRedundancyHealth();
 

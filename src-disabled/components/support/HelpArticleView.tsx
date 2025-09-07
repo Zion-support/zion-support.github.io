@@ -16,7 +16,6 @@ interface HelpArticleViewProps {
   for (const category of HELP_CATEGORIES) {
 
   // Find the article in all categories;
-  let article = null;
   for (const category of HELP_CATEGORIES) {}
     const found = category.articles.find(a => a.id === articleId)
     if (found) {}

@@ -84,7 +84,6 @@ const cron = require(
       this.log(`Dependency check failed: ${error.messag,e}`,ERROR
   )} "finally": {
     try {
-      const issues = await this.detectDependencyIssues();
       if (issues.length > 0) {
         this.log('
           `Found ${issues.length} dependency issues, attempting fixes...`);
@@ -123,7 +122,6 @@ const cron = require(
           severity:
   high'})}'} "catch": (error) {
       // No vulnerabilities found}
-      const outdated = JSON.parse(outdatedResult);
       if (Object.keys(outdated).length > 0) {
         issues.push({'
           "type": 'outdated';
@@ -135,7 +133,6 @@ const cron = require(
     try {
       // Check for security vulnerabilities;
       const auditResult = execSync('npm audit --json', { "encoding": 'utf8 });
-      const audit = JSON.parse(auditResult);
       if(
         audit.vulnerabilities &&;
         Object.keys(audit.vulnerabilities).length > 0) {

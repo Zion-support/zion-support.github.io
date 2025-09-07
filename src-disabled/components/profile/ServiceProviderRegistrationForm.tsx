@@ -275,7 +275,6 @@ if ( {) {}
   };
 
   // Apply generated content to form;
-  const applyGeneratedContent = () => {;
     if (generatedContent) {;'
       form && form.setValue('bio', generatedContent && generatedContent.summary);
 
