@@ -54,7 +54,7 @@ export default function WebsiteAnalyzerPage() {
       <div className="mt-16 bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-8 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Optimize Your Website?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Get comprehensive insights into your website's performance, SEO, and security.
+          Get comprehensive insights into your website&apos;s performance, SEO, and security.
           Perfect for web developers, marketers, and business owners.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

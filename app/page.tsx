@@ -77,7 +77,6 @@ function ServiceCard({
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
@@ -90,10 +89,8 @@ export default function HomePage() {
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Enterprise-grade solutions that drive real business results. We help companies transform their operations with cutting-edge technology.
-=======
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl relative overflow-hidden" role="banner">
+          </p>
+        </div>
         {/* Enhanced animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-8 -left-8 w-80 h-80 bg-gradient-to-r from-blue-200 to-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-float"></div>
@@ -112,7 +109,6 @@ export default function HomePage() {
           </h1>
           <p className="text-2xl md:text-3xl text-gray-700 mb-4 max-w-5xl mx-auto animate-slide-up font-medium">
             Enterprise AI solutions, micro SaaS development, and comprehensive IT services
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
           </p>
           <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-4xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
             that drive business transformation and growth.
@@ -128,7 +124,6 @@ export default function HomePage() {
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
               </span>
             </Link>
-<<<<<<< HEAD
           </div>
         </div>
         
@@ -262,20 +257,21 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-=======
-            <a
-              href="https://ziontechgroup.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-xl font-bold text-lg hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-500 focus:ring-offset-2 shadow-lg hover:shadow-xl"
-              aria-label="Visit our main website (opens in new tab)"
-            >
-              <span className="flex items-center justify-center gap-2">
-                Visit Main Site
-                <span className="group-hover:translate-x-1 transition-transform duration-300">↗</span>
-              </span>
-            </a>
-          </div>
+      
+      <div className="text-center mb-16">
+        <a
+          href="https://ziontechgroup.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-xl font-bold text-lg hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-500 focus:ring-offset-2 shadow-lg hover:shadow-xl"
+          aria-label="Visit our main website (opens in new tab)"
+        >
+          <span className="flex items-center justify-center gap-2">
+            Visit Main Site
+            <span className="group-hover:translate-x-1 transition-transform duration-300">↗</span>
+          </span>
+        </a>
+      </div>
           
           {/* Stats Section */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up" style={{ animationDelay: '0.5s' }}>

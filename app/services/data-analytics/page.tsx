@@ -53,7 +53,7 @@ export default function ServicePage() {
         </div>
         
         <div className="text-center mt-16">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Unlock Your Data's Potential?</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Unlock Your Data&apos;s Potential?</h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Let our data analytics experts help you transform raw data into strategic insights.
           </p>

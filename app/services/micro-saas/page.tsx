@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-
 // Simple ServiceCard component
 const ServiceCard = ({ title, description, icon }) => (
   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -128,8 +126,6 @@ export default function MicroSAASPage() {
   );
 
 }
-
-<<<<<<< HEAD
 
 function SolutionCard({ title, description, features, pricing }: {
   title: string;

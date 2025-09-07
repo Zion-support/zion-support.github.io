@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export const metadata = {
   title: 'AI-Powered CRM Platform | Zion Tech Group',
@@ -32,21 +32,21 @@ function FeatureCardComponent({ icon, title, description, benefits }: FeatureCar
   );
 }
 
-function PricingTier({ 
-  name, 
-  price, 
-  period, 
-  description, 
-  features, 
-  popular = false 
-}: { 
-  name: string; 
-  price: string; 
-  period: string; 
-  description: string; 
-  features: string[]; 
-  popular?: boolean; 
-}) {
+// function PricingTier({ 
+//   name, 
+//   price, 
+//   period, 
+//   description, 
+//   features, 
+//   popular = false 
+// }: { 
+//   name: string; 
+//   price: string; 
+//   period: string; 
+//   description: string; 
+//   features: string[]; 
+//   popular?: boolean; 
+// }) {
   return (
     <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
       {popular && (

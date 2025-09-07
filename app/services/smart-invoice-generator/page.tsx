@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export const metadata = {
   title: 'Smart Invoice Generator | Zion Tech Group',
   description: 'Professional smart invoice generator services for your business needs.',

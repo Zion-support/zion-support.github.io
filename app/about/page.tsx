@@ -10,7 +10,6 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             About Zion Tech Group
           </h1>
@@ -47,7 +46,7 @@ export default function AboutPage() {
               We envision a future where technology seamlessly integrates with
               business operations to create unprecedented value and
               opportunities.
-=======
+            </p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             About Zion Tech Group
           </h1>
@@ -64,7 +63,6 @@ export default function AboutPage() {
             </p>
             <p className="text-gray-300 mb-6">
               We combine technical expertise with business acumen to create solutions that drive real results for our clients.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -81,7 +79,6 @@ export default function AboutPage() {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
 
         <div className="text-center">
@@ -138,7 +135,6 @@ export default function AboutPage() {
                 Custom solutions for every need
               </li>
             </ul>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
           </div>
         </div>
       </div>

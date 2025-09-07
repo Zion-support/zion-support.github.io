@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+// import Link from 'next/link';
 
 
 export default function ContactPage() {
@@ -48,14 +48,8 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Contact Us
           </h1>
-<<<<<<< HEAD
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Ready to transform your business with AI, micro SaaS, and IT solutions? 
-            Let's discuss your project and how we can help you succeed.
-=======
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to transform your business? Let&apos;s discuss your project and discover how our solutions can accelerate your growth.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
           </p>
         </div>
 
@@ -227,7 +221,7 @@ export default function ContactPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're here to help you succeed. Reach out to us through any of these channels.
+              We&apos;re here to help you succeed. Reach out to us through any of these channels.
             </p>
           </div>
         </div>

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import Link from 'next/link';
-
 
 // Simple ServiceCard component
 const ServiceCard = ({ title, description, icon }) => (
@@ -10,10 +8,7 @@ const ServiceCard = ({ title, description, icon }) => (
     <p className="text-gray-600">{description}</p>
   </div>
 );
-export const metadata = { 
-=======
 export const metadata = {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   title: 'AI Services | Zion Tech Group',
   description: 'Comprehensive AI solutions including machine learning, natural language processing, computer vision, and intelligent automation.',
   keywords: 'AI services, machine learning, NLP, computer vision, automation, artificial intelligence'
@@ -173,7 +168,6 @@ export default function ServicePage() {
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Technology Stack</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -245,7 +239,7 @@ export default function ServicePage() {
             Ready to implement AI in your business?
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-            Let's discuss your AI needs and create a solution that delivers measurable results.
+            Let&apos;s discuss your AI needs and create a solution that delivers measurable results.
           </p>
           <a
             href="/contact"
@@ -314,7 +308,7 @@ function Plan({ name, price, features, popular = false }: {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
           <p className="text-lg text-gray-600 mb-8">
-            Ready to implement AI in your business? Let's discuss your project.
+            Ready to implement AI in your business? Let&apos;s discuss your project.
           </p>
           <div className="bg-gray-100 rounded-lg p-6 max-w-md mx-auto">
             <p>📞 +1-302-464-0950</p>
