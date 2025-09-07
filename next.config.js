@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-const bundleAnalyzer = require('@next/bundle-analyzer');
-
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
-
-=======
 /** @type {import('next').NextConfig} */
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
 const nextConfig = {
   // Performance optimizations
   compress: true,
@@ -63,8 +54,4 @@ const nextConfig = {
   }
 };
 
-<<<<<<< HEAD
-module.exports = withBundleAnalyzer(nextConfig);
-=======
-export default nextConfig;
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+module.exports = nextConfig;
