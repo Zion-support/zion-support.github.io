@@ -5,7 +5,7 @@ module.exports = {
     '**/App.smoke.test.{js,jsx,ts,tsx}',
     '**/AppMinimal.test.{js,jsx,ts,tsx}'
   ],
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
