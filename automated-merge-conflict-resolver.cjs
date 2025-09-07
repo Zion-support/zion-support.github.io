@@ -3,8 +3,11 @@
 const { execSync } = require('child_process');
 
 console.log('🔧 Automated Merge Conflict Resolver');
+<<<<<<< HEAD
 
 console.log('==');
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 // Strategy for resolving conflicts
 const conflictResolutionStrategy = {

@@ -1,11 +1,12 @@
 #!/usr/bin/env node
+
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
 class AdvancedAppImprovementSuite {
   constructor(projectRoot) {
-    this.projectRoot = projectRoot || process.cwd();
+
     this.reportsDir = path.join(this.projectRoot, "improvement-reports");
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
     this.ensureDirectories();
@@ -14,12 +15,19 @@ class AdvancedAppImprovementSuite {
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
+<<<<<<< HEAD
     }
   }
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
+=======
+
+    }
+  }
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
@@ -29,6 +37,7 @@ class AdvancedAppImprovementSuite {
   }
 
   async runCommand(command, description) {
+<<<<<<< HEAD
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -40,10 +49,14 @@ class AdvancedAppImprovementSuite {
       return { success: true, output };
     } catch (error) {
       this.log(`Failed: ${description} - ${error.message}`, 'ERROR');
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       return { success: false, error: error.message };
     }
   }
 
+<<<<<<< HEAD
   async optimizeBundleSize() {
     this.log("Optimizing bundle size...");
     const optimizations = [
@@ -86,28 +99,38 @@ class AdvancedAppImprovementSuite {
   async optimizeBundleSize() {
     this.log("Optimizing bundle size...");
     const optimizations = [
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       { command: "npm run analyze", description: "Bundle Analysis" },
       { command: "npm run build", description: "Production Build" }
     ];
     
     const results = [];
+<<<<<<< HEAD
     for (const task of tasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, ...result });
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     for (const optimization of optimizations) {
       const result = await this.runCommand(optimization.command, optimization.description);
       results.push({ ...optimization, result });
 
+<<<<<<< HEAD
 
     for (const optimization of optimizations) {
       const result = await this.runCommand(optimization.command, optimization.description);
       results.push({ ...optimization, result });
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }
     return results;
   }
 
   async improvePerformance() {
+<<<<<<< HEAD
     this.log("⚡ Improving performance...");
     const tasks = [
 
@@ -117,6 +140,8 @@ class AdvancedAppImprovementSuite {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
       { command: "npm run lint:fix", description: "Fix Linting Issues" },
       { command: "npm run type-check", description: "TypeScript Type Check" }
@@ -124,23 +149,30 @@ class AdvancedAppImprovementSuite {
     
     const results = [];
 
+<<<<<<< HEAD
     for (const task of tasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, ...result });
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     for (const task of performanceTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+<<<<<<< HEAD
 
     for (const task of performanceTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }
     return results;
   }
 
   async enhanceSecurity() {
+<<<<<<< HEAD
     this.log("🔒 Enhancing security...");
     const tasks = [
 
@@ -150,6 +182,8 @@ class AdvancedAppImprovementSuite {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
       { command: "npm audit --audit-level=moderate", description: "Security Audit" },
       { command: "npm audit fix --force", description: "Fix Security Vulnerabilities" }
@@ -157,23 +191,30 @@ class AdvancedAppImprovementSuite {
     
     const results = [];
 
+<<<<<<< HEAD
     for (const task of tasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, ...result });
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     for (const task of securityTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+<<<<<<< HEAD
 
     for (const task of securityTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }
     return results;
   }
 
   async runTests() {
+<<<<<<< HEAD
     this.log("🧪 Running tests...");
     const tasks = [
 
@@ -183,6 +224,8 @@ class AdvancedAppImprovementSuite {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
       { command: "npm test", description: "Run Test Suite" },
       { command: "npm run test:coverage", description: "Generate Test Coverage" }
@@ -190,22 +233,29 @@ class AdvancedAppImprovementSuite {
     
     const results = [];
 
+<<<<<<< HEAD
     for (const task of tasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, ...result });
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     for (const task of testTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+<<<<<<< HEAD
 
     for (const task of testTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }
     return results;
   }
 
+<<<<<<< HEAD
   async generateReport(results) {
     this.log("📊 Generating improvement reports...");
     const report = {
@@ -214,13 +264,18 @@ class AdvancedAppImprovementSuite {
       performanceImprovements: results.performanceImprovements,
       securityEnhancements: results.securityEnhancements,
       testResults: results.testResults
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       bundleOptimization: await this.optimizeBundleSize(),
       performanceImprovements: await this.improvePerformance(),
       securityEnhancements: await this.enhanceSecurity(),
       testResults: await this.runTests()
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     };
     
     const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");
@@ -233,6 +288,7 @@ class AdvancedAppImprovementSuite {
     const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportFile}`);
+<<<<<<< HEAD
 
   }
 
@@ -251,6 +307,9 @@ class AdvancedAppImprovementSuite {
       this.log("✅ Advanced App Improvement Suite completed successfully!");
     } catch (error) {
       this.log(`❌ Advanced App Improvement Suite failed: ${error.message}`, 'ERROR');
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     console.log(`[${timestamp}] ${message}`);
   }
 
@@ -378,6 +437,7 @@ class AdvancedAppImprovementSuite {
       return results;
     } catch (error) {
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
+<<<<<<< HEAD
       throw error;
 
 
@@ -385,10 +445,14 @@ class AdvancedAppImprovementSuite {
       this.errors.push({ type: 'fatal', message: error.message });
       process.exit(1);
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }
   }
 }
 
+<<<<<<< HEAD
 // Run if called directly
 if (require.main === module) {
   const suite = new AdvancedAppImprovementSuite(process.cwd());
@@ -396,6 +460,10 @@ if (require.main === module) {
 }
 
 module.exports = AdvancedAppImprovementSuite;
+=======
+}
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 module.exports = AdvancedAppImprovementSuite;
 // Run the improvement suite
 const suite = new AdvancedAppImprovementSuite();

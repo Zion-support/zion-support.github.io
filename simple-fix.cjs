@@ -7,9 +7,14 @@ function fixFile(filePath) {
     const originalContent = content;
 
     // Remove merge conflict markers
+<<<<<<< HEAD
     content = content.replace(/[\s\S]*?[\s\S]*?
     content = content.replace(/[\s\S]*?
     content = content.replace(/[\s\S]*?
+=======
+    content = content.replace(/
+    content = content.replace(/
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     
     // Fix common syntax issues
     content = content.replace(/\{_/g, '{');

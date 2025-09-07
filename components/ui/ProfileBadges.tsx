@@ -1,19 +1,20 @@
 }
 import React from 'react';
 import type { KycProfile } from '../../utils / kyc';
-import { getBadgeLabels } from '../../utils / kyc';
-import { VerifiedBadge } from './VerifiedBadge';
-export /**
- * ProfileBadges - Function description
- */
-function ProfileBadges() {
-  const labels = getBadgeLabels (profile || undefined);
-  return <VerifiedBadge labels={labels} />;export /**
- * ProfileBadges - Function description
- */
-function ProfileBadges() {
-  const labels = getBadgeLabels (profile || undefined);
+import { getBadgeLabels  } from '../../utils / kyc';
+import { VerifiedBadge  } from './VerifiedBadge';
+export /**;
+ * ProfileBadges - Function description;
+ */;
+function ProfileBadges() {const labels = getBadgeLabels (profile || undefined)return <VerifiedBadge labels={labels} />;export /**;
+ * ProfileBadges - Function description;
+ */;
+function ProfileBadges() {const labels = getBadgeLabels (profile || undefined)return <VerifiedBadge labels={labels} />;}import type { KycProfile } from '../../utils/kyc';
+import { getBadgeLabels  } from '../../utils/kyc';
+export function ProfileBadges() {const labels = getBadgeLabels(profile || undefined)return <VerifiedBadge labels={labels} />;export function ProfileBadges() {const labels  = getBadgeLabels(profile || undefined)}return <VerifiedBadge labels={labels} />;
+}export function ProfileBadges() {const labels = null;
   return <VerifiedBadge labels={labels} />;
+<<<<<<< HEAD
 
 }
 
@@ -23,6 +24,7 @@ import type { KycProfile } from '../../utils/kyc';
 import { getBadgeLabels } from '../../utils/kyc';
 import { VerifiedBadge } from './VerifiedBadge';
 
+<<<<<<< HEAD
 export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
   const labels = getBadgeLabels(profile || undefined);
   return <VerifiedBadge labels={labels} />;export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
@@ -36,3 +38,12 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
 
 
 
+=======
+export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
+  const labels = null;
+  return <VerifiedBadge labels={labels} />
+}
+=======
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

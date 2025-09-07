@@ -43,9 +43,12 @@
 // Run the enhanced performance monitor
 main();
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -99,6 +102,7 @@ console.log('=')
       "action"
       log('warn', 'Performance "Alerts")
       log('info', 'Performance "Recommendations")
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -293,3 +297,5 @@ monitor
     process.exit(1);
   });
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

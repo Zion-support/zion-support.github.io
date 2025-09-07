@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -23,6 +24,10 @@ class QuickSyntaxFixer {
       const content = originalContent
         // Remove merge conflict markers
 
+=======
+
+        .replace(/^>>>>>>>.*$/gm, '')
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
@@ -88,7 +93,10 @@ if (require.main === module) {
 
 module.exports = QuickSyntaxFixer;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -97,4 +105,7 @@ const path = require('path')
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

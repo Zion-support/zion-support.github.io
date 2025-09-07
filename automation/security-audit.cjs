@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 }},
 }},
 
 
 
+=======
+
+}},
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -19,7 +24,10 @@ const securityChecks = [{
     },
   },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }},
   {
     "name": 'Environment Variables Check',
@@ -35,6 +43,7 @@ const securityChecks = [{
         }
       });
 
+<<<<<<< HEAD
       
 
 
@@ -51,6 +60,8 @@ const securityChecks = [{
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }},
   {
     "name": 'API Security Check',
@@ -68,6 +79,7 @@ const securityChecks = [{
           if (
             content.includes('process.env') &&
 
+<<<<<<< HEAD
 
 
 
@@ -76,23 +88,29 @@ const securityChecks = [{
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
             !content.includes('// "Security": ')
           ) {
             securityIssues++;
           }
         });
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
         console.log(
           `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
         );
       }
     },
   },
+<<<<<<< HEAD
 
 
 
@@ -100,6 +118,9 @@ const securityChecks = [{
         
 
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       }
     }},
   {
@@ -123,15 +144,19 @@ const securityChecks = [{
           }
         });
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
         console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
       }
     },
   },
+<<<<<<< HEAD
 
 
 
@@ -139,6 +164,9 @@ const securityChecks = [{
         
 
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       }
     }},
   {
@@ -157,6 +185,7 @@ const securityChecks = [{
         
       }
 
+<<<<<<< HEAD
 
 
 
@@ -165,6 +194,8 @@ const securityChecks = [{
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }},
 ];
 
@@ -183,19 +214,19 @@ for (const check of securityChecks) {
   }
 }
 
-
-
-
 // Generate security report
 const report = {
   "timestamp": new Date().toISOString(),
   "checks": securityChecks.map(check => ({
     name: check.name,
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     status: 'completed',
   })),
   summary: {
@@ -205,6 +236,7 @@ const report = {
   },
 };
 
+<<<<<<< HEAD
 
 
 
@@ -213,12 +245,15 @@ const report = {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
 
+<<<<<<< HEAD
 
 
 
@@ -233,6 +268,8 @@ const report = {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -241,6 +278,7 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
 
 
 
@@ -253,6 +291,8 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -266,6 +306,7 @@ console.log('� Security Audit Starting...\n')
     "name"
     "name"
     "status"
+<<<<<<< HEAD
     "status"
     "status"
     "status"
@@ -282,4 +323,9 @@ console.log('� Security Audit Starting...\n')
 
 
 
+=======
+
+    "status"
+    "status"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 #!/usr/bin/env node
@@ -262,6 +263,11 @@ console.log('\n🎯 Merge conflict resolution complete!');
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+=======
+
+
+const { execSync } = require('child_process');
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 console.log('Resolving merge conflicts...');
 
@@ -333,6 +339,7 @@ contentConflicts.forEach(file => {
   }
 });
 
+<<<<<<< HEAD
 console.log('\nMerge conflict resolution completed!');
 console.log('Run "git status" to check remaining conflicts.');
 
@@ -343,3 +350,5 @@ console.log('Run "git status" to check remaining conflicts.');
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

@@ -101,6 +101,7 @@ if (require.main === module) {}
   generateSitemap()};
 module.exports = { generateSitemap };
 
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -110,3 +111,5 @@ console.log('🗺️  Generating sitemap...');
 console.log('✅ Sitemap generation completed');
 
 module.exports = {};
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

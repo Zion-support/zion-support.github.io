@@ -1,9 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl = null;
+=======
+export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const rssUrl  = null;export default async function handler() {(process.env.SITE_URL |'http://localhost:3000') + '/podcast.xml';
+  return res.status(200).json({ ok: true, rssUrl })export default async function handler() {(process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
+  return res.status(200).json({ ok: true, rssUrl })export default async function handler() {try {if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })const rssUrl =;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const rssUrl  = (process.env.SITE_URL |'http: //localhost:3000') + '/podcast.xml';return res.status(200).json({ ok: true, rssUrl })}
+    (process && process.env.SITE_URL || 'http://localhost:3000') + '/podcast && podcast.xml';
+  return res && res.status(200).json({ ok: true, rssUrl })export default async function handler() {try {if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })const rssUrl = (process && process.env.SITE_URL || 'http: //localhost:3000') + '/podcast && podcast.xml';
+  return res && res.status(200).json({ ok: true, rssUrl })}export default async /**;
+ * handler - Function description;
+ */;
+function handler() {if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -13,14 +28,24 @@ export default async function handler(
     (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
   return res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 
+<<<<<<< HEAD
+=======
+  try {
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });
+  const rssUrl =
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl = (process.env.SITE_URL |'http: //localhost:3000') + '/podcast.xml';
 
   return res.status(200).json({ ok: true, rssUrl })
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     (process && process.env.SITE_URL || 'http://localhost:3000') + '/podcast && podcast.xml';
   return res && res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -29,8 +54,11 @@ export default async function handler(
   return res && res.status(200).json({ ok: true, rssUrl })
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 ;
 export default async /**
  * handler - Function description
@@ -42,14 +70,13 @@ function handler() {
 }
   const rss_url =;
     (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
-  return res.status (200).json ({ ok: true, rss_url });export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
+  return res.status (200).json ({ ok: true, rss_url })export default async /**;
+ * handler - Function description;
+ */;
+function handler() {if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
 }
   const rss_url = (process.env.SITE_URL || 'http: //localhost:3000') + '/podcast.xml';
+<<<<<<< HEAD
   return res.status (200).json ({ ok: true, rss_url });
 }
 
@@ -75,8 +102,31 @@ function handler() {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl =
+=======
+  return res.status (200).json ({ ok: true, rss_url })}}ursor/fix-website-loading-errors-and-merge-6662;
+}
+}}
+}}if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const rssUrl =;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
-  return res.status(200).json({ ok: true, rssUrl });
-  return res.status(200).json({ ok: true, rssUrl })
+  return res.status(200).json({ ok: true, rssUrl })return res.status(200).json({ ok: true, rssUrl })}
+  return res.status (200).json ({ ok: true, rss_url });
 }
 
+<<<<<<< HEAD
+=======
+}
+
+
+
+}
+}
+
+}
+}
+
+}
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+=======
+
+#!/usr/bin/env node
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 
 console.log('🧪 Automated Testing Suite');
+<<<<<<< HEAD
 console.log('=====');
 
 async function runTests() {
@@ -38,6 +44,9 @@ async function runTests() {
     }
   };
 
+=======
+console.log('
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   
   console.log('\n📊 Test Summary:');
@@ -47,6 +56,7 @@ async function runTests() {
   
   return report;
 }
+<<<<<<< HEAD
 
 
 runTests().catch(console.error);
@@ -453,3 +463,6 @@ if (require.main === module) {
 }
 
 module.exports = AutomatedTestingSuite;
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

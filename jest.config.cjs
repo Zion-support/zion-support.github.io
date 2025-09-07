@@ -1,15 +1,9 @@
-const nextJest = require('next/jest')
 
-const createJestConfig = nextJest({
-  dir: './',
-})
+module.exports = {
 
-const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testEnvironment: 'jsdom',
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', {
@@ -30,7 +24,7 @@ const customJestConfig = {
     'app/**/*.{js,jsx,ts,tsx}',
     'utils/**/*.{js,jsx,ts,tsx}',
     '!**/node_modules/**',
-    '!**/*.d.ts',
+    '!**/*.d.ts'
   ],
   testPathIgnorePatterns: [
     '<rootDir>/.next/',
@@ -69,6 +63,72 @@ const customJestConfig = {
     '<rootDir>/corrupted_backup/',
     '<rootDir>/corrupted-files-backup/',
     '<rootDir>/broken_files_backup/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/zion_academy/',
+    '<rootDir>/apps/',
+    '<rootDir>/pages_backup*/',
+    '<rootDir>/pages.*/',
+    '<rootDir>/pages-*/',
+    '<rootDir>/pages_disabled*/',
+    '<rootDir>/pages.disabled*/',
+    '<rootDir>/pages.broken*/',
+    '<rootDir>/pages.corrupted*/',
+    '<rootDir>/pages.old*/',
+    '<rootDir>/pages._*/',
+    '<rootDir>/pages.__*/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/src.pages.disabled/',
+    '<rootDir>/lib_backup*/',
+    '<rootDir>/corrupted-files-backup*/',
+    '<rootDir>/performance-reports*/',
+    '<rootDir>/log-analysis-reports*/',
+    '<rootDir>/link-reports*/',
+    '<rootDir>/lint-target*/',
+    '<rootDir>/monitoring*/',
+    '<rootDir>/pm2-automation*/',
+    '<rootDir>/automation/logs*/',
+    '<rootDir>/automation/backup*/'
+  ],
+  modulePathIgnorePatterns: [
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/zion_academy/',
+    '<rootDir>/apps/',
+    '<rootDir>/pages_backup*/',
+    '<rootDir>/pages.*/',
+    '<rootDir>/pages-*/',
+    '<rootDir>/pages_disabled*/',
+    '<rootDir>/pages.disabled*/',
+    '<rootDir>/pages.broken*/',
+    '<rootDir>/pages.corrupted*/',
+    '<rootDir>/pages.old*/',
+    '<rootDir>/pages._*/',
+    '<rootDir>/pages.__*/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/src.pages.disabled/',
+    '<rootDir>/lib_backup*/',
+    '<rootDir>/corrupted-files-backup*/',
+    '<rootDir>/performance-reports*/',
+    '<rootDir>/log-analysis-reports*/',
+    '<rootDir>/link-reports*/',
+    '<rootDir>/lint-target*/',
+    '<rootDir>/monitoring*/',
+    '<rootDir>/pm2-automation*/',
+    '<rootDir>/automation/logs*/',
+    '<rootDir>/automation/backup*/'
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   verbose: true,
@@ -85,4 +145,3 @@ const customJestConfig = {
   }
 }
 
-module.exports = createJestConfig(customJestConfig)

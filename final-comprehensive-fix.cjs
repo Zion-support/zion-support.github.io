@@ -59,6 +59,7 @@ const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
+<<<<<<< HEAD
 
 
 
@@ -67,6 +68,8 @@ console.log('✅ Fixed SEO.tsx');
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
@@ -91,11 +94,14 @@ const talentFixed = talentContent
   .replace(/className="text-sm">/g, 'className="text-sm">');
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
@@ -107,6 +113,7 @@ const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
 const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
+<<<<<<< HEAD
 
 
 
@@ -115,6 +122,8 @@ console.log('✅ Fixed use-toast.ts');
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
@@ -130,7 +139,10 @@ const servicesFixed = servicesContent
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
 const authFixed = authContent
@@ -140,11 +152,14 @@ const authFixed = authContent
   .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 ) {
     ) {
     if (processFile(file)) {
@@ -154,13 +169,17 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 if ( {
   ) {
      {
 console.log('✨ Final comprehensive fixes completed!');
 
+<<<<<<< HEAD
 
   }} else {
   }
@@ -172,6 +191,8 @@ console.log('✨ Final comprehensive fixes completed!');
   }} else {
   }
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require('fs')
     return match.replace(/,\s*$/, '')
@@ -214,6 +235,9 @@ const fs = require('fs')
   .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
   .replace(/"isLoading": fals e/g, '"isLoading")
 
+<<<<<<< HEAD
   .replace(/"isLoading": fals e/g, '"isLoading")
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

@@ -16,9 +16,12 @@ if (require.main === module) {;
 ;
 module.exports = { resolveMergeConflict, findConflictedFiles }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

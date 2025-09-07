@@ -1,13 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
-
 export const metadata = {
   title: 'Smart Invoice Generator | Zion Tech Group',
-  description: 'AI-powered invoice automation with smart templates, payment tracking, and financial analytics. Reduce billing time by 80% and get paid 30% faster.',
-  keywords: 'invoice automation, smart invoicing, AI billing, payment tracking, financial analytics, invoice generator'
+  description: 'Professional smart invoice generator services for your business needs.',
+  keywords: 'smart-invoice-generator, services, business, technology'
 };
 
-export default function SmartInvoiceGeneratorPage() {
+export default function ServicePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -21,20 +18,6 @@ export default function SmartInvoiceGeneratorPage() {
               AI-powered invoice automation with smart templates, payment tracking, and financial analytics. 
               Reduce billing time by 80% and get paid 30% faster.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="#contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="#features"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
           </div>
         </div>
       </div>

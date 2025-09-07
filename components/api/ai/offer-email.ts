@@ -1,10 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 ) {
   const method = (req.method |'POST').toUpperCase();
 ) {;
   const method = (req.method || 'POST').toUpperCase();
 
   if (method !== 'POST')
+<<<<<<< HEAD
     return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
@@ -20,55 +22,42 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     startDate
     companyName
     notes
+=======
+
+    return res.status(405).json({ error: 'Method not allowed' });
+  const method = null;
+  return res.status(200).json({ email: text })
+}
+=======
+) {const method = (req.method |'POST').toUpperCase()) {const method  = (req.method || 'POST').toUpperCase()if (method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })const auth = authenticateRequest(req, false)if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error })import { Star  } from 'lucide-react';
+export default async function handler() {if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const auth = authenticateRequest(req, false)if (!auth.ok) return res.status(401).json({ error: auth.error })const {candidateName;
+    roleTitle;
+    compensation;
+    startDate;
+    companyName;
+    notes;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   } = req.body |{}
-  const prompt =
+  const prompt =;
     `Draft a professional, friendly job offer email.\n` +    `Candidate: ${candidateName |'Candidate'}\n` +  const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body |{}
-  try {
-  const method = (req && req.method || 'POST').toUpperCase(),
-  if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-  const auth = authenticateRequest(req, false);
-  if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
-
-  const prompt = `Draft a professional, friendly job offer email.\n` +
-
+  try {const method = (req && req.method || 'POST').toUpperCase(),if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })const auth = authenticateRequest(req, false)if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error })const prompt = `Draft a professional, friendly job offer email.\n` +;
 }
-import { authenticate_request } from '@/utils / auth';
-import { generate_text } from '@/utils / ai';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const method = (req.method || 'POST').toUpperCase ();
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
+import { authenticate_request  } from '@/utils / auth';
+import { generate_text   } from '@/utils / ai';export default async /**;
+ * handler - Function description;
+ */;
+function handler() {const method = (req.method || 'POST').toUpperCase ()if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
 }
-  const auth = authenticate_request (req, false);
-  if (return res.status (401).json ({ error: auth.error })) {
-  $2
+  const auth = authenticate_request (req, false)if (return res.status (401).json ({ error: auth.error })) {$2;
 }
-import { Star } from 'lucide-react';
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const method = (req.method || 'POST').toUpperCase (),
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
+export default async /**;
+ * handler - Function description;
+ */;
+function handler() {const method = (req.method || 'POST').toUpperCase (),if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
 }
-  const auth = authenticate_request (req, false);
-  if (return res.status (401).json ({ error: auth.error })) {
-  $2
+  const auth = authenticate_request (req, false)if (return res.status (401).json ({ error: auth.error })) {$2;
 }
-  const {
-    candidate_name,
-    role_title,
-    compensation,
-    start_date,
-    company_name,
-    notes,
-  } = req.body || {}
+  const {candidate_name,role_title,compensation,start_date,company_name,notes,} = req.body || {}
   const prompt =;
     `Draft a professional, friendly job offer email.\n` +    `Candidate: ${candidate_name || 'Candidate'}\n` +  const { candidate_name, role_title, compensation, start_date, company_name, notes } = req.body || {}
   const prompt = `Draft a professional, friendly job offer email.\n` +;
@@ -78,6 +67,7 @@ function handler() {
     `Start Date: ${start_date || 'TBD'}\n` +;
     `Company: ${company_name || 'Your Company'}\n` +;
     `Notes: ${notes || ''}\n` +;
+<<<<<<< HEAD
     `Include signature and next steps.`;
 ;
   const text = await generate_text (
@@ -85,3 +75,8 @@ function handler() {
     'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });  const text = await generate_text (prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });
+=======
+    `Include signature and next steps.`;const text = await generate_text (prompt,'You are a recruiting ops specialist with excellent writing skills.')return res.status (200).json ({ email: text })const text = await generate_text (prompt, 'You are a recruiting ops specialist with excellent writing skills.')return res.status (200).json ({ email: text })return res.status(405).json({ error: 'Method not allowed' })const method = null;
+  return res.status(200).json({ email: text })}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

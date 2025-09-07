@@ -81,11 +81,16 @@ function resolveMergeConflicts() {
             
             // Remove conflict markers and keep both versions where possible
             content = content
+<<<<<<< HEAD
               .replace(/\n/g, '')
               .replace(/\n/g, '')
               .replace(/
               .replace(/<<<<<<< [^\n]+\n/g, '')
               .replace(/\n/g, '')
+=======
+              .replace(/
+              .replace(/<<<<<<< [^\n]+\n/g, '')
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
               .replace(/
             
             fs.writeFileSync(file, content);

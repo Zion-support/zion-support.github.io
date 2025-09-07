@@ -7,4 +7,7 @@ const { execSync } = require('child_process')
         "encoding"
         "criticalIssues"
 
+<<<<<<< HEAD
         "highIssues"
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

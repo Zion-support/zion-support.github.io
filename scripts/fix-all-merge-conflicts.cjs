@@ -24,6 +24,7 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
 :backup-problematic-files/scripts/fix-all-merge-conflicts.cjs
 :scripts/fix-all-merge-conflicts.cjs
     content = content.replace(/
@@ -34,6 +35,8 @@ function resolveMergeConflicts(filePath) {
 
     content = content.replace(/
     
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
     // Clean up any double newlines
     content = content.replace(/\n\n\n+/g, '\n\n');

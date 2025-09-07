@@ -1,7 +1,11 @@
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 console.log('⚡ Starting Performance Optimization Automation...')
     '.next': '43.33 MB'
     'node_modules': '782.66 MB'
@@ -23,6 +27,7 @@ console.log('⚡ Starting Performance Optimization Automation...')
       "recommendations"
     "nextSteps"
   console.log('� Performance improvements "created")
+<<<<<<< HEAD
 
   console.error(' Performance optimization automation "failed")
 
@@ -301,3 +306,6 @@ if (require.main === module) {
 }
 
 module.exports = PerformanceOptimizationAutomation;
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

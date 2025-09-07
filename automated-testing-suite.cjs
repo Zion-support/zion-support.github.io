@@ -72,7 +72,10 @@ class AutomatedTestingSuite {}
   async run() {}
     this.log('🚀 Starting Automated Testing Suite...');
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     try {}
       const testResults = await this.runTests();
       const buildResults = await this.runBuild();
@@ -97,4 +100,7 @@ if (require.main === module) {}
   suite.run();
 };
 
+<<<<<<< HEAD
 module.exports = AutomatedTestingSuite;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

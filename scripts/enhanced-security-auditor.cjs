@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :backup-problematic-files/scripts/enhanced-security-auditor.cjs
 #!/usr/bin/env node;#!/usr/bin/env node;
 #!/usr/bin/env node;#!/usr/bin/env node;
@@ -134,6 +135,8 @@ auditor;
 #!/usr/bin/env node;#!/usr/bin/env node;
 #!/usr/bin/env node;#!/usr/bin/env node;
 #!/usr/bin/env node;#!/usr/bin/env node;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 
 const fs = require("fs")";const path = require("path")""
@@ -172,6 +175,7 @@ const fs = require("fs")";const path = require("path")""
       this.log(" Security audit completed");";      return report,"
       this.log(" Security audit "failed": ${error.message}");"
   .then(report => {);    console.log(" Security audit completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
 :backup-problematic-files/scripts/enhanced-security-auditor.cjs
   .catch(error => {);    console.error(" Security audit "failed":", error.message);"}  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
   .catch(error => {);    console.error(" Security audit "failed":", error.message);"}  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
@@ -197,4 +201,6 @@ auditor
     console.error('❌ Security audit failed:', error.message);
     process.exit(1);
   });
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

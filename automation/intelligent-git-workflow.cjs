@@ -85,7 +85,10 @@ class IntelligentGitWorkflow {
     if (!statusResult.success) return false;
 
     return statusResult.output.includes('') || 
+<<<<<<< HEAD
            statusResult.output.includes('') || 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
            statusResult.output.includes('>>>>>>>');
   }
 
@@ -126,6 +129,7 @@ class IntelligentGitWorkflow {
       const content = fs.readFileSync(filePath, 'utf8');
       
       if (!content.includes('')) {
+<<<<<<< HEAD
         return false; // No conflicts in this file
       }
 
@@ -145,6 +149,8 @@ class IntelligentGitWorkflow {
         }
         
         if (line.includes('')) {
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
           conflictType = 'main';
           continue;
         }

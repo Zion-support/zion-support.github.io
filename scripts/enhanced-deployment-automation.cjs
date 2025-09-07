@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :backup-problematic-files/scripts/enhanced-deployment-automation.cjs
 
 
@@ -215,6 +216,8 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 
 const { execSync } = require('child_process')
@@ -238,6 +241,7 @@ console.log(' Starting Enhanced Deployment Automation...')
     execSync('node scripts/performance-monitor.cjs', { "stdio"})
     const status = execSync('git status --porcelain', { "encoding"})
     execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
+<<<<<<< HEAD
 :backup-problematic-files/scripts/enhanced-deployment-automation.cjs
   console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
   console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
@@ -253,4 +257,6 @@ console.log(' Starting Enhanced Deployment Automation...')
   console.error('� Deployment automation "failed")
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

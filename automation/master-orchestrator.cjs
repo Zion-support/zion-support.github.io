@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 // Master Automation Orchestrator (clean version)
 const fs = require('fs');
 const path = require('path');
@@ -16,7 +19,10 @@ class MasterOrchestrator {
     this.results = {};
     try {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       fs.mkdirSync(this.logsDir, { "recursive": true });
     } catch {}
   }
@@ -42,9 +48,13 @@ class MasterOrchestrator {
   }
 
   async runAllChecks() {
+<<<<<<< HEAD
     this.log('Starting comprehensive system check...');
 
     const tasks = [['health', 'node automation/health-check.cjs'],
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     this.log('Starting comprehensive system check.');
     
     const tasks = [
@@ -74,16 +84,23 @@ class MasterOrchestrator {
     const total = Object.keys(this.results).length;
     const durationMs = Date.now() - this.startTime;
 
+<<<<<<< HEAD
 
     
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     const summary = {
       timestamp: new Date().toISOString(),
       durationMs,
       total,
       passed,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
@@ -287,7 +304,10 @@ class MasterAutomationOrchestrator {
       );
     } catch {}
 
+<<<<<<< HEAD
     this.log(
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
     return passed === total;
@@ -333,11 +353,14 @@ if (require.main === module) {
 
 module.exports = MasterOrchestrator;
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -479,10 +502,15 @@ class MasterAutomationOrchestrator {
         automation: 'completed'
       },
 
+<<<<<<< HEAD
 
     };
 
 
+=======
+    };
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
@@ -490,8 +518,11 @@ class MasterAutomationOrchestrator {
             ? 'WARNING'
             : 'CRITICAL'};
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     try {
       fs.writeFileSync(
         path.join(this.logsDir, 'master-orchestrator-report.json'),
@@ -499,9 +530,15 @@ class MasterAutomationOrchestrator {
       );
     } catch {}
 
+<<<<<<< HEAD
     this.log(`Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`);
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
+=======
+      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
+    );
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     return passed === total;
   }
 }
@@ -515,6 +552,7 @@ if (require.main === module) {
       orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
       break;
 
+<<<<<<< HEAD
     "default": 
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
@@ -541,15 +579,23 @@ if (require.main === module) {
       this.log('🎉 Master automation orchestration completed successfully!');
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
+=======
+    default:
+      console.log('Usage: node automation/master-orchestrator.cjs check');
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       process.exit(1);
     }
   }
 }
 
+<<<<<<< HEAD
 module.exports = MasterOrchestrator;
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -698,14 +744,18 @@ class MasterAutomationOrchestrator {
     }
   }
 }
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
+<<<<<<< HEAD
 
 
 
@@ -717,3 +767,6 @@ module.exports = MasterOrchestrator;
 orchestrator.run().catch(console.error);
 
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 
 class AccessibilityChecker {
   constructor() {
@@ -422,6 +423,10 @@ if (!fs.existsSync(reportsDir)) {
 
 
 
+=======
+#!/usr/bin/env node
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -539,6 +544,7 @@ if (require.main === module) {
     });
 }
 
+<<<<<<< HEAD
 
 
 
@@ -571,6 +577,8 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -582,9 +590,12 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "status"
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
@@ -606,6 +617,7 @@ module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
 
+<<<<<<< HEAD
 
 
 
@@ -614,3 +626,5 @@ module.exports = AccessibilityChecker;
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

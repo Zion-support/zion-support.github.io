@@ -3,6 +3,7 @@ const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
+<<<<<<< HEAD
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
@@ -16,12 +17,32 @@ function fixMergeConflicts(filePath) {
       console.log(`Fixing merge conflicts: in: ${filePath}`);
 
 
+=======
+
+    // Check if file has merge conflict markers
+    if (
+
+    ) {
+      console.log(`Fixing merge conflicts: in: ${filePath}`);
+
+      const lines = content.split('\n');
+      const fixedLines = [];
+      let inConflict = false;
+      let keepContent = false;
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
           inConflict = true;
           keepContent = false;
           continue;
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
           inConflict = false;
           keepContent = false;
           continue;

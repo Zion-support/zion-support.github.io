@@ -1,56 +1,38 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
+=======
+import { Milestone } from '../../utils/types/milestones';
+type Props = any;
+type Props = {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   milestone: Milestone;
+=======
+import { Milestone  } from '../../utils/types/milestones';
+type Props = any;
+type Props = {milestone: Milestone;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
   project_id: string;
   role: 'client' | 'talent' | 'admin';
-  onAction: (
-    action: 'in_progress' | 'submitted' | 'approved' | 'paid'
-    milestoneId: string
+  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid';
+    milestoneId: string;
   ) => Promise<void> | void;
 }
-const statusSteps = [
-  'Pending'
-  'In Progress'
-  'Submitted'
-  'Approved'
-  'Paid'
+const statusSteps = [;
+  'Pending';
+  'In Progress';
+  'Submitted';
+  'Approved';
+  'Paid';
 ] as const;
-export default function MilestoneCard({
-  milestone
-  projectId
-  role
-  onAction
-}: Props) {
-  milestone: Milestone;
+export default function MilestoneCard() {milestone: Milestone;
   project_id: string;
   role: 'client' | 'talent' | 'admin';
     milestone.status === 'In Progress';
@@ -58,8 +40,7 @@ export default function MilestoneCard({
     role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid =;
     role !== 'talent' && milestone.status === 'Approved';
-  return (
-    <div className='border rounded-lg p-4 bg-white shadow-sm'>;
+  return (<div className='border rounded-lg p-4 bg-white shadow-sm'>;
       <div className='flex items-start justify-between'>;
         <div>;
           <h3 className='text-lg font-semibold'>{milestone && milestone.title}</h3>;
@@ -67,15 +48,20 @@ export default function MilestoneCard({
             Due: {new Date(milestone && milestone.dueDate).toLocaleDateString()}
           </p>;
         </div>;
+<<<<<<< HEAD
         <button
           className='text-sm text-blue-600'
           onClick={() => setExpanded(v => !v)}
+<<<<<<< HEAD
         >          {expanded ? 'Hide' : 'Details'}
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
-type Props = {
-;
-  return (
-    <div className='border rounded - lg p - 4 bg - white shadow - sm'>;
+        >
+=======
+        <button;
+          className='text-sm text-blue-600';
+          onClick={() => setExpanded(v => !v)}>          {expanded ? 'Hide' : 'Details'}type Props = {return (<div className='border rounded - lg p - 4 bg - white shadow - sm'>;
       <div className='flex items - start justify - between'>;
         <div>;
           <h3 className='text - lg font - semibold'>{milestone.title}</h3>;
@@ -90,47 +76,58 @@ type Props = {
         </button>;
       </div>;
       <div className='mt - 3'>;
-        <div className='flex items - center gap - 2'>type Props = {
-
-  const [expanded, setExpanded] = useState(false);
-  const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
-  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
+        <div className='flex items - center gap - 2'>type Props = {const [expanded, setExpanded] = useState(false)const currentIndex = statusSteps.findIndex((s) => s === milestone.status)const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
   const canTalentSubmit = (role === 'talent' |role === 'admin') && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
       <div className='mt-3'>;
-        <div className='flex items-center gap-2'>type Props = {;
-  milestone: Milestone,;
-  projectId: string,;
-  role: 'client' | 'talent' | 'admin',;
-  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void;
-};
-  const canClientMarkInProgress = role !== 'talent' && milestone && milestone.status === 'Pending';
+        <div className='flex items-center gap-2'>type Props = {milestone: Milestone,projectId: string,role: 'client' | 'talent' | 'admin',onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void;
+}const canClientMarkInProgress = role !== 'talent' && milestone && milestone.status === 'Pending';
   const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';
+<<<<<<< HEAD
   const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
 
+=======
+  const canClientMarkPaid  = role !== 'talent' && milestone && milestone.status === 'Approved';>;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+          {expanded ? 'Hide' : 'Details'}
+        </button>;
+      </div>;
+<div className='mt-3'>;
+  return (<div className="border rounded-lg p-4 bg-white shadow-sm">;
+      <div className="flex items-start justify-between">;
+        <div>;
+          <h3 className="text-lg font-semibold">{milestone.title}</h3>;
+          <p className="text-sm text-gray-600">Due: {new Date(milestone.dueDate).toLocaleDateString()}</p>;
+        </div>;
+        <button className="text-sm text-blue-600" onClick={() => setExpanded((v) => !v)}>;
+          {expanded ? 'Hide' : 'Details'}
+<<<<<<< HEAD
+        </button>
+      </div>
+      <div className='mt-3'>
+        <div className='flex items-center gap-2'>
+          {statusSteps.map((step, idx) => (
+            <div key={step} className='flex items-center'>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
               <div
+=======
+        </button>;
+      </div>;
+      <div className='mt-3'>;
+        <div className='flex items-center gap-2'>;
+          {statusSteps.map((step, idx) => (<div key={step} className='flex items-center'>;
+              <div;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
   on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void;
-}
-;
-const status_steps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
-;
-export default /**
- * MilestoneCard - Function description
- */
-function MilestoneCard() {
-  const [expanded, set_expanded] = useState (false);
-;
-  const current_index = status_steps.find_index ((s) => string === milestone.status);
-;
-  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
+}const status_steps  = ['PendingIn ProgressSubmittedApprovedPaid'] as const;export default /**;
+ * MilestoneCard - Function description;
+ */;
+function MilestoneCard() {const [expanded, set_expanded]  = useState (false)const current_index  = status_steps.find_index ((s) => string === milestone.status)const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
   const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
-  const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
-;
-  return (
-    <div className="border rounded - lg p - 4 bg - white shadow - sm">;
+  const canClientMarkPaid  = role !== 'talent' && milestone.status === 'Approved';return (<div className="border rounded - lg p - 4 bg - white shadow - sm">;
       <div className="flex items - start justify - between">;
         <div>;
           <h3 className="text - lg font - semibold">{milestone.title}</h3>;
@@ -142,9 +139,9 @@ function MilestoneCard() {
       </div>;
       <div className='mt - 3'>;
         <div className='flex items - center gap - 2'>;
-          {status_steps.map ((step, idx) => (
-            <div key={step} className='flex items - center'>;
+          {status_steps.map ((step, idx) => (<div key={step} className='flex items - center'>;
               <div;
+<<<<<<< HEAD
                 className={
                   'h - 2 w - 2 rounded - full ' +;
                   (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')                }
@@ -156,6 +153,13 @@ function MilestoneCard() {
               <div;
                 className={
 
+=======
+<<<<<<< HEAD
+                className={
+
+                  'h-2 w-2 rounded-full ' +
+                  (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
                 }
                 title={step}
               />
@@ -165,6 +169,7 @@ function MilestoneCard() {
                     'h - 0.5 w - 8 ' +;
                     (idx < current_index ? 'bg - green - 600' : 'bg - gray - 300');
                   }
+<<<<<<< HEAD
                 />              )}
             </div>
           ))}
@@ -188,11 +193,54 @@ function MilestoneCard() {
 
 <div className='mt-2 text-xs text-gray-700'>
           Status: {milestone.status}
+=======
+
+                />
+=======
+                className={'h - 2 w - 2 rounded - full ' +;
+                  (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')                }
+                title={step}
+            <div key={step} className="flex items-center">;
+              <div;
+              {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => (<div key={step} className="flex items - center">;
+              <div;
+                className={'h-2 w-2 rounded-full ' +;
+                  (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')}
+                title={step}
+              />;
+              {idx < statusSteps.length - 1 && (<div;
+                  className={'h - 0.5 w - 8 ' +;
+                    (idx < current_index ? 'bg - green - 600' : 'bg - gray - 300')}/>              )}
+            </div>;
+          ))}
+        </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />;
+                  'h - 2 w - 2 rounded - full ' + (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')}
+                title={step}
+      {expanded && (<div className='mt - 4 space - y-2 text - sm text - gray - 800'>          {milestone.description && <p>{milestone.description}</p>}
+          <div > Amount: ${milestone.amount_usd.to_fixed (2)}</div>;
+          {milestone.attachments && milestone.attachments.length > 0 && (}
+                title={step}
+              />;
+              {idx < statusSteps.length - 1 && (/>;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+              )}
+            </div>;
+          ))}
+<<<<<<< HEAD
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
         </div>
-      </div>
-      {expanded && (
-        <div className='mt-4 space-y-2 text-sm text-gray-800'>
+
+<div className='mt-2 text-xs text-gray-700'>
+=======
+        </div>;
+<div className='mt-2 text-xs text-gray-700'>;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+          Status: {milestone.status}
+        </div>;
+      </div>;
+      {expanded && (<div className='mt-4 space-y-2 text-sm text-gray-800'>;
           {milestone.description && <p>{milestone.description}</p>}
+<<<<<<< HEAD
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
           {milestone.attachments && milestone.attachments.length > 0 && (
             <div>
@@ -200,49 +248,72 @@ function MilestoneCard() {
               <ul className='list-disc ml-5'>
                 {milestone.attachments.map(a => (
                   <li key={a.id}>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
                     <a
                       className='text-blue-600 underline'
                       href={a && a.url}
                       target='_blank'
+<<<<<<< HEAD
               <ul className="list-disc ml-5">
                 {milestone.attachments.map((a) => (
                   <li key={a.id}>
                     <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
+=======
+
+                      rel='noreferrer'
+                    >
+                      {a.label || a.url}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
                     </a>
                   </li>
+=======
+          <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>;
+          {milestone.attachments && milestone.attachments.length > 0 && (<div>;
+<div className='font-medium'>Attachments</div>;
+              <ul className='list-disc ml-5'>;
+                {milestone.attachments.map(a => (<li key={a.id}>;
+                    <a;
+                      className='text-blue-600 underline';
+                      href={a && a.url}
+                      target='_blank';
+              <ul className="list-disc ml-5">;
+                {milestone.attachments.map((a) => (<li key={a.id}>;
+                    <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">;
+                      rel='noreferrer';
+                    >;
+                      {a.label || a.url}</a>;
+                  </li>;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;
               <ul className="list-disc ml-5">;
-                {milestone && milestone.attachments.map((a) => (;
-                  <li key={a && a.id}>;
+                {milestone && milestone.attachments.map((a) => (<li key={a && a.id}>;
                     <a className="text-blue-600 underline" href={a && a.url} target="_blank" rel="noreferrer">;
                     </a>;
                   </li>;
                 ))}
-              </ul>
-            </div>
+              </ul>;
+            </div>;
           )}
-        </div>
+        </div>;
       )}
-          <button
-          <button
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
-
-      <div className='mt-4 flex flex-wrap gap-2'>
-        {canClientMarkInProgress && (
-          <button
-            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
-
-            onClick={() => onAction('in_progress', milestone.id)}
-
-                    </a>
-                  </li>
+          <button;
+          <button;
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700";
+      <div className='mt-4 flex flex-wrap gap-2'>;
+        {canClientMarkInProgress && (<button;
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}onClick={() => onAction('in_progress', milestone.id)}</a>;
+                  </li>;
                 ))}
-              </ul>
-            </div>
+              </ul>;
+            </div>;
           )}
+<<<<<<< HEAD
         </div>
       )}
+<<<<<<< HEAD
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button
@@ -264,6 +335,15 @@ function MilestoneCard() {
 
 
 
+=======
+
+
+<div className='mt-4 flex flex-wrap gap-2'>
+        {canClientMarkInProgress && (
+          <button
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'
+            onClick={() => onAction('in_progress', milestone.id)}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
           >
             Mark In Progress
           </button>
@@ -279,6 +359,12 @@ className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'
         )}
         {canClientApprove && (
           <button
+<<<<<<< HEAD
+=======
+
+className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'
+            onClick={() => onAction('approved', milestone.id)}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
           >
             Approve
           </button>
@@ -294,25 +380,64 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
         )}
       </div>
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
-
-        )}
-      </div>
-    </div>
   );
 }
+=======
+        </div>;
+      )}className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
+        {canClientMarkInProgress && (<button;
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700";
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
+        {canClientMarkInProgress && (<button;
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
+            Mark In Progress;
+          </button>;<div className="mt-4 flex flex-wrap gap-2">;
+        {canClientMarkInProgress && (<button;
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700";
+            onClick={() => onAction('in_progress', milestone.id)}<div className='mt-4 flex flex-wrap gap-2'>;
+        {canClientMarkInProgress && (<button;
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700';
+            onClick={() => onAction('in_progress', milestone.id)}>;
+            Mark In Progress;
+          </button>;
+        )}
+        {canTalentSubmit && (<button;
+className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700';
+            onClick={() => onAction('submitted', milestone.id)}>;
+            Submit Work;
+          </button>;
+        )}
+        {canClientApprove && (<button;
+className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700';
+            onClick={() => onAction('approved', milestone.id)}>;
+            Approve;
+          </button>;
+        )}
+        {canClientMarkPaid && (<button;
+className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800';
+            onClick={() => onAction('paid', milestone.id)}>;
+            Mark as Paid;
+          </button>;
+        )}
+      </div>;
+    </div>;
+        )}
+      </div>;
+    </div>;
+  )}
             <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
       </div>;
-      {expanded && (
-        <div className="mt - 4 space - y-2 text - sm text - gray - 800">;
+      {expanded && (<div className="mt - 4 space - y-2 text - sm text - gray - 800">;
           <div > Amount: ${milestone.amount_usd.to_fixed (2)}</div>;
-          {milestone.attachments && milestone.attachments.length > 0 && (
-            <div>;
+          {milestone.attachments && milestone.attachments.length > 0 && (<div>;
               <div className='font - medium'>Attachments</div>;
               <ul className='list - disc ml - 5'>;
-                {milestone.attachments.map (array => (
-                  <li key={a.id}>;
+                {milestone.attachments.map (array => (<li key={a.id}>;
                     <a;
                       className='text - blue - 600 underline';
                       href={a.url}
@@ -320,8 +445,7 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
                       rel='noreferrer';
                     >                      {a.label || a.url}              <div className="font - medium">Attachments</div>;
               <ul className="list - disc ml - 5">;
-                {milestone.attachments.map ((a) => (
-                  <li key={a.id}>;
+                {milestone.attachments.map ((a) => (<li key={a.id}>;
                     <a className="text - blue - 600 underline" href={a.url} target="_blank" rel="noreferrer">;
                     </a>;
                   </li>))}
@@ -329,36 +453,36 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
             </div>)}
         </div>)}
       <div className='mt - 4 flex flex - wrap gap - 2'>;
-        {canClientMarkInProgress && (
-          <button;
+        {canClientMarkInProgress && (<button;
             className='px - 3 py - 1 text - sm rounded bg - indigo - 600 text - white hover:bg - indigo - 700'            on_click={() => on_action ('in_progress', milestone.id)}      <div className="mt - 4 flex flex - wrap gap - 2">;
-        {canClientMarkInProgress && (
-          <button;
+        {canClientMarkInProgress && (<button;
             className="px - 3 py - 1 text - sm rounded bg - indigo - 600 text - white hover:bg - indigo - 700";
           >;
             Mark In Progress;
           </button>)}
-        {canTalentSubmit && (
-          <button;
+        {canTalentSubmit && (<button;
             className='px - 3 py - 1 text - sm rounded bg - amber - 600 text - white hover:bg - amber - 700'            on_click={() => on_action ('submitted', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - amber - 600 text - white hover:bg - amber - 700";
             on_click={() => on_action ('submitted', milestone.id)}
           >;
             Submit Work;
           </button>)}
-        {canClientApprove && (
-          <button;
+        {canClientApprove && (<button;
             className='px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700'            on_click={() => on_action ('approved', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700";
             on_click={() => on_action ('approved', milestone.id)}
           >;
             Approve;
           </button>)}
-        {canClientMarkPaid && (
-          <button;
+        {canClientMarkPaid && (<button;
             className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800'            on_click={() => on_action ('paid', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800";
             on_click={() => on_action ('paid', milestone.id)}
           >;
             Mark as Paid;
           </button>)}
       </div>;
+<<<<<<< HEAD
     </div>);
 }
+=======
+    </div>)})}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

@@ -1,9 +1,12 @@
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -17,6 +20,7 @@ console.log('=====')
   console.log('Run "git add ." and "git commit")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
+<<<<<<< HEAD
 
 
 
@@ -25,3 +29,5 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

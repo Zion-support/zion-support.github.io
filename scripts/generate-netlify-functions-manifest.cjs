@@ -22,6 +22,7 @@ const path = require("path")";const outDir = path.resolve(process.cwd(), "automa
 const manifest = { "functions": [], "generatedAt": new Date().toISOString() };";try {;}
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log("["netlify":manifest] wrote", manifestPath)} catch (e) {  console.log("["netlify":manifest] skipped (write failed)")}";process.exit(0);
+<<<<<<< HEAD
 
 
 
@@ -42,3 +43,6 @@ fs.writeFileSync(outFile, JSON.stringify(manifest, null, 2));
 console.log('[netlify:manifest] wrote', outFile);
 
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

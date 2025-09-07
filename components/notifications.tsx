@@ -1,5 +1,29 @@
 
+<<<<<<< HEAD
 
+=======
+;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
+  }
+}
+import React from 'react';
+  return <NotificationCenter />;
+}import dynamic from 'next / dynamic';const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'),import dynamic from 'next/dynamic';
+const NotificationCenter = null;
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'){ssr: false;
+  }
+)export default function NotificationsPage() {return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {ssr: false})export default function NotificationsPage() {const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'),{ssr: false}
+)export default function NotificationsPage() {return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {ssr: false}),export default function NotificationsPage() {return <NotificationCenter />;
+}}export default /**;
+ * NotificationsPage - Function description;
+ */;
+function NotificationsPage() {return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {ssr: false}),export default /**;
+ * NotificationsPage - Function description;
+ */;
+function NotificationsPage() {return <NotificationCenter />;
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,13 +46,17 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 import React from 'react';
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 
   return <NotificationCenter />;
 }
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -37,15 +65,24 @@ const NotificationCenter = null;
 const NotificationCenter = dynamic(
   () => import('../components/notifications/NotificationCenter')
 
+=======
+import dynamic from 'next / dynamic';
+;
+const NotificationCenter = dynamic (
+  () => import ('../components / notifications / NotificationCenter'),
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   {
     ssr: false
   }
 );
+<<<<<<< HEAD
 
 export default function NotificationsPage() {
   return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
   ssr: false})
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 export default function NotificationsPage() {
 const NotificationCenter = dynamic(;
   () => import('../components/notifications/NotificationCenter'),;
@@ -58,9 +95,27 @@ export default function NotificationsPage() {;
   ssr: false}),;
 export default function NotificationsPage() {;
   return <NotificationCenter />;
+<<<<<<< HEAD
 }
 
 
 
 
 
+=======
+}
+;
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {
+  ssr: false}),
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;
+}
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

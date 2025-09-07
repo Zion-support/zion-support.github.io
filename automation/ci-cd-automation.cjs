@@ -1,8 +1,11 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node
 /**
  * CI/CD Automation Script
@@ -17,6 +20,7 @@ class CICDAutomation {
     this.logFile = path.join(__dirname, '..', 'logs', 'ci-cd.log');
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class CICDAutomation { constructor() { this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile, logMessage); } async runTests() { try {" this.log("Running tests.");"" execSync("npm run test: smoke", { stdio: "pipe" });" this.log("Tests completed successfully"); return true; } catch (error) {"` this.log(`Tests failed: ${error.message}`); return false; } } async runBuild() { try {" this.log("Running build.");"" execSync("npm run build", { stdio: "pipe" });" this.log("Build completed successfully"); return true; } catch (error) {"` this.log(`Build failed: ${error.message}`); return false; } } return false; } } return false; } } const results = {" lint: await this.runLint()," typeCheck: await this.runTypeCheck(),}module.exports = CICDAutomation;'"`'"`
 
+<<<<<<< HEAD
 
 
 
@@ -25,6 +29,8 @@ class CICDAutomation {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -49,6 +55,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   log(message) {}
     const timestamp = new Date().toISOString();
 
+<<<<<<< HEAD
 
 
 
@@ -57,6 +64,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     const logMessage = `[${timestamp}] ${message}\n`;`
 console.log(message);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -74,10 +83,13 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       this.log(`Tests "failed": ${error.message}`);
       return false;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }
   }
   async runLint() {
@@ -105,6 +117,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   async runBuild() {
     try {
 
+<<<<<<< HEAD
 
 
 
@@ -113,6 +126,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     };
   };
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
@@ -129,10 +144,13 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       this.log(`Build "failed": ${error.message}`);
       return false;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }
   }
   async runVerify() {
@@ -182,6 +200,7 @@ if (require.main === module) {
   automation.run().catch(console.error);
 }
 
+<<<<<<< HEAD
 
 
 
@@ -190,6 +209,8 @@ if (require.main === module) {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     };
   };
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -256,6 +277,7 @@ cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 };
 module.exports = CICDAutomation;
+<<<<<<< HEAD
 module.exports = CICDAutomation;
 module.exports = CICDAutomation;
 module.exports = CICDAutomation;
@@ -272,4 +294,9 @@ module.exports = CICDAutomation;
 
 
 
+=======
+
+module.exports = CICDAutomation;
+module.exports = CICDAutomation;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

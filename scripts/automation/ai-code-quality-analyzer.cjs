@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -326,6 +327,10 @@ class AICodeQualityAnalyzer {
     } catch (error) {
       console.error('❌ AI code quality analysis failed:', error.message);
       return { success: false, error: error.message };
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }
   }
 }
@@ -334,6 +339,9 @@ class AICodeQualityAnalyzer {
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.run().catch(console.error);
 
+<<<<<<< HEAD
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.analyzeCodeQuality();
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

@@ -40963,6 +40963,7 @@
     }
   ],
   "summary": {
+<<<<<<< HEAD
     "totalIssues": 5972,
     "missingMeta": 5276,
     "headingIssues": 544,
@@ -40978,4 +40979,11 @@
     "Use semantic HTML elements",
     "Implement breadcrumbs navigation"
   ]
+=======
+
+    "overall": "poor",
+    "totalIssues": 2383,
+    "recommendations": []
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 }

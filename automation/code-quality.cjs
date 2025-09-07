@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 }},
 }},
 
 
 
+=======
+
+}},
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -19,7 +24,10 @@ const qualityChecks = [{
     },
   },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }},
   {
     "name": 'ESLint Code Analysis',
@@ -32,6 +40,7 @@ const qualityChecks = [{
         
       }
 
+<<<<<<< HEAD
 
 
 
@@ -40,6 +49,8 @@ const qualityChecks = [{
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }},
   {
     "name": 'Prettier Code Formatting',
@@ -52,6 +63,7 @@ const qualityChecks = [{
         
       }
 
+<<<<<<< HEAD
 
 
 
@@ -60,6 +72,8 @@ const qualityChecks = [{
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }},
   {
     "name": 'Code Complexity Analysis',
@@ -75,6 +89,7 @@ const qualityChecks = [{
         if (fs.existsSync(dir)) {
           const files = fs
 
+<<<<<<< HEAD
 
 
 
@@ -83,6 +98,8 @@ const qualityChecks = [{
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
             .readdirSync(dir, { "recursive": true })
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
 
@@ -99,22 +116,28 @@ const qualityChecks = [{
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       console.log(`Average lines per file: ${avgLinesPerFile}`);
       console.log(`Total files analyzed: ${totalFiles}`);
     },
   },
 
+<<<<<<< HEAD
 
 
       
       
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }},
   {
     "name": 'Import/Export Analysis',
@@ -134,16 +157,20 @@ const qualityChecks = [{
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
         console.log(`Total imports: ${importCount}`);
         console.log(`Total exports: ${exportCount}`);
       }
     },
   },
+<<<<<<< HEAD
 
 
 
@@ -152,6 +179,9 @@ const qualityChecks = [{
         
 
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       }
     }},
   {
@@ -186,15 +216,19 @@ const qualityChecks = [{
           });
         });
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
         console.log(`Potential unused imports: ${unusedImports}`);
       }
     },
   },
+<<<<<<< HEAD
 
 
 
@@ -202,6 +236,9 @@ const qualityChecks = [{
         
 
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       }
     }},
 ];
@@ -221,19 +258,19 @@ for (const check of qualityChecks) {
   }
 }
 
-
-
-
 // Generate quality report
 const report = {
   "timestamp": new Date().toISOString(),
   "checks": qualityChecks.map(check => ({
     name: check.name,
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     status: 'completed',
   })),
   summary: {
@@ -243,6 +280,7 @@ const report = {
   },
 };
 
+<<<<<<< HEAD
 
 
 
@@ -251,12 +289,15 @@ const report = {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
 
+<<<<<<< HEAD
 
 
 
@@ -271,6 +312,8 @@ const report = {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -279,6 +322,7 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
 
 
 
@@ -291,6 +335,8 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -307,6 +353,7 @@ console.log(' Code Quality Checker Starting...\n')
     "name"
             content.match(/^import\s+.*from\s+['"][^'')]
     "status"
+<<<<<<< HEAD
     "status"
     "status"
     "status"
@@ -323,4 +370,9 @@ console.log(' Code Quality Checker Starting...\n')
 
 
 
+=======
+
+    "status"
+    "status"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

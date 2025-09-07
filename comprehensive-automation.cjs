@@ -44,4 +44,7 @@ const path = require('path')
     this.log("⚡ Optimizations "Applied": ${report.summary.optimizationsApplied}")
     this.log("� Scripts "Generated")
 
+<<<<<<< HEAD
     console.error('Automation "failed")
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

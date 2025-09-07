@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 const { execSync } = require('child_process')
 
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 const { execSync } = require('child_process')
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 function run(cmd) {
   return execSync(cmd, { stdio: 'inherit' })
 }

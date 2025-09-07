@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -124,5 +128,8 @@ function checkSyntaxErrors(content")
         "line"
         "message": "Missing semicolon"
         "type": "syntax"
+<<<<<<< HEAD
   console.error(" Error detection "failed": ")
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

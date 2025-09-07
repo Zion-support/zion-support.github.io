@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
         console.log('⚡ Optimizing loading performance...')
@@ -7,6 +8,9 @@ const path = require('path')
         console.log('� Optimizing mobile experience...')
         this.improvements.push('Mobile optimization completed')
             "recommendations"
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');

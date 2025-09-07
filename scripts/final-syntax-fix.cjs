@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 
+=======
+
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Final Syntax Fix');
+console.log('
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -59,7 +70,10 @@ const filesToFix = [
 
 let totalFixed = 0;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
@@ -84,4 +98,7 @@ for (const file of filesToFix) {
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
 
+<<<<<<< HEAD
 console.log('🎉 Final syntax fix completed!');
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

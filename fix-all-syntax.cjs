@@ -15,7 +15,11 @@ function fixFile(filePath) {
       },
       // Fix merge conflict markers
       {
+<<<<<<< HEAD
         pattern: /[\s\S]*?[\s\S]*?
+=======
+        pattern: /
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
         replacement: ''
       },
       // Fix malformed function calls and syntax

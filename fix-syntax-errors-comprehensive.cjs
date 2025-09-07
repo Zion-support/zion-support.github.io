@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 /**
@@ -23,6 +24,9 @@ function fixFile(filePath, description, fixFunction) {
     
 console.log('🔧 Starting comprehensive syntax error fixing...');
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 // Function to fix common syntax errors
 function fixSyntaxErrors(content, filePath) {
     let fixes = 0;
@@ -78,10 +82,13 @@ function fixSyntaxErrors(content, filePath) {
         </div>
     );`;
     });
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
@@ -93,7 +100,10 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
 
     // Fix missing semicolons
+<<<<<<< HEAD
     content = content.replace(/([^;}])\s*$/gm, '$1;');
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
     // Fix malformed object destructuring
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
@@ -127,6 +137,7 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
     );
 });
 
+<<<<<<< HEAD
 
 
     // Fix missing semicolons at end of statements
@@ -236,6 +247,16 @@ async function main() {
 
 
 
+=======
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
+
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
@@ -244,6 +265,7 @@ async function main() {
     
     return fixed;
 });
+<<<<<<< HEAD
 
 // Fix PerformanceMonitor syntax
 fixFile('components/PerformanceMonitor.tsx', 'PerformanceMonitor syntax', (content) => {
@@ -340,6 +362,8 @@ console.log('\n🎯 Syntax error fixing completed!');
     // Fix missing closing parentheses
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
     if (openParens > closeParens) {
       const missingParens = openParens - closeParens;
@@ -401,5 +425,8 @@ console.log('\n🎯 Syntax error fixing completed!');
   }
 }
 
+<<<<<<< HEAD
 console.log('\n🎯 Syntax error fixing completed!');
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

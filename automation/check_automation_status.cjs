@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -20,7 +24,10 @@ async function checkAutomationStatus() {
     try {
       const pm2List = execSync('pm2 jlist', { encoding: 'utf8' });
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   const statusReport = {
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
@@ -34,18 +41,25 @@ async function checkAutomationStatus() {
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
 
       const runningProcesses = pm2Data.filter(
         proc => proc.pm2_env && proc.pm2_env.status === 'online'
       );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     } catch (error) {
       
     } catch (error) {
@@ -53,6 +67,7 @@ async function checkAutomationStatus() {
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
     } catch (error) {
       console.log('⚠️  PM2 not available or no processes running');
+<<<<<<< HEAD
     } catch (error) {
       
     } catch (error) {
@@ -74,12 +89,15 @@ async function checkAutomationStatus() {
       
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
       statusReport.pm2Processes = [];
     }
 
     // Check automation scripts
 
+<<<<<<< HEAD
 
     console.log('📋 Checking automation scripts...');
     const automationScripts = [
@@ -87,11 +105,14 @@ async function checkAutomationStatus() {
 
 
     
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
       'automation/security-scanner.cjs',
 
+<<<<<<< HEAD
 
       'automation/master-orchestrator.cjs',
       'automation/master-orchestrator.cjs',
@@ -107,6 +128,8 @@ async function checkAutomationStatus() {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       'automation/health-check.cjs',
       'automation/security-scanner.cjs',
       'automation/code-quality-monitor.cjs',
@@ -118,10 +141,13 @@ async function checkAutomationStatus() {
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
         name: script,
         exists,
         path: scriptPath
@@ -149,10 +175,13 @@ async function checkAutomationStatus() {
       platform: process.platform,
     };
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
         "name": script,
         exists,
         isExecutable,
@@ -170,6 +199,7 @@ async function checkAutomationStatus() {
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
 
+<<<<<<< HEAD
 
 
 
@@ -205,12 +235,17 @@ async function checkAutomationStatus() {
 
 
 
+=======
+    }
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
+<<<<<<< HEAD
     
     
     
@@ -221,6 +256,8 @@ async function checkAutomationStatus() {
 
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     console.log('📋 Checking system health...');
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
@@ -254,7 +291,10 @@ async function checkAutomationStatus() {
 
     // Save report
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -267,12 +307,16 @@ async function checkAutomationStatus() {
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
+<<<<<<< HEAD
     console.log('📊 Status Report:');
     console.log(`   Overall Status: ${statusReport.overallStatus}`);
     console.log(`   PM2 Processes: ${runningProcesses.length} running`);
@@ -283,6 +327,8 @@ async function checkAutomationStatus() {
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
     return statusReport;
   } catch (error) {
@@ -299,14 +345,18 @@ async function checkAutomationStatus() {
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     statusReport.overallStatus = 'error';
   }
 
   return statusReport;
 }
+<<<<<<< HEAD
 
 
 
@@ -316,6 +366,12 @@ if (require.main === module) {
 
 
 
+=======
+
+// Run if called directly
+
+if (require.main === module) {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
   checkAutomationStatus()
     .then(() => {
@@ -329,6 +385,7 @@ if (require.main === module) {
 
 module.exports = { checkAutomationStatus };
 
+<<<<<<< HEAD
 
 
 
@@ -337,6 +394,8 @@ module.exports = { checkAutomationStatus };
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -357,6 +416,7 @@ module.exports = checkAutomationStatus;
 
 module.exports = checkAutomationStatus;
 
+<<<<<<< HEAD
 
 
 
@@ -365,3 +425,5 @@ module.exports = checkAutomationStatus;
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

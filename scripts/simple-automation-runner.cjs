@@ -106,9 +106,12 @@ const path = require('path')
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
+<<<<<<< HEAD
       
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
       return size}}
 
@@ -148,7 +151,10 @@ module.exports = { runSimpleAutomation }) {
 
 module.exports = { runSimpleAutomation }}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
     "overallStatus"

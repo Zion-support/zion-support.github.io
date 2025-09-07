@@ -1,52 +1,44 @@
 export const metadata = {
-  title: 'Ai Chatbot | Zion Tech Group',
-  description: 'Professional ai chatbot services for your business needs.',
-  keywords: 'ai-chatbot, services, business, technology'
+  title: 'AI Chatbot Development | Zion Tech Group',
+  description: 'Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.',
+  keywords: 'ai-chatbot, chatbot development, AI assistants, customer support, automation, NLP'
 };
 
-export default function ServicePage() {
+export default function AIChatbotPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Chatbot
+            AI Chatbot Development
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai chatbot services for your business needs.
+            Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Natural Language Processing</h3>
+            <p className="text-gray-300">Advanced NLP capabilities for understanding and responding to user queries naturally.</p>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Multi-Channel Integration</h3>
+            <p className="text-gray-300">Deploy across websites, mobile apps, social media, and messaging platforms.</p>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Integrations</h3>
+            <p className="text-gray-300">Seamlessly integrate with your existing CRM, helpdesk, and business systems.</p>
           </div>
+        </div>
+
+        <div className="text-center">
+          <a
+            href="/contact"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-300"
+          >
+            Get Started Today
+          </a>
         </div>
       </div>
     </div>

@@ -1,9 +1,4 @@
-import React from 'react',;
-import Head from 'next/head',;
-;
-export default function GovernanceCreatePage() {;
-  return (;
-    <>;
+import React from 'react',import Head from 'next/head',export default function GovernanceCreatePage() {return (<>;
       <Head>;
         <title>Create Proposal - Zion Tech Group</title>;
         <meta name="description" content="Create a new governance proposal" />;
@@ -17,5 +12,4 @@ export default function GovernanceCreatePage() {;
         </div>;
       </div>;
     </>;
-  );
-}
+  )}

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 class AppImprovementAutomation {}
   constructor() {}
@@ -91,7 +98,10 @@ class AppImprovementAutomation {}
       };
     };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     const reportPath = path.join(this.projectRoot, 'improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Improvement report generated: ${reportPath}`);
@@ -119,4 +129,7 @@ if (require.main === module) {}
   automation.run();
 };
 
+<<<<<<< HEAD
 module.exports = AppImprovementAutomation;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

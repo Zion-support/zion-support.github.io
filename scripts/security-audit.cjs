@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -33,4 +34,6 @@ if (require.main === module) {
 }
 
 module.exports = SecurityAuditor;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

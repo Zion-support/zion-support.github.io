@@ -119,6 +119,9 @@ async function main() {}
 main().catch(err => {})
   console.error('"Error": ', err.message);
   process.exit(1)}
+<<<<<<< HEAD
 
 });
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

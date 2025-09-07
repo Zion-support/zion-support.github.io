@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 
 
 
@@ -12,6 +16,8 @@ const { execSync } = require('child_process');
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -19,30 +25,41 @@ const { promisify } = require("util");
 
 const execAsync = promisify(exec);
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
     this.ensureLogsDir();
   }
 
+<<<<<<< HEAD
 
 
 
   log(message) {
 
 
+=======
+  log(message) {
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 class MasterAutomation {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'master-automation.log');
@@ -53,12 +70,15 @@ class MasterAutomation {}
     ];
   };
   log(message) {}
+<<<<<<< HEAD
 
 
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
@@ -67,7 +87,10 @@ class MasterAutomation {}
   }
 
   log(message, type = 'info') {
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -92,6 +115,7 @@ class MasterAutomation {}
     fs.appendFileSync(logFile, logMessage + '\n');
   }
 
+<<<<<<< HEAD
   async runCommand(command, description) {
   async runCommand(command, description) {
 
@@ -107,6 +131,8 @@ class MasterAutomation {}
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -115,6 +141,7 @@ class MasterAutomation {}
         stdio: 'pipe',
       });
 
+<<<<<<< HEAD
 
     try {
       const { stdout, stderr } = await execAsync(command, { 
@@ -133,6 +160,8 @@ class MasterAutomation {}
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -142,14 +171,20 @@ class MasterAutomation {}
         ...options}
 });
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       return { success: true, stdout, stderr };
     } catch (error) {}
       this.log(`Command failed: ${command} - ${error.message}`);
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       return { 
         success: false, 
         stdout: error.stdout || "", 
@@ -236,6 +271,7 @@ class MasterAutomation {}
     }
   }
 
+<<<<<<< HEAD
 
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
@@ -245,6 +281,25 @@ class MasterAutomation {}
     }
   }
 
+=======
+  async runBuildProcess() {
+    this.log('🚀 Starting build process...');
+
+    const steps = [
+      { command: 'npm install', description: 'Installing dependencies' },
+      { command: 'npm run build', description: 'Building application' },
+      { command: 'npm run test:smoke', description: 'Running smoke tests' },
+    ];
+
+    const results = [];
+    for (const step of steps) {
+      const result = await this.runCommand(step.command, step.description);
+      results.push({ ...step, result });
+
+      if (!result.success) {
+        this.log(`❌ Build process failed at: ${step.description}`, 'error');
+        return { success: false, results };
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
       }
     }
@@ -253,6 +308,7 @@ class MasterAutomation {}
     return { success: true, results };
   }
 
+<<<<<<< HEAD
       }
     } else {
       this.log("Failed to get PM2 process list");
@@ -260,6 +316,8 @@ class MasterAutomation {}
     }
   }
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
@@ -267,8 +325,11 @@ class MasterAutomation {}
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       return {}
         success: false,
         stdout: error.stdout || '',
@@ -375,6 +436,7 @@ class MasterAutomation {}
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {}
       this.log('PM2 is not running, attempting to start processes...');
+<<<<<<< HEAD
       await this.startPM2Processes();
       return;
     };
@@ -382,12 +444,15 @@ class MasterAutomation {}
     const processes = await this.monitorProcesses();
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
     if (runningProcesses < expectedProcesses) {
       this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
       await this.restartPM2Processes();
     } else {
       this.log("All processes are running normally");
+<<<<<<< HEAD
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
@@ -523,6 +588,8 @@ class MasterAutomation {}
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
     if (runningProcesses < expectedProcesses) {}
       this.log()
@@ -544,6 +611,7 @@ class MasterAutomation {}
         "lintFixer": await this.getPM2Logs('lint-fixer', 20),
         "buildMonitor": await this.getPM2Logs('build-monitor', 20),
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
+<<<<<<< HEAD
 
 
       return { 
@@ -624,6 +692,9 @@ class MasterAutomation {}
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       await this.startPM2Processes();
       return;
     }
@@ -633,6 +704,7 @@ class MasterAutomation {}
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
 
+<<<<<<< HEAD
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -655,6 +727,8 @@ class MasterAutomation {}
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 
     // Calculate summary
@@ -675,6 +749,7 @@ class MasterAutomation {}
 
     this.log(`📄 Report saved to: ${reportFile}`);
     return report;
+<<<<<<< HEAD
 
   }
   async start() {
@@ -696,6 +771,9 @@ class MasterAutomation {}
       fs.mkdirSync(logsDir, { recursive: true });
     }
     // Start PM2 processes
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   };
   async start() {}
     this.log('Master Automation started');
@@ -742,44 +820,61 @@ if (require.main === module) {}
 
   switch (command) {}
     case 'start':
+<<<<<<< HEAD
       automation.start().catch(error => {})
         console.error('Master Automation "failed": ', error);
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case 'stop':
       automation.stop().catch(error => {})
         console.error('Failed to stop Master "Automation": ', error);
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case 'restart':
       automation.restartPM2Processes().catch(error => {})
         console.error('Failed to restart "processes": ', error);
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case 'status':
       automation.monitorProcesses().catch(error => {})
         console.error('Failed to get "status": ', error);
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case 'report':
       automation.generateReport().catch(error => {})
         console.error('Failed to generate report: ', error);
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
 
 
 
@@ -850,6 +945,8 @@ class MasterAutomation {
   }
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
@@ -863,6 +960,61 @@ class MasterAutomation {
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
+    }
+
+    this.log('✅ Quality checks completed');
+    return { success: true, results };
+  }
+
+  async runAutomationScripts() {
+    this.log('🤖 Running automation scripts...');
+
+    const scripts = [
+      {
+        command: 'node automation/ai-intelligent-code-analyzer.cjs',
+        description: 'AI Code Analyzer',
+      },
+      {
+        command: 'node automation/intelligent-git-workflow.cjs',
+        description: 'Git Workflow Automation',
+      },
+      {
+        command: 'node automation/advanced-performance-optimizer.cjs',
+        description: 'Performance Optimizer',
+      },
+      {
+        command: 'node automation/automated-test-runner.cjs',
+        description: 'Automated Test Runner',
+      },
+      {
+        command: 'node automation/security-auditor.cjs',
+        description: 'Security Auditor',
+      },
+      {
+        command: 'node automation/performance-monitor.cjs',
+        description: 'Performance Monitor',
+      },
+    ];
+
+    const results = [];
+    for (const script of scripts) {
+      const result = await this.runCommand(script.command, script.description);
+      results.push({ ...script, result });
+    }
+
+    this.log('✅ Automation scripts completed');
+    return { success: true, results };
+  }
+<<<<<<< HEAD
+
+
+
+
+
     }
 
     this.log('✅ Quality checks completed');
@@ -909,56 +1061,8 @@ class MasterAutomation {
     return { success: true, results };
   }
 
-
-
-
-
-    }
-
-    this.log('✅ Quality checks completed');
-    return { success: true, results };
-  }
-
-  async runAutomationScripts() {
-    this.log('🤖 Running automation scripts...');
-
-    const scripts = [
-      {
-        command: 'node automation/ai-intelligent-code-analyzer.cjs',
-        description: 'AI Code Analyzer',
-      },
-      {
-        command: 'node automation/intelligent-git-workflow.cjs',
-        description: 'Git Workflow Automation',
-      },
-      {
-        command: 'node automation/advanced-performance-optimizer.cjs',
-        description: 'Performance Optimizer',
-      },
-      {
-        command: 'node automation/automated-test-runner.cjs',
-        description: 'Automated Test Runner',
-      },
-      {
-        command: 'node automation/security-auditor.cjs',
-        description: 'Security Auditor',
-      },
-      {
-        command: 'node automation/performance-monitor.cjs',
-        description: 'Performance Monitor',
-      },
-    ];
-
-    const results = [];
-    for (const script of scripts) {
-      const result = await this.runCommand(script.command, script.description);
-      results.push({ ...script, result });
-    }
-
-    this.log('✅ Automation scripts completed');
-    return { success: true, results };
-  }
-
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
   async generateReport() {
     this.log('📊 Generating automation report...');
@@ -975,7 +1079,10 @@ class MasterAutomation {
       },
     };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -997,7 +1104,10 @@ class MasterAutomation {
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
@@ -1013,6 +1123,7 @@ class MasterAutomation {
       this.logsDir,
       `automation-report-${Date.now()}.json`
     );
+<<<<<<< HEAD
 
 
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -1027,6 +1138,9 @@ class MasterAutomation {
 
 
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
@@ -1035,9 +1149,12 @@ class MasterAutomation {
 
   async start() {
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -1067,6 +1184,7 @@ class MasterAutomation {
       this.log("Generating daily report.");
       await this.generateReport();
     }, 24 * 60 * 60 * 1000);
+<<<<<<< HEAD
 
 
 
@@ -1077,6 +1195,9 @@ class MasterAutomation {
 
 
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   }
 
   async status() {
@@ -1123,12 +1244,15 @@ class MasterAutomation {
     return status;
   }
 }
+<<<<<<< HEAD
 
     this.log('🎯 Starting Master Automation System...');
     const report = await this.generateReport();
     this.log('🏁 Master Automation completed');
     return report;
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
   }
 
@@ -1223,6 +1347,7 @@ class MasterAutomation {
 }
 // CLI interface
 
+<<<<<<< HEAD
 
 
 
@@ -1235,15 +1360,20 @@ class MasterAutomation {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
 
   switch (command) {
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -1304,13 +1434,15 @@ if (require.main === module) {}
       break;
     default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
 
-
   }
 }
 
 module.exports = MasterAutomation;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     case 'start':
       automation
         .start()
@@ -1335,6 +1467,7 @@ module.exports = MasterAutomation;
           process.exit(1);
         });
       break;
+<<<<<<< HEAD
     default:
       console.log('Usage: node master-automation.cjs [start|status]');
 
@@ -1369,6 +1502,19 @@ module.exports = MasterAutomation;
 module.exports = MasterAutomation;
 
 
+=======
+
+    default:
+      console.log('Usage: node master-automation.cjs [start|status]');
+
+      process.exit(1);
+
+  }
+}
+
+module.exports = MasterAutomation;
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
@@ -1376,6 +1522,7 @@ module.exports = MasterAutomation;
   };
 };
 module.exports = MasterAutomation;
+<<<<<<< HEAD
 module.exports = MasterAutomation;
 
 
@@ -1394,3 +1541,6 @@ module.exports = MasterAutomation;
 
 
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

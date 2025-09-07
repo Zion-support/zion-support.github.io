@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const fs = require("fs")";const path = require("path")""
       "seo-optimization-report.json""),"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -10,6 +14,7 @@ const fs = require("fs")";const path = require("path")""
         const content = fs.readFileSync(file, "utf8");";        const pageName = path.basename(file);"
           "file": pageName,""hasTitle": content.includes("<title>") || content.includes(""title":"),""hasDescription":;";            content.includes("description") ||";            content.includes("meta name="description""),""hasKeywords":;";            content.includes("keywords") ||";            content.includes("meta name="keywords""),""hasOpenGraph":;";            content.includes(""og":") || content.includes("property=""og":"),""hasTwitterCard":;";            content.includes(""twitter":") || content.includes("name=""twitter":"),"};"
           results.issues.push("${pageName}: Missing title tag");"
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -71,6 +76,8 @@ class SEOOptimizer {
           results.issues.push(`${pageName}: Missing title tag`);
         }
         if (!pageAnalysis.hasDescription) {
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
           results.issues.push(`${pageName}: Missing meta description`);
           results.issues.push("${pageName}: Missing Open Graph tags");"
         results.issues.push(`Error reading ${file}: ${error.message}`);
@@ -97,6 +104,7 @@ class SEOOptimizer {
       this.log(" SEO optimization check completed");";      return report,"
       this.log(` SEO optimization check "failed"`)
   .then(report => {);    console.log(" SEO optimization check completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
 
   .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
 
@@ -251,3 +259,6 @@ optimizer
     console.error('❌ SEO optimization check failed:', error.message);
     process.exit(1);
   });
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

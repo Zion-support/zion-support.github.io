@@ -2,29 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Meeting Assistant | Zion Tech Group',
-  description: 'Revolutionary AI meeting platform with real-time transcription, intelligent summaries, and action item extraction. Transform your meetings with 95% accuracy and 50% time savings.',
-  keywords: 'AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings'
+  title: 'Ai Meeting Assistant | Zion Tech Group',
+  description: 'Professional ai meeting assistant services for your business needs.',
+  keywords: 'ai-meeting-assistant, services, business, technology'
 };
 
-function TestimonialCard({ quote, author, role, company }: {
-  quote: string;
-  author: string;
-  role: string;
-  company: string;
-}) {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-lg">
-      <p className="text-gray-600 mb-4 italic">"{quote}"</p>
-      <div>
-        <p className="font-semibold text-gray-900">{author}</p>
-        <p className="text-sm text-gray-500">{role}, {company}</p>
-      </div>
-    </div>
-  );
-}
-
-export default function AIMeetingAssistantPage() {
+export default function ServicePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -72,18 +55,18 @@ export default function AIMeetingAssistantPage() {
               Get instant, accurate transcription of all your meetings with 95% accuracy in multiple languages.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="text-3xl mb-4">📝</div>
-            <h3 className="text-xl font-semibold mb-3">Smart Summaries</h3>
-            <p className="text-gray-600">
-              Automatically generate concise meeting summaries highlighting key decisions and outcomes.
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="text-3xl mb-4">✅</div>
-            <h3 className="text-xl font-semibold mb-3">Action Items</h3>
-            <p className="text-gray-600">
-              Extract and track action items automatically, ensuring nothing falls through the cracks.
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai meeting assistant solutions run smoothly.
             </p>
           </div>
         </div>
@@ -106,24 +89,33 @@ export default function AIMeetingAssistantPage() {
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <TestimonialCard
-            quote="The AI Meeting Assistant has transformed our client meetings. We never miss important details and our follow-up is 100% accurate."
-            author="Jennifer Martinez"
-            role="Account Director"
-            company="Marketing Agency Pro"
-          />
-          <TestimonialCard
-            quote="Our team meetings are now 50% more productive. The action item extraction is incredibly accurate and saves us hours of manual work."
-            author="David Kim"
-            role="Engineering Manager"
-            company="TechCorp Solutions"
-          />
-          <TestimonialCard
-            quote="As a consultant, this tool is invaluable. I can focus on the conversation knowing that every detail is being captured perfectly."
-            author="Lisa Thompson"
-            role="Management Consultant"
-            company="Strategic Insights LLC"
-          />
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <blockquote className="text-gray-600 mb-4">
+              &ldquo;The AI Meeting Assistant has transformed our client meetings. We never miss important details and our follow-up is 100% accurate.&rdquo;
+            </blockquote>
+            <div>
+              <p className="font-semibold text-gray-900">Jennifer Martinez</p>
+              <p className="text-sm text-gray-500">Account Director, Marketing Agency Pro</p>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <blockquote className="text-gray-600 mb-4">
+              &ldquo;Our team meetings are now 50% more productive. The action item extraction is incredibly accurate and saves us hours of manual work.&rdquo;
+            </blockquote>
+            <div>
+              <p className="font-semibold text-gray-900">David Kim</p>
+              <p className="text-sm text-gray-500">Engineering Manager, TechCorp Solutions</p>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <blockquote className="text-gray-600 mb-4">
+              &ldquo;As a consultant, this tool is invaluable. I can focus on the conversation knowing that every detail is being captured perfectly.&rdquo;
+            </blockquote>
+            <div>
+              <p className="font-semibold text-gray-900">Lisa Thompson</p>
+              <p className="text-sm text-gray-500">Management Consultant, Strategic Insights LLC</p>
+            </div>
+          </div>
         </div>
       </section>
 

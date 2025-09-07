@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 console.log('🧹 Starting Final Cleanup...');
 
 // Function to clean merge conflict markers
@@ -10,6 +11,10 @@ function cleanMergeConflicts(content) {
     .replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?
     .replace(/^<<<<<<< [^\n]+$/gm, '')
     .replace(/^$/gm, '')
+=======
+    .replace(/<<<<<<< [^\n]+[\s\S]*?
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     .replace(/^
 }
 
@@ -45,6 +50,7 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     let cleaned = cleanMergeConflicts(content);
     cleaned = cleanSyntaxErrors(cleaned);
+<<<<<<< HEAD
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
       findConflictedFiles(filePath, conflictedFiles);
@@ -98,3 +104,19 @@ const endTime = Date.now();
 console.log(`✅ Final cleanup completed!`);
 console.log(`📁 Processed ${processedFiles} files`);
 console.log(`⏱️  Took ${endTime - startTime}ms`);
+=======
+
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+  content = content.replace(/
+  content = content.replace(/
+  
+  // Clean up any remaining artifacts
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  
+  // Remove any remaining conflict markers
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

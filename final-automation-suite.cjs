@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -7,6 +8,7 @@ const { execSync } = require('child_process');
 class FinalAutomationSuite {
   constructor() {
     this.projectRoot = process.cwd();
+
     this.startTime = new Date();
     this.results = {
       scripts: [],
@@ -125,6 +127,7 @@ export default TestimonialCard;
   }
 
   async runTests() {
+
     this.log('Running tests...', 'PROGRESS');
     
     try {
@@ -145,6 +148,7 @@ export default TestimonialCard;
   }
 
   async buildProject() {
+
     this.log('Building project...', 'PROGRESS');
     
     try {
@@ -299,5 +303,6 @@ if (require.main === module) {
   const suite = new FinalAutomationSuite();
   suite.run().catch(console.error);
 }
+
 
 module.exports = FinalAutomationSuite;

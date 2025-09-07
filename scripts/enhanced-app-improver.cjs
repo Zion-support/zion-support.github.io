@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     console.log(" Enhanced App Improver Starting...");""
       console.error(" Error during "improvements":", error.message);"}"
@@ -103,6 +107,7 @@ module.exports = DeploymentAutomation";"
     console.log("\\n Fixes "Applied":");";    this.fixes.forEach(fix => {);      console.log(" ${fix}");"
       "timestamp": new Date().toISOString(),""improvements": this.improvements,""fixes": this.fixes,""summary": {""totalImprovements": this.improvements.length,""totalFixes": this.fixes.length,,"}
     fs.writeFileSync();      path.join(this.projectRoot, "enhanced-app-improvement-report.json"),";      JSON.stringify(report, null, 2);"
+<<<<<<< HEAD
 
     console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
 
@@ -796,3 +801,6 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedAppImprover;
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

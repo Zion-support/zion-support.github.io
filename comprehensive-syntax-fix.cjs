@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -5,12 +6,19 @@ const path = require('path')
   // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
   content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
   content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, '$"1": "$2"
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
+
+          content = content.replace(/
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 console.log('🔧 Running comprehensive syntax fix...');
 
@@ -265,16 +273,15 @@ for (const fix of fixes) {
 }
 
 console.log(`✅ Fixed ${fixedCount} files`);
+<<<<<<< HEAD
 
 const { execSync } = require('child_process');
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureReportsDir();
-  }
+          content = content.replace(/
 
+<<<<<<< HEAD
   ensureReportsDir() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
@@ -374,3 +381,5 @@ class ComprehensiveSyntaxFixer {
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

@@ -1,51 +1,38 @@
+<<<<<<< HEAD
 
 import React from "react";
 export type Badge = any;
 
+=======
+<<<<<<< HEAD
+
+import React from "react";
+export type Badge = any;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 import React from 'react';
   id: string;
 label: string;
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
 
-export function currentBadge(balance: number): Badge | null {;
-
-  let current: Badge | null = null;
-threshold: number, //token balance threshold 
-};
-const BADGES: Badge[] = [;
-  { id: 'starter', label: 'Starter', threshold: 50 },;
-  { id: 'rising', label: 'Rising Star', threshold: 200 },;
-  { id: 'pro', label: 'Pro', threshold: 500 },;
-  { id: 'elite', label: 'Elite', threshold: 1000 },;
-];
-
-import React from "react";
-
-export type Badge = {
-  id: string,
-  label: string,
-  threshold: number, // token balance threshold
-};
-const BADGES: Badge[] = [
-  { id: "starter", label: "Starter", threshold: 50 },
-  { id: "rising", label: "Rising Star", threshold: 200 },
-  { id: "pro", label: "Pro", threshold: 500 },
-  { id: "elite", label: "Elite", threshold: 1000 }],
-export function currentBadge(balance: number): Badge | null {
-  let current: Badge | null = null,
-
-import React from 'react';
 ;
-  id: string;
+import React from 'react';
+export type Badge = any;id: string;
+label: string;export function currentBadge(balance: number): Badge | null {let current: Badge | null = null;
+threshold: number, //token balance threshold;
+}const BADGES: Badge[] = [;
+  { id: 'starter', label: 'Starter', threshold: 50 },{ id: 'rising', label: 'Rising Star', threshold: 200 },{ id: 'pro', label: 'Pro', threshold: 500 },{ id: 'elite', label: 'Elite', threshold: 1000 },];export type Badge = {id: string,label: string,threshold: number, // token balance threshold;
+}const BADGES: Badge[] = [;
+  { id: "starter", label: "Starter", threshold: 50 },{ id: "rising", label: "Rising Star", threshold: 200 },{ id: "pro", label: "Pro", threshold: 500 },{ id: "elite", label: "Elite", threshold: 1000 }],export function currentBadge(balance: number): Badge | null {let current: Badge | null  = null,id: string;
 label: string;
 threshold: number, //token balance threshold;
 }
-  return (
-    <div className='flex gap - 2 items - center flex - wrap'>;
+  return (<div className='flex gap - 2 items - center flex - wrap'>;
       {BADGES.map (boolean => (        <span;
           key={b.id}
-          className={`px - 3 py - 1 rounded - full text - xs border ${
-            balance >= b.threshold;
+          className={`px - 3 py - 1 rounded - full text - xs border ${balance >= b.threshold;
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
+<<<<<<< HEAD
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null,
 
   for (const b of BADGES) {
@@ -55,21 +42,35 @@ if (current = b) {
 }
 
   return current;
+<<<<<<< HEAD
 
 export default function Badges(): any ({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
   return (
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
-export default function Badges(): any ({ balance }: { balance: number }) {;
+
+export default function Badges({ balance }: { balance: number }) {
   const active = currentBadge(balance);
   return (
-    <div className='flex gap-2 items-center flex-wrap'>;
-      {BADGES && BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
-      {BADGES && BADGES.map((b) => (;
+<div className='flex gap-2 items-center flex-wrap'>
+      {BADGES.map(b => (
         <span
-          key={b && b.id}
+          key={b.id}
           className={`px-3 py-1 rounded-full text-xs border ${
-            balance>= b && b.threshold;
+            balance >= b.threshold
+
+? 'bg-yellow-100 border-yellow-300 text-yellow-800'
+              : 'bg-gray-100 border-gray-200 text-gray-500'
+=======
+              : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null,for (const b of BADGES) {// Check condition;
+if (current = b) {$2;
+}return current;export default function Badges(): any ({ balance }: { balance: number }) {const active = currentBadge(balance)return (export default function Badges(): any ({ balance }: { balance: number }) {const active = currentBadge(balance)return (<div className='flex gap-2 items-center flex-wrap'>;
+      {BADGES && BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
+      {BADGES && BADGES.map((b) => (<span;
+          key={b && b.id}
+          className={`px-3 py-1 rounded-full text-xs border ${balance>= b && b.threshold;
               ? 'bg-yellow-100 border-yellow-300 text-yellow-800';
               : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800";
               : "bg-gray-100 border-gray-200 text-gray-500";
@@ -79,35 +80,29 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
           {b && b.label}
         </span>;
       ))}
-      {active && (;
-        <span className='ml-2 text-xs text-green-600'>;
+      {active && (<span className='ml-2 text-xs text-green-600'>;
           Current: {active && active.label}
         </span>;
       )}
       )}
     </div>;
-  );
-}
-              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
-              : "bg-gray-100 border-gray-200 text-gray-500"
+  )}
+              ? "bg-yellow-100 border-yellow-300 text-yellow-800";
+              : "bg-gray-100 border-gray-200 text-gray-500";
   }
   return current;
 }
-export default /**
- * Badges - Function description
- */
-function Badges() {
-  const active = current_badge (balance);
-  return (
-    <div className='flex gap - 2 items - center flex - wrap'>;
+export default /**;
+ * Badges - Function description;
+ */;
+function Badges() {const active = current_badge (balance)return (<div className='flex gap - 2 items - center flex - wrap'>;
       {BADGES.map (boolean => (    <div className="flex gap - 2 items-center flex-wrap">;
-      {BADGES.map ((b) => (
-        <span;
+      {BADGES.map ((b) => (<span;
           key={b.id}
-          className={`px - 3 py - 1 rounded - full text - xs border ${
-            balance >= b.threshold;
+          className={`px - 3 py - 1 rounded - full text - xs border ${balance >= b.threshold;
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
+<<<<<<< HEAD
               : "bg - gray - 100 border - gray - 200 text - gray - 500";
 
 export default function Badges({ balance }: { balance: number }) {;
@@ -124,23 +119,53 @@ export default function Badges({ balance }: { balance: number }) {
           className={`px-3 py-1 rounded-full text-xs border ${
             balance >= b.threshold
 
+=======
+              : "bg - gray - 100 border - gray - 200 text - gray - 500";export default function Badges() {export default function Badges() {const active  = currentBadge(balance)return (<div className='flex gap-2 items-center flex-wrap'>;
+      {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
+      {BADGES.map((b) => (export default function Badges() {const active = currentBadge(balance)return (<div className='flex gap-2 items-center flex-wrap'>;
+      {BADGES.map(b => (<span;
+          key={b.id}
+          className={`px-3 py-1 rounded-full text-xs border ${balance >= b.threshold;
+? 'bg-yellow-100 border-yellow-300 text-yellow-800';
+              : 'bg-gray-100 border-gray-200 text-gray-500';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >;
           {b.label}
         </span>))}
+<<<<<<< HEAD
       {active && (
   );
+=======
+<<<<<<< HEAD
+      {active && (
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
-}
-  );
-
-        <span className='ml - 2 text - xs text - green - 600'>;
-          Current: {active.label}
-
-        <span className='ml - 2 text - xs text - green - 600'>;
+<span className='ml-2 text-xs text-green-600'>
+=======
+      {active && ()}
+  )<span className='ml - 2 text - xs text - green - 600'>;
+          Current: {active.label}<span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
         </span>)}
+<<<<<<< HEAD
     </div>);        <span className="ml - 2 text - xs text-green-600">Current: {active.label}</span>)}
     </div>);
 }
+=======
+    </div>)<span className="ml - 2 text - xs text-green-600">Current: {active.label}</span>)}
+    </div>)}<span className='ml-2 text-xs text-green-600'>;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+          Current: {active.label}
+        </span>;
+      )}
+<<<<<<< HEAD
+    </div>
+  );
+=======
+    </div>;
+  )
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

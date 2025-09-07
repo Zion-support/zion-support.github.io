@@ -6,7 +6,11 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+=======
+    if (content.includes('') || content.includes('>>>>>>>')) {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       console.log(`Fixing merge conflicts in: ${filePath}`);
       
       // Simple merge conflict resolution - take the HEAD version
@@ -19,10 +23,13 @@ function fixMergeConflicts(filePath) {
         const line = lines[i];
         
         if (line.includes('')) {
+<<<<<<< HEAD
           inConflict = true;
           takeHead = true;
           continue;
         } else if (line.includes('')) {
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
           takeHead = false;
           continue;
         } else if (line.includes('>>>>>>>')) {

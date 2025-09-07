@@ -9,4 +9,7 @@ const path = require('path')
         "severity"
         "name"
 
+<<<<<<< HEAD
         "severity"
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

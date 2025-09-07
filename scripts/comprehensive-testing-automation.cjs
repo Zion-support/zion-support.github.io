@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -53,6 +56,7 @@ const { execSync } = require('child_process')
       { "component": 'ContactForm', "status"}
       { "component": 'ErrorBoundary', "status"}
       { "component": 'PerformanceMonitor', "status"}
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -314,3 +318,5 @@ if (require.main === module) {
 
 module.exports = ComprehensiveTestingAutomation;
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

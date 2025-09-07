@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -109,5 +113,8 @@ this.log("� Report "generated": ${reportFile}")
   this.log(" Starting Build Error Detector...")
   this.log("� Build check passed successfully!")
         return { "success": true, "errors": [], "fixed"}
+<<<<<<< HEAD
       this.log("� Build Error Detector completed!")
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

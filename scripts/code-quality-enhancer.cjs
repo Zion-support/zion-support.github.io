@@ -15,6 +15,7 @@ s*(w+)/g, '
       improvements.push('Arrow functions optimized')
       improvements.push('Semicolons added')
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+<<<<<<< HEAD
 
       // Skip directories that can'
 
@@ -626,3 +627,6 @@ if (require.main === module) {
 }
 
 module.exports = CodeQualityEnhancer;
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

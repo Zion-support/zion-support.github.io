@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 #!/usr/bin/env node;
 ;
 >
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const fs = require('fs');
 const path = require('path');
 

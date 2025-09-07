@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 console.log('🔧 Fixing remaining syntax errors...');
 
 // Fix specific files with known issues
@@ -12,6 +13,9 @@ const filesToFix = [
     'src/components/talent/TalentCard.jsx'
 
 ];
+=======
+function fixFile(filePath) {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
@@ -146,6 +150,7 @@ function fixFilesInDirectory(dirPath) {}
     
     const handleRequestHire = (talentId) => {
         // Handle hire request logic here
+<<<<<<< HEAD
 
     if (stat.isDirectory()) {}
       fixedCount += fixFilesInDirectory(filePath);
@@ -240,3 +245,6 @@ walkDir('./pages');
 
 console.log('Remaining syntax error fixing completed!');
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

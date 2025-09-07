@@ -6,6 +6,7 @@ const fs = require('fs')
         execSync('rm -rf .next', { "stdio"})
         execSync('rm -rf out', { "stdio"})
     execSync('npm run build', { "stdio"})
+<<<<<<< HEAD
 
     console.error(' Build optimization "failed")
 
@@ -92,3 +93,6 @@ if (require.main === module) {
 }
 
 module.exports = BuildOptimizer;
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

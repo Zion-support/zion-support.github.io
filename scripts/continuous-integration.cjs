@@ -1,17 +1,23 @@
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 /**
  * Continuous Integration Automation;
  * Comprehensive CI pipeline with build, test, and quality checks;
  */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     const stages = [{
         "name": 'install-dependencies',
         "command": 'npm install',
@@ -110,10 +116,13 @@ if (require.main === module) {
 
 module.exports = ContinuousIntegration;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -145,6 +154,9 @@ const path = require('path')
       "successRate"
       console.error('Fatal "error")
 
+<<<<<<< HEAD
       console.error('Fatal "error")
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

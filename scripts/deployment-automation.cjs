@@ -16,6 +16,7 @@ const { execSync } = require('child_process')
     this.deployments.push('Created Dockerfile')
     this.log('Created Dockerfile', 'SUCCESS')
     const dockerCompose = ""version"
+<<<<<<< HEAD
 
 
     console.error('Deployment automation "failed")
@@ -561,3 +562,6 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
 const automation = new DeploymentAutomation();
 automation.run();
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

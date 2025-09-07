@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
@@ -26,6 +29,7 @@ if (missing.length > 0) {;}
 ;
 console.log("[pre-build-health-check] OK");
 process.exit(0);
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node
@@ -41,6 +45,8 @@ process.exit(0);
 
 #!/usr/bin/env node
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 // Minimal pre-build health check stub to unblock builds
 try {
@@ -51,12 +57,15 @@ try {
 	process.exit(0);
 }
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node
 // Minimal pre-build health check to unblock CI builds.
 // Extensible: add real checks as needed.
@@ -68,6 +77,7 @@ try {
 	process.exit(0);
 }
 
+<<<<<<< HEAD
 
 
 
@@ -79,3 +89,5 @@ try {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

@@ -17,6 +17,7 @@
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
 
+<<<<<<< HEAD
 
 
 
@@ -25,6 +26,8 @@ fixer.run().catch(console.error);
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

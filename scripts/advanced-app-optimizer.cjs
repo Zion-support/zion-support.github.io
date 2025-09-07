@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 ;const fs = require('fs');
 const path = require('path');
@@ -339,6 +342,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')
       this.log(` Total "optimizations"`)
       this.log(` Advanced App Optimization "failed"`)
     console.error('Advanced App Optimization "failed")
+<<<<<<< HEAD
 
 
  * Comprehensive optimization for the application;
@@ -626,4 +630,6 @@ if (require.main === module) {
   optimizer.run().catch(console.error),,
 }
 module.exports = AdvancedAppOptimizer
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

@@ -51,14 +51,22 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
     if (!content.includes('') && !content.includes('') && !content.includes('
+=======
+    if (!content.includes('
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       return false;
     }
     
     console.log(`📝 Fixing merge conflicts in: ${filePath}`);
     
     // Strategy: Keep the newer version (after ) for most cases
+<<<<<<< HEAD
     content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
+=======
+    content = content.replace(/
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       // For version conflicts, prefer the newer version
       if (headContent.includes('"') && newContent.includes('"')) {
         return newContent.trim();
@@ -67,8 +75,12 @@ function resolveMergeConflicts(filePath) {
     });
     
     // Clean up any remaining conflict markers
+<<<<<<< HEAD
     content = content.replace(/[\s\S]*?
     content = content.replace(/[\s\S]*?
+=======
+    content = content.replace(/
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     
     fs.writeFileSync(filePath, content);
     return true;
@@ -99,7 +111,11 @@ function findConflictedFiles(dir) {
           // Check for merge conflict markers
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
             if (content.includes('') || content.includes('') || content.includes('
+=======
+            if (content.includes('
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
               conflictedFiles.push(fullPath);
             }
           } catch (err) {

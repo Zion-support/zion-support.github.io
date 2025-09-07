@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 
@@ -7,16 +8,24 @@
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
+<<<<<<< HEAD
 const execAsync = promisify(exec);
 const execAsync = promisify(exec);
 
 
 
 
+=======
+
+const execAsync = promisify(exec);
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 class BuildMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -35,6 +44,7 @@ const execAsync = promisify(exec);
 
 const execAsync = promisify(exec);
 
+<<<<<<< HEAD
 
 
 
@@ -44,6 +54,8 @@ const execAsync = promisify(exec);
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -54,6 +66,7 @@ class BuildMonitor {}
   log(message) {}
     const timestamp = new Date().toISOString();
 
+<<<<<<< HEAD
 
 
 
@@ -62,6 +75,8 @@ class BuildMonitor {}
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -71,11 +86,14 @@ class BuildMonitor {}
     try {}
       this.log('Starting build process...');
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       execSync('npm run clean', {
         cwd: this.projectRoot,
         stdio: 'ignore',
@@ -88,6 +106,7 @@ class BuildMonitor {}
         timeout: 300000,
       });
 
+<<<<<<< HEAD
 
 
 
@@ -102,6 +121,8 @@ class BuildMonitor {}
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
@@ -110,6 +131,10 @@ class BuildMonitor {}
 
       const endTime = Date.now();
       const duration = endTime - startTime;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       this.lastBuild = {
         timestamp: new Date().toISOString(),
         success: true,
@@ -119,10 +144,13 @@ class BuildMonitor {}
       const endTime = Date.now();
       const duration = endTime - startTime;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       const buildResult = {}
         "timestamp": new Date().toISOString(),
         duration,
@@ -137,11 +165,14 @@ class BuildMonitor {}
       this.lastBuildTime = new Date();
       this.log(`Build completed successfully in ${duration}ms`);
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       this.log(`Build completed successfully in ${buildTime}ms`);
       await this.saveBuildReport();
     } catch (error) {
@@ -152,6 +183,7 @@ class BuildMonitor {}
         error: error.message,
         output: error.stdout || error.stderr,
 
+<<<<<<< HEAD
 
 
 
@@ -166,6 +198,8 @@ class BuildMonitor {}
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       return buildResult;
     } catch (error) {}
       const endTime = Date.now();
@@ -184,11 +218,14 @@ class BuildMonitor {}
       };
       this.log(`Build failed after ${duration}"ms": ${error.message}`);
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   async handleBuildFailure(error) {
     this.log('Handling build failure...');
     try {
@@ -216,6 +253,7 @@ class BuildMonitor {}
       nodeVersion: process.version,
       platform: process.platform,
 
+<<<<<<< HEAD
 
 
 
@@ -230,6 +268,8 @@ class BuildMonitor {}
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       return buildResult;
     };
   };
@@ -241,11 +281,14 @@ class BuildMonitor {}
         "timeout": 60000}
 });
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   async reportBuildFailure(error) {
     try {
       const failureReport = {
@@ -263,6 +306,7 @@ class BuildMonitor {}
     } catch (_) {}
   }
 
+<<<<<<< HEAD
 
 
 
@@ -277,6 +321,8 @@ class BuildMonitor {}
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -368,6 +414,7 @@ class BuildMonitor {}
     try {}
       this.log('Optimizing build...');
 
+<<<<<<< HEAD
 
 
 
@@ -382,6 +429,8 @@ class BuildMonitor {}
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       // Clean up first;
       await this.cleanupOldBuilds();
 
@@ -445,6 +494,7 @@ if (require.main === module) {}
     console.error('Build Monitor "failed": ', error);
     process.exit(1);
   }
+<<<<<<< HEAD
 });
 };
 module.exports = BuildMonitor;
@@ -454,6 +504,12 @@ module.exports = BuildMonitor;
 
 
 
+=======
+
+});
+};
+module.exports = BuildMonitor;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 }
 const monitor = new BuildMonitor();
@@ -466,6 +522,7 @@ monitor.start().catch(error => {
 });
 };
 
+<<<<<<< HEAD
 
 
 });
@@ -474,3 +531,7 @@ monitor.start().catch(error => {
 module.exports = BuildMonitor;
 
 
+=======
+module.exports = BuildMonitor;
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const SystemAdministrationChat: NextPage = () => {return (<div>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -8,9 +16,9 @@ const SystemAdministrationChat: NextPage = () => {;
     <div>;
       <Head>;
         <title>SystemAdministrationChat - Zion Tech Solutions</title>;
-        <meta
-          name="description"
-          content="SystemAdministrationChat service"
+        <meta;
+          name="description";
+          content="SystemAdministrationChat service";
         />{" "}
       <main>
         <h1>SystemAdministrationChat</h1>
@@ -20,6 +28,7 @@ const SystemAdministrationChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
 
 
 
@@ -29,6 +38,35 @@ import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+      <main>;
+        <h1>SystemAdministrationChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+      </Head>;<main>;
+        <h1>SystemAdministrationChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  )}
+export default SystemAdministrationChat;const SystemAdministrationChat: NextPage = () => {return (<div>;
+      <Head>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+ursor/fix-website-loading-errors-and-merge-6662;
+  );
+}
+export default SystemAdministrationChat;
+
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 const SystemAdministrationChat: NextPage = () => {
   return (
@@ -41,17 +79,18 @@ const SystemAdministrationChat: NextPage = () => {
 
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const SystemAdministrationChat: NextPage = () => {
-  return (
-    <div>;
+const SystemAdministrationChat: NextPage = () => {return (<div>;
       <Head>;
         <title > SystemAdministrationChat - Zion Tech Solutions</title>;
         <meta;
@@ -64,15 +103,68 @@ const SystemAdministrationChat: NextPage = () => {
         <p > Service details coming soon...</p>;
         <a href="/services">Back to Services</a>;
       </main>;
+    </div>)}export default SystemAdministrationChat;<div>;
+      <Head>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <meta name=&quot;description&quot; content=&quot;SystemAdministrationChat service&quot; />;
+      </Head>;
+      <main>;
+        <h1>SystemAdministrationChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href=&quot;/services&quot;>Back to Services</a>;
+      </main>;
+    </div>;
+  )},export default SystemAdministrationChat;
+const SystemAdministrationChat: NextPage = () => {return (<div>;
+      <Head>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <meta;
+          name="description";
+          content="SystemAdministrationChat service";
+        />{" "}
+      </Head>;
+      <main>;
+        <h1>SystemAdministrationChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  )}
+export default SystemAdministrationChat;<title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
     </div>);
 }
 ;
 export default SystemAdministrationChat;
 ;
+<<<<<<< HEAD
+=======
+    <div>
+      <Head>
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;SystemAdministrationChat service&quot; />
+      </Head>
+      
+      <main>
+        <h1>SystemAdministrationChat</h1>
+        <p>Service details coming soon...</p>
+        <a href=&quot;/services&quot;>Back to Services</a>
+      </main>
+    </div>
+  )
+},
+
+export default SystemAdministrationChat
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

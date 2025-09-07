@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,8 @@
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -366,6 +369,7 @@ if ( {})
       console.error('Dependency management "failed": ', error);
       process.exit(1)})};
 module.exports = DependencyManager;
+<<<<<<< HEAD
 module.exports = DependencyManager;
 module.exports = DependencyManager;
 module.exports = DependencyManager;
@@ -382,4 +386,9 @@ module.exports = DependencyManager;
 
 
 
+=======
+
+module.exports = DependencyManager;
+module.exports = DependencyManager;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

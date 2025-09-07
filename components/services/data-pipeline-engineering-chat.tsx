@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const DataPipelineEngineeringChat: NextPage = () => {return (<div>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -8,9 +16,9 @@ const DataPipelineEngineeringChat: NextPage = () => {;
     <div>;
       <Head>;
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
-        <meta
-          name="description"
-          content="DataPipelineEngineeringChat service"
+        <meta;
+          name="description";
+          content="DataPipelineEngineeringChat service";
         />{" "}
       <main>
         <h1>DataPipelineEngineeringChat</h1>
@@ -20,6 +28,7 @@ const DataPipelineEngineeringChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
 
 
 
@@ -29,6 +38,35 @@ import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+      <main>;
+        <h1>DataPipelineEngineeringChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+      </Head>;<main>;
+        <h1>DataPipelineEngineeringChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  )}
+export default DataPipelineEngineeringChat;const DataPipelineEngineeringChat: NextPage = () => {return (<div>;
+      <Head>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+ursor/fix-website-loading-errors-and-merge-6662;
+  );
+}
+export default DataPipelineEngineeringChat;
+
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 const DataPipelineEngineeringChat: NextPage = () => {
   return (
@@ -41,17 +79,18 @@ const DataPipelineEngineeringChat: NextPage = () => {
 
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const DataPipelineEngineeringChat: NextPage = () => {
-  return (
-    <div>;
+const DataPipelineEngineeringChat: NextPage = () => {return (<div>;
       <Head>;
         <title > DataPipelineEngineeringChat - Zion Tech Solutions</title>;
         <meta;
@@ -64,15 +103,68 @@ const DataPipelineEngineeringChat: NextPage = () => {
         <p > Service details coming soon...</p>;
         <a href="/services">Back to Services</a>;
       </main>;
+    </div>)}export default DataPipelineEngineeringChat;<div>;
+      <Head>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <meta name=&quot;description&quot; content=&quot;DataPipelineEngineeringChat service&quot; />;
+      </Head>;
+      <main>;
+        <h1>DataPipelineEngineeringChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href=&quot;/services&quot;>Back to Services</a>;
+      </main>;
+    </div>;
+  )},export default DataPipelineEngineeringChat;
+const DataPipelineEngineeringChat: NextPage = () => {return (<div>;
+      <Head>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <meta;
+          name="description";
+          content="DataPipelineEngineeringChat service";
+        />{" "}
+      </Head>;
+      <main>;
+        <h1>DataPipelineEngineeringChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  )}
+export default DataPipelineEngineeringChat;<title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
     </div>);
 }
 ;
 export default DataPipelineEngineeringChat;
 ;
+<<<<<<< HEAD
+=======
+    <div>
+      <Head>
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;DataPipelineEngineeringChat service&quot; />
+      </Head>
+      
+      <main>
+        <h1>DataPipelineEngineeringChat</h1>
+        <p>Service details coming soon...</p>
+        <a href=&quot;/services&quot;>Back to Services</a>
+      </main>
+    </div>
+  )
+},
+
+export default DataPipelineEngineeringChat
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

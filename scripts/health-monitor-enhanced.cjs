@@ -13,6 +13,7 @@ const path = require('path')
             "status"
             "message"
 
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -33,3 +34,5 @@ const monitor = new HealthMonitor();
 monitor.run().catch(console.error);
 
 module.exports = HealthMonitor;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

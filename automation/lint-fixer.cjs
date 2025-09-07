@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,8 @@
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -22,6 +25,7 @@ class LintFixer {}
   log(message) {}
     const timestamp = new Date().toISOString();
 
+<<<<<<< HEAD
 
 
 
@@ -30,6 +34,8 @@ class LintFixer {}
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -223,6 +229,7 @@ if (require.main === module) {}
 });
 };
 module.exports = LintFixer;
+<<<<<<< HEAD
 module.exports = LintFixer;
 module.exports = LintFixer;
 module.exports = LintFixer;
@@ -239,4 +246,9 @@ module.exports = LintFixer;
 
 
 
+=======
+
+module.exports = LintFixer;
+module.exports = LintFixer;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 

@@ -3,6 +3,7 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 :backup-problematic-files/scripts/final-build-fix.cjs
 :scripts/resolve-final-conflicts.cjs
 
@@ -22,6 +23,11 @@ console.log('====');
 
 
 
+=======
+console.log('🔧 Resolving Final Conflicts');
+console.log('
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
@@ -101,6 +107,7 @@ for (const file of filesToFix) {
     }
 
     let content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
 :backup-problematic-files/scripts/final-build-fix.cjs
 :scripts/resolve-final-conflicts.cjs
     let modified = false;
@@ -163,3 +170,6 @@ console.log('\n🎉 Final build fix completed!');
 
     // Check for merge conflict markers
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

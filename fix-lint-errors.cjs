@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD
     content = content.replace(/<<<<<<< [^\n]*[\s\S]*?[\s\S]*?
     
     // Clean up any remaining conflict markers
     content = content.replace(/^.*$/gm, "");
     content = content.replace(/^
     
+=======
+
+    // Clean up any remaining conflict markers
+    content = content.replace(/^.*$/gm, "");
+    content = content.replace(/^
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
     
@@ -15,6 +23,7 @@
     return false}
 }
 
+<<<<<<< HEAD
 // Function to remove unused imports
 function removeUnusedImports(filePath) {
   try {
@@ -131,6 +140,8 @@ try {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 
@@ -32,23 +33,43 @@ function fixMergeConflicts(filePath) {
     // Check if file has merge conflicts
     if (!content.includes('')) {
       return false;
+=======
+const fs = require('fs');
+const path = require('path');
+
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflicts
+    if (!content.includes('<<<<<<< HEAD')) {
+      return false; // No conflicts to fix
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     }
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
+<<<<<<< HEAD
 
     // Remove merge conflict markers and keep the second version (after )
 
     // Remove merge conflict markers and keep the second version (after )
     const lines = content.split('\n');
     const fixedLines = [];
+=======
+    // Remove merge conflict markers and keep the content after =======
+    // This is a simple approach - we'll take the "incoming" changes (after =======)
+    let lines = content.split('\n');
+    let fixedLines = [];
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     let inConflict = false;
     let keepContent = false;
-
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
+<<<<<<< HEAD
 
 
 
@@ -118,10 +139,37 @@ function findAndFixConflicts(dir) {
 
     const resolvedContent = resolvedLines.join('\n');
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
+=======
+      if (line.includes('<<<<<<< HEAD')) {
+        inConflict = true;
+        keepContent = false;
+        continue;
+      }
+      
+      if (line.includes('=======')) {
+        keepContent = true;
+        continue;
+      }
+      
+      if (line.includes('>>>>>>>')) {
+        inConflict = false;
+        keepContent = false;
+        continue;
+      }
+      
+      if (!inConflict || keepContent) {
+        fixedLines.push(line);
+      }
+    }
+    
+    // Write the fixed content back
+    fs.writeFileSync(filePath, fixedLines.join('\n'));
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
+<<<<<<< HEAD
 
 /**
  * Merge Conflict Resolver
@@ -276,21 +324,35 @@ function findAndFixConflicts(dir) {
   let fixedCount = 0;
   
 
+=======
+  }
+}
+
+// Function to recursively find and fix merge conflicts
+function fixAllMergeConflicts(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-      fixedCount += findAndFixConflicts(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      fixedCount += fixAllMergeConflicts(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
       if (fixMergeConflicts(filePath)) {
         fixedCount++;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
       }
     }
   }
   
+<<<<<<< HEAD
 
   return files;
 }
@@ -313,18 +375,16 @@ for (const file of conflictedFiles) {
 console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
 console.log('🎉 Merge conflict resolution complete!');
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
   return fixedCount;
 }
 
-// Fix conflicts in src/pages directory
-const pagesDir = path.join(__dirname, 'src', 'pages');
-if (fs.existsSync(pagesDir)) {
-  const fixedCount = findAndFixConflicts(pagesDir);
-  console.log(`Fixed merge conflicts in ${fixedCount} files`);
-} else {
-  console.log('src/pages directory not found');
-}
+// Fix merge conflicts in the app directory
+const appDir = '/workspace/app';
+const fixedCount = fixAllMergeConflicts(appDir);
 
+<<<<<<< HEAD
 // Also fix other common directories
 const otherDirs = ['src/components', 'src'];
 for (const dir of otherDirs) {
@@ -518,3 +578,6 @@ const totalFixed = processDirectory('.');
 console.log(`\nResolved conflicts in ${totalFixed} files.`);
 console.log('Merge conflict resolution complete!');
 
+=======
+console.log(`Fixed merge conflicts in ${fixedCount} files`);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

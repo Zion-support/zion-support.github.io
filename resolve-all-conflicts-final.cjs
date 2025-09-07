@@ -12,6 +12,7 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
+<<<<<<< HEAD
     // Remove all merge conflict markers and keep the main branch version (after )
     content = content.replace(/[\s\S]*?([\s\S]*?)
     content = content.replace(/[\s\S]*?([\s\S]*?)
@@ -27,6 +28,17 @@ function resolveMergeConflicts(filePath) {
     content = content.replace(/[\s\S]*?[\s\S]*?
     content = content.replace(/[\s\S]*?[\s\S]*?
     
+=======
+    // Remove all merge conflict markers and keep the main branch version (after =======)
+    content = content.replace(/([\s\S]*?)    content = content.replace(/([\s\S]*?)    
+    // Handle incomplete conflicts (missing closing markers)
+    content = content.replace(/([\s\S]*?)(?=\n|$)/g, '$1');
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    
+    // Remove any remaining conflict markers
+    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     // Clean up multiple consecutive newlines
     content = content.replace(/\n{3,}/g, '\n\n');
     

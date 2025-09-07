@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const EnhancedFooter: React.FC = () => {
   const navigation = [
     { name: 'About Us', href: '/about' },
@@ -40,10 +41,22 @@ const EnhancedFooter: React.FC = () => {
           <p className="text-center text-gray-300">
             &copy; 2025 Zion Tech Group. All rights reserved.
           </p>
+=======
+export default function EnhancedFooter(): React.JSX.Element {
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center">
+          <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 };
 
 export default EnhancedFooter;
+=======
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

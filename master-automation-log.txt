@@ -76,6 +76,7 @@
 [2025-09-05T14:29:59.640Z] 📊 Phase 2: Running Performance Monitor...
 [2025-09-05T14:29:59.640Z] 🚀 Running: Performance Monitor
 [2025-09-05T14:29:59.663Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-monitor-enhanced.cjs
+<<<<<<< HEAD
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 
 
@@ -92,6 +93,8 @@
 
 
 /workspace/scripts/performance-monitor-enhanced.cjs:1
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 ^^
@@ -291,6 +294,7 @@ Node.js v22.16.0
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 
+<<<<<<< HEAD
 
 
 
@@ -300,3 +304,5 @@ Node.js v22.16.0
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5

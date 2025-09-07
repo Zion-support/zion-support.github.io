@@ -21,10 +21,15 @@ for file in "${files[@]}"; do
         
         # Process the file to resolve conflicts by keeping HEAD version
         awk '
+<<<<<<< HEAD
         /^/ { in_head = 1; next }
         /^/ { in_head = 0; in_other = 1; next }
         /^
         in_other { next }
+=======
+        /^/ { in_head = 0; in_other = 1; next }
+        /^        in_other { next }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
         { print }
         ' "$file" > "$temp_file"
         

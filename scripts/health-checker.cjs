@@ -234,6 +234,7 @@ class HealthChecker {
 // Run the health checker
 if (require.main === module) {
   const checker = new HealthChecker();
+
   checker.runHealthChecks().catch(console.error);
 }
 

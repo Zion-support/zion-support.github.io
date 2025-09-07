@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -32,6 +37,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
       this.log(" Health check completed");";      return report,"
       this.log(" Health check "failed": ${error.message}");"
   .then(report => {);    console.log(" Health check completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
 
 
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
@@ -226,3 +232,6 @@ checker
     console.error('❌ Health check failed:', error.message);
     process.exit(1);
   });
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
