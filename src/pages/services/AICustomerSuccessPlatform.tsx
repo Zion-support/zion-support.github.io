@@ -184,6 +184,7 @@ export default function AICustomerSuccessPlatform() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100/10 border border-blue-200/20 text-blue-200 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
@@ -197,6 +198,7 @@ export default function AICustomerSuccessPlatform() {
               Our revolutionary AI customer success platform predicts churn, optimizes onboarding, 
               and maximizes customer lifetime value. Get 25% reduction in churn with intelligent automation.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote?service=ai-customer-success"
@@ -214,6 +216,12 @@ export default function AICustomerSuccessPlatform() {
             </div>
           </motion.div>
         </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+        </div>
       </section>
 
       {/* Benefits Section */}
@@ -223,7 +231,6 @@ export default function AICustomerSuccessPlatform() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -263,7 +270,6 @@ export default function AICustomerSuccessPlatform() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -438,10 +444,9 @@ export default function AICustomerSuccessPlatform() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Success?
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Customer Success?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join hundreds of companies already using AI to reduce churn, improve satisfaction, 
