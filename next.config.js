@@ -1,16 +1,9 @@
-
 const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
-  // Security configurations
-  poweredByHeader: false,
-  compress: true,
   
   // Disable linting during build
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -19,18 +12,21 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  
+  images: {
     domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
-    formats: ['image/webp', 'image/avif'],
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     unoptimized: true
   },
+  
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['@radix-ui/react-icons'],
   },
+  
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
   },
@@ -69,6 +65,7 @@ const nextConfig = {
       }
     ];
   },
+  
   webpack: (config, { dev, isServer }) => {
     // Exclude problematic directories from webpack compilation
     config.watchOptions = {
@@ -121,6 +118,7 @@ const nextConfig = {
 
     return config;
   },
+  
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
@@ -129,8 +127,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-  }
-};
-
-module.exports = nextConfig;
-
