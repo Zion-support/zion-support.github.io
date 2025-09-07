@@ -121,36 +121,7 @@ generate_report() {
     {
         echo "=== PM2 Automation Report ==="
         echo "Generated: $(date)"
-        echo "================================"
-        echo ""
-        
-        echo "=== PM2 Status ==="
-        pm2 status
-        echo ""
-        
-        echo "=== System Information ==="
-        echo "OS: $(uname -a)"
-        echo "Node.js: $(node --version)"
-        echo "NPM: $(npm --version)"
-        echo "PM2: $(pm2 --version)"
-        echo ""
-        
-        echo "=== Process Details ==="
-        pm2 jlist | jq -r '.[] | "\(.name): \(.status) - \(.pm2_env.status)"' 2>/dev/null || echo "Could not get detailed process info"
-        echo ""
-        
-        echo "=== Recent Logs ==="
-        pm2 logs --lines 20 --nostream 2>/dev/null || echo "Could not get recent logs"
-        
-    } > "$report_file"
-    
-    echo -e "${GREEN}✅ Report generated: $report_file${NC}"
-}
-
-# Show help information
-show_help() {
-    echo -e "${CYAN}🚀 PM2 Manager for Zion Website Automation${NC}"
-    echo ""
+        echo "    echo ""
     echo "Usage: $0 [COMMAND] [OPTIONS]"
     echo ""
     echo "Commands:"
