@@ -15,8 +15,7 @@ import {
   Lock,
   Rocket,
   DollarSign,
-  Clock,
-  Award,
+  ArrowRight,
   Phone,
   Mail,
   MapPin,
@@ -55,7 +54,7 @@ import {
   Infinity
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
+import { COMPREHENSIVE_SERVICES_INDEX_2030 } from '../data/comprehensiveServicesIndex2030';
 
 export default function ComprehensivePricingGuide2030() {
   const [viewMode, setViewMode] = useState('grid');
