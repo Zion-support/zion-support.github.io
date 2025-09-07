@@ -1,5 +1,6 @@
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
+<<<<<<< HEAD
 // see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
 
 // see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
@@ -18,6 +19,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 // see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
 /// <reference types="next/navigation-types/compat/navigation" />
 /// <reference path="./dist/types/routes.d.ts" />
+=======
+/// <reference path="./.next/types/routes.d.ts" />
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/app/api-reference/config/typescript for more information.

@@ -192,6 +192,8 @@ function Footer() {
   );
 }
 
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -213,7 +215,7 @@ export const metadata: Metadata = {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
   },
-
+};
 
 export default function RootLayout({
   children,
@@ -222,6 +224,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
 }
 }
 
@@ -236,3 +239,11 @@ export default function RootLayout({
 
 
 }
+=======
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  );
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
