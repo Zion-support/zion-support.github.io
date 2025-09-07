@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   BookOpen, 
   Target, 
@@ -325,7 +325,7 @@ export default function Resources() {
                   ))}
                 </div>
                 <Link
-                  to={resource.href}
+                  href={resource.href}
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                 >
                   Read More
@@ -380,7 +380,7 @@ export default function Resources() {
                     )}
                   </div>
                   <Link
-                    to={resource.href}
+                    href={resource.href}
                     className="text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     <ArrowRight className="w-4 h-4" />
@@ -408,14 +408,14 @@ export default function Resources() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                to="/newsletter"
+                href="/newsletter"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center gap-2"
               >
                 Subscribe to Newsletter
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="px-8 py-4 border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-lg transition-all duration-300 inline-flex items-center gap-2"
               >
                 Request Custom Content

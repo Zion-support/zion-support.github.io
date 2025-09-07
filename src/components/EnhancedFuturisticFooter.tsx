@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Phone, 
@@ -210,7 +210,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           {/* Company Info & Contact */}
           <div className="lg:col-span-1 xl:col-span-1">
             <div className="mb-8">
-              <Link to="/" className="inline-flex items-center space-x-3 group">
+              <Link href="/" className="inline-flex items-center space-x-3 group">
                 <div className="relative">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Zap className="w-7 h-7 text-white" />
@@ -300,7 +300,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     {section.links.map((link) => (
                       <li key={link.name}>
                         <Link
-                          to={link.href}
+                          href={link.href}
                           className={`text-sm transition-colors duration-200 flex items-center gap-2 group ${
                             link.featured 
                               ? 'text-cyan-400 hover:text-cyan-300' 
@@ -334,7 +334,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             {quickActions.map((action) => (
               <Link
                 key={action.name}
-                to={action.href}
+                href={action.href}
                 className={`p-4 rounded-xl border transition-all duration-300 transform hover:scale-105 text-center group ${
                   action.featured
                     ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30'
@@ -426,9 +426,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
-              <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
-              <Link to="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>
+              <Link href="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
+              <Link href="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>
             </div>
             
             <div className="flex items-center space-x-4">
