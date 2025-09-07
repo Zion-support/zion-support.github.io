@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-"target": "ES2020",
+    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
@@ -12,34 +12,21 @@
       "es2021",
       "es2022"
     ],
-
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6"
-    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-"module": "ESNext",
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "baseUrl": ".",
     "paths": {
-"@/*": ["./src/*"],
+      "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
       "@/utils/*": ["./src/utils/*"],
@@ -49,57 +36,11 @@
       "@/assets/*": ["./src/assets/*"]
     },
     "allowSyntheticDefaultImports": true
-  }
-}
-      "@/*": [
-        "./*"
-      ]
-    }
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/pages/*": [
-        "./pages/*"
-      ],
-      "@/styles/*": [
-        "./styles/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ],
-      "@/lib/*": [
-        "./lib/*"
-      ],
-      "@/hooks/*": [
-        "./hooks/*"
-      ],
-      "@/assets/*": [
-        "./assets/*"
-      ]
-    },
-    "allowSyntheticDefaultImports": true,
-    "noImplicitAny": false,
-    "strictNullChecks": true,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    "next-env.d.ts",
-    "dist/types/**/*.ts"
+    "next-env.d.ts"
   ],
   "exclude": [
     "node_modules"
