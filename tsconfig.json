@@ -58,9 +58,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-<<<<<<< HEAD
-    "node_modules"
-=======
     "node_modules",
     ".next",
     "out",
@@ -87,6 +84,5 @@
     "components.disabled",
     "src.disabled",
     "src.pages.disabled"
->>>>>>> origin/chore/fix-automation-and-build
   ]
 }
