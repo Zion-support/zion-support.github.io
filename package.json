@@ -3,23 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
+    "ci:build-test": "npm run build && npm run test:smoke",
     "dev": "next dev",
-<<<<<<< HEAD
-    "build": "next build",
+    "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
     "start": "next start",
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
     "postbuild": "echo \"Build completed\"",
-    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
-    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
-    "lint:check": "eslint . --max-warnings 0",
-    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
-=======
-    "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
-    "start": "next start",
-    "export": "next export",
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
@@ -28,37 +19,55 @@
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
-<<<<<<< HEAD
     "prepare": "echo 'Husky prepare script disabled'",
-    "seo:generate": "node scripts/generate-dynamic-sitemap.js",
-    "security:audit": "npm audit",
-    "perf:monitor": "node scripts/performance-monitor.js",
-    "automation:seo": "node scripts/seo-optimizer.js",
-    "automation:health": "node scripts/health-checker.js"
+    "automation:master": "node automation/master-orchestrator.cjs",
+    "automation:performance": "node automation/performance-optimizer.cjs",
+    "automation:seo": "node automation/seo-optimizer.cjs",
+    "automation:health": "node automation/health-check.cjs",
+    "automation:security": "node automation/security-scanner.cjs",
+    "pr:merge-open": "node scripts/merge-open-prs.cjs",
+    "pr:auto-resolve-and-merge": "node scripts/auto-resolve-merge-prs.cjs",
+    "pr:force-merge-heads": "node scripts/force-merge-open-pr-heads-into-main.cjs",
+    "optimize:performance": "node scripts/performance-optimizer.cjs",
+    "audit:security": "node scripts/security-audit-enhanced.cjs",
+    "optimize:ux": "node scripts/ux-optimizer.cjs",
+    "improve:all": "bash scripts/comprehensive-app-improvements.sh",
+    "sanitize:data": "node tools/sanitize-data-files.cjs",
+    "automation:safe": "bash scripts/run-safe-automations.sh",
+    "ci:smoke": "npm run build && npm run test:smoke",
+    "ci:consolidated": "bash scripts/ci-consolidated.sh",
+    "report:aggregate": "node scripts/aggregate-health-security.mjs",
+    "dev:setup": "bash scripts/dev-setup.sh",
+    "quick:test": "bash scripts/quick-test.sh",
+    "deploy:app": "bash scripts/deploy.sh",
+    "health:check": "bash scripts/health-check.sh",
+    "error:fix": "node scripts/comprehensive-error-fix.cjs",
+    "error:prevention:start": "pm2 start ecosystem.error-prevention.cjs",
+    "error:prevention:stop": "pm2 stop ecosystem.error-prevention.cjs",
+    "error:prevention:restart": "pm2 restart ecosystem.error-prevention.cjs",
+    "error:prevention:status": "pm2 status",
+    "error:prevention:logs": "pm2 logs --lines 100",
+    "build:production": "NODE_ENV=production npm run build",
+    "error:detect": "node automation/intelligent-error-detector.cjs",
+    "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs",
+    "optimize:images": "node scripts/optimize-images.js",
+    "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
+    "test:accessibility": "npx jest --testPathPatterns=accessibility",
+    "test:performance": "npx jest --testPathPatterns=performance",
+    "improve:performance": "node scripts/performance-improver.cjs",
+    "improve:security": "node scripts/security-improver.cjs",
+    "improve:seo": "node scripts/seo-improver.cjs",
+    "improve:accessibility": "node scripts/accessibility-improver.cjs",
+    "improve:monitoring": "node scripts/monitoring-improver.cjs",
+    "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
+    "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
+    "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
+    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
-=======
-    "prepare": "echo \"Husky prepare script disabled\"",
-    "lint": "eslint app components --no-error-on-unmatched-pattern",
-    "lint:fix": "eslint app components --fix --no-error-on-unmatched-pattern",
-    "lint:check": "eslint app components --max-warnings 0 --no-error-on-unmatched-pattern",
-    "type-check": "tsc --noEmit",
-    "analyze": "ANALYZE=true npm run build",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
-    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
-    "security:audit": "npm audit --audit-level moderate",
-    "security:fix": "npm audit fix",
-    "deps:update": "npm update",
-    "deps:check": "npm outdated",
-    "perf:lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
-    "perf:bundle": "npm run build && npx @next/bundle-analyzer"
-  },
-  "dependencies": {
-    "@babel/core": "^7.28.4",
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
@@ -70,10 +79,6 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-<<<<<<< HEAD
-    "@next/bundle-analyzer": "^15.5.2",
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "@next/swc-linux-x64-gnu": "^15.5.2",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-alert-dialog": "^1.1.2",
@@ -102,13 +107,12 @@
     "@radix-ui/react-toggle-group": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.3",
     "@reduxjs/toolkit": "^2.9.0",
-<<<<<<< HEAD
-    "@sendgrid/mail": "^8.1.5",
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.57.2",
+    "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.536.0",
@@ -126,13 +130,6 @@
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
     "@types/react-router-dom": "^5.3.3",
-=======
-    "@stripe/stripe-js": "^7.9.0",
-    "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.57.0",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
     "@types/react-datepicker": "^6.2.0",
@@ -205,16 +202,11 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.8",
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "autoprefixer": "^10.4.20",
     "critters": "^0.0.23",
-<<<<<<< HEAD
     "eslint": "^9.35.0",
-=======
-    "eslint": "^8.57.0",
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "eslint-config-next": "^15.5.2",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -227,19 +219,11 @@
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^24.0.0",
     "lighthouse": "^12.8.2",
-<<<<<<< HEAD
-    "next": "^15.5.2",
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "postcss": "^8.5.0",
     "rollup": "^4.50.0",
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
-<<<<<<< HEAD
-    "ts-loader": "^9.5.4",
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
     "vite": "^7.1.4"
@@ -262,14 +246,6 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-<<<<<<< HEAD
-  "license": "MIT"
-=======
   "license": "MIT",
-  "nextConfig": {
-    "compress": true,
-    "poweredByHeader": false,
-    "generateEtags": false
-  }
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-    "target": "ES2017",
-=======
     "target": "ES2020",
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "lib": [
       "dom",
       "dom.iterable",
@@ -15,31 +11,20 @@
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-<<<<<<< HEAD
     "incremental": true,
-    "module": "esnext",
-    "esModuleInterop": true,
-=======
-    "esModuleInterop": true,
     "module": "ESNext",
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-<<<<<<< HEAD
-=======
-    "incremental": true,
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "plugins": [
       {
         "name": "next"
       }
     ],
-<<<<<<< HEAD
-    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
@@ -72,9 +57,6 @@
         "./public/*"
       ]
     },
-    "allowSyntheticDefaultImports": true,
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "strictNullChecks": true
   },
   "include": [
@@ -85,11 +67,9 @@
   ],
   "exclude": [
     "node_modules",
-<<<<<<< HEAD
     ".next",
     "out",
-    "dist"
-=======
+    "dist",
     "apps/**",
     "apps.backup/**",
     "api-backup/**",
@@ -116,6 +96,5 @@
     "netlify/**",
     "components/**",
     "src/**"
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ]
 }
