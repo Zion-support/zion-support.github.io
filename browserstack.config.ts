@@ -38,14 +38,10 @@ export default defineConfig({;
   ]
   ]
         browserName: "webkit",
-        ...devices["iPhone 12"],
-      },
-    },
-  ],
+        ...devices["iPhone 12"]}}],
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }],
-  ],});        browserName: 'chromium';
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]});        browserName: 'chromium';
         channel: 'chrome'}
     };
     {
@@ -66,13 +62,13 @@ export default defineConfig({;
   }
   projects: [
 import { define_config, devices } from '@playwright / test';
-import { define_config, devices } from '@playwright / test',
+import { define_config, devices } from '@playwright / test';
 ;
 export default define_config ({
   test_dir:'tests / e2e',
   use:{
     baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-    trace:'on - first - retry'},
+    trace:'on - first - retry'};
   projects:[;
     {
       name:'Desktop Chrome',
