@@ -29,11 +29,14 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
-// Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
-const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
+// Service pages
+const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
+const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
+const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
+const AIEmailAutomationPlatform = lazy(() => import('./pages/services/ai-email-automation-platform'));
+const SmartSurveyAnalyticsPlatform = lazy(() => import('./pages/services/smart-survey-analytics-platform'));
+const ComprehensiveITSolutions = lazy(() => import('./pages/services/comprehensive-it-solutions'));
+const AdvancedAISolutions = lazy(() => import('./pages/services/advanced-ai-solutions'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -72,58 +75,31 @@ const Marketplace = () => (
 
 function App() {
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-futuristic">
-          <AppHeader />
-          
-          <main className="flex-1">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
-                <Route path="/cookies" element={<Cookies />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/solutions" element={<Solutions />} />
-                <Route path="/resources" element={<Resources />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/partners" element={<Partners />} />
-                <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
-                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
-                <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
-                <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
-                <Route path="/request-quote" element={<RequestQuote />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/marketplace" element={<Marketplace />} />
-                
-                {/* Service Routes - only for existing pages */}
-                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-                <Route path="/services/digital-twin" element={<DigitalTwin />} />
-                <Route path="/services/data-analytics" element={<DataAnalytics />} />
-                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                
-                {/* Catch all route */}
-                <Route path="*" element={<Home />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-          <ChatAssistant />
-          <PerformanceOptimizer />
-          <AccessibilityEnhancer />
-        </div>
-      </Router>
-    </ErrorBoundary>
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <Header />
+      <main className="flex-1">
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services-overview" element={<ServicesOverview />} />
+            <Route path="/solutions" element={<SolutionsPage />} />
+            {/* Service pages */}
+            <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
+            <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
+            <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
+            <Route path="/services/ai-email-automation-platform" element={<AIEmailAutomationPlatform />} />
+            <Route path="/services/smart-survey-analytics-platform" element={<SmartSurveyAnalyticsPlatform />} />
+            <Route path="/services/comprehensive-it-solutions" element={<ComprehensiveITSolutions />} />
+            <Route path="/services/advanced-ai-solutions" element={<AdvancedAISolutions />} />
+            <Route path="*" element={<HomePage />} />
+          </Routes>
+        </Suspense>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
