@@ -194,23 +194,16 @@ export default function HomePage() {
           <h1 className="text-6xl font-bold text-gray-900 mb-6">
             Welcome to Zion Tech Group
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Leading technology solutions provider specializing in AI, web development, 
-            mobile applications, cloud services, and digital transformation.
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Leading provider of AI, automation, and technology solutions for modern businesses.
           </p>
-          <div className="flex gap-4 justify-center">
-            <Link 
-              href="/services" 
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Our Services
-            </Link>
-            <Link 
-              href="/contact" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg border border-blue-600 hover:bg-blue-50 transition-colors"
-            >
-              Contact Us
-            </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+            <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+              Learn More
+            </button>
           </div>
         </div>
 
