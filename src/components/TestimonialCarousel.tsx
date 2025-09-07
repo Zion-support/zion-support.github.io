@@ -1,126 +1,275 @@
-<<<<<<< HEAD
-
-=======
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react';
-interface Testimonial  {id: number;
-  name: string;
-  company: string;
-  role: string;
-  content: string;
-  rating: number;
-  avatar?: string;
-}const TestimonialCarousel: React.FC = () => {const [currentIndex, setCurrentIndex]  = useState(0)const testimonials: Testimonial[] = [;
-    {id: 1,name: 'Sarah Johnson',company: 'TechCorp Solutions',role: 'CTO',content: 'Zion Tech transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and their support team is exceptional.',rating: 5,avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face';
-    },{id: 2,name: 'Michael Chen',company: 'InnovateLabs',role: 'CEO',content: 'The cybersecurity solutions provided by Zion Tech are top-notch. We\'ve had zero security incidents since implementing their systems.',rating: 5,avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face';
-    },{id: 3,name: 'Emily Rodriguez',company: 'DataFlow Inc',role: 'Data Director',content: 'Their cloud migration services were seamless. We saved 40% on infrastructure costs while improving performance significantly.',rating: 5,avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face';
-    },{id: 4,name: 'David Kim',company: 'GlobalTech',role: 'VP of Engineering',content: 'Zion Tech\'s data analytics platform gave us insights we never had before. Our decision-making process is now data-driven and efficient.',rating: 5,avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face';
-    },{id: 5,name: 'Lisa Wang',company: 'FutureSystems',role: 'Operations Director',content: 'The digital transformation services exceeded our expectations. Our processes are now 50% more efficient and our team is more productive.',rating: 5,avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face';
-    }
-  ];const nextTestimonial = () => {setCurrentIndex((prevIndex) =>;
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1;
-    )}const prevTestimonial = () => {setCurrentIndex((prevIndex) =>;
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1;
-    )}const goToTestimonial = (index: number) => {setCurrentIndex(index)}// Auto-advance testimonials;
-  useEffect(() => {const interval = setInterval(nextTestimonial, 5000)return () => clearInterval(interval)}, [])const currentTestimonial  = testimonials[currentIndex];return (<div className="relative max-w-4xl mx-auto">;
-      {/* Main Testimonial */}
-      <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden">;
-        {/* Quote Icon */}
-        <div className="absolute top-6 right-6 text-blue-100">;
-          <Quote className="w-12 h-12" />;
-        </div>;
-        {/* Content */}
-        <div className="relative z-10">;
-          {/* Rating */}
-          <div className="flex items-center justify-center mb-6">;
-            {[...Array(5)].map((_, i) => (<Star;
-                key={i}
-                className={`w-5 h-5 ${i < currentTestimonial.rating;
-                    ? 'text-yellow-400 fill-current';
-                    : 'text-gray-300';
-                }`}
-              />;
-            ))}
-          </div>;
-          {/* Testimonial Text */}
-          <blockquote className="text-xl md:text-2xl text-gray-700 text-center mb-8 leading-relaxed">;
-            &ldquo;{currentTestimonial.content}&rdquo;
-          </blockquote>;
-          {/* Author Info */}
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">;
-            {/* Avatar */}
-            <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-blue-100">;
-              <img;
-                src={currentTestimonial.avatar}
-                alt={currentTestimonial.name}
-                className="w-full h-full object-cover";
-                onError={(e) => {const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                }}
-              />;
-            </div>;
-            {/* Author Details */}
-            <div className="text-center md:text-left">;
-              <h4 className="text-lg font-semibold text-gray-900">;
-                {currentTestimonial.name}
-              </h4>;
-              <p className="text-blue-600 font-medium">;
-                {currentTestimonial.role}
-              </p>;
-              <p className="text-gray-500 text-sm">;
-                {currentTestimonial.company}
-              </p>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Navigation Controls */}
-      <div className="flex items-center justify-center mt-8 space-x-4">;
-        {/* Previous Button */}
-        <button;
-          onClick={prevTestimonial}
-          className="p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-50 group";
-          aria-label="Previous testimonial";
-        >;
-          <ChevronLeft className="w-6 h-6 text-gray-600 group-hover:text-blue-600" />;
-        </button>;
-        {/* Dots Indicator */}
-        <div className="flex space-x-2">;
-          {testimonials.map((_, index) => (<button;
+import { motion, AnimatePresence } from 'framer-motion';
+import { Quote, Star, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Sarah Johnson",
+    role: "CTO at TechCorp",
+    comp: "TechCorp Inc.",
+    content: "Zion Tech Group has revolutionized how we find AI talent. The platform is intuitive and the quality of candidates is exceptional. We've reduced our hiring time by 60% while improving candidate quality.",
+    avatar: "/avatars/sarah.jpg",
+    rating: 5,
+    category: "Enterprise",
+    project: "AI Talent Acquisition"
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    role: "AI Engineer",
+    comp: "Freelance",
+    content: "As a freelancer, Zion Tech Group has opened up incredible opportunities. The marketplace is well-organized and the clients are top-tier. I've doubled my income since joining the platform.",
+    avatar: "/avatars/michael.jpg",
+    rating: 5,
+    category: "Freelancer",
+    project: "Machine Learning Solutions"
+  },
+  {
+    id: 3,
+    name: "Dr. Emily Rodriguez",
+    role: "Research Director",
+    comp: "InnovateLab",
+    content: "The AI services we found through Zion Tech Group exceeded our expectations. The team delivered cutting-edge solutions that accelerated our research by months. Highly recommended!",
+    avatar: "/avatars/emily.jpg",
+    rating: 5,
+    category: "Research",
+    project: "AI Research Platform"
+  },
+  {
+    id: 4,
+    name: "David Kim",
+    role: "Startup Founder",
+    comp: "DataFlow",
+    content: "Starting a tech company is challenging, but Zion Tech Group made it so much easier. We found the perfect team and equipment to get our MVP to market in record time.",
+    avatar: "/avatars/david.jpg",
+    rating: 5,
+    category: "Startup",
+    project: "SaaS Platform"
+  },
+  {
+    id: 5,
+    name: "Lisa Thompson",
+    role: "IT Manager",
+    comp: "Global Retail Co.",
+    content: "Our digital transformation project was a huge success thanks to Zion Tech Group. The comprehensive services and expert team delivered everything we needed on time and budget.",
+    avatar: "/avatars/lisa.jpg",
+    rating: 5,
+    category: "Enterprise",
+    project: "Digital Transformation"
+  },
+  {
+    id: 6,
+    name: "Alex Patel",
+    role: "DevOps Engineer",
+    comp: "CloudScale",
+    content: "The infrastructure solutions from Zion Tech Group are world-class. We've achieved 99.99% uptime and our performance has improved dramatically. The team is incredibly responsive.",
+    avatar: "/avatars/alex.jpg",
+    rating: 5,
+    category: "Infrastructure",
+    project: "Cloud Infrastructure"
+  }
+];
+
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity;
+};
+
+const slideVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 1000 : -1000,
+    opacity: 0
+  }),
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1
+  },
+  exit: (direction: number) => ({
+    zIndex: 0,
+    x: direction < 0 ? 1000 : -1000,
+    opacity: 0
+  })
+};
+
+export function TestimonialCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDirection(1);
+      setCurrentIndex(prev => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const paginate = (newDirection: number) => {
+    setDirection(newDirection);
+    setCurrentIndex(prev => (prev + newDirection + testimonials.length) % testimonials.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setDirection(index > currentIndex ? 1 : -1);
+    setCurrentIndex(index);
+  };
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            What Our{' '}
+            <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+              Users Say
+            </span>
+          </h2>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto leading-relaxed">
+            Join thousands of satisfied customers who have transformed their businesses with Zion Tech Group
+          </p>
+        </motion.div>
+
+        <div className="relative max-w-6xl mx-auto">
+          <AnimatePresence initial={false} custom={direction}>
+            <motion.div
+              key={currentIndex}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 }
+              }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+              className="absolute w-full"
+            >
+              <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-zion-blue-light/30 shadow-2xl">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple mb-8 shadow-lg">
+                    <Quote className="w-8 h-8 text-white" />
+                  </div>
+
+                  <div className="flex justify-center gap-1 mb-6">
+                    {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                      <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+
+                  <blockquote className="text-zion-slate-light text-lg md:text-xl leading-relaxed mb-8 max-w-4xl mx-auto italic">
+                    "{testimonials[currentIndex].content}"
+                  </blockquote>
+
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+                    <div className="flex items-center gap-4">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center text-white font-bold text-xl">
+                        {testimonials[currentIndex].name.charAt(0)}
+                      </div>
+                      <div className="text-left">
+                        <div className="font-semibold text-white text-lg">
+                          {testimonials[currentIndex].name}
+                        </div>
+                        <div className="text-zion-slate-light">
+                          {testimonials[currentIndex].role} at {testimonials[currentIndex].comp}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-blue-light/20 rounded-full border border-zion-cyan/30">
+                    <span className="text-zion-cyan text-sm font-medium">
+                      {testimonials[currentIndex].category}
+                    </span>
+                    <ArrowRight className="w-4 h-4 text-zion-cyan" />
+                    <span className="text-zion-slate-light text-sm">
+                      {testimonials[currentIndex].project}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          <button
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10"
+            onClick={() => paginate(-1)}
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          <button
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10"
+            onClick={() => paginate(1)}
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>
+
+        <div className="flex justify-center gap-3 mt-8">
+          {testimonials.map((_, index) => (
+            <button
               key={index}
-              onClick={() => goToTestimonial(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex;
-                  ? 'bg-blue-600 scale-125';
-                  : 'bg-gray-300 hover:bg-gray-400';
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentIndex
+                  ? "bg-zion-cyan scale-125"
+                  : "bg-zion-slate-light/40 hover:bg-zion-slate-light/60"
               }`}
-              aria-label={`Go to testimonial ${index + 1}`}
-            />;
+            />
           ))}
-        </div>;
-        {/* Next Button */}
-        <button;
-          onClick={nextTestimonial}
-          className="p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-50 group";
-          aria-label="Next testimonial";
-        >;
-          <ChevronRight className="w-6 h-6 text-gray-600 group-hover:text-blue-600" />;
-        </button>;
-      </div>;
-      {/* Stats */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
-        <div>;
-          <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>;
-          <div className="text-gray-600">Happy Clients</div>;
-        </div>;
-        <div>;
-          <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>;
-          <div className="text-gray-600">Satisfaction Rate</div>;
-        </div>;
-        <div>;
-          <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>;
-          <div className="text-gray-600">Support Available</div>;
-        </div>;
-      </div>;
-    </div>;
-  )}export default TestimonialCarousel;
->>>>>>> 157aff07b859488146569974cc7382910d9762e2
+        </div>
+
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>
+            <div className="text-zion-slate-light text-sm">Satisfaction Rate</div>
+          </div>
+          <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            <div className="text-3xl font-bold text-zion-purple mb-2">5000+</div>
+            <div className="text-zion-slate-light text-sm">Happy Clients</div>
+          </div>
+          <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            <div className="text-3xl font-bold text-zion-cyan-light mb-2">24/7</div>
+            <div className="text-zion-slate-light text-sm">Support Available</div>
+          </div>
+          <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            <div className="text-3xl font-bold text-zion-purple-light mb-2">100+</div>
+            <div className="text-zion-slate-light text-sm">Countries Served</div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

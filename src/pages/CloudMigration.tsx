@@ -1,13 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
 
 const CloudMigration: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-8">Cloud Solutions</h1>
-        <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-          Cloud migration and management solutions.
+    <div className="min-h-screen bg-background text-foreground">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8 text-center">Cloud Migration Services</h1>
+        <p className="text-lg text-center text-gray-600 dark:text-gray-300">
+          Seamless cloud migration and optimization for enhanced flexibility and scale.
         </p>
       </div>
     </div>
@@ -15,22 +14,3 @@ const CloudMigration: React.FC = () => {
 };
 
 export default CloudMigration;
-=======
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import SEO from '../components/SEO';
-const CloudMigration: React.FC = () => {return (<>;
-      <SEO title="Cloud Migration" description="Cloud Migration page" url="/services/cloud-migration" />;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
-        <Header />;
-        <main className="pt-20 pb-16 px-4">;
-          <div className="max-w-7xl mx-auto text-center">;
-            <h1 className="text-5xl font-bold text-white mb-6">Cloud Migration</h1>;
-            <p className="text-xl text-gray-300">Coming soon...</p>;
-          </div>;
-        </main>;
-        <Footer />;
-      </div>;
-    </>;
-  )}export default CloudMigration;
->>>>>>> 157aff07b859488146569974cc7382910d9762e2
