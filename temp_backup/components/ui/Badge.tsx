@@ -1,8 +1,7 @@
-  className: string
-  id: string
-  innerHTML: string
-  textContent: string | null
-  style: { [key: string]: string }
+import React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "../../lib/utils";
+
 
 const badgeVariants = null;
 const badgeVariants = cva(

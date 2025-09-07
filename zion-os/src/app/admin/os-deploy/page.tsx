@@ -1,4 +1,12 @@
-"use client",
+'use client';
+
+import React from 'react';
+
+export default function OSDeployPage() {
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+  };
 
 import { useState } from "react";
 import { FeatureKeys } from "@/lib/zod";
