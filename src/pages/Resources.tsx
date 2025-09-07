@@ -170,8 +170,9 @@ export default function Resources() {
     if (searchQuery) {
       resources = resources.filter(resource => 
         resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        resource.description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        resource.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+        (resource as any).description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (resource as any).excerpt?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (resource as any).tags?.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       );
     }
     
@@ -339,14 +340,14 @@ export default function Resources() {
                   <span className="text-sm text-gray-400">{getCategoryName(resource.category)}</span>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3 line-clamp-2">{resource.title}</h3>
-                <p className="text-gray-400 mb-4 text-sm leading-relaxed line-clamp-3">{resource.description}</p>
+                <p className="text-gray-400 mb-4 text-sm leading-relaxed line-clamp-3">{(resource as any).description || (resource as any).excerpt}</p>
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-500">
-                    {resource.date && <span>{resource.date}</span>}
-                    {resource.readTime && (
+                    {(resource as any).date && <span>{(resource as any).date}</span>}
+                    {(resource as any).readTime && (
                       <>
                         <span className="mx-2">•</span>
-                        <span>{resource.readTime}</span>
+                        <span>{(resource as any).readTime}</span>
                       </>
                     )}
                   </div>
