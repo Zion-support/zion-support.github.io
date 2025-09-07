@@ -7,13 +7,11 @@ const nextConfig = {
   
   // Disable linting during build
   eslint: {
-    ignoreDuringBuilds: true,
-  },
+    ignoreDuringBuilds: true},
   
   // Disable type checking during build
   typescript: {
-    ignoreBuildErrors: true,
-  },
+    ignoreBuildErrors: true},
   
   // Webpack configuration simplified - Next.js handles TypeScript natively
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
@@ -23,8 +21,7 @@ const nextConfig = {
   // Image optimization
   images: {
     domains: ['localhost'],
-    formats: ['image/webp', 'image/avif'],
-  },
+    formats: ['image/webp', 'image/avif']},
   
   // Security headers
   async headers() {
@@ -34,19 +31,13 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
-          },
+            value: 'DENY'},
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
+            value: 'nosniff'},
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
+            value: 'origin-when-cross-origin'}]}];
   },
   
   // Redirects
@@ -55,16 +46,13 @@ const nextConfig = {
       {
         source: '/home',
         destination: '/',
-        permanent: true,
-      },
-    ];
+        permanent: true}];
   },
   
   
   // Experimental features
   experimental: {
-    optimizeCss: true,
-  },
+    optimizeCss: true},
   
   // Output configuration
   output: 'standalone',
@@ -74,8 +62,6 @@ const nextConfig = {
   
   // Environment variables
   env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
-  },
-};
+    CUSTOM_KEY: process.env.CUSTOM_KEY}};
 
 module.exports = nextConfig;

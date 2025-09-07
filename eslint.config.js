@@ -173,7 +173,7 @@ export default [
       'resolve-*.js',
       'run-complete-automation.js',
       'security-config.js',
-      'seo-improvements.js',
+      'seo-improvements.js';
       'simple-test.js';
       'syntax-fixer.js';
       'performance-monitor.js']}];
