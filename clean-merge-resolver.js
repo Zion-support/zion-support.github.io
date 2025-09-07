@@ -9,8 +9,9 @@ console.log($2);
   try {
     let content = fs.readFileSync($2);
     const originalContent = $2;
-    // Remove merge conflict markers and keep HEAD version
-    
+    // Remove merge conflict markers and keep HEAD version,
+  content = content.replace($2);
+    content = content.replace($2);
     if (content !== originalContent) {
       fs.writeFileSync($2);
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),
@@ -22,6 +23,7 @@ console.log($2);
     return false
   }
 }
+<<<<<<< HEAD
 
 
 // Function to fix merge conflicts in a file;
@@ -168,13 +170,17 @@ function main() {try {// Check if were in a git repository;
       const fullPath = path.join(dir, item),
       const stat = fs.statSync(fullPath),
 // Function to get all files recursively
+=======
+// Function to get all files recursively,
+  function getAllFiles(dir, extensions) {
+>>>>>>> origin/improvements-and-fixes
   let files = $2;
   try {
     const items = fs.readdirSync($2);
     for (const item of items) {
       const fullPath = path.join($2);
       const stat = fs.statSync($2);
-      if (stat.isDirectory() && !item.startsWith(.') && item !== 'node_modules && item !== .git') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.git') {
         files = files.concat(getAllFiles(fullPath, extensions))
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath)
@@ -289,7 +295,7 @@ function main() {
   const status = execSync($2);
     if (status.trim()) {
       console.log($2);
-      execSync('git stash push -m Auto-stash before merge process")
+      execSync('git stash push -m "Auto-stash before merge process"')
     }
     // Fetch latest changes,
   console.log($2);
@@ -300,7 +306,7 @@ function main() {
     // Pull latest changes,
   console.log($2);
     try {
-      execSync(git pull origin main')
+      execSync('git pull origin main')
     } catch (error) {
       console.log($2);
       // Find files with merge conflicts,
@@ -313,11 +319,11 @@ function main() {
           if (file.trim()) {
             console.log($2);
             try {
-              execSync(`git checkout --ours "${file}`)
+              execSync(`git checkout --ours "${file}"`)
             } catch (e) {
-              execSync(`git checkout --theirs ${file}"`)
+              execSync(`git checkout --theirs "${file}"`)
             }
-            execSync(`git add "${file}`)
+            execSync(`git add "${file}"`)
           }
         }
         // Commit the merge,
@@ -399,6 +405,7 @@ function main() {
         execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
       }
     }
+<<<<<<< HEAD
 
     let fixedCount = 0;
 
@@ -424,12 +431,27 @@ function main() {
             fixedCount++;
 <<<<<<< HEAD
 
+=======
+    // Now scan for and fix any remaining merge conflicts in files,
+  console.log($2);
+    const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js.json.md.css']),
+    let fixedCount = $2;
+    for (const file of files) {
+      try {
+        const content = fs.readFileSync($2);
+          if (fixMergeConflicts(file)) {
+            fixedCount++;
+          }
+        }
+      } catch (error) {
+        // Skip files that can't be read
+>>>>>>> origin/improvements-and-fixes
       }
     }
     if (fixedCount > 0) {
       console.log($2);
       execSync($2);
-      execSync(git commit -m "fix: resolve remaining merge conflicts in files\n\n- Fixed merge conflict markers in source files\n- Ensured clean codebase without conflicts")
+      execSync('git commit -m "fix: resolve remaining merge conflicts in files\n\n- Fixed merge conflict markers in source files\n- Ensured clean codebase without conflicts"')
     }
     // Get all branches,
   console.log($2);

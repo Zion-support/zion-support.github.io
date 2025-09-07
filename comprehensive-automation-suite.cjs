@@ -5,6 +5,7 @@ const fs = require('fs');
 class ComprehensiveAutomationSuite {
   constructor() {
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.startTime = new Date();
     this.results = {
       dependencyFix: { success: false, duration: 0, errors: [], warnings: [] },
@@ -427,6 +428,8 @@ class ComprehensiveAutomationSuite {
     }
 
     return recommendations;
+=======
+>>>>>>> origin/improvements-and-fixes
   }
 
 

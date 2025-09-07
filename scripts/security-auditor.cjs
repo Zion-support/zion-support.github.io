@@ -2,17 +2,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 
 =======
+=======
+>>>>>>> origin/improvements-and-fixes
 #!/usr/bin/env node,
   const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 class SecurityAuditor {
   constructor() {
     this.vulnerabilities = [];
@@ -20,18 +22,13 @@ class SecurityAuditor {
   }
   async auditDependencies() {
     try {
-      console.log('Auditing dependencies...);
-      const result = execSync(npm audit --json', { encoding: 'utf8 });
+      console.log('Auditing dependencies...');
+      const result = execSync('npm audit --json', { encoding: 'utf8' });
       const auditData = JSON.parse(result);
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       if (auditData.vulnerabilities) {
         this.vulnerabilities = Object.values(auditData.vulnerabilities);
         console.log(`Found ${this.vulnerabilities.length} vulnerabilities`);
+<<<<<<< HEAD
 =======
 =======
     this.projectRoot = process.cwd();
@@ -54,25 +51,31 @@ class SecurityAuditor {
       const vulnerabilities = auditData.vulnerabilities || {};
       const vulnerabilityCount = Object.keys(vulnerabilities).length;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes
       this.log(`🔍 Found ${vulnerabilityCount} vulnerabilities`);
       return {
+<<<<<<< HEAD
   // TODO: Implement
         vulnerabilities,"
 <<<<<<< HEAD
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
+=======
+>>>>>>> origin/improvements-and-fixes
         vulnerabilities,
-        "count: vulnerabilityCount,
-        status": vulnerabilityCount === 0 ? secure' : 'vulnerable
+        "count": vulnerabilityCount,
+        "status": vulnerabilityCount === 0 ? 'secure' : 'vulnerable'
       }} catch (error) {
-      this.log(`❌ NPM audit "failed: ${error.message}`);
-      return { error": error.message }}
+      this.log(`❌ NPM audit "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async checkEnvironmentVariables() {
-    this.log(🔐 Checking environment variables...');
+    this.log('🔐 Checking environment variables...');
     try {
+<<<<<<< HEAD
       const envFiles = ['.env, .env.local', '.env.development, .env.production'];
 =======
 
@@ -81,6 +84,9 @@ class SecurityAuditor {
   async checkEnvironmentVariables() {"
 >>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+      const envFiles = ['.env', '.env.local', '.env.development', '.env.production'];
+>>>>>>> origin/improvements-and-fixes
       const foundEnvFiles = [];
       const sensitiveVars = [];
 
@@ -88,6 +94,7 @@ class SecurityAuditor {
         const envPath = path.join(this.projectRoot, envFile);
         if (fs.existsSync(envPath)) {
           foundEnvFiles.push(envFile);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -98,6 +105,12 @@ class SecurityAuditor {
           // Check for sensitive variables;
           const sensitivePatterns = [/API_KEY/i,
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+          const content = fs.readFileSync(envPath, 'utf8');
+          
+          // Check for sensitive variables
+const sensitivePatterns = [/API_KEY/i,;
+>>>>>>> origin/improvements-and-fixes
             /SECRET/i,
             /PASSWORD/i,
             /TOKEN/i,
@@ -105,18 +118,21 @@ class SecurityAuditor {
             /CREDENTIAL/i;]
           ];
 
-          const lines = content.split(\n');
+          const lines = content.split('\n');
           lines.forEach((line, index) => {
-            if (line.trim() && !line.startsWith('#)) {
-              const [key] = line.split(=');
+            if (line.trim() && !line.startsWith('#')) {
+              const [key] = line.split('=');
               if (key && sensitivePatterns.some(pattern => pattern.test(key))) {
                 sensitiveVars.push({
 
-                  "line: index + 1,)"
-                  "variable: key.trim()
+                  "line": index + 1,")"
+                  "variable": key.trim()"
                 })}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/improvements-and-fixes
             }
           })}
       }
@@ -127,27 +143,32 @@ class SecurityAuditor {
       return {
         "envFiles": foundEnvFiles,
         sensitiveVars,
-        status: sensitiveVars.length > 0 ? 'needs_review : secure'
+        "status": sensitiveVars.length > 0 ? 'needs_review' : 'secure'
       }} catch (error) {
       this.log(`❌ Environment variables check "failed": ${error.message}`);
-      return { error: error.message }}
+      return { "error": error.message }}
   }
 
   async checkDependencies() {
-    this.log('📦 Checking dependencies...);
+    this.log('📦 Checking dependencies...');
     try {
-      const packageJsonPath = path.join(this.projectRoot, package.json');
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
       if (!fs.existsSync(packageJsonPath)) {
-        throw new Error('package.json not found)}
+        throw new Error('package.json not found')}
 
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies }
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
       
       // Check for known vulnerable packages
-
+const vulnerablePackages = ['lodash',;
+        'moment',
+        'jquery',
+        'express',
+        'request'
       ];
 
       const foundVulnerable = Object.keys(dependencies).filter(dep => 
+<<<<<<< HEAD
 
 =======
 `;
@@ -162,46 +183,51 @@ class SecurityAuditor {
 
       const foundVulnerable = Object.keys(dependencies).filter(dep => )
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes
         vulnerablePackages.some(vuln => dep.includes(vuln))
       );
       this.log(`📦 Found ${foundVulnerable.length} potentially vulnerable packages`);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/improvements-and-fixes
       return {
         "totalDependencies": Object.keys(dependencies).length,
-        vulnerablePackages: foundVulnerable,
-        "status": foundVulnerable.length === 0 ? secure' : 'needs_review
+        "vulnerablePackages": foundVulnerable,
+        "status": foundVulnerable.length === 0 ? 'secure' : 'needs_review'
       }} catch (error) {
-      this.log(`❌ Dependencies check failed: ${error.message}`);
+      this.log(`❌ Dependencies check "failed": ${error.message}`);
       return { "error": error.message }}
   }
 
   async checkCodeSecurity() {
-    this.log(🔍 Checking code security...');
+    this.log('🔍 Checking code security...');
     try {
       const securityIssues = [];
       
       // Check for common security issues in code
       const patterns = [{
-          name: 'eval() usage,
+          "name": 'eval() usage',
           "pattern": /eval\s*\(/g,
-          severity: high'
+          "severity": 'high'
         },
         {
-          "name": 'innerHTML usage,
-          pattern: /\.innerHTML\s*=/g,
-          "severity": medium'
+          "name": 'innerHTML usage',
+          "pattern": /\.innerHTML\s*=/g,
+          "severity": 'medium'
         },
         {
-          name: 'dangerouslySetInnerHTML usage,
+          "name": 'dangerouslySetInnerHTML usage',
           "pattern": /dangerouslySetInnerHTML/g,
-          severity: medium'
+          "severity": 'medium'
         },
         {
-          "name": 'console.log with sensitive data,
-          pattern: /console\.log\s*\(\s*[""].*?(password|secret|token|key)[']/gi,
-          "severity": 'high
+          "name": 'console.log with sensitive data',
+          "pattern": /console\.log\s*\(\s*['""].*?(password|secret|token|key)['""]/gi,
+          "severity": 'high'
         }
       ];
 =======
@@ -213,21 +239,23 @@ class SecurityAuditor {
       const patterns = [{
 >>>>>>> origin/chore/fix-lint-and-merge
 
-
       const files = this.findSourceFiles();
       for (const file of files) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/improvements-and-fixes
         try {
-          const content = fs.readFileSync(file, utf8');
+          const content = fs.readFileSync(file, 'utf8');
           
           patterns.forEach(pattern => {
             const matches = content.match(pattern.pattern);
             if (matches) {
               securityIssues.push({
-                file: path.relative(this.projectRoot, file),
+                "file": path.relative(this.projectRoot, file),
                 "issue": pattern.name,
-                severity: pattern.severity,
+                "severity": pattern.severity,
                 "count": matches.length
               })}
           })} catch (error) {
@@ -238,17 +266,18 @@ class SecurityAuditor {
       this.log(`🔍 Found ${securityIssues.length} potential security issues`);
 
       return {
-        issues: securityIssues,
-        "status": securityIssues.length === 0 ? secure : 'needs_review'
+        "issues": securityIssues,
+        "status": securityIssues.length === 0 ? 'secure' : 'needs_review'
       }} catch (error) {
-      this.log(`❌ Code security check failed: ${error.message}`);
+      this.log(`❌ Code security check "failed": ${error.message}`);
       return { "error": error.message }}
   }
 
   findSourceFiles() {
     const sourceFiles = [];
-    const extensions = [.ts, '.tsx', .js, '.jsx'];
+    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
     
+<<<<<<< HEAD
 =======
   // TODO: Implement
 
@@ -266,16 +295,22 @@ class SecurityAuditor {
   // TODO: Implement
 >>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+>>>>>>> origin/improvements-and-fixes
     const scanDirectory = (dir) => {
   // TODO: Implement
 
-        this.fixes.push(Applied automatic security fixes);
+        this.fixes.push('Applied automatic security fixes');
         console.log('✅ Security fixes applied');
       } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         console.log(❌ Could not apply automatic fixes);
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+        console.log('❌ Could not apply automatic fixes');
+>>>>>>> origin/improvements-and-fixes
       }
     } catch (error) {
       console.error('Error auditing dependencies:', error);
@@ -286,6 +321,7 @@ class SecurityAuditor {
       timestamp: new Date().toISOString(),
       vulnerabilities: this.vulnerabilities,
       recommendations: this.recommendations
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         console.log('❌ Could not apply automatic fixes');
@@ -303,6 +339,9 @@ class SecurityAuditor {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+    };
+>>>>>>> origin/improvements-and-fixes
     const reportPath = path.join(process.cwd(), 'security-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`Security audit report generated: ${reportPath}`);
@@ -311,6 +350,7 @@ class SecurityAuditor {
     console.log('🔒 Starting Security Audit');
     await this.auditDependencies();
     await this.generateReport();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -420,10 +460,15 @@ class SecurityAuditor {
   }
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+  }
+}
+>>>>>>> origin/improvements-and-fixes
 if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.run()
     .then((report) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -464,43 +509,52 @@ module.exports = SecurityAuditor;
 
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-#!/usr/bin/env node;
-
-        "status"
-        status
-        "status"
-          name
-          "severity"
-          name
-          "severity"
-          name
-          "severity"
-          name
-          "pattern": /console\.log\s*\(\s*[')]
-          "severity"
-        status
-        "type"
-        priority
-        "message"
-        impact
-        "type"
-        priority
-        "message"
-        impact
-        "type"
-        priority
-        "message"
-        impact
-        "type"
-        priority
-        "message"
-<<<<<<< HEAD
-        "impact"
-<<<<<<< HEAD
 =======
-        impact
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+      process.exit(0)})
+    .catch((error) => {
+      console.error('\n💥 Security Auditor "failed": ', error.message);
+      process.exit(1)})}
+module.exports = SecurityAuditor;
+>>>>>>> origin/improvements-and-fixes
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+    this.reportsDir = path.join(this.projectRoot, 'security-reports')
+    this.log(' Running npm audit...')
+const result = execSync('npm audit --audit-level=moderate --json');
+        "encoding"
+        "status"
+        "status"
+        "status"
+          "name"
+          "severity"
+          "name"
+          "severity"
+          "name"
+          "severity"
+          "name"
+          "pattern": /console\.log\s*\(\s*['"")]
+          "severity"
+        "status"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
       console.error('\n� Security Auditor "failed")
+<<<<<<< HEAD
 
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -526,3 +580,5 @@ main
 
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

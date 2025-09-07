@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -30,6 +31,11 @@ const path = require('path');
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/improvements-and-fixes
 // console.log(' Fixing Final Corrupted Files...')
 console.log('')
 const corruptedFiles = ['pages/docs/integration-examples.tsx']
@@ -39,28 +45,22 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
   'pages/schedule-demo.tsx'
     let content = ''
     if (filePath === 'pages/docs/integration-examples.tsx')
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
       content = "
-    name
+    "name"
     "email"
-    company
+    "company"
     "phone"
-    service
+    "service"
     "message"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-  const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"]
 <<<<<<< HEAD
 =======
-const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"];
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+>>>>>>> origin/improvements-and-fixes
+  const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"]
         <meta name="description" content="
+<<<<<<< HEAD
 
 
 
@@ -88,3 +88,5 @@ const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

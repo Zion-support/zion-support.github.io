@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -44,15 +45,14 @@
 =======
 #!/usr/bin/env node;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/improvements-and-fixes
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-=======
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log(' Comprehensive Code Fixer')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -74,6 +74,8 @@ console.log()
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> origin/improvements-and-fixes
 console.log('')
   console.log('� Fixing common linting issues...')
 const filesToFix = ['components/ContactForm.tsx'];
@@ -112,8 +114,8 @@ let content = fs.readFileSync(filePath, 'utf8');
     execSync('npx tsc --noEmit', { "stdio"})
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
-<<<<<<< HEAD
     console.error(' Comprehensive Code Fixer "failed")
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log()
 =======
@@ -146,3 +148,5 @@ const { execSync } = require('child_process')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

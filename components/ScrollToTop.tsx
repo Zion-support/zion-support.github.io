@@ -1,5 +1,8 @@
+'use client';
 
+import { useEffect, useState } from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 useEffect ( () => {
   const toggleVisibility = () => {
@@ -17,17 +20,21 @@ export default ScrollToTop
 import React, { useState, useEffect } from 'react';
 
 const ScrollToTop: React.FC = () => {
+=======
+const ScrollToTop = () => {
+>>>>>>> origin/improvements-and-fixes
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-      }
+  // Show button when page is scrolled down
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
     }
+  };
 
+<<<<<<< HEAD
     window.addEventListener(scroll', toggleVisibility);
     return () => window.removeEventListener('scroll, toggleVisibility)
 =======
@@ -51,24 +58,50 @@ const scrollToTop = (
 <<<<<<< HEAD
       behavior: smooth'})
   }
+=======
+  // Scroll to top smoothly
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+>>>>>>> origin/improvements-and-fixes
 
-return (;
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  return (
     <>
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group"
+          className="fixed bottom-8 right-8 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           aria-label="Scroll to top"
         >
-          <svg,
-className='w-6 h-6 transform group-"hover":-translate-y-1 transition-transform duration-300''
-            fill='none''
-            stroke='currentColor''
-            viewBox='0 0 24 24''
-            <path,
-strokeLinecap='round''
-              strokeLinejoin='round''
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
+          </svg>
+        </button>
+      )}
+    </>
+  );
+};
 
+<<<<<<< HEAD
 export default ScrollToTop;
   )}export default ScrollToTop;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
@@ -174,3 +207,6 @@ strokeLinecap='round'
 export default ScrollToTop;
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+export default ScrollToTop;
+>>>>>>> origin/improvements-and-fixes

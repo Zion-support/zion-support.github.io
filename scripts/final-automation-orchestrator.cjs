@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -29,21 +30,12 @@ main
 
 
 
-#!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node;
 =======
+>>>>>>> origin/improvements-and-fixes
 #!/usr/bin/env node;
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-=======
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log(' Final Automation Orchestrator')
 console.log('=====')
 const output = execSync(command, { "encoding": 'utf8', "stdio"});
@@ -59,11 +51,8 @@ const status = execSync('git status --porcelain', { "encoding"});
       execSync('git push origin main', { "stdio"})
 // console.log('\n Final Automation "Summary")
       console.log('\n "Recommendations")
-<<<<<<< HEAD
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     console.error(' Final automation orchestrator "failed")
+<<<<<<< HEAD
 
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -78,3 +67,5 @@ const { execSync } = require('child_process')
 // console.log(' Final Automation Orchestrator')
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

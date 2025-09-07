@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useCallback } from 'react';
 
 <<<<<<< HEAD
@@ -9,6 +11,7 @@ interface ApiState<T> {
   error: string | null;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
 interface UseApiOptions {
@@ -209,9 +212,15 @@ export function use_api < T>(url: string;, options?: RequestInit) {
 
 >>>>>>> origin/chore/fix-lint-and-merge
 interface UseApiOptions {
+=======
+interface ApiOptions {
+>>>>>>> origin/improvements-and-fixes
   immediate?: boolean;
+  onSuccess?: (data: any) => void;
+  onError?: (error: string) => void;
 }
 
+<<<<<<< HEAD
 export function useApi<T>(
 <<<<<<< HEAD
   apiCall: () => Promise<T>;
@@ -370,27 +379,75 @@ interface UseApiOptions {}
       const result = await apiCall();
       setData(result);
     } catch (err) {
+=======
+/**
+ * Custom hook for making API calls with loading and error states
+ */
+export function useApi<T = any>(
+  url: string,
+  options: ApiOptions = {}
+): ApiState<T> & {
+  refetch: () => Promise<void>;
+  mutate: (data: T) => void;
+} {
+  const [state, setState] = useState<ApiState<T>>({
+    data: null,
+    loading: false,
+    error: null,
+  });
 
-    } finally {
+  const { immediate = true, onSuccess, onError } = options;
+
+  const fetchData = useCallback(async () => {
+    setState(prev => ({ ...prev, loading: true, error: null }));
+>>>>>>> origin/improvements-and-fixes
+
+    try {
+      const response = await fetch(url);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-      setLoading(false);
+      
+      const data = await response.json();
+      
+      setState({
+        data,
+        loading: false,
+        error: null,
+      });
+      
+      onSuccess?.(data);
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'An error occurred';
+      
+      setState({
+        data: null,
+        loading: false,
+        error: errorMessage,
+      });
+      
+      onError?.(errorMessage);
     }
-  }, [apiCall]);
+  }, [url, onSuccess, onError]);
+
+  const mutate = useCallback((data: T) => {
+    setState(prev => ({ ...prev, data }));
+  }, []);
 
   useEffect(() => {
-    if (options.immediate !== false) {
-      }
+    if (immediate) {
       fetchData();
     }
-  }, [fetchData, options.immediate]);
+  }, [fetchData, immediate]);
 
   return {
-    data;
-    loading;
-    error;
-    refetch: fetchData;
+    ...state,
+    refetch: fetchData,
+    mutate,
   };
 }
+<<<<<<< HEAD
 =======
       const result = await apiCall();}
       setData(result);}
@@ -442,3 +499,72 @@ if ( {) {
 }
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
+=======
+
+/**
+ * Custom hook for making POST requests
+ */
+export function useApiPost<T = any, R = any>(
+  url: string,
+  options: ApiOptions = {}
+): ApiState<R> & {
+  post: (data: T) => Promise<void>;
+  mutate: (data: R) => void;
+} {
+  const [state, setState] = useState<ApiState<R>>({
+    data: null,
+    loading: false,
+    error: null,
+  });
+
+  const { onSuccess, onError } = options;
+
+  const post = useCallback(async (data: T) => {
+    setState(prev => ({ ...prev, loading: true, error: null }));
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const result = await response.json();
+      
+      setState({
+        data: result,
+        loading: false,
+        error: null,
+      });
+      
+      onSuccess?.(result);
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'An error occurred';
+      
+      setState({
+        data: null,
+        loading: false,
+        error: errorMessage,
+      });
+      
+      onError?.(errorMessage);
+    }
+  }, [url, onSuccess, onError]);
+
+  const mutate = useCallback((data: R) => {
+    setState(prev => ({ ...prev, data }));
+  }, []);
+
+  return {
+    ...state,
+    post,
+    mutate,
+  };
+}
+>>>>>>> origin/improvements-and-fixes

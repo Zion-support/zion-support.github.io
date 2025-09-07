@@ -1,127 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 
+=======
+>>>>>>> origin/improvements-and-fixes
 import React from 'react';
-import Link from 'next/link';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
-
-import React from "react";
-import Link from "next/link";
-import {
-  Phone
-  Mail
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  ArrowRight
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram
-
-
-  Phone;
-  Mail;
-  MapPin;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  ArrowRight;
-  Phone,Mail,MapPin,Facebook,Twitter,Linkedin,Instagram;
-  Instagram;
-
-              {socialLinks.map((link) => (<a;
-                  }
-                  key={link.name}
-                  href={link.href}
-
-  Phone;
-  Mail;
-  MapPin;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  ArrowRight;
-
-          {/* Company Info */}Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,quantum computing, blockchain, IoT, and digital transformation services.;
-            </p>;
-              Leading technology solutions provider specializing in AI;
-              cybersecurity, cloud infrastructure, quantum computing;
-              blockchain, IoT, and digital transformation services.;
-            </p>;
-            {/* Contact Info */}
-
-                <span>;
-                  364 E Main St STE 1008;
-                  <br />;
-                  Middletown DE 19709;
-                </span>;
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>;
-
-              </div>;
-            </div>;
-            <p className="text-gray-300 mb-6 max-w-md>;"
-              Leading provider of AI solutions, cloud services, and technology consulting.;
-              Transforming businesses through innovation and cutting-edge technology.;
-            </p>;
-
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>;
-                <span>;
-                  364 E Main St STE 1008;
-                  <br />;
-                  Middletown DE 19709;
-                </span>;
-import { motion } from 'framer-motion';'
-import { 
-  }
-  MapPin, 
-  Phone, 
-  Mail, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram, 
-  Github 
-
-
-const socialLinks = [;
-  { "name": 'Facebook', "href": '#', "icon": Facebook,'
-},
-  { "name": 'Twitter', "href": '#', "icon": Twitter,'
-},
-  { "name": 'LinkedIn', "href": '#', "icon": Linkedin,'
-},
-  { "name": 'Instagram', "href": '#', "icon": Instagram,'
-},
-  { "name": 'GitHub', "href": '#', "icon": Github,'
-}
-];
-
-  Phone
-  Mail
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  ArrowRight
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-} from "lucide-react";
-
-import React from 'react;';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -129,8 +12,7 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: 'AI Meeting Assistant', href: '/services/ai-meeting-assistant' },
-      { name: 'Smart Invoice Generator', href: '/services/smart-invoice-generator' },
+      { name: 'AI Solutions', href: '/services/ai-chatbot-platform' },
       { name: 'Web Development', href: '#' },
       { name: 'Cloud Services', href: '#' },
       { name: 'Mobile Apps', href: '#' },
@@ -171,113 +53,29 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
+            <Link href="/" className="text-2xl font-bold text-white mb-4 block">
+              Zion Tech Group
             </Link>
-            <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
-              Leading technology solutions provider specializing in web development, 
-              mobile applications, AI integration, and cloud services. Transform your business with cutting-edge technology.
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading technology solutions provider specializing in AI, web development, 
+              mobile applications, cloud services, and digital transformation.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
+                  className="text-gray-300 hover:text-white transition-colors"
                   aria-label={social.name}
                 >
-                  <span className="text-lg">{social.icon}</span>
+                  <span className="text-2xl">{social.icon}</span>
                 </a>
-              </div>
-              <div className="flex items-center>"
-                <Mail className="w-4 h-4 mr-2 text-blue-400" />"
-                <a href="mailto":kleber@ziontechgroup.com" className=""hover":text-blue-400 transition-colors>"
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center">"
-                <MapPin className=w-4 h-4 mr-2 text-blue-400" />"
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
-                <span>
-                  364 E Main St STE 1008
-                  <br />
-                  Middletown DE 19709
-                </span>
-            {/* Contact Info */}
-import React from 'react';
-
-export default function Footer() {
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-import React from 'react';
-import Link from 'next/link';
-
-const Footer: React.FC = () => {
-  return (
-    <footer className="bg-gray-800 text-white">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:px-8">
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
-            </p>
-          </div>
-ursor/automate-test-improve-and-merge-code-646c;
-import React from 'react';'
-  MapPin,Phone,Mail,Facebook,Twitter,Linkedin,Instagram,Github;
-
-              {socialLinks.map((link) => (<a;
-                  }
-                  key={link.name}
-                  href={link.href}
-
-                </a>;
-              ))}
-            </div>;
-          </div>;
-ursor/automate-test-improve-and-merge-code-646c;
-          <div>;
-
-                  >;
-                    {link.name}
-                    className="text-gray-300 "hover": text-white transition-colors">"
-
-                    {link.nam
-}
-                  </Link>;
-                </li>;
-
-              {Object.entries(services).map(([category, links]) => (<div key={category}>;
-                  <h4 className=text-sm font-medium text-blue-400 mb-2">{category}</h4>;"
-                  <ul className="space-y-1>;"
-                    {links.slice(0, 3).map((link) => (<li key={link.name}>;
-                        <Link;
-                          href={link.href}
-
-                        >;
-                          {link.name}
-                          className="text-sm text-gray-300 "hover": text-white transition-colors">"
-
-                          {link.nam
-}
-                        </Link>;
-                      </li>;
-                    ))}
-                  </ul>;
-                </div>;
-              </div>
               ))}
             </div>
           </div>
-
+          
           {/* Services */}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -444,12 +242,28 @@ import Link from 'next/link';
               {footerLinks && footerLinks.company.map((link) => (;
                 <li key={link && link.name}>;
                   <Link
+=======
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              {footerLinks.services.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+>>>>>>> origin/improvements-and-fixes
           {/* Company */}
           <div>
-            <h3 className=text-lg font-semibold mb-6">Company</h3>"
-            <ul className="space-y-3>"
-              {company.map((link) => (
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              {footerLinks.company.map((link) => (
                 <li key={link.name}>
+<<<<<<< HEAD
                   <Link
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-colors duration-200"
@@ -682,15 +496,30 @@ export default function Footer() {
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
+=======
+                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors">
+>>>>>>> origin/improvements-and-fixes
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+          
+          {/* Support */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <ul className="space-y-2">
+              {footerLinks.support.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />;"
                 </svg>;
@@ -977,23 +806,25 @@ export default Footer;
               </Link>;
               <Link
                 href=/terms
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">"
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-          </div>
+=======
         </div>
-
-        {/* Bottom Bar */}
+>>>>>>> origin/improvements-and-fixes
+        
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex items-center space-x-6 mt-4 md:mt-0">
-              <span className="text-gray-400 text-sm">Made with ❤️ by Zion Tech Group</span>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              {footerLinks.legal.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
 =======
@@ -1006,6 +837,7 @@ export default Footer;
 <<<<<<< HEAD
 };
 
+<<<<<<< HEAD
 
 export default Footer;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -1036,3 +868,6 @@ export default Footer;
 }
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+export default Footer;
+>>>>>>> origin/improvements-and-fixes

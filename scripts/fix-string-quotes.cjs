@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -30,6 +31,11 @@ const path = require('path');
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/improvements-and-fixes
 // console.log(' Fixing String Quote Issues...')
 console.log('====')
 const filesToFix = ['pages/api/docs.ts']
@@ -48,6 +54,7 @@ const filesToFix = ['pages/api/docs.ts']
     "pattern"
     "replacement"
     "replacement": '"$1${$2}$3"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "replacement": '"$1\\\\\n  $2"
@@ -76,3 +83,6 @@ const filesToFix = ['pages/api/docs.ts']
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+    "replacement": '"$1\\\\\n  $2"
+>>>>>>> origin/improvements-and-fixes

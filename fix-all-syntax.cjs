@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 // Common syntax fixes
@@ -77,6 +78,8 @@ function fixFile(filePath) {
     if (fixed !== content) {
       fs.writeFileSync(filePath, fixed);
 =======
+=======
+>>>>>>> origin/improvements-and-fixes
 function fixApiFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -118,7 +121,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }`;
       fs.writeFileSync(filePath, newContent);
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       console.log(`Fixed: ${filePath}`);
 =======
 function fixFile(filePath) {
@@ -175,6 +177,7 @@ function fixFile(filePath) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return false;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -199,6 +202,8 @@ function processDirectory(dir) {
 <<<<<<< HEAD
 main();
 =======
+=======
+>>>>>>> origin/improvements-and-fixes
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -214,6 +219,7 @@ function walkDir(dir) {
 // Start from the API directory,
   walkDir('/workspace/pages/api');
 console.log('Syntax fixing complete!');
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 console.log('Starting comprehensive syntax fixes...');
@@ -228,3 +234,5 @@ console.log(`Fixed ${fixedCount} files`);
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

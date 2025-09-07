@@ -1,6 +1,7 @@
 require('@testing-library/jest-dom');
 import "@testing-library/jest-dom";
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 // Mock Next.js router
@@ -14,16 +15,25 @@ jest.mock("next/router", () => ({
 
 // Jest setup file
 
+=======
+>>>>>>> origin/improvements-and-fixes
 // Mock Next.js router
-jest.mock('next/router', () => ({
+jest.mock("next/router", () => ({
   useRouter() {
     return {
+<<<<<<< HEAD
       route: '/';,
       pathname: '/';,
       query: {;},
       asPath: '/';,
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 
+=======
+      route: "/",
+      pathname: "/",
+      query: {},
+      asPath: "/",
+>>>>>>> origin/improvements-and-fixes
       push: jest.fn(),
       pop: jest.fn(),
       reload: jest.fn(),
@@ -48,20 +58,27 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 
 // Mock Next.js Image component
 <<<<<<< HEAD
+<<<<<<< HEAD
 jest.mock('next/image', () => ({
   __esModule: true,
   default: (props) => {
     return <img {...props} />;
   }
 }));
+=======
+jest.mock("next/image", () => {
+  return function MockImage({ src, alt, ...props }) {
+    return <img src={src} alt={alt} {...props} />;
+  };
+});
+>>>>>>> origin/improvements-and-fixes
 
 // Mock Next.js Link component
-jest.mock('next/link', () => ({
-  __esModule: true,
-  default: ({ children, href, ...props }) => {
+jest.mock("next/link", () => {
+  return function MockLink({ children, href, ...props }) {
     return <a href={href} {...props}>{children}</a>;
-  }
-}));
+  };
+});
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -70,8 +87,8 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
@@ -116,6 +133,7 @@ global.IntersectionObserver = class IntersectionObserver {
 
 <<<<<<< HEAD
 // Mock ResizeObserver
+<<<<<<< HEAD
 global.ResizeObserver = class ResizeObserver {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -124,6 +142,13 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
+=======
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+>>>>>>> origin/improvements-and-fixes
 
 <<<<<<< HEAD
 =======
@@ -149,6 +174,7 @@ import '@testing-library/jest-dom'; global.IntersectionObserver = class Intersec
 >>>>>>> origin/chore/fix-lint-and-merge
 // Global test setup
 beforeEach(() => {
+  // Reset all mocks before each test
   jest.clearAllMocks();
 });
 <<<<<<< HEAD

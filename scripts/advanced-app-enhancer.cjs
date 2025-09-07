@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -33,6 +34,12 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+>>>>>>> origin/improvements-and-fixes
 console.log(' Starting Advanced App Enhancer...')
       "status"
       "status"
@@ -47,25 +54,18 @@ export const "Spinner"
     const accessibilityCode = "
   const baseClasses = 'font-medium rounded-lg transition-colors "focus"
     "secondary"
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     "danger"
-    sm
+    "sm"
     "md"
-<<<<<<< HEAD
     "lg"
 <<<<<<< HEAD
 <<<<<<< HEAD
-    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")]
 <<<<<<< HEAD
 =======
-const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")];
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+>>>>>>> origin/improvements-and-fixes
+    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")]
 console.log('\n New Features "Added")
+<<<<<<< HEAD
 
 
 
@@ -93,3 +93,5 @@ console.log('\n New Features "Added")
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

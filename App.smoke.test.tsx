@@ -1,16 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react;
 import { render } from @testing-library/react';
 import App from './App;
+=======
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App';
+>>>>>>> origin/improvements-and-fixes
 
-describe(App Smoke Tests', () => {
-  it('should render without crashing, () => {
+describe('App Smoke Tests', () => {
+  it('should render without crashing', () => {
     expect(() => render(<App />)).not.toThrow();
   });
-
+<<<<<<< HEAD
+  
+  it('should render a basic structure', () => {
+=======
+  it('should render the main app component', () => {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-a8e3
     const { container } = render(<App />);
     expect(container).toBeInTheDocument();
   });
+<<<<<<< HEAD
 
 =======
 });
@@ -57,3 +69,6 @@ it('renders without crashing', () => {
 =======
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+});
+>>>>>>> origin/improvements-and-fixes

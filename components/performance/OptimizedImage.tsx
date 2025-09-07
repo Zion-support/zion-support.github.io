@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import Image from 'next/image';
@@ -38,6 +39,8 @@ import Image from next / image';
 
 
 
+=======
+>>>>>>> origin/improvements-and-fixes
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -48,22 +51,10 @@ interface OptimizedImageProps {
   sizes?: string;
 }
 
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src;
-  alt;
-  width;
-  height;
-  priority = false;
-  className;
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
-
 import React from "react";
 import Image from "next/image";
-import Image from 'next / image';
-;
-import React from "react;
-import Image from next/image";
-
+import React from 'react';
+import Image from 'next/image';
 
 
 import React from "react";
@@ -72,8 +63,6 @@ import React from "react";
 import Image from "next/image";
 
 import React from \"react\";"
-
-import React from \"react\;
 import Image from \"next/image\";
 =======
 
@@ -95,34 +84,64 @@ interface OptimizedImageProps {
   height: number;
   className?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+interface OptimizedImageProps {}
+  width?: number;
+  height?: number;
+  class_name?: string;
+>>>>>>> origin/improvements-and-fixes
   priority?: boolean;
   quality?: number;
   sizes?: string;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const "OptimizedImage": React.FC<OptimizedImageProps> = ({
+  }
+>>>>>>> origin/improvements-and-fixes
   src,
   alt,
   width,
   height,
 <<<<<<< HEAD
+<<<<<<< HEAD
   className = "",
+=======
+  className = "","
+>>>>>>> origin/improvements-and-fixes
   priority = false,
   quality = 75,
   sizes = "100vw","
 }) => {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+  // Check condition
+if ( {) {
+  $2
+  priority = false,'
+  sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
+  quality = 85,
+  fill = false,
+  style;
+}) => {}
+  // Check condition;
+if ( {) {}
+  $2;
+>>>>>>> origin/improvements-and-fixes
 }
-  height}
     return (
       <Image;
         src={src}
@@ -136,6 +155,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 <<<<<<< HEAD
   return (
     <Image
+  src,
+  alt,
+  width,
+  height,
+  className = "",
+  priority = false,
+  quality = 75,
+  sizes = "100vw",
+}) => {
       src={src}
   priority?: boolean;
   quality?: number;
@@ -158,36 +186,30 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             
 =======
 
-}) => {
-  return (
-    <Image
-      src={src}
 
  ;
-  return (}
-    <Image;}
-}) => {
-  return (
-    <Image
-      src={src}
-  return (}
-    <Image;}
+}
+return (;
+    <Image,
 src={src}
+<<<<<<< HEAD
 
 =======
 
       src={src}
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes
       alt={alt}
       width={width}
       height={height}
-      className={className}
       priority={priority}
 <<<<<<< HEAD
       className={className}
       sizes={sizes}
       quality={85}
+<<<<<<< HEAD
       sizes={sizes}
       quality={quality}
       style={style}
@@ -239,12 +261,20 @@ export default OptimizedImage;
 "
 =======
 
+=======
+export default OptimizedImage;
+'
+>>>>>>> origin/improvements-and-fixes
   )
-}
+};
+
 export default OptimizedImage;
-"
-export default OptimizedImage;
+<<<<<<< HEAD
 =======
 export default OptimizedImage;
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/main
+=======
+      className={className}
+      priority={priority}
+>>>>>>> origin/improvements-and-fixes

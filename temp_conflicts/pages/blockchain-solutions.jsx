@@ -1,9 +1,12 @@
-<
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const BlockchainSolutions: NextPage;
+const BlockchainSolutions: NextPage = () => {
   return (
     <div>
       <Head>
         <title>BlockchainSolutions - Zion Tech Solutions</title>
-        <meta name='description content=BlockchainSolutions page' />
+        <meta name='description' content='BlockchainSolutions page' />
       </Head>
 
       <main>
@@ -12,4 +15,5 @@
       </main>
     </div>
   )
-<
+}
+export default BlockchainSolutions;

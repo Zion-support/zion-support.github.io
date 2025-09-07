@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pr-12243
 
 import { IntegrationConfig } from './types';
@@ -8,6 +9,45 @@ export class IntegrationRegistry {
   registerConnector(type: string;, connector: BaseConnector): void {
     this.connectors.set(type, connector);
   }
+=======
+<<<<<<< HEAD
+export interface IntegrationProvider {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  authUrl: string;
+  scopes: string[];
+}
+
+export const providers: IntegrationProvider[] = [
+  {
+    id: 'github',
+    name: 'GitHub',
+    description: 'Connect your GitHub repositories',
+    icon: 'github',
+    authUrl: 'https://github.com/login/oauth/authorize',
+    scopes: ['repo', 'user']
+  },
+  {
+    id: 'slack',
+    name: 'Slack',
+    description: 'Connect your Slack workspace',
+    icon: 'slack',
+    authUrl: 'https://slack.com/oauth/authorize',
+    scopes: ['channels:read', 'chat:write']
+  }
+];
+
+export function getProviderById(id: string): IntegrationProvider | undefined {
+  return providers.find(p => p.id === id);
+}
+
+export function getAllProviders(): IntegrationProvider[] {
+  return providers;
+=======
+import { IntegrationProviderMeta } from './types';'
+>>>>>>> origin/improvements-and-fixes
 
   {
     id: "salesforce"
@@ -101,6 +141,7 @@ export function getProviderById (
   return PROVIDERS.find ((p) => p.id === id);
 }
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12243
@@ -143,3 +184,10 @@ export function getProviderById(
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export function getActiveProviders(): IntegrationProviderMeta[] {
+  }
+  return PROVIDERS.filter(provider => { return provider.isActive); }
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+}
+>>>>>>> origin/improvements-and-fixes

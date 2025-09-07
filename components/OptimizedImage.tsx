@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useCallback } from 'react';
 
 interface OptimizedImageProps {
@@ -170,6 +171,8 @@ export default OptimizedImage;
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/improvements-and-fixes
 return (
     <Image,
   src={src}

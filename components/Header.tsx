@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -35,20 +36,15 @@ import { Menu, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap } from 'luc
 import { useRouter } from 'next/router';
 
 
+=======
+>>>>>>> origin/improvements-and-fixes
 'use client';
-"use client";
 
-"use client";
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import {
-  Menu,
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
 const Header = () => {
+<<<<<<< HEAD
 =======
 'use client';
 <<<<<<< HEAD
@@ -1027,6 +1023,8 @@ const servicesDropdown = [
 ];
 
 const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
+=======
+>>>>>>> origin/improvements-and-fixes
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
@@ -1037,94 +1035,52 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <div className="flex items-center">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
+            </Link>
+          </div>
+          
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
               >
                 {item.name}
               </Link>
             ))}
           </nav>
-
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
-              Sign In
-            </button>
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
-              Get Started
+          
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
             </button>
           </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {isMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
         </div>
-
-        {/* Mobile Navigation */}
+        
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-blue-600 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
-                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 text-left">
-                  Sign In
-                </button>
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
-                  Get Started
-                </button>
-              </div>
             </nav>
           </div>
         )}
@@ -1133,6 +1089,7 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Header;
 }
 export default Header;
@@ -1158,3 +1115,6 @@ export default Header;
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
+=======
+export default Header;
+>>>>>>> origin/improvements-and-fixes

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -21,22 +22,11 @@
 
 
 
-#!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-///usr/bin/env node
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
+>>>>>>> origin/improvements-and-fixes
 #!/usr/bin/env node;
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
-=======
-const fs = require('fs');
-const path = require('path');
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log(' Targeted Syntax Fixer')
 console.log('===')
 const content = fs.readFileSync(filePath, 'utf8');
@@ -57,8 +47,8 @@ const nextLine = i + 1 < lines.length ? lines[i + 1].trim() : '';
     fixedContent = fixedContent.replace(/\\'/g, ')
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
-<<<<<<< HEAD
 // console.log('\n� "Errors")
+<<<<<<< HEAD
 =======
 
     fixedContent = fixedContent.replace(/\\'/g, ')
@@ -85,3 +75,5 @@ main
 
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
@@ -21,17 +22,12 @@
 
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> origin/improvements-and-fixes
 #!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-=======
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log(' Zion Tech Group - Enhanced Automation Suite')
 console.log('====')
   log(message, type = 'info')
@@ -47,8 +43,8 @@ const buildCommands = [{ "cmd": 'npm run build', "desc"}];
 const result = await this.runCommand(cmd, desc, { "stdio"});
       "recommendations"
     this.log(`Report saved "to"`)
-<<<<<<< HEAD
       this.log(` Enhanced automation suite "failed"`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 ///usr/bin/env node
 =======
@@ -110,3 +106,5 @@ console.log('====)
 
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

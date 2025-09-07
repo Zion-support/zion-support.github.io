@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -7,6 +8,68 @@ import {
 } from 'lucide-react';
 const Header: React.FC = () => {
   const [, setIsScrolled] = useState(false);
+=======
+
+const service_categories = [;
+  {"name": 'Micro SaaS',"href": '/services / micro - saas',"description": 'Innovative focused software solutions',"popular": ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];'
+},{"name": 'IT Services',"href": '/services / it - services',"description": 'Enterprise infrastructure & security',"popular": ['Cloud Migration', 'Edge Computing', 'Zero Trust Security', '5G Networks'];'
+},{"name": 'AI Services',"href": '/services / ai - services',"description": 'Cutting - edge AI & machine learning',{"name": 'Micro SaaS',"href": '/services/micro-saas',"description": 'Innovative focused software solutions',"popular": ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];'
+},{"name": 'IT Services',"href": '/services/it-services',"description": 'Enterprise infrastructure & security',"popular": ['Cloud Migration', 'Edge Computing', 'Zero Trust Security', '5G Networks'];'
+},{"name": 'AI Services',"href": '/services/ai-services',"description": 'Cutting-edge AI & machine learning',"popular": ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];'
+}];
+import React, { useState } from 'react';'
+import Link from 'next/link';'
+import { useRouter } from 'next/router';'
+import { motion, AnimatePresence } from 'framer-motion';'
+import { 
+  }
+  Menu, 
+  X, 
+  Search, 
+  Phone, 
+  FileText,
+  BarChart3,
+  Cpu,
+  Shield,
+  Cloud,
+  Database,
+  Zap,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Target,
+  Rocket,
+  Code,
+  Network,
+  Atom,
+  Workflow,
+  MessageCircle,
+  ArrowUp,
+  Sparkles,
+  Home,
+  Truck,
+  BookOpen,
+  Leaf,
+  Satellite,
+  HelpCircle,
+  Building2,
+  Factory,
+  Building,
+  DollarSign,
+  ShoppingCart,
+  Heart,
+  Eye,
+  Server,
+  Lock,
+  ChevronDown
+} from 'lucide-react';'
+
+const Header = () => {
+ ;
+  }
+>>>>>>> origin/improvements-and-fixes
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -46,6 +109,7 @@ const Header: React.FC = () => {
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
+<<<<<<< HEAD
       
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -59,6 +123,485 @@ const Header: React.FC = () => {
             <div className="px-4 py-4 space-y-2">
               {navigationItems.map((item) => (
                 <Link
+=======
+
+      {/* Main Navigation */}
+      <nav className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8">"
+        <div className="flex justify-between items-center h-16">"
+          {/* Logo */}
+          <div className="flex items-center">"
+            <Link href="/" className="flex items-center">"
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"
+                <span className="text-white font-bold text-xl">Z</span>"
+              </div>
+              <span className="ml-3 text-2xl font-bold text-gray-900">Zion Tech Group</span>"
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden "lg":flex items-center space-x-8">"
+            {navigation.map((item) => (
+              <div key={item.nam
+} className="relative">"
+                {item.hasDropdown ? (
+                  <div
+}
+className="flex items-center space-x-1 text-gray-700 "hover":text-blue-600 cursor-pointer transition-colors duration-200""
+                    onMouseEnter={() => {
+                      }
+                      if (item.name === 'Services') setIsServicesOpen(true);'
+                      if (item.name === 'Solutions') setIsSolutionsOpen(true);'
+                    }}
+                    onMouseLeave={() => {
+                      }
+                      if (item.name === 'Services') setIsServicesOpen(false);'
+                      if (item.name === 'Solutions') setIsSolutionsOpen(false);'
+                    }}
+                  >
+                    <span className="font-medium">{item.name}</span>"
+                    <ChevronDown className="h-4 w-4" />"
+                  </div>
+                ) : (
+                  <Link,
+href={item.href}
+                    className={`font-medium transition-colors duration-200 ${`                      }
+                      isActive(item.href) ? 'text-blue-600' : 'text-gray-700 "hover": text-blue-600''
+                    }`}`                  >
+                    {item.name}
+                  </Link>
+                )}
+
+                {/* Services Dropdown *
+}
+                {item.name === 'Services' && ('
+                  <AnimatePresence>
+                    {isServicesOpen && (
+                      <motion.div
+}
+initial={{ "opacity": 0, "y": 10 
+}
+                        animate={{ "opacity": 1, "y": 0 
+}
+                        exit={{ "opacity": 0, "y": 10 }}
+                        className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                      >
+                        <div className="grid grid-cols-2 gap-2">"
+                          {item.children?.map((child) => (
+                            <Link
+}
+key={child.name}
+                              href={child.href}
+                              className="flex items-center px-4 py-3 text-gray-700 "hover":bg-gray-50 "hover":text-blue-600 transition-colors duration-200""
+                            >
+                              <child.icon className="h-5 w-5 mr-3 text-blue-500" />"
+                              <span className="text-sm font-medium">{child.name}</span>"
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+
+                {/* Solutions Dropdown *
+}
+                {item.name === 'Solutions' && ('
+                  <AnimatePresence>
+                    {isSolutionsOpen && (
+                      <motion.div
+}
+initial={{ "opacity": 0, "y": 10 
+}
+                        animate={{ "opacity": 1, "y": 0 
+}
+                        exit={{ "opacity": 0, "y": 10 }}
+                        className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
+                        onMouseEnter={() => setIsSolutionsOpen(true)}
+                        onMouseLeave={() => setIsSolutionsOpen(false)}
+                      >
+                        <div className="grid grid-cols-2 gap-2">"
+                          {item.children?.map((child) => (
+                            <Link
+}
+key={child.name}
+                              href={child.href}
+                              className="flex items-center px-4 py-3 text-gray-700 "hover":bg-gray-50 "hover":text-blue-600 transition-colors duration-200""
+                            >
+                              <child.icon className="h-5 w-5 mr-3 text-blue-500" />"
+                              <span className="text-sm font-medium">{child.name}</span>"
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden "lg":flex items-center space-x-4">"
+            <Link,
+href="/contact""
+              className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg "hover":from-blue-700 "hover":to-purple-700 transition-all duration-300 shadow-lg "hover":shadow-xl""
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />"
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className=""lg":hidden">"
+            <button,
+onClick={() => setIsMenuOpen(!isMenuOpen
+}
+              className="text-gray-700 "hover":text-blue-600 transition-colors duration-200""
+
+
+    { "name": 'Contact', "href": '/contact', "icon": Phone,'
+}
+
+  ];
+
+const service_categories = [;
+  {
+      }
+      "name": 'Micro SaaS','
+      "href": '/services / micro - saas','
+      "description": 'Innovative focused software solutions','
+      "popular": ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];'
+},
+    {
+      }
+      "name": 'IT Services','
+      "href": '/services / it - services','
+      "description": 'Enterprise infrastructure & security','
+      "popular": ['Cloud Migration', 'Edge Computing', 'Zero Trust Security', '5G Networks'];'
+},
+    {
+      }
+      "name": 'AI Services','
+      "href": '/services / ai - services','
+      "description": 'Cutting - edge AI & machine learning','
+
+      "popular": ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];'
+}
+  ];
+
+    { ;
+      }
+      "name": 'Micro SaaS',;'
+      "href": '/services/micro-saas',;'
+      "description": 'Innovative focused software solutions',;'
+      "popular": ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];'
+},;
+    { ;
+      }
+      "name": 'IT Services',;'
+      "href": '/services/it-services',;'
+      "description": 'Enterprise infrastructure & security',;'
+      "popular": ['Cloud Migration', 'Edge Computing', 'Zero Trust Security', '5G Networks'];'
+},;
+    { ;
+      }
+      "name": 'AI Services',;'
+      "href": '/services/ai-services',;'
+      "description": 'Cutting-edge AI & machine learning',;'
+      "popular": ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];'
+}
+];
+
+
+const serviceCategories = [;
+    { "name": 'AI Solutions', "href": '/services/ai-solutions','
+},
+  { "name": 'Cloud & DevOps', "href": '/services/cloud','
+},
+  { "name": 'Cybersecurity', "href": '/services/cybersecurity','
+},
+  { "name": 'Data & Analytics', "href": '/services/data','
+},
+  { "name": 'Micro SaaS', "href": '/services/micro-saas','
+},
+{ "name": 'Digital Transformation', "href": '/services/transformation','
+}];
+
+const solutionCategories = [;
+    { "name": 'Enterprise', "href": '/solutions/enterprise','
+},
+  { "name": 'SMB', "href": '/solutions/smb','
+},
+{ "name": 'Startup', "href": '/solutions/startup','
+}];
+
+const resourceCategories = [;
+    { "name": 'Documentation', "href": '/docs','
+},
+  { "name": 'Blog', "href": '/blog','
+},
+  { "name": 'Partners', "href": '/partners','
+},
+  { "name": 'Team', "href": '/team','
+},
+  { "name": 'Careers', "href": '/careers','
+},
+  { "name": 'Blog', "href": '/blog','
+},
+  { "name": 'Case Studies', "href": '/case-studies','
+},
+  { "name": 'Webinars', "href": '/webinars','
+},
+  { "name": 'Documentation', "href": '/documentation','
+},
+  { "name": 'API Reference', "href": '/api','
+},
+  { "name": 'Help Center', "href": '/help','
+},
+{ "name": 'FAQ', "href": '/faq','
+}];
+  return (<headerclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled;`        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50';'
+        : 'bg-transparent';'
+      { "name": 'Documentation', "href": '/docs','
+},
+;
+      { "name": 'Blog', "href": '/blog','
+},
+;
+      { "name": 'Partners', "href": '/partners','
+},
+;
+      { "name": 'Team', "href": '/team','
+},
+;
+      { "name": 'Careers', "href": '/careers','
+}
+
+];
+
+
+const isActive = ("path": string) => location && location.pathname === path;
+
+const resourceCategories = [;
+    { "name": 'Blog', "href": '/blog','
+},
+;
+      { "name": 'Case Studies', "href": '/case-studies','
+},
+;
+      { "name": 'Webinars', "href": '/webinars','
+},
+;
+      { "name": 'Documentation', "href": '/documentation','
+},
+;
+      { "name": 'API Reference', "href": '/api','
+},
+;
+      { "name": 'Help Center', "href": '/help','
+},
+;
+      { "name": 'FAQ', "href": '/faq','
+}
+
+];
+
+return (;
+    <headerclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${`      }
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' '
+        : 'bg-transparent''
+
+      "popular": ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];'
+}
+  ]
+];
+
+
+const isActive = ("path": string) => location && location.pathname === path;
+
+const resourceCategories = [;
+const service_categories = [;
+    { "name": 'AI Solutions', "href": '/services / ai - solutions','
+},
+  { "name": 'Cloud & DevOps', "href": '/services / cloud','
+},
+  { "name": 'Cybersecurity', "href": '/services / cybersecurity','
+},
+  { "name": 'Data & Analytics', "href": '/services / data','
+},
+  { "name": 'Micro SaaS', "href": '/services / micro - saas','
+},
+{ "name": 'Digital Transformation', "href": '/services / transformation','
+}
+  ];
+
+const solution_categories = [;
+    { "name": 'Enterprise', "href": '/solutions / enterprise','
+},
+  { "name": 'SMB', "href": '/solutions / smb','
+},
+{ "name": 'Startup', "href": '/solutions / startup','
+}
+  ];
+
+const resource_categories = [;
+    { "name": 'Documentation', "href": '/docs','
+},
+  { "name": 'Blog', "href": '/blog','
+},
+  { "name": 'Partners', "href": '/partners','
+},
+  { "name": 'Team', "href": '/team','
+},
+{ "name": 'Careers', "href": '/careers','
+}
+  ];
+
+const is_active = ("path": string) =>: any location.pathname === path;
+
+const resource_categories = [;
+    { "name": 'Blog', "href": '/blog','
+},
+  { "name": 'Case Studies', "href": '/case - studies','
+},
+  { "name": 'Webinars', "href": '/webinars','
+},
+  { "name": 'Documentation', "href": '/documentation','
+},
+  { "name": 'API Reference', "href": '/api','
+},
+  { "name": 'Help Center', "href": '/help','
+},
+{ "name": 'FAQ', "href": '/faq','
+}
+  ];
+  return (<header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled ;`        ? 'bg - slate - 900 / 95 backdrop - blur - md border - b border - slate - 700 / 50' ;'
+        : 'bg - transparent';'
+}`}>`
+      <div className="max - w-7xl mx - auto px - 4 "sm":px - 6 "lg":px - 8">;"
+        <div className="flex items - center justify - between h - 16">;"
+          {/* Logo */}
+
+          <div className="flex-shrink-0">;"
+            <Link href="/" className="text-2xl font-bold text-blue-600">;"
+              Zion Tech Group;
+            </Link>;
+          </div>;
+
+
+          {/* Desktop Navigation */}
+          <div className="hidden "md":block">;"
+            <div className="ml-10 flex items-baseline space-x-4">;"
+              {navigation && navigation.map((item) => (<Link;
+                  }
+                  key={item && item.name}
+                  href={item && item.href}
+                  className="text-gray-700 "hover":text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">;"
+                  {item && item.name}
+                </Link>;
+              ))}
+            </div>;
+          </div>;
+
+            </div>;
+          </div>;
+
+
+
+
+
+            </div>;
+          </div>;
+          {/* Mobile menu button */}
+          <div className=""md":hidden">;"
+            <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-700 "hover": text-blue-600 p-2">"
+
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" /,"
+}
+
+            </button>;
+          </div>;
+        </div>;
+
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>;
+          {isMenuOpen && (<motion&& motion.div;
+              }
+              initial={{ "opacity": 0, "height": 0 
+}
+              animate={{ "opacity": 1, "height": 'auto' ,'
+}
+              exit={{ "opacity": 0, "height": 0 
+}
+              className=""md":hidden">;"
+              <div className="px-2 pt-2 pb-3 space-y-1 "sm":px-3 bg-white border-t">;"
+                {navigation && navigation.map((item) => (<Link;
+                    }
+                    key={item && item.name}
+                    href={item && item.href}
+                    className="text-gray-700 "hover":text-blue-600 block px-3 py-2 rounded-md text-base font-medium";"
+                    onClick={() => setIsMenuOpen(false)}
+                  >;
+                    {item && item.name}
+                  </Link>;
+                ))}
+              </div>;
+            </motion && motion.div>;
+          )}
+        </AnimatePresence>;
+      </nav>;
+    </header>;
+  )<div className="flex - shrink - 0">;"
+  );
+}
+
+export default Header;
+import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge';'
+
+const "Header": React.FC = () => {;
+  }
+  const [isScrolled,setIsScrolled] = useState(false); useEffect(() => {
+ }
+ const handleScroll = () => { setIsScrolled(window && window.scrollY > 0)}; window && window.addEventListener('scroll',handleScroll); return () => window && window.removeEventListener('scroll',handleScroll)},[]);'
+
+const navigationItems = [   { "name": 'Home', "href": '/',;'
+},
+  { "name": 'Services', "href": '/services','
+},
+  { "name": 'Solutions', "href": '/solutions','
+},
+  { "name": 'About', "href": '/about','
+},
+  { "name": 'Careers', "href": '/careers','
+},
+{ "name": 'Contact',"href": '/contact','
+}]; return ( <header className = "sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden "md":flex items-center gap-6 text-sm"> {navigationItems && navigationItems.map((item) => ( <Link key={item && item.name} href={item && item.href} className="text-gray-300 "hover":text-white"> {item && item.name} </Link> ),"
+} </nav> </div> </header> ;
+}
+
+export default Header;
+
+export default Header;
+
+
+
+
+          <div className="flex - shrink - 0">;"
+            <Link href="/" className="text - 2xl font - bold text - blue - 600">;"
+              Zion Tech Group;
+            </Link>;
+          </div>;
+          {/* Desktop Navigation */}
+          <div className="hidden "md":block">;"
+            <div className="ml - 10 flex items - baseline space - x-4">;"
+              {navigation.map ((item) => (<Link;
+                  }
+>>>>>>> origin/improvements-and-fixes
                   key={item.name}
                   href={item.href}
                   className="block text-gray-300 hover:text-white py-2"
@@ -78,3 +621,7 @@ const Header: React.FC = () => {
 =======
 
 export default Header;
+<<<<<<< HEAD
+=======
+export default Header;
+>>>>>>> origin/improvements-and-fixes

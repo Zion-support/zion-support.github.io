@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
@@ -56,6 +57,8 @@ function fixSyntaxErrors(filePath) {
       const serviceName = fileName.replace(/-/g, ' ).replace(/\b\w/g, l => l.toUpperCase());
       
 =======
+=======
+>>>>>>> origin/improvements-and-fixes
 #!/usr/bin/env node,
   const fs = require('fs');
 const path = require('path');
@@ -90,13 +93,13 @@ const path = require('path');
   if (content.length < 100 || content.includes('icon:') || content.includes('title:')) {
       const fileName = path.basename(filePath, path.extname(filePath))
       const serviceName = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       content = `export default function ServicePage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>${serviceName}</h1>
       <p>Learn about our ${serviceName.toLowerCase()} services.</p>
     </main>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,6 +131,8 @@ const path = require('path');
       fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed: ${filePath}`);
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes
       return true;
     }
     return false;
@@ -137,6 +142,7 @@ const path = require('path');
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Function to find and fix all TypeScript/JSX files
@@ -144,13 +150,11 @@ function fixAllFiles() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/improvements-and-fixes
 // Function to find and fix all TypeScript/JSX files,
   function fixAllFiles() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
   const filesToCheck = [
-=======
-const filesToCheck = [;
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
     'components/Footer.tsx',
     'components/Header.tsx',
     'components/layout/MainLayout.tsx',
@@ -163,9 +167,6 @@ const filesToCheck = [;
     'pages/terms.tsx',
     'pages/services.tsx',
     'pages/pricing.tsx'
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   ];
   let totalFixed = 0;
   filesToCheck.forEach(file => {
@@ -199,9 +200,10 @@ function findServicePages(dir) {
 >>>>>>> origin/chore/fix-lint-and-merge
       }
     } catch (error) {
-      // Skip directories that cant be read
+      // Skip directories that can't be read
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -255,6 +257,8 @@ async function main() {
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
+=======
+>>>>>>> origin/improvements-and-fixes
   scanDirectory(dir);
   return files;
 }
@@ -269,6 +273,7 @@ async function main() {
   console.error('❌ Error:', error.message);
   process.exit(1);
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
       fixedCount++;
@@ -289,3 +294,5 @@ async function main() {
 
 main().catch(console.error);
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

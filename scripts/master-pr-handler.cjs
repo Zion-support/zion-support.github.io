@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -44,38 +45,16 @@
 =======
 #!/usr/bin/env node;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/improvements-and-fixes
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Master PR Handler & Automation System')
 console.log()
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || 
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN ||
   throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const REPO_OWNER = 'Zion-Holding;s;
-const REPO_NAME = 'zion.app;
-=======
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-// console.log(' Master PR Handler & Automation System')
-console.log('')
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
-throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.';
-const REPO_OWNER = 'Zion-Holding;s;';
-const REPO_NAME = 'zion.app;';
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-async function githubApiCall(endpoint, method = 'GET')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       'Authorization'
       'Accept': 'application/vnd.github.v3+json'
       'Content-Type': 'application/json'
@@ -99,8 +78,8 @@ const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH'`);
       "automationSuccess"
       "automationFailed"
     console.log('\n Final "Summary")
-<<<<<<< HEAD
     console.error(' Master PR handler "failed")
+<<<<<<< HEAD
 
 =======
 =======
@@ -164,3 +143,5 @@ const REPO_NAME = 'zion.app;
 async function githubApiCall(endpoint, method = 'GET')
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

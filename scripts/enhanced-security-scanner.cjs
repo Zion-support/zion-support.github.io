@@ -2,6 +2,7 @@
 #!/usr/bin/env node;
 main();#!/usr/bin/env node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 main();
 =======
 
@@ -119,11 +120,13 @@ main();#!/usr/bin/env node;
 
 const fs = require('fs')
 =======
+=======
+>>>>>>> origin/improvements-and-fixes
 ///usr/bin/env node,
   const fs = require('fs')
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const path = require('path')
 const { execSync } = require('child_process')
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
@@ -134,6 +137,8 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes
 // console.log('� Enhanced Security Scanner v2.0')
 console.log('======')
   log('info', 'Checking dependencies for vulnerabilities')
@@ -160,8 +165,8 @@ console.log('======')
     "message"
     "action"
       log('warn', 'Vulnerabilities "found")
-<<<<<<< HEAD
       log('info', 'Security "Recommendations")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -223,3 +228,5 @@ console.log('======)
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

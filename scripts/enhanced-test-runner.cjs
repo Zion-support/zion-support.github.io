@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -13,10 +14,13 @@
 
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> origin/improvements-and-fixes
 #!/usr/bin/env node;
 const fs = require('fs');
-const path = require(path');
+const path = require('path');
 const { execSync, spawn } = require('child_process');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -54,22 +58,21 @@ const { execSync, spawn } = require('child_process');
 
 
 >>>>>>> origin/chore/fix-lint-and-merge
-  "summary": {}"
 =======
-
-  "summary: {}
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+>>>>>>> origin/improvements-and-fixes
+  "summary": {}"
     total: 0,"
-    "passed: 0,
-    failed": 0,
-    "skipped: 0,
-    duration": 0,
-    "coverage: 0;
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "duration": 0,
+    "coverage": 0;"
   },"
-  "recommendations: [];
-}
+  "recommendations": [];"
+};
 
 function log(level, message) {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,25 +91,28 @@ async function runJestTests() {}"
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> origin/improvements-and-fixes
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
   log('info', 'Running Jest tests');
-=======
-  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)}
-async function runJestTests() {}
-  log(info', 'Running Jest tests);
-  
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   try {}
     const startTime = Date.now();
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const output = execSync('npm test -- --coverage --json', { });
+      "encoding": 'utf8',
+      "stdio": 'pipe'
+>>>>>>> origin/improvements-and-fixes
     }
 });
     const endTime = Date.now();
     const result = JSON.parse(output);
     testReport.tests.push({})
+<<<<<<< HEAD
 <<<<<<< HEAD
       "framework": 'jest,
       duration: endTime - startTime,
@@ -121,12 +127,20 @@ async function runJestTests() {}
 
       "result": result;"
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      "framework": 'jest',
+      "duration": endTime - startTime,
+      "result": result;
+    }
+});
+>>>>>>> origin/improvements-and-fixes
     testReport.summary.total += result.numTotalTests;
     testReport.summary.passed += result.numPassedTests;
     testReport.summary.failed += result.numFailedTests;
     testReport.summary.skipped += result.numPendingTests;
     testReport.summary.duration += endTime - startTime;
     if (result.coverageMap) {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,165 +202,120 @@ async function runJestTests() {}"
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+    "
+      "result": { passed: false, "error": error.message };"
+    testReport.summary.failed++;"
+>>>>>>> origin/improvements-and-fixes
       testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct};
     log('info', `Jest tests "completed": ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {`}
     log('warn', 'Jest tests failed or not configured', error.message)};
 };
 async function runPlaywrightTests() {}
   log('info', 'Running Playwright tests');
-=======
-      testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct}
-    log(info', `Jest tests "completed: ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {`}
-    log('warn, Jest tests failed or not configured', error.message)}
-}
-async function runPlaywrightTests() {}
-  log('info, Running Playwright tests');
-  
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   try {}
-
+    const startTime = Date.now();
+const output = execSync('npx playwright test --reporter=json', { });
+      "encoding": 'utf8',
+      "stdio": 'pipe'
     }
 });
-<<<<<<< HEAD
     const endTime = Date.now();
     const result = JSON.parse(output);
-=======
-    
-    
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     testReport.tests.push({})
-      framework": playwright',
-      "duration: endTime - startTime,
-      result": result;
+      "framework": 'playwright',
+      "duration": endTime - startTime,
+      "result": result;
     }
 });
     testReport.summary.total += result.total;
     testReport.summary.passed += result.passed;
     testReport.summary.failed += result.failed;
     testReport.summary.duration += endTime - startTime;
-<<<<<<< HEAD
     log('info', `Playwright tests "completed": ${result.passed}/${result.total} passed`)} catch (error) {`}
     log('warn', 'Playwright tests failed or not configured', error.message)};
 };
 async function runCypressTests() {}
   log('info', 'Running Cypress tests');
-=======
-    
-    log('info, `Playwright tests "completed: ${result.passed}/${result.total} passed`)} catch (error) {`}
-    log(warn', 'Playwright tests failed or not configured, error.message)}
-}
-async function runCypressTests() {}
-  log(info', 'Running Cypress tests);
-  
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   try {}
-
+    const startTime = Date.now();
+const output = execSync('npx cypress run --reporter json', { });
+      "encoding": 'utf8',
+      "stdio": 'pipe'
     }
 });
-<<<<<<< HEAD
     const endTime = Date.now();
     const result = JSON.parse(output);
-=======
-    
-    
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     testReport.tests.push({})
-      framework": 'cypress,
-      "duration: endTime - startTime,
-      result": result;
+      "framework": 'cypress',
+      "duration": endTime - startTime,
+      "result": result;
     }
 });
     testReport.summary.total += result.total;
     testReport.summary.passed += result.passed;
     testReport.summary.failed += result.failed;
     testReport.summary.duration += endTime - startTime;
-<<<<<<< HEAD
     log('info', `Cypress tests "completed": ${result.passed}/${result.total} passed`)} catch (error) {`}
     log('warn', 'Cypress tests failed or not configured', error.message)};
 };
 async function runLintTests() {}
   log('info', 'Running linting tests');
-=======
-    
-    log(info', `Cypress tests "completed: ${result.passed}/${result.total} passed`)} catch (error) {`}
-    log('warn, Cypress tests failed or not configured', error.message)}
-}
-async function runLintTests() {}
-  log('info, Running linting tests');
-  
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   try {}
-
+    const startTime = Date.now();
+const output = execSync('npm run lint', { });
+      "encoding": 'utf8',
+      "stdio": 'pipe'
     }
 });
-<<<<<<< HEAD
     const endTime = Date.now();
-=======
-    
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     testReport.tests.push({})
-      framework": eslint',
-      "duration: endTime - startTime,
-      result": { passed: true, output }
+      "framework": 'eslint',
+      "duration": endTime - startTime,
+      "result": { passed: true, output };
     }
 });
     testReport.summary.passed++;
     testReport.summary.duration += endTime - startTime;
-<<<<<<< HEAD
     log('info', 'Linting tests completed successfully')} catch (error) {}
-=======
-    
-    log('info, Linting tests completed successfully')} catch (error) {}
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     testReport.tests.push({})
-      "framework: 'eslint,
-      duration": 0,
-      "result: { passed: false, error": error.message }
+      "framework": 'eslint',
+      "duration": 0,
+      "result": { passed: false, "error": error.message };
     }
 });
     testReport.summary.failed++;
-    log(warn', 'Linting tests failed, error.message)}
-}
+    log('warn', 'Linting tests failed', error.message)};
+};
 async function runTypeTests() {}
-<<<<<<< HEAD
   log('info', 'Running TypeScript type tests');
-=======
-  log(info', 'Running TypeScript type tests);
-  
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   try {}
-
+    const startTime = Date.now();
+const output = execSync('npx tsc --noEmit', { });
+      "encoding": 'utf8',
+      "stdio": 'pipe'
     }
 });
-<<<<<<< HEAD
     const endTime = Date.now();
-=======
-    
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     testReport.tests.push({})
-      "framework: 'typescript,
-      duration": endTime - startTime,
-      "result: { passed: true, output }
+      "framework": 'typescript',
+      "duration": endTime - startTime,
+      "result": { passed: true, output };
     }
 });
     testReport.summary.passed++;
     testReport.summary.duration += endTime - startTime;
-<<<<<<< HEAD
     log('info', 'TypeScript type tests completed successfully')} catch (error) {}
-=======
-    
-    log(info', 'TypeScript type tests completed successfully)} catch (error) {}
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     testReport.tests.push({})
-      framework": typescript',
-      "duration: 0,
-      result": { passed: false, "error: error.message }
+      "framework": 'typescript',
+      "duration": 0,
+      "result": { passed: false, "error": error.message };
     }
 });
     testReport.summary.failed++;
-<<<<<<< HEAD
     log('warn', 'TypeScript type tests failed', error.message)};
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -373,51 +342,46 @@ function generateRecommendations() {}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/improvements-and-fixes
 function generateRecommendations() {}
   const recommendations = []
   const { total, passed, failed, coverage } = testReport.summary,
   if($2) {}
     recommendations.push({})
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       "priority": 'high',
       "message": 'No tests found',
       "action": 'Implement comprehensive test suite'
     })};
-=======
-      priority": 'high,
-      "message: No tests found',
-      action": 'Implement comprehensive test suite
-    })}
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   if (failed > 0) {}
     recommendations.push({})
-      "priority: high',
-      message": `${failed} tests failed`,`
-      "action: 'Fix failing tests immediately
-    })}
+      "priority": 'high',
+      "message": `${failed} tests failed`,`
+      "action": 'Fix failing tests immediately'
+    })};
   if (coverage < 80) {}
     recommendations.push({})
-      priority": medium',
-      "message: `Test coverage is ${coverage}% (below 80%)`,`
-      action": 'Increase test coverage to at least 80%
-    })}
+      "priority": 'medium',
+      "message": `Test coverage is ${coverage}% (below 80%)`,`
+      "action": 'Increase test coverage to at least 80%'
+    })};
   if (total > 0 && passed / total < 0.9) {}
     recommendations.push({})
-      "priority: medium',
-      message": `Test success rate is ${Math.round((passed / total) * 100)}% (below 90%)`,`
-      "action: 'Improve test reliability and fix flaky tests
-    })}
+      "priority": 'medium',
+      "message": `Test success rate is ${Math.round((passed / total) * 100)}% (below 90%)`,`
+      "action": 'Improve test reliability and fix flaky tests'
+    })};
   recommendations.push({})
-    priority": low',
-    "message: 'Implement automated testing pipeline,
-    action": Set up CI/CD with automated test execution'
+    "priority": 'low',
+    "message": 'Implement automated testing pipeline',
+    "action": 'Set up CI/CD with automated test execution'
   }
 });
-<<<<<<< HEAD
   return recommendations};
 async function main() {}
   try {}
     log('info', 'Starting enhanced test runner');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -431,6 +395,8 @@ async function main() {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes
     await runJestTests();
     await runPlaywrightTests();
     await runCypressTests();
@@ -441,6 +407,9 @@ async function main() {}
     // Display summary;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/improvements-and-fixes
     log('info', 'Enhanced Test Runner Summary');
     log('info', '');
     log('info', `Total "tests": ${testReport.summary.total}`);
@@ -449,45 +418,27 @@ async function main() {}
     log('info', `"Skipped": ${testReport.summary.skipped}`);
     log('info', `"Coverage": ${testReport.summary.coverage}%`);
     log('info', `"Duration": ${testReport.summary.duration}ms`);
-=======
-    log('info, Enhanced Test Runner Summary');
-    log('info, ');
-    log('info, `Total "tests: ${testReport.summary.total}`);
-    log(info', `Passed": ${testReport.summary.passed}`);
-    log('info, `"Failed: ${testReport.summary.failed}`);
-    log(info', `Skipped": ${testReport.summary.skipped}`);
-    log('info, `"Coverage: ${testReport.summary.coverage}%`);
-    log(info', `Duration": ${testReport.summary.duration}ms`);
-    
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     if (testReport.recommendations.length > 0) {}
-      log('info, Test "Recommendations: ');
+      log('info', 'Test "Recommendations": ');
       testReport.recommendations.forEach(rec => {})
-        log('info, `- [${rec.priority.toUpperCase()}] ${rec.message}`);
-        log(info', `  Action": ${rec.action}`)})}
+        log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
+        log('info', `  "Action": ${rec.action}`)})};
     // Save report;
     const reportPath = path.join(process.cwd(), `enhanced-test-report-${testReport.sessionId}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(testReport, null, 2));
-<<<<<<< HEAD
     log('info', `Enhanced test report saved "to": enhanced-test-report-${testReport.sessionId}.json`);
-=======
-    
-    log('info, `Enhanced test report saved "to": enhanced-test-report-${testReport.sessionId}.json`);
-    
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     // Exit with appropriate status;
     if (testReport.summary.failed > 0) {}
-      log(error', 'Some tests failed);
+      log('error', 'Some tests failed');
       process.exit(1)} else {}
-      log(info', 'All tests passed successfully);
-      process.exit(0)}
+      log('info', 'All tests passed successfully');
+      process.exit(0)};
   } catch (error) {}
-<<<<<<< HEAD
     log('error', 'Fatal error in enhanced test runner', error.message);
     process.exit(1)};
 };
-<<<<<<< HEAD
 main();
+<<<<<<< HEAD
 <<<<<<< HEAD
 await runJestTests()
     await runPlaywrightTests()
@@ -516,3 +467,5 @@ main();
 main();
 `;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

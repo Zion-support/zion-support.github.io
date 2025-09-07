@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
@@ -58,12 +59,13 @@ main();
 
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> origin/improvements-and-fixes
 #!/usr/bin/env node;
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-const os = require('os');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+const os = require('os')
 // console.log(' Comprehensive Monitoring & Alerting v2.0')
 console.log('')
 const output = execSync('df -h /', { "encoding"});
@@ -109,8 +111,8 @@ const output = execSync('ps aux | wc -l', { "encoding"});
     "message"
     "action"
       log('warn', 'Alerts "generated")
-<<<<<<< HEAD
       log('info', 'Monitoring "Recommendations")
+<<<<<<< HEAD
 =======
 
 
@@ -206,3 +208,5 @@ console.log(')
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

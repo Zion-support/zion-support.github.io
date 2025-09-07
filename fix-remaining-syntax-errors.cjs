@@ -14,12 +14,16 @@ console.log('🔧 Fixing remaining syntax errors...');
 // List of files with known syntax errors
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/improvements-and-fixes
 const filesToFix = [
   '/workspace/app/about/page.tsx',
   '/workspace/app/services/automation/page.tsx',
   '/workspace/app/services/consulting/page.tsx',
   '/workspace/pages/api/admin/partners/fraud-flags.ts',
   '/workspace/pages/api/admin/partners/update.ts'
+<<<<<<< HEAD
 =======
 const filesToFix = [;
 =======
@@ -32,16 +36,14 @@ const filesToFix = [
   '/workspace/src/components/Navigation.tsx',
   '/workspace/src/components/ServicesSection.tsx'
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+>>>>>>> origin/improvements-and-fixes
 ];
 
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
-<<<<<<< HEAD
       console.log(`⚠️ File not found: ${filePath}`);
-=======
-      console.log(`⚠️  File not found: ${filePath}`);
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
       return false;
     }
 

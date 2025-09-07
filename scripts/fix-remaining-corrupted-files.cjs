@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -27,6 +28,9 @@
 =======
 #!/usr/bin/env node;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/improvements-and-fixes
 const fs = require('fs')
 const path = require('path')
 // console.log(' Fixing Remaining Corrupted Files...')
@@ -35,6 +39,7 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
   'pages/docs/sdk.tsx
   'pages/enterprise.tsx
   'pages/help.tsx
+<<<<<<< HEAD
 <<<<<<< HEAD
   'pages/login.tsx
     let content = 
@@ -86,3 +91,8 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  'pages/login.tsx,
+  let content =
+    if (filePath === 'pages/docs/integration-examples.tsx')
+>>>>>>> origin/improvements-and-fixes

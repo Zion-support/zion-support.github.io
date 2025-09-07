@@ -1,12 +1,12 @@
 const fs = require('fs');
-const path = require(path');
+const path = require('path');
 const { execSync } = require('child_process');
 function findFilesWithConflicts() {
   try {
-    const result = execSync(find . -name "*.js -o -name *.ts" -o -name "*.tsx -o -name *.jsx" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< " 2>/dev/null || true', { encoding: 'utf8 });
-    return result.trim().split(\n').filter(line => line.trim().length > 0);
+    const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< " 2>/dev/null || true', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(line => line.trim().length > 0);
   } catch (error) {
-    console.log('No files with merge conflicts found);
+    console.log('No files with merge conflicts found');
     return [];
   }
 }
@@ -16,7 +16,6 @@ function cleanMergeConflicts(filePath) {
       console.log(`File not found: ${filePath}`);
       return;
     }
-<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     // Remove merge conflict markers and keep our version (the part after )
     content = content.replace(/\n([\s\S]*?)    
@@ -30,24 +29,6 @@ function cleanMergeConflicts(filePath) {
         content = '// TypeScript file\nexport {};\n';
       } else if (filePath.endsWith('.js') || filePath.endsWith('.jsx')) {
         content = '// JavaScript file\nmodule.exports = {};\n';
-=======
-    
-    let content = fs.readFileSync(filePath, utf8');
-    
-    // Remove merge conflict markers and keep our version (the part after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)    
-    // Also handle cases where there's no content after     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n    
-    // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD.*?\n/g, );
-    content = content.replace(/=======.*?\n/g, '');
-    content = content.replace(/    
-    // If file becomes empty or just whitespace, create a simple export
-    if (content.trim().length === 0) {
-      if (filePath.endsWith(.ts) || filePath.endsWith('.tsx')) {
-        content = // TypeScript file\nexport {}\n;
-      } else if (filePath.endsWith('.js') || filePath.endsWith(.jsx)) {
-        content = '// JavaScript file\nmodule.exports = {}\n';
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
       }
     }
     fs.writeFileSync(filePath, content);

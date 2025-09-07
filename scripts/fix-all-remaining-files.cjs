@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -30,6 +31,11 @@ const path = require('path');
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/improvements-and-fixes
 // console.log(' Fixing All Remaining Files...')
 console.log('=====')
 const problematicFiles = ['pages/docs/integration-examples.tsx']
@@ -39,20 +45,24 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
   'pages/signup.tsx'
 <<<<<<< HEAD
 let content = '';
+<<<<<<< HEAD
 =======
 
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 =======
     let content = ''
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes
     if (filePath === 'pages/docs/integration-examples.tsx')
       content = "
-    firstName
+    "firstName"
     "lastName"
-    email
+    "email"
     "password"
-    confirmPassword
+    "confirmPassword"
     console.log('Signup "attempt")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,3 +93,6 @@ let content = '';
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+        <meta name="description" content="
+>>>>>>> origin/improvements-and-fixes

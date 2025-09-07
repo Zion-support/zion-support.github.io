@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/improvements-and-fixes
 }
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
@@ -18,6 +21,7 @@ interface AccessibilityContextType {
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/chore/fix-lint-and-merge
 interface AccessibilityProviderProps {
@@ -272,10 +276,15 @@ export const useAccessibility = () => {
 
   return (
     <AccessibilityContext.Provider value={value}>
+=======
+  return (
+    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
+>>>>>>> origin/improvements-and-fixes
       {children}
     </AccessibilityContext.Provider>
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 
   )
 }
@@ -298,3 +307,5 @@ export default AccessibilityProvider;
 }
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

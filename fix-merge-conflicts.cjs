@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
@@ -12,10 +13,12 @@
 const fs = require('fs');
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/improvements-and-fixes
 #!/usr/bin/env node,
   const fs = require('fs');
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const path = require('path');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const { execSync } = require('child_process');
@@ -70,6 +73,8 @@ class MergeConflictFixer {
           continue;
         }
         if (line.includes('>>>>>>>')) {
+=======
+>>>>>>> origin/improvements-and-fixes
           inConflict = false;
           // Use the last valid content (after )
           fixedLines.push(...lastValidContent);
@@ -163,9 +168,8 @@ class MergeConflictFixer {
       process.exit(1);
     });
 }
-<<<<<<< HEAD
-
 module.exports = MergeConflictFixer;
+<<<<<<< HEAD
 =======
 
 console.log('🔧 Fixing merge conflicts in TypeScript files...');
@@ -274,3 +278,5 @@ for (const file of conflictedFiles) {
 
 console.log(`Fixed ${fixedCount} out of ${conflictedFiles.length} files`);
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

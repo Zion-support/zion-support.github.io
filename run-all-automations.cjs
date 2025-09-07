@@ -110,7 +110,6 @@ class AutomationRunner {
       { path: 'scripts/simple-app-improvements.cjs', desc: 'Simple App Improvements' },
       { path: 'scripts/ultimate-automation-orchestrator.cjs', desc: 'Ultimate Automation Orchestrator' }
     ];
-<<<<<<< HEAD
 
     // Also run npm commands
     const npmCommands = [
@@ -126,6 +125,7 @@ class AutomationRunner {
     // Run scripts
     for (const script of automationScripts) {
       await this.runScript(script.path, script.desc);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -157,6 +157,8 @@ class AutomationRunner {
         results.push({ script, "success": false, "error": 'Script not found' });
       }
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+>>>>>>> origin/improvements-and-fixes
     }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge

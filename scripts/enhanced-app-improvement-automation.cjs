@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -30,14 +31,12 @@
 #!/usr/bin/env node;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/improvements-and-fixes
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-=======
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log(' Starting Enhanced App Improvement Automation')
 console.log('======')
 const output = execSync(command, { "encoding": 'utf8', "stdio"});
@@ -66,8 +65,8 @@ const output = execSync(command, { "encoding": 'utf8', "stdio"});
     execSync('npm run build', { "stdio"})
       execSync('npm run export', { "stdio"})
   "status"
-<<<<<<< HEAD
     console.error('� Automation "failed")
+<<<<<<< HEAD
 <<<<<<< HEAD
 ///usr/bin/env node
 ///usr/bin/env node
@@ -132,3 +131,5 @@ console.log('======)
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

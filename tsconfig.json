@@ -1,31 +1,23 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
+      "es6"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "moduleResolution": "bundler",
-    "maxNodeModuleJsDepth": 0,
-    "skipDefaultLibCheck": true,
+    "incremental": true,
+    "module": "esnext",
     "esModuleInterop": true,
-    "module": "ESNext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
@@ -33,43 +25,19 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/pages/*": [
-        "./pages/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/hooks/*": [
-        "./hooks/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ],
-      "@/styles/*": [
-        "./styles/*"
-      ],
-      "@/assets/*": [
-        "./assets/*"
-      ]
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/assets/*": ["./src/assets/*"],
+      "@/app/*": ["./app/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/public/*": ["./public/*"]
     },
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "incremental": true,
-    "module": "esnext",
-    "esModuleInterop": true,
-    "tsBuildInfoFile": ".next/cache/tsbuildinfo.json",
-    "allowImportingTsExtensions": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "next-env.d.ts",
@@ -80,31 +48,7 @@
   "exclude": [
     "node_modules",
     ".next",
-    "dist",
-    "build",
-    "backup*",
-    "temp*",
-    "corrupted*",
-    "apps.backup*",
-    "apps*",
-    "recovered-branches*",
-    "src*",
-    "data*",
-    "**/*.backup.*",
-    "**/*.temp.*",
-    "**/*.conflict.*",
-    "src/App.tsx",
-    "src/components/DynamicListingPage.tsx",
-    "src/components/ErrorBoundary.tsx",
-    "src/components/FeaturesGuideSection.tsx",
-    "src/components/Footer.tsx",
-    "src/components/Header.tsx",
-    "src/components/PerformanceMonitor.tsx",
-    "src/components/developers/WebhooksManager.tsx",
-    "src/components/icons/index.tsx",
-    "src/pages/About.tsx",
-    "src/pages/Contact.tsx",
-    "src/pages/Pricing.tsx",
-    "src/pages/Services.tsx"
+    "out",
+    "dist"
   ]
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -33,6 +34,12 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+>>>>>>> origin/improvements-and-fixes
   console.log(' Starting Improved Automation Orchestrator...')
     "overallStatus"
       execSync('npm install --dry-run', { "stdio"})
@@ -59,11 +66,8 @@ const { execSync } = require('child_process')
       return { "status": 'completed', "message"}
         "status"
         "status"
-<<<<<<< HEAD
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     console.error(' Improved automation "failed")
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -90,3 +94,5 @@ const { execSync } = require('child_process')
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -30,6 +31,11 @@ const path = require('path');
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/improvements-and-fixes
 // console.log(' Fixing All Remaining Syntax Issues...')
 console.log('=====')
 const problematicFiles = ['pages/docs/integration-examples.tsx']
@@ -39,37 +45,36 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
   'pages/services-overview.tsx'
 <<<<<<< HEAD
 let content = '';
+<<<<<<< HEAD
 =======
 
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 =======
     let content = ''
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes
     if (filePath === 'pages/docs/integration-examples.tsx')
       content = "
-    phone
+    "phone"
     "email"
-    address
+    "address"
     "site"
-      title
+      "title"
       "count"
-      description
+      "description"
       "features"
-      title
+      "title"
       "count"
-      description
+      "description"
       "features"
-      title
+      "title"
       "count"
-      description
+      "description"
       "features"
-<<<<<<< HEAD
         <meta name="description" content="
-<<<<<<< HEAD
-=======
-        <meta name=description content="
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
         <meta property="og:description" content="
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -96,3 +101,5 @@ let content = '';
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/improvements-and-fixes
