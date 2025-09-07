@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+<<<<<<< HEAD
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
@@ -29,6 +30,26 @@ const nextConfig = {
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
+=======
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  experimental: {
+    // Removed deprecated options
+  },
+  images: {
+    domains: ['ziontechgroup.com', 'localhost', 'images.unsplash.com', 'via.placeholder.com'],
+    unoptimized: true,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  webpack: (config, { dev, isServer }) => {
+    // Exclude problematic directories from the build
+>>>>>>> e9bffd582428846eb99e83f178ef637a17a2ec8a
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -43,15 +64,21 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
+<<<<<<< HEAD
         /^components\//, // Exclude root components directory
       ]
     });
 
+=======
+      ],
+    });
+>>>>>>> e9bffd582428846eb99e83f178ef637a17a2ec8a
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
+<<<<<<< HEAD
       tls: false
     };
 
@@ -66,3 +93,12 @@ const nextConfig = {
 };
 
 export default nextConfig;
+=======
+      tls: false,
+    };
+    return config;
+  },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+};
+export default nextConfig;
+>>>>>>> e9bffd582428846eb99e83f178ef637a17a2ec8a

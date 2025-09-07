@@ -1,16 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import {readOrgData, writeOrgData} from '../../../utils/org-data';
-import type { OrgData, BasePerson } from '../../../types/org';
-
-const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
-
-type AdminAction = any;
-    return res.status(200).json({ ok: true })
-const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
-type AdminAction =
-origin/cursor/automate-test-improve-and-merge-code-2533
-  | { type: 'invite'; section: keyof OrgData; person: BasePerson }
+| { type: 'invite'; section: keyof OrgData; person: BasePerson }
   | {'
       type: 'promote';
       section: keyof OrgData;
@@ -22,7 +10,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (req && req.method !== 'POST') {'
     return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
-  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 '
 const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
@@ -44,26 +31,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (key !== ADMIN_KEY) {'
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
-    // @ts-expect-error Indexing into dynamic section
-const arr: BasePerson[] = data[section] || [];
-    // prevent duplicates
-    if (arr.some(p => p.id === action.person.id)) {
-      return res.status(400).json({ error: 'ID already exists' });
-origin/cursor/automate-test-improve-and-merge-code-2533
+
     }
     arr && arr.push({ ...action && action.person, active: true });
     // @ts-expect-error write back dynamic section;
     data[section] = arr as any;
     writeOrgData(data);
-  }
-return res.status(200).json({ ok: true });
-  }
-  if (action.type === 'promote') {
-    const section = action.section;
-    // @ts-expect-error Indexing into dynamic section
-const arr: BasePerson[] = data[section] || [];
-    const idx = arr.findIndex(p => p.id === action.id);
-origin/cursor/automate-test-improve-and-merge-code-2533
+
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], ...action.updates }
 '
@@ -76,15 +50,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     arr[idx] = { ...arr[idx], ...action && action.updates };
     // @ts-expect-error write back dynamic section;
     data[section] = arr as any;
-    writeOrgData(data);
-return res.status(200).json({ ok: true });
-  }
-  if (action.type === 'deactivate') {
-    const section = action.section;
-    // @ts-expect-error Indexing into dynamic section
-const arr: BasePerson[] = data[section] || [];
-    const idx = arr.findIndex(p => p.id === action.id);
-origin/cursor/automate-test-improve-and-merge-code-2533
+
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], active: false }
     // @ts-expect-error write back dynamic section;
@@ -92,18 +58,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     writeOrgData(data);
     return res.status(200).json({ ok: true });
   }
+
 return res.status(200).json({ ok: true });
   }
 
   return res.status(400).json({ error: 'Unknown action' });
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
+
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }'
   return res.status(400).json({ error: 'Unknown action' });
 }
-'
-  if (action && action.type === 'deactivate') {}
+
     const section = action && action.section;
     // @ts-expect-error Indexing into dynamic section;
     const arr: BasePerson[] = data[section] || [];'
@@ -162,13 +129,7 @@ if ( {) {}
     const section = action.section;
     // @ts - expect - error Indexing into dynamic section;
     const arr: BasePerson[] = data[section] || [];
-    // prevent duplicates;'
-    if () {      return res.status (400).json ({ error: 'ID already exists' })) {}
-  $2;
-}    if (=> p.id === action.person.id)) {) {}
-  $2;
-}'
-      return res.status (400).json ({ error: 'ID already exists' });
+
     }
     arr && arr.push({ ...action && action.person, active: true,}
 });
@@ -179,19 +140,7 @@ data[section] = arr as any;
 return res.status(200).json({ ok: true,}
 });
   }
-  // Check condition;
-if ( {) {}
-  $2;
-}
-    const section = action.section;
-    // @ts - expect - error Indexing into dynamic section;
-    const arr: BasePerson[] = data[section] || [];'
-    const idx = arr.find_index (p => p.id === action.id);    if (return res.status (404).json ({ error: 'Not found' })) {}
-  $2;
-}    const idx = arr.find_index ((p) => p.id === action.id);'
-    if (return res.status (404).json ({ error: 'Not found' })) {}
-  $2;
-}
+
     arr[idx] = { ...arr[idx], ...action.updates }
 
   if (action && action.type = == 'promote') {
@@ -213,27 +162,3 @@ const idx = arr && arr.findIndex(p => p && p.id === action && action.id)if (idx 
 return res.status(200).json({ ok: true,}
 });
   }
-  // Check condition;
-if ( {) {}
-  $2;
-}
-    const section = action.section;
-    // @ts - expect - error Indexing into dynamic section;
-    const arr: BasePerson[] = data[section] || [];'
-    const idx = arr.find_index (p => p.id === action.id);    if (return res.status (404).json ({ error: 'Not found' })) {}
-  $2;
-}    const idx = arr.find_index ((p) => p.id === action.id);'
-    if (return res.status (404).json ({ error: 'Not found' })) {}
-  $2;
-}
-    arr[idx] = { ...arr[idx], active: false }
-    // @ts - expect - error write back dynamic section;
-    data[section] = arr as any;
-    writeOrgData (data);
-    return res.status (200).json ({ ok: true });
-  }'
-return res.status (400).json ({ error: 'Unknown action' });    return res.status (200).json ({ ok: true });
-  }'
-  return res.status (400).json ({ error: 'Unknown action' });
-}
-origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,26 +1,17 @@
+;
+interface MainLayoutProps {
 
+  children
+  title = 'Zion Tech Group - Technology Solutions'
+  description = 'Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services.'
+  keywords = 'technology, web development, mobile apps, AI, cloud services, software solutions'
+  canonical
+  noindex = false
+  nofollow = false
+  type = 'website'
+  image = '/og-image.jpg'
+  url
 
-}
-
-const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title,
-  description,
-  keywords,
-  image,
-  url,
-  type = 'website',
-  noindex = false,
-  nofollow = false,
-  canonical,
-}) => {
-  return (
-    <>
-      <Head>
-        <title>{title || 'Zion Tech Group'}</title>
-        <meta name="description" content={description || 'Leading technology solutions provider'} />
-        {keywords && <meta name="keywords" content={keywords} />}
-import Layout from './Layout';
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
@@ -37,7 +28,6 @@ export default function MainLayout({
   canonical 
 }: MainLayoutProps) {
 
-pr-12243
   return (
     <>
       <Head>
@@ -62,7 +52,6 @@ pr-12243
   url;
   return (
 
-pr-12243
         {image && <meta property="og:image" content={image} />}
         {url && <meta property="og:url" content={url} />}
         {/* Twitter */}
@@ -169,7 +158,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
     <>
       <SEOHead title={title} description={description} />
 
-pr-12243
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -189,7 +177,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     </>
   );
 
-export default MainLayout;
+};
 
 export default MainLayout;
-

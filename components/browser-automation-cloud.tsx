@@ -1,33 +1,3 @@
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-'
-import React from 'react';'
-import SEO from '../components / SEO';'
-import {Check, ExternalLink} from 'lucide-react';
-
-pr-12243
-
 export default function BrowserAutomationCloudPage() {
   const features = [
     'Parallel Playwright/Puppeteer execution',
@@ -94,15 +64,10 @@ pr-12243
               rel='noreferrer''
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;'
               <ExternalLink className='w-4 h-4' /> Puppeteer;
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
-              <ExternalLink className='w-4 h-4' /> Puppeteer;
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
-              <ExternalLink className='w-4 h-4' /> Puppeteer;
-
-pr-12243
 
 export default /**
  * BrowserAutomationCloudPage - Function description
+
  */
 function BrowserAutomationCloudPage() {}
   const features = [;'
@@ -171,9 +136,6 @@ function BrowserAutomationCloudPage() {}
         </section>;
       </main>;
 
-origin/cursor/integrate-build-improve-and-re-verify-2156
-pr-12243
-
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;"
@@ -202,38 +164,11 @@ pr-12243
   </main>;
   </>),
 }
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
-	const features = [
-		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
-	];
-import React from 'react',
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
-import React from 'react';
-import SEO from '../components/SEO';
-import {Check, ExternalLink} from 'lucide-react';
 
-export default function BrowserAutomationCloudPage() {
-
-export default function BrowserAutomationCloudPage() {
-  const features = [
-    'Parallel Playwright/Puppeteer execution',
-    'Queued jobs with retries and rate limits',
-    'Artifacts: HAR, traces, screenshots, videos',
-    'Rotating proxies and geo targeting',
-    'Webhook callbacks and REST API',;
-  ];
-
-  const features = [
-    'Parallel Playwright/Puppeteer execution'
-    'Queued jobs with retries and rate limits'
-    'Artifacts: HAR, traces, screenshots, videos'
-    'Rotating proxies and geo targeting'
-    'Webhook callbacks and REST API'
 	const features = null;
 	return (
 origin/cursor/automate-test-improve-and-merge-code-2533
+
   ];
   return (
     <>
@@ -294,12 +229,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </main>
     </>
-  );	return (
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-
-  );	return (
 
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
@@ -330,15 +262,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 		</>
 	)
 }
-pr-12243
 
 	),
 }
-
-	),
-}
-	),
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-

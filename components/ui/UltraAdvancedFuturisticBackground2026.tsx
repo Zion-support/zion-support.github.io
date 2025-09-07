@@ -1,183 +1,10 @@
-const UltraAdvancedFuturisticBackground2026: React.FC<;
-  UltraAdvancedFuturisticBackground2026Props;
-> = ({;
-  intensity = 'high',;'
-  colorScheme = 'neural-network',;
-  particleCount = 300,;
-  animationSpeed = 2 && 2.0,;
-  enableHolographic = true,;
-  enableQuantumEffects = true,;
-  enableNeuralNetworks = true,;
-  enableMultidimensional = true,;
-  children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({;'
-  intensity = 'high';'
-  colorScheme = 'neural-network';
-  particleCount = 300;
-  animationSpeed = 2 && 2.0;
-  enableHolographic = true;
-  enableQuantumEffects = true;
-  enableNeuralNetworks = true;
-import React, { useEffect, useRef } from 'react';
-import { motion  } from 'framer-motion';
-interface UltraAdvancedFuturisticBackground2026Props {
-  intensity?: 'low' | 'medium' | 'high' | 'extreme',
-  colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional';
-  particleCount?: number;
+particleCount?: number;
   animationSpeed?: number;
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
   enableNeuralNetworks?: boolean;
   enableMultidimensional?: boolean;
 
-const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({
-  intensity;
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-origin/cursor/automate-test-improve-and-merge-code-2533
-    if (!ctx) return;
-
-let animationFrameId: number;
-    let particles: Particle[] = [];
-    let neuralNodes: NeuralNode[] = [];
-    let quantumFields: QuantumField[] = [];
-    let holographicLayers: HolographicLayer[] = [];
-    // Set canvas size;
-    const resizeCanvas = () => {}
-      if (containerRef.current) {}
-        const rect = containerRef.current.getBoundingClientRect();
-        canvas.width = rect.width;
-      x: number;
-
-      }
-    }
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    // Particle class
-    class Particle {
-x: number;
-origin/cursor/automate-test-improve-and-merge-code-2533
-      y: number;
-  color_scheme?:;'
-    | 'neural - network';'
-    | 'quantum - field';'
-    | 'cyberpunk';'
-    | 'holographic';'
-    | 'multidimensional';  particle_count?: number;interface UltraAdvancedFuturisticBackground2026Props {'
-  intensity?: 'low' | 'medium' | 'high' | 'extreme';'
-  color_scheme?: 'neural - network' | 'quantum - field' | 'cyberpunk' | 'holographic' | 'multidimensional';
-  particle_count?: number;
-  animation_speed?: number;
-  enable_holographic?: boolean;
-  enableQuantumEffects?: boolean;
-  enableNeuralNetworks?: boolean;
-  enable_multidimensional?: boolean;
-  children?: React.ReactNode;
-;
-const UltraAdvancedFuturisticBackground2026: React.FC<;
-  UltraAdvancedFuturisticBackground2026Props;
-> = ({'
-  intensity = 'high','
-  color_scheme = 'neural - network',
-  particle_count = 300,
-  animation_speed = 2.0,
-  enable_holographic = true,
-  enableQuantumEffects = true,
-  enableNeuralNetworks = true,
-  enable_multidimensional = true,
-  children, }) => {const UltraAdvancedFuturisticBackground2026: React.FC < UltraAdvancedFuturisticBackground2026Props> = ({'
-  intensity = 'high';'
-  color_scheme = 'neural - network';
-  particle_count = 300;
-  animation_speed = 2.0;
-  enable_holographic = true;
-  enableQuantumEffects = true;
-  enableNeuralNetworks = true;
-  enable_multidimensional = true,
-  children;
-  const canvas_ref = useRef < HTMLCanvasElement>(null);
-  const container_ref = useRef < HTMLDivElement>(null);
-;
-  useEffect (() => {}
-    const canvas = canvas_ref.current;
-    // Check condition;
-if (return) {}
-  $2;
-}'
-    const ctx = canvas.get_context ('2d');
-    // Check condition;
-if (return) {}
-  $2;
-}
-    let animationFrameId: number;    let particles: Particle[] = [];
-    let neural_nodes: NeuralNode[] = [];
-    let quantum_fields: QuantumField[] = [];
-    let holographic_layers: HolographicLayer[] = [];    let particles: Particle[] = [];
-    let neural_nodes: NeuralNode[] = [];
-    let quantum_fields: QuantumField[] = [];
-    let holographic_layers: HolographicLayer[] = [];
-    let animationFrameId: number,
-    let particles: Particle[] = [],
-    let neural_nodes: NeuralNode[] = [],
-    let quantum_fields: QuantumField[] = [],
-    let holographic_layers: HolographicLayer[] = [],
-    // Set canvas size;
-    const resize_canvas = () =>: any {}
-      // Check condition;
-if ( {) {}
-  $2;
-}
-        const rect = container_ref.current.getBoundingClientRect ();
-        canvas.width = rect.width;
-        canvas.height = rect.height;        canvas.height = rect.height;
-      }
-    }
-;
-    resize_canvas ();'
-    window.addEventListener ('resize', resize_canvas);
-;
-    // Particle class;
-    class Particle {}
-      coordinate_x: number;
-      coordinate_y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      alpha: number;
-      life: number;
-      maxLife: number;
-      constructor(x: number, y: number) {
-        this.x = x;
-        this.y = y;
-        this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
-        this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
-        this.size = Math.random() * 3 + 1;
-        this.color = getColorSchemeColor();
-        this.alpha = Math.random() * 0.8 + 0.2;
-        this.life = Math.random() * 100 + 50;
-this.maxLife = this.life;
-origin/cursor/automate-test-improve-and-merge-code-2533
-      }
-      update() {}
-        this.x += this.vx;
-        this.y += this.vy;
-        this.life--;
-        // Bounce off edges;
-        if (this.x <= 0 |this.x >= canvas.width) this.vx *= -1;
-        if (this.y <= 0 |this.y >= canvas.height) this.vy *= -1;
-        // Wrap around;
-        if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
-
-        // Fade out
-this.alpha = this.life / this.maxLife;
-origin/cursor/automate-test-improve-and-merge-code-2533
       }
       draw() {}
         ctx.save();
@@ -247,9 +74,7 @@ ctx.restore();
 origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
-    // Neural network node class
-    class NeuralNode {
-x: number;
+
       y: number;
       connections: NeuralNode[];
       activation: number;
@@ -329,9 +154,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Quantum field class;
     class QuantumField {;
 
-    // Quantum field class
-    class QuantumField {
-x: number;
       y: number;
       radius: number;
       intensity: number;
@@ -358,12 +180,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         for (let i = 0, i < 3, i++) {}
           const waveRadius = this.radius + Math.sin(this.phase + i * Math.PI / 3) * 20;
           const alpha = this.intensity * (1 - i / 3);
-          
-for (let i = 0; i < 3; i++) {
-          const waveRadius =
-            this.radius + Math.sin(this.phase + (i * Math.PI) / 3) * 20;
-          const alpha = this.intensity * (1 - i / 3);
-origin/cursor/automate-test-improve-and-merge-code-2533
+
           ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
@@ -387,9 +204,6 @@ ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
-    // Holographic layer class
-    class HolographicLayer {
-x: number;
       y: number;
       max_life: number,
         this.coordinate_x = x;
@@ -610,72 +424,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Math.random() * canvas.width;
           Math.random() * canvas.height;
         ))
-'neural-network': ['#00ffff', '#0080ff', '#8000ff', '#ff0080'],
-        'quantum-field': ['#00ff80', '#80ff00', '#ff8000', '#ff0080'],
-        cyberpunk: ['#ff0066', '#00ffff', '#ffff00', '#ff6600'],
-        holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000'],
-        multidimensional: ['#8000ff', '#00ff80', '#ff8000', '#0080ff'],
-      };
 
-      const schemeColors = colors[colorScheme] || colors['neural-network'];
-      return schemeColors[Math.floor(Math.random() * schemeColors.length)];
-    }
-    // Initialize particles
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(
-        new Particle(
-          Math.random() * canvas.width
-          Math.random() * canvas.height
-        )
-      );
-    }
-
-    // Initialize neural network
-    if (enableNeuralNetworks) {
-for (let i = 0; i < 20; i++) {
-        neuralNodes.push(
-          new NeuralNode(
-            Math.random() * canvas.width
-            Math.random() * canvas.height
-          )
-        );
-      }
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-      // Create connections
-      neuralNodes.forEach(node => {
-        neuralNodes.forEach(otherNode => {
-          if (node !== otherNode && Math.random() < 0.3) {
         quantumFields.push(new QuantumField(
           Math.random() * canvas.width;
           Math.random() * canvas.height;
         ))
     }
-    // Initialize holographic layers
-    if (enableHolographic) {
-node.connections.push(otherNode);
-          }
-        });
-      });
-    }
 
-    // Initialize quantum fields
-    if (enableQuantumEffects) {
-for (let i = 0; i < 8; i++) {
-        quantumFields.push(
-          new QuantumField(
-            Math.random() * canvas.width
-            Math.random() * canvas.height
-          )
-        );
-      }
-    }
-    // Initialize holographic layers
-    if (enableHolographic) {
-for (let i = 0; i < 5; i++) {
-        holographicLayers.push(new HolographicLayer());
-      }
-origin/cursor/automate-test-improve-and-merge-code-2533
     }
     // Animation loop;
     const animate = () => {}
@@ -693,45 +448,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       gradient.addColorStop(0, currentBgColors[0]);
       gradient.addColorStop(0.5, currentBgColors[1]);
       gradient.addColorStop(1, currentBgColors[2]);
-canvas.width / 2,
-        canvas.height / 2,
-        0,
-        canvas.width / 2,
-        canvas.height / 2,
-        Math.max(canvas.width, canvas.height) / 2
-      );
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-      const bgColors = {
-        'neural-network': [
-          'rgba(0, 0, 20, 0.8)',
-          'rgba(0, 20, 40, 0.6)',
-          'rgba(20, 0, 40, 0.4)',
-        ],
-        'quantum-field': [
-          'rgba(0, 20, 0, 0.8)',
-          'rgba(20, 40, 0, 0.6)',
-          'rgba(40, 0, 20, 0.4)',
-        ],
-        cyberpunk: [
-          'rgba(40, 0, 20, 0.8)',
-          'rgba(20, 0, 40, 0.6)',
-          'rgba(0, 20, 40, 0.4)',
-        ],
-        holographic: [
-          'rgba(40, 0, 40, 0.8)',
-          'rgba(0, 40, 40, 0.6)',
-          'rgba(40, 40, 0, 0.4)',
-        ],
-        multidimensional: [
-          'rgba(20, 0, 40, 0.8)',
-          'rgba(0, 40, 20, 0.6)',
-          'rgba(40, 20, 0, 0.4)',
-        ],
-      };
-
-      const currentBgColors =
-        bgColors[colorScheme] || bgColors['neural-network'];
       gradient.addColorStop(0, currentBgColors[0]);
       gradient.addColorStop(0.5, currentBgColors[1]);
       gradient.addColorStop(1, currentBgColors[2]);
@@ -1172,17 +889,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               rotate: [0, 180, 360]
               opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
             }}
-            transition={{
-            animate={{
-              scale: [1, 1.2, 1],
-              rotate: [0, 180, 360],
-              opacity: [0.1, 0.3, 0.1],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-ease: 'easeInOut',
-origin/cursor/automate-test-improve-and-merge-code-2533
+
             }}
           />;
           <motion&& motion.div'
@@ -1254,9 +961,3 @@ export default UltraAdvancedFuturisticBackground2026;
 
               duration: 10,
               repeat: Infinity,
-
-};
-
-export default UltraAdvancedFuturisticBackground2026;
-origin/cursor/automate-test-improve-and-merge-code-2533
-

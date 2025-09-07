@@ -15,10 +15,6 @@ interface UltraAdvancedFuturisticBackgroundProps {
 export default function UltraAdvancedFuturisticBackground({children;
   intensity;
 
-export default function UltraAdvancedFuturisticBackground({
-origin/cursor/automate-test-improve-and-merge-code-2533
-  children,
-  intensity = 'medium',
   theme = 'quantum',
   particleCount = 200,
   animationSpeed = 1.0,
@@ -107,94 +103,7 @@ if (return) {}
       rotation_speed: number;
     }> = [];
                    Math.floor(particleCount * 0.5);
-      for (let i = 0, i < count, i++) {
-    const colors = {
-      quantum: [
-        '#00ffff'
-        '#ff00ff'
-        '#ffff00'
-        '#00ff00'
-        '#ff0080'
-        '#8000ff'
-        '#00ffff'
-      ]
-      neon: [
-        '#ff0066'
-        '#00ffff'
-        '#ff6600'
-        '#9900ff'
-        '#00ff99'
-        '#ff1493'
-        '#00bfff'
-      ]
-      holographic: [
-        '#ff1493'
-        '#00bfff'
-        '#ffd700'
-        '#7fff00'
-        '#ff69b4'
-        '#00ced1'
-        '#ff4500'
-      ]
-      cyberpunk: [
-        '#ff0066'
-        '#00ffff'
-        '#ff6600'
-        '#9900ff'
-        '#00ff99'
-        '#ff1493'
-        '#00bfff'
-      ]
-      'quantum-fusion': [
-        '#00ffff',
-        '#ff00ff',
-        '#ffff00',
-        '#00ff00',
-        '#ff0080',
-        '#8000ff',
-        '#00ffff',
-        '#ff1493',
-        '#00bfff',
-      ],
-    };
 
-    const selectedColors = colors[theme] || colors.quantum;
-
-    // Initialize particles with enhanced properties
-    const initParticles = () => {
-const count =
-        intensity === 'extreme'
-          ? particleCount * 2
-          : intensity === 'high'
-            ? particleCount
-            : intensity === 'medium'
-              ? Math.floor(particleCount * 0.7)
-              : Math.floor(particleCount * 0.5);
-
-      for (let i = 0; i < count; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 3 * animationSpeed,
-          vy: (Math.random() - 0.5) * 3 * animationSpeed,
-          size: Math.random() * 6 + 2,
-          opacity: Math.random() * 0.9 + 0.1,
-color:
-            selectedColors[Math.floor(Math.random() * selectedColors.length)],
-          type: ['quantum', 'neon', 'holographic', 'cyberpunk'][
-            Math.floor(Math.random() * 4)
-          ] as any,
-          life: Math.random() * 100,
-          maxLife: 100 + Math.random() * 100,
-          rotation: Math.random() * Math.PI * 2,
-          rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed,
-        });
-      }
-    };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-    // Enhanced animation loop with quantum effects
-    const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background;
       const gradient = ctx.createRadialGradient(
@@ -240,12 +149,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.rotation += particle.rotationSpeed;
-        // Quantum entanglement effect
-        if (enableQuantumEffects && Math.random() < 0.01) {
-const partner =
-            particles[Math.floor(Math.random() * particles.length)];
-origin/cursor/automate-test-improve-and-merge-code-2533
-          if (partner && partner !== particle) {
+
             ctx.beginPath();
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * particle.opacity})`;
             ctx.lineWidth = 1;
@@ -270,11 +174,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             // Quantum tunneling effect;
           } else {}
             particle.vx *= -1;          }            particle.coordinate_x = particle.x <= 0 ? canvas.width : 0;
-          } else {
-particle.x = particle.x <= 0 ? canvas.width : 0;
-          } else {
-            particle.vx *= -1;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
           }
         }
         if (particle.y <= 0 |particle.y >= canvas.height) {}
@@ -293,10 +193,7 @@ if (< 0.1) {) {}
             particle.coordinate_y = particle.y <= 0 ? canvas.height : 0;
           } else {}
             particle.vy *= -1;          }            particle.coordinate_y = particle.y <= 0 ? canvas.height : 0;
-          } else {
-particle.y = particle.y <= 0 ? canvas.height : 0;
-          } else {
-origin/cursor/automate-test-improve-and-merge-code-2533
+
             particle.vy *= -1;
           }
         }
@@ -348,7 +245,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ctx.lineWidth = 1;
               ctx.beginPath();
               ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
-              ctx.stroke();
+
             }
           }'
         } else if (particle.type === 'holographic' && enableHolographic) {}
@@ -671,73 +568,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }
           const x = Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5;
           const y = Math.cos(time + i * 0.7) * canvas.height * 0.3 + canvas.height * 0.5;
-ctx.fillRect(
-            -particle.size,
-            -particle.size,
-            particle.size * 2,
-            particle.size * 2
-          );
-          // Holographic glitch effect
-          if (Math.random() < 0.05) {
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-            ctx.fillRect(
-              -particle.size * 1.5
-              -particle.size * 1.5
-              particle.size * 3
-            );
-          }
-        } else if (particle.type === 'cyberpunk') {
-          // Cyberpunk particle with neon glow
-          ctx.fillStyle = particle.color;
-ctx.fillRect(
-            -particle.size,
-            -particle.size,
-            particle.size * 2,
-            particle.size * 2
-          );
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = particle.size * 3;
-          ctx.fillRect(
-            -particle.size
-            -particle.size
-            particle.size * 2
-            particle.size * 2
-          );
-          ctx.shadowBlur = 0;
-        } else {
-          // Standard neon particle
-          ctx.fillStyle = particle.color;
-          ctx.fillRect(
-            -particle.size
-            -particle.size
-            particle.size * 2
-            particle.size * 2
-          );
-          // Neon glow
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = particle.size * 2;
-          ctx.fillRect(
-            -particle.size
-            -particle.size
-            particle.size * 2
-            particle.size * 2
-          );
-          ctx.shadowBlur = 0;
-        }
 
-        ctx.restore();
-      });
-      // Add quantum field effects
-      if (enableQuantumEffects && theme === 'quantum-fusion') {
-        const time = Date.now() * 0.001;
-for (let i = 0; i < 5; i++) {
-          const x =
-            Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5;
-          const y =
-            Math.cos(time + i * 0.7) * canvas.height * 0.3 +
-            canvas.height * 0.5;
-origin/cursor/automate-test-improve-and-merge-code-2533
-          ctx.beginPath();
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time * 2 + i)})`;
           ctx.lineWidth = 2;
           ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
@@ -767,52 +598,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ctx.stroke()
         }
       }
-      animationRef.current = requestAnimationFrame(animate)
-for (let i = 0; i < 20; i++) {
-          const x = ((i * canvas.width) / 20 + time * 50) % canvas.width;
-          ctx.beginPath();
-          ctx.moveTo(x, 0);
-          ctx.lineTo(x, canvas.height);
-          ctx.stroke();
-        }
-        for (let i = 0; i < 15; i++) {
-          const y = ((i * canvas.height) / 15 + time * 30) % canvas.height;
-          ctx.beginPath();
-          ctx.moveTo(0, y);
-          ctx.lineTo(canvas.width, y);
-          ctx.stroke();
-        }
-      }
 
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    // Handle window resize
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-    };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
     window.addEventListener('resize', handleResize);
     initParticles();
     animate();
     return () => {'
       window.removeEventListener('resize', handleResize);
-      if (animationRef.current) {
-cancelAnimationFrame(animationRef.current);
-      }
-    }
-  }, [
-    intensity
-    theme
-    particleCount
-    animationSpeed
-    enableHolographic
-    enableQuantumEffects
-  ]);
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
+
     <div className='relative min-h-screen'>;
       <canvas;
         ref={canvasRef}'
@@ -834,8 +626,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]' />;
         </div>;
       )}
-      {children}
-  );      }
+      {children});      }
         // Wrap around edges;
         // Check condition;
 if (particle.coordinate_x = canvas.width) {}
@@ -871,11 +662,9 @@ if ( {) {}
     enableQuantumEffects,
   ]);
 ;
-    </div>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
+
     <div className='relative min - h-screen'>;
+
       <canvas;
         ref={canvas_ref}'
         className='fixed inset - 0 w - full h - full pointer - events - none';
@@ -883,13 +672,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
       />;
       {/* Additional futuristic overlay effects */}
-      {enable_holographic && (
-        <div;'
-          className='fixed inset - 0 pointer - events - none';
-          style={{ z_index: -1 }}
-        >;'
-          <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to - purple - 500 / 5' />;'
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]' />;'
+
           <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]' />;
         </div>)}
       {enableQuantumEffects && (
@@ -927,32 +710,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 
-    <div className="relative min-h-screen">;
-      <canvas;
-        ref={canvas_ref}
-        className="fixed inset - 0 w - full h - full pointer-events-none";
-        style={{ z_index: -1 }}
-      />;
-      {/* Additional futuristic overlay effects */}
-      {enable_holographic && (
-        <div className="fixed inset - 0 pointer-events-none" style={{ z_index: -1 }}>;
-          <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to-purple-500 / 5" />;
-          <div className="absolute inset-0 bg-[radial-gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]" />;
-          <div className="absolute inset-0 bg-[radial-gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]" />;
-        </div>)}
-      {enableQuantumEffects && (
-        <div className="fixed inset - 0 pointer-events-none" style={{ z_index: -1 }}>;
-          <div className="absolute inset-0 bg-[radial-gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]" />;
         </div>)}
       {children}
     </div>);
   );
+
     </div>
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-
-    </div>
-);
-}
-

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { authenticateRequest  } from '@/utils/auth';
 import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
 
@@ -9,9 +10,6 @@ interface ReportingData {
     timeToHireDays: number;
     costPerHireUsd?: number;
 
-const FILE = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    {
       funnel: { stage: string; count: number }[];
       timeToHireDays: number;
       costPerHireUsd?: number;
@@ -21,15 +19,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     timeToHireDays: number;
     costPerHireUsd?: number;
     updatedAt: string;
+
   }>
-}
-  >;
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-  >;
-
-  const method = (req.method |'GET').toUpperCase()
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;'
@@ -45,22 +37,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
     const updated = updateJsonFile<ReportingData>(
-      FILE
-const entry = data.byTenant[tenantId] || {
-      funnel: [],
-      timeToHireDays: 0,
-      updatedAt: new Date().toISOString(),
-    };
-    return res.status(200).json(entry);
-  }
 
-  if (method === 'POST') {
-    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-const updated = updateJsonFile<ReportingData>(
-      FILE,
-origin/cursor/automate-test-improve-and-merge-code-2533
-      curr => {
-        next[tenantId] = {
           funnel: funnel |next[tenantId]?.funnel |[]
           timeToHireDays:'
             typeof timeToHireDays === 'number'
@@ -155,7 +132,6 @@ if ( {) {}
 return res.status (405).json ({ error: 'Method not allowed' });
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 
-  return res.status(405).json({ error: 'Method not allowed' });
     return res.status(200).json(updated.byTenant[tenantId])
   }
 return res.status(405).json({ error: 'Method not allowed',}

@@ -1,16 +1,14 @@
-
-
-import React from 'react';
-import Link from 'next/link';
-              rel='noreferrer'
-              className='rounded-md border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50'
-            >
+export default function AutomationsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
-              View Live Runs
+  return (
+            <a;
+
+              rel='noreferrer'
+
             </a>
           </div>
         </div>
-          <h2 className="text-lg font-semibold text-gray-900">AI Content Curator</h2>"
+
           <p className="mt-2 text-sm text-gray-600">
             Optionally uses AI to produce small, useful artifacts (e.g., growth experiments), committed into the repository.
           </p>"
@@ -46,8 +44,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
-    </main>}
-  );}
+    </main>});}
 }
 }
-origin/cursor/automate-test-improve-and-merge-code-2533

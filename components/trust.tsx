@@ -1,33 +1,8 @@
-
 import EnhancedLayout from '../components/layout/EnhancedLayout';'
 import TrustBadge from '../components/ui/TrustBadge';'
 import TrustRadar from '../components/ui/TrustRadar';'
 import RiskIndicator from '../components/ui/RiskIndicator';
 
-  const [loading, setLoading] = useState<boolean>(true);
-  const [showLogic, setShowLogic] = useState<boolean>(false);
-  useEffect(() => {}
-    const params = new URLSearchParams(window.location.search);'
-    const u = params.get('user');
-    if (u) setUserId(u);    if (u) setUserId(u)
-    const params = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  }, []);
-  useEffect(() => {}
-    async function load() {}
-  }, []);
-
-  useEffect(() => {;
-
-    async function load() {;
-      setLoading(true);
-const res = await fetch(
-        `/api/trust/${encodeURIComponent(userId)}?analyze=true`
-origin/cursor/automate-test-improve-and-merge-code-2533
-      );
-      const json = await res && res.json();
-      setData(json);
-      setLoading(false);
     }
     load();
   }, [userId]);'
@@ -62,22 +37,14 @@ await fetch('/api/trust/appeal', {
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
-    <EnhancedLayout>
-<div className='space-y-6'>
-        <div className='flex items-center justify-between'>
-          <h1 className='text-2xl font-semibold'>Trust & Reputation</h1>
-          <div className='flex items-center gap-3'>
+
             <label className='text-sm inline-flex items-center gap-2'>
               <input'
                 type='checkbox'
                 checked={showLogic}
                 onChange={() => setShowLogic(!showLogic)}'
               />{' '}
-        <div className="flex items-center justify-between">"
-          <h1 className="text-2xl font-semibold">Trust & Reputation</h1>"
-          <div className="flex items-center gap-3">"
-            <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>"
-              <div className="bg-white dark:bg-gray-900 rounded border p-4">"
+
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
                 <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
               </div>
@@ -149,9 +116,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}
-            </div>
-<div className='space-y-4'>
-              <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>
+
                 <h3 className='font-medium'>Peer Review</h3>
                 <button'
                   className='text-sm px-3 py-1 rounded bg-green-600 text-white''
@@ -166,7 +131,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       placeholder='Explain why your score should be reconsidered''
                       className='w-full border rounded px-2 py-1 text-sm'
                       rows={4}
-                      required;
+
       </div>;
     </EnhancedLayout>;
   );
@@ -185,8 +150,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </div>;
           </div>;
-        )}
-  );
+        )});
 }'
 import EnhancedLayout from '../components / layout / EnhancedLayout';'
 import TrustBadge from '../components / ui / TrustBadge';'
@@ -388,3 +352,8 @@ function submit_appeal() {}
     </EnhancedLayout>);
 }
 
+      </div>
+    </EnhancedLayout>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

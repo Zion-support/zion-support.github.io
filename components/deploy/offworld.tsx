@@ -1,49 +1,21 @@
-
 export default function OffworldDeploy() {}
-  const [cid, setCid] = useState<string | null>(null),
-  const [status, setStatus] = useState<string>(''),;
-export default function OffworldDeploy() { return null; }
-import { useState } from 'react';'
-import Head from 'next/head';
+  const [cid, setCid] = useState<string | null>(null),'
+  const [status, setStatus] = useState<string>(''),';
+  const [error, setError] = useState<string>('');'
+  const [provider, setProvider] = useState<string>('');
+
     setError('');
     setCid(null);'
     setProvider('');
-'
-      const res = await fetch('/api/offworld/deploy', { method: 'POST' });      const res = await fetch('/api/offworld/deploy', { method: 'POST' })
-      const data = await res.json();'
-      if (!res.ok) throw new Error(data?.error |'Deploy failed');
-      setCid(data.cid);'
-      setProvider(data.provider |'');
-    try {;'
-      const res = await fetch('/api/offworld/deploy', { method: 'POST' });      const res = await fetch('/api/offworld/deploy', { method: 'POST' }),;
-      const data = await res && res.json();'
-      if (!res && res.ok) throw new Error(data?.error || 'Deploy failed');
-      setCid(data && data.cid);'
-      setProvider(data && data.provider || '');'
-      setStatus('Deployed successfully');
-    } catch (e: any) {;
-      setError(e && e.message);'
-      setStatus('');    }
 
       const res = null;
       setStatus('')
     }
 
   }
-  return ('
-    <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
-    } catch (e: any) {}
-      setError(e.message)'
-      setStatus('')
-'
-    <div className='min-h-screen p-8'>      setStatus('Deployed successfully');
-    } catch (e: any) {;
-      setError(e && e.message),;'
-      setStatus('');
 
   }
-  return (
-<div className='min-h-screen p-8'>
+
       <Head>
         <title>Zion Offworld Deploy</title>
       </Head>'
@@ -64,6 +36,7 @@ import Head from 'next/head';
             CID: <code className='break-all'>{cid}</code>;
           </div>;
           {provider && <div>Provider: {provider}</div>}'
+
           <div className='text-sm text-gray-600'>;
             You can open via any IPFS gateway or offline node.;
           </div>        </div>;
@@ -101,16 +74,6 @@ function handle_deploy() { return null; }
       if (throw new Error (data?.error || 'Deploy failed')) {}
   $2;
 }
-
-    }
-      set_cid (data.cid);'
-      set_provider (data.provider || '');'
-      set_status ('Deployed successfully');
-    } catch (e: any) {}
-      set_error (e.message);'
-      set_status ('');    }
-  }
-  return (
 
           <div className='text-sm text-gray-600'>
           <div className='text-sm text-gray-600' />

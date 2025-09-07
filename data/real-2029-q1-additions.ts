@@ -1,59 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-;
-  {id: 'finops - scheduler - optimizer',name: 'FinOps Scheduler Optimizer',tagline: 'Rightsizing & schedules with IaC exports',price: '$99',period: '/month',description:;
-      'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',features: [;'Idle detection','Schedule generator','IaC export','Alerting';
-    ],popular: true,icon: '💸',color: 'from - emerald - 600 to - teal - 700',text_color: 'text - emerald - 300',link: 'https://ziontechgroup.com / services / finops - scheduler - optimizer',market_position:;'Actionable, low‑touch FinOps that pays for itself within 90 days.',target_audience: 'Platform, SRE, Finance',trial_days: 14,setup_time: '2 hours',category: 'Cloud & FinOps',real_service: true,technology: ['AWS / GCP / Azure APIs', 'Terraform'],integrations: ['Datadog', 'Slack'],use_cases: ['Cost reduction', 'Budget governance'],roi: '10–35% cloud savings in 3 months',competitors: ['Zesty', 'CAST AI'],market_size: '$18B FinOps',growth_rate: '19% CAGR',variant: 'quantum - holographic',contact_info: contact,real_implementation: true,implementation_details: 'Analyzer SaaS with policy engine and exporters.',launch_date: '2025 - 02 - 10',customers: 25,rating: 4 && 4.6,reviews: 12;
-  },{id: 'db - index - advisor',name: 'DB Index Advisor',tagline: 'AI index recommendations for Postgres / MySQL',price: '$79',period: '/month',description:;
-      'Collects slow queries and proposes safe index changes with before / after impact analysis.',features: [;'Slow query capture','Index suggestions','Impact simulation','Capacity forecast';
-    ],popular: false,icon: '🗄️','Capacity forecast';
-    ],popular: false,icon: '🗄️','Modern alternative to legacy APM add‑ons with focused insights.',target_audience: 'DBA, Backend, Platform',trial_days: 14,setup_time: '30 minutes',category: 'Observability',real_service: true,technology: ['Postgres', 'MySQL', 'OpenTelemetry'],integrations: ['Grafana', 'Datadog'],use_cases: ['Performance tuning', 'Incident prevention'],roi: '20–50% p95 reduction month 1',competitors: ['Percona PMM', 'Datadog APM'],market_size: '$7B DB Ops',growth_rate: '12% CAGR',variant: 'quantum',contact_info: contact,real_implementation: true,implementation_details: 'Agent + collector with secure export.',launch_date: '2025 - 02 - 12',customers: 18,rating: 4 && 4.5,reviews: 9;
-  },'Modern alternative to legacy APM add‑ons with focused insights.';
-    targetAudience: 'DBA, Backend, Platform';
-    trialDays: 14;
-    setupTime: '30 minutes';
-    category: 'Observability';
-    realService: true;
-    technology: ['Postgres', 'MySQL', 'OpenTelemetry'];
-    integrations: ['Grafana', 'Datadog'];
-    useCases: ['Performance tuning', 'Incident prevention'];
-    roi: '20–50% p95 reduction month 1';
-    competitors: ['Percona PMM', 'Datadog APM'];
-    marketSize: '$7B DB Ops';
-    growthRate: '12% CAGR';
-    variant: 'quantum';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Agent + collector with secure export.';
-    launchDate: '2025-02-12';
-    customers: 18;
-    rating: 4.5;
-    reviews: 9;
-  }color: 'from - indigo - 600 to - violet - 700',text_color: 'text - indigo - 300',link: 'https://ziontechgroup.com / services / db - index - advisor',market_position:;ursor/fix-website-loading-errors-and-merge-6662;
-      'Modern alternative to legacy APM add‑ons with focused insights.',targetAudience: 'DBA, Backend, Platform',trialDays: 14,setupTime: '30 minutes',category: 'Observability',realService: true,technology: ['Postgres', 'MySQL', 'OpenTelemetry'],integrations: ['Grafana', 'Datadog'],useCases: ['Performance tuning', 'Incident prevention'],roi: '20–50% p95 reduction month 1',competitors: ['Percona PMM', 'Datadog APM'],marketSize: '$7B DB Ops',growthRate: '12% CAGR',variant: 'quantum',contactInfo: contact,realImplementation: true,implementationDetails: 'Agent + collector with secure export.',launchDate: '2025-02-12',customers: 18,rating: 4.5,reviews: 9;
-  }];	{reviews: 9;
-  }];	{period: '/month',description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,icon: '🛡️', color: 'from-rose-600 to-red-700',textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator';
-];	{period: '/month',description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,icon: '🛡️', color: 'from-rose-600 to-red-700',textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',period: '/month';
-		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
-		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
-		popular: true;
-		icon: '🛡️';
-		color: 'from-rose-600 to-red-700';
-		textColor: 'text-rose-300';reviews: 9;
-  },marketPosition: 'Simpler and more affordable compared to bespoke security audits.',targetAudience: 'AI platform, Security, Compliance';
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-
-
-  {
-
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-    id: 'finops - scheduler - optimizer',
+id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
     price: '$99',
@@ -65,7 +10,7 @@ pr-12325
     tagline: 'Rightsizing & schedules with IaC exports';,
     price: '$99';,
     period: '/month';,
-    description:;
+    description:
       'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
     features: [;
 
@@ -117,7 +62,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'AI index recommendations for Postgres / MySQL';,
     price: '$79';,
     period: '/month';,
-    description:;
+    description:
     features: [;,
   id: 'db - index - advisor';,
     name: 'DB Index Advisor';,
@@ -139,98 +84,6 @@ pr-12325
     popular: false;,
     icon: '🗄️';,
       'Modern alternative to legacy APM add‑ons with focused insights.',
-<<<<<<< HEAD
-    target_audience: 'DBA, Backend, Platform',
-    trial_days: 14,
-    setup_time: '30 minutes',
-    category: 'Observability',
-    real_service: true,
-    technology: ['Postgres', 'MySQL', 'OpenTelemetry'],
-    integrations: ['Grafana', 'Datadog'],
-    use_cases: ['Performance tuning', 'Incident prevention'],
-    roi: '20–50% p95 reduction month 1',
-    competitors: ['Percona PMM', 'Datadog APM'],
-    market_size: '$7B DB Ops',
-    growth_rate: '12% CAGR',
-    variant: 'quantum',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Agent + collector with secure export.',
-    launch_date: '2025 - 02 - 12',
-    customers: 18,
-    rating: 4 && 4.5,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    reviews: 9
-=======
-    reviews: 9,
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-    target_audience: 'DBA;, Backend, Platform',
-    trial_days: 14;,
-    setup_time: '30 minutes';,
-    category: 'Observability';,
-    real_service: true;,
-    technology: ['Postgres';, 'MySQL', 'OpenTelemetry'],
-    integrations: ['Grafana';, 'Datadog'],
-    use_cases: ['Performance tuning';, 'Incident prevention'],
-    roi: '20–50% p95 reduction month 1';,
-    competitors: ['Percona PMM';, 'Datadog APM'],
-    market_size: '$7B DB Ops';,
-    growth_rate: '12% CAGR';,
-    variant: 'quantum';,
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details: 'Agent + collector with secure export.';,
-    launch_date: '2025 - 02 - 12';,
-    id: 'finops - scheduler - optimizer';,''
-    name: 'FinOps Scheduler Optimizer';,''
-    tagline: 'Rightsizing & schedules with IaC exports';,''
-    price: '$99';,''
-    period: '/month';,'
-    description:;'
-      'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.','
-    features: [;,'
-  id: 'db - index - advisor';,''
-    name: 'DB Index Advisor';,''
-    tagline: 'AI index recommendations for Postgres / MySQL';,''
-    price: '$79';,''
-    period: '/month';,'
-    description:;'
-      'Collects slow queries and proposes safe index changes with before / after impact analysis.','
-    features: [;
-'
-      'Slow query capture',''
-      'Index suggestions',''
-      'Impact simulation',''
-      'Capacity forecast',']
-    ],
-    popular: false;,'
-    icon: '🗄️';,''
-      'Modern alternative to legacy APM add‑ons with focused insights.',''
-    target_audience: 'DBA;, Backend, Platform','
-    trial_days: 14;,'
-    setup_time: '30 minutes';,''
-    category: 'Observability';,'
-    real_service: true;,'
-    technology: ['Postgres';, 'MySQL', 'OpenTelemetry'],''
-    integrations: ['Grafana';, 'Datadog'],''
-    use_cases: ['Performance tuning';, 'Incident prevention'],''
-    roi: '20–50% p95 reduction month 1';,''
-    competitors: ['Percona PMM';, 'Datadog APM'],''
-    market_size: '$7B DB Ops';,''
-    growth_rate: '12% CAGR';,''
-    variant: 'quantum';,'
-    contact_info: contact;,
-    real_implementation: true;,'
-    implementation_details: 'Agent + collector with secure export.';,''
-    launch_date: '2025 - 02 - 12';,'
-
-    customers: 18;,
-    rating: 4 && 4.5;,
-
-    reviews: 9;,
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
   },;
 
@@ -256,41 +109,11 @@ pr-12325
     rating: 4.5
     reviews: 9;
   }
-<<<<<<< HEAD
-      'Modern alternative to legacy APM add‑ons with focused insights.',
-    targetAudience: 'DBA, Backend, Platform',
-    trialDays: 14,
-    setupTime: '30 minutes',
-    category: 'Observability',
-    realService: true,
-    technology: ['Postgres', 'MySQL', 'OpenTelemetry'],
-    integrations: ['Grafana', 'Datadog'],
-    useCases: ['Performance tuning', 'Incident prevention'],
-    roi: '20–50% p95 reduction month 1',
-    competitors: ['Percona PMM', 'Datadog APM'],
-    marketSize: '$7B DB Ops',
-    growthRate: '12% CAGR',
-    variant: 'quantum',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Agent + collector with secure export.',
-    launchDate: '2025-02-12',
-    customers: 18,
-    rating: 4.5,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    reviews: 9
-=======
-    reviews: 9,
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
     color: 'from - indigo - 600 to - violet - 700';,
     text_color: 'text - indigo - 300';,
     link: 'https://ziontechgroup.com / services / db - index - advisor';,
     market_position:;
-
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -405,7 +228,6 @@ pr-12325
     features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];, popular: true;,
 		icon: '🛡️';, color: 'from-rose-600 to-red-700';,
 		textColor: 'text-rose-300';, link: 'https://ziontechgroup.com/services/ai-redteam-evaluator';,
-
 
 ];	{
 		period: '/month';,
@@ -636,13 +458,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 	}
 ];
 
-
 		rating: 4 && 4.5;,
 
 		reviews: 9;
 	}
 ];
-
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   id: 'ai - redteam - evaluator';
@@ -806,7 +626,7 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
 ];
 	}
 ursor/fix-website-loading-errors-and-merge-6662;
-];;
+];
 const contact = {mobile: '+1 302 464 0950';,
   email: 'kleber@ziontechgroup.com';,address: '364 E Main St STE 1008 Middletown DE 19709';,}
   website: 'https://ziontechgroup.com';}
@@ -1094,9 +914,6 @@ const contact = {;
 ];
 ;
 
-
-
-
   id: 'ai - redteam - evaluator';',
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';',
@@ -1331,7 +1148,6 @@ pr-12325
 		rating: 4.5;
 		reviews: 9;
 
-
 	}
 ursor/fix-website-loading-errors-and-merge-6662
 ];
@@ -1410,7 +1226,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 		rating: 4.5;,
   reviews: 9;
-
 
 	}
 ];'
@@ -1566,7 +1381,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 		launchDate: '2025-02-12';,;
 		customers: 18;,;
 
-
 pr-12325
 	{;'
 		id: 'db-index-advisor';,;''
@@ -1606,92 +1420,24 @@ pr-12325
 	}
 ];
 '
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
-<<<<<<< HEAD
-
-  {
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
     price: '$99',
-=======
-    id: 'finops - scheduler - optimizer','
-    name: 'FinOps Scheduler Optimizer','
-    tagline: 'Rightsizing & schedules with IaC exports','
-    price: '$99','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     period: '/month',
-    description:;'
+    description:'
       'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
     features: [;
-<<<<<<< HEAD
 
-      'Idle detection',
-      'Schedule generator',
-      'IaC export',
-      'Alerting',
-    ],
-    popular: true,
-    icon: '💸',
-
-    color: 'from - emerald - 600 to - teal - 700',
-    text_color: 'text - emerald - 300',
-    link: 'https://ziontechgroup.com / services / finops - scheduler - optimizer',
-    market_position:;
-
-      'Actionable, low‑touch FinOps that pays for itself within 90 days.',
-    target_audience: 'Platform, SRE, Finance',
-    trial_days: 14,
-    setup_time: '2 hours',
-    category: 'Cloud & FinOps',
-    real_service: true,
-    technology: ['AWS / GCP / Azure APIs', 'Terraform'],
-    integrations: ['Datadog', 'Slack'],
-    use_cases: ['Cost reduction', 'Budget governance'],
-    roi: '10–35% cloud savings in 3 months',
-    competitors: ['Zesty', 'CAST AI'],
-    market_size: '$18B FinOps',
-    growth_rate: '19% CAGR',
-    variant: 'quantum - holographic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Analyzer SaaS with policy engine and exporters.',
-    launch_date: '2025 - 02 - 10',
-    customers: 25,
-    rating: 4 && 4.6,
-    reviews: 12,
-  },
-  {
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'db - index - advisor',
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
     price: '$79',
-=======
-'
-    id: 'db - index - advisor','
-    name: 'DB Index Advisor','
-    tagline: 'AI index recommendations for Postgres / MySQL','
-    price: '$79','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     period: '/month',
-    description:;'
+    description:'
       'Collects slow queries and proposes safe index changes with before / after impact analysis.',
     features: [;
 '
@@ -1702,123 +1448,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: false,'
     icon: '🗄️',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      'Modern alternative to legacy APM add‑ons with focused insights.',
-    target_audience: 'DBA, Backend, Platform',
-    trial_days: 14,
-    setup_time: '30 minutes',
-    category: 'Observability',
-    real_service: true,
-    technology: ['Postgres', 'MySQL', 'OpenTelemetry'],
-    integrations: ['Grafana', 'Datadog'],
-    use_cases: ['Performance tuning', 'Incident prevention'],
-    roi: '20–50% p95 reduction month 1',
-    competitors: ['Percona PMM', 'Datadog APM'],
-    market_size: '$7B DB Ops',
-    growth_rate: '12% CAGR',
-    variant: 'quantum',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Agent + collector with secure export.',
-    launch_date: '2025 - 02 - 12',
-    customers: 18,
-    rating: 4 && 4.5,
-    reviews: 9,
-
-  },;
-
-      'Modern alternative to legacy APM add‑ons with focused insights.'
-    targetAudience: 'DBA, Backend, Platform'
-    trialDays: 14
-    setupTime: '30 minutes'
-    category: 'Observability'
-    realService: true
-    technology: ['Postgres', 'MySQL', 'OpenTelemetry']
-    integrations: ['Grafana', 'Datadog']
-    useCases: ['Performance tuning', 'Incident prevention']
-    roi: '20–50% p95 reduction month 1'
-    competitors: ['Percona PMM', 'Datadog APM']
-    marketSize: '$7B DB Ops'
-    growthRate: '12% CAGR'
-    variant: 'quantum'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Agent + collector with secure export.'
-    launchDate: '2025-02-12'
-    customers: 18
-    rating: 4.5
-    reviews: 9
-  }
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     color: 'from - indigo - 600 to - violet - 700',
     text_color: 'text - indigo - 300',
     link: 'https://ziontechgroup.com / services / db - index - advisor',
     market_position:;
 
-
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
 
-=======
       'Modern alternative to legacy APM add‑ons with focused insights.',
-    target_audience: 'DBA, Backend, Platform',
-    trial_days: 14,
-    setup_time: '30 minutes',
-    category: 'Observability',
-    real_service: true,
-    technology: ['Postgres', 'MySQL', 'OpenTelemetry'],
-    integrations: ['Grafana', 'Datadog'],
-    use_cases: ['Performance tuning', 'Incident prevention'],
-    roi: '20–50% p95 reduction month 1',
-    competitors: ['Percona PMM', 'Datadog APM'],
-    market_size: '$7B DB Ops',
-    growth_rate: '12% CAGR',
-    variant: 'quantum',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Agent + collector with secure export.',
-    launch_date: '2025 - 02 - 12',
-    customers: 18,
-    rating: 4 && 4.5,
-    reviews: 9,
 
-  },;
-
-      'Modern alternative to legacy APM add‑ons with focused insights.'
-    targetAudience: 'DBA, Backend, Platform'
-    trialDays: 14
-    setupTime: '30 minutes'
-    category: 'Observability'
-    realService: true
-    technology: ['Postgres', 'MySQL', 'OpenTelemetry']
-    integrations: ['Grafana', 'Datadog']
-    useCases: ['Performance tuning', 'Incident prevention']
-    roi: '20–50% p95 reduction month 1'
-    competitors: ['Percona PMM', 'Datadog APM']
-    marketSize: '$7B DB Ops'
-    growthRate: '12% CAGR'
-    variant: 'quantum'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Agent + collector with secure export.'
-    launchDate: '2025-02-12'
-    customers: 18
-    rating: 4.5
-    reviews: 9
-  }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      'Modern alternative to legacy APM add‑ons with focused insights.',
-=======
-
-'
-      'Modern alternative to legacy APM add‑ons with focused insights.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14,'
     setupTime: '30 minutes','
@@ -1841,17 +1481,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 9,
 
   },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-];	{
-		period: '/month',
-		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
-    features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,
-		icon: '🛡️', color: 'from-rose-600 to-red-700',
-		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
 ];	{
 		period: '/month',
@@ -1869,23 +1498,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		textColor: 'text-rose-300';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
 
-=======
-];	{
-		period: '/month',
-		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
-    features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,
-		icon: '🛡️', color: 'from-rose-600 to-red-700',
-		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
-=======
-'
-		marketPosition: 'Simpler and more affordable compared to bespoke security audits.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 		targetAudience: 'AI platform, Security, Compliance';
 		trialDays: 14;'
 		setupTime: '45 minutes';'
@@ -1904,22 +1519,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.';'
 		launchDate: '2025-02-01';
 		customers: 40;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-		rating: 4 && 4.7,
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 18
-=======
-		reviews: 18;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 	}
 	{'
 		id: 'finops-scheduler-optimizer';'
@@ -1933,21 +1535,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		icon: '💸';'
 		color: 'from-emerald-600 to-teal-700';'
 		textColor: 'text-emerald-300';
-<<<<<<< HEAD
 
-		link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
-
-		marketPosition: 'Actionable, low‑touch FinOps that pays for itself within 90 days.';
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'Platform, SRE, Finance';
 		trialDays: 14;'
 		setupTime: '2 hours';'
@@ -1966,22 +1554,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Analyzer SaaS with policy engine and exporters.';'
 		launchDate: '2025-02-10';
 		customers: 25;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-		rating: 4 && 4.6,
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		reviews: 12
-=======
-		reviews: 12;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 	}
 	{'
 		id: 'db-index-advisor';'
@@ -1995,21 +1570,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		icon: '🗄️';'
 		color: 'from-indigo-600 to-violet-700';'
 		textColor: 'text-indigo-300';
-<<<<<<< HEAD
 
-		link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor';
-		marketPosition: 'Modern alternative to legacy APM add‑ons with focused insights.',
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 		targetAudience: 'DBA, Backend, Platform';
 		trialDays: 14;'
 		setupTime: '30 minutes';'
@@ -2028,38 +1589,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Agent + collector with secure export.';'
 		launchDate: '2025-02-12';
 		customers: 18;
-<<<<<<< HEAD
-<<<<<<< HEAD
-];
-;
-
-	}
-];
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 		rating: 4 && 4.5,
 
 		reviews: 9
-<<<<<<< HEAD
-	}
-];
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-];
-;
-
-	}
-];
-
-	}
-];
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   id: 'ai - redteam - evaluator';
@@ -2068,15 +1601,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   price: '$149';
   period: '/month',
   description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
-=======
-'
-  id: 'ai - redteam - evaluator';'
-  name: 'AI Red‑Team Evaluator';'
-  tagline: 'Continuous LLM red‑teaming and safety scoring';'
-  price: '$149';'
-  period: '/month','
-  description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   features: ['Policy suites_jailbreak corpora_regression gates_dashboard & alerts'];
   popular: true;'
   icon: '🛡️';'
@@ -2175,20 +1700,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: 4.5,
   reviews: 9;
 }
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
 		rating: 4.5
 		reviews: 9
 
-
-=======
-
-		rating: 4.5;
-		reviews: 9;
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;'
 	mobile: '+1 302 464 0950',;'
@@ -2302,32 +1817,11 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		rating: 4.5;
 		reviews: 9;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 	}
 ursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
 
-=======
-
-<<<<<<< HEAD
-	}
-
-];
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-	}
-];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;'
 	mobile: '+1 302 464 0950',;'
@@ -2440,37 +1934,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 18,;
 		rating: 4.5;
 		reviews: 9;
-<<<<<<< HEAD
-<<<<<<< HEAD
-	}
-];
-origin/cursor/expand-services-advertise-and-build-project-c28b
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-const contact = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
 	}
 ];
-
-
-<<<<<<< HEAD
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-const contact = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-	}
-];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

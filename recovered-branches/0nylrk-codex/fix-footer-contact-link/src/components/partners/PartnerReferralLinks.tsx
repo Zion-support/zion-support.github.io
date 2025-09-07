@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useRef, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -38,33 +16,7 @@ export function PartnerReferralLinks() {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-
-import {useRef, useState} from "react";"
-import {Button} from "@/components/ui/button";"
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";"
-import {Input} from "@/components/ui/input";"
-import {Copy, Download, Link, Plus} from "lucide-react";"
-import {toast} from "@/hooks/use-toast";"
-import {useReferrals} from "@/hooks/useReferrals";"
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";"
-import {Label} from "@/components/ui/label";"
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-
-
-
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-"
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [customParam, setCustomParam] = useState<string>("");
 
 import { useRef, useState } from "react",
@@ -89,11 +41,6 @@ export function PartnerReferralLinks() {
 import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -102,13 +49,7 @@ import { Copy, Download, Link, Plus } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 import { useReferrals } from "@/hooks/useReferrals",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-<<<<<<< HEAD
 
-=======
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-export function PartnerReferralLinks() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
@@ -120,75 +61,26 @@ export function PartnerReferralLinks() {
 import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
   const [customParam, setCustomParam] = useState<string>(""),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
 
   // Get the base referral link
-=======
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
-  
-  // Get the base referral link;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   const baseLink = getReferralLink(),
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleCopyLink = (link: string) => {
-=======
-  const [customParam, setCustomParam] = useState<string>("");  const handleCopyLink = (link: string) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  const [customParam, setCustomParam] = useState<string>("");  const handleCopyLink = (link: string) => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-
-  const handleCopyLink = (link: string) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   // Get the base referral link
   const baseLink = getReferralLink(),
 
-
   const handleCopyLink = (link: string) => {
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
-  const [customParam, setCustomParam] = useState<string>("");  const handleCopyLink = (link: string) => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     navigator.clipboard.writeText(link)
     toast({"
       title: "Link copied!""
@@ -196,116 +88,20 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
       variant: "default"
     })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-  }
-=======
-
-  },
-  
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
   
   const handleGenerateLink = () => {}
     if (baseLink) {}
-=======
-}
-  const handleGenerateLink = () => {
-    if (baseLink) {
-      const url = new URL(baseLink);
-  },
 
-
-import {useRef, useState} from "react";""
-import {Button} from "@/components/ui/button";""
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
-import {Input} from "@/components/ui/input";""
-import {Copy, Download, Link, Plus} from "lucide-react";""
-import {toast} from "@/hooks/use-toast";""
-import {useReferrals} from "@/hooks/useReferrals";""
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";""
-import {Label} from "@/components/ui/label";""
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";"
-export function PartnerReferralLinks() {;
-
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-"
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");"
-</string>"
-  const [customParam, setCustomParam] = useState<string>("");"
-</string>
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
-  // Get the base referral link;
-  const baseLink = getReferralLink(),
-
-  const handleCopyLink = (link: string) => {
-    navigator.clipboard.writeText(link)
-    toast({"
-      title: "Link copied!"","
-  description: "The referral link has been copied to your clipboard"""
-      variant: "default"")
-
-    })
-
-
-pr-12325
-  },
-  const handleGenerateLink = (
-    if (baseLink) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const url = new URL(baseLink),
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
-=======
 
-      // Add custom campaign parameter if selected"
-      if (selectedCampaign !== "default") {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         url.searchParams.append("campaign", selectedCampaign)
       }
       // Add custom parameter if provided;
@@ -314,149 +110,20 @@ pr-12325
       }
       const newLink = {"
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`
-<<<<<<< HEAD
-<<<<<<< HEAD
-        link: url.toString()      setGeneratedLinks(prev => [...prev, newLink]);
-=======
-        link: url.toString()
 
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
-
-  // Get the base referral link;
-  const baseLink = getReferralLink();
-
-  const handleCopyLink = (link: string) => {;
-    navigator && navigator.clipboard.writeText(link),;
-    toast({;
-      title: "Link copied!",;
-      description: "The referral link has been copied to your clipboard",;
-      variant: "default";
-    });
-  };
-
-  const handleGenerateLink = () => {;
-    if (baseLink) {;
-      const url = new URL(baseLink);
-
-      // Add custom campaign parameter if selected;
-      if (selectedCampaign !== "default") {;
-        url && url.searchParams.append("campaign", selectedCampaign);
-      }
-
-      // Add custom parameter if provided;
-      if (customParam) {;
-        url && url.searchParams.append("source", customParam);
-      }
-
-      const newLink = {;
-        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,;
-        link: url && url.toString();
-      };
-
-      setGeneratedLinks(prev => [...prev, newLink]);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsDialogOpen(false);
-=======
-        link: url.toString()
 
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
-
-  // Get the base referral link;
-  const baseLink = getReferralLink();
-
-  const handleCopyLink = (link: string) => {;
-    navigator && navigator.clipboard.writeText(link),;
-    toast({;"
-      title: "Link copied!",;"
-      description: "The referral link has been copied to your clipboard",;"
-      variant: "default";
-    });
-  };
-
-  const handleGenerateLink = () => {;
-    if (baseLink) {;
-      const url = new URL(baseLink);
-
-      // Add custom campaign parameter if selected;"
-      if (selectedCampaign !== "default") {;"
-        url && url.searchParams.append("campaign", selectedCampaign);
-      }
-
-      // Add custom parameter if provided;
-      if (customParam) {;"
-        url && url.searchParams.append("source", customParam);
-      }
-
-      const newLink = {;"`
-        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,;
-        link: url && url.toString();
-      };
-
-
-
-      setGeneratedLinks(prev => [...prev, newLink]);
-      setIsDialogOpen(false);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setCustomParam("");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
 
-      },
-      
-      setGeneratedLinks(prev => [...prev, newLink]),
-      setIsDialogOpen(false),"
-=======
-    }
-
-}
-      setGeneratedLinks(prev => [...prev, newLink]);
-      setIsDialogOpen(false);
-      setCustomParam("")
-    }
-  }
-      },
-      setGeneratedLinks(prev => [...prev, newLink]),
-      setIsDialogOpen(false),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setCustomParam("")
     }
   },
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleDownloadLinks = () => {
     const allLinks = [
       { name: "Default", link: baseLink }
       ...generatedLinks
-<<<<<<< HEAD
 
-    const csvContent = [
-      "Name,Link",
-      ...allLinks.map(l => `${l.name},${l.link}`)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  };
-
-=======
-  };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-  const handleDownloadLinks = () => {}
-    const allLinks = ["
-      { name: "Default", link: baseLink }
-      ...generatedLinks;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const handleDownloadLinks = () => {;
     const allLinks = [;"
       { name: "Default", link: baseLink },;
@@ -476,32 +143,13 @@ pr-12325
     document.body.removeChild(link)
   },
 
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
   return ("
     <div className="space-y-6">"
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>"
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Button
               variant="outline"
               size="sm"
@@ -529,7 +177,7 @@ export function PartnerReferralLinks() {;
   const handleCopyLink = (link: string) => {;
     navigator.clipboard.writeText(link),;
     toast({;
-      title: "Link copied!",;
+      title: "Link copied!",
       description: "The referral link has been copied to your clipboard",;
       variant: "default";
     });
@@ -574,17 +222,7 @@ export function PartnerReferralLinks() {;
     document.body.appendChild(link),;
     link.click();
     document.body.removeChild(link);
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
-      "Name,Link";
-      ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
-    ].join("\n");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
     const url = URL && URL.createObjectURL(blob);"
     const link = document && document.createElement("a");"
@@ -594,7 +232,7 @@ export function PartnerReferralLinks() {;
     document && document.body.appendChild(link);
     link && link.click();
     document && document.body.removeChild(link);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   };
 "
 import { useRef, useState } from "react",;"
@@ -674,291 +312,7 @@ export function PartnerReferralLinks() { return null; }
 "
     <div className="space-y-6">;"
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
-<<<<<<< HEAD
-=======
-    }  const handleDownloadLinks = () => {
-    const allLinks = [
-      { name: "Default", link: baseLink }
-      ...generatedLinks      <Card className="bg-zion-blue-dark border-zion-blue-light">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    }  const handleDownloadLinks = () => {
-    const allLinks = [
-      { name: "Default", link: baseLink }
-      ...generatedLinks      <Card className="bg-zion-blue-dark border-zion-blue-light">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  const handleDownloadLinks = () => {
-    const allLinks = [
-      { name: "Default", link: baseLink }
-      ...generatedLinks
 
-  };
-
-};
-  const handleDownloadLinks = () => {;
-    const allLinks = [;
-      { name: "Default", link: baseLink },;
-      ...generatedLinks;
-    ];
-
-    const csvContent = [;
-
-      "Name,Link";
-      ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
-    ].join("\n");
-
-    ],
-
-    const csvContent = [
-      "Name,Link",
-      ...allLinks.map(l => `${l.name},${l.link}`)
-
-const csvContent = [;
-    ];
-    ],
-    const csvContent = [
-      "Name,Link",
-      ...allLinks.map(l => `${l.name},${l.link}`)
-    ].join("\n");
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.setAttribute("href", url);
-    link.setAttribute("download", "zion_referral_links.csv");
-    link.style.visibility = 'hidden';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link)
-  }
-    ].join("\n"),
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
-    const url = URL.createObjectURL(blob),
-    const link = document.createElement("a"),
-    link.setAttribute("href", url),
-    link.setAttribute("download", "zion_referral_links.csv"),
-    link.style.visibility = 'hidden',
-    document.body.appendChild(link),
-    link.click(),
-    document.body.removeChild(link)
-  },
-
-  return (
-    <div className="space-y-6">
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle className="flex items-center justify-between">
-            <span>Your Referral Link</span>
-
-<Button
-              variant="outline"
-              size="sm"
-            <Button 
-              variant="outline" 
-              size="sm" 
-import { useRef, useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Copy, Download, Link, Plus } from "lucide-react",;
-import { toast } from "@/hooks/use-toast",;
-import { useReferrals } from "@/hooks/useReferrals",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Label } from "@/components/ui/label",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-export function PartnerReferralLinks() {;
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),;
-  const [isDialogOpen, setIsDialogOpen] = useState(false),;
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),;
-  const [customParam, setCustomParam] = useState<string>(""),;
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
-  // Get the base referral link;
-  const baseLink = getReferralLink(),;
-  const handleCopyLink = (link: string) => {;
-    navigator.clipboard.writeText(link),;
-    toast({;
-      title: "Link copied!",;
-      description: "The referral link has been copied to your clipboard",;
-      variant: "default";
-    });
-  },;
-  const handleGenerateLink = () => {;
-    if (baseLink) {;
-      const url = new URL(baseLink),;
-      // Add custom campaign parameter if selected;
-      if (selectedCampaign !== "default") {;
-        url.searchParams.append("campaign", selectedCampaign);
-      }
-;
-      // Add custom parameter if provided;
-      if (customParam) {;
-        url.searchParams.append("source", customParam);
-      }
-;
-      const newLink = {;
-        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,;
-        link: url.toString();
-      },;
-      setGeneratedLinks(prev => [...prev, newLink]),;
-      setIsDialogOpen(false),;
-      setCustomParam("");
-    }
-  },;
-  const handleDownloadLinks = () => {;
-    const allLinks = [;
-      { name: "Default", link: baseLink },;
-      ...generatedLinks;
-    ],;
-    const csvContent = [;
-      "Name,Link",;
-      ...allLinks.map(l => `${l.name},${l.link}`);
-    ].join("\n"),;
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),;
-    const url = URL.createObjectURL(blob),;
-    const link = document.createElement("a"),;
-    link.setAttribute("href", url),;
-    link.setAttribute("download", "zion_referral_links.csv"),;
-    link.style.visibility = 'hidden',;
-    document.body.appendChild(link),;
-    link.click();
-    document.body.removeChild(link);
-
-      "Name,Link";
-      ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
-    ].join("\n");
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
-    const url = URL && URL.createObjectURL(blob);
-    const link = document && document.createElement("a");
-    link && link.setAttribute("href", url);
-    link && link.setAttribute("download", "zion_referral_links && zion_referral_links.csv");
-    link && link.style.visibility = 'hidden';
-    document && document.body.appendChild(link);
-    link && link.click();
-    document && document.body.removeChild(link);
-  };
-
-  return (
-return (
-import { useRef, useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Copy, Download, Link, Plus } from "lucide-react",;
-import { toast } from "@/hooks/use-toast",;
-import { useReferrals } from "@/hooks/useReferrals",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Label } from "@/components/ui/label",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-;
-export function PartnerReferralLinks() {;
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),;
-  const [isDialogOpen, setIsDialogOpen] = useState(false),;
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),;
-  const [customParam, setCustomParam] = useState<string>(""),;
-  const [generatedLinks, setGeneratedLinks] = useState<{name:string, link:string}[]>([]),;
-  ;
-  // Get the base referral link;
-  const baseLink = getReferralLink(),;
-  ;
-  const handleCopyLink = (link:string) => {;
-    navigator.clipboard.writeText(link),;
-    toast({;
-      title:"Link copied!",;
-      description:"The referral link has been copied to your clipboard",;
-      variant:"default";
-    }),;
-  },;
-  ;
-  const handleGenerateLink = () => {;
-    if (baseLink) {;
-      const url = new URL(baseLink),;
-      ;
-      // Add custom campaign parameter if selected;
-      if (selectedCampaign !== "default") {;
-        url.searchParams.append("campaign", selectedCampaign),;
-      }
-      ;
-      // Add custom parameter if provided;
-      if (customParam) {;
-        url.searchParams.append("source", customParam),;
-      }
-      ;
-      const newLink = {;
-        name:`${selectedCampaign}${customParam ? `-${customParam}` :""}`,;
-        link:url.toString();
-      },;
-      ;
-      setGeneratedLinks(prev => [...prev, newLink]),;
-      setIsDialogOpen(false),;
-      setCustomParam(""),;
-    }
-  },;
-  ;
-  const handleDownloadLinks = () => {;
-    const allLinks = [;
-      { name:"Default", link:baseLink },;
-      ...generatedLinks;
-    ],;
-    ;
-    const csvContent = [;
-      "Name,Link",;
-      ...allLinks.map(l => `${l.name},${l.link}`);
-    ].join("\n"),;
-    ;
-    const blob = new Blob([csvContent], { type:'text/csv,charset=utf-8,' }),;
-    const url = URL.createObjectURL(blob),;
-    const link = document.createElement("a"),;
-    link.setAttribute("href", url),;
-    link.setAttribute("download", "zion_referral_links.csv"),;
-    link.style.visibility = 'hidden',;
-    document.body.appendChild(link),;
-  };
-  return (;
-return (
-    <div className="space-y-6">;
-      <Card className="bg-zion-blue-dark border-zion-blue-light">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-        link: url.toString()      setGeneratedLinks(prev => [...prev, newLink]);
-      setIsDialogOpen(false);
-      setCustomParam("");
-    }  const handleDownloadLinks = () => {
-    const allLinks = [
-      { name: "Default", link: baseLink }
-      ...generatedLinks      <Card className="bg-zion-blue-dark border-zion-blue-light">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        <CardHeader>;
-          <CardTitle className="flex items-center justify-between">;
-            <span>Your Referral Link</span>;
-<<<<<<< HEAD
-            <Button;
-              variant="outline";
-              size="sm";
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-            <Button
-              variant="outline" 
-              size="sm" 
-
-
-            <Button 
-              variant="outline" 
-              size="sm" 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onClick={handleDownloadLinks}
               className="flex items-center gap-2">;
 <Button
@@ -975,34 +329,11 @@ return (
       "Name,Link";
               className="flex items-center gap-2">;      "Name,Link";
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
-=======
-        <CardHeader>;"
-          <CardTitle className="flex items-center justify-between">;
-            <span>Your Referral Link</span>;
-            <Button"
-              variant="outline" "
-              size="sm" 
 
-
-
-
-
-            <Button "
-              variant="outline" "
-              size="sm" 
-
-
-"
-      "Name,Link";`
-      ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     ].join("\n");
               onClick={handleDownloadLinks}"
               className="flex items-center gap-2">;
-<<<<<<< HEAD
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               <Download className="h-4 w-4" />;
               Export Links;
 
@@ -1026,7 +357,7 @@ return (
   const handleCopyLink = (link: string) => {;
     navigator && navigator.clipboard.writeText(link),;
     toast({;"
-      title: "Link copied!",;""
+      title: "Link copied!",""
       description: "The referral link has been copied to your clipboard",;""
       variant: "default";")
     });
@@ -1052,12 +383,10 @@ return (
         link: url && url.toString();
       };
 
-
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);"
       setCustomParam("");"
     }
-
 
       },
       setGeneratedLinks(prev => [...prev, newLink]),
@@ -1065,7 +394,6 @@ return (
       setCustomParam("")"
     }
   },
-
 
   const handleDownloadLinks = () => {
     const allLinks = ["
@@ -1101,8 +429,6 @@ return (
     link.click(),
     document.body.removeChild(link)
   },
-
-
 
   return ('
     <div className="space-y-6">"
@@ -1218,37 +544,10 @@ return (
         </CardHeader>;
         <CardContent>;"
           <div className="flex space-x-2">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<Button;
-              variant="outline";
-              size="sm";
-              onClick={handleDownloadLinks}
-              className="flex items-center gap-2"
-            >
-              <Download className="h-4 w-4" />
-              Export Links
-            </Button>
-          </CardTitle>
-          <CardDescription>Share this link with your audience to earn rewards</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="flex space-x-2">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <Input
               value={baseLink}
               readOnly
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className="font-mono text-sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 
             <Input;
               value={baseLink}
@@ -1258,74 +557,20 @@ return (
             />;"
             <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>;"
               <Copy className="h-4 w-4" />;"
-=======
-              className="font-mono text-sm"
 
-<Input;
-              value={baseLink}
-              readOnly;
-              className="font-mono text-sm";
-            />;
-            <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>;
-              <Copy className="h-4 w-4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <span className="sr-only">Copy</span>;
             </Button>;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-"
-      <div className="flex justify-between items-center">;"
-        <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>;
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
-          <DialogTrigger asChild>;"
-            <Button variant="outline" size="sm" className="flex items-center gap-2">;"
-              <Plus className="h-4 w-4" />;
-              Create New Link;
-            </Button>;
-          </DialogTrigger>;"
-=======
 
-;
-      <div className="flex justify-between items-center">;
-        <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>;
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
-          <DialogTrigger asChild>;
-            <Button variant="outline" size="sm" className="flex items-center gap-2">;
-              <Plus className="h-4 w-4" />;
-              Create New Link;
-            </Button>;
-          </DialogTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <DialogContent className="sm:max-w-md bg-zion-blue border-zion-blue-light">;
             <DialogHeader>;
               <DialogTitle>Create Custom Campaign Link</DialogTitle>;
               <DialogDescription>;
                 Generate a trackable link for specific marketing campaigns;
               </DialogDescription>;
-<<<<<<< HEAD
-            </DialogHeader>;"
-            <div className="grid gap-4 py-4">;"
-              <div className="grid gap-2">;"
-                <Label htmlFor="campaign">Campaign Type</Label>;
 
-                  value={selectedCampaign}
-                  onValueChange={setSelectedCampaign}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-            </DialogHeader>;
-            <div className="grid gap-4 py-4">;
-              <div className="grid gap-2">;
-                <Label htmlFor="campaign">Campaign Type</Label>;
-                <Select
-<Select ;
-                  value={selectedCampaign}
-                  onValueChange={setSelectedCampaign}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useRef, useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -1335,19 +580,7 @@ import { toast } from '@/hooks / use - toast';
 import { useReferrals } from '@/hooks / useReferrals';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
 import { Label } from '@/components / ui / label';
-<<<<<<< HEAD
-=======
-'
-import { useRef, useState } from './react';'
-import { Button } from '@/components / ui / button';'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';'
-import { Input } from '@/components / ui / input';'
-import { Copy, Download, Link, Plus } from './lucide-react';'
-import { toast } from '@/hooks / use - toast';'
-import { useReferrals } from '@/hooks / useReferrals';'
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';'
-import { Label } from '@/components / ui / label';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
 export /**;
  * PartnerReferralLinks - Function description;
@@ -1356,268 +589,73 @@ function PartnerReferralLinks() {}
   const { referral_code, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals ();
   const [isDialogOpen, setIsDialogOpen] = useState (false);"
   const [selected_campaign, setSelectedCampaign] = useState < string>("default");"
-=======
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-export /**
- * PartnerReferralLinks - Function description
- */
-function PartnerReferralLinks() {
-  const { referral_code, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals ();
-  const [isDialogOpen, setIsDialogOpen] = useState (false);
-  const [selected_campaign, setSelectedCampaign] = useState < string>("default");
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
   const [custom_param, setCustomParam] = useState < string>("");
   const [generated_links, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   // Get the base referral link;
   const base_link = getReferralLink ();
 ;
-<<<<<<< HEAD
-  const handleCopyLink = (link: string) =>: any {}
-    navigator.clipboard.write_text (link),
-    toast ({"
-      title: "Link copied!","
-      description: "The referral link has been copied to your clipboard","
-=======
-  const handleCopyLink = (link: string) =>: any {
-    navigator.clipboard.write_text (link),
-    toast ({
-      title: "Link copied!",
-      description: "The referral link has been copied to your clipboard",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
       variant: "default";
     });
   }
 ;
-<<<<<<< HEAD
-  const handleGenerateLink = () =>: any {}
-    // Check condition;
-if ( {) {}
-  $2;
-=======
-  const handleGenerateLink = () =>: any {
-    // Check condition
-if ( {) {
-  $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
 }
       const url = new URL (base_link);
 ;
       // Add custom campaign parameter if selected;
-<<<<<<< HEAD
-      // Check condition;
-if ( {) {}
-  $2;
-}"
-        url.search_params.append ("campaign", selected_campaign);
-      }
-      // Add custom parameter if provided;
-      // Check condition;
-if ( {) {}
-  $2;
-}"
-        url.search_params.append ("source", custom_param);
-      }
-      const new_link = {"`
-=======
-      // Check condition
-if ( {) {
-  $2
-}
-        url.search_params.append ("campaign", selected_campaign);
-      }
-      // Add custom parameter if provided;
-      // Check condition
-if ( {) {
-  $2
-}
-        url.search_params.append ("source", custom_param);
-      }
-      const new_link = {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
         name: `${selected_campaign}${custom_param ? `-${custom_param}` : ""}`,
         link: url.to_string ();
       }
 ;
       setGeneratedLinks (prev => [...prev, new_link]);
-<<<<<<< HEAD
-      setIsDialogOpen (false);"
-=======
-      setIsDialogOpen (false);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
       setCustomParam ("");
     }
   }
 ;
-<<<<<<< HEAD
-  const handleDownloadLinks = () =>: any {}
-    const all_links = [;"
-=======
-  const handleDownloadLinks = () =>: any {
-    const all_links = [;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
       { name: "Default", link: base_link },
       ...generated_links;
     ];
 ;
-<<<<<<< HEAD
-    const csv_content = [;"
-      "Name, Link";`
-      ...all_links.map (l => `${l.name}, ${l.link}`);"
-    ].join ("\n");
-;'
-    const blob = new Blob ([csv_content], { type: 'text / csv, charset = utf - 8, ' });
-    const url = URL.createObjectURL (blob);"
-    const link = document.create_element ("a");"
-    link.set_attribute ("href", url);"
-    link.set_attribute ("download", "zion_referral_links.csv");'
-=======
-    const csv_content = [;
-      "Name, Link";
-      ...all_links.map (l => `${l.name}, ${l.link}`);
-    ].join ("\n");
-;
-    const blob = new Blob ([csv_content], { type: 'text / csv, charset = utf - 8, ' });
-    const url = URL.createObjectURL (blob);
-    const link = document.create_element ("a");
-    link.set_attribute ("href", url);
-    link.set_attribute ("download", "zion_referral_links.csv");
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
     link.style.visibility = 'hidden';
     document.body.append_child (link);
     link.click ();
     document.body.remove_child (link);
   }
 ;
-<<<<<<< HEAD
-  return ("
-    <div className="space - y-6">;"
-      <Card className="bg - zion - blue - dark border - zion - blue - light">;
-        <CardHeader>;"
-          <CardTitle className="flex items - center justify - between">;
-            <span > Your Referral Link</span>;
-            <Button;"
-              variant="outline";"
-              size="sm";
-              on_click={handleDownloadLinks}"
-              className="flex items - center gap - 2";
-            >;"
-=======
-  return (
-    <div className="space - y-6">;
-      <Card className="bg - zion - blue - dark border - zion - blue - light">;
-        <CardHeader>;
-          <CardTitle className="flex items - center justify - between">;
-            <span > Your Referral Link</span>;
-            <Button;
-              variant="outline";
-              size="sm";
-              on_click={handleDownloadLinks}
-              className="flex items - center gap - 2";
-            >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
               <Download className="h - 4 w - 4" />;
               Export Links;
             </Button>;
           </CardTitle>;
           <CardDescription > Share this link with your audience to earn rewards</CardDescription>;
         </CardHeader>;
-<<<<<<< HEAD
-        <CardContent>;"
-          <div className="flex space - x-2">;
-            <Input;
-              value={base_link}
-              read_only;"
-              className="font - mono text - sm";
-            />;"
-            <Button variant="outline" on_click={() => handleCopyLink (base_link)}>;"
-              <Copy className="h - 4 w - 4" />;"
-=======
-        <CardContent>;
-          <div className="flex space - x-2">;
-            <Input;
-              value={base_link}
-              read_only;
-              className="font - mono text - sm";
-            />;
-            <Button variant="outline" on_click={() => handleCopyLink (base_link)}>;
-              <Copy className="h - 4 w - 4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
               <span className="sr - only">Copy</span>;
             </Button>;
           </div>;
         </CardContent>;
-<<<<<<< HEAD
-      </Card>;"
-      <div className="flex justify - between items - center">;"
-        <h3 className="text - lg font - semibold text - white">Custom Campaign Links</h3>;
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
-          <DialogTrigger as_child>;"
-            <Button variant="outline" size="sm" className="flex items - center gap - 2">;"
-              <Plus className="h - 4 w - 4" />;
-              Create New Link;
-            </Button>;
-          </DialogTrigger>;"
-=======
-      </Card>;
-      <div className="flex justify - between items - center">;
-        <h3 className="text - lg font - semibold text - white">Custom Campaign Links</h3>;
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
-          <DialogTrigger as_child>;
-            <Button variant="outline" size="sm" className="flex items - center gap - 2">;
-              <Plus className="h - 4 w - 4" />;
-              Create New Link;
-            </Button>;
-          </DialogTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
           <DialogContent className="sm:max - w-md bg - zion - blue border - zion - blue - light">;
             <DialogHeader>;
               <DialogTitle > Create Custom Campaign Link</DialogTitle>;
               <DialogDescription>;
                 Generate a trackable link for specific marketing campaigns;
               </DialogDescription>;
-<<<<<<< HEAD
-            </DialogHeader>;"
-            <div className="grid gap - 4 py - 4">;"
-              <div className="grid gap - 2">;"
-=======
-            </DialogHeader>;
-            <div className="grid gap - 4 py - 4">;
-              <div className="grid gap - 2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
                 <Label html_for="campaign">Campaign Type</Label>;
                 <Select;
                   value={selected_campaign}
                   onValueChange={setSelectedCampaign}
                 >;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <SelectTrigger id="campaign">;
-<<<<<<< HEAD
-=======
-              className="font-mono text-sm"                  <SelectTrigger id="campaign">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-              className="font-mono text-sm"                  <SelectTrigger id="campaign">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-"
-                  <SelectTrigger id="campaign">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                  <SelectTrigger id="campaign">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <Input
-              value={baseLink}
-              readOnly
-              className="font-mono text-sm"                  <SelectTrigger id="campaign">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <SelectValue placeholder="Select campaign type" />;
                   </SelectTrigger>;
                   <SelectContent>;"
@@ -1631,16 +669,6 @@ if ( {) {
                 </Select>;
               </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className="grid gap-2">;
-=======
-              <div className="grid gap - 2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              <div className="grid gap-2">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <Label html_for="custom">Custom Parameter (Optional)</Label>;
                 <Input;
                   id="custom";
@@ -1882,81 +910,14 @@ if ( {) {
                 </CardTitle>;
               </CardHeader>;
                   >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <Copy className="h - 4 w-4" />;
-                    <span className="sr-only">Copy</span>;
-=======
 
+                  </Button>;
+                </div>;
 
-                />;
-              </div>;
-            </div>;
-            <DialogFooter>;
-
-                Generate Link;
-              </Button>;
-            </DialogFooter>;
-          </DialogContent>;
-        </Dialog>;
-      </div>;
-
-                  >;"
-                    <Copy className="h-4 w-4" />;"
-                    <span className="sr-only">Copy</span>;
                   </Button>;
                 </div>;
               </CardContent>;
-            </Card>;
-          ));
-"
-          <Card className="bg-zion-blue/20 border-dashed border-zion-blue-light">;"
-            <CardContent className="flex flex-col items-center justify-center p-6">;"
-              <p className="text-zion-slate-light text-center mb-4">;
-                Create custom campaign links to track different marketing efforts;
-              </p>;
 
-
-              <Button;
-"
-                variant="outline"
-
-"
-                variant="outline"
-
-                onClick={() => setIsDialogOpen(true)}"
-                className="flex items-center gap-2";
-              >;"
-                <Plus className="h-4 w-4" />;
-                Create First Link;
-              </Button>;
-"
-                    <span>{item.name || "Campaign Link"}</span>;
-                  </div>;
-                </CardTitle>;
-              </CardHeader>;
-                  >;"
-                    <Copy className="h - 4 w - 4" />;"
-                    <span className="sr - only">Copy</span>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  </Button>;
-                </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                    <Copy className="h - 4 w - 4" />;
-                    <span className="sr - only">Copy</span>;
-=======
-                    <Copy className="h - 4 w-4" />;
-                    <span className="sr-only">Copy</span>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                  </Button>;
-                </div>;
-              </CardContent>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </Card>))) : (
           <Card className="bg - zion - blue / 20 border - dashed border - zion - blue - light">;
             <CardContent className="flex flex - col items - center justify - center p - 6">;
@@ -1983,7 +944,7 @@ if ( {) {
   const handleCopyLink = (link: string) => {;
     navigator && navigator.clipboard.writeText(link),;
     toast({;"
-      title: "Link copied!",;""
+      title: "Link copied!",""
       description: "The referral link has been copied to your clipboard",;""
       variant: "default";")
     });
@@ -2005,16 +966,13 @@ if ( {) {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,;"
         link: url && url.toString();
 
-
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);"
       setCustomParam("");"
 
-
       setGeneratedLinks(prev => [...prev, newLink]),
       setIsDialogOpen(false),"
       setCustomParam("")"
-
 
   const handleDownloadLinks = () => {
     const allLinks = ["
@@ -2047,8 +1005,6 @@ if ( {) {
     document.body.appendChild(link),
     link.click(),
     document.body.removeChild(link)
-
-
 
   return (
     <div className="space-y-6">"
@@ -2110,7 +1066,6 @@ if ( {) {
               size="sm""
               onClick={handleDownloadLinks}"
               className="flex items-center gap-2">;"
-
 
             <Button ;"
               variant="outline" ;""
@@ -2241,7 +1196,6 @@ if ( {) {
 
           <DialogContent className="sm:max - w-md bg - zion - blue border - zion - blue - light">;"
 
-
               <DialogTitle > Create Custom Campaign Link;
 
             <div className="grid gap - 4 py - 4">;"
@@ -2270,7 +1224,6 @@ if ( {) {
 
             <DialogFooter>;
 
-
                 type="button";""
                 variant="secondary";"
                 on_click={() => setIsDialogOpen (false)}
@@ -2298,16 +1251,9 @@ if ( {) {
           </Card>;
       </div>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
   ),; export function PartnerReferralLinks () {
-=======
-),; export function PartnerReferralLinks () {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   const {
   referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia 
 }= useReferrals ();
@@ -2367,30 +1313,5 @@ pr-12325
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 }
-=======
-              </CardContent>;}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-              </CardContent>;}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-}'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-}
-    </div>"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

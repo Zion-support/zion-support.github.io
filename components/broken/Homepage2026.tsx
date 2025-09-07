@@ -1,51 +1,8 @@
-import Link from 'next/link';'
-import { motion } from 'framer-motion';
-
-import {};
-const Homepage2026: React.FC = () => {;
-  return (
-    <Layout>;
-      {/* Main Content */}'
-      <main className='relative z-10'>;
-        {/* Hero Section */}'
-        <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>;
-          {/* Background Elements */}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              {/* Company Badge */}
-              <motion&& motion.div;
-                initial={{ opacity: 0, scale: 0 && 0.8 }}
-import {}
-  ArrowRight,
-  Star,
-  Brain,
-  Atom,
-  Shield,
-  Zap,
-  TrendingUp,
-  Globe,
-  MapPin,
-  Users,
-  Building,
-  Rocket,
-  CheckCircle,;
-  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
-  Users, Building, Rocket, CheckCircle, Phone, Mail;
-import { ArrowRight, Star;
-  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
-  Users, Building, Rocket, CheckCircle, Phone, Mail
- } from 'lucide-react';
-const Homepage2026: React.FC;
-origin/cursor/automate-test-improve-and-merge-code-2533
-const Homepage2026: React.FC = () => {
-  return (
+return (
     <Layout>;
       {/* Main Content */}'
       <main className='relative z-10'>
 
-<main className='relative z-10'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-        {/* Hero Section */}
         <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
           {/* Background Elements */}'
           <div className='absolute inset - 0 pointer - events - none'>;'
@@ -89,10 +46,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
 
-                transition={{ duration: 0.6, delay: 0.2 }}
-className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2026</span>
               </motion.div>'
@@ -151,9 +104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>"
                 <a href="mailto:kleber@ziontechgroup.com">"
                   <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                  <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    Get Started
+
                   </button>
                 </a>
               </div>'
@@ -284,47 +235,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>"
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                transition={{ duration: 0.8, delay: 0.4 }}
-className='flex items-center justify-center space-x-6 text-sm text-gray-400'
-              >
-                <div className='flex items-center space-x-2'>
-                  <Shield className='w-4 h-4 text-green-400' />
-                  <span>Enterprise Security</span>
-                </div>
-                <div className='flex items-center space-x-2'>
-                  <Globe className='w-4 h-4 text-blue-400' />
-                  <span>Global Reach</span>
-                </div>
-                <div className='flex items-center space-x-2'>
-                  <TrendingUp className='w-4 h-4 text-purple-400' />
-                  <span>Proven Results</span>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Company Stats */}
-<section className='py-20 px-4 bg-black/30 relative'>
-          <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
-          <div className='max-w-6xl mx-auto relative z-10'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className='text-center mb-16'
-            >
-              <h2 className='text-4xl font-bold text-white mb-4'>
-                Why Choose Zion Tech Group?
-              </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                We deliver innovative solutions that drive real business
-                transformation
-              </p>
-            </motion.div>
 
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -426,10 +337,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0.6, delay: 0.1 }}'
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
 
-className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                <div className='text-5xl mb-6'>🤖</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
                   AI Automation Services;
                 </h3>'
@@ -479,9 +386,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>"
                 <Link href="/comprehensive-2025-services-showcase">"
                   <button className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-                  <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    Learn More
+
                   </button>
                 </Link>
               </motion.div>
@@ -681,11 +586,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
 
-                transition={{ duration: 0.6, delay: 0.2 }}
-className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                <div className='text-5xl mb-6'>🏗️</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
                   IT Infrastructure Services;
                 </h3>'
@@ -707,10 +607,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <CheckCircle className='w-4 h-4 text-green-400' />
                     <span>Hybrid Cloud Management - $499/month</span>
                   </div>
-                </div>
-                <Link href='/comprehensive-2025-services-showcase'>
-                  <button className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors'>
-                    Learn More
+
                   </button>
                 </Link>
               </motion.div>
@@ -773,11 +670,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
 
-                transition={{ duration: 0.6, delay: 0.3 }}
-className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                <div className='text-5xl mb-6'>🚀</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
                   Micro SAAS Solutions;
                 </h3>'
@@ -799,10 +691,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <CheckCircle className='w-4 h-4 text-green-400' />
                     <span>Smart Appointment Scheduler - $69/month</span>
                   </div>
-                </div>
-                <Link href='/comprehensive-2025-services-showcase'>
-                  <button className='w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors'>
-                    Learn More
+
                   </button>
                 </Link>
               </motion.div>
@@ -936,11 +825,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
 
-                transition={{ duration: 0.6, delay: 0.4 }}
-className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                <div className='text-5xl mb-6'>🧠</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
                   Cutting-Edge AI Services;
                 </h3>'
@@ -962,10 +846,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <CheckCircle className='w-4 h-4 text-green-400' />
                     <span>AI Data Analysis - $399/month</span>
                   </div>
-                </div>
-                <Link href='/comprehensive-2025-services-showcase'>
-                  <button className='w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors'>
-                    Learn More
+
                   </button>
                 </Link>
               </motion.div>
@@ -980,25 +861,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-        {/* Contact Section */}
-<section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>
-          <div className='max-w-4xl mx-auto text-center'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className='space-y-6'
-            >
-              <h2 className='text-4xl font-bold text-white mb-6'>
-                Ready to Transform Your Business?
-              </h2>
-              <p className='text-xl text-gray-300 mb-8'>
-                Get in touch with our team to discuss how our innovative
-                services can drive your success
-              </p>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              {/* Contact Information */}
-              <div className='bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8'>;
+
                 <h3 className='text-2xl font-semibold text-cyan-400 mb-6'>;
                   Contact Information;
                 </h3>;'
@@ -1111,28 +974,3 @@ export default Homepage2026;  )
 export default Homepage2026;
 
 export default Homepage2026;
-<div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <a
-                  href='mailto:kleber@ziontechgroup.com'
-                  className='inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
-                >
-                  <span>Get Started Today</span>
-                  <ArrowRight className='w-5 h-5' />
-                </a>
-                <a
-                  href='tel:+13024640950'
-                  className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300'
-                >
-                  Call Now
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </Layout>
-);
-};
-
-export default Homepage2026;
-origin/cursor/automate-test-improve-and-merge-code-2533

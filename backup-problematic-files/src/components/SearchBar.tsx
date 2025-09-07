@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import React, { useState, useEffect, useRef } from 'react',;
-import { useRouter } from 'next/router',;
-=======
-import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
@@ -45,75 +35,13 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
   const inputRef = useRef<HTMLInputElement>(null),;
 
   const containerRef = useRef<HTMLDivElement>(null),;
-<<<<<<< HEAD
-;
-  useEffect(() => {;
-    if (!debounced) {;
-      setSuggestions([]),;
-      setHighlightedIndex(-1),;
-      return,;
-    }
-    const controller = new AbortController(),;
-    fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal:controller.signal });
-      .then(res => {;
-        if (!res.ok) throw new Error('Failed to fetch suggestions'),;
-        return res.json(),;
-      });
-      .then(data => {;
-        if (Array.isArray(data)) {;
-          setSuggestions(data.slice(0, 5)),;
-        } else {;
-          setSuggestions([]),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        }
-        setHighlightedIndex(-1),;
-      });
-      .catch(() => setSuggestions([])),;
-    return () => controller.abort(),;
-  }, [debounced]),;
-;
-  useOnClickOutside(containerRef, () => {;
-    setFocused(false),;
-    setHighlightedIndex(-1),;
-  }),;
-;
-  const handleSelect = (suggestion:SearchSuggestion) => {;
-    onChange(suggestion.text),;
-    if (onSelectSuggestion) onSelectSuggestion(suggestion),;
-;
-    const searchQuery = encodeURIComponent(suggestion.text),;
-    router.push(`/search?q=${searchQuery}`),;
-    fireEvent('search', { search_term:suggestion.text }),;
-    setFocused(false),;
-    setHighlightedIndex(-1),;
-    inputRef.current?.blur(),;
-  },;
-;
-  return (;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div;
       className="relative w-full";"
       ref={containerRef}"
       role="combobox";"
       aria-expanded={focused && suggestions.length > 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      aria-haspopup="listbox";
-      aria-controls={listId}
-      data-testid="search-bar";
-    >;
-      <div className="relative">;
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />;
-=======
-</div>"
-      <div className="relative">;"
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />;"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Input;
           ref={inputRef}"
           type="text";""
@@ -155,9 +83,3 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 }listId= {;
   listId ;
 }/> </div>) ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,21 +1,4 @@
-
-<<<<<<< HEAD
-=======
-import { useState } from "react",;
-import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Alert, AlertDescription } from "@/components/ui/alert",;
-import { Badge } from "@/components/ui/badge",;
-;
-import CodeBlock from "./CodeBlock",;
-;
-export function ApiDocumentation() {;
-  return (;
-    <Card className="bg-zinc-900 border-zinc-800 text-white">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-      <CardHeader>;
+<CardHeader>;
         <CardTitle className="text-xl flex items-center">;
           <BookOpen className="mr-2" size={20} /> API Documentation;
         </CardTitle>;
@@ -84,4 +67,3 @@ export function ApiDocumentation() {;
         </div>;
       )}
     </div>;
-

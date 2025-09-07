@@ -1,9 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const winston = require('winston'),;
 ;
 const logger = winston.createLogger({;
@@ -35,12 +29,7 @@ class AggressiveSyntaxFixer {;
     log(message) {;
         logger.info(`[Aggressive Syntax Fixer] ${message}`),;
     async fixAllSyntaxErrors() {;
-<<<<<<< HEAD
-        this.log('🔧 Starting aggressive syntax error fixing...'),;
-=======
-        this.log(' Starting aggressive syntax error fixing...'),;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 ;
         try {;
             // Get all TypeScript and JavaScript files;
@@ -48,56 +37,22 @@ class AggressiveSyntaxFixer {;
                 ignore:['node_modules/**.next/**', 'dist/**build/**'];
             }),;
 ;
-<<<<<<< HEAD
-            this.log(`📁 Found ${files.length} files to check`),;
-=======
-            this.log(` Found ${files.length} files to check`),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 ;
             for (const file of files) {;
                 await this.fixFile(file),;
             }
 ;
-<<<<<<< HEAD
-            this.log(`✅ Fixed ${this.fixedFiles.length} files`),;
-            if (this.errors.length > 0) {;
-                this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`),;
-=======
-=======
-        try {;
-            // Get all TypeScript and JavaScript files;
-            const files = await glob('src/**/*.{ts,tsx,js,jsx}', {;
-                ignore: ['node_modules/**.next/**';, 'dist/**build/**'];')
-;`;
-            this.log(` Found ${files.length} files to check`),;
-            for (const file of files) {;
-                await this.fixFile(file),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             this.log(` Fixed ${this.fixedFiles.length} files`),;
             if (this.errors.length > 0) {;`;
                 this.log(`  ${this.errors.length} files had errors that couldn't be auto-fixed`),;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-            }
-;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             return {;
                 fixedFiles: this.fixedFiles;,;
                 errors:this.errors;
             },;
-<<<<<<< HEAD
-;
-        } catch (error) {;
-<<<<<<< HEAD
-            this.log(`❌ Error fixing syntax:${error.message}`),;
-=======
-            this.log(` Error fixing syntax:${error.message}`),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        } catch (error) {;`;
-            this.log(` Error fixing syntax: ${error.message;}`),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             throw error,;
     async fixFile(filePath) {;
             const fullPath = path.join(this.projectRoot, filePath),;
@@ -107,32 +62,16 @@ class AggressiveSyntaxFixer {;
             if (this.hasSyntaxErrors(content)) {;
                 const fixedContent = this.createValidFile(filePath),;
                 fs.writeFileSync(fullPath, fixedContent),;
-<<<<<<< HEAD
-                this.fixedFiles.push(filePath),;
-<<<<<<< HEAD
-                this.log(`✅ Fixed:${filePath}`),;
-=======
-                this.log(` Fixed:${filePath}`),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
             }
 ;
         } catch (error) {;
             this.errors.push({ file:filePath, error:error.message }),;
-<<<<<<< HEAD
-            this.log(`❌ Error fixing ${filePath} ${error.message}`),;
-=======
-            this.log(` Error fixing ${filePath} ${error.message}`),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
         }
     }
 ;
-=======
-                this.fixedFiles.push(filePath),;`;
-                this.log(` Fixed: ${filePath;}`),;
-        } catch (error) {;
-            this.errors.push({ file: filePath;, error: error.message ;}),;`;
-            this.log(` Error fixing ${filePath} ${error.message}`),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     hasSyntaxErrors(content) {;
         // Check for various syntax error patterns;
         const errorPatterns = [;
@@ -170,85 +109,24 @@ default function ${validFileName}() {;
       <h1>${validFileName}</h1>;
       <p>Component placeholder</p>;
     </div>;
-<<<<<<< HEAD
-  );
-}`,;
-        } else if (ext === '.ts') {;
-            return `// ${validFileName} module placeholder;
-const ${validFileName} = {;
-  // TODO:Implement ${validFileName} functionality;
-}`;
-        } else if (ext === '.js') {;
-            return `// ${validFileName} module placeholder;
-const ${validFileName} = {;
-  // TODO:Implement ${validFileName} functionality;
-}`;
-        }
-        ;
-        return `// ${validFileName} placeholder;
-const ${validFileName} = {}`;    }
-;
-    async generateReport() {;
-        const report = {;
-            timestamp:new Date().toISOString(),;
-            fixedFiles:this.fixedFiles,;
-            errors:this.errors,;
-            summary:{;
-                totalFixed:this.fixedFiles.length,;
-                totalErrors:this.errors.length,;
-                successRate:this.fixedFiles.length / (this.fixedFiles.length + this.errors.length) * 100;
-            }
-        },;
-;
-        const reportPath = path.join(this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date.now()}.json`),;
-        fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),;
-;
-        return report,;
-    }
-}
-;
-// Main execution;
-async function main() {;
-    const fixer = new AggressiveSyntaxFixer(),;
-    ;
-    try {;
-        const result = await fixer.fixAllSyntaxErrors(),;
-        const report = await fixer.generateReport(),;
-        ;
-<<<<<<< HEAD
-        logger.info('\n📊 Aggressive Syntax Fix Report:'),;
-=======
-        logger.info('\n Aggressive Syntax Fix Report:'),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
         logger.info(`Files Fixed:${report.summary.totalFixed}`),;
         logger.info(`Errors:${report.summary.totalErrors}`),;
         logger.info(`Success Rate:${report.summary.successRate.toFixed(1)}%`),;
         ;
         if (result.fixedFiles.length > 0) {;
-<<<<<<< HEAD
-            logger.info('\n✅ Fixed Files:'),;
-=======
-            logger.info('\n Fixed Files:'),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
             result.fixedFiles.forEach(file => logger.info(`  - ${file}`)),;
         }
         ;
         if (result.errors.length > 0) {;
-<<<<<<< HEAD
-            logger.info('\n❌ Files with Errors:'),;
-=======
-            logger.info('\n Files with Errors:'),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
             result.errors.forEach(({ file, error }) => logger.info(`  - ${file} ${error}`)),;
         }
         ;
         process.exit(0),;
     } catch (error) {;
-<<<<<<< HEAD
-        logger.error('❌ Aggressive syntax fixing failed:', error.message),;
-=======
-        logger.error(' Aggressive syntax fixing failed:', error.message),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
         process.exit(1),;
     }
 }
@@ -261,21 +139,13 @@ module.exports = AggressiveSyntaxFixer, ;
 ;
 // Graceful shutdown handling;
 process.on('SIGINT', () => {;
-<<<<<<< HEAD
-  // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),;
-=======
-  // // // console.log('\n Received SIGINT, shutting down gracefully...'),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
   // Add cleanup logic here;
   process.exit(0),;
 }),;
 ;
 process.on('SIGTERM', () => {;
-<<<<<<< HEAD
-  // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),;
-=======
-  // // // console.log('\n Received SIGTERM, shutting down gracefully...'),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
   // Add cleanup logic here;
   process.exit(0),;
 }),;
@@ -323,12 +193,3 @@ new winston.transports.File ({
 process.on ('SIGTERM', () => {
   // Add cleanup logic here process.exit (0) 
 });
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-<div> <h1>$ {
-</div>)
-}</h1> <p>Component placeholder</p> </div>) `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

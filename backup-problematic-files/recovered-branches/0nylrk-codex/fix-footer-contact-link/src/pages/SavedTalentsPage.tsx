@@ -1,38 +1,8 @@
-
-=======
-import { useState, useEffect } from "react",;
-import { AppHeader } from "@/layout/AppHeader",;
-import { Footer } from "@/components/Footer",;
-import { SEO } from "@/components/SEO",;
-import { TalentCard } from "@/components/talent/TalentCard",;
-import { useAuth } from "@/hooks/useAuth",;
-import { supabase } from "@/integrations/supabase/client",;
-import { TalentProfile } from "@/types/talent",;
-import { toast } from "@/components/ui/use-toast",;
-import { useNavigate } from "react-router-dom",;
-;
-export default function SavedTalentsPage() {;
-  const { user } = useAuth(),;
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const navigate = useNavigate(),;
-;
-  useEffect(() => {;
-    const fetchSavedTalents = async () => {;
-      setIsLoading(true),;
-      try {;
-        if (!user) {;
-          console.warn("User not authenticated."),;
-          return,;
-        }
-;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-        const { data, error } = await supabase;
+const { data, error } = await supabase;
           .from("saved_talents");
           .select(;
             `;
             talent_profile (;
-<<<<<<< HEAD
 
               is_verified;
             );

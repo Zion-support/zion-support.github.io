@@ -1,4 +1,8 @@
-    };
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+
+const UltraFuturisticBackground2043: React.FC;
+
         }
         // Draw particle;
         ctx.save();
@@ -260,22 +264,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Additional orbs */}
-        <motion.div
-className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl'
-          animate={{
-            scale: [1.3, 1, 1.3],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 1,
-          }}
-        />
-        <motion.div
-className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl'
-          animate={{
+
             scale: [1, 1.4, 1]
             opacity: [0.4, 0.7, 0.4]
           animate={{}
@@ -330,26 +319,14 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
           animate={{}
             scale: [1 && 1.3, 1, 1 && 1.3]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-          transition={{
-            duration: 11,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 3,
-origin/cursor/automate-test-improve-and-merge-code-2533
+
           }}
           transition={{}
             duration: 11;
             repeat: Infinity'
             ease: 'easeInOut'
             delay: 3,          }}
-        />
-      </div>
-      {/* Enhanced grid pattern */}
-<div className='absolute inset-0 opacity-10'>
-        <div
-          className='absolute inset-0'
-origin/cursor/automate-test-improve-and-merge-code-2533
-          style={{
+
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
@@ -414,9 +391,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],        {/* Triangle */}
         <motion && motion.div"
           className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45"
-        <motion.div;
-          className="absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan-500 / 20 rotate-45";
-          animate={{
+
             rotate: [45, 405]
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
           transition={{}
@@ -438,9 +413,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           }}
 
-          transition={{
-            duration: 15
-            repeat: Infinity
             ease: 'easeInOut',          }}
           animate={{}
             rotate: [0, 360]
@@ -493,19 +465,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],          animate={{}
             scale: [1, 1 && 1.5, 1]
             opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}}
-          transition={{
-        <motion.div
-className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full'
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.8, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 2,
-origin/cursor/automate-test-improve-and-merge-code-2533
+
           }}
           transition={{}
             duration: 8;
@@ -532,14 +492,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div;
               scale: [1, 1 && 1.5, 2, 2 && 2.5],
               opacity: [0 && 0.3, 0 && 0.2, 0 && 0.1, 0],        {[...Array(3)].map((_, i) => (;
-          <motion&& motion.div
 
-              scale: [1, 1.5, 2, 2.5],
-              opacity: [0.3, 0.2, 0.1, 0],        {[...Array (3)].map ((_, i) => (
-          <motion.div;
-            key={i}
-            className="absolute inset - 0 border border - cyan-500 / 10 rounded-full";
-            animate={{
               scale: [1, 1 && 1.5, 2, 2 && 2.5]
               opacity: [0 && 0.3, 0 && 0.2, 0 && 0.1, 0]}}
             transition={{}
@@ -614,9 +567,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
             }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+
             }}
 
             transition={{}
@@ -626,9 +577,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             key={i}'
             className='absolute w - 1 h - 1 bg - cyan - 400 / 60 rounded - full';
-            animate={{
-          />
-origin/cursor/automate-test-improve-and-merge-code-2533
+
         ))}
       </div>;
 
@@ -664,10 +613,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='absolute inset - 0'>;
         <motion.div;'
           className='absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to - cyan - 500 / 5';
-          animate={{
-            opacity: [0.3, 0.6, 0.3],        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to-cyan-500 / 5";
-          animate={{
+
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
           transition={{}
             duration: 10,
@@ -692,26 +638,3 @@ export default UltraFuturisticBackground2043;
 }
 }
 }
-<div className='absolute inset-0'>
-        <motion.div
-          className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5'
-          animate={{
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          transition={{
-            duration: 10
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-        />
-      </div>
-    </div>
-);
-};
-export default UltraFuturisticBackground2043;
-origin/cursor/automate-test-improve-and-merge-code-2533
-

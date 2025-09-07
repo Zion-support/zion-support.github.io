@@ -1,13 +1,5 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { QuoteRequestSteps } from "../QuoteRequestForm",;
-=======
-import { QuoteRequestSteps } from "../QuoteRequestForm";""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import { CheckIcon } from 'lucide-react';
 import { cn } from "@/lib/utils";"
 ;
@@ -25,56 +17,12 @@ export function StepProgress({ currentStep } StepProgressProps) {;
   const getStepStatus = (stepId:QuoteRequestSteps) => {;
     const stepOrder = steps.findIndex(s => s.id === stepId),;
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),;
-<<<<<<< HEAD
-    ;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
     if (stepOrder < currentStepOrder) return "complete",;
     if (stepOrder === currentStepOrder) return "current",;
     return "upcoming";
   },;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-;
-  return (;
-    <div className="relative">;
-      <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">;
-        <div ;
-          className="absolute h-full bg-zion-purple transition-all duration-500";
-          style={{ ;
-            width:`${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`;
-          }}
-        />;
-      </div>;
-      ;
-      <div className="flex justify-between relative">;
-        {steps.map((step) => {;
-          const status = getStepStatus(step.id),;
-          return (;
-            <div key={step.id} className="flex flex-col items-center relative">;
-=======
-    ;"
-    if (stepOrder < currentStepOrder) return "complete",;""
-    if (stepOrder === currentStepOrder) return "current",;""
-    return "upcoming";"
-  },;
-  return (;"
-    <div className="relative">;"
-</div>"
-      <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">;"
-</div>
-        <div ;"
-          className="absolute h-full bg-zion-purple transition-all duration-500";"
-          style={{ ;)
-            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100;}%`;
-      </div>;"
-      <div className="flex justify-between relative">;"
-            <div key={step.id} className="flex flex-col items-center relative">;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div ;
                 className={cn(;"
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",;""
@@ -102,10 +50,3 @@ export function StepProgress({ currentStep } StepProgressProps) {;
 }</div> <span) ;
 }> {;
 }</span> </div>) ;
-<<<<<<< HEAD
-}) ;
-}</div> </div>) ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}</div> </div>) ;"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

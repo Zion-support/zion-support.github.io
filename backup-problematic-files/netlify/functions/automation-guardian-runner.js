@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 exports.config = {
 
@@ -35,16 +27,7 @@ exports.handler = async () => {
   // Attempt to push any changes;
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
   return { statusCode: 200, body: logs.join('\n') }
-<<<<<<< HEAD
-=======
 
-},
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 },;
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -72,8 +55,3 @@ function runNode(relPath, args = []) {
   // Attempt to push any changes;
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 },
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

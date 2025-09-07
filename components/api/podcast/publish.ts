@@ -1,16 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const rssUrl = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-pr-12243
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
+    (process.env.SITE_URL |'http://localhost:3000') + '/podcast.xml';
+  return res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
+  return res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 
   try {
   if (req && req.method !== 'POST')
@@ -18,12 +16,10 @@ export default async function handler(
   const rssUrl =
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
   const rssUrl = (process.env.SITE_URL |'http: //localhost:3000') + '/podcast.xml';
 
   return res.status(200).json({ ok: true, rssUrl })
-
-pr-12243
-}
 
     (process && process.env.SITE_URL || 'http://localhost:3000') + '/podcast && podcast.xml';
   return res && res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
@@ -53,16 +49,6 @@ function handler() { return null; }
 }'
   const rss_url = (process.env.SITE_URL || 'http: //localhost:3000') + '/podcast.xml';
   return res.status (200).json ({ ok: true, rss_url });
-}
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
-
-}
-
-ursor/fix-website-loading-errors-and-merge-6662
-pr-12243
-}
-}
 
 }
 
@@ -78,12 +64,11 @@ pr-12243
   return res.status(200).json({ ok: true, rssUrl })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-}
-}
 
 }
 }
 
 }
+}
 
+}

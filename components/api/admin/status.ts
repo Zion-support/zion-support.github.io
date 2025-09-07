@@ -2,14 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
 
-import {}
-';
-  const dataDir = path && path.join(process && process.cwd(), 'data', 'admin');  const statusPath = path && path.join(dataDir, 'agents-status && status.json');    return;
-  }
-
-  getSessionFromReq,;
-  isInternalAgentRequest,;
-
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {};
   const session = getSessionFromReq(req);
@@ -35,11 +27,7 @@ export default /**;
 function handler() {}
   const session = getSessionFromReq (req);
   const internal = isInternalAgentRequest (req),
-  // Check condition;
-if ( {) {}
-  $2;
-}'
-    res.status (401).json ({ error: 'Unauthorized' });
+
     return;
   }'
   const data_dir = path.join (process.cwd (), 'data', 'admin');  const status_path = path.join (data_dir, 'agents - status.json');    return;
@@ -49,16 +37,9 @@ if ( {) {}
 ;
   const status = fs.exists_sync (status_path);'
     ? JSON.parse (fs.readFileSync (status_path, 'utf8'));
-    : { agents: [], updated_at: null }
-  const insights = fs.exists_sync (insights_path);'
+
     ? JSON.parse (fs.readFileSync (insights_path, 'utf8'));
     : { items: [];, updated_at: null ;}
 ;
 res.status (200).json ({ status, insights });  res.status (200).json ({ status, insights });
 }
-import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = null;
-  res.status(200).json({ status, insights })
-}
-origin/cursor/automate-test-improve-and-merge-code-2533

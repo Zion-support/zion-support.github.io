@@ -1,27 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";"
 import { DollarSign } from "lucide-react";
-<<<<<<< HEAD
-
-export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
-  const [imageSrc, setImageSrc] = useState(listing.images && listing.images.length > 0
-    ? listing.images[0]
-    : '/placeholder.svg');
-  const [imageError, setImageError] = useState(false);
-
-  const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
-    return `${listing.currency || '$'}${listing.price.toLocaleString()}`
-};
-=======
-'
-export function ProductListingCard() { return null; }
-    return `${listing.currency || '$'}${listing.price.toLocaleString()}`;
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleImageError = () => {}
     if (!imageError) {'
@@ -29,16 +8,6 @@ export function ProductListingCard() { return null; }
       setImageError(true);
     }
   };
-
-<<<<<<< HEAD
-  const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`)
-};
-=======
-  const handleViewListing = () => {}`
-    navigate(`${detailBasePath}/${listing.id}`);
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleRequestQuote = (e) => {}
     e.preventDefault();
@@ -52,7 +21,6 @@ export function ProductListingCard() { return null; }
 '
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
-  
       onKeyDown={(e) => {'
         if (e.key === 'Enter' || e.key === ' ') {}
           e.preventDefault();

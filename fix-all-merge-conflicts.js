@@ -26,7 +26,7 @@ function resolveMergeConflicts(filePath) {
         continue;
       }
       
-      if (line.startsWith('=======')) {
+      if (line.startsWith('')) {
         keepLines = true;
         continue;
       }
@@ -81,7 +81,7 @@ function findFilesWithConflicts(dir) {
         } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.json') || item.endsWith('.cjs'))) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+            if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
               files.push(fullPath);
             }
           } catch (error) {

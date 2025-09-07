@@ -1,9 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Define the shape of a message;
 export interface Message {;
   id:string;
@@ -72,8 +66,4 @@ export interface MessagingContextType {;
   setActiveConversation:(value:Conversation | null) => void;
   fetchConversations:() => Promise<void>;
   loadMessages:(conversationId:string) => Promise<void>;
-} // Define the shape of a message /** * Set the currently active conversation. Passing `null` will clear the * selection. */ 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+} // Define the shape of a message /** * Set the currently active conversation. Passing `null` will clear the * selection. */

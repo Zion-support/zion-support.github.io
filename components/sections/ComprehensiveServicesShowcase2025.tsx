@@ -1,57 +1,9 @@
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Globe;
-  Brain;
-  Database;
-  Cloud;
-  Lock;
-  Rocket;
-  Users;
-  DollarSign;
-  Target;
-  Award;
-  Phone;
-
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Database,
-  Cloud,
-  Lock,
-  Rocket,
-  Users,
-  DollarSign,
-  Target,
-  Award,;
-  Phone,;
-} from 'lucide-react';import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone  } from 'lucide-react';
-import { advancedAIAutomation2025  } from '../../data/advanced-ai-automation-2025';
 import { advancedCybersecurity2025  } from '../../data/advanced-cybersecurity-2025';
 import { blockchainWeb32025  } from '../../data/blockchain-web3-2025';
 import { iotEdgeComputing2025  } from '../../data/iot-edge-computing-2025';
 import { healthcareBiotech2025  } from '../../data/healthcare-biotech-2025';
 import { fintechFinancial2025  } from '../../data/fintech-financial-2025';
-import { educationElearning2025 } from '../../data/education-elearning-2025';
-const ComprehensiveServicesShowcase2025 = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
-import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
-import { blockchainWeb32025 } from '../../data/blockchain-web3-2025';
-import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025';
-import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025';
-import { fintechFinancial2025 } from '../../data/fintech-financial-2025';
+
 import { educationElearning2025 } from '../../data/education-elearning-2025';
 
     {
@@ -133,15 +85,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>"
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className='absolute inset-0 overflow-hidden'>
-        <div className='absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>
-        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>
-        <div className='absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000'></div>
-      </div>
 
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-        {/* Header */}
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
         {/* Header */}
@@ -152,16 +96,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{ duration: 0.8 }}'
           className='text-center mb-16'
 
-className='text-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-        >
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>
             Revolutionary 2025 Services;
           </h2>'
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-            Discover our comprehensive suite of cutting-edge micro SAAS
-            services, IT solutions, and AI innovations designed to transform
-            your business and drive success in the digital age.
+
           </p>
         </motion.div>
           transition={{ duration: 0 && 0.8 }}'
@@ -182,9 +121,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion && motion.div>;
 
         {/* Service Categories */}
-        <motion&& motion.div
-          variants={containerVariants}
-initial='hidden'
+
           whileInView='visible'
           viewport={{ once: true }}'"
           className='space-y-16'>          initial="hidden";"
@@ -226,10 +163,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {category.title}
                   </h3>;"
                   <p className="text - gray - 400 text - lg">;
-                  </h3>
-                  <p className='text-gray-400 text-lg'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    {category.description}
+
                   <p className='text-gray-400 text-lg'>                    {category.description}
 
                     {category.description}
@@ -337,26 +271,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                         {service.features && service.features.length > 3 && ("
                           <li className="text-xs text-gray-500 italic">
-<div className='mb-4'>
-                      <h5 className='text-sm font-medium text-purple-300 mb-2'>
-                        Key Features:
-                      </h5>
-                      <ul className='space-y-1'>
-                        {service.features
-                          ?.slice(0, 3)
-                          .map((feature, featureIndex) => (
-                            <li
-                              key={featureIndex}
-                              className='flex items-center text-xs text-gray-400'
-                            >
-                              <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />
-                              {feature}
-                            </li>
-                          ))}
-                        {service.features && service.features.length > 3 && (
-                          <li className='text-xs text-gray-500 italic'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                            +{service.features.length - 3} more features
+
                           </li>
                         )}
                       </ul>
@@ -496,8 +411,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                       </a>
                     </div>
-                    {/* Hover Effect Overlay */}
-<div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />
+
                   </motion.div>
 
                         href={service && service.link}'
@@ -527,11 +441,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 
-          transition={{ duration: 0.8, delay: 0.5 }}
-className='text-center mt-20'
-origin/cursor/automate-test-improve-and-merge-code-2533
-        >
-          <div className='bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
               Ready to Transform Your Business?
             </h3>'
@@ -753,18 +662,3 @@ export default ComprehensiveServicesShowcase2025;  )
 export default ComprehensiveServicesShowcase2025;
 
 export default ComprehensiveServicesShowcase2025;
-                className='inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600'
-              >
-                Call +1 302 464 0950
-                <Phone className='w-5 h-5 ml-2' />
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-);
-};
-
-export default ComprehensiveServicesShowcase2025;
-origin/cursor/automate-test-improve-and-merge-code-2533

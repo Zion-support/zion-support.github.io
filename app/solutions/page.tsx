@@ -1,48 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
-  title: 'Solutions | Zion Tech Group',
-  description: 'Comprehensive technology solutions for modern businesses.',
-  keywords: 'solutions, technology, business, innovation'
-};
-
-export default function SolutionsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Our Solutions
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive technology solutions for modern businesses.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">AI Solutions</h3>
-            <p className="text-gray-300">
-              Advanced AI solutions for business automation and intelligence.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Web Development</h3>
-            <p className="text-gray-300">
-              Professional web development services for modern applications.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Cloud Services</h3>
-            <p className="text-gray-300">
-              Scalable cloud services for business growth and efficiency.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+  title: "Solutions | Zion Tech Group",
+  description: "Explore our comprehensive range of AI solutions, micro SaaS development, and IT services designed to accelerate your business growth.",
+=======
 import {
 
   LightBulbIcon,
@@ -111,7 +74,6 @@ const industryApplications = [
     icon: GlobeAltIcon,
     useCases: ['Customer AnalyticsInventory ManagementPersonalized MarketingDemand Forecasting']}]
 
-const implementationSteps = [
   {
     step: '01',
     title: 'Discovery & Assessment',
@@ -133,42 +95,7 @@ const implementationSteps = [
     description: 'Seamless deployment with comprehensive training for your team to maximize solution adoption.',
     icon: RocketLaunchIcon},
   {
-    step: '05',
-    title: 'Ongoing Support',
-    description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.',
-    icon: ShieldCheckIcon}]
 
-export default function SolutionsPage() {
-  const solutions = [
-    {
-      category: 'AI-Powered Solutions',
-      title: 'Intelligent Business Automation',
-      description: 'Transform your business processes with AI-driven automation that learns and adapts to your specific needs.',
-      benefits: ['Increased Efficiency', 'Reduced Costs', 'Improved Accuracy', '24/7 Operations']
-    },
-    {
-      category: 'Quantum Computing',
-      title: 'Advanced Problem Solving',
-      description: 'Leverage quantum computing power to solve complex optimization problems and accelerate research.',
-      benefits: ['Exponential Speed', 'Complex Optimization', 'Advanced Research', 'Future-Ready Technology']
-    },
-    {
-      category: 'Autonomous Systems',
-      title: 'Self-Managing Infrastructure',
-      description: 'Deploy autonomous systems that monitor, maintain, and optimize themselves without human intervention.',
-      benefits: ['Reduced Maintenance', 'Predictive Analytics', 'Self-Healing Systems', 'Continuous Optimization']
-    },
-    {
-      category: 'Enterprise Integration',
-      title: 'Seamless Digital Transformation',
-      description: 'Complete digital transformation solutions that integrate all your systems and processes seamlessly.',
-      benefits: ['Unified Systems', 'Data Integration', 'Process Optimization', 'Scalable Architecture']
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-black text-white pt-20">
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
   {
     step: '01'
     title: 'Discovery & Assessment'
@@ -185,22 +112,13 @@ export default function SolutionsPage() {
     description: 'We develop and rigorously test your AI solution to ensure optimal performance and reliability.'
     icon: CogIcon}
   {
-    title: 'Smart Analytics',
-    description: 'Intelligent data analysis and business intelligence',
-    benefits: ['Predictive Insights', 'Real-time Monitoring', 'Data-driven Decisions', 'Competitive Advantage']
-  }
-];
-
-export default function SolutionsPage() {
-  return (
-
-    <div className=&quot;bg - black & quot;>;
 
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+
               AI Solutions for{' '}
               operations and drive unprecedented growth and innovation.
             </p>
@@ -238,17 +156,22 @@ export default function SolutionsPage() {
                 <a;
                   href={solution.href}
 
-className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
-                  className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  Learn more <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            ))}
 
           </div>;
         </div>;
       </div>;
       {/* Industry Applications */}
+
             Transforming Every Sector
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
             Our AI solutions are designed to adapt and excel across diverse industries
+
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
@@ -258,9 +181,6 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our AI solutions are designed to adapt and excel across diverse industries, 
 
-            delivering measurable results and competitive advantages.
-          </p>
-        </div>
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Industries</h2>;
@@ -324,6 +244,7 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         </div>;
       </div>;
       {/* Implementation Process */}
+
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
@@ -337,23 +258,6 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
           </p>
         </div>
 
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5&quot;>
-            {implementationSteps.map((step, index) => (
-              <div key={step.step} className=&quot;relative&quot;>
-                {index < implementationSteps.length - 1 && (
-                  <div className=&quot;hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700&quot;></div>
-                )}
-                <div className=&quot;bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                  <div className=&quot;mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4&quot;>
-                    <step.icon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  </div>
-                  <div className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>{step.step}</div>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{step.title}</h3>
-                  <p className=&quot;text-sm text-gray-300&quot;>{step.description}</p>
-                </div>
-              </div>
-            ))}
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Implementation</h2>;
@@ -380,6 +284,7 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
                   <p className=&quot;text - sm text - gray - 300 & quot;>{step.description}</p>;
                 </div>;
               </div>))}
+
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
@@ -415,9 +320,6 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         </div>;
       </div>;
       {/* CTA section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
             Ready to transform your business?
           </h2>
@@ -439,26 +341,94 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
           </div>
         </div>
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'Solutions - Zion Tech Group',
-  description: 'Comprehensive technology solutions for modern businesses.',
-
+>>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
 };
 
 export default function SolutionsPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+=======
+
+>>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Our Solutions
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our comprehensive technology solutions designed to transform your business.
+            Comprehensive technology solutions designed to accelerate your business growth and drive innovation.
           </p>
         </div>
 
+<<<<<<< HEAD
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span className="text-2xl">🤖</span>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Solutions</h3>
+            <p className="text-gray-600 mb-6">
+              Custom AI implementations that solve real business problems and drive efficiency.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li>• Machine Learning Models</li>
+              <li>• Natural Language Processing</li>
+              <li>• Computer Vision</li>
+              <li>• Predictive Analytics</li>
+            </ul>
+            <Link 
+              href="/contact" 
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span className="text-2xl">⚡</span>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
+            <p className="text-gray-600 mb-6">
+              Scalable software solutions designed for rapid deployment and growth.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li>• Web Applications</li>
+              <li>• Mobile Apps</li>
+              <li>• API Development</li>
+              <li>• Cloud Integration</li>
+            </ul>
+            <Link 
+              href="/contact" 
+              className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span className="text-2xl">🔧</span>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
+            <p className="text-gray-600 mb-6">
+              Comprehensive IT services to support your business infrastructure needs.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li>• Cloud Migration</li>
+              <li>• DevOps & SRE</li>
+              <li>• Security Audits</li>
+              <li>• System Monitoring</li>
+            </ul>
+            <Link 
+              href="/contact" 
+              className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
+=======
       </div>
     </div>
   )
@@ -510,17 +480,6 @@ export default function SolutionsPage() {
                   Learn More
                 </a>
               </div>
-
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Solutions
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready-to-deploy solutions that address your specific business challenges and drive measurable results.
-
-            delivering measurable results and competitive advantages.
 
           </p>
         </div>
@@ -595,12 +554,8 @@ export default function SolutionsPage() {
                   <p className=&quot;text-sm text-gray-300&quot;>{step.description}</p>
                 </div>
               </div>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                Learn More
-              </button>
 
-            </div>
-          ))}
+>>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
         </div>
       </div>
     </div>
@@ -629,299 +584,6 @@ export default function SolutionsPage() {
       </div>
     </div>
   )
-
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata = {
-  title: "Solutions | Zion Tech Group",
-  description: "Discover our comprehensive technology solutions designed to transform your business and drive growth.",
-
-};
-
-export default function SolutionsPage() {
-  const solutions = [
-    {
-      title: 'FinTech Solutions',
-      description: 'Revolutionary financial technology solutions for modern banking and payment systems.',
-      href: '/solutions/fintech',
-      icon: '💳',
-      features: ['Payment Processing', 'Digital Banking', 'Cryptocurrency Integration', 'Risk Management']
-    },
-    {
-      title: 'HealthTech Solutions',
-      description: 'Advanced healthcare technology solutions for improved patient care and management.',
-      href: '/solutions/healthtech',
-      icon: '🏥',
-      features: ['Electronic Health Records', 'Telemedicine Platforms', 'Health Analytics', 'Patient Management']
-    },
-    {
-      title: 'EdTech Solutions',
-      description: 'Innovative educational technology solutions for modern learning experiences.',
-      href: '/solutions/edtech',
-      icon: '🎓',
-      features: ['Learning Management Systems', 'Virtual Classrooms', 'Student Analytics', 'Content Management']
-    },
-    {
-      title: 'Enterprise Solutions',
-      description: 'Comprehensive enterprise technology solutions for large-scale operations.',
-      href: '/solutions/enterprise',
-      icon: '🏢',
-      features: ['Enterprise Resource Planning', 'Customer Relationship Management', 'Business Intelligence', 'Workflow Automation']
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Industry Solutions
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Specialized technology solutions designed for specific industries and use cases.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {solutions.map((solution, index) => (
-            <Link
-              key={index}
-              href={solution.href}
-              className="block p-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-blue-300"
-            >
-              <div className="text-5xl mb-6">{solution.icon}</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">{solution.title}</h3>
-              <p className="text-gray-600 mb-6">{solution.description}</p>
-              <ul className="space-y-3">
-                {solution.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="text-gray-600 flex items-center">
-                    <span className="text-green-500 mr-3">✓</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </Link>
-          ))}
-        </div>
-
-        <div className="bg-white p-8 rounded-lg shadow-md mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Approach</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔍</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Analysis</h3>
-              <p className="text-gray-600">We analyze your industry requirements and challenges to design the perfect solution.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🛠️</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Development</h3>
-              <p className="text-gray-600">We develop custom solutions using the latest technologies and best practices.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🚀</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Deployment</h3>
-              <p className="text-gray-600">We ensure smooth deployment and provide ongoing support for your solution.</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your Industry?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Let's discuss your industry-specific requirements and create a solution that drives real results.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Start Your Project
-            </Link>
-            <Link
-              href="/services"
-              className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-            >
-              View Our Services
-            </Link>
-          </div>
-        </div>
-      </div>
-
-import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Solutions | Zion Tech Group',
-  description: 'Discover our comprehensive technology solutions designed to transform your business operations and drive growth.',
-};
-
-const solutions = [
-  {
-    step: '01',
-    title: 'Discovery & Assessment',
-    description: 'We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.',
-    icon: '🔍'
-  },
-  {
-    step: '02',
-    title: 'Solution Design',
-    description: 'Our experts design custom AI solutions tailored to your specific business needs and objectives.',
-    icon: '🎨'
-  },
-  {
-    step: '03',
-    title: 'Implementation',
-    description: 'We implement the solution with minimal disruption to your existing operations.',
-    icon: '⚙️'
-  },
-  {
-    step: '04',
-    title: 'Optimization',
-    description: 'Continuous monitoring and optimization to ensure maximum performance and ROI.',
-    icon: '📈'
-  }
-];
-
-const solutionCategories = [
-  {
-    title: 'AI-Powered Automation',
-    description: 'Streamline operations with intelligent automation solutions.',
-    icon: '🤖',
-    features: ['Process Automation', 'Workflow Optimization', 'Intelligent Routing', 'Predictive Maintenance']
-  },
-  {
-    title: 'Data Intelligence',
-    description: 'Transform raw data into actionable business insights.',
-    icon: '📊',
-    features: ['Real-time Analytics', 'Predictive Modeling', 'Data Visualization', 'Business Intelligence']
-  },
-  {
-    title: 'Cloud Infrastructure',
-    description: 'Scalable and secure cloud solutions for modern businesses.',
-    icon: '☁️',
-    features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery']
-  },
-  {
-    title: 'Security & Compliance',
-    description: 'Comprehensive security solutions to protect your digital assets.',
-    icon: '🔒',
-    features: ['Security Audits', 'Compliance Management', 'Threat Detection', 'Incident Response']
-  }
-];
-
-export default function SolutionsPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6">
-            Technology Solutions
-          </h1>
-          <p className="text-xl sm:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to transform your business operations and drive sustainable growth.
-          </p>
-        </div>
-      </section>
-
-      {/* Process Steps */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Our Process
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a proven methodology to deliver solutions that drive real business value.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {solutions.map((solution, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">{solution.icon}</span>
-                </div>
-                <div className="text-sm font-semibold text-blue-600 mb-2">Step {solution.step}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{solution.title}</h3>
-                <p className="text-gray-600">{solution.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Solution Categories */}
-      <section className="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Solution Categories
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive range of technology solutions across different domains.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutionCategories.map((category, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-6">{category.icon}</div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{category.title}</h3>
-                <p className="text-gray-600 mb-6">{category.description}</p>
-                
-                <ul className="space-y-2">
-                  {category.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <span className="text-green-500 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-blue-700 text-white py-16 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-lg sm:text-xl mb-8 opacity-90">
-            Let's discuss your specific needs and create a custom solution that drives real results.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <a
-              href="tel:+13024640950"
-              className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Call Us: +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Email Us
-            </a>
-          </div>
-          <p className="text-sm mt-8 opacity-80">
-            364 E Main St STE 1008, Middletown DE 19709
-          </p>
-        </div>
-      </section>
 
     </div>
 

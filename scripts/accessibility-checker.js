@@ -9,7 +9,7 @@ import fs from 'fs';
 import path from 'path';
 
 console.log('♿ Accessibility Checker for Zion Tech Group');
-console.log('===========================================');
+console.log('=');
 
 // Function to check accessibility compliance
 function checkAccessibility() {

@@ -1,13 +1,3 @@
-
-
-pr-12243
-
-import React from 'react'
-}
-import React, { Suspense, lazy } from 'react';
-import React, { Suspense, ReactNode } from 'react';
-import LoadingSpinner from '../LoadingSpinner';
-pr-12243
 interface LazyComponentProps {
   fallback?: React.ReactNode;
   children: React.ReactNode;
@@ -32,5 +22,10 @@ interface LazyComponentProps {
 
   return (
 
-pr-12243
+    <Suspense fallback={fallback}>
+      {children}
+    </Suspense>
+  );
+};
 
+export default LazyComponent;

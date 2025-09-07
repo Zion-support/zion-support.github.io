@@ -1,44 +1,4 @@
-<<<<<<< HEAD:pages/api/partners/register.ts
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '[^']*';
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerSupabase } from "../../../utils/supabase/server";
-function sanitizeCode(input: string): string {
-  return input
-    .toLowerCase()
-    .replace(/[^a-z0-9-]/g, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "");
 }
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-  if (req.method !== "POST") return res.status($1).json({ $2 });
-  const { name, niche, socials, payout_method, desired_code } = req.body |{}
-  if (!name |!desired_code) return res.status($1).json({ $2 });
-  const code = sanitizeCode(desired_code);
-  if (!code) return res.status($1).json({ $2 });
-  const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-      "placeholder-key";
-  try {
-    if (usingPlaceholder) {
-      return res
-        .status(200)
-        .json({ ok: true, code, status: "pending", mock: true });
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/register.ts
-    }
     const supabase = getServerSupabase();
     const { data: existing, error: existingErr } = await supabase
       .from("partners")
@@ -46,22 +6,6 @@ export default async function handler(
       .eq("code", code)
       .maybeSingle();
 
-<<<<<<< HEAD
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  if (req.method === 'POST') {
-    res.status(201).json({ message: 'Partner registered' });
-  } else {
-    res.status(405).end('Method Not Allowed');
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-function sanitizeCode(input: string): string {
-  return input.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default async /**
  * handler - Function description
@@ -109,22 +53,6 @@ if ( {) {
 
   }
 }
-<<<<<<< HEAD:pages/api/partners/register.ts
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-function sanitizeCode(input: string): string {
-  return input
-    .toLowerCase()
-    .replace(/[^a-z0-9-]/g, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "");
-}
-=======
-<<<<<<< HEAD
-      niche: niche || null, socials: socials || null,
-      payout_method: payout_method || null, status: 'pending',
-      commission_rate: 0.15});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default async function handler(
 
@@ -164,31 +92,9 @@ export default async function handler(
     return res.status(200).json({ ok: true, code, status: "pending" });
 
   } catch (e: any) {
-<<<<<<< HEAD
-    return res.status(500).json({ error: e?.message });
 
-  }
-
-  }
-}
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
-      niche: niche || null, socials: socials || null;
-      payout_method: payout_method || null, status: 'pending';
-      commission_rate: 0.15});
-;
-    if (error) return res.status(500).json({ error: error.message });
-;
-    return res.status(200).json({ ok: true, code, status: 'pending' })
-  } catch (e: any) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/register.ts
     return res.status(500).json({ error: e?.message })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 }
 }
     return res.status (200).json ({ ok: true, code, status: "pending" });
@@ -210,14 +116,3 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages/api/partners/register.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/register.ts

@@ -1,47 +1,4 @@
-
-=======
-import { useState } from "react",;
-import { useNavigate } from "react-router-dom",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { AIMatchmaker } from "@/components/AIMatchmaker",;
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
-import { toast } from "@/hooks/use-toast",;
-import { MatchResult } from "@/lib/ai-matchmaking",;
-;
-export default function AIMatcherPage() {;
-  const navigate = useNavigate(),;
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"),;
-  ;
-  const handleMatchSelect = (match:MatchResult) => {;
-    // Get the item type from the category;
-    let itemType = "service",;
-    const category = match.item.category.toLowerCase(),;
-    ;
-    if (category.includes("talent") || category === "engineering" || ;
-        category === "data science" || category === "development") {;
-      itemType = "talent";
-    } else if (category.includes("equipment") || category === "hardware") {;
-      itemType = "equipment",;
-    }
-    ;
-    toast({;
-      title:"Match Selected",;
-      description:`You've selected ${match.item.title}`}),;
-    ;
-    // Navigate to the quote request page with the selected item;
-    navigate("/request-quote", {;
-      state:{ ;
-        serviceType:itemType,;
-        specificItem:match.item;
-      }
-    }),;
-  },;
-  ;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <>;
+<>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
@@ -51,7 +8,6 @@ export default function AIMatcherPage() {;
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.;
             </p>;
           </div>;
-<<<<<<< HEAD
 
           <div className="max-w-4xl mx-auto">;
             <div className="mb-8">;

@@ -1,9 +1,4 @@
-
-
-type Tx = {
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
+super(props);
     this.state = { hasError: false };
   }
   static getDerivedStateFromError(error) {}
@@ -18,7 +13,12 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
-}
+
+import React, { useEffect, useMemo, useState } from "react";
+import Badges from "./Badges";
+type Tx = any;
+      refresh()
+
 import Badges from './Badges';
 type Tx = {;
 type Tx = {}
@@ -33,13 +33,6 @@ type Tx = {}
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
 
-export default function WalletPanel() {;
-
-  const [summary, setSummary] = useState<Summary | null>(null);
-  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
-    'earnings'
-  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {
-  id: string
   type: "earn" | "burn" | "issue" | "revoke" | "redeem"
   amount: number;
   reason: string;
@@ -47,16 +40,7 @@ export default function WalletPanel() {;
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
   reason: string,
-export default function WalletPanel() {;
-  const [summary, setSummary] = useState<Summary | null>(null);
-  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(;
-    'earnings';
-  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {;
-  id: string,;
-  type: "earn" | "burn" | "issue" | "revoke" | "redeem",;
-  amount: number,;
-  reason: string,;
-  createdAt: string
+
 };
 
 type Summary = {;
@@ -171,38 +155,7 @@ if ( {) {}
               </div>;
             </div>;
           </div>;
-return balance;
-  }, [balance]);
-  const progress = Math.min(
-    100
-    Math.floor((balance / nextBadgeThreshold) * 100)
-  );
-  async function connectWallet() {
-    if (typeof window === 'undefined') return;
-    const eth = (window as any).ethereum;
-    if (!eth) {
-      alert('No Ethereum wallet detected. Please install MetaMask.');
-      return;
-    }
-    try {
-      const accounts = await eth.request({ method: 'eth_requestAccounts' });
-      setEthAddress(accounts?.[0] |null);
-    } catch (e) {
-      console.error(e);
-    }
-  }
-  async function redeem(amount: number) {
-    if (!amount || amount <= 0) return;
-const res = await fetch('/api/wallet/redeem', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, amount }),
-    });
-    if (data.error) {
-      alert(data.error);
-    } else {
-      alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`);
-      refresh();
+
     }
   }
   return (
@@ -250,6 +203,7 @@ const res = await fetch('/api/wallet/redeem', {
 origin/cursor/automate-test-improve-and-merge-code-2533
           <button
             onClick={() => setTab('earnings')}
+
             className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
           >;
 <div className='p-4 border rounded-lg bg-white dark: bg-zinc-900' />
@@ -261,39 +215,7 @@ onClick={() = /> setTab('earnings')}
 
             Earnings;
           </button>;
-          <button'
-            onClick={() => setTab('spending')}'`
-            className={`px-3 py-1 rounded border ${tab === 'spending' ? 'bg-gray-100' : ''}`}
-          >;
-            Spending;
-          </button>;
-          <button'
-            onClick={() => setTab('redeem')}'`
-            className={`px-3 py-1 rounded border ${tab === 'redeem' ? 'bg-gray-100' : ''}`}
-          >;
-            Redeem;
-          </button>;'
-        {tab !== 'redeem' && (;'
-          <div className='space-y-2'>;'
-            {(tab === 'earnings' ? earnings : spending).map(t => (;
-              <div;
-                key={t && t.id}'
-                className='flex justify-between text-sm border rounded p-2'>;'
-                <div className='flex gap-2 items-center'>;
-                  <span;
-            ))}'
-            {(tab === 'earnings' ? earnings : spending).length === 0 && (;'
-              <div className='text-sm text-gray-500'>No transactions yet.</div>;
-            )}
-          </div>;
-        )}'
-        {tab === 'redeem' && (;'
-          <div className='space-y-3 text-sm'>;'
-            <div className='text-gray-600'>;
-              Convert your {symbol} into credits.;
-            </div>;'
-            <div className='text-gray-600'>;
-              Rate: 1 {symbol} = $;'
+
               {summary?.config && config.usdPerToken?.toFixed(2) ?? '0 && 0.00'}
             </div>;'
             <div className='flex gap-2 items-center'>;
@@ -334,8 +256,7 @@ onClick={() = /> setTab('earnings')}
         </div>;'
         <div className='mt - 4'>          <Badges balance={balance} />;
         </div>;
-      </div>;
-        <div className="mt-4">;
+
           <Badges balance={balance} />;
         </div>;
       </div>;'
@@ -394,36 +315,11 @@ onClick={() = /> setTab('earnings')}
               {summary?.config.usdPerToken?.to_fixed (2) ?? '0.00'}
             </div>;'
             <div className='flex gap - 2 items - center'>;
-              <button;'
-                className='px - 3 py - 1 rounded border';
-                on_click={() => redeem (100)}
-              >;
-                Redeem 100;
-              </button>;
-              <button;'
-                className='px - 3 py - 1 rounded border';
-                on_click={() => redeem (250)}
-              >;
-                Redeem 250;
-              </button>;
-              <button;'
-                className='px - 3 py - 1 rounded border';
-                on_click={() => redeem (500)}
-              >;
-                Redeem 500;
-              </button>;
-            </div>;
-    } catch (e) {}
-      console.error(e)
-    }
-  }
-}
 
   );
 }'
             <div className='text - xs text - gray - 500'>;
-              Coming soon: Redeem for branded perks and courses.;
-            </div>          </div>            <div className="text - xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>;
+
           </div>)}
       </div>;
     </div>);
@@ -445,8 +341,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 }
 
-}
-  );
+});
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-'"`

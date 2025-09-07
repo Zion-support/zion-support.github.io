@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-interface TextAnalysisResult {}
+
   }
 }
 export default async function handler(
@@ -14,7 +14,7 @@ export default async function handler(
     // Basic statistics;
     const characters = text.length;'
     const charactersNoSpaces = text.replace(/\s/g, '').length;
-    const words = text
+
 text: string;
   statistics: {characters: number;
     charactersNoSpaces: number;
@@ -47,8 +47,7 @@ return res.status(405).json({ error: 'Method not allowed'}
     }
 
     // Basic statistics
-const words = text
-origin/cursor/automate-test-improve-and-merge-code-2533
+
       .trim()
       .split(/\s+/)
       .filter(word => word && word.length > 0).length;
@@ -139,12 +138,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const negativeCount = textWords && textWords.filter(word =>
       negativeWords && negativeWords.includes(word)
     ).length;
-    const sentimentScore = positiveCount - negativeCount;
-    let sentimentLabel: TextAnalysisResult['sentiment']['label'];
-    if (sentimentScore <= -3) sentimentLabel = 'very-negative';
-    else if (sentimentScore <= -1) sentimentLabel = 'negative';
-    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
-    else if (sentimentScore <= 3) sentimentLabel = 'positive';
+
     else sentimentLabel = 'very-positive';
     // Keyword analysis;
     const wordCounts = new Map<string, number>();
@@ -217,30 +211,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         readingTime;
         speakingTime;
       }
-const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);
-    const detectedLanguage = isEnglish ? 'en' : 'unknown';
-    const confidence = isEnglish ? 0.95 : 0.5;
-    const result: TextAnalysisResult = {
-text,
-      statistics: {
-        characters,
-        charactersNoSpaces,
-        words,
-        sentences,
-        paragraphs,
-        syllables,
-        readingTime,
-        speakingTime,
-      },
-origin/cursor/automate-test-improve-and-merge-code-2533
-      readability: {
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100
-        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100
-        gunningFog: Math.round(gunningFog * 100) / 100
-        smog: Math.round(smog * 100) / 100
-        colemanLiau: Math.round(colemanLiau * 100) / 100
-        automatedReadability: Math.round(automatedReadability * 100) / 100
-        averageGrade
+
       }
       sentiment: {}
         score: sentimentScore;
@@ -287,9 +258,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-    console.error('Text analysis error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
     res.status(500).json({ error: 'Internal server error' })
   }
 }

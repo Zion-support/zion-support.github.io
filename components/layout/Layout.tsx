@@ -1,7 +1,3 @@
-import React from 'react';
-
-import React from 'react';
-import Head from 'next/head';
 main
 import React, { ReactNode } from 'react';
 React from
@@ -10,9 +6,6 @@ import Header from 'react'
   './Header';import Footer from 'react'
   './Footer'
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-import Head from 'next/head';
-import React, { ReactNode } from 'react';
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -115,33 +108,11 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
-main
-pr-12243
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
-  keywords?: string;
-}
-
-export default function Layout({ 
-  children, 
-  title = "Zion Tech Group", 
-  description = "Leading technology solutions provider",
-  keywords = "technology, AI, cloud, micro SaaS"
-}: LayoutProps) {
-  // Suppress unused variable warnings for props that might be used in the future
-  void title;
-  void description;
-  void keywords;
-  void canonical;
-  void ogTitle;
-  void ogDescription;
-  void ogImage;
-  void noIndex;
-
-  return (
 
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -151,7 +122,7 @@ export default function Layout({
       <Footer />
     </div>
   );
-}
+
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
@@ -169,4 +140,3 @@ export default function Layout({ children, title = "Zion Tech Group", descriptio
     </>
   );
 }
-

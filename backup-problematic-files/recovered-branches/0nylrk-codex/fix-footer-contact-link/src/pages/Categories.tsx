@@ -1,14 +1,4 @@
-
-=======
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { CategoriesSection } from "@/components/CategoriesSection",;
-import { GradientHeading } from "@/components/GradientHeading",;
-;
-export default function Categories() {;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <>;
+<>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
         <div className="container mx-auto px-4 py-12">;
@@ -21,7 +11,6 @@ export default function Categories() {;
               Find exactly what you're looking for to enhance your business or personal projects.;
             </p>;
           </div>;
-<<<<<<< HEAD
 
           {/* Reuse the Categories Section component */}
           <CategoriesSection showTitle={false} />;
@@ -29,4 +18,3 @@ export default function Categories() {;
       </div>;
       <Footer />;
     </>;
-

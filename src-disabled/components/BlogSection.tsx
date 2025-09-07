@@ -17,158 +17,21 @@ const BlogSection: React.FC = () => {,
   const blogPosts: BlogPost[] = [,
     {
       id: 1,
-<<<<<<< HEAD
-      title: 'The Future of AI in Business: Trends and Predictions for 2024',
-      excerpt:
-        'Explore the latest AI trends that are reshaping industries and discover how businesses can leverage artificial intelligence for competitive advantage.',
-      author: 'Sarah Johnson',
-      date: '2024-01-15',
-      readTime: '5 min read',
-      category: 'AI & Machine Learning',
-      image: '/api/placeholder/400/250',
-      slug: 'future-ai-business-trends-2024',
-    },
-    {
-      id: 2,
-      title: 'Cybersecurity Best Practices for Small to Medium Businesses',
-      excerpt:
-        'Learn essential cybersecurity strategies to protect your business from evolving threats and ensure data security in the digital age.',
-      author: 'Michael Chen',
-      date: '2024-01-10',
-      readTime: '7 min read',
-      category: 'Cybersecurity',
-      image: '/api/placeholder/400/250',
-      slug: 'cybersecurity-best-practices-smb',
-    },
-    {
-      id: 3,
-      title: 'Cloud Migration: A Complete Guide for Enterprise Success',
-      excerpt:
-        'Discover the step-by-step process of migrating to the cloud, including planning, execution, and optimization strategies.',
-      author: 'Emily Rodriguez',
-      date: '2024-01-05',
-      readTime: '8 min read',
-      category: 'Cloud Computing',
-      image: '/api/placeholder/400/250',
-      slug: 'cloud-migration-complete-guide',
-    },
-    {
-      id: 4,
-      title: 'Building Scalable Micro SaaS Applications: Architecture Patterns',
-      excerpt:
-        'Learn the key architectural patterns and best practices for building scalable micro SaaS applications that can grow with your business.',
-      author: 'David Thompson',
-      date: '2024-01-01',
-      readTime: '6 min read',
-      category: 'Software Development',
-      image: '/api/placeholder/400/250',
-      slug: 'scalable-micro-saas-architecture',
-    },
-  ];
 
-  const categories = [
-    'All Posts',
-    'AI & Machine Learning',
-    'Cybersecurity',
-    'Cloud Computing',
-    'Software Development',
-    'Data Analytics',
-=======
-title: "The Future of AI in Business: Trends and Predictions for 2024","
-      excerpt: "Explore the latest AI trends that are reshaping industries and discover how businesses can leverage artificial intelligence for competitive advantage.","
-      author: "Sarah Johnson","
-      date: "2024-01-15","
-      readTime: "5 min read","
-      category: "AI & Machine Learning","
-      image: "/api/placeholder/400/250","
-      slug: "future-ai-business-trends-2024""
-    },
-    {
-      id: 2,
-      title: "Cybersecurity Best Practices for Small to Medium Businesses","
-      excerpt: "Learn essential cybersecurity strategies to protect your business from evolving threats and ensure data security in the digital age.","
-      author: "Michael Chen","
-      date: "2024-01-10","
-      readTime: "7 min read","
-      category: "Cybersecurity","
-      image: "/api/placeholder/400/250","
-      slug: "cybersecurity-best-practices-smb""
-    },
-    {
-      id: 3,
-      title: "Cloud Migration: A Complete Guide for Enterprise Success","
-      excerpt: "Discover the step-by-step process of migrating to the cloud, including planning, execution, and optimization strategies.","
-      author: "Emily Rodriguez","
-      date: "2024-01-05","
-      readTime: "8 min read","
-      category: "Cloud Computing","
-      image: "/api/placeholder/400/250","
-      slug: "cloud-migration-complete-guide""
-    },
-    {
-      id: 4,
-      title: "Building Scalable Micro SaaS Applications: Architecture Patterns","
-      excerpt: "Learn the key architectural patterns and best practices for building scalable micro SaaS applications that can grow with your business.","
-      author: "David Thompson","
-      date: "2024-01-01","
-      readTime: "6 min read","
-      category: "Software Development","
-      image: "/api/placeholder/400/250","
-      slug: "scalable-micro-saas-architecture""
-    }
-  ];,
-  const categories = [
-    "All Posts","
-    "AI & Machine Learning","
-    "Cybersecurity","
-    "Cloud Computing","
-    "Software Development","
-    "Data Analytics""
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   ];
   return (
-<<<<<<< HEAD
-    <div className="py-20 bg-gray-900/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="text-center mb-16"
-=======
-<div className="py-20 bg-gray-900/50">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <motion.div
-          className="text-center mb-16""
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-<<<<<<< HEAD
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Latest{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-              Insights
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Stay updated with the latest trends, insights, and best practices in
-            technology and digital transformation.
-=======
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">",
-            Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Insights</span>"
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-            Stay updated with the latest trends, insights, and best practices in technology and digital transformation.
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           </p>
         </motion.div>
         {/* Category Filter */}
         <motion.div
-<<<<<<< HEAD
-          className="flex flex-wrap justify-center gap-4 mb-12"
-=======
-className="flex flex-wrap justify-center gap-4 mb-12""
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -211,26 +74,7 @@ className="flex flex-wrap justify-center gap-4 mb-12""
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
 
-              <div className="p-6">
-                <div className="flex items-center text-sm text-gray-400 mb-4">
-                  <User className="w-4 h-4 mr-2" />
-                  <span className="mr-4">{post.author}</span>
-                  <Calendar className="w-4 h-4 mr-2" />
-                  <span className="mr-4">
-                    {new Date(post.date).toLocaleDateString()}
-                  </span>
-                  <Clock className="w-4 h-4 mr-2" />
-=======
-              <div className="p-6">"
-                <div className="flex items-center text-sm text-gray-400 mb-4">"
-                  <User className="w-4 h-4 mr-2" />"
-                  <span className="mr-4">{post.author}</span>"
-                  <Calendar className="w-4 h-4 mr-2" />"
-                  <span className="mr-4">{new Date(post.date).toLocaleDateString()}</span>"
-                  <Clock className="w-4 h-4 mr-2" />"
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
                   <span>{post.readTime}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors line-clamp-2">"
@@ -250,11 +94,7 @@ className="flex flex-wrap justify-center gap-4 mb-12""
         </div>
         {/* View All Posts CTA */}
         <motion.div
-<<<<<<< HEAD
-          className="text-center mt-12"
-=======
-className="text-center mt-12""
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}

@@ -1,4 +1,4 @@
-  enableNeonEffects = true,;
+enableNeonEffects = true,;
   enableSpaceTime = true;
 
 import React, { useEffect, useRef } from 'react';
@@ -23,108 +23,6 @@ interface UltraFuturisticBackground2035Props {
 const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props /> = ({
   intensity;
 
-  const getColorScheme = () => {;
-    switch (colorScheme) {;
-      case 'quantum-fusion':;
-        return {;'
-          primary: '#00ffff',;'
-          secondary: '#ff00ff',;'
-          accent: '#ffff00',;'
-          background: 'rgba(0, 0, 0, 0 && 0.95)',;'
-          glow: 'rgba(0, 255, 255, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.95)';'
-          glow: 'rgba(0, 255, 255, 0 && 0.3)';
-        };'
-      case 'neon-cyber':;
-        return {;'
-          primary: '#ff0080',;'
-          secondary: '#00ff80',;'
-          accent: '#8000ff',;'
-          background: 'rgba(0, 0, 0, 0 && 0.9)',;'
-          glow: 'rgba(255, 0, 128, 0 && 0.4)',        };          background: 'rgba(0, 0, 0, 0 && 0.9)';'
-          glow: 'rgba(255, 0, 128, 0 && 0.4)';
-        };'
-      case 'holographic-matrix':;
-        return {;'
-          primary: '#00ff41',;'
-          secondary: '#ff0040',;'
-          accent: '#0040ff',;'
-          background: 'rgba(0, 0, 0, 0 && 0.92)',;'
-          glow: 'rgba(0, 255, 65, 0 && 0.35)',        };          background: 'rgba(0, 0, 0, 0 && 0.92)';'
-          glow: 'rgba(0, 255, 65, 0 && 0.35)';
-        };'
-      case 'space-time':;
-        return {;'
-          primary: '#ff6b35',;'
-          secondary: '#4ecdc4',;'
-          accent: '#45b7d1',;'
-          background: 'rgba(0, 0, 0, 0 && 0.88)',;'
-          glow: 'rgba(255, 107, 53, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.88)';'
-          glow: 'rgba(255, 107, 53, 0 && 0.3)';
-        };
-      default:;
-        return {;'
-          primary: '#00ffff',;'
-          secondary: '#ff00ff',;'
-          accent: '#ffff00',;'
-          background: 'rgba(0, 0, 0, 0 && 0.95)',;'
-          glow: 'rgba(0, 255, 255, 0 && 0.3)',;'
-        };    }          background: 'rgba(0, 0, 0, 0 && 0.95)';'
-          glow: 'rgba(0, 255, 255, 0 && 0.3)';
-        return {'
-          primary: '#00ffff','
-          secondary: '#ff00ff','
-          accent: '#ffff00',
-
-          background: 'rgba(0, 0, 0, 0.95)',
-glow: 'rgba(0, 255, 255, 0.3)',
-        };
-      case 'neon-cyber':
-        return {
-          primary: '#ff0080',
-          secondary: '#00ff80',
-          accent: '#8000ff',
-          background: 'rgba(0, 0, 0, 0.9)',
-glow: 'rgba(255, 0, 128, 0.4)',
-        };
-      case 'holographic-matrix':
-        return {
-          primary: '#00ff41',
-          secondary: '#ff0040',
-          accent: '#0040ff',
-          background: 'rgba(0, 0, 0, 0.92)',
-glow: 'rgba(0, 255, 65, 0.35)',
-        };
-      case 'space-time':
-        return {
-          primary: '#ff6b35',
-          secondary: '#4ecdc4',
-          accent: '#45b7d1',
-          background: 'rgba(0, 0, 0, 0.88)',
-glow: 'rgba(255, 107, 53, 0.3)',
-        };
-      default:
-        return {
-          primary: '#00ffff',
-          secondary: '#ff00ff',
-          accent: '#ffff00',
-          background: 'rgba(0, 0, 0, 0.95)',
-glow: 'rgba(0, 255, 255, 0.3)',
-        };
-    }
-  }
-  const colors = getColorScheme();
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-    };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-    resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles;
     const initParticles = () => {}
@@ -203,10 +101,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = colors.glow;
           ctx.fill();
-ctx.shadowBlur = 0;
-origin/cursor/automate-test-improve-and-merge-code-2533
-        } else {
-          // Normal particle
+
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = particle.color;
@@ -214,25 +109,7 @@ ctx.fill();
 origin/cursor/automate-test-improve-and-merge-code-2533
         }
       });
-      // Draw holographic grid
-      if (enableHolographic) {
-drawHolographicGrid(ctx, colors);
-      }
 
-      // Draw neon effects
-      if (enableNeonEffects) {
-drawNeonEffects(ctx, colors);
-      }
-
-      // Draw space-time effects
-      if (enableSpaceTime) {
-drawSpaceTimeEffects(ctx, colors);
-      }
-
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
     animate();
     return () => {'
       window.removeEventListener('resize', resizeCanvas);
@@ -275,7 +152,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.stroke();
     }
 
-    for (let y = 0; y < ctx.canvas.height; y += gridSize) {
       ctx.beginPath();
       ctx.moveTo(0, y);
       ctx.lineTo(ctx.canvas.width, y);
@@ -297,11 +173,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {}
     const time = Date.now() * 0.001;
-    // Neon orbs
-    for (let i = 0, i < 3, i++) {
-// Neon orbs
-    for (let i = 0; i < 3; i++) {
-origin/cursor/automate-test-improve-and-merge-code-2533
+
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
       const size = 30 + Math.sin(time + i) * 10;
@@ -327,43 +199,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const x = centerX + Math && Math.cos(angle) * radius;
       const y = centerY + Math && Math.sin(angle) * radius;
       const alpha = 1 - i / 20;      const alpha = 1 - (i / 20);
-ctx.fill();
-    }
-  }
-  const drawSpaceTimeEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
-    const time = Date.now() * 0.001;
 
-    // Wormhole effect
-    const centerX = ctx.canvas.width / 2;
-    const centerY = ctx.canvas.height / 2
-    const maxRadius = Math.min(ctx.canvas.width, ctx.canvas.height) * 0.3;
-
-for (let i = 0; i < 20; i++) {
-      const radius = (i / 20) * maxRadius;
-      const angle = time * 2 + i * 0.3;
-      const x = centerX + Math.cos(angle) * radius;
-      const y = centerY + Math.sin(angle) * radius;
-const alpha = 1 - i / 20;
-
-      ctx.globalAlpha = alpha * 0.5;
-      ctx.fillStyle = colors.accent;
-      ctx.beginPath();
-      ctx.arc(x, y, 2, 0, Math.PI * 2);
-ctx.fill();
-    }
-  };
-
-  return (
-<div className='fixed inset-0 -z-10 overflow-hidden'>
-      <canvas
-        ref={canvasRef}
-        className='w-full h-full'
-        style={{
-          background: colors.background
-        }}
-      />
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {/* Additional overlay effects */}
       <div className='absolute inset-0 pointer-events-none'>;
         {/* Quantum energy field */}
         <motion&& motion.div'
@@ -421,11 +257,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               }}
 
-              transition={{
-                duration: 3,
-                delay: i * 0.1,
-                repeat: Infinity,
-ease: 'easeInOut',
               }}
 
               transition={{}
@@ -461,12 +292,3 @@ export default UltraFuturisticBackground2035;  )
 export default UltraFuturisticBackground2035;
 
 export default UltraFuturisticBackground2035;
-        </div>
-      </div>
-    </div>
-);
-};
-
-export default UltraFuturisticBackground2035;
-origin/cursor/automate-test-improve-and-merge-code-2533
-

@@ -1,38 +1,16 @@
-<<<<<<< HEAD:src_backup/components/support/SupportWidget.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-const [isOpen, setIsOpen] = useState(false)
-  const { theme } = useTheme()
-  const router = useRouter()
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> pr-12243
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
 import { ChatBotPanel } from "./ChatBotPanel";
 import { MessageSquare, Info, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-=======
-import React, { useState } from "react";"
-import { useRouter } from "next/router";"
-import { Button } from "@/components/ui/button";"
-import { ChatBotPanel } from "./ChatBotPanel";"
-import { MessageSquare, Info, X } from "lucide-react";"
-import { cn } from "@/lib/utils";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/SupportWidget.tsx
+
 import { useTheme } from "@/hooks/useTheme";
 export function SupportWidget() {};
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
   const router = useRouter();
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
       {/* Fixed button in the bottom right */}
@@ -88,23 +66,6 @@ const [isOpen, setIsOpen] = useState(false)
               ? 'bg-zion-blue-dark border border-zion-blue-light'
               : 'bg-white border border-gray-200'
 
-=======
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
-import { Button } from '@/components/ui/button';
-import { ChatBotPanel } from './ChatBotPanel';
-import { MessageSquare, Info, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useTheme } from '@/hooks/useTheme';
-
-export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
-  const router = null;
-            theme === "dark" 
-              ? "bg-zion-blue-dark border border-zion-blue-light" 
-              : "bg-white border border-gray-200"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           )}
           style={{ height: '600px', maxHeight: '80vh' }}        >
           <div className='flex items-center justify-between p-4 border-b border-zion-purple/20'>
@@ -174,29 +135,13 @@ export function SupportWidget() { return null; }
               </h3>
             </div>"
             <div className="flex items-center gap-2">
-<<<<<<< HEAD:src_backup/components/support/SupportWidget.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <Button
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> pr-12243
+
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
                 onClick={() => router.push("/help")}
-=======
-              <Button"
-                variant="ghost""
-                size="icon""
-                className="h-8 w-8 rounded-full""
-                onClick={() => router.push("/help")}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/SupportWidget.tsx
+
                 aria-label="Help center"
               >"
                 <Info className="h-5 w-5" />
@@ -218,19 +163,3 @@ export function SupportWidget() { return null; }
       )}
     </>
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD:src_backup/components/support/SupportWidget.tsx
-;
-              <Button
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
-=======
-;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/SupportWidget.tsx

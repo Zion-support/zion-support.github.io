@@ -1,91 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
-import React, { useState } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import Layout from "./components/Layout";
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Mail, Lock, Eye } from 'lucide-react';
-import Layout from '../components/Layout';
-export default function LoginPage() {
-  const [formData, setFormData] = useState({
-    email: ,
-    password: ')
-
-  const [formData, setFormData] = useState({'
-    email: '',''
-    password: ''')
-  });
-  const [showPassword, setShowPassword] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-
-    <Layout title="Login - Zion Tech Group">"
-"
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">"
-</div>"
-        <div className="max-w-md w-full space-y-8">"
-</div>
-          <div>
-<<<<<<< HEAD:pages/login.tsx
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              Sign in to your account
-            </h2>
-          </div>
-          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-            <div className="space-y-4">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Email address
-                </label>
-                <div className="mt-1 relative">
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from './components/Layout';
-=======
-
-import React, { useState } from 'react';'
-import Head from 'next/head';'
-import Link from 'next/link';'
-import { motion } from 'framer-motion';'
-import Layout from './components/Layout';
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import {;
   Mail,;
@@ -265,24 +178,6 @@ import {;
   DizzyFace2,;
 
 } from "lucide-react";
-<<<<<<< HEAD
-  DizzyFace2
-} from 'lucide-react';
-origin/automation-improvements-final
-=======
-
-"
-} from "lucide-react";
-  DizzyFace2'
-} from 'lucide-react';
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
 
   Mail;
   Lock;
@@ -460,87 +355,25 @@ origin/automation-improvements-final
   YawningFace2;
   DizzyFace2"
 } from "lucide-react";
-<<<<<<< HEAD
-    email: ""
-    password: ""
-    email: "",
-    password: "",;
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState("");
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-=======
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const { name, value } = e.target;
     setFormData(prev => ({}
       ...prev,
-<<<<<<< HEAD
-      [name]: value,
-  const [error, setError] = useState('');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-origin/automation-improvements-final
-      ...prev
-      [name]: value
-=======
-      [name]: value;
-      ...prev;
-      [name]: value;
-export default function LoginPage() {}
-  const [formData, setFormData] = useState({}
-"
-    email: "",";
-    password: "",;
-
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();
-<<<<<<< HEAD
-    setIsLoading(true);
-    setError("");
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-=======
 
-    setIsLoading(true);
-"
-    setError("");
-    try {}
-      // Simulate API call;
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         setError("Please fill in all fields");
       }
     } catch (err) {;"
       setError("Login failed. Please try again.");
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     setError('');
 
     try {}
@@ -556,27 +389,13 @@ export default function LoginPage() {}
       }
     } catch (err) {'
       setError('Login failed. Please try again.');
-<<<<<<< HEAD
-    } finally {
-=======
 
-    } finally {}
-    } finally {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     } finally {;
       setIsLoading(false);
     }
   }
   return (
-<<<<<<< HEAD
-      </Head>
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-=======
 
-
-      </Head>"
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-md w-full space-y-8">
           <motion.div"
             className="text-center"
@@ -588,23 +407,7 @@ export default function LoginPage() {}
               <Shield className="h-6 w-6 text-white" />
             </div>"
             <h2 className="mt-6 text-3xl font-bold text-gray-900">
-<<<<<<< HEAD
-              Sign in to your account
-            </h2>
-            <p className="mt-2 text-sm text-gray-600">
-              <Link
-=======
-              Sign in to your account;
-            </h2>"
-            <p className="mt-2 text-sm text-gray-600">
 
-
-
-
-
-
-              <Link"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 href="/contact"
 "
                 className="font-medium text-blue-600 hover:text-blue-500">;
@@ -629,20 +432,7 @@ export default function LoginPage() {}
                   {error}
                 </motion && motion.div>;
               )}
-<<<<<<< HEAD
-                  Email address
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-=======
 
-
-
-                  Email address;
-                </label>"
-                <div className="relative">"
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
 
@@ -656,19 +446,11 @@ export default function LoginPage() {}
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;"
                     <Mail className="h-5 w-5 text-gray-400" />;
                   </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Lock, Eye } from 'lucide-react';
-=======
-'
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-import { Mail, Lock, Eye } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import Layout from '../components/Layout';
 
 export default function LoginPage() {}
@@ -706,44 +488,12 @@ export default function LoginPage() {}
                   Email address;
                 </label>"
                 <div className="mt-1 relative">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
                   <input
                     id="email"
                     name="email"
                     type="email"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-                    required
-                    className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Enter your email"
-=======
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">"
-</h2>
-          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>"
-</form>"
-            <div className="space-y-4">"
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">"
-</label>
-                </label>"
-                <div className="mt-1 relative">"
-                  <input;"
-                    id="email"""
-                    name="email"""
-                    type="email""
-                    required;"
-                    className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500"""
-                    placeholder="Enter your email""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages-disabled/login.tsx
+
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -780,7 +530,6 @@ export default function LoginPage() {}
               </div>
             </div>
 
-
             <div>
 </div>
               <button;"
@@ -794,11 +543,7 @@ export default function LoginPage() {}
           </form>
         </div>
       </div>
-<<<<<<< HEAD:pages/login.tsx
-    </Layout>
-  );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
                     autoComplete="email"
                     required
                     value={formData && formData.email}
@@ -809,19 +554,7 @@ export default function LoginPage() {}
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-=======
 
-                  <input"
-                    id="email""
-                    name="email""
-                    type="email"
-
-
-                  Password;
-                </label>"
-                <div className="relative">"
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
                   />;
@@ -859,24 +592,7 @@ export default function LoginPage() {}
                     ) : (;"
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
                     )}
-<<<<<<< HEAD
-                  <input
-                    id="remember-me"
-                    name="remember-me"
-                    type="checkbox"
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                    Remember me
-=======
 
-                  <input"
-                    id="remember-me""
-                    name="remember-me""
-                    type="checkbox""
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-
-
-                    Remember me;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </label>
                 </div>"
                 <div className="text-sm">
@@ -889,11 +605,7 @@ export default function LoginPage() {}
                 </div>
               </div>
               <div>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               </div>"
               <div className="mt-6 grid grid-cols-2 gap-3">"
@@ -915,19 +627,7 @@ export default function LoginPage() {}
             transition={{ duration: 0.8, delay: 0.4 }}
           >"
             <p className="text-sm text-gray-600">
-<<<<<<< HEAD
-              <Link
-                href="/contact"
-=======
 
-
-
-
-
-
-              <Link"
-                href="/contact""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="font-medium text-blue-600 hover:text-blue-500">;
                 Contact us to get started;
               </Link>;
@@ -997,17 +697,10 @@ export default function LoginPage() {}
         </div>;
       </div>;
     </Layout>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
                     required
                     className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-=======
 
-                    required"
-                    className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     placeholder="Enter your email"
                     value={formData.email}
                     onChange={handleChange}
@@ -1055,19 +748,5 @@ export default function LoginPage() {}
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-}
-=======
 
-}'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    </Layout>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages-disabled/login.tsx
+}

@@ -361,7 +361,6 @@ const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' }),
 };
 
-
   return (
     <footer className=\"bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50\" />
       {/* Main Footer Content */}
@@ -592,15 +591,7 @@ key={action.name}
           <div className=\"flex flex-col md:flex-row items-center justify-between gap-4\" />
             <div className=\"flex items-center space-x-6 text-sm text-gray-400\" />
               <span />&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
-<<<<<<< HEAD;
-              <Link href=\"/privacy\" className=\"hover:text-cyan-400 transition-colors\" />Privacy Policy</Link>
-              <Link href=\"/terms\" className=\"hover:text-cyan-400 transition-colors\" />Terms of Service</Link>
-              <Link href=\"/cookies\" className=\"hover:text-cyan-400 transition-colors\" />Cookie Policy</Link>
-=======
-              <Link to=\"/privacy\" className=\"hover: text-cyan-400 transition-colors\" />Privacy Policy</Link>
-              <Link to=\"/terms\" className=\"hover:text-cyan-400 transition-colors\" />Terms of Service</Link>
-              <Link to=\"/cookies\" className=\"hover:text-cyan-400 transition-colors\" />Cookie Policy</Link>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7;
+
             </div>
             
             <div className=\"flex items-center space-x-4\" />

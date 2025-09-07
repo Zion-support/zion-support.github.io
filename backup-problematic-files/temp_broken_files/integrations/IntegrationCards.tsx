@@ -1,30 +1,4 @@
-
-=======
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { ArrowRight, Check, ExternalLink } from "lucide-react",;
-;
-interface IntegrationCardProps {;
-  title:string,;
-  description:string,;
-  icon:React.ReactNode,;
-  status?:"connected" | "disconnected" | "pending",;
-  href?:string,;
-  onConnect?:() => void;
-}
-;
-export function IntegrationCard({;
-  title,;
-  description,;
-  icon,;
-  status = "disconnected",;
-  href,;
-  onConnect} IntegrationCardProps) {;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <Card className="overflow-hidden">;
+<Card className="overflow-hidden">;
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-start">;
           <div className="flex items-center gap-3">;
@@ -37,7 +11,6 @@ export function IntegrationCard({;
           </div>;
           {status === "connected" ? (;
             <Badge variant="outline" className="bg-green-100 text-green-800 gap-1">;
-<<<<<<< HEAD
 
             <Badge variant="outline">Not Connected</Badge>;
           )}
@@ -56,4 +29,3 @@ export function IntegrationCard({;
         )}
       </CardFooter>;
     </Card>;
-

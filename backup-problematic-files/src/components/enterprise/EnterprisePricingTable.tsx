@@ -1,16 +1,7 @@
-
-=======
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Check, X } from 'lucide-react';
-import {;
-  Table,;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  TableBody,;
+TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
-<<<<<<< HEAD
 
       <div className="container mx-auto max-w-7xl">;
         <div className="text-center mb-12">;
@@ -26,4 +17,3 @@ import {;
                   ))}
                 </TableRow>;
               ))}
-

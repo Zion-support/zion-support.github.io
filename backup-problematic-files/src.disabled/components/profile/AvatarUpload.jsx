@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
-=======
-'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
-"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
-'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-import React from 'react';
-=======
-'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
-'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
-"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
-'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
@@ -46,10 +27,3 @@ const AvatarUpload = ({ className }) => {
     </div>
   )
 };
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    </div>)'
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

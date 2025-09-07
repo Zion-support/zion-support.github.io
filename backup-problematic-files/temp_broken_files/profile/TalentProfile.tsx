@@ -1,18 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-=======
-import React from "react",;
-import { Handshake, MessageSquare, Star } from "lucide-react",;
-=======
-import React from "react",;
-import { Handshake, MessageSquare, Star } from 'lucide-react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/TalentProfile.tsx
-=======
-import React from "react",;
-import { Handshake, MessageSquare, Star } from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from "@/components/ui/button",;
 ;
 import { HireNowCTA } from "./HireNowCTA",;
@@ -26,23 +11,7 @@ import { ProfileRatings } from "./ProfileRatings",;
 import { TalentProfile as TalentProfileType } from "@/types/talent",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Availability } from "@/types/profile",;
-=======
-import React from "react";""
-import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from "@/components/ui/button";"
-;"
-import { HireNowCTA } from "./HireNowCTA";""
-import { ProfileHero } from "./ProfileHero";""
-import { ProfileSkills } from "./ProfileSkills";""
-import { ProfileExperience } from "./ProfileExperience";""
-import { ProfileProjects } from "./ProfileProjects";""
-import { ProfileAvailability } from "./ProfileAvailability";""
-import { ProfileContact } from "./ProfileContact";""
-import { ProfileRatings } from "./ProfileRatings";""
-import { TalentProfile as TalentProfileType } from "@/types/talent";""
-import { useAuth } from "@/hooks/useAuth";""
-import { Availability } from "@/types/profile";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 ;
 interface TalentProfileProps {;
   profile: TalentProfileType;,;
@@ -67,25 +36,7 @@ export function TalentProfile({ ;
     level:3 // Default level since we don't have this data;')
   })) || [],;
   // Create proper projects array for ProfileProjects component;
-<<<<<<< HEAD
-  const projectsArray = profile.key_projects?.map((proj, i) => ({;
-    id:`project-${i}`,;
-<<<<<<< HEAD
-    title:proj.title,;
-    description:proj.description,;
-=======
-    title:proj.title,,
-  description:proj.description,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  const projectsArray = profile.key_projects?.map((proj, i) => ({;`;
-    id: `project-${i;}`,;
-    title: proj.title;,,
-  description: proj.description;,;
-    title: proj.title;,;
-    description: proj.description;,;)
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     date:new Date().toISOString() // Default date since we don't have this data;
   return (;
     <div className="container mx-auto px-4 py-8">;"
@@ -149,13 +100,7 @@ pr-12325
                       <MessageSquare className="mr-2 h-5 w-5" />;
                       Message;
                     </Button>;                  )}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/TalentProfile.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
                 </div>;
               </div>;
             </div>;
@@ -163,75 +108,3 @@ pr-12325
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
-
-=======
-  ),;}
- interface TalentProfileProps {;
-  profile: TalentProfileType;
-onRequestHire: () => void;
-onMessageTalent?: () => void ;
-}export function TalentProfile ({;
-  profile;
-onRequestHire;
-onMessageTalent ;
-}: TalentProfileProps) {;
-  const { ;
-  isAuthenticated ;
- } = useAuth ();
-//Create proper availability object from talent profile const availability: Availability = {;
-  status: profile.availability type === 'full time' ? 'available' : profile.availability type === 'part time' ? 'limited' : 'unavailable';
-message: `$ {;
-  profile.professional title ;
-}with $ {;
-  profile.years experience ;
-}years of experience` 
-};
-//Create proper skills array for ProfileSkills component const skillsArray = profile.skills?.map (skill => ({;
-  name: skill;';
-level: 3 //Default level since we don't have this data ;
-}) ) || [];
-id: `project-$ {;
-  i ;
-}`;
-title: proj.title;,
-  description: proj.description;';
-date: new Date () .toISOString () //Default date since we don't have this data ;
-}) ) || [];
-                      <MessageSquare className="mr-2 h-5 w-5" />;"
-)
-                    ;                  )}
-pr-12325
-return (</div> </div> {;
-}<ProfileProjects projects= {;
-  projectsArray ;
-}/> Reviews & Ratings </h2> <ProfileRatings userId= {;
-<<<<<<< HEAD
-  profile.id ;
-}averageRating= {;
-  profile.average rating ;
-}ratingCount= {;
-  profile.rating count ;
-}/> </div> Connect with {;
-  profile.full name ;
-}for your next project and get started right away. {;
-  profile.hourly rate && `Rate starts at $$ {;
-  profile.hourly rate ;
-}/hour.` ;
-}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now </Button> {";"  onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={;"  onMessageTalent ";"}> <MessageSquare className="mr-2 h-5 w-5" /> Message </Button>) ;
-}</div> </div> </div>) ;
-:temp_broken_files/profile/TalentProfile.tsx
-}</div> </div> </div>) ;"}'"
-}</div> </div> </div>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/TalentProfile.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-}/> </div> Connect with {;)"
-}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now  {";"  onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={;"  onMessageTalent ";"}> <MessageSquare className="mr-2 h-5 w-5" /> Message ) ;"
-}</div> </div> </div>) ;"
-}</div> </div> </div>) ;"}'""
-}</div> </div> </div>) ;"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

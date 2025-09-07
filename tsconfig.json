@@ -26,28 +26,28 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "./*"
       ],
       "@/components/*": [
-        "./src/components/*"
+        "./components/*"
       ],
       "@/pages/*": [
-        "./src/pages/*"
+        "./pages/*"
       ],
       "@/utils/*": [
-        "./src/utils/*"
+        "./utils/*"
       ],
       "@/hooks/*": [
-        "./src/hooks/*"
+        "./hooks/*"
       ],
       "@/types/*": [
-        "./src/types/*"
+        "./types/*"
       ],
       "@/styles/*": [
-        "./src/styles/*"
+        "./styles/*"
       ],
       "@/assets/*": [
-        "./src/assets/*"
+        "./assets/*"
       ]
     },
     "allowSyntheticDefaultImports": true,

@@ -1,4 +1,3 @@
-
 import { GetServerSideProps } from 'next';
 
 interface SitemapUrl {}
@@ -199,7 +198,6 @@ ${staticPages;
   };
 };
 
-export default Sitemap;
      `;
        });
        .join("")}
@@ -234,4 +232,3 @@ export default SiteMap;
 }
 ;
 export default SiteMap;
-

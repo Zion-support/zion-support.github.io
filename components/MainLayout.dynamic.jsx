@@ -1,5 +1,5 @@
 import React from 'react';
-export default MainLayout.dynamic;
+
 ;
 const MainLayout.dynamic = () => {}
   return (
@@ -16,4 +16,3 @@ const MainLayout.dynamic = () => ;
 
 pr-12243
 export default MainLayout.dynamic;
-

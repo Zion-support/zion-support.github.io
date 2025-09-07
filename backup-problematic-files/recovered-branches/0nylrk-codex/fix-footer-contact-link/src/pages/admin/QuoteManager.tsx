@@ -1,78 +1,4 @@
-
-=======
-import React, { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
-import { useAuth } from "@/hooks/useAuth",;
-import { ;
-  Card,;
-  CardContent;
-} from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Navigate } from "react-router-dom",;
-import type { QuoteRequest } from "@/types/quotes",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { QuoteDetails } from "@/components/quotes/QuoteDetails",;
-import { ExportToCSV } from "@/components/quotes/ExportToCSV",;
-import {;
-  QuoteStatusCards,;
-  QuotesFilter,;
-  QuotesTable;
-} from "@/components/admin/quotes",;
-;
-export default function QuoteManager() {;
-  const { user } = useAuth(),;
-  const isAdmin = user?.userType === 'admin',;
-  ;
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
-  const [showDetails, setShowDetails] = useState(false),;
-;
-  const {;
-    quotes,;
-    isLoading,;
-    error,;
-    statusFilter,;
-    setStatusFilter,;
-    archiveFilter,;
-    setArchiveFilter,;
-    searchQuery,;
-    setSearchQuery,;
-    dateRange,;
-    setDateRange,;
-    updateStatus,;
-    toggleArchive,;
-    deleteQuote;
-  } = useAdminQuotes(),;
-;
-  // Count quotes by status;
-  const statusCounts = {;
-    new:quotes.filter(q => q.status === 'new').length,;
-    in_review:quotes.filter(q => q.status === 'in_review').length,;
-    accepted:quotes.filter(q => q.status === 'accepted').length,;
-    responded:quotes.filter(q => q.status === 'responded').length,;
-    closed:quotes.filter(q => q.status === 'closed').length;
-  },;
-;
-  const handleViewDetails = (quote:QuoteRequest) => {;
-    setSelectedQuote(quote),;
-    setShowDetails(true);
-  },;
-;
-  const handleResetFilters = () => {;
-    setStatusFilter('all'),;
-    setArchiveFilter('all'),;
-    setSearchQuery(''),;
-    setDateRange({ from:undefined, to:undefined }),;
-  },;
-;
-  if (!isAdmin) {;
-    return <Navigate to="/unauthorized" replace />,;
-  }
-;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <ProtectedRoute adminOnly>;
+<ProtectedRoute adminOnly>;
       <div>;
         <Header />;
         <div className="min-h-screen bg-zion-blue px-4 py-8">;
@@ -84,7 +10,6 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
-<<<<<<< HEAD
 
             {/* Filters */}
             <QuotesFilter;
@@ -119,4 +44,3 @@ export default function QuoteManager() {;
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {;
-

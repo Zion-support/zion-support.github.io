@@ -1,17 +1,4 @@
-
-=======
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
-import { SortFilterProps } from "@/types/filters",;
-;
-export function SortFilter({ sortOption, setSortOption } SortFilterProps) {;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <div className="mb-6">;
+<div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
       </label>;
@@ -23,5 +10,3 @@ export function SortFilter({ sortOption, setSortOption } SortFilterProps) {;
           <SelectItem value="relevance">Relevance</SelectItem>;
           <SelectItem value="rating">Highest Rating</SelectItem>;
           <SelectItem value="experience">Most Experienced</SelectItem>;
-<<<<<<< HEAD
-

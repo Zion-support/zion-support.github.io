@@ -1,29 +1,7 @@
-
-=======
-import React from "react",;
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow} from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { Switch } from "@/components/ui/switch",;
-import { toast } from "@/hooks/use-toast",;
-import { InfoIcon } from "lucide-react",;
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger} from "@/components/ui/tooltip",;
-;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function RoleManagement() {;
   // Mock team members data;
   const teamMembers = [;
     {;
-<<<<<<< HEAD
 
     <div className="space-y-6">;
       <div>;
@@ -159,4 +137,3 @@ export function RoleManagement() {;
         </Table>;
       </div>;
     </div>;
-

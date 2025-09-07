@@ -1,18 +1,3 @@
-
-
-}
-export default /**;
- * SimpleLayout - Function description;
- */
-function SimpleLayout() { return null; }
-        <title>{title}</title>,
-        {description && <meta name="description" content={description} />}
-      </Head>,
-
-      {children};
-    </>)
-};
-
 interface SimpleLayoutProps {
   children: ReactNode;
   title?: string;
@@ -32,8 +17,3 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 };
 
 export default SimpleLayout;
-
-"
-
-        {description && <meta name;
-

@@ -1,10 +1,7 @@
-
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import type { NextPage } from 'next',
-
-import type { NextPage } from 'next','
 
 import Head from 'next/head',
 const BlockchainSolutions: NextPage = () => {}
@@ -15,32 +12,18 @@ const BlockchainSolutions: NextPage = () => {}
         <meta name="description" content="BlockchainSolutions page" />
       </Head>
 
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const BlockchainSolutions: NextPage;
-
       <main>
         <h1>BlockchainSolutions</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
 
-  ),
+  )
 };
-
-;
-
-      <main>;
-        <h1>BlockchainSolutions</h1>;
-        <p>This page is under construction.</p>;
-      </main>;
-    </div>;
-  ),;
-};
-
 export default BlockchainSolutions;
 
-'
+},
+export default BlockchainSolutions,
 
 import Head from 'next / head';
       <main>;
@@ -64,4 +47,3 @@ export default BlockchainSolutions;
 
 },
 export default BlockchainSolutions,
-

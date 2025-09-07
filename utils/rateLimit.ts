@@ -1,41 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-const WINDOW_MS = 5 * 60 * 1000, // 5 minutes;
-const MAX_REQUESTS = 30, // per IP per endpoint per window;
-const store: Map<string number[]> = new Map();
-export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {;
-  const ip = (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || 'unknown';
-  const key = `${ip}:${req.url}`;
-  const now = Date.now();
-  const windowStart = now - WINDOW_MS;
-  const timestamps = (store.get(key) || []).filter((t) => t > windowStart);
-  timestamps.push(now);
-  store.set(key, timestamps);
-  if (timestamps.length > MAX_REQUESTS) {;
-    res.setHeader('Retry-After', Math.ceil(WINDOW_MS / 1000).toString());
-    res.status(429).json({ error: 'Rate limit exceeded. Please try again later.' });
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const ip =
-=======
-
-export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {}
-  const ip ="
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
     req.socket.remoteAddress ||";
     "unknown";
@@ -55,68 +19,12 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {}
 
   if (current.count >= RATE_LIMIT_MAX_REQUESTS) {"
     res.status(429).json({ error: "Too Many Requests" });
-=======    return false;
-=======
 
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-main
-=======
-export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
-  const ip =
-    (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
-    req.socket.remoteAddress ||
-    "unknown";
-
-  const now = Date.now();
-  const key = `rate_limit_${ip}`;
-  const current = rateLimitMap.get(key);
-
-  if (!current || now > current.resetTime) {
-    // Reset or initialize
-    rateLimitMap.set(key, {
-      count: 1,
-      resetTime: now + RATE_LIMIT_WINDOW,
-    });
-    return true;
-  }
-
-  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
-    res.status(429).json({ error: "Too Many Requests" });
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-    return false;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 
   current.count++;
   rateLimitMap.set (key, current);
   return true;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-
-
-
-
-
 
 // Rate limiting utilities;
 export interface RateLimitConfig {};
@@ -187,15 +95,9 @@ export const rateLimiter = new RateLimiter({};
 // Express middleware for rate limiting;
 export function rateLimit(config: RateLimitConfig) {};
   const limiter = new RateLimiter(config);
-<<<<<<< HEAD
-export function rateLimit(options: { windowMs: number; max: number }) {
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
   return (req: any, res: any, next: any) => {
-=======
-  return (req: any, res: any, next: any) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     const info = limiter.isAllowed(req);
     res.set({'
       'X-RateLimit-Limit': info.limit.toString(),'
@@ -212,30 +114,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     next();
   };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-=======
-}
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes;
@@ -287,70 +166,8 @@ if ( {) {}
   $2;
 }'
     res.status (429).json ({ error: 'Too Many Requests' });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
     return false;
   }
 ;
   return true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-<<<<<<< HEAD
-}
-
-}
-=======
-'
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

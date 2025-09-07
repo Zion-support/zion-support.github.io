@@ -1,16 +1,4 @@
-
-=======
-import React from "react",;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",;
-import { Link } from "react-router-dom",;
-;
-export function TalentDashboard() {;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <div className="space-y-6 px-4 pb-24">;
+<div className="space-y-6 px-4 pb-24">;
       <section>;
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">New Job Matches</h2>;
@@ -20,7 +8,6 @@ export function TalentDashboard() {;
             </Button>;
           </Link>;
         </div>;
-<<<<<<< HEAD
 
         <div className="space-y-3">;
           <Card>;
@@ -67,4 +54,3 @@ export function TalentDashboard() {;
           </CardContent>;
         </Card>;
       </section>;
-

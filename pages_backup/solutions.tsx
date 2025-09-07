@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions.tsx
-<<<<<<< HEAD:pages/solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/solutions.tsx
-
 export default function Solutions() {
   const solutions = [
     {
@@ -71,151 +58,8 @@ export default function Solutions() {
           </div>
         </div>
 
-<<<<<<< HEAD:pages_backup/solutions.tsx
-                      <span className="text - lg text - gray - 400">/{solution.period}</span>;
-                    </div>;
-                  </div>;
-                  <ul className="space - y-3 mb - 6">;
-                    {solution.features.map ((feature, feature_index) => (
-                      <li key={feature_index} className="flex items - center text - gray - 300">;
-                        <CheckCircle className="w - 5 h - 5 text - orange - 400 mr - 3 flex - shrink - 0" />;
-                        {feature}
-                      </li>))}
-                  </ul>;
-                  <a;
-                    href="/contact";
-                    className="w - full block text - center px - 6 py - 3 bg - gradient - to - r from - orange - 500 to - red - 600 text - white font - semibold rounded - lg hover:from - orange - 600 hover:to - red - 700 transition - all duration - 300";
-                  >;
-                    Get Started;
-                  </a>;
-                </motion.div>))}
-            </div>;
-            <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">;
-              Industry Solutions;
-            </h1>;
-            <p className="text - xl md:text - 2xl text - gray - 300 max - w-3xl mx - auto mb - 8">;
-              Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.;
-            </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-              <Link;
-                href="/contact";
-                className="bg - gradient - to - r from - green - 500 to - emerald - 600 text - white px - 8 py - 4 rounded - full text - lg font - semibold hover:shadow - 2xl hover:shadow - green - 500 / 25 transition - all duration - 300";
-              >;
-                Get Started;
-                <ArrowRight className="inline - block ml - 2 w - 5 h - 5" />;
-              </Link>;
-              <Link;
-                href="/demo";
-                className="border border - white / 30 hover:border - white / 50 text - white px - 8 py - 4 rounded - full text - lg font - semibold transition - all duration - 300 backdrop - blur - md hover:bg - white / 10";
-              >;
-                Request Demo;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-
-        {/* CTA Section */}
-        <section className="py - 20 px - 4 bg - gradient - to - b from - gray - 900 to - black">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-
-
-        {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            >
-              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Ready for Industry Transformation?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Partner with us to build industry-specific solutions that drive your business forward
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Transformation
-                </a>
-                <a 
-                  href="/contact" 
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Transformation
-                </Link>
-                <a
-                  href="/contact"
-
-
-
-                <a
-                  href="/contact"
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                >
-                  Schedule Consultation
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { 
-  Shield, 
-  Cloud, 
-  Zap, 
-  Users, 
-  Brain, 
-  Network, 
-  TrendingUp, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
 
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const solutions = [
   {
     title: 'Enterprise Solutions',
@@ -390,18 +234,11 @@ export default function SolutionsPage() {
                 solutions that drive growth, efficiency, and innovation.
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Solutions Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4">
@@ -422,11 +259,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   </div>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
                   <ul className="space-y-2">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
         {/* Solutions Overview */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -481,19 +314,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD:pages/solutions.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -1050,57 +870,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   Schedule Consultation
 
                 </a>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-8 hover:bg-gray-800/70 transition-all duration-300 group">
-                <div className="text-4xl mb-4">{solution.icon}</div>
-                <h2 className="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors duration-200">
-                  {solution.title}
-                </h2>
-                <p className="text-gray-300 mb-6">
-                  {solution.description}
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <svg className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200">
-                  Learn More
-                </button>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/solutions.tsx
+
               </div>
             ))}
           </div>
-<<<<<<< HEAD:pages_backup/solutions.tsx
-        </section>
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    </Layout>
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
     </UltraAdvancedFuturisticBackground>
   )
 
@@ -1139,41 +913,6 @@ export default Solutions,
 
 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/solutions.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-},
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-    </Layout>
-  );
-}
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO';
@@ -1191,36 +930,3 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 const Solutions: NextPage;
 export default Solutions;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/solutions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
-=======
-        </div>
-
-        <div className="bg-gray-800/30 border-t border-gray-800">
-          <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-gray-300 mb-8">
-              Let's discuss how our solutions can help you achieve your goals.
-            </p>
-            <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200">
-              Get Started Today
-            </button>
-          </div>
-        </div>
-      </main>
-    </>
-  );
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/solutions.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

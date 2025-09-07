@@ -1,23 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
 
-const hasSupabase =
-  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
-  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
-  .split(',')
-  .map(x => x.trim());
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req && req.method === 'GET') {
-    try {
-      if (hasSupabase) {
-        const { data, error } = await supabaseClient
-          .from('talent_profiles')
           .order('created_at', { ascending: false });
         if (error) throw error;
         return res && res.status(200).json({ items: data as TalentProfile[] });
@@ -139,10 +124,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 }
+
   }
 return res;
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
 origin/cursor/automate-test-improve-and-merge-code-2533
-

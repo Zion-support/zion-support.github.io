@@ -1,34 +1,4 @@
-
-=======
-import { useState } from "react",;
-import { useParams } from "react-router-dom",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { Star, MessageSquare, Brain, Shield } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;
-import { toast } from "@/hooks/use-toast",;
-import { PaymentButton } from "@/components/transactions/PaymentButton",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { ProfileContact } from "@/components/profile/ProfileContact",;
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
-;
-export default function ListingDetail() {;
-  // useParams may be untyped in this environment, so avoid passing a;
-  // type argument and cast the result instead to prevent TS2347 errors.;
-  const { id } = useParams() as { id?:string },;
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),;
-;
-  // Find the listing from our shared data source - now also checking equipment listings;
-  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),;
-;
-  if (!listing) {;
-    return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      <AppLayout>;
+<AppLayout>;
         <div className="min-h-screen bg-zion-blue py-12 px-4">;
           <div className="container mx-auto">;
             <div className="text-center py-20">;
@@ -41,7 +11,6 @@ export default function ListingDetail() {;
           </div>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
 
     <AppLayout>;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;

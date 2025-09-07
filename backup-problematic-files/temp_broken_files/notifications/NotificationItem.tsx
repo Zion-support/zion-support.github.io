@@ -1,124 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationItem.tsx
-
-=======
-import React from 'react',;
-// Use the centralized icon wrapper to avoid missing icons;
-import { Check, Trash2, ChevronRight } from '@/components/icons',;
-=======
-import React from 'react',;
-// Use the centralized icon wrapper to avoid missing icons;
-import { Check, Trash2, ChevronRight } from 'lucide-react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/notifications/NotificationItem.tsx
-=======
-import React from 'react',;
-// Use the centralized icon wrapper to avoid missing icons;
-import { Check, Trash2, ChevronRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from '@/components/ui/button',;
 import { Badge } from '@/components/ui/badge',;
 import { formatDistanceToNow } from 'date-fns',;
 import { cn } from '@/lib/utils',;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationItem.tsx
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
-import { useNavigate } from 'react-router-dom',;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import React from 'react';
-// Use the centralized icon wrapper to avoid missing icons;
-import { Check, Trash2, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { formatDistanceToNow } from 'date-fns';
-import { cn } from '@/lib/utils';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import {;
   Tooltip,;
   TooltipContent,;
   TooltipProvider,;
   TooltipTrigger} from '@/components/ui/tooltip',;
-<<<<<<< HEAD
-import { useRouter } from 'next/router',;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/notifications/NotificationItem.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 import { Notification, NotificationType } from '@/context/notifications',;
-=======
-import { useRouter } from 'next/router';
-import { Notification, NotificationType } from '@/context/notifications';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 ;
 export const getTypeIcon = (type:NotificationType) => {;
   switch (type) {;
     case 'message':;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      return <span className="text-blue-500">💬</span>,;
-    case 'quote_request':;
-      return <span className="text-purple-500">📝</span>,;
-    case 'booking_confirmation':;
-      return <span className="text-green-500">✅</span>,;
-    case 'hire_request':;
-      return <span className="text-zion-purple">🤝</span>,;
-    case 'onboarding':;
-      return <span className="text-zion-cyan">🚀</span>,;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationItem.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    case 'system':;
-      return <span className="text-yellow-500">⚠️</span>,;
-    default:;
-      return <span className="text-gray-500">📣</span>;
-  }
 
-  notification, ;
-  onMarkAsRead, ;
-  onDismiss ;
-}) => {;
-
-=======
-      return <span className="text-blue-500"></span>,;
-    case 'quote_request':;
-      return <span className="text-purple-500"></span>,;
-    case 'booking_confirmation':;
-      return <span className="text-green-500"></span>,;
-    case 'hire_request':;
-      return <span className="text-zion-purple"></span>,;
-    case 'onboarding':;
-      return <span className="text-zion-cyan"></span>,;
-    case 'system':;
-      return <span className="text-yellow-500"></span>,;
-    case 'project_update':;
-      return <span className="text-indigo-400"></span>,;
-    case 'milestone_complete':;
-      return <span className="text-green-500"></span>,;
-    case 'order_status':;
-      return <span className="text-orange-500"></span>,;
-    default:;
-      return <span className="text-gray-500"></span>;
-  }
-},;
-;
-interface NotificationItemProps {;
-  notification:Notification,;
-  onMarkAsRead:(id:string) => Promise<void>,;
-=======
-      return <span className="text-blue-500"></span>,;""
-      return <span className="text-purple-500"></span>,;""
-      return <span className="text-green-500"></span>,;""
-      return <span className="text-zion-purple"></span>,;""
-      return <span className="text-zion-cyan"></span>,;""
-      return <span className="text-yellow-500"></span>,;""
-      return <span className="text-indigo-400"></span>,;""
-      return <span className="text-orange-500"></span>,;""
-      return <span className="text-gray-500"></span>;"
-  onMarkAsRead: (id:string) => Promise<void>;,;
-</void>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   onDismiss:(id:string) => Promise<void>;
 export const NotificationItem:React.FC<NotificationItemProps> = ({;
 
@@ -164,33 +61,11 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
                 size="icon";""
                 className="h-6 w-6";"
                 onClick={(e) => {;
-<<<<<<< HEAD
-                  e.stopPropagation(),;
-                  onMarkAsRead(notification.id);
-                }}
-                aria-label="Mark as read";
-              >;
-                <Check className="h-3.5 w-3.5 text-green-400" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-              </Button>;
-            </TooltipTrigger>;
-=======
-                <Check className="h-3.5 w-3.5 text-green-400" />;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <TooltipContent>;
 
               <p>Mark as read</p>;
-<<<<<<< HEAD
-            </TooltipContent>;
-          </Tooltip>;
-        </TooltipProvider>;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationItem.tsx
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
         <TooltipProvider>;
           <Tooltip>;
@@ -206,20 +81,12 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
                 aria-label="Dismiss notification";
               >;
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/notifications/NotificationItem.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
               <p>Dismiss</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationItem.tsx
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
@@ -246,31 +113,3 @@ onDismiss ;
 }) : 'Just now' ;
 }</p> {;
   notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={;
-<<<<<<< HEAD
-:temp_broken_files/notifications/NotificationItem.tsx
-  handleClick ;"}> </Button>) ";"}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
-};"'"
-  handleClick ;
-}> </Button>) ";
-}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
-};
-'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/notifications/NotificationItem.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/notifications/NotificationItem.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
-
-                <Trash2 className="h-3.5 w-3.5 text-red-400" />;"
-</Trash2>
-
-              <p>Dismiss</p>;
-onMarkAsRead: (id: string) => Promise<void>;
-onDismiss: (id: string) => Promise<void> ;
-}export const NotificationItem: React.FC<NotificationItemProps> = ({;
-
-}</p> {;"
-  notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={;")"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

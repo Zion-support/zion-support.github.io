@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
 import { Resend } from "npm:resend@1.0.0";
@@ -40,8 +39,7 @@ serve(async (req:Request) => {;
         JSON.stringify({ error:"Missing required fields" });
         {;
           status:400;
-          headers:{ "Content-Type":"application/json", ...corsHeaders }}
-      );
+          headers:{ "Content-Type":"application/json", ...corsHeaders }});
     }
     ;
     // Get user data;
@@ -56,8 +54,7 @@ serve(async (req:Request) => {;
         JSON.stringify({ error:"User not found", details:userError });
         {;
           status:404;
-          headers:{ "Content-Type":"application/json", ...corsHeaders }}
-      );
+          headers:{ "Content-Type":"application/json", ...corsHeaders }});
     }
     ;
     // Create message based on role and missing milestone;
@@ -101,8 +98,7 @@ serve(async (req:Request) => {;
         JSON.stringify({ error:"Failed to send email", details:emailError });
         {;
           status:500;
-          headers:{ "Content-Type":"application/json", ...corsHeaders }}
-      );
+          headers:{ "Content-Type":"application/json", ...corsHeaders }});
     }
     ;
     // Create notification in database;
@@ -112,8 +108,7 @@ serve(async (req:Request) => {;
         _user_id:user_id;
         _title:"Complete your next step";
         _message:`Don't forget to ${action} to get the most out of Zion AI Marketplace.`;
-        _type:"onboarding"}
-    );
+        _type:"onboarding"});
     ;
     if (notificationError) {;
       console.error("Failed to create notification:", notificationError);
@@ -125,16 +120,14 @@ serve(async (req:Request) => {;
         notification_id:notification});
       {;
         status:200;
-        headers:{ "Content-Type":"application/json", ...corsHeaders }}
-    );
+        headers:{ "Content-Type":"application/json", ...corsHeaders }});
   } catch (error) {;
     console.error(error);
     return new Response(;
       JSON.stringify({ error:"Internal server error", details:error.message });
       {;
         status:500;
-        headers:{ "Content-Type":"application/json", ...corsHeaders }}
-    );  }
+        headers:{ "Content-Type":"application/json", ...corsHeaders }});  }
 });
  interface ReminderPayload {
   user id: string;
@@ -181,7 +174,3 @@ if (notificationError) {
   console.error ("Failed to create notification:", notificationError) 
 }
 });
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

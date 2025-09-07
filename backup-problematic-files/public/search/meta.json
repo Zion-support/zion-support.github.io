@@ -406,14 +406,7 @@
   },
   {
     "route": "/",
-<<<<<<< HEAD:public/search/meta.json.backup.1756001098
-<<<<<<< HEAD
-    "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "title": "Zion Tech Group  Leading-Edge Technology Solutions & Autonomous Innovation Platform",
-    "h1": "Zion Tech Group"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/public/search/meta.json
+
   },
   {
     "route": "/innovative-services-showcase-2025",
@@ -893,14 +886,7 @@
   {
     "route": "/reports",
     "title": "",
-<<<<<<< HEAD:public/search/meta.json.backup.1756001098
-<<<<<<< HEAD
-    "h1": "Autonomous Content Hub"
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "h1": "Reports"
-  },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/public/search/meta.json
+
   {
     "route": "/reports/links",
     "title": "",

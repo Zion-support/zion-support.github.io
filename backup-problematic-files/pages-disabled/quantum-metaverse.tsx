@@ -1,20 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
-<<<<<<< HEAD:backup-problematic-files/components/metaverse-ai-development-platform.tsx.backup.1755991683
-import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Button from '../components/ui/Button',
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-export default function MetaverseAIPlatformPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/metaverse-ai-development-platform')),
-=======
-import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Button from '../components/ui/Button',
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-export default function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-internet-security-platform')),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/pages-disabled/quantum-metaverse.tsx
+
   if (!service) return null,
 
   return (

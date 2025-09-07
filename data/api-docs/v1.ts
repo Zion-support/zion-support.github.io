@@ -1,27 +1,11 @@
 import { ApiDocsSpec } from './types';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-import { ApiDocsSpec } from './types';'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ]
 }
 export default v1;
   ];
 
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 const baseUrl = 'https://api && api.zion.os';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-const baseUrl = 'https://api && api.zion.os';
-
 
 const v1: ApiDocsSpec = {
   product: 'Zion OS'
@@ -84,23 +68,6 @@ pr-12325
         }
       ]
 
-<<<<<<< HEAD
-id: 'auth-login-jwt',
-          title: 'JWT Login',
-          description: 'Obtain a JWT by providing credentials.',
-          path: '/v1/auth/login',
-          method: 'POST',
-          visibility: 'public',
-          auth: ['none'],
-=======
-id: 'auth-login-jwt';,
-          title: 'JWT Login';,
-          description: 'Obtain a JWT by providing credentials.';,
-          path: '/v1/auth/login';,
-          method: 'POST';,
-          visibility: 'public';,
-          auth: ['none'];,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           requestBodySchema: {
             type: 'object';,
             properties: {
@@ -153,41 +120,7 @@ id: 'auth-login-jwt';,
     },
     {
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-  ]
-}
-export default v1;
 
-  ];
-
-  product: 'Zion OS'
-  versions: ['v1']
-  defaultVersion: 'v1'
-  lastUpdatedIso: new Date().toISOString()
-  sections: [
-const base_url = 'https://api.zion.os';
-;
-const v1: ApiDocsSpec = {
-  product: 'Zion OS',
-  versions: ['v1'],
-  default_version: 'v1',
-  lastUpdatedIso: new Date ().toISOString (),
-  sections: [;
-    {
-
-      id: 'auth',
-      title: 'Auth (JWT, OAuth, Wallet)',
-
-          ],
-          versions: ['v1']
-        }
-      ]
-    },
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       id: 'talent'
       title: 'Talent Profiles'
 
@@ -200,20 +133,7 @@ const v1: ApiDocsSpec = {
           method: 'GET'
           visibility: 'public'
           auth: ['jwt']
-<<<<<<< HEAD
-          params: { talentId: 'The UUID of the talent' }
-          responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } }
-          samples: [
-<<<<<<< HEAD
 
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r && r.json())` },
-            { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
-
-=======
-          params: { talentId: 'The UUID of the talent' ;}
-      title: 'Auth (JWT;, OAuth, Wallet)',']
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           ],
     },
 
@@ -268,12 +188,6 @@ pr-12325
       ]
     },
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {
               language: 'curl';,
               code: `curl '${baseUrl;}/v1/talent/123' -H 'Authorization: Bearer <token>'`;,
@@ -293,22 +207,7 @@ pr-12325
     },
     {
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
 
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r && r.json())` },
-            { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
-
-          ],
-          versions: ['v1']
-        }
-      ]
-    },
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       id: 'jobs'
       title: 'Job Listings'
 
@@ -325,53 +224,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           responseBodySchema: { type: 'object';, properties: { items: { type: 'array';, items: { type: 'object' ;} }, nextPage: { type: 'string' ;} } }
           samples: [
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-const baseUrl = 'https://api.zion.os';
-
-const baseUrl = 'https://api.zion.os';
-const v1: ApiDocsSpec = {
-
-  openapi: '3.0.0';,
-  info: {
-    title: 'Zion OS API';,
-    version: '1.0.0';,
-    description: 'Zion OS API Documentation';
-  },
-  servers: [{ url: baseUrl ;}],
-  paths: {
-    '/v1/nation/stats': {
-      get: {
-        summary: 'Get Nation Stats';,
-        responses: {
-          '200': {
-            description: 'Success';,
-            content: {
-              'application/json': {
-                schema: { type: 'object' ;}
-              }
-            }
-          }
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-        }
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       ];
     }
@@ -380,52 +232,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },'`
             { language: 'python', code: `import requests\nrequests ;
 
-
-=======
-        }
-      ];
-    }
-
-            { language: 'curl';, code: `curl '${baseUrl;}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` ;},
-            { language: 'javascript';, code: `await fetch('${baseUrl;}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' ;} }).then(r => r && r.json())` },
-            { language: 'python';, code: `import requests\nrequests ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-<<<<<<< HEAD
-  }
-
-  ];
-
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-  ];
-
-  }
-
-  ];
-
-  }
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 export default v1;
   ];
@@ -433,10 +242,7 @@ export default v1;
 ;
 export default v1;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
             {
@@ -649,63 +455,3 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export default v1;
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-</token>`;
-            { language: 'javascript';, code: `await fetch('${baseUrl;}/v1/messages', { method: 'POST';, headers: { Authorization: 'Bearer <token>';, 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123';, body: 'Hello' ;}) }).then(r => r && r.json())` },
-            { language: 'python';, code: `import requests\nrequests && nrequests.post('${baseUrl;}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
-            { language: 'curl';, code: `curl '${baseUrl;}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` ;},
-            { language: 'javascript';, code: `await fetch('${baseUrl;}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' ;} }).then(r => r && r.json())` },
-</token>]`;
-pr-12325
-'
-      id: 'talent'';,'
-  title: 'Talent Profiles''
-      endpoints: [
-        {'
-          id: 'talent-get'';,'
-  title: 'Get Talent Profile'''
-          description: 'Fetch a talent profile by ID.'';,'
-  path: '/v1/talent/{talentId;}'''
-          method: 'GET'';,'
-  visibility: 'public'']'
-          auth: ['jwt']';,'
-  params: { talentId: 'The UUID of the talent' ;}''
-          responseBodySchema: { type: 'object';, properties: { id: { type: 'string' ;}, name: { type: 'string' ;}, skills: { type: 'array';, items: { type: 'string' ;} } } }'
-          samples: [
-'
-            { language: 'curl';, code: `curl -X POST ${baseUrl;}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123";,"body":"Hello"}'` },'
-</token>'
-            { language: 'javascript';, code: `await fetch('${baseUrl;}/v1/messages', { method: 'POST';, headers: { Authorization: 'Bearer <token>';, 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123';, body: 'Hello' ;}) }).then(r => r && r.json())` },'
-</token>'
-            { language: 'python';, code: `import requests\nrequests && nrequests.post('${baseUrl;}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }'
-</token>'
-            { language: 'curl';, code: `curl '${baseUrl;}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` ;},'
-</token>'
-            { language: 'javascript';, code: `await fetch('${baseUrl;}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' ;} }).then(r => r && r.json())` },'
-</token>]'
-
-        }
-      ];
-    }
-            { language: 'curl';,}
-  code: `curl '${baseUrl;}/v1/wallet/balance' -H 'Authorization: Bearer <token />'` ;},
-            { language: 'javascript';,}
-  code: `await fetch('${baseUrl;}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token />' ;} }).then(r => r && r.json())` },
-
-            { language: 'python';,
-  code: `import requests\nrequests ;
-
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,35 +1,4 @@
-
-=======
-import { useState, useEffect } from "react",;
-import { AppHeader } from "@/layout/AppHeader", ;
-import { Footer } from "@/components/Footer",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Link } from "react-router-dom",;
-import { SEO } from "@/components/SEO",;
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from "lucide-react",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Avatar } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",;
-import { MyApplications } from "@/components/jobs/MyApplications",;
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",;
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",;
-;
-function TalentDashboardContent() {;
-  const { user } = useAuth(),;
-  const [activeTab, setActiveTab] = useState("job-matches"),;
-;
-  return (;
-    <>;
-      <SEO ;
-        title="Talent Dashboard | Zion AI Marketplace" ;
-        description="Your personalized talent dashboard with job matches and professional opportunities." ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      />;
+/>;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
@@ -51,7 +20,6 @@ function TalentDashboardContent() {;
             </Button>;
           </div>;
         </div>;
-<<<<<<< HEAD
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
           <div>;
@@ -173,4 +141,3 @@ function TalentDashboardContent() {;
       </main>;
       <Footer />;
     </>;
-

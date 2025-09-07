@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <Layout>;
       <Head>;
         <title>API Documentation | Zion Tech Group</title>;
@@ -45,9 +43,8 @@ function APIDocumentationPage() {}
     </Layout>);
 ;
 
-import React from 'react',
-import React from 'react';
 import Head from 'next/head';
+
 import Layout from '../components/layout/Layout';
 export default function APIDocumentationPage() {}
   return (
@@ -107,10 +104,6 @@ export default function APIDocumentationPage(req, res) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 
-  }
-}
-;
-
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -123,9 +116,3 @@ class ErrorBoundary extends React.Component {}
   }
 }
 ;
-
-    </Layout>
-  );
-
-'"
-

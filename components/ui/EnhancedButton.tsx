@@ -1,6 +1,3 @@
-
-
-pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,9 +16,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-pr-12243
 
 import React from "react";
+
 import clsx from "clsx";
 export type EnhancedButtonProps =;
   React && React.ButtonHTMLAttributes<HTMLButtonElement> & {;"
@@ -31,13 +28,6 @@ export type EnhancedButtonProps =;
 
   };
 
-pr-12243
-  };
-const baseStyles =;
-  "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";
-const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
-  sm: "text-sm px-3 py-2",;
-  md: "text-sm px-4 py-3",;
   lg: "text-base px-5 py-3",;
 };
 const variantStyles: Record<;"
@@ -57,10 +47,6 @@ export default function EnhancedButton(): any ({;
   fullWidth,;
   ...props;
 }: EnhancedButtonProps) {;
-
-  return (
-    <button
-      className={clsx(
 
 import React from 'react';
 import clsx from 'clsx';
@@ -116,21 +102,13 @@ export default function EnhancedButton({
   size = "md"
   fullWidth
 
-import React from 'react';
-import clsx from 'clsx';
-export type EnhancedButtonProps = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
   ...props
 }: EnhancedButtonProps) {
   return (
     <button
 className={clsx(
 
-pr-12243
-
         baseStyles
-
-        baseStyles;
 
         sizeStyles[size]
         variantStyles[variant]"
@@ -143,7 +121,6 @@ pr-12243
 
 }
 
-pr-12243
 import React from './react';
 export type EnhancedButtonProps =;
   React.ButtonHTMLAttributes < HTMLButtonElement> & {
@@ -209,11 +186,6 @@ sizeStyles[size]
 );
 }
 
-    />
-  );
-main
-pr-12243
-
 }
 
 const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {}
@@ -224,42 +196,3 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {}
     </div>
   );
 };
-
-export default EnhancedButton;
-}
-
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-
-    />;
-);
-/>
-  );
-    />
-  );
-main
-pr-12243
-    />;
-);
-}
-
-const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    ;}) => {
-
-}
-  return (}
-    <div className={className || ''} />
-      <h1 />EnhancedButton</h1>
-      <p />This component is under development.</p>
-    </div>
-  )
-};
-
-export default EnhancedButton;
-}
-
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-"
-

@@ -1,17 +1,7 @@
-
-=======
-import React, { useState } from "react",;
-import { Dispute, DisputeStatus } from "@/types/disputes",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import {;
-  Table,;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  TableBody,;
+TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
-<<<<<<< HEAD
 
               ))}
             </TableBody>;
@@ -43,4 +33,3 @@ import {;
                 </TableCell>;
               </TableRow>;
             ))}
-

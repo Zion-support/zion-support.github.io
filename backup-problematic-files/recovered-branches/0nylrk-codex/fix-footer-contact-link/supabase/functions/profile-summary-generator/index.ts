@@ -1,4 +1,3 @@
-
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1';
@@ -20,8 +19,7 @@ serve(async (req) => {;
     if (!bio || bio.length < 20) {;
       return new Response(;
         JSON.stringify({ error:"Bio must be at least 20 characters long" });
-        { status:400, headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
-      );
+        { status:400, headers:{ ...corsHeaders, 'Content-Type':'application/json' } });
     }
 ;
     // Create a request to OpenAI API;
@@ -99,16 +97,14 @@ serve(async (req) => {;
 ;
     return new Response(;
       JSON.stringify(parsedResponse);
-      { headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
-    );
+      { headers:{ ...corsHeaders, 'Content-Type':'application/json' } });
 ;
   } catch (error) {;
     console.error("Error in profile-summary-generator function:", error);
     ;
     return new Response(;
       JSON.stringify({ error:error.message });
-      { status:500, headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
-    );  }
+      { status:500, headers:{ ...corsHeaders, 'Content-Type':'application/json' } });  }
 });
  const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type' 
@@ -156,7 +152,3 @@ return new Response (JSON.stringify ({
 }) 
 }
 });
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -13,13 +13,7 @@ export const generateMetadata = (title: string, description: string) => {}
       card: 'summary_large_image',`
       title: `${title} - Zion Tech Group`,
       description,
-<<<<<<< HEAD
-    },
-  }
-=======
-    },;
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 };
 
 export const generateStructuredData = () => {}
@@ -35,12 +29,6 @@ export const generateStructuredData = () => {}
       "telephone": "+1-555-123-4567","
       "contactType": "customer service","
       "email": "contact@ziontechgroup.com"
-<<<<<<< HEAD
-    }
-  }
-=======
-    };
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 };
 '"`

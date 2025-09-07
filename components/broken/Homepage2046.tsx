@@ -1,131 +1,7 @@
-import Layout from './layout/Layout';'
-import { motion, AnimatePresence } from 'framer-motion';
-
-import {}
-class ErrorBoundary extends React.Component {}
-  constructor(props) {};
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {'
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}'
-import React, { useState, useEffect } from 'react';'
-import Layout from './layout / Layout';'
-import { motion, AnimatePresence } from 'framer-motion';
-
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, ;
   Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
-  Eye, Clock, DollarSign, CheckCircle, ArrowUpRight;'
-} from 'lucide-react';
-    {/* Quantum particle effects */}'
-    <div className='absolute inset-0'>;
-      {[...Array(100)].map((_, i) => (;
-        <motion&& motion.div;
-  ArrowRight,
-  Play,
-  Star,
-  Users,
-  Award,
-  TrendingUp,
-  Brain,
-  Shield,
-  Rocket,
-  Loader2,
-  ChevronDown,
-  Zap,
-  Globe,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Palette,
-  Heart,
-  Phone,
-  Mail,
-  MapPin,
-  Search,
-  Grid,
-  List,
-  Sparkles,
-  Target,
-  BarChart3,
-  Lightbulb,
-  Code,
-  Server,
-  Network,
-  ShieldCheck,
-  BrainCircuit,
-  Atom,
-  Satellite,
-  Eye,
-  Clock,
-  DollarSign,
-  CheckCircle,
-  ArrowUpRight,'
-} from 'lucide-react';
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
-  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3;
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
-  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3,
-import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
-  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
 
-  Eye, Clock, DollarSign, CheckCircle, ArrowUpRight'
- } from 'lucide-react';'
-import Link from 'next/link';
-
-// Import our new innovative services'
-import { innovative2046AIServices } from '../data/innovative-2046-ai-services';'
-import { innovative2046ITServices } from '../data/innovative-2046-it-services';
-'
-import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
-// Enhanced loading component with quantum effects;
-const QuantumLoadingFallback = () => ('
-  <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>
-    {/* Quantum particle effects */}'
-    <div className='absolute inset - 0'>;
-      {[...Array (100)].map ((_, i) => (
-        <motion.div;
-          key={i}'
-          className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - full';
-          animate={{}
-          }}
-          style={{'
-            left: Math.random() * 100 + '%','
-            top: Math.random() * 100 + '%'}}
-        />
-      ))}
-    </div>
-
-    
-    {/* Quantum loading animation */}
-    <motion&& motion.div;
-      initial={{ opacity: 0, scale: 0 && 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1 }}
-
-className='text-center relative z-10'
-origin/cursor/automate-test-improve-and-merge-code-2533
-    >
       <div className='relative'>
         <motion.div;
           animate={{}
@@ -221,19 +97,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [activeSection, setActiveSection] = useState('hero');'
   const [selectedCategory, setSelectedCategory] = useState('all');'
   const [searchQuery, setSearchQuery] = useState('');
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-setIsVisible(true);
-    }, 2000);
 
-    return () => clearTimeout(timer);
-  }, []);
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  // Intersection Observer for better performance
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
       const observer = new (window as any).IntersectionObserver(
         (entries: any[]) => {}
             coordinate_x: [0, Math.random () * 1200],
@@ -372,8 +236,7 @@ if ( {) {}
               setActiveSection (entry.target.id);
             }
           });
-        },        { threshold: 0 && 0.3 }
-      );
+        },        { threshold: 0 && 0.3 });
       return () => observer.disconnect()
     }
   }, []);
@@ -618,16 +481,8 @@ if ( {) {}
               }}
               style={{'
                 left: Math.random() * 100 + '%',
-          entries.forEach(entry => {
-entries.forEach(entry => {
-origin/cursor/automate-test-improve-and-merge-code-2533
-            if (entry.isIntersecting) {
-              setActiveSection(entry.target.id);
-            }
-          });
-        },
-        { threshold: 0.3 }
-      );'
+
+        { threshold: 0.3 });'
       const sections = document.querySelectorAll('section[id]');
 sections.forEach(section => observer.observe(section));
 
@@ -637,10 +492,7 @@ sections.forEach(section => observer.observe(section));
   if (isLoading) {}
     return <QuantumLoadingFallback />;
   }
-  const allServices = [
-...innovative2046AIServices,
-    ...innovative2046ITServices,
-    ...innovative2046MicroSAASServices,
+
   ];
   const filteredServices = allServices.filter(service => {}
     const matchesCategory ='
@@ -664,35 +516,19 @@ sections.forEach(section => observer.observe(section));
 origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30'
-              animate={{
+
                 x: [0, Math.random() * 100 - 50]
                 y: [0, Math.random() * 100 - 50]
                 opacity: [0.3, 0.8, 0.3]
               }}
               transition={{}
               }}
-              style={{
-                left: Math.random() * 100 + '%',
-                top: Math.random() * 100 + '%',
-              }}
-            />
-        {/* Hero Section */}
-<section
-          id='hero'
-          className='relative z-10 min-h-screen flex items-center justify-center px-4'
-        >
-          <div className='text-center max-w-6xl mx-auto'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <motion.div
+
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-<motion.h1
-                className='text-6xl md:text-8xl font-bold text-white mb-8'
+
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
@@ -708,9 +544,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,"
               <motion.div"
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"'
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent'>
-<span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                  Zion Tech Group
+
                 </span>
               </motion.h1>
               <motion.p'
@@ -727,10 +561,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
-              >
-Revolutionary{' '}
-                <span className='text-cyan-400 font-semibold'>Quantum AI</span>,
-                <span className='text-purple-400 font-semibold'>
+
                   {' '}
                   Neural Interfaces;
                 </span>
@@ -739,9 +570,7 @@ Revolutionary{' '}
                   {' '}
                   Space Technology'
                 </span>{' '}
-                Solutions
-              <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'
+
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.5 }}
@@ -838,10 +667,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Services Showcase Section */}"
         <section id="services" className="relative z-10 py-20 px-4">"
           <div className="max-w-7xl mx-auto">
-<section id='services' className='relative z-10 py-20 px-4'>
-          <div className='max-w-7xl mx-auto'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <motion.div
+
             >
 
             >
@@ -852,10 +678,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 1 }}
               viewport={{ once: true }}
 
-className='text-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-            >
-              <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
                   Revolutionary Services;
                 </span>
@@ -904,11 +726,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 1, delay: 0 && 0.2 }}
               viewport={{ once: true }}
 
-className='mb-12'
-origin/cursor/automate-test-improve-and-merge-code-2533
-            >
-              <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>
-                <div className='relative flex-1 max-w-md'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
                   <input'
                     type='text''
@@ -930,16 +747,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     type="text""
                     placeholder="Search services..."
                     value={searchQuery}
-                  {categories.map(category => (                    <button
-
-                    onChange={e => setSearchQuery(e.target.value)}
-                    className='w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg'
-                  />
-                </div>
-                <div className='flex gap-2'>
-                  {categories.map(category => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    <button
 
                       key={category}
                       onClick={() => setSelectedCategory(category)}
@@ -969,13 +776,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   viewport={{ once: true }}'
                   className='group'
 
-                  whileHover={{ y: -10, scale: 1.02 }}
-className='group'
-origin/cursor/automate-test-improve-and-merge-code-2533
-                >
-                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>
-                    <div className='flex items-start justify-between mb-4'>
-                      <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
                         <Brain className='w-6 h-6 text-white' />
                       </div>'
                       <div className='text-right'>'
@@ -1026,9 +826,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
-                    </div>
 
-<h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
                       {service.name}
                     </h3>'
                     <p className='text-gray-300 text-sm mb-4 line-clamp-3'>
@@ -1496,12 +1294,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-              transition={{ duration: 1, delay: 0.6 }}
-              viewport={{ once: true }}
-className='text-center mt-20'
-origin/cursor/automate-test-improve-and-merge-code-2533
-            >
-              <div className='bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-cyan-400/30'>
                 <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
                   Ready to Transform Your Business?
                 </h3>'
@@ -1540,17 +1332,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </motion && motion.button>;
                   </Link>;'
                   <Link href='/services'>;
-                    <motion&& motion.button
-                      whileTap={{ scale: 0.95 }}
-                      className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
-                    >
-                      Get Started Today
-                    </motion.button>
-                  </Link>
-<Link href='/services'>
-                    <motion.button
-origin/cursor/automate-test-improve-and-merge-code-2533
-                      whileHover={{
+
                       }}
                       whileTap={{ scale: 0 && 0.95 }}'
                       className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'>                    <motion&& motion.button"
@@ -1655,22 +1437,3 @@ export default Homepage2046;
   );
 
 };
-
-                      whileTap={{ scale: 0.95 }}
-                      className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'
-                    >
-                      View All Services
-                    </motion.button>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-);
-};
-
-export default Homepage2046;
-origin/cursor/automate-test-improve-and-merge-code-2533

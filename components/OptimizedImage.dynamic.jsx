@@ -1,5 +1,5 @@
 import React from 'react';
-export default OptimizedImage.dynamic;
+
 ;
 const OptimizedImage.dynamic = () => {}
   return (
@@ -16,4 +16,3 @@ const OptimizedImage.dynamic = () => ;
 
 pr-12243
 export default OptimizedImage.dynamic;
-

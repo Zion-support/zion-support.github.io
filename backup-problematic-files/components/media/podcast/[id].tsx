@@ -14,21 +14,10 @@ export default function EpisodePage() {
     })()
   }, [id]),
 
-<<<<<<< HEAD
-  if (!episode) return <div>Loading…</div>,
-=======
-
-  if (!episode) return <div>Loading</div>,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-bold">{episode.title}</h1>
-<<<<<<< HEAD
-      <p className="text-sm text-gray-600">Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
-=======
-      <p className="text-sm text-gray-600">Guest: {episode.invitee?.name}  {new Date(episode.createdAt).toLocaleString()}</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
       {episode.audio?.mp3Url && (
         <audio controls className="w-full">
           <source src={episode.audio.mp3Url} type="audio/mpeg" />
@@ -39,9 +28,5 @@ export default function EpisodePage() {
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
       </div>
     </div>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 }

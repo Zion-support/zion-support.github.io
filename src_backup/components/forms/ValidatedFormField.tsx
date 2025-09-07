@@ -1,128 +1,17 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',;
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
-import { Checkbox } from '@/components/ui/checkbox',;
-import { cn } from '@/lib/utils',;
-=======
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-import { FormField, FormItem, FormLabel, FormControl, FormMessage  } from '@/components/ui/form';
-import { Input  } from '@/components/ui/input';
-import { Textarea  } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
-import { Checkbox  } from '@/components/ui/checkbox';
-import { cn  } from '@/lib/utils';
-import React, { useState, useEffect } from 'react'
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
-import { cn } from '@/lib/utils'
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
-=======
-import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormMessage,;'
-} from '@/components/ui/form';'
-import { Input } from '@/components/ui/input';'
-import { Textarea } from '@/components/ui/textarea';
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue,;'
-} from '@/components/ui/select';import { Checkbox } from '@/components/ui/checkbox';'
-import { cn } from '@/lib/utils';'
-import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-interface ValidationRule {  required?: boolean;
-=======
-=======
-interface ValidationRule {
-interface ValidationRule {;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
   required?: boolean;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
 
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-  name: string
-  label: string
-  type?:
-    | 'text'
-    | 'email'
-    | 'password'
-    | 'tel'
-    | 'url'
-    | 'number'
-    | 'textarea'
-    | 'select'
-=======
-
-  name: string;
-  label: string;
-  type?:'
-    | 'text''
-    | 'email''
-    | 'password''
-    | 'tel''
-    | 'url''
-    | 'number''
-    | 'textarea''
-    | 'select''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
     | 'checkbox'
   placeholder?: string;
   description?: string;
   validation?: ValidationRule;
   options?: { value: string; label: string }[]
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-  form: any; // React Hook Form control
-  className?: string
-  disabled?: boolean
-  showValidIcon?: boolean
 
-  debounceMs?: number
-export function ValidatedFormField({
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-
-  name
-  label
-=======
-  form: any; // React Hook Form control;
-  className?: string;
-  disabled?: boolean;
-  showValidIcon?: boolean;
-  debounceMs?: number;
-export function ValidatedFormField({};
-  name;
-  label'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
   type = 'text'
   placeholder;
   description;
@@ -158,14 +47,7 @@ export function ValidatedFormField({};
       const error = validateField(fieldValue)'
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-    setDebounceTimer(timer)
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
-=======
-    setDebounceTimer(timer)'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
+
 import React, { useState, useEffect } from 'react';
 import {}
   FormField,
@@ -292,13 +174,7 @@ if ( {) {}
       return validation.custom (value);
     }
     return null;
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
   }
   const getValidationIcon = () =>: any {}
     // Check condition;
@@ -334,24 +210,7 @@ if (return '') {}
   }
   const render_field = () =>: any {}
     const base_classes = cn (getFieldClasses (), class_name);
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-    switch (type) {
 
-import React, { useState, useEffect } from 'react';
-
-import { Checkbox } from '@/components/ui/checkbox';
-import { cn } from '@/lib/utils';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
-=======
-    switch (type) {}
-'
-import React, { useState, useEffect } from 'react';
-'
-import { Checkbox } from '@/components/ui/checkbox';'
-import { cn } from '@/lib/utils';'
-import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
 import { Button } from '@/components/ui/button',;
 interface ValidationRule {;
   required?: boolean,;
@@ -362,40 +221,7 @@ interface ValidationRule {;
 }
 ;
 interface ValidatedFormFieldProps {;
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-  name: string,;
-  label: string,;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox',;
-  placeholder?: string,;
-  description?: string,;
-  validation?: ValidationRule,;
-  options?: { value: string, label: string }[],;
-  form: any, // React Hook Form control;
-  className?: string,;
-  disabled?: boolean,;
-  showValidIcon?: boolean,;
-=======
-  name: string;
-  label: string;
-  type?:;'
-    | 'text';'
-    | 'email';'
-    | 'password';'
-    | 'tel';'
-    | 'url';'
-    | 'number';'
-    | 'textarea';'
-    | 'select';'
-    | 'checkbox';
-  placeholder?: string;
-  description?: string;
-  validation?: ValidationRule;
-  options?: { value: string; label: string }[];
-  form: any; // React Hook Form control;
-  className?: string;
-  disabled?: boolean;
-  showValidIcon?: boolean;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
+
   debounceMs?: number;
 }
 ;
@@ -411,105 +237,21 @@ export function ValidatedFormField({;
   className,;
   disabled = false,;
   showValidIcon = true,;
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-  debounceMs = 300}: ValidatedFormFieldProps) {;
-  const [showPassword, setShowPassword] = useState(false),;
-  const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle'),;
-  const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(null),;
-  const fieldValue = form.watch(name),;
-  const fieldError = form.formState.errors[name],;
-  const isTouched = form.formState.touchedFields[name],;
-  // Debounced validation;
-  useEffect(() => {;
-    if (!fieldValue || !isTouched) {;
-      setValidationState('idle'),;
-=======
-  debounceMs = 300,;
-}: ValidatedFormFieldProps) {;
-  const [showPassword, setShowPassword] = useState(false);
-  const [validationState, setValidationState] = useState<;'
-    'idle' | 'validating' | 'valid' | 'invalid';'
-  >('idle');
-  const [debounceTimer, setDebounceTimer] = useState<NodeJS && NodeJS.Timeout | null>(;
-    null;
-  );
 
-  const fieldValue = form && form.watch(name);
-  const fieldError = form && form.formState.errors[name];
-  const isTouched = form && form.formState.touchedFields[name];
-
-  // Debounced validation;
-  useEffect((,) => {;
-    if (!fieldValue || !isTouched) {;'
-      setValidationState('idle');
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
       return;
     }
 ;
     if (debounceTimer) {;
       clearTimeout(debounceTimer);
     }
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-;
-    setValidationState('validating'),;
-    const timer = setTimeout(() => {;
-      const error = validateField(fieldValue),;
-=======
-'
-    setValidationState('validating');
 
-    const timer = setTimeout(() => {;
-      const error = validateField(fieldValue);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
       setValidationState(error ? 'invalid' : 'valid');
     }, debounceMs),;
     setDebounceTimer(timer),;
     return () => {;
-<<<<<<< HEAD
-      if (timer) clearTimeout(timer);
-    }
-  }, [fieldValue, isTouched, debounceMs]),;
-=======
-      if (timer) clearTimeout(timer)
-};
-  }, [fieldValue, isTouched, debounceMs]);
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const validateField = (value: any): string | null => {;
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-    if (validation.required && (!value || (typeof value === 'string' && value.trim() === ''))) {;
-      return `${label} is required`;
-    }
-;
-    if (typeof value === 'string') {;
-      if (validation.minLength && value.length < validation.minLength) {;
-        return `${label} must be at least ${validation.minLength} characters`;
-      }
-;
-      if (validation.maxLength && value.length > validation.maxLength) {;
-        return `${label} must not exceed ${validation.maxLength} characters`;
-      }
-;
-      if (validation.pattern && !validation.pattern.test(value)) {;
-=======
-    if (;
-      validation && validation.required &&;'
-      (!value || (typeof value === 'string' && value && value.trim() === ''));
-    ) {;`
-      return `${label} is required`;
-    }
-'
-    if (typeof value === 'string') {;
-      if (validation && validation.minLength && value && value.length < validation && validation.minLength) {;`
-        return `${label} must be at least ${validation && validation.minLength} characters`;
-      }
 
-      if (validation && validation.maxLength && value && value.length > validation && validation.maxLength) {;`
-        return `${label} must not exceed ${validation && validation.maxLength} characters`;
-      }
-
-      if (validation && validation.pattern && !validation && validation.pattern.test(value)) {;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
         return `${label} format is invalid`;
       }
     }
@@ -518,138 +260,18 @@ export function ValidatedFormField({;
       return validation.custom(value);
     }
 
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-    return null
-=======
-
-    return null;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const getValidationIcon = () => {
-    if (!showValidIcon || !isTouched || validationState === 'idle') return null,
-
-    switch (validationState) {
-      case 'validating':
-        return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />,
-      case 'valid':
-        return <CheckCircle className="h-4 w-4 text-green-500" />,
-      case 'invalid':
-        return <AlertCircle className="h-4 w-4 text-red-500" />,
-      default: return null
-;
-    return null;
-  },;
-  const getValidationIcon = () => {;
-    if (!showValidIcon || !isTouched || validationState === 'idle') return null,;
-    switch (validationState) {;
-      case 'validating':;
-        return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />,;
-      case 'valid':;
-        return <CheckCircle className="h-4 w-4 text-green-500" />,;
-      case 'invalid':;
-        return <AlertCircle className="h-4 w-4 text-red-500" />,;
-      default: return null;
-    }
-  },;
-  const getFieldClasses = () => {;
-    if (!isTouched) return '',;
-    switch (validationState) {;
-      case 'valid':;
-        return 'border-green-500 focus: border-green-500 focus:ring-green-500/20',;
-      case 'invalid':;
-        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20',;
-      default:;
-        return '';
-    }
-  },
-
-  const renderField = () => {
-    const baseClasses = cn(getFieldClasses(), className),
-=======
-
-
-
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-  const getValidationIcon = () => {
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-  const getValidationIcon = () => {
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  const getValidationIcon = () => {
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     switch (type) {
       case 'textarea':
         return (
           <div className="relative">
             <Textarea
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
-=======
-  const getValidationIcon = () => {}
-    switch (type) {'
-      case 'textarea':
-        return ('
-          <div className='relative'>;
-            <Textarea;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
               disabled={disabled}
               className={baseClasses}
               rows={4}
-=======
 
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
-              {...form.register(name)}
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-            />
-            <div className="absolute top-2 right-2">
-              {getValidationIcon()}
-            </div>
-          </div>
-        ),
-
-      case 'select':
-=======
-
-            />
-=======
-            />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
-            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
-          </div>
-
-              {...form && form.register(name)}
-            />;'
-            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
-          </div>;
-        );
-
-        ),
-
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
-      case 'select':;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         return (
           <div className="relative">
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
@@ -661,55 +283,13 @@ export function ValidatedFormField({;
                   <SelectItem key={option.value} value={option.value}>
 
                     {option.label}
-<<<<<<< HEAD
-                  </SelectItem>;
-                ))}
-              </SelectContent>
-            </Select>
-            <div className="absolute top-2 right-8">
-              {getValidationIcon()}
-            </div>
-          </div>
-        ),
 
-      case 'checkbox':
         return (
-          <div className="flex items-center space-x-2">
-=======
-                  </SelectItem>
-                ))}
 
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-      case 'checkbox':        return (
-=======
-=======
-
-        ),
-
-
-'
-      case 'checkbox':
-              </SelectContent>;
-            </Select>;'
-            <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
-          </div>;
-        );
-'
-      case 'checkbox':;
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
-        return (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className='flex items-center space-x-2'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
             <Checkbox
-=======
-        return ('
-          <div className='flex items-center space-x-2'>;
-            <Checkbox;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
+
               id={name}
               checked={fieldValue}
               onCheckedChange={(checked) => form.setValue(name, checked)}
@@ -717,23 +297,7 @@ export function ValidatedFormField({;
             />;
             <label;
               htmlFor={name}
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              {label}
-            </label>;
-            {getValidationIcon()}
-          </div>
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-=======
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
 
@@ -741,56 +305,10 @@ export function ValidatedFormField({;
             </label>;
             {getValidationIcon()}
 
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
         ),
 
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-=======
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
       case 'password':
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-          </div>;
-        );
-'
-      case 'password':;
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
-        return (
-=======
-      case 'password':        return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          <div className='relative'>;
-            <Input
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-        return ('
-          <div className='relative'>;
-            <Input;
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}'
               className={cn(baseClasses, 'pr-20')}
@@ -799,95 +317,27 @@ export function ValidatedFormField({;
             />"
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
               {getValidationIcon()}
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-              <Button
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
                 type="button"
                 variant="ghost"
                 size="sm"
-=======
-              <Button;
-"
-                type="button""
-                variant="ghost""
-                size="sm""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
+
                 className="h-7 w-7 p-0"
                 onClick={() => setShowPassword(!showPassword)}'
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
                 {showPassword ? (
-=======
-                {showPassword ? ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
+
                   <EyeOff className="h-4 w-4" />
                 ) : ("
                   <Eye className="h-4 w-4" />
                 )}
-<<<<<<< HEAD
-              </Button>
-            </div>
-          </div>
+
         ),
 
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
-        ),
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       default:
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-        return (
-          <div className='relative'>;
-            <Input
-=======
-              </Button>;
-            </div>;
-          </div>;
-        );
 
-      default:;
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-
-        return (
-          <div className='relative'>;
-            <Input
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
-=======
-        return ('
-          <div className='relative'>;
-            <Input;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
               type={type}
               disabled={disabled}
               className={baseClasses}
@@ -899,12 +349,7 @@ export function ValidatedFormField({;
           </div>;
         );
     }
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-  },;
-=======
-  };
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
+
   if (type === 'checkbox') {;
     return (;
       <FormField;
@@ -920,52 +365,21 @@ export function ValidatedFormField({;
                 {fieldError && ("
                   <FormMessage className="text-sm text-red-500">
 
-=======
-        return (
-          <div className='relative'>;
-            <Input
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
                     {fieldError.message}
                   </FormMessage>;
                 )}
                 {description && !fieldError && (
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                  <p className="text-sm text-muted-foreground">{description}</p>
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
                   <p className="text-sm text-muted-foreground">{description}</p>
 
+                  <p className="text-sm text-muted-foreground">{description}</p>
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
                 )}
               </div>;
             )}
           </FormItem>;
         )}
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-=======
 
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
       case 'textarea':;
         return ('
           <div className='relative'>;
@@ -1074,35 +488,10 @@ if ( {) {}
             {label}
             {validation.required && (
 
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       />;
     );
   }
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-;
-  return (;
-    <FormField;
-      control={form.control}
-      name={name}
-      render={() => (
-        <FormItem>
-          <FormLabel className="text-sm font-medium">
-            {label}
-=======
 
-
-      render={() => (;
-        <FormItem>;'
-          <FormLabel className='text-sm font-medium'>;
-            {label}
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
             {validation.required && <span className="text-red-500 ml-1">*</span>}
           </FormLabel>
           <FormControl>
@@ -1114,65 +503,18 @@ if ( {) {}
                 <FormMessage className="text-sm text-red-500 flex items-center gap-1">"
                   <AlertCircle className="h-3 w-3" />
 
-
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
                   {fieldError.message}
                 </FormMessage>;
               )}
               {description && !fieldError && (
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                <p className="text-sm text-muted-foreground">{description}</p>
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-              )}
-=======
-      default:        return (
-          <div className='relative'>;
-            <Input                  {fieldError.message}
-                </FormMessage>
-              )}
-              {description && !fieldError && (
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
-                <p className="text-sm text-muted-foreground">{description}</p>
-
 
               )}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
+
             </div>;
           )}
         </FormItem>;
       )}
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-    />;
-  );
-}
-;
-// Validation helpers for common patterns;
-export const validationPatterns = {;
-  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,;
-  phone: /^[\+]?[1-9][\d]{0,15}$/,;
-  url: /^https?:\/\/.+/,;
-  strongPassword: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/},;
-=======
 
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
               <span className='text - red - 500 ml - 1'>*</span>)}          </FormLabel>;
           <FormControl>{render_field ()}</FormControl>;
           {(field_error || description) && ('
@@ -1255,55 +597,12 @@ export const validationPatterns = {;
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Pre-configured validation rules;
 export const commonValidations = {;
   required: { required: true },;
   email: {;
     required: true,;
-<<<<<<< HEAD
-    pattern: validationPatterns.email,;
-    custom: (value: string) => {;
-      if (value && !validationPatterns.email.test(value)) {;
-        return 'Please enter a valid email address';
-      }
-      return null;
-    }
-  },;
-  password: {;
-    required: true,;
-    minLength: 8,;
-    custom: (value: string) => {;
-      if (value && !validationPatterns.strongPassword.test(value)) {;
-        return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
-      }
-      return null;
-    }
-  },;
-  phone: {;
-    pattern: validationPatterns.phone;
-    custom: (value: string) => {;
-      if (value && !validationPatterns.phone.test(value)) {;
-        return 'Please enter a valid phone number';
-      }
-      return null;
-    }
-=======
-    pattern: validationPatterns && validationPatterns.email,;
-    custom: (value: string,) => {;
-      if (value && !validationPatterns && validationPatterns.email.test(value)) {;'
-        return 'Please enter a valid email address';
-      }
-      return null;
-    },;
-  },;
-  password: {;
-    required: true,;
-    minLength: 8,;
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
+
     custom: (value: string,) => {;
       if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {;'
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
@@ -1321,34 +620,8 @@ export const commonValidations = {;
 
   }},
     }
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  }};
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-=======
-  }};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
       return null;
     },
   },
 };
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
-=======
-  }};'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx

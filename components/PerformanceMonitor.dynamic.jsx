@@ -1,5 +1,5 @@
 import React from 'react';
-export default PerformanceMonitor.dynamic;
+
 ;
 const PerformanceMonitor.dynamic = () => {}
   return (
@@ -16,4 +16,3 @@ const PerformanceMonitor.dynamic = () => ;
 
 pr-12243
 export default PerformanceMonitor.dynamic;
-

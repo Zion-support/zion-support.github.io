@@ -1,4 +1,4 @@
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+address: '364 E Main St STE 1008 Middletown DE 19709',
 '
         { name: 'Overview', href: '/enhanced-services-showcase' },'
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },'
@@ -18,6 +18,12 @@ export default function DocsPage() {}
       links: ['
       color: 'text-green-400'
     }
+
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
     const matchesSearch =
       doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       doc.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -115,19 +121,7 @@ export default function DocsPage() { return null; }
     switch (difficulty) {    const matchesSearch = doc && doc.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          doc && doc.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());'
     const matchesCategory = selectedCategory === 'all' || doc && doc.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-      selectedCategory === 'all' || doc.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-case 'Beginner':
-origin/cursor/automate-test-improve-and-merge-code-2533
-        return 'bg-green-500/20 text-green-400';
-      case 'Intermediate':;
-        return 'bg-yellow-500/20 text-yellow-400';
-      case 'Advanced':;
         return 'bg-red-500/20 text-red-400';
       default:;'
         return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';'
@@ -163,6 +157,21 @@ day: 'numeric',
 origin/cursor/automate-test-improve-and-merge-code-2533
     });
   };
+
+  return (
+
+                <h2 className='text-xl font-semibold mb-4 text-white'>;
+                  {s && s.title}
+                </h2>;'
+                <ul className='space-y-2'>;
+                  {s && s.links.map(l => (;
+                    <li key={l && l.name}>;
+
+                  ))}
+                </ul>
+              </Card>
+            ))}
+
                     className='text-cyan-400 hover:underline'>;
                     {e && e.name}
                   </a>;
@@ -172,6 +181,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
               {external.map((e) => ("
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
+
+                    className='text-cyan-400 hover:underline'
+                  >
+                    {e.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Card>
+
+<Card className='p-6 bg-black/40 border border-gray-700/50'>
+            <h2 className='text-xl font-semibold mb-4 text-white'>
+              Need help?
+            </h2>
+            <div className='flex flex-col sm:flex-row gap-3'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+              <Button
+                href='/contact'
 
                 className='bg-gradient-to-r from-cyan-600 to-blue-600 text-white'>;
                 Contact Support;
@@ -269,13 +296,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {contact.mobile}
               </a>;'`
               <a className='text - purple - 400' href={`mailto:${contact.email}`}>;
-                {contact.email}"
-              </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;"
-            <h2 className="text - xl font - semibold mb - 4 text - white">Need help?</h2>;"
-            <div className="flex flex - col sm:flex - row gap - 3">;"
-              <Button href="/contact" className="bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white">Contact Support</Button>;"
-              <Button href={contact.website} variant="outline" className="border - gray - 600 text - gray - 200">Visit Website</Button>;'"`
-              <a className="text - cyan - 400" href={`tel:${contact.mobile.replace (/[^+\\d]/g, '')}`}>{contact.mobile}</a>;"`
+
               <a className="text - purple - 400" href={`mailto:${contact.email}`}>{contact.email}</a>;
           </Card>;
         </div>;
@@ -290,3 +311,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ul>
           </Card>
 
+              </a>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

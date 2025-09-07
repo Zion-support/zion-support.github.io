@@ -1,9 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Email analysis functionality;
 import { suspiciousEmailDomains } from './constants';
 import { EmailAnalysisResult } from './types';
@@ -29,4 +23,4 @@ export const analyzeEmail = (email:string):EmailAnalysisResult => {;
     isSuspicious:reasons.length > 0;
     reasons;
   };
-}; // Email analysis functionality 
+}; // Email analysis functionality

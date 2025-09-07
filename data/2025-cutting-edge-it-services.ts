@@ -1,30 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-<<<<<<< HEAD
-export const cuttingEdgeITServices2025 = [
-  {
-    id: 'quantum-cloud-infrastructure-platform'
-    name: 'Quantum Cloud Infrastructure Platform'
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
-
-
-
-export const cuttingEdgeITServices2025 = [
-  {
-    id: 'quantum-cloud-infrastructure-platform'
-    name: 'Quantum Cloud Infrastructure Platform'
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     description:
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
       'Quantum-enhanced security protocols'
@@ -437,178 +414,39 @@ export const cuttingEdgeITServices2025 = [
       'Google Cloud'
     ]
     compliance: [
-<<<<<<< HEAD
-      'DevOps Best Practices'
-      'Security Standards'
-      'Quality Assurance Protocols'
-    ]
-  }
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-      'DevOps Best Practices'
-      'Security Standards'
-      'Quality Assurance Protocols'
-    ]
-  }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const cuttingEdgeITServices2025 = [
   {
 
-
-<<<<<<< HEAD
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
-    description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
-    features: [
-      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
-      'Quantum-enhanced data processingAutomated infrastructure management'
-    market_size: '$25.6B',
-    target_audience:;
-      'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
-    competitive_advantage:;
-      'AI - powered DevOps automation, predictive monitoring, intelligent incident response',
-    use_cases: [;
-      'Software development automation',
-      'Continuous deployment pipelines',
-      'Performance monitoring and optimization',
-      'Incident response automation',
-      'Quality assurance automation',
-    ],
-    integrations: [;
-      'GitHub',
-      'GitLab',
-      'Jenkins',
-      'Docker',
-      'Kubernetes',
-      'AWS',
-      'Azure',
-      'Google Cloud',
-    ],
-    compliance: [;
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
-    description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
-    features: [
-      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
-      'Quantum-enhanced data processingAutomated infrastructure management'
-    market_size: '$25.6B',
-    target_audience:;
-      'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
-    competitive_advantage:;
-      'AI - powered DevOps automation, predictive monitoring, intelligent incident response',
-    use_cases: [;
-      'Software development automation',
-      'Continuous deployment pipelines',
-      'Performance monitoring and optimization',
-      'Incident response automation',
-      'Quality assurance automation',
-    ],
-    integrations: [;
-      'GitHub',
-      'GitLab',
-      'Jenkins',
-      'Docker',
-      'Kubernetes',
-      'AWS',
-      'Azure',
-      'Google Cloud',
-    ],
-    compliance: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
       'DevOps Best Practices',
       'Security Standards',
-=======
 
-
-export const cuttingEdgeITServices2025 = []
-  {}
-      'DevOps Best Practices','
-      'Security Standards','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Quality Assurance Protocols',
     ],
-<<<<<<< HEAD
-;
-  },;
 
-'
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-<<<<<<< HEAD
-];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
-];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
 
-=======
-
-  },;
-
-
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
 
-
 ;
-<<<<<<< HEAD
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
-
-;
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-20a4
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-=======
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-
-
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
 
     ];'
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
 
-
-
 '
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export const cuttingEdgeITServices2025 = [;
   {;'
     id: 'quantum-cloud-infrastructure-platform',;'
@@ -814,21 +652,6 @@ export const cuttingEdgeITServices2025 = [;
     ],;'
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;'
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-];
-  },
-    ];
-    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-  }
-];
-;
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
   }
 ];
@@ -837,31 +660,3 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-
-  }
-];
-
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  }
-];
-  },
-    ];
-    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-  }
-];
-;
-  }
-];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,61 +1,12 @@
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { MessageSquare } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { ChatAssistant } from "@/components/ChatAssistant",
-import {logErrorToProduction} from '@/utils/productionLogger',
-export function ChatAssistantTrigger() {
-
-  const [isOpen, setIsOpen] = useState(false),
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  // Handle sending messages to the AI chat assistant
-=======
-// Handle sending messages to the AI chat assistant
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 // Handle sending messages to the AI chat assistant
 
   const handleSendMessage = async (message: string): Promise<void> => {
-    try {
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST"
-        headers: {
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-  const handleSendMessage = async (message: string): Promise<void> => {
-=======
-  // Handle sending messages to the AI chat assistant  const handleSendMessage = async (message: string): Promise<void> => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "Content-Type": "application/json"},
-        body: JSON.stringify({ 
-          messages: [{ role: "user", content: message }] 
-        })}),
-      
-      if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant")
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
         body: JSON.stringify({ ;
           messages: [{ role: "user", content: message }] ;
         })});
@@ -71,7 +22,7 @@ export function ChatAssistantTrigger() {
       
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 import { useState } from "react",;
 import { MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -79,24 +30,7 @@ import { ChatAssistant } from "@/components/ChatAssistant",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 export function ChatAssistantTrigger() {;
   const [isOpen, setIsOpen] = useState(false),;
-<<<<<<< HEAD
-=======
-  // Handle sending messages to the AI chat assistant;
-  const handleSendMessage = async (message: string): Promise<void> => {;
-    try {;
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {;
-        method: "POST",;
-        headers: {;
-          "Content-Type": "application/json"},;
-        body: JSON.stringify({;
-          messages: [{ role: "user", content: message }];
-        })}),;
-      if (!response.ok) {;
-        throw new Error("Failed to get response from AI assistant");
 
-  const [isOpen, setIsOpen] = useState(false);
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Handle sending messages to the AI chat assistant;
   const handleSendMessage = async (message: string): Promise<void> => {;
     try {;
@@ -110,85 +44,29 @@ export function ChatAssistantTrigger() {;
       if (!response.ok) {;
         throw new Error("Failed to get response from AI assistant");
       }
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-      return Promise.resolve();
-    } catch (error) {;
-      logErrorToProduction('Error in AI chat:', { data: error }),;
-      return Promise.resolve();
-    }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },;
-=======
-      return Promise.resolve()
-    } catch (error) {
-      logErrorToProduction('Error in AI chat:', { data: error })
-      return Promise.resolve()
-    }  },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
   return (;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}        size="icon"
-=======
 
-=======
-
-      return Promise && Promise.resolve();
-    } catch (error) {;
-      logErrorToProduction('Error in AI chat:', { data: error }),;
-      return Promise && Promise.resolve();
-    }
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
   },;
   return (;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}
 
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
         size="icon"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
         aria-label="Open chat assistant"
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-      
-<<<<<<< HEAD
-      {isOpen && (
-        <ChatAssistant
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
-      
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
       return Promise.resolve()
     } catch (error) {
       logErrorToProduction('Error in AI chat:', { data: error }),
@@ -196,40 +74,11 @@ export function ChatAssistantTrigger() {;
     }
   },
 
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
-<<<<<<< HEAD
-        size="icon"
-        variant="outline"
-        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
-        aria-label="Open chat assistant"
-      >
-        <MessageSquare className="h-5 w-5" />
-      </Button>        <ChatAssistant
-=======
-=======
-
-  return (
-    <>;
-      <Button
-        onClick = {(,) => setIsOpen(true),}
-
-        size="icon";
-        variant="outline";
-        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50";
-        aria-label="Open chat assistant";
-      >;
-        <MessageSquare className="h-5 w-5" />;
-      </Button>;
-
-      {isOpen && (;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
         <ChatAssistant
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           recipient={{;
@@ -237,25 +86,7 @@ export function ChatAssistantTrigger() {;
             name: 'AI Assistant';
             avatarUrl: 'https://placehold.co/64x64?text=AI';
             role: 'Virtual Assistant';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
 import { useState } from 'react';
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -273,25 +104,11 @@ export function ChatAssistantTrigger() {
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = null;
             role: 'Virtual Assistant'
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
+
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </>;
-  );
-}
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     </>;
   );
@@ -350,49 +167,20 @@ if ( {) {
             avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant';
           }}
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
+
           onSendMessage = {handleSendMessage, }
         />)}
     </>);
 }
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
     </>;
-=======
-      {isOpen && (
-        <ChatAssistant    </>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
   );
 }
 ;
 
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
 ;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
     </>
   );
 
@@ -411,9 +199,3 @@ return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
 }/>) ;
 }</>) ;
 }'"
-<<<<<<< HEAD:src/components/ChatAssistantTrigger.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistantTrigger.tsx
