@@ -193,6 +193,10 @@ export default function ComprehensivePricingGuide2026() {
     }
   };
 
+  const toggleServiceExpansion = (serviceId: string) => {
+    setExpandedService(expandedService === serviceId ? null : serviceId);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
@@ -418,7 +422,54 @@ export default function ComprehensivePricingGuide2026() {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           <span>{feature}</span>
                         </div>
-                      ))}
+                        <div>
+                          <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                            {service.title}
+                          </h3>
+                          <div className="flex items-center space-x-2 mt-1">
+                            <span className={`inline-flex items-center px-2 py-1 rounded-full bg-gradient-to-r ${getCategoryColor(service.category)} text-white text-xs font-medium`}>
+                              {service.category}
+                            </span>
+                            {service.featured && (
+                              <span className="inline-flex items-center px-2 py-1 rounded-full bg-yellow-500/20 text-yellow-400 text-xs font-medium">
+                                <Star className="w-3 h-3 mr-1" />
+                                Featured
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Pricing Summary */}
+                      <div className="text-right">
+                        <div className="text-3xl font-bold text-cyan-400 mb-1">{service.ourPrice}</div>
+                        <div className="text-slate-400 capitalize">{service.billing}</div>
+                        <div className="text-sm text-green-400 mt-1">Save {service.savings}</div>
+                      </div>
+                    </div>
+
+                    <p className="text-slate-300 mb-4 text-lg">
+                      {service.description}
+                    </p>
+
+                    {/* Key Metrics */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <div className="text-center p-3 bg-slate-700/30 rounded-lg">
+                        <div className="text-lg font-bold text-cyan-400">{service.ourPrice}</div>
+                        <div className="text-xs text-slate-400">Our Price</div>
+                      </div>
+                      <div className="text-center p-3 bg-slate-700/30 rounded-lg">
+                        <div className="text-lg font-bold text-green-400">{service.roi}</div>
+                        <div className="text-xs text-slate-400">ROI</div>
+                      </div>
+                      <div className="text-center p-3 bg-slate-700/30 rounded-lg">
+                        <div className="text-lg font-bold text-blue-400">{service.implementationTime}</div>
+                        <div className="text-xs text-slate-400">Implementation</div>
+                      </div>
+                      <div className="text-center p-3 bg-slate-700/30 rounded-lg">
+                        <div className="text-lg font-bold text-purple-400">{service.supportLevel}</div>
+                        <div className="text-xs text-slate-400">Support</div>
+                      </div>
                     </div>
                   </div>
 

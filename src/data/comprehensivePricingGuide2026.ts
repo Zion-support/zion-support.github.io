@@ -14,12 +14,11 @@ export interface PricingTier {
   href: string;
 }
 
-export interface ServicePricing {
+export type ServicePricing = {
   id: string;
   title: string;
   description: string;
   category: string;
-  subcategory: string;
   pricingTiers: PricingTier[];
   features: string[];
   benefits: string[];
