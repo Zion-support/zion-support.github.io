@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from './App';
+
+=======
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './src/App';
@@ -20,6 +27,7 @@ import App from './src/App';
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
@@ -33,6 +41,11 @@ describe('App', () => {
 
   it('handles user interactions', () => {
     render(<App />);
+<<<<<<< HEAD
+    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
+  });
+});
+=======
     // Add interaction tests here
     expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
@@ -42,3 +55,4 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -3,7 +3,10 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 class FinalAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
@@ -166,3 +169,7 @@ if (require.main === module) {
   });
 }
 
+<<<<<<< HEAD
+module.exports = FinalAutomationOrchestrator;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

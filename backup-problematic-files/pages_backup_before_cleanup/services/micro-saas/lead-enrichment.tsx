@@ -10,3 +10,9 @@ export default function Leadenrichment({ }: LeadenrichmentProps) {
       <p>This component is under development.</p>
     </div>
   );
+<<<<<<< HEAD:backup-problematic-files/pages_backup_before_cleanup/services/micro-saas/lead-enrichment.tsx
+=======
+}
+}
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:backup-problematic-files/pages.bak/services/micro-saas/lead-enrichment.tsx

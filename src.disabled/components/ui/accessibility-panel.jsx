@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+"use client\"; \",\"; \"react\";\"; \"framer-motion\'
+"use client"; ","; "react";"; "framer-motion""""
+=======
 "use client"; ","; "react";"; "framer-motion'''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 "use client\"; \",\"; \"react\";\"; \"framer-motion\'
@@ -13,7 +18,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "use client\"; \",\"; \"react\";\"; \"framer-motion\'
 "use client"; ","; "react";"; "framer-motion""""
 "use client"; ","; "react";"; "framer-motion'''
+<<<<<<< HEAD
+=======
 "use client"; ","; "react";"; "framer-motion'''
 "use client\"; \",\"; \"react\";\"; \"framer-motion\'
 "use client"; ","; "react";"; "framer-motion""""
 "use client"; ","; "react";"; "framer-motion'''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

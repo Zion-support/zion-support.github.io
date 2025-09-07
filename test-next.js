@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { execSync } = require('child_process');
 console.log('Testing Next.js installation...');
 try {// Check if Next.js is installed;
@@ -12,8 +15,11 @@ try {// Check if Next.js is installed;
 const { execSync } = require('child_process'),;
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 console.log('Testing Next.js installation...'),;
 try {;
   // Check if Next.js is installed;

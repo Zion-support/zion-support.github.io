@@ -23,8 +23,11 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 export const Next.config.analyze = () => {
   // Implementation here
   return null;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 };
 
 ,;
@@ -39,6 +42,8 @@ export const Next.config.analyze = () => {
 
 
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -47,6 +52,7 @@ export const Next.config.analyze = () => {
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 ;}
 }
@@ -68,7 +74,10 @@ module && module.exports = {
 ,;
 ;};
 ;
+<<<<<<< HEAD
+=======
 };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 
@@ -77,8 +86,11 @@ module && module.exports = {
 
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 ;}
 }
@@ -124,8 +136,11 @@ module.exports = {
   if (!isServer) {
   config.plugins.push(;
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
+=======
 };
 ,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 
@@ -179,6 +194,11 @@ const { BundleAnalyzerPlugin } = require ("webpack - bundle - analyzer"); module
 if ( { config.plugins.push () {
   $2
 } new BundleAnalyzerPlugin ({ analyzer_mode: "static", open_analyzer: false, report_filename: "bundle - analysis.html", }))} return config} }
+<<<<<<< HEAD
+},;
+,;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 };
 ;
 ,;

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
+const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
+=======
 import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';

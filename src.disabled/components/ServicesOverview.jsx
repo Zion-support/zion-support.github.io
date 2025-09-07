@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+' import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe\''\'";\";
+" import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe"""";";'"'"
+=======
 ' '''";";""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 ' import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe\''\'";\";

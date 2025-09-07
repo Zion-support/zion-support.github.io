@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 
@@ -13,26 +13,24 @@ function resolveMergeConflicts(filePath) {
         
         // Check if file has merge conflicts
 <<<<<<< HEAD
+        if (!content.includes('            return false; // No conflicts to resolve
 =======
-        if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
             return false; // No conflicts to resolve
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         }
         
         // Strategy: Keep HEAD version (current branch) for most conflicts
         // Remove merge conflict markers and keep the HEAD version
 <<<<<<< HEAD
-        
+        content = content.replace(/        
         // Remove any remaining conflict markers
+        content = content.replace(/        content = content.replace(/\n/g, '');
+        content = content.replace(/        
 =======
-        content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
         
         // Remove any remaining conflict markers
-        content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
-        content = content.replace(/=======\n?/g, '');
-        content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
         
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');
         
@@ -53,12 +51,13 @@ function getConflictFiles() {
         return result.trim().split('\n').filter(file => file.length > 0);
     } catch (error) {
         // If git command fails, use grep to find files with conflict markers
+        const { execSync } = require('child_process');
         try {
 <<<<<<< HEAD
+            const result = execSync('grep -l "            return result.trim().split('\n').filter(file => file.length > 0);
 =======
-            const result = execSync('grep -l "<<<<<<<" -r . --exclude-dir=node_modules --exclude-dir=.git', { encoding: 'utf8' });
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
             return result.trim().split('\n').filter(file => file.length > 0);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         } catch (e) {
             return [];
         }

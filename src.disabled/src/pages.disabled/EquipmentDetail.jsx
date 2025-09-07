@@ -40,8 +40,11 @@ export default function EquipmentDetail({ }: EquipmentDetailProps) {
 :src.disabled/src/pages.disabled/EquipmentDetail.jsx
 }
 }
+<<<<<<< HEAD
+=======
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 :temp_exclude/src.disabled/src/pages.disabled/EquipmentDetail.jsx
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

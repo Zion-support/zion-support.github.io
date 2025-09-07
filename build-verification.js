@@ -33,7 +33,10 @@ try {
     Shield,
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     Zap,
   } = require('lucide-react');
   console.log('✅ Lucide React icons import successful', {

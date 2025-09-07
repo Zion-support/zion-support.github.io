@@ -40,8 +40,11 @@ export default function Aichatassistant({ }: AichatassistantProps) {
 :src.disabled/components/ui/ai-chat-assistant.jsx
 }
 }
+<<<<<<< HEAD
+=======
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 :temp_exclude/src.disabled/components/ui/ai-chat-assistant.jsx
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

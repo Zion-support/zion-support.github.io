@@ -57,7 +57,10 @@ try {
                         exec_sync (`git checkout --theirs "${file}"`);
 
 #!/usr/bin/env node;
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node;
 
 
@@ -70,6 +73,9 @@ try {;
     console.error('❌ Not in a git repository'),;
     process.exit(1);
 }
+<<<<<<< HEAD
+            // Resolve conflicts by accepting our version;
+=======
 ;
 try {;
     // Ensure clean working directory;
@@ -98,14 +104,24 @@ try {;
 
             // Resolve conflicts by accepting our version;
             // Resolve conflicts by accepting our version;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
             for (const file of files) {;
                 if (file.trim()) {;
+<<<<<<< HEAD
+                    console.log(`Resolving conflicts in: ${file}`);
+                    try {execSync(`git checkout --ours "${file}"`);
+                    } catch (e) {execSync(`git checkout --theirs "${file}"`);
+                    console.log(`Resolving conflicts in: ${file}`);
+                    try {execSync(`git checkout --ours "${file}"`);
+                    } catch (e) {execSync(`git checkout --theirs "${file}"`);
+=======
 
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
                     console.log(`Resolving conflicts in: ${file}`),;
                     try {;
@@ -158,6 +174,8 @@ try {;
             execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
         }
     }
+<<<<<<< HEAD
+=======
     // Get all branches;
     console.log('🌿 Getting all branches...');
     const branches = execSync('git branch -r', { encoding: 'utf8' });
@@ -177,14 +195,18 @@ try {;
             execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`);
             console.log(`✅ Successfully merged ${branchName}`);
         } catch (error) {console.log(`⚠️  Error merging ${branch}: ${error.message}`);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
             // Continue with other branches;
         }
     }
     // Push all changes;
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ;
     // Get all branches;
     console.log('🌿 Getting all branches...'),;
@@ -227,6 +249,8 @@ try {;
 
     process.exit(1);
 }
+<<<<<<< HEAD
+=======
     console.log ('📤 Pushing all changes to main...'),
     exec_sync ('git push origin main'),
     console.log ('🎉 All merge operations completed successfully!'),
@@ -237,5 +261,6 @@ try {;
     console.error ('❌ Error during merge process:', error.message),
     process.exit (1);
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     process.exit(1);
 }

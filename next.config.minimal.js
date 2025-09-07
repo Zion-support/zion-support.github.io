@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 const nextConfig = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
@@ -24,6 +26,7 @@ const nextConfig = {
       };
     }
     return config;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
@@ -46,6 +49,12 @@ module.exports = next_config;
   distDir: '.next',
 };
 
+<<<<<<< HEAD
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
     domains: ["localhost", "ziontechgroup.com"],
@@ -74,6 +83,8 @@ module.exports = nextConfig;};
 export default nextConfig;
 const nextConfig = {,
   reactStrictMode: true,
+<<<<<<< HEAD
+=======
 const nextConfig = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
@@ -100,6 +111,7 @@ const nextConfig = {
       };
     }
     return config;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },

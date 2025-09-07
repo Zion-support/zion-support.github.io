@@ -41,6 +41,8 @@ describe('ProductActions', () => {
     vi.useRealTimers();
   });
 });
+<<<<<<< HEAD
+=======
 interface ProductActions.testProps {
   // Add props here as needed
 }
@@ -52,3 +54,4 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
     </div>
   );
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

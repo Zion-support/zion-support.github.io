@@ -5,7 +5,10 @@ export interface ModerationResult {
   reason?: string;
   moderatedBy?: string;
   moderatedAt: Date;
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ;
 export interface ModerationAction {
   id: string;
@@ -15,7 +18,10 @@ export interface ModerationAction {
   adminId: string;
   reason?: string;
   createdAt: string;
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 }
 export interface ModerationFlag {

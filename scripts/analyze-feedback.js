@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   } catch (e) {
     return [];
 
@@ -35,7 +38,10 @@ function readAll() {;
     return JSON.parse(raw || '[]');
   } catch (e) {;
     return [];
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 }
 
@@ -81,6 +87,8 @@ async function main() {
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
   }
+<<<<<<< HEAD
+=======
   const all = readAll()
   const recent = all.filter(lastNDays(7))
   const downs = recent.filter((r) => r.rating === 'down')
@@ -98,6 +106,7 @@ async function main() {
 
   const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
@@ -109,7 +118,10 @@ async function main() {
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON && JSON.stringify(downs && downs.slice(-100), null, 2)}`,
 
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
@@ -136,7 +148,10 @@ async function main() {
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`
   fs.writeFileSync(summaryPath, md)
   // Append to prompt improvements
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
@@ -209,6 +224,8 @@ main ().catch ((e) => { console.error (e), process.exit (1) }),
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
+<<<<<<< HEAD
+=======
 const fs = require('fs'),;
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
@@ -240,6 +257,7 @@ async function main() {;
 main().catch((e) => { console.error(e), process.exit(1) });
 
   // // // console.log('Analysis written to', summaryPath)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   const all = readAll(),;
   const recent = all.filter(lastNDays(7)),;
   const downs = recent.filter((r) => r.rating === 'down'),;

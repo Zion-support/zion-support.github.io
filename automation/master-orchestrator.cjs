@@ -322,7 +322,27 @@ if (require.main === module) {
 }
 
 module.exports = MasterOrchestrator;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -463,6 +483,20 @@ class MasterAutomationOrchestrator {
         build: 'completed',
         automation: 'completed'
       },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+=======
+      summary: 'Master automation orchestrator completed successfully',
+>>>>>>> origin/main
+    };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
     };
 
@@ -504,6 +538,23 @@ if (require.main === module) {
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = MasterOrchestrator;
+=======
+<<<<<<< HEAD
+module.exports = MasterOrchestrator;
+=======
+
+module.exports = MasterOrchestrator;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -652,8 +703,41 @@ class MasterAutomationOrchestrator {
     }
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// Run the orchestrator
+const orchestrator = new MasterAutomationOrchestrator();
+orchestrator.run().catch(console.error);
+
+module.exports = MasterOrchestrator;
+<<<<<<< HEAD
+orchestrator.run().catch(console.error);
+=======
+<<<<<<< HEAD
+orchestrator.run().catch(console.error);
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
 
+<<<<<<< HEAD
+module.exports = MasterOrchestrator;
+orchestrator.run().catch(console.error);
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

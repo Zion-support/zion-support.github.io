@@ -1,272 +1,61 @@
-  Phone
-  Mail
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  ArrowRight
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-} from "lucide-react";
-
-import React from 'react;';
+import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram, 
-  Github 
-} from 'lucide-react';
-
-const socialLinks = [
-  { name: 'Facebook', href: '#', icon: Facebook },
-  { name: 'Twitter', href: '#', icon: Twitter },
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
-  { name: 'Instagram', href: '#', icon: Instagram },
-  { name: 'GitHub', href: '#', icon: Github }
-];
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-gray-800 text-white">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
-              Leading provider of AI solutions, IT services, and micro SaaS applications. 
-              Transform your business with cutting-edge technology.
+              Leading technology solutions provider specializing in web development, 
+              mobile applications, AI integration, and cloud services.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <link.icon className="h-5 w-5" />
-                </a>
-              </div>
-              <div className="flex items-center>
-                <Mail className="w-4 h-4 mr-2 text-blue-400" />
-                <a href=mailto:kleber@ziontechgroup.com" className="hover:text-blue-400 transition-colors>
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                <MapPin className=w-4 h-4 mr-2 text-blue-400" />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
-                <span>
-                  364 E Main St STE 1008
-                  <br />
-                  Middletown DE 19709
-                </span>
-            {/* Contact Info */}
-              </div>
+              <a href="#" className="text-gray-300 hover:text-white">
+                <span className="sr-only">Twitter</span>
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                </svg>
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white">
+                <span className="sr-only">LinkedIn</span>
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
             </div>
           </div>
-          {/* Services */}
+
+          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-
-
-
-            <h3 className="text-lg font-semibold mb-6>Services</h3>
-            <div className="space-y-4">
-              {Object.entries(services).map(([category, links]) => (
-                <div key={category}>
-                  <h4 className=text-sm font-medium text-blue-400 mb-2">{category}</h4>
-                  <ul className="space-y-1>
-                    {links.slice(0, 3).map((link) => (
-                      <li key={link.name}>
-                        <Link
-                          href={link.href}
-                          className="text-sm text-gray-300 hover:text-white transition-colors"
-                        >
-                          {link.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-            <div className="space-y-3">;
-              <div className="flex items-center text-gray-300">;
-                <Phone className="w-4 h-4 mr-3" />;
-                <span>+1 302 464 0950</span>;
-              </div>;
-              <div className="flex items-center text-gray-300">;
-                <Mail className="w-4 h-4 mr-3" />;
-                <span>kleber@ziontechgroup && ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items-start text-gray-300">;
-                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />;
-                <span>;
-                  364 E Main St STE 1008;
-                  <br />;
-                  Middletown DE 19709;
-                </span>;
-              </div>;
-            </div>;
-          </div>;
-          {/* Services */}
-          <div>;
-            <h3 className="text-lg font-semibold mb-4">Services</h3>;
-            <ul className="space-y-2">;
-              {footerLinks && footerLinks.services.map((link) => (;
-                <li key={link && link.name}>;
-                  <Link
-                    href={link && link.href}
-                    className="text-gray-300 hover:text-white transition-colors">;
-                    {link && link.name}
-                  </Link>;
-                </li>;
-              ))}
-            </ul>;
-          </div>;
-
-
-          {/* Solutions */}
-          <div>;
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
-            <ul className="space-y-2">;
-              {footerLinks && footerLinks.solutions.map((link) => (;
-                <li key={link && link.name}>;
-
-
-          {/* Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
-            <ul className="space-y-2">
-              {footerLinks.solutions.map((link) => (
-                <li key={link.name}>
-                  <Link
-          {/* Company */}
-          <div>
-            <h3 className=text-lg font-semibold mb-6">Company</h3>
-            <ul className="space-y-3>
-              {company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              <li><Link href="/about" className="text-gray-300 hover:text-white">About Us</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-white">Services</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
+              <li><Link href="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
             </ul>
           </div>
-          
+
+          {/* Services */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
-              <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
-              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white">Micro SaaS</Link></li>
-              <li><Link href="/consulting" className="text-gray-300 hover:text-white">Consulting</Link></li>
+              <li><span className="text-gray-300">Web Development</span></li>
+              <li><span className="text-gray-300">Mobile Apps</span></li>
+              <li><span className="text-gray-300">AI Integration</span></li>
+              <li><span className="text-gray-300">Cloud Services</span></li>
             </ul>
           </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-gray-300">
-              <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2" />
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2" />
-                <span>kleber@ziontechgroup.com</span>
-              <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
-              <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
-              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white">Micro SaaS</Link></li>
-              <li><Link href="/consulting" className="text-gray-300 hover:text-white">Consulting</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-gray-300">
-              <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2" />
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-          </div>
         </div>
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  );
-}
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-800 mt-8 pt-8>
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className=text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex space-x-6 text-sm>
-              <Link href="/privacy" className=text-gray-400 hover:text-white transition-colors">
-              <Link
-                href="/privacy"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Privacy Policy
-              </Link>
-                className="text-gray-400 hover:text-white transition-colors">;
-                <Instagram className="w-5 h-5" />;
-              </a>;
-            </div>;
-            {/* Legal Links */}
-            <div className="flex space-x-6 text-sm">;
-              <Link
-                href="/privacy"
-                className="text-gray-400 hover:text-white transition-colors">;
-                Privacy Policy;
-              </Link>;
-              <Link
-                href="/terms"
-                className="text-gray-400 hover:text-white transition-colors">;
-                Terms of Service;
-              </Link>;
-              <Link
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+
+        <div className="mt-8 pt-8 border-t border-gray-700">
+          <p className="text-center text-gray-300">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

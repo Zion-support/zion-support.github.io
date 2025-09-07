@@ -42,6 +42,8 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface SetupProps {
@@ -56,3 +58,4 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

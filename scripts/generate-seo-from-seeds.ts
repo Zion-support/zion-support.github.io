@@ -27,8 +27,11 @@ const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
 async function post(url: string, body: any) {;
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
   return await res.json();
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 
 }
@@ -74,6 +77,8 @@ main().catch((e) => { console && console.error(e), process && process.exit(1) })
 
 
 
+<<<<<<< HEAD
+=======
       fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2));
       console && console.log('Generated', gen && gen.slug)
     }
@@ -81,6 +86,7 @@ main().catch((e) => { console && console.error(e), process && process.exit(1) })
 }
 main().catch((e) => { console.error(e), process.exit(1) });
 main().catch((e) => { console && console.error(e), process && process.exit(1) });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ;
 import fs from 'fs';
 import path from 'path';
@@ -126,11 +132,14 @@ async function main() {;
 }
 main ().catch ((e) => { console.error (e), process.exit (1) });
 ;
+<<<<<<< HEAD
+=======
 
 main().catch((e) => { console.error(e), process.exit(1) });
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 /* eslint-disable no-console */;
 import fs from 'fs',;

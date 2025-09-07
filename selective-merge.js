@@ -89,8 +89,11 @@ const mergeSpecificFiles = () =>: any {
 
     return true;
   } catch (error) {
+<<<<<<< HEAD
+=======
     console.error("Error in selective merge:", error.message);
     console.error("Error in selective merge:", error.message);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     } catch (error) {
       console && console.error('Error committing changes:', error && error.message);
     }

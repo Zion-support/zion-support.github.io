@@ -1,9 +1,35 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+async function optimizeImages() {
+  const imagesDir = path.join(__dirname, 'public', 'images');
+  
+  if (fs.existsSync(imagesDir)) {
+    const files = fs.readdirSync(imagesDir);
+    
+    for (const file of files) {
+      if (file.match(/\.(jpg|jpeg|png|webp)$/i)) {
+        const inputPath = path.join(imagesDir, file);
+        const outputPath = path.join(imagesDir, `optimized-${file}`);
+        
+        await sharp(inputPath)
+          .resize(800, 600, { fit: 'inside', withoutEnlargement: true })
+          .webp({ quality: 80 })
+          .toFile(outputPath);
+      }
+    }
+  }
+}
+
+optimizeImages();
+=======
 async function optimizeImages() {}
   const publicDir = path.join(process.cwd(), 'public;';);
   const images = [];
@@ -36,3 +62,4 @@ async function optimizeImages() {}
 };
 optimizeImages().catch(console.error);
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

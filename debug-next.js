@@ -1,6 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
 console.log('🔍 Debugging Next.js project structure...');
 
 // Check if we're in a valid Next.js project
@@ -81,6 +78,13 @@ const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
+<<<<<<< HEAD
+    if (content.includes('') || content.includes('
+}
+}
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
+    if (content.includes('      problematicFiles.push(file);
+=======
 
 
 
@@ -88,6 +92,7 @@ for (const file of allFiles) {;
 }
 }
       problematicFiles.push(file);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
   } catch (error) {
     // Skip files that can't be read
@@ -118,5 +123,10 @@ function getAllFiles(dir, extensions) {
   }
   return files;
 }
+<<<<<<< HEAD
+;
+console.log('✅ Debug completed'),;
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 console.log('✅ Debug completed');
