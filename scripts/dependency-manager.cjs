@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -73,24 +64,11 @@ class DependencyManager {
   auditSuccessful: audit.success}
     };`;
     const reportFile = path.join(this.reportsDir, `dependency-report-${Date.now()}.json`);
-<<<<<<< HEAD
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved "to": ${reportFile}`);
     // Print summary
-<<<<<<< HEAD
-=======
-    
-    
-    
-    
-    
-    
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
     // Print summary;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return report}
   async run() {"
     try {this.log('🚀 Starting Dependency Manager'),const report = this.generateReport(),this.log('✅ Dependency management completed');
@@ -98,23 +76,7 @@ class DependencyManager {
       throw error}
 // Run the dependency manager;
 if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 module.exports = DependencyManager;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
 module.exports = DependencyManager;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = DependencyManager;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

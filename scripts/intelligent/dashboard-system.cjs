@@ -1,11 +1,5 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/intelligent/dashboard-system.cjs
 
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/dashboard-system.cjs
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/dashboard-system.cjs
 #!/usr/bin/env node;
 /**
  * Intelligent Dashboard System;
@@ -13,12 +7,7 @@
  */
 
 <<<<<<< HEAD:backup-problematic-files/scripts/intelligent/dashboard-system.cjs
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/dashboard-system.cjs
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/dashboard-system.cjs
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -51,10 +40,6 @@ const url = require('url')
                 alertList.innerHTML = '<div class="metric"><span class="metric-label"
                     <span class="
 <<<<<<< HEAD:backup-problematic-files/scripts/intelligent/dashboard-system.cjs
-=======
 <<<<<<< HEAD:scripts/intelligent/dashboard-system.cjs
     console.error(' Dashboard System "failed")
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     console.error(' Dashboard System "failed")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/dashboard-system.cjs

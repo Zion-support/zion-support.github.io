@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Starting app directory merge conflict resolution...');
+console.log('🚀 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
@@ -36,10 +36,10 @@ function resolveMergeConflicts(filePath) {
     }
 }
 
-// Function to get all files with merge conflicts in app directory
+// Function to get all files with merge conflicts
 function getConflictFiles() {
     try {
-        const result = execSync('grep -l "<<<<<<< HEAD" app -r --include="*.js" --include="*.ts" --include="*.tsx" --include="*.json" --include="*.cjs" --include="*.mjs"', { encoding: 'utf8' });
+        const result = execSync('grep -l "<<<<<<< HEAD" . -r --include="*.js" --include="*.ts" --include="*.tsx" --include="*.json" --include="*.cjs" --include="*.mjs" --include="*.yml" --include="*.yaml" --include="*.sh"', { encoding: 'utf8' });
         return result.trim().split('\n').filter(file => file.length > 0);
     } catch (error) {
         return [];
@@ -57,15 +57,23 @@ async function main() {
         process.exit(1);
     }
 
-    // Get files with conflicts in app directory
+    // Get current branch
+    const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
+    console.log(`📍 Current branch: ${currentBranch}`);
+
+    // Fetch latest changes
+    console.log('📥 Fetching latest changes...');
+    execSync('git fetch --all --prune');
+
+    // Get files with conflicts
     const conflictFiles = getConflictFiles();
     
     if (conflictFiles.length === 0) {
-        console.log('✅ No merge conflicts found in app directory');
+        console.log('✅ No merge conflicts found');
         return;
     }
 
-    console.log(`🔍 Found ${conflictFiles.length} files with merge conflicts in app directory`);
+    console.log(`🔍 Found ${conflictFiles.length} files with merge conflicts`);
 
     // Resolve conflicts in each file
     let resolvedCount = 0;
@@ -77,19 +85,29 @@ async function main() {
         }
     }
 
-    console.log(`✅ Resolved conflicts in ${resolvedCount} files in app directory`);
+    console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
 
     // Add resolved files to staging
     if (resolvedCount > 0) {
         console.log('📝 Adding resolved files to staging...');
-        execSync('git add app/');
+        execSync('git add .');
         
         // Commit the resolved conflicts
         console.log('💾 Committing resolved conflicts...');
-        execSync('git commit -m "fix: resolve merge conflicts in app directory\n\n- Resolved conflicts in ' + resolvedCount + ' files\n- Kept HEAD version for consistency\n- Cleaned up duplicate content"');
+        execSync('git commit -m "fix: resolve merge conflicts automatically\n\n- Resolved conflicts in ' + resolvedCount + ' files\n- Kept HEAD version for consistency\n- Cleaned up duplicate content"');
     }
 
-    console.log('🎉 App directory merge conflict resolution completed!');
+    // Try to merge with main
+    console.log('🔄 Attempting to merge with main...');
+    try {
+        execSync('git merge origin/main --no-edit');
+        console.log('✅ Successfully merged with main');
+    } catch (error) {
+        console.log('⚠️  Merge failed, but conflicts have been resolved');
+        console.log('You may need to manually review and complete the merge');
+    }
+
+    console.log('🎉 Merge conflict resolution completed!');
 }
 
 main().catch(console.error);

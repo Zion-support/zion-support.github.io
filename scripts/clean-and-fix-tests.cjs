@@ -11,8 +11,7 @@ function cleanTestFile(filePath) {
     // Remove merge conflict markers
     content = content.replace(/<<<<<<< HEAD[^>]*>/g, '');
     content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^>]*>/g, '');
-    
+    content = content.replace(/    
     // Remove corrupted lines with branch names
     content = content.replace(/cursor\/[^;]*;/g, '');
     

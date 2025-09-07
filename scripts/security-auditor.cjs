@@ -62,7 +62,6 @@
         "envFiles": foundEnvFiles,"
         sensitiveVars,"
 
-
       const foundVulnerable = Object.keys(dependencies).filter(dep => )
         vulnerablePackages.some(vuln => dep.includes(vuln))
       );
@@ -74,7 +73,6 @@
       const securityIssues = [];
       // Check for common security issues in code;
       const patterns = [{
-
 
       const files = this.findSourceFiles();
       for (const file of files) {
@@ -121,7 +119,6 @@
     if (analysis.npmAudit && analysis.npmAudit.count > 0) {
       recommendations.push({"
 
-
     return recommendations}
 
   async run() {
@@ -143,18 +140,5 @@ if (require.main === module) {
 
 module.exports = SecurityAuditor;
 
-
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 main
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
 

@@ -1,33 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Security Scanner Automation;
  * Comprehensive security scanning and vulnerability detection;
  */
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-=======
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class SecurityScanner {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -42,11 +22,7 @@ class SecurityScanner {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         console.log(message)};
     scanForVulnerabilities() {}
         this.log('Scanning for security vulnerabilities...');
@@ -58,16 +34,13 @@ class SecurityScanner {}
             };);
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-=======
         console.log(message)};
     scanForVulnerabilities() {}"
 
             };);
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-<<<<<<< HEAD
             
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
                 "status": 'success',
@@ -80,10 +53,6 @@ class SecurityScanner {}
     };
     scanForSecrets() {}
         this.log('Scanning for exposed secrets...');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Passwords', "pattern": /password\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Secrets', "pattern": /secret\s*[:=]\s*['"][^'"]+['"]/gi },
@@ -93,65 +62,33 @@ class SecurityScanner {}
             { "name": 'AWS Keys', "pattern": /aws[_-]?access[_-]?key[_-]?id\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'GitHub Tokens', "pattern": /github[_-]?token\s*[:=]\s*['"][^'"]+['"]/gi };
        ];
-<<<<<<< HEAD
         const files = this.findSourceFiles(;);
         const foundSecrets = [];
         for (const file of files) {}
             try {}
                 const content = fs.readFileSync(file, 'utf8';);
-=======
-        
-=======
-            `;
-            this.log(`Found ${vulnerabilities} security vulnerabilities`);
-            return {;}
-
-       ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const files = this.findSourceFiles(;);
         const foundSecrets = [];
         for (const file of files) {}
-<<<<<<< HEAD
             try {}
                 const content = fs.readFileSync(file, 'utf8';);
                 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-            try {}"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 for (const secretType of secretPatterns) {}
                     const matches = content.match(secretType.pattern;);
                     if ( {})
                         foundSecrets.push({})
 
         const files = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
-=======
-        
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-        const scanDirectory = (dir) => {}
-            if () retu) {}
-    ) retu}r;n;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
@@ -161,19 +98,12 @@ class SecurityScanner {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
             };
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }};
         scanDirectory(this.projectRoot);
         return files};
     checkFilePermissions() {}
-<<<<<<< HEAD
         this.log('Checking file permissions...');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const criticalFiles = ['package.json',]
             'package-lock.json',
             '.env',
@@ -181,17 +111,9 @@ class SecurityScanner {}
             '.env.production',
             '.env.development'
         ];
-<<<<<<< HEAD
         const permissionIssues = [];
-=======
-        
-        const permissionIssues = [];
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
         const permissionIssues = [];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         for (const file of criticalFiles) {}
             const filePath = path.join(this.projectRoot, file;);
                 const stats = fs.statSync(filePath) {}
@@ -201,11 +123,6 @@ class SecurityScanner {}
                 const isReadableByOthers = (mode & 0o004) !==;0;
                 const isWritableByOthers = (mode & 0o002) !==;0;
                 const isExecutableByOthers = (mode & 0o001) !==;0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                 if ( {})
                     permissionIssues.push({})
                         "file": file,
@@ -231,42 +148,21 @@ class SecurityScanner {}
         return permissionIssues};
     checkDependencies() {}
         this.log('Checking dependencies for security issues...');
-<<<<<<< HEAD
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-=======
-        
-        try {}
-            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
-            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             const dependencies = {}
                 ...packageJson.dependencies || {},
                 ...packageJson.devDependencies || {};
            };
-<<<<<<< HEAD
             const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
             // Check for known vulnerable packages;
             const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
-=======
-            
-            const totalDeps = Object.keys(dependencies).lengt;h;
-=======
-
-            const dependencies = {}
-                ...packageJson.dependencies || {},
-                ...packageJson.devDependencies || {};
-            const totalDeps = Object.keys(dependencies).lengt;h;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             this.log(`Analyzing ${totalDeps} dependencies`);
             // Check for known vulnerable packages;
             const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
-<<<<<<< HEAD
             
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             return {;}
                 "status": 'success',
                 "totalDependencies": totalDeps,
@@ -282,13 +178,7 @@ class SecurityScanner {}
             'jquery@1.12.0',
             'moment@2.24.0'
         ];
-<<<<<<< HEAD
         const vulnerable = [];
-=======
-        
-        const vulnerable = [];
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         for (const [name, version] of Object.entries(dependencies)) {}
             const packageVersion = \`\${name}@\${version}\;`;`
             if ([0]))) {}
@@ -309,18 +199,10 @@ class SecurityScanner {}
         return vulnerable}};
     generateSecurityHeaders() {}
         this.log('Generating security headers configuration...');
-<<<<<<< HEAD
         const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
         let nextConfig = ;';';
-=======
-        
-        const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
-        let nextConfig = ;';';
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         if () {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
-=======
 
         const vulnerable = [];
         for (const [name, version] of Object.entries(dependencies)) {}`;
@@ -328,7 +210,6 @@ class SecurityScanner {}
             if ([0]))) {}
                 vulnerable.push({})
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Add security headers if not already present;
         if (!nextConfig.includes('X-Frame-Options')) {}
             const securityHeaders = 
@@ -338,7 +219,6 @@ class SecurityScanner {}
 
   // Security headers;
     return }[;]
-<<<<<<< HEAD
       {}
         "source": '/(.*)',
         "headers": []
@@ -360,10 +240,6 @@ class SecurityScanner {}
           {}
             "key": 'Content-Security-Policy',
             "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';"}]}]},";
-<<<<<<< HEAD
-=======
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             // Insert security headers before the closing brace;
             const updatedConfig = nextConfig.replace(/(\s*)(module\.exports\s*=\s*nextConf;i;g;)/, "$1${securityHeaders}$1$2");
             fs.writeFileSync(nextConfigPath, updatedConfig);
@@ -371,10 +247,6 @@ class SecurityScanner {}
         return { "status": 'success' }};
     generateSecurityReport() {}
         this.log('Generating security scan report...');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -387,15 +259,8 @@ class SecurityScanner {}
             },
             "recommendations": this.generateSecurityRecommendations();
        };
-<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Security scan report saved to ${this.reportFile}");
-=======
-
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log("Security scan report saved to ${this.reportFile}");
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         return report};
     generateSecurityRecommendations() {}
         return [;]
@@ -414,16 +279,11 @@ class SecurityScanner {}
         ]};
     async run() {}
         this.log('Security Scanner started');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         try {}
             const report = this.generateSecurityReport(;);
             this.log('Security Scanner completed successfully');
             return report} catch (error) {}
             this.log("Security Scanner "failed": ${error.message}`);
-=======
 
             "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';"}]}]},";"
             // Insert security headers before the closing brace;"
@@ -446,29 +306,12 @@ class SecurityScanner {}
     generateSecurityRecommendations() {}
         return [;]"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
 // Run the scanner if this script is executed directly;
     const scanner = new SecurityScanner) {}
     const scanner = new SecurityScanner}(;);
     scanner.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 module.exports = SecurityScanner;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
 module.exports = SecurityScanner;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = SecurityScanner;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

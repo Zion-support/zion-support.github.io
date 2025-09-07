@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -246,25 +239,7 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
       )} catch (error) {  this.log(`Failed to commit test "improvements": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(dir, ")
   files.push(...this.getAllFiles(fullPath")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

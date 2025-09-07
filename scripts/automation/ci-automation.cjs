@@ -1,27 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class $1 {}
   constructor() {}"
   this.projectRoot = path.resolve(__dirname, "../../");"
@@ -43,34 +30,17 @@ class $1 {}
 ;"
   log(message, level = "INFO") {}"
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const logEntry = `[${timestamp}] [${level}] ${message}`;`
     console.log("logEntry);
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n");
-<<<<<<< HEAD
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
-=======
-
-  log(message, level = "INFO") {}
-  const timestamp = new Date().toISOString();
-    const logEntry = "[${timestamp}] [${level}] ${message}";
-    
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
 ;
-=======
     const logEntry = `[${timestamp}] [${level}] ${message};`"
     console.log("logEntry);"
     // Append to log file;"
@@ -79,13 +49,11 @@ class $1 {}
     const logEntry = "[${timestamp}] [${level}] ${message}";"
     // Append to log file;"
     fs.appendFileSync(this.logFile, logEntry + "\n")};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runCommand(command, cwd = this.projectRoot) {}
   // Append to log file;"
     fs.appendFileSync(this.logFile, logEntry + "\n");")}");
 ");
   async runCommand(command, cwd = this.projectRoot) {");}
-<<<<<<< HEAD
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");
       const child = spawn(command, [], {})
   "shell": true,
@@ -106,12 +74,7 @@ class $1 {}
       }
 });
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
-=======
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");"
       const child = spawn(command, [], {})"
   "shell": true,"
@@ -120,7 +83,6 @@ class $1 {}
 });"
 
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         reject(error)})})};
   async installDependencies() {}"
   this.log("Installing dependencies...");"
@@ -130,17 +92,12 @@ class $1 {}
       return true} catch (error) {  this.log("Failed to install "dependencies": ${error.message  }", "ERROR");"
       return false};
   };
-<<<<<<< HEAD
 ;
   async runLint() {}
   this.log("Running linting...");
     try {}
   await this.runCommand("npm run lint");
       this.log("Linting completed successfully");
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async runLint() {}
   this.log("Running linting...");
     try {}
@@ -164,10 +121,6 @@ class $1 {}
     try {}
   await this.runCommand("npm run build");
       this.log("Build completed successfully");
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async runBuild() {}
   this.log("Building project...");
     try {}
@@ -187,7 +140,6 @@ class $1 {}
   };
 ;
   async verifyBuildOutput() {}
-=======
   async runLint() {}"
   this.log("Running linting...");"
 
@@ -205,7 +157,6 @@ class $1 {}
 
       return true} catch (error) {  this.log("Tests "failed": ${error.message  }", "WARN");"
   async verifyBuildOutput() {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   this.log("Verifying build output...");
     const distPath = path.join(this.projectRoot, "dist");"
     if (!fs.existsSync(distPath)) {}"
@@ -227,18 +178,11 @@ class $1 {}
       "summary": {}"
   total: results.length,"
         "passed": results.filter(r => r.success).length,
-<<<<<<< HEAD
         "failed": results.filter(r => !r.success).length}};
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Report "generated": ${this.reportFile}");
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         "failed": results.filter(r => !r.success).length}};"
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Report "generated": ${this.reportFile}");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return report};
   async run() {}"
   this.log("Starting CI automation...");"
@@ -248,55 +192,31 @@ class $1 {}
     results.push({})"
   "step": "install-dependencies",
       "success": depsResult,
-<<<<<<< HEAD
       "timestamp": new Date().toISOString(),
-<<<<<<< HEAD
   async run() {}
   this.log("Starting CI automation...");
     const results = [];
-=======
 
-  async run() {}
-  this.log("Starting CI automation...");
-
-    const results = [];
-=======
-      "timestamp": new Date().toISOString(),"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Install dependencies;
 
       "timestamp": new Date().toISOString()}"
 });
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (!depsResult) {}
   this.log(Skipping remaining steps due to dependency installation failure",)
         "WARN";
       );
-=======
     if (!depsResult) {}"
   this.log(Skipping remaining steps due to dependency installation failure")
         "WARN";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       await this.generateReport(results);
       return};
     // Run linting;
     const lintResult = await this.runLint();
-<<<<<<< HEAD
     results.push({})
   "step": "lint",
       "success": lintResult,
       "timestamp": new Date().toISOString()}
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Run type check;
     const typeCheckResult = await this.runTypeCheck();
     results.push({})
@@ -326,20 +246,13 @@ class $1 {}
         "success": testResult,
         "timestamp": new Date().toISOString()})};
 ;
-=======
 
         "timestamp": new Date().toISOString()})};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Generate final report;
     const report = await this.generateReport(results);"
 this.log("CI automation completed. "Status": ${report.status}");this.log(Passed": ${report.summary.passed}/${report.summary.total}");
     if (report.status === "FAILED") {}
-<<<<<<< HEAD
   this.log("CI automation failed. Check the report for details.", "ERROR");
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (buildResult) {}
   // Verify build output;
       const verifyResult = await this.verifyBuildOutput();
@@ -348,10 +261,6 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(Passed"
         "success": verifyResult,
         "timestamp": new Date().toISOString()}
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Run tests;
       const testResult = await this.runTests();
       results.push({})
@@ -362,17 +271,11 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(Passed"
     // Generate final report;
     const report = await this.generateReport(results);
 this.log("CI automation completed. "Status": ${report.status}");this.log(""Passed": ${report.summary.passed}/${report.summary.total}`);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (report.status === "FAILED") {}
   this.log("CI automation failed. Check the report for details.", "ERROR");
-=======
   this.log("CI automation failed. Check the report for details.", "ERROR");"
   // Verify build output;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       process.exit(1)};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
@@ -380,28 +283,10 @@ if (require.main === module) {}
   ci.run().catch(error => {})"
 
     process.exit(1)})};
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-module.exports = CIAutomation;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-module.exports = CIAutomation;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = CIAutomation;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 module.exports = CIAutomation;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+module.exports = CIAutomation;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+module.exports = CIAutomation;
+
