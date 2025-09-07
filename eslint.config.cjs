@@ -5,23 +5,7 @@ const typescriptEslint = require('@typescript-eslint/eslint-plugin');
 
 module.exports = [
   {
-    ignores: [
-      'node_modules/**/*',
-      '.next/**/*',
-      'out/**/*',
-      'dist/**/*',
-      'build/**/*',
-      'automation/**/*',
-      'scripts/**/*',
-      '*.cjs',
-      '*.mjs',
-      '*.js',
-      '*.report.json',
-      'test_build/**/*',
-      'tests/**/*',
-      'pages/**/*',
-      'api/**/*'
-    ],
+    ignores: ['**/*'],
   },
   js.configs.recommended,
   {
