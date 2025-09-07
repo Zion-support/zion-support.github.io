@@ -25,16 +25,6 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/pages/*": ["./pages/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/types/*": ["./types/*"],
-      "@/lib/*": ["./lib/*"],
-      "@/hooks/*": ["./hooks/*"]
-    },
-    "allowSyntheticDefaultImports": true
       "@/*": [
         "./*"
       ],
@@ -44,17 +34,20 @@
       "@/pages/*": [
         "./pages/*"
       ],
+      "@/styles/*": [
+        "./styles/*"
+      ],
       "@/utils/*": [
         "./utils/*"
-      ],
-      "@/hooks/*": [
-        "./hooks/*"
       ],
       "@/types/*": [
         "./types/*"
       ],
-      "@/styles/*": [
-        "./styles/*"
+      "@/lib/*": [
+        "./lib/*"
+      ],
+      "@/hooks/*": [
+        "./hooks/*"
       ],
       "@/assets/*": [
         "./assets/*"
@@ -62,17 +55,16 @@
     },
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": false
-pr-12325
-    "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "dist/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
