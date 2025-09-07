@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -5,10 +6,19 @@ export const metadata: Metadata = {
   title: 'Blockchain Services | Zion Tech Group',
   description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain solutions.',
   keywords: 'blockchain development, smart contracts, DeFi, NFT, Web3, cryptocurrency, enterprise blockchain, dApp development'
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata = {
+  title: 'Blockchain - Zion Tech Group',
+  description: 'Professional blockchain solutions for your business needs.',
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
 };
 
 export default function BlockchainPage() {
   return (
+<<<<<<< HEAD
     <div className="animate-fade-in">
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -67,6 +77,19 @@ export default function BlockchainPage() {
           />
         </div>
       </section>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Blockchain
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional blockchain solutions designed to meet your business requirements 
+            and drive growth. Our expert team delivers high-quality, scalable solutions.
+          </p>
+        </div>
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
 
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Blockchain Development Process</h2>
@@ -232,6 +255,7 @@ function BlockchainProcessStep({ step, title, description }: {
       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
         {step}
       </div>
+<<<<<<< HEAD
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
@@ -394,6 +418,8 @@ function CTASection() {
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>
+=======
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
     </div>
   );
 }

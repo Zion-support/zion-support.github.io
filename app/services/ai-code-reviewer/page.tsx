@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = {
   title: 'Ai Code Reviewer | Zion Tech Group',
   description: 'Professional ai code reviewer services for your business needs.',
@@ -8,6 +9,20 @@ export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata = {
+  title: 'Ai Code Reviewer - Zion Tech Group',
+  description: 'Professional ai code reviewer solutions for your business needs.',
+};
+
+export default function AiCodeReviewerPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Ai Code Reviewer
@@ -31,6 +46,7 @@ export default function ServicePage() {
               Cutting-edge technology and best practices to deliver exceptional results.
             </p>
           </div>
+<<<<<<< HEAD
           
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
@@ -38,8 +54,14 @@ export default function ServicePage() {
               Round-the-clock support to ensure your ai code reviewer solutions run smoothly.
             </p>
           </div>
+=======
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a

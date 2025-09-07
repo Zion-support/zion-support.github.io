@@ -158,8 +158,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           });
         }
       }
+<<<<<<< HEAD
     }ursor/automate-test-improve-and-merge-code-646c;
     return errors;
+=======
+    }
+            timestamp: new Date().toISOString(),
+          });
+    );
+        }
+      }
+    }
+=    return errors;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   parseESLintErrors(output) {const errors = [];
     const lines = output.split('\n')=;
@@ -177,6 +188,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 >          timestamp: new Date().toISOString()})}
   parseESLintErrors(output) {
     const errors = [];
+<<<<<<< HEAD
     const lines = output.split('\n');
     for (const line of lines) {
       const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
@@ -188,6 +200,13 @@ ursor/automate-test-improve-and-merge-code-646c;
           column: parseInt(match[3]),
           message: match[4].trim(),
           timestamp: new Date().toISOString()
+=======
+    const lines = output.split('\n');<
+    );
+      }
+    }
+          timestamp: new Date().toISOString(),
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         });
       }
     }
@@ -315,8 +334,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
 ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-        timestamp: new Date().toISOString()
+ursor/fix-syntax-push-and-merge-to-main-40de;
+    timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
@@ -375,6 +394,11 @@ if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
 }
+<<<<<<< HEAD
 module.exports = ErrorMonitor;
 }
 module.exports = ErrorMonitor;
+=======
+module.exports = ErrorMonitor;}
+module.exports = ErrorMonitor;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

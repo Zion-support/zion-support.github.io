@@ -26,8 +26,8 @@ module.exports = {
       env: {
         NODE_ENV: 'production'
       },
-      cron_restart: '0 */1 * * *', // Every hour
-      log_file: 'logs/pm2/ci-cd-automation.log',
+      cron_restart: '0 */1 * * *', // Every hour;
+    log_file: 'logs/pm2/ci-cd-automation.log',
       error_file: 'logs/pm2/ci-cd-automation-error.log',
       out_file: 'logs/pm2/ci-cd-automation-out.log',
     },

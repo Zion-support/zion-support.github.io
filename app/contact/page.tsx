@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import Link from 'next/link';
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function ContactPage() {
@@ -50,7 +54,11 @@ export default function ContactPage() {
                 </ul>
               </div>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
             {/* CTA Section */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Ready to Get Started?</h2>
