@@ -1,4 +1,4 @@
-import React from "react";
+import React from \"react\";
 
 interface PerformanceOptimizerProps {
   className?: string;}
@@ -6,11 +6,11 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps /> = ({
-  className = "",}
+  className = \"\",}
   children,}
 }) => {}
   return (}
-    <div data-testid="erformanceoptimizer" className={className} />
+    <div data-testid=\"erformanceoptimizer\" className={className} />
       {children || <div />PerformanceOptimizer Component</div>}
     </div>
   );

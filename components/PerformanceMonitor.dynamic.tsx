@@ -1,4 +1,4 @@
-import React from "react";
+import React from \"react\";
 
 interface PerformanceMonitorProps {
   className?: string;}
@@ -6,11 +6,11 @@ interface PerformanceMonitorProps {
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps /> = ({
-  className = "",}
+  className = \"\",}
   children,}
 }) => {}
   return (}
-    <div data-testid="erformancemonitor" className={className} />
+    <div data-testid=\"erformancemonitor\" className={className} />
       {children || <div />PerformanceMonitor Component</div>}
     </div>
   );

@@ -85,7 +85,7 @@ async function main() {
   ];
   
   let successCount = 0;
-  const totalCount = prs.length;
+  let totalCount = prs.length;
   
   for (const pr of prs) {
     console.log(`\n📋 Processing PR #${pr.number} (${pr.branch})...`);

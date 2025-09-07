@@ -49,25 +49,25 @@ const mockData = useMemo<SearchResult[] />(() => [;
   )// Search suggestions;
 
 const searchSuggestions = useMemo<SearchSuggestion[] />(() => [;
-      {text: 'SaaS'}
+      { text: 'SaaS',}
   type: 'popular', count: 45,}
-},{text: 'AI'}
+},{ text: 'AI',}
   type: 'popular', count: 32,}
-},{text: 'Cloud'}
+},{ text: 'Cloud',}
   type: 'popular', count: 28,}
-},{text: 'Security'}
+},{ text: 'Security',}
   type: 'popular', count: 25,}
-},{text: 'Development'}
+},{ text: 'Development',}
   type: 'popular', count: 22,}
-},{text: 'Machine Learning'}
+},{ text: 'Machine Learning',}
   type: 'recent',}
-},{text: 'Micro Services'}
+},{ text: 'Micro Services',}
   type: 'recent',}
-},{text: 'DevOps'}
+},{ text: 'DevOps',}
   type: 'recent',}
-},{text: 'Blockchain'}
+},{ text: 'Blockchain',}
   type: 'related',}
-},{text: 'IoT'}
+},{ text: 'IoT',}
   type: 'related',}
 },],[];
   )// Filter options;
@@ -139,25 +139,25 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
   return $3;}
 }
     }
-  }return (<div className="w-full max-w-4xl mx-auto" />;
+  }return (<div className=\"w-full max-w-4xl mx-auto\" />;
       {/* Search Input */}
-      <div className="relative" />;
-        <div className="relative" />;
+      <div className=\"relative\" />;
+        <div className=\"relative\" />;
           <input;
-            type="text";
+            type=\"text\";
             value={query}
             onChange={e = /> setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             onFocus={() => setShowFilters(true)}
-            placeholder="Search for services, technologies, or content...";
-            className="w-full px-4 py-3 pl-12 pr-20 text-lg bg-white border-2 border-gray-300 rounded-lg focus: outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200";
+            placeholder=\"Search for services, technologies, or content...\";
+            className=\"w-full px-4 py-3 pl-12 pr-20 text-lg bg-white border-2 border-gray-300 rounded-lg focus: outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200\";
           />;
-          <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />;
+          <div className=\"absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400\" />;
             🔍;
           </div>;
           <button;
             onClick={() = /> setShowFilters(!showFilters)}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover: text-gray-700 transition-colors">
+            className=\"absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover: text-gray-700 transition-colors\">
 
             {showFilters ? '🔽' : '🔍,}
 }
@@ -172,16 +172,16 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
 }
               exit={{ opacity: 0, y: -10 ,}
 }
-              className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-10" />
+              className=\"absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-10\" />
 
               {suggestions.map((suggestion, index) => (<button;}
                   key={index}
                   onClick={() = /> handleSearch(suggestion.text)}
-                  className="w-full px-4 py-3 text-left hover: bg-gray-50 transition-colors flex items-center justify-between">
+                  className=\"w-full px-4 py-3 text-left hover: bg-gray-50 transition-colors flex items-center justify-between\">
 
                   <span />{suggestion.tex,}
 }</span>;
-                  <div className="flex items-center space-x-2 text-sm text-gray-500" />;
+                  <div className=\"flex items-center space-x-2 text-sm text-gray-500\" />;
                     <span;
                       className={`px-2 py-1 rounded text-xs ${suggestion.type === 'popular';
                           ? 'bg-blue-100 text-blue-800';
@@ -209,46 +209,46 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
 }
             exit={{ opacity: 0, height: 0 ,}
 }
-            className="mt-4 bg-white border border-gray-200 rounded-lg p-4 shadow-sm" />
+            className=\"mt-4 bg-white border border-gray-200 rounded-lg p-4 shadow-sm\" />
 
-            <div className="flex items-center justify-between mb-4" />;
-              <h3 className="text-lg font-semibold" />Filters</h3>;
+            <div className=\"flex items-center justify-between mb-4\" />;
+              <h3 className=\"text-lg font-semibold\" />Filters</h3>;
               <button;
                 onClick={clearFilters}
-                className="text-sm text-gray-500 hover:text-gray-700 underline" />
+                className=\"text-sm text-gray-500 hover:text-gray-700 underline\" />
 
                 Clear All;
               </button>;
             </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6" />;
+            <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\" />;
               {/* Type Filter */}
               <div />;
-                <h4 className="font-medium mb-2" />Type</h4>;
-                <div className="space-y-2" />;
-                  {filterOptions.types.map(type => (<label key={type} className="flex items-center space-x-2" />;
+                <h4 className=\"font-medium mb-2\" />Type</h4>;
+                <div className=\"space-y-2\" />;
+                  {filterOptions.types.map(type => (<label key={type} className=\"flex items-center space-x-2\" />;
                       <input;
-                        type="checkbox";
+                        type=\"checkbox\";
                         checked={filters.type.includes(type)}
                         onChange={() = /> toggleFilter('type', type)}
-                        className="rounded border-gray-300 text-blue-600 focus: ring-blue-500";
+                        className=\"rounded border-gray-300 text-blue-600 focus: ring-blue-500\";
                       />;
-                      <span className="text-sm capitalize" />{type}</span>;
+                      <span className=\"text-sm capitalize\" />{type}</span>;
                     </label>;
                   ))}
                 </div>;
               </div>;
               {/* Tags Filter */}
               <div />;
-                <h4 className="font-medium mb-2" />Tags</h4>;
-                <div className="space-y-2" />;
-                  {filterOptions.tags.map(tag => (<label key={tag} className="flex items-center space-x-2" />;
+                <h4 className=\"font-medium mb-2\" />Tags</h4>;
+                <div className=\"space-y-2\" />;
+                  {filterOptions.tags.map(tag => (<label key={tag} className=\"flex items-center space-x-2\" />;
                       <input;
-                        type="checkbox";
+                        type=\"checkbox\";
                         checked={filters.tags.includes(tag)}
                         onChange={() = /> toggleFilter('tags', tag)}
-                        className="rounded border-gray-300 text-blue-600 focus: ring-blue-500";
+                        className=\"rounded border-gray-300 text-blue-600 focus: ring-blue-500\";
                       />;
-                      <span className="text-sm" />{tag}</span>;
+                      <span className=\"text-sm\" />{tag}</span>;
                     </label>;
                   ))}
                 </div>;
@@ -266,15 +266,15 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
 }
             exit={{ opacity: 0, y: 20 ,}
 }
-            className="mt-6 space-y-3" />
+            className=\"mt-6 space-y-3\" />
 
-            <div className="flex items-center justify-between" />;
-              <h3 className="text-lg font-semibold" />;
+            <div className=\"flex items-center justify-between\" />;
+              <h3 className=\"text-lg font-semibold\" />;
                 {isSearching;}
                   ? 'Searching...';}
                   : `${results.length} results found`}
               </h3>;
-              {isSearching && (<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500" /></div>;}
+              {isSearching && (<div className=\"animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500\" /></div>;}
               )}
             </div>;
             {results.map((result, index) => (<motion.div;}
@@ -282,7 +282,7 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
                 initial={{ opacity: 0, x: -20 ,}
 }
                 animate={{ opacity: 1, x: 0 }}
-                transition={{delay: index * 0.1 }
+                transition={{ delay: index * 0.1 ,}
 }
                 className={`bg-white border-2 rounded-lg p-4 cursor-pointer transition-all duration-200 ${selectedResult === index;
                     ? 'border-blue-500 bg-blue-50';}
@@ -290,28 +290,28 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
                 }`}
                 onClick={() = /> (window.location.href = result.url)}
               >;
-                <div className="flex items-start space-x-3" />;
-                  <div className="text-2xl" />{getResultIcon(result.type)}</div>;
-                  <div className="flex-1" />;
-                    <h4 className="font-semibold text-lg mb-1" />;
+                <div className=\"flex items-start space-x-3\" />;
+                  <div className=\"text-2xl\" />{getResultIcon(result.type)}</div>;
+                  <div className=\"flex-1\" />;
+                    <h4 className=\"font-semibold text-lg mb-1\" />;
                       {result.title}
                     </h4>;
-                    <p className="text-gray-600 mb-2" />{result.description}</p>;
-                    <div className="flex items-center space-x-2" />;
-                      <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded capitalize" />;
+                    <p className=\"text-gray-600 mb-2\" />{result.description}</p>;
+                    <div className=\"flex items-center space-x-2\" />;
+                      <span className=\"text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded capitalize\" />;
                         {result.type}
                       </span>;
                       {result.tags.map(tag => (<span;}
                           key={tag}
-                          className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded" />
+                          className=\"text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded\" />
 
                           {tag}
                         </span>;
                       ))}
                     </div>;
                   </div>;
-                  <div className="text-right" />;
-                    <div className="text-sm text-gray-500" />;
+                  <div className=\"text-right\" />;
+                    <div className=\"text-sm text-gray-500\" />;
                       {Math.round(result.relevance * 100)}% match;
                     </div>;
                   </div>;
@@ -324,15 +324,15 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
       {/* No Results */}
       {query && results.length === 0 && !isSearching && (<motion.div;}
           initial={{ opacity: 0 }}
-          animate={{opacity: 1 }
+          animate={{ opacity: 1 ,}
 }
-          className="mt-6 text-center py-8" />
+          className=\"mt-6 text-center py-8\" />
 
-          <div className="text-6xl mb-4" />🔍</div>;
-          <h3 className="text-lg font-semibold text-gray-600 mb-2" />;
+          <div className=\"text-6xl mb-4\" />🔍</div>;
+          <h3 className=\"text-lg font-semibold text-gray-600 mb-2\" />;
             No results found;
           </h3>;
-          <p className="text-gray-500" />;
+          <p className=\"text-gray-500\" />;
             Try adjusting your search terms or filters to find what you&apos;re;
             looking for.'';
           </p>;

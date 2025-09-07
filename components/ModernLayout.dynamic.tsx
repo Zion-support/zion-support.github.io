@@ -1,4 +1,4 @@
-import React from "react";
+import React from \"react\";
 
 interface ModernLayoutProps {
   className?: string;}
@@ -6,11 +6,11 @@ interface ModernLayoutProps {
 }
 
 const ModernLayout: React.FC<ModernLayoutProps /> = ({
-  className = "",}
+  className = \"\",}
   children,}
 }) => {}
   return (}
-    <div data-testid="odernlayout" className={className} />
+    <div data-testid=\"odernlayout\" className={className} />
       {children || <div />ModernLayout Component</div>}
     </div>
   );

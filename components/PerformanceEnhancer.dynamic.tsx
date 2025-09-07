@@ -1,4 +1,4 @@
-import React from "react";
+import React from \"react\";
 
 interface PerformanceEnhancerProps {
   className?: string;}
@@ -6,11 +6,11 @@ interface PerformanceEnhancerProps {
 }
 
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps /> = ({
-  className = "",}
+  className = \"\",}
   children,}
 }) => {}
   return (}
-    <div data-testid="erformanceenhancer" className={className} />
+    <div data-testid=\"erformanceenhancer\" className={className} />
       {children || <div />PerformanceEnhancer Component</div>}
     </div>
   );

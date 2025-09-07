@@ -1,0 +1,7 @@
+const MobileNavigation = (
+
+ const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] =;
+  useState (')  const location = useLocation () ;
+  const menuRef = useRef (null) ';'\"'\";) => {
+  return $3;}
+}

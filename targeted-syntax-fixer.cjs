@@ -17,7 +17,7 @@ class TargetedSyntaxFixer {
   fixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
+      let originalContent = content;
       let hasChanges = false;
 
       // Fix specific syntax issues

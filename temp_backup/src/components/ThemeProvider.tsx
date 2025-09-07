@@ -14,7 +14,7 @@ interface ThemeProviderState {
 }
 }
 
-const initialState: ThemeProviderState = {theme: 'system'}
+const initialState: ThemeProviderState = {theme: 'system',}
   setTheme: () => null,toggleTheme: () => nul;}
 }
 
