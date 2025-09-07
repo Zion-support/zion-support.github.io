@@ -617,6 +617,24 @@ export default function ComprehensiveServicesShowcase2025() {
                     Get Started
                   </motion.button>
                 </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-zion-slate-light mb-6">{service.description}</p>
+                <div className="text-xl font-bold text-zion-cyan mb-4">{service.price}</div>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-zion-slate-light">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full py-3 px-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+                >
+                  Learn More
+                </motion.button>
               </motion.div>
             ))}
           </div>
