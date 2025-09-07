@@ -5,54 +5,55 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog",
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogHeader;
+  DialogTitle;
+  DialogTrigger} from "@/components/ui/dialog";
 
 type RewardOption = {
-  id: string;
-  title: string;
-  description: string;
-  cost: number;
-  type: 'credit' | 'feature' | 'course',
-},
+  id: string,
+  title: string,
+  description: string,
+  cost: number,
+  type: 'credit' | 'feature' | 'course'
+};
 
 const REWARD_OPTIONS: RewardOption[] = [
-  {,
+  {
     id: 'premium-week',
     title: 'Premium Week',
     description: '7 days of premium features including top placement in search results',
     cost: 100,
-    type: 'feature',
-  },
+    type: 'feature'
+  };
   {
     id: 'resume-review',
     title: 'AI Resume Review',
     description: 'Get your resume analyzed and optimized by our AI',
     cost: 50,
-    type: 'feature',
-  },
+    type: 'feature'
+  };
   {
     id: 'platform-credit',
     title: '$5 Platform Credit',
     description: 'Get $5 credit to use on any paid service',
     cost: 100,
-    type: 'credit',
+    type: 'credit'
   }
-],
+];
 
 export function RedeemTokensCard() {
-  const { wallet, spendTokens } = useWallet(),
-  const [open, setOpen] = useState(false),
+  const { wallet, spendTokens } = useWallet();
+  const [open, setOpen] = useState(false);
 
-  const handleRedeem = async (option: RewardOption) => {,
-    if (!wallet || wallet.balance < option.cost) return,
+  const handleRedeem = async (option: RewardOption) => {
+    if (!wallet || wallet.balance < option.cost) return;
     
-    await spendTokens(option.cost, `Redeemed: ${option.title}`), setOpen(false)
-  },
+    await spendTokens(option.cost, `Redeemed: ${option.title}`),
+    setOpen(false)
+  };
 
   return (
     <Card>
@@ -107,4 +108,3 @@ export function RedeemTokensCard() {
     </Card>
   )
 }
-;

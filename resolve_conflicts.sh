@@ -1,20 +1,35 @@
 #!/bin/bash
 
+# Script to resolve merge conflicts systematically
+# Keep our PM2 automation improvements, accept main branch for others
+
 echo "Resolving merge conflicts..."
 
-# Accept incoming changes for most files (from origin/main)
-git status --porcelain | grep "^UU" | cut -c4- | xargs -I {} git checkout --theirs {}
+# Keep our PM2 automation files
+git checkout --ours ecosystem.config.js
+git checkout --ours pm2-automation.sh
+git checkout --ours eslint.config.cjs
 
-# Handle modify/delete conflicts by keeping the file
-git status --porcelain | grep "^DU" | cut -c4- | xargs -I {} git add {}
+# For most other files, accept the main branch version
+git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
+    file=$(echo "$line" | cut -c4-)
+    
+    # Skip our important files
+    if [[ "$file" == "ecosystem.config.js" || "$file" == "pm2-automation.sh" || "$file" == "eslint.config.cjs" ]]; then
+        echo "Keeping our version of $file"
+        continue
+    fi
+    
+    # Accept main branch version for most files
+    echo "Accepting main branch version of $file"
+    git checkout --theirs "$file"
+done
 
-# Handle delete/modify conflicts by keeping the file
-git status --porcelain | grep "^UD" | cut -c4- | xargs -I {} git add {}
-
-# Add all resolved files
+echo "Adding resolved files..."
 git add .
 
-echo "Conflicts resolved. Committing merge..."
-git commit -m "Resolve merge conflicts by accepting origin/main changes"
+echo "Committing merge resolution..."
+git commit -m "Resolve merge conflicts - keep PM2 automation improvements"
 
-echo "Merge completed successfully!"
+echo "Pushing resolved changes..."
+git push origin HEAD

@@ -40,8 +40,8 @@ export default function FrontLanding() {
         <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 10}}
-              animate={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md"
             >
@@ -50,8 +50,8 @@ export default function FrontLanding() {
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 8}}
-              animate={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.05 }}
               className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"
             >
@@ -59,8 +59,8 @@ export default function FrontLanding() {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 8}}
-              animate={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
               className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
             >
@@ -68,21 +68,27 @@ export default function FrontLanding() {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0}}
-              animate={{ opacity: 1}}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="mt-8 flex flex-wrap justify-center gap-3"
             >
               <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
-              <a href = $2;
-                ['MainDirect Sync'],
-                ['0 OpsCloud‑Native'],
+              <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-meta.yml" target="_blank" rel="noopener noreferrer" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Live Meta Factory</a>
+            </motion.div>
+
+            {/* Quick stats */}
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {[
+                ['24/7Autonomous'];
+                ['MainDirect Sync'];
+                ['0 OpsCloud‑Native'];
                 ['SafetyGuardrails']].map(([k, v]) => (
                 <motion.div
                   key={k}
-                  initial={{ opacity: 0, y: 6}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  viewport={{ once: true}}
+                  initial={{ opacity: 0, y: 6 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                   className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left"
                 >
@@ -99,17 +105,17 @@ export default function FrontLanding() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.' },
+              { title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.' };
               { title: 'Repo Sync', desc: 'Changes are committed and pushed automatically to main.' },
               { title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.' },
-              { title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.' },
+              { title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.' };
               { title: 'Scalable', desc: 'Generates domain‑specific factories on demand.' },
               { title: 'Observability', desc: 'Dashboards, reports, and GitHub Actions artifacts.' }].map((f) => (
               <motion.article
                 key={f.title}
-                initial={{ opacity: 0, y: 8}}
-                whileInView={{ opacity: 1, y: 0}}
-                viewport={{ once: true}}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className="group glow-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30"
               >
@@ -126,14 +132,14 @@ export default function FrontLanding() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
-              { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' },
-              { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' },
+              { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' };
+              { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' };
               { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' }].map((c) => (
               <motion.article
                 key={c.title}
-                initial={{ opacity: 0, y: 8}}
-                whileInView={{ opacity: 1, y: 0}}
-                viewport={{ once: true}}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl"
               >
@@ -153,9 +159,9 @@ export default function FrontLanding() {
               '24/7 progress without human interventionRapid feedback loop with safe, incremental editsContinuous delivery directly to main branchFewer regressions via layered checks and reports'].map((b) => (
               <motion.div
                 key={b}
-                initial={{ opacity: 0, y: 6}}
-                whileInView={{ opacity: 1, y: 0}}
-                viewport={{ once: true}}
+                initial={{ opacity: 0, y: 6 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md"
               >
@@ -170,8 +176,8 @@ export default function FrontLanding() {
         <section className="mx-auto max-w-7xl px-6 pb-24">
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1}}
-            viewport={{ once: true}}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
           >

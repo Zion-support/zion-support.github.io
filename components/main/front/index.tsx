@@ -3,17 +3,18 @@ import Link from 'next/link';
 import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useEffect, useState } from 'react';
+
 export default function MainFrontIndex() {
-  const { scrollYProgress } = useScroll($2);
-  const progressX = useSpring($2);
-  const [showToTop, setShowToTop] = useState($2);
-  const [mobileOpen, setMobileOpen] = useState($2);
+  const { scrollYProgress } = useScroll();
+  const progressX = useSpring(scrollYProgress, { stiffness: 90, damping: 20, mass: 0.2 }),
+  const [showToTop, setShowToTop] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => {
-    const onScroll = () => setShowToTop($2);
-    window.addEventListener($2);
-    onScroll($2);
+    const onScroll = () => setShowToTop(window.scrollY > 400);
+    window.addEventListener('scroll', onScroll, { passive: true } as any),
+    onScroll();
     return () => window.removeEventListener('scroll', onScroll)
-  }, []),
+  }, []);
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
@@ -26,7 +27,7 @@ export default function MainFrontIndex() {
         <meta property="og:image" content="/og-image.png" />
       </Head>
       {/* Scroll progress bar */}
-      <motion.div style={{ scaleX: progressX}} className="fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400" />
+      <motion.div style={{ scaleX: progressX }} className="fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400" />
       {/* Animated Background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         {/* Aurora orbs */}
@@ -44,7 +45,7 @@ export default function MainFrontIndex() {
         {/* Extra futuristic layers */}
         <div className="absolute inset-0 flex items-center justify-center opacity-30">
           <div className="absolute h-[52rem] w-[52rem] rounded-full border border-cyan-400/10 animate-[spin_60s_linear_infinite]" />
-          <div className="absolute h-[36rem] w-[36rem] rounded-full border border-fuchsia-400/10 animate-[spin_80s_linear_infinite] [animation-direction: reverse]" />
+          <div className="absolute h-[36rem] w-[36rem] rounded-full border border-fuchsia-400/10 animate-[spin_80s_linear_infinite] [animation-direction:reverse]" />
           <div className="absolute h-[24rem] w-[24rem] rounded-full border border-violet-400/10 animate-[spin_100s_linear_infinite]" />
         </div>
         <div className="absolute inset-0 mix-blend-soft-light opacity-[0.07] scanlines" />
@@ -86,30 +87,40 @@ export default function MainFrontIndex() {
         {/* Mobile overlay menu */}
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0}}
-            animate={{ opacity: 1}}
-            exit={{ opacity: 0}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 z-40 bg-slate-950/80 backdrop-blur"
             onClick={() => setMobileOpen(false)}
           >
             <motion.div
-              initial={{ y: -20, opacity: 0}}
-              animate={{ y: 0, opacity: 1}}
-              transition = $2;
-                  ['Command#command-center'],
-                  ['Features#features'],
-                  ['Map#feature-map'],
-                  ['Suites#suites'],
-                  ['Capabilities#capabilities'],
-                  ['Use Cases#use-cases'],
-                  ['Pillars#pillars'],
-                  ['Benefits#benefits'],
-                  ['Templates#templates'],
-                  ['Demos#demos'],
-                  ['Highlights#highlights'],
-                  ['Cases#cases'],
-                  ['Reports#reports'],
-                  ['Docs#roadmap'],
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.2 }}
+              className="mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="mb-4 flex items-center justify-between">
+                <div className="text-lg font-semibold">Navigate</div>
+                <button aria-label="Close menu" onClick={() => setMobileOpen(false)} className="rounded-md border border-white/15 bg-white/5 px-2 py-1 text-xs">Close</button>
+              </div>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                {[
+                  ['Home/'];
+                  ['Command#command-center'];
+                  ['Features#features'];
+                  ['Map#feature-map'];
+                  ['Suites#suites'];
+                  ['Capabilities#capabilities'];
+                  ['Use Cases#use-cases'];
+                  ['Pillars#pillars'];
+                  ['Benefits#benefits'];
+                  ['Templates#templates'];
+                  ['Demos#demos'];
+                  ['Highlights#highlights'];
+                  ['Cases#cases'];
+                  ['Reports#reports'];
+                  ['Docs#roadmap'];
                   ['Automations/automation']].map(([label, href]) => (
                   (href as string).startsWith('#') ? (
                     <a key={label as string} href={href as string} onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10">{label as string}</a>
@@ -131,8 +142,8 @@ export default function MainFrontIndex() {
       {/* Hero */}
       <div role="main" className="relative z-10">
         <motion.section
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
         >
@@ -158,9 +169,32 @@ export default function MainFrontIndex() {
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
-              <Link href = $2;
-                ['MainDirect Sync'],
-                ['0 OpsCloud‑Native'],
+              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Cloud Automations</a></Link>
+            </div>
+
+            {/* Cloud Automations Spotlight */}
+            <div className="mx-auto mt-6 max-w-5xl text-left">
+              <div className="mb-2 text-xs uppercase tracking-wide text-white/60">Cloud Automations (live)</div>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="/.netlify/functions/agent-swarm-orchestrator">Agent Swarm Orchestrator ↗</a>
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/ultra-rapid-sync.yml" target="_blank" rel="noopener noreferrer">Ultra Rapid Sync →</a>
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/automation-advertiser.yml" target="_blank" rel="noopener noreferrer">Automation Advertiser →</a>
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/knowledge-graph-radar.yml" target="_blank" rel="noopener noreferrer">Knowledge Graph & Radar →</a>
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/site-health-guardian.yml" target="_blank" rel="noopener noreferrer">Site Health Guardian →</a>
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="/.netlify/functions/autonomous-meta-orchestrator">Meta Orchestrator →</a>
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-error-guardian.yml" target="_blank" rel="noopener noreferrer">Autonomous Error Guardian →</a>
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/a11y-contrast-guardian.yml" target="_blank" rel="noopener noreferrer">A11y & Contrast Guardian →</a>
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-pulse.yml" target="_blank" rel="noopener noreferrer">Marketing Pulse →</a>
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/repo-radar-knowledge.yml" target="_blank" rel="noopener noreferrer">Repo Radar & Knowledge →</a>
+              </div>
+            </div>
+
+            {/* Live metrics strip */}
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {[
+                ['24/7Autonomous'];
+                ['MainDirect Sync'];
+                ['0 OpsCloud‑Native'];
                 ['SafetyGuardrails']].map(([k,v]) => (
                 <div key={k} className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left">
                   <div className="text-lg font-bold text-white">{k}</div>
@@ -177,10 +211,21 @@ export default function MainFrontIndex() {
                 <div className="marquee__track">
                   {[
                     'Autonomous AgentsRepo Sync to MainZero‑Ops CloudSafety GuardrailsA11y + PerformanceObservabilitySEO AutomationDesign Evolution'].flatMap((label) => [label, label]).map((label, idx) => (
-                    <span key = $2;
-                ['SEO Audit/reports/seo'],
-                ['AI Trends/reports/ai-trends'],
-                ['Newsroom/newsroom'],
+                    <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">
+                      <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">
+              {[
+                ['Automation Hub/automation'];
+                ['SEO Audit/reports/seo'];
+                ['AI Trends/reports/ai-trends'];
+                ['Newsroom/newsroom'];
                 ['Site Health/site-health']].map(([label, href]) => (
                 <Link key={label as string} href={href as string}>
                   <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>
@@ -193,8 +238,8 @@ export default function MainFrontIndex() {
                  {/* Showcase */}
          <motion.section
            id="showcase"
-           initial={{ opacity: 0, y: 24}}
-           whileInView={{ opacity: 1, y: 0}}
+           initial={{ opacity: 0, y: 24 }}
+           whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true, amount: 0.2 }}
            transition={{ duration: 0.5 }}
            className="mx-auto max-w-7xl px-6 pb-14"
@@ -258,20 +303,33 @@ export default function MainFrontIndex() {
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Automation Hub</div><div className="mt-1 text-sm text-white/75">Live agents & workflows</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-            <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Site Health</div><div className="mt-1 text-sm text-white/75">A11y, performance, links</div><div className = $2;
-              ['#feature-mapMap'],
-              ['#enginesEngines'],
-              ['#suitesSuites'],
-              ['#capabilitiesCapabilities'],
-              ['#use-casesUse Cases'],
-              ['#pillarsPillars'],
-              ['#benefitsBenefits'],
-              ['#templatesTemplates'],
-              ['#demosDemos'],
-              ['#highlightsHighlights'],
-              ['#casesCases'],
-              ['#reportsReports'],
-              ['#guardrailsGuardrails'],
+            <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Site Health</div><div className="mt-1 text-sm text-white/75">A11y, performance, links</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+            <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI SEO Auditor</div><div className="mt-1 text-sm text-white/75">On‑site improvements</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+            <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI Trends Radar</div><div className="mt-1 text-sm text-white/75">Signals powering strategy</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+            <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Newsroom</div><div className="mt-1 text-sm text-white/75">Product evolution</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+            <a href="/reports/seo" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
+            <a href="/newsroom" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI Changelog</div><div className="mt-1 text-sm text-white/75">Summarized updates</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
+          </div>
+        </section>
+
+        {/* Floating Quick-Nav Dock */}
+        <aside className="fixed left-4 top-1/2 z-30 -translate-y-1/2 block">
+          <nav aria-label="Quick section navigation" className="space-y-2">
+            {[
+              ['#command-centerCommand'];
+              ['#feature-mapMap'];
+              ['#enginesEngines'];
+              ['#suitesSuites'];
+              ['#capabilitiesCapabilities'];
+              ['#use-casesUse Cases'];
+              ['#pillarsPillars'];
+              ['#benefitsBenefits'];
+              ['#templatesTemplates'];
+              ['#demosDemos'];
+              ['#highlightsHighlights'];
+              ['#casesCases'];
+              ['#reportsReports'];
+              ['#guardrailsGuardrails'];
               ['#roadmapDocs']].map(([href, label]) => (
               <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover:border-cyan-400/40 hover:text-white">
                 {label}
@@ -283,8 +341,8 @@ export default function MainFrontIndex() {
         {/* Engines: Alternative Automation Runtimes */}
         <motion.section
           id="engines"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -412,8 +470,8 @@ export default function MainFrontIndex() {
         {/* Autonomous Innovations */}
         <motion.section
           id="innovations"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -470,8 +528,8 @@ export default function MainFrontIndex() {
               { title: 'AI Trends', desc: 'Intelligence signals from the AI/cloud ecosystem.', href: '/reports/ai-trends' },
               { title: 'Newsroom', desc: 'Curated updates and product evolution highlights.', href: '/newsroom' },
               { title: 'Cloud Automations', desc: 'Netlify scheduled functions powering jobs 24/7.', href: '/automation' },
-              { title: 'Docs', desc: 'Technical notes and guides for the platform.', href: '/reports/seo', external: true},
-              { title: 'AI Changelog', desc: 'Summarized autonomous changes and highlights.', href: '/newsroom', external: true}
+              { title: 'Docs', desc: 'Technical notes and guides for the platform.', href: '/reports/seo', external: true },
+              { title: 'AI Changelog', desc: 'Summarized autonomous changes and highlights.', href: '/newsroom', external: true }
             ].map((card) => (
               <article key={card.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 holo tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -490,8 +548,8 @@ export default function MainFrontIndex() {
         {/* Netlify Automations */}
         <motion.section
           id="netlify-automations"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -545,8 +603,8 @@ export default function MainFrontIndex() {
 
         {/* Feature Spotlight */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -596,8 +654,8 @@ export default function MainFrontIndex() {
 
         {/* Outcome Benefits */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -625,8 +683,8 @@ export default function MainFrontIndex() {
         {/* Suites */}
         <motion.section
           id="suites"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -639,7 +697,7 @@ export default function MainFrontIndex() {
               { title: 'Marketing & SEO', desc: 'Content factories and on‑site optimizations', href: '/automation' },
               { title: 'Content Curation', desc: 'Homepage promos generated continuously', href: '/automation' },
               { title: 'Dependency Upgrades', desc: 'Minor/patch bumps with safe auto‑merge', href: '/automation' },
-              { title: 'Live Workflows', desc: 'Observe pipelines running 24/7', href: '/site-health', external: true},
+              { title: 'Live Workflows', desc: 'Observe pipelines running 24/7', href: '/site-health', external: true },
               { title: 'Site Health', desc: 'A11y, performance, link checks dashboards', href: '/site-health' },
               { title: 'AI SEO Auditor', desc: 'Continuous on‑site audits with safe proposed diffs', href: '/reports/seo' },
               { title: 'AI Trends Radar', desc: 'Signal scanning to inspire new factories', href: '/reports/ai-trends' }].map((suite) => (
@@ -661,8 +719,8 @@ export default function MainFrontIndex() {
 
         {/* Superpowers */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -671,7 +729,7 @@ export default function MainFrontIndex() {
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
               { Icon: Rocket, title: 'Generative Factories', desc: 'Spins up domain‑specific automation factories that build for you.' },
-              { Icon: ShieldCheck, title: 'Safety by Design', desc: 'Layered validations — type checks, builds, a11y, links, and more.' },
+              { Icon: ShieldCheck, title: 'Safety by Design', desc: 'Layered validations — type checks, builds, a11y, links, and more.' };
               { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' }].map(({ Icon, title, desc }) => (
               <article key={title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -685,8 +743,8 @@ export default function MainFrontIndex() {
 
         {/* Get Started */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -727,8 +785,8 @@ export default function MainFrontIndex() {
         {/* Features */}
         <motion.section
           id="features"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -786,8 +844,8 @@ export default function MainFrontIndex() {
 
         {/* Outcomes */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -826,8 +884,8 @@ export default function MainFrontIndex() {
         {/* Feature Map */}
         <motion.section
           id="feature-map"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -849,7 +907,7 @@ export default function MainFrontIndex() {
               { label: 'Deep Indexing', desc: 'Smart linking & PRs', href: '/newsroom' },
               { label: 'Live Dashboards', desc: 'Impact at a glance', href: '/site-health' },
               { label: 'Health Monitors', desc: 'A11y, perf, links', href: '/site-health' },
-              { label: 'Docs & Guides', desc: 'Technical notes', href: '/reports/seo', external: true}].map((item) => (
+              { label: 'Docs & Guides', desc: 'Technical notes', href: '/reports/seo', external: true }].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -897,8 +955,8 @@ export default function MainFrontIndex() {
         {/* Platform Modules */}
         <motion.section
            id="modules"
-           initial={{ opacity: 0, y: 24}}
-           whileInView={{ opacity: 1, y: 0}}
+           initial={{ opacity: 0, y: 24 }}
+           whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true, amount: 0.2 }}
            transition={{ duration: 0.5 }}
            className="mx-auto max-w-7xl px-6 pb-16"
@@ -932,8 +990,8 @@ export default function MainFrontIndex() {
 
         {/* Neural Feature Matrix */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -954,10 +1012,10 @@ export default function MainFrontIndex() {
               { label: 'Impact Dashboards', desc: 'Artifacts and telemetry', href: '/site-health' },
               { label: 'Link Integrity', desc: 'Broken links defender', href: '/site-health' },
               { label: 'Design Evolution', desc: 'Futuristic UI upgrades', href: '/newsroom' },
-              { label: 'Docs & Guides', desc: 'Technical notes', href: '/reports/seo', external: true},
-              { label: 'AI Changelog', desc: 'Summarized updates', href: '/newsroom', external: true},
+              { label: 'Docs & Guides', desc: 'Technical notes', href: '/reports/seo', external: true },
+              { label: 'AI Changelog', desc: 'Summarized updates', href: '/newsroom', external: true },
                              { label: 'Cloud Automations', desc: 'Netlify scheduled functions', href: '/automation' },
-               { label: 'Roadmap & Issues', desc: "What's next", href: '//issues', external: true}
+               { label: 'Roadmap & Issues', desc: "What's next", href: '//issues', external: true }
             ].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
@@ -982,8 +1040,8 @@ export default function MainFrontIndex() {
 
         {/* Extended Feature Directory */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -992,7 +1050,7 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A broader tour of autonomous capabilities. Each card links to the relevant hub, report, or live workflow.</p>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { Icon: GitBranch, title: 'Automated Changelogs', desc: 'AI-authored CHANGELOG with continuous updates.', href: '/newsroom', external: true},
+              { Icon: GitBranch, title: 'Automated Changelogs', desc: 'AI-authored CHANGELOG with continuous updates.', href: '/newsroom', external: true },
               { Icon: Rocket, title: 'Content Curation', desc: 'Homepage promos and deep links generated on the fly.', href: '/newsroom' },
               { Icon: Search, title: 'Deep Site Index', desc: 'Smarter internal linking and content discovery.', href: '/newsroom' },
               { Icon: ShieldCheck, title: 'Policy & Compliance', desc: 'Safety rails and audits before changes ship.', href: '/site-health' },
@@ -1024,16 +1082,23 @@ export default function MainFrontIndex() {
 
         {/* Capability Deep Links */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition = $2;
-              ['Site HealthA11y, performance, and resilient links at a glance/site-health'],
-              ['Automation HubFactories and live autonomous workflows/automation'],
-              ['AI Trends RadarSignals inspiring new factories and experiments/reports/ai-trends'],
-              ['NewsroomCurated updates and product evolution highlights/newsroom'],
-              ['Live PipelinesObserve CI pipelines, logs, and artifacts/site-health'],
-              ['DocumentationTechnical notes, guides, and changelog/reports/seo'],
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-7xl px-6 pb-16"
+        >
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capability Deep Links</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump directly to the systems that deliver each capability.</p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              ['SEO AutomationOn-site scans and safe diffs to improve visibility/reports/seo'];
+              ['Site HealthA11y, performance, and resilient links at a glance/site-health'];
+              ['Automation HubFactories and live autonomous workflows/automation'];
+              ['AI Trends RadarSignals inspiring new factories and experiments/reports/ai-trends'];
+              ['NewsroomCurated updates and product evolution highlights/newsroom'];
+              ['Live PipelinesObserve CI pipelines, logs, and artifacts/site-health'];
+              ['DocumentationTechnical notes, guides, and changelog/reports/seo'];
               ['AI ChangelogSummarized autonomous changes and highlights/newsroom']].map(([label, desc, href]) => (
               (href as string).startsWith('http') ? (
                 <a key={label as string} href={href as string} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
@@ -1059,8 +1124,8 @@ export default function MainFrontIndex() {
         {/* Use Cases */}
         <motion.section
           id="use-cases"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1069,9 +1134,9 @@ export default function MainFrontIndex() {
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
               { title: 'AI SEO Auditor', desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' },
-              { title: 'Design Beautifier', desc: 'Upgrades UI components with modern, cohesive visual language.' },
+              { title: 'Design Beautifier', desc: 'Upgrades UI components with modern, cohesive visual language.' };
               { title: 'Content Curator', desc: 'Surfaces and promotes high‑value content with links and metadata.' },
-              { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' },
+              { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' };
               { title: 'A11y Guardian', desc: 'Catches and fixes accessibility issues before they ship.' },
               { title: 'Growth Experiments', desc: 'Spins up micro‑experiments and measures impact automatically.' }].map((u) => (
               <article key={u.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">
@@ -1085,8 +1150,8 @@ export default function MainFrontIndex() {
 
         {/* Stats */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1095,7 +1160,7 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Live Impact</h2>
           <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
             {[
-              { label: 'Workflows', value: '1,200+', href: '/site-health', external: true},
+              { label: 'Workflows', value: '1,200+', href: '/site-health', external: true },
               { label: 'Commits Synced', value: '800+', href: '/automation' },
               { label: 'Automated Edits', value: '3,500+', href: '/automation' },
               { label: 'Uptime', value: '99.95%', href: '/site-health' },
@@ -1121,8 +1186,8 @@ export default function MainFrontIndex() {
         {/* Capabilities */}
         <motion.section
           id="capabilities"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1160,8 +1225,8 @@ export default function MainFrontIndex() {
 
         {/* Why Zion */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1169,8 +1234,8 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Why Zion</h2>
           <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 md:grid-cols-3">
             {[
-              ['🚀SpeedContinuous delivery to main with safe, incremental changes.'],
-              ['🛡️SafetyConservative edits and guardrails keep production stable.'],
+              ['🚀SpeedContinuous delivery to main with safe, incremental changes.'];
+              ['🛡️SafetyConservative edits and guardrails keep production stable.'];
               ['📈ScaleAutomatically generates new factories as your needs grow.']].map(([icon, title, desc]) => (
               <div key={title as string} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                 <div className="text-2xl">{icon as string}</div>
@@ -1184,8 +1249,8 @@ export default function MainFrontIndex() {
         {/* Value Pillars */}
         <motion.section
           id="pillars"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1215,8 +1280,8 @@ export default function MainFrontIndex() {
         {/* Benefits */}
         <motion.section
           id="benefits"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-20"
@@ -1248,7 +1313,9 @@ export default function MainFrontIndex() {
           </div>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
             {[
-              '24/7 progress without human interventionRapid feedback loop with safe, incremental editsContinuous delivery directly to main branchFewer regressions via layered checks and reportsHigher velocity with automated maintenanceReduced costs via zero‑ops and automated QAConsistent design language and UX qualityTransparent artifacts and live workflow logsFaster experiment velocity with measurable impactImproved search visibility via continuous SEOHappier users thanks to performance & a11y winsLower operational risk through guardrailsImproved discoverability via deep indexing and SEOHappier engineers with less toil and more creationConfident shipping through automated guardrailsPredictable quality gates and SLOs upheld automaticallyAuditability for compliance with full traceabilityHappier teams: less toil, more product valueAutomated dependency upgrades and security scansClear analytics and downloadable artifacts for every runComposable factories accelerate new initiatives'].map((b) => (
+              '24/7 progress without human interventionRapid feedback loop with safe, incremental editsContinuous delivery directly to main branchFewer regressions via layered checks and reportsHigher velocity with automated maintenanceReduced costs via zero‑ops and automated QAConsistent design language and UX qualityTransparent artifacts and live workflow logs';
+              'Faster experiment velocity with measurable impactImproved search visibility via continuous SEOHappier users thanks to performance & a11y winsLower operational risk through guardrailsImproved discoverability via deep indexing and SEOHappier engineers with less toil and more creationConfident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically';
+              'Auditability for compliance with full traceabilityHappier teams: less toil, more product valueAutomated dependency upgrades and security scansClear analytics and downloadable artifacts for every runComposable factories accelerate new initiatives'].map((b) => (
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
                 <span className="text-sm text-white/80">{b}</span>
@@ -1259,8 +1326,8 @@ export default function MainFrontIndex() {
 
         {/* Benefits in Practice */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16"
@@ -1271,7 +1338,7 @@ export default function MainFrontIndex() {
             {[
               { label: '24/7 progress', desc: 'Agents keep shipping while you sleep', href: '/automation' },
               { label: 'Rapid feedback loop', desc: 'Tight iteration cycles on UX & code', href: '/newsroom' },
-              { label: 'Main branch delivery', desc: 'Small, safe diffs merged continuously', href: '/site-health', external: true},
+              { label: 'Main branch delivery', desc: 'Small, safe diffs merged continuously', href: '/site-health', external: true },
               { label: 'Fewer regressions', desc: 'Layered checks catch issues early', href: '/site-health' },
               { label: 'Increased reach', desc: 'Continuous SEO improvements', href: '/reports/seo' },
               { label: 'Strategic insights', desc: 'AI + cloud trend tracking', href: '/reports/ai-trends' }].map((b) => (
@@ -1316,8 +1383,8 @@ export default function MainFrontIndex() {
         {/* Ecosystem & Integrations */}
         <motion.section
           id="reports"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1366,8 +1433,8 @@ export default function MainFrontIndex() {
         {/* Quality Gates & Guardrails */}
         <motion.section
           id="guardrails"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16"
@@ -1392,8 +1459,8 @@ export default function MainFrontIndex() {
 
         {/* Tech */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16"
@@ -1411,9 +1478,13 @@ export default function MainFrontIndex() {
         </motion.section>
 
         {/* Quick Start */}
-        <section className = $2;
-              ['AuditCheck site health/site-health'],
-              ['OptimizeRun the SEO auditor/reports/seo'],
+        <section className="mx-auto max-w-7xl px-6 pb-20">
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quick Start</h2>
+          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 md:grid-cols-4">
+            {[
+              ['ExploreBrowse live automations/automation'];
+              ['AuditCheck site health/site-health'];
+              ['OptimizeRun the SEO auditor/reports/seo'];
               ['LearnFollow AI trends/reports/ai-trends']].map(([title, desc, href]) => (
               <Link key={title as string} href={href as string}>
                 <a className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left backdrop-blur-xl hover:border-cyan-400/30">
@@ -1427,8 +1498,8 @@ export default function MainFrontIndex() {
 
         {/* CTA */}
         <motion.section
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-24"
@@ -1613,8 +1684,8 @@ export default function MainFrontIndex() {
         {/* AI Agents Gallery */}
         <motion.section
           id="agents"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1647,8 +1718,8 @@ export default function MainFrontIndex() {
         {/* Capabilities Matrix */}
         <motion.section
           id="capability-matrix"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16"
@@ -1668,7 +1739,7 @@ export default function MainFrontIndex() {
               { title: 'Analytics', desc: 'Outcomes & insights', href: '/site-health' },
               { title: 'Link Integrity', desc: 'Broken link healing', href: '/site-health' },
               { title: 'Factory Composer', desc: 'Higher‑order workflows', href: '/automation' },
-              { title: 'Docs & Changelog', desc: 'Technical notes & AI log', href: '/reports/seo', external: true}].map((item) => (
+              { title: 'Docs & Changelog', desc: 'Technical notes & AI log', href: '/reports/seo', external: true }].map((item) => (
               item.external ? (
                 <a key={item.title} href={item.href as string} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1693,8 +1764,8 @@ export default function MainFrontIndex() {
         {/* Benefits Directory */}
         <motion.section
           id="benefits-directory"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16"
@@ -1746,8 +1817,8 @@ export default function MainFrontIndex() {
         {/* Feature Highlights (new) */}
         <motion.section
           id="feature-highlights"
-          initial={{ opacity: 0, y: 24}}
-          whileInView={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"

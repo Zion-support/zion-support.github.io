@@ -3,77 +3,96 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+
 export default function APIRateLimiterPage() {
-  const [endpoint, setEndpoint] = useState($2);
-  const [rateLimit, setRateLimit] = useState($2);
-  const [timeWindow, setTimeWindow] = useState($2);
-  const [testResults, setTestResults] = useState<any[]>([]),
-  const [isTesting, setIsTesting] = useState($2);
-  const [apiKey, setApiKey] = useState($2);
+  const [endpoint, setEndpoint] = useState('');
+  const [rateLimit, setRateLimit] = useState('100');
+  const [timeWindow, setTimeWindow] = useState('1m');
+  const [testResults, setTestResults] = useState<any[]>([]);
+  const [isTesting, setIsTesting] = useState(false);
+  const [apiKey, setApiKey] = useState('');
+
   const timeWindows = [
     { value: '1s', label: '1 Second', description: 'Per second rate limiting' },
     { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' },
     { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' },
     { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
-  ],
+  ];
 
   const rateLimits = [
     { value: '10', label: '10 requests', description: 'Very strict' },
     { value: '100', label: '100 requests', description: 'Standard' },
     { value: '1000', label: '1000 requests', description: 'High volume' },
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
-  ],
+  ];
 
   const generateApiKey = () => {
-    const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString($2);
+    const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
     setApiKey(key)
-  },
+  };
 
-  const testRateLimiting = $2;
-    setIsTesting($2);
-    setTestResults($2);
-    const limit = parseInt($2);
-    const results = $2;
+  const testRateLimiting = async () => {
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+    
+    setIsTesting(true);
+    setTestResults([]);
+    
+    const limit = parseInt(rateLimit);
+    const results = [];
+    
     // Simulate API calls to test rate limiting
     for (let i = 1, i <= limit + 5, i++) {
-      await new Promise(resolve => setTimeout(resolve, 100)),
+      await new Promise(resolve => setTimeout(resolve, 100));
       
-      const isAllowed = $2;
-      const status = $2;
-      const statusCode = $2;
+      const isAllowed = i <= limit;
+      const status = isAllowed ? 'success' : 'rate_limited';
+      const statusCode = isAllowed ? 200 : 429;
+      
       results.push({
         request: i,
-        timestamp: new Date().toLocaleTimeString($2);
-        status,
-        statusCode,
+        timestamp: new Date().toLocaleTimeString(),
+        status;
+        statusCode;
         responseTime: Math.random() * 100 + 50,
         headers: {
-          'X-RateLimit-Limit': limit,
-          'X-RateLimit-Remaining': Math.max($2);
+          'X-RateLimit-Limit': limit;
+          'X-RateLimit-Remaining': Math.max(0, limit - i);
           'X-RateLimit-Reset': new Date(Date.now() + 60000).toISOString()
         }
-      }),
+      });
       
       if (!isAllowed) break
     }
     
-    setTestResults($2);
+    setTestResults(results);
     setIsTesting(false)
-  },
+  };
 
-  const copyToClipboard = $2;
-  const getStatusIcon = $2;
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text)
+  };
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'success':
+        return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'rate_limited':
-        return <AlertTriangle className = $2;
+        return <AlertTriangle className="w-5 h-5 text-red-400" />;
       default:
-        return <AlertTriangle className = $2;
-  const getStatusColor = $2;
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />
+    }
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'success':
+        return 'text-green-400';
       case 'rate_limited':
-        return 'text-red-400',
+        return 'text-red-400';
       default:
         return 'text-yellow-400'
     }
-  },
+  };
 
   return (
     <>
@@ -382,12 +401,20 @@ export default function APIRateLimiterPage() {
               </h3>
               <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
                 <pre className="text-sm text-gray-300">
-{`const axios = require($2);
-const apiKey = $2;
-const endpoint = $2;
+{`const axios = require('axios');
+
+const apiKey = '${apiKey || 'your_api_key_here'}';
+const endpoint = '${endpoint || '/api/users'}';
+
 // Make API request with rate limiting
-const response = await axios.get($2);
-console.log($2);
+const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
+  headers: {
+    'Authorization': \`Bearer \${apiKey}\`;
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+  }
+});
+
+console.log('Response:', response.data);
 console.log('Rate Limit Info:', {
   limit: response.headers['x-ratelimit-limit'],
   remaining: response.headers['x-ratelimit-remaining'],
@@ -396,36 +423,84 @@ console.log('Rate Limit Info:', {
                 </pre>
               </div>
               <Button
-                onClick={() => copyToClipboard($2);
-const apiKey = $2;
-const endpoint = $2;
+                onClick={() => copyToClipboard(`const axios = require('axios');
+
+const apiKey = '${apiKey || 'your_api_key_here'}';
+const endpoint = '${endpoint || '/api/users'}';
+
 // Make API request with rate limiting
-const response = await axios.get($2);
-console.log($2);
+const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
+  headers: {
+    'Authorization': \`Bearer \${apiKey}\`;
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+  }
+});
+
+console.log('Response:', response.data);
 console.log('Rate Limit Info:', {
   limit: response.headers['x-ratelimit-limit'],
   remaining: response.headers['x-ratelimit-remaining'],
   reset: response.headers['x-ratelimit-reset']
 }),`)}
-                variant = $2;
+                variant="outline"
+                size="sm"
+                className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-700"
+              >
+                <Copy className="w-4 h-4 mr-2" />
+                Copy Code
+              </Button>
+            </Card>
+
+            <Card className="p-6 bg-gray-800 border border-gray-700">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                <Code className="w-5 h-5 mr-2 text-blue-400" />
+                Python Example
+              </h3>
+              <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
+                <pre className="text-sm text-gray-300">
+{`import requests
+
+api_key = '${apiKey || 'your_api_key_here'}'
+endpoint = '${endpoint || '/api/users'}'
+
+# Make API request with rate limiting
+headers = {
+    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+}
+
+response = requests.get(
+    f'https://api.zion.tech{endpoint}';
     headers=headers
 )
 
 print('Response:', response.json())
-print($2);
-    'remaining': response.headers.get($2);
+print('Rate Limit Info:', {
+    'limit': response.headers.get('x-ratelimit-limit');
+    'remaining': response.headers.get('x-ratelimit-remaining');
     'reset': response.headers.get('x-ratelimit-reset')
 })`}
                 </pre>
               </div>
               <Button
-                onClick = $2;
+                onClick={() => copyToClipboard(`import requests
+
+api_key = '${apiKey || 'your_api_key_here'}'
+endpoint = '${endpoint || '/api/users'}'
+
+# Make API request with rate limiting
+headers = {
+    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+}
+
+response = requests.get(
+    f'https://api.zion.tech{endpoint}';
     headers=headers
 )
 
 print('Response:', response.json())
-print($2);
-    'remaining': response.headers.get($2);
+print('Rate Limit Info:', {
+    'limit': response.headers.get('x-ratelimit-limit');
+    'remaining': response.headers.get('x-ratelimit-remaining');
     'reset': response.headers.get('x-ratelimit-reset')
 })`)}
                 variant="outline"

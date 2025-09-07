@@ -1,34 +1,34 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  FaRocket,
+  FaRocket;
   FaBrain, 
   FaCloud, 
   FaShieldAlt, 
   FaChartLine, 
-  FaCogs,
-  FaLightbulb,
-  FaGlobe,
-  FaMobile,
-  FaDatabase,
-  FaNetworkWired,
-  FaRobot,
+  FaCogs;
+  FaLightbulb;
+  FaGlobe;
+  FaMobile;
+  FaDatabase;
+  FaNetworkWired;
+  FaRobot;
   FaSearch
-} from 'react-icons/fa',
+} from 'react-icons/fa';
 import { 
-  SiNextdotjs,
+  SiNextdotjs;
   SiReact, 
   SiTypescript, 
-  SiTailwindcss,
-  SiPrisma,
-  SiSupabase,
-  SiVercel,
-  SiDocker,
-  SiKubernetes,
-  SiAws,
-  SiGooglecloud,
+  SiTailwindcss;
+  SiPrisma;
+  SiSupabase;
+  SiVercel;
+  SiDocker;
+  SiKubernetes;
+  SiAws;
+  SiGooglecloud;
   SiMicrosoftazure
-} from 'react-icons/si',
+} from 'react-icons/si';
 
 interface Service {
   id: string,
@@ -40,7 +40,8 @@ interface Service {
   pricing: {
     starter: number,
     professional: number,
-    enterprise: number},
+    enterprise: number
+  };
   technologies: string[],
   benefits: string[]
 }
@@ -50,171 +51,180 @@ interface ServiceCategory {
   name: string,
   description: string,
   icon: React.ReactNode,
-  color: string}
+  color: string
+}
 
 const serviceCategories: ServiceCategory[] = [
   {
     id: 'ai-ml',
     name: 'AI & Machine Learning',
     description: 'Cutting-edge artificial intelligence and machine learning solutions',
-    icon: <FaBrain className = $2;
+    icon: <FaBrain className="w-8 h-8" />,
     color: 'from-purple-500 to-pink-500'
-  },
+  };
   {
     id: 'cloud',
     name: 'Cloud & DevOps',
     description: 'Scalable cloud infrastructure and development operations',
-    icon: <FaCloud className = $2;
+    icon: <FaCloud className="w-8 h-8" />,
     color: 'from-blue-500 to-cyan-500'
-  },
+  };
   {
     id: 'security',
     name: 'Cybersecurity',
     description: 'Advanced security solutions for modern threats',
-    icon: <FaShieldAlt className = $2;
+    icon: <FaShieldAlt className="w-8 h-8" />,
     color: 'from-red-500 to-orange-500'
-  },
+  };
   {
     id: 'data',
     name: 'Data & Analytics',
     description: 'Comprehensive data management and analytics platforms',
-    icon: <FaDatabase className = $2;
+    icon: <FaDatabase className="w-8 h-8" />,
     color: 'from-green-500 to-emerald-500'
-  },
+  };
   {
     id: 'iot',
     name: 'IoT & Edge Computing',
     description: 'Internet of Things and edge computing solutions',
-    icon: <FaNetworkWired className = $2;
+    icon: <FaNetworkWired className="w-8 h-8" />,
     color: 'from-indigo-500 to-purple-500'
-  },
+  };
   {
     id: 'automation',
     name: 'Process Automation',
     description: 'Intelligent automation for business processes',
-    icon: <FaRobot className = $2;
+    icon: <FaRobot className="w-8 h-8" />,
     color: 'from-yellow-500 to-orange-500'
   }
-],
+];
 
 const services: Service[] = [
   {
     id: 'ai-automation-suite',
     title: 'AI-Powered Automation Suite',
     description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
-    icon: <FaRobot className = $2;
+    icon: <FaRobot className="w-6 h-6" />,
     category: 'automation',
     features: [
       'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision makingCustom AI model trainingMulti-platform integration'
-    ],
+    ];
     pricing: {
       starter: 299,
       professional: 799,
-      enterprise: 1999},
+      enterprise: 1999
+    };
     technologies: ['TensorFlowPyTorchOpenAILangChainReactNode.js'],
     benefits: [
       'Reduce manual tasks by 80%Improve accuracy by 95%24/7 automated operationsScalable AI infrastructure'
     ]
-  },
+  };
   {
     id: 'quantum-computing-platform',
     title: 'Quantum Computing Platform',
     description: 'Next-generation quantum computing solutions for complex problem solving',
-    icon: <FaBrain className = $2;
+    icon: <FaBrain className="w-6 h-6" />,
     category: 'ai-ml',
     features: [
       'Quantum algorithm optimizationHybrid classical-quantum computingQuantum machine learningCryptographic solutionsQuantum simulation toolsAPI access to quantum hardware'
-    ],
+    ];
     pricing: {
       starter: 999,
       professional: 2499,
-      enterprise: 4999},
+      enterprise: 4999
+    };
     technologies: ['QiskitCirqPennyLanePythonC++CUDA'],
     benefits: [
       'Solve previously impossible problemsExponential speed improvementsFuture-proof technologyResearch and development support'
     ]
-  },
+  };
   {
     id: 'edge-ai-platform',
     title: 'Edge AI Computing Platform',
     description: 'Distributed artificial intelligence at the edge for real-time processing',
-    icon: <FaNetworkWired className = $2;
+    icon: <FaNetworkWired className="w-6 h-6" />,
     category: 'iot',
     features: [
       'Edge device optimizationReal-time AI inferenceDistributed learningLow-latency processingOffline AI capabilitiesEdge-to-cloud synchronization'
-    ],
+    ];
     pricing: {
       starter: 199,
       professional: 599,
-      enterprise: 1499},
+      enterprise: 1499
+    };
     technologies: ['TensorFlow LiteONNX RuntimeEdge TPURaspberry PiArduino'],
     benefits: [
       'Reduced latency by 90%Lower bandwidth costsEnhanced privacyScalable edge deployment'
     ]
-  },
+  };
   {
     id: 'quantum-cybersecurity',
     title: 'Quantum Cybersecurity Suite',
     description: 'Advanced security solutions leveraging quantum-resistant cryptography',
-    icon: <FaShieldAlt className = $2;
+    icon: <FaShieldAlt className="w-6 h-6" />,
     category: 'security',
     features: [
       'Post-quantum cryptographyQuantum key distributionAdvanced threat detectionZero-trust architectureCompliance frameworksReal-time monitoring'
-    ],
+    ];
     pricing: {
       starter: 399,
       professional: 999,
-      enterprise: 2499},
+      enterprise: 2499
+    };
     technologies: ['NIST PQCQKD protocolsZero TrustSIEMSOAR'],
     benefits: [
       'Future-proof securityQuantum-resistant encryptionComprehensive complianceAdvanced threat protection'
     ]
-  },
+  };
   {
     id: 'data-fabric-platform',
     title: 'Intelligent Data Fabric Platform',
     description: 'Unified data management and analytics across all sources and formats',
-    icon: <FaDatabase className = $2;
+    icon: <FaDatabase className="w-6 h-6" />,
     category: 'data',
     features: [
       'Unified data accessReal-time analyticsData governanceAI-powered insightsMulti-cloud supportData lineage tracking'
-    ],
+    ];
     pricing: {
       starter: 299,
       professional: 799,
-      enterprise: 1999},
+      enterprise: 1999
+    };
     technologies: ['Apache KafkaApache SparkSnowflakeDatabricksAirflow'],
     benefits: [
       'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
     ]
-  },
+  };
   {
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
-    icon: <FaCloud className = $2;
+    icon: <FaCloud className="w-6 h-6" />,
     category: 'cloud',
     features: [
       'Kubernetes orchestrationMicroservices architectureCI/CD pipelinesAuto-scalingMulti-cloud deploymentDevOps automation'
-    ],
+    ];
     pricing: {
       starter: 199,
       professional: 599,
-      enterprise: 1499},
+      enterprise: 1499
+    };
     technologies: ['KubernetesDockerHelmArgoCDPrometheusGrafana'],
     benefits: [
       'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
     ]
   }
-],
+];
 
 const EnhancedServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedService, setSelectedService] = useState<Service | null>(null),
-  const [searchTerm, setSearchTerm] = useState($2);
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
 
-  const filteredServices = $2;
+  const filteredServices = useMemo(() => {
+    let filtered = services;
+    
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
@@ -230,23 +240,29 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return a.pricing.starter - b.pricing.starter,
+          return a.pricing.starter - b.pricing.starter;
         case 'category':
-          return a.category.localeCompare($2);
+          return a.category.localeCompare(b.category);
         default: return a.title.localeCompare(b.title)
       }
     })
-  }, [selectedCategory, searchTerm, sortBy]),
+  }, [selectedCategory, searchTerm, sortBy]);
 
-  const handleServiceSelect = $2;
-  const closeModal = $2;
+  const handleServiceSelect = (service: Service) => {
+    setSelectedService(service)
+  };
+
+  const closeModal = () => {
+    setSelectedService(null)
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Header */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -261,8 +277,8 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12"
         >
@@ -292,8 +308,8 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
         {/* Category Tabs */}
         <motion.div
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-12"
         >
@@ -327,16 +343,16 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20}}
-              animate={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300"
@@ -386,8 +402,8 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
-            initial={{ opacity: 0}}
-            animate={{ opacity: 1}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             className="text-center py-16"
           >
             <div className="text-6xl mb-4">🔍</div>
@@ -401,16 +417,16 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       <AnimatePresence>
         {selectedService && (
           <motion.div
-            initial={{ opacity: 0}}
-            animate={{ opacity: 1}}
-            exit={{ opacity: 0}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0}}
-              animate={{ scale: 1, opacity: 1}}
-              exit={{ scale: 0.9, opacity: 0}}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -483,5 +499,27 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {Object.entries(selectedService.pricing).map(([plan, price]) => (
                     <div
-                      key = $2;
-export default EnhancedServicesShowcase2025,
+                      key={plan}
+                      className="p-4 bg-white/5 border border-white/20 rounded-lg text-center"
+                    >
+                      <h4 className="text-lg font-bold text-white capitalize mb-2">{plan}</h4>
+                      <div className="text-3xl font-bold text-blue-400 mb-2">
+                        ${price}
+                        <span className="text-sm text-gray-400 font-normal">/month</span>
+                      </div>
+                      <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+                        Get Started
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+};
+
+export default EnhancedServicesShowcase2025;

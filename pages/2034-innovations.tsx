@@ -3,11 +3,12 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
-const contactInfo = $2;
+const contactInfo = {
+  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 export default function Innovations2034Page() {
   return (
@@ -47,14 +48,17 @@ export default function Innovations2034Page() {
             <div className="absolute inset-0">
               {[...Array(15)].map((_, i) => (
                 <motion.div
-                  key = $2;
+                  key={i} className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-60"
+                  style={{
+                    left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`}}
                   animate={{
-                    y: [0, -100, 0],
-                    opacity: [0.6, 1, 0.6],
-                    scale: [1, 1.5, 1],
+                    y: [0, -100, 0];
+                    opacity: [0.6, 1, 0.6];
+                    scale: [1, 1.5, 1];
                     rotate: [0, 360]}}
-                  transition = $2;
+                  transition={{
+                    duration: 4 + Math.random() * 3,
                     repeat: Infinity,
                     delay: Math.random() * 2}}
                 />
@@ -64,13 +68,13 @@ export default function Innovations2034Page() {
 
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 50}}
-              animate={{ opacity: 1, y: 0}}
-              transition={{ duration: 1}}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
             >
               <motion.h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight"
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1}}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2, delay: 0.2 }}
               >
                 2034
@@ -81,8 +85,8 @@ export default function Innovations2034Page() {
               </motion.h1>
               
               <motion.p className="text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12"
-                initial={{ opacity: 0, y: 30}}
-                animate={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.4 }}
               >
                 Experience the future with our revolutionary micro SAAS services, IT solutions, and AI platforms. 
@@ -90,8 +94,8 @@ export default function Innovations2034Page() {
               </motion.p>
 
               <motion.div
-                initial={{ opacity: 0, y: 30}}
-                animate={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.6 }} className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -110,15 +114,15 @@ export default function Innovations2034Page() {
 
           {/* Scroll Indicator */}
           <motion.div
-            initial={{ opacity: 0}}
-            animate={{ opacity: 1}}
-            transition={{ duration: 1, delay: 1}} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
             <motion.div
               animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity}} className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
+              transition={{ duration: 2, repeat: Infinity }} className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
               <motion.div
                 animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2, repeat: Infinity}} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
+                transition={{ duration: 2, repeat: Infinity }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
               />
             </motion.div>
           </motion.div>
@@ -128,61 +132,70 @@ export default function Innovations2034Page() {
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 50}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition = $2;
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }} className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Innovation Categories
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our 2034 innovations span across multiple cutting-edge technology domains, 
                 each designed to revolutionize industries and accelerate human progress.
               </p>
             </motion.div>
 
-            <div className = $2;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  icon: '🧠',
                   title: 'AI Consciousness',
                   description: 'Revolutionary AI consciousness and emotional intelligence platforms',
                   color: 'from-violet-500 to-purple-600',
                   count: '5+ Services'
-                },
+                };
                 {
                   icon: '⚛️',
                   title: 'Quantum Tech',
-                  description: 'Quantum computing, DNA computing, and quantum internet infrastructure',
+                  description: 'Quantum computing, DNA computing, and quantum internet infrastructure';
                   color: 'from-indigo-500 to-blue-600',
                   count: '6+ Services'
-                },
+                };
                 {
                   icon: '🌌',
                   title: 'Space & Metaverse',
                   description: 'Space mining automation and metaverse development platforms',
                   color: 'from-teal-500 to-emerald-600',
                   count: '4+ Services'
-                },
+                };
                 {
                   icon: '🏙️',
                   title: 'Enterprise IT',
                   description: 'Autonomous DevOps and zero-trust security solutions',
                   color: 'from-blue-500 to-cyan-600',
                   count: '5+ Services'
-                },
+                };
                 {
                   icon: '🧬',
                   title: 'Biotech & Neural',
                   description: 'Synthetic biology automation and neural interface platforms',
                   color: 'from-green-500 to-emerald-600',
                   count: '3+ Services'
-                },
+                };
                 {
                   icon: '🤖',
                   title: 'Robotics & Automation',
                   description: 'Swarm robotics orchestration and autonomous systems',
                   color: 'from-orange-500 to-red-600',
                   count: '2+ Services'
-                },
+                };
                 {
                   icon: '⚡',
                   title: 'Energy & Materials',
                   description: 'Fusion energy control and nanotechnology materials',
                   color: 'from-yellow-500 to-orange-600',
                   count: '3+ Services'
-                },
+                };
                 {
                   icon: '🔄',
                   title: 'Digital Twins',
@@ -193,10 +206,10 @@ export default function Innovations2034Page() {
               ].map((category, index) => (
                 <motion.div
                   key={category.title}
-                  initial={{ opacity: 0, y: 50}}
-                  whileInView={{ opacity: 1, y: 0}}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true}} className="group">
+                  viewport={{ once: true }} className="group">
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105">
                     <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       {category.icon}
@@ -224,42 +237,51 @@ export default function Innovations2034Page() {
         <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 50}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition = $2;
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }} className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We're not just another technology company. We're pioneers building the future, 
                 one breakthrough innovation at a time.
               </p>
             </motion.div>
 
-            <div className = $2;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: '🚀',
                   title: 'First-to-Market',
-                  description: 'We\'re the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.',
+                  description: 'We\'re the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.';
                   color: 'from-cyan-500 to-blue-600'
-                },
+                };
                 {
                   icon: '🧠',
                   title: 'AI-First Approach',
-                  description: 'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',
+                  description: 'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.';
                   color: 'from-purple-500 to-pink-600'
-                },
+                };
                 {
                   icon: '⚡',
                   title: 'Lightning Fast',
-                  description: 'Our platforms are designed for speed and performance, handling the most demanding workloads.',
+                  description: 'Our platforms are designed for speed and performance, handling the most demanding workloads.';
                   color: 'from-yellow-500 to-orange-600'
-                },
+                };
                 {
                   icon: '🛡️',
                   title: 'Enterprise Security',
                   description: 'Military-grade security protocols ensure your data and operations are always protected.',
                   color: 'from-green-500 to-emerald-600'
-                },
+                };
                 {
                   icon: '🌍',
                   title: 'Global Scale',
-                  description: 'Built to scale globally, our services work seamlessly across borders and time zones.',
+                  description: 'Built to scale globally, our services work seamlessly across borders and time zones.';
                   color: 'from-teal-500 to-cyan-600'
-                },
+                };
                 {
                   icon: '💎',
                   title: 'Premium Support',
@@ -269,10 +291,10 @@ export default function Innovations2034Page() {
               ].map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 50}}
-                  whileInView={{ opacity: 1, y: 0}}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true}} className="group">
+                  viewport={{ once: true }} className="group">
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105">
                     <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       {feature.icon}
@@ -294,10 +316,10 @@ export default function Innovations2034Page() {
         <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 50}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true}} className="max-w-4xl mx-auto">
+              viewport={{ once: true }} className="max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Build the Future?
               </h2>

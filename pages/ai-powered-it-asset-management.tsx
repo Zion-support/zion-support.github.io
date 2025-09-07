@@ -4,79 +4,85 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Monitor, Brain, Cpu, Zap, Shield, Globe, 
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign,
+  Rocket, Target, TrendingUp, Users, CheckCircle;
+  ArrowRight, Star, Award, Clock, DollarSign;
   Database, Network, Server, Laptop, Smartphone
-} from 'lucide-react',
+} from 'lucide-react';
 
-const AIPoweredITAssetManagement = $2;
+const AIPoweredITAssetManagement = () => {
+  const features = [
+    {
+      icon: Brain,
       title: "AI-Powered Asset Discovery",
       description: "Intelligent detection and cataloging of all IT assets across your network",
       color: "from-purple-500 to-pink-500"
-    },
+    };
     {
       icon: Monitor,
       title: "Real-Time Monitoring",
       description: "Continuous monitoring and health assessment of all IT assets",
       color: "from-blue-500 to-cyan-500"
-    },
+    };
     {
       icon: Shield,
       title: "Security Compliance",
       description: "Automated security audits and compliance monitoring for all assets",
       color: "from-emerald-500 to-teal-500"
-    },
+    };
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
     }
-  ],
+  ];
 
   const assetTypes = [
-    "Hardware devices (servers, workstations, mobile devices)",
-    "Software licenses and applications",
-    "Network infrastructure and equipment",
-    "Cloud resources and virtual machines",
-    "Security devices and appliances",
+    "Hardware devices (servers, workstations, mobile devices)";
+    "Software licenses and applications";
+    "Network infrastructure and equipment";
+    "Cloud resources and virtual machines";
+    "Security devices and appliances";
     "Peripheral devices and accessories"
-  ],
+  ];
 
-  const benefits = $2;
+  const benefits = [
+    {
+      icon: DollarSign,
       title: "Cost Optimization",
       value: "35%",
       description: "Reduction in IT asset costs"
-    },
+    };
     {
       icon: Clock,
       title: "Time Savings",
       value: "60%",
       description: "Faster asset management"
-    },
+    };
     {
       icon: Shield,
       title: "Security Improvement",
       value: "90%",
       description: "Better security compliance"
-    },
+    };
     {
       icon: TrendingUp,
       title: "Efficiency Boost",
       value: "200%",
       description: "Increased operational efficiency"
     }
-  ],
+  ];
 
-  const capabilities = $2;
-    "Real-time health monitoring and alerts",
-    "Predictive maintenance scheduling",
-    "License compliance management",
-    "Security vulnerability assessment",
-    "Asset lifecycle optimization",
-    "Cost allocation and tracking",
+  const capabilities = [
+    "Automated asset discovery and inventory";
+    "Real-time health monitoring and alerts";
+    "Predictive maintenance scheduling";
+    "License compliance management";
+    "Security vulnerability assessment";
+    "Asset lifecycle optimization";
+    "Cost allocation and tracking";
     "Integration with existing IT tools"
-  ],
+  ];
 
   return (
     <>
@@ -96,9 +102,23 @@ const AIPoweredITAssetManagement = $2;
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              animate={{ opacity: 1, y: 0}}
-              transition = $2;
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="flex justify-center mb-6">
+                <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full">
+                  <Monitor className="w-8 h-8 text-white" />
+                </div>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI-Powered IT Asset
+                <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                  Management
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your IT operations with intelligent asset management that discovers, 
                 monitors, and optimizes every piece of your technology infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -118,10 +138,10 @@ const AIPoweredITAssetManagement = $2;
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -136,10 +156,10 @@ const AIPoweredITAssetManagement = $2;
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20}}
-                  whileInView={{ opacity: 1, y: 0}}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true}}
+                  viewport={{ once: true }}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -157,10 +177,10 @@ const AIPoweredITAssetManagement = $2;
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -176,9 +196,9 @@ const AIPoweredITAssetManagement = $2;
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0}}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true}}
+                  viewport={{ once: true }}
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
@@ -193,10 +213,10 @@ const AIPoweredITAssetManagement = $2;
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -211,10 +231,10 @@ const AIPoweredITAssetManagement = $2;
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20}}
-                  whileInView={{ opacity: 1, y: 0}}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true}}
+                  viewport={{ once: true }}
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -235,10 +255,10 @@ const AIPoweredITAssetManagement = $2;
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -254,9 +274,9 @@ const AIPoweredITAssetManagement = $2;
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0}}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true}}
+                  viewport={{ once: true }}
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
@@ -271,7 +291,32 @@ const AIPoweredITAssetManagement = $2;
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition = $2;
-export default AIPoweredITAssetManagement,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+                Ready to Transform Your IT Asset Management?
+              </h2>
+              <p className="text-xl text-gray-400 mb-8">
+                Join the AI revolution and optimize your IT infrastructure today
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 text-lg">
+                  Get Started
+                  <Monitor className="ml-2 w-6 h-6" />
+                </Link>
+                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200 text-lg">
+                  Explore All Services
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+};
+
+export default AIPoweredITAssetManagement;

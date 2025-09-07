@@ -16,28 +16,32 @@ import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
-  const { jobs, isLoading } = useJobs($2);
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
-  const isMobile = useIsMobile($2);
-  const onboardingStatus = useOnboardingStatus($2);
-  const showAdvanced = $2;
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
+  const { jobs, isLoading } = useJobs();
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
+  const isMobile = useIsMobile();
+  const onboardingStatus = useOnboardingStatus();
+  const showAdvanced =
+    onboardingStatus.jobPosted &&
+    onboardingStatus.inviteSent &&
+    onboardingStatus.responseReceived;
+
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
-      const firstJob = $2;
+      const firstJob = jobs[0];
       if (firstJob) {
-        setSelectedJobId($2);
+        setSelectedJobId(firstJob.id);
         setSelectedJobTitle(firstJob.title)
       }
     }
-  }, [jobs, selectedJobId]),
+  }, [jobs, selectedJobId]);
 
-  const handleJobSelect = (jobId: string, jobTitle: string) => {,
-    setSelectedJobId(jobId),
+  const handleJobSelect = (jobId: string, jobTitle: string) => {
+    setSelectedJobId(jobId);
     setSelectedJobTitle(jobTitle)
-  },
+  };
 
   return (
     <>
@@ -76,7 +80,7 @@ function ClientDashboardContent() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">,
+          <div className="lg:col-span-2">
             <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>
               <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>
                 <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>
@@ -144,4 +148,3 @@ export default function ClientDashboard() {
     </ProtectedRoute>
   )
 }
-;

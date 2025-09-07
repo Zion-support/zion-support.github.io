@@ -1,20 +1,20 @@
 import React from 'react';
 import FocusLock from 'react-focus-lock';
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle} from '@/components/ui/dialog',
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle} from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage} from '@/components/ui/form',
+  Form;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormMessage} from '@/components/ui/form';
 import { useForm, type Resolver } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -24,74 +24,81 @@ import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 interface ContactPublisherModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  publisherName: string;
-  publisherEmail?: string,
+  isOpen: boolean,
+  onClose: () => void,
+  publisherName: string,
+  publisherEmail?: string;
   productId?: string
 }
 
 type FormValues = {
-  subject: string;
-  message: string,
-},
+  subject: string,
+  message: string
+};
 
 const schema: yup.ObjectSchema<FormValues> = yup
   .object({
     subject: yup
-      .string(),
+      .string()
       .min(5, 'Subject must be at least 5 characters')
-      .required($2);
+      .required('Subject is required');
     message: yup
-      .string(),
+      .string()
       .min(20, 'Message must be at least 20 characters')
       .required('Message is required')})
-  .required($2);
+  .required();
+
 export function ContactPublisherModal({
-  isOpen,
-  onClose,
-  publisherName,
-  publisherEmail,
+  isOpen;
+  onClose;
+  publisherName;
+  publisherEmail;
   productId}: ContactPublisherModalProps) {
-  const { user } = useAuth($2);
-  const [isSubmitting, setIsSubmitting] = React.useState($2);
-  const [error, setError] = React.useState<string | null>(null),
-  const [loginOpen, setLoginOpen] = React.useState($2);
-  const form = $2;
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
+  const [loginOpen, setLoginOpen] = React.useState(false);
+
+  const form = useForm<FormValues>({
+    resolver: yupResolver(schema) as Resolver<FormValues>,
     mode: 'onChange',
     defaultValues: { subject: '', message: '' }}),
 
   const handleSend = async () => {
     if (!user) {
-      setLoginOpen($2);
+      setLoginOpen(true);
       return
     }
-    const values = form.getValues($2);
-    setIsSubmitting($2);
-    setError($2);
+    const values = form.getValues();
+    setIsSubmitting(true);
+    setError(null);
     try {
-      await api.post($2);
-      toast.success($2);
-      form.reset($2);
+      await api.post('/api/messages', {
+        productId;
+        subject: values.subject,
+        body: values.message,
+        fromUser: user.id}),
+      toast.success('Message sent');
+      form.reset();
       onClose()
     } finally {
       setIsSubmitting(false)
     }
-  },
+  };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {,
-      e.stopPropagation(),
+    if (e.key === 'Escape') {
+      e.stopPropagation();
       onClose()
     }
-  },
+  };
 
   return (
     <>
     <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
         <DialogContent
-          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md",
+          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown={handleKeyDown}
           aria-modal="true"
           aria-labelledby="contact-publisher-title"
@@ -105,8 +112,8 @@ export function ContactPublisherModal({
           {error && <p className="text-red-500 mb-2">{error}</p>}
           {publisherEmail && (
             <div className="mb-4 text-zion-slate-light">
-            <span className="block">Email:</span>,
-            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">,
+            <span className="block">Email:</span>
+            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
             </a>
           </div>
@@ -116,7 +123,7 @@ export function ContactPublisherModal({
             <FormField
               control={form.control}
               name="subject"
-              render={({ field }: { field: any}) => (
+              render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
@@ -133,7 +140,7 @@ export function ContactPublisherModal({
             <FormField
               control={form.control}
               name="message"
-              render={({ field }: { field: any}) => (
+              render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
@@ -164,4 +171,3 @@ export function ContactPublisherModal({
     </>
   )
 }
-;

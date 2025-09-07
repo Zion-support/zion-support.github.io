@@ -5,13 +5,13 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function AdminDashboard() {
-  const schema = {;
-    "@context": "https: //schema.org";
-    "@type": "WebPage",
-    "name": "Admin Dashboard",
-    "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
-    "url": "https://app.ziontechgroup.com/features/admin-dashboard",
-  },
+  const schema = {
+    "@context": "https://schema.org";
+    "@type": "WebPage";
+    "name": "Admin Dashboard";
+    "description": "Monitor marketplace activity, manage listings and view analytics in one place.";
+    "url": "https://app.ziontechgroup.com/features/admin-dashboard"
+  };
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function AdminDashboard() {
         description="Gain insight into your marketplace with powerful administration tools."
         keywords="admin dashboard, analytics, manage listings"
         canonical="https://app.ziontechgroup.com/features/admin-dashboard"
-      />,
+      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -30,7 +30,7 @@ export default function AdminDashboard() {
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">Admin Dashboard</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">,
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Visualize user activity, manage orders and keep your marketplace running smoothly.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
@@ -39,7 +39,7 @@ export default function AdminDashboard() {
               alt="Screenshot of admin dashboard"
               className="object-cover"
             />
-          </div>,
+          </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Track sales and service metrics in real time.</li>

@@ -8,14 +8,21 @@ import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
 import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
-  project: PortfolioProject;
-  onEdit: (project: PortfolioProject) => void;
-  onDelete: (projectId: string) => void,
+  project: PortfolioProject,
+  onEdit: (project: PortfolioProject) => void,
+  onDelete: (projectId: string) => void
 }
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState($2);
-  const handleDelete = $2;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  
+  const handleDelete = () => {
+    if (project.id) {
+      onDelete(project.id)
+    }
+    setDeleteDialogOpen(false)
+  };
+  
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -113,4 +120,3 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     </Card>
   )
 }
-;

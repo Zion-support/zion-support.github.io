@@ -4,15 +4,16 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
-const TalentProfile: NextPage = () => {
-  const router = useRouter($2);
-  const { slug } = router.query,
 
-  const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string}>>([]),
+const TalentProfile: NextPage = () => {
+  const router = useRouter();
+  const { slug } = router.query;
+
+  const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
 
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
-  },
+  };
 
   return (
     <div className="space-y-6 pb-20">
@@ -55,5 +56,17 @@ const TalentProfile: NextPage = () => {
             <ul className="space-y-1 text-sm">
               {responseLog.length === 0 && <li className="opacity-70">No responses yet.</li>}
               {responseLog.map((r, idx) => (
-                <li key = $2;
-export default TalentProfile,
+                <li key={idx} className="flex items-center justify-between">
+                  <span>{r.action}</span>
+                  <span className="opacity-70">{new Date(r.at).toLocaleString()}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </div>
+  )
+};
+
+export default TalentProfile;

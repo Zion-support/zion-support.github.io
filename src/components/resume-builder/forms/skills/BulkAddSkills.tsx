@@ -8,23 +8,29 @@ import { BulkAddSkillsProps } from './types';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Textarea } from '@/components/ui/textarea';
 export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
-  const [bulkSkills, setBulkSkills] = useState($2);
-  const [error, setError] = useState<string | null>(null),
-  const { enhanceContent, isEnhancing } = useResumeEnhancer($2);
-  const { addSkill } = useResume($2);
+  const [bulkSkills, setBulkSkills] = useState('');
+  const [error, setError] = useState<string | null>(null);
+  const { enhanceContent, isEnhancing } = useResumeEnhancer();
+  const { addSkill } = useResume();
+
   const handleCategorizeSkills = async () => {
     if (!bulkSkills || bulkSkills.trim().length === 0) {
-      setError($2);
+      setError('Please enter some skills to categorize');
       return
     }
     
-    setError($2);
+    setError(null);
     try {
-      const enhancedContent = await enhanceContent($2);
+      const enhancedContent = await enhanceContent(
+        bulkSkills;
+        'skill-categorization'
+      );
+      
       if (enhancedContent) {
         try {
           // Parse the JSON response
-          const categorizedSkills = JSON.parse($2);
+          const categorizedSkills = JSON.parse(enhancedContent);
+          
           // Add the categorized skills
           for (const [category, skillsList] of Object.entries(categorizedSkills)) {
             if (Array.isArray(skillsList)) {
@@ -38,7 +44,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           }
           
           // Reset the form and bulk input
-          setBulkSkills($2);
+          setBulkSkills('');
+          
           // Refresh the skills
           await onSuccess()
         } catch (err) {
@@ -46,9 +53,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
         }
       }
     } catch (err: any) {
-      setError(err.message || 'Failed to categorize skills'),
+      setError(err.message || 'Failed to categorize skills')
     }
-  },
+  };
 
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
@@ -85,5 +92,4 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
       </div>
     </div>
   )
-},
-;
+};

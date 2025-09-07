@@ -97,7 +97,8 @@ export default function CaseStudyPage() {
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Self-Healing, Auto-Scaling Infrastructure</h3>
-                <p className = $2;
+                <p className="text-white/90 text-lg mb-6">
+                  We built a comprehensive cloud infrastructure solution that automatically scales, 
                   monitors, and heals itself while optimizing costs and performance.
                 </p>
                 

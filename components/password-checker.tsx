@@ -3,102 +3,134 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+
 export default function PasswordCheckerPage() {
-  const [password, setPassword] = useState($2);
-  const [showPassword, setShowPassword] = useState($2);
-  const [strength, setStrength] = useState($2);
-  const [strengthText, setStrengthText] = useState($2);
-  const [strengthColor, setStrengthColor] = useState($2);
-  const [checks, setChecks] = useState($2);
-  const [suggestions, setSuggestions] = useState<string[]>([]),
-  const [generatedPassword, setGeneratedPassword] = useState($2);
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [strength, setStrength] = useState(0);
+  const [strengthText, setStrengthText] = useState('');
+  const [strengthColor, setStrengthColor] = useState('');
+  const [checks, setChecks] = useState({
+    length: false,
+    uppercase: false,
+    lowercase: false,
+    numbers: false,
+    symbols: false,
+    noCommon: false,
+    noSequential: false
+  });
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [generatedPassword, setGeneratedPassword] = useState('');
+
   useEffect(() => {
     if (password) {
       analyzePassword(password)
     } else {
       resetAnalysis()
     }
-  }, [password]),
+  }, [password]);
 
-  const analyzePassword = $2;
-      uppercase: /[A-Z]/.test($2);
-      lowercase: /[a-z]/.test($2);
-      numbers: /\d/.test($2);
-      symbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test($2);
-      noCommon: !isCommonPassword($2);
+  const analyzePassword = (pass: string) => {
+    const newChecks = {
+      length: pass.length >= 8,
+      uppercase: /[A-Z]/.test(pass),
+      lowercase: /[a-z]/.test(pass),
+      numbers: /\d/.test(pass),
+      symbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(pass);
+      noCommon: !isCommonPassword(pass),
       noSequential: !hasSequentialChars(pass)
-    },
+    };
 
-    setChecks($2);
+    setChecks(newChecks);
+
     // Calculate strength score
-    let score = $2;
-    score += newChecks.length ? 15 : 0,
-    score += newChecks.uppercase ? 15 : 0,
-    score += newChecks.lowercase ? 15 : 0,
-    score += newChecks.numbers ? 15 : 0,
-    score += newChecks.symbols ? 20 : 0,
-    score += newChecks.noCommon ? 10 : 0,
-    score += newChecks.noSequential ? 10 : 0,
+    let score = 0;
+    score += newChecks.length ? 15 : 0;
+    score += newChecks.uppercase ? 15 : 0;
+    score += newChecks.lowercase ? 15 : 0;
+    score += newChecks.numbers ? 15 : 0;
+    score += newChecks.symbols ? 20 : 0;
+    score += newChecks.noCommon ? 10 : 0;
+    score += newChecks.noSequential ? 10 : 0;
 
     // Bonus for length
-    if (pass.length >= 12) score += 10,
-    if (pass.length >= 16) score += 5,
+    if (pass.length >= 12) score += 10;
+    if (pass.length >= 16) score += 5;
 
-    setStrength($2);
+    setStrength(score);
+
     // Set strength text and color
     if (score >= 90) {
-      setStrengthText($2);
+      setStrengthText('Very Strong');
       setStrengthColor('text-green-400')
     } else if (score >= 70) {
-      setStrengthText($2);
+      setStrengthText('Strong');
       setStrengthColor('text-green-400')
     } else if (score >= 50) {
-      setStrengthText($2);
+      setStrengthText('Moderate');
       setStrengthColor('text-yellow-400')
     } else if (score >= 30) {
-      setStrengthText($2);
+      setStrengthText('Weak');
       setStrengthColor('text-orange-400')
     } else {
-      setStrengthText($2);
+      setStrengthText('Very Weak');
       setStrengthColor('text-red-400')
     }
 
     // Generate suggestions
     generateSuggestions(newChecks, pass)
-  },
+  };
 
-  const isCommonPassword = $2;
+  const isCommonPassword = (pass: string) => {
+    const commonPasswords = [
+      'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhello'
+    ];
     return commonPasswords.includes(pass.toLowerCase())
-  },
+  };
 
-  const hasSequentialChars = $2;
-    return sequences.some(seq = $2;
+  const hasSequentialChars = (pass: string) => {
+    const sequences = ['123abcqweasdzxc789456'];
+    return sequences.some(seq => pass.toLowerCase().includes(seq))
+  };
+
   const generateSuggestions = (checks: any, pass: string) => {
     const suggestions: string[] = [],
     
-    if (!checks.length) suggestions.push($2);
-    if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)'),
-    if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)'),
-    if (!checks.numbers) suggestions.push('Add at least one number (0-9)'),
-    if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)'),
-    if (!checks.noCommon) suggestions.push($2);
-    if (!checks.noSequential) suggestions.push($2);
-    if (pass.length < 12) suggestions.push($2);
-    if (pass.length < 16) suggestions.push($2);
+    if (!checks.length) suggestions.push('Make your password at least 8 characters long');
+    if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)');
+    if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)');
+    if (!checks.numbers) suggestions.push('Add at least one number (0-9)');
+    if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)');
+    if (!checks.noCommon) suggestions.push('Avoid common passwords like "password" or "123456"');
+    if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"');
+    
+    if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security');
+    if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters');
+    
     setSuggestions(suggestions)
-  },
+  };
 
   const resetAnalysis = () => {
-    setStrength($2);
-    setStrengthText($2);
-    setStrengthColor($2);
-    setChecks($2);
+    setStrength(0);
+    setStrengthText('');
+    setStrengthColor('');
+    setChecks({
+      length: false,
+      uppercase: false,
+      lowercase: false,
+      numbers: false,
+      symbols: false,
+      noCommon: false,
+      noSequential: false
+    });
     setSuggestions([])
-  },
+  };
 
-  const generateStrongPassword = $2;
-    const charset = $2;
-    let result = $2;
+  const generateStrongPassword = () => {
+    const length = 16;
+    const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
+    let result = '';
+    
     // Ensure at least one of each required character type
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)], // Uppercase
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)], // Lowercase
@@ -111,26 +143,54 @@ export default function PasswordCheckerPage() {
     }
     
     // Shuffle the password
-    result = result.split('').sort(() => Math.random() - 0.5).join($2);
-    setGeneratedPassword($2);
+    result = result.split('').sort(() => Math.random() - 0.5).join('');
+    setGeneratedPassword(result);
     setPassword(result)
-  },
+  };
 
-  const copyToClipboard = $2;
-  const getStrengthBarColor = $2;
-    if (strength >= 70) return 'bg-green-400',
-    if (strength >= 50) return 'bg-yellow-400',
-    if (strength >= 30) return 'bg-orange-400',
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text)
+  };
+
+  const getStrengthBarColor = () => {
+    if (strength >= 90) return 'bg-green-500';
+    if (strength >= 70) return 'bg-green-400';
+    if (strength >= 50) return 'bg-yellow-400';
+    if (strength >= 30) return 'bg-orange-400';
     return 'bg-red-400'
-  },
+  };
 
-  const getCheckIcon = $2;
+  const getCheckIcon = (passed: boolean) => {
+    return passed ? (
+      <CheckCircle className="w-5 h-5 text-green-400" />
+    ) : (
+      <XCircle className="w-5 h-5 text-red-400" />
+    )
+  };
+
   return (
     <>
       <Head>
         <title>Password Strength Checker - Zion Tech Group</title>
         <meta name="description" content="Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords." />
-        <meta property = $2;
+        <meta property="og:title" content="Password Strength Checker - Zion Tech Group" />
+        <meta property="og:description" content="Advanced password strength analyzer with security recommendations." />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-sm font-medium mb-6">
+              <Lock className="w-4 h-4 mr-2" />
+              Password Security & Analysis
+            </div>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+            Password Strength Checker
+          </h1>
+          <p className="text-xl text-indigo-200 max-w-4xl mx-auto leading-relaxed">
+            Analyze your password security with our advanced strength checker. Get detailed feedback, 
             suggestions, and generate strong passwords to protect your accounts and data.
           </p>
         </div>

@@ -14,30 +14,32 @@ import { PartnerResources } from "@/components/partners/PartnerResources";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+
 export default function Partners() {
 
-  logInfo($2);
-  const [activeTab, setActiveTab] = useState($2);
-  const { t } = useTranslation($2);
-  const { user, isAuthenticated } = useAuth($2);
-  const router = useRouter($2);
-  const [authServiceAvailable, setAuthServiceAvailable] = useState($2);
+  logInfo('PartnersPage rendering');
+  const [activeTab, setActiveTab] = useState("overview");
+  const { t } = useTranslation();
+  const { user, isAuthenticated } = useAuth();
+  const router = useRouter();
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
+
   useEffect(() => {
     async function checkHealth() {
       try {
-        const res = await fetch($2);
+        const res = await fetch('/api/auth/health');
         setAuthServiceAvailable(res.ok)
       } catch (err) {
-        logErrorToProduction($2);
+        logErrorToProduction('Partner login auth health check failed', { data: err }),
         setAuthServiceAvailable(false)
       }
     }
     checkHealth()
-  }, []),
+  }, []);
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
-    logInfo($2);
+    logInfo('PartnersPage rendering Unauthenticated View');
     return (
       <div className="container max-w-6xl py-10">
         <div className="text-center mb-8">
@@ -47,7 +49,7 @@ export default function Partners() {
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
-            <CardHeader>,
+            <CardHeader>
               <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
               <CardDescription>{t('partner.influencers.desc')}</CardDescription>
             </CardHeader>
@@ -114,7 +116,7 @@ export default function Partners() {
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-zion-cyan" />
-                </div>,
+                </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.join_title')}</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-sm text-zion-slate-light">
@@ -153,7 +155,7 @@ export default function Partners() {
             size="lg"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             asChild
-          >,
+          >
             <Link href="/signup?type=partner&source=partner-program">{t('partner.apply')}</Link>
           </Button>
           <Button
@@ -174,12 +176,12 @@ export default function Partners() {
   }
 
   // Authenticated user view - Partner Dashboard
-  logInfo($2);
+  logInfo('PartnersPage rendering Authenticated View. User:', { data: user }),
   return (
     <div className="container max-w-7xl py-10">
       <h1>DEBUG: Partners Page - Authenticated View</h1>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-        <div>,
+        <div>
           <h1 className="text-3xl font-bold tracking-tight text-white">{t('partner.dashboard_title')}</h1>
           <p className="text-zion-slate-light">{t('partner.dashboard_desc')}</p>
         </div>
@@ -192,7 +194,7 @@ export default function Partners() {
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">,
+        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">
           <TabsTrigger value="overview">{t('partner.tabs.overview')}</TabsTrigger>
           <TabsTrigger value="referrals">{t('partner.tabs.referrals')}</TabsTrigger>
           <TabsTrigger value="earnings">{t('partner.tabs.earnings')}</TabsTrigger>
@@ -232,4 +234,3 @@ export default function Partners() {
     </div>
   )
 }
-;

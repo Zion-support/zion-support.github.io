@@ -1,91 +1,3 @@
-
-
-}function getAllServices () : Service[] {
-  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
-}return {
-  paths: Array.from (slugs) .map ( (slug) => ({
-  params: {
-  slug
-}) );
-fallback: false
-}export default function ServiceDetailPage ({
-  service
-}: {
-  service: Service
-}) {
-  return (<Layout> <Head> <title> {
-
-}function getAllServices () : Service[] {
-
-2) 
-  service.name 
-}| Zion Tech Group</title> ;
-};
-null;
-
-  service.name
-}| Zion Tech Group</title>
-}
-null;
-2)
-}/> </Head> </li>) )
-}</ul> </div>) )
-}</ul> </div> <div>) )
-2) 
-}function getAllServices () : Service[] {
-
-2) 
-  service.name 
-}| Zion Tech Group</title> ;
-};
-null;
-
-}/> </Head> </li>) ) 
-}</ul> </div>) ) 
-}</ul> </div> <div>) ) 
-
-}</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
-  `tel:$ {
-  contactInfo.mobile.replace (/[^+\\d]/g, '')
-}`
-}className="hover:underline" > {
-  contactInfo.mobile
-}</a></div> <div className="flex items-center gap-2 text-purple-400" ><Mail className="w-4 h-4" /><a href= {
-  `mailto:$ {
-  contactInfo.email
-}`
-}className="hover:underline" > {
-  contactInfo.email
-}</a></div> <div className="flex items-center gap-2 text-green-400" ><MapPin className="w-4 h-4" /><a href= {
-  `https://maps.google.com/?q=$ {
-  encodeURIComponent (contactInfo.address)
-}`
-}target="blank" rel="noopener noreferrer" className="hover:underline" > {
-  contactInfo.address
-}</a></div> </div> </div> {
-  /* Market Position & ROI */
-}<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
-  service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
-
-  service.marketPosition 
-}</p>
-}{
-  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
-  service.roi 
-
-}</p>
-}{
-  service.competitors?.length ? () : null
-}<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
-
-}function getAllServices(): any () : Service[] {;
-  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) ;
-}return {;
-  paths: Array && Array.from (slugs) .map ( (slug) => ({;
-  params: {;
-  slug ;
-}) );
-fallback: false ;
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -101,13 +13,23 @@ import { moreRealServices2025 } from '../../data/more-real-services-2025';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
-type Service = $2;
-const contactInfo = $2;
+type Service = typeof enhancedRealMicroSaasServices[number];
+
+const contactInfo = {
+	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-},
+};
 
+function getPriceValue(price: Service['price']): string {
+	if (price && typeof price === 'object' && 'monthly' in price) {
+		return price.monthly.toString()
+	}
+	if (typeof price === 'string') {
+		return price
+	}
+	return '99'
 }
 
 function getAllServices(): Service[] {
@@ -120,7 +42,7 @@ function getAllServices(): Service[] {
 		.concat(moreRealServices2025 as unknown as Service[])
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
-		.concat($2);
+		.concat(realServicesQ32025 as unknown as Service[]);
 		.concat(newVerifiedServicesQ22025 as unknown as Service[])
 }
 
@@ -130,8 +52,8 @@ function toSlug(value: string): string {
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
-		const url = new URL($2);
-		const path = url.pathname.replace($2);
+		const url = new URL(link);
+		const path = url.pathname.replace(/^\/+|\/+$/g, '');
 		if (path.startsWith('services/')) {
 			return path.substring('services/'.length)
 		}
@@ -142,20 +64,25 @@ function extractServiceSlugFromLink(link: string): string | null {
 }
 
 export async function getStaticPaths() {
-	const services = getAllServices($2);
-	const slugs = $2;
+	const services = getAllServices();
+	const slugs = new Set<string>();
+
 	// Define static service slugs that should not be handled by this dynamic route
-	const staticServiceSlugs = $2;
+	const staticServiceSlugs = [
+		'ai-evaluation-orchestratorai-support-triage-routerai-code-review-assistant-proai-revenue-forecasting-copilot'
+	];
+
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available
-		const fromLink = $2;
+		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
 		if (fromLink && !staticServiceSlugs.includes(fromLink)) {
-			slugs.add($2);
+			slugs.add(fromLink);
 			continue
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
-		const idSlug = $2;
-		const nameSlug = $2;
+		const idSlug = s.id ? toSlug(s.id) : '';
+		const nameSlug = s.name ? toSlug(s.name) : '';
+		
 		if (idSlug && !staticServiceSlugs.includes(idSlug)) {
 			slugs.add(idSlug)
 		}
@@ -166,34 +93,63 @@ export async function getStaticPaths() {
 
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
-		fallback: false}
+		fallback: false
+	}
 }
 
-export async function getStaticProps({ params }: { params: { slug: string} }) {
-	const services = getAllServices($2);
-	const incomingSlug = (params?.slug || '').replace($2);
-	let service: Service | undefined = $2;
-		const fromLink = extractServiceSlugFromLink($2);
-		return fromLink = $2;
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+	const services = getAllServices();
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+
+	let service: Service | undefined = services.find((s) => {
+		if (!s.link) return false;
+		const fromLink = extractServiceSlugFromLink(s.link);
+		return fromLink === incomingSlug
+	});
+
 	if (!service) {
-		service = $2;
-								"@type": "Service",
+		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
+	}
+
+	if (!service) {
+		return { notFound: true }
+	}
+
+	return {
+		props: { service }
+	}
+}
+
+export default function ServiceDetailPage({ service }: { service: Service }) {
+	return (
+		<Layout>
+			<Head>
+				<title>{service.name} | Zion Tech Group</title>
+				<meta name="description" content={service.tagline || service.description} />
+				<link rel="canonical" href={service.link} />
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(
+							{
+								"@context": "https://schema.org";
+								"@type": "Service";
 								name: service.name,
 								description: service.tagline || service.description,
 								url: service.link,
 								provider: {
-									"@type": "Organization",
+									"@type": "Organization";
 									name: "Zion Tech Group",
 									url: "https://ziontechgroup.com"
-								},
+								};
 								offers: {
-									"@type": "Offer",
+									"@type": "Offer";
 									        price: "99",
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
 								}
-							},
-							null,
+							};
+							null;
 							2
 							)
 						}}
@@ -280,7 +236,14 @@ export async function getStaticProps({ params }: { params: { slug: string} }) {
 								{service.competitors?.length ? (
 									<p className="leading-relaxed"><span className="text-gray-400">Competitors:</span> {service.competitors.slice(0,6).join()}</p>
 								) : null}
-								<a href = $2;
+								<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Layout>
+	);
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -288,148 +251,56 @@ import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import services from '@/data/services/services.json';
 const ServiceDetail: NextPage = () => {
-  const router = useRouter($2);
-  const { slug } = router.query as { slug?: string },
-  const items = $2;
-  const service = $2;
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string };
+  const items = services as any[];
+  const service = items.find((s) => s.slug === slug);
+
   if (!service) {
     return (
       <EnhancedLayout>
         <Head>
           <title>Service Not Found - Zion Tech Solutions</title>
         </Head>
-        <div className = $2;
+        <div className="space-y-4">
+          <h1 className="text-xl font-semibold">Service not found</h1>
+          <Link href="/services"><a className="text-blue-600 hover: underline">Back to Services</a></Link>
+        </div>
+      </EnhancedLayout>
+    )
+  }
+
+  const priceRange = `$${service.priceRangeUSD[0]} - $${service.priceRangeUSD[1]}`;
+
   return (
     <EnhancedLayout>
       <Head>
         <title>{service.name} - Zion Tech Solutions</title>
       </Head>
-      <div className = $2;
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="md:col-span-2 space-y-4">
+          <img src={`https://picsum.photos/seed/${encodeURIComponent(service.slug)}/1200/600`} alt={service.name} className="w-full rounded-lg border border-gray-200 dark:border-gray-800" />
+          <div>
+            <h1 className="text-2xl font-semibold">{service.name}</h1>
+            <p className="opacity-80">Category: {service.category}</p>
+          </div>
+          <p className="leading-relaxed">{service.description}</p>
+          <div className="flex flex-wrap gap-2">
+            <span className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700">{service.category}</span>
+          </div>
+        </div>
+        <aside className="md:col-span-1 space-y-3 p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-zinc-900 h-max">
+          <div className="text-sm opacity-70">Price Range</div>
+          <div className="text-xl font-semibold">{priceRange}</div>
+          <Link href={`/contact?subject=${encodeURIComponent('Quote request: ' + service.name)}`}>
+            <a className="inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover: bg-blue-700">Request Quote</a>
+          </Link>
+          <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+        </aside>
+      </div>
+    </EnhancedLayout>
+  )
+};
+
 export default ServiceDetail
 }
-  service.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-};
-export default ServiceDetail 
-export default ServiceDetail
-}export default function ServiceDetailPage(): any ({;
-  service ;
-}: {;
-  service: Service ;
-}) {;
-  return (<Layout> <Head> <title> {;
-  service && service.name ;
-}| Zion Tech Group</title> ;
-};
-null;
-2) ;
-
-}/> </Head> </li>) ) ;
-}</ul> </div>) ) ;
-}</ul> </div> <div>) ) ;
-}</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><ahref= {
-  `tel:$ {
-  contactInfo && contactInfo.mobile.replace (/[^+\\d]/g, '') 
-}` 
-}className="hover:underline"> {;
-  contactInfo && contactInfo.mobile ;
-}</a></div> <div className="flex items-center gap-2 text-purple-400" ><Mail className="w-4 h-4" /><ahref= {
-  `mailto:$ {
-  contactInfo && contactInfo.email 
-}` 
-}className="hover:underline"> {;
-  contactInfo && contactInfo.email ;
-}</a></div> <div className="flex items-center gap-2 text-green-400" ><MapPin className="w-4 h-4" /><ahref= {
-  `https://maps && maps.google.com/?q=$ {
-  encodeURIComponent (contactInfo && contactInfo.address) 
-}` 
-}target="blank" rel="noopener noreferrer" className="hover:underline"> {;
-  contactInfo && contactInfo.address ;
-}</a></div> </div> </div> {;
-  /* Market Position & ROI */ ;
-}<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {;
-  service && service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {;
-  service && service.marketPosition ;
-}</p> ;
-}{;
-  service && service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {;
-  service && service.roi ;
-}</p> ;
-}{;
-  service && service.competitors?.length ? () : null ;
-}<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {;
-  service && service.name ;
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> ;
-};
-export default ServiceDetail ;
-export default ServiceDetail;
-
-}
-
-export default ServiceDetail
-
-  service.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-};
-export default ServiceDetail 
-export default ServiceDetail
-
-}
-  return enhancedRealMicroSaasServices .concat (extra_services as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]);
-}return {
-  paths: Array.from (slugs) .map ( (slug) => ({
-  params: {
-  slug;
-}) );
-fallback: false;
-}export default /**
- * ServiceDetailPage - Function description
- */
-function ServiceDetailPage() {
-  return (<Layout> <Head> <title> {
-  service.name;
-}| Zion Tech Group</title>;
-}
-null;
-2);
-}/> </Head> </li>) );
-}</ul> </div>) );
-}</ul> </div> <div>) );
-}</div> </div> </div> </div> </div> </div> </div> <div className="p - 6 bg - black / 40 border border - gray - 700 / 50 rounded - lg" > <h3 className="text - white font - semibold mb - 3" >Contact</h3> <div className="space - y-3 text - sm" > <div className="flex items - center gap - 2 text - cyan - 400" ><Phone className="w - 4 h - 4" /><a href= {
-  `tel:$ {
-  contact_info.mobile.replace (/[^+\\d]/g, '');
-}`;
-}className="hover:underline" > {
-  contact_info.mobile;
-}</a></div> <div className="flex items - center gap - 2 text - purple - 400" ><Mail className="w - 4 h - 4" /><a href= {
-  `mailto:$ {
-  contact_info.email;
-}`;
-}className="hover:underline" > {
-  contact_info.email;
-}</a></div> <div className="flex items - center gap - 2 text - green - 400" ><MapPin className="w - 4 h - 4" /><a href= {
-  `https://maps.google.com/?q=$ {
-  encodeURIComponent (contact_info.address);
-}`;
-}target="blank" rel="noopener noreferrer" className="hover:underline" > {
-  contact_info.address;
-}</a></div> </div> </div> {
-  /* Market Position & ROI */;
-}<div className="p - 6 bg - black / 40 border border - gray - 700 / 50 rounded - lg" > <h3 className="text - white font - semibold mb - 3" >Market & ROI</h3> <div className="space - y-3 text - sm text - gray - 300" > {
-  service.market_position && <p className="leading - relaxed" ><span className="text - gray - 400" >Position:</span> {
-  service.market_position;
-}</p>;
-}{
-  service.roi && <p className="leading - relaxed" ><span className="text - gray - 400" >ROI:</span> {
-  service.roi;
-}</p>;
-}{
-  service.competitors?.length ? () : null;
-}<a href="/market - pricing" className="inline - block mt - 2 text - cyan - 300 hover: text - cyan - 200">See average market prices →</a> return (<EnhancedLayout> <Head> <title > Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
-  service.name;
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text - sm text - blue - 600 hover:underline">Back to Services</a></Link>;
-}
-export default ServiceDetail;
-export default ServiceDetail;
-}
-

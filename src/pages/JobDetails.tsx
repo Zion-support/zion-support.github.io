@@ -14,13 +14,13 @@ import { SEO } from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { JobDetailsSkeleton } from '@/components/jobs';
 interface Job {
-  id: string;
-  title: string;
-  description: string;
-  company_name?: string,
-  budget: { min: number, max: number };,
+  id: string,
+  title: string,
+  description: string,
+  company_name?: string;
+  budget: { min: number, max: number },
   client_id: string,
-  skills?: string[],
+  skills?: string[];
   created_at: string,
   category: string,
   deadline?: string
@@ -28,19 +28,19 @@ interface Job {
 
 export default function JobDetails() {
   const router = useRouter(), // Init router
-  const { jobId: rawJobId} = router.query, // Get jobId from query
-  const jobId = $2;
-  const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any},
-  const { user, isAuthenticated } = useAuth($2);
+  const { jobId: rawJobId } = router.query, // Get jobId from query
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
+  const { user, isAuthenticated } = useAuth();
   // navigate is now router
-  const { isWhitelabel, brandName } = useWhitelabel(),
+  const { isWhitelabel, brandName } = useWhitelabel();
   
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
-  const formatBudget = (budget: any) => {,
-    if (!budget) return "Not specified",
+  const formatBudget = (budget: any) => {
+    if (!budget) return "Not specified";
     return `$${budget.min} - $${budget.max}`
-  },
+  };
 
   if (isLoading) {
     return <JobDetailsSkeleton />
@@ -61,30 +61,31 @@ export default function JobDetails() {
 
   const handleApply = () => {
     if (!isAuthenticated) {
-      toast.error($2);
+      toast.error("Please log in to apply for this job");
       router.push(`/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`), // Added null check for jobId
       return
     }
 
     if (user?.userType !== "talent" && user?.userType !== "admin" && user?.userType !== "client") {
-      toast.error($2);
+      toast.error("Only job seekers can apply for jobs");
       return
     }
     
     setIsApplyModalOpen(true)
-  },
+  };
 
-  const handleApplySuccess = async (appliedJobId: string) => {,
-    toast.success("Application submitted successfully!"),
+  const handleApplySuccess = async (appliedJobId: string) => {
+    toast.success("Application submitted successfully!");
     setIsApplyModalOpen(false)
-  },
+  };
 
 
-  const isOwnJob = $2;
+  const isOwnJob = user?.id === job.client_id;
+
   return (
     <>
       <SEO 
-        title={`${job.title} - ${isWhitelabel ? brandName: 'Zion AI Marketplace'}`}
+        title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job.description.substring(0, 160)}
       />
       <Header />
@@ -104,11 +105,11 @@ export default function JobDetails() {
             <Card>
               <CardHeader>
                 <div className="flex justify-between items-start">
-                  <div>,
+                  <div>
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
                     <div className="flex items-center text-muted-foreground">
                       <Calendar className="mr-2 h-4 w-4" />
-                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true})}</span>
+                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>
                     </div>
                   </div>
                   <Badge>{job.category}</Badge>
@@ -125,7 +126,7 @@ export default function JobDetails() {
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
-                    {job.skills?.map((skill: string, i: number) => (,
+                    {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
                         {skill}
                       </Badge>
@@ -190,7 +191,12 @@ export default function JobDetails() {
       {job && (
         <ApplyToJobModal
           job={{
-            id: job.id, title: job.title, description: job.description, company_name: job.company_name ?? "Company", budget: formatBudget(job.budget), client_id: job.client_id}}
+            id: job.id,
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name ?? "Company",
+            budget: formatBudget(job.budget),
+            client_id: job.client_id}}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
         />
@@ -198,4 +204,3 @@ export default function JobDetails() {
     </>
   )
 }
-;

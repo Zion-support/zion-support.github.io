@@ -29,7 +29,7 @@ export default function PaymentCanceled() {
           </Button>
           
           <Button 
-            variant="outline",
+            variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
           >
@@ -38,6 +38,5 @@ export default function PaymentCanceled() {
         </div>
         </div>
       </div>
-  ),
+  )
 }
-;

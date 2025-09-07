@@ -8,46 +8,51 @@ import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
-  amount: number;
-  serviceId: string;
-  providerId: string;
-  buttonText?: string,
-  className?: string,
-  onPaymentInitiated?: () => void,
+  amount: number,
+  serviceId: string,
+  providerId: string,
+  buttonText?: string;
+  className?: string;
+  onPaymentInitiated?: () => void;
   redirectUrl?: string
 }
 
 export function PaymentButton({
-  amount,
-  serviceId,
-  providerId,
-  buttonText = $2;
-  className,
-  onPaymentInitiated,
+  amount;
+  serviceId;
+  providerId;
+  buttonText = "Purchase";
+  className;
+  onPaymentInitiated;
   redirectUrl}: PaymentButtonProps) {
-  const [isProcessing, setIsProcessing] = useState($2);
-  const { isAuthenticated, user } = useAuth($2);
-  const router = useRouter($2);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const { isAuthenticated, user } = useAuth();
+  const router = useRouter();
+  
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
-      toast($2);
-      const returnTo = encodeURIComponent($2);
-      router.push($2);
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to make a purchase."}),
+
+      const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`);
+      router.push(`/auth/login?returnTo=${returnTo}`);
       return
     }
     
     try {
-      setIsProcessing($2);
+      setIsProcessing(true);
+      
       if (onPaymentInitiated) {
         onPaymentInitiated()
       }
       
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
-        body: {,
-          amount,
-          serviceId,
-          providerId,
+        body: {
+          amount;
+          serviceId;
+          providerId;
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
@@ -65,7 +70,7 @@ export function PaymentButton({
       }
       
     } catch (error) {
-      logErrorToProduction($2);
+      logErrorToProduction('Payment error:', { data: error }),
       toast({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
@@ -76,11 +81,14 @@ export function PaymentButton({
         setIsProcessing(false)
       }, 1500)
     }
-  },
+  };
   
   return (
     <Button
-      onClick = $2;
+      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn(
+        "relative min-w-[120px]";
         className
       )}
     >
@@ -95,4 +103,3 @@ export function PaymentButton({
     </Button>
   )
 }
-;

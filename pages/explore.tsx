@@ -2,24 +2,28 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Search, Filter, Grid, List, ArrowRight, ChevronRight,
+  Search, Filter, Grid, List, ArrowRight, ChevronRight;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
-} from 'lucide-react',
+} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function ExplorePage() {
-  const [searchTerm, setSearchTerm] = useState($2);
-  const [selectedCategory, setSelectedCategory] = useState($2);
-  const [sortBy, setSortBy] = useState($2);
-  const categories = $2;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
+
+  const categories = [
+    {
+      id: 'ai',
       name: 'AI & Machine Learning',
       icon: Brain,
       description: 'Revolutionary AI consciousness and machine learning solutions',
       color: 'from-purple-500 to-pink-500',
       serviceCount: 25,
-      featured: true},
+      featured: true
+    };
     {
       id: 'quantum',
       name: 'Quantum Computing',
@@ -27,7 +31,8 @@ export default function ExplorePage() {
       description: 'Quantum-powered computing and consciousness simulation',
       color: 'from-blue-500 to-cyan-500',
       serviceCount: 18,
-      featured: true},
+      featured: true
+    };
     {
       id: 'cybersecurity',
       name: 'Cybersecurity',
@@ -35,7 +40,8 @@ export default function ExplorePage() {
       description: 'Quantum-resistant security and AI threat detection',
       color: 'from-red-500 to-orange-500',
       serviceCount: 22,
-      featured: true},
+      featured: true
+    };
     {
       id: 'cloud',
       name: 'Cloud & DevOps',
@@ -43,7 +49,8 @@ export default function ExplorePage() {
       description: 'Autonomous DevOps and cloud infrastructure',
       color: 'from-emerald-500 to-teal-500',
       serviceCount: 20,
-      featured: false},
+      featured: false
+    };
     {
       id: 'edge',
       name: 'Edge Computing',
@@ -51,7 +58,8 @@ export default function ExplorePage() {
       description: 'Edge computing orchestration and IoT management',
       color: 'from-yellow-500 to-orange-500',
       serviceCount: 15,
-      featured: false},
+      featured: false
+    };
     {
       id: 'space',
       name: 'Space Technology',
@@ -59,7 +67,8 @@ export default function ExplorePage() {
       description: 'Space exploration and resource optimization',
       color: 'from-indigo-500 to-purple-500',
       serviceCount: 12,
-      featured: true},
+      featured: true
+    };
     {
       id: 'biotech',
       name: 'Biotechnology',
@@ -67,7 +76,8 @@ export default function ExplorePage() {
       description: 'Neural interfaces and biomedical innovations',
       color: 'from-pink-500 to-rose-500',
       serviceCount: 16,
-      featured: false},
+      featured: false
+    };
     {
       id: 'blockchain',
       name: 'Blockchain',
@@ -75,7 +85,8 @@ export default function ExplorePage() {
       description: 'AI-powered blockchain governance and DeFi',
       color: 'from-green-500 to-emerald-500',
       serviceCount: 14,
-      featured: false},
+      featured: false
+    };
     {
       id: 'automation',
       name: 'Automation',
@@ -83,7 +94,8 @@ export default function ExplorePage() {
       description: 'Business process automation and AI agents',
       color: 'from-cyan-500 to-blue-500',
       serviceCount: 19,
-      featured: false},
+      featured: false
+    };
     {
       id: 'fintech',
       name: 'Financial Technology',
@@ -91,28 +103,31 @@ export default function ExplorePage() {
       description: 'Quantum financial trading and AI analytics',
       color: 'from-emerald-500 to-green-500',
       serviceCount: 17,
-      featured: false}
-  ],
+      featured: false
+    }
+  ];
 
-  const featuredServices = $2;
+  const featuredServices = [
+    {
+      id: 'ai-consciousness-evolution',
       title: 'AI Consciousness Evolution',
       category: 'ai',
       description: 'Revolutionary AI consciousness platform with emotional intelligence',
       status: 'beta',
-      price: '$1,999/month',
+      price: '$1,999/month';
       icon: Brain,
       color: 'from-purple-500 to-pink-500'
-    },
+    };
     {
       id: 'quantum-neural-networks',
       title: 'Quantum Neural Networks',
       category: 'quantum',
       description: 'Quantum-powered AI with advanced consciousness capabilities',
       status: 'beta',
-      price: '$1,299/month',
+      price: '$1,299/month';
       icon: Atom,
       color: 'from-blue-500 to-cyan-500'
-    },
+    };
     {
       id: 'quantum-cybersecurity',
       title: 'Quantum Cybersecurity',
@@ -122,37 +137,39 @@ export default function ExplorePage() {
       price: '$799/month',
       icon: Shield,
       color: 'from-red-500 to-orange-500'
-    },
+    };
     {
       id: 'space-technology',
       title: 'Space Technology Innovation',
       category: 'space',
       description: 'AI-powered space exploration and resource optimization',
       status: 'beta',
-      price: '$2,499/month',
+      price: '$2,499/month';
       icon: Rocket,
       color: 'from-indigo-500 to-purple-500'
     }
-  ],
+  ];
 
   // Filter categories based on search
-  const filteredCategories = $2;
-    const matchesFilter = $2;
+  const filteredCategories = categories.filter(category => {
+    const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         category.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory;
     return matchesSearch && matchesFilter
-  }),
+  });
 
   // Sort categories
   const sortedCategories = [...filteredCategories].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
-        return b.serviceCount - a.serviceCount,
+        return b.serviceCount - a.serviceCount;
       case 'name':
-        return a.name.localeCompare($2);
+        return a.name.localeCompare(b.name);
       case 'featured':
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0),
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
       default: return 0
     }
-  }),
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -170,9 +187,15 @@ export default function ExplorePage() {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            animate={{ opacity: 1, y: 0}}
-            transition = $2;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              Explore Technology Categories
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+              Discover our comprehensive range of cutting-edge technology solutions across AI, 
               quantum computing, cybersecurity, space technology, and more
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -228,8 +251,8 @@ export default function ExplorePage() {
       <section className="px-6 pb-16">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20}}
-            animate={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
@@ -245,8 +268,8 @@ export default function ExplorePage() {
             {featuredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
@@ -292,8 +315,8 @@ export default function ExplorePage() {
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20}}
-            animate={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
@@ -308,9 +331,9 @@ export default function ExplorePage() {
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
               <motion.div
-                initial={{ opacity: 0}}
-                animate={{ opacity: 1}}
-                exit={{ opacity: 0}}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 className="text-center py-20"
               >
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
@@ -332,8 +355,8 @@ export default function ExplorePage() {
                 {sortedCategories.map((category, index) => (
                   <motion.div
                     key={category.id}
-                    initial={{ opacity: 0, y: 20}}
-                    animate={{ opacity: 1, y: 0}}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
                     onClick={() => window.location.href = `/category/${category.id}`}
@@ -398,42 +421,57 @@ export default function ExplorePage() {
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition = $2;
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              Emerging Technology Trends
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              Stay ahead of the curve with our insights into the latest technology developments
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Brain,
                 title: 'AI Consciousness',
                 description: 'The evolution of AI towards true consciousness and emotional intelligence',
                 trend: 'Rising',
                 color: 'from-purple-500 to-pink-500'
-              },
+              };
               {
                 icon: Atom,
                 title: 'Quantum Supremacy',
                 description: 'Breakthroughs in quantum computing and quantum AI applications',
                 trend: 'Breakthrough',
                 color: 'from-blue-500 to-cyan-500'
-              },
+              };
               {
                 icon: Shield,
                 title: 'Quantum Security',
                 description: 'Quantum-resistant cryptography and AI-powered threat detection',
                 trend: 'Critical',
                 color: 'from-red-500 to-orange-500'
-              },
+              };
               {
                 icon: Rocket,
                 title: 'Space Innovation',
                 description: 'AI-powered space exploration and resource optimization',
                 trend: 'Emerging',
                 color: 'from-indigo-500 to-purple-500'
-              },
+              };
               {
                 icon: ZapIcon,
                 title: 'Neural Interfaces',
                 description: 'Brain-computer interfaces and neural augmentation',
                 trend: 'Experimental',
                 color: 'from-pink-500 to-rose-500'
-              },
+              };
               {
                 icon: TrendingUp,
                 title: 'Autonomous Systems',
@@ -444,10 +482,10 @@ export default function ExplorePage() {
             ].map((trend, index) => (
               <motion.div
                 key={trend.title}
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true}}
+                viewport={{ once: true }}
                 className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
@@ -479,10 +517,10 @@ export default function ExplorePage() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            viewport={{ once: true }}
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?

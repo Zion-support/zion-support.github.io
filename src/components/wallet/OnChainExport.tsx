@@ -4,69 +4,79 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger} from "@/components/ui/tooltip",
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger} from "@/components/ui/tooltip";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
-  const [isConnected, setIsConnected] = useState($2);
-  const [isExporting, setIsExporting] = useState($2);
-  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
-  const { toast } = useToast($2);
-  const { user } = useAuth($2);
-  const handleConnectWallet = $2;
+  const [isConnected, setIsConnected] = useState(false);
+  const [isExporting, setIsExporting] = useState(false);
+  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
+  const { toast } = useToast();
+  const { user } = useAuth();
+  
+  const handleConnectWallet = async () => {
+    try {
+      // Check if wallet is available
+      const ethereum = (window as any).ethereum;
       if (!ethereum) {
         toast({
           title: "Wallet not detected",
           description: "Please install MetaMask or another Ethereum wallet to use this feature",
-          variant: "destructive",
-        }),
+          variant: "destructive"
+        });
         return
       }
       
       // Request accounts
-      const accounts = await ethereum.request($2);
-      const address = $2;
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const address = accounts[0];
+      
       // Sign message to verify ownership
-      const message = $2;
-      await ethereum.request($2);
-      setIsConnected($2);
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
+      await ethereum.request({
+        method: 'personal_sign',
+        params: [address, message]
+      });
+      
+      setIsConnected(true);
       toast({
         title: "Wallet connected",
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
     } catch (error: any) {
-      toast({,
+      toast({
         title: "Connection failed",
         description: error.message || "Could not connect to wallet",
-        variant: "destructive",
+        variant: "destructive"
       })
     }
-  },
+  };
   
   const handleExportTokens = async () => {
-    setIsExporting($2);
-    setExportStatus($2);
+    setIsExporting(true);
+    setExportStatus('processing');
+    
     try {
       // Simulate token export
-      await new Promise(resolve => setTimeout(resolve, 2000)),
+      await new Promise(resolve => setTimeout(resolve, 2000));
       
-      setExportStatus($2);
+      setExportStatus('success');
       toast({
         title: "Tokens exported",
         description: "Your ZION$ tokens have been exported to your wallet"})
-    } catch (error: any) {,
-      setExportStatus('error'),
+    } catch (error: any) {
+      setExportStatus('error');
       toast({
         title: "Export failed",
         description: error.message || "Could not export tokens",
-        variant: "destructive",
+        variant: "destructive"
       })
     } finally {
       setIsExporting(false)
     }
-  },
+  };
   
   return (
     <Card>
@@ -105,7 +115,7 @@ export function OnChainExport() {
               </Button>
             ) : (
               <Button 
-                className="w-full",
+                className="w-full" 
                 onClick={handleExportTokens} 
                 disabled={isExporting}
               >
@@ -128,4 +138,3 @@ export function OnChainExport() {
     </Card>
   )
 }
-;

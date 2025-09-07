@@ -13,13 +13,14 @@ import Spinner from '@/components/ui/spinner';
 import { SERVICES } from '@/data/servicesData';
 import { useCurrency } from '@/hooks/useCurrency';
 // Initial services from existing data
-const INITIAL_SERVICES: ProductListing[] = SERVICES;
-// Market insights component,
+const INITIAL_SERVICES: ProductListing[] = SERVICES,
+
+// Market insights component
 const ServicesMarketInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
     <CardContent className="p-6">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">,
+        <div className="text-center">
           <div className="text-2xl font-bold text-green-400">${(stats.averagePrice / 1000).toFixed(1)}k</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
         </div>
@@ -41,16 +42,17 @@ const ServicesMarketInsights = ({ stats }: { stats: any }) => (
       </div>
     </CardContent>
   </Card>
-),
+);
 
 // Filter controls
-const ServiceFilterControls = $2;
-  setSortBy,
-  filterCategory,
-  setFilterCategory,
-  categories,
-  showRecommended,
-  setShowRecommended,
+const ServiceFilterControls = ({
+  sortBy;
+  setSortBy;
+  filterCategory;
+  setFilterCategory;
+  categories;
+  showRecommended;
+  setShowRecommended;
   loading
 }: any) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -71,22 +73,22 @@ const ServiceFilterControls = $2;
         <option value="rating">Highest Rated</option>
         <option value="ai-score">AI Score</option>
       </select>
-    </div>,
+    </div>
     <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
       <Star className="h-4 w-4 mr-1" />
       {showRecommended ? "All Services" : "Recommended"}
     </Button>
   </div>
-),
+);
 
 // Service card
 const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency($2);
+  const { formatPrice } = useCurrency();
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
-        <div className="flex-1 min-w-0">,
+        <div className="flex-1 min-w-0">
           <h3 className="font-semibold text-lg mb-1 line-clamp-1">{service.title}</h3>
           <div className="flex items-center gap-2 mb-2">
             <div className="flex items-center gap-1">
@@ -122,34 +124,39 @@ const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onVi
     </CardHeader>
   </Card>
 )
-},
+};
 
 // Loading grid
 const ServicesLoadingGrid = ({ count = 8 }: { count?: number }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
-),
+);
 
 // Main component
 export default function ServicesPage() {
-  const router = useRouter(),
-  const [sortBy, setSortBy] = useState('newest'),
-  const [filterCategory, setFilterCategory] = useState(''),
-  const [showRecommended, setShowRecommended] = useState(false),
-  const [totalGenerated, setTotalGenerated] = useState(0),
+  const router = useRouter();
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterCategory, setFilterCategory] = useState('');
+  const [showRecommended, setShowRecommended] = useState(false);
+  const [totalGenerated, setTotalGenerated] = useState(0);
 
-  const fetchServices = useCallback(async (page: number, limit: number) => {,
-    await new Promise(resolve => setTimeout(resolve, 400)),
+  const fetchServices = useCallback(async (page: number, limit: number) => {
+    await new Promise(resolve => setTimeout(resolve, 400));
 
     let allServices: ProductListing[] = [],
     
-    if (page = $2;
-    const newServices = generateITServices($2);
-    setTotalGenerated($2);
-    allServices = [...allServices, ...newServices],
+    if (page === 1) {
+      allServices = [...INITIAL_SERVICES]
+    }
     
-    let filteredServices = $2;
+    const startId = INITIAL_SERVICES.length + (page - 1) * limit + totalGenerated;
+    const newServices = generateITServices(limit, startId);
+    setTotalGenerated(prev => prev + newServices.length);
+    allServices = [...allServices, ...newServices];
+    
+    let filteredServices = allServices;
+    
     if (filterCategory) {
       filteredServices = filteredServices.filter(s => s.category === filterCategory)
     }
@@ -161,61 +168,65 @@ export default function ServicesPage() {
     filteredServices.sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-          return (a.price || 0) - (b.price || 0),
+          return (a.price || 0) - (b.price || 0);
         case 'price-high':
-          return (b.price || 0) - (a.price || 0),
+          return (b.price || 0) - (a.price || 0);
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0),
+          return (b.rating || 0) - (a.rating || 0);
         case 'ai-score':
-          return (b.aiScore || 0) - (a.aiScore || 0),
-        default: return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime(),
+          return (b.aiScore || 0) - (a.aiScore || 0);
+        default: return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
       }
-    }),
+    });
     
-    const startIndex = $2;
-    const endIndex = $2;
-    const items = filteredServices.slice($2);
+    const startIndex = (page - 1) * limit;
+    const endIndex = startIndex + limit;
+    const items = filteredServices.slice(startIndex, endIndex);
+    
     return {
-      items,
+      items;
       hasMore: endIndex < filteredServices.length || page < 10,
-      total: filteredServices.length,
+      total: filteredServices.length
     }
-  }, [sortBy, filterCategory, showRecommended, totalGenerated]),
+  }, [sortBy, filterCategory, showRecommended, totalGenerated]);
 
   const {
-    items: services, loading,
-    error,
-    hasMore,
-    isFetching,
-    lastElementRef,
-    scrollToTop,
-    refresh,
+    items: services,
+    loading;
+    error;
+    hasMore;
+    isFetching;
+    lastElementRef;
+    scrollToTop;
+    refresh;
     total
-  } = useInfiniteScrollPagination($2);
-  useEffect(() => {
-    refresh($2);
-    setTotalGenerated(0)
-  }, [sortBy, filterCategory, showRecommended]),
+  } = useInfiniteScrollPagination(fetchServices, 12);
 
-  const marketStats = $2;
+  useEffect(() => {
+    refresh();
+    setTotalGenerated(0)
+  }, [sortBy, filterCategory, showRecommended]);
+
+  const marketStats = useMemo(() => {
+    if (services.length === 0) return null;
     return getServicesMarketStats(services)
-  }, [services]),
+  }, [services]);
 
   const categories = useMemo(() => {
     return Array.from(new Set(services.map(s => s.category).filter(Boolean)))
-  }, [services]),
+  }, [services]);
 
-  const [showScrollTop, setShowScrollTop] = useState($2);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
-    const handleScroll = () => setShowScrollTop($2);
-    window.addEventListener($2);
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800);
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
+  }, []);
 
   if (loading && services.length === 0) {
     return (
       <div className="container py-8">
-        <motion.div initial={{ opacity: 0, y: 20}} animate={{ opacity: 1, y: 0}} className="text-center mb-8">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
             IT & AI Services
           </h1>
@@ -238,20 +249,20 @@ export default function ServicesPage() {
 
   return (
     <div className="container py-8">
-      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0}}>
+      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
           IT & AI Services
         </h1>
         <p className="text-muted-foreground text-lg">Professional services for digital transformation and technology innovation</p>
       </motion.div>
 
-      {marketStats && (,
+      {marketStats && (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
           <ServicesMarketInsights stats={marketStats} />
         </motion.div>
       )}
 
-      <motion.div initial={{ opacity: 0, y: 20}} animate={{ opacity: 1, y: 0}} transition={{ delay: 0.3 }}>
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
         <ServiceFilterControls
           sortBy={sortBy}
           setSortBy={setSortBy}
@@ -264,11 +275,11 @@ export default function ServicesPage() {
         />
       </motion.div>
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0}} animate={{ opacity: 1}} transition={{ delay: 0.4 }}>
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
           {services.map((item, index) => (
             <motion.div
-              key={item.id} ref={index === services.length - 1 ? lastElementRef: null}
+              key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }} whileHover={{ scale: 1.02 }}
             >
@@ -279,13 +290,13 @@ export default function ServicesPage() {
       </motion.div>
 
       {(isFetching || loading) && (
-        <motion.div className="mt-8" initial={{ opacity: 0}} animate={{ opacity: 1}}>
+        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <ServicesLoadingGrid count={4} />
         </motion.div>
       )}
 
       {!hasMore && services.length > 0 && (
-        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0}} animate={{ opacity: 1}}>
+        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <div className="text-muted-foreground text-lg mb-2">🚀 You've explored all available services!</div>
           <div className="text-sm text-muted-foreground">Showing {services.length} IT & AI services</div>
         </motion.div>
@@ -293,7 +304,7 @@ export default function ServicesPage() {
 
       <AnimatePresence>
         {showScrollTop && (
-          <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50",
+          <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
             initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
           >
@@ -304,4 +315,3 @@ export default function ServicesPage() {
     </div>
   )
 }
-;

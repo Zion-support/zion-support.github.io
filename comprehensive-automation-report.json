@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-09-06T04:56:46.894Z",
-  "totalDuration": 50098,
-  "successfulTasks": 5,
+  "timestamp": "2025-09-06T04:50:51.829Z",
+  "totalDuration": 69262,
+  "successfulTasks": 4,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-      "duration": 7952,
+      "duration": 27941,
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-      "duration": 6380,
+      "duration": 4661,
       "errors": [
         "Command failed: npx tsc --noEmit --skipLibCheck\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
         "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
@@ -21,7 +21,7 @@
     },
     "securityAudit": {
       "success": false,
-      "duration": 2366,
+      "duration": 2802,
       "errors": [
         "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
       ],
@@ -29,33 +29,36 @@
     },
     "buildOptimization": {
       "success": true,
-      "duration": 9820,
+      "duration": 12413,
       "errors": [],
       "warnings": []
     },
     "seoOptimization": {
-      "success": true,
-      "duration": 57,
-      "errors": [],
+      "success": false,
+      "duration": 41,
+      "errors": [
+        "Command failed: node scripts/generate-sitemap.cjs\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/scripts/generate-sitemap.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n",
+        "Command failed: node scripts/generate-search-index.cjs\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/scripts/generate-search-index.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n"
+      ],
       "warnings": []
     },
     "accessibilityImprovements": {
       "success": false,
-      "duration": 3078,
+      "duration": 1612,
       "errors": [
-        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nA configuration object specifies rule \"jsx-a11y/alt-text\", but could not find plugin \"jsx-a11y\".\n\nCommon causes of this problem include:\n\n1. The \"jsx-a11y\" plugin is not defined in your configuration file.\n2. The \"jsx-a11y\" plugin is not defined within the same configuration object in which the \"jsx-a11y/alt-text\" rule is applied.\n\n"
       ],
       "warnings": []
     },
     "performanceOptimization": {
       "success": true,
-      "duration": 18997,
+      "duration": 18395,
       "errors": [],
       "warnings": []
     },
     "deployment": {
       "success": true,
-      "duration": 1444,
+      "duration": 1394,
       "errors": [],
       "warnings": []
     }
@@ -63,6 +66,7 @@
   "recommendations": [
     "Review and fix code quality issues",
     "Address security vulnerabilities",
+    "Improve SEO optimization",
     "Enhance accessibility features"
   ]
 }

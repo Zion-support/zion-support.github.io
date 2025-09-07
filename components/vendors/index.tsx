@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 import type { Vendor } from '../../utils/vendor-types';
-type Props = $2;
+type Props = { vendors: Vendor[] },
+
 export default function VendorsPage({ vendors }: Props) {
   return (
     <div className="space-y-6">
@@ -41,7 +42,7 @@ export default function VendorsPage({ vendors }: Props) {
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import($2);
-  const vendors = listVendors($2);
+  const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
   return { props: { vendors } }
-},
+};

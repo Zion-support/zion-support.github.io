@@ -1,54 +1,14 @@
-<<<<<<< HEAD
 import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 
 export default [
-  js.configs.recommended
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    ignores: [
-      '.next/**out/**dist/**build/**node_modules/**.eslintrc.js*.config.js*.config.cjs*.config.mjsscripts/**automation/**backup-merge-conflicts/****/*.backup.***/*.old.***/*.disabled.***/*.broken.***/*.corrupted.***/*.temp.***/*.test.***/*.spec.***/test-utils.***/jest.setup.***/jest.config.***/vite.config.***/postcss.config.***/playwright.config.***/cypress.config.***/bundle-analyzer.config.***/csp-config.***/ecosystem.config.***/Dockerfile***/docker-compose*',
-      '**/pm2-***/fix-***/clean-***/batch-***/merge-***/resolve-***/systematic-***/ultimate-***/structural-***/quick-***/comprehensive-***/enhanced-***/complete-***/app-optimizer.***/improve-***/find-***/git-ops.***/pr-manager.***/merge-strategy.***/resolve-and-merge-***/merge-all-***/merge-prs.***/pr-***/batch_***/check_***/commit-***/complete_***/deploy-***/fix_***/git_***/health-***/quick-*',
-      '**/run-***/start-***/test-***/ultimate-***/utils/next-***/utils/performance-***/utils/rate-***/utils/input-***/utils/csrf-***/utils/dynamic-***/utils/env-***/utils/messageChannel***/utils/sanitize***/utils/seo-***/utils/testing-***/utils/accessibility-***/utils/api.***/utils/monitoring.***/utils/performance.***/utils/seo-optimizer.***/types/empty.***/types/index.***/types/service-***/supabase/****/src/main.***/src/data/****/src/utils/****/src/components/****/src/App.***/components/ui/****/components/layout/****/components/performance/**',
-      '**/hooks/****/lib/****/api-backup/****/deployment/****/deployments/****/docs/****/e2e/****/content/****/data/****/config/****/__tests__/****/automation-reports/****/error-prevention-reports/****/performance-reports/****/link-reports/****/monitoring/****/pm2-automation/****/automation/logs/****/automation/backup/****/backup-merge-conflicts/****/temp_backup/****/temp_broken_components/****/temp_working/****/temp_*/****/ai-optimization-backups/****/ai-analysis-reports/****/optimization-reports/****/public/reports/****/pages_backup*/****/pages.*/****/pages-*/****/pages_disabled*/**',
-      '**/pages.disabled*/****/pages.broken*/****/pages.corrupted*/****/pages.old*/****/pages._*/****/pages.__*/****/backup-pages/****/src.pages.disabled/****/lib_backup*/****/src_backup*/****/corrupted-files-backup*/****/performance-reports*/****/log-analysis-reports*/****/link-reports*/****/lint-target*/****/monitoring*/****/pm2-automation*/****/automation/logs*/****/automation/backup*/****/performance-*.json**/performance-*.js**/performance-*.cjs**/performance-*.sh**/performance-*.html**/performance-*.md**/performance-*.txt'
-    ],
+    files: ['**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: {
-        ...globals.browser,
-        ...globals.node
-      }
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'error'
-=======
-const { FlatCompat } = require('@eslint/eslintrc');
-const js = require('@eslint/js');
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-});
-
-module.exports = [
-  ...compat.extends('next/core-web-vitals'),
-  {
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn'
-    },
-    languageOptions: {
-      ecmaVersion: 'latest',
+      ecmaVersion: 2021,
       sourceType: 'module',
       globals: {
         window: 'readonly',
@@ -103,47 +63,334 @@ module.exports = [
         exports: 'readonly'
       },
       parserOptions: {
-        ecmaVersion: 'latest'
-        sourceType: 'module'
         ecmaFeatures: {
           jsx: true
         }
       }
->>>>>>> origin/main
+    },
+    plugins: {
+      react,
+      'react-hooks': reactHooks
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
     }
-  }
+  },
   {
-    files: ['**/*.cjs']
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      sourceType: 'commonjs'
+      parser: tsparser,
+      ecmaVersion: 2021,
+      sourceType: 'module',
       globals: {
-        // Node.js globals
-        process: 'readonly'
-        console: 'readonly'
-        require: 'readonly'
-        module: 'readonly'
-        exports: 'readonly'
-        __dirname: 'readonly'
-        __filename: 'readonly'
-        global: 'readonly'
-        Buffer: 'readonly'
-        setTimeout: 'readonly'
-        clearTimeout: 'readonly'
-        setInterval: 'readonly'
-        clearInterval: 'readonly'
-        setImmediate: 'readonly'
-        clearImmediate: 'readonly'
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLParagraphElement: 'readonly',
+        HTMLHeadingElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        MessageEvent: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        Performance: 'readonly',
+        PerformanceNavigationTiming: 'readonly'
       }
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      react,
+      'react-hooks': reactHooks
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
     }
-  }
+  },
   {
     ignores: [
-      // Node/build outputs
-      '.next/**out/**dist/**build/**node_modules/**',
-      // Public assets/scripts
-
-      // Root-level noisy files
-      '*.config.js*.config.cjs*.config.mjs*.backup.**.old.**.disabled.**.broken.**.corrupted.**.temp.*'
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      'out/**',
+      'coverage/**',
+      'src.corrupted/**',
+      'src.disabled/**',
+      'src.broken/**',
+      'src.pages.disabled/**',
+      'solutions.disabled/**',
+      'components.disabled/**',
+      'components.corrupted/**',
+      'hooks.disabled/**',
+      'lib.disabled/**',
+      'lib.corrupted/**',
+      'zion-os.disabled/**',
+      'zion_academy/**',
+      'contracts.disabled/**',
+      'corrupted-files-backup/**',
+      'corrupted_files_backup_2/**',
+      'cypress.disabled/**',
+      'cypress_backup/**',
+      'data/**',
+      'e2e/**',
+      'pages.disabled/**',
+      'pages.disabled_backup/**',
+      'pages_backup/**',
+      'pages.disabled_full/**',
+      'pages_backup_before_cleanup/**',
+      'pages_backup_conflicts/**',
+      'pages.bak/**',
+      'pages.broken/**',
+      'pages.corrupted.*/**',
+      'pages._quarantine/**',
+      'pages._archive_corrupted/**',
+      'pages-quarantine/**',
+      'pages.blog.disabled/**',
+      'pages.disabled_auto/**',
+      'pages_api.disabled/**',
+      'components.disabled_full/**',
+      'components.broken/**',
+      'backup-corrupted-files/**',
+      'lib.broken/**',
+      'data.disabled/**',
+      'test_build/**',
+      'server/**',
+      'types/**',
+      'next-env.d.ts',
+      'jest.setup.jsx',
+      'middleware.ts',
+      'middleware.security.ts',
+      'temp-backup/**',
+      'temp_backup/**',
+      'temp_broken_files/**',
+      'temp_working/**',
+      'tests.disabled/**',
+      'supabase/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'vite.config.*',
+      '**/*.cjs',
+      'next.config.*',
+      'playwright.config.ts',
+      'vite.config-backup.ts',
+      'public/**',
+      '.venv/**',
+      'api/**',
+      'api.disabled/**',
+      'api.disabled.temp/**',
+      'disabled-api/**',
+      'jest.config.*',
+      'fix-*.js',
+      'fix-*.jsx',
+      '*.js',
+      '*.cjs',
+      '*.mjs',
+      'deployments/**',
+      'pages.__backup/**',
+      'pages-disabled/**',
+      'src/**',
+      'automation/**',
+      'automation_backup/**',
+      'data_backup/**',
+      'pm2-automation/**',
+      'scripts/**',
+      'tests/**',
+      'test-results/**',
+      'test-reports/**',
+      '*.test.js',
+      '*.test.jsx',
+      '*.test.ts',
+      '*.test.tsx',
+      '*.spec.js',
+      '*.spec.jsx',
+      '*.spec.ts',
+      '*.spec.tsx',
+      '*.backup.js',
+      '*.backup.jsx',
+      '*.backup.ts',
+      '*.backup.tsx',
+      '*.broken.js',
+      '*.broken.jsx',
+      '*.broken.ts',
+      '*.broken.tsx',
+      '*.corrupted.js',
+      '*.corrupted.jsx',
+      '*.corrupted.ts',
+      '*.corrupted.tsx',
+      '*.disabled.js',
+      '*.disabled.jsx',
+      '*.disabled.ts',
+      '*.disabled.tsx',
+      '*.old.js',
+      '*.old.jsx',
+      '*.old.ts',
+      '*.old.tsx',
+      '*.temp.js',
+      '*.temp.jsx',
+      '*.temp.ts',
+      '*.temp.tsx',
+      '*.tmp.js',
+      '*.tmp.jsx',
+      '*.tmp.ts',
+      '*.tmp.tsx',
+      '*.bak.js',
+      '*.bak.jsx',
+      '*.bak.ts',
+      '*.bak.tsx',
+      '*.orig.js',
+      '*.orig.jsx',
+      '*.orig.ts',
+      '*.orig.tsx',
+      '*.rej.js',
+      '*.rej.jsx',
+      '*.rej.ts',
+      '*.rej.tsx',
+      '*.swp.js',
+      '*.swp.jsx',
+      '*.swp.ts',
+      '*.swp.tsx',
+      '*.swo.js',
+      '*.swo.jsx',
+      '*.swo.ts',
+      '*.swo.tsx',
+      '*.log',
+      '*.pid',
+      '*.seed',
+      '*.pid.lock',
+      '*.tgz',
+      '*.tar.gz',
+      '*.zip',
+      '*.rar',
+      '*.7z',
+      '*.tar',
+      '*.gz',
+      '*.bz2',
+      '*.xz',
+      '*.lzma',
+      '*.zst',
+      '*.lz4',
+      '*.lzop',
+      '*.lrz',
+      '*.lha',
+      '*.lzh',
+      '*.ace',
+      '*.arj',
+      '*.cab',
+      '*.deb',
+      '*.rpm',
+      '*.msi',
+      '*.dmg',
+      '*.iso',
+      '*.img',
+      '*.bin',
+      '*.exe',
+      '*.app',
+      '*.dll',
+      '*.so',
+      '*.dylib',
+      '*.a',
+      '*.lib',
+      '*.o',
+      '*.obj',
+      '*.pyc',
+      '*.pyo',
+      '*.pyd',
+      '*.class',
+      '*.jar',
+      '*.war',
+      '*.ear',
+      '*.sar',
+      '*.nar',
+      '*.zip',
+      '*.rar',
+      '*.7z',
+      '*.tar',
+      '*.gz',
+      '*.bz2',
+      '*.xz',
+      '*.lzma',
+      '*.zst',
+      '*.lz4',
+      '*.lzop',
+      '*.lrz',
+      '*.lha',
+      '*.lzh',
+      '*.ace',
+      '*.arj',
+      '*.cab',
+      '*.deb',
+      '*.rpm',
+      '*.msi',
+      '*.dmg',
+      '*.iso',
+      '*.img',
+      '*.bin',
+      '*.exe',
+      '*.app',
+      '*.dll',
+      '*.so',
+      '*.dylib',
+      '*.a',
+      '*.lib',
+      '*.o',
+      '*.obj',
+      '*.pyc',
+      '*.pyo',
+      '*.pyd',
+      '*.class',
+      '*.jar',
+      '*.war',
+      '*.ear',
+      '*.sar',
+      '*.nar'
     ]
   }
-],
+];

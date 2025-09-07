@@ -8,26 +8,26 @@ import { CATEGORIES } from '@/data/categories';
 import { NextSeo } from '@/components/NextSeo';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface CategoryType {
-  id: string;
-  name: string;
-  slug: string;
-  icon: string,
+  id: string,
+  name: string,
+  slug: string,
+  icon: string
 }
 
 const fetcher = async (url: string): Promise<CategoryType[]> => {
-  try {,
-    const response = await fetch(url),
+  try {
+    const response = await fetch(url);
     if (!response.ok) {
-      logErrorToProduction($2);
+      logErrorToProduction('Categories API error:', { data: response.statusText }),
       return CATEGORIES as CategoryType[]
     }
-    const data = await response.json(),
-    return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[],
+    const data = await response.json();
+    return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[]
   } catch (err) {
-    logErrorToProduction($2);
+    logErrorToProduction('Categories API fetch failed:', { data: err }),
     return CATEGORIES as CategoryType[]
   }
-},
+};
 
 export interface CategoriesProps {
   categories?: CategoryType[]
@@ -36,8 +36,9 @@ export interface CategoriesProps {
 export default function Categories({ categories: initialCategories = [] }: CategoriesProps) {
   const { data, error } = useSWR<CategoryType[]>('/api/categories', fetcher, {
     fallbackData: initialCategories}),
-  const categories = $2;
-  const isLoading = $2;
+  const categories = data || [];
+  const isLoading = !data && !error;
+
   return (
     <>
       <NextSeo
@@ -58,7 +59,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
 
         <ErrorBoundary>
           {isLoading && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-testid="skeleton-loader">,
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-testid="skeleton-loader">
               {Array.from({ length: 4 }).map((_, index) => (
                 <SkeletonCard key={index} />
               ))}
@@ -76,11 +77,11 @@ export default function Categories({ categories: initialCategories = [] }: Categ
             </div>
           )}
           {!isLoading && !error && categories.length > 0 && (
-            <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {categories.map((category) => {
                 // Use default folder icon for all categories to avoid large bundle
                 return (
-                  <CategoryCard,
+                  <CategoryCard
                     key={category.id}
                     title={category.name}
                     description={`Explore ${category.name.toLowerCase()} in our marketplace`}
@@ -96,4 +97,3 @@ export default function Categories({ categories: initialCategories = [] }: Categ
     </>
   )
 }
-;

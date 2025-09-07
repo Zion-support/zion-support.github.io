@@ -2,35 +2,40 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Brain, Atom, Shield, Rocket, Star, Award, TrendingUp,
-  CheckCircle, ArrowRight, Zap, Target, Microscope,
-  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette,
+  Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
+  CheckCircle, ArrowRight, Zap, Target, Microscope;
+  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
-} from 'lucide-react',
+} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-const contactInfo = $2;
+const contactInfo = {
+  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const heroStats = [
-  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className = $2;
-  { label: 'Innovation Areas', value: '8+', icon: <Brain className = $2;
-  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className = $2;
-  { label: 'Success Rate', value: '99.9%', icon: <Award className = $2;
-const serviceCategories = $2;
+  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },
+  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },
+  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },
+  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
+];
+
+const serviceCategories = [
+  {
+    title: 'AI & Consciousness',
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
     services: cuttingEdgeAIServices2025,
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
     gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
     count: cuttingEdgeAIServices2025.length
-  },
+  };
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum computing and space technology solutions',
@@ -39,7 +44,7 @@ const serviceCategories = $2;
     color: 'from-indigo-500 to-blue-600',
     gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600',
     count: cuttingEdgeQuantumServices2025.length
-  },
+  };
   {
     title: 'Enterprise IT',
     description: 'Advanced enterprise infrastructure and security solutions',
@@ -48,7 +53,7 @@ const serviceCategories = $2;
     color: 'from-blue-500 to-cyan-600',
     gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600',
     count: cuttingEdgeEnterpriseITServices2025.length
-  },
+  };
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
@@ -58,35 +63,40 @@ const serviceCategories = $2;
     gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',
     count: cuttingEdgeMicroSaasServices2025.length
   }
-],
+];
 
 export default function CuttingEdgeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState($2);
-  const [selectedCategory, setSelectedCategory] = useState($2);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const allServices = $2;
-    ...cuttingEdgeQuantumServices2025,
-    ...cuttingEdgeEnterpriseITServices2025,
+  const allServices = [
+    ...cuttingEdgeAIServices2025;
+    ...cuttingEdgeQuantumServices2025;
+    ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025
-  ],
+  ];
 
-  const filteredServices = $2;
-    const matchesCategory = $2;
+  const filteredServices = allServices.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory
-  }),
+  });
 
-  const containerVariants = $2;
+  const containerVariants = {
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  },
+  };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0},
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -94,7 +104,7 @@ export default function CuttingEdgeServicesShowcase2025() {
         duration: 0.5
       }
     }
-  },
+  };
 
   return (
     <>
@@ -112,15 +122,15 @@ export default function CuttingEdgeServicesShowcase2025() {
           <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
               <motion.h1 
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1}}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
               >
                 Cutting-Edge Services
@@ -131,8 +141,8 @@ export default function CuttingEdgeServicesShowcase2025() {
               
               <motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 Discover revolutionary technology solutions that are reshaping industries and defining the future. 
@@ -142,8 +152,8 @@ export default function CuttingEdgeServicesShowcase2025() {
               {/* Hero Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {heroStats.map((stat, index) => (
@@ -162,8 +172,8 @@ export default function CuttingEdgeServicesShowcase2025() {
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
                 <a
@@ -189,10 +199,10 @@ export default function CuttingEdgeServicesShowcase2025() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
             >
               {/* Search */}
               <div className="relative flex-1 max-w-md">
@@ -267,7 +277,7 @@ export default function CuttingEdgeServicesShowcase2025() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
             >
               {filteredServices.map((service, index) => (
@@ -371,8 +381,8 @@ export default function CuttingEdgeServicesShowcase2025() {
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
-                initial={{ opacity: 0}}
-                animate={{ opacity: 1}}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -380,7 +390,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
                 <button
                   onClick={() => {
-                    setSearchTerm($2);
+                    setSearchTerm('');
                     setSelectedCategory('all')
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -396,10 +406,10 @@ export default function CuttingEdgeServicesShowcase2025() {
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?

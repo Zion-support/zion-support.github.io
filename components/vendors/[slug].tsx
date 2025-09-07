@@ -1,25 +1,28 @@
 import type { GetServerSideProps } from 'next';
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
-type Props = $2;
+type Props = { vendor: Vendor | null },
+
 export default function VendorProfilePage({ vendor }: Props) {
-  const [message, setMessage] = useState<string | null>(null),
-  const [loading, setLoading] = useState($2);
-  if (!vendor) return <div className = $2;
+  const [message, setMessage] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
+
   async function submitLead(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault($2);
-    const form = $2;
-    const formData = new FormData($2);
-    const title = $2;
-    setLoading($2);
-    setMessage($2);
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const title = String(formData.get('title') || 'New lead');
+    setLoading(true);
+    setMessage(null);
     try {
       const res = await fetch('/api/vendors/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ vendorId: vendor.id, title })}),
-      if (!res.ok) throw new Error($2);
-      setMessage($2);
+        body: JSON.stringify({ vendorId: vendor.id, title })});
+      if (!res.ok) throw new Error('Failed to submit');
+      setMessage('Thanks! We will contact you soon.');
       form.reset()
     } catch (e: any) {
       setMessage(e.message)
@@ -105,8 +108,8 @@ export default function VendorProfilePage({ vendor }: Props) {
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
-  const slug = String($2);
-  const { getVendorBySlug } = await import($2);
-  const vendor = $2;
+  const slug = String(ctx.params?.slug || '');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } }
-},
+};

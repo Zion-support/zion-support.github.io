@@ -2,13 +2,13 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { 
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
-  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
-  ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon,
-  DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor,
-  Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon,
+  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
+  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
+  ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
+  DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
+  Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
-} from 'lucide-react',
+} from 'lucide-react';
 
 // Import our new innovative services
 import { innovative2025AIAutonomousEcosystemV2 } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
@@ -19,59 +19,73 @@ import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackgrou
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
 const Homepage2047: React.FC = () => {
-  const [isVisible, setIsVisible] = useState($2);
-  const [currentServiceIndex, setCurrentServiceIndex] = useState($2);
-  const [selectedCategory, setSelectedCategory] = useState($2);
-  const [mousePosition, setMousePosition] = useState($2);
-  const [hoveredService, setHoveredService] = useState<string | null>(null),
-  const [consciousnessLevel, setConsciousnessLevel] = useState($2);
-  const [scrollY, setScrollY] = useState($2);
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
+  const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [consciousnessLevel, setConsciousnessLevel] = useState(0.5);
+  const [scrollY, setScrollY] = useState(0);
+  
   useEffect(() => {
-    setIsVisible($2);
+    setIsVisible(true);
+    
     // Auto-rotate featured services
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)
-    }, 8000),
+    }, 8000);
     
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
-    },
+    };
     
     // Animate consciousness level
     const consciousnessInterval = setInterval(() => {
       setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7)
-    }, 100),
+    }, 100);
 
     // Track scroll position
-    const handleScroll = $2;
-    window.addEventListener($2);
-    window.addEventListener($2);
+    const handleScroll = () => {
+      setScrollY(window.scrollY)
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('scroll', handleScroll);
+    
     return () => {
-      clearInterval($2);
-      clearInterval($2);
-      window.removeEventListener($2);
+      clearInterval(interval);
+      clearInterval(consciousnessInterval);
+      window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll)
     }
-  }, []),
+  }, []);
 
   // Combine all innovative services
-  const allInnovativeServices = $2;
-    ...emergingTechBreakthroughs2025V4,
+  const allInnovativeServices = [
+    ...innovative2025AIAutonomousEcosystemV2;
+    ...emergingTechBreakthroughs2025V4;
     ...innovative2025ITInfrastructureV2
-  ],
+  ];
 
   // Get featured services for rotation
-  const featuredServices = allInnovativeServices.slice($2);
+  const featuredServices = allInnovativeServices.slice(0, 6);
+
   // Filter services by category
-  const getFilteredServices = $2;
-    return allInnovativeServices.filter(service = $2;
+  const getFilteredServices = () => {
+    if (selectedCategory === 'all') return allInnovativeServices;
+    return allInnovativeServices.filter(service => 
+      service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
+      service.type.toLowerCase().includes(selectedCategory.toLowerCase())
+    )
+  };
+
   const categories = [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },
     { id: 'ai', name: 'AI & Autonomous', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: innovative2025AIAutonomousEcosystemV2.length },
     { id: 'quantum', name: 'Quantum & Emerging', icon: AtomIcon, color: 'from-blue-500 to-indigo-500', count: emergingTechBreakthroughs2025V4.length },
     { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-emerald-500 to-teal-500', count: innovative2025ITInfrastructureV2.length }
-  ],
+  ];
 
   const features = [
     { icon: Brain, title: "AI Autonomous Ecosystem 2025", description: "Revolutionary autonomous AI solutions", href: "/2025-innovative-services-showcase-v2", color: "from-purple-500 to-pink-500" },
@@ -80,22 +94,29 @@ const Homepage2047: React.FC = () => {
     { icon: Rocket, title: "Space Resource Intelligence 2025", description: "AI-powered space resource discovery", href: "/space-resource-intelligence-platform-2025", color: "from-indigo-500 to-purple-500" },
     { icon: Cpu, title: "Autonomous DevOps Intelligence 2025", description: "AI-powered DevOps optimization", href: "/autonomous-devops-intelligence-platform-2025", color: "from-emerald-500 to-teal-500" },
     { icon: Database, title: "Edge Computing Orchestration 2025", description: "Edge computing optimization platform", href: "/edge-computing-orchestration-platform-2025", color: "from-yellow-500 to-orange-500" }
-  ],
+  ];
 
   const stats = [
-    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star},
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp},
-    { number: "24/7", label: "AI Intelligence Available", icon: Brain},
-    { number: "300+", label: "Countries Served", icon: Globe}
-  ],
+    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
+    { number: "24/7", label: "AI Intelligence Available", icon: Brain },
+    { number: "300+", label: "Countries Served", icon: Globe }
+  ];
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 60},
-    animate: { opacity: 1, y: 0},
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
-  },
+  };
 
-  const staggerContainer = $2;
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
       {/* Futuristic Background */}
@@ -111,14 +132,14 @@ const Homepage2047: React.FC = () => {
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0}}
-              transition={{ duration: 1}}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
               className="space-y-8"
             >
               <div className="space-y-6">
                 <motion.div
-                  initial={{ opacity: 0, y: 20}}
-                  animate={{ opacity: 1, y: 0}}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium"
                 >
@@ -145,8 +166,8 @@ const Homepage2047: React.FC = () => {
 
               {/* CTA Buttons */}
               <motion.div
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
@@ -189,8 +210,8 @@ const Homepage2047: React.FC = () => {
 
             {/* Right Content - Featured Service */}
             <motion.div
-              initial={{ opacity: 0, x: 50}}
-              animate={{ opacity: 1, x: 0}}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
               className="relative"
             >
@@ -198,7 +219,7 @@ const Homepage2047: React.FC = () => {
                 <motion.div
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1}}
+                  animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
                   className="relative"
@@ -254,9 +275,9 @@ const Homepage2047: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            viewport={{ once: true}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -273,7 +294,7 @@ const Homepage2047: React.FC = () => {
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true}}
+            viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {categories.map((category, index) => (
@@ -317,9 +338,9 @@ const Homepage2047: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            viewport={{ once: true}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -336,7 +357,7 @@ const Homepage2047: React.FC = () => {
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true}}
+            viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {features.map((feature, index) => (
@@ -370,9 +391,9 @@ const Homepage2047: React.FC = () => {
 
           {/* View All Services CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            viewport={{ once: true}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mt-16"
           >
@@ -391,9 +412,9 @@ const Homepage2047: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            viewport={{ once: true}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -402,5 +423,28 @@ const Homepage2047: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Join thousands of organizations already leveraging our revolutionary AI, quantum, and IT infrastructure solutions
             </p>
-            <div className = $2;
-export default Homepage2047,
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                href="/2025-innovative-services-showcase-v2"
+                className="border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <UltraFuturisticFooter2047 />
+    </div>
+  )
+};
+
+export default Homepage2047;

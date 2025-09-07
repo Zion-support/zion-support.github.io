@@ -4,51 +4,60 @@ import {
   Smartphone, Tablet, Monitor, RotateCcw, 
   Wifi, WifiOff, Signal, SignalHigh, 
   Mouse, Hand
-} from 'lucide-react',
+} from 'lucide-react';
 
 // TouchEvent types are already defined in DOM
 
 interface MobileOptimizerProps {
   children: React.ReactNode,
-  showDebugInfo?: boolean,
-  enableTouchGestures?: boolean,
-  enableMobileLayout?: boolean,
+  showDebugInfo?: boolean;
+  enableTouchGestures?: boolean;
+  enableMobileLayout?: boolean;
   enablePerformanceMode?: boolean
 }
 
 interface TouchGesture {
   type: 'swipe' | 'pinch' | 'rotate' | 'longPress',
-  direction?: 'up' | 'down' | 'left' | 'right',
-  distance?: number,
+  direction?: 'up' | 'down' | 'left' | 'right';
+  distance?: number;
   duration?: number
 }
 
 const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
-  children,
-  showDebugInfo = $2;
-  enableTouchGestures = $2;
-  enableMobileLayout = $2;
+  children;
+  showDebugInfo = false;
+  enableTouchGestures = true;
+  enableMobileLayout = true;
   enablePerformanceMode = true
 }) => {
-  const [isMobile, setIsMobile] = useState($2);
-  const [isTablet, setIsTablet] = useState($2);
-  const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait'),
-  const [touchGestures, setTouchGestures] = useState<TouchGesture[]>([]),
-  const [performanceMetrics, setPerformanceMetrics] = useState($2);
-  const [showMobilePanel, setShowMobilePanel] = useState($2);
-  const touchStartRef = useRef<{ x: number, y: number, time: number} | null>(null),
-  const touchMoveRef = useRef<{ x: number, y: number, time: number} | null>(null),
-  const fpsRef = $2;
-  const frameCountRef = $2;
-  const lastTimeRef = $2;
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+  const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
+  const [touchGestures, setTouchGestures] = useState<TouchGesture[]>([]);
+  const [performanceMetrics, setPerformanceMetrics] = useState({
+    fps: 0,
+    memoryUsage: 0,
+    batteryLevel: 0,
+    networkSpeed: 'unknown'
+  });
+  const [showMobilePanel, setShowMobilePanel] = useState(false);
+  
+  const touchStartRef = useRef<{ x: number, y: number, time: number } | null>(null),
+  const touchMoveRef = useRef<{ x: number, y: number, time: number } | null>(null),
+  const fpsRef = useRef<number>(0);
+  const frameCountRef = useRef<number>(0);
+  const lastTimeRef = useRef<number>(0);
+
   // Detect mobile device
   useEffect(() => {
     const checkDevice = () => {
-      const userAgent = navigator.userAgent.toLowerCase($2);
-      const isMobileDevice = /mobile|android|iphone|ipad|ipod|blackberry|windows phone/g.test($2);
-      const isTabletDevice = /ipad|android(?!.*mobile)|tablet/g.test($2);
-      setIsMobile($2);
-      setIsTablet($2);
+      const userAgent = navigator.userAgent.toLowerCase();
+      const isMobileDevice = /mobile|android|iphone|ipad|ipod|blackberry|windows phone/g.test(userAgent);
+      const isTabletDevice = /ipad|android(?!.*mobile)|tablet/g.test(userAgent);
+      
+      setIsMobile(isMobileDevice);
+      setIsTablet(isTabletDevice);
+      
       // Apply mobile-specific optimizations
       if (isMobileDevice && enableMobileLayout) {
         applyMobileLayout()
@@ -57,176 +66,226 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       if (isMobileDevice && enablePerformanceMode) {
         enableMobilePerformanceMode()
       }
-    },
+    };
 
-    checkDevice($2);
-    window.addEventListener($2);
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
     return () => window.removeEventListener('resize', checkDevice)
-  }, [enableMobileLayout, enablePerformanceMode]),
+  }, [enableMobileLayout, enablePerformanceMode]);
 
   // Detect orientation changes
   useEffect(() => {
-    const checkOrientation = $2;
-      setOrientation($2);
+    const checkOrientation = () => {
+      const newOrientation = window.innerHeight > window.innerWidth ? 'portrait' : 'landscape';
+      setOrientation(newOrientation);
+      
       // Apply orientation-specific optimizations
-      if (newOrientation = $2;
-    checkOrientation($2);
-    window.addEventListener($2);
-    window.addEventListener($2);
+      if (newOrientation === 'landscape') {
+        applyLandscapeOptimizations()
+      } else {
+        applyPortraitOptimizations()
+      }
+    };
+
+    checkOrientation();
+    window.addEventListener('orientationchange', checkOrientation);
+    window.addEventListener('resize', checkOrientation);
+    
     return () => {
-      window.removeEventListener($2);
+      window.removeEventListener('orientationchange', checkOrientation);
       window.removeEventListener('resize', checkOrientation)
     }
-  }, []),
+  }, []);
 
   // Touch gesture handling
   useEffect(() => {
-    if (!enableTouchGestures || !isMobile) return,
+    if (!enableTouchGestures || !isMobile) return;
 
-    const handleTouchStart = $2;
+    const handleTouchStart = (e: TouchEvent) => {
+      if (e.touches.length === 1) {
+        touchStartRef.current = {
+          x: e.touches[0].clientX,
           y: e.touches[0].clientY,
           time: Date.now()
         }
       }
-    },
+    };
 
-    const handleTouchMove = $2;
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length === 1 && touchStartRef.current) {
+        touchMoveRef.current = {
+          x: e.touches[0].clientX,
           y: e.touches[0].clientY,
           time: Date.now()
         }
       }
-    }),
+    });
     
     setTimeout(() => setIsOptimizing(false), 2000)
-  }, []),
+  }, []);
 
   // Touch gesture optimization
-  const optimizeTouchGestures = $2;
+  const optimizeTouchGestures = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
     const handleTouchEnd = (e: TouchEvent) => {
       if (touchStartRef.current && touchMoveRef.current) {
-        const gesture = detectTouchGesture($2);
+        const gesture = detectTouchGesture(touchStartRef.current, touchMoveRef.current);
         if (gesture) {
-          setTouchGestures(prev => [...prev.slice(-4), gesture]),
+          setTouchGestures(prev => [...prev.slice(-4), gesture]);
           handleGestureAction(gesture)
         }
         
-        touchStartRef.current = $2;
-        touchMoveRef.current = $2;
+        touchStartRef.current = null;
+        touchMoveRef.current = null
+      }
+    });
+    
     // Optimize fonts for high DPI
-    const fonts = document.querySelectorAll($2);
+    const fonts = document.querySelectorAll('link[rel="preload"][as="font"]');
     fonts.forEach(font => {
       font.setAttribute('crossoriginanonymous')
     })
-  }, []),
+  }, []);
 
-    const handleLongPress = $2;
-          duration: 1000},
-        setTouchGestures(prev => [...prev.slice(-4), gesture]),
+    const handleLongPress = (e: TouchEvent) => {
+      const longPressTimer = setTimeout(() => {
+        const gesture: TouchGesture = {
+          type: 'longPress',
+          duration: 1000
+        };
+        setTouchGestures(prev => [...prev.slice(-4), gesture]);
         handleGestureAction(gesture)
-      }, 1000),
+      }, 1000);
 
-      const clearLongPress = () => clearTimeout($2);
-      e.target?.addEventListener($2);
-      e.target?.addEventListener('touchmove', clearLongPress, { once: true})
-    },
+      const clearLongPress = () => clearTimeout(longPressTimer);
+      
+      e.target?.addEventListener('touchend', clearLongPress, { once: true }),
+      e.target?.addEventListener('touchmove', clearLongPress, { once: true })
+    };
 
-    document.addEventListener($2);
-    document.addEventListener($2);
-    document.addEventListener($2);
-    document.addEventListener($2);
+    document.addEventListener('touchstart', handleTouchStart, { passive: true }),
+    document.addEventListener('touchmove', handleTouchMove, { passive: true }),
+    document.addEventListener('touchend', handleTouchEnd, { passive: true }),
+    document.addEventListener('touchstart', handleLongPress, { passive: true }),
+
     return () => {
-      document.removeEventListener($2);
-      document.removeEventListener($2);
-      document.removeEventListener($2);
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
       document.removeEventListener('touchstart', handleLongPress)
     }
-  }, [enableTouchGestures, isMobile]),
+  }, [enableTouchGestures, isMobile]);
 
   // Performance monitoring
   useEffect(() => {
-    if (!enablePerformanceMode) return,
+    if (!enablePerformanceMode) return;
 
     let animationFrameId: number,
     
-    const measurePerformance = $2;
+    const measurePerformance = (currentTime: number) => {
+      frameCountRef.current++;
+      
       if (currentTime - lastTimeRef.current >= 1000) {
-        fpsRef.current = $2;
-        frameCountRef.current = $2;
-        lastTimeRef.current = $2;
+        fpsRef.current = frameCountRef.current;
+        frameCountRef.current = 0;
+        lastTimeRef.current = currentTime;
+        
         // Update performance metrics
-        setPerformanceMetrics(prev = $2;
+        setPerformanceMetrics(prev => ({
+          ...prev;
           fps: fpsRef.current
         }))
       }
       
-      animationFrameId = $2;
-    animationFrameId = requestAnimationFrame($2);
+      animationFrameId = requestAnimationFrame(measurePerformance)
+    };
+
+    animationFrameId = requestAnimationFrame(measurePerformance);
+
     // Monitor memory usage
-    const memoryInterval = $2;
-        setPerformanceMetrics(prev = $2;
+    const memoryInterval = setInterval(() => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        setPerformanceMetrics(prev => ({
+          ...prev;
           memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) // MB
         }))
       }
-    }, 2000),
+    }, 2000);
 
     // Monitor battery level
     if ('getBattery' in navigator) {
       (navigator as any).getBattery().then((battery: any) => {
-        const updateBatteryLevel = $2;
+        const updateBatteryLevel = () => {
+          setPerformanceMetrics(prev => ({
+            ...prev;
             batteryLevel: Math.round(battery.level * 100)
           }))
-        },
+        };
         
-        updateBatteryLevel($2);
-        battery.addEventListener($2);
+        updateBatteryLevel();
+        battery.addEventListener('levelchange', updateBatteryLevel);
+        
         return () => battery.removeEventListener('levelchange', updateBatteryLevel)
       })
     }
 
     // Monitor network speed
     if ('connection' in navigator) {
-      const connection = $2;
-      const updateNetworkSpeed = $2;
+      const connection = (navigator as any).connection;
+      const updateNetworkSpeed = () => {
+        let speed = 'unknown';
         if (connection.effectiveType) {
-          speed = $2;
-          networkSpeed: speed}))
-      },
+          speed = connection.effectiveType
+        } else if (connection.downlink) {
+          speed = `${connection.downlink} Mbps`
+        }
+        
+        setPerformanceMetrics(prev => ({
+          ...prev;
+          networkSpeed: speed
+        }))
+      };
       
-      updateNetworkSpeed($2);
-      connection.addEventListener($2);
+      updateNetworkSpeed();
+      connection.addEventListener('change', updateNetworkSpeed);
+      
       return () => connection.removeEventListener('change', updateNetworkSpeed)
     }
 
     return () => {
-      cancelAnimationFrame($2);
+      cancelAnimationFrame(animationFrameId);
       clearInterval(memoryInterval)
     }
-  }, [enablePerformanceMode]),
+  }, [enablePerformanceMode]);
 
-  const detectTouchGesture = (start: { x: number, y: number, time: number}, end: { x: number, y: number, time: number}): TouchGesture | null = $2;
-    const deltaY = $2;
-    const distance = Math.sqrt($2);
-    const duration = $2;
+  const detectTouchGesture = (start: { x: number, y: number, time: number }, end: { x: number, y: number, time: number }): TouchGesture | null => {
+    const deltaX = end.x - start.x;
+    const deltaY = end.y - start.y;
+    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    const duration = end.time - start.time;
+    
     // Minimum distance and duration thresholds
-    if (distance < 50 || duration < 100) return null,
+    if (distance < 50 || duration < 100) return null;
     
     // Determine direction
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
       return {
         type: 'swipe',
-        direction: deltaX> 0 ? 'right' : 'left',
-        distance: Math.abs($2);
+        direction: deltaX > 0 ? 'right' : 'left',
+        distance: Math.abs(deltaX),
         duration
       }
     } else {
       return {
         type: 'swipe',
-        direction: deltaY> 0 ? 'down' : 'up',
-        distance: Math.abs($2);
+        direction: deltaY > 0 ? 'down' : 'up',
+        distance: Math.abs(deltaY),
         duration
       }
     }
-  },
+  };
 
   const handleGestureAction = (gesture: TouchGesture) => {
     switch (gesture.type) {
@@ -248,108 +307,150 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           // Scroll to bottom
           window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
         }
-        break,
+        break;
       case 'longPress':
         // Show context menu or additional options
-        console.log($2);
+        console.log('Long press detected');
         break
     }
-  },
+  };
 
   const applyMobileLayout = () => {
     // Add mobile-specific CSS classes
-    document.documentElement.classList.add($2);
+    document.documentElement.classList.add('mobile-optimized');
+    
     // Optimize viewport
-    const viewport = document.querySelector($2);
+    const viewport = document.querySelector('meta[name="viewport"]');
     if (viewport) {
       viewport.setAttribute('contentwidth=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
     }
     
     // Add touch-action CSS
-    const style = document.createElement($2);
-    style.textContent = $2;
-        -webkit-tap-highlight-color: transparent}
+    const style = document.createElement('style');
+    style.textContent = `
+      .mobile-optimized * {
+        touch-action: manipulation,
+        -webkit-tap-highlight-color: transparent
+      }
       
-      .mobile-optimized button,
+      .mobile-optimized button;
       .mobile-optimized a {
         min-height: 44px,
-        min-width: 44px}
+        min-width: 44px
+      }
       
-      .mobile-optimized input,
-      .mobile-optimized select,
+      .mobile-optimized input;
+      .mobile-optimized select;
       .mobile-optimized textarea {
         font-size: 16px, /* Prevents zoom on iOS */
       }
-    `,
+    `;
     document.head.appendChild(style)
-  },
+  };
 
   const enableMobilePerformanceMode = () => {
     // Reduce animations on mobile
-    document.documentElement.classList.add($2);
+    document.documentElement.classList.add('mobile-performance-mode');
+    
     // Optimize images
-    const images = document.querySelectorAll($2);
-    images.forEach($2);
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      img.loading = 'lazy';
+      img.decoding = 'async'
+    });
+    
     // Reduce motion for better performance
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.documentElement.classList.add('reduced-motion')
     }
-  },
+  };
 
   const applyLandscapeOptimizations = () => {
     // Landscape-specific optimizations
-    document.documentElement.classList.add($2);
+    document.documentElement.classList.add('landscape-mode');
+    
     // Adjust layout for landscape
-    const style = document.createElement($2);
-    style.textContent = $2;
-        height: 100vh}
-    `,
+    const style = document.createElement('style');
+    style.textContent = `
+      .landscape-mode .mobile-panel {
+        width: 300px,
+        height: 100vh
+      }
+    `;
     document.head.appendChild(style)
-  },
+  };
 
-  const applyPortraitOptimizations = $2;
-  const optimizeForMobile = $2;
+  const applyPortraitOptimizations = () => {
+    // Portrait-specific optimizations
+    document.documentElement.classList.remove('landscape-mode')
+  };
+
+  const optimizeForMobile = useCallback(() => {
+    if (!isMobile) return;
+
     // Optimize images
-    const images = document.querySelectorAll($2);
-    images.forEach(img = $2;
-      if (!img.decoding) img.decoding = $2;
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.loading) img.loading = 'lazy';
+      if (!img.decoding) img.decoding = 'async'
+    });
+
     // Optimize fonts
-    const fonts = document.querySelectorAll($2);
-    fonts.forEach(font = $2;
+    const fonts = document.querySelectorAll('link[rel="preload"][as="font"]');
+    fonts.forEach(font => {
+      font.setAttribute('crossoriginanonymous')
+    });
+
     // Add mobile-specific event listeners
-    document.addEventListener('touchstart', () => {}, { passive: true}),
-    document.addEventListener('touchmove', () => {}, { passive: true})
-  }, [isMobile]),
+    document.addEventListener('touchstart', () => {}, { passive: true }),
+    document.addEventListener('touchmove', () => {}, { passive: true })
+  }, [isMobile]);
 
   useEffect(() => {
     optimizeForMobile()
-  }, [optimizeForMobile]),
+  }, [optimizeForMobile]);
 
   useEffect(() => {
-    if (typeof window = $2;
+    if (typeof window === 'undefined') return;
+
     // Set up event listeners
-    window.addEventListener($2);
-    window.addEventListener($2);
+    window.addEventListener('orientationchange', handleOrientationChange);
+    window.addEventListener('resize', handleResize);
+    
     // Set up orientation change detection
-    const mediaQuery = $2;
-    const handleMediaQueryChange = $2;
-    mediaQuery.addEventListener($2);
+    const mediaQuery = window.matchMedia('(orientation: portrait)'),
+    const handleMediaQueryChange = (e: MediaQueryListEvent) => {
+      setCurrentOrientation(e.matches ? 'portrait' : 'landscape')
+    };
+    
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+    
     return () => {
-      window.removeEventListener($2);
-      window.removeEventListener($2);
+      window.removeEventListener('orientationchange', handleOrientationChange);
+      window.removeEventListener('resize', handleResize);
       mediaQuery.removeEventListener('change', handleMediaQueryChange)
     }
-  }, [handleOrientationChange, handleResize]),
+  }, [handleOrientationChange, handleResize]);
 
-  if (!showPanel || !isVisible) return null,
+  if (!showPanel || !isVisible) return null;
 
-  const getDeviceIcon = $2;
-      case 'tablet': return <Tablet className = $2;
-      default: return <Monitor className = $2;
-  const getStatusIcon = $2;
-      case 'warning': return <AlertTriangle className = $2;
-      case 'error': return <AlertTriangle className = $2;
-      default: return <CheckCircle className = $2;
+  const getDeviceIcon = (type: string) => {
+    switch (type) {
+      case 'mobile': return <Smartphone className="w-5 h-5" />;
+      case 'tablet': return <Tablet className="w-5 h-5" />;
+      default: return <Monitor className="w-5 h-5" />
+    }
+  };
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'success': return <CheckCircle className="w-4 h-4 text-green-400" />;
+      case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
+      case 'error': return <AlertTriangle className="w-4 h-4 text-red-400" />;
+      default: return <CheckCircle className="w-4 h-4 text-gray-400" />
+    }
+  };
+
   return (
     <>
       {children}
@@ -358,9 +459,9 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       <AnimatePresence>
         {showMobilePanel && (
           <motion.div
-            initial={{ opacity: 0, x: 300}}
-            animate={{ opacity: 1, x: 0}}
-            exit={{ opacity: 0, x: 300}}
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 300 }}
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-md border-l border-cyan-500/30 z-40 overflow-y-auto"
           >
             <div className="p-6">
@@ -442,8 +543,34 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                   </button>
                   <button
                     onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
-                    className = $2;
-          -webkit-tap-highlight-color: transparent}
+                    className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded transition-colors"
+                  >
+                    Scroll to Bottom
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Toggle Button */}
+      <button
+        onClick={() => setShowMobilePanel(!showMobilePanel)}
+        className="fixed top-4 right-4 z-50 p-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500/50"
+        aria-label="Mobile optimization panel"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>
+      </button>
+
+      {/* Global Mobile Styles */}
+      <style jsx global>{`
+        .mobile-optimized * {
+          touch-action: manipulation,
+          -webkit-tap-highlight-color: transparent
+        }
 
         .mobile-performance-mode * {
           animation-duration: 0.3s !important,
@@ -457,22 +584,25 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         }
 
         .landscape-mode .mobile-panel {
-          width: 300px}
+          width: 300px
+        }
 
         @media (max-width: 768px) {
-          .mobile-optimized button,
+          .mobile-optimized button;
           .mobile-optimized a {
             min-height: 44px,
-            min-width: 44px}
+            min-width: 44px
+          }
           
-          .mobile-optimized input,
-          .mobile-optimized select,
+          .mobile-optimized input;
+          .mobile-optimized select;
           .mobile-optimized textarea {
-            font-size: 16px}
+            font-size: 16px
+          }
         }
       `}</style>
     </>
   )
-},
+};
 
-export default MobileOptimizer,
+export default MobileOptimizer;

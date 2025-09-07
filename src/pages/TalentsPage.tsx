@@ -20,7 +20,7 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         <h3 className="text-lg font-semibold">Talent Market Insights</h3>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <div className="text-center">,
+        <div className="text-center">
           <div className="text-2xl font-bold text-green-400">${Math.round(stats.averageHourlyRate)}/hr</div>
           <div className="text-sm text-muted-foreground">Avg Hourly Rate</div>
         </div>
@@ -43,11 +43,12 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       </div>
     </CardContent>
   </Card>
-),
+);
 
 // Filter and sort controls for talents
-const TalentFilterControls: React.FC<{,
-  sortBy: string, setSortBy: (sort: string) => void,
+const TalentFilterControls: React.FC<{
+  sortBy: string,
+  setSortBy: (sort: string) => void,
   filterSpecialization: string,
   setFilterSpecialization: (spec: string) => void,
   filterAvailability: string,
@@ -55,17 +56,17 @@ const TalentFilterControls: React.FC<{,
   specializations: string[],
   showRecommended: boolean,
   setShowRecommended: (show: boolean) => void,
-  loading: boolean,
+  loading: boolean
 }> = ({
-  sortBy,
-  setSortBy,
-  filterSpecialization,
-  setFilterSpecialization,
-  filterAvailability,
-  setFilterAvailability,
-  specializations,
-  showRecommended,
-  setShowRecommended,
+  sortBy;
+  setSortBy;
+  filterSpecialization;
+  setFilterSpecialization;
+  filterAvailability;
+  setFilterAvailability;
+  specializations;
+  showRecommended;
+  setShowRecommended;
   loading
 }) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -115,7 +116,7 @@ const TalentFilterControls: React.FC<{,
       </select>
     </div>
 
-    <Button,
+    <Button
       variant={showRecommended ? "default" : "outline"}
       size="sm"
       onClick={() => setShowRecommended(!showRecommended)}
@@ -125,7 +126,7 @@ const TalentFilterControls: React.FC<{,
       {showRecommended ? "All Talents" : "Recommended"}
     </Button>
   </div>
-),
+);
 
 // Talent card component
 const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ talent, onHire }) => (
@@ -133,7 +134,7 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
         <div className="flex items-start gap-3">
-          <img,
+          <img
             src={talent.profile_picture_url || `https://api.dicebear.com/6.x/initials/svg?seed=${talent.full_name}`}
             alt={talent.full_name}
             className="w-12 h-12 rounded-full object-cover"
@@ -180,39 +181,69 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
 
       <div className="flex flex-wrap gap-1 mb-4">
         {talent.skills?.slice(0, 4).map((skill, index) => (
-          <Badge key = $2;
+          <Badge key={index} variant="secondary" className="text-xs">
+            {skill}
+          </Badge>
+        ))}
+        {talent.skills && talent.skills.length > 4 && (
+          <Badge variant="outline" className="text-xs">
+            +{talent.skills.length - 4} more
+          </Badge>
+        )}
+      </div>
+
+      <div className="flex items-center justify-between">
+        <Badge variant={talent.availability_type === 'full_time' ? 'default' : 'outline'} className="text-xs">
+          {talent.availability_type?.replace('_ ').toUpperCase()}
+        </Badge>
+        <Button size="sm" onClick={onHire}>
+          Hire Talent
+        </Button>
+      </div>
+    </CardContent>
+  </Card>
+);
+
 // Loading skeleton for talent grid
 const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => (
       <SkeletonCard key={i} />
     ))}
   </div>
-),
+);
 
 // Main enhanced talents page with infinite scroll
 export default function TalentsPage() {
-  const router = useRouter($2);
-  const [sortBy, setSortBy] = useState($2);
-  const [filterSpecialization, setFilterSpecialization] = useState($2);
-  const [filterAvailability, setFilterAvailability] = useState($2);
-  const [showRecommended, setShowRecommended] = useState($2);
-  const [totalGenerated, setTotalGenerated] = useState($2);
+  const router = useRouter();
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterSpecialization, setFilterSpecialization] = useState('');
+  const [filterAvailability, setFilterAvailability] = useState('');
+  const [showRecommended, setShowRecommended] = useState(false);
+  const [totalGenerated, setTotalGenerated] = useState(0);
+
   // Fetch function for infinite scroll with AI talent generation
   const fetchTalents = useCallback(async (page: number, limit: number) => {
-    // Add realistic loading delay,
-    await new Promise(resolve => setTimeout(resolve, 300)),
+    // Add realistic loading delay
+    await new Promise(resolve => setTimeout(resolve, 300));
 
     let allTalents: TalentProfile[] = [],
     
     // Start with existing talent profiles
-    if (page = $2;
-    const newTalents = generateAITalents($2);
-    setTotalGenerated($2);
-    allTalents = [...allTalents, ...newTalents],
+    if (page === 1) {
+      allTalents = [...TALENT_PROFILES]
+    }
+    
+    // Generate new AI/IT talents using the auto-feed algorithm
+    const startId = TALENT_PROFILES.length + (page - 1) * limit + totalGenerated;
+    const newTalents = generateAITalents(limit, startId);
+    setTotalGenerated(prev => prev + newTalents.length);
+    
+    allTalents = [...allTalents, ...newTalents];
     
     // Apply filters
-    let filteredTalents = $2;
+    let filteredTalents = allTalents;
+    
     if (filterSpecialization) {
       filteredTalents = filteredTalents.filter(t => 
         t.professional_title?.toLowerCase().includes(filterSpecialization.toLowerCase())
@@ -231,74 +262,80 @@ export default function TalentsPage() {
     filteredTalents.sort((a, b) => {
       switch (sortBy) {
         case 'hourly-rate-low':
-          return (a.hourly_rate || 0) - (b.hourly_rate || 0),
+          return (a.hourly_rate || 0) - (b.hourly_rate || 0);
         case 'hourly-rate-high':
-          return (b.hourly_rate || 0) - (a.hourly_rate || 0),
+          return (b.hourly_rate || 0) - (a.hourly_rate || 0);
         case 'rating':
-          return (b.average_rating || 0) - (a.average_rating || 0),
+          return (b.average_rating || 0) - (a.average_rating || 0);
         case 'experience':
-          return (b.years_experience || 0) - (a.years_experience || 0),
+          return (b.years_experience || 0) - (a.years_experience || 0);
         case 'verified':
-          return (b.is_verified ? 1 : 0) - (a.is_verified ? 1 : 0),
+          return (b.is_verified ? 1 : 0) - (a.is_verified ? 1 : 0);
         case 'newest':
-        default: return new Date(b.id || '').getTime() - new Date(a.id || '').getTime(),
+        default: return new Date(b.id || '').getTime() - new Date(a.id || '').getTime()
       }
-    }),
+    });
     
     // Paginate results
-    const startIndex = $2;
-    const endIndex = $2;
-    const items = filteredTalents.slice($2);
+    const startIndex = (page - 1) * limit;
+    const endIndex = startIndex + limit;
+    const items = filteredTalents.slice(startIndex, endIndex);
+    
     return {
-      items,
+      items;
       hasMore: endIndex < filteredTalents.length || page < 12, // Allow up to 12 pages
-      total: filteredTalents.length,
+      total: filteredTalents.length
     }
-  }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]),
+  }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]);
 
   // Use infinite scroll hook
   const {
-    items: talents, loading,
-    error,
-    hasMore,
-    total,
-    isFetching,
-    lastElementRef,
-    refresh,
-    scrollToTop,
+    items: talents,
+    loading;
+    error;
+    hasMore;
+    total;
+    isFetching;
+    lastElementRef;
+    refresh;
+    scrollToTop;
     loadMore
-  } = useInfiniteScrollPagination($2);
+  } = useInfiniteScrollPagination(fetchTalents, 16);
+
   // Refresh when filters change
   useEffect(() => {
-    refresh($2);
+    refresh();
     setTotalGenerated(0)
-  }, [sortBy, filterSpecialization, filterAvailability, showRecommended]),
+  }, [sortBy, filterSpecialization, filterAvailability, showRecommended]);
 
   // Calculate market stats
-  const marketStats = $2;
+  const marketStats = useMemo(() => {
+    if (talents.length === 0) return null;
     return getTalentMarketStats(talents)
-  }, [talents]),
+  }, [talents]);
 
   // Get unique specializations
   const specializations = useMemo(() => {
     return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)))
-  }, [talents]),
+  }, [talents]);
 
   // Show scroll to top button
-  const [showScrollTop, setShowScrollTop] = useState($2);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
-    const handleScroll = $2;
-    window.addEventListener($2);
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 800)
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
+  }, []);
 
   // Loading state
   if (loading && talents.length === 0) {
     return (
       <div className="container py-8" data-testid="talents-loading">
         <motion.div
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
@@ -333,12 +370,12 @@ export default function TalentsPage() {
       <motion.div 
         className="text-center mb-8"
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0}}
+        animate={{ opacity: 1, y: 0 }}
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
           AI & IT Talent Directory
         </h1>
-        <p className="text-muted-foreground text-lg">,
+        <p className="text-muted-foreground text-lg">
           Connect with world-class professionals specializing in AI, machine learning, and modern technology
         </p>
       </motion.div>
@@ -346,8 +383,8 @@ export default function TalentsPage() {
       {/* Market Insights */}
       {marketStats && (
         <motion.div
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
           <TalentMarketInsights stats={marketStats} />
@@ -356,8 +393,8 @@ export default function TalentsPage() {
 
       {/* Filter Controls */}
       <motion.div
-        initial={{ opacity: 0, y: 20}}
-        animate={{ opacity: 1, y: 0}}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
       >
         <TalentFilterControls
@@ -376,7 +413,7 @@ export default function TalentsPage() {
 
       {/* Talent Grid */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6",
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
@@ -385,9 +422,9 @@ export default function TalentsPage() {
           {talents.map((talent, index) => (
             <motion.div
               key={talent.id}
-              ref={index === talents.length - 1 ? lastElementRef: null}
+              ref={index === talents.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1}}
+              animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
@@ -405,8 +442,8 @@ export default function TalentsPage() {
       {(isFetching || loading) && (
         <motion.div
           className="mt-8"
-          initial={{ opacity: 0}}
-          animate={{ opacity: 1}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
         >
           <TalentLoadingGrid count={4} />
         </motion.div>
@@ -431,8 +468,8 @@ export default function TalentsPage() {
       {!hasMore && talents.length > 0 && (
         <motion.div
           className="text-center mt-12 py-8 border-t"
-          initial={{ opacity: 0}}
-          animate={{ opacity: 1}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
         >
           <div className="text-muted-foreground text-lg mb-2">
             🎉 You've explored all available talents!
@@ -448,7 +485,7 @@ export default function TalentsPage() {
         {showScrollTop && (
           <motion.button
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50",
+            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
@@ -462,4 +499,3 @@ export default function TalentsPage() {
     </div>
   )
 }
-;

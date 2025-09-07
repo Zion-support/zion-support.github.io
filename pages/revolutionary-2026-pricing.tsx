@@ -5,25 +5,28 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   CheckCircle, Star, TrendingUp, DollarSign, Clock, Users, 
   ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, 
-  Target, Satellite, Globe, Cpu, Lock, Palette, Layers,
+  Target, Satellite, Globe, Cpu, Lock, Palette, Layers;
   Phone, Mail, MapPin, ExternalLink, Filter, Grid, List
-} from 'lucide-react',
+} from 'lucide-react';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
 export default function Revolutionary2026Pricing() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('price-low'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('price-low');
 
   // Combine all 2026 services
-  const all2026Services = $2;
+  const all2026Services = [
+    ...innovative2026MicroSaasServicesV2;
     ...emergingTech2026ServicesV2
-  ],
+  ];
 
   // Filter services based on category and price
-  const filteredServices = $2;
+  const filteredServices = useMemo(() => {
+    let filtered = all2026Services;
+
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
@@ -43,11 +46,11 @@ export default function Revolutionary2026Pricing() {
     // Price filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-        const price = parseFloat(service.price.replace(/[^0-9.]/g, '')),
-        if (selectedPriceRange = $2;
-        if (selectedPriceRange = $2;
-        if (selectedPriceRange = $2;
-        if (selectedPriceRange = $2;
+        const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+        if (selectedPriceRange === 'low') return price < 1000;
+        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
+        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
+        if (selectedPriceRange === 'premium') return price >= 20000;
         return true
       })
     }
@@ -55,37 +58,39 @@ export default function Revolutionary2026Pricing() {
     // Sort services
     filtered.sort((a, b) => {
       if (sortBy === 'price-low') {
-        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0,
-        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0,
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
         return priceA - priceB
       }
       if (sortBy === 'price-high') {
-        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0,
-        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0,
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
         return priceB - priceA
       }
-      if (sortBy = $2;
-      if (sortBy = $2;
-      if (sortBy === 'name') return a.name.localeCompare($2);
+      if (sortBy === 'rating') return b.rating - a.rating;
+      if (sortBy === 'popularity') return b.customers - a.customers;
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
       return 0
-    }),
+    });
 
     return filtered
-  }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]),
+  }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s = $2;
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s = $2;
-    { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all2026Services.filter(s = $2;
-    { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all2026Services.filter(s = $2;
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length },
+    { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all2026Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length },
+    { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business')).length }
+  ];
+
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
     { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
-  ],
+  ];
 
   const sortOptions = [
     { id: 'price-low', name: 'Price Low to High' },
@@ -93,23 +98,27 @@ export default function Revolutionary2026Pricing() {
     { id: 'rating', name: 'Highest Rated' },
     { id: 'popularity', name: 'Most Popular' },
     { id: 'name', name: 'Name A-Z' }
-  ],
+  ];
 
-  const contactInfo = $2;
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   // Calculate pricing statistics
-  const pricingStats = $2;
+  const pricingStats = {
+    totalServices: all2026Services.length,
     averagePrice: all2026Services.reduce((acc, service) => {
-      const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) || 0,
+      const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) || 0;
       return acc + price
-    }, 0) / all2026Services.length,
-    lowestPrice: Math.min(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0)),
-    highestPrice: Math.max(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0)),
-    popularServices: all2026Services.filter(s = $2;
+    }, 0) / all2026Services.length;
+    lowestPrice: Math.min(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0));
+    highestPrice: Math.max(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0));
+    popularServices: all2026Services.filter(s => s.popular).length
+  };
+
   return (
     <UltraAdvancedFuturisticBackground 
       intensity="extreme" 
@@ -141,10 +150,10 @@ export default function Revolutionary2026Pricing() {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -180,10 +189,10 @@ export default function Revolutionary2026Pricing() {
 
             {/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto"
             >
               <h3 className="text-xl font-bold text-white mb-4 text-center">Need Custom Pricing?</h3>
@@ -278,9 +287,9 @@ export default function Revolutionary2026Pricing() {
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
-                  initial={{ opacity: 0}}
-                  animate={{ opacity: 1}}
-                  exit={{ opacity: 0}}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
                   className="text-center py-20"
                 >
                   <div className="text-gray-400 text-xl">
@@ -291,16 +300,16 @@ export default function Revolutionary2026Pricing() {
                 </motion.div>
               ) : (
                 <motion.div
-                  initial={{ opacity: 0}}
-                  animate={{ opacity: 1}}
-                  exit={{ opacity: 0}}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
                   className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                 >
                   {filteredServices.map((service, index) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20}}
-                      animate={{ opacity: 1, y: 0}}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className="group relative"
                     >
@@ -421,10 +430,10 @@ export default function Revolutionary2026Pricing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -438,20 +447,28 @@ export default function Revolutionary2026Pricing() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Value Proposition */}
               <motion.div
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                viewport = $2;
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <DollarSign className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Unmatched Value</h3>
+                <p className="text-gray-300">
+                  Get enterprise-grade technology at competitive prices. Our services deliver 1000%+ ROI, 
                   making them the smartest investment for your business.
                 </p>
               </motion.div>
 
               {/* Technology */}
               <motion.div
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true}}
+                viewport={{ once: true }}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -466,10 +483,10 @@ export default function Revolutionary2026Pricing() {
 
               {/* Support */}
               <motion.div
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true}}
+                viewport={{ once: true }}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -489,10 +506,10 @@ export default function Revolutionary2026Pricing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-12"
             >
               <h2 className="text-4xl font-bold text-white mb-6">

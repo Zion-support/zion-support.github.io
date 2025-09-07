@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Leaf, Server, Cloud } from 'lucide-react'
 import Link from "next/link";
 export default function GreenIT() {
-  const greenITSolutions = $2;
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
+  const greenITSolutions = [
+    {
+      title: "Energy-Efficient Hardware",
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
       icon: Server},
     {
       title: "Optimized Cooling Systems",
@@ -16,7 +18,7 @@ export default function GreenIT() {
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
-  ],
+  ];
 
   return (
     <>
@@ -24,7 +26,7 @@ export default function GreenIT() {
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
-        canonical="https: //app.ziontechgroup.com/marketplace/category/green-it"
+        canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,8 +41,8 @@ export default function GreenIT() {
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>,
-                  <p className="text-zion-slate-light text-lg mb-6">,
+                  <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
+                  <p className="text-zion-slate-light text-lg mb-6">
                     As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. 
                     Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure 
                     while maintaining performance and reliability.
@@ -50,7 +52,7 @@ export default function GreenIT() {
                     for reducing your carbon footprint.
                   </p>
                   <div className="mt-8">
-                    <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple">
+                    <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       Explore Green IT Solutions
                     </Button>
                   </div>
@@ -67,13 +69,13 @@ export default function GreenIT() {
             
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
-              ,
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {greenITSolutions.map((solution, index) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
                     <div className="flex justify-center mb-4">
                       <solution.icon className="h-12 w-12 text-zion-cyan" />
-                    </div>,
+                    </div>
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>
                     <p className="text-zion-slate-light text-center">{solution.description}</p>
                   </div>
@@ -120,6 +122,5 @@ export default function GreenIT() {
         </div>
       </main>
     </>
-  ),
+  )
 }
-;

@@ -4,12 +4,24 @@ import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lu
 import { FormData, FormErrors } from '../types';
 import { useToast } from './ui/Toast';
 const EnhancedContactForm: React.FC = () => {
-  const [formData, setFormData] = useState($2);
-  const [isSubmitting, setIsSubmitting] = useState($2);
-  const [isSubmitted, setIsSubmitted] = useState($2);
-  const { showSuccess, showError } = useToast($2);
-  const services = $2;
-  const validateForm = $2;
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const { showSuccess, showError } = useToast();
+
+  const services = [
+    'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther'
+  ];
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {},
+
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required'
     } else if (formData.name.trim().length < 2) {
@@ -30,44 +42,61 @@ const EnhancedContactForm: React.FC = () => {
       newErrors.message = 'Message must be less than 1000 characters'
     }
 
-    setErrors($2);
-    return Object.keys(newErrors).length = $2;
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault($2);
+    e.preventDefault();
+    
     if (!validateForm()) {
-      showError($2);
+      showError('Validation ErrorPlease fix the errors in the form');
       return
     }
 
-    setIsSubmitting($2);
+    setIsSubmitting(true);
+
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000)),
+      await new Promise(resolve => setTimeout(resolve, 2000));
       
-      setIsSubmitted($2);
-      showSuccess($2);
-      setFormData($2);
+      setIsSubmitted(true);
+      showSuccess('Message Sent!Thank you for contacting us. We\'ll get back to you soon.');
+      
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        service: '',
+        message: ''
+      });
       setErrors({})
     } catch (error) {
-      console.error($2);
+      console.error('Error submitting form:', error);
       showError('Submission FailedThere was an error sending your message. Please try again.')
     } finally {
       setIsSubmitting(false)
     }
-  },
+  };
 
-  const services = $2;
-  const handleInputBlur = $2;
-      delete newErrors[name],
+  const services = [
+    'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology InnovationNeural Interface DevelopmentOther'
+  ];
+
+  const handleInputBlur = (name: keyof FormData) => {
+    // Validate individual field on blur
+    if (formData[name] && errors[name]) {
+      const newErrors = { ...errors };
+      delete newErrors[name];
       setErrors(newErrors)
     }
-  },
+  };
 
   if (isSubmitted) {
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1}}
+        animate={{ opacity: 1, scale: 1 }}
         className="text-center py-12"
       >
         <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">
@@ -157,7 +186,7 @@ const EnhancedContactForm: React.FC = () => {
                 {errors.name && (
                   <motion.p
                     initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0}}
+                    animate={{ opacity: 1, y: 0 }}
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
@@ -187,7 +216,7 @@ const EnhancedContactForm: React.FC = () => {
                 {errors.email && (
                   <motion.p
                     initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0}}
+                    animate={{ opacity: 1, y: 0 }}
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
@@ -255,6 +284,41 @@ const EnhancedContactForm: React.FC = () => {
               {errors.message && (
                 <motion.p
                   initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0}}
-                  className = $2;
-export default EnhancedContactForm,
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mt-2 text-sm text-red-400 flex items-center gap-2"
+                >
+                  <AlertCircle className="w-4 h-4" />
+                  {errors.message}
+                </motion.p>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
+                isSubmitting 
+                  ? 'bg-gray-600 cursor-not-allowed' 
+                  : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
+              } flex items-center justify-center gap-3`}
+            >
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                  Sending Message...
+                </>
+              ) : (
+                <>
+                  <Send className="w-5 h-5" />
+                  Send Message
+                </>
+              )}
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  )
+};
+
+export default EnhancedContactForm;

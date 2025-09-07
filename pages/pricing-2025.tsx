@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 import { 
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
-} from 'lucide-react',
+} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Pricing2025() {
-  const [selectedCategory, setSelectedCategory] = useState($2);
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
@@ -19,26 +19,30 @@ export default function Pricing2025() {
     { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' },
     { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' },
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬' }
-  ],
+  ];
 
-  const filteredServices = $2;
+  const filteredServices = innovative2025MicroSaasExpansionV3.filter(service => 
+    selectedCategory === 'all' || service.category.includes(selectedCategory)
+  );
+
   const getAnnualPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', '')),
+    const price = parseFloat(monthlyPrice.replace('$', ''));
     const annualPrice = price * 12 * 0.8, // 20% discount for annual
     return `$${Math.round(annualPrice)}`
-  },
+  };
 
-  const containerVariants = $2;
+  const containerVariants = {
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  },
+  };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20},
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -46,7 +50,7 @@ export default function Pricing2025() {
         duration: 0.5
       }
     }
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -66,9 +70,15 @@ export default function Pricing2025() {
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            animate={{ opacity: 1, y: 0}}
-            transition = $2;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+              2025 Pricing & Services
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
             
@@ -289,10 +299,10 @@ export default function Pricing2025() {
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true}}
+            viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Need Enterprise Solutions?
@@ -324,27 +334,39 @@ export default function Pricing2025() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition = $2;
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h2>
+          </motion.div>
+
+          <div className="space-y-6">
+            {[
+              {
+                question: "What payment methods do you accept?",
                 answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can arrange custom payment terms."
-              },
+              };
               {
                 question: "Do you offer free trials?",
                 answer: "Yes! All our services come with free trial periods ranging from 14 to 60 days, depending on the service complexity."
-              },
+              };
               {
                 question: "Can I cancel my subscription anytime?",
                 answer: "Absolutely. You can cancel your subscription at any time with no cancellation fees. Your service will remain active until the end of your billing period."
-              },
+              };
               {
                 question: "Do you offer volume discounts?",
                 answer: "Yes, we offer volume discounts for organizations using multiple services. Contact our sales team for custom pricing and enterprise solutions."
-              },
+              };
               {
                 question: "What kind of support do you provide?",
                 answer: "We provide comprehensive support including documentation, tutorials, email support, and priority support for enterprise customers. Some services include dedicated account managers."
-              },
+              };
               {
                 question: "Can I upgrade or downgrade my plan?",
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
@@ -352,10 +374,10 @@ export default function Pricing2025() {
             ].map((faq, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true}}
+                viewport={{ once: true }}
                 className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl"
               >
                 <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>

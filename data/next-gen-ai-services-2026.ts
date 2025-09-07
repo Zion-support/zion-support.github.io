@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface NextGenAIService2026 {
   id: string,
   name: string,
@@ -30,15 +30,18 @@ export interface NextGenAIService2026 {
     mobile: string,
     email: string,
     address: string,
-    website: string},
+    website: string
+  },
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number}
+  reviews: number
+}
 
-const contact = $2;
+const contact = {
+  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
@@ -53,7 +56,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',
     features: [
-      'Real-time emotion detection from video/audioSentiment analysis with emotional contextEmotional response recommendationsMulti-modal emotion fusion (facial, voice, text)Emotional intelligence training modulesCustom emotion models for specific industriesReal-time emotional analytics dashboardAPI for integration with existing systemsPrivacy-compliant emotion processingEmotional intelligence scoring and reports'
+      'Real-time emotion detection from video/audioSentiment analysis with emotional contextEmotional response recommendationsMulti-modal emotion fusion (facial, voice, text)Emotional intelligence training modulesCustom emotion models for specific industriesReal-time emotional analytics dashboardAPI for integration with existing systems',
+      'Privacy-compliant emotion processingEmotional intelligence scoring and reports'
     ],
     popular: true,
     icon: '🧠💙',
@@ -80,7 +84,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4.9,
-    reviews: 89},
+    reviews: 89
+  },
   {
     id: 'ai-predictive-maintenance-platform',
     name: 'AI Predictive Maintenance Platform',
@@ -89,7 +94,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',
     features: [
-      'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field techniciansCustom alerting and notificationsHistorical performance analytics'
+      'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',
+      'Custom alerting and notificationsHistorical performance analytics'
     ],
     popular: true,
     icon: '⚙️🔮',
@@ -116,7 +122,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4.7,
-    reviews: 156},
+    reviews: 156
+  },
   {
     id: 'ai-content-personalization-engine',
     name: 'AI Content Personalization Engine',
@@ -125,7 +132,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.',
     features: [
-      'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content deliveryGDPR-compliant data handlingCustom personalization rules engine'
+      'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content delivery',
+      'GDPR-compliant data handlingCustom personalization rules engine'
     ],
     popular: false,
     icon: '🎯✨',
@@ -152,7 +160,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4.6,
-    reviews: 203},
+    reviews: 203
+  },
   {
     id: 'ai-voice-cloning-platform',
     name: 'AI Voice Cloning Platform',
@@ -161,7 +170,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Professional voice cloning platform that creates high-quality, natural-sounding voice replicas for content creators, marketers, and businesses.',
     features: [
-      'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library managementQuality assurance toolsCommercial usage rights'
+      'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library management',
+      'Quality assurance toolsCommercial usage rights'
     ],
     popular: false,
     icon: '🎤🎭',
@@ -188,7 +198,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4.8,
-    reviews: 312},
+    reviews: 312
+  },
   {
     id: 'ai-code-review-assistant',
     name: 'AI Code Review Assistant',
@@ -197,7 +208,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',
     features: [
-      'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analyticsPull request automationMulti-language support'
+      'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics',
+      'Pull request automationMulti-language support'
     ],
     popular: true,
     icon: '💻🔍',
@@ -224,5 +236,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-01-25',
     customers: 203,
     rating: 4.7,
-    reviews: 445}
+    reviews: 445
+  }
 ],

@@ -5,13 +5,13 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Ecommerce() {
-  const schema = {;
-    "@context": "https: //schema.org";
-    "@type": "WebPage",
-    "name": "E-commerce Platform",
-    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-    "url": "https://app.ziontechgroup.com/features/e-commerce",
-  },
+  const schema = {
+    "@context": "https://schema.org";
+    "@type": "WebPage";
+    "name": "E-commerce Platform";
+    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.";
+    "url": "https://app.ziontechgroup.com/features/e-commerce"
+  };
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function Ecommerce() {
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
         canonical="https://app.ziontechgroup.com/features/e-commerce"
-      />,
+      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -39,7 +39,7 @@ export default function Ecommerce() {
               alt="Screenshot of marketplace interface"
               className="object-cover"
             />
-          </div>,
+          </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Support for videos and 3D models to highlight your offerings.</li>

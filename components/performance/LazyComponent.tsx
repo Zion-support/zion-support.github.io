@@ -1,12 +1,28 @@
-
-
-import React from 'react'
-}
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 
 interface LazyComponentProps {
-  children: ReactNode;
-  fallback?: ReactNode;
+  component: () => Promise<{ default: React.ComponentType<unknown> }>,
+  fallback?: React.ReactNode;
+  [key: string]: unknown,
+}
+
+export const LazyComponent: React.FC<LazyComponentProps> = ({
+  component;
+  fallback = <div>Loading...</div>;
+  ...props
+}) => {
+  const LazyLoadedComponent = lazy(component);
 
   return (
+    <Suspense fallback={fallback}>
+      <LazyLoadedComponent {...props} />
+    </Suspense>
+  );
+};
 
+export default LazyComponent;
+=======
+import React from 'react';
+};
+>>>>>>> pr-11992

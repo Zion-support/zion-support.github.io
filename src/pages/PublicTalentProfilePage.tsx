@@ -14,21 +14,23 @@ import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, Check
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const router = useRouter($2);
-  const profileId = $2;
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState($2);
-  const [isError, setIsError] = useState($2);
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
   useEffect(() => {
     const fetchProfile = async () => {
-      setIsLoading($2);
-      setIsError($2);
+      setIsLoading(true);
+      setIsError(false);
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-          .single($2);
+          .single();
+
         if (error) {
           throw error
         }
@@ -36,7 +38,7 @@ export default function ProfilePage() {
         setProfileData(data)
       } catch (error) {
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-        setIsError($2);
+        setIsError(true);
         toast({
           title: "Error",
           description: "Failed to load profile. Please try again later.",
@@ -44,12 +46,12 @@ export default function ProfilePage() {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
 
     if (profileId) {
       fetchProfile()
     }
-  }, [profileId]),
+  }, [profileId]);
 
   if (isLoading) {
     return (
@@ -76,7 +78,7 @@ export default function ProfilePage() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
           {/* Main Content Area */}
-          <div className="col-span-12 lg:col-span-8">,
+          <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <div className="flex items-start">
@@ -129,7 +131,7 @@ export default function ProfilePage() {
                 <div className="mt-4">
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>
                   <div className="flex flex-wrap gap-2">
-                    {profileData.skills.map((skill: string, index: number) => (,
+                    {profileData.skills.map((skill: string, index: number) => (
                       <Badge key={skill + index} variant="secondary">{skill}</Badge>
                     ))}
                   </div>
@@ -149,14 +151,14 @@ export default function ProfilePage() {
               <div className="space-y-3">
                 {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (
                   profileData.portfolio_links.map((link: string, index: number) => (
-                    <a,
+                    <a
                       key={link + index}
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-zion-cyan hover:text-white transition-colors"
                     >
-                      <LinkIcon className="h-4 w-4 mr-2" />,
+                      <LinkIcon className="h-4 w-4 mr-2" />
                       {link}
                     </a>
                   ))
@@ -186,7 +188,7 @@ export default function ProfilePage() {
                     title="GitHub"
                   >
                     <Github className="h-6 w-6" />
-                  </a>,
+                  </a>
                 )}
                 {profileData.twitter_link && (
                   <a
@@ -198,7 +200,7 @@ export default function ProfilePage() {
                     title="Twitter"
                   >
                     <Twitter className="h-6 w-6" />
-                  </a>,
+                  </a>
                 )}
                 {profileData.linkedin_link && (
                   <a
@@ -210,7 +212,7 @@ export default function ProfilePage() {
                     title="LinkedIn"
                   >
                     <Linkedin className="h-6 w-6" />
-                  </a>,
+                  </a>
                 )}
               </div>
             </div>
@@ -219,8 +221,11 @@ export default function ProfilePage() {
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA
-              talentProfile={{,
-                id: profileData?.id || '', full_name: profileData?.full_name || '', professional_title: profileData?.professional_title || '', hourly_rate: profileData?.hourly_rate || 0,
+              talentProfile={{
+                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
+                professional_title: profileData?.professional_title || '',
+                hourly_rate: profileData?.hourly_rate || 0
               }}
             />
             {/* Placeholder for other sidebar elements */}
@@ -230,4 +235,3 @@ export default function ProfilePage() {
     </>
   )
 }
-;

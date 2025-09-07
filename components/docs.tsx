@@ -3,32 +3,35 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 export default function DocsPage() {
-  const contact = $2;
+  const contact = {
+    mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
-  const sections = $2;
+  const sections = [
+    {
+      title: 'Getting Started',
       links: [
         { name: 'Overview', href: '/enhanced-services-showcase' },
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
         { name: 'Contact Sales', href: '/contact' }]
-    },
+    };
     {
       title: 'AI Services Docs',
       links: [
         { name: 'AI Guardrails', href: '/ai-guardrails' },
         { name: 'AI Evals', href: '/ai-evals' },
         { name: 'Agentic RAG', href: '/agentic-rag' }]
-    },
+    };
     {
       title: 'IT & Platform Docs',
       links: [
         { name: 'API Observability', href: '/api-observability' },
         { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
         { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
-    }],
+    }];
 
   const external = [
     { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' },
@@ -36,46 +39,52 @@ export default function DocsPage() {
     { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' },
     { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }],
 
-  const quickLinks = $2;
+  const quickLinks = [
+    {
+      title: 'API Status',
       description: 'Check service availability and performance',
-      icon: <CheckCircle className = $2;
+      icon: <CheckCircle className="w-6 h-6" />,
       href: '/status',
       color: 'text-green-400'
-    },
+    };
     {
       title: 'SDK Downloads',
       description: 'Get the latest SDKs and client libraries',
-      icon: <Download className = $2;
+      icon: <Download className="w-6 h-6" />,
       href: '/downloads',
       color: 'text-blue-400'
-    },
+    };
     {
       title: 'Support Portal',
       description: 'Get help from our technical support team',
-      icon: <ExternalLink className = $2;
+      icon: <ExternalLink className="w-6 h-6" />,
       href: '/support',
       color: 'text-purple-400'
-    },
+    };
     {
       title: 'Community Forum',
       description: 'Connect with other developers and users',
-      icon: <ExternalLink className = $2;
+      icon: <ExternalLink className="w-6 h-6" />,
       href: '/community',
       color: 'text-yellow-400'
     }
-  ],
+  ];
 
-  const filteredDocs = $2;
-    const matchesCategory = $2;
+  const filteredDocs = documentationItems.filter(doc => {
+    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         doc.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory;
     return matchesSearch && matchesCategory
-  }),
+  });
 
-  const getDifficultyColor = $2;
-      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400',
-      case 'Advanced': return 'bg-red-500/20 text-red-400',
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {
+      case 'Beginner': return 'bg-green-500/20 text-green-400';
+      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
+      case 'Advanced': return 'bg-red-500/20 text-red-400';
       default: return 'bg-gray-500/20 text-gray-400'
     }
-  },
+  };
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -83,7 +92,7 @@ export default function DocsPage() {
       month: 'short',
       day: 'numeric'
     })
-  },
+  };
 
   return (
     <UltraAdvancedFuturisticBackground>

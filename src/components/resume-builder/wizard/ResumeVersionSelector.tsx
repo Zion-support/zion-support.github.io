@@ -1,12 +1,12 @@
 
 import { useState } from 'react';
 import { 
-  DropdownMenu,
+  DropdownMenu;
   DropdownMenuContent, 
   DropdownMenuItem, 
-  DropdownMenuSeparator,
+  DropdownMenuSeparator;
   DropdownMenuTrigger 
-} from '@/components/ui/dropdown-menu',
+} from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
@@ -14,36 +14,37 @@ import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react'
 import { Resume } from '@/types/resume';
 import { useResume } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
-  currentResume: Resume;
-  onResumeChange: (resumeId: string) => void,
+  currentResume: Resume,
+  onResumeChange: (resumeId: string) => void
 }
 
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
-  const { createResume, fetchResume } = useResume($2);
-  const [saveDialogOpen, setSaveDialogOpen] = useState($2);
-  const [newResumeTitle, setNewResumeTitle] = useState($2);
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
-  const [isLoading, setIsLoading] = useState($2);
+  const { createResume, fetchResume } = useResume();
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
+  const [newResumeTitle, setNewResumeTitle] = useState('');
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
-      setIsLoading($2);
-      const resumeId = $2;
+      setIsLoading(true);
+      const resumeId = await createResume({ title: newResumeTitle.trim() }),
       if (resumeId) {
-        await fetchResume($2);
-        onResumeChange($2);
-        setSaveDialogOpen($2);
+        await fetchResume(resumeId);
+        onResumeChange(resumeId);
+        setSaveDialogOpen(false);
         setNewResumeTitle('')
       }
       setIsLoading(false)
     }
-  },
+  };
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-sm text-muted-foreground">Resume: </span>
+      <span className="text-sm text-muted-foreground">Resume:</span>
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>,
-          <Button variant="outline" size="sm" className="gap-2">,
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" size="sm" className="gap-2">
             {currentResume?.basic_info?.title || 'My Resume'}
             <ChevronDown className="h-4 w-4" />
           </Button>
@@ -75,7 +76,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <DialogTitle>Save as new resume version</DialogTitle>
           </DialogHeader>
           <div className="py-4">
-            <Input,
+            <Input
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
               placeholder="Enter resume title (e.g. DevOps Resume)"
@@ -103,4 +104,3 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
     </div>
   )
 }
-;

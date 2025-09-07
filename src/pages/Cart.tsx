@@ -6,15 +6,15 @@ import axios from 'axios';
 import { useAuth } from '@/hooks/useAuth';
 import type { RootState, AppDispatch } from '@/store';
 import {
-  removeItem as removeItemAction,
-  updateQuantity as updateQuantityAction} from '@/store/cartSlice',
+  removeItem as removeItemAction;
+  updateQuantity as updateQuantityAction} from '@/store/cartSlice';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
 import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
 // CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
-// import { CartItem as CartItemType } from '@/types/cart',
+// import { CartItem as CartItemType } from '@/types/cart';
 // safeStorage is no longer needed here for reading
-// import { safeStorage } from '@/utils/safeStorage',
+// import { safeStorage } from '@/utils/safeStorage';
 import { getStripe } from '@/utils/getStripe';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -24,50 +24,56 @@ import { toast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 export default function CartPage() {
-  const { t } = useTranslation(),
+  const { t } = useTranslation();
   const items = useSelector((s: RootState) => s.cart.items),
-  const dispatch = useDispatch<AppDispatch>(),
-  const { user, isAuthenticated } = useAuth(),
-  const [loading, setLoading] = useState(false),
-  const [guestOpen, setGuestOpen] = useState(false),
-  const { toggle: toggleWishlist, isWishlisted } = useWishlist(),
+  const dispatch = useDispatch<AppDispatch>();
+  const { user, isAuthenticated } = useAuth();
+  const [loading, setLoading] = useState(false);
+  const [guestOpen, setGuestOpen] = useState(false);
+  const { toggle: toggleWishlist, isWishlisted } = useWishlist();
 
-  const updateQuantity = (id: string, qty: number) => {,
+  const updateQuantity = (id: string, qty: number) => {
     dispatch(updateQuantityAction({ id, quantity: qty }))
-  },
+  };
 
-  const removeItem = (id: string) => {,
-    const item = items.find(i => i.id === id),
-    dispatch(removeItemAction(id)),
+  const removeItem = (id: string) => {
+    const item = items.find(i => i.id === id);
+    dispatch(removeItemAction(id));
     
     if (item) {
       toast({
         title: "Item removed",
         description: `${item.name} has been removed from your cart`})
     }
-  },
+  };
 
-  const saveForLater = (id: string, name: string) => {,
-    const wasWishlisted = isWishlisted(id),
-    toggleWishlist(id),
+  const saveForLater = (id: string, name: string) => {
+    const wasWishlisted = isWishlisted(id);
+    toggleWishlist(id);
     toast({
       title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist',
-      description: wasWishlisted,
+      description: wasWishlisted
         ? `${name} has been removed from your wishlist`
         : `${name} has been added to your wishlist`})
-  },
+  };
 
   const handleCheckout = async (details?: { email?: string, address?: string }) => {
-    setLoading($2);
+    setLoading(true);
     try {
-      const stripe = await getStripe($2);
-      if (!stripe) throw new Error($2);
-      const { data } = await axios.post($2);
-      const sessionId = $2;
-      if (!sessionId) throw new Error($2);
-      const { error } = await stripe.redirectToCheckout($2);
+      const stripe = await getStripe();
+      if (!stripe) throw new Error('Stripe.js failed to load');
+
+      const { data } = await axios.post('/api/checkout-session', {
+        cartItems: items,
+        customer_email: details?.email || user?.email,
+        shipping_address: details?.address}),
+
+      const sessionId = data.sessionId as string | undefined;
+      if (!sessionId) throw new Error('Session ID missing in response');
+
+      const { error } = await stripe.redirectToCheckout({ sessionId });
       if (error) logErrorToProduction('Stripe redirect error:', { data: error.message })
-    } catch (err: any) {,
+    } catch (err: any) {
       logErrorToProduction('Checkout error:', { data: err }),
       alert(err.message || 'Checkout failed')
     } finally {
@@ -75,15 +81,23 @@ export default function CartPage() {
     }
   }, 
 
-  const startCheckout = $2;
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0),
+  const startCheckout = () => {
+    if (!isAuthenticated) {
+      setGuestOpen(true)
+    } else {
+      handleCheckout()
+    }
+  };
+
+  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
   const tax = subtotal * 0.08, // 8% tax estimate
   
   // Only add shipping for physical items
   const hasPhysicalItems = items.some(item => 
     !item.type || item.type === 'physical' // Default to physical if type not specified
-  ),
-  const shipping = hasPhysicalItems && subtotal <= 100 ? 15: 0, const total = subtotal + tax + shipping,
+  );
+  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
+  const total = subtotal + tax + shipping;
 
   // Empty cart state
   if (items.length === 0) {
@@ -92,8 +106,8 @@ export default function CartPage() {
         <div className="container mx-auto max-w-2xl">
           <motion.div 
             className="text-center py-20"
-            initial={{ opacity: 0, y: 20}}
-            animate={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
           >
             <div className="mb-8">
               <ShoppingCart className="mx-auto h-24 w-24 text-zion-slate-light mb-4" />
@@ -132,7 +146,7 @@ export default function CartPage() {
           </motion.div>
         </div>
       </div>
-    ),
+    )
   }
 
   return (
@@ -141,7 +155,7 @@ export default function CartPage() {
         {/* Header */}
         <motion.div 
           className="text-center mb-8"
-          initial={{ opacity: 0, y: -20 }},
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
           <h1 className="text-4xl font-bold text-white mb-2">Your Cart</h1>
@@ -149,26 +163,26 @@ export default function CartPage() {
             {items.length} {items.length === 1 ? 'item' : 'items'} ready for checkout
           </p>
         </motion.div>
-,
-        <div className="grid lg:grid-cols-3 gap-8">,
+
+        <div className="grid lg:grid-cols-3 gap-8">
           {/* Cart Items */}
           <motion.div 
-            className="lg: col-span-2 space-y-4",
-            initial={{ opacity: 0, x: -20 }},
+            className="lg:col-span-2 space-y-4"
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-          >,
+          >
             {items.map((item, index) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
                 <Card className="bg-zion-blue-light/80 border-zion-cyan/20 hover:border-zion-cyan/40 transition-colors">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between">
-                      <div className="flex-1">,
+                      <div className="flex-1">
                         <h3 className="text-lg font-semibold text-white mb-1">{item.name}</h3>
                         <p className="text-zion-cyan font-medium text-xl">${item.price.toFixed(2)}</p>
                       </div>
@@ -209,7 +223,7 @@ export default function CartPage() {
                             </Button>
                             <Button
                               variant="ghost"
-                              size="sm",
+                              size="sm"
                               onClick={() => saveForLater(item.id, item.name)}
                               className="text-zion-cyan hover:bg-zion-cyan/10"
                             >
@@ -221,13 +235,13 @@ export default function CartPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>,
+              </motion.div>
             ))}
           </motion.div>
 
           {/* Order Summary */}
           <motion.div
-            className="lg: col-span-1",
+            className="lg:col-span-1"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
@@ -284,7 +298,7 @@ export default function CartPage() {
                   )}
                   
                   <Button 
-                    className="w-full bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue",
+                    className="w-full bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue" 
                     onClick={startCheckout} 
                     disabled={loading}
                     size="lg"
@@ -328,4 +342,3 @@ export default function CartPage() {
     </div>
   )
 }
-;

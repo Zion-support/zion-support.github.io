@@ -18,10 +18,15 @@ import { MyApplications } from "@/components/jobs/MyApplications";
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
-  const { user } = useAuth($2);
-  const [activeTab, setActiveTab] = useState($2);
-  const onboardingStatus = useOnboardingStatus($2);
-  const showAdvanced = $2;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("job-matches");
+  const onboardingStatus = useOnboardingStatus();
+  const showAdvanced =
+    onboardingStatus.profileCompleted &&
+    onboardingStatus.skillsAdded &&
+    onboardingStatus.availabilitySet &&
+    onboardingStatus.matchReceived;
+
   return (
     <>
       <SEO 
@@ -47,7 +52,8 @@ function TalentDashboardContent() {
               </Link>
             </Button>
           </div>
-        </div>,
+        </div>
+
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
 
@@ -58,7 +64,7 @@ function TalentDashboardContent() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
-                      {user?.avatarUrl ? (,
+                      {user?.avatarUrl ? (
                         <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
@@ -140,7 +146,7 @@ function TalentDashboardContent() {
             </Card>
           </div>
           
-          <div className="lg:col-span-2">,
+          <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
@@ -193,4 +199,3 @@ export default function TalentDashboard() {
     </ProtectedRoute>
   )
 }
-;

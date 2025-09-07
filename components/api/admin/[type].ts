@@ -8,41 +8,44 @@ function isSupabaseConfigured() {
 }
 
 function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
-  const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string>,
-  const filters: Record<string, any> = {},
+  const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string>;
+  const filters: Record<string, any> = {};
   Object.keys(rest).forEach((k) => {
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k]
-  }),
+  });
   return {
-    search,
-    sort,
-    order: (order as any) || 'desc',
-    page: page ? Number(page) : 0,
-    pageSize: pageSize ? Number(pageSize) : 20,
-    filters,
+    search;
+    sort;
+    order: (order as any) || 'desc';
+    page: page ? Number(page) : 0;
+    pageSize: pageSize ? Number(pageSize) : 20;
+    filters;
     format: (format as any) || undefined}
 }
 
 function toCsv(rows: any[]): string {
-  if (!rows.length) return '',
-  const headers = Object.keys($2);
-  const escape = $2;
-    const s = typeof v === 'string' ? v : JSON.stringify($2);
+  if (!rows.length) return '';
+  const headers = Object.keys(rows[0]);
+  const escape = (v: any) => {
+    if (v === null || v === undefined) return '';
+    const s = typeof v === 'string' ? v : JSON.stringify(v);
     return '"' + s.replace(/"/g, '""') + '"'
-  },
-  const lines = $2;
+  };
+  const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const type = $2;
-  if (!ADMIN_TYPES.includes(type)) return res.status(400).json($2);
-  const useSupabase = isSupabaseConfigured($2);
+  const type = (req.query.type as AdminType) || '';
+  if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
+
+  const useSupabase = isSupabaseConfigured();
+
   if (req.method === 'GET') {
-    const params = parseListParams($2);
+    const params = parseListParams(req);
     if (useSupabase) {
-      const table = $2;
-      let query = client.from(table).select($2);
+      const table = type;
+      let query = client.from(table).select('*', { count: 'exact' });
       if (params.search) {
         // heuristic: search name/title/email
         query = query.or('name.ilike.%' + params.search + '%,title.ilike.%' + params.search + '%,email.ilike.%' + params.search + '%')
@@ -52,23 +55,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           if (v !== undefined) query = query.eq(k, v)
         }
       }
-      if (params.sort) query = query.order($2);
-      const from = $2;
-      const to = $2;
-      const { data, error, count } = await query.range($2);
-      if (error) return res.status(500).json($2);
+      if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' });
+      const from = params.page * params.pageSize;
+      const to = from + params.pageSize - 1;
+      const { data, error, count } = await query.range(from, to);
+      if (error) return res.status(500).json({ error: error.message });
       if (params.format === 'csv') {
-        res.setHeader($2);
-        res.setHeader($2);
+        res.setHeader('Content-Typetext/csv');
+        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res.status(200).send(toCsv(data || []))
       }
       return res.status(200).json({ items: data || [], total: count || 0 })
     } else {
       // fallback
-      const all = (MOCK_DATA[type] || []).slice($2);
-      let filtered = $2;
+      const all = (MOCK_DATA[type] || []).slice();
+      let filtered = all;
       if (params.search) {
-        const s = params.search.toLowerCase($2);
+        const s = params.search.toLowerCase();
         filtered = filtered.filter((r) => JSON.stringify(r).toLowerCase().includes(s))
       }
       if (params.filters) {
@@ -78,15 +81,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
-          const av = $2;
-          const bv = $2;
-          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order = $2;
-      const start = $2;
-      const end = $2;
-      const pageItems = filtered.slice($2);
+          const av = (a as any)[params.sort!];
+          const bv = (b as any)[params.sort!];
+          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
+        })
+      }
+      const total = filtered.length;
+      const start = params.page * params.pageSize;
+      const end = start + params.pageSize;
+      const pageItems = filtered.slice(start, end);
       if (params.format === 'csv') {
-        res.setHeader($2);
-        res.setHeader($2);
+        res.setHeader('Content-Typetext/csv');
+        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res.status(200).send(toCsv(pageItems))
       }
       return res.status(200).json({ items: pageItems, total })
@@ -94,34 +100,35 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   if (req.method === 'PATCH') {
-    const { id, updates } = req.body as { id: string, updates: Record<string, any> },
-    if (!id) return res.status(400).json($2);
+    const { id, updates } = req.body as { id: string, updates: Record<string, any> };
+    if (!id) return res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
-      const { data, error } = await client.from(type).update({ ...updates, updated_at: new Date().toISOString() }).eq('id', id).select('*').single($2);
-      if (error) return res.status(500).json($2);
-      return res.status(200).json({ item: data})
+      const { data, error } = await client.from(type).update({ ...updates, updated_at: new Date().toISOString() }).eq('id', id).select('*').single();
+      if (error) return res.status(500).json({ error: error.message });
+      return res.status(200).json({ item: data })
     } else {
-      const list = $2;
-      const idx = $2;
-      if (idx === -1) return res.status(404).json($2);
-      const updated = { ...list[idx], ...updates, updated_at: new Date().toISOString() },
-      list[idx] = updated as any,
-      return res.status(200).json({ item: updated})
+      const list = MOCK_DATA[type] || [];
+      const idx = list.findIndex((r: any) => r.id === id);
+      if (idx === -1) return res.status(404).json({ error: 'Not found' });
+      const updated = { ...list[idx], ...updates, updated_at: new Date().toISOString() };
+      list[idx] = updated as any;
+      return res.status(200).json({ item: updated })
     }
   }
 
-  if (req.method = $2;
-    if (!id) return res.status(400).json($2);
+  if (req.method === 'DELETE') {
+    const id = (req.query.id as string) || '';
+    if (!id) return res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
-      const { error } = await client.from(type).delete().eq($2);
-      if (error) return res.status(500).json($2);
-      return res.status(200).json({ ok: true})
+      const { error } = await client.from(type).delete().eq('id', id);
+      if (error) return res.status(500).json({ error: error.message });
+      return res.status(200).json({ ok: true })
     } else {
-      const list = $2;
-      const idx = $2;
-      if (idx === -1) return res.status(404).json($2);
-      list.splice($2);
-      return res.status(200).json({ ok: true})
+      const list = MOCK_DATA[type] || [];
+      const idx = list.findIndex((r: any) => r.id === id);
+      if (idx === -1) return res.status(404).json({ error: 'Not found' });
+      list.splice(idx, 1);
+      return res.status(200).json({ ok: true })
     }
   }
 

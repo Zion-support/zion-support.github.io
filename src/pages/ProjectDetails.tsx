@@ -10,27 +10,27 @@ import { Project, ProjectStatus } from "@/types/projects";
 import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle} from "@/components/ui/card",
+  Card;
+  CardContent;
+  CardDescription;
+  CardFooter;
+  CardHeader;
+  CardTitle} from "@/components/ui/card";
 import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger} from "@/components/ui/tabs",
+  Tabs;
+  TabsContent;
+  TabsList;
+  TabsTrigger} from "@/components/ui/tabs";
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger} from "@/components/ui/alert-dialog",
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogFooter;
+  AlertDialogHeader;
+  AlertDialogTitle;
+  AlertDialogTrigger} from "@/components/ui/alert-dialog";
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
@@ -40,26 +40,30 @@ import { ProjectReviewSection } from "@/components/projects/reviews/ProjectRevie
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
 
 function ProjectDetailsContent() {
-  const router = useRouter($2);
+  const router = useRouter();
   // Get projectId from Next.js router query params
-  const { projectId } = router.query as { projectId?: string },
-  const { user } = useAuth($2);
-  const { getProjectById, updateProjectStatus } = useProjects($2);
-  const [project, setProject] = useState<Project | null>(null),
-  const [isLoading, setIsLoading] = useState($2);
-  const [notes, setNotes] = useState<any[]>([]),
-  const [newNote, setNewNote] = useState($2);
-  const [isSubmittingNote, setIsSubmittingNote] = useState($2);
-  const [activeTab, setActiveTab] = useState($2);
+  const { projectId } = router.query as { projectId?: string };
+  const { user } = useAuth();
+  const { getProjectById, updateProjectStatus } = useProjects();
+  
+  const [project, setProject] = useState<Project | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [notes, setNotes] = useState<any[]>([]);
+  const [newNote, setNewNote] = useState("");
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
+  const [activeTab, setActiveTab] = useState("details");
+  
   // Load project data
   useEffect(() => {
     async function loadProject() {
-      if (!projectId) return,
+      if (!projectId) return;
       
-      setIsLoading($2);
-      const projectData = await getProjectById($2);
+      setIsLoading(true);
+      const projectData = await getProjectById(projectId);
+      
       if (projectData) {
-        setProject($2);
+        setProject(projectData);
+        
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
@@ -67,39 +71,43 @@ function ProjectDetailsContent() {
           title: "Project not found",
           description: "The requested project could not be found.",
           variant: "destructive"}),
-        router.push("/dashboard");
+        router.push("/dashboard")
       }
       
       setIsLoading(false)
     }
     
     loadProject()
-  }, [projectId]),
+  }, [projectId]);
   
   const fetchProjectNotes = async (projectId: string) => {
-    try {,
+    try {
       const { data, error } = await supabase
         .from("project_notes")
         .select(`
-          *,
+          *;
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
-        .order($2);
-      if (error) throw error,
+        .order("created_at", { ascending: false }),
+      
+      if (error) throw error;
       
       setNotes(data || [])
-    } catch (err: any) {,
+    } catch (err: any) {
       logErrorToProduction('Error fetching project notes:', { data: err }),
       toast({
         title: "Failed to load notes",
         description: err.message || "An error occurred while loading project notes.",
         variant: "destructive"})
     }
-  },
+  };
   
-  const handleSubmitNote = $2;
-    setIsSubmittingNote($2);
+  const handleSubmitNote = async () => {
+    if (!newNote.trim() || !project || !user) return;
+    
+    setIsSubmittingNote(true);
+    
     try {
       const { data, error } = await supabase
         .from("project_notes")
@@ -107,16 +115,18 @@ function ProjectDetailsContent() {
           project_id: project.id,
           user_id: user.id,
           content: newNote})
-        .select($2);
-      if (error) throw error,
+        .select();
+      
+      if (error) throw error;
       
       // Refresh notes
-      fetchProjectNotes($2);
-      setNewNote($2);
+      fetchProjectNotes(project.id);
+      setNewNote("");
+      
       toast({
         title: "Note added",
         description: "Your note has been added to the project."})
-    } catch (err: any) {,
+    } catch (err: any) {
       logErrorToProduction('Error adding note:', { data: err }),
       toast({
         title: "Failed to add note",
@@ -125,49 +135,90 @@ function ProjectDetailsContent() {
     } finally {
       setIsSubmittingNote(false)
     }
-  },
+  };
   
-  const handleStatusChange = async (newStatus: ProjectStatus) => {,
-    if (!project) return,
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return;
     
-    const success = await updateProjectStatus(project.id, newStatus),
+    const success = await updateProjectStatus(project.id, newStatus);
     
     if (success) {
-      setProject($2);
+      setProject({
+        ...project;
+        status: newStatus}),
+      
       // If offer was accepted, show a special toast
-      if (newStatus = $2;
+      if (newStatus === "offer_accepted") {
+        toast({
+          title: "Offer Accepted! 🎉",
           description: "The project is now in progress. Congratulations!"})
       }
     }
-  },
+  };
   
   const getStatusBadge = (status: ProjectStatus) => {
-    switch (status) {,
-      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
+    switch (status) {
+      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>;
       case "offer_accepted":
-        return <Badge className = $2;
+        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
       case "changes_requested":
-        return <Badge variant = $2;
+        return <Badge variant="secondary">Changes Requested</Badge>;
       case "in_progress":
-        return <Badge className = $2;
+        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;
       case "completed":
-        return <Badge variant = $2;
+        return <Badge variant="default">Completed</Badge>;
       case "canceled":
-        return <Badge variant = $2;
+        return <Badge variant="destructive">Canceled</Badge>;
       default:
-        return <Badge variant = $2;
+        return <Badge variant="outline">{status}</Badge>
+    }
+  };
+  
   if (isLoading) {
     return (
-      <div className = $2;
-  const isTalent = $2;
+      <div className="container mx-auto py-8">
+        <div className="flex justify-center items-center h-64">
+          <div className="text-center">
+            <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
+            <p>Loading project details...</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+  
+  if (!project) {
+    return (
+      <div className="container mx-auto py-8">
+        <Card>
+          <CardContent className="flex flex-col items-center justify-center py-10">
+            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />
+            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>
+            <p className="text-muted-foreground mb-4">
+              The project you're looking for doesn't exist or you don't have access to it.
+            </p>
+            <Button onClick={() => router.push("/dashboard")}>
+              Return to Dashboard
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    )
+  }
+  
+  // Check if user is either the client or the talent
+  const isClient = user?.id === project.client_id;
+  const isTalent = user?.id === project.talent_id;
+  
   if (!isClient && !isTalent) {
-    router.push($2);
+    router.push("/unauthorized");
     return null
   }
   
-  const isOfferPending = $2;
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes($2);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes($2);
+  const isOfferPending = project.status === "offer_sent";
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+  
   return (
     <>
       <SEO 
@@ -177,7 +228,7 @@ function ProjectDetailsContent() {
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
-            <div>,
+            <div>
               <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
                 {getStatusBadge(project.status)}
@@ -274,7 +325,7 @@ function ProjectDetailsContent() {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="order-2 lg:order-1 lg:col-span-2">,
+          <div className="order-2 lg:order-1 lg:col-span-2">
             <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="details">Project Details</TabsTrigger>
@@ -475,7 +526,7 @@ function ProjectDetailsContent() {
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
                       {project.talent_profile?.profile_picture_url ? (
-                        <img,
+                        <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                           loading="lazy"
@@ -545,20 +596,20 @@ function ProjectDetailsContent() {
               <CardContent>
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Current Status:</span>,
+                    <span className="text-sm font-medium">Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
                   
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
-                    <span className="text-sm">,
+                    <span className="text-sm">
                       {format(new Date(project.created_at), "PPP")}
                     </span>
                   </div>
                   
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Start Date:</span>
-                    <span className="text-sm">,
+                    <span className="text-sm">
                       {format(new Date(project.start_date), "PPP")}
                     </span>
                   </div>
@@ -619,4 +670,3 @@ export default function ProjectDetails() {
     </ProtectedRoute>
   )
 }
-;

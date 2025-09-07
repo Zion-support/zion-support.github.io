@@ -11,7 +11,7 @@ function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: strin
   )
 }
 
-function AppleBadge({ href }: { href: string}) {
+function AppleBadge({ href }: { href: string }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-black text-white px-4 py-2 shadow hover: opacity-90">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -25,7 +25,7 @@ function AppleBadge({ href }: { href: string}) {
   )
 }
 
-function GoogleBadge({ href }: { href: string}) {
+function GoogleBadge({ href }: { href: string }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-[#121212] text-white px-4 py-2 shadow hover: opacity-90">
       <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden>
@@ -60,20 +60,21 @@ function GoogleBadge({ href }: { href: string}) {
   )
 }
 
-function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string}) {
-  const [visible, setVisible] = useState($2);
+function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {
+  const [visible, setVisible] = useState(false);
   useEffect(() => {
-    if (typeof window = $2;
-    const dismissed = $2;
-    if (dismissed) return,
-    const ua = $2;
-    const isMobile = /iPhone|iPad|iPod|Android/i.test($2);
+    if (typeof window === 'undefined') return;
+    const dismissed = localStorage.getItem('smartBannerDismissed') === '1';
+    if (dismissed) return;
+    const ua = navigator.userAgent || '';
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
     if (isMobile) setVisible(true)
-  }, []),
+  }, []);
 
-  if (!visible) return null,
-  const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test($2);
-  const storeUrl = $2;
+  if (!visible) return null;
+  const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const storeUrl = isIOS ? iosUrl : androidUrl;
+
   return (
     <div className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto max-w-5xl">
@@ -89,42 +90,57 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
             <button
               aria-label="Dismiss"
               onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
-              className = $2;
-const ANDROID_APP_URL = $2;
-const DEEP_LINK_URL = $2;
-const SITE_BASE_URL = $2;
+              className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',
+const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app';
+const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
+
+const SITE_BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || '';
+
 const testimonials = [
   { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 
 export default function MobileLaunchPage() {
-  const [email, setEmail] = useState($2);
-  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle'),
-  const [error, setError] = useState($2);
-  // Auto-rotate testimonial index
-  const [idx, setIdx] = useState($2);
-  useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000),
-    return () => clearInterval(t)
-  }, []),
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
+  const [error, setError] = useState('');
 
-  const qrHref = $2;
-    const encoded = encodeURIComponent($2);
+  // Auto-rotate testimonial index
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000);
+    return () => clearInterval(t)
+  }, []);
+
+  const qrHref = useMemo(() => {
+    const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
+    const encoded = encodeURIComponent(target);
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`
-  }, []),
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault($2);
-    setStatus($2);
-    setError($2);
+    e.preventDefault();
+    setStatus('loading');
+    setError('');
     try {
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
-      if (!res.ok) throw new Error(await res.text()),
-      setStatus($2);
+      if (!res.ok) throw new Error(await res.text());
+      setStatus('success');
       setEmail('')
     } catch (err: any) {
-      setStatus($2);
+      setStatus('error');
       setError(err?.message || 'Something went wrong.')
     }
   }

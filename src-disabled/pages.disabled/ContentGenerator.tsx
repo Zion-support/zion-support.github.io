@@ -17,82 +17,84 @@ import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function ContentGenerator() {
 
-  const { user, isLoading } = useAuth($2);
-  const router = useRouter($2);
-  const [contentType, setContentType] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog'),
-  const [customPrompt, setCustomPrompt] = useState($2);
-  const [topic, setTopic] = useState($2);
-  const [keywords, setKeywords] = useState($2);
-  const [autoPublish, setAutoPublish] = useState($2);
-  const [includeImage, setIncludeImage] = useState($2);
-  const [isGenerating, setIsGenerating] = useState($2);
-  const [previewContent, setPreviewContent] = useState<any>(null),
-  const [testEmail, setTestEmail] = useState($2);
+  const { user, isLoading } = useAuth();
+  const router = useRouter();
+  const [contentType, setContentType] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog');
+  const [customPrompt, setCustomPrompt] = useState('');
+  const [topic, setTopic] = useState('');
+  const [keywords, setKeywords] = useState('');
+  const [autoPublish, setAutoPublish] = useState(false);
+  const [includeImage, setIncludeImage] = useState(true);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [previewContent, setPreviewContent] = useState<any>(null);
+  const [testEmail, setTestEmail] = useState('');
+
   useEffect(() => {
     if (!isLoading && !user) {
-      router.push("/login?redirect=/content-generator");
+      router.push("/login?redirect=/content-generator")
     }
-  }, [user, isLoading, router]),
+  }, [user, isLoading, router]);
 
   const generateContent = async () => {
-    setIsGenerating($2);
-    setPreviewContent($2);
+    setIsGenerating(true);
+    setPreviewContent(null);
+    
     try {
-      const keywordsArray = keywords.split().map(k => k.trim()).filter(k => k.length > 0),
+      const keywordsArray = keywords.split().map(k => k.trim()).filter(k => k.length > 0);
       const { data, error } = await supabase.functions.invoke('generate-seo-content', {
-        body: {,
-          contentType,
+        body: {
+          contentType;
           userPrompt: customPrompt || topic, // Use customPrompt if available, else topic
           keywords: keywordsArray,
           // autoPublish and includeImage are not explicitly used by 'generate-seo-content'
           // but we can leave them here, the backend will ignore them if not needed.
-          autoPublish,
-          includeImage: contentType === 'blog' ? includeImage : false,
+          autoPublish;
+          includeImage: contentType === 'blog' ? includeImage : false
         }
-      }),
+      });
       
-      if (error) throw error,
+      if (error) throw error;
       
       setPreviewContent(data), // Expecting { generatedContent: "..." }
       toast.success(`Content for "${contentType}" generated successfully!`)
     } catch (error) {
       logErrorToProduction('Error generating content:', { data: error }),
-      toast.error("Failed to generate content. Please try again.");
+      toast.error("Failed to generate content. Please try again.")
     } finally {
       setIsGenerating(false)
     }
-  },
+  };
 
   const sendTestNewsletter = async () => {
     if (!testEmail) {
-      toast.error($2);
+      toast.error("Please enter a test email address");
       return
     }
     
     if (!previewContent) {
-      toast.error($2);
+      toast.error("Generate newsletter content first");
       return
     }
     
     try {
       const { data, error } = await supabase.functions.invoke('send-newsletter', {
-        body: {,
+        body: {
           subject: previewContent.subject,
           previewText: previewContent.previewText,
           body: previewContent.body,
           testMode: true,
           testEmail
         }
-      }),
+      });
       
-      if (error) throw error,
+      if (error) throw error;
       
-      toast.success(`Test newsletter sent to ${testEmail}!`);
+      toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       logErrorToProduction('Error sending test newsletter:', { data: error }),
-      toast.error("Failed to send test newsletter. Please try again.");
+      toast.error("Failed to send test newsletter. Please try again.")
     }
-  },
+  };
 
   // Check if user is still loading
   if (isLoading) {
@@ -113,7 +115,7 @@ export default function ContentGenerator() {
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-white mb-8">Content Generator</h1>
           
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-1">
               <Card className="bg-zion-blue-dark border border-zion-blue-light">
                 <CardHeader>
@@ -123,8 +125,8 @@ export default function ContentGenerator() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <div className="space-y-2">,
-                    <Label htmlFor="contentType" className="text-white">Content Type</Label>,
+                  <div className="space-y-2">
+                    <Label htmlFor="contentType" className="text-white">Content Type</Label>
                     <Select value={contentType} onValueChange={(value) => setContentType(value as 'blog' | 'newsletter' | 'serviceDescription' | 'faq')}>
                       <SelectTrigger id="contentType" className="bg-zion-blue border border-zion-blue-light text-white">
                         <SelectValue placeholder="Select content type" />
@@ -164,6 +166,7 @@ export default function ContentGenerator() {
                       onChange={(e) => setKeywords(e.target.value)}
                     />
                   </div>
+                  
                   <div className="space-y-2">
                     <Label htmlFor="customPrompt" className="text-white">Detailed Instructions / Custom Prompt (Optional)</Label>
                     <Textarea
@@ -174,6 +177,7 @@ export default function ContentGenerator() {
                       onChange={(e) => setCustomPrompt(e.target.value)}
                     />
                   </div>
+                  
                   {contentType === 'blog' && (
                     <>
                       <div className="flex items-center justify-between">
@@ -184,21 +188,18 @@ export default function ContentGenerator() {
                           onCheckedChange={setAutoPublish}
                         />
                       </div>
+                      
                       <div className="flex items-center justify-between">
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
-                        />;
-                      </div>;
-                    </>;
-                          checked={includeImage}
-                          onCheckedChange={setIncludeImage}
                         />
                       </div>
                     </>
                   )}
+                  
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
@@ -209,12 +210,6 @@ export default function ContentGenerator() {
                         className="bg-zion-blue border border-zion-blue-light text-white"
                         value={testEmail}
                         onChange={(e) => setTestEmail(e.target.value)}
-                      />;
-                    </div>;
-                  )}
-                </CardContent>;
-                <CardFooter>;
-                  <Button;
                       />
                     </div>
                   )}
@@ -231,12 +226,13 @@ export default function ContentGenerator() {
                         Generating...
                       </>
                     ) : (
-                      <>Generate Content</> // Simplified button text,
+                      <>Generate Content</> // Simplified button text
                     )}
                   </Button>
                 </CardFooter>
               </Card>
             </div>
+            
             <div className="lg:col-span-2">
               <Card className="bg-zion-blue-dark border border-zion-blue-light h-full">
                 <CardHeader>
@@ -253,11 +249,10 @@ export default function ContentGenerator() {
                     </div>
                   ) : previewContent && previewContent.generatedContent ? (
                     // Simplified preview for all content types for this subtask
-                    <ScrollArea className="h-[500px] pr-4">,
+                    <ScrollArea className="h-[500px] pr-4">
                       <h2 className="text-2xl font-bold text-white mb-4">Generated Content ({contentType})</h2>
                       <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">
                         {previewContent.generatedContent}
-                      </pre>;
                       </pre>
                       {/* Specific handling for newsletter test send can be re-added if needed */}
                       {contentType === 'newsletter' && previewContent.subject && ( // Assuming generatedContent might be the body for newsletter
@@ -266,7 +261,7 @@ export default function ContentGenerator() {
                             onClick={sendTestNewsletter} // sendTestNewsletter would need to be adapted if previewContent structure changed significantly
                             disabled={!testEmail}
                             className="bg-zion-blue-light hover:bg-zion-blue text-white"
-                          >,
+                          >
                             Send Test to {testEmail || "your email"}
                           </Button>
                         </div>
@@ -297,26 +292,14 @@ export default function ContentGenerator() {
                       <p className="text-zion-slate-light max-w-md">
                         Use the settings panel to configure your content and click "Generate" to create AI-powered content.
                       </p>
-                    </div>,
+                    </div>
                   )}
-                </CardContent>;
-              </Card>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  );
-}
-;
                 </CardContent>
               </Card>
             </div>
           </div>
         </div>
       </div>
-:src/pages/ContentGenerator.tsx
     </>
   )
 }
-;

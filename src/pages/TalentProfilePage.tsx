@@ -16,38 +16,39 @@ import { UserProfile } from "@/types/auth";
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 export default function TalentProfilePage() {
-  const router = useRouter($2);
+  const router = useRouter();
   // Get id from Next.js router query params
-  const { id } = router.query as { id?: string },
-  const { profile, isLoading, error } = useTalentProfile($2);
-  const [isHireModalOpen, setIsHireModalOpen] = useState($2);
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState($2);
-  const { userDetails } = useAuthStatus($2);
-  const { isAuthenticated, user } = useAuth($2);
+  const { id } = router.query as { id?: string };
+  const { profile, isLoading, error } = useTalentProfile(id);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+  const { isAuthenticated, user } = useAuth();
+
   // Create a compatible UserProfile from UserDetails or the authenticated user
-  const userProfile: UserProfile = user ? {,
+  const userProfile: UserProfile = user ? {
     id: user.id || '',
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
     userType: user.userType || null,
     profileComplete: user.profileComplete || false,
-    created_at: user.created_at || new Date().toISOString($2);
-    updated_at: user.updatedAt || new Date().toISOString($2);
+    created_at: user.created_at || new Date().toISOString(),
+    updated_at: user.updatedAt || new Date().toISOString(),
     role: user.role || '',
     name: user.name || '',
-    points: user.points || 0,
+    points: user.points || 0
   } : {
-    id: userDetails ?.id || '',
-    displayName: userDetails ?.name || '',
-    email: userDetails ?.email || '', // Ensure email is always a string
+    id: userDetails?.id || '',
+    displayName: userDetails?.name || '',
+    email: userDetails?.email || '', // Ensure email is always a string
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
     created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
     updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '', // Default empty string since userDetails doesn't have this property
     name: '',
-    points: 0,
-  },
+    points: 0
+  };
 
   // Handle loading error gracefully
   useEffect(() => {
@@ -57,7 +58,7 @@ export default function TalentProfilePage() {
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"})
     }
-  }, [error]),
+  }, [error]);
 
   if (isLoading) {
     return <ProfileLoadingState />
@@ -69,21 +70,27 @@ export default function TalentProfilePage() {
 
   const handleRequestHire = () => {
     if (!isAuthenticated) {
-      toast($2);
-      router.push(`/login?returnTo = $2;
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to hire this talent.",
+        variant: "default"}),
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return
     }
     setIsHireModalOpen(true)
-  },
+  };
 
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
-      toast($2);
-      router.push(`/login?returnTo = $2;
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to message this talent.",
+        variant: "default"}),
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return
     }
     setIsMessageModalOpen(true)
-  },
+  };
 
   return (
     <>
@@ -105,7 +112,7 @@ export default function TalentProfilePage() {
         <div className="p-2 flex gap-2">
           <Button 
             size="sm"
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark",
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
             onClick={handleRequestHire}
           >
             <Handshake className="mr-2 h-4 w-4" />
@@ -114,7 +121,7 @@ export default function TalentProfilePage() {
           <Button 
             size="sm"
             variant="outline"
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10",
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             onClick={handleMessageTalent}
           >
             <MessageSquare className="mr-2 h-4 w-4" />
@@ -141,4 +148,3 @@ export default function TalentProfilePage() {
     </>
   )
 }
-;

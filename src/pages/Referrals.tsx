@@ -17,24 +17,29 @@ import { useRouter } from 'next/router', // Changed from useNavigate
 
 export default function ReferralsPage() {
   const router = useRouter(), // Changed from navigate
-  const { isAuthenticated } = useAuth($2);
+  const { isAuthenticated } = useAuth();
   const {
-    isLoading,
-    referralCode,
-    referrals,
-    rewards,
-    stats,
-    getReferralLink,
-    copyReferralLink,
-    shareOnSocialMedia} = useReferrals($2);
+    isLoading;
+    referralCode;
+    referrals;
+    rewards;
+    stats;
+    getReferralLink;
+    copyReferralLink;
+    shareOnSocialMedia} = useReferrals();
+
   useEffect(() => {
     if (!isAuthenticated) {
-      toast($2);
+      toast({
+        title: "Authentication required",
+        description: "Please login to access the referral program",
+        variant: "destructive"}),
       router.push("/login"), // Changed to router.push
     }
   }, [isAuthenticated, router]), // Changed navigate to router in dependencies
 
-  const referralLink = getReferralLink($2);
+  const referralLink = getReferralLink();
+
   return (
     <div className="container max-w-7xl py-10">
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
@@ -43,7 +48,7 @@ export default function ReferralsPage() {
           <p className="text-muted-foreground mt-1">
             Invite others to Zion AI Marketplace and earn rewards
           </p>
-        </div>,
+        </div>
         <Button className="flex items-center gap-2" onClick={copyReferralLink}>
           <Share className="h-4 w-4" />
           Share Referral Link
@@ -54,7 +59,7 @@ export default function ReferralsPage() {
       
       <div className="grid gap-6 mt-6 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-6">
-          <ReferralLink,
+          <ReferralLink 
             referralLink={referralLink} 
             onCopy={copyReferralLink} 
             onShare={shareOnSocialMedia}
@@ -88,4 +93,3 @@ export default function ReferralsPage() {
     </div>
   )
 }
-;

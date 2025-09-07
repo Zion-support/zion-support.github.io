@@ -3,9 +3,9 @@ import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
-  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database,
+  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
-} from 'lucide-react',
+} from 'lucide-react';
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
@@ -16,32 +16,48 @@ const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1}}
-      transition = $2;
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className="text-center"
+    >
+      <div className="relative">
+        <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
+      </div>
+      <p className="text-xl text-gray-300 mb-2">Loading Zion Tech Group...</p>
+      <p className="text-sm text-gray-500">Preparing your digital transformation journey</p>
+    </motion.div>
+  </div>
+);
+
 const Homepage2035: React.FC = () => {
-  const [isLoading, setIsLoading] = useState($2);
-  const [isVisible, setIsVisible] = useState($2);
-  const [activeCategory, setActiveCategory] = useState($2);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeCategory, setActiveCategory] = useState('all');
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading($2);
+      setIsLoading(false);
       setIsVisible(true)
-    }, 800),
+    }, 800);
 
     return () => clearTimeout(timer)
-  }, []),
+  }, []);
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 60},
-    animate: { opacity: 1, y: 0},
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" }
-  },
+  };
 
-  const staggerContainer = $2;
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1,
         delayChildren: 0.2
       }
     }
-  },
+  };
 
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
@@ -50,34 +66,37 @@ const Homepage2035: React.FC = () => {
       scale: 1,
       transition: { duration: 1.5, ease: "easeOut" as const }
     }
-  },
+  };
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: <Globe className = $2;
-    { id: 'ai', name: 'AI & ML', icon: <Brain className = $2;
-    { id: 'it', name: 'IT Enterprise', icon: <Cpu className = $2;
-    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className = $2;
-    { id: 'space', name: 'Space Tech', icon: <Satellite className = $2;
-    { id: 'cyber', name: 'Cybersecurity', icon: <Shield className = $2;
-    { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className = $2;
-    { id: 'fintech', name: 'FinTech', icon: <ChartBar className = $2;
-  const allServices = $2;
-    ...innovative2025ITEnterpriseBatch,
+    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" /> },
+    { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5" /> },
+    { id: 'it', name: 'IT Enterprise', icon: <Cpu className="w-5 h-5" /> },
+    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className="w-5 h-5" /> },
+    { id: 'space', name: 'Space Tech', icon: <Satellite className="w-5 h-5" /> },
+    { id: 'cyber', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },
+    { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
+  ];
+
+  const allServices = [
+    ...innovative2025MicroSaasBatch;
+    ...innovative2025ITEnterpriseBatch;
     ...innovative2025AIServicesBatch
-  ],
+  ];
 
   const filteredServices = activeCategory === 'all' 
     ? allServices 
     : allServices.filter(service => {
-        if (activeCategory === 'ai') return service.category.includes('AI') || service.category.includes($2);
-        if (activeCategory === 'it') return service.category.includes('IT') || service.category.includes($2);
-        if (activeCategory === 'quantum') return service.name.includes($2);
-        if (activeCategory === 'space') return service.category.includes($2);
-        if (activeCategory === 'cyber') return service.category.includes('Security') || service.category.includes($2);
-        if (activeCategory === 'cloud') return service.category.includes('Cloud') || service.category.includes($2);
-        if (activeCategory === 'fintech') return service.category.includes('Financial') || service.category.includes($2);
+        if (activeCategory === 'ai') return service.category.includes('AI') || service.category.includes('Machine Learning');
+        if (activeCategory === 'it') return service.category.includes('IT') || service.category.includes('Enterprise');
+        if (activeCategory === 'quantum') return service.name.includes('Quantum');
+        if (activeCategory === 'space') return service.category.includes('Space');
+        if (activeCategory === 'cyber') return service.category.includes('Security') || service.category.includes('Cybersecurity');
+        if (activeCategory === 'cloud') return service.category.includes('Cloud') || service.category.includes('DevOps');
+        if (activeCategory === 'fintech') return service.category.includes('Financial') || service.category.includes('Trading');
         return true
-      }),
+      });
 
   if (isLoading) {
     return <LoadingFallback />
@@ -90,8 +109,8 @@ const Homepage2035: React.FC = () => {
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
@@ -125,8 +144,8 @@ const Homepage2035: React.FC = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
             >
@@ -139,7 +158,7 @@ const Homepage2035: React.FC = () => {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1}}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                   className="text-center"
                 >
@@ -156,10 +175,10 @@ const Homepage2035: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -172,10 +191,10 @@ const Homepage2035: React.FC = () => {
 
             {/* Category Filter */}
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
               {categories.map((category) => (
@@ -201,7 +220,7 @@ const Homepage2035: React.FC = () => {
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {filteredServices.map((service, index) => (
@@ -217,10 +236,10 @@ const Homepage2035: React.FC = () => {
 
             {/* View All Services Button */}
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="text-center mt-16"
             >
               <motion.button
@@ -239,10 +258,10 @@ const Homepage2035: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -253,42 +272,45 @@ const Homepage2035: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className = $2;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: <Brain className="w-12 h-12" />,
                   title: 'AI-Powered Solutions',
                   description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'
-                },
+                };
                 {
-                  icon: <Shield className = $2;
+                  icon: <Shield className="w-12 h-12" />,
                   title: 'Enterprise Security',
                   description: 'Military-grade security protocols and compliance standards to protect your business'
-                },
+                };
                 {
-                  icon: <Rocket className = $2;
+                  icon: <Rocket className="w-12 h-12" />,
                   title: 'Space Technology',
                   description: 'Pioneering space tech solutions for the next generation of innovation'
-                },
+                };
                 {
-                  icon: <Atom className = $2;
+                  icon: <Atom className="w-12 h-12" />,
                   title: 'Quantum Computing',
                   description: 'Access to quantum computing power for complex problem-solving'
-                },
+                };
                 {
-                  icon: <Cloud className = $2;
+                  icon: <Cloud className="w-12 h-12" />,
                   title: 'Cloud-Native',
                   description: 'Built for the cloud with scalability, reliability, and performance in mind'
-                },
+                };
                 {
-                  icon: <Target className = $2;
+                  icon: <Target className="w-12 h-12" />,
                   title: 'Results-Driven',
                   description: 'Focused on delivering measurable business outcomes and ROI'
                 }
               ].map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30}}
-                  whileInView={{ opacity: 1, y: 0}}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true}}
+                  viewport={{ once: true }}
                   className="text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group"
                 >
                   <div className="text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
@@ -306,7 +328,40 @@ const Homepage2035: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition = $2;
-export default Homepage2035,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of companies already leveraging our cutting-edge technology solutions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
+                >
+                  <span>Get Started Today</span>
+                  <ArrowRight className="w-5 h-5" />
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
+                >
+                  Schedule a Demo
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </UltraFuturisticBackground2035>
+    </Layout>
+  )
+};
+
+export default Homepage2035;

@@ -1,142 +1,115 @@
+<<<<<<< HEAD
+import React from 'react';
 
-
-  id: string;
-  type: "success" | "error" | "warning" | "info";
-
+interface Notification {
+  id: string,
+  type: 'success' | 'error' | 'warning' | 'info',
+  message: string,
   title?: string;
-  message: string;
-  duration?: number;
 }
 
-const getNotificationStyles = (type: Notification["type"]): string => {
-  const baseStyles = "border-l-4";
-  const typeStyles = {
-    success: "bg-green-50 border-green-400 text-green-800"
-    error: "bg-red-50 border-red-400 text-red-800"
-    warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
-    info: "bg-blue-50 border-blue-400 text-blue-800"
-  }
-  return `${baseStyles} ${typeStyles[type]}`;
+interface NotificationSystemProps {
+  notifications: Notification[],
+  onDismiss?: (id: string) => void,
+  className?: string;
 }
-export default function NotificationSystem({
-  notifications
-  onDismiss
-key={notification.id}
+
+const NotificationSystem: React.FC<NotificationSystemProps> = ({
+  notifications;
+  onDismiss;
+  className;
+}) => {
+  const getNotificationStyles = (type: Notification['type']) => {
+    switch (type) {
+      case 'success':
+        return 'bg-green-50 border-green-200 text-green-800';
+      case 'error':
+        return 'bg-red-50 border-red-200 text-red-800';
+      case 'warning':
+        return 'bg-yellow-50 border-yellow-200 text-yellow-800';
+      case 'info':
+        return 'bg-blue-50 border-blue-200 text-blue-800';
+      default:
+        return 'bg-gray-50 border-gray-200 text-gray-800';
+    }
+  };
+=======
+          key={notification.id};
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`};
+
+        >;
+          <div className="flex items-start justify-between">;
+            <div className="flex-1">;
+              {notification.title && (;
+                <h4 className="font-medium mb-1">{notification.title}</h4>)};
+              <p className="text-sm">{notification.message}</p>;
+            </div>;
+            {onDismiss && (;
+              <button;
+                onClick={() => onDismiss(notification.id)};
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+
+export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' };
+
+type NotificationContextValue = {
+  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
+};
+
+const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} }),
+
+export function useToast() {
+  return useContext(NotificationContext)
+}
+
+export function NotificationProvider({ children }: { children: ReactNode }) {
+  const [toasts, setToasts] = useState<Toast[]>([]);
+
+  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
+    const id = Math.random().toString(36).slice(2);
+    setToasts((prev) => [...prev, { id, message, tone }]);
+    setTimeout(() => {
+      setToasts((prev) => prev.filter((t) => t.id !== id))
+    }, 3000)
+  }, []);
+>>>>>>> pr-11992
+
+  return (
+    <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
+      {notifications.map((notification) => (
+        <div
+          key={notification.id}
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
         >
           <div className="flex items-start justify-between">
             <div className="flex-1">
               {notification.title && (
-                <h4 className="font-medium mb-1">{notification.title}</h4>)}
+                <h4 className="font-medium mb-1">{notification.title}</h4>
+              )}
               <p className="text-sm">{notification.message}</p>
             </div>
             {onDismiss && (
               <button
                 onClick={() => onDismiss(notification.id)}
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
-
-type NotificationContextValue = {
-  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
-},
-
-const NotificationContext = $2;
-export function useToast() {
-  return useContext(NotificationContext)
-}
-
-export function NotificationProvider({ children }: { children: ReactNode}) {
-  const [toasts, setToasts] = useState<Toast[]>([]),
-
-  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
-    const id = Math.random().toString(36).slice($2);
-    setToasts((prev) => [...prev, { id, message, tone }]),
-    setTimeout(() => {
-      setToasts((prev) => prev.filter((t) => t.id !== id))
-    }, 3000)
-  }, [])
-    success: "bg-green-50 border-green-400 text-green-800",
-    error: "bg-red-50 border-red-400 text-red-800",
-    warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
-    info: "bg-blue-50 border-blue-400 text-blue-800",
-
-  };
-  return `${baseStyles} ${typeStyles[type]}`;
-};
-
-import React from 'react';
-
-interface Notification {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  title: string;
-  message: string;
-  duration?: number;
-}
-
-interface NotificationContextType {
-  notifications: Notification[];
-  addNotification: (notification: Omit<Notification, 'id'>) => void;
-  removeNotification: (id: string) => void;
-}
-
-  return (
-    <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
-      {children}
-      <NotificationContainer />
-    </NotificationContext.Provider>
-  );
-};
-
-const NotificationContainer: React.FC = () => {
-  const { notifications, removeNotification } = useNotifications();
-
-  return (
-    <div className="fixed top-4 right-4 z-50 space-y-2">
-      {notifications.map((notification) => (
-
+                className="ml-4 text-gray-400 hover:text-gray-600"
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+          </div>
+        </div>
+<<<<<<< HEAD
       ))}
     </div>
   );
 };
 
-  const colors = {
-    success: 'bg-green-500',
-    error: 'bg-red-500',
-    warning: 'bg-yellow-500',
-    info: 'bg-blue-500',
-  };
-
-  const Icon = icons[notification.type];
-
-  return (
-    <NotificationContext.Provider value={{ notify }}>
-      {children}
-      <div className="fixed inset-x-0 top-4 z-[100] flex justify-center pointer-events-none">
-        <div className="w-full max-w-md px-4">
-          <AnimatePresence>
-            {toasts.map((toast) => (
-              <motion.div
-                key={toast.id}
-                initial={{ opacity: 0, y: -8 }}
-                animate={{ opacity: 1, y: 0}}
-                exit={{ opacity: 0, y: -8 }}
-                className={`mb-2 pointer-events-auto rounded-lg border backdrop-blur px-4 py-3 shadow-lg ${
-                  toast.tone === 'success'
-                    ? 'border-emerald-300/50 bg-emerald-50 text-emerald-900 dark:bg-emerald-950/60 dark:text-emerald-200'
-                    : toast.tone === 'error'
-                    ? 'border-rose-300/50 bg-rose-50 text-rose-900 dark:bg-rose-950/60 dark:text-rose-200'
-                    : 'border-gray-200 bg-white/90 text-gray-900 dark:border-gray-800 dark:bg-gray-900/90 dark:text-gray-100'
-                }`}
-              >
-                <div className="text-sm font-medium">{toast.message}</div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
+export default NotificationSystem;
+=======
       </div>
-    </div>
-  );
-};
-
+    </NotificationContext.Provider>
+  )
+}
+>>>>>>> pr-11992

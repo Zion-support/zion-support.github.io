@@ -13,16 +13,16 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 export default function MessagingInbox() {
 
   const { 
-    conversations,
+    conversations;
     activeConversation, 
     setActiveConversation, 
-    markAsRead,
-    fetchConversations,
+    markAsRead;
+    fetchConversations;
     isLoading
-  } = useMessaging($2);
-  const isMobile = useIsMobile($2);
+  } = useMessaging();
+  const isMobile = useIsMobile();
   const router = useRouter(), // Changed from navigate
-  const [activeCall, setActiveCall] = useState<string | null>(null),
+  const [activeCall, setActiveCall] = useState<string | null>(null);
   
   useEffect(() => {
     // Fetch conversations when component mounts
@@ -31,29 +31,30 @@ export default function MessagingInbox() {
         await fetchConversations()
       } catch (error) {
         logErrorToProduction('Failed to load conversations:', { data: error }),
-        toast.error("Failed to load messages. Please try again.");
+        toast.error("Failed to load messages. Please try again.")
       }
-    },
+    };
     
     loadData()
-  }, [fetchConversations]),
+  }, [fetchConversations]);
   
   const startVideoCall = () => {
     if (!activeConversation) {
-      toast.error($2);
+      toast.error("Please select a conversation first");
       return
     }
     
-    const roomId = $2;
-    setActiveCall($2);
+    const roomId = `msg-${activeConversation.id}`;
+    setActiveCall(roomId);
+    
     // Show toast notification
     toast.success("Starting video call", {
-      description: "Initializing video call connection...",
-    }),
+      description: "Initializing video call connection..."
+    });
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
-  },
+  };
   
   return (
     <ProtectedRoute>
@@ -72,7 +73,7 @@ export default function MessagingInbox() {
               >
                 <Video className="h-4 w-4" />
                 Start Call
-              </Button>,
+              </Button>
             )}
           </div>
           
@@ -104,4 +105,3 @@ export default function MessagingInbox() {
     </ProtectedRoute>
   )
 }
-;

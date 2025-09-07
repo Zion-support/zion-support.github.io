@@ -1,19 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
-type Item = { source: string, title: string, url: string, date?: string, summary?: string },
+type Item = { source: string, title: string, url: string, date?: string, summary?: string };
 
-type Props = $2;
+type Props = { items: Item[] },
+
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'publicautomationinnovation-digest.json'),
-    const raw = fs.readFileSync($2);
-    const data = JSON.parse($2);
-    return { props: { items: data.items || [] }, revalidate: 1800}
+    const file = path.join(process.cwd(), 'publicautomationinnovation-digest.json');
+    const raw = fs.readFileSync(file, 'utf8');
+    const data = JSON.parse(raw);
+    return { props: { items: data.items || [] }, revalidate: 1800 }
   } catch {
-    return { props: { items: [] }, revalidate: 1800}
+    return { props: { items: [] }, revalidate: 1800 }
   }
-},
+};
 
 export default function InnovationDigest({ items }: Props) {
   return (
@@ -27,7 +28,7 @@ export default function InnovationDigest({ items }: Props) {
       )}
       <ul className="space-y-4">
         {items.map((it, idx) => (
-          <li key={idx} className="p-4 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-gray-900">
+          <li key={idx} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
             <div className="flex items-center justify-between gap-4">
               <div className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">{it.source}</div>
               {it.date && <div className="text-xs text-gray-500 dark:text-gray-400">{new Date(it.date).toLocaleString()}</div>}

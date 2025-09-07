@@ -19,30 +19,53 @@ import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const router = useRouter($2);
-  const id = $2;
-  const [selectedImageIndex, setSelectedImageIndex] = useState($2);
-  const [isLoading, setIsLoading] = useState($2);
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState($2);
-  const [isChatOpen, setIsChatOpen] = useState($2);
-  const { user } = useAuth($2);
-  const { formatPrice } = useCurrency($2);
+  const router = useRouter();
+  const id = router.query.id as string;
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const { user } = useAuth();
+  const { formatPrice } = useCurrency();
+
   // Find the listing from our shared data source - now also checking equipment listings
-  const listing = MARKETPLACE_LISTINGS.find($2);
+  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
+
   if (!listing) {
     return (
-      <div className = $2;
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
+          <div className="text-center py-20">
+            <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
+              <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
+              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
+                <Link href="/marketplace">Back to Marketplace</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      )
+  }
+
+  const handleContact = () => {
+    if (user) {
+      setIsChatOpen(true)
+    } else {
+      setIsContactDialogOpen(true)
+    }
+  };
+
   return (
     <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
                   {listing.images && listing.images.length > 0 ? (
-                    <ImageWithRetry,
+                    <ImageWithRetry
                       src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
                       alt={listing.title}
                       className="object-cover"
@@ -59,7 +82,10 @@ export default function ListingDetail() {
                   <div className="flex p-4 gap-2 overflow-x-auto">
                     {listing.images.map((image, index) => (
                       <div 
-                        key = $2;
+                        key={index}
+                        onClick={() => setSelectedImageIndex(index)}
+                        className={cn(
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
                       >
@@ -103,7 +129,8 @@ export default function ListingDetail() {
                       </div>
                     </div>
                   </div>
-                </div>,
+                </div>
+                
                 {/* Tags */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
@@ -122,7 +149,7 @@ export default function ListingDetail() {
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
                 <div className="mb-2">
-                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">,
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
                     {listing.category}
                   </Badge>
                   {listing.featured && (
@@ -139,7 +166,9 @@ export default function ListingDetail() {
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
                         <Star
-                          key = $2;
+                          key={i}
+                          className={cn(
+                            "h-5 w-5";
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />
@@ -172,11 +201,11 @@ export default function ListingDetail() {
                       serviceId={listing.id}
                       providerId={listing.author.id}
                       buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white py-6",
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={() => {
-                        toast({,
+                        toast({
                           title: "Payment Processing",
-                          description: "Redirecting to secure checkout...",
+                          description: "Redirecting to secure checkout..."
                         })
                       }}
                     />
@@ -185,7 +214,7 @@ export default function ListingDetail() {
                       onClick={handleContact}
                       disabled={isLoading}
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                    >,
+                    >
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>
                   )}
@@ -199,7 +228,8 @@ export default function ListingDetail() {
                     <MessageSquare className="h-4 w-4 mr-2" />
                     Contact Publisher
                   </Button>
-                </div>,
+                </div>
+                
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
@@ -211,8 +241,8 @@ export default function ListingDetail() {
                           alt={listing.author.name}
                           className="object-cover"
                           onError={(e) => {
-                            const target = e.target as HTMLImageElement,
-                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name),
+                            const target = e.target as HTMLImageElement;
+                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />
                       </div>
@@ -258,7 +288,7 @@ export default function ListingDetail() {
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
-          <ProfileContact,
+          <ProfileContact 
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
             profileType="service"
@@ -268,4 +298,3 @@ export default function ListingDetail() {
     </>
   )
 }
-;

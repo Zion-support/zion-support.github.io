@@ -5,47 +5,47 @@ import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form";
 import {
-  RadioGroup,
-  RadioGroupItem} from "@/components/ui/radio-group",
+  RadioGroup;
+  RadioGroupItem} from "@/components/ui/radio-group";
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
 interface ReviewFormValues {
-  rating?: number,
-  review_text?: string,
-  communication_rating?: number,
-  quality_rating?: number,
-  timeliness_rating?: number,
-  would_work_again?: boolean,
+  rating?: number;
+  review_text?: string;
+  communication_rating?: number;
+  quality_rating?: number;
+  timeliness_rating?: number;
+  would_work_again?: boolean;
   is_anonymous?: boolean
 }
 
 interface ReviewFormProps {
-  projectId: string;
-  revieweeId: string;
-  revieweeName: string;
-  onSubmit: (data: any) => Promise<boolean>;
-  defaultValues?: Review,
-  isSubmitting: boolean,
+  projectId: string,
+  revieweeId: string,
+  revieweeName: string,
+  onSubmit: (data: any) => Promise<boolean>, 
+  defaultValues?: Review;
+  isSubmitting: boolean
 }
 
 export function ReviewForm({
-  projectId,
-  revieweeId,
-  revieweeName,
-  onSubmit,
-  defaultValues,
+  projectId;
+  revieweeId;
+  revieweeName;
+  onSubmit;
+  defaultValues;
   isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
+  const [hoveredStar, setHoveredStar] = useState<number>(0);
   
   const form = useForm<ReviewFormValues>({
-    defaultValues: defaultValues ? {,
+    defaultValues: defaultValues ? {
       rating: defaultValues.rating,
       review_text: defaultValues.review_text,
       communication_rating: defaultValues.communication_rating,
@@ -60,21 +60,22 @@ export function ReviewForm({
       timeliness_rating: undefined,
       would_work_again: undefined,
       is_anonymous: false}
-  }),
+  });
   
   const handleSubmit = async (values: ReviewFormValues) => {
-    const formattedData = {,
-      ...values,;
-      project_id: projectId;
+    const formattedData = {
+      ...values;
+      project_id: projectId,
       reviewee_id: revieweeId},
     
-    const success = await onSubmit($2);
+    const success = await onSubmit(formattedData);
     if (success) {
       form.reset()
     }
-  },
+  };
   
-  const watchRating = form.watch($2);
+  const watchRating = form.watch("rating");
+  
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
@@ -83,7 +84,7 @@ export function ReviewForm({
           control={form.control}
           name="rating"
           rules={{ required: "Rating is required" }}
-          render={({ field }: { field: any}) => (
+          render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel className="block text-center mb-2">
                 How was your experience with {revieweeName}?
@@ -97,7 +98,7 @@ export function ReviewForm({
                       onClick={() => field.onChange(star)}
                       onMouseEnter={() => setHoveredStar(star)}
                       onMouseLeave={() => setHoveredStar(0)}
-                      className="focus:outline-none transition-transform hover:scale-110",
+                      className="focus:outline-none transition-transform hover:scale-110"
                       aria-label={`Rate ${star} star${star > 1 ? 's' : ''}`}
                     >
                       <Star
@@ -123,8 +124,10 @@ export function ReviewForm({
           control={form.control}
           name="review_text"
           rules={{
-            required: "Please provide feedback", minLength: {,
-              value: 20, message: "Review must be at least 20 characters"}}}
+            required: "Please provide feedback",
+            minLength: {
+              value: 20,
+              message: "Review must be at least 20 characters"}}}
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Your Review</FormLabel>
@@ -149,7 +152,7 @@ export function ReviewForm({
             <FormField
               control={form.control}
               name="communication_rating"
-              render={({ field }: { field: any}) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Communication</FormLabel>
                   <FormControl>
@@ -182,7 +185,7 @@ export function ReviewForm({
             <FormField
               control={form.control}
               name="quality_rating"
-              render={({ field }: { field: any}) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Quality of Work</FormLabel>
                   <FormControl>
@@ -215,7 +218,7 @@ export function ReviewForm({
             <FormField
               control={form.control}
               name="timeliness_rating"
-              render={({ field }: { field: any}) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Timeliness</FormLabel>
                   <FormControl>
@@ -248,7 +251,7 @@ export function ReviewForm({
             <FormField
               control={form.control}
               name="would_work_again"
-              render={({ field }: { field: any}) => (
+              render={({ field }: { field: any }) => (
                 <FormItem>
                   <div className="flex items-center gap-2">
                     <FormLabel>Would you work with {revieweeName} again?</FormLabel>
@@ -276,7 +279,7 @@ export function ReviewForm({
         <FormField
           control={form.control}
           name="is_anonymous"
-          render={({ field }: { field: any}) => (
+          render={({ field }: { field: any }) => (
             <FormItem>
               <div className="flex items-center gap-2">
                 <FormControl>
@@ -309,4 +312,3 @@ export function ReviewForm({
     </Form>
   )
 }
-;

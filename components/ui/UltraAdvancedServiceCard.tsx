@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, ExternalLink, Star, TrendingUp, 
-  Users, Zap, Shield, Clock, Check, Brain,
+  Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
-} from 'lucide-react',
+} from 'lucide-react';
 
 interface UltraAdvancedServiceCardProps {
   service: {
@@ -38,28 +38,34 @@ interface UltraAdvancedServiceCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string},
+      website: string
+    };
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number}
+    reviews: number
+  }
 }
 
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
-  const [isExpanded, setIsExpanded] = useState($2);
-  const [isHovered, setIsHovered] = useState($2);
-  const getCategoryIcon = $2;
-    if (category.includes('Quantum')) return <Zap className = $2;
-    if (category.includes('Space')) return <Rocket className = $2;
-    if (category.includes('Biotech') || category.includes('Healthcare')) return <Dna className = $2;
-    if (category.includes('Finance') || category.includes('Trading')) return <DollarSign className = $2;
-    if (category.includes('Security') || category.includes('Cybersecurity')) return <Lock className = $2;
-    if (category.includes('Internet') || category.includes('Network')) return <Globe className = $2;
-    return <Zap className = $2;
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const getCategoryIcon = (category: string) => {
+    if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
+    if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
+    if (category.includes('Space')) return <Rocket className="w-4 h-4" />;
+    if (category.includes('Biotech') || category.includes('Healthcare')) return <Dna className="w-4 h-4" />;
+    if (category.includes('Finance') || category.includes('Trading')) return <DollarSign className="w-4 h-4" />;
+    if (category.includes('Security') || category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
+    if (category.includes('Internet') || category.includes('Network')) return <Globe className="w-4 h-4" />;
+    return <Zap className="w-4 h-4" />
+  };
+
   const containerVariants = {
-    hidden: { opacity: 0, y: 20},
+    hidden: { opacity: 0, y: 20 },
     visible: { 
       opacity: 1, 
       y: 0,
@@ -67,7 +73,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         duration: 0.6,
         ease: "easeOut" as const
       }
-    },
+    };
     hover: {
       y: -10,
       transition: {
@@ -75,10 +81,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
   const contentVariants = {
-    hidden: { opacity: 0, height: 0},
+    hidden: { opacity: 0, height: 0 },
     visible: { 
       opacity: 1, 
       height: "auto",
@@ -87,7 +93,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
   return (
     <motion.div
@@ -105,7 +111,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           isHovered ? 'opacity-100' : 'opacity-50'
         }`}
         style={{
-          background: `linear-gradient(135deg, ${service.color})`,
+          background: `linear-gradient(135deg, ${service.color})`;
           transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
       />
       
@@ -135,7 +141,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <motion.div
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
                 animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity}}
+                transition={{ duration: 2, repeat: Infinity }}
               >
                 POPULAR
               </motion.div>
@@ -255,5 +261,35 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               onClick={() => window.open(service.link, '_blank')}
             >
               <span>Learn More</span>
-              <ExternalLink className = $2;
-export default UltraAdvancedServiceCard,
+              <ExternalLink className="w-4 h-4" />
+            </motion.button>
+            
+            <motion.button
+              className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
+                isExpanded 
+                  ? 'border-gray-600 text-gray-400' 
+                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'
+              }`}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              {isExpanded ? 'Show Less' : 'Details'}
+            </motion.button>
+          </div>
+
+          {/* Expand/Collapse Indicator */}
+          <motion.div
+            className="flex justify-center mt-4"
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ArrowRight className="w-5 h-5 text-gray-400" />
+          </motion.div>
+        </div>
+      </div>
+    </motion.div>
+  )
+};
+
+export default UltraAdvancedServiceCard;

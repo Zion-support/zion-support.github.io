@@ -4,19 +4,21 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react';
+
 export default function AboutPage() {
-	const contactInfo = $2;
+	const contactInfo = {
+		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	},
+	};
 
 	const pillars = [
-		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' },
-		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' },
+		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' };
+		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' };
 		{ title: 'Quantum R&D', icon: <Cpu className="w-6 h-6" />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
 		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
-	],
+	];
 
 	return (
 		<UltraFuturisticBackground variant="holographic" intensity="high">
@@ -100,7 +102,9 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 export default function AboutPage() {
-  const values = $2;
+  const values = [
+    {
+      icon: '🚀',
       title: 'Innovation',
       description: 'Constantly pushing boundaries and exploring new frontiers in technology',
       color: 'text-cyan-400',
@@ -118,14 +122,16 @@ export default function AboutPage() {
       color: 'text-green-400',
       gradient: 'from-green-400 to-emerald-500'}],
 
-  const services = $2;
-      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.',
+  const services = [
+    {
+      title: 'AI Development',
+      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.';
       icon: '🧠',
       color: 'text-cyan-400',
       gradient: 'from-cyan-400 to-blue-500'},
     {
       title: 'Automation Systems',
-      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.',
+      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.';
       icon: '⚙️',
       color: 'text-fuchsia-400',
       gradient: 'from-fuchsia-400 to-purple-500'}],
@@ -136,11 +142,12 @@ export default function AboutPage() {
     { number: '24/7', label: 'Support', color: 'text-green-400' },
     { number: '99.9%', label: 'SLA', color: 'text-blue-400' }],
 
-  const contactInfo = $2;
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   return (
       {/* Mission & Vision */}
@@ -271,7 +278,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button href="/contact" size="lg" className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow">Get in Touch</Button>
-            <Button href="/services" variant="outline" size="lg" className="border-white text-white hover: bg: white hover:text-cursor-blue shadow-2xl">Explore Services</Button>
+            <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl">Explore Services</Button>
           </div>
         </div>
 

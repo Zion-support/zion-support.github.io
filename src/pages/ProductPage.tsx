@@ -9,34 +9,37 @@ import { SEO } from '@/components/SEO';
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function ProductPage() {
 
-  const router = useRouter($2);
-  const { id: rawId} = router.query,
-  const id = $2;
+  const router = useRouter();
+  const { id: rawId } = router.query,
+  const id = typeof rawId === 'string' ? rawId : undefined;
   const [product, setProduct] = useState(
-    NEW_PRODUCTS.find((p) => p.id = $2;
-  const { items, dispatch } = useCart($2);
-  const [adding, setAdding] = useState($2);
+    NEW_PRODUCTS.find((p) => p.id === id) || null
+  );
+  const { items, dispatch } = useCart();
+  const [adding, setAdding] = useState(false);
+
   useEffect(() => {
     // Update product if id changes and is available from router.query
     if (id) {
-      const foundProduct = $2;
+      const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);
       setProduct(foundProduct || null)
     }
-  }, [id]),
+  }, [id]);
 
   useEffect(() => {
-    const fetchProduct = $2;
+    const fetchProduct = async () => {
+      if (!id) return;
       try {
-        const res = await fetch($2);
+        const res = await fetch(`/api/products/${id}`);
         if (res.ok) {
-          const data = await res.json($2);
+          const data = await res.json();
           setProduct(data)
         }
       } catch (err) {
         // Fail silently and fall back to local data
-        logErrorToProduction('Error fetching product', { data: err})
+        logErrorToProduction('Error fetching product', { data: err })
       }
-    },
+    };
 
     // Only fetch if id is available (from router)
     if (id) {
@@ -52,13 +55,18 @@ export default function ProductPage() {
     return <div className="p-6 text-white">Product not found</div>
   }
 
-  const inCart = items.some($2);
-  const handleAdd = $2;
-    setAdding($2);
-    dispatch($2);
-    toast.success($2);
+  const inCart = items.some(i => i.id === product.id);
+
+  const handleAdd = () => {
+    if (inCart) return;
+    setAdding(true);
+    dispatch({
+      type: 'ADD_ITEM',
+      payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
+    });
+    toast.success(`1× ${product.title} added`);
     setTimeout(() => setAdding(false), 500)
-  },
+  };
 
   return (
     <>
@@ -86,4 +94,3 @@ export default function ProductPage() {
     </>
   )
 }
-;

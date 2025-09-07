@@ -7,65 +7,68 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
 import './video-call.css';
 interface Participant {
-  id: string;
-  name: string;
-  avatar?: string,
-  isMuted?: boolean,
-  isVideoEnabled?: boolean,
-  isScreenSharing?: boolean,
+  id: string,
+  name: string,
+  avatar?: string;
+  isMuted?: boolean;
+  isVideoEnabled?: boolean;
+  isScreenSharing?: boolean;
   isHost?: boolean
 }
 
 interface VideoCallRoomProps {
-  roomId: string;
-  participants?: Participant[],
-  onLeave?: () => void,
-  onToggleMute?: (isMuted: boolean) => void;
-  onToggleVideo?: (isEnabled: boolean) => void;
-  onToggleScreenShare?: (isSharing: boolean) => void;
-  className?: string,
+  roomId: string,
+  participants?: Participant[];
+  onLeave?: () => void;
+  onToggleMute?: (isMuted: boolean) => void,
+  onToggleVideo?: (isEnabled: boolean) => void,
+  onToggleScreenShare?: (isSharing: boolean) => void,
+  className?: string
 }
 
-export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
-  roomId,
-  participants = $2;
-  onLeave,
-  onToggleMute,
-  onToggleVideo,
-  onToggleScreenShare,
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
+  roomId;
+  participants = [], 
+  onLeave;
+  onToggleMute;
+  onToggleVideo;
+  onToggleScreenShare;
   className 
 }) => {
-  const [isMuted, setIsMuted] = useState($2);
-  const [isVideoEnabled, setIsVideoEnabled] = useState($2);
-  const [isScreenSharing, setIsScreenSharing] = useState($2);
-  const [isAudioOnly, setIsAudioOnly] = useState($2);
-  const [callDuration, setCallDuration] = useState($2);
+  const [isMuted, setIsMuted] = useState(false);
+  const [isVideoEnabled, setIsVideoEnabled] = useState(true);
+  const [isScreenSharing, setIsScreenSharing] = useState(false);
+  const [isAudioOnly, setIsAudioOnly] = useState(false);
+  const [callDuration, setCallDuration] = useState(0);
+
   // Call duration timer
   React.useEffect(() => {
     const timer = setInterval(() => {
       setCallDuration(prevDuration => prevDuration + 1)
-    }, 1000),
+    }, 1000);
     
     return () => clearInterval(timer)
-  }, []),
+  }, []);
 
-  const formatDuration = (seconds: number) => {,
-    const hrs = Math.floor(seconds / 3600),
-    const mins = Math.floor((seconds % 3600) / 60),
-    const secs = seconds % 60,
+  const formatDuration = (seconds: number) => {
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
     
     return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`
-  },
+  };
 
-  const handleToggleMute = $2;
-    setIsMuted($2);
+  const handleToggleMute = () => {
+    const newMuteState = !isMuted;
+    setIsMuted(newMuteState);
     if (onToggleMute) {
       onToggleMute(newMuteState)
     }
-  },
+  };
 
-  const handleToggleVideo = $2;
-    setIsVideoEnabled($2);
+  const handleToggleVideo = () => {
+    const newVideoState = !isVideoEnabled;
+    setIsVideoEnabled(newVideoState);
     if (onToggleVideo) {
       onToggleVideo(newVideoState)
     }
@@ -74,26 +77,32 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (newVideoState) {
       setIsAudioOnly(false)
     }
-  },
+  };
 
-  const handleToggleScreenShare = $2;
-    setIsScreenSharing($2);
+  const handleToggleScreenShare = () => {
+    const newScreenShareState = !isScreenSharing;
+    setIsScreenSharing(newScreenShareState);
     if (onToggleScreenShare) {
       onToggleScreenShare(newScreenShareState)
     }
-  },
+  };
 
   const handleToggleAudioOnly = () => {
-    setIsAudioOnly($2);
+    setIsAudioOnly(!isAudioOnly);
     if (!isAudioOnly) {
-      setIsVideoEnabled($2);
+      setIsVideoEnabled(false);
       if (onToggleVideo) {
         onToggleVideo(false)
       }
     }
-  },
+  };
 
-  const handleLeaveCall = $2;
+  const handleLeaveCall = () => {
+    if (onLeave) {
+      onLeave()
+    }
+  };
+
   return (
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>
       <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
@@ -116,7 +125,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
       <CardContent className="p-0">
         <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {participants.length > 0 ? (
-            participants.map((participant) => (,
+            participants.map((participant) => (
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
@@ -211,5 +220,4 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
       </CardContent>
     </Card>
   )
-},
-;
+};

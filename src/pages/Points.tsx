@@ -10,53 +10,56 @@ import { formatDistanceToNow } from 'date-fns';
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
 export default function PointsPage() {
-  const { isAuthenticated, user } = useAuth($2);
-  const { ledger, balance, loading, fetchLedger } = usePoints($2);
-  const [loginOpen, setLoginOpen] = useState($2);
-  const [redeeming, setRedeeming] = useState($2);
-  async function handleRedeem(reward: { id: string, cost: number, title: string}) {
-    if (!user?.id) return,
-    setRedeeming($2);
+  const { isAuthenticated, user } = useAuth();
+  const { ledger, balance, loading, fetchLedger } = usePoints();
+  const [loginOpen, setLoginOpen] = useState(false);
+  const [redeeming, setRedeeming] = useState(false);
+
+  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
+    if (!user?.id) return;
+    setRedeeming(true);
     try {
       await fetch('/api/points/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
-      }),
+      });
       await fetchLedger()
     } finally {
       setRedeeming(false)
     }
   }
 
-  const earningOpportunities = $2;
+  const earningOpportunities = [
+    {
+      icon: <Users className="h-5 w-5" />,
       title: "Sign Up & Profile Setup",
       description: "Complete your profile and verify your email",
       points: "50 pts",
-      action: isAuthenticated ? "✓ Completed" : "Get Started",
-    },
+      action: isAuthenticated ? "✓ Completed" : "Get Started"
+    };
     {
-      icon: <ShoppingBag className = $2;
+      icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
-      action: "Browse Marketplace",
-    },
+      action: "Browse Marketplace"
+    };
     {
-      icon: <MessageSquare className = $2;
+      icon: <MessageSquare className="h-5 w-5" />,
       title: "Community Engagement",
       description: "Post in the community or comment on discussions",
       points: "25 pts per post",
-      action: "Join Community",
-    },
+      action: "Join Community"
+    };
     {
-      icon: <Users className = $2;
+      icon: <Users className="h-5 w-5" />,
       title: "Refer Friends",
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
-      action: "Share Referral Link",
+      action: "Share Referral Link"
     }
-  ],
+  ];
 
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
@@ -64,7 +67,7 @@ export default function PointsPage() {
     { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },
     { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' },
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-  ],
+  ];
 
   if (!isAuthenticated) {
     return (
@@ -92,7 +95,7 @@ export default function PointsPage() {
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">,
+              <CardContent className="space-y-4">
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                     <div className="text-primary mt-1">{opportunity.icon}</div>
@@ -176,7 +179,7 @@ export default function PointsPage() {
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">,
+          <CardContent className="space-y-4">
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                 <div className="text-primary mt-1">{opportunity.icon}</div>
@@ -245,7 +248,7 @@ export default function PointsPage() {
                     <div>
                       <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
                       <p className="text-xs text-muted-foreground">
-                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true})}
+                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
                       </p>
                     </div>
                     <Badge
@@ -283,4 +286,3 @@ export default function PointsPage() {
     </div>
   )
 }
-;

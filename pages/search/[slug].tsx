@@ -15,24 +15,26 @@ import { TALENT_PROFILES } from '@/data/talentData';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { useDebounce } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+
+
 interface BaseSearchResult {
   id: string,
   title: string,
-  description?: string,
+  description?: string;
   slug: string,
-  image?: string,
+  image?: string;
   author?: {
     name: string,
     avatar?: string
-  },
-  tags?: string[],
-  category?: string,
+  };
+  tags?: string[];
+  category?: string;
   date?: string
 }
 
 interface ProductSearchResult extends BaseSearchResult {
   type: 'product' | 'equipment',
-  price?: number,
+  price?: number;
   rating?: number
 }
 
@@ -49,33 +51,45 @@ interface CategorySearchResult extends BaseSearchResult {
   type: 'category'
 }
 
-type SearchResult = $2;
+type SearchResult = ProductSearchResult | TalentSearchResult | BlogSearchResult | CategorySearchResult;
+
 // Type guard functions
-const hasPrice = $2;
-const hasRating = $2;
+const hasPrice = (result: SearchResult): result is ProductSearchResult => 
+  result.type === 'product' || result.type === 'equipment';
+
+const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
+  result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
+
 interface SearchResultsPageProps {
   initialResults: SearchResult[],
   query: string,
   slug: string,
-  totalCount: number}
+  totalCount: number
+}
 
 interface OfflineFilters {
-  sortBy?: string,
-  category?: string,
-  minPrice?: number,
-  maxPrice?: number,
+  sortBy?: string;
+  category?: string;
+  minPrice?: number;
+  maxPrice?: number;
   minRating?: number
 }
 
 function offlineSearch(
   query: string,
-  page = $2;
-  limit = $2;
+  page = 1;
+  limit = 12;
   filters: OfflineFilters = {}
-): { results: SearchResult[], totalCount: number} {
-  const term = query.toLowerCase().trim($2);
-  const match = (text?: string) => text?.toLowerCase().includes($2);
-  const productResults = $2;
+): { results: SearchResult[], totalCount: number } {
+  const term = query.toLowerCase().trim();
+  const match = (text?: string) => text?.toLowerCase().includes(term);
+
+  const productResults = MARKETPLACE_LISTINGS.filter(
+    (p) =>
+      match(p.title) ||
+      match(p.description) ||
+      match(p.category) ||
+      p.tags?.some((t) => match(t));
   ).map((p) => ({
     id: p.id,
     title: p.title,
@@ -87,12 +101,17 @@ function offlineSearch(
     rating: p.rating,
     author: p.author
       ? { name: p.author.name, avatar: p.author.avatarUrl }
-      : undefined,
+      : undefined;
     tags: p.tags,
     category: p.category,
     date: p.createdAt})),
 
-  const talentResults = $2;
+  const talentResults = TALENT_PROFILES.filter(
+    (t) =>
+      match(t.full_name) ||
+      match(t.professional_title) ||
+      match(t.bio) ||
+      t.skills?.some((s) => match(s));
   ).map((t) => ({
     id: t.id,
     title: t.full_name,
@@ -106,7 +125,12 @@ function offlineSearch(
     category: t.location,
     date: undefined})),
 
-  const blogResults = $2;
+  const blogResults = BLOG_POSTS.filter(
+    (b) =>
+      match(b.title) ||
+      match(b.excerpt) ||
+      match(b.content) ||
+      b.tags?.some((t) => match(t));
   ).map((b) => ({
     id: b.slug,
     title: b.title,
@@ -118,7 +142,7 @@ function offlineSearch(
     category: 'Blog',
     date: b.publishedDate})),
 
-  let all = [...productResults, ...talentResults, ...blogResults],
+  let all = [...productResults, ...talentResults, ...blogResults];
 
   if (filters.category) {
     all = all.filter(r => r.category === filters.category)
@@ -152,87 +176,96 @@ function offlineSearch(
     switch (filters.sortBy) {
       case 'price_asc':
         all.sort((a, b) => {
-          const aPrice = $2;
-          const bPrice = $2;
+          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
+          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
           return aPrice - bPrice
-        }),
-        break,
+        });
+        break;
       case 'price_desc':
         all.sort((a, b) => {
-          const aPrice = $2;
-          const bPrice = $2;
+          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
+          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
           return bPrice - aPrice
-        }),
-        break,
+        });
+        break;
       case 'rating':
         all.sort((a, b) => {
-          const aRating = $2;
-          const bRating = $2;
+          const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
+          const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
           return bRating - aRating
-        }),
-        break,
-      default: break}
+        });
+        break;
+      default: break
+    }
   } else {
     all.sort((a, b) => a.title.localeCompare(b.title))
   }
-  const start = $2;
-  const paginated = all.slice($2);
+  const start = (page - 1) * limit;
+  const paginated = all.slice(start, start + limit);
   return { results: paginated, totalCount: all.length }
 }
 
 export default function SearchResultsPage({
-  initialResults,
-  query,
-  slug,
+  initialResults;
+  query;
+  slug;
   totalCount}: SearchResultsPageProps) {
-  const router = useRouter($2);
-  const { isAuthenticated } = useAuth($2);
-  const [results, setResults] = useState<SearchResult[]>(initialResults),
-  const [loading, setLoading] = useState($2);
-  const [searchQuery, setSearchQuery] = useState($2);
-  const debouncedQuery = useDebounce($2);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [currentPage, setCurrentPage] = useState($2);
-  const [sortBy, setSortBy] = useState($2);
-  const [categoryFilter, setCategoryFilter] = useState($2);
-  const [minPrice, setMinPrice] = useState($2);
-  const [maxPrice, setMaxPrice] = useState($2);
-  const [minRating, setMinRating] = useState($2);
-  const [totalResults, setTotalResults] = useState($2);
+  const router = useRouter();
+  const { isAuthenticated } = useAuth();
+  const [results, setResults] = useState<SearchResult[]>(initialResults);
+  const [loading, setLoading] = useState(false);
+  const [searchQuery, setSearchQuery] = useState(query);
+  const debouncedQuery = useDebounce(searchQuery, 300);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [sortBy, setSortBy] = useState('relevance');
+  const [categoryFilter, setCategoryFilter] = useState('all');
+  const [minPrice, setMinPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState('');
+  const [minRating, setMinRating] = useState('');
+  const [totalResults, setTotalResults] = useState(totalCount);
+
   // Fetch search results
   const fetchResults = async (searchTerm: string, page = 1) => {
     try {
-      setLoading($2);
-      logInfo($2);
-      const params = new URLSearchParams($2);
+      setLoading(true);
+      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`),
+
+      const params = new URLSearchParams({
+        query: searchTerm,
+        page: String(page),
         limit: '12',
         sort: sortBy}),
-      if (categoryFilter !== 'all') params.append($2);
-      if (minPrice) params.append($2);
-      if (maxPrice) params.append($2);
-      if (minRating) params.append($2);
-      const response = $2;
+      if (categoryFilter !== 'all') params.append('category', categoryFilter);
+      if (minPrice) params.append('minPrice', minPrice);
+      if (maxPrice) params.append('maxPrice', maxPrice);
+      if (minRating) params.append('minRating', minRating);
+
+      const response = await fetch(`/api/search?${params.toString()}`);
+
       if (!response.ok) {
         throw new Error(`Search API error: ${response.status}`)
       }
 
-      const data = await response.json($2);
-      logInfo($2);
-      setTotalResults($2);
+      const data = await response.json();
+      logInfo('Search results received:', { data: data }),
+
+      setTotalResults(data.totalCount || data.results?.length || 0);
+
       if (page === 1) {
         setResults(data.results || [])
       } else {
         setResults((prev) => [...prev, ...(data.results || [])])
       }
     } catch (error) {
-      logErrorToProduction($2);
+      logErrorToProduction('Error fetching search results:', { data: error }),
       const offline = offlineSearch(searchTerm, page, 12, {
-        sortBy,
+        sortBy;
         category: categoryFilter !== 'all' ? categoryFilter : undefined,
         minPrice: minPrice ? Number(minPrice) : undefined,
         maxPrice: maxPrice ? Number(maxPrice) : undefined,
         minRating: minRating ? Number(minRating) : undefined}),
-      setTotalResults($2);
+      setTotalResults(offline.totalCount);
       if (page === 1) {
         setResults(offline.results)
       } else {
@@ -241,48 +274,83 @@ export default function SearchResultsPage({
     } finally {
       setLoading(false)
     }
-  },
+  };
 
   // Handle search input change
   const handleSearch = (newQuery: string) => {
-    setSearchQuery($2);
+    setSearchQuery(newQuery);
     if (newQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {
         shallow: true}),
       setCurrentPage(1)
     }
-  },
+  };
 
   useEffect(() => {
     if (debouncedQuery.trim()) {
       fetchResults(debouncedQuery, 1)
     } else {
-      setResults($2);
+      setResults([]);
       setTotalResults(0)
     }
-  }, [debouncedQuery]),
+  }, [debouncedQuery]);
 
   // Load more results
-  const loadMore = $2;
-    setCurrentPage($2);
+  const loadMore = () => {
+    const nextPage = currentPage + 1;
+    setCurrentPage(nextPage);
     fetchResults(searchQuery, nextPage)
-  },
+  };
 
-  const categories = $2;
-  ),
+  const categories = Array.from(
+    new Set(results.map((r) => r.category).filter(Boolean));
+  );
 
-  const filteredResults = $2;
+  const filteredResults = results.filter((r) => {
+    if (
+      categoryFilter !== 'all' &&
+      categoryFilter &&
+      r.category !== categoryFilter
+    ) {
+      return false
+    }
+    if (minPrice && r.type === 'product') {
+      if ((r.price ?? 0) < Number(minPrice)) {
+        return false
+      }
+    }
+    if (maxPrice && r.type === 'product') {
+      if ((r.price ?? 0) > Number(maxPrice)) {
+        return false
+      }
+    }
+    if (minRating && (r.type === 'product' || r.type === 'talent')) {
+      if ((r.rating ?? 0) < Number(minRating)) {
+        return false
+      }
+    }
+    return true
+  });
+
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
-      if (!acc[result.type]) acc[result.type] = [],
-      acc[result.type]!.push($2);
+      if (!acc[result.type]) acc[result.type] = [];
+      acc[result.type]!.push(result);
       return acc
-    },
-    {} as Record<string, SearchResult[]>,
-  ),
+    };
+    {} as Record<string, SearchResult[]>;
+  );
 
-  const renderResultCard = $2;
+  const renderResultCard = (result: SearchResult) => {
+    switch (result.type) {
+      case 'product':
+      case 'equipment':
+        return (
+          <div key={result.id} data-testid="result-card">
+            <ProductCard
+              product={{
+                id: result.id,
                 name: result.title,
                 title: result.title,
                 description: result.description || '',
@@ -293,17 +361,20 @@ export default function SearchResultsPage({
                 tags: result.tags || [],
                 category: result.category || '',
                 currency: '$',
-                created_at: new Date().toISOString($2);
-                updated_at: new Date().toISOString($2);
+                created_at: new Date().toISOString(),
+                updated_at: new Date().toISOString(),
                 stock: (result as any).stock,
                 in_stock: ((result as any).stock || 0) > 0
               }}
             />
           </div>
-        ),
+        );
       case 'talent':
         return (
-          <div key = $2;
+          <div key={result.id} data-testid="result-card">
+            <TalentCard
+              talent={{
+                id: result.id,
                 user_id: result.id,
                 full_name: result.title,
                 professional_title: result.description || '',
@@ -315,12 +386,42 @@ export default function SearchResultsPage({
                 summary: result.description,
                 is_verified: false,
                 availability_type: 'available'}}
-              onViewProfile = $2;
+              onViewProfile={(id: string) => {
+                router.push(`/talent/${id}`)
+              }}
+              onRequestHire={(talent) => {
+                router.push(`/talent/${talent.id}?action=hire`)
+              }}
+              isAuthenticated={isAuthenticated}
+            />
+          </div>
+        );
       case 'category':
-        return($2);
-      default: return(
+        return (
+          <div key={result.id} data-testid="result-card">
+            <CategoryCard
+              title={result.title}
+              description={result.description || ''}
+              icon={result.image || '📁'}
+            />
+          </div>
+        );
+      default:
+        return (
           <div
-            key = $2;
+            key={result.id}
+            className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
+            data-testid="result-card"
+          >
+            <h3 className="font-semibold">{result.title}</h3>
+            <p className="text-gray-600 dark:text-gray-200">
+              {result.description}
+            </p>
+          </div>
+        )
+    }
+  };
+
   return (
     <>
       <SEO
@@ -475,41 +576,100 @@ export default function SearchResultsPage({
           {filteredResults.length > 0 && (
             <div className="space-y-8">
               {Object.entries(groupedResults).map(([type, typeResults]) => (
-                <div key = $2;
-  const slug = $2;
+                <div key={type}>
+                  <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize">
+                    {type}s ({typeResults.length})
+                  </h2>
+
+                  <div
+                    className={
+                      viewMode === 'grid'
+                        ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
+                        : 'space-y-4'
+                    }
+                  >
+                    {typeResults.map(renderResultCard)}
+                  </div>
+                </div>
+              ))}
+
+              {/* Load More Button */}
+              {results.length < totalResults && (
+                <div className="flex justify-center py-8">
+                  <Button
+                    onClick={loadMore}
+                    disabled={loading}
+                    className="flex items-center gap-2"
+                  >
+                    {loading ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                        Loading...
+                      </>
+                    ) : (
+                      'Load More Results'
+                    )}
+                  </Button>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  )
+}
+
+export const getServerSideProps: GetServerSideProps<
+  SearchResultsPageProps
+> = async (context: any) => {
+  const params = context.params;
+  const slug = params?.slug as string;
+
   // Convert slug back to query term
-  const query = slug ? slug.replace(/-/g, ' ') : '',
+  const query = slug ? slug.replace(/-/g, ' ') : '';
 
   try {
     // In production, replace with your actual API base URL
-    const apiBaseUrl = $2;
-    logInfo($2);
-    const response = $2;
-    ),
+    const apiBaseUrl =
+      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
 
-    let results = $2;
-    let totalCount = $2;
+    logInfo(`Fetching search results for slug: ${slug}, query: ${query}`),
+
+    const response = await fetch(
+      `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`;
+    );
+
+    let results = [];
+    let totalCount = 0;
+
     if (response.ok) {
-      const data = await response.json($2);
-      results = $2;
-      totalCount = $2;
+      const data = await response.json();
+      results = data.results || [];
+      totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`)
     } else {
-      logErrorToProduction($2);
-      const offline = offlineSearch($2);
-      results = $2;
-      totalCount = $2;
-        query,
-        slug,
+      logErrorToProduction(`Search API error: ${response.status} ${response.statusText}`),
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+      results = offline.results;
+      totalCount = offline.totalCount
+    }
+
+    return {
+      props: {
+        initialResults: results,
+        query;
+        slug;
         totalCount}}
   } catch (error) {
-    logErrorToProduction($2);
-    const offline = offlineSearch($2);
+    logErrorToProduction('Error fetching search results:', { data: error }),
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+
     return {
       props: {
         initialResults: offline.results,
-        query,
-        slug,
+        query;
+        slug;
         totalCount: offline.totalCount}}
   }
-},
+};

@@ -3,42 +3,53 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-  Search, Star, DollarSign, CheckCircle,
-  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,
+  Search, Star, DollarSign, CheckCircle;
+  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List;
   ChevronDown, Sparkles
-} from 'lucide-react',
+} from 'lucide-react';
 import { ultimate2026Services } from '../data/ultimate-2026-services';
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
 export default function Ultimate2026ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState($2);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('name'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const contactInfo = $2;
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   // Combine all services
-  const allServices = $2;
+  const allServices = [
+    ...ultimate2026Services;
     ...revolutionary2026Innovations
-  ],
+  ];
 
   // Dynamic category counts
-  const aiCount = $2;
-  const quantumCount = $2;
-  const enterpriseCount = $2;
-  const emergingCount = $2;
+  const aiCount = allServices.filter(service =>
+    service.category?.includes('AI') || service.category?.includes('Machine Learning')
+  ).length;
+  const quantumCount = allServices.filter(service =>
+    service.category?.includes('Quantum') || service.category?.includes('Space')
+  ).length;
+  const enterpriseCount = allServices.filter(service =>
+    service.category?.includes('Enterprise') || service.category?.includes('IT')
+  ).length;
+  const emergingCount = allServices.filter(service =>
+    service.category?.includes('Emerging') || service.category?.includes('Innovation')
+  ).length;
+
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount},
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount},
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount},
-    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount}
-  ],
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
+    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount }
+  ];
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
@@ -46,43 +57,56 @@ export default function Ultimate2026ServicesShowcase() {
     { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
-  ],
+  ];
 
   // Filter and sort services
-  const filteredServices = $2;
-      const matchesCategory = $2;
+  const filteredServices = useMemo(() => {
+    let filtered = allServices.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+
+      const matchesCategory = selectedCategory === 'all' ||
+        (selectedCategory === 'ai' && service.category.includes('AI')) ||
+        (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
+        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
+        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation')));
+
       const matchesPrice = selectedPriceRange === 'all' ||
         (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
         (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||
         (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||
-        (selectedPriceRange = $2;
+        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing');
+
       return matchesSearch && matchesCategory && matchesPrice
-    }),
+    });
 
     // Sort services
     switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name)),
-        break,
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        break;
       case 'price':
         filtered.sort((a, b) => {
-          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, '')),
-          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, '')),
+          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''));
+          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''));
           return priceA - priceB
-        }),
-        break,
+        });
+        break;
       case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
-        break,
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
+        break;
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating),
-        break,
-      default: break}
+        filtered.sort((a, b) => b.rating - a.rating);
+        break;
+      default: break
+    }
 
     return filtered
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
-  const featuredServices = allServices.filter(service => service.popular).slice($2);
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
+
   return (
     <>
       <Head>
@@ -107,8 +131,8 @@ export default function Ultimate2026ServicesShowcase() {
 
         <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            animate={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -117,7 +141,7 @@ export default function Ultimate2026ServicesShowcase() {
               <span className="text-6xl md:text-8xl">Innovations</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Discover revolutionary AI consciousness simulation, quantum neural interfaces, autonomous AI agents,
+              Discover revolutionary AI consciousness simulation, quantum neural interfaces, autonomous AI agents;
               and cutting-edge enterprise solutions that will transform your business in 2026 and beyond.
             </p>
 
@@ -190,8 +214,8 @@ export default function Ultimate2026ServicesShowcase() {
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Revolutionary Services</span>
@@ -205,8 +229,8 @@ export default function Ultimate2026ServicesShowcase() {
             {featuredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30}}
-                whileInView={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }} className="group relative">
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -263,8 +287,8 @@ export default function Ultimate2026ServicesShowcase() {
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               All <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Revolutionary Services</span>
@@ -353,8 +377,8 @@ export default function Ultimate2026ServicesShowcase() {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30}}
-                whileInView={{ opacity: 1, y: 0}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.05 }}
                 className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'}
               >
@@ -445,8 +469,8 @@ export default function Ultimate2026ServicesShowcase() {
 
           {filteredServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0}}
-              animate={{ opacity: 1}} className="text-center py-20">
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }} className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400">Try adjusting your search criteria or filters</p>
@@ -459,15 +483,15 @@ export default function Ultimate2026ServicesShowcase() {
       <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with 2026 Innovations?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing,
+              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing;
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
             </p>
 

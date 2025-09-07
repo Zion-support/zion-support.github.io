@@ -12,108 +12,111 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 const formSchema = z.object({
-  title: z.string().min($2);
+  title: z.string().min(1, "Title is required");
   isDefault: z.boolean()}),
 
-type FormValues = z.infer<typeof formSchema>,
+type FormValues = z.infer<typeof formSchema>;
 
-interface TemplateSaveFormProps {;
-  onCancel: () => void;
-  onComplete: () => void;
-  editTemplate?: ContractTemplate | null,
+interface TemplateSaveFormProps {
+  onCancel: () => void,
+  onComplete: () => void,
+  editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues
 }
 
 export function TemplateSaveForm({
-  onCancel,
-  onComplete,
-  editTemplate,
+  onCancel;
+  onComplete;
+  editTemplate;
   currentValues
 }: TemplateSaveFormProps) {
-  const [saving, setSaving] = useState($2);
-  const { createTemplate, updateTemplate } = useContractTemplates($2);
+  const [saving, setSaving] = useState(false);
+  const { createTemplate, updateTemplate } = useContractTemplates();
+  
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
-    defaultValues: {,
+    defaultValues: {
       title: editTemplate?.title || "",
       isDefault: editTemplate?.is_default || false}}),
   
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
-      return,
+      return
     }
-
+    
+    setSaving(true);
+    
+    try {
+      if (editTemplate) {
+        await updateTemplate.mutateAsync({
+          templateId: editTemplate.id,
+          title: values.title,
+          templateData: editTemplate.template_data,
+          isDefault: values.isDefault})
+      } else if (currentValues) {
+        await createTemplate.mutateAsync({
+          title: values.title,
+          templateData: currentValues,
+          isDefault: values.isDefault})
+      }
+      
+      onComplete()
+    } finally {
+      setSaving(false)
+    }
+  };
+  
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-
+          name="title"
+          render={({ field }: { field: ControllerRenderProps<FormValues, "title"> }) => (
+            <FormItem>
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder="Enter template name" />
               </FormControl>
               <FormMessage />
             </FormItem>
-
-            field: ControllerRenderProps<FormValues, 'title'>;
-          }) => (            <FormItem>;
-              <FormLabel>Template Name</FormLabel>;
-            field: ControllerRenderProps < FormValues, 'title'>;
-          }) => (            <FormItem>;
-              <FormLabel > Template Name</FormLabel>;
-
-              <FormControl>;
-                <Input {...field} placeholder='Enter template name' />;
-              </FormControl>;
-              <FormMessage />;
-
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name='is_default';
-
-          render={({
-            field
-          }: {
-
-            field: ControllerRenderProps<FormValues, 'isDefault'>;
-          }) => (;
-            <FormItem className='flex items-center justify-between'>;
-              <FormLabel className='cursor-pointer'>;
-                Set as default template;
-              </FormLabel>;
-              <FormControl>;
-
-                <Switch
-                  aria-label='Default template'
-                  checked={field && field.value}
-                  onCheckedChange={field && field.onChange}                />;
-
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
           )}
-
+        />
+        
+        <FormField
+          control={form.control}
+          name="isDefault"
+          render={({ field }: { field: ControllerRenderProps<FormValues, "isDefault"> }) => (
+            <FormItem className="flex items-center justify-between">
+              <FormLabel className="cursor-pointer">Set as default template</FormLabel>
+              <FormControl>
+                <Switch
+                  aria-label="Default template"
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        
+        <div className="flex gap-2 justify-end">
+          <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
           </Button>
-
+          <Button type="submit" disabled={saving}>
+            {saving ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
-
-  editTemplate ? "Update" : "Save" 
-}Template`) ;
-}</Button> </div> </form> </Form>) ;
-}"};
-
               `${editTemplate ? "Update" : "Save"} Template`
-
             )}
-          </Button>;
-        </div>;
-      </form>;
-
+          </Button>
+        </div>
+      </form>
+    </Form>
+  )
+}

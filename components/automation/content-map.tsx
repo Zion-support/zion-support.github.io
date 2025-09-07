@@ -1,24 +1,25 @@
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
-type Entry = { route: string, file: string},
+type Entry = { route: string, file: string },
 interface Report { generatedAt: string, totalPages: number, bySection: Record<string, number>, pages: Entry[] }
 
-type Props = $2;
+type Props = { report: Report | null },
+
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'publicautomationcontent-map.json'),
-    const raw = fs.readFileSync($2);
-    const data = JSON.parse($2);
-    return { props: { report: data}, revalidate: 21600}
+    const file = path.join(process.cwd(), 'publicautomationcontent-map.json');
+    const raw = fs.readFileSync(file, 'utf8');
+    const data = JSON.parse(raw);
+    return { props: { report: data }, revalidate: 21600 }
   } catch {
-    return { props: { report: null}, revalidate: 21600}
+    return { props: { report: null }, revalidate: 21600 }
   }
-},
+};
 
 export default function ContentMap({ report }: Props) {
-  if (!report) return <div>No content map yet. Check back later.</div>,
-  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]),
+  if (!report) return <div>No content map yet. Check back later.</div>;
+  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
   return (
     <div className="space-y-6">
       <header className="space-y-1">

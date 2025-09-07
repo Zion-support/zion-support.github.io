@@ -9,20 +9,20 @@ import { Loader2 } from 'lucide-react'
 import Link from 'next/link';
 import { ErrorState } from '@/components/jobs/applications';
 export default function EquipmentRecommendations() {
-  const { isAuthenticated, user } = useAuth($2);
-  const [listings, setListings] = useState<ProductListing[]>([]),
-  const [loading, setLoading] = useState<boolean>(false),
-  const [error, setError] = useState<boolean>(false),
+  const { isAuthenticated, user } = useAuth();
+  const [listings, setListings] = useState<ProductListing[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     if (isAuthenticated && user?.id) {
-      setLoading($2);
+      setLoading(true);
       fetchRecommendations(user.id)
         .then(setListings)
         .catch(() => setError(true))
         .finally(() => setLoading(false))
     }
-  }, [isAuthenticated, user]),
+  }, [isAuthenticated, user]);
 
   if (!isAuthenticated) {
     return (
@@ -50,7 +50,7 @@ export default function EquipmentRecommendations() {
       )}
       {error && <ErrorState error="Failed to load recommendations." />}
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-        {listings.map((listing) => (,
+        {listings.map((listing) => (
           <div key={listing.id} className="break-inside-avoid mb-4">
             <ProductListingCard listing={listing} />
           </div>
@@ -59,4 +59,3 @@ export default function EquipmentRecommendations() {
     </div>
   )
 }
-;

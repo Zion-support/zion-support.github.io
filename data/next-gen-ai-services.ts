@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface NextGenAIService {
   id: string,
   name: string,
@@ -30,13 +30,15 @@ export interface NextGenAIService {
     mobile: string,
     email: string,
     address: string,
-    website: string},
+    website: string
+  },
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number}
+  reviews: number
+}
 
 export const nextGenAIServices: NextGenAIService[] = [
   // Advanced AI & Neural Network Services
@@ -48,7 +50,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Revolutionary neural interface that directly connects human brains to quantum AI systems, enabling unprecedented cognitive enhancement, memory augmentation, and real-time learning acceleration.',
     features: [
-      'Direct neural signal processingQuantum AI cognitive enhancementReal-time memory augmentationNeural pattern recognitionCognitive performance optimizationBrain-computer interfaceQuantum neural networksAdvanced analytics dashboardAPI for research integration24/7 neural support center'
+      'Direct neural signal processingQuantum AI cognitive enhancementReal-time memory augmentationNeural pattern recognitionCognitive performance optimizationBrain-computer interfaceQuantum neural networksAdvanced analytics dashboard',
+      'API for research integration24/7 neural support center'
     ],
     popular: true,
     icon: '🧠',
@@ -80,7 +83,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-20',
     customers: 3,
     rating: 4.9,
-    reviews: 2},
+    reviews: 2
+  },
 
   // Quantum AI Content Factory
   {
@@ -91,7 +95,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Revolutionary content generation platform that uses quantum AI to create unlimited high-quality content across all media types. Generates content 1000x faster than traditional methods.',
     features: [
-      'Quantum AI content generationMulti-media content creationReal-time content optimizationBrand voice consistencySEO optimizationContent personalizationMulti-language supportPerformance analyticsAPI for integrations24/7 content generation'
+      'Quantum AI content generationMulti-media content creationReal-time content optimizationBrand voice consistencySEO optimizationContent personalizationMulti-language supportPerformance analytics',
+      'API for integrations24/7 content generation'
     ],
     popular: true,
     icon: '🏭',
@@ -123,7 +128,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-11-20',
     customers: 180,
     rating: 4.8,
-    reviews: 95},
+    reviews: 95
+  },
 
   // AI Autonomous Research Platform
   {
@@ -134,7 +140,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform that conducts autonomous research across all domains, making breakthrough discoveries without human intervention. Achieves research breakthroughs 100x faster than traditional methods.',
     features: [
-      'Autonomous research capabilitiesCross-domain knowledge synthesisBreakthrough discovery algorithmsReal-time research optimizationMulti-language researchCitation and validationResearch collaborationPerformance analyticsAPI for integration24/7 autonomous research'
+      'Autonomous research capabilitiesCross-domain knowledge synthesisBreakthrough discovery algorithmsReal-time research optimizationMulti-language researchCitation and validationResearch collaborationPerformance analytics',
+      'API for integration24/7 autonomous research'
     ],
     popular: true,
     icon: '🔬',
@@ -166,7 +173,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-10',
     customers: 12,
     rating: 4.9,
-    reviews: 6},
+    reviews: 6
+  },
 
   // Quantum AI Video Production Studio
   {
@@ -177,7 +185,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Revolutionary video production platform that uses quantum AI to create Hollywood-quality videos, movies, and content in minutes. Generates professional content 100x faster than traditional production.',
     features: [
-      'Quantum AI video generationHollywood-quality productionReal-time video editingAI script writingVoice synthesisMusic compositionSpecial effects generationMulti-format exportCollaboration tools24/7 video production'
+      'Quantum AI video generationHollywood-quality productionReal-time video editingAI script writingVoice synthesisMusic compositionSpecial effects generationMulti-format export',
+      'Collaboration tools24/7 video production'
     ],
     popular: true,
     icon: '🎬',
@@ -209,7 +218,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-11-25',
     customers: 45,
     rating: 4.7,
-    reviews: 23},
+    reviews: 23
+  },
 
   // AI Quantum Computing Platform
   {
@@ -220,7 +230,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum computing platform that makes quantum computing accessible to businesses and researchers. Features AI optimization and real-time quantum algorithm development.',
     features: [
-      'Quantum computing accessAI algorithm optimizationReal-time quantum developmentQuantum algorithm libraryPerformance optimizationQuantum error correctionMulti-qubit systemsAdvanced analyticsAPI for integration24/7 quantum operations'
+      'Quantum computing accessAI algorithm optimizationReal-time quantum developmentQuantum algorithm libraryPerformance optimizationQuantum error correctionMulti-qubit systemsAdvanced analytics',
+      'API for integration24/7 quantum operations'
     ],
     popular: true,
     icon: '⚛️',
@@ -252,7 +263,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-05',
     customers: 8,
     rating: 4.8,
-    reviews: 4},
+    reviews: 4
+  },
 
   // Neural Network Evolution Platform
   {
@@ -263,7 +275,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Revolutionary platform that creates self-evolving neural networks that continuously improve and adapt without human intervention. Achieves exponential performance improvements over time.',
     features: [
-      'Self-evolving neural networksContinuous improvementAdaptive learningPerformance optimizationAutomatic architecture updatesReal-time evolutionPerformance analyticsEvolution trackingAPI for integration24/7 evolution monitoring'
+      'Self-evolving neural networksContinuous improvementAdaptive learningPerformance optimizationAutomatic architecture updatesReal-time evolutionPerformance analyticsEvolution tracking',
+      'API for integration24/7 evolution monitoring'
     ],
     popular: true,
     icon: '🔄',
@@ -295,7 +308,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-15',
     customers: 6,
     rating: 4.9,
-    reviews: 3},
+    reviews: 3
+  },
 
   // Quantum AI Creativity Engine
   {
@@ -306,7 +320,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Revolutionary creativity engine that uses quantum AI to generate unlimited creative content across all domains. Creates original art, music, literature, and designs with human-level creativity.',
     features: [
-      'Quantum AI creativityMulti-domain generationOriginal content creationCreative optimizationStyle transferCollaboration toolsPerformance analyticsCreative analyticsAPI for integration24/7 creative generation'
+      'Quantum AI creativityMulti-domain generationOriginal content creationCreative optimizationStyle transferCollaboration toolsPerformance analyticsCreative analytics',
+      'API for integration24/7 creative generation'
     ],
     popular: true,
     icon: '🎨',
@@ -338,7 +353,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-11-30',
     customers: 75,
     rating: 4.6,
-    reviews: 38},
+    reviews: 38
+  },
 
   // New Innovative AI Services
   {
@@ -349,7 +365,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform that understands, processes, and responds to human emotions in real-time. Perfect for customer service, mental health applications, and human-computer interaction systems.',
     features: [
-      'Real-time emotion detection and analysisMulti-modal emotion recognition (voice, text, facial)Emotional response generationSentiment analysis and mood trackingEmotional intelligence training modulesAPI for third-party integrationsCompliance with privacy regulationsMulti-language emotional understandingCustom emotional response trainingAnalytics and reporting dashboard'
+      'Real-time emotion detection and analysisMulti-modal emotion recognition (voice, text, facial)Emotional response generationSentiment analysis and mood trackingEmotional intelligence training modulesAPI for third-party integrationsCompliance with privacy regulationsMulti-language emotional understanding',
+      'Custom emotional response trainingAnalytics and reporting dashboard'
     ],
     popular: true,
     icon: '🧠',
@@ -381,7 +398,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-12-01',
     customers: 150,
     rating: 4.9,
-    reviews: 89},
+    reviews: 89
+  },
 
   {
     id: 'ai-quantum-optimization-engine',
@@ -391,7 +409,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Breakthrough AI optimization engine that uses quantum-inspired algorithms to solve complex business problems. Achieve optimal solutions 1000x faster than traditional methods.',
     features: [
-      'Quantum-inspired optimization algorithmsMulti-objective optimizationReal-time constraint solvingMachine learning optimizationAPI for custom optimization problemsPerformance analytics dashboardCustom algorithm developmentIntegration with existing systemsScalable cloud infrastructure24/7 optimization support'
+      'Quantum-inspired optimization algorithmsMulti-objective optimizationReal-time constraint solvingMachine learning optimizationAPI for custom optimization problemsPerformance analytics dashboardCustom algorithm developmentIntegration with existing systems',
+      'Scalable cloud infrastructure24/7 optimization support'
     ],
     popular: true,
     icon: '⚡',
@@ -423,7 +442,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-11-15',
     customers: 75,
     rating: 4.8,
-    reviews: 52},
+    reviews: 52
+  },
 
   {
     id: 'ai-autonomous-decision-platform',
@@ -433,7 +453,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform that makes autonomous decisions for businesses. Handles complex decision-making processes with human-like reasoning and continuous learning capabilities.',
     features: [
-      'Autonomous decision-making engineContinuous learning and adaptationMulti-domain decision supportRisk assessment and mitigationDecision audit trailCustom decision rules engineReal-time decision analyticsIntegration with business systemsCompliance and governance tools24/7 autonomous operation'
+      'Autonomous decision-making engineContinuous learning and adaptationMulti-domain decision supportRisk assessment and mitigationDecision audit trailCustom decision rules engineReal-time decision analyticsIntegration with business systems',
+      'Compliance and governance tools24/7 autonomous operation'
     ],
     popular: true,
     icon: '🤖',
@@ -465,7 +486,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-10-01',
     customers: 45,
     rating: 4.9,
-    reviews: 38},
+    reviews: 38
+  },
 
   {
     id: 'ai-creative-intelligence-suite',
@@ -475,7 +497,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Comprehensive AI suite for creative professionals. Generate designs, content, and creative assets with AI assistance while maintaining human creativity and artistic vision.',
     features: [
-      'AI-powered design generationCreative content creationBrand identity developmentVisual asset generationCreative collaboration toolsStyle transfer and adaptationCreative analytics dashboardAPI for integrationsCustom creative trainingMulti-format output support'
+      'AI-powered design generationCreative content creationBrand identity developmentVisual asset generationCreative collaboration toolsStyle transfer and adaptationCreative analytics dashboardAPI for integrations',
+      'Custom creative trainingMulti-format output support'
     ],
     popular: true,
     icon: '🎨',
@@ -507,7 +530,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-09-15',
     customers: 320,
     rating: 4.7,
-    reviews: 245},
+    reviews: 245
+  },
 
   {
     id: 'ai-predictive-maintenance-platform',
@@ -517,7 +541,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Advanced AI platform for predictive maintenance of industrial equipment. Reduce downtime by 90% and maintenance costs by 70% through intelligent monitoring and prediction.',
     features: [
-      'IoT sensor integrationAI-powered failure predictionReal-time monitoring dashboardMaintenance scheduling automationPerformance analyticsCustom alert systemIntegration with CMMSMobile app supportPredictive analytics API24/7 monitoring support'
+      'IoT sensor integrationAI-powered failure predictionReal-time monitoring dashboardMaintenance scheduling automationPerformance analyticsCustom alert systemIntegration with CMMSMobile app support',
+      'Predictive analytics API24/7 monitoring support'
     ],
     popular: true,
     icon: '🔧',
@@ -549,7 +574,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-08-01',
     customers: 180,
     rating: 4.8,
-    reviews: 156},
+    reviews: 156
+  },
 
   // AI-Powered Predictive Analytics Platform
   {
@@ -560,7 +586,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Enterprise-grade predictive analytics platform that uses machine learning to forecast business trends, customer behavior, and market opportunities with unprecedented accuracy.',
     features: [
-      '95% prediction accuracy guaranteeReal-time data processingMulti-dimensional forecasting modelsCustom algorithm developmentAutomated insights generationRisk assessment engineScenario planning toolsExecutive dashboardAPI for real-time predictionsCompliance & audit trails'
+      '95% prediction accuracy guaranteeReal-time data processingMulti-dimensional forecasting modelsCustom algorithm developmentAutomated insights generationRisk assessment engineScenario planning toolsExecutive dashboard',
+      'API for real-time predictionsCompliance & audit trails'
     ],
     popular: true,
     icon: '🔮',
@@ -592,7 +619,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-02-15',
     customers: 89,
     rating: 4.9,
-    reviews: 67},
+    reviews: 67
+  },
 
   // AI-Powered Customer Experience Platform
   {
@@ -603,7 +631,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Comprehensive customer experience platform that uses AI to create personalized interactions across all touchpoints, dramatically improving customer satisfaction and loyalty.',
     features: [
-      '360-degree customer viewReal-time personalization enginePredictive customer behaviorOmnichannel experience orchestrationSentiment analysis & monitoringAutomated customer journey mappingA/B testing for experiencesCustomer feedback automationLoyalty program optimizationROI tracking & analytics'
+      '360-degree customer viewReal-time personalization enginePredictive customer behaviorOmnichannel experience orchestrationSentiment analysis & monitoringAutomated customer journey mappingA/B testing for experiencesCustomer feedback automation',
+      'Loyalty program optimizationROI tracking & analytics'
     ],
     popular: true,
     icon: '🎯',
@@ -635,7 +664,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-01-20',
     customers: 342,
     rating: 4.8,
-    reviews: 289},
+    reviews: 289
+  },
 
   // AI-Powered Supply Chain Optimization
   {
@@ -646,7 +676,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Advanced supply chain optimization platform that uses AI to predict demand, optimize inventory, and streamline logistics operations for maximum efficiency and cost savings.',
     features: [
-      'Demand forecasting with 90% accuracyInventory optimization algorithmsRoute optimization & logistics planningSupplier performance analyticsRisk assessment & mitigationReal-time supply chain monitoringAutomated reorder systemsCost optimization recommendationsSustainability trackingCompliance management'
+      'Demand forecasting with 90% accuracyInventory optimization algorithmsRoute optimization & logistics planningSupplier performance analyticsRisk assessment & mitigationReal-time supply chain monitoringAutomated reorder systemsCost optimization recommendations',
+      'Sustainability trackingCompliance management'
     ],
     popular: true,
     icon: '🚚',
@@ -678,7 +709,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-03-10',
     customers: 67,
     rating: 4.9,
-    reviews: 45},
+    reviews: 45
+  },
 
   // AI-Powered Financial Trading Platform
   {
@@ -689,7 +721,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Professional-grade AI trading platform that uses machine learning to analyze market data, identify opportunities, and execute trades automatically with high accuracy.',
     features: [
-      '85% win rate guaranteeReal-time market analysisMulti-strategy trading algorithmsRisk management systemsPortfolio optimizationBacktesting & simulationReal-time performance monitoringCustom strategy developmentMulti-exchange supportCompliance & audit tools'
+      '85% win rate guaranteeReal-time market analysisMulti-strategy trading algorithmsRisk management systemsPortfolio optimizationBacktesting & simulationReal-time performance monitoringCustom strategy development',
+      'Multi-exchange supportCompliance & audit tools'
     ],
     popular: true,
     icon: '📈',
@@ -721,7 +754,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-02-01',
     customers: 23,
     rating: 4.9,
-    reviews: 18},
+    reviews: 18
+  },
 
   // AI-Powered Healthcare Diagnostics
   {
@@ -732,7 +766,8 @@ export const nextGenAIServices: NextGenAIService[] = [
     period: '/month',
     description: 'Advanced healthcare diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.',
     features: [
-      '95% diagnostic accuracyMulti-modality image analysisPatient data integrationTreatment recommendation engineRisk assessment algorithmsClinical decision supportAutomated reportingHIPAA complianceIntegration with EMR systemsContinuous learning algorithms'
+      '95% diagnostic accuracyMulti-modality image analysisPatient data integrationTreatment recommendation engineRisk assessment algorithmsClinical decision supportAutomated reportingHIPAA compliance',
+      'Integration with EMR systemsContinuous learning algorithms'
     ],
     popular: true,
     icon: '🏥',
@@ -764,5 +799,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-01-10',
     customers: 45,
     rating: 4.9,
-    reviews: 34}
+    reviews: 34
+  }
 ],

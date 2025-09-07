@@ -15,9 +15,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export default function TenantOnboarding() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("company"),
-  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     brand_name: "",
     subdomain: "",
@@ -27,41 +27,43 @@ export default function TenantOnboarding() {
     company_size: "",
     industry: "",
     custom_domain: "",
-    is_co_branded: true,
-  }),
+    is_co_branded: true
+  });
   
   // Check if user has admin role
-  const isAdmin = $2;
+  const isAdmin = user?.role === "admin";
+  
   if (!isAdmin) {
     return // Use router.push('/unauthorized') or redirect in getServerSideProps
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
-    const { name, value } = e.target,
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }))
-  },
+  };
   
-  const handleSelectChange = (name: string, value: string) => {,
+  const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }))
-  },
+  };
   
-  const handleSwitchChange = (name: string, checked: boolean) => {,
+  const handleSwitchChange = (name: string, checked: boolean) => {
     setFormData(prev => ({ ...prev, [name]: checked }))
-  },
+  };
   
-  const handleSubmit = async (e: React.FormEvent) => {,
-    e.preventDefault(),
-    setIsSubmitting(true),
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
     
     try {
       // Generate subdomain if not provided
-      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace($2);
+      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      
       // Create landing page copy
-      const landingPageCopy = {;
-        headline: "AI Hiring Assistant";
+      const landingPageCopy = {
+        headline: "AI Hiring Assistant",
         subtitle: `Find the best talent for your ${formData.industry || "company"}`,
-        cta: "Get Started",
-      },
+        cta: "Get Started"
+      };
       
       // Submit to Supabase
       const { data, error } = await supabase
@@ -77,13 +79,17 @@ export default function TenantOnboarding() {
           is_active: true,
           account_manager_id: user.id,
           dns_verified: false,
-          email_template_override: null,
+          email_template_override: null
         })
         .select('id, brand_name, subdomain')
-        .single($2);
-      if (error) throw error,
+        .single();
       
-      toast.success($2);
+      if (error) throw error;
+      
+      toast.success("Tenant created successfully!", {
+        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
+      });
+      
       // Reset form
       setFormData({
         brand_name: "",
@@ -94,18 +100,18 @@ export default function TenantOnboarding() {
         company_size: "",
         industry: "",
         custom_domain: "",
-        is_co_branded: true,
+        is_co_branded: true
       })
       
-    } catch (error: any) {,
+    } catch (error: any) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' }),
       toast.error("Failed to create tenant", {
-        description: error.message,
-      });
+        description: error.message
+      })
     } finally {
       setIsSubmitting(false)
     }
-  },
+  };
 
   return (
     <>
@@ -114,7 +120,7 @@ export default function TenantOnboarding() {
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
       />
       <Header />
-      <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm: px-6 lg:px-8">
+      <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col space-y-6">
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Tenant Onboarding</h1>
@@ -129,8 +135,8 @@ export default function TenantOnboarding() {
               <CardDescription>
                 Configure the branding and details for the new white-label tenant.
               </CardDescription>
-            </CardHeader>,
-            <CardContent>,
+            </CardHeader>
+            <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                   <TabsList className="mb-4 grid grid-cols-3 w-full">
@@ -138,6 +144,7 @@ export default function TenantOnboarding() {
                     <TabsTrigger value="branding">Branding</TabsTrigger>
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>
                   </TabsList>
+                  
                   <TabsContent value="company" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="brand_name">Company Name</Label>
@@ -150,6 +157,7 @@ export default function TenantOnboarding() {
                         required
                       />
                     </div>
+                    
                     <div className="space-y-2">
                       <Label htmlFor="industry">Industry</Label>
                       <Select 
@@ -172,6 +180,7 @@ export default function TenantOnboarding() {
                         </SelectContent>
                       </Select>
                     </div>
+                    
                     <div className="space-y-2">
                       <Label htmlFor="company_size">Company Size</Label>
                       <Select 
@@ -193,7 +202,7 @@ export default function TenantOnboarding() {
                       </Select>
                     </div>
                   </TabsContent>
-
+                  
                   <TabsContent value="branding" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="logo_url">Logo URL</Label>
@@ -208,13 +217,14 @@ export default function TenantOnboarding() {
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended)
                       </p>
                     </div>
+                    
                     <div className="space-y-2">
                       <Label htmlFor="primary_color">Primary Brand Color</Label>
                       <div className="flex items-center gap-2">
                         <Input
                           id="primary_color"
                           name="primary_color"
-                          type="color",
+                          type="color"
                           value={formData.primary_color}
                           onChange={handleInputChange}
                           className="w-12 p-1 h-10"
@@ -227,6 +237,7 @@ export default function TenantOnboarding() {
                         />
                       </div>
                     </div>
+                    
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
                       <Select 
@@ -246,6 +257,7 @@ export default function TenantOnboarding() {
                         </SelectContent>
                       </Select>
                     </div>
+                    
                     <div className="flex items-center justify-between">
                       <div className="space-y-0.5">
                         <Label htmlFor="is_co_branded">Co-branding</Label>
@@ -260,6 +272,7 @@ export default function TenantOnboarding() {
                       />
                     </div>
                   </TabsContent>
+                  
                   <TabsContent value="domain" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="subdomain">Subdomain</Label>
@@ -279,6 +292,7 @@ export default function TenantOnboarding() {
                         Leave blank to auto-generate from company name
                       </p>
                     </div>
+                    
                     <div className="space-y-2">
                       <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>
                       <Input
@@ -294,7 +308,7 @@ export default function TenantOnboarding() {
                     </div>
                   </TabsContent>
                 </Tabs>
-
+                
                 <div className="flex justify-end space-x-2">
                   <Button type="button" variant="outline" onClick={() => window.history.back()}>
                     Cancel
@@ -311,4 +325,3 @@ export default function TenantOnboarding() {
     </>
   )
 }
-;

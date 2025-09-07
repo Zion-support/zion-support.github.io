@@ -13,19 +13,19 @@ import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-  const router = useRouter($2);
-  const profileId = $2;
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState($2);
-  const [error, setError] = useState<string | null>(null),
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchProfile = async () => {
-      setIsLoading($2);
-      setError($2);
+      setIsLoading(true);
+      setError(null);
       try {
         if (!profileId) {
-          setError($2);
+          setError("Profile ID is missing.");
           return
         }
 
@@ -33,19 +33,20 @@ export default function ProfileDetail() {
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-          .single($2);
+          .single();
+
         if (error) {
           throw new Error(error.message)
         }
 
         if (!data) {
-          setError($2);
+          setError("Profile not found.");
           return
         }
 
         setProfileData(data)
-      } catch (err: any) {,
-        setError(err.message || "Failed to fetch profile."),
+      } catch (err: any) {
+        setError(err.message || "Failed to fetch profile.");
         toast({
           title: "Error",
           description: err.message || "Failed to fetch profile.",
@@ -53,10 +54,10 @@ export default function ProfileDetail() {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
 
     fetchProfile()
-  }, [profileId]),
+  }, [profileId]);
 
   if (isLoading) {
     return (
@@ -92,7 +93,7 @@ export default function ProfileDetail() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
           {/* Main Content */}
-          <div className="col-span-12 lg:col-span-8">,
+          <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -156,7 +157,7 @@ export default function ProfileDetail() {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {profileData.skills?.map((skill: string, index: number) => (,
+                  {profileData.skills?.map((skill: string, index: number) => (
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>
                   )) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>
@@ -170,7 +171,7 @@ export default function ProfileDetail() {
               </CardHeader>
               <CardContent>
                 {profileData.experience ? (
-                  profileData.experience.map((exp: any, index: number) => (,
+                  profileData.experience.map((exp: any, index: number) => (
                     <div key={index} className="mb-4">
                       <h4 className="font-bold text-white">{exp.title}</h4>
                       <p className="text-zion-cyan">{exp.company}</p>
@@ -193,14 +194,14 @@ export default function ProfileDetail() {
                 {profileData.portfolio_links ? (
                   <div className="flex flex-col gap-3">
                     {profileData.portfolio_links.map((link: any, index: number) => (
-                      <a,
+                      <a
                         key={index}
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
-                        <LinkIcon className="h-4 w-4" />,
+                        <LinkIcon className="h-4 w-4" />
                         {link.title || link.url}
                       </a>
                     ))}
@@ -215,8 +216,11 @@ export default function ProfileDetail() {
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
-              talentProfile={{,
-                id: profileData?.id || '', full_name: profileData?.full_name || '', professional_title: profileData?.professional_title || '', hourly_rate: profileData?.hourly_rate || 0,
+              talentProfile={{
+                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
+                professional_title: profileData?.professional_title || '',
+                hourly_rate: profileData?.hourly_rate || 0
               }}
             />
             {/* Contact Information */}
@@ -241,7 +245,7 @@ export default function ProfileDetail() {
                     <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
                       Website
                     </a>
-                  </div>,
+                  </div>
                 )}
               </div>
             </div>
@@ -261,7 +265,7 @@ export default function ProfileDetail() {
                   >
                     <Github className="h-4 w-4" />
                     GitHub
-                  </a>,
+                  </a>
                 )}
                 {profileData.twitter_url && (
                   <a
@@ -274,7 +278,7 @@ export default function ProfileDetail() {
                   >
                     <Twitter className="h-4 w-4" />
                     Twitter
-                  </a>,
+                  </a>
                 )}
                 {profileData.linkedin_url && (
                   <a
@@ -287,7 +291,7 @@ export default function ProfileDetail() {
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
-                  </a>,
+                  </a>
                 )}
               </div>
             </div>
@@ -297,4 +301,3 @@ export default function ProfileDetail() {
     </>
   )
 }
-;

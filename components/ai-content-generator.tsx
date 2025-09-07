@@ -4,53 +4,57 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
 export default function AIContentGeneratorPage() {
-  const features = $2;
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8 text-white" />,
       title: 'AI-Powered Content Creation',
-      description: 'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.',
+      description: 'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.';
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'},
     {
-      icon: <Zap className = $2;
+      icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Real-time Generation',
       description: 'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.',
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       gradient: 'from-yellow-400 to-orange-500'},
     {
-      icon: <Shield className = $2;
+      icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Plagiarism-Free Content',
       description: 'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
-      icon: <BarChart3 className = $2;
+      icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'SEO Optimization',
-      description: 'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.',
+      description: 'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.';
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'},
     {
-      icon: <Users className = $2;
+      icon: <Users className="w-8 h-8 text-white" />,
       title: 'Multi-Language Support',
       description: 'Generate content in 50+ languages with native-level fluency and cultural understanding.',
       color: 'bg-gradient-to-br from-red-500 to-pink-600',
       gradient: 'from-red-400 to-pink-500'},
     {
-      icon: <Clock className = $2;
+      icon: <Clock className="w-8 h-8 text-white" />,
       title: '24/7 Availability',
-      description: 'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.',
+      description: 'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.';
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
       gradient: 'from-teal-400 to-blue-500'}],
 
-  const pricingPlans = $2;
+  const pricingPlans = [
+    {
+      name: 'Starter',
       price: '$29',
       period: '/month',
       description: 'Perfect for individuals and small blogs',
       features: [
         '1,000 words per month5 content templatesBasic SEO optimizationEmail supportAPI access (100 calls/month)Content analytics dashboard'
-      ],
+      ];
       popular: false,
       color: 'border-gray-600',
       buttonColor: 'bg-gray-600 hover:bg-gray-700'
-    },
+    };
     {
       name: 'Professional',
       price: '$99',
@@ -58,49 +62,52 @@ export default function AIContentGeneratorPage() {
       description: 'Ideal for growing businesses and agencies',
       features: [
         '10,000 words per month25+ content templatesAdvanced SEO toolsPriority supportAPI access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding'
-      ],
+      ];
       popular: true,
       color: 'border-blue-500',
       buttonColor: 'bg-blue-600 hover:bg-blue-700'
-    },
+    };
     {
       name: 'Enterprise',
       price: '$299',
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrationsSLA guarantee'
-      ],
+        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
+        'SLA guarantee'
+      ];
       popular: false,
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
-  ],
+  ];
 
-  const useCases = $2;
-      description: 'Generate engaging blog posts, articles, and long-form content in minutes.',
+  const useCases = [
+    {
+      title: 'Blog Writing',
+      description: 'Generate engaging blog posts, articles, and long-form content in minutes.';
       icon: '📝',
       examples: ['Tech reviewsHow-to guidesIndustry insightsProduct comparisons']
-    },
+    };
     {
       title: 'Marketing Copy',
-      description: 'Create compelling ad copy, landing pages, and marketing materials.',
+      description: 'Create compelling ad copy, landing pages, and marketing materials.';
       icon: '🎯',
       examples: ['Facebook adsGoogle adsLanding pagesEmail campaigns']
-    },
+    };
     {
       title: 'Social Media',
-      description: 'Generate engaging social media posts, captions, and hashtag suggestions.',
+      description: 'Generate engaging social media posts, captions, and hashtag suggestions.';
       icon: '📱',
       examples: ['Instagram postsTwitter threadsLinkedIn articlesTikTok captions']
-    },
+    };
     {
       title: 'E-commerce',
-      description: 'Write product descriptions, category pages, and promotional content.',
+      description: 'Write product descriptions, category pages, and promotional content.';
       icon: '🛍️',
       examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections']
     }
-  ],
+  ];
 
   const integrations = [
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
@@ -109,7 +116,7 @@ export default function AIContentGeneratorPage() {
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-  ],
+  ];
 
   return (
     <>

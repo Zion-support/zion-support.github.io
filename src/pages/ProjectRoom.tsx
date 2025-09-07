@@ -9,16 +9,18 @@ import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lu
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
 export default function ProjectRoom() {
-  const router = useRouter($2);
-  const { projectId: rawProjectId} = router.query,
+  const router = useRouter();
+  const { projectId: rawProjectId } = router.query,
   const projectId = typeof rawProjectId === 'string' ? rawProjectId : '', // Ensure string, default to empty if not
-  const [activeTab, setActiveTab] = useState($2);
-  const [isInCall, setIsInCall] = useState($2);
+  const [activeTab, setActiveTab] = useState('chat');
+  const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
-    id: string, name: string, avatar?: string,
-    isMuted?: boolean,
-    isVideoEnabled?: boolean,
-    isScreenSharing?: boolean,
+    id: string,
+    name: string,
+    avatar?: string;
+    isMuted?: boolean;
+    isVideoEnabled?: boolean;
+    isScreenSharing?: boolean;
     isHost?: boolean
   }>>([
     {
@@ -26,42 +28,43 @@ export default function ProjectRoom() {
       name: 'You',
       isHost: true,
       isVideoEnabled: true,
-      isMuted: false,
+      isMuted: false
     }
-  ]),
+  ]);
   
   const startVideoCall = () => {
-    setIsInCall(true),
+    setIsInCall(true);
     toast.success("Video call started", {
-      description: "Others can join with the project room link",
-    }),
+      description: "Others can join with the project room link"
+    });
     // Switch to video tab if not already there
     if (activeTab !== 'video') {
       setActiveTab('video')
     }
-  },
+  };
   
   const endVideoCall = () => {
-    setIsInCall($2);
+    setIsInCall(false);
     toast.info("Video call ended", {
-      description: "Call duration and participants will be logged",
-    });
-  },
+      description: "Call duration and participants will be logged"
+    })
+  };
   
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false},
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true},
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true}
-    ],
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ];
     
-    const randomUser = $2;
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+    
     if (randomUser && !callParticipants.find(p => p.id === randomUser.id)) {
-      setCallParticipants($2);
+      setCallParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser.name} joined the call`)
     }
-  },
+  };
   
   return (
     <>
@@ -98,7 +101,7 @@ export default function ProjectRoom() {
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                </span>,
+                </span>
               )}
             </TabsTrigger>
             <TabsTrigger value="calendar" className="flex items-center gap-2">
@@ -152,7 +155,7 @@ export default function ProjectRoom() {
               <CardContent className="min-h-[400px] p-4">
                 {isInCall ? (
                   <div className="space-y-4">
-                    <VideoCallRoom,
+                    <VideoCallRoom 
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
@@ -178,7 +181,7 @@ export default function ProjectRoom() {
                       <p>Recent calls:</p>
                       <p>No recent calls for this project</p>
                     </div>
-                  </div>,
+                  </div>
                 )}
               </CardContent>
             </Card>
@@ -230,4 +233,3 @@ export default function ProjectRoom() {
     </>
   )
 }
-;

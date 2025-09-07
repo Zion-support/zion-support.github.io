@@ -13,29 +13,33 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
-  interview: Interview;
-  onRefresh: () => Promise<void>,
+  interview: Interview,
+  onRefresh: () => Promise<void>
 }
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
-  const { user } = useAuth($2);
-  const { respondToInterview, cancelInterview } = useInterviews($2);
-  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState($2);
-  const [isLoading, setIsLoading] = useState($2);
-  const isClient = $2;
-  const isTalent = $2;
+  const { user } = useAuth();
+  const { respondToInterview, cancelInterview } = useInterviews();
+  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  
+  const isClient = user?.id === interview.client_id;
+  const isTalent = user?.id === interview.talent_id;
+
   // Format interview date and time
-  const interviewDate = parseISO($2);
-  const formattedDate = format($2);
-  const formattedTime = format($2);
+  const interviewDate = parseISO(interview.scheduled_date);
+  const formattedDate = format(interviewDate, 'EEEE, MMMM d');
+  const formattedTime = format(interviewDate, 'h: mm a'),
+
   // Calculate when interview ends
-  const endTime = new Date($2);
-  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes),
-  const formattedEndTime = format($2);
-  const isInterviewPending = $2;
-  const isInterviewConfirmed = $2;
+  const endTime = new Date(interviewDate);
+  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
+  const formattedEndTime = format(endTime, 'h: mm a'),
+  
+  const isInterviewPending = interview.status === 'requested';
+  const isInterviewConfirmed = interview.status === 'confirmed';
   const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
-  const isInterviewPast = isPast(interviewDate),
+  const isInterviewPast = isPast(interviewDate);
   
   const getRelativeTime = () => {
     if (isPast(interviewDate)) {
@@ -43,66 +47,81 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     } else {
       return `Starts in ${formatDistanceToNow(interviewDate)}`
     }
-  },
+  };
 
-  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {,
-    setIsLoading(true),
+  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
+    setIsLoading(true);
     const success = await respondToInterview(interview.id, { 
       interview_id: interview.id, 
       status 
-    }),
+    });
     
     if (success) {
-      toast($2);
-      setIsResponseDialogOpen($2);
+      toast({
+        title: `Interview ${status}`,
+        description: `You have successfully ${status} the interview request.`
+      });
+      setIsResponseDialogOpen(false);
       await onRefresh()
     } else {
       toast({
         title: "Error",
         description: "Failed to respond to the interview request. Please try again.",
-        variant: "destructive",
+        variant: "destructive"
       })
     }
     setIsLoading(false)
-  },
+  };
 
   const handleCancelInterview = async () => {
-    setIsLoading($2);
-    const success = await cancelInterview($2);
+    setIsLoading(true);
+    const success = await cancelInterview(interview.id);
+    
     if (success) {
       toast({
         title: "Interview cancelled",
-        description: "The interview has been cancelled successfully.",
-      }),
+        description: "The interview has been cancelled successfully."
+      });
       await onRefresh()
     } else {
       toast({
         title: "Error",
         description: "Failed to cancel the interview. Please try again.",
-        variant: "destructive",
+        variant: "destructive"
       })
     }
     setIsLoading(false)
-  },
+  };
 
-  const getStatusBadge = $2;
+  const getStatusBadge = () => {
+    switch (interview.status) {
+      case 'requested':
+        return <Badge className="bg-amber-500">Pending</Badge>;
       case 'confirmed':
         return isInterviewLive ? 
-          <Badge className = $2;
+          <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : 
+          <Badge className="bg-green-600">Confirmed</Badge>;
       case 'declined':
-        return <Badge variant = $2;
+        return <Badge variant="destructive">Declined</Badge>;
       case 'rescheduled':
-        return <Badge className = $2;
+        return <Badge className="bg-blue-500">Rescheduled</Badge>;
       case 'completed':
-        return <Badge className = $2;
+        return <Badge className="bg-green-700">Completed</Badge>;
       case 'cancelled':
-        return <Badge variant = $2;
+        return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>;
       default:
         return <Badge>{interview.status}</Badge>
     }
-  },
+  };
   
-  const getOtherPartyName = $2;
+  const getOtherPartyName = () => {
+    if (isClient) {
+      return interview.talent_name || 'Talent'
+    } else {
+      return interview.client_name || 'Client'
+    }
+  };
+
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2 relative">
@@ -176,7 +195,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                   </AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
-            </AlertDialog>,
+            </AlertDialog>
           )}
           
           {/* For talents with pending requests */}
@@ -234,7 +253,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                   </AlertDialogFooter>
                 </AlertDialogContent>
               </AlertDialog>
-            </>,
+            </>
           )}
         </div>
       </CardFooter>
@@ -245,7 +264,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
           <DialogHeader>
             <DialogTitle>Respond to Interview Request</DialogTitle>
           </DialogHeader>
-          <InterviewResponseForm,
+          <InterviewResponseForm 
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
@@ -256,5 +275,3 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     </Card>
   )
 }
-  );
-

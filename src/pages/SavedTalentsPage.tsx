@@ -10,26 +10,27 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 import { EmptyState } from "@/components/ui/empty-state";
 import { Heart } from 'lucide-react'
 import { logInfo, logWarn } from '@/utils/productionLogger';
+
 export default function SavedTalentsPage() {
 
-  const { user } = useAuth($2);
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [isLoading, setIsLoading] = useState($2);
-  const router = useRouter($2);
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter();
   // Using router.asPath instead of useLocation
 
   useEffect(() => {
     if (!user) {
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
     }
-  }, [user, router]),
+  }, [user, router]);
 
   useEffect(() => {
     const fetchSavedTalents = async () => {
-      setIsLoading($2);
+      setIsLoading(true);
       try {
         if (!user) {
-          logWarn($2);
+          logWarn("User not authenticated.");
           return
         }
 
@@ -38,23 +39,24 @@ export default function SavedTalentsPage() {
           .select(
             `
             talent_profile (
-              id,
-              user_id,
-              full_name,
-              professional_title,
-              profile_picture_url,
-              hourly_rate,
-              bio,
-              years_experience,
-              key_projects,
-              skills,
-              location,
-              availability,
+              id;
+              user_id;
+              full_name;
+              professional_title;
+              profile_picture_url;
+              hourly_rate;
+              bio;
+              years_experience;
+              key_projects;
+              skills;
+              location;
+              availability;
               is_verified
             )
           `
           )
-          .eq($2);
+          .eq("user_id", user.id);
+
         if (error) {
           throw error
         }
@@ -62,8 +64,8 @@ export default function SavedTalentsPage() {
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
-            (item: any) => item.talent_profile as unknown as TalentProfile,
-          ),
+            (item: any) => item.talent_profile as unknown as TalentProfile
+          );
           setSavedTalents(talentProfiles)
         }
       } catch (error) {
@@ -75,26 +77,26 @@ export default function SavedTalentsPage() {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
 
     fetchSavedTalents()
-  }, [user]),
+  }, [user]);
 
-  const handleViewProfile = (talentId: string) => {,
-    router.push(`/talent/${talentId}`);
-  },
+  const handleViewProfile = (talentId: string) => {
+    router.push(`/talent/${talentId}`)
+  };
 
-  const handleRequestHire = (talent: TalentProfile) => {,
+  const handleRequestHire = (talent: TalentProfile) => {
     logInfo('Request to hire:', { data: talent }),
     toast({
       title: "Hire Request Sent",
       description: `A hire request has been sent to ${talent.full_name}.`})
-  },
+  };
 
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
-      if (!user) {,
-        logWarn("User not authenticated."),
+      if (!user) {
+        logWarn("User not authenticated.");
         return
       }
   
@@ -104,14 +106,15 @@ export default function SavedTalentsPage() {
           .from('saved_talents')
           .delete()
           .eq('user_id', user.id)
-          .eq($2);
+          .eq('talent_id', talentId);
+  
         if (error) {
           throw error
         }
   
         setSavedTalents(prevTalents =>
-          prevTalents.filter(talent => talent.id !== talentId);
-        ),
+          prevTalents.filter(talent => talent.id !== talentId)
+        );
         toast({
           title: "Talent Removed",
           description: "Talent removed from saved list."})
@@ -119,25 +122,30 @@ export default function SavedTalentsPage() {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
-          .insert($2);
+          .insert([{ user_id: user.id, talent_id: talentId }]),
+  
         if (error) {
           throw error
         }
   
         // Fetch the updated talent profile and add it to the list
-        const { data: talentData, error: talentError} = await supabase
+        const { data: talentData, error: talentError } = await supabase
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-          .single($2);
+          .single();
+  
         if (talentError) {
           logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), talentError instanceof Error ? talentError : undefined, { message: 'Error fetching talent profile' }),
-          toast($2);
+          toast({
+            title: "Error",
+            description: "Failed to update saved talents. Please try again later.",
+            variant: "destructive"}),
           return
         }
   
         if (talentData) {
-          setSavedTalents($2);
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]);
           toast({
             title: "Talent Saved",
             description: "Talent saved to your list."})
@@ -150,7 +158,7 @@ export default function SavedTalentsPage() {
         description: "Failed to update saved talents. Please try again later.",
         variant: "destructive"})
     }
-  },
+  };
 
   return (
     <>
@@ -177,9 +185,9 @@ export default function SavedTalentsPage() {
             />
           </div>
         ) : (
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mt-8">,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (
-              <TalentCard,
+              <TalentCard
                 key={talent.id}
                 talent={talent}
                 onViewProfile={handleViewProfile}
@@ -193,4 +201,3 @@ export default function SavedTalentsPage() {
     </>
   )
 }
-;

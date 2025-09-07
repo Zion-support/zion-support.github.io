@@ -12,15 +12,16 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { toast } from "@/components/ui/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
-  onSubmit: (formData: any) => void;
-  isSubmitting?: boolean,
+  onSubmit: (formData: any) => void,
+  isSubmitting?: boolean
 }
 
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-  const { t } = useTranslation($2);
-  const { translateContent, isTranslating } = useTranslationService($2);
-  const { supportedLanguages, currentLanguage } = useLanguage($2);
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
+  const { t } = useTranslation();
+  const { translateContent, isTranslating } = useTranslationService();
+  const { supportedLanguages, currentLanguage } = useLanguage();
+  
+  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
   
   // Form fields with translations
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
@@ -44,72 +45,81 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     pt: "",
     ar: ""}),
   
-  const [budget, setBudget] = useState($2);
-  const [deadline, setDeadline] = useState($2);
+  const [budget, setBudget] = useState("");
+  const [deadline, setDeadline] = useState("");
+  
   // Handle text changes
-  const handleTitleChange = (value: string) => {,
+  const handleTitleChange = (value: string) => {
     setTitle({ ...title, [activeTab]: value })
-  },
+  };
   
-  const handleDescriptionChange = (value: string) => {,
+  const handleDescriptionChange = (value: string) => {
     setDescription({ ...description, [activeTab]: value })
-  },
+  };
   
-  const handleRequirementsChange = (value: string) => {,
+  const handleRequirementsChange = (value: string) => {
     setRequirements({ ...requirements, [activeTab]: value })
-  },
+  };
   
   // Handle form submission
-  const handleSubmit = async (e: React.FormEvent) => {,
-    e.preventDefault(),
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     
     // Complete any missing translations with auto-translation
-    await ensureAllTranslations($2);
+    await ensureAllTranslations();
+    
     onSubmit({
-      title,
-      description,
-      requirements,
-      budget,
+      title;
+      description;
+      requirements;
+      budget;
       deadline})
-  },
+  };
   
   // Auto translate content when language tab changes
-  const handleTabChange = async (tab: string) => {,
-    const selectedLanguage = tab as SupportedLanguage,
+  const handleTabChange = async (tab: string) => {
+    const selectedLanguage = tab as SupportedLanguage;
     if (selectedLanguage !== activeTab) {
       setActiveTab(selectedLanguage)
     }
-  },
+  };
   
   // Auto translate function
-  const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {,
+  const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {
     let sourceLanguage: SupportedLanguage = 'en',
-    let content = '',
+    let content = '';
     
     // Find first non-empty content to translate
-    for (const lang of supportedLanguages.map(l = $2;
-        sourceLanguage = $2;
+    for (const lang of supportedLanguages.map(l => l.code)) {
+      if (field === 'title' && title[lang]) {
+        content = title[lang];
+        sourceLanguage = lang;
         break
-      } else if (field = $2;
-        sourceLanguage = $2;
+      } else if (field === 'description' && description[lang]) {
+        content = description[lang];
+        sourceLanguage = lang;
         break
-      } else if (field = $2;
-        sourceLanguage = $2;
+      } else if (field === 'requirements' && requirements[lang]) {
+        content = requirements[lang];
+        sourceLanguage = lang;
         break
       }
     }
     
     if (!content) {
-      toast($2);
-        description: t($2);
+      toast({
+        title: t('translation.no_content'),
+        description: t('translation.add_content_first'),
         variant: "destructive"}),
       return
     }
     
     try {
-      const { translations, error } = await translateContent($2);
+      const { translations, error } = await translateContent(content, 'job', sourceLanguage);
+      
       if (error) {
-        toast($2);
+        toast({
+          title: t('translation.translation_failed'),
           description: error,
           variant: "destructive"}),
         return
@@ -123,23 +133,45 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         setRequirements(translations)
       }
       
-      toast($2);
+      toast({
+        title: t('translation.translation_success'),
         description: t('translation.content_translated')})
     } catch (error) {
-      logErrorToProduction($2);
-      toast($2);
-        description: error instanceof Error ? error.message : t($2);
+      logErrorToProduction('Error translating ${field}:', { data: error }),
+      toast({
+        title: t('translation.translation_failed'),
+        description: error instanceof Error ? error.message : t('translation.unknown_error'),
         variant: "destructive"})
     }
-  },
+  };
   
   // Ensure all translations are available
-  const ensureAllTranslations = $2;
-    if (!title.en && !title.es && !title.fr && !title.pt && !title.ar) return,
-    if (!description.en && !description.es && !description.fr && !description.pt && !description.ar) return,
+  const ensureAllTranslations = async () => {
+    const promises = [];
+    
+    if (!title.en && !title.es && !title.fr && !title.pt && !title.ar) return;
+    if (!description.en && !description.es && !description.fr && !description.pt && !description.ar) return;
     
     // Title translations
-    if (Object.values(title).some(val = $2;
+    if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
+      promises.push(autoTranslate('title'))
+    }
+    
+    // Description translations
+    if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
+      promises.push(autoTranslate('description'))
+    }
+    
+    // Requirements translations
+    if (Object.values(requirements).some(val => val) && Object.values(requirements).some(val => !val)) {
+      promises.push(autoTranslate('requirements'))
+    }
+    
+    if (promises.length) {
+      await Promise.all(promises)
+    }
+  };
+  
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -289,7 +321,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1">
-            <label htmlFor="budget" className="text-lg font-medium">,
+            <label htmlFor="budget" className="text-lg font-medium">
               {t('jobs.budget')}
             </label>
             <Input
@@ -318,7 +350,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       <div className="pt-4">
         <Button
           type="submit"
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan",
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
           disabled={isSubmitting || isTranslating}
         >
           {isSubmitting ? (
@@ -334,4 +366,3 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     </form>
   )
 }
-;
