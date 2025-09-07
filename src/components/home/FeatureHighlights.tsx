@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-=======
-pr-12325
-className?: string;
-  style?: React && React.CSSProperties;
->>>>>>> origin/main
 
 export function FeatureHighlights(): any ({;
   className,;
@@ -72,90 +66,7 @@ interface FeatureHighlightsProps {
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-
-import React from 'react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Check } from 'lucide-react';
-import { cn } from '@/lib / utils';
-interface FeatureHighlightsProps {
-  class_name?: string;
-  style?: React.CSSProperties;
-export /**
- * FeatureHighlights - Function description
- */
-        'Customizable workflow and approval processes',;']
-  ];
-
-  return (
-
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/ card';
-import { Check } from 'lucide-react';
-import { cn } from '@/lib / utils';
-interface FeatureHighlightsProps {
-  // TODO: Implement
-}
-  class_name?: string;
-  style?: React.CSSProperties;
-export /**
- * FeatureHighlights - Function description;
- */)
-pr-12325
-function FeatureHighlights() {
-  const highlights_data = [;
-
-
-pr-12325
-  const highlightsData = [
-
-    {
-      title: 'For Talent Seekers',
-      features: [;
-pr-12325
-        'AI - powered talent matching based on your specific project requirements',
-        'Verified profiles with skills validation and credential checking',
-        'Transparent pricing and no hidden fees',
-        'Direct communication with potential candidates',
-        'Secure payment protection and dispute resolution',
-        'Post jobs and receive AI - matched applicants',
-      ],
-    },
-    {
-      title: 'For Talent & Service Providers',
-      features: [;
-        'Post jobs and receive AI - matched applicants',']
-      ],
-    },
-      title: 'For Talent & Service Providers',
-pr-12325
-        'Create a professional profile showcasing your skills and experience',
-        'Get matched with relevant projects that fit your expertise',
-        'Secure payment processing with on - time disbursements',
-        'Build your reputation through client reviews and ratings',
-        'Access to enterprise clients and high - value projects',
-        'Professional development resources and community support',
-      ],
-    },
-    {
-
-      title: "For Enterprise Clients",
-        'Professional development resources and community support',']
-
-      title: "For Enterprise Clients","
-pr-12325
-      features: [
-
-
-
-
-
-
->>>>>>> origin/main
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -172,7 +83,6 @@ pr-12325
 );
 
 
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">

@@ -1,72 +1,13 @@
-<<<<<<< HEAD
 
-
-import { useEffect, useState } from "react",
-import Link from "next/link",
-import { BriefcaseIcon, Clock } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-=======
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
->>>>>>> origin/main
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 origin/cursor/automate-test-improve-and-merge-code-2533
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
-  
   useEffect(() => {
     if (projects && !isLoading) {
-<<<<<<< HEAD
-      const active = null;
 
-  if (isLoading) {
-=======
-
-
-      const active = projects.filter(p => 
-        ['offer_acceptedin_progress'].includes(p.status)
-      ).slice(0, 3), // Limit to 3 most recent projects
-      setActiveProjects(active)
-    }
-  }, [projects, isLoading]),
-  
-
-
-  if (isLoading) {
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { BriefcaseIcon, Clock } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { useProjects } from '@/hooks/useProjects';
-import { Project } from '@/types/projects';
-export function ActiveProjectsCard() {;
-  const { projects, isLoading } = useProjects();
-  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
-
-  useEffect(() => {    if (projects && !isLoading) {;
-      const active = projects;
-        .filter(p => ['offer_accepted', 'in_progress'].includes(p && p.status));
-        .slice(0, 3); // Limit to 3 most recent projects;
-      setActiveProjects(active);
-    }
-  }, [projects, isLoading]);
-
-  if (isLoading) {;
->>>>>>> origin/main
     return (
 
 
@@ -154,7 +95,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
   }
-  
   if (activeProjects.length === 0) {
     return (
       <Card>
@@ -521,9 +461,7 @@ export function ActiveProjectsCard() {
             <BriefcaseIcon className="h-5 w-5 text-primary" />"
 
             <span>Active Projects</span>
-          
           <CardDescription>Your ongoing work
-        
         <CardContent>
 "
           <div className="space-y-2">"
@@ -551,8 +489,6 @@ export function ActiveProjectsCard() {
 
           <CardTitle className="flex items-center gap-2">"
 
-          
-        
 
           <CardTitle className='flex items-center gap-2'>;
 
@@ -575,11 +511,8 @@ export function ActiveProjectsCard() {
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
           <Button variant="outline" asChild>"
             <Link href="/jobs">Find Opportunities"
-          
 
 
-        
-      
 
 
           <BriefcaseIcon className='h-5 w-5 text-primary' />          <span>Active Projects</span>;
@@ -589,7 +522,6 @@ export function ActiveProjectsCard() {
 
 
 
-        
       <CardContent className='space-y-4'>
 
           <div key={project.id} className='border rounded-md p-3'>
@@ -621,7 +553,6 @@ export function ActiveProjectsCard() {
             <Link href="/projects">View All Projects;"
         ;`;
               <Link href={`/project/${project.id}`}>View Project
-            
   const [active_projects, setActiveProjects] = useState < Project[]>([]);
   useEffect (() => {    // Check condition;
 if ( {) {

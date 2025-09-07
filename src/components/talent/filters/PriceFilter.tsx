@@ -82,20 +82,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Slider } from "@/components/ui/slider",;
 import { PriceFilterProps } from "@/types/filters",;
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
-<<<<<<< HEAD
 
-  const handleChange = null;
-
-=======
-  const handleChange = (values: number[]) => {
-    setPriceRange([values[0] || 0, values[1] || 500])
-  },
-
-
-        <div className='mt-6'>
-          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -112,7 +99,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </button>
 
-      
       {expanded && (
 
         <div className="mt-6">

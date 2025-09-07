@@ -3,7 +3,6 @@ export default function GreenIT() {
   const greenITSolutions = [
     {
     }
-    
     return this.props.children;
   }
 }
@@ -13,61 +12,10 @@ import { Button } from '@/components/ui/button';
 import { Leaf, Server, Cloud } from 'lucide-react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
 
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-
-import { Button } from "@/components/ui/button";
-import { Leaf, Server, Cloud } from 'lucide-react'
-import Link from "next/link";
-export default function GreenIT() {
-
-  const greenITSolutions = null;
-
-=======
-export default function GreenIT() {;
-  const greenITSolutions = [;
-    {;
-      title: 'Energy-Efficient Hardware',;
-      description:;
-        'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.',;
-      icon: Server,;
-    },;
-    {;
-      title: 'Optimized Cooling Systems',;
-      description:;
-        'Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.',;
-      icon: Cloud,;
-    },;
-    {;
-      title: 'Renewable Energy Integration',;
-      description:;
-        'Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.',;
-      icon: Leaf,;
-    },;
-  ];
-
-
-      title: "Energy-Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-      icon: Server},
-    {
-      title: "Optimized Cooling Systems",
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-      icon: Cloud},
-    {
-      title: "Renewable Energy Integration",
-      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
-      icon: Leaf}
-  ],
-
-
->>>>>>> origin/main
   return (
     <>
       <SEO
-          
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -716,10 +664,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </div>
-            
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
 

@@ -1,127 +1,9 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FilePlus, Loader2 } from 'lucide-react';import { ProjectCard } from './ProjectCard';
-=======
-}
 
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-        <div>
-          <h1 className="text-2xl font-bold">Portfolio Projects</h1>
-          <p className="text-muted-foreground">Showcase your best work and projects</p>
-        </div>
-
-        <Button 
-          onClick={() => setShowAddProject(true)} 
-          className="gap-2"
-          disabled={showAddProject || !!editingProject}
-        >
-          <FilePlus className="h-4 w-4" />
-          Add Project
-        </Button>
-      </div>
-
-          Add Project
-        </Button>
-      </div>
-
-      {/* Edit or Add Form */}
-      {(showAddProject |editingProject) && (
-        <Card>
-
-          <CardContent className='pt-6'>
-            <h2 className='text-xl font-semibold mb-6'>
-              {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>
-
-            <ProjectForm              project={editingProject || undefined}
-
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {
-                setShowAddProject(false)
-                setEditingProject(null) }}
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FilePlus, Loader2 } from 'lucide-react';
-import { ProjectCard } from './ProjectCard';
->>>>>>> origin/main
 import { ProjectForm } from './ProjectForm';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 
-<<<<<<< HEAD
 
-import { useState, useEffect  } from 'react';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { FilePlus, Loader2 } from 'lucide-react'
-import { ProjectCard  } from './ProjectCard';
-import { ProjectForm  } from './ProjectForm';
-import { PortfolioProject  } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-
-export function PortfolioBuilder() {
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
-  const [showAddProject, setShowAddProject] = useState(false);
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),
-  
-  useEffect((,) => {
-    fetchProjects()
-  }, [fetchProjects]),
-  
-
-  const handleAddSuccess = null;
-
-                setEditingProject(null)
-=======
-export function PortfolioBuilder() {
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <ProjectForm
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {
-                setShowAddProject(false)
-                setEditingProject(null);                setEditingProject(null)
-
-                setShowAddProject(false);
-setEditingProject(null);
-origin/cursor/automate-test-improve-and-merge-code-2533
-                setEditingProject(null)
-          className='gap-2';
-          disabled={showAddProject || !!editingProject}        >;
-          <FilePlus className='h-4 w-4' />;
-          Add Project;
-        </Button>;
-      </div>;
-
-      {/* Edit or Add Form */}
-      {(showAddProject || editingProject) && (;
-        <Card>;
-          <CardContent className='pt-6'>;
-            <h2 className='text-xl font-semibold mb-6'>;
-              {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>;
-
-            <ProjectForm              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false);
-                setEditingProject(null);              }}
-
-            <ProjectForm
-
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false);
-                setEditingProject(null);                setEditingProject(null);
-                setEditingProject(null);
-
->>>>>>> origin/main
               }}
             />;
           </CardContent>;
@@ -147,24 +29,20 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
   useEffect(() => {
     fetchProjects()
   }, [fetchProjects]);
-  
   const handleAddSuccess = () => {
     setShowAddProject(false);
     fetchProjects()
   };
-  
   const handleEditSuccess = () => {
     setEditingProject(null);
     fetchProjects()
   };
-  
   const handleDeleteProject = async (projectId: string) => {
     const success = await deleteProject(projectId);
     if (success) {
       fetchProjects()
     }
   };
-  
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -172,7 +50,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       </div>
     )
   }
-  
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm: flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -193,7 +70,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           Add Project
         </Button>
       </div>
-      
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
         <Card>

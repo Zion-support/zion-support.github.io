@@ -1,50 +1,4 @@
-<<<<<<< HEAD
 
-
-import React, { useState } from "react",
-import { Dispute, DisputeStatus } from "@/types/disputes",
-
-=======
-}
-export /**
- * DisputesList - Function description
- */
-function DisputesList() {
-  const [status_filter, setStatusFilter] = useState < DisputeStatus | 'all'>(
-}
-export /**
- * DisputesList - Function description;
- */
-function DisputesList() {
-  const [status_filter, setStatusFilter] = useState < DisputeStatus | 'all'>(')
-pr-12325
-    'all');
-  const filtered_disputes =;
-    status_filter === 'all';
-      ? disputes;
-      : disputes.filter (dispute => dispute.status === status_filter);
-  const getStatusBadgeVariant = (status: DisputeStatus, ) =>: any {
-  // TODO: Implement
-pr-12325
-    switch (status) {
-      case 'open':;
-        return 'default';
-      case 'under_review':;
-        return 'secondary';
-      case 'resolved':;
-        return 'outline'; // Changed from './success'; to "outline";
-      case 'closed':;
-        return 'outline';
-      default:;
-        return 'default';
-import React, { useState } from './react';
-import { Dispute, DisputeStatus  } from '@/types / disputes';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
-
-import React, { useState } from "react",;
-import { Dispute, DisputeStatus } from "@/types/disputes",;
->>>>>>> origin/main
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -65,206 +19,14 @@ pr-12325
   TableCell;
   TableHead;
   TableHeader;
-<<<<<<< HEAD
 
-=======
-  TableRow } from '@/components / ui / table';
-import Skeleton from "@/components / ui / skeleton";
-import { formatDistanceToNow  } from './date - fns';
-import Link from './next / link';
->>>>>>> origin/main
   TableRow} from "@/components/ui/table",
 import Skeleton from "@/components/ui/skeleton",;
 import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from 'lucide-react'
 import Link from "next/link";
 type DisputesListProps = any;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-  TableRow } from '@/components/ui/ table';
-import Skeleton from "@/components/ui/ skeleton";""
-import { formatDistanceToNow  } from './date - fns';
-import Link from './next / link';
-pr-12325
-type DisputesListProps = {
-
-
-import React, { useState } from 'react';
-import { Dispute, DisputeStatus } from '@/types/disputes';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import {  Table,  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-pr-12325
-  TableRow,;
-} from '@/components/ui/table';
-import Skeleton from '@/components/ui/skeleton';
-import { formatDistanceToNow } from 'date-fns';
-import { ShieldAlert } from 'lucide-react';
-import Link from 'next/link';
-type DisputesListProps = {;
-  disputes: Dispute[];
-isLoading: boolean ;
-  disputes: Dispute[];,
-  isLoading: boolean ;
-pr-12325
-};
-
-export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(;
-    'all';
-  );
-
-  const filteredDisputes =;
-    statusFilter === 'all';
-      ? disputes;
-      : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
-
-  const getStatusBadgeVariant = (status: DisputeStatus,) => {;
-    switch (status) {;
-      case 'open':;
-        return 'default';
-      case 'under_review':;
-        return 'secondary';
-      case 'resolved':;
-        return 'outline'; // Changed from "success" to "outline"
-      case 'closed':
-        return 'outline'
-      default:
-        return 'default'
-import React, { useState } from "react"
-import { Dispute, DisputeStatus } from "@/types/disputes"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import {
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow} from "@/components/ui/table"
-import Skeleton from "@/components/ui/skeleton"
-import { formatDistanceToNow } from "date-fns"
-import Link from "next/link"
-TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-
-import React, { useState } from "react",;
-import { Dispute, DisputeStatus } from "@/types/disputes",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import {
-        return 'outline'; // Changed from "success" to "outline";
-      case 'closed':;
-        return 'outline';
-      default:;
-        return 'default';
-
-
-import React, { useState } from "react";
-import { Dispute, DisputeStatus } from "@/types/disputes";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import {
-
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table",
-
-
-import React, { useState } from "react";
-import { Dispute, DisputeStatus } from "@/types/disputes";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import {;
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
-import Skeleton from "@/components/ui/skeleton";
-import { formatDistanceToNow } from "date-fns";
-import { ShieldAlert } from 'lucide-react';
-import Link from "next/link";
-type DisputesListProps = {;
-  disputes: Dispute[],;
-  isLoading: boolean;
-};
-
-export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
-
-  const filteredDisputes = statusFilter === "all" ;
-    ? disputes ;
-    : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
-
-  const getStatusBadgeVariant = (status: DisputeStatus) => {;
-    switch (status) {;
-  disputes: Dispute[],
-  is_loading: boolean;
-}
-export /**
- * DisputesList - Function description
- */
-function DisputesList() {
-  const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");
-  const filtered_disputes = status_filter === "all";
-    ? disputes;
-    : disputes.filter (dispute => dispute.status === status_filter);
-  const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
-    switch (status) {
-      case "open": return "default";
-      case "under_review":;
-        return "secondary";
-      case "resolved":;
-import Skeleton from "@/components/ui/skeleton",;
-import { formatDistanceToNow } from "date-fns",;
-import { ShieldAlert } from 'lucide-react'
-import Link from "next/link",;
-type DisputesListProps = {
-  disputes: Dispute[]
-  isLoading: boolean
-
-        return "outline", // Changed from './success'; to "outline";
-
-      case "closed":;
-        return "outline";
-      default:;
-        return "default";
-
-
-        <div className="border rounded-md">
-}
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all")
-  const filteredDisputes = statusFilter === "all"
-    ? disputes
-    : disputes.filter(dispute => dispute.status === statusFilter)
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
-      case "open": return "default"
-      case "under_review":
-        return "secondary"
-      case "resolved":
-        return "outline", // Changed from "success" to "outline"
-      case "closed":
-        return "outline"
-      default:
-        return "default"
-    }
-  }
->>>>>>> origin/main
   if (isLoading) {
     return (
       <div className='space-y-4'>
@@ -594,8 +356,6 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
                 <TableHead>Status
 
                 <TableHead className="text-right">Actions"
-              
-            
             <TableBody>
 
                 <TableRow key={i}>
@@ -668,23 +428,18 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
           variant={statusFilter === "all" ? "default" : "outline"}""
           onClick={() => setStatusFilter("all")}"
 
-        
           variant={statusFilter === "open" ? "default" : "outline"}""
           onClick={() => setStatusFilter("open")}"
 
-        
           variant={statusFilter === "under_review" ? "default" : "outline"}""
           onClick={() => setStatusFilter("under_review")}"
 
-        
           variant={statusFilter === "resolved" ? "default" : "outline"}""
           onClick={() => setStatusFilter("resolved")}"
 
-        
           variant={statusFilter === "closed" ? "default" : "outline"}""
           onClick={() => setStatusFilter("closed")}"
 
-        
 
       <div className="border rounded-md overflow-hidden">"
 pr-12325
@@ -1054,33 +809,23 @@ if (isLoading) {";
 }</TableBody> </Table> </div> </div>) ;
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533
-            
-          
 
               <TableRow key={dispute.id}>
                 <TableCell className='font-mono text-xs'>
 
-                
                 <TableCell>
 
-                
 
                   <div className='flex flex-col text-sm'>
                     <span>
 </span>
                       {dispute.talent_profile?.display_name |'Unknown Talent'}                    </span>
-                
 
-            
-          
 
                 <TableCell className="font-mono text-xs">"
 
-                
 
-                
                   <div className="flex flex-col text-sm">"
-                
 
       <div className='border rounded-md overflow-hidden'>        <Table>      <div className="border rounded-md overflow-hidden">;"
 
@@ -1129,19 +874,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {dispute.talent_profile?.display_name || 'Unknown Talent'}                    </span>;
 
 
-                
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>
 
-                  
-                
 
                 <TableCell className="text-right">"
                   <Button asChild size="sm">"
 
                     <Link href={`/dashboard/disputes/${dispute.id}`}>View Details
-                  
-                
-              
 
                   <Badge variant={getStatusBadgeVariant (dispute.status)}>;
 

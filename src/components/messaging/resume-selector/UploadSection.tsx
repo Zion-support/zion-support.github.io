@@ -1,29 +1,4 @@
-<<<<<<< HEAD
 
-
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Upload, FileText } from 'lucide-react'
-
-interface UploadSectionProps {
-  customFile: File | null;
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
-
-export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
-=======
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Upload, FileText } from 'lucide-react';
-
-import React from 'react';
-import { Button } from "@/components/ui/button";
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { Upload, FileText } from 'lucide-react'
-interface UploadSectionProps {
-  customFile: File | null;
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
->>>>>>> origin/main
 
   return (
     <div className='space - y-3'>;
@@ -54,7 +29,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 
 
-      
       {customFile && (
 
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">

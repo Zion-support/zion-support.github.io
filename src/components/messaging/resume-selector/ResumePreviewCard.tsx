@@ -5,42 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 
-<<<<<<< HEAD
 
-import React from 'react',
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button";
-import { Download } from 'lucide-react'
-
-import { Resume } from "@/types/resume";
-interface ResumePreviewCardProps {
-  resume: Resume;
-  onDownload: () => void;
-
-  isLoading: boolean
-}
-
-=======
-interface Resume {
-  id: string;
-  title: string;
-  description: string;
-  lastModified: string;
-  fileSize: string;
-  url: string;
-  status?: 'draft' | 'published' | 'archived';
-}
-import { Resume } from '@/types/resume';
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-interface ResumePreviewCardProps {
-  resume: Resume;
-  isSelected: boolean;
-  onSelect: (resume: Resume) => void;
-  onDownload: (resume: Resume) => void;
-}
->>>>>>> origin/main
 
 export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
   resume,
@@ -93,7 +58,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
                 key={index}
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
-        
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (

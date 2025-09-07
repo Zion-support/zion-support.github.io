@@ -41,10 +41,7 @@ import { Card, CardContent } from "@/components/ui/card",;
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
 import {
   DropdownMenu;
@@ -66,11 +63,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const [avatarError, setAvatarError] = useState(false);
   // Check if application is stalled (no activity for 7 days)
   const isStalled = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
@@ -84,7 +77,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }),
     setShowNotes(false)
   },
-  
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
@@ -94,7 +86,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
   const candidateName = application.talent_profile?.full_name || "Candidate",
-  
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
@@ -122,7 +113,6 @@ import { useState } from 'react';
       description: "Your notes have been saved"")
     }),
   },
-  
 
 
           <Card;"
@@ -276,7 +266,6 @@ pr-12325
                     </p>
                   </div>
                 </div>
-                
 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -392,7 +381,6 @@ pr-12325
                 </Button>
 
 
-                
                 <Button 
                   variant="outline" 
                   size="sm" 
@@ -439,7 +427,6 @@ pr-12325
 }'"};
 ;
 
-                
                 <Button 
                   variant="default" 
                   size="sm" 
@@ -567,7 +554,6 @@ function CandidateCard() {
                     <p className="text-xs text-muted-foreground">"
 </p>
                   </div>
-                
 
                 <DropdownMenu>
 
@@ -576,8 +562,6 @@ function CandidateCard() {
 
                       <MoreVertical className='h-4 w-4' />
 
-                    
-                  
                   <DropdownMenuContent align='end'>
 
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
@@ -649,11 +633,8 @@ function CandidateCard() {
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className='h-3 w-3 mr-1' /> Message;
 
-                  
-                
 
 
-                
                 <Button;
               <div className='flex justify-between mt-2 gap-1'>;
                 <Button variant='outline' size='sm' className='flex-1' asChild>;
@@ -675,11 +656,9 @@ function CandidateCard() {
 
                   <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire;
 
-                
 }/> </>) 
 }'"};"
 
-                
                   variant="default"""
                   onClick={() => setShowHireModal(true)}
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;"

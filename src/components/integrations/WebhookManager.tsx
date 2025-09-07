@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 
-=======
-export function WebhookManager() {
-  const { 
-    webhooks,
-    loading, 
-webhooks,
-    loading,
-    error,
->>>>>>> origin/main
 
 
 import React, { useEffect, useState } from 'react';
@@ -99,156 +89,11 @@ export function WebhookManager() {
     { value: "milestone_approved", label: "Milestone Approved" },
     { value: "talent_hired", label: "Talent Hired" }
   ],
-  
   useEffect(() => {
     fetchWebhooks()
   }, []),
-  
   const handleAddEvent = null;
-<<<<<<< HEAD
 
-=======
-export function WebhookManager() {
-  const {
-    webhooks
-    loading
-    error
-    testResult
-    fetchWebhooks
-    createWebhook
-    toggleWebhook
-    deleteWebhook
-    testWebhook
-  } = useWebhooks()
-  const [newWebhook, setNewWebhook] = useState({
-    name: ''
-    url: ''
-    selectedEvent: '' as WebhookEventType
-    eventTypes: [] as WebhookEventType[]
-    secret: ''
-  })
-  const eventOptions: { value: WebhookEventType; label: string }[] = [
-    { value: 'new_application', label: 'New Application Received' }
-    { value: 'quote_received', label: 'Quote Request Received' }
-    { value: 'milestone_approved', label: 'Milestone Approved' }
-    { value: 'talent_hired', label: 'Talent Hired' }
-  ]
-  useEffect(() => {
-    fetchWebhooks()
-  }, [])
-  const handleAddEvent = () => {
-    if (!newWebhook.selectedEvent) return
-    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
-      toast.error('This event is already added')
-      return
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-
-    setNewWebhook({;
-      ...newWebhook,;
-      eventTypes: [...newWebhook && newWebhook.eventTypes, newWebhook && newWebhook.selectedEvent],;
-      selectedEvent: '' as WebhookEventType,;
-    });
-  };
-
-  const handleRemoveEvent = (event: WebhookEventType) => {    setNewWebhook({;
-      ...newWebhook,;
-      eventTypes: newWebhook && newWebhook.eventTypes.filter(e => e !== event),;
-    });
-  };
-
-  const handleCreateWebhook = async () => {;
-    if (;
-      !newWebhook && newWebhook.name ||;
-      !newWebhook && newWebhook.url ||;
-      newWebhook && newWebhook.eventTypes.length === 0;
-    ) {;
-      toast && toast.error('Please fill in all required fields');
-      return;
-    }
-
-    await createWebhook(;
-      newWebhook && newWebhook.name,;
-      newWebhook && newWebhook.url,;
-      newWebhook && newWebhook.eventTypes,;
-      newWebhook && newWebhook.secret || undefined;
-    );
-
-    // Reset form;
-    setNewWebhook({;
-      name: '',;
-      url: '',;
-      selectedEvent: '' as WebhookEventType,;
-      eventTypes: [],;
-      secret: '',;
-    });
-  };
-
-  const handleTestWebhook = async (;
-    webhookId: string,;
-    eventType: WebhookEventType;
-  ) => {;
-    await testWebhook(webhookId, eventType);
-  };
-  return (
-
-    <div className='space - y-8'>;
-      <Card>;
-        <CardHeader>;
-          <CardTitle > Create Webhook</CardTitle>;
-
-          <CardDescription>;
-            Define webhooks to notify external systems when events occur in;
-            Zion.;
-          </CardDescription>;
-        </CardHeader>;
-
-    testResult,
-    fetchWebhooks,
-    createWebhook,
-    toggleWebhook,
-    deleteWebhook,
-
-
-    }
-    
-    setNewWebhook({
-      ...newWebhook,
-      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
-
-
-    }
-    
-    await createWebhook(
-      newWebhook.name, 
-      newWebhook.url, 
-      newWebhook.eventTypes, 
-      newWebhook.secret || undefined
-
-
-    // Reset form
-    setNewWebhook({
-      name: "",
-      url: "",
-      selectedEvent: "" as WebhookEventType,
-      eventTypes: [],
-
-
-      name: ''
-      url: ''
-      selectedEvent: '' as WebhookEventType
-      eventTypes: []
-      secret: ''
-    })
-  }
-  const handleTestWebhook = async (
-    webhookId: string
-    eventType: WebhookEventType
-  ) => {
-    await testWebhook(webhookId, eventType)
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <div className="space-y-8">
       <Card>
@@ -310,7 +155,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-            
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
               <Input 
@@ -726,7 +570,6 @@ export function WebhookManager() {;
                           size='sm'
 
 
-          
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
 

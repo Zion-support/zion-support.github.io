@@ -1,109 +1,8 @@
-<<<<<<< HEAD
 
-
-import React from "react",
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { Button } from "@/components/ui/button";
-=======
->>>>>>> origin/main
 import { X } from 'lucide-react'
 interface ActiveFiltersProps {
 
-<<<<<<< HEAD
 
-=======
-  selectedSkills: string[]
-  toggleSkill: (skill: string) => void
-  selectedAvailability: string[]
-  toggleAvailability: (status: string) => void
-  selectedRegions: string[]
-  toggleRegion: (region: string) => void
-  priceRange: [number, number]
-  setPriceRange: (range: [number, number]) => void
-  experienceRange: [number, number]
-  setExperienceRange: (range: [number, number]) => void
-  clearFilters: () => void;interface ActiveFiltersProps {
-  selectedSkills: string[]
-  toggleSkill: (skill: string,) => void
-  selectedAvailability: string[]
-  toggleAvailability: (status: string,) => void
-  selectedRegions: string[]
-  toggleRegion: (region: string,) => void
-  priceRange: [number, number]
-  setPriceRange: (range: [number, number],) => void
-  experienceRange: [number, number]
-  setExperienceRange: (range: [number, number],) => void
-
-  clearFilters: () => void
-}
-import { X } from 'lucide-react
-interface ActiveFiltersProps {
-  // TODO: Implement
-}
-  selectedSkills: string[],
-  toggleSkill: (skill: string) => void;,
-  selectedAvailability: string[]
-  toggleAvailability: (status: string) => void;,
-  selectedRegions: string[]
-  toggleRegion: (region: string) => void;,
-  priceRange: [number, number]
-  setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
-  clearFilters: () => void;interface ActiveFiltersProps {
-  // TODO: Implement
-  toggleSkill: (skill: string,) => void;
-  selectedAvailability: string[],
-  toggleAvailability: (status: string,) => void;
-  selectedRegions: string[],
-  toggleRegion: (region: string,) => void;
-  setPriceRange: (range: [number, number],) => void;
-  experienceRange: [number, number]
-  setExperienceRange: (range: [number, number],) => void;
-  clearFilters: () => void;
-
-
-
-
-pr-12325
-
-  const hasActiveFilters = null;
-    selectedSkills.length > 0 ||
-    selectedAvailability.length > 0 ||
-
-    selectedRegions.length > 0 ||
-    experienceRange[0] !== 0 ||
-    experienceRange[1] !== 15 ||
-    priceRange[0] !== 50 ||
-
-    selectedRegions.length > 0 ||
-    experienceRange[0] !== 0 ||
-    experienceRange[1] !== 15 ||
-    priceRange[0] !== 50 ||
-
-pr-12325
-
-    priceRange[1] !== 200,
-  
-  if (!hasActiveFilters) return null,
-
-  const hasActiveFilters = null;
-    selectedSkills.length > 0 ||
-    selectedAvailability.length > 0 ||
-    selectedRegions.length > 0 ||
-    experienceRange[0] !== 0 ||
-    experienceRange[1] !== 15 ||
-    priceRange[0] !== 50 ||
-import React from 'react';
-import { ClickableBadge } from '@/components/ui/clickable-badge';
-import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react';
-
-import React from "react",;
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { Button } from "@/components/ui/button";
-import { X } from 'lucide-react'
->>>>>>> origin/main
 interface ActiveFiltersProps {
   selectedSkills: string[];
   toggleSkill: (skill: string) => void;
@@ -111,25 +10,16 @@ interface ActiveFiltersProps {
   toggleAvailability: (status: string) => void;
   selectedRegions: string[];
   toggleRegion: (region: string) => void;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   priceRange: [number, number],
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   clearFilters: () => void
 }
 export function ActiveFilters({
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   selectedSkills;
   toggleSkill;
   selectedAvailability;
@@ -144,44 +34,7 @@ export function ActiveFilters({
 }: ActiveFiltersProps) {
   // Check if any filters are active
   const hasActiveFilters = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-    <div className="mb-6 flex flex-wrap gap-2 items-center">
-      <span className="text-zion-slate-light text-sm">Active filters:</span>
-      
-      {selectedSkills.map(skill => (
-        <ClickableBadge 
-          key={skill}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-import React from "react",;
-import { ClickableBadge } from "@/components/ui/clickable-badge",;
-import { Button } from "@/components/ui/button",;
-import { X } from 'lucide-react';
-
-interface ActiveFiltersProps {;
-
-  selectedSkills,;
-  toggleSkill,;
-  selectedAvailability,;
-  toggleAvailability,;
-  selectedRegions,;
-  toggleRegion,;
-  priceRange,;
-  setPriceRange,;
-  experienceRange,;
-  setExperienceRange,;
-
-    experienceRange[0] !== 0 ||;
-    experienceRange[1] !== 15 ||;
-    priceRange[0] !== 50 ||;
-    priceRange[1] !== 200;
-
-  if (!hasActiveFilters) return null;
-
->>>>>>> origin/main
   return (
     <div className='mb-6 flex flex-wrap gap-2 items-center'>;
       <span className='text-zion-slate-light text-sm'>Active filters:</span>;
@@ -237,7 +90,6 @@ interface ActiveFiltersProps {;
 
         </ClickableBadge>
       ))}
-      
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
 
           ${priceRange[0]}-${priceRange[1]}/hr
@@ -431,12 +283,10 @@ interface ActiveFiltersProps {;
 "
           <X className="h-3 w-3" />"
 
-        
           key={status}"
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2""
           onClick={() => toggleAvailability(status)}
 
-        
           key={region}"
           onClick={() => toggleRegion(region)}
 
@@ -446,7 +296,6 @@ interface ActiveFiltersProps {;
 
           onClick={() => setPriceRange([50, 200])}
 
-        
           onClick={() => setExperienceRange([0, 15])}        >
 
           onClick={() => setExperienceRange([0, 15])}
@@ -454,7 +303,6 @@ interface ActiveFiltersProps {;
 
 
 
-        
       <Button;"
         variant='ghost
         size='sm
@@ -462,7 +310,6 @@ interface ActiveFiltersProps {;
 
 
         Clear All;
-      
       <Button;
         variant="ghost"""
         size="sm""
@@ -470,7 +317,6 @@ interface ActiveFiltersProps {;
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent""
       >
 
-      
           <X className="h-3 w-3" />;"
 
         ;

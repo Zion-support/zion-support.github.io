@@ -3,31 +3,7 @@ default:
         return <Badge variant="outline">{status}</Badge>
     }
 
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-=======
-import {ApplicationStatus} from "@/types/jobs";
-import { useState } from 'react';
-import { useJobApplications } from '@/hooks/useJobApplications';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
-import { formatDistanceToNow } from 'date-fns';
-import Link from 'next/link';
-import { ApplicationStatus } from '@/types/jobs';
-
-import { useState } from "react",;
-import { useJobApplications } from "@/hooks/useJobApplications",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
->>>>>>> origin/main
 import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",;
 import Link from "next/link";
@@ -35,10 +11,7 @@ import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications();
   const getStatusBadge = null;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   if (isLoading) {
 origin/cursor/automate-test-improve-and-merge-code-2533
     return (
@@ -175,7 +148,6 @@ export function MyApplications() {;
                 </p>
               )}
 
-              
               <div className="flex justify-between items-center">
                 <Button 
                   variant="outline" 
@@ -229,7 +201,6 @@ export function MyApplications() {;
 
                 <Button
 
-                
 
                 <Button 
 

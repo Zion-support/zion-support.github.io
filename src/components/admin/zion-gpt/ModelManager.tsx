@@ -1,27 +1,4 @@
-<<<<<<< HEAD
 
-import { useState, useEffect  } from 'react';
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge";
-=======
-// If activating, deactivate all other models with the same purpose;
-      // Check condition
-if ( {) {
-  $2
-}
-        await supabase;
-
-          .from('model_versions');
-          .update({ active: false });
-          .eq('purpose', purpose);
-
-
-      }
-
-      // Update this model;
->>>>>>> origin/main
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
@@ -125,11 +102,7 @@ export function ZionGPTModelManager() {
   }, []),
 
   const fetchModels = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;

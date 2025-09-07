@@ -1,27 +1,4 @@
-<<<<<<< HEAD
 
-=======
-if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-64">;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-      </div>;
-    );
-  }
-
-  if (error) {
-
-  if (error) {;
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useResume } from '@/hooks/useResume';
-import { Tabs } from '@/components/ui/tabs';
-import { Card, CardContent } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Resume } from '@/types/resume';
->>>>>>> origin/main
 
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
@@ -41,18 +18,12 @@ import { ResumeStepContent  } from './ResumeStepContent';
 import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 export function ResumeWizard() {
   const { user } = useAuth();
   const { 
     isLoading;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     error;
     resume;
     fetchResume;
@@ -62,10 +33,7 @@ export function ResumeWizard() {
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
   // Use the extracted hook for progress calculation
   const progress = null;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   if (isLoading) {
 origin/cursor/automate-test-improve-and-merge-code-2533
     return (
@@ -227,7 +195,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }if (showNewResumeForm) {;
 
-  
 origin/cursor/automate-test-improve-and-merge-code-2533
   () => setShowNewResumeForm (false) ;
 }isLoading= {;

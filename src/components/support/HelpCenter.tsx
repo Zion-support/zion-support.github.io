@@ -109,11 +109,9 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -122,19 +120,15 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
   componentDidCatch(error, errorInfo) {"
     console.error('Error caught by boundary:', error, errorInfo);
 pr-12325
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -147,7 +141,6 @@ import { HelpArticleList } from './HelpArticleList';
 import { HelpArticleView } from './HelpArticleView';
 import { HELP_CATEGORIES } from './help-content';
 
-          
           <div className="relative mb-8">
             <Input
               placeholder="Search for help articles..."
@@ -157,14 +150,12 @@ import { HELP_CATEGORIES } from './help-content';
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
           </div>
-          
           <Tabs defaultValue="articles" className="mb-8">
             <TabsList className="w-full grid grid-cols-3 mb-6">
               <TabsTrigger value="articles">Articles</TabsTrigger>
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
-            
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
                 <HelpCategoryList 
@@ -192,45 +183,7 @@ export default function HelpCenter() {;
   const handleArticleSelect = (articleId: string) => {;
     setSelectedArticle(articleId);
   };
-<<<<<<< HEAD
-export default function HelpCenter() {
 
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  const handleCategorySelect = null;
-
-=======
-export default function HelpCenter() {;
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-
-  const handleCategorySelect = (categoryId: string,) => {;
-    setSelectedCategory(categoryId),;
-    setSelectedArticle(null);
-  },;
-
-  const handleArticleSelect = (articleId: string,) => {;
-    setSelectedArticle(articleId);
-  },;
-
-  const handleBackToCategories = () => {;
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  };
-
-  const handleBackToArticles = () => {;
-    setSelectedArticle(null);
-  };
-
-export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  const handleCategorySelect = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <>;
       <div className='container mx-auto px-4 py-8'>;
@@ -324,7 +277,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TabsTrigger value="articles">Articles""
               <TabsTrigger value="faq">FAQ""
               <TabsTrigger value="contact">Contact Us"
-            
             <TabsContent value="articles">"
 
                 <HelpCategoryList;
@@ -426,7 +378,6 @@ pr-12325
                     className='mb-4
                   >
 
-                  
                   <HelpArticleList;
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
@@ -444,7 +395,6 @@ pr-12325
                     variant='ghost'
                     onClick={handleBackToArticles}
                     className='mb-4'                  >
-              
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -462,7 +412,6 @@ pr-12325
                 </>;
               )}
 
-              
               {selectedArticle && (
                 <>
                   <Button
@@ -481,11 +430,9 @@ pr-12325
             </TabsContent>
 
 
-            
             <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
-                
                 <div className="space-y-6">
                   <div>
                     <h3 className='font-medium text-zion-cyan mb-2'>
@@ -510,20 +457,16 @@ pr-12325
                     onClick={handleBackToCategories}"
                     className="mb-4""
 
-                  
                     searchQuery={searchQuery}
                   />;
 
                 </>;)
 
-              
               {selectedArticle && (
                     onClick={handleBackToArticles}"
 
-                  
                   <HelpArticleView articleId={selectedArticle} />
 
-            
 
 
             <TabsContent value="faq">"
@@ -536,7 +479,6 @@ pr-12325
 pr-12325
 
 
-                  
 
 
                   <div>
@@ -557,7 +499,6 @@ pr-12325
 pr-12325
 
 
-                  
 
 
                   <div>
@@ -567,7 +508,6 @@ pr-12325
                     </p>
                   </div>
 
-                  
 
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>
@@ -607,10 +547,8 @@ pr-12325
                   <Button;
                     <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3>""
 
-                  
 
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>""
-            
 
             <TabsContent value='faq'>;
 
@@ -715,7 +653,6 @@ pr-12325
             </TabsContent>;
 
 
-            
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
@@ -723,7 +660,6 @@ pr-12325
                   <p className="text-zion-slate-light mb-4">
                     Our support team is available 24/7 to assist you with any questions or issues.
                   </p>
-                  
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -755,7 +691,6 @@ pr-12325
                           viewBox='0 0 20 20'
 
 
-                    
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
@@ -771,18 +706,15 @@ pr-12325
                   </div>
 
 
-                  
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
                   </Button>
                 </div>
-                
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">Feedback & Suggestions</h2>
                   <p className="text-zion-slate-light mb-4">
                     We value your input and are constantly looking to improve our platform.
                   </p>
-                  
                   <form className="space-y-4">
 
 
@@ -800,7 +732,6 @@ pr-12325
                     </div>
 
 
-                    
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
 
 
@@ -935,7 +866,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </svg>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">"
 </a>
-                      
                       </a>;
                     <div className='flex items-center'>;
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>;
@@ -949,7 +879,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">"
 
-                  
                   <h2 className="text-xl font-semibold mb-4">Feedback & Suggestions</h2>""
                   <form className="space-y-4">"
 </form>
@@ -966,9 +895,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">"
 
-                    
-            
-          
                           <path d='M2 3a1 1 0 011-1h2 && 1h2.153a1 1 0 01 && 01.986.836l && 836l.74 4 && 4.435a1 1 0 01-.54 1 && 1.06l-1 && 1.548.773a11 && 773a11.037 11 && 11.037 0 006 && 006.105 6 && 6.105l.774-1 && 1.548a1 1 0 011 && 011.059-.54l4 && 54l4.435.74a1 1 0 01 && 01.836.986V17a1 1 0 01-1 1h-2C7 && 2C7.82 18 2 12 && 12.18 2 5V3z' />;
                         </svg>;
                       <span className='text-zion-slate-light'>;

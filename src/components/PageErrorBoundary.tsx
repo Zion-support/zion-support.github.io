@@ -1,77 +1,10 @@
-<<<<<<< HEAD
 
-import React from 'react',
-=======
-import React from 'react';
->>>>>>> origin/main
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger';
-<<<<<<< HEAD
 
-interface PageErrorFallbackProps extends FallbackProps {
-=======
-interface PageErrorFallbackProps extends FallbackProps {
-  pageName?: string
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12325
-}
-
-  },
-
-pr-12325
-
-
-
-  return (
-    <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
-      <div className='max-w-2xl w-full'>;
-        {/* Main Error Card */}
-    <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
-</div>
-      <div className='max-w-2xl w-full'>;
-pr-12325
-        <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
-          <div className='text-center mb-6'>;
-            <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>;
-              <AlertTriangle className='h-8 w-8 text-red-600' />;
-            </div>;
-            <h1 className='text-3xl font-bold text-gray-900 mb-2'>;
-              {pageName ? `${pageName} Unavailable` : 'Page Unavailable'}
-            </h1>;
-            <p className='text-gray-600'>;
-              {isAuthConfigError;
-                ? 'This page cannot load due to missing authentication configuration';
-                : 'An unexpected error occurred while loading this page'}
-import {
-  logInfo
-  logErrorToProduction as prodLogError
-} from '@/utils/productionLogger'
-interface PageErrorFallbackProps extends FallbackProps {
-  pageName?: string
-function PageErrorFallback({
-  error
-  resetErrorBoundary
-  pageName
-}: PageErrorFallbackProps) {
-    error?.message?.includes('environment')
-  const handleRefresh = () => {
-    if (resetErrorBoundary) {
-      resetErrorBoundary()
-    } else {
-      window.location.reload()
-    }
-  }
-import React from 'react';
-import Link from 'next/link';
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
-import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
-import {logErrorToProduction} from '@/utils/productionLogger',;
-import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger',;
-interface PageErrorFallbackProps extends FallbackProps {;
->>>>>>> origin/main
   pageName?: string;
 }
 ;
@@ -88,12 +21,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
     }
   },
 
-<<<<<<< HEAD
 
-function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFallbackProps) {
-  const isAuthConfigError = null;
-=======
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
@@ -263,7 +191,6 @@ pr-12325
               <RefreshCw className="w-4 h-4 mr-2" />
               Try Again
             </button>
-            
             <Link 
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
@@ -397,13 +324,11 @@ pr-12325
               <RefreshCw className="w-4 h-4 mr-2" />"
 
             </button>
-            
             <Link;"
               href="/"""
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors""
               <Home className="w-4 h-4 mr-2" />"
 
-            
           </div>"
               <RefreshCw className='w-4 h-4 mr-2' />;
 
@@ -663,11 +588,7 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
       onReset={() => {
         // Reset any application state if needed
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
       }}
     >
       {children}

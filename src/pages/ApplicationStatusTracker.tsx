@@ -1,27 +1,4 @@
-<<<<<<< HEAD
 
-
-import { SEO } from "@/components/SEO",
-import { ApplicationsTracker } from "@/components/jobs/applications",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Briefcase, Inbox } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
-function ApplicationStatusTrackerContent() {
-  const isMobile = null;
-
-=======
-    <>;
-import { SEO } from '@/components/SEO';
-import { ApplicationsTracker } from '@/components/jobs/applications';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Briefcase, Inbox } from 'lucide-react';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { useIsMobile } from '@/hooks/use-mobile';
-
-function ApplicationStatusTrackerContent() {
-  const isMobile = null;
->>>>>>> origin/main
   return (
     <>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -37,7 +14,6 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { useIsMobile } from "@/hooks/use-mobile",;
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
-  
 
 
 

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import { ArrowRight } from 'lucide-react'
->>>>>>> origin/main
 
 import {
   Card
@@ -76,7 +72,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </div>
 
 
-        
         <div>
 
 
@@ -114,17 +109,7 @@ interface GeneratedContent {
 interface GeneratedContentDisplayProps {
   content: GeneratedContent;
   onApply: () => void
-<<<<<<< HEAD
-}
 
-export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
-
-=======
-export function GeneratedContentDisplay({
-  content
-  onApply
-}: GeneratedContentDisplayProps) {
->>>>>>> origin/main
   return (
     <Card className='border border-zion-blue-light bg-zion-blue-dark'>
       <CardHeader>
@@ -155,7 +140,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Badge>;
             ))}
 
-        
 
 
         <div>
@@ -177,11 +161,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-        
           </p>
         </div>
 
-        
         <div>
 
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
@@ -392,7 +374,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
 
-        
 
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>""
           <div className="flex flex-wrap gap-2">"
@@ -403,7 +384,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-white">"
 </p>
 
-        
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>""
           <ul className="list-disc pl-5 text-white space-y-1">"
 </ul>
@@ -450,8 +430,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <CardFooter>;
           <ArrowRight className="ml-2 h-4 w-4" />"
 
-        
-      
           <ArrowRight className="ml-2 h-4 w-4" />;"
 
         <Button;

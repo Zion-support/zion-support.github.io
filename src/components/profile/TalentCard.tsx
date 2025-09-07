@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-=======
->>>>>>> origin/main
 import Link from "next/link";
 import { TalentProfile } from "@/types/talent";
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 export interface TalentCardProps {
@@ -28,34 +19,7 @@ export interface TalentCardProps {
 
   isSaved: boolean;
   onToggleSave: (id: string, isSaved: boolean) => void;
-<<<<<<< HEAD
 
-
-  isAuthenticated: boolean
-}
-
-export function TalentCard({
-
-=======
-  isAuthenticated: boolean;
-
-export function TalentCard({
-  talent,
-  onViewProfile,
-  onRequestHire,
-  isSaved,
-  onToggleSave,
-  isAuthenticated,
-}: TalentCardProps) {
-  const [avatarError, setAvatarError] = useState(false);
-
-  const handleViewProfile = () => {
-    if (onViewProfile) {
-      onViewProfile(talent.id);
-  isAuthenticated: boolean
-}
-export function TalentCard({
->>>>>>> origin/main
   talent;
   onViewProfile;
   onRequestHire;
@@ -71,162 +35,7 @@ export function TalentCard({
         <div className="flex items-start">
           <div className="relative mr-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-  }
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(talent) }
-      onRequestHire(talent)
-    if (onRequestHire) {
-onRequestHire(talent);
-    }
-  }
-  const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-    if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved)
-    if (onToggleSave) {
-
-
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import Link from 'next/link';
-import { TalentProfile } from '@/types/talent';
-import Image from 'next/image'; // Import next/image;
-import React, { useState } from 'react'; // Import React and useState;
-
-export interface TalentCardProps {;
-  talent: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire: (talent: TalentProfile) => void;
-  isSaved: boolean;
-  onToggleSave: (id: string, isSaved: boolean) => void;
-  isAuthenticated: boolean;
-export interface TalentCardProps {;
-  talent: TalentProfile,;
-  onViewProfile: (id: string,) => void,;
-  onRequestHire: (talent: TalentProfile,) => void,;
-  isSaved: boolean,;
-  onToggleSave: (id: string, isSaved: boolean,) => void,;
-  isAuthenticated: boolean;
-}
-
-export function TalentCard(): any ({;
-  talent,;
-  onViewProfile,;
-  onRequestHire,;
-  isSaved,;
-  onToggleSave,;
-  isAuthenticated,;
-}: TalentCardProps) {;
-  const [avatarError, setAvatarError] = useState(false);
-
-  const handleViewProfile = () => {;
-    if (onViewProfile) {;
-      onViewProfile(talent && talent.id);    }      onViewProfile(talent && talent.id);
-      onToggleSave(talent.id, !isSaved)
-onToggleSave(talent.id, !isSaved);
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-  };
-
-  const handleRequestHire = (e: React && React.MouseEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation(),;
-    if (onRequestHire) {;
-      onRequestHire(talent);    }
-      onRequestHire(talent);
-    if (onRequestHire) {;
-      onRequestHire(talent);
-    }
-  };
-
-  const handleToggleSave = (e: React && React.MouseEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation(),;
-    if (onToggleSave) {;
-      onToggleSave(talent && talent.id, !isSaved);
-    if (onToggleSave) {;
-    }
-  };
-
-  const skills = talent && talent.skills?.slice(0, 5) || [];
-  const talentNameInitial = talent && talent.full_name?.charAt(0) || 'T';
-
-
-    >;
-      <div className='p-6'>;
-        <div className='flex items-start'>;
-          <div className='relative mr-4'>;
-            <div className='w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative'>;
-              {' '}
-              {/* Added relative for Image */}
-              {talent && talent.profile_picture_url && !avatarError ? (;
-                <Image
-                  src={talent && talent.profile_picture_url}
-                  alt={talent && talent.full_name || 'Talent Avatar'}
-                  fill={true}                  style={{ objectFit: 'cover' }}
-                  className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
-                  priority={false}
-                />;
-              ) : (;
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
-                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container;
-                  onError={() => setAvatarError(true)}
-
-                  priority={false}                />;
-              ) : (;
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent && talent.profile_picture_url} ;
-                  alt={talent && talent.full_name || 'Talent Avatar'}
-
-
-import Link from 'next/link';
-import { TalentProfile } from '@/types/talent';
-
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import React and useState
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import Link from "next/link",;
-import { TalentProfile } from "@/types/talent",;
-import Image from 'next/image', // Import next/image
-import React, { useState } from 'react', // Import React and useState
-
-
-
-export interface TalentCardProps {
-  talent: TalentProfile
-  onViewProfile: (id: string) => void
-  onRequestHire: (talent: TalentProfile) => void
-  isSaved: boolean
-  onToggleSave: (id: string, isSaved: boolean) => void
-  isAuthenticated: boolean
-
-  talent: TalentProfile,
-  onViewProfile: (id: string,) => void,
-  onRequestHire: (talent: TalentProfile,) => void,
-  isSaved: boolean,
-  onToggleSave: (id: string, isSaved: boolean,) => void,
-  isAuthenticated: boolean
-
-                  alt={talent.full_name || 'Talent Avatar'}
-                  fill={true}
-                  style={{ objectFit: 'cover' }}
-
-                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
-                  onError={() => setAvatarError(true)}
-                  priority={false}
-
->>>>>>> origin/main
               {talent.profile_picture_url && !avatarError ? (
                 <Image
                   src={talent.profile_picture_url}
@@ -272,7 +81,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
-            
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
@@ -407,7 +215,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
 
-        
         <div className="mt-5 flex items-center justify-between">
           <div>
                 <span className='text - zion - slate - light font - normal'>/hr</span>;

@@ -1,338 +1,4 @@
-<<<<<<< HEAD
 
-
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge";
-import { Search, Filter } from 'lucide-react'
-import { SEO } from "@/components/SEO";
-// Mock data for support requests
-const MOCK_SUPPORT_REQUESTS = null;
-
-  return (
-    <>
-      <SEO
-        title='Support Requests | Admin Dashboard'
-        description='Manage and track user support requests and issues'
-      />
-      <div className='container mx-auto px-4 py-8'>
-        <div className='flex flex-col md:flex-row items-start md:items-center justify-between mb-8'>
-          <div>
-            <h1 className='text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>
-              Support Requests
-            </h1>
-            <p className='text-zion-slate-light mt-2'>
-              Manage and respond to user support requests and issues
-            </p>
-          </div>
-=======
-// Mock data for support requests
-
-const MOCK_SUPPORT_REQUESTS = [
-  {
-
-import React, { useState } from 'react';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components / ui / table';
-import { Badge } from '@/components / ui / badge';
-import { Search, Filter } from 'lucide-react';
-import { SEO } from '@/components / SEO';
-// Mock data for support requests;
-const MOCK_SUPPORT_REQUESTS = [;
-  {
-    id: 'SR - 1001',
-    user: 'john.doe@example.com',
-    user_id: 'user - 123',
-    issue: 'Cannot access account after password reset',
-    status: 'open',
-    priority: 'high',
-    created_at: '2023 - 12 - 15T14:30:00Z',
-    last_updated: '2023 - 12 - 15T15:45:00Z',
-    category: 'authentication',
-
-    id: "SR-1001",
-    user: "john.doe@example.com",
-    userId: "user-123",
-    issue: "Cannot access account after password reset",
-    status: "open",
-    priority: "high",
-    createdAt: "2023-12-15T14:30:00Z",
-    lastUpdated: "2023-12-15T15:45:00Z",
-    category: "authentication"
-
-  },
-  {
-    id: 'SR - 1002',
-    user: 'sarah.smith@company.co',
-    user_id: 'user - 456',
-    issue: 'Payment failed but funds were deducted',
-    status: 'in - progress',
-    priority: 'high',
-    created_at: '2023 - 12 - 14T09:15:00Z',
-    last_updated: '2023 - 12 - 15T13:20:00Z',
-    category: 'billing',
-  },
-  {
-    id: 'SR - 1003',
-    user: 'tech.guru@startup.io',
-    user_id: 'user - 789',
-    issue: 'Unable to download invoice PDF',
-    status: 'open',
-    priority: 'medium',
-    created_at: '2023 - 12 - 15T11:00:00Z',
-    last_updated: '2023 - 12 - 15T11:00:00Z',
-    category: 'billing',
-  },
-  {
-    id: 'SR - 1004',
-    user: 'developer@codelab.dev',
-    user_id: 'user - 235',
-    issue: 'API integration documentation is outdated',
-    status: 'open',
-    priority: 'low',
-    created_at: '2023 - 12 - 13T16:45:00Z',
-    last_updated: '2023 - 12 - 13T16:45:00Z',
-    category: 'api',
-  },
-  {
-    id: 'SR - 1005',
-    user: 'maria.rodriguez@design.co',
-    user_id: 'user - 567',
-    issue: 'Dispute with freelancer over delivered work quality',
-    status: 'in - progress',
-    priority: 'high',
-    created_at: '2023 - 12 - 12T10:30:00Z',
-    last_updated: '2023 - 12 - 15T09:15:00Z',
-    category: 'disputes',
-  },
-  {
-    id: "SR-1006",
-    user: "alex.wong@datacompany.com",
-    userId: "user-890",
-    issue: "Profile verification pending for over 7 days",
-    status: "resolved",
-    priority: "medium",
-    createdAt: "2023-12-08T13:20:00Z",
-    lastUpdated: "2023-12-15T08:30:00Z",
-    category: "verification"
-  },
-  {
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue,;
-} from '@/components/ui/select';
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import { Search, Filter } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-// Mock data for support requests;
-const MOCK_SUPPORT_REQUESTS = [;
-  {;
-    id: 'SR-1001',;
-    user: 'john && john.doe@example && example.com',;
-    userId: 'user-123',;
-    issue: 'Cannot access account after password reset',;
-    status: 'open',;
-    priority: 'high',;
-    createdAt: '2023-12-15T14:30:00Z',;
-    lastUpdated: '2023-12-15T15:45:00Z',;
-    category: 'authentication',;
-  },;
-  {;
-    id: 'SR-1002',;
-    user: 'sarah && sarah.smith@company && company.co',;
-    userId: 'user-456',;
-    issue: 'Payment failed but funds were deducted',;
-    status: 'in-progress',;
-    priority: 'high',;
-    createdAt: '2023-12-14T09:15:00Z',;
-    lastUpdated: '2023-12-15T13:20:00Z',;
-    category: 'billing',;
-  },;
-  {;
-    id: 'SR-1003',;
-    user: 'tech && tech.guru@startup && startup.io',;
-    userId: 'user-789',;
-    issue: 'Unable to download invoice PDF',;
-    status: 'open',;
-    priority: 'medium',;
-    createdAt: '2023-12-15T11:00:00Z',;
-    lastUpdated: '2023-12-15T11:00:00Z',;
-    category: 'billing',;
-  },;
-  {;
-    id: 'SR-1004',;
-    user: 'developer@codelab && codelab.dev',;
-    userId: 'user-235',;
-    issue: 'API integration documentation is outdated',;
-    status: 'open',;
-    priority: 'low',;
-    createdAt: '2023-12-13T16:45:00Z',;
-    lastUpdated: '2023-12-13T16:45:00Z',;
-    category: 'api',;
-  },;
-  {;
-    id: 'SR-1005',;
-    user: 'maria && maria.rodriguez@design && design.co',;
-    userId: 'user-567',;
-    issue: 'Dispute with freelancer over delivered work quality',;
-    status: 'in-progress',;
-    priority: 'high',;
-    createdAt: '2023-12-12T10:30:00Z',;
-    lastUpdated: '2023-12-15T09:15:00Z',;
-    category: 'disputes',;
-  },;
-  {;
-    id: 'SR-1006',;
-    user: 'alex && alex.wong@datacompany && datacompany.com',;
-    userId: 'user-890',;
-    issue: 'Profile verification pending for over 7 days',;
-    status: 'resolved',;
-    priority: 'medium',;
-    createdAt: '2023-12-08T13:20:00Z',;
-    lastUpdated: '2023-12-15T08:30:00Z',;
-    category: 'verification',;
-  },;
-  {;
-    id: 'SR-1007',;
-    user: 'jamie && jamie.taylor@tech && tech.org',;
-    userId: 'user-345',;
-    issue: 'Cannot upload portfolio images',;
-    status: 'resolved',;
-    priority: 'medium',;
-    createdAt: '2023-12-10T15:10:00Z',;
-    lastUpdated: '2023-12-13T11:25:00Z',;
-    category: 'profile',;
-  },;
-];
-
-export default function SupportRequests() {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
-
-  // Apply filters to the request data;
-  const filteredRequests = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(request => {;
-    // Apply search query filter;
-    if (;
-      searchQuery &&;
-      !request && request.issue.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) &&;
-      !request && request.user.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) &&;
-      !request && request.id.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-    ) {;
-      return false;
-    }
-
-    // Apply status filter;
-    if (statusFilter && request && request.status !== statusFilter) {;
-      return false;
-    }
-
-    // Apply priority filter;
-    if (priorityFilter && request && request.priority !== priorityFilter) {;
-      return false;
-    }
-
-    // Apply category filter;
-    if (categoryFilter && request && request.category !== categoryFilter) {;
-      return false;
-    }
-
-    return true;
-  });
-
-  // Count by status for the summary dashboard;
-  const openCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(;
-    r => r && r.status === 'open';
-  ).length;
-  const inProgressCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(;
-    r => r && r.status === 'in-progress';
-  ).length;
-  const resolvedCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(;
-    r => r && r.status === 'resolved';
-  ).length;
-  const totalCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.length;
-
-  const resetFilters = () => {;
-    setSearchQuery('');
-    setStatusFilter(null);
-    setPriorityFilter(null);
-    setCategoryFilter(null);
-  };
-
->>>>>>> origin/main
 
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -376,7 +42,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <>;
 
 
-          
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
 
@@ -387,7 +52,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
 
-        
 
 
         {/* Status Cards */}
@@ -400,7 +64,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
 
 
-          
 
 
           <Card>
@@ -413,7 +76,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
 
 
-          
 
 
           <Card>
@@ -426,7 +88,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
 
 
-          
 
 
           <Card>
@@ -438,7 +99,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
 
-        
         <Tabs defaultValue="all" className="mb-8">
 
 
@@ -514,7 +174,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <TabsContent value='all' className='mt-6'>;
 
 
-          
           <TabsContent value="all" className="mt-6">
 
             {/* Search and Filters */}
@@ -536,7 +195,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className="pl-10"
                 />
               </div>
-              
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
@@ -559,7 +217,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' />
-              
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
@@ -582,7 +239,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Category' />
-              
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
@@ -609,12 +265,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
 
-              
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
               </Button>
             </div>
-            
 
 
             {/* Support Requests Table */}
@@ -855,7 +509,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </TableCell>;
 
 
-          
           <TabsContent value="escalated" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
@@ -864,7 +517,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </div>
           </TabsContent>
-          
           <TabsContent value="ai-flagged" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>
@@ -873,7 +525,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </div>
           </TabsContent>
-          
           <TabsContent value="need-response" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>

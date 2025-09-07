@@ -1,27 +1,9 @@
-<<<<<<< HEAD
 
-import React, { useEffect } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-=======
-return (
-    <>;
-import React, { useEffect } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
->>>>>>> origin/main
 import Link from 'next/link';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
   const schema = null;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   return (
     <>
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import {logErrorToProduction} from '@/utils/productionLogger';
-export default function MessagingInbox() {;
-import { useRouter } from 'next/router'; // Changed from react-router-dom
->>>>>>> origin/main
 
 import {logErrorToProduction} from '@/utils/productionLogger';
 
@@ -14,38 +8,7 @@ import { useRouter } from 'next/router'; // Changed from react-router-dom
 import React, { useEffect, useState } from 'react',;
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react'
-<<<<<<< HEAD
-import { useMessaging  } from '@/context/MessagingContext';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
-import { useIsMobile  } from '@/hooks/use-mobile';
-import { toast  } from 'sonner';
-import { Button  } from '@/components/ui/button';
-import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 
-=======
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react';
-import { useMessaging } from '@/context/MessagingContext';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView } from '@/components/messaging';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { toast } from 'sonner';
-import { Button } from '@/components/ui/button';
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
-import { useRouter } from 'next/router'; // Changed from react-router-dom
-
-import React, { useEffect, useState } from 'react';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext',;
-import { ProtectedRoute } from '@/components/ProtectedRoute',;
-import { ConversationsList, ConversationDetailView } from '@/components/messaging',;
-import { useIsMobile } from '@/hooks/use-mobile',;
-import { toast } from 'sonner',;
-import { Button } from '@/components/ui/button',;
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',;
->>>>>>> origin/main
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',;
 export default function MessagingInbox() {
@@ -60,79 +23,13 @@ export default function MessagingInbox() {
 
   const { 
     conversations;
-<<<<<<< HEAD
 
-    activeConversation;
-    setActiveConversation;
-
-=======
-    activeConversation;
-    setActiveConversation;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
     markAsRead;
     fetchConversations;
 export default function MessagingInbox() {
 
     isLoading
-<<<<<<< HEAD
-  } = useMessaging();
 
-  const isMobile = null;
-
-=======
-  } = useMessaging(),
-  const isMobile = useIsMobile(),
-  const router = useRouter(), // Changed from navigate
-    // Fetch conversations when component mounts
-    const loadData = async () => {
-      try {
-        await fetchConversations()
-      } catch (error) {
-    };
-    
-    loadData()
-  }, [fetchConversations]);
-  const startVideoCall = () => {
-  
-    if (!activeConversation) {
-      toast.error("Please select a conversation first");
-
-        logErrorToProduction('Failed to load conversations:', { data: error })
-        toast.error("Failed to load messages. Please try again.")
-      }
-    },
-    
-    loadData()
-  }, [fetchConversations]),
-  
-  const startVideoCall = () => {
-    if (!activeConversation) {
-      toast.error("Please select a conversation first"),
-      return
-    }
-
-    
-    const roomId = `msg-${activeConversation.id}`,
-    setActiveCall(roomId),
-    
-    const roomId = `msg-${activeConversation.id}`,
-    setActiveCall(roomId),
-
-    
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    }),
-    
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  },
-  
-  } = useMessaging();
-  const isMobile = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto py-8 px-4">
@@ -146,8 +43,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect((,) => {;
 
 
-            
-            
             {activeConversation && (
               <Button 
                 onClick={startVideoCall}
@@ -168,7 +63,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               ) : (
                 <ConversationsList
-              
 
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react';

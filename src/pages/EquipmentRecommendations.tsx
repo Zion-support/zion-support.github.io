@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-=======
-import {useEffect, useState} from 'react'
-import {ProductListingCard} from '@/components/ProductListingCard'
-import {useAuth} from '@/hooks/useAuth'
-import {fetchRecommendations} from '@/api/recommendations'
-import type { ProductListing } from '@/types/listings'
-import {
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
-} from '@/components/ui/dialog'
-import { Button } from '@/components/ui/button'
->>>>>>> origin/main
+
 
 import { useEffect, useState  } from 'react';
 import { ProductListingCard  } from '@/components/ProductListingCard';
@@ -25,17 +11,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { Loader2 } from 'lucide-react'
 import Link from 'next/link';
 import { ErrorState } from '@/components/jobs/applications';
-<<<<<<< HEAD
 
-export default function EquipmentRecommendations() {
-=======
-export default function EquipmentRecommendations() {
-
-  const { isAuthenticated, user } = useAuth()
-  const [listings, setListings] = useState<ProductListing[]>([])
-  const [loading, setLoading] = useState<boolean>(false)
-  const [error, setError] = useState<boolean>(false)
->>>>>>> origin/main
   const { isAuthenticated, user } = useAuth();
   const [listings, setListings] = useState<ProductListing[]>([]),
   const [loading, setLoading] = useState<boolean>(false),

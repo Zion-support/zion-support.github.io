@@ -1,27 +1,4 @@
-<<<<<<< HEAD
 
-=======
-key={language.code}
-              className={`cursor-pointer transition-all ${
-                selectedLanguage === language.code
-                  ? "border-primary bg-primary/5"
-              onClick = {(,) => setSelectedLanguage(language && language.code),}
-            >;
-              <CardContent className='p-3 flex items-center justify-between'>;
-                <div className='flex items-center'>;
-                  <span className='text-xl mr-2'>{language && language.flag}</span>;
-                  <span>{language && language.name}</span>;
-                </div>;
-                {selectedLanguage === language && language.code && (;
-                  <Check className='h-4 w-4 text-primary' />                )}          {languages && languages.map((language) => (;
-            <Card
-              key={language && language.code}
-              className={`cursor-pointer transition-all ${
-                selectedLanguage === language && language.code 
-                  ? "border-primary bg-primary/5" 
-                  : "border-border hover:border-primary/40"
-              }`}
->>>>>>> origin/main
 
               onClick={() => setSelectedLanguage(language.code)}
 
@@ -48,12 +25,7 @@ interface Language {
   code: string;
   name: string;
   flag: string
-<<<<<<< HEAD
-}
 
-
-=======
->>>>>>> origin/main
 const languages: Language[] = [
   { code: 'en', name: 'English', flag: '🇺🇸' }
   { code: 'es', name: 'Español', flag: '🇪🇸' }
@@ -63,13 +35,7 @@ const languages: Language[] = [
 ]
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
-<<<<<<< HEAD
 
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
-
-=======
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
->>>>>>> origin/main
 
   return (
     <div className='space-y-8 px-4'>
@@ -168,7 +134,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Choose theme</h2>
         <p className="text-muted-foreground">Select your preferred appearance</p>
-        
         <div className="flex gap-3 mt-4">
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
@@ -197,7 +162,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
 
-          
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
 
@@ -314,12 +278,9 @@ key={language.code}
               <span>Light</span>"
                 <Check className="h-4 w-4 text-primary mt-2" />"
 
-            
-
-          
 
 
-          
+
 
 
             onClick={() => setTheme('dark')}

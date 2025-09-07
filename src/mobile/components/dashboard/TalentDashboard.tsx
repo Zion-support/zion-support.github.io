@@ -1,14 +1,5 @@
 
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-=======
-import React from "react",;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
->>>>>>> origin/main
 import { Badge } from "@/components/ui/badge";
 import React from 'react'
 import {
@@ -33,10 +24,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 import Link from "next/link";
 origin/cursor/automate-test-improve-and-merge-code-2533
 export function TalentDashboard() {
@@ -92,8 +80,6 @@ export function TalentDashboard() {
             <Button variant="ghost" size="sm" className="h-8 gap-1">"
               View all <ChevronRight className="h-4 w-4" />"
 
-            
-          
 
           <Card>
             <CardContent className="p-4">"
@@ -110,13 +96,9 @@ export function TalentDashboard() {
               <div className="flex gap-2 mt-3">"
                 <Button size="sm">Apply Now""
                 <Button size="sm" variant="outline">View Details"
-            
-          
 pr-12325
 
-          
 
-          
 
 
           <Card>
@@ -161,13 +143,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Badge variant="secondary" className="text-xs">Contract"
                   <span className="text-xs text-muted-foreground mt-1">4 hours ago</span>"
 
-            
-          
       </section>
 pr-12325
 
 
-      
 
 
       <section>
@@ -247,9 +226,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <Button variant="outline" className="w-full mt-4">"
 
-            
-          
-        
 pr-12325
 
     <div className='space-y-6 px-4 pb-24'>;
@@ -527,7 +503,6 @@ pr-12325
         </Card>;
       </section>;
 
-      
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -646,7 +621,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Clock className="h-5 w-5 mb-1" aria-hidden="true" />"
 
             <span>Availability</span>
-          
 
 
 
@@ -654,13 +628,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />"
 
             <span>AI Resume Boost</span>
-          
 pr-12325
 
-      
 
 
-      
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
@@ -744,7 +715,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className="text-lg font-medium">Learning Hub</h2>""
           <Button variant="ghost" size="sm" className="h-8">"
 
-          
             <div className="flex items-center gap-3">"
               <div className="bg-primary/10 p-3 rounded-full" aria-hidden="true">"
                 <BookOpen className="h-6 w-6 text-primary" />"
@@ -754,8 +724,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>"
 
 
-          
-        
             <Clock className="h-5 w-5 mb-1" aria-hidden="true" />;"
 
             <span>Availability</span>;

@@ -1,37 +1,4 @@
-<<<<<<< HEAD
 
-import { cn } from "@/lib/utils",
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { StarIcon } from 'lucide-react'
-import Image from 'next/image', // Import next/image
-import React, { useState } from 'react', // Import useState
-
-
-=======
-import { cn } from '@/lib / utils';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { StarIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { StarIcon } from 'lucide-react';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useState
-import { Star } from 'lucide-react'
-import { cn } from '@/lib / utils';
-import { Badge } from '@/components/ui/ badge';
-import { Button } from '@/components/ui/ button';
-import { StarIcon } from 'lucide-react';
-pr-12325
-import Image from 'next / image'; // Import next / image;
-import React, { useState } from 'react'; // Import useStateimport Image from 'next / image'; // Import next / image;
-import React, { useState } from 'react'; // Import useState;
-import { Star } from 'lucide-react';
->>>>>>> origin/main
 interface ListingScoreCardProps {
   title: string;
 interface ListingScoreCardProps {
@@ -60,11 +27,7 @@ interface ListingScoreCardProps {
   aiScore?: number;
   rating?: number;
   reviewCount?: number;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   className?: string
 }
 
@@ -145,7 +108,6 @@ pr-12325
 
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
-        
         {rating > 0 && (
           <div className="flex items-center gap-1 mb-4">
             <div className="flex">
@@ -356,11 +318,7 @@ function ListingScoreCard() {
                       : "text-zion-slate-light"
                   )}
                 />
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
               ))}
             </div>
             <span className="text-sm text-zion-slate-light ml-1">
@@ -487,11 +445,9 @@ pr-12325
             ))}
           </div>;
         )}
-        
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote
         </Button>
-        
 
 
 

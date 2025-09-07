@@ -1,31 +1,4 @@
-<<<<<<< HEAD
-  
-import React, { useState } from "react";
-import {MobileHeader} from "@/mobile/components/common/MobileHeader";
-import {BottomNavigation} from "@/mobile/components/common/BottomNavigation";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Label} from "@/components/ui/label";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Zap, ChevronLeft, ChevronRight} from 'lucide-react'
-import {Badge} from "@/components/ui/badge";
-import {Card, CardContent} from "@/components/ui/card";
 
-
-import React, { useState } from "react",
-import { MobileHeader } from "@/mobile/components/common/MobileHeader",
-import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-=======
-const goToNextStep = () => {
-import React, { useState } from "react",;
-import { MobileHeader } from "@/mobile/components/common/MobileHeader",;
-import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
->>>>>>> origin/main
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { 
@@ -39,728 +12,7 @@ import { Zap, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 type JobPostStep = any;
-<<<<<<< HEAD
 
-=======
-export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details")
-  const goToNextStep = () => {
-origin/cursor/automate-test-improve-and-merge-code-2533
-    if (currentStep === "details") {
-      setCurrentStep("requirements")
-    } else if (currentStep === "requirements") {
-      setCurrentStep("budget")
-    } else if (currentStep === "budget") {
-      setCurrentStep("preview")
-
-;
-import React, { useState } from './react';
-import { MobileHeader } from '@/mobile / components / common / MobileHeader';
-import { BottomNavigation } from '@/mobile / components / common / BottomNavigation';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Label } from '@/components / ui / label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import {Zap, ChevronLeft, ChevronRight} from 'lucide-react';
-import { Badge } from '@/components / ui / badge';
-import { Card, CardContent } from '@/components / ui / card';
-type JobPostStep = "details" | "requirements" | "budget" | "preview";
-export /**
- * MobileJobPost - Function description
- */
-function MobileJobPost() {
-  const [current_step, setCurrentStep] = useState < JobPostStep>("details");
-  const goToNextStep = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("requirements");
-    } else // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("budget");
-    } else // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("preview");
-
-    }
-  }
-  const goToPrevStep = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("details");
-    } else // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("requirements");
-    } else // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep ("budget");
-    }
-  }
-  const renderStepContent = () =>: any {
-    switch (current_step) {
-      case "details": return <DetailsStep />;
-      case "requirements":;
-        return <RequirementsStep />;
-      case "budget":;
-        return <BudgetStep />;
-      case "preview":;
-        return <PreviewStep />;
-      default:;
-        return <DetailsStep />;
-    }
-  }
-
-import React, { useState } from "react";
-import {MobileHeader} from "@/mobile/components/common/MobileHeader";
-import {BottomNavigation} from "@/mobile/components/common/BottomNavigation";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Label} from "@/components/ui/label";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Zap, ChevronLeft, ChevronRight} from 'lucide-react';
-import {Badge} from "@/components/ui/badge";
-import {Card, CardContent} from "@/components/ui/card";
-
-type JobPostStep = "details" | "requirements" | "budget" | "preview";
-export function MobileJobPost() {;
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
-
-  const goToNextStep = () => {;
-    if (currentStep === "details") {;
-      setCurrentStep("requirements");
-    } else if (currentStep === "requirements") {;
-      setCurrentStep("budget");
-    } else if (currentStep === "budget") {;
-      setCurrentStep("preview");
-    }
-  };
-
-  const goToPrevStep = () => {;
-    if (currentStep === "requirements") {;
-      setCurrentStep("details");
-    } else if (currentStep === "budget") {;
-      setCurrentStep("requirements");
-    } else if (currentStep === "preview") {;
-      setCurrentStep("budget");
-    }
-  };
-
-  const renderStepContent = () => {;
-    switch (currentStep) {;
-      case "details": return <DetailsStep />;
-      case "requirements":;
-        return <RequirementsStep />;
-      case "budget":;
-        return <BudgetStep />;
-      case "preview":;
-        return <PreviewStep />;
-      default:;
-        return <DetailsStep />;
-    }
-  };
-
-    }
-
-  },
-  
-
-  const goToPrevStep = () => {
-    if (currentStep === "requirements") {
-      setCurrentStep("details")
-    } else if (currentStep === "budget") {
-      setCurrentStep("requirements")
-    } else if (currentStep === "preview") {
-      setCurrentStep("budget")
-    }
-
-  },
-  
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case "details": return <DetailsStep />,
-      case "requirements":
-        return <RequirementsStep />,
-      case "budget":
-        return <BudgetStep />,
-      case "preview":
-        return <PreviewStep />,
-      default:
-        return <DetailsStep />
-    }
-  },
-  
-
-  return (
-
-
-      
-
-
-      <main className="flex-1 py-4 pb-24 px-4">
-        <div className="mb-6 flex justify-between">
-          <div className="flex space-x-1">
-            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>
-            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>
-            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>
-            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>
-const goToNextStep = () => {
-    if (currentStep === "details") {""
-      setCurrentStep("requirements")""
-    } else if (currentStep === "requirements") {""
-      setCurrentStep("budget")""
-    } else if (currentStep === "budget") {""
-      setCurrentStep("preview")"
-;"
-import React, { useState } from './react';
-import { MobileHeader } from '@/mobile / components / common / MobileHeader';
-import { BottomNavigation } from '@/mobile / components / common / BottomNavigation';
-import { Button } from '@/components/ui/ button';
-import { Input } from '@/components/ui/ input';
-import { Textarea } from '@/components/ui/ textarea';
-import { Label } from '@/components/ui/ label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/ select';
-import {Zap, ChevronLeft, ChevronRight} from 'lucide-react';
-import { Badge } from '@/components/ui/ badge';
-import { Card, CardContent } from '@/components/ui/ card';
-type JobPostStep = "details" | "requirements" | "budget" | "preview";"
-export /**
- * MobileJobPost - Function description;
- */
-function MobileJobPost() {"
-  const [current_step, setCurrentStep] = useState < JobPostStep>("details");"
-  const goToNextStep = () =>: any {
-  // TODO: Implement
-}
-    // Check condition;
-if ( {) {
-  $2;
-}"
-      setCurrentStep ("requirements");"
-    } else // Check condition;
-      setCurrentStep ("budget");"
-      setCurrentStep ("preview");"
-  const goToPrevStep = () =>: any {
-  // TODO: Implement
-    // Check condition;
-      setCurrentStep ("details");"
-  const renderStepContent = () =>: any {
-  // TODO: Implement
-    switch (current_step) {"
-      case "details": return <DetailsStep />;"
-
-        return <RequirementsStep />;
-
-        return <BudgetStep />;
-
-        return <PreviewStep />;
-
-        return <DetailsStep />;
-"
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");"
-
-
-
-
-      case "details": return <DetailsStep />,"
-
-        return <RequirementsStep />,
-
-        return <BudgetStep />,
-
-        return <PreviewStep />,
-
-        return <DetailsStep />
-      <main className="flex-1 py-4 pb-24 px-4">"
-</main>"
-        <div className="mb-6 flex justify-between">"
-</div>"
-          <div className="flex space-x-1">"
-            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1""
-            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2""
-            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3""
-            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4"
-pr-12325
-          </div>
-
-
-          
-
-
-          <Button variant="outline" className="flex gap-1">
-            <Zap className="h-4 w-4" /> AI Assist
-          </Button>
-        </div>
-
-
-
-        
-
-        {renderStepContent()}
-        
-        <div className="flex gap-2 mt-6">
-          {currentStep !== "details" && (
-            <Button 
-              variant="outline" 
-              className="flex-1 gap-1" 
-              onClick={goToPrevStep}
-            >
-              <ChevronLeft className="h-4 w-4" /> Back
-            </Button>
-          )}
-
-      />;
-
-      <main className="flex-1 py-4 pb-24 px-4">;
-        <div className="mb-6 flex justify-between">;
-          <div className="flex space-x-1">;
-            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>;
-            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>;
-            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>;
-            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
-          </div>;
-
-          <Button variant="outline" className="flex gap-1">;
-            <Zap className="h-4 w-4" /> AI Assist;
-          </Button>;
-        </div>;
-
-        {renderStepContent()}
-
-        <div className="flex gap-2 mt-6">;
-          {currentStep !== "details" && (;
-            <Button
-              variant="outline" 
-              className="flex-1 gap-1" 
-              onClick = {goToPrevStep,}>;
-              <ChevronLeft className="h-4 w-4" /> Back;
-            </Button>;
-          )}
-
-
-          <Button
-
-          
-          <Button 
-
-            className="flex-1 gap-1"
-            onClick = {goToNextStep,}>;
-            {currentStep === "preview" ? "Publish Job" : "Continue"}
-            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
-
-
-      
-
-
-      <BottomNavigation />
-    </div>
-  )
-}
-function DetailsStep() {
-  return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">Job Details</h2>
-          <Button variant="outline" className="flex gap-1">"
-            <Zap className="h-4 w-4" /> AI Assist;"
-
-          
-        <div className="flex gap-2 mt-6">"
-            <Button;"
-              variant="outline"""
-              className="flex-1 gap-1""
-              onClick={goToPrevStep}
-            >
-              <ChevronLeft className="h-4 w-4" /> Back;"
-
-      <main className="flex-1 py-4 pb-24 px-4">;"
-        <div className="mb-6 flex justify-between">;"
-          <div className="flex space-x-1">;"
-            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1;""
-            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2;""
-            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3;""
-            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4;"
-          </div>;"
-          <Button variant="outline" className="flex gap-1">;"
-
-          ;
-        <div className="flex gap-2 mt-6">;"
-              onClick = {goToPrevStep,}>;
-
-          <Button;
-            onClick={goToNextStep}
-            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}"
-
-      <BottomNavigation />
-
-    <div className="space-y-4">"
-      <h2 className="text-lg font-medium">Job Details</h2>""
-      <div className="space-y-2">"
-        <Label htmlFor="title">Job Title""
-        <Input id="title" placeholder="e.g. Senior React Developer" />"
-
-pr-12325
-
-
-      
-
-
-      <div className="space-y-2">
-        <Label htmlFor="title">Job Title</Label>
-        <Input id="title" placeholder="e.g. Senior React Developer" />
-      </div>
-        <Label htmlFor="company">Company Name""
-        <Input id="company" placeholder="Your company name" />"
-
-pr-12325
-
-
-      
-
-
-      <div className="space-y-2">
-        <Label htmlFor="company">Company Name</Label>
-        <Input id="company" placeholder="Your company name" />
-      </div>
-
-
-      
-
-
-      <div className="space-y-2">
-        <Label htmlFor="location">Location</Label>
-        <Select defaultValue="remote">
-          <SelectTrigger>
-            <SelectValue placeholder="Select location type" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="remote">Remote</SelectItem>
-            <SelectItem value="onsite">On-site</SelectItem>
-            <SelectItem value="hybrid">Hybrid</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-        <Label htmlFor="location">Location""
-        <Select defaultValue="remote">"
-
-          <SelectTrigger>
-            <SelectValue placeholder="Select location type" />"
-
-          
-          <SelectContent>
-            <SelectItem value="remote">Remote""
-            <SelectItem value="onsite">On-site""
-            <SelectItem value="hybrid">Hybrid"
-          
-        
-pr-12325
-
-
-      
-
-
-      <div className="space-y-2">
-        <Label htmlFor="jobType">Job Type</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder="Select job type" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="fulltime">Full-time</SelectItem>
-            <SelectItem value="parttime">Part-time</SelectItem>
-            <SelectItem value="contract">Contract</SelectItem>
-            <SelectItem value="freelance">Freelance</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-    <div className="min - h-screen flex flex - col">;
-
-      
-
-      <div className="space-y-2">
-        <Label htmlFor="description">Job Description</Label>
-        <Textarea 
-          id="description" 
-          placeholder="Describe the job role and responsibilities" 
-
-      
-      <div className="space-y-2">
-        <Label htmlFor="description">Job Description</Label>
-        <Textarea 
-          id="description" 
-          placeholder="Describe the job role and responsibilities" 
-
-import React, { useState } from "react",;
-import { MobileHeader } from "@/mobile/components/common/MobileHeader",;
-import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Label } from "@/components/ui/label",;
-        <Label htmlFor="jobType">Job Type"
-        <Select>
-
-            <SelectValue placeholder="Select job type" />"
-
-          
-            <SelectItem value="fulltime">Full-time""
-            <SelectItem value="parttime">Part-time""
-            <SelectItem value="contract">Contract""
-            <SelectItem value="freelance">Freelance"
-          
-        
-    <div className="min - h-screen flex flex - col">;"
-        <Label htmlFor="description">Job Description"
-        <Textarea;"
-          id="description"""
-          placeholder="Describe the job role and responsibilities"""
-import React, { useState } from "react",;""
-import { MobileHeader } from "@/mobile/components/common/MobileHeader",;""
-import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",;""
-import { Button } from "@/components/ui/button",;""
-import { Input } from "@/components/ui/input",;""
-import { Textarea } from "@/components/ui/textarea",;""
-import { Label } from "@/components/ui/label",;"
-pr-12325
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue;
-} from "@/components/ui/select",;
-import { Zap, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Badge } from "@/components/ui/badge",;
-import { Card, CardContent } from "@/components/ui/card",;
-type JobPostStep = "details" | "requirements" | "budget" | "preview",;
-export function MobileJobPost() {;
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),;
-  const goToNextStep = () => {;
-    if (currentStep === "details") {;
-      setCurrentStep("requirements");
-    } else if (currentStep === "requirements") {;
-      setCurrentStep("budget");
-    } else if (currentStep === "budget") {;
-      setCurrentStep("preview");
-    }
-  },;
-  const goToPrevStep = () => {;
-    if (currentStep === "requirements") {;
-      setCurrentStep("details");
-    } else if (currentStep === "budget") {;
-      setCurrentStep("requirements");
-    } else if (currentStep === "preview") {;
-      setCurrentStep("budget");
-    }
-  },;
-  const renderStepContent = () => {;
-    switch (currentStep) {;
-      case "details": return <DetailsStep />,;
-      case "requirements":;
-        return <RequirementsStep />,;
-      case "budget":;
-        return <BudgetStep />,;
-      case "preview":;
-        return <PreviewStep />,;
-      default:;
-        return <DetailsStep />;
-    }
-  },;
-  return (;
-    <div className="min-h-screen flex flex-col">;
-
-      <MobileHeader;
-        title={`Post a Job (${current_step === "preview" ? 4 : current_step === "budget" ? 3 : current_step === "requirements" ? 2 : 1}/4)`}
-        show_back;
-      />;
-      <main className="flex - 1 py - 4 pb - 24 px - 4">;
-        <div className="mb - 6 flex justify - between">;
-          <div className="flex space - x-1">;
-            <Badge variant={current_step === "details" ? "default" : "outline"} className="rounded - full w - 7 h - 7 flex items - center justify - center p - 0">1</Badge>;
-            <Badge variant={current_step === "requirements" ? "default" : "outline"} className="rounded - full w - 7 h - 7 flex items - center justify - center p - 0">2</Badge>;
-            <Badge variant={current_step === "budget" ? "default" : "outline"} className="rounded - full w - 7 h - 7 flex items - center justify - center p - 0">3</Badge>;
-            <Badge variant={current_step === "preview" ? "default" : "outline"} className="rounded - full w - 7 h - 7 flex items - center justify - center p - 0">4</Badge>;
-          </div>;
-          <Button variant="outline" className="flex gap - 1">;
-            <Zap className="h - 4 w - 4" /> AI Assist;
-          </Button>;
-        </div>;
-        {renderStepContent ()}
-        <div className="flex gap - 2 mt - 6">;
-          {current_step !== "details" && (
-            <Button;
-              variant="outline";
-              className="flex - 1 gap - 1";
-              on_click = {goToPrevStep, }
-            >;
-              <ChevronLeft className="h - 4 w - 4" /> Back;
-            </Button>)}
-          <Button;
-            className="flex - 1 gap - 1";
-            on_click = {goToNextStep, }
-          >;
-            {current_step === "preview" ? "Publish Job" : "Continue"}
-            {current_step !== "preview" && <ChevronRight className="h - 4 w - 4" />}
-        title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
-        showBack;
-      />;
-      <main className="flex-1 py-4 pb-24 px-4">;
-        <div className="mb-6 flex justify-between">;
-          <div className="flex space-x-1">;
-            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>;
-            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>;
-            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>;
-            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
-          </div>;
-          <Button variant="outline" className="flex gap-1">;
-            <Zap className="h-4 w-4" /> AI Assist;
-          </Button>;
-        </div>;
-        {renderStepContent()}
-;
-        <div className="flex gap-2 mt-6">;
-          {currentStep !== "details" && (;
-            <Button;
-              variant="outline";
-              className="flex-1 gap-1";
-              onClick={goToPrevStep}
-            >;
-              <ChevronLeft className="h-4 w-4" /> Back;
-            </Button>;
-          )}
-;
-          <Button;
-            className="flex-1 gap-1";
-            onClick={goToNextStep}
-          >;
-            {currentStep === "preview" ? "Publish Job" : "Continue"}
-            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
-          </Button>;
-        </div>;
-      </main>;
-      <BottomNavigation />;
-    </div>);
-}
-/**
- * DetailsStep - Function description
- */
-function DetailsStep() {
-  return (
-    <div className="space - y-4">;
-      <h2 className="text - lg font - medium">Job Details</h2>;
-      <div className="space - y-2">;
-        <Label html_for="title">Job Title</Label>;
-        <Input id="title" placeholder="e.g. Senior React Developer" />;
-      </div>;
-      <div className="space - y-2">;
-        <Label html_for="company">Company Name</Label>;
-        <Input id="company" placeholder="Your company name" />;
-      </div>;
-      <div className="space - y-2">;
-        <Label html_for="location">Location</Label>;
-        <Select default_value="remote">;
-    </div>;
-  );
-}
-;
-function DetailsStep() {;
-  return (;
-    <div className="space-y-4">;
-      <h2 className="text-lg font-medium">Job Details</h2>;
-      <div className="space-y-2">;
-        <Label htmlFor="title">Job Title</Label>;
-        <Input id="title" placeholder="e.g. Senior React Developer" />;
-      </div>;
-      <div className="space-y-2">;
-        <Label htmlFor="company">Company Name</Label>;
-        <Input id="company" placeholder="Your company name" />;
-      </div>;
-      <div className="space-y-2">;
-        <Label htmlFor="location">Location</Label>;
-        <Select defaultValue="remote">;
-          <SelectTrigger>;
-            <SelectValue placeholder="Select location type" />;
-          </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="remote">Remote</SelectItem>;
-            <SelectItem value="onsite">On - site</SelectItem>;
-            <SelectItem value="onsite">On-site</SelectItem>;
-            <SelectItem value="hybrid">Hybrid</SelectItem>;
-          </SelectContent>;
-        </Select>;
-      </div>;
-      <div className="space - y-2">;
-        <Label html_for="job_type">Job Type</Label>;
-      <div className="space-y-2">;
-        <Label htmlFor="jobType">Job Type</Label>;
-        <Select>;
-          <SelectTrigger>;
-            <SelectValue placeholder="Select job type" />;
-          </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="fulltime">Full - time</SelectItem>;
-            <SelectItem value="parttime">Part - time</SelectItem>;
-            <SelectItem value="fulltime">Full-time</SelectItem>;
-            <SelectItem value="parttime">Part-time</SelectItem>;
-            <SelectItem value="contract">Contract</SelectItem>;
-            <SelectItem value="freelance">Freelance</SelectItem>;
-          </SelectContent>;
-        </Select>;
-      </div>;
-      <div className="space - y-2">;
-        <Label html_for="description">Job Description</Label>;
-        <Textarea;
-          id="description";
-          placeholder="Describe the job role and responsibilities";
-          rows = {5, }
-        />;
-      </div>;
-    </div>);
-      <div className="space-y-2">;
-        <Label htmlFor="description">Job Description</Label>;
-        <Textarea;
-          id="description";
-          placeholder="Describe the job role and responsibilities";
-          rows={5}
-        />;
-      </div>;
-    </div>;
-  );
-}
-
-
-
-
-
-function RequirementsStep() {
-  const [skills, setSkills] = useState<string[]>([
-    "React", "TypeScript", "Node.js"
-
-
-  ])
-  const [newSkill, setNewSkill] = useState("")
-  const addSkill = () => {
-    if (newSkill && !skills.includes(newSkill)) {
-      setSkills([...skills, newSkill])
-      setNewSkill("")
-    }
-  }
-  const removeSkill = (skill: string,) => {
-    setSkills(skills.filter(s => s !== skill))
-  }
->>>>>>> origin/main
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
@@ -849,17 +101,13 @@ export function MobileJobPost() {;"
 
             <SelectValue placeholder="Select experience level" />"
 
-          
             <SelectItem value="entry">Entry Level""
             <SelectItem value="mid">Mid Level""
             <SelectItem value="senior">Senior""
             <SelectItem value="expert">Expert"
-          
-        
 pr-12325
 
 
-      
 
 
       <div className="space-y-2">
@@ -1020,7 +268,6 @@ function RequirementsStep() {;
 
 
 
-      
 
       <div className="space-y-2">
         <Label>Required Skills</Label>
@@ -1038,7 +285,6 @@ function RequirementsStep() {;
 
 
 
-      
 
       <div className="space-y-2">
         <Label htmlFor="requirements">Specific Requirements</Label>
@@ -1049,7 +295,6 @@ function RequirementsStep() {;
         />
       </div>
 
-      
 
       <div className="space-y-2">
         <Label htmlFor="responsibilities">Key Responsibilities</Label>
@@ -1068,15 +313,12 @@ function BudgetStep() {
 
             <SelectValue placeholder="Select required education" />"
 
-          
             <SelectItem value="high_school">High School""
             <SelectItem value="associate">Associate Degree""
             <SelectItem value="bachelor">Bachelor's Degree
             <SelectItem value="master">Master's Degree
             <SelectItem value="phd">PhD""
             <SelectItem value="none">No Specific Requirement"
-          
-        
 
 
         <Input id="title" placeholder="e && e.g. Senior React Developer" />;"
@@ -1127,7 +369,6 @@ function BudgetStep() {
         />
 
 
-      
         <Label htmlFor="responsibilities">Key Responsibilities"
           id="responsibilities"""
           placeholder="List the key responsibilities for this role""
@@ -1139,16 +380,12 @@ function BudgetStep() {
 
             <SelectValue placeholder="Select payment type" />"
 
-          
             <SelectItem value="hourly">Hourly Rate""
             <SelectItem value="fixed">Fixed Price""
             <SelectItem value="salary">Salary"
-          
-        
 pr-12325
 
 
-      
 
 
       <div className="space-y-2">
@@ -1174,16 +411,12 @@ pr-12325
             <SelectTrigger className="w-24">"
               <SelectValue placeholder="Currency" />"
 
-            
               <SelectItem value="usd">USD""
               <SelectItem value="eur">EUR""
               <SelectItem value="gbp">GBP"
-            
-          
 pr-12325
 
 
-      
 
 
       <div className="space-y-2">
@@ -1206,7 +439,6 @@ pr-12325
       </div>
 
 
-      
 
 
       <div className="space-y-2">
@@ -1215,7 +447,6 @@ pr-12325
       </div>
 
 
-      
 
 
       <div className="space-y-2">
@@ -1224,7 +455,6 @@ pr-12325
       </div>
 
 
-      
 
 
       <div className="space-y-2">
@@ -1249,7 +479,6 @@ pr-12325
 
 
 
-      
 
       <div className="space-y-2">
         <Label htmlFor="additionalInfo">Additional Budget Information</Label>
@@ -1266,7 +495,6 @@ function PreviewStep() {
       <h2 className="text-lg font-medium mb-2">Job Preview</h2>
 
 
-      
 
 
       <Card>
@@ -1278,25 +506,20 @@ function PreviewStep() {
 
 
 
-      
 
         <Label htmlFor="duration">Project Duration"
 
             <SelectValue placeholder="Select project duration" />"
 
-          
             <SelectItem value="ltw">Less than a week""
             <SelectItem value="ltm">Less than a month""
             <SelectItem value="1-3m">1-3 months""
             <SelectItem value="3-6m">3-6 months""
             <SelectItem value="6m+">6+ months""
             <SelectItem value="ongoing">Ongoing"
-          
-        
 
 
 
-      
         <Label htmlFor="additionalInfo">Additional Budget Information"
           id="additionalInfo"""
           placeholder="Any additional information about budget or payment""
@@ -1313,7 +536,6 @@ function PreviewStep() {
 pr-12325
 
 
-          
 
 
           <div className="flex gap-2 my-3">
@@ -1323,7 +545,6 @@ pr-12325
           </div>
 
 
-          
 
 
           <div className="space-y-1 text-sm mt-4">
@@ -1336,7 +557,6 @@ pr-12325
 pr-12325
 
 
-          
 
 
           <div className="space-y-1 text-sm mt-3">
@@ -1349,7 +569,6 @@ pr-12325
 pr-12325
 
 
-          
 
 
           <div className="space-y-1 text-sm mt-3">
@@ -1361,7 +580,6 @@ pr-12325
 pr-12325
 
 
-          
 
 
           <div className="mt-4 pt-3 border-t border-border">
@@ -1752,7 +970,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="mt-4 pt-3 border-t border-border">"
             <h4 className="font-medium mb-2">Description</h4>""
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
-        
 
         <div className="flex gap-2">;"
           <Input;

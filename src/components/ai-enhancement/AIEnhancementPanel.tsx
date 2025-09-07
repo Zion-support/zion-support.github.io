@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
@@ -10,49 +7,7 @@ import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-<<<<<<< HEAD
 
-interface AIEnhancementPanelProps {
-=======
-import React, { useState } from 'react'
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardFooter
-} from '@/components/ui/card'; import React, { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
-  useAIContentEnhancer
-  AIEnhancementOptions
-} from '@/hooks/useAIContentEnhancer'
-origin/cursor/automate-test-improve-and-merge-code-2533
-interface AIEnhancementPanelProps {
-pr-12325
-import React, { useState } from 'react';
-import {;
-  Card,;
-  CardContent,;
-  CardHeader,;
-  CardTitle,;
-  CardFooter,;
-} from '@/components/ui/card';import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
-import {;
-  useAIContentEnhancer,;
-  AIEnhancementOptions,;
-} from '@/hooks/useAIContentEnhancer';
-
-interface AIEnhancementPanelProps {;
->>>>>>> origin/main
   title: string;
   useAIContentEnhancer,;
   AIEnhancementOptions,;
@@ -64,23 +19,7 @@ pr-12325
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
-<<<<<<< HEAD
 
-  initialContent?: string
-=======
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
-interface AIEnhancementPanelProps {;
-  title: string,;
-  defaultOptions: AIEnhancementOptions,;
-  onApply: (content: string) => void,;
-  onClose?: () => void,;
-  showInstructions?: boolean,;
-  initialContent?: string;
->>>>>>> origin/main
 }
 ;
 export function AIEnhancementPanel({;
@@ -291,11 +230,7 @@ export function AIEnhancementPanel({
   onApply;
   onClose;
   showInstructions;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -361,7 +296,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <CardTitle className="flex items-center gap-2">"
           <Sparkles className="h-5 w-5 text-primary" />"
 
-        
       <CardContent className="space-y-4">"
         <div className="space-y-2">"
 </div>"
@@ -465,7 +399,6 @@ pr-12325
 
             </>)
           )}
-        
             <>;
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
             </>;
@@ -501,7 +434,6 @@ pr-12325
         )}
 
 
-      
 
 
       {generatedContent && (
@@ -541,7 +473,6 @@ pr-12325
 
             <Button variant='outline' onClick={onClose}>
 
-            
         <CardFooter className='flex justify-between'>;
 
             <Button variant='outline' onClick={onClose}>;

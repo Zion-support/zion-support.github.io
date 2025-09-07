@@ -11,23 +11,7 @@ import { Badge } from '@/components/ui/badge';
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
-
-import Link from "next/link";
-=======
-import React from "react",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
-                </Button>
->>>>>>> origin/main
 export function ClientDashboard() {
   return (
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -46,13 +30,11 @@ export function ClientDashboard() {
 "
           <Plus className="mr-2 h-5 w-5" /> Post a New Job;"
 
-        
 pr-12325
       </section>
 
 
 
-      
 
       <section>
         <div className="flex items-center justify-between mb-4">
@@ -68,12 +50,9 @@ pr-12325
             <Button variant="ghost" size="sm" className="h-8 gap-1">"
               View all <ChevronRight className="h-4 w-4" />"
 
-            
-          
 pr-12325
         </div>
 
-        
 
         <Card>
           <CardContent className="p-4">
@@ -86,7 +65,6 @@ pr-12325
                 <Badge>3 Milestones</Badge>
               </div>
 
-              
               <div className="space-y-1">
                 <div className="flex justify-between text-sm">
 
@@ -98,7 +76,6 @@ pr-12325
                 </div>
               </div>
 
-              
               <div className="flex justify-between items-center">
                 <div className="flex -space-x-2">
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
@@ -124,7 +101,6 @@ pr-12325
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">"
                   <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>
 
-              
               <div className="flex justify-between items-center">"
                 <div className="flex -space-x-2">"
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">"
@@ -143,9 +119,7 @@ pr-12325
         </Card>
       </section>
 
-      
 
-      
 
 
       <section>
@@ -166,7 +140,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
 
-        
         <div className="space-y-3">
 
 
@@ -198,19 +171,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </CardContent>
           </Card>
                 <Button size="sm" variant="outline">View Details"
-          
-        
 
-      
 
-      
 
 
           <h2 className="text-lg font-medium">Suggested Talents</h2>""
           <Link href="/mobile/marketplace">"
 
-            
-          
 
 
         <div className="space-y-3">"
@@ -229,12 +196,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="flex gap-2 mt-3">"
                 <Button size="sm">View Profile""
                 <Button size="sm" variant="outline">Message"
-            
-          
 pr-12325
 
 
-          
 
 
           <Card>
@@ -295,12 +259,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Badge variant="outline" className="text-xs">React""
                 <Badge variant="outline" className="text-xs">Node.js""
                 <Badge variant="outline" className="text-xs">AWS"
-            
-          
 pr-12325
 
 
-      
 
 
       <section>
@@ -315,7 +276,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12325
 
 
-        
 
 
         <Card>
@@ -333,7 +293,6 @@ pr-12325
             </div>
 
 
-            
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
                 <FileText className="h-5 w-5 text-primary" />
@@ -353,7 +312,6 @@ pr-12325
               </div>
             </div>
 
-      
       <section>
 
         <div className="flex items-center justify-between mb-4">
@@ -384,7 +342,6 @@ pr-12325
               </div>
             </div>
 
-            
 
             <Button variant="outline" className="w-full">View All Notifications</Button>
             <Button variant='outline' className='w-full'>
@@ -504,14 +461,10 @@ function ClientDashboard() {
                   <strong>Mobile App Development:</strong> 3 new applicants for your job post;
                 <p className="text-xs text-muted-foreground">1 day ago</p>"
 
-      
 
 
 
-            
             <Button variant="outline" className="w-full">View All Notifications"
-          
-        
 
 
 

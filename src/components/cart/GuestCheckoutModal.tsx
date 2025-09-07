@@ -1,56 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Label } from '@/components/ui/label',;
-import { Textarea } from '@/components/ui/textarea',;
-try {
-      on_submit ({ email, address });
-    } finally {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogFooter,;
-  DialogHeader,;
-  DialogTitle,;
-} from '@/components/ui/dialog';
-import { User, Mail, MapPin, CreditCard } from 'lucide-react';
-import { isProdDomain } from '@/utils/getStripe';
-
-interface GuestCheckoutModalProps {;
->>>>>>> origin/main
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -78,65 +26,7 @@ import {
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
 interface GuestCheckoutModalProps {
-<<<<<<< HEAD
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  onSubmit: (details: { email: string, address: string }) => void
-}
 
-
-interface GuestCheckoutModalProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  onSubmit: (details: { email: string; address: string }) => void;
-export default function GuestCheckoutModal({
-
-  open;
-  onOpenChange;
-  onSubmit}: GuestCheckoutModalProps) {
-  const [email, setEmail] = useState('');
-  const [address, setAddress] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const handleSubmit = null;
-
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  onSubmit: (details: { email: string; address: string }) => void;
-export default function GuestCheckoutModal(): any ({;
-  open,;
-  onOpenChange,;
-  onSubmit,;
-}: GuestCheckoutModalProps) {;
-  const [email, setEmail] = useState('');
-  const [address, setAddress] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    if (!email || !address) {;
-      alert('Please fill in all required fields');
-      return;
-    }
-
-    setIsSubmitting(true);
-    try {;
-      onSubmit({ email, address });
-    } finally {;
-      setIsSubmitting(false);
-
-    }
-  }
-
-    }
-  },
-
-
-
-  const handleSubmit = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">

@@ -1,32 +1,4 @@
-<<<<<<< HEAD
 
-import Image from "next/image";
-import { Twitter, Linkedin } from 'lucide-react'
-
-interface Speaker {
-  name: string;
-  title: string;
-  avatar: string;
-
-  twitter?: string;
-=======
-interface Speaker {
-
-}
-interface Speaker {
-  name: string,
-  title: string,
-  avatar: string,
-  twitter?: string
-import Image from "next/image",;
-import { Twitter, Linkedin } from 'lucide-react'
-
-interface Speaker {
-  name: string,
-  title: string,
-  avatar: string,
-  twitter?: string,
->>>>>>> origin/main
   linkedin?: string
 }
 
@@ -83,19 +55,13 @@ linkedin: '#',
 }
 const speakers: Speaker[] = [
   {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     name: 'Alex Zion';
     title: 'Founder & CEO';
     avatar: 'https://placehold.co/100x100';
     twitter: '#';
     linkedin: '#'}],
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 
     name: 'Alex Zion'
     title: 'Founder & CEO'

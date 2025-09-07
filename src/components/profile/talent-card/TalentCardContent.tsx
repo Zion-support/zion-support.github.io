@@ -6,38 +6,16 @@ import React, { useState } from 'react';
 import { MapPin } from 'lucide-react';
 import { TalentCardSkills } from './TalentCardSkills';
 
-<<<<<<< HEAD
-import React, { useState } from "react";
 
-import { MapPin } from 'lucide-react'
-
-import { TalentCardSkills } from "./TalentCardSkills";
-=======
->>>>>>> origin/main
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
-<<<<<<< HEAD
 
-  skills: string[] | undefined
-=======
->>>>>>> origin/main
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-<<<<<<< HEAD
-export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
 
-=======
-
-export function TalentCardContent(): any ({;
-  summary,;
-  bio,;
-  timezone,;
-  skills,;
-}: TalentCardContentProps) {;
->>>>>>> origin/main
   const [isHovering, setIsHovering] = useState(false);
 
 origin/cursor/automate-test-improve-and-merge-code-2533

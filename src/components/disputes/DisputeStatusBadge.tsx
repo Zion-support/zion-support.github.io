@@ -1,35 +1,11 @@
-<<<<<<< HEAD
 
-
-import { Badge } from "@/components/ui/badge";
-import { ShieldAlert } from 'lucide-react'
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-
-=======
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import {
-  Tooltip
-  TooltipContent
-  TooltipTrigger
-} from '@/components/ui/tooltip'
->>>>>>> origin/main
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
-<<<<<<< HEAD
 
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive";
-  let message = null;
-
-=======
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive";
-  let message = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
     default:
       break
   }
-  
   return (
     <Tooltip>
       <TooltipTrigger asChild>
@@ -139,7 +115,6 @@ interface DisputeStatusBadgeProps {
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
   let message = "This item has an open dispute",
-  
   switch (status) {
     case 'under_review':
       variant = "secondary",
@@ -239,6 +214,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <p>{message}</p>;
       ;)
     );
-      
-    
 pr-12325

@@ -38,25 +38,7 @@ import { ReferralReward } from '@/types/referrals';
 import { formatDate } from '@/utils/referralUtils';
 import { BadgeDollarSign, Badge } from 'lucide-react';
 
-<<<<<<< HEAD
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-
-=======
-interface RewardsCardProps {;
-  rewards: ReferralReward[];
-  isLoading: boolean;
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ReferralReward } from "@/types/referrals"
-import { formatDate } from "@/utils/referralUtils"
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-
-
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/main
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react';
@@ -226,44 +208,31 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 "
             <BadgeDollarSign className="h-5 w-5" />"
 
-          
           <CardDescription>Rewards earned from successful referrals
-        
         <CardContent>
           <div className="flex items-center justify-center p-4">"
 </div>"
             <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />"
 </div>
-        
-      
       <Card>
 
         <CardHeader>
 
 
 
-          
           <CardDescription>
 
-          
-        
 
 
-          
-        
 
 
           <div className="flex flex-col items-center justify-center p-4 text-center">"
             <p className="text-muted-foreground">No rewards yet</p>""
             <p className="text-sm text-muted-foreground mt-1">"
 </p>
-        
-      
 
 
 
-        
-      
         <div className="space-y-4">"
             <div;
               key={reward.id}
@@ -618,8 +587,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="text-xs text-muted-foreground">;"
 
 
-        
-      
               key={reward.id}`;
                 index !== rewards.length - 1 ? "border-b pb-3" : "";"`;
               }`}

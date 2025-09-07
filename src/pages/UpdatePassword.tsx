@@ -1,75 +1,9 @@
-<<<<<<< HEAD
 
-
-import { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { z } from "zod",
-import { LockKeyhole } from 'lucide-react'
-
-import { supabase } from "@/integrations/supabase/client",
-
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Form;
-=======
->>>>>>> origin/main
   FormControl;
   FormField;
   FormItem;
   FormLabel;
-<<<<<<< HEAD
 
-=======
-import { useState, useEffect } from "react",;
-import { useRouter } from 'next/router',;
-
-import { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { useForm, ControllerRenderProps } from "react-hook-form",;
-import { z } from "zod",;
-import { LockKeyhole } from 'lucide-react'
-
-  )
-}
-
-
-  FormMessage } from '@/components / ui / form'; import { toast  } from '@/hooks / use - toast';
-import { cleanupAuthState  } from '@/utils / auth_utils';
-import { logErrorToProduction } from '@/utils / production_logger';
-// Form validation schema;
-const updatePasswordSchema = z;
-  .object ({
-    password: z;
-      .string ();
-      .min (8, "Password must be at least 8 characters");
-      .max (64, "Password must be less than 64 characters");
-    confirm_password: z.string ()});
-  .refine ((data, ) => data.password === data.confirm_password, {
-    message: "Passwords do not match",
-    path: ["confirm_password"]}),
-type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
-}
-  );
-}
-
-      .max(64, "Password must be less than 64 characters"),
-      .max(64, "Password must be less than 64 characters"),
-
-import { supabase } from "@/integrations/supabase/client",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
->>>>>>> origin/main
   FormMessage} from "@/components/ui/form",
 import { toast } from "@/hooks/use-toast",;
 import { cleanupAuthState } from "@/utils/authUtils",;
@@ -106,7 +40,6 @@ export default function UpdatePassword() {
     const hash = typeof window !== 'undefined' ? window.location.hash : "",
     const hashParams = new URLSearchParams(hash.substring(1)),
     const token = hashParams.get("access_token"),
-    
     if (token) {
       setAccessToken(token)
     } else {
@@ -456,12 +389,7 @@ export default function UpdatePassword() {;
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  )
 
-}
-=======
->>>>>>> origin/main
   );
   password: z .string () if (token) {;
   setAccessToken (token) ;

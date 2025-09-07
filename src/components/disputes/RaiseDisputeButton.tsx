@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -83,23 +80,17 @@ export function RaiseDisputeButton({
 
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
-  
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false),
     router.push(`/dashboard/disputes/${disputeId}`)
   },
-  
 }
 
 export function RaiseDisputeButton({ 
   projectId;
   milestoneId;
   variant;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <>
       <Button 
@@ -111,7 +102,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <ShieldAlert className="h-4 w-4 mr-2" />
         Raise Dispute
       </Button>
-      
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
           <DialogHeader>
@@ -174,7 +164,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 
-          
           <DisputeForm 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;

@@ -1,89 +1,16 @@
-<<<<<<< HEAD
 
-
-import { useState } from "react",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-=======
-import { useState } from "react",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { useForm } from "react-hook-form",;
-import { z } from "zod",;
->>>>>>> origin/main
 import { User, Mail, AtSign, GraduationCap } from 'lucide-react'
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 import {
   Form;
   FormControl;
   FormField;
   FormItem;
   FormLabel;
-<<<<<<< HEAD
 
-  FormMessage} from "@/components/ui/form",
-
-const profileSchema = null;
-
-=======
-  FormMessage} from "@/components/ui/form",
-
-const profileSchema = null;
-import {
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormLabel
-  FormMessage} from "@/components/ui/form"
-const profileSchema = z.object({
-  displayName: z.string().min(2, "Full Name must be at least 2 characters")
-  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters")
-  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")})
-type ProfileFormValues = z.infer<typeof profileSchema>
-origin/cursor/automate-test-improve-and-merge-code-2533
-interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void,
-  userType: string
-userType: string
-}
-export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
-  const form = useForm<ProfileFormValues>({
-    resolver: zodResolver(profileSchema)
-    defaultValues: {
-      case "serviceProvider": return "Service Provider"
-      case "talent":
-        return "Talent"
-      case "client":
-        return "Client"
-      default:
-        return "User"
-    }
-  }
-      case "serviceProvider": return "Service Provider",
-      case "talent":
-        return "Talent",
-      case "client":
-        return "Client",
-      default:
-        return "User"
-    }
-  },
-
-
-
-
-
-
-
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -93,7 +20,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>
       </div>
 
-      
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
@@ -356,7 +282,6 @@ function ProfileSetup() {
             )}
           />
 
-          
 
           <Button
             type="submit"

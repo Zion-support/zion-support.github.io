@@ -1,25 +1,11 @@
-<<<<<<< HEAD
 
-import { useEffect, useState } from "react";
-import { useRouter  } from 'next/router';
-import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
-
-=======
->>>>>>> origin/main
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {;
   Tabs;
   TabsContent;
   TabsList;
-<<<<<<< HEAD
 
-  TabsTrigger} from "@/components/ui/tabs",
-
-=======
->>>>>>> origin/main
 import { Loader2 } from 'lucide-react'
 
 
@@ -197,7 +183,6 @@ export default function SearchPage() {
   // Sync query with URL parameter changes
   useEffect(() => {
     if (!router.isReady) return,
-    
     const urlQuery = (router.query.q as string) || "",
     if (urlQuery !== query) {
       setQuery(urlQuery)
@@ -289,17 +274,7 @@ interface SearchResult {
   description: string
 }
 function highlight(text: string, term: string) {
-<<<<<<< HEAD
 
-  if (!term) return text;
-  const escaped = null;
-              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
-
-=======
-  if (!term) return text;
-  const escaped = null;
-              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
->>>>>>> origin/main
             }}
             searchSuggestions = {suggestions,}
 origin/cursor/automate-test-improve-and-merge-code-2533

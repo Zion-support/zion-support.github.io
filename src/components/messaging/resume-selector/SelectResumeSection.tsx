@@ -6,29 +6,19 @@ import { ResumeOption } from '../resume-selector/types';
 import { ResumePreviewCard } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/main
 import React from 'react';
 import { FileText } from 'lucide-react'
 import { ResumeOption  } from '../resume-selector/types';
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 interface SelectResumeSectionProps {
   resumeOptions: ResumeOption[];
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   isLoading: boolean
 export function SelectResumeSection({
   resumeOptions;
@@ -37,10 +27,7 @@ export function SelectResumeSection({
   handleDownloadResume;
 origin/cursor/automate-test-improve-and-merge-code-2533
   isLoading
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 }: SelectResumeSectionProps) {
   return (
     <div className="space-y-2">
@@ -58,14 +45,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </button>
           ))}
-          
-
-          
 
 
-          
 
-          
+
 
           {resumeOptions.map((option) => (
             <button
@@ -188,7 +171,6 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
           Upload New
         </button>
       </div>
-      
       {resumes.length === 0 ? (
         <div className="text-center py-8">
           <FileText className="mx-auto h-12 w-12 text-gray-400" />

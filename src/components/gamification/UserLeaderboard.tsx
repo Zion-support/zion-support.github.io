@@ -1,21 +1,4 @@
-<<<<<<< HEAD
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Trophy } from 'lucide-react'
-
-=======
-import { Trophy } from 'lucide-react'
-import { Trophy } from 'lucide-react
-pr-12325
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Trophy } from 'lucide-react';
-export interface LeaderboardEntry {
->>>>>>> origin/main
 
   name: string,
   points: number;
@@ -179,9 +162,7 @@ function UserLeaderboard() {
 origin/cursor/automate-test-improve-and-merge-code-2533
           <Trophy className="h-5 w-5" /> Leaderboard;"
 
-        
         <CardDescription>Top users by points
-      
       <CardContent>
 
 

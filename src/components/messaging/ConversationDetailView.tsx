@@ -1,15 +1,4 @@
-<<<<<<< HEAD
 
-=======
-                    src = {activeConversation && activeConversation.context_data.image_url,}
-                    alt = {activeConversation && activeConversation.context_data.title || "Context",}
-
-  const { user } = useAuth()
-  const {
-    activeConversation
-    activeMessages
-    sendMessage
->>>>>>> origin/main
 
 import React, { useState, useEffect, useRef } from 'react';
 import { format  } from 'date-fns';
@@ -20,19 +9,13 @@ import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import { AspectRatio  } from '@/components/ui/aspect-ratio';
 import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
   const { user } = useAuth();
   const { 
     activeConversation;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     activeMessages;
     sendMessage;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -43,10 +26,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="flex-1 flex flex-col h-full">
       {/* Header */}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">

@@ -1,59 +1,4 @@
-<<<<<<< HEAD
 
-
-import { useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
-import { format } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-
-interface JobMatchCardProps {
-  match: JobMatch;
-  onApply: (matchId: string, jobId: string) => void;
-  onDecline: (matchId: string) => void;
-
-=======
-import { useState } from 'react';
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardDescription
-  CardFooter
-} from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
-import { format } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-origin/cursor/automate-test-improve-and-merge-code-2533
-interface JobMatchCardProps {
-interface JobMatchCardProps {
-  // TODO: Implement
-}
-pr-12325
-import { useState } from 'react';
-import {;
-  Card,;
-  CardContent,;
-  CardHeader,;
-  CardTitle,;
-  CardDescription,;
-  CardFooter,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
-import { format } from 'date-fns';
-import { JobMatch } from '@/types/jobs';
-interface JobMatchCardProps {;
-  match: JobMatch;
-  onApply: (matchId: string, jobId: string) => void;
-  onDecline: (matchId: string) => void;
->>>>>>> origin/main
   showApplied?: boolean
 
   match: JobMatch;,
@@ -82,19 +27,13 @@ export function JobMatchesCard(): any ({;
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
-  
   if (!job) return null,
-  
 
 
 }
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
       <CardHeader className="p-4 pb-2">
@@ -120,7 +59,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {job.description}
         </p>
 
-        
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>
@@ -202,7 +140,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$
             {job.budget.min} - ${job.budget.max}
 
-        
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
@@ -256,10 +193,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <CardDescription>
                 <span className="ml-2 text-xs text-muted-foreground">"
 </span>
-            
           <Badge variant="outline" className="flex items-center">"
 
-          
       <CardContent className="p-4 pt-0">"
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">"
 </p>
@@ -292,7 +227,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
                 <Badge variant="secondary" className="text-xs">"
 
-                
           </div>;"
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
           <div className='flex items-center text-sm'>
@@ -304,7 +238,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
             <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />
 
-      
 
 
       <CardFooter className="p-4 pt-0">"
@@ -475,7 +408,6 @@ if (return null) {
               className="flex-1""
               onClick={() => onApply(match.id, job.id)}
 
-            
 
 
               variant="outline"""

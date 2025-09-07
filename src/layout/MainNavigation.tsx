@@ -1,221 +1,10 @@
-<<<<<<< HEAD
 
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { useState } from "react",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { useTranslation } from "react-i18next",
-import { useFavorites } from "@/hooks/useFavorites",
-=======
-import Link from "next/link",;
-import { useRouter } from "next/router",;
-import { useState } from "react",;
-import { cn } from "@/lib/utils",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useTranslation } from "react-i18next",;
-import { useFavorites } from "@/hooks/useFavorites",;
->>>>>>> origin/main
 import { useCart } from "@/context/CartContext";
 import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
 import { LanguageSelector  } from '@/components/header/LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components/ui/hover-card';
 import { MiniCartPreview  } from '@/components/cart/MiniCartPreview';
-<<<<<<< HEAD
 
-=======
-import { LoginModal } from '@/components/auth/LoginModal';
-origin/cursor/automate-test-improve-and-merge-code-2533
-interface MainNavigationProps {
-  isAdmin?: boolean
-  unreadCount?: number
-  className?: string
-
-import Link from 'next / link';
-import { use_router } from 'next / router';
-import { useState } from 'react';
-import { cn } from '@/lib / utils';
-import { use_auth } from '@/hooks / use_auth';
-import { use_translation } from 'react - i18next';
-import { use_favorites } from '@/hooks / use_favorites';
-import { use_cart } from '@/context / CartContext';
-export function MainNavigation({ isAdmin;
-                      router.pathname.startsWith('/cart')
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
-import { cn } from '@/lib/utils'
-import { useAuth } from '@/hooks/useAuth'
-import { useTranslation } from 'react-i18next'
-import { useFavorites } from '@/hooks/useFavorites'
-import { useCart } from '@/context/CartContext'
-origin/cursor/automate-test-improve-and-merge-code-2533
-import {
-interface MainNavigationProps {
-  // TODO: Implement
-}
-  isAdmin?: boolean;
-  unreadCount?: number;
-  className?: string;
-import Link from 'next / link';
-import { use_router } from 'next/router';
-import { useState } from 'react';
-import { cn } from '@/lib / utils';
-import { use_auth } from '@/hooks/ use_auth';
-import { use_translation } from 'react - i18next';
-import { use_favorites } from '@/hooks/ use_favorites';
-import { use_cart } from '@/context / CartContext';
-import {
-  // TODO: Implement
-pr-12325
-  Heart,
-  MessageSquare,
-  CreditCard,
-  ShoppingCart,
-  Wallet,
-} from 'lucide-react';
-import { LanguageSelector } from '@/components / header / LanguageSelector';
-  HoverCard,
-  HoverCardTrigger,
-  HoverCardContent,
-} from '@/components / ui / hover - card';
-import { MiniCartPreview } from '@/components / cart / MiniCartPreview';
-import { LoginModal } from '@/components / auth / LoginModal'; import { LanguageSelector } from '@/components / header / LanguageSelector';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components / ui / hover - card';
-import { LoginModal } from '@/components / auth / LoginModal';
-interface MainNavigationProps {
-  is_admin?: boolean,
-  unread_count?: number,
-  class_name?: string;
-}
-interface MainNavigationProps {
-  is_admin?: boolean;
-  unread_count?: number;
-  class_name?: string;
-export /**
- * MainNavigation - Function description
-import { LanguageSelector } from '@/components/ header / LanguageSelector';
-  HoverCard,
-  HoverCardTrigger,
-  HoverCardContent,
-} from '@/components/ui/ hover - card';
-import { MiniCartPreview } from '@/components/ cart / MiniCartPreview';
-import { LoginModal, LanguageSelector } from 'lucide-react';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/ hover - card';
-import { LoginModal } from '@/components/ auth / LoginModal';
-  // TODO: Implement
-  is_admin?: boolean,
-  unread_count?: number,
-  class_name?: string;
-  // TODO: Implement
-  is_admin?: boolean;
-  unread_count?: number;
-export /**
- * MainNavigation - Function description;
-pr-12325
- */
-function MainNavigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false); // Add state;
-  const { user } = use_auth ();
-  const is_authenticated = !!user;
-  const [login_open, setLoginOpen] = useState (false);
-  const { count } = use_favorites ();
-  const { items } = use_cart ();
-  const cart_count = items.length;
-  const router = use_router (); // Changed from use_location;
-  const { t } = use_translation ();
-  const handleCartClick = (e: React.MouseEvent, ) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-  // TODO: Implement
-    // Check condition;
-if ( {) {
-  $2;
-pr-12325
-      e.prevent_default ();
-      setLoginOpen (true);
-      return;
-
-    }
-    setIsMobileMenuOpen(false)
-  }
-  const baseLinks = [
-    {
-      key: 'home'
-      href: '/'
-      matches: (path: string) => path === '/',    }
-    {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-    setIsMobileMenuOpen(false)
-  const baseLinks = [
-    {
-      key: 'home,
-  href: '/
-      matches: (path: string) => path === '/',    }
-
-class ErrorBoundary extends React.Component {
-  // TODO: Implement
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-pr-12325
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
-import { useAuth } from '@/hooks/useAuth';
-import { useTranslation } from 'react-i18next';
-import { useFavorites } from '@/hooks/useFavorites';
-import { useCart } from '@/context/CartContext';
-import {;
-  Heart,;
-  MessageSquare,;
-  CreditCard,;
-  ShoppingCart,;
-  Wallet,;
-} from 'lucide-react';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import {;
-  HoverCard,;
-  HoverCardTrigger,;
-  HoverCardContent,;
-} from '@/components/ui/hover-card';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
-import { LoginModal } from '@/components/auth/LoginModal';import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
->>>>>>> origin/main
 import { LoginModal } from '@/components/auth/LoginModal';
 interface MainNavigationProps {;
   isAdmin?: boolean,;
@@ -223,141 +12,7 @@ interface MainNavigationProps {;
   className?: string;
 }
 
-<<<<<<< HEAD
 
-export function MainNavigation({ isAdmin;
-                      router.pathname.startsWith('/cart')
-
-=======
-  const baseLinks = [;
-    {;
-      key: 'home',;
-      href: '/',;
-
-      href: '/analytics',;
-      matches: (path: string) => path && path.startsWith('/analytics'),;
-    });  }
-
-  return (
-
-      <nav
-        className={cn('navbar', className)}
-        role='navigation'
-        aria-label='Main navigation'>;
-
-        <div
-
-          className={cn(
-
-                  href={link.href}
-                  aria-label={link.name}
-
-                  onClick={() => setIsMobileMenuOpen(false)}
-
-                    'nav-link',
-                    'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-
-                    link.matches(router.pathname)
-                      ? 'bg-zion-purple/20 text-zion-cyan'
-                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
-                  )}                >
-
-                    "nav-link",
-                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
-                    link.matches(router.pathname)
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-                  )}
-                >;
-
-                  {link.name}
-                </Link>
-              </li>
-                  className={cn(;
-                    'nav-link',;
-                    'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
-                    link && link.matches(router && router.pathname);
-                      ? 'bg-zion-purple/20 text-zion-cyan';
-                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
-                  )}                >;
-                  {link && link.name}
-                </Link>;
-              </li>;
-            ))}
-
-                  className={cn(;
-                    'nav-link',;
-                    'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
-                    router && router.pathname === '/wishlist';
-                      ? 'bg-zion-purple/20 text-zion-cyan';
-                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
-                  )}                >;
-                  <Heart className='w-4 h-4' />;
-                  {count > 0 && (;
-                    <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
-
-                      {count}
-                    </span>
-                  )}
-                </Link>
-              </li>
-            )}
-            {/* Wallet link */}
-            {isAuthenticated && (
-              <li className='nav-item'>
-                <Link
-                  href='/wallet'
-                  aria-label='Wallet'
-                  onClick={() => setIsMobileMenuOpen(false)}
-
-                  className={cn(;
-                    'nav-link',;
-                    'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
-                    router && router.pathname === '/wallet';
-                      ? 'bg-zion-purple/20 text-zion-cyan';
-                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
-                  )}                >;
-                  <Wallet className='w-4 h-4' />;
-                </Link>;
-              </li>;
-
-            )}
-            {/* Messages link */}
-            {isAuthenticated && (
-              <li className='nav-item'>
-                <Link
-                  href='/messages'
-                  aria-label='Messages'
-                  onClick={() => setIsMobileMenuOpen(false)}
-
-                  className={cn(;
-                    'nav-link',;
-                    'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
-                    router && router.pathname === '/messages';
-                      ? 'bg-zion-purple/20 text-zion-cyan';
-                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
-                  )}                >;
-                  <MessageSquare className='w-4 h-4' />;
-                  {unreadCount > 0 && (;
-                    <span className='absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
-
-                      {unreadCount > 9 ? '9+' : unreadCount}
-                    </span>;
-                  )}
-                </Link>;
-              </li>;
-            )}
-
-                    onClick={handleCartClick}
-                    className={cn(
-
-                      'nav-link',
-                      'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router && router.pathname.startsWith('/cart')
-
-                      'nav-link'
-                      'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router.pathname.startsWith('/cart')
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                     ),}>;
@@ -424,7 +79,6 @@ if ( {) {
 )
                   onClick={() => setIsMobileMenuOpen(false)}
 </div>
-                
               </li>
                 ;
               </li>;"
@@ -432,7 +86,6 @@ if ( {) {
 
                     <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
 </span>
-                
               <li className='nav-item'>
                 <Link;
                   href='/wallet
@@ -1231,7 +884,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   aria-label="Wallet""
                   <Wallet className="w-4 h-4" />"
 
-                
               </li>"
                   href="/messages"""
                   aria-label="Messages""
@@ -1299,14 +951,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">"
                     <ShoppingCart className="w-4 h-4 mr-1" />;"
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;"
-                  
-                
                 <HoverCardContent>
 
                   <MiniCartPreview />
 
-                
-              
           </ul>"
           <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto">"
             <LanguageSelector />

@@ -1,28 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from "react",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
-import { useRouter  } from 'next/router';
-import Link from 'next/link',
-import { useAuth } from "@/context/auth/AuthProvider",
-import { AlertCircle } from 'lucide-react'
-import { Alert, AlertDescription } from "@/components/ui/alert",
-
-=======
-import React from 'react';
-
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { useAuth } from "@/context/auth/AuthProvider";
-import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { useAuth } from "@/context/auth/AuthProvider";
-import { AlertCircle } from 'lucide-react';
-import { Alert, AlertDescription } from "@/components/ui/alert";
->>>>>>> origin/main
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
@@ -49,156 +25,7 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
 
 
-<<<<<<< HEAD
-  const router = null;
 
-=======
-;
-import { use_router } from 'next/router';
-import Link from 'next / link';
-import { use_auth  } from '@/context / auth / AuthProvider';
-import { AlertCircle } from 'lucide-react'import { use_router } from 'next/router';
-import { Alert, AlertDescription  } from '@/components/ui/ alert';
-import { PasswordStrengthMeter  } from '@/components/ PasswordStrengthMeter';
-import {logErrorToProduction} from '@/utils/ production_logger';
-export /**
- * SignUpForm - Function description;
-pr-12325
- */
-function SignUpForm() {
-  const router = use_router ();
-  const { sign_up, login, loginWithGoogle } = use_auth ();
-  const [form_data, setFormData] = useState ({
-    email: "",
-    password: "",
-    name: ""}),
-    }
-    if (!formData.email.trim()) {
-      errors.email = 'Email is required'
-    } else if (!emailRegex.test(formData.email)) {
-      errors.email = 'Invalid email address'
-    }
-    if (!formData.password) {
-      errors.password = 'Password is required'
-    } else if (!strongPasswordRegex.test(formData.password)) {
-      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
-    }
-    email: "",""
-    password: "",")"
-    name: ""}),"
-    }
-    if (!formData.email.trim()) {"
-      errors.email = 'Email is required
-    } else if (!emailRegex.test(formData.email)) {
-      errors.email = 'Invalid email address
-    if (!formData.password) {
-      errors.password = 'Password is required
-    } else if (!strongPasswordRegex.test(formData.password)) {
-      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.
-pr-12325
-
-    if (Object.keys(errors).length > 0) {
-      setFieldErrors(errors)
-      setIsLoading(false)
-      return;
-    }
-    try {
-      setShowVerificationMessage(false), // Reset verification message
-      if (signupMode) {
-        const result = await signUp(formData.email, formData.password, {
-          name: formData.name})
-        if (result?.error) {
-          throw new Error(result.error as any), // Cast to any if type is AuthError
-;
-    if (Object.keys(errors).length > 0) {;
-      setFieldErrors(errors),;
-      setIsLoading(false),;
-      return;
-    }
-;
-    try {;
-      setShowVerificationMessage(false), // Reset verification message;
-      if (signupMode) {;
-
-        if (result?.error) {;
-          throw new Error(result.error as any), // Cast to any if type is AuthError;
-        }
-    try {
-  // TODO: Implement
-      setShowVerificationMessage(false), // Reset verification message;
-      if (signupMode) {
-        const result = await signUp(formData.email, formData.password, {)
-          name: formData.name})
-        if (result?.error) {
-          throw new Error(result.error as any), // Cast to any if type is AuthError;
-    if (Object.keys(errors).length > 0) {;
-      setFieldErrors(errors),;
-      setIsLoading(false),;
-    try {;
-      if (signupMode) {;
-        const result = await signUp(formData.email, formData.password, {;)
-          name: formData.name}),;
-        if (result?.error) {;
-pr-12325
-
-        if (result?.emailVerificationRequired) {
-          setShowVerificationMessage(true)
-        } else {
-          // Only navigate if email verification is not required
-          router.push("/mobile")
-;
-        if (result?.emailVerificationRequired) {;
-          setShowVerificationMessage(true);
-        } else {;
-          // Only navigate if email verification is not required;
-
-        if (error) {;
-          throw new Error(error);
-        }
-        
-        router.push("/mobile")
-;
-        router.push("/mobile");
-      }
-    } catch (err: any) {
-      logErrorToProduction('Signup/Login error:', { data: err })
-      setError(err.message |'An unexpected error occurred. Please try again.')
-    } finally {
-      setIsLoading(false)
-    }
-  };
-
-  const handleGoogleLogin = async () => {;
-    try {;
-      await loginWithGoogle();
-    } catch (err: any) {;
-
-    }
-
-  },
-
-import React, { useState } from "react",;
-import { Label } from "@/components/ui/label",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
-import { useRouter  } from 'next/router';
-import Link from 'next/link',;
-import { useAuth } from "@/context/auth/AuthProvider",;
-
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import { useAuth } from "@/context/auth/AuthProvider"
-import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router'
-import { AlertCircle } from 'lucide-react'
-import { Alert, AlertDescription } from "@/components/ui/alert",;
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function SignUpForm() {
-
-  const router = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
 
       <div className="space-y-2">
@@ -332,14 +159,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setError(err.message);
 
   },
-  
 
 
 
   return (
 
 
-      
 
 
       <div className="space-y-2">"
@@ -358,11 +183,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />"
 </path>
           </svg>
-        
 
 
             <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />"
-        
       </div>"
       <div className="relative flex items-center">"
         <div className="flex-grow border-t border-border"></div>""
@@ -705,7 +528,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
 
 
-      
 
       <p className="text-center text-sm">"
 </p>"

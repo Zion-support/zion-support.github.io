@@ -130,7 +130,6 @@ if ( {) {
 
 
   },
-  
 
   return (
 
@@ -185,11 +184,7 @@ import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/main
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2 } from 'lucide-react'
@@ -207,10 +202,7 @@ export function AIEnhancementButton({
   context;
   onEnhanced;
   buttonText;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   return (
     <Button
       type="button"

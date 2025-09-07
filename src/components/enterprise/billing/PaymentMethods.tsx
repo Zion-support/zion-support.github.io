@@ -1,22 +1,4 @@
-<<<<<<< HEAD
 
-
-import React from "react",
-
-=======
-import { CreditCard, Plus, Trash } from 'lucide-react'
-
-
-
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
-
-import React from "react",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-
-import React from "react",;
->>>>>>> origin/main
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -31,87 +13,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 export function PaymentMethods() {
   // Mock payment methods
 
-<<<<<<< HEAD
-  const paymentMethods = null;
 
-=======
-import { CreditCard, Plus, Trash } from 'lucide-react
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import React from "react",""
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",""
-import { Button } from "@/components/ui/button",""
-export function PaymentMethods() {
-  // Mock payment methods;
-pr-12325
-  const paymentMethods = [
-    {
-
-
-      id: 'pm-1',
-      type: 'credit_card',
-      brand: 'Visa',
-      last4: '4242',
-
-
-      id: "pm-1",
-      type: "credit_card",
-      brand: "Visa",
-      last4: "4242",
-      id: "pm-1",""
-      type: "credit_card",""
-      brand: "Visa",""
-      last4: "4242","
-pr-12325
-      expMonth: 12,
-
-
-
-
-      expYear: 2025,
-      isDefault: true},
-    {
-      id: "pm-2",
-      type: "credit_card",
-      brand: "Mastercard",
-      last4: "8888",
-      expMonth: 4,
-      expYear: 2026,
-      isDefault: false}
-  ],
-    {"
-      id: "pm-2",""
-      brand: "Mastercard",""
-      last4: "8888","
-      expMonth: 4,
-      expYear: 2026,
-pr-12325
-
-
-
-
-
-
-
-id: 'pm-1',
-      type: 'credit_card',
-      brand: 'Visa',
-      last4: '4242',
-      expMonth: 12,
-      expYear: 2025,
-      isDefault: true,
-    },
-    {
-      id: 'pm-2',
-      type: 'credit_card',
-      brand: 'Mastercard',
-      last4: '8888',
-      expMonth: 4,
-      expYear: 2026,
-      isDefault: false,
-    },
-  ];
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <Card>
       <CardHeader>
@@ -137,7 +39,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <CardTitle>Payment Methods
 
         <CardDescription>Manage your payment methods for automatic billing
-      
 "
       <CardContent className="space-y-4">"
 
@@ -474,16 +375,11 @@ function PaymentMethods() {
               <Button size="sm" variant="ghost" className="text-destructive">"
                 <Trash className="h-4 w-4" />"
 
-              
         <Button className="gap-1">"
           <Plus className="h-4 w-4" />"
 
-        
     ;"
 
-        
-      
-    
 
 
         <CardDescription>Manage your payment methods for automatic billing;
@@ -499,7 +395,6 @@ function PaymentMethods() {
                 <p className='text-sm text-muted-foreground'>                  Expires {method.expMonth}/{method.expYear}
             <div className='flex gap-2'>
 
-              
 
       <CardFooter>;
 

@@ -1,69 +1,10 @@
-<<<<<<< HEAD
 
-
-import React, { useEffect, useState } from "react",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { InterviewCard } from "@/components/interviews/InterviewCard",
-import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Video } from 'lucide-react'
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
-function InterviewsContent() {
-=======
-import { Calendar, Clock, Video } from 'lucide-react'
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
-function InterviewsContent() {
-      if (!grouped[dateKey]) {
-        grouped[dateKey] = []
-      }
-      grouped[dateKey].push(interview)
-    return Object.entries(groupedInterviews)
-      .sort(
-        ([dateA], [dateB]) =>
-          parseISO(dateA).getTime() - parseISO(dateB).getTime()
-      )
-      .map(([date, interviews]) => (
-            ))}
-          </div>
-        </div>
-      ))
-
-import React, { useEffect, useState } from 'react';
-import { useInterviews } from '@/hooks/useInterviews';
-import { Interview } from '@/types/interview';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { SEO } from '@/components/SEO';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { InterviewCard } from '@/components/interviews/InterviewCard';
-import { Button } from '@/components/ui/button';
-import { Calendar, Clock, Video } from 'lucide-react';
-import { format, isAfter, parseISO, startOfDay } from 'date-fns';
-
-import React, { useEffect, useState } from "react",;
-import { useInterviews } from "@/hooks/useInterviews",;
-import { Interview } from "@/types/interview",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { SEO } from "@/components/SEO",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { InterviewCard } from "@/components/interviews/InterviewCard",;
-import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Video } from 'lucide-react'
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
-function InterviewsContent() {
->>>>>>> origin/main
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <>;
       <SEO

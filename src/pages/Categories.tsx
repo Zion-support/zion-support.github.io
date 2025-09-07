@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import useSWR from 'swr',
-import { CategoryCard } from "@/components/CategoryCard",
-import { GradientHeading } from "@/components/GradientHeading";
-import { SkeletonCard  } from '@/components/ui';
-import ErrorBoundary from "@/components/GlobalErrorBoundary";
-=======
->>>>>>> origin/main
 import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
@@ -284,20 +276,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
               })}
             </div>;
           )}
-<<<<<<< HEAD
-        </ErrorBoundary>
-      </div>
-    </div>
-    </>
-  )
 
-=======
-        </ErrorBoundary>;
-      </div>;
-    </div>;
-    </>;
-  );
->>>>>>> origin/main
 }
 ;
 export: default Categories

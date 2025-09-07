@@ -1,140 +1,4 @@
-<<<<<<< HEAD
 
-=======
-pr-12325
-}
-  })
-  const handleSubmit = async (data: EducationFormValues) => {
-    setIsLoading(true)
-    setError(null);    try {
-  // TODO: Implement
-pr-12325
-      await onSubmit(data)
-    } catch (err: any) {
-      setError(err.message |'An error occurred')
-import { use_form } from 'react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from 'zod';
-import { format } from 'date - fns';
-import { Loader2 } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
-import { Input } from '@/components / ui / input';
-import { Checkbox } from '@/components / ui / checkbox';
-import { Alert, AlertDescription } from '@/components / ui / alert';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { format } from 'date-fns';
-import { Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import {
-import { Button } from '@/components/ui/ button';
-import { Textarea } from '@/components/ui/ textarea';
-import { Input } from '@/components/ui/ input';
-import { Checkbox } from '@/components/ui/ checkbox';
-import { Alert, AlertDescription } from '@/components/ui/ alert';
-import {
-  // TODO: Implement
-pr-12325
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components / ui / form';
-import { useState } from 'react';
-import { EducationFormFieldsProps } from './types';
-import { Education } from '@/types / resume';
-// Define schema for form validation;
-const education_schema = z.object ({
-  FormMessage,
-} from '@/components/ui/ form';
-import { useState } from 'react';
-import { EducationFormFieldsProps } from './types';
-import { Education } from '@/types/ resume';
-// Define schema for form validation;
-const education_schema = z.object ({)
-pr-12325
-  institution: z.string ().min (1, 'Institution is required'),
-  degree: z.string ().min (1, 'Degree is required'),
-  field_of_study: z.string ().optional (),
-  start_date: z.string ().min (1, 'Start date is required'),
-  end_date: z.string ().optional (),
-  is_current: z.boolean ().default (false),
-  description: z.string ().optional (),
-  location: z.string ().optional (),
-});
-type EducationFormValues = z.infer < typeof education_schema>;
-export /**
- * EducationFormFields - Function description
- * EducationFormFields - Function description;
-pr-12325
- */
-function EducationFormFields() {
-  const [is_loading, setIsLoading] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-  const form = use_form < EducationFormValues>({
-    resolver: zod_resolver (education_schema),
-    default_values: {
-      institution: '',
-      degree: '',
-      field_of_study: '',
-      start_date: format (new Date (), 'yyyy - MM - dd'),
-      is_current: false,
-      description: '',
-      location: '',
-    },
-  });
-  const handle_submit = async (data: EducationFormValues) => {
-    setIsLoading (true);
-    set_error (null);    try {
-      await on_submit (data);
-    } catch (err: any) {
-      set_error (err.message || 'An error occurred');
-    } finally {
-      setIsLoading (false);
-    }
-  }
-  const form = use_form < EducationFormValues>({)
-    resolver: zod_resolver (education_schema),
-    default_values: {,
-  institution: ,
-      degree: ,
-      field_of_study: ,
-      start_date: format (new Date (), 'yyyy - MM - dd'),
-      is_current: false,
-      description: ,
-      location: ,
-    },
-  const handle_submit = async (data: EducationFormValues) => {
-    setIsLoading (true);
-    set_error (null);    try {
-  // TODO: Implement
-      await on_submit (data);
-      set_error (err.message || 'An error occurred');
-    } finally {
-  // TODO: Implement
-      setIsLoading (false);
-pr-12325
-
-
-
-
-
-
-  FormMessage,;
-} from '@/components/ui/form';
-import { useState } from 'react';
-import { EducationFormFieldsProps } from './types';
-import { Education } from '@/types/resume';
->>>>>>> origin/main
 
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -157,11 +21,7 @@ import { EducationFormFieldsProps  } from './types';
 import { Education } from '@/types/resume';
 // Define schema for form validation
 const educationSchema = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <Form {...form}>;
 
@@ -564,10 +424,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   <Input placeholder="University of California, MIT, etc." {...field} />"
 
-                
                 <FormMessage />
 
-              
             control={form.control}"
             name='degree)
 
@@ -586,9 +444,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <FormLabel>Degree
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />"
 
-                
 
-              
         </div>;
           name='field_of_study)
           render={({ field }: { field: any }) => (            <FormItem>;
@@ -606,7 +462,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormLabel>Field of Study
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />"
 
-              
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
 
@@ -624,7 +479,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Input type='date' {...field} value={field.value || } />                
 
 
-              
 
                     type="date""
                     {...field}"
@@ -640,10 +494,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       onCheckedChange={field.onChange}
                     />
 
-                  
                   <div className="space-y-1 leading-none">"
                     <FormLabel>I am currently studying here
-                
                 control={form && form.control}"
                 name='end_date
 
@@ -657,12 +509,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {...field} "
                         value={field.value || }
 
-                    
 
 
 
 
-                  
 
                     <FormLabel>End Date;
 
@@ -719,9 +569,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormLabel>Location (Optional)
                 <Input placeholder="Cambridge, MA" {...field} />"
 
-              
 
-            
           name="description""
 
 
@@ -730,7 +578,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className="min-h-[100px]""
 
 
-          
           <Alert variant='destructive'>;
 
             <AlertDescription>{error};

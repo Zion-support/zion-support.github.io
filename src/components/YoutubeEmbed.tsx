@@ -1,32 +1,13 @@
 
 import Image from 'next/image';
-<<<<<<< HEAD
 
-import { Loader2 } from 'lucide-react'
-import { useState } from 'react';
-
-=======
-import { Loader2 } from 'lucide-react';
-import { useState } from 'react';
->>>>>>> origin/main
 interface YoutubeEmbedProps {
   videoId: string;
   title: string;
   poster: string
 }
 
-<<<<<<< HEAD
 
-export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedProps) {
-  const [loaded, setLoaded] = useState(false);
-  const src = null;
-
-=======
-export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedProps) {
-  const [loaded, setLoaded] = useState(false);
-  const src = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <div className="relative aspect-video max-w-3xl mx-auto">
       {!loaded && (

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-=======
-{/* Progress bar */}
-      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
-        <div 
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
->>>>>>> origin/main
 
 
       {/* Steps list */}
@@ -46,12 +39,7 @@ import Link from './next / link';
 
 import React from "react",;
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
-<<<<<<< HEAD
-import { cn } from "@/lib/utils",
 
-=======
-import { cn } from "@/lib/utils",;
->>>>>>> origin/main
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export interface OnboardingStep {
@@ -83,27 +71,14 @@ export interface OnboardingStep {
   action?: string
 }
 interface OnboardingTrackerProps {
-<<<<<<< HEAD
 
-  steps: OnboardingStep[];
-
-=======
-  steps: OnboardingStep[];
->>>>>>> origin/main
   title?: string;
   className?: string
 }
 
 export function OnboardingTracker({ 
   steps;
-<<<<<<< HEAD
 
-  title;
-
-=======
-  title;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">

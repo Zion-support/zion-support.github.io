@@ -1,33 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { ImageIcon, AlertTriangle } from 'lucide-react'
-import { cn  } from '@/lib/utils';
-import { imageOptimization  } from '@/utils/performance';
-
-import { logWarn } from '@/utils/productionLogger';
-=======
-import React, { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
-import { motion, AnimatePresence  } from 'framer-motion';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { ImageIcon, AlertTriangle } from 'lucide-react'
-import { ImageIcon, AlertTriangle } from 'lucide-react
-pr-12325
-import { cn  } from '@/lib/utils';
-import { imageOptimization  } from '@/utils/performance';
-import { logWarn } from '@/utils/productionLogger';
-interface OptimizedImageProps {;
-import React, { useState, useRef, useEffect } from 'react';
-import Image from 'next / image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ImageIcon, AlertTriangle } from 'lucide-react';
-import { cn } from '@/lib / utils';
-import { image_optimization } from '@/utils / performance';
-import { log_warn } from '@/utils / production_logger';
->>>>>>> origin/main
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -990,7 +961,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           <motion&& motion.div
             key = {index,}
 
-      
       <div 
         className={`grid gap-4`}
         style={{;
@@ -1016,7 +986,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
         <span className="text-sm text-muted-foreground">"
 </span>
 
-      
       <div;`;
         className={`grid gap-4`}
         style={{;`;
@@ -1042,7 +1011,6 @@ pr-12325
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images
               />
-              
               {image.caption && (
                 <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">
                   <p className="text-sm">{image.caption}</p>
@@ -1420,10 +1388,7 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
   showLoadingProgress?: boolean;
   fill?: boolean;
   blurDataURL?: string;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   loading?: 'lazy' | 'eager',
   style?: React.CSSProperties;
   objectPosition?: string
@@ -1437,38 +1402,4 @@ interface ImageMetrics {
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-<<<<<<< HEAD
-  src;
-  alt;
-  width;
-  height;
-  className;
-  placeholder;
 
-=======
-  );
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-                aspect_ratio={aspect_ratio}
-                className='rounded - lg group - hover:scale - 105 transition - transform duration - 300';
-                on_load={handleImageLoad}                priority={index < 3} // Prioritize first 3 images;
-
-                <div className='absolute bottom - 0 left - 0 right - 0 bg - black / 50 text - white p - 2 rounded - b-lg'>;
-                  <p className='text - sm'>{image.caption}</p>;
-          </motion.div>))}
-//Gallery component with optimized loading </span> </div> <div className= {`;
-  `grid gap - 4`;
-}, 1fr) `;
-export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
-          aspect_ratio='1 / 1';
-          object_fit='cover';')`;
-          fallback_src={`https://ui - avatars.com / api/?name=${encodeURIComponent (initials)}&background = random`}
-          placeholder='color';
-          placeholder_color='#f3f4f6';
-          className='rounded - full'        />) : (
-
-        <div className='w - full h - full bg - gradient - to - br from - blue - 400 to - purple - 500 flex items - center justify - center text - white font - semibold'>;
-</div>)
-    </div>);`;
-pr-12325
->>>>>>> origin/main

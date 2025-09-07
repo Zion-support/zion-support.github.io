@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
 
-import { Header  } from '@/components/Header';
-import { NextSeo  } from '@/components/NextSeo';
-import { Globe, MapPin } from 'lucide-react'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-
-=======
-import { Globe, MapPin } from 'lucide-react'
-
-import {
-  Tooltip
-  TooltipContent
-  TooltipProvider
-  TooltipTrigger
-} from '@/components/ui/tooltip'
-
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
 interface Instance {
   id: number;
   name: string;
@@ -159,10 +139,7 @@ export default function GlobalMapPage() {;
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
   votesPassed: number;
   votesPending: number;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   region: string
 const INSTANCES: Instance[] = [
   {
@@ -199,27 +176,16 @@ const INSTANCES: Instance[] = [
 interface FeedItem {
   id: number;
   text: string
-<<<<<<< HEAD
-}
 
-
-=======
->>>>>>> origin/main
 export default function GlobalMapPage() {
   const [feed, setFeed] = useState<FeedItem[]>([]),
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   useEffect(() => {
     const interval = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
               return (
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
                 <TooltipProvider key={i.id}>
                     <TooltipTrigger asChild>
                       <div

@@ -1,26 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import { useState, useMemo } from 'react';
-import {;
-  onsiteServicePricing,;
-  CountryPricing,;
-} from '@/data/onsiteServicePricing';
-import { Input } from '@/components/ui/input';
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { Globe, Search, ArrowUpDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-export function ITServicePricingTable() {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortConfig, setSortConfig] = useState<{;
->>>>>>> origin/main
 
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
@@ -31,100 +9,7 @@ import { Button } from "@/components/ui/button";
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
-<<<<<<< HEAD
-    key: keyof CountryPricing;
-    direction: "ascending" | "descending"
-  }>({
-    key: "country";
-    direction: "ascending"}),
 
-  const sortedData = null;
-
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-    key: keyof CountryPricing;
-    direction: 'ascending' | 'descending';
-  }>({;
-    key: 'country',;
-    direction: 'ascending',;
-  });
-
-  const sortedData = useMemo(() => {;
-    let filteredData = [...onsiteServicePricing];
-    // Filter by search query;
-    if (searchQuery) {;
-      filteredData = filteredData && filteredData.filter(item =>;
-        item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-      );
-  const sortedData = null;
-import { useState, useMemo } from 'react'
-import {
-  onsiteServicePricing
-  CountryPricing
-} from '@/data/onsiteServicePricing'
-import { Input } from '@/components/ui/input'
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from '@/components/ui/table'
-import { Globe, Search, ArrowUpDown } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [sortConfig, setSortConfig] = useState<{
-    key: keyof CountryPricing
-    direction: 'ascending' | 'descending'
-  }>({
-    key: 'country'
-    direction: 'ascending'
-  })
-  const sortedData = useMemo(() => {
-    let filteredData = [...onsiteServicePricing]
-    // Filter by search query
-    if (searchQuery) {
-      filteredData = filteredData.filter(item =>
-        item.country.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-
-    // Sort data;
-    filteredData && filteredData.sort((a, b,) => {;
-      if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
-        return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
-      }
-
-  const handleSort = (key: keyof CountryPricing) => {
-    setSortConfig({
-      key,
-      direction: 
-        sortConfig.key === key && sortConfig.direction === "ascending" 
-          ? "descending" 
-          : "ascending"})
-  },
-
-  const handleSort = (key: keyof CountryPricing,) => {;
-    setSortConfig({;
-      key,;
-      direction:;
-        sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === 'ascending';
-          ? 'descending';
-          : 'ascending',;
-    });
-  };
-
-      key
-      direction:
-        sortConfig.key === key && sortConfig.direction === 'ascending'
-          ? 'descending'
-          : 'ascending'
-    })
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
 
         return sortConfig.direction === "ascending" ? -1 : 1
@@ -134,7 +19,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
       return 0
     }),
-    
     return filteredData
   }, [onsiteServicePricing, searchQuery, sortConfig]),
 

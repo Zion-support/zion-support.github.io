@@ -2,41 +2,7 @@
   isUserMessage: boolean
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
-<<<<<<< HEAD
 
-import { format  } from 'date-fns';
-import { PaperclipIcon } from 'lucide-react'
-import { cn  } from '@/lib/utils';
-
-import { Message } from '@/types/messaging';
-=======
-import { format } from 'date-fns';
-import { PaperclipIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Message } from '@/types/messaging';
-
-interface MessageBubbleProps {
-  message: Message;
-  isUserMessage: boolean;
-}
-
-export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
-  return (
-    <div
-      className={cn(
-        'flex',
-        isUserMessage ? 'justify-end' : 'justify-start'
-      )}
-    >
-      <div
-        className={cn(
-          'max-w-[75%] rounded-lg px-4 py-2',
-          isUserMessage
-            ? 'bg-zion-purple text-white'
-            : 'bg-zion-blue-dark text-white'
-        )}
-      >
->>>>>>> origin/main
 interface MessageBubbleProps {
 
         <div className='text-xs opacity-70 text-right mt-1'>
@@ -44,20 +10,13 @@ interface MessageBubbleProps {
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
-<<<<<<< HEAD
 
-    <div className;
-
-=======
-    <div className;
->>>>>>> origin/main
         isUserMessage 
           ? "bg-zion-purple text-white" 
           : "bg-zion-blue-dark text-white"
       )}>
 origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="whitespace-pre-wrap">{message.content}</div>
-        
         {message.attachment_url && (
           <a
             href={message.attachment_url}

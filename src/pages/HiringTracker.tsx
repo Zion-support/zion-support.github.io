@@ -1,44 +1,4 @@
-<<<<<<< HEAD
 
-
-import { useState } from "react",
-import { useRouter } from "next/router",
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Briefcase } from 'lucide-react'
-
-function HiringTrackerContent() {
-  const router = null;
-
-=======
-return (
-    <>;
-      <SEO
-        title='Hiring Tracker | Zion AI Marketplace'
-        description='Manage your candidate pipeline in the Zion AI Marketplace.'
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard';
-import { HiringAnalytics } from '@/components/hiring-tracker/HiringAnalytics';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { SEO } from '@/components/SEO';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { Briefcase } from 'lucide-react';
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-import { useState } from "react",;
-import { useRouter } from "next/router",;
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Briefcase } from 'lucide-react'
->>>>>>> origin/main
   return (
     <>
       <SEO 
@@ -93,11 +53,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <KanbanBoard jobId={jobId} />
           </TabsContent>
 
-          
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
-          
 
           <TabsContent value="analytics" className="mt-6">
           <TabsContent value='kanban' className='mt-6'>

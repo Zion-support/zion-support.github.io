@@ -1,15 +1,4 @@
-<<<<<<< HEAD
 
-import { SEO } from "@/components/SEO",
-import { useState, useEffect } from "react",
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
-import { logWarn } from '@/utils/productionLogger';
-=======
->>>>>>> origin/main
 interface ServiceStatus {
   name: string
   status: 'operational' | 'degraded' | 'outage' | 'maintenance'
@@ -19,22 +8,7 @@ import React, { useState, useEffect } from 'react' import { motion    } from 'fr
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
 
-
-
-
-
-;
-
-
-;
->>>>>>> origin/main
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
@@ -62,20 +36,16 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     lastChecked: new Date().toISOString()
 
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 const FALLBACK_SERVICES: ServiceStatus[] = [
@@ -130,152 +100,7 @@ interface ServiceStatus {;
   lastChecked: string;
 }
 
-<<<<<<< HEAD
-          {showFallback && (
-            <>
-              <div className="mb-8">
-                <Card className="bg-zion-blue-dark border-zion-blue-light">
-                  <CardHeader>
-                    <CardTitle className="text-white">Service Status Overview</CardTitle>
-                    <CardDescription>
-                      Current status of core platform services
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    {FALLBACK_SERVICES.map((service) => (
-                      <div key={service.name} className="flex items-center justify-between p-4 bg-zion-blue rounded-lg">
-                        <div className="flex items-center gap-3">
-                          {getStatusIcon(service.status)}
-                          <div>
-                            <h3 className="font-medium text-white">{service.name}</h3>
-                            <p className="text-sm text-zion-slate-light">{service.description}</p>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <div className={`font-medium ${getStatusColor(service.status)}`}>
-                            {getStatusText(service.status)}
-                          </div>
-                          <div className="text-xs text-zion-slate-light">
-                            Updated: {new Date(service.lastChecked).toLocaleTimeString()}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </CardContent>
-                </Card>
-              </div>
 
-              <div className="text-center">
-                <p className="text-zion-slate-light mb-4">
-                  For detailed incident history and real-time updates:
-                </p>
-                <Button
-                  variant="outline"
-                  asChild
-                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
-                >
-                  <a 
-                    href={statusUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    Visit Full Status Page
-                  </a>
-                </Button>
-              </div>
-            </>
-          )}
-
-          <div className="mt-12 text-center">
-            <Card className="bg-zion-blue-dark border-zion-blue-light">
-              <CardHeader>
-                <CardTitle className="text-white">Need Help?</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-zion-slate-light">
-                  If you're experiencing issues not reflected here, please contact our support team.
-                </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                  <Button
-                    variant="outline"
-                    asChild
-                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
-                  >
-                    <Link href="/contact">Contact Support</Link>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    asChild
-                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10"
-                  >
-                    <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">
-                      @ZionTechGroup
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </main>
-    </>
-  )
-
-}
-=======
-        return <CheckCircle className="h-5 w-5 text-green-500" />;
-        return <Clock className="h-5 w-5 text-blue-500" />;
-      default:;
-        return <AlertCircle className="h-5 w-5 text-gray-500" />;
-    }
-  },;
-  const getStatusText = (status: ServiceStatus['status']) => {;
-    switch (status) {;
-      case 'operational':;
-        return 'Operational',;
-      case 'degraded':;
-        return 'Degraded Performance',;
-      case 'outage':;
-        return 'Service Outage',;
-      case 'maintenance':;
-        return 'Scheduled Maintenance',;
-      default:;
-        return 'Unknown';
-    }
-  },;
-  const getStatusColor = (status: ServiceStatus['status']) => {;
-    switch (status) {;
-      case 'operational':;
-        return 'text-green-500',;
-      case 'degraded':;
-        return 'text-yellow-500',;
-      case 'outage':;
-        return 'text-red-500',;
-      case 'maintenance':;
-        return 'text-blue-500',;
-      default:;
-        return 'text-gray-500';
-    }
-  },
-
-  )
-import { SEO } from '@/components/SEO';
-import { useState, useEffect } from 'react';
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { logWarn } from '@/utils/productionLogger';
-interface ServiceStatus {
->>>>>>> origin/main
   );
 
 };

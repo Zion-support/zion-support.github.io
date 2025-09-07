@@ -18,99 +18,7 @@ const formSchema = z && z.object({;
   paymentAmount: z && z.string().min(1, "Payment amount is required");
   additionalClauses: z && z.array(z && z.string()).optional()}),;
 
-<<<<<<< HEAD
 
-import { useState, useEffect } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-=======
-export type ContractFormValues = z && z.infer<typeof formSchema>;
-
-
-
-        values, ;
-        talent, ;
-        clientName, ;
-
-export type ContractFormValues = z.infer<typeof formSchema" > interface ContractFormProps {"
-  talent: TalentProfile;
-   clientName: string;
-   initialValues?: ContractFormValues;
-   onFormValuesChange?: (values: ContractFormValues) => void;
-   onContractGenerated: (contractContent: string) => void;
-   deployOptions?: DeploymentOptions
-   onDeployOptionsChange?: (options: DeploymentOptions) => void} export function ContractForm({ talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-}
-  );
-}
-
-
-  )
-}
-
-import { useState, useEffect  } from './react';
-import { use_form  } from './react - hook - form';
-import { zod_resolver  } from '@hookform / resolvers / zod';
-import { z  } from './zod';
-import { Loader2 } from 'lucide-react'import { Button  } from '@/components / ui / button';
-import { Form  } from '@/components / ui / form';
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle  } from '@/components / ui / dialog';
-import { use_toast  } from '@/hooks / use - toast';
-import { TalentProfile  } from '@/types / talent';
-import { GeneratedMilestone  } from '@/hooks / useMilestoneGenerator';
-import { generate_contract  } from '../utils / contract_utils';
-import { ProjectDetailsFields  } from './ProjectDetailsFields';
-import { PaymentTermsFields  } from './PaymentTermsFields';
-import { AdditionalClausesFields  } from './AdditionalClausesFields';
-import {logErrorToProduction} from '@/utils / production_logger';
-const form_schema = z.object ({
-  project_name: z.string ().min (1, "Project name is required");
-  scope_summary: z.string ().min (10, "Scope summary should be at least 10 characters");
-  start_date: z.date ({
-    required_error: "Start date is required"}),
-  end_date: z.date ().optional (),
-  payment_terms: z.enum (["hourly", "fixed", "milestone"]);
-  payment_amount: z.string ().min (1, "Payment amount is required");
-  additional_clauses: z.array (z.string ()).optional ()}),
-import { Form } from "@/components/ui/form";""
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";""
-import { useToast } from "@/hooks/use-toast";""
-import { TalentProfile } from "@/types/talent";""
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";""
-import { generateContract } from "../utils/contractUtils";""
-import { ProjectDetailsFields } from "./ProjectDetailsFields";""
-import { PaymentTermsFields } from "./PaymentTermsFields";""
-import { AdditionalClausesFields } from "./AdditionalClausesFields";""
-import {logErrorToProduction} from '@/utils/productionLogger';
-const formSchema = z && z.object({;)
-  projectName: z && z.string().min(1, "Project name is required");""
-  scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");"
-  startDate: z && z.date({;,)"
-  required_error: "Start date is required"}),;"
-  endDate: z && z.date().optional(),;"
-  paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);""
-  paymentAmount: z && z.string().min(1, "Payment amount is required");"
-  additionalClauses: z && z.array(z && z.string()).optional()}),;
-
-export type ContractFormValues = z && z.infer<typeof formSchema>;
-</typeof>
-pr-12325
-export type ContractFormValues = z.infer < typeof form_schema>;
-        values,
-        talent,
-        client_name,
-}
-  );
-}
-
-;
-import { useState, useEffect } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
->>>>>>> origin/main
 import { Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button",;
 import { Form } from "@/components/ui/form",;
@@ -132,22 +40,18 @@ const formSchema = null;
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
-    
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <ProjectDetailsFields 
             form={form} 
           />
-          
           <PaymentTermsFields 
             form={form}
             handleMilestonesGenerated={handleMilestonesGenerated}
           />
-          
           <AdditionalClausesFields 
             form={form}
           />
-          
           <Button 
             type="submit" 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
@@ -164,7 +68,6 @@ const formSchema = null;
           </Button>
         </form>
       </Form>
-      
       <DialogFooter className="gap-2 flex-wrap mt-4">
         <Button 
           variant="outline" 
@@ -175,12 +78,7 @@ const formSchema = null;
         </Button>
       </DialogFooter>
     </>
-<<<<<<< HEAD
-  )
 
-}
-=======
->>>>>>> origin/main
   );
 }finally {;
   setIsGenerating (false) ;

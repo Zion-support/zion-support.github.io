@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-id: string;
->>>>>>> origin/main
 
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -14,56 +10,12 @@ import { Progress } from "@/components/ui/progress",;
 import { SeverityIndicator } from "../common/SeverityIndicator";
 import { useRouter  } from 'next/router';
 import { toast } from "sonner";
-<<<<<<< HEAD
 
-=======
-import React from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
-import {
-  CheckCircle
-  ChevronRight
-  FileText
-  MessageSquare
-  Video
-} from 'lucide-react'
-import { Progress } from '@/components/ui/progress'
-import { SeverityIndicator } from '../common/SeverityIndicator'
-import { useRouter } from 'next/router'
-import { toast } from 'sonner'
->>>>>>> origin/main
 interface Milestone {
   id: string;
   title: string;
   dueDate: string;
-<<<<<<< HEAD
 
-  status: "completed" | "in_progress" | "pending";
-  paymentStatus: "paid" | "pending" | "overdue";
-  amount: string
-}
-
-=======
-  status: "completed" | "in_progress" | "pending";
-  paymentStatus: "paid" | "pending" | "overdue";
-  amount: string
-interface ProjectViewProps {
-  project: {
-    id: string;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    title: string;
-    client: {
-      name: string;
-      avatar?: string
-    },
-    startDate: string;
-    endDate?: string;
-    status: string;
-    totalAmount: string;
-    progress: number;
->>>>>>> origin/main
 
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -131,196 +83,14 @@ interface ProjectViewProps {
     title: string;
     client: {
       name: string;
-<<<<<<< HEAD
 
-      avatar?: string
-    },
-
-    startDate: string;
-    endDate?: string;
-=======
-      avatar?: string;
-    }
-    start_date: string;
-    end_date?: string;
->>>>>>> origin/main
     status: string;
     total_amount: string;
     progress: number;
-<<<<<<< HEAD
 
-    description: string
-  },
-  milestones: Milestone[]
-}
-
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {
-  const router = null;
-
-=======
-    description: string;
-  }
-  id: string,
-  title: string,
-  dueDate: string,
-  status: "completed" | "in_progress" | "pending",
-  paymentStatus: "paid" | "pending" | "overdue",
-  amount: string
-import React from "react",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
-import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from 'lucide-react';
-import { Progress } from "@/components/ui/progress",;
-import { SeverityIndicator } from "../common/SeverityIndicator",;
-import { useRouter } from 'next/router',;
-import { toast } from "sonner",;
-interface Milestone {;
-  id: string,;
-  title: string,;
-  dueDate: string,;
-  status: "completed" | "in_progress" | "pending",;
-  paymentStatus: "paid" | "pending" | "overdue",;
-  amount: string;
-}
-;
-interface ProjectViewProps {;
-  project: {;
-    id: string,;
-    title: string,;
-    client: {;
-      name: string,;
-      avatar?: string;
-import { Progress } from '@/components/ui/ progress';
-import { SeverityIndicator } from '../common / SeverityIndicator';
-import { use_router } from 'next/router';
-import { toast } from 'sonner';
-import React from "react",""
-import { Card, CardContent } from "@/components/ui/card",""
-import { Button } from "@/components/ui/button",""
-import { Badge } from "@/components/ui/badge",""
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",""
-import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from 'lucide-react
-import { Progress } from "@/components/ui/progress",""
-import { SeverityIndicator } from "../common/SeverityIndicator",""
-import { useRouter } from 'next/router',;
-import { toast } from "sonner","
-interface Milestone {
-  // TODO: Implement
-  id: string,
-  title: string,
-  dueDate: string,"
-  status: "completed" | "in_progress" | "pending",""
-  paymentStatus: "paid" | "pending" | "overdue","
-  amount: string;"
-import React from "react",;""
-import { Card, CardContent } from "@/components/ui/card",;""
-import { Button } from "@/components/ui/button",;""
-import { Badge } from "@/components/ui/badge",;""
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;""
-import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from 'lucide-react';
-import { Progress } from "@/components/ui/progress",;""
-import { SeverityIndicator } from "../common/SeverityIndicator",;""
-import { useRouter } from 'next/router',;
-import { toast } from "sonner",;"
-interface Milestone {;
-  id: string,;
-  title: string,;
-  dueDate: string,;"
-  status: "completed" | "in_progress" | "pending",;""
-  paymentStatus: "paid" | "pending" | "overdue",;"
-  amount: string;
-;
-interface ProjectViewProps {;
-  project: {;,
-    client: {;,
-  name: string,;
-pr-12325
-    },;
-    startDate: string,;
-    endDate?: string,;
-    status: string,;
-    totalAmount: string,;
-    progress: number,;
-    description: string;
-  },;
-  milestones: Milestone[];
-
-    description: string;
-  milestones: Milestone[];,
-pr-12325
-  };
-  milestones: Milestone[];
-
-export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {;
-  const router = useRouter();
-
-  const startProjectCall = () => {;
-    const roomId = `project-${project && project.id}`;
-    toast && toast.success('Starting project call', {;
-      description: 'Initializing video connection...',;
-    });
-
-    router && router.push(`/call/${roomId}`);
-  };
-
-  const messageClient = () => {;
-    toast && toast.info('Opening message thread with client', {;
-      description: `Messaging ${project && project.client.name}...`,;
-    });
-    // Navigate to messaging with this client;
-  };
-
-
-}
-    const roomId = `project-${project && project.id}`;"
-    toast && toast.success('Starting project call', {;
-      description: 'Initializing video connection...',;')
-    });
-`;
-    router && router.push(`/call/${roomId}`);
-
-  const messageClient = () => {;
-    toast && toast.info('Opening message thread with client', {;`;
-      description: `Messaging ${project && project.client.name}...`,;)
-    // Navigate to messaging with this client;
-
-
-pr-12325
-
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {
-  const router = useRouter(),
-  
-  const startProjectCall = () => {
-    const roomId = `project-${project.id}`,
-    toast.success("Starting project call", {
-      description: "Initializing video connection..."
-    }),
-    
-    router.push(`/call/${roomId}`)
-  },
-  
-  const messageClient = () => {
-    toast.info("Opening message thread with client", {
-      description: `Messaging ${project.client.name}...`
-    }),
-    // Navigate to messaging with this client
-  },
-  
-
-
-    description: string
-  }
-  milestones: Milestone[]
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {
-  const router = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
 
 
-            
             <div className="space-y-1">
               <div className="flex justify-between items-center text-sm">
 
@@ -335,7 +105,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
 
-            
             <div className="grid grid-cols-2 gap-3 text-sm">
 
 
@@ -366,12 +135,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description: "Initializing video connection..."")
     }),
     router.push(`/call/${roomId}`)
-  
   const messageClient = () => {"
     toast.info("Opening message thread with client", {"`;
       description: `Messaging ${project.client.name}...`)
     // Navigate to messaging with this client;
-  
 
 
   return (
@@ -402,7 +169,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12325
 
 
-            
 
 
             <div>
@@ -482,7 +248,6 @@ pr-12325
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
 
 
-            
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="gap-1 flex-1">
                 <FileText className="h-4 w-4" /> Contract
@@ -529,13 +294,11 @@ pr-12325
 
                 <MessageSquare className='h-4 w-4' /> Message;
 
-              
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light
             <div className="flex gap-2">"
               <Button size="sm" variant="outline" className="gap-1 flex-1">"
                 <FileText className="h-4 w-4" /> Contract;"
 
-              
               <Button;"
                 size="sm"""
                 variant="outline"""
@@ -544,18 +307,13 @@ pr-12325
               >
                 <MessageSquare className="h-4 w-4" /> Message;"
 
-              
                 className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light""
                 onClick={startProjectCall}
                 <Video className="h-4 w-4" /> Call;"
 
-              
-        
-      
 pr-12325
 
 
-      
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
         <div className="space-y-3">
@@ -842,7 +600,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     {milestone.paymentStatus}
                   </Badge>
                 </div>
-                
                 <div className="pl-7">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Due Date:</span>
@@ -1014,7 +771,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                       milestone.paymentStatus === "paid" ? "default" :;""
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";"
 
-                  
                 <div className="pl-7">"
                   <div className="flex justify-between text-sm">"
                     <span className="text-muted-foreground">Due Date:</span>"
@@ -1026,9 +782,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     className="w-full mt-3 gap-1""
                     View Details <ChevronRight className="h-4 w-4" />"
 
-                  
-              
-            
 
 
                 <div className="pl-7">;"

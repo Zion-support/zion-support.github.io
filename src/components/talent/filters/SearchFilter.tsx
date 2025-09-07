@@ -1,21 +1,4 @@
-<<<<<<< HEAD
 
-import { Input } from "@/components/ui/input";
-import { SearchIcon } from 'lucide-react'
-import { SearchFilterProps } from "@/types/filters";
-export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
-
-=======
-import { Input } from '@/components/ui/input';
-import { SearchIcon } from 'lucide-react';
-import { SearchFilterProps } from '@/types/filters';
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12325
-export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
-
-
->>>>>>> origin/main
   return (
     <div className="mb-6">
       <div className="relative">

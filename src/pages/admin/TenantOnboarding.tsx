@@ -1,77 +1,6 @@
 const [formData, setFormData] = useState({
 
-<<<<<<< HEAD
 
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth",
-import { useRouter } from "next/router",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { toast } from "sonner",
-import { supabase } from "@/integrations/supabase/client",
-import { Switch } from "@/components/ui/switch";
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-=======
-    brand_name: ""
-    subdomain: ""
-    logo_url: ""
-    primary_color: "#9b87f5"
-    theme_preset: "light"
-    company_size: ""
-    industry: ""
-    custom_domain: ""
-
-import React, { useState } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { useAuth } from '@/hooks/useAuth';
-import { useRouter } from 'next/router';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-import { toast } from 'sonner';
-import { supabase } from '@/integrations/supabase/client';
-import { Switch } from '@/components/ui/switch';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-import React, { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { SEO } from "@/components/SEO",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useRouter } from "next/router",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { toast } from "sonner",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Switch } from "@/components/ui/switch";
-import { logErrorToProduction } from '@/utils/productionLogger';
->>>>>>> origin/main
 export default function TenantOnboarding() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
@@ -87,14 +16,7 @@ export default function TenantOnboarding() {
     custom_domain: "";
 origin/cursor/automate-test-improve-and-merge-code-2533
     is_co_branded: true
-<<<<<<< HEAD
-  });
 
-=======
-
-
-  })
->>>>>>> origin/main
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
       };
@@ -102,10 +24,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
   }),
-  
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
-  
   if (!isAdmin) {
     return // Use router.push('/unauthorized') or redirect in getServerSideProps
   }
@@ -114,30 +34,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
   },
-  
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }))
   },
-  
   const handleSwitchChange = (name: string, checked: boolean) => {
     setFormData(prev => ({ ...prev, [name]: checked }))
   },
-  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
-    
     try {
       // Generate subdomain if not provided
       const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
-      
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant",
         subtitle: `Find the best talent for your ${formData.industry || "company"}`,
         cta: "Get Started"
       },
-      
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -156,13 +70,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         })
         .select('id, brand_name, subdomain')
         .single(),
-      
       if (error) throw error,
-      
       toast.success("Tenant created successfully!", {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
       }),
-      
       // Reset form
       setFormData({
         brand_name: "",
@@ -175,7 +86,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         custom_domain: "",
         is_co_branded: true
       })
-      
     } catch (error: any) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' }),
       toast.error("Failed to create tenant", {
@@ -218,7 +128,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <TabsTrigger value="branding">Branding</TabsTrigger>
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>
                   </TabsList>
-                  
                   <TabsContent value="company" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="brand_name">Company Name</Label>
@@ -231,7 +140,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         required
                       />
                     </div>
-                    
                     <div className="space-y-2">
                       <Label htmlFor="industry">Industry</Label>
                       <Select 
@@ -254,7 +162,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </SelectContent>
                       </Select>
                     </div>
-                    
                     <div className="space-y-2">
                       <Label htmlFor="company_size">Company Size</Label>
                       <Select 
@@ -276,7 +183,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </Select>
                     </div>
                   </TabsContent>
-                  
                   <TabsContent value="branding" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="logo_url">Logo URL</Label>
@@ -291,7 +197,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended)
                       </p>
                     </div>
-                    
                     <div className="space-y-2">
                       <Label htmlFor="primary_color">Primary Brand Color</Label>
                       <div className="flex items-center gap-2">
@@ -311,7 +216,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         />
                       </div>
                     </div>
-                    
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
                       <Select 
@@ -331,7 +235,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </SelectContent>
                       </Select>
                     </div>
-                    
                     <div className="flex items-center justify-between">
                       <div className="space-y-0.5">
                         <Label htmlFor="is_co_branded">Co-branding</Label>
@@ -346,7 +249,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       />
                     </div>
                   </TabsContent>
-                  
                   <TabsContent value="domain" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="subdomain">Subdomain</Label>
@@ -366,7 +268,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Leave blank to auto-generate from company name
                       </p>
                     </div>
-                    
                     <div className="space-y-2">
                       <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>
                       <Input
@@ -382,7 +283,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </TabsContent>
                 </Tabs>
-                
                 <div className="flex justify-end space-x-2">
                   <Button type="button" variant="outline" onClick={() => window.history.back()}>
                     Cancel
@@ -399,85 +299,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   )
 
-<<<<<<< HEAD
-=======
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {SEO} from "@/components/SEO";
-import {useAuth} from "@/hooks/useAuth";
-import {useRouter} from "next/router";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {toast} from "sonner";
-import {supabase} from "@/integrations/supabase/client";
-import {Switch} from "@/components/ui/switch";
-import {logErrorToProduction} from '@/utils/productionLogger';
-
-import React, { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { SEO } from "@/components/SEO",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useRouter } from "next/router",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { toast } from "sonner",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Switch } from "@/components/ui/switch",;
-import { logErrorToProduction } from '@/utils/productionLogger',;
-export default function TenantOnboarding() {;
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({;
-    brand_name: "",;
-    subdomain: "",;
-    logo_url: "",;
-    primary_color: "#9b87f5",;
-    theme_preset: "light",;
-    company_size: "",;
-    industry: "",;
-    custom_domain: "",;
-    is_co_branded: true;
-  });
-
-  // Check if user has admin role;
-  const isAdmin = user?.role === "admin";
-
-      }
-  );
->>>>>>> origin/main
 }
 
 

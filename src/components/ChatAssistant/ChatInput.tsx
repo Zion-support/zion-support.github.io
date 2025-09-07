@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
 import { Button } from "@/components/ui/button";
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -23,117 +20,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     inputRef.current?.focus()
 interface ChatInputProps {
 
-<<<<<<< HEAD
-export function ChatInput({ onSend, disabled;
 
-=======
-  onSend: (message: string) => void,
-  disabled?: boolean
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Send } from 'lucide-react';
-import React, {;
-  useState,;
-  useRef,;
-  useEffect,;
-  FormEvent,;
-  KeyboardEvent,;
-} from 'react';
-import { Button } from '@/components/ui/button';
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
-import { Button } from "@/components/ui/button",;
-
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Send } from 'lucide-react'
-interface ChatInputProps {
-
-  onSend: (message: string) => void,
-  disabled?: boolean
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Send } from 'lucide-react';
-
-interface ChatInputProps {;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  onSend: (message: string) => void;
-disabled?: boolean ;
-}export function ChatInput(): any ({;
-  onSend, disabled = false ;
-}: ChatInputProps) {';
-  const [message, setMessage] = useState ('');
-const inputRef = useRef<HTMLTextAreaElement> (null);
-//Focus input when component mounts ;
-export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
-
-  const [ message, setMessage ] = useState(''),;
-  const inputRef = useRef<HTMLTextAreaElement>(null),;
-
-  useEffect(() => {    // Focus input when component mounts;
-    inputRef && inputRef.current?.focus();  }, []);
-    inputRef && inputRef.current?.focus();
-
-interface ChatInputProps {;
-  onSend: (message: string) => void,;
-  disabled?: boolean;
-}
-
-export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
-  const [message, setMessage] = useState('');
-  const inputRef = useRef<HTMLTextAreaElement>(null);
-
-  useEffect(() => {;
-    // Focus input when component mounts;
-    inputRef && inputRef.current?.focus();
-
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
-import { Button } from "@/components/ui/button";
-import { Send } from 'lucide-react'
-
-interface ChatInputProps {
-  onSend: (message: string) => void,
-  disabled?: boolean
-}
-
-export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
-
-  const [ message, setMessage ] = useState(''),
-  const inputRef = useRef<HTMLTextAreaElement>(null),
-
-
-  useEffect(() => {
-    // Focus input when component mounts
-    inputRef.current?.focus()
-
-  }, []);
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
-    e && e.preventDefault();    if (message && message.trim() && !disabled) {;
-      onSend(message);
-
-
-    }
-
-
-export function ChatInput({ onSend, disabled;
-    }
-  }
-  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>,) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault()
-      if (message.trim() && !disabled) {
-        onSend(message);
-setMessage('');
-origin/cursor/automate-test-improve-and-merge-code-2533
-      }
-    }
-  };
-
-
-
-return (
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
 
     <form on_submit={handle_submit} className='flex items - end gap - 2'>;

@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-=======
-interface NotificationProps {
-  type: 'message' | 'order' | 'default';
-}
-}
-return <Badge className="bg - blue - 500">Message</Badge>;
-      return <Badge className="bg - orange - 500">Order</Badge>;    default:;
-      return <Badge variant="outline">Notification</Badge>;
-import React, { useState, useEffect } from 'react';
-import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
->>>>>>> origin/main
 import React, { useState } from 'react';
 import { useNotifications } from '@/context/notifications/NotificationContext';
 import {
@@ -246,15 +234,6 @@ export default function Notifications() {
             </Card>
           ))}
         </div>
-<<<<<<< HEAD
-      </main>
-    </>
-  )
 
-=======
-      )}
-    </div>
-  );
->>>>>>> origin/main
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

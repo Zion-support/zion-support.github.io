@@ -4,12 +4,7 @@
   }
 
 
-<<<<<<< HEAD
-=======
 
-import { useEffect, useState } from "react",;
-import { useRouter } from 'next/router',;
->>>>>>> origin/main
 import { useEffect, useState } from "react";
 import { useRouter  } from 'next/router';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -23,82 +18,10 @@ export function ProjectOfferBanner() {
   const { projects, isLoading } = useProjects(),
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
   const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
-  
   useEffect(() => {
   const router = null;
-<<<<<<< HEAD
 
-  if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
-    return null;
-=======
-  if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
-import { useEffect, useState } from "react"
-import { useRouter } from 'next/router'
-import { Bell, Calendar, X } from 'lucide-react'import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { useProjects } from "@/hooks/useProjects"
-import { Project } from "@/types/projects"
-export function ProjectOfferBanner() {
-  const router = useRouter()
-  const { projects, isLoading } = useProjects()
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([])
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set())
-  useEffect((,) => {
-origin/cursor/automate-test-improve-and-merge-code-2533
-    if (projects && !isLoading) {
-      const offers = projects.filter(p => p.status === 'offer_sent'),
-      setPendingOffers(offers)
-import { useEffect, useState } from "react",;
-import { useRouter } from 'next/router',;
-import { Bell, Calendar, X } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { useProjects } from "@/hooks/useProjects",;
-import { Project } from "@/types/projects",;
-export function ProjectOfferBanner() {;
-  const router = useRouter(),;
-  const { projects, isLoading } = useProjects(),;
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]),;
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set()),;
-  useEffect(() => {;
-    if (projects && !isLoading) {;
-      const offers = projects.filter(p => p.status === 'offer_sent'),;
-      setPendingOffers(offers);
-    }
-  }, [projects, isLoading]),;
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
-    e.stopPropagation(),;
-    setDismissed(prev => {;
-      const updated = new Set(prev),;
-      updated.add(projectId),;
-      return updated;
-    });
-  };
-  const handleViewOffer = (projectId: string) => {;
-    router.push(`/project/${projectId}`);
-  };
-  if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
-    return null;
-
-
-
-  }, [projects, isLoading])
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
-    e.stopPropagation();    setDismissed(prev => {
-      const updated = new Set(prev)
-      updated.add(projectId)
-      return updated
-    })
   }
-  const handleViewOffer = (projectId: string,) => {
-    router.push(`/project/${projectId}`)
-  }
-  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
-    return null
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
-  }
-  
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -127,7 +50,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
 
 
-              
 
 
               <div className="flex items-center gap-2">

@@ -1,90 +1,4 @@
-<<<<<<< HEAD
 
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth";
-import { useRouter  } from 'next/router';
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
-import { toast } from "@/hooks/use-toast",
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client";
-import { logErrorToProduction  } from '@/utils/productionLogger';
-import { EmptyState } from "@/components/ui/empty-state";
-=======
-onViewDetails, }
-
-  )
-}
-
-
-
-import { use_router } from 'next / router';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Input  } from '@/components / ui / input';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components / ui / table';
-import { Badge  } from '@/components / ui / badge';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components / ui / dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-import { Alert, AlertDescription, AlertTitle  } from '@/components / ui / alert';
-import { toast  } from '@/hooks / use - toast';
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client';
-import { logErrorToProduction } from '@/utils / production_logger';
-import { EmptyState  } from '@/components / ui / empty - state';
-interface PartnerProfile {
-  id: string,
-  user_id: string,
-  name: string,
-  status: 'pending' | 'approved' | 'rejected',
-  created_at: string,
-  niche: string,
-  audience_size: string,
-  social_media?: Record < string, string>;
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useRouter } from 'next/router';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,;
-} from '@/components/ui/dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { toast } from '@/hooks/use-toast';
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { EmptyState } from '@/components/ui/empty-state';
-
->>>>>>> origin/main
 interface PartnerProfile {
   id: string;
   user_id: string;
@@ -94,11 +8,7 @@ interface PartnerProfile {
   niche: string;
   audience_size: string;
   social_media?: Record<string, string>,
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   website?: string;
   bio?: string;
   payout_method?: string;
@@ -148,61 +58,8 @@ if ( {) {
   );
 }
 
-<<<<<<< HEAD
-export default function PartnerManager() {
 
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [commissionRate, setCommissionRate] = useState(25);
-  const { user, isAuthenticated } = useAuth();
-
-  const router = null;
-  getFraudFlagBadge
-}: PartnerTableProps) {
-  if (isLoading) {
-    return (
-      <div className="text-center py-8">
-        <p className="text-zion-slate-light">Loading partner data...</p>
-      </div>
-    )
-=======
-
-;
-interface PartnerTableProps {;
-  partners: PartnerProfile[],;
-  isLoading: boolean,;
-  onViewDetails: (partner: PartnerProfile) => void,;
-  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,;
-  onOpenSettings: (partner: PartnerProfile) => void,;
-  getStatusBadge: (status: string) => JSX.Element,;
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null;
-}
-;
-function PartnerTable({;
-  partners,;
-  isLoading,;
-  onViewDetails,;
-  onUpdateStatus,;
-  onOpenSettings;
-  getStatusBadge;
-  getFraudFlagBadge;
-}: PartnerTableProps) {;
-  if (isLoading) {;
-    return (;
-      <div className="text-center py-8">;
-        <p className="text-zion-slate-light">Loading partner data...</p>;
-      </div>;
-    );
->>>>>>> origin/main
   }
-  
   if (partners.length === 0) {
     return (
       <div className="py-8">
@@ -269,7 +126,6 @@ function PartnerTable({;
                     </Button>
                   </>
                 )}
-                
                 <Button 
                   variant="ghost" 
                   size="sm"
@@ -279,7 +135,6 @@ function PartnerTable({;
                   <Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>
                 </Button>
-                
                 <Button 
                   variant="outline" 
                   size="sm"
@@ -291,16 +146,7 @@ function PartnerTable({;
             </TableCell>;
           </TableRow>;
         ))}
-<<<<<<< HEAD
-      </TableBody>
-    </Table>
-  )
 
-=======
-      </TableBody>;
-    </Table>;
-  );
->>>>>>> origin/main
 }
 ;
   commission_rate?: number

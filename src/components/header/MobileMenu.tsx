@@ -1,26 +1,4 @@
-<<<<<<< HEAD
 
-import Link from 'next/link';
-import { useRouter  } from 'next/router';
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
-import { cn  } from '@/lib/utils';
-import { useAuth  } from '@/hooks/useAuth';
-import { Button  } from '@/components/ui/button';
-import { ModeToggle  } from '@/components/ModeToggle';
-import { useTranslation } from 'react-i18next';
-export interface MobileMenuProps {
-  unreadCount?: number;
-  onClose: () => void;
-  openLoginModal: (returnToPath: string) => void, // Added from plan
-}
-
-// Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
-// These are routes that should trigger the login modal if accessed while unauthenticated.
-const protectedRoutes = null;
-                // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
-                // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
-=======
->>>>>>> origin/main
               }
 }
               onClose(), // Close mobile menu on any click
@@ -42,10 +20,7 @@ const protectedRoutes = null;
         <ModeToggle />
       </div>
     </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   )
 
 

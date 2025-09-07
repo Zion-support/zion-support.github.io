@@ -1,21 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState, useEffect } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Label  } from '@/components/ui/label';
-import { useAuth  } from '@/hooks/useAuth';
-import { toast  } from '@/hooks/use-toast';
-import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
-import { cn  } from '@/lib/utils';
-import { fireEvent  } from '@/lib/analytics';
-import {logErrorToProduction} from '@/utils/productionLogger';
-const signupSchema = null;
-=======
->>>>>>> origin/main
                 passwordStrength.strength >= 4 ? 'text-green-600' :
 passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
@@ -64,7 +47,6 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             </div>
           </div>
         )}
-        
         {errors.password && (
           <p className="text-sm text-red-600 flex items-center gap-1">
             <AlertCircle className="h-3 w-3" />
@@ -218,16 +200,7 @@ type SignupFormData = z.infer < typeof signup_schema>;
         ) : (
           'Create Account'
         )}
-<<<<<<< HEAD
-      </Button>
-    </form>
-  )
 
-=======
-      </Button>;
-    </form>;
-  );
->>>>>>> origin/main
 }
 ;
   );

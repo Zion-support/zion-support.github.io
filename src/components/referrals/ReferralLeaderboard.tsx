@@ -1,20 +1,11 @@
-<<<<<<< HEAD
 
-=======
-rank: number,
-  name: string,
->>>>>>> origin/main
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award } from 'lucide-react'
 interface LeaderboardEntry {
   rank: number;
   name: string;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   referrals: number
 }
 

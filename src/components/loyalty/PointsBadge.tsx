@@ -73,10 +73,7 @@ export function PointsBadge() {;
   },
 
 import React, { useState } from 'react';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 import { Gift, RefreshCw } from 'lucide-react'
 import { usePoints  } from '@/hooks/usePoints';
 import { useAuth  } from '@/hooks/useAuth';
@@ -85,26 +82,16 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/com
 import { LoginModal  } from '@/components/auth/LoginModal';
 import { Button  } from '@/components/ui/button';
 import {logErrorToProduction} from '@/utils/productionLogger';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 export function PointsBadge() {
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   const { isAuthenticated } = useAuth();
   const { ledger, balance, loading, fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const points = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <TooltipProvider>;
 
@@ -226,7 +213,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             )}
           </TooltipContent>
         </Tooltip>
-        
 
 
         {isAuthenticated && (

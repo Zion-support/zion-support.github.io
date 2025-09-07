@@ -1,37 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
 
-import { AlertTriangle, RefreshCw } from 'lucide-react'
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
-
-=======
-interface Props {;
-  children: React && React.ReactNode;
-}
-import { AlertTriangle, RefreshCw } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { logErrorToProduction } from '@/utils/productionLogger'
-interface Props {
-  children: React.ReactNode
-interface State {
-  hasError: boolean
-  error?: Error
-export class EquipmentErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
-  hasError: boolean
-  error?: Error
-}
-import {logErrorToProduction} from '@/utils/productionLogger'
-
-import React from 'react';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
->>>>>>> origin/main
 import {logErrorToProduction} from '@/utils/productionLogger';
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface Props {
@@ -48,15 +15,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-<<<<<<< HEAD
 
-    this.state = { hasError: false }
-
-  }
-
-=======
-    this.state = { hasError: false }
->>>>>>> origin/main
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   }

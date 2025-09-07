@@ -1,291 +1,4 @@
-<<<<<<< HEAD
 
-=======
-export function RoleManagement() {
-  // Mock team members data
-  const teamMembers = [
-import React from 'react';
-import React from 'react';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import {
-export function RoleManagement() {
-  // Mock team members data;
-  const teamMembers = [
-import React from 'react';
-import {
-  // TODO: Implement
-}
-pr-12325
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components / ui / table';
-import { Badge } from '@/components / ui / badge';
-import { Switch } from '@/components / ui / switch';
-import { toast } from '@/hooks / use - toast'; import { InfoIcon } from 'lucide-react';
-  TableRow,
-} from '@/components/ui/ table';
-import { Badge } from '@/components/ui/ badge';
-import { Switch } from '@/components/ui/ switch';
-import { toast, InfoIcon } from 'lucide-react';
-pr-12325
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components / ui / tooltip';
-export /**
- * RoleManagement - Function description
-} from '@/components/ui/ tooltip';
-export /**
- * RoleManagement - Function description;
-pr-12325
- */
-function RoleManagement() {
-  // Mock team members data;
-  const team_members = [;
-    {
-
-        view_candidates: true,
-        edit_candidates: true,
-        create_jobs: true,
-        manage_team: true,
-        view_billing: true,
-        manage_billing: true,
-      },
-    },
-
-
-
-  const roleDescriptions: Record<string string> = {
-    "Admin": "Full access to all features and settings",
-    "Recruiter": "Can manage candidates and job postings",
-    "Manager": "Can view candidates and create jobs",
-    "Viewer": "Read-only access to candidates"},
-    {
-      id: 2
-      name: 'Jamie Smith'
-      email: 'jamie@example.com'
-      role: 'Recruiter'
-      permissions: {
-
-        view_candidates: true,
-        edit_candidates: true,
-        create_jobs: true,
-        manage_team: false,
-        view_billing: false,
-        manage_billing: false,
-      },
-    },
-
-    {
-      id: 3
-      name: 'Sam Williams'
-      email: 'sam@example.com'
-      role: 'Manager'
-      permissions: {
-
-        view_candidates: true,
-        edit_candidates: false,
-        create_jobs: true,
-        manage_team: false,
-        view_billing: true,
-        manage_billing: false,
-      },
-    },
-
-    {
-      id: 4
-      name: 'Taylor Brown'
-      email: 'taylor@example.com'
-      role: 'Viewer'
-      permissions: {
-
-        view_candidates: true,
-        edit_candidates: false,
-        create_jobs: false,
-        manage_team: false,
-        view_billing: false,
-        manage_billing: false,
-      },
-    },
-  ];
-  const handlePermissionChange = (
-    _memberId: number,
-    permission: string,
-    value: boolean) =>: any {    // In a real app, this would make an API call to update permissions;
-    toast ({
-      title: 'Permission updated',
-      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,
-    });
-  }
-
-      id: 2;,
-  name: 'Jamie Smith
-      email: 'jamie@example.com,
-  role: 'Recruiter
-      permissions: {,
-        manage_team: false,
-        view_billing: false,
-        manage_billing: false,
-
-      id: 3;,
-  name: 'Sam Williams
-      email: 'sam@example.com,
-  role: 'Manager
-        edit_candidates: false,
-
-      id: 4;,
-  name: 'Taylor Brown
-      email: 'taylor@example.com,
-  role: 'Viewer
-        create_jobs: false,
-    },]
-  ];
-  const handlePermissionChange = (
-    _memberId: number,
-    permission: string,)
-    value: boolean) =>: any {    // In a real app, this would make an API call to update permissions;
-    toast ({
-      title: 'Permission updated',
-      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,')
-    });
-pr-12325
-  const role_descriptions: Record < string, string> = {
-    Admin: 'Full access to all features and settings',
-    Recruiter: 'Can manage candidates and job postings',
-    Manager: 'Can view candidates and create jobs',
-    Viewer: 'Read - only access to candidates',
-
-  }
-import React from 'react';
-pr-12325
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12325
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import { Switch } from '@/components/ui/switch';
-import { toast } from '@/hooks/use-toast';import { InfoIcon } from 'lucide-react';
-import {;
-pr-12325
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-
-pr-12325
-export function RoleManagement() {;
-  // Mock team members data;
-  const teamMembers = [;
-    {;
-      id: 1,;
-      name: 'Alex Johnson',;
-      email: 'alex@example && example.com',;
-      role: 'Admin',;
-      permissions: {;
-        viewCandidates: true,;
-      permissions: {;,
-  viewCandidates: true,;
-pr-12325
-        editCandidates: true,;
-        createJobs: true,;
-        manageTeam: true,;
-        viewBilling: true,;
-        manageBilling: true,;
-      },;
-    },;
-    {;
-pr-12325
-      id: 2,;
-      name: 'Jamie Smith',;
-      email: 'jamie@example && example.com',;
-      role: 'Recruiter',;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: true,;
-        createJobs: true,;
-        manageTeam: false,;
-        viewBilling: false,;
-        manageBilling: false,;
-      },;
-    },;
-    {;
-        manageTeam: false,;
-        viewBilling: false,;
-        manageBilling: false,;
-pr-12325
-      id: 3,;
-      name: 'Sam Williams',;
-      email: 'sam@example && example.com',;
-      role: 'Manager',;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: false,;
-        createJobs: true,;
-        manageTeam: false,;
-        viewBilling: true,;
-        manageBilling: false,;
-      },;
-    },;
-    {;
-        editCandidates: false,;
-pr-12325
-      id: 4,;
-      name: 'Taylor Brown',;
-      email: 'taylor@example && example.com',;
-      role: 'Viewer',;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: false,;
-        createJobs: false,;
-        manageTeam: false,;
-        viewBilling: false,;
-        manageBilling: false,;
-      },;
-    },;
-  ];
-        createJobs: false,;
-    },;]
-pr-12325
-
-  const handlePermissionChange = (;
-    _memberId: number,;
-    permission: string,;
-    value: boolean;
-  ) => {    // In a real app, this would make an API call to update permissions;
-    toast({;
-      title: 'Permission updated',;
-      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,;
-    });
-  };
-
-  const roleDescriptions: Record<string, string> = {;
-    Admin: 'Full access to all features and settings',;
-    Recruiter: 'Can manage candidates and job postings',;
-    Manager: 'Can view candidates and create jobs',;
-    Viewer: 'Read-only access to candidates',;
-  };
-
-import { toast } from '@/hooks/use-toast';
-import { InfoIcon } from 'lucide-react';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
->>>>>>> origin/main
 
 import React from "react";
 import {
@@ -308,65 +21,7 @@ import {
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-
-
-      id: 1,
-      name: "Alex Johnson",
-      email: "alex@example.com",
-      role: "Admin",
-      permissions: {
-        viewCandidates: true,
-        editCandidates: true,
-        createJobs: true,
-        manageTeam: true,
-        viewBilling: true,
-        manageBilling: true}},
-    {
-      id: 2,
-      name: "Jamie Smith",
-      email: "jamie@example.com",
-      role: "Recruiter",
-      permissions: {
-        viewCandidates: true,
-        editCandidates: true,
-        createJobs: true,
-        manageTeam: false,
-        viewBilling: false,
-        manageBilling: false}},
-    {
-      id: 3,
-      name: "Sam Williams",
-      email: "sam@example.com",
-      role: "Manager",
-      permissions: {
-        viewCandidates: true,
-        editCandidates: false,
-        createJobs: true,
-        manageTeam: false,
-        viewBilling: true,
-        manageBilling: false}},
-    {
-      id: 4,
-      name: "Taylor Brown",
-      email: "taylor@example.com",
-      role: "Viewer",
-      permissions: {
-        viewCandidates: true,
-        editCandidates: false,
-        createJobs: false,
-        manageTeam: false,
-        viewBilling: false,
-
-
-
-
-
->>>>>>> origin/main
   return (
     <div className="space-y-6">
       <div>
@@ -833,59 +488,32 @@ export function RoleManagement() {;
 
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />
 
-                      
                       <TooltipContent>
 
-                      
-                    
-                  
-              
 
 
 
 
 
-                      
-
-                      
-                    
-                  
-              
 
 
 
 
 
-                      
-
-                      
-                    
-                  
-              
 
 
 
 
 
-                      
-
-                      
-                    
-                  
-              
 
 
 
 
 
-                      
 
-                      
-                    
-                  
-              
-            
-          
+
+
+
           <TableBody>
 
               <TableRow key={member.id}>
@@ -896,7 +524,6 @@ export function RoleManagement() {;
 
                   <div className='font-medium'>{member.name}</div>
                   <div className='text-sm text-muted-foreground'>
-                
 
 
 
@@ -1353,7 +980,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Switch;
                     aria-label='Edit candidates
 
-                
 
                 <TableCell className='text-center'>;
 

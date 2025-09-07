@@ -1,24 +1,4 @@
-<<<<<<< HEAD
 
-=======
-              }
-              setEquipment(equipmentData)
-              setLoading(false)
-              return
-            }
-      } catch (error) {
-        logErrorToProduction ('Error loading equipment:', { data: error });
-        set_error ('Failed to load equipment details');
-        set_loading (false);
-      }
-    }
-
-
-
-import { useState, useEffect } from "react",;
-import { useRouter } from 'next/router',;
-import { NextSeo } from '@/components/NextSeo',;
->>>>>>> origin/main
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import { NextSeo  } from '@/components/NextSeo';
@@ -488,20 +468,14 @@ interface EquipmentDetails {
   warranty?: string;
   returnPolicy?: string
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 
 // Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(
   item: ProductListing
 ): EquipmentDetails {
   return {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     id: item.id;
     name: item.title;
     description: item.description;
@@ -510,11 +484,7 @@ function convertProductListingToEquipmentDetails(
     subcategory: item.subcategory;
     images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto;
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
         }}
       />;
       <div className='min-h-screen bg-zion-blue py-8 px-4'>;
@@ -572,9 +542,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {equipment.brand}
                   </Badge>
                 </div>
-                
                 <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
-                
                 {equipment.rating && (
                   <div className="flex items-center gap-2">
                     <div className="flex items-center">
@@ -628,7 +596,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               {/* Additional Info */}
               <div className='space-y-4 border-t border-zion-blue-light pt-4'>
-                
                 <Button
                   onClick={handleAddToCart}
                   disabled={isAdding || !equipment.inStock}

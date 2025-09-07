@@ -1,88 +1,4 @@
-<<<<<<< HEAD
 
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Facebook } from 'lucide-react'
-import { signIn } from 'next-auth/react';
-type Provider = any;
-
-=======
-import { signIn } from 'next-auth/react';
-type Provider = any;
-import { signIn } from 'next-auth/react'
-type Provider = 'google' | 'github' | 'facebook' | 'credentials'
-interface AuthButtonsProps {
-  providers?: Provider[]
-export function AuthButtons({
-  providers = ['google', 'github', 'facebook', 'credentials']
-}: AuthButtonsProps) {
-  const [loadingProvider, setLoadingProvider] = useState<string | null>(null)
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const handleSignIn = async (provider: Provider) => {
-    setLoadingProvider(provider)
-    await signIn(provider)
-  }
-
-import { useState } from 'react';
-import { Button } from '@/components / ui / button';
-import { Facebook } from 'lucide-react';
-import { sign_in } from 'next - auth / react';
-type Provider = 'google' | 'github' | 'facebook' | 'credentials';
-interface AuthButtonsProps {
-  providers?: Provider[];
-export /**
- * AuthButtons - Function description
-import { useState } from 'react';
-import { Button } from '@/components/ui/ button';
-import { Facebook } from 'lucide-react';
-import { sign_in } from 'next - auth / react';
-type Provider = 'google' | 'github' | 'facebook' | 'credentials';
-import { Button } from '@/components/ui/button';
-import { Facebook, Github } from 'lucide-react';
-import { signIn } from 'next-auth/react';
-
-
-interface AuthButtonsProps {
-  // TODO: Implement
-}
-  providers?: Provider[];
-export /**
- * AuthButtons - Function description;
-pr-12325
- */
-function AuthButtons() {
-  const [loading_provider, setLoadingProvider] = useState < string | null>(null);
-
-  const handleSignIn = async (provider: Provider) => {
-    setLoadingProvider (provider);
-    await sign_in (provider);
-  }
-
-type Provider = 'google' | 'github' | 'facebook' | 'credentials';
-interface AuthButtonsProps {;
-  providers?: Provider[];
-
-export function AuthButtons(): any ({;
-  providers = ['google', 'github', 'facebook', 'credentials'],;
-}: AuthButtonsProps) {;
-  const [loadingProvider, setLoadingProvider] = useState<string | null>(null);
-
-  const handleSignIn = async (provider: Provider) => {;
-    setLoadingProvider(provider);
-    await signIn(provider);
-  };
-  const gridCols = `grid-cols-${providers && providers.length}`;
-
-
-
-  const gridCols = `grid-cols-${providers.length}`,
-
-
-
-
-  const gridCols = `grid-cols-${providers.length}`
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>
       {providers.includes('google') && (
@@ -441,7 +357,6 @@ export function AuthButtons({
           <span className="ml-2">
             {loadingProvider === provider ? 'Signing in...' : getProviderLabel(provider)}
           </span>
-        
     </div>;"
       ))}
 pr-12325

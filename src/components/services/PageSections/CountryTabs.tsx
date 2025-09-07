@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-import { useState, useEffect  } from 'react';
-import { Search } from 'lucide-react'
-=======
-import { Search } from 'lucide-react';
-import { Input } from '@/components/ui/input';
->>>>>>> origin/main
 import { Input  } from '@/components/ui/input';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Button } from '@/components/ui/button';
@@ -337,22 +330,7 @@ interface CountryTabsProps {
   onQuote?: (country: CountryPricing) => void;
   searchQuery: string;
   setSearchQuery: (query: string) => void
-<<<<<<< HEAD
-}
 
-
-interface CountryTabsProps {
-  popularCountries: string[];
-  filteredCountries: CountryPricing[];
-  handleCountrySelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
-export function CountryTabs({
-
-=======
-export function CountryTabs({
->>>>>>> origin/main
   popularCountries;
   filteredCountries;
   handleCountrySelect;
@@ -364,41 +342,7 @@ export function CountryTabs({
                       setCurrentPage(Math.min(totalPages, currentPage + 1))
 origin/cursor/automate-test-improve-and-merge-code-2533
                     }}
-<<<<<<< HEAD
 
-                  />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
-          </div>
-=======
-                  />;
-                </PaginationItem>;
-                {Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(;
-                  page => (;
-                    <PaginationItem key={page}>;
-                      <PaginationButton
-                        page={page}
-                        isActive={page === currentPage}
-                        onClick={e => {;
-                          e && e.preventDefault();
-                          setCurrentPage(page);                        }}
-                      />;
-                    </PaginationItem>;
-                  );
-                )}
-                <PaginationItem>;
-                  <PaginationNext
-                    href={`?page=${currentPage + 1}`}
-                    onClick={e => {;
-                      e && e.preventDefault();
-                      setCurrentPage(Math && Math.min(totalPages, currentPage + 1));                    }}
-                  />;
-                </PaginationItem>;
-              </PaginationContent>;
-            </Pagination>;
-          </div>;
->>>>>>> origin/main
         )}
       </TabsContent>;
     </Tabs>;
@@ -468,7 +412,6 @@ function CountryTabs() {
           {filtered_countries;
             .filter (country => popular_countries.includes (country.country));
 
-      
       <TabsContent value="all" className="mt-0">"
         <div className="mb-6 max-w-md mx-auto">"
           <div className="relative">"
@@ -485,7 +428,6 @@ function CountryTabs() {
 
 
 
-      
 
 
 

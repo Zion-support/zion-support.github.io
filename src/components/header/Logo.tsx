@@ -5,25 +5,7 @@ return (
   }
 
 
-<<<<<<< HEAD
 
-import React from 'react',
-import Link from 'next/link';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-
-interface LogoProps {
-  customLogo?: string;
-
-export function Logo({ customLogo }: LogoProps) {
-  const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
-
-  // Use the white-label logo if available and no specific customLogo is provided
-  const logoToUse = null;
-
-=======
-  const logoToUse = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -32,7 +14,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     )
   }
 
-  
 
   return (
 

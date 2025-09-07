@@ -5,80 +5,12 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-<<<<<<< HEAD
 
-import React from 'react',
-
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ArrowLeft } from 'lucide-react'
-;
-=======
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ArrowLeft } from 'lucide-react'
-
-    <div className='min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4'>;
-      <div className='text - red - 400 mb - 4 text - xl'>;
-        {error || 'Something went wrong'}
-      </div>;
-      <Button as_child>;
-return (
-
-
-import React from 'react';
-import { Button } from "@/components/ui/button";""
-import Link from "next/link";""
-import { ArrowLeft } from 'lucide-react
-    <div className='min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4'>;
-</div>
-      <div className='text - red - 400 mb - 4 text - xl'>;
-      </div>;
-      <Button as_child>;
-
-pr-12325
-        <Link;
-          href='/talents';
-          className='bg - zion - purple hover:bg - zion - purple - dark';
-        >;
-          <ArrowLeft className='mr - 2 h - 4 w - 4' />          Back to Talent Directory;
-        <Link href="/talents" className="bg - zion - purple hover: bg - zion - purple - dark">;
-          <ArrowLeft className="mr - 2 h - 4 w - 4" />;
-import { Button  } from '@/components / ui / button';
-import Link from './next / link';
->>>>>>> origin/main
 interface ProfileErrorStateProps {
   error: string | null
 }
 
-<<<<<<< HEAD
-export function ProfileErrorState({ error }: ProfileErrorStateProps) {
-  return (
-    <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
-      <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>
-      <Button asChild>
-        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">
-          <ArrowLeft className="mr-2 h-4 w-4" />
-=======
-        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">
-          <ArrowLeft className="mr-2 h-4 w-4" />
-interface ProfileErrorStateProps {
-  error: string | null
-export function ProfileErrorState({ error }: ProfileErrorStateProps) {
-  return (
-    <div className='min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4'>
-      <div className='text-red-400 mb-4 text-xl'>
-        {error |'Something went wrong'}
-      </div>
-      <Button asChild>
-        <Link
-          href='/talents'
-          className='bg-zion-purple hover:bg-zion-purple-dark'
-        >
-          <ArrowLeft className='mr-2 h-4 w-4' />
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+
           Back to Talent Directory
         </Link>
       </Button>
@@ -153,8 +85,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">"
           <ArrowLeft className="mr-2 h-4 w-4" />"
 
-        
-      
 
 
 

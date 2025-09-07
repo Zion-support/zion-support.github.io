@@ -1,18 +1,4 @@
-<<<<<<< HEAD
 
-import { useState, useEffect  } from 'react';
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import { useFormik  } from 'formik';
-import * as Yup from 'yup',
-import axios from 'axios',
-=======
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from react-router-dom
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import axios from 'axios';
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
 import Link from 'next/link';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
@@ -234,7 +220,6 @@ const SignupSchema = null;
               </Button>
             </div>
           )}
-          
 origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Additional help text when service issues are detected */}
           {healthCheckError && (
@@ -243,10 +228,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
           </form>
           {!emailVerificationRequired && (
             <div className='mt-6'>

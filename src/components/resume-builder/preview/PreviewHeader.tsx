@@ -3,20 +3,7 @@ import { Resume } from '@/types/resume';
 import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
-<<<<<<< HEAD
 
-import { Button  } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link } from 'lucide-react'
-import { PdfExportButton  } from '../PdfExportButton';
-import { Resume  } from '@/types/resume';
-import { useState  } from 'react';
-import { useIsMobile } from '@/hooks/use-mobile';
-interface PreviewHeaderProps {
-  resume: Resume;
-  onBack: () => void
-}
-=======
->>>>>>> origin/main
 
           position: absolute;
           left: 0;
@@ -84,10 +71,7 @@ interface PreviewHeaderProps {
       >
         <ArrowLeft className="h-4 w-4" />
         Back
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
       </Button>
       <div
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}

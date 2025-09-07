@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import {
->>>>>>> origin/main
 
 export function UsageStats() {
 
@@ -42,11 +38,7 @@ import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <div className="space-y-8">
       <div>
@@ -96,7 +88,6 @@ return (
         </Card>
 
 
-        
 
 
         <Card>
@@ -133,7 +124,6 @@ return (
         </Card>
 
 
-        
 
 
         <Card>
@@ -168,7 +158,6 @@ return (
         </Card>
 
 
-        
 
 
         <Card>
@@ -215,7 +204,6 @@ return (
       </div>
 
 
-      
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">

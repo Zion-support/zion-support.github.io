@@ -1,15 +1,4 @@
-<<<<<<< HEAD
 
-
-import { useAuth } from "@/hooks/useAuth",
-import { Loader2 } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",
-
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
-=======
->>>>>>> origin/main
 interface SuggestedJobsProps {
   talent_id?: string;
 }
@@ -46,49 +35,7 @@ function SuggestedJobs() {
   const currentTalentId = talentId || user?.id,
 
 
-<<<<<<< HEAD
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-  const { user } = useAuth();
 
-  const currentTalentId = null;
-
-=======
-  const { 
-    isLoading,
-    updateJobMatchStatus, 
-    categorizedMatches: { 
-
-
-
-
-
-  if (isLoading) {
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-
-
-    updateJobMatchStatus, ;
-import { useAuth } from "@/hooks/useAuth";
-import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
-import { useJobSuggestions } from "@/hooks/useJobSuggestions";
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
-    updateJobMatchStatus
-import { useAuth } from "@/hooks/useAuth"
-import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge"
-import { useJobSuggestions } from "@/hooks/useJobSuggestions"
-import { JobMatchesCard } from "./JobMatchesCard"
-import { NoJobsCard } from "./NoJobsCard"
-interface SuggestedJobsProps {
-  talentId?: string
-}
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-  const { user } = useAuth();
-  const currentTalentId = null;
->>>>>>> origin/main
   if (isLoading) {
     return (
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -168,7 +115,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
               />;
 
 
-          
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -181,13 +127,11 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-      
 ;
 
 
 ;
 
-      
 ;
 
       {/* Previously Viewed Section */}
@@ -216,7 +160,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
               />;
 
 
-          
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -229,13 +172,11 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-      
 ;
 
 
 ;
 
-      
 ;
 
       {/* Applied Jobs Section */}

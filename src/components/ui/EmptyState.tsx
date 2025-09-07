@@ -17,20 +17,12 @@ interface EmptyStateProps {
   onRetry?: () => void;
   showRetry?: boolean;
 
-<<<<<<< HEAD
-  icon?: React.ReactNode
-=======
 
->>>>>>> origin/main
 }
 
 export function EmptyState({ 
   text;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   icon
 }: EmptyStateProps) {
   return (

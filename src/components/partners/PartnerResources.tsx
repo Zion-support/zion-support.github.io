@@ -1,109 +1,11 @@
-<<<<<<< HEAD
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button";
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
-import { toast } from "@/hooks/use-toast";
-
-=======
-pr-12325
-interface ResourceItem {;
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-} from '@/components/ui/ card';
-import { Button } from '@/components/ui/ button';
-pr-12325
-  Download,
-  FileImage,
-  FileText,
-  FileType,
-  FileVideo,
-  Link,
-} from 'lucide-react';
-import { toast } from '@/hooks / use - toast';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button";
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
-import { toast } from "@/hooks/use-toast";
-origin/cursor/automate-test-improve-and-merge-code-2533
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-  Download
-  FileImage
-  FileText
-  FileType
-  FileVideo
-  Link
-} from 'lucide-react'
-import { toast } from '@/hooks/use-toast'
-
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
 interface ResourceItem {
   id: string;
   title: string;
   description: string;
   type: 'image' | 'video' | 'document' | 'link';
   icon: JSX.Element;
-<<<<<<< HEAD
 
-  url: string
-}
-
-=======
-  url: string
-
-  icon: JSX.Element;
-  url: string;
-export /**
- * PartnerResources - Function description
-import { toast } from '@/hooks/ use - toast';
-interface ResourceItem {
-  // TODO: Implement
-}
-  id: string;,
-  title: string;
-  description: string;,
-  type: 'image' | 'video' | 'document' | 'link';
-  icon: JSX.Element;,
-  url: string;
-export /**
- * PartnerResources - Function description;
-pr-12325
- */
-function PartnerResources() {
-  const resources: ResourceItem[] = [;
-
-
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",;
-interface ResourceItem {
-  id: string,
-  title: string,
-  description: string,
-  type: 'image' | 'video' | 'document' | 'link',
-  icon: JSX.Element,
-  url: string
-}
-
-
-
->>>>>>> origin/main
 
 export function PartnerResources() {
   const resources: ResourceItem[] = [
@@ -129,88 +31,7 @@ pr-12325
       id: 'logo-pack',
       title: 'Zion AI Logo Pack',
       description: 'Official logos in various formats (PNG, SVG, JPG)',
-<<<<<<< HEAD
 
-      type: 'image';
-      icon: <FileImage className;
-
-=======
-      type: 'image',
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
-      url: '#'
-    },
-    {
-      id: 'brand-guidelines',
-      title: 'Brand Guidelines',
-      description: 'How to properly use our brand assets in your content',
-      type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
-      url: '#'
-    },
-    {
-      id: 'banner-templates',
-      title: 'Social Media Banners',
-      description: 'Pre-designed graphics for your social channels',
-      type: 'image',
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
-      url: '#'
-    },
-    {
-      id: 'promotional-video',
-      title: 'Promotional Video',
-      description: 'Short explainer video about Zion AI Marketplace',
-      type: 'video',
-      icon: <FileVideo className="h-10 w-10 text-red-500" />,
-      url: '#'
-    },
-    {
-      id: 'email-templates',
-      title: 'Email Templates',
-      description: 'Ready-to-use email templates for your audience',
-      type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
-      url: '#'
-    },
-    {
-      id: 'talking-points',
-      title: 'Talking Points',
-      description: 'Key messages and benefits to highlight',
-      type: 'document',
-
-  icon: JSX && JSX.Element;
-
-
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
-      url: '#'
-    }
-  ],
-
-  const handleDownload = (resource: ResourceItem) => {
-
-  const handleDownload = (resource: ResourceItem) => {
-    // In a real app, this would download the actual resource
-    toast({
-      title: "Download started",
-      description: `Downloading ${resource.title}`,
-      variant: "default"})
-  },
-
-
-
-
-
-
-
-      variant: "default"})
-  },
-
-      id: 'logo-pack';
-      title: 'Zion AI Logo Pack';
-      description: 'Official logos in various formats (PNG, SVG, JPG)',
-      type: 'image';
-      icon: <FileImage className;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -428,8 +249,6 @@ export function PartnerResources() {;
           <CardTitle>Marketing Resources
           <CardDescription>
 
-          
-        
         <CardContent>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">"
@@ -445,8 +264,6 @@ export function PartnerResources() {;
 
 
 
-          
-        
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,;"
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,;"
       icon: <FileVideo className="h-10 w-10 text-red-500" />,;"
@@ -471,13 +288,10 @@ export function PartnerResources() {;
                   <p className="text-xs text-zion-slate-light mb-4">{resource.description}</p>;"
                     <Download className="h-4 w-4" />;"
 
-                  
-                
 
 
           <CardTitle>Promotion Guidelines
 
-          
         <CardContent className="space-y-4">"
           <div className="space-y-2">"
             <h3 className="text-lg font-semibold text-white">Do's</h3>
@@ -534,24 +348,18 @@ pr-12325
           <CardTitle>Promotion Guidelines</CardTitle>;
           <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
             {resources.map (resource => (
-        
-      
 
 
 
 
           <CardTitle>Partner Support
 
-          
         <CardContent className="flex flex-col items-center text-center py-6">"
           <p className="text-zion-slate-light mb-4">"
 </p>
           </p>"
           <Button className="bg-zion-purple hover: bg-zion-purple-dark">"
 
-          
-        
-      
 
           </div>;
       ;"

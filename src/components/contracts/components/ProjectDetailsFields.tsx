@@ -1,40 +1,5 @@
 import { format } from "date-fns";
-<<<<<<< HEAD
 
-import { CalendarIcon } from 'lucide-react'
-
-import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
-import { 
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormDescription;
-  FormMessage 
-} from "@/components/ui/form",
-
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Button } from "@/components/ui/button",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-
-=======
-import { CalendarIcon } from 'lucide-react';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
-import { ;
-  FormField,;
-  FormItem, ;
-  FormLabel, ;
-  FormControl, ;
-  FormDescription, ;
-  FormMessage ;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
->>>>>>> origin/main
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
@@ -301,7 +266,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ) : (;
                         <span>Pick a date</span>;
 
-      
       <FormField
         control={form.control}
         name="scopeSummary"
@@ -360,7 +324,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         )}
       />
-      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control={form.control}
@@ -585,7 +548,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </FormItem>
           )}
         />
-        
         <FormField
           control={form.control}
           name="endDate"

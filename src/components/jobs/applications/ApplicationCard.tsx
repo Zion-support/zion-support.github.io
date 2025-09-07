@@ -229,10 +229,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <ApplicationProgress status={application.status} className='my - 4' />;
 
 
-      
       <CardContent className="pb-3">
         <ApplicationProgress status={application.status} className="my-4" />
-        
 
 <CardContent className='pb-3'>
         <ApplicationProgress status={application.status} className='my-4' />
@@ -270,26 +268,7 @@ import { StatusBadge } from './StatusBadge';
 import { ApplicationProgress } from './ApplicationProgress';
 import { toast } from 'sonner';
 
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'
-import Link from "next/link",
-import { StatusBadge } from "./StatusBadge",
-
-=======
-import { useState } from "react";
-import { formatDistanceToNow } from "date-fns";
-import { JobApplication } from "@/types/jobs";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react';import Link from "next/link";
-import { StatusBadge } from "./StatusBadge";
->>>>>>> origin/main
 import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
 interface ApplicationCardProps {;
@@ -310,48 +289,7 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
 export function ApplicationCard(): any ({ application }: ApplicationCardProps) {;
   const [expanded, setExpanded] = useState(false);
-<<<<<<< HEAD
 
-  const handleDownloadResume = null;
-
-=======
-
-  const handleDownloadResume = () => {;
-    // This would typically download the resume file;
-    toast && toast.info("Resume download functionality will be implemented soon");
-  };
-
-  const renderActionButtons = () => {;
-    switch (application && application.status) {;
-      case 'shortlisted':;
-        return (
-          <Button variant='default' size='sm'>;
-            <Calendar className='h-4 w-4 mr-1' /> Prepare for Interview;
-        );
-      case 'interview':;
-        return (
-          <Button variant='default' size='sm'>;
-            <Calendar className='h-4 w-4 mr-1' /> View Interview Details;
-          </Button>;
-        );
-      case 'hired':;
-
-          >;
-            <FileText className='h-4 w-4 mr-1' /> View Offer;
-          </Button>;
-        );
-      case 'rejected':;
-        return (
-          <Button variant='outline' size='sm'>;
-            <HelpCircle className='h-4 w-4 mr-1' /> View Feedback;
-          </Button>;
-        );
-      default:;
-        return null;
-    }
-  };
-
->>>>>>> origin/main
   return (
     <Card className='overflow-hidden'>;
       <CardHeader className='pb-3'>;
@@ -415,7 +353,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
             <HelpCircle className='h-4 w-4 mr-1' /> View Feedback;
 
-          
           <Button variant="default" size="sm">"
 "
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;"
@@ -438,7 +375,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
             <div className="text-sm text-muted-foreground mt-1">"
           <StatusBadge status={application.status} />
 
-      
     <Card className='overflow - hidden'>;
 
       <CardHeader className='pb - 3'>;
@@ -527,7 +463,6 @@ pr-12325
                     <FileText className="h-4 w-4 mr-2 text-blue-500" />
                     <span className="text-sm font-medium">{application.resume.title |"Resume"}</span>
                   </div>
-            
             {application.resume && (
               <div className="border rounded-md p-3 bg-muted/20">
                 <div className="flex justify-between items-center">
@@ -536,10 +471,8 @@ pr-12325
                     <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>
                   </div>
 
-      
       <CardContent className="pb-3">
         <ApplicationProgress status={application.status} className="my-4" />
-        
 
                 </p>;
               </div>)}
@@ -627,7 +560,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Relevance to job requirements
                   </span>                </div>            {application.match_score && (
               <div>
-            
             {application.match_score && (
               <div>;
                 <h4 className='text - sm font - medium mb - 1'>Match Score</h4>;
@@ -639,7 +571,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Relevance to job requirements;
                   </span>                </div>            {application.match_score && (
 
-            
             {application.match_score && (
 
               <div>
@@ -769,7 +700,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
 
       </CardContent>
-      
       <CardFooter className="flex flex-col gap-3 pt-0">
         <div className="flex justify-between items-center w-full">
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>
@@ -793,7 +723,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>"
                     <Download className="h-3 w-3 mr-1" /> Download;"
 
-                  
                 <h4 className="text - sm font - medium mb - 1">Your Cover Letter</h4>;""
                 <p className="text - sm text - muted - foreground">{application.cover_letter}</p>;"
               <div className="border rounded - md p - 3 bg - muted / 20">;"
@@ -843,8 +772,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={() => setExpanded(!expanded)}
 
           <div className='flex gap-2'>;
-      
-      
       <CardFooter className="flex flex-col gap-3 pt-0">"
         <div className="flex justify-between items-center w-full">"
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>"
@@ -870,11 +797,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 
-        
 
-        
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client        
-        
 
 
         <Button 
@@ -1026,10 +950,7 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job;"
 
-              
-            
 
-        
 
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client;
 
@@ -1040,11 +961,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client;"
 
-          
 
 
-        
-      
             <Button variant='outline' size='sm' asChild>;
               <Link href={`/jobs/${application && application.job_id}`}>;
 
@@ -1083,9 +1001,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               as_child;
                 <ExternalLink className="h - 4 w - 4 mr - 1" /> View Job;"
 
-          
-        
-      
 
             <MessageSquare className='h - 4 w - 4 mr - 1' /> Message Client;
 

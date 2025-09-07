@@ -10,33 +10,7 @@ export function ApiKeysManager() {
 import { format } from "date-fns",;
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
 
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
-import { format } from "date-fns",
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
-
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Input } from "@/components/ui/input",
-import { Checkbox } from "@/components/ui/checkbox",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
-=======
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Input } from "@/components/ui/input",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { Label } from "@/components/ui/label",;
-import { Badge } from "@/components/ui/badge",;
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
->>>>>>> origin/main
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import CodeBlock from "./CodeBlock";
 export function ApiKeysManager() {
@@ -53,7 +27,6 @@ export function ApiKeysManager() {
   const [showCreateDialog, setShowCreateDialog] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
-  
 origin/cursor/automate-test-improve-and-merge-code-2533
   // Create key form state
   const [keyName, setKeyName] = useState(""),
@@ -62,604 +35,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   // Load keys on mount
   useState(() => {
     fetchApiKeys()
-<<<<<<< HEAD
-  }),
-  
-  const handleCreateKey = null;
 
-=======
-pr-12325
-keys,
-
-    loading, 
-    newApiKey;
-    fetchApiKeys, 
-    createApiKey, 
-    regenerateApiKey, 
-
-    revokeApiKey,
-
-
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
-
-
-  // Load keys on mount
-  useState(() => {
-    fetchApiKeys()
-
-
-    if (keyName.trim() === '' || selectedScopes.length === 0) return;
-
-
-    await createApiKey(keyName, selectedScopes)
-    setShowCreateDialog(false)
-    setKeyName('')
-    setSelectedScopes([]) }
-  const handleRegenerateKey = async (keyId: string) => {
-    await regenerateApiKey(keyId)
-    setShowRegenerateConfirm(null);  useState(() => {
-    fetchApiKeys()
-  })
-  const handleCreateKey = async () => {
-
-
-    if (keyName.trim() === "" || selectedScopes.length === 0) return;
-
-
-    await createApiKey(keyName, selectedScopes)
-    setShowCreateDialog(false)
-    setKeyName("")
-    setSelectedScopes([])
-
-import { useState } from 'react';
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
-import { format } from 'date - fns';
-import { useApiKeys, type ApiKeyScope } from '@/hooks / useApiKeys';
-import { Button } from '@/components / ui / button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components / ui / dialog';
-import { Input } from '@/components / ui / input';
-import { Checkbox } from '@/components / ui / checkbox';
-import { Label } from '@/components / ui / label';
-import { Badge } from '@/components / ui / badge';
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components / ui / popover';
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from '@/components / ui / alert - dialog';
-import CodeBlock from './CodeBlock';
-export /**
- * ApiKeysManager - Function description
- */
-function ApiKeysManager() {
-  const {
-    keys,
-    loading,
-    newApiKey,
-    fetchApiKeys,
-    createApiKey,
-    regenerateApiKey,
-    revokeApiKey,
-    clearNewApiKey,
-  } = useApiKeys ();
-  const [showCreateDialog, setShowCreateDialog] = useState (false);
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState < string | null>(
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState < string | null>()
-pr-12325
-    null);
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<;
-    string | null;
-  >(null);
-  // Create key form state;
-  const [key_name, setKeyName] = useState ('');
-  const [key_name, setKeyName] = useState ();
-pr-12325
-  const [selected_scopes, setSelectedScopes] = useState < ApiKeyScope[]>([]);
-  // Load keys on mount;
-  useState (() => {
-    fetchApiKeys ();
-  });
-  const handleCreateKey = async () => {
-    if (=== '' || selected_scopes.length === 0) return) {
-  $2
-}
-    await createApiKey (key_name, selected_scopes);
-    setShowCreateDialog (false);
-    setKeyName ('');
-    if (===  || selected_scopes.length === 0) return) {
-  $2;
-}
-    await createApiKey (key_name, selected_scopes);
-    setShowCreateDialog (false);
-    setKeyName ();
-pr-12325
-    setSelectedScopes ([]) }
-  const handleRegenerateKey = async (key_id: string) => {
-    await regenerateApiKey (key_id);
-    setShowRegenerateConfirm (null);  useState (() => {
-    fetchApiKeys ();
-  });
-  const handleCreateKey = async () => {
-    if (=== "" || selected_scopes.length === 0) return) {
-  $2
-}
-    await createApiKey (key_name, selected_scopes);
-    setShowCreateDialog (false);
-    setKeyName ("");
-    setSelectedScopes ([]);
-  }
-  const handleRegenerateKey = async (keyId: string) => {
-    await regenerateApiKey(keyId)
-    setShowRegenerateConfirm(null)
-  }),
-  
-  const handleCreateKey = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const handleRevokeKey = async (keyId: string) => {
-    await revokeApiKey(keyId)
-    setShowDeleteConfirm(null)
-  }
-  const handleRegenerateKey = async (keyId: string,) => {
-    await regenerateApiKey(keyId),
-    setShowRegenerateConfirm(null)
-  },
-  
-    await revokeApiKey(keyId),
-    setShowDeleteConfirm(null)
-  }
-  // Scope options
-  const scopeOptions: {
-    value: ApiKeyScope
-    label: string
-    description: string
-  }[] = [
-
-  }
-  const handleRegenerateKey = async (key_id: string) => {
-    await regenerateApiKey (key_id);
-    if (=== "" || selected_scopes.length === 0) return) {"
-    setShowCreateDialog (false);"
-    setKeyName ("");"
-    setSelectedScopes ([]);
-
-pr-12325
-    setShowRegenerateConfirm (null);
-  const handleRevokeKey = async (key_id: string) => {
-    await revokeApiKey (key_id);
-    setShowDeleteConfirm (null);
-  }
-
-  const handleRegenerateKey = async (key_id: string, ) => {
-    await regenerateApiKey (key_id),
-    setShowRegenerateConfirm (null);
-  },
-  const handleRevokeKey = async (key_id: string, ) => {
-    await revokeApiKey (key_id),
-    setShowDeleteConfirm (null);
-  },
-  // Scope options;
-  const scope_options: {
-    value: ApiKeyScope;
-    label: string;
-    description: string;
-  }[] = [;
-
-    {
-      value: 'jobs:read'
-      label: 'Read Jobs'
-      description: 'Access to view job listings'
-    }
-    {
-      value: 'jobs:write'
-      label: 'Write Jobs'
-      description: 'Create and manage job listings'
-    }
-    {
-      value: 'talent:read'
-      label: 'Read Talent'
-      description: 'Access to view talent profiles'
-    }
-    {
-      value: 'quotes:write'
-      label: 'Write Quotes'
-      description: 'Create and manage quotes'
-    }
-    {
-
-    if (keyName.trim() === "" || selectedScopes.length === 0) return;
-    
-    await createApiKey(keyName, selectedScopes);
-    setShowCreateDialog(false);
-    setKeyName("");
-
-  const handleRegenerateKey = async (key_id: string, ) => {
-    await regenerateApiKey (key_id),
-  },
-  const handleRevokeKey = async (key_id: string, ) => {
-    await revokeApiKey (key_id),
-  // Scope options;
-  const scope_options: {,
-  value: ApiKeyScope;
-    label: string;,
-  description: string;
-  }[] = [;
-
-    {"
-      value: 'jobs:read,
-  label: 'Read Jobs
-      description: 'Access to view job listings
-    {
-      value: 'jobs:write,
-  label: 'Write Jobs
-      description: 'Create and manage job listings
-      value: 'talent:read,
-  label: 'Read Talent
-      description: 'Access to view talent profiles
-      value: 'quotes:write,
-  label: 'Write Quotes
-      description: 'Create and manage quotes
-
-    if (keyName.trim() === "" || selectedScopes.length === 0) return;"
-    await createApiKey(keyName, selectedScopes);
-    setShowCreateDialog(false);"
-    setKeyName("");"]
-pr-12325
-    setSelectedScopes([])
-  };
-
-  const handleRegenerateKey = async (keyId: string) => {
-    await regenerateApiKey(keyId);
-    setShowRegenerateConfirm(null)
-  };
-pr-12325
-  
-  const handleRevokeKey = async (keyId: string) => {
-    await revokeApiKey(keyId);
-    setShowDeleteConfirm(null)
-  };
-  
-  // Scope options
-  const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
-    { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },
-    { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },
-    { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },
-    { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },
-    { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }],
-  // Toggle a scope selection
-  const toggleScope = (scope: ApiKeyScope) => {
-    setSelectedScopes(prev => 
-  
-  // Scope options;
-  const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = ["
-    { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },
-    { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },
-    { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },
-    { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },']
-    { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }],
-  // Toggle a scope selection;
-  const toggleScope = (scope: ApiKeyScope) => {
-    setSelectedScopes(prev => )
-pr-12325
-      prev.includes(scope) 
-        ? prev.filter(s => s !== scope) 
-        : [...prev, scope]
-
-    )
-  }
-  const getExampleCode = (key: string) => {    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
-  -H "Authorization: Bearer ${key}" \\
-                  <Label>Scopes</Label>
-                  <div className="grid gap-2 pt-2">
-                    {scopeOptions.map((scope) => (
-                      <div key={scope.value} className="flex items-center space-x-2">
-import { useState } from "react",;
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
-import { format } from "date-fns",;
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Input } from "@/components/ui/input",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { Label } from "@/components/ui/label",;
-import { Badge } from "@/components/ui/badge",;
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
-import CodeBlock from "./CodeBlock",;
-
-      value: 'webhooks:manage',
-      label: 'Manage Webhooks',
-      description: 'Set up and manage webhook endpoints',
-    },
-  ];
-  // Toggle a scope selection;
-  const toggle_scope = (scope: ApiKeyScope) =>: any {
-    setSelectedScopes (prev =>;
-      prev.includes (scope) ? prev.filter (string => s !== scope) : [...prev, scope]);
-  }
-  const getExampleCode = (key: string) =>: any {    return `curl -X GET "https://api.ziontechgroup.com / v1 / jobs" \\;
-  -H "Authorization: Bearer ${key}" \\;
-  -H "Content - Type: application / json"` }
-  // Reset form when dialog closes;
-  const handleDialogClose = () =>: any {
-    setKeyName ('');  -H "Content - Type: application / json"`;
-
-  }
-  // Reset form when dialog closes;
-  const handleDialogClose = () =>: any {
-    setKeyName ('');
-    setShowCreateDialog (false);
-  }
-    setSelectedScopes(prev =>
-      prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope]
-    );
-  };
-
-  const getExampleCode = (key: string) => {
-    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
-  -H "Authorization: Bearer ${key}" \\
-  -H "Content-Type: application/json"`;
-  };
-
-  // Reset form when dialog closes
-  const handleDialogClose = () => {
-setKeyName('');
-    setSelectedScopes([]);
-    setShowCreateDialog(false);
-  };
-origin/cursor/automate-test-improve-and-merge-code-2533
-    )
-  const getExampleCode = (key: string) => {    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\""
-  -H "Authorization: Bearer ${key}" \\""
-      value: 'webhooks:manage',
-      label: 'Manage Webhooks',
-      description: 'Set up and manage webhook endpoints',
-  ];
-  // Toggle a scope selection;
-  const toggle_scope = (scope: ApiKeyScope) =>: any {
-  // TODO: Implement
-    setSelectedScopes (prev =>;)
-      prev.includes (scope) ? prev.filter (string => s !== scope) : [...prev, scope]);
-  }`;
-  const getExampleCode = (key: string) =>: any {    return `curl -X GET "https://api.ziontechgroup.com / v1 / jobs" \\;""
-  -H "Authorization: Bearer ${key}" \\;""`;
-  -H "Content - Type: application / json"` }"
-  // Reset form when dialog closes;
-  const handleDialogClose = () =>: any {
-  // TODO: Implement
-}"`;
-    setKeyName ();  -H "Content - Type: application / json"`;"
-  // Reset form when dialog closes;
-  // TODO: Implement
-}"
-pr-12325
-
-  return (
-
-
-import { useState } from 'react';
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
-import { format } from 'date-fns';
-import { useApiKeys, type ApiKeyScope } from '@/hooks/useApiKeys';
-import { Button } from '@/components/ui/button';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import {;
-pr-12325
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogFooter,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogTrigger,;
-} from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Label } from '@/components/ui/label';
-import { Badge } from '@/components/ui/badge';
-import {;
-pr-12325
-  Popover,;
-  PopoverContent,;
-  PopoverTrigger,;
-} from '@/components/ui/popover';
-import {;
-pr-12325
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
-} from '@/components/ui/dropdown-menu';
-import {;
-pr-12325
-  AlertDialog,;
-  AlertDialogAction,;
-  AlertDialogCancel,;
-  AlertDialogContent,;
-  AlertDialogDescription,;
-  AlertDialogFooter,;
-  AlertDialogHeader,;
-  AlertDialogTitle,;
-} from '@/components/ui/alert-dialog';
-
-import CodeBlock from './CodeBlock';
-import CodeBlock from './CodeBlock';')
-pr-12325
-export function ApiKeysManager() {;
-  const {;
-    keys,;
-    loading,;
-    newApiKey,;
-    fetchApiKeys,;
-    createApiKey,;
-    regenerateApiKey,;
-    revokeApiKey,;
-    await revokeApiKey(keyId),;
-    setShowDeleteConfirm(null);
-  },;
-  // Scope options;
-          Create and manage API keys for accessing the Zion APIs.;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-pr-12325
-    clearNewApiKey,;
-  } = useApiKeys();
-
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(;
-    null;
-  );
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<;
-    string | null;
-  >(null);
-
-  // Create key form state;
-  const [keyName, setKeyName] = useState('');
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
-
-  // Load keys on mount;
-  useState(() => {;
-    fetchApiKeys();
-  });
-  const handleCreateKey = async () => {;
-    if (keyName && keyName.trim() === '' || selectedScopes && selectedScopes.length === 0) return;
-
-    await createApiKey(keyName, selectedScopes);
-    setShowCreateDialog(false);
-    setKeyName('');
-    setSelectedScopes([]);  };
-
-  const handleRegenerateKey = async (keyId: string) => {;
-    await regenerateApiKey(keyId);
-    setShowRegenerateConfirm(null);  useState(() => {;
-    fetchApiKeys();
-  });
-
-  const handleCreateKey = async () => {;
-    if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
-
-    await createApiKey(keyName, selectedScopes);
-    setShowCreateDialog(false);
-  -H "Content-Type: application/json"`
-  };
-
-  // Reset form when dialog closes
-  const handleDialogClose = () => {
-    setKeyName("");
-    setSelectedScopes([]);
-  };
-
-  const handleRegenerateKey = async (keyId: string) => {;
-    await regenerateApiKey(keyId);
-    setShowRegenerateConfirm(null);
-
-  const handleRevokeKey = async (keyId: string) => {;
-    await revokeApiKey(keyId);
-    setShowDeleteConfirm(null);
-  };
-
-  const handleRegenerateKey = async (keyId: string,) => {;
-    await regenerateApiKey(keyId),;
-    setShowRegenerateConfirm(null);
-  },;
-
-  const handleRevokeKey = async (keyId: string,) => {;
-    await revokeApiKey(keyId),;
-    setShowDeleteConfirm(null);
-  },;
-
-  // Scope options;
-  const scopeOptions: {;
-    value: ApiKeyScope;
-    label: string;
-    description: string;
-  }[] = [;
-    {;
-      value: 'jobs:read',;
-      label: 'Read Jobs',;
-      description: 'Access to view job listings',;
-    },;
-    {;
-      value: 'jobs:write',;
-      label: 'Write Jobs',;
-      description: 'Create and manage job listings',;
-    },;
-    {;
-      value: 'talent:read',;
-      label: 'Read Talent',;
-      description: 'Access to view talent profiles',;
-    },;
-    {;
-      value: 'quotes:write',;
-      label: 'Write Quotes',;
-      description: 'Create and manage quotes',;
-    },;
-    {;
-      value: 'webhooks:manage',;
-      label: 'Manage Webhooks',;
-      description: 'Set up and manage webhook endpoints',;
-    },;
-  ];
-
-  // Toggle a scope selection;
-  const toggleScope = (scope: ApiKeyScope) => {;
-    setSelectedScopes(prev =>;
-      prev && prev.includes(scope) ? prev && prev.filter(s => s !== scope) : [...prev, scope];
-    );
-  };
-
-  const getExampleCode = (key: string) => {    return `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs" \\;
-  -H "Authorization: Bearer ${key}" \\;
-  -H "Content-Type: application/json"`;  };
-
-  // Reset form when dialog closes;
-  const handleDialogClose = () => {;
-    setKeyName('');  -H "Content-Type: application/json"`;
-  };
-
-  // Reset form when dialog closes;
-  const handleDialogClose = () => {;
-    setKeyName('');
-    setShowCreateDialog(false);
-  };
-
->>>>>>> origin/main
   return (
     <Card className='bg-zinc-900 border-zinc-800 text-white'>;
       <CardHeader>;
@@ -743,11 +119,9 @@ pr-12325
 
     clearNewApiKey
   } = useApiKeys(),
-  
   const [showCreateDialog, setShowCreateDialog] = useState(false),
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
-  
   // Create key form state
   const [keyName, setKeyName] = useState(""),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -756,10 +130,8 @@ pr-12325
   useState(() => {
     fetchApiKeys()
   }),
-  
   const handleCreateKey = async () => {
     if (keyName.trim() === "" || selectedScopes.length === 0) return,
-    
     await createApiKey(keyName, selectedScopes),
     setShowCreateDialog(false),
     setKeyName(""),
@@ -777,13 +149,11 @@ pr-12325
           Create and manage API keys for accessing the Zion APIs.
         </CardDescription>
       </CardHeader>
-      
       <CardContent>
         <div className="flex justify-between items-center mb-6">
           <p className="text-sm text-zinc-400">
             You have {keys.length} API {keys.length === 1 ? 'key' : 'keys'}
           </p>
-          
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
               <Button variant="default">Create New API Key</Button>
@@ -795,7 +165,6 @@ pr-12325
                   Generate a new API key for accessing the Zion APIs.
                 </DialogDescription>
               </DialogHeader>
-              
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <Label htmlFor="key-name">Key Name</Label>
@@ -807,7 +176,6 @@ pr-12325
                     className="bg-zinc-800 border-zinc-700"
                   />
                 </div>
-                
                 <div className="space-y-2">
     setSelectedScopes([])
   },
@@ -817,7 +185,6 @@ pr-12325
     await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null)
   },
-  
 
   const handleRevokeKey = async (keyId: string) => {
 
@@ -871,7 +238,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </div>
-              
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
@@ -996,7 +362,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Dialog>;
         </div>;
 
-        
         {/* New API Key Alert */}
 
 {/* New API Key Alert */}
@@ -1009,7 +374,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </span>;
               <Button
 
-        
 
         {/* New API Key Alert */}
         {newApiKey && (
@@ -1269,7 +633,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </DropdownMenu>
                 </div>
 
-                
 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope,) => (
@@ -1323,7 +686,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {key.last_used_at
                         ? format(new Date(key.last_used_at), 'MMM d, yyyy')
                         : 'Never'}
-                
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope) => (
                     <Badge 
@@ -1358,7 +720,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         : 'Never'}
 
                 </div>
-                
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
                   <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
                   <Popover>
@@ -1653,14 +1014,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70""
                         >
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>"
-                        
 
 
 
-                
-              
-            
-          
 
               <DialogFooter>;
                 <Button variant='outline' onClick={handleDialogClose}>;
@@ -1768,7 +1124,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className="text - sm text - zinc - 400 font - mono">{key.key_prefix}••••••••••••</span>;"
                 <X size={14} />
 
-              
             <p className="text-sm text-zinc-300 mb-2">"
             </p>"
             <CodeBlock code={newApiKey} className="mb-3" />"
@@ -1836,11 +1191,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                         <RefreshCw size={14} className='mr-2' /> Regenerate;
 
-                      
-                    
-                  
 
-                
 
                 <div className="mt-3 flex flex-wrap gap-2">"
                         <X size={14} className='mr-2' /> Revoke                      ;
@@ -1867,7 +1218,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       <Clock size={12} className='mr-1' />;
 
-                
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">"
                   <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
                   <Popover>
@@ -1878,8 +1228,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">"
                       <p className="text-sm mb-1">Last Used</p>""
                       <p className="text-xs text-zinc-400">"
-                    
-                  
                     ;"
                     <PopoverContent className='bg-zinc-900 border-zinc-800 text-white w-64 p-3'>;
 
@@ -1893,8 +1241,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="text-xs text-zinc-500">"
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>"
 
-        
-      
       <CardFooter className='justify-between border-t border-zinc-800 py-4'>;
 
         <div className='text-xs text-zinc-500'>;
@@ -2061,7 +1407,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
         </div>
       </CardContent>
-      
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
           Keep your API keys secure. They have the same permissions as your account.
@@ -2189,19 +1534,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogTitle>Regenerate API Key?"
             <AlertDialogDescription className="text-zinc-400">"
 
-            
-          
           <AlertDialogFooter>
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">"
 
-            
             <AlertDialogAction;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
 
-            
-          
-        
-      
               onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;"
 

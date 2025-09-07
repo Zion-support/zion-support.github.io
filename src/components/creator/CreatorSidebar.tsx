@@ -4,24 +4,7 @@
   SidebarGroup
   SidebarMenuItem
 
-<<<<<<< HEAD
-import {
 
-  Sidebar;
-  SidebarContent;
-  SidebarGroup;
-  SidebarMenuItem;
-
-  // SidebarMenu, // Removed
-  // SidebarMenuButton, // Removed
-  // SidebarGroupLabel, // Not needed
-  // SidebarGroupContent, // Not needed;
-} from '@/components/ui/sidebar';
-  // SidebarGroupContent, // Not needed
-} from "@/components/ui/sidebar";
-import {
-=======
->>>>>>> origin/main
   Sidebar;
   SidebarContent;
   SidebarGroup;
@@ -308,7 +291,6 @@ export function AppSidebar() {
           <SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>"
 
             <span>Notifications</span>
-          
         <SidebarGroup title="Content">"
           <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>"
 
@@ -316,7 +298,6 @@ export function AppSidebar() {
           <SidebarMenuItem href="/analytics" icon={<Search size={16} />}>"
 
             <span>Analytics</span>
-          
         <SidebarGroup title="Settings">"
           <SidebarMenuItem href="/profile" icon={<Users size={16} />}>"
 
@@ -324,9 +305,6 @@ export function AppSidebar() {
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>"
 
             <span>Settings</span>
-          
-        
-      
     <Sidebar>;
 
       <SidebarContent>;

@@ -42,7 +42,6 @@ function RegionFilter() {
       </button>;
 
 
-      
 
       {expanded && (
         <div className='mt - 4 space - y-2'>;
@@ -131,23 +130,7 @@ export function RegionFilter({
       {expanded && (
         <div className='mt-4 space-y-2'>
           {REGION_OPTIONS.map(region => (
-<<<<<<< HEAD
-            <div key={region.id} className='flex items-center'>              <Checkbox
-                id={`region-${region.id}`}
-                checked={selectedRegions.includes(region.id)}
-                onCheckedChange={() => toggleRegion(region.id)}
-            <div key={region.id} className="flex items-center">
 
-import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
-
-const REGION_OPTIONS = null;
-
-=======
-            <div key={region.id} className='flex items-center'>
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
