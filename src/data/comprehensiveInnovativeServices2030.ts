@@ -695,7 +695,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2030: ProductListing[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-metaverse",
+      website: "https://ziontechgroup.com/ai-metaverse-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$10,000-25,000",
