@@ -1,8 +1,22 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 function fixFile(filePath) {
 
+=======
+console.log('🔧 Fixing remaining syntax errors...');
+
+// Fix specific files with known issues
+const filesToFix = [
+    'src/components/SEO.tsx',
+    'src/components/ui/button.tsx',
+    'src/components/ui/card.tsx',
+    'src/components/ui/input.tsx',
+    'src/components/talent/TalentCard.jsx'
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
   try {}

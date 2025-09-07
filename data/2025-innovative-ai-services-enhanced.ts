@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeAIService2025  {id: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -416,9 +420,10 @@ export interface InnovativeAIService2025 {
     rating: 4.8
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      address: "address",
+    website: 'https://ziontechgroup.com'
     }
+<<<<<<< HEAD
     reviews: 89;
 
 
@@ -688,3 +693,6 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
 
   }
 ];
+=======
+    reviews: 89;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

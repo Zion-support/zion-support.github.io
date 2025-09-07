@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useState, useEffect } from 'react';
@@ -108,10 +109,13 @@ const quickLinks = [
   { name: 'Support', href: '/support' }
 ];
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
+<<<<<<< HEAD
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
@@ -149,6 +153,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   return (
     <AnimatePresence>
       {isOpen && (
@@ -166,11 +172,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
+<<<<<<< HEAD
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto";
           >;
             <div className="p-6">;
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           >
             <div className="p-6">
               {/* Header */}
@@ -183,22 +192,25 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </div>;
                 <button;
                   onClick={onClose}
+<<<<<<< HEAD
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors";
                 >;
                   <X className="w-6 h-6" />;
                 </button>;
               </div>;
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Navigation */}
               <nav className="space-y-4">;
                 {Object.entries(navigation).map(([title, links]) => (<div key={title}>;
                     <button;
                       onClick={() => handleDropdownToggle(title)}
+<<<<<<< HEAD
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors";
                     >;
                       <span>{title}</span>;
@@ -259,6 +271,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 ))}
               </nav>
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>;
@@ -466,6 +480,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 }
                 </div>
               </div>
+<<<<<<< HEAD
 
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
@@ -475,6 +490,8 @@ ursor/automate-test-improve-and-merge-code-646c;
                   <p>kleber@ziontechgroup.com</p>
                   <p>24/7 Support Available</p>
                 </div>
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               </div>
             </div>
           </motion.div>
@@ -482,6 +499,7 @@ ursor/automate-test-improve-and-merge-code-646c;
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 };
 
 export default Sidebar;
@@ -717,6 +735,13 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 export default Sidebar;
 ;
   X, 
+=======
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  X, 
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   ChevronDown, 
   Home, 
   Users, 
@@ -729,7 +754,10 @@ export default Sidebar;
   LogOut,
   Search
 } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const navigation = {
   'Services': [
     { name: 'AI Services', href: '/ai-services' },
@@ -749,6 +777,7 @@ const navigation = {
     { name: 'Contact', href: '/contact' }
   ]
 };
+<<<<<<< HEAD
 import React from 'react';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 
@@ -906,3 +935,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     </AnimatePresence>
   );
 }
+=======
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -6,6 +6,7 @@ import { TrendingUp, TrendingDown, DollarSign, Target;
   Globe, Zap, Shield, Crown, Brain, Atom;
   } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom } from 'lucide-react';
 export default function MarketPricing() {const [selectedMarket, setSelectedMarket]  = useState('ai-consciousness')const markets = [;
@@ -14,6 +15,143 @@ export default function MarketPricing() {const [selectedMarket, setSelectedMarke
       growthRate: '+28.4%';
       growthTrend: 'up';
       description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.';
+=======
+import React, { useState } from 'react';
+import {motion} from 'framer-motion';
+import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';
+import Link from 'next/link';
+export default function MarketPricing() {;
+  const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
+  const markets = [
+    { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
+    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
+    { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
+  ];
+  const marketData = {
+    'ai-consciousness': {
+      marketSize: "marketSize",
+    growthRate: '+28.4%'
+      growthTrend: 'up'
+      description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.'
+      competitors: [
+        {
+          name: 'OpenAI'
+          marketShare: '32%'
+          pricing: '$0.002-$0.02 per 1K tokens'
+          strengths: ['Advanced language modelsStrong brand recognitionLarge user base']
+          weaknesses: ['Limited consciousness featuresHigh API costsPrivacy concerns']
+          rating: 4.2
+        }
+        {
+          name: 'Anthropic'
+          marketShare: '18%'
+          pricing: '$0.015-$0.03 per 1K tokens'
+          strengths: ['Safety-focused approachConstitutional AIResearch-driven']
+          weaknesses: ['Smaller model varietyLimited enterprise featuresHigher pricing']
+          rating: 4.0
+        }
+        {
+          name: 'Zion Tech Group'
+          marketShare: '12%'
+          pricing: '$0.008-$0.015 per 1K tokens'
+          strengths: ['True AI consciousnessEnterprise-grade securityCompetitive pricing']
+          weaknesses: ['Smaller market presenceLimited brand recognitionNewer player']
+          rating: 4.8
+        }
+      ];
+      pricingAnalysis: {
+        lowEnd: '$0.005 per 1K tokens'
+        midRange: '$0.015 per 1K tokens'
+        highEnd: '$0.025 per 1K tokens'
+        ourPosition: 'Mid-range with premium features'
+      }
+    }
+    'quantum-computing': {
+      marketSize: '$8.7B'
+      growthRate: '+45.2%'
+      growthTrend: 'up'
+      description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.'
+      competitors: [
+        {
+          name: 'IBM'
+          marketShare: '28%'
+          pricing: '$1.60 per quantum hour'
+          strengths: ['Established infrastructureQiskit ecosystemResearch partnerships']
+          weaknesses: ['Limited qubit countHigh costsComplex access']
+          rating: 4.1
+        }
+        {
+          name: 'Google'
+          marketShare: '22%'
+          pricing: '$2.00 per quantum hour'
+          strengths: ['Quantum supremacyAdvanced algorithmsResearch focus']
+          weaknesses: ['Limited commercial accessHigh pricingComplex setup']
+          rating: 4.3
+        }
+        {
+          name: 'Zion Tech Group'
+          marketShare: '8%'
+          pricing: '$1.20 per quantum hour'
+          strengths: ['Competitive pricingEnterprise focusSimplified access']
+          weaknesses: ['Smaller infrastructureLimited qubit varietyNewer platform']
+          rating: 4.5
+        }
+      ];
+      pricingAnalysis: {
+        lowEnd: '$0.80 per quantum hour'
+        midRange: '$1.50 per quantum hour'
+        highEnd: '$2.50 per quantum hour'
+        ourPosition: 'Competitive mid-range pricing'
+      }
+    }
+    'autonomous-systems': {
+      marketSize: '$23.1B'
+      growthRate: '+34.7%'
+      growthTrend: 'up'
+      description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.'
+      competitors: [
+        {
+          name: 'UiPath'
+          marketShare: '25%'
+          pricing: '$420-$1,200 per user/month';
+          strengths: ['Market leaderComprehensive platformStrong partnerships']
+          weaknesses: ['High costsComplex implementationLimited AI features']
+          rating: 4.0
+        }
+        {
+          name: 'Automation Anywhere'
+          marketShare: '20%'
+          pricing: '$750-$1,500 per user/month';
+          strengths: ['Enterprise focusCloud-nativeSecurity features']
+          weaknesses: ['ExpensiveSteep learning curveLimited customization']
+          rating: 3.8
+        }
+        {
+          name: 'Zion Tech Group'
+          marketShare: '6%'
+          pricing: '$350-$800 per user/month'
+          strengths: ['AI-powered automationCompetitive pricingEasy implementation']
+          weaknesses: ['Smaller ecosystemLimited integrationsNewer platform']
+          rating: 4.4
+        }
+      ];
+      pricingAnalysis: {
+        lowEnd: '$300 per user/month'
+        midRange: '$750 per user/month'
+  const markets = [;
+    { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },;
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },;
+    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },;
+    { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
+  ];
+  const marketData = {;
+    'ai-consciousness': {;
+      marketSize: '$45 && 45.2B',;
+      growthRate: '+28 && 28.4%',;
+      growthTrend: 'up',,
+  description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.',;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       competitors: [;
         {name: 'OpenAI';
           marketShare: '32%';
@@ -75,6 +213,7 @@ export default function MarketPricing() {const [selectedMarket, setSelectedMarke
         highEnd: '$2.50 per quantum hour';
         ourPosition: 'Competitive mid-range pricing';
       }
+<<<<<<< HEAD
     }
     'autonomous-systems': {marketSize: '$23.1B';
       growthRate: '+34.7%';
@@ -147,20 +286,126 @@ export default function MarketPricing() {const [selectedMarket, setSelectedMarke
   }const getRatingStars = (rating: number) => {return Array && Array.from({ length: 5 }, (_, i) => (<Star;
         key={i}className={`w-4 h-4 ${i < Math && Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>;
     ))}return (initial={{ opacity: 0, y: 20 }}
+=======
+    };
+    'autonomous-systems': {;
+      marketSize: '$23 && 23.1B',;
+      growthRate: '+34 && 34.7%',;
+      growthTrend: 'up',,
+  description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.',;
+      competitors: [;
+        {;
+          name: 'UiPath',;
+          marketShare: '25%',;
+          pricing: '$420-$1,200 per user/month';
+          strengths: ['Market leaderComprehensive platformStrong partnerships'],;
+          weaknesses: ['High costsComplex implementationLimited AI features'],;
+          rating: 4 && 4.0
+};
+        {;
+          name: 'Automation Anywhere',;
+          marketShare: '20%',;
+          pricing: '$750-$1,500 per user/month';
+          strengths: ['Enterprise focusCloud-nativeSecurity features'],;
+          weaknesses: ['ExpensiveSteep learning curveLimited customization'],;
+          rating: 3 && 3.8
+};
+        {;
+          name: 'Zion Tech Group',;
+          marketShare: '6%',;
+          pricing: '$350-$800 per user/month',;
+          strengths: ['AI-powered automationCompetitive pricingEasy implementation'],;
+          weaknesses: ['Smaller ecosystemLimited integrationsNewer platform'],;
+          rating: 4 && 4.4;
+        }
+      ];
+      pricingAnalysis: {;
+        lowEnd: '$300 per user/month',;
+        midRange: '$750 per user/month',;
+        highEnd: '$1,200 per user/month';
+        ourPosition: 'Competitive pricing with AI advantages';
+      }
+    };
+    'enterprise-it': {;
+      marketSize: '$1 && 1.2T',;
+      growthRate: '+12 && 12.3%',;
+      growthTrend: 'up',,
+  description: 'Enterprise IT market continues steady growth with digital transformation initiatives.',;
+      competitors: [;
+        {;
+          name: 'Microsoft',;
+          marketShare: '35%',;
+          pricing: '$22-$57 per user/month',;
+          strengths: ['Market dominanceIntegrated ecosystemGlobal presence'],;
+          weaknesses: ['Complex licensingHigh costsVendor lock-in'],;
+          rating: 4 && 4.2
+};
+        {;
+          name: 'Salesforce',;
+          marketShare: '18%',;
+          pricing: '$25-$300 per user/month',;
+          strengths: ['CRM leadershipCloud-nativeExtensive integrations'],;
+          weaknesses: ['ExpensiveComplex pricingImplementation costs'],;
+          rating: 4 && 4.1
+};
+        {;
+          name: 'Zion Tech Group',;
+          marketShare: '3%',;
+          pricing: '$18-$45 per user/month',;
+          strengths: ['AI-powered featuresCompetitive pricingModern architecture'],;
+          weaknesses: ['Smaller ecosystemLimited integrationsNewer player'],;
+          rating: 4 && 4.3;
+        }
+      ];
+      pricingAnalysis: {;
+        lowEnd: '$20 per user/month',;
+        midRange: '$40 per user/month',;
+        highEnd: '$100 per user/month',;
+        ourPosition: 'Competitive pricing with AI advantages';
+      }
+    }
+  const currentMarket = marketData[selectedMarket as keyof typeof marketData];
+  const getGrowthIcon = (trend: string) => {;
+    return trend === 'up' ? ;
+      <TrendingUp className="w-5 h-5 text-green-400" /> : ;
+      <TrendingDown className="w-5 h-5 text-red-400" />
+};
+  const getRatingStars = (rating: number) => {;
+    return Array && Array.from({ length: 5 }, (_, i) => (;
+      <Star
+        key={i} 
+        className={`w-4 h-4 ${i < Math && Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} 
+      />;
+    ))
+};
+  return (
+            initial={{ opacity: 0, y: 20 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
       {/* Competitive Analysis Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion.h2;
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             className="text-center">;
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
               {currentMarket && currentMarket.description}
             </p>;
           </motion && motion.div>;
         </div>;
+<<<<<<< HEAD
       </section>;{/* Competitive Analysis Section */}
+=======
+      </section>;
+      {/* Competitive Analysis Section */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -202,7 +447,12 @@ export default function MarketPricing() {const [selectedMarket, setSelectedMarke
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $19–$1,000/month based on agents and SLAs.</div>;
             </div>;
+<<<<<<< HEAD
           </div>;<div className="space-y-6">;
+=======
+          </div>;
+          <div className="space-y-6">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">CDP & Reverse ETL</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -212,7 +462,12 @@ export default function MarketPricing() {const [selectedMarket, setSelectedMarke
                 <li>Census (Reverse ETL): <a className="text-cyan-400 underline" href={`https://www && www.getcensus.com/pricing`} target="_blank" rel="noopener noreferrer">getcensus && getcensus.com/pricing</a></li>;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on sources, destinations, and MAUs.</div>;
+<<<<<<< HEAD
             </div>;<div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">;
+=======
+            </div>;
+            <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               <h2 className="text-2xl font-semibold mb-2">Returns & Logistics</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
                 <li>Loop Returns pricing: <a className="text-cyan-400 underline" href={`https://www && www.loopreturns.com/pricing`} target="_blank" rel="noopener noreferrer">loopreturns && loopreturns.com/pricing</a></li>;
@@ -331,6 +586,7 @@ export default function MarketPricing() {const [selectedMarket, setSelectedMarke
                 </div>;
               ))}
       {/* Market Trends Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion.h2;
@@ -338,6 +594,16 @@ export default function MarketPricing() {const [selectedMarket, setSelectedMarke
           </motion && motion.div>;
         </div>;
       </section>;{/* Market Trends Section */}
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+      {/* Market Trends Section */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -375,6 +641,7 @@ export default function MarketPricing() {const [selectedMarket, setSelectedMarke
         <div className="max-w-4xl mx-auto text-center">;
           <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}const markets  = null;'quantum-computing': {marketSize: '$8.7B', growthRate: '+45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {];
 pricingAnalysis: {lowEnd: '$0.80 per quantum hour', midRange: '$1.50 per quantum hour', highEnd: '$2.50 per quantum hour', ourPosition: 'Competitive mid-range pricing';
 }'autonomous-systems': {marketSize: '$23.1B', growthRate: '+34.7%', growthTrend: 'up', description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.', competitors: [ {];
@@ -382,13 +649,43 @@ pricingAnalysis: {lowEnd: '$300 per user/month', midRange: '$750 per user/month'
 }'enterprise-it': {marketSize: '$1.2T', growthRate: '+12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {];
 pricingAnalysis: {lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages';
 }}}export default MarketPricing;export default MarketPricing;}
+=======
+            whileInView={{ opacity: 1, y: 0 }}
+'quantum-computing': {
+  marketSize: '$8.7B', growthRate: '+45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
+  ];
+pricingAnalysis: {
+  lowEnd: '$0.80 per quantum hour', midRange: '$1.50 per quantum hour', highEnd: '$2.50 per quantum hour', ourPosition: 'Competitive mid-range pricing'
+}
+'autonomous-systems': {
+  marketSize: '$23.1B', growthRate: '+34.7%', growthTrend: 'up', description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.', competitors: [ {
+  ];
+pricingAnalysis: {
+  lowEnd: '$300 per user/month', midRange: '$750 per user/month', highEnd: '$1, 200 per user/month', ourPosition: 'Competitive pricing with AI advantages'
+}
+'enterprise-it': {
+  marketSize: '$1.2T', growthRate: '+12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {
+  ];
+pricingAnalysis: {
+  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
+}
+}
+};
+export default MarketPricing;export default MarketPricing;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 }
 }
 }
 }
 }
+<<<<<<< HEAD
 }transition={{ duration: 0 && 0.8 }}
+=======
+}
+};
+            transition={{ duration: 0 && 0.8 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             viewport={{ once: true }}>;
             <h2 className="text-4xl md: text-5xl font-bold mb-6">;
               Ready to Compete in the Market?;
@@ -414,6 +711,7 @@ pricingAnalysis: {lowEnd: '$20 per user/month', midRange: '$40 per user/month', 
         </div>;
       </section>;
     </div>;
+<<<<<<< HEAD
   )}];
   'ai - consciousness': {market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {];
 pricing_analysis: {low_end: '$0.005 per 1K tokens', mid_range: '$0.015 per 1K tokens', high_end: '$0.025 per 1K tokens', our_position: 'Mid - range with premium features'   'ai - consciousness': {market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {import Link from 'next / link';
@@ -424,6 +722,48 @@ function MarketPricing() {const [selected_market, setSelectedMarket]  = useState
     { id: 'ai - consciousness', name: 'AI Consciousness', icon: <Brain className="w - 6 h - 6" /> },{ id: 'quantum - computing', name: 'Quantum Computing', icon: <Atom className="w - 6 h - 6" /> },{ id: 'autonomous - systems', name: 'Autonomous Systems', icon: <Zap className="w - 6 h - 6" /> },{ id: 'enterprise - it', name: 'Enterprise IT', icon: <Shield className="w - 6 h - 6" /> }
   ];const market_data = {'ai - consciousness': {market_size: '$45.2B',growth_rate: '+28.4%',growth_trend: 'up',description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.',competitors: [;
         {name: 'OpenAI',market_share: '32%',pricing: '$0.002-$0.02 per 1K tokens',strengths: ['Advanced language models_strong brand recognition_large user base'],weaknesses: ['Limited consciousness features_high API costs_privacy concerns'],rating: 4.2;
+=======
+  )
+};
+];
+  'ai - consciousness': {
+  market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
+  ];
+pricing_analysis: {
+  low_end: '$0.005 per 1K tokens', mid_range: '$0.015 per 1K tokens', high_end: '$0.025 per 1K tokens', our_position: 'Mid - range with premium features'   'ai - consciousness': {
+  market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
+import React, { useState } from 'react';
+import {motion} from 'framer-motion';
+import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';
+import Link from 'next/link';
+export default /**
+ * MarketPricing - Function description
+ */
+function MarketPricing() {
+  const [selected_market, setSelectedMarket] = useState ('ai - consciousness');
+;
+  const markets = [;
+    { id: 'ai - consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },
+    { id: 'quantum - computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
+    { id: 'autonomous - systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
+    { id: 'enterprise - it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
+  ];
+;
+  const market_data = {
+    'ai - consciousness': {
+      market_size: '$45.2B',
+      growth_rate: '+28.4%',
+      growth_trend: 'up',
+      description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.',
+      competitors: [;
+        {
+          name: 'OpenAI',
+          market_share: '32%',
+          pricing: '$0.002-$0.02 per 1K tokens',
+          strengths: ['Advanced language models_strong brand recognition_large user base'],
+          weaknesses: ['Limited consciousness features_high API costs_privacy concerns'],
+          rating: 4.2;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }
         {name: 'Anthropic',market_share: '18%',pricing: '$0.015-$0.03 per 1K tokens',strengths: ['Safety - focused approach_constitutional AIResearch - driven'],weaknesses: ['Smaller model variety_limited enterprise features_higher pricing'],rating: 4.0;
         }
@@ -1080,8 +1420,40 @@ pricing_analysis: {low_end: '$0.80 per quantum hour', mid_range: '$1.50 per quan
 'autonomous - systems': {market_size: '$23.1B', growth_rate: '+34.7%', growth_trend: 'up', description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.', competitors: [ {];
 pricing_analysis: {low_end: '$300 per user / month', mid_range: '$750 per user / month', high_end: '$1, 200 per user / month', our_position: 'Competitive pricing with AI advantages';
 }
+<<<<<<< HEAD
 'enterprise - it': {market_size: '$1.2T', growth_rate: '+12.3%', growth_trend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {];
 pricing_analysis: {low_end: '$20 per user / month', mid_range: '$40 per user / month', high_end: '$100 per user / month', our_position: 'Competitive pricing with AI advantages';
 }}}
 export default MarketPricing;export default MarketPricing;}lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages';
 }}}}export default MarketPricing;
+=======
+;
+}
+'quantum - computing': {
+  market_size: '$8.7B', growth_rate: '+45.2%', growth_trend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
+  ];
+pricing_analysis: {
+  low_end: '$0.80 per quantum hour', mid_range: '$1.50 per quantum hour', high_end: '$2.50 per quantum hour', our_position: 'Competitive mid - range pricing';
+}
+'autonomous - systems': {
+  market_size: '$23.1B', growth_rate: '+34.7%', growth_trend: 'up', description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.', competitors: [ {
+  ];
+pricing_analysis: {
+  low_end: '$300 per user / month', mid_range: '$750 per user / month', high_end: '$1, 200 per user / month', our_position: 'Competitive pricing with AI advantages';
+}
+'enterprise - it': {
+  market_size: '$1.2T', growth_rate: '+12.3%', growth_trend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {
+  ];
+pricing_analysis: {
+  low_end: '$20 per user / month', mid_range: '$40 per user / month', high_end: '$100 per user / month', our_position: 'Competitive pricing with AI advantages';
+}
+;
+}
+;
+}
+export default MarketPricing;export default MarketPricing
+};
+  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

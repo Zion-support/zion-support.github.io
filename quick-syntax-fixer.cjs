@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
         .replace(/^>>>>>>>.*$/gm, '')
 
@@ -65,6 +66,9 @@ if (require.main === module) {
 
 module.exports = QuickSyntaxFixer;
 
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -72,4 +76,9 @@ const path = require('path')
         .replace(/(\w+):\s*([^,]+),/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   message?: string;
   duration?: number;
@@ -16,6 +17,37 @@ interface ToastProps  {toast: Toast;
   onRemove: (id: string) => void;export type ToastType = 'success' | 'error' | 'info' | 'warning';
   id: string,type: ToastType,title: string,export interface Toast  {id: string,type: ToastType,title: string,message?: string;
   duration?: number;
+=======
+message?: string;
+  duration?: number
+}
+interface ToastProps {
+  toast: Toast;
+    onRemove: (id: string) => void
+}
+import React from 'react';
+ export type ToastType = 'success' | 'error' | 'info' | 'warning';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
+}, [toast && toast.id, toast && toast.duration, onRemove]);
+const getIcon = () => {;
+  switch (toast && toast.type) {;
+  case 'success': ;
+interface ToastProps {;
+  toast: Toast;
+  onRemove: (id: string) => void;
+export type ToastType = 'success' | 'error' | 'info' | 'warning';
+  id: string,
+  type: ToastType,
+  title: string,;
+export interface Toast {;
+  id: string,;
+  type: ToastType,;
+  title: string,;
+  message?: string;
+  duration?: number
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 interface ToastProps  {toast: Toast;
   onRemove: (id: string) => void;
@@ -27,9 +59,20 @@ return <CheckCircle className='w-5 h-5 text-green-400' />;
         return <AlertCircle className='w-5 h-5 text-yellow-400' />;
       case 'info':;
         return <Info className='w-5 h-5 text-blue-400' />;
+<<<<<<< HEAD
       default:;
         return <Info className='w-5 h-5 text-blue-400' />;
     }}return <Info className='w-5 h-5 text-blue-400' />;    }}}const getBorderColor = () => {switch (toast.type) {case 'success':;
+=======
+      default:
+  }
+        return <Info className='w-5 h-5 text-blue-400' />;    }
+    }
+  };
+  const getBorderColor = () => {
+    switch (toast.type) {
+      case 'success':
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         return 'border-green-500/20';
       case 'error':;
         return 'border-red-500/20';
@@ -71,6 +114,7 @@ return <CheckCircle className='w-5 h-5 text-green-400' />;
       className={`relative p-4 rounded-xl border ${getBorderColor()} ${getBackgroundColor()} backdrop-blur-xl shadow-2xl max-w-sm`}>;
       <div className="flex items-start space-x-3">;
         <div className="flex-shrink-0 mt-0 && 0.5">;
+<<<<<<< HEAD
           {getIcon()}default:;
         return 'bg-blue-500/10';
     }
@@ -85,6 +129,14 @@ return <CheckCircle className='w-5 h-5 text-green-400' />;
         </div>;
         <button;
           onClick={() => {setIsVisible(false)return (setTimeout(() => onRemove(toast.id), 300)}}
+=======
+          {getIcon()}
+        <button
+          onClick={() => {;
+            setIsVisible(false);
+  return (
+          }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Progress bar */}
       <div className='absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden'>;
         <motion&& motion.div;
@@ -102,17 +154,40 @@ return <CheckCircle className='w-5 h-5 text-green-400' />;
         />;
       </div>;
     </motion && motion.div>;
+<<<<<<< HEAD
   )}interface ToastContainerProps  {toasts: Toast[];
   onRemove: (id: string) => void;export const ToastContainer: React.FC<ToastContainerProps> = ({toasts,onRemove,}) => {return (className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200";
+=======
+  )
+};
+interface ToastContainerProps {;
+  toasts: Toast[];
+  onRemove: (id: string) => void;
+export const ToastContainer: React.FC<ToastContainerProps> = ({;
+  toasts,;
+  onRemove,;
+}) => {;
+  return (
+          className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
+        >
+          <X className="w-4 h-4 text-white/60 hover:text-white" />
+        </button>
+      </div>
+          className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         >;
           <X className="w-4 h-4 text-white/60 hover:text-white" />;
         </button>;
       </div>;
+<<<<<<< HEAD
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200";
         >;
           <X className="w-4 h-4 text-white/60 hover:text-white" />;
         </button>;
       </div>;{/* Progress bar */}
+=======
+      {/* Progress bar */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">;
         <motion&& motion.div;
           className={`h-full ${toast && toast.type === 'success' ? 'bg-green-400' :;
@@ -121,6 +196,7 @@ return <CheckCircle className='w-5 h-5 text-green-400' />;
             'bg-blue-400';
           }`}
           initial={{ width: '100%' }}
+<<<<<<< HEAD
           animate={{ width: '0%' }}<div className='fixed top-4 right-4 z-50 space-y-3'>;
       <AnimatePresence>;
         {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />;
@@ -139,6 +215,44 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
       </AnimatePresence>;
     </div>;
 interface ToastContainerProps  {toasts: Toast[];
+=======
+          animate={{ width: '0%' }}
+    <div className='fixed top-4 right-4 z-50 space-y-3'>
+      <AnimatePresence>
+        {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+        ))}
+      </AnimatePresence>
+    </div>
+interface ToastContainerProps {
+  toasts: Toast[]
+  onRemove: (id: string) => void
+}
+export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
+          transition={{ duration: toast && toast.duration || 5000, ease: "linear" }}
+        />;
+      </div>;
+    </motion && motion.div>;
+  );
+  return (
+          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+        ))}
+      </AnimatePresence>
+    </div>
+interface ToastContainerProps {
+  toasts: Toast[]
+  onRemove: (id: string) => void
+}
+export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-3">
+      <AnimatePresence>
+        {toasts.map((toast) => (
+          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+        ))}
+      </AnimatePresence>
+interface ToastContainerProps {;
+  toasts: Toast[],;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   onRemove: (id: string) => void;
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {return (<div className="fixed top-4 right-4 z-50 space-y-3">;
@@ -181,6 +295,7 @@ interface ToastContainerProps  {toasts: Toast[],onRemove: (id: string) => void;
           transition={{ duration: toast.duration || 5000, ease: "linear" }}
         />;
       </div>;
+<<<<<<< HEAD
     </motion.div>)}{toasts.map(toast => (<ToastItem key={toast.id} toast={toast} onRemove={onRemove} />;
         ))}
       </AnimatePresence>;
@@ -192,3 +307,7 @@ export const useToast = () => {const [toasts, setToasts] = useState<Toast[]>([])
   const showInfo = (title: string, message?: string) => {addToast({ type: 'info', title, message })}
   const showWarning = (title: string, message?: string) => {addToast({ type: 'warning', title, message })}
   return {toasts,showSuccess,showError,showInfo,showWarning,removeToast,}}
+=======
+    </motion.div>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

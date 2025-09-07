@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
   Phone;
   Mail;
@@ -41,6 +42,75 @@ import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
 const contactInfo  = null;services: [;
       {name: 'AI Consciousness Evolution';
         href: '/ai-consciousness-evolution-platform';
+=======
+import { motion } from 'framer-motion';
+  Phone
+  Mail
+  MapPin
+  Globe
+  Zap
+  Brain
+  Atom
+  Rocket
+  Shield
+  Cpu
+  Target
+  Microscope
+  Users
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  ArrowRight
+  Heart
+  Star
+  Award
+  CheckCircle;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cpu,
+  Target,
+  Microscope,
+  Users,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,;
+  CheckCircle,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+  Rocket, Shield, Cpu, Target, Microscope, Users;
+  Facebook, Twitter, Linkedin, Instagram, Youtube;
+  Github, ArrowRight, Heart, Star, Award, CheckCircle
+const contactInfo = {
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+}
+const serviceCategories = [
+  {
+    title: '🚀 AI & Consciousness'
+    services: [
+      {
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-platform'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
       {name: 'AI Emotional Intelligence';
         href: '/ai-emotion-intelligence-platform';
@@ -58,14 +128,35 @@ const contactInfo  = null;services: [;
     ];
   },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' }
       { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' }
+<<<<<<< HEAD
       { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' }class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
+=======
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' }
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
 }
 import React from 'react';
 import Link from 'next/link';
 import {Phone,Mail,MapPin,Globe,Zap,Brain,Atom,Rocket,Shield,Cpu,Target,Microscope,Users,Facebook,Twitter,Linkedin,Instagram,Youtube,Github,ArrowRight,Heart,Star,Award,CheckCircle,} from 'lucide-react';import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
+<<<<<<< HEAD
   Github, ArrowRight, Heart, Star, Award, CheckCircle;const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com',}website: 'https://ziontechgroup && ziontechgroup.com';
 }const serviceCategories = [;
   {title: '🚀 AI & Consciousness',services: [;
@@ -79,6 +170,159 @@ import {Phone,Mail,MapPin,Globe,Zap,Brain,Atom,Rocket,Shield,Cpu,Target,Microsco
       {name: 'Space Mining Automation',href: '/space-mining-automation-platform',},{name: 'Metaverse Digital Reality',href: '/metaverse-digital-reality-platform',},{ name: 'Quantum Research Platform', href: '/quantum-research-platform' },{ name: 'AI Research Assistant', href: '/ai-research-assistant' },],},{title: '🎯 2030 Innovative Micro SAAS',services: [;
       {name: 'AI Business Intelligence Suite 2030',href: '/ai-business-intelligence-suite-2030',},{name: 'AI Customer Experience Platform 2030',href: '/ai-customer-experience-platform-2030',},{name: 'AI Marketing Automation Suite 2030',href: '/ai-marketing-automation-2030',},{name: 'AI HR Management Suite 2030',href: '/ai-hr-management-suite-2030',},],},];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' },{ name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' },{ name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' },name: 'AI Customer Experience Platform 2030',href: '/ai-customer-experience-platform-2030',},{name: 'AI Marketing Automation Suite 2030',href: '/ai-marketing-automation-2030',},{name: 'AI HR Management Suite 2030',href: '/ai-hr-management-suite-2030',},],},];const quickLinks = [;
   { name: 'Home', href: '/' },{ name: 'Services', href: '/services' },{ name: 'Solutions', href: '/solutions' },{ name: 'Pricing', href: '/pricing' },{ name: 'Resources', href: '/resources' },{ name: 'Case Studies', href: '/case - studies' },{ name: 'Blog', href: '/blog' },{ name: 'Case Studies', href: '/case-studies' },{ name: 'Blog', href: '/blog' },{ name: 'Contact', href: '/contact' },];
+=======
+  Github, ArrowRight, Heart, Star, Award, CheckCircle;
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com'
+};
+const serviceCategories = [;
+  {;
+    title: '🚀 AI & Consciousness',;
+    services: [;
+      {;
+        name: 'AI Consciousness Evolution',;
+        href: '/ai-consciousness-evolution-platform',;
+      },;
+      {;
+        name: 'AI Emotional Intelligence',;
+        href: '/ai-emotion-intelligence-platform',;
+      },;
+      {;
+        name: 'AI Creativity Orchestrator',;
+        href: '/ai-creativity-orchestrator',;
+      },;
+      {;
+        name: 'AI Autonomous Business Manager',;
+        href: '/ai-autonomous-business-manager',;
+      },;
+    ],;
+  },;
+    title: '⚛️ Quantum & Emerging Tech',;
+    services: [;
+      {;
+        name: 'Quantum Internet Security',;
+        href: '/quantum-internet-security-gateway',;
+      },;
+      {;
+        name: 'Quantum Learning Accelerator',;
+        href: '/quantum-learning-accelerator',;
+      },;
+      {;
+        name: 'Quantum Financial Trading',;
+        href: '/quantum-financial-trading-platform',;
+      },;
+      {;
+        name: 'Quantum Cloud Infrastructure',;
+        href: '/quantum-cloud-infrastructure',;
+      },;
+    ],;
+  },;
+  {;
+    title: '🧬 Biotech & DNA Computing',;
+    services: [;
+      {;
+        name: 'DNA Computing Platform',;
+        href: '/biotech-dna-computing-platform',;
+      },;
+      {;
+        name: 'Personalized Nutrition',;
+        href: '/biotech-personalized-nutrition',;
+      },;
+      {;
+        name: 'Predictive Health Analytics',;
+        href: '/ai-predictive-health-analytics',;
+      },;
+      { name: 'Research Automation', href: '/advanced-research-automation' },;
+    ],;
+  },  {;
+    title: '🏙️ Enterprise IT Solutions',;
+    services: [;
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },      { name: 'DNA Computing Platform', href: '/biotech-dna-computing-platform' },;
+      { name: 'Personalized Nutrition', href: '/biotech-personalized-nutrition' },;
+      { name: 'Predictive Health Analytics', href: '/ai-predictive-health-analytics' },;
+      { name: 'Research Automation', href: '/advanced-research-automation' }
+    ]
+};
+    title: '🏙️ Enterprise IT Solutions',;
+    services: [;
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },;
+      {;
+        name: 'Autonomous IT Operations',;
+        href: '/autonomous-it-operations-center',;
+      },;
+      {;
+        name: 'AI Enterprise Security',;
+        href: '/ai-powered-enterprise-security',;
+      },;
+      {;
+        name: 'Intelligent Data Governance',;
+        href: '/intelligent-data-governance',;
+      },;
+    ],;
+  },;
+    title: '🌌 Space & Metaverse Tech',;
+    services: [;
+      {;
+        name: 'Space Mining Automation',;
+        href: '/space-mining-automation-platform',;
+      },;
+      {;
+        name: 'Metaverse Digital Reality',;
+        href: '/metaverse-digital-reality-platform',;
+      },;
+      { name: 'Quantum Research Platform', href: '/quantum-research-platform' },;
+      { name: 'AI Research Assistant', href: '/ai-research-assistant' },;
+    ],;
+  },;
+  {;
+    title: '🎯 2030 Innovative Micro SAAS',;
+    services: [;
+      {;
+        name: 'AI Business Intelligence Suite 2030',;
+        href: '/ai-business-intelligence-suite-2030',;
+      },;
+      {;
+        name: 'AI Customer Experience Platform 2030',;
+        href: '/ai-customer-experience-platform-2030',;
+      },;
+      {;
+        name: 'AI Marketing Automation Suite 2030',;
+        href: '/ai-marketing-automation-2030',;
+      },;
+      {;
+        name: 'AI HR Management Suite 2030',;
+        href: '/ai-hr-management-suite-2030',;
+      },;
+    ],;
+  },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' },;
+      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' },;
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' },;
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Resources', href: '/resources' },
+  { name: 'Case Studies', href: '/case - studies' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Press', href: '/press' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Support', href: '/support' },
+  { name: 'Status', href: '/status' }
+];
+const quickLinks = [;
+  { name: 'Home', href: '/' },;
+  { name: 'Services', href: '/services' },;
+  { name: 'Solutions', href: '/solutions' },;
+  { name: 'Pricing', href: '/pricing' },;
+  { name: 'Resources', href: '/resources' },;
+  { name: 'Case Studies', href: '/case-studies' },;
+  { name: 'Blog', href: '/blog' },;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const companyInfo = [;
   { name: 'About Us', href: '/about' },{ name: 'Careers', href: '/careers' },{ name: 'Press', href: '/press' },{ name: 'Partners', href: '/partners' },{ name: 'Support', href: '/support' },{ name: 'Status', href: '/status' }
 ];const quickLinks = [;
@@ -130,6 +374,7 @@ export default function UltraFuturisticFooter2030() {return (<footer className='
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
             {/* Company Info */}
+<<<<<<< HEAD
             <div className='space-y-6'>;
               <div className='flex items-center space-x-3'>;
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center'>;
@@ -158,6 +403,13 @@ export default function UltraFuturisticFooter2030() {return (<footer className='
                     className='hover:text-purple-400 transition-colors';
                   >;
                     {contactInfo.mobile}
+=======
+                    {contactInfo.website.replace('https://', '')}
+                  </a>
+                </div>
+              </div>
+            </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   </a>;
                 </div>;
                 <div className='flex items-center space-x-3 text-sm text-gray-300'>;
@@ -223,8 +475,14 @@ className='block text-xs text-gray-400 hover:text-purple-300 transition-colors';
                     </div>;
                   </div>;
                 ))}
+<<<<<<< HEAD
             {/* Quick Links */}))}
                   <Link;
+=======
+            {/* Quick Links */}
+                ))}
+                  <Link
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     key={index}
                     href={link && link.href}
                     className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'>              <div className="space-y-2">;
@@ -250,6 +508,7 @@ className='block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                   </Link>;
                 ))}
               </div>;
+<<<<<<< HEAD
 <div className='space-y-2'>;
                 <h5 className='text-sm font-medium text-cyan-300'>Company</h5>;
                 {companyInfo.map((link, index) => (<Link;
@@ -264,6 +523,10 @@ className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors';
               </h4>;
               </div>;
             </div>;{/* Social & Certifications */}
+=======
+            </div>;
+            {/* Social & Certifications */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             <div className='space-y-6'>;
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>;
                 <Users className='w-5 h-5 text-green-400' />;
@@ -315,6 +578,7 @@ target='_blank';
                 </div>;
               </div>;
               {/* Certifications */}
+<<<<<<< HEAD
 <div className='space-y-3'>;
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>;
                   <Award className='w-4 h-4' />;
@@ -322,6 +586,16 @@ target='_blank';
                 </h5>;
                 <div className='grid grid-cols-1 gap-2'>;
                   {certifications.map((cert, index) => ({/* Certifications */}
+=======
+              <div className='space-y-3'>
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
+                  <Award className='w-4 h-4' />
+                  <span>Certifications</span>
+                </h5>
+                <div className='grid grid-cols-1 gap-2'>
+                  {certifications.map((cert, index) => (
+              {/* Certifications */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               <div className='space-y-3'>;
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>;
                   <Award className='w-4 h-4' />;
@@ -351,11 +625,19 @@ target='_blank';
                       <span>{cert}</span>;
                     </div>;
                   ))}
+<<<<<<< HEAD
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
+=======
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       target='_blank';
                       rel='noopener noreferrer';
                       className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
@@ -384,7 +666,12 @@ target='_blank';
                   {certifications.map ((cert, index) => (<div key={index} className="flex items - center space - x-2 text - xs text - gray - 400">;
                       <CheckCircle className="w - 3 h - 3 text - green - 400" />;
                       <span>{cert}</span>;
+<<<<<<< HEAD
                     </div>))}</div>;
+=======
+                    </div>))}
+                </div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               </div>;
             </div>;
           </div>;
@@ -435,5 +722,13 @@ target='_blank';
   )}}
 }
 }
+<<<<<<< HEAD
   )}
     </footer>)}
+=======
+}
+  );
+}
+    </footer>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

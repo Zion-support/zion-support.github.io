@@ -1,14 +1,41 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Milestone  } from '../../utils/types/milestones';
 type Props = any;
 type Props = {milestone: Milestone;
+=======
+  milestone: Milestone;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   project_id: string;
   role: 'client' | 'talent' | 'admin';
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid';
@@ -38,9 +65,20 @@ export default function MilestoneCard() {milestone: Milestone;
             Due: {new Date(milestone && milestone.dueDate).toLocaleDateString()}
           </p>;
         </div>;
+<<<<<<< HEAD
         <button;
           className='text-sm text-blue-600';
           onClick={() => setExpanded(v => !v)}>          {expanded ? 'Hide' : 'Details'}type Props = {return (<div className='border rounded - lg p - 4 bg - white shadow - sm'>;
+=======
+        <button
+          className='text-sm text-blue-600'
+          onClick={() => setExpanded(v => !v)}
+        >          {expanded ? 'Hide' : 'Details'}
+type Props = {
+;
+  return (
+    <div className='border rounded - lg p - 4 bg - white shadow - sm'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className='flex items - start justify - between'>;
         <div>;
           <h3 className='text - lg font - semibold'>{milestone.title}</h3>;
@@ -55,7 +93,14 @@ export default function MilestoneCard() {milestone: Milestone;
         </button>;
       </div>;
       <div className='mt - 3'>;
+<<<<<<< HEAD
         <div className='flex items - center gap - 2'>type Props = {const [expanded, setExpanded] = useState(false)const currentIndex = statusSteps.findIndex((s) => s === milestone.status)const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
+=======
+        <div className='flex items - center gap - 2'>type Props = {
+  const [expanded, setExpanded] = useState(false);
+  const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
+  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const canTalentSubmit = (role === 'talent' |role === 'admin') && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
@@ -64,12 +109,37 @@ export default function MilestoneCard() {milestone: Milestone;
 }const canClientMarkInProgress = role !== 'talent' && milestone && milestone.status === 'Pending';
   const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';
+<<<<<<< HEAD
   const canClientMarkPaid  = role !== 'talent' && milestone && milestone.status === 'Approved';>;
           {expanded ? 'Hide' : 'Details'}
         </button>;
       </div>;
 <div className='mt-3'>;
   return (<div className="border rounded-lg p-4 bg-white shadow-sm">;
+=======
+  const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
+              <div;
+    on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void;
+}
+;
+const status_steps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
+;
+export default /**
+ * MilestoneCard - Function description
+ */
+function MilestoneCard() {
+  const [expanded, set_expanded] = useState (false);
+;
+  const current_index = status_steps.find_index ((s) => string === milestone.status);
+;
+  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
+  const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress';
+  const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
+  const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
+;
+  return (
+    <div className="border rounded - lg p - 4 bg-white shadow-sm">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className="flex items-start justify-between">;
         <div>;
           <h3 className="text-lg font-semibold">{milestone.title}</h3>;
@@ -109,10 +179,15 @@ function MilestoneCard() {const [expanded, set_expanded]  = useState (false)cons
                 title={step}
             <div key={step} className="flex items-center">;
               <div;
+<<<<<<< HEAD
               {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => (<div key={step} className="flex items - center">;
               <div;
                 className={'h-2 w-2 rounded-full ' +;
                   (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')}
+=======
+                className={
+                }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 title={step}
               />;
               {idx < statusSteps.length - 1 && (<div;
@@ -120,8 +195,14 @@ function MilestoneCard() {const [expanded, set_expanded]  = useState (false)cons
                     (idx < current_index ? 'bg - green - 600' : 'bg - gray - 300')}/>              )}
             </div>;
           ))}
+<<<<<<< HEAD
         </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />;
                   'h - 2 w - 2 rounded - full ' + (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')}
+=======
+        </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
+                  'h - 2 w - 2 rounded - full ' + (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300');
+                }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 title={step}
       {expanded && (<div className='mt - 4 space - y-2 text - sm text - gray - 800'>          {milestone.description && <p>{milestone.description}</p>}
           <div > Amount: ${milestone.amount_usd.to_fixed (2)}</div>;
@@ -167,6 +248,7 @@ function MilestoneCard() {const [expanded, set_expanded]  = useState (false)cons
           )}
         </div>;
       )}
+<<<<<<< HEAD
           <button;
           <button;
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700";
@@ -174,16 +256,41 @@ function MilestoneCard() {const [expanded, set_expanded]  = useState (false)cons
         {canClientMarkInProgress && (<button;
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}onClick={() => onAction('in_progress', milestone.id)}</a>;
                   </li>;
+=======
+          <button
+          <button
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+      <div className='mt-4 flex flex-wrap gap-2'>
+        {canClientMarkInProgress && (
+          <button
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
+            onClick={() => onAction('in_progress', milestone.id)}
+                    </a>
+                  </li>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 ))}
               </ul>;
             </div>;
           )}
+<<<<<<< HEAD
         </div>;
       )}className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
         {canClientMarkInProgress && (<button;
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700";
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
         {canClientMarkInProgress && (<button;
+=======
+        </div>
+      )}
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
+        {canClientMarkInProgress && (
+          <button
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
+        {canClientMarkInProgress && (;
+          <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
             Mark In Progress;
           </button>;<div className="mt-4 flex flex-wrap gap-2">;
@@ -195,6 +302,17 @@ function MilestoneCard() {const [expanded, set_expanded]  = useState (false)cons
             onClick={() => onAction('in_progress', milestone.id)}>;
             Mark In Progress;
           </button>;
+<<<<<<< HEAD
+=======
+      <div className="mt-4 flex flex-wrap gap-2">
+        {canClientMarkInProgress && (
+          <button
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+            onClick={() => onAction('in_progress', milestone.id)}
+          >
+            Mark In Progress
+          </button>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         )}
         {canTalentSubmit && (<button;
 className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700';
@@ -214,6 +332,17 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
             Mark as Paid;
           </button>;
         )}
+<<<<<<< HEAD
+=======
+      </div>
+    </div>
+        )}
+      </div>
+    </div>
+  );
+}
+            <div>        <div className="mt - 2 text - xs text-gray-700">Status: {milestone.status}</div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       </div>;
     </div>;
         )}
@@ -269,4 +398,9 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
             Mark as Paid;
           </button>)}
       </div>;
+<<<<<<< HEAD
     </div>)})}
+=======
+    </div>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

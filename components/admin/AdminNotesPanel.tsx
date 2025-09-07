@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 
 ;
 export type AdminNotesPanelProps = {targetType: string; // e && e.g., 'user' | 'listing';
   targetId: string; // unique identifier for the target;
 }type Note = {target_type: string; // e.g., 'user' | 'listing';
+=======
+export type AdminNotesPanelProps = {;
+  targetType: string; // e && e.g., 'user' | 'listing';
+  targetId: string; // unique identifier for the target
+};
+type Note = {;
+  target_type: string; // e.g., 'user' | 'listing';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   target_id: string; // unique identifier for the target;
 import React, { useEffect, useMemo, useState } from 'react';
   targetType: string; // e.g., 'user' | 'listing';
@@ -14,6 +23,7 @@ export type AdminNotesPanelProps = any;targetId: string; // unique identifier fo
   targetType: string;
   targetId: string;
   text: string;
+<<<<<<< HEAD
   authorId: string;
   createdAt: number;
 }}export default function AdminNotesPanel() {authorId: string;
@@ -27,9 +37,32 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
         headers: {'Content-Type': 'application/json';
           'X-Admin': isAdmin ? 'true' : 'false';
           'X-Admin-User': adminId;
+=======
+  targetType,
+  targetId,;
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)
+};
+type Note = {
+  id: string;
+    targetType: string
+  targetId: string
+  text: string
+  authorId: string
+  createdAt: number
+}
+};
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [adminId, setAdminId] = useState('admin-demo');
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [adding, setAdding] = useState(false);
+  const [text, setText] = useState('');
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }
         body: JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {method: 'POST',headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId,},body: JSON.stringify({ targetType, targetId, text }),})if (!res.ok) {alert('Failed to add note')return;
       }
+<<<<<<< HEAD
       setText('')setAdding(false)}await fetchNotes()} finally {setAdding(false)await fetchNotes()} finally {setAdding(false)}
   }}
   }if (!isAdmin) {return (<div className='rounded border p-3'>;
@@ -37,6 +70,44 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
           <input;
             id='isAdminToggle';
             type='checkbox';
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
+        body: JSON.stringify({ targetType, targetId, text })});
+  useEffect(() => {
+    if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
+  }, [isAdmin, targetType, targetId]);
+  async function addNote() {
+    if (!text.trim()) return;
+    setAdding(true);
+    try {
+      const res = await fetch('/api/admin/notes', {
+        method: "method",
+    headers: {
+          'Content-Type': 'application/json'
+          'X-Admin': isAdmin ? 'true' : 'false'
+          'X-Admin-User': adminId
+        }
+        body: JSON.stringify({ targetType, targetId, text })
+    } finally {
+      setAdding(false);    }      if (!res.ok) {
+        alert('Failed to add note');
+        return;
+      }
+      setText('');
+      setAdding(false);    }
+    }
+  }
+    }
+  }
+  if (!isAdmin) {
+    return (
+      <div className='rounded border p-3'>
+        <div className='flex items-center gap-2 text-sm'>
+          <input
+            id='isAdminToggle'
+            type='checkbox'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
           />;
@@ -62,6 +133,7 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
         <textarea;
           className='w-full border rounded-md px-3 py-2';
           rows={3}
+<<<<<<< HEAD
           placeholder='Write a private note (abuse, spam, special support)';
           value={text}</div>;
     </div>;
@@ -69,6 +141,23 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
   )}
   useEffect (() => {if (fetch_notes ()) {$2;
 }    if (fetch_notes ()) {$2;
+=======
+          placeholder='Write a private note (abuse, spam, special support)'
+          value={text}
+      </div>;
+    </div>;
+  );
+  );
+}
+}
+  );
+}
+  useEffect (() => {
+    if (fetch_notes ()) {
+  $2
+}    if (fetch_notes ()) {
+  $2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 }
     set_adding (true)try {const res = await fetch ('/api / admin / notes', {method: 'POST',headers: {'Content - Type': 'application / json','X - Admin': is_admin ? 'true' : 'false','X - Admin - User': admin_id,},body: JSON.stringify ({ target_type, target_id, text }),})// Check condition;
@@ -147,6 +236,7 @@ if ( {) {$2;
               </li>))}
           </ul>)}
       </div>;
+<<<<<<< HEAD
     </div>)</div>;
         <div className=&quot;text-xs opacity-60 mt-2&quot;>Admin-only notes hidden.</div>;
       </div>;
@@ -173,6 +263,42 @@ if ( {) {$2;
             {notes.map((n) => (<li key={n.id} className=&quot;rounded border p-2 text-sm&quot;>;
                 <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>;
                 <div>{n.text}</div>;
+=======
+    </div>);
+        </div>
+        <div className=&quot;text-xs opacity-60 mt-2&quot;>Admin-only notes hidden.</div>
+      </div>
+    )
+  }
+  return (
+    <div className=&quot;rounded border p-4 space-y-3&quot;>
+      <div className=&quot;flex items-center justify-between&quot;>
+        <h3 className=&quot;font-medium&quot;>Admin Notes</h3>
+        <div className=&quot;flex items-center gap-3 text-sm&quot;>
+          <label className=&quot;inline-flex items-center gap-2&quot;>
+            <input type=&quot;checkbox&quot; checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+            <span>Admin</span>
+          </label>
+          <input className=&quot;border rounded px-2 py-1&quot; value={adminId} onChange={(e) => setAdminId(e.target.value)} placeholder=&quot;Admin ID&quot; />
+        </div>
+      </div>
+      <div className=&quot;space-y-2&quot;>
+        <textarea className=&quot;w-full border rounded-md px-3 py-2&quot; rows={3} placeholder=&quot;Write a private note (abuse, spam, special support)&quot; value={text} onChange={(e) => setText(e.target.value)} />
+        <button disabled={!text.trim() || adding} onClick={addNote} className=&quot;px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50&quot;>{adding ? 'Adding…' : 'Add Note'}</button>
+      </div>
+      <div className=&quot;border-t pt-3&quot;>
+        <div className=&quot;text-sm opacity-70 mb-2&quot;>Notes are private, time-stamped, and include author ID.</div>
+        {loading ? (
+          <div className=&quot;text-sm&quot;>Loading…</div>
+        ) : notes.length === 0 ? (
+          <div className=&quot;text-sm opacity-70&quot;>No notes yet.</div>
+        ) : (
+          <ul className=&quot;space-y-2&quot;>
+            {notes.map((n) => (
+              <li key={n.id} className=&quot;rounded border p-2 text-sm&quot;>
+                <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+                <div>{n.text}</div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           onChange={e => setText(e.target.value)}
         />;
         <button;
@@ -199,9 +325,24 @@ if ( {) {$2;
             ))}
           </ul>;
         )}
+<<<<<<< HEAD
       </div>;
     </div>;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {target_type: string; // e.g., 'user' | 'listing';
+=======
+      </div>
+    </div>
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+  target_type: string; // e.g., 'user' | 'listing';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   target_id: string; // unique identifier for the target;
 }type Note = {id: string;
   target_type: string;
@@ -214,8 +355,25 @@ type Note = {id: string;
   authorId: string;
   createdAt: number;
 }
+<<<<<<< HEAD
 export default function AdminNotesPanel() {}export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useState(true)const [adminId, setAdminId] = useState('admin-demo')const [notes, setNotes] = useState<Note[]>([])const [loading, setLoading] = useState(false)const [adding, setAdding] = useState(false)const [text, setText] = useState('')}
       )if (!res && res.ok) {setNotes([])return;
+=======
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+};
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [adminId, setAdminId] = useState('admin-demo');
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [adding, setAdding] = useState(false);
+  const [text, setText] = useState('');
+        }
+      );
+      if (!res && res.ok) {;
+        setNotes([]);
+        return;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
     } finally {set_loading (false)}
   }
@@ -224,15 +382,58 @@ export default function AdminNotesPanel() {}export default function AdminNotesPa
       }
       const data = await res.json ()set_notes (data.notes || [])} finally {set_loading (false)}
   }
+<<<<<<< HEAD
   }, [isAdmin, targetType, targetId])async function addNote() {if (!text.trim()) return;
     setAdding(true)try {const res = await fetch('/api/admin/notes', {const data = await res && res.json()setNotes(data && data.notes || [])} finally {setLoading(false)}
   }useEffect(() => {if (isAdmin) fetchNotes()if (isAdmin) fetchNotes()}, [isAdmin, targetType, targetId])async function addNote() {if (!text && text.trim()) return;
     setAdding(true)try {const res = await fetch('/api/admin/notes', {method: 'POST',headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId,},body: JSON && JSON.stringify({ targetType, targetId, text }),})if (!res && res.ok) {alert('Failed to add note')return;
+=======
+  }, [isAdmin, targetType, targetId]);
+  async function addNote() {
+    if (!text.trim()) return;
+    setAdding(true);
+    try {
+      const res = await fetch('/api/admin/notes', {
+      const data = await res && res.json();
+      setNotes(data && data.notes || []);
+    } finally {;
+      setLoading(false);
+    }
+  }
+  useEffect(() => {;
+    if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes();
+  }, [isAdmin, targetType, targetId]);
+  async function addNote() {;
+    if (!text && text.trim()) return;
+    setAdding(true);
+    try {;
+      const res = await fetch('/api/admin/notes', {;
+        method: 'POST',;
+        headers: {;
+          'Content-Type': 'application/json',;
+          'X-Admin': isAdmin ? 'true' : 'false',;
+          'X-Admin-User': adminId,;
+        },;
+        body: JSON && JSON.stringify({ targetType, targetId, text }),;
+      });
+      if (!res && res.ok) {;
+        alert('Failed to add note');
+        return;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
       setText('')await fetchNotes()} finally {setAdding(false)}      if (!res && res.ok) {alert('Failed to add note')return;
       }
+<<<<<<< HEAD
       setText('')}
   }if (!isAdmin) {return (<div className='rounded border p-3'>;
+=======
+      setText('');
+    }
+  }
+  if (!isAdmin) {;
+    return (
+      <div className='rounded border p-3'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <div className='flex items-center gap-2 text-sm'>;
           <input;
             id='isAdminToggle';
@@ -272,7 +473,12 @@ export default function AdminNotesPanel() {}export default function AdminNotesPa
           {adding ? 'Adding…' : 'Add Note'}
               </li>;
         </button>;
+<<<<<<< HEAD
       </div>;<div className='border-t pt-3'>;
+=======
+      </div>;
+      <div className='border-t pt-3'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <div className='text-sm opacity-70 mb-2'>;
           Notes are private, time-stamped, and include author ID.;
         </div>;
@@ -374,4 +580,9 @@ if ( {) {$2;
               </li>))}
           </ul>)}
       </div>;
+<<<<<<< HEAD
     </div>)})}
+=======
+    </div>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

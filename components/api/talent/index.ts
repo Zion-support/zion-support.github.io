@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { supabase as supabaseClient   } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL   } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
@@ -11,6 +12,32 @@ const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh').sp
       return res && res.status(200).json({ items: LOCAL })} catch (e: any) {return res && res.status(500).json({ error: e && e.message })}  }
 export default async function handler() {if (req && req.method === 'GET') {try {} as any)// Check condition;
 if (throw error) {$2;
+=======
+export default async function handler(
+  req: NextApiRequest;
+    res: NextApiResponse
+) {
+  if (req && req.method === 'GET') {
+    try {
+      if (hasSupabase) {
+        const { data, error } = await supabaseClient
+          .from('talent_profiles')
+          .order('created_at', { ascending: false });
+        if (error) throw error;
+        return res && res.status(200).json({ items: data as TalentProfile[] });
+      }
+      return res && res.status(200).json({ items: LOCAL });
+    } catch (e: any) {
+      return res && res.status(500).json({ error: e && e.message });
+    }  }
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method === 'GET') {
+    try {
+        } as any);
+        // Check condition
+if (throw error) {
+  $2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
         return res.status (201).json ({ slug: item.slug })return res.status(500).json({ error: e.message })}
   }
@@ -57,7 +84,17 @@ const slug =;
           original_language: item.originalLanguage,translations: item.translations as any,} as any)if (error) throw error;
         return res.status(201).json({ slug: item.slug })}
       // Fallback: return the slug as if saved;
+<<<<<<< HEAD
       return res.status (201).json ({ slug: item.slug })} catch (e: any) {return res.status (500).json ({ error: e.message })}.end('Method Not Allowed')return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')}
 }}
 return res;
     .setHeader('Allow', 'GET, POST').status(405).end('Method Not Allowed')
+=======
+      return res.status (201).json ({ slug: item.slug });
+    } catch (e: any) {
+      return res.status (500).json ({ error: e.message });
+    }
+    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

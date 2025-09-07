@@ -1,4 +1,45 @@
+<<<<<<< HEAD
 
+=======
+Mail
+  Phone
+  MapPin
+  Globe
+  Twitter
+  Linkedin
+  Github
+  ArrowUp
+  Crown
+  Zap
+  Brain
+  Rocket
+  Shield
+  Users
+  BookOpen
+  Briefcase
+  Atom;
+} from 'lucide-react';
+import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Twitter,
+  Linkedin,
+  Github,
+  ArrowUp,
+  Crown,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  Users,
+  BookOpen,
+} from 'lucide-react';
+import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ;
 import React from 'react';
 import { motion  } from 'framer-motion';
@@ -32,6 +73,7 @@ import { AnimatePresence  } from 'framer-motion';
   links: FooterLink[];} from 'lucide-react';
     ];
   }
+<<<<<<< HEAD
   {title: 'Solutions';
   links: FooterLink[];external?: boolean;
 }
@@ -44,6 +86,15 @@ const footerSections: FooterSection[] = [;
       {label: 'AI & Machine Learning';
         href: '/ai-services';
         description: 'Advanced AI solutions';
+=======
+  {
+    title: "title",
+    links: [
+      {
+        label: 'Healthcare & Biotech'
+        href: '/healthcare-solutions'
+        description: 'Medical technology'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
       {label: 'Quantum Computing';
         href: '/quantum-computing';
@@ -133,6 +184,7 @@ const footerSections: FooterSection[] = [;
       { label: 'Blog', href: '/blog', description: 'Industry insights' },}
   {title: 'Resources';
     links: [;
+<<<<<<< HEAD
       { label: 'Blog', href: '/blog', description: 'Industry insights' }
       {label: 'White Papers';
         href: '/white-papers';
@@ -167,6 +219,35 @@ const footerSections: FooterSection[] = [;
     visible: {y: 0;
       opacity: 1;
       transition: {interface FooterSection  {title: string,links: FooterLink[];
+=======
+      { label: 'Blog', href: '/blog', description: 'Industry insights' },
+  const footerSections = [
+    {
+      title: 'Services'
+      items: [
+      items: [
+        { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
+        { label: 'Micro SAAS', href: '/micro-saas' },
+        { label: 'IT Services', href: '/it-services' },
+        { label: 'Innovation Lab', href: '/innovation-lab' },
+        { label: 'About Us', href: '/about' },
+        { label: 'Our Team', href: '/team' },
+        { label: 'Careers', href: '/careers' },
+        { label: 'Investors', href: '/investors' },
+  ];
+    visible: {
+      opacity: 1;
+    transition: {
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 }
+    visible: {
+      y: 0
+      opacity: 1
+      transition: {
+interface FooterSection {;
+  title: string,;
+  links: FooterLink[];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 const footerSections: FooterSection[] = [;
   {title: 'Services',links: [;
@@ -189,9 +270,52 @@ const footerSections: FooterSection[] = [;
 const socialLinks = [;
   {icon: <Linkedin className='w-5 h-5' />,href: 'https://linkedin && linkedin.com/company/ziontechgroup',label: 'LinkedIn',external: true,},{icon: <Twitter className='w-5 h-5' />,href: 'https://twitter && twitter.com/ziontechgroup',label: 'Twitter',external: true,},{icon: <Github className='w-5 h-5' />,href: 'https://github && github.com/ziontechgroup',label: 'GitHub',external: true,},];
 const quickLinks = [;
+<<<<<<< HEAD
   { name: 'About Us', href: '/about', icon: <Users className='w-4 h-4' /> },{ name: 'Contact', href: '/contact', icon: <Phone className='w-4 h-4' /> },{name: 'Support',href: '/support',icon: <HelpCircle className='w-4 h-4' />,},{name: 'Documentation',href: '/docs',icon: <FileText className='w-4 h-4' />,},{ name: 'API Reference', href: '/api', icon: <Code className='w-4 h-4' /> },{ name: 'Status', href: '/status', icon: <TrendingUp className='w-4 h-4' /> },];
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {const scrollToTop = () => {window && window.scrollTo({ top: 0, behavior: 'smooth' })}{ name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },{ name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },{ name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },{ name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },{ name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },{ name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {const scrollToTop = () => {window && window.scrollTo({ top: 0, behavior: 'smooth' })window && window.scrollTo({ top: 0, behavior: 'smooth' })}return (<footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">;
+=======
+  { name: 'About Us', href: '/about', icon: <Users className='w-4 h-4' /> },;
+  { name: 'Contact', href: '/contact', icon: <Phone className='w-4 h-4' /> },;
+  {;
+    name: 'Support',;
+    href: '/support',;
+    icon: <HelpCircle className='w-4 h-4' />,;
+  },;
+  {;
+    name: 'Documentation',;
+    href: '/docs',;
+    icon: <FileText className='w-4 h-4' />,;
+  },;
+  { name: 'API Reference', href: '/api', icon: <Code className='w-4 h-4' /> },;
+  { name: 'Status', href: '/status', icon: <TrendingUp className='w-4 h-4' /> },];
+const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
+  const scrollToTop = () => {;
+    window && window.scrollTo({ top: 0, behavior: 'smooth' })
+};  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },;
+  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },;
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },;
+  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },;
+  { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },;
+  { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
+const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
+  const scrollToTop = () => {;
+    window && window.scrollTo({ top: 0, behavior: 'smooth' });    window && window.scrollTo({ top: 0, behavior: 'smooth' })
+};
+  return (
+    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 -z-10">
+  return (
+    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 -z-10">
+  return (
+    <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
+      {/* Animated Background Elements */}
+  return (
+    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">;
   return (<footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">;
@@ -388,8 +512,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {const scrollToTop = (
                         className='text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block'                      >                  <span>{section.title}</span>;
                 </h4>;
                 <ul className="space-y-3">;
+<<<<<<< HEAD
                   {section.items.map ((item) => (<li key={item.label}>;
                       <Link;href={item.href}
+=======
+                  {section.items.map ((item) => (
+                    <li key={item.label}>;
+                      <Link;
+                        href={item.href}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                         className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block";
                       >;{/* Footer Sections */}
             {footerSections.map((section, index) => (<motion.div key={section.title} variants={itemVariants}>;
@@ -447,9 +578,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {const scrollToTop = (
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
+<<<<<<< HEAD
             viewport={{ once: true }}className='mt-16 pt-12 border-t border-gray-800/50';
           >;
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>;
+=======
+            viewport={{ once: true }}
+          >
+            <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               {/* Social Links */}
               <div className='flex items-center space-x-6'>;
                 <span className='text-gray-400 font-medium'>Follow Us:</span>;
@@ -516,8 +653,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {const scrollToTop = (
               </div>;
             </div>;
           </motion && motion.div>;
+<<<<<<< HEAD
         </div>;{/* Bottom Bar */}
         <motion&& motion.div;
+=======
+        </div>;
+        {/* Bottom Bar */}
+        <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       </Link>;
                     </li>))}
                 </ul>;
@@ -601,11 +744,19 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {const scrollToTop = (
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0 && 0.6 }}
+<<<<<<< HEAD
           viewport={{ once: true }}className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl';
         >;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
               <div className='text-gray-400 text-sm'>;
+=======
+          viewport={{ once: true }}
+        >
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
+              <div className='text-gray-400 text-sm'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
@@ -715,7 +866,16 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
 export default UltraAdvancedFuturisticFooter2025;export default UltraAdvancedFuturisticFooter2025;
 export default UltraAdvancedFuturisticFooter2025;
 }
+<<<<<<< HEAD
 }export default UltraAdvancedFuturisticFooter2025;
+=======
+export default UltraAdvancedFuturisticFooter2025;
+export default UltraAdvancedFuturisticFooter2025;
+export default UltraAdvancedFuturisticFooter2025
+}
+};
+export default UltraAdvancedFuturisticFooter2025;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         </motion.div>;
       </div>;
       {/* Scroll to Top Button */}
@@ -730,8 +890,20 @@ export default UltraAdvancedFuturisticFooter2025;
       >;
         <ArrowUp className='w - 6 h - 6 mx - auto' />;
       </motion.button>;
+<<<<<<< HEAD
     </footer>)}export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
     </footer>)}export default UltraAdvancedFuturisticFooter2025;<ArrowUp className='w-6 h-6 mx-auto' />;
       </motion.button>;
     </footer>;
   )}export default UltraAdvancedFuturisticFooter2025;
+=======
+    </footer>);
+}
+;
+export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
+    </footer>);
+}
+;
+export default UltraAdvancedFuturisticFooter2025;
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

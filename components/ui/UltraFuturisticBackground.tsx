@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react';
@@ -62,11 +63,19 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   enableNeonEffects = true,
   enableSpaceTime = true,
   variant = 'quantum',
+=======
+import React from 'react';
+interface UltraFuturisticBackgroundProps {
+  children: React.ReactNode;
+  className?: string;
+}
+const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
+  children,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   className = ''
 }) => {
   const getBackgroundClasses = () => {
     const baseClasses = 'relative overflow-hidden';
-    
     switch (variant) {
       case 'quantum':
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
@@ -82,20 +91,30 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
     </div>;
   )}export default UltraFuturisticBackground;
       case 'cyber':
+<<<<<<< HEAD
         return `${baseClasses} bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900`;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       default:
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
     }
   };
+<<<<<<< HEAD
 
   return (
     <div className={`${getBackgroundClasses()} ${className}`}>
       <div className="absolute inset-0 bg-black/20" />
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className="relative z-10">
         {children}
       </div>
     </div>
   );
 };
+<<<<<<< HEAD
 
 export default UltraFuturisticBackground;
+=======
+export default UltraFuturisticBackground;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

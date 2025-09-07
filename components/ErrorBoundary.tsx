@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -280,20 +281,25 @@ ursor/automate-test-improve-and-merge-code-646c;
   }
 }export default ErrorBoundary;</div>;
         ))}return this.props.children;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
+<<<<<<< HEAD
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+<<<<<<< HEAD
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -314,10 +320,15 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
+=======
+      errorInfo
+    });
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
+<<<<<<< HEAD
 
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
@@ -326,6 +337,10 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
 
+=======
+    }
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -347,8 +362,11 @@ class ErrorBoundary extends Component<Props, State> {
               >
                 Reload Page
               </button>
+<<<<<<< HEAD
               <button 
                 onClick={() => this.setState({ hasError: false })} 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
               >
                 Try Again
@@ -368,6 +386,7 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
+<<<<<<< HEAD
 
     return this.props.children;
   }
@@ -380,6 +399,18 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {super(props)this && this.state = { hasError: false }}
   handleRetry = () => {this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+=======
+    return this && this.props.children;
+  }
+}
+class ErrorBoundary extends Component<Props, State> {;
+  constructor(props: Props) {;
+    super(props);
+    this && this.state = { hasError: false };
+}
+  handleRetry = () => {this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">;
           <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
@@ -479,6 +510,7 @@ if ( {) {$2;
   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }return this.props.children;
   }
+<<<<<<< HEAD
 }export default ErrorBoundary;ursor/automate-test-improve-and-merge-code-646c;
 export default ErrorBoundary;
 }
@@ -487,3 +519,9 @@ export default ErrorBoundary;
 }
 
 export default ErrorBoundary;
+=======
+}
+    return this.props.children;
+  }
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

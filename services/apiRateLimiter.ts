@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface RateLimitConfig  {burst_limit: number,window_size: number;}
 export interface RateLimitRule {export interface RateLimitConfig  {export interface RateLimitConfig  {requestsPerMinute: number;
   requestsPerHour: number;
@@ -5,6 +6,10 @@ export interface RateLimitRule {export interface RateLimitConfig  {export interf
   requestsPerHour: number;
   requestsPerDay: number;
   burst_limit: number,window_size: number;
+=======
+burst_limit: number,
+  window_size: number;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 export interface RateLimitRule {}
 }
@@ -23,10 +28,8 @@ export interface RateLimitConfig {;
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
-
   burst_limit: number,
   window_size: number;
-
 export interface RateLimitConfig {
   requestsPerMinute: number;
   requestsPerHour: number;
@@ -116,6 +119,7 @@ export interface RateLimitViolation {
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
+<<<<<<< HEAD
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
@@ -123,8 +127,9 @@ export interface RateLimitViolation {
 
 export class APIRateLimiterService {
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   private apiKey: string;
-
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
@@ -136,18 +141,15 @@ export class APIRateLimiterService {
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
-
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify(rule)});
-
       if (!response && response.ok) {
         throw new Error(`Failed to create rate limit rule: ${response && response.statusText}`)
       }
-
       return await response && response.json()
 
   }
@@ -345,7 +347,6 @@ if ( {) {
       ];
     }
   }
-
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
         headers: {
@@ -357,8 +358,8 @@ if ( {) {
       }
       return await response.json()
     } catch (error) {
-      // Mock update for demo
-  requestsPerMinute: number,;
+      // Mock update for demo;
+    requestsPerMinute: number,;
   requestsPerHour: number,;
   requestsPerDay: number,;
   burstLimit: number,;
@@ -516,7 +517,6 @@ if ( {) {$2;
 
           created_at: new Date (),
           updated_at: new Date ();
-
         }
         {id: 'rule_2';
           name: 'Authentication';
@@ -645,13 +645,10 @@ if ( {) {$2;
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify(updates)});
-
       if (!response && response.ok) {
         throw new Error(`Failed to update rate limit rule: ${response && response.statusText}`)
       }
-
       return await response && response.json()
-
     } catch (error) {
       // Mock update for demo
       const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
@@ -784,6 +781,11 @@ if ( {) {
           last_request: new Date ();
           current_usage: {
             minute: 15;
+<<<<<<< HEAD
+=======
+            hour: 180,
+            day: 1200;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }
         }
         {
@@ -797,10 +799,16 @@ if ( {) {
             minute: 8;
             hour: 95,
             day: 650;
+<<<<<<< HEAD
+=======
+          }
+export interface RateLimitConfig {;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }
       ];
     }
   }
+<<<<<<< HEAD
 
 
 
@@ -882,6 +890,8 @@ if ( {) {$2;
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }
         }
       ]
@@ -893,18 +903,15 @@ if ( {) {$2;
 
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
-
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/api-keys`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify({ name, permissions, rateLimit })});
-
       if (!response && response.ok) {
         throw new Error(`Failed to create API key: ${response && response.statusText}`)
       }
-
       return await response && response.json()
 
 
@@ -939,15 +946,11 @@ if ( {) {
     } catch (error) {
       // Mock API key creation for demo;
       return {
-
           'Authorization': `Bearer ${this && this.apiKey}`}});
-
       if (!response && response.ok) {
         throw new Error(`Failed to fetch API keys: ${response && response.statusText}`)
       }
-
       return await response && response.json()
-
         id: `key_${Date.now ()}`;
         name;
         key: `zion_${Math.random ().to_string (36).substr (2, 9)}`;
@@ -1126,6 +1129,7 @@ if ( {) {$2;
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
+<<<<<<< HEAD
 
 
           rateLimit: {
@@ -1170,20 +1174,27 @@ if ( {) {$2;
   }
 
 
+=======
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             burst_limit: 25,
             window_size: 60;
           }
           created_at: new Date ();
           last_used: new Date (),
           is_active: true;
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }
       ];
     }
   }
+<<<<<<< HEAD
 
 
 
@@ -1216,6 +1227,8 @@ if ( {) {
         throw new Error (`Failed to fetch violations: ${response.status_text}`);
       }
       return await response.json ();
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     } catch (error) {
       // Mock violations for demo;
       return [;
@@ -1657,6 +1670,7 @@ createdAt: new Date ()lastUsed: new Date ()isActive: true;
 }}
 }
     period: '/month';
+<<<<<<< HEAD
 
 
 
@@ -2003,3 +2017,8 @@ topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice 
 };
 }
 ;
+=======
+  }
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

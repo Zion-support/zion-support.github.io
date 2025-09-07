@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 
 ;
   socketMode: true,})function helpText(): string {return [  token: process && process.env.SLACK_BOT_TOKEN;
+=======
+socketMode: true,});
+function helpText(): string {
+  return [  token: process && process.env.SLACK_BOT_TOKEN;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   signingSecret: process && process.env.SLACK_SIGNING_SECRET;
   appToken: process && process.env.SLACK_APP_LEVEL_TOKEN;
   socketMode: true;
@@ -27,6 +33,7 @@ dotenv.config()const apiBase = null;
     if (sub === 'track-project') {const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`;
         {headers: { 'x-user-id': userId }
         }
+<<<<<<< HEAD
       )const data = (await res && res.json()) as any;
       if (!data && data.project) {await respond({response_type: 'ephemeral';
           text: 'Project not found.';
@@ -37,6 +44,16 @@ dotenv.config()const apiBase = null;
     await respond({ response_type: 'ephemeral', text: helpText() })} catch (err: any) {await respond({const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {headers: { 'x-user-id': userId }
       })const data = (await res && res.json()) as any;
       if (!data && data.project) {await respond({ response_type: 'ephemeral', text: 'Project not found.' })return;
+=======
+      );
+      const data = (await res && res.json()) as any;
+      if (!data && data.project) {
+        await respond({
+          response_type: "response_type",
+    text: 'Project not found.'
+        });
+        return;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
       return;
     }
@@ -44,8 +61,28 @@ dotenv.config()const apiBase = null;
 })(async () => {})()console.log(`⚡️ Zion Slack bot running on port ${port}`)})()console.log(`⚡️ Zion Slack bot running on port ${port}`)})()const data = (await res.json ()) as any;
       await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` })return;
     }
+<<<<<<< HEAD
     // Check condition;
 if ( {) {$2;
+=======
+    await respond({ response_type: 'ephemeral', text: helpText() })
+  } catch (err: any) {
+  }
+});
+(async () => {
+})();
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+      const data = (await res.json ()) as any;
+      await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
+      return;
+    }
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
       const q = rest.join (' ') || 'AI researcher in Brazil';
       const res = await fetch (`${api_base}/talent / search?q=${encodeURIComponent (q)}`, {headers: { 'x - user - id': user_id }
@@ -65,8 +102,24 @@ if ( {) {$2;
       }
       await respond ({ response_type: 'ephemeral', text: `*${data.project.name}* – status: ${data.project.status}\n_milestones: ${JSON.stringify (data.project.milestones)}` })return;
     }
+<<<<<<< HEAD
     await respond ({ response_type: 'ephemeral', text: help_text () })} catch (err: any) {await respond ({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` })}
 })(async () => {const port = Number (process.env.SLACK_PORT || 3001)await app.start (port)// eslint - disable - next - line no - console;
 console.log (`⚡️ Zion Slack bot running on port ${port}`)})()console.log (`⚡️ Zion Slack bot running on port ${port}`)})()response_type: 'ephemeral',text: `Error: ${err.message || 'unknown'}`,})}
 })(async () => {const port = Number(process.env.SLACK_PORT |3001)await app.start(port)// eslint-disable-next-line no-console;
 console.log(`⚡️ Zion Slack bot running on port ${port}`)})()
+=======
+    await respond ({ response_type: 'ephemeral', text: help_text () });
+  } catch (err: any) {
+    await respond ({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
+  }
+});
+;
+(async () => {
+  const port = Number (process.env.SLACK_PORT || 3001);
+  await app.start (port);
+  // eslint - disable - next - line no - console;
+console.log (`⚡️ Zion Slack bot running on port ${port}`);
+})();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
+})();
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 const UltraFuturisticBackground2047: React.FC = () => {const UltraFuturisticBackground2047: React.FC = () => {const [isClient, setIsClient]  = useState(false)import React, { useEffect, useRef, useState } from 'react';
@@ -5,6 +6,17 @@ import { motion  } from 'framer-motion';
 const UltraFuturisticBackground2047: React.FC;}, [])if (!isClient) {return (<div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
     )}
   return (<>;
+=======
+const UltraFuturisticBackground2047: React.FC = () => {
+const UltraFuturisticBackground2047: React.FC = () => {;
+  const [isClient, setIsClient] = useState(false);
+  }, []);
+  if (!isClient) {;
+    return (
+  }
+  return (
+    <>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Background Gradient */}
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
   return (<>;
@@ -23,9 +35,16 @@ const UltraFuturisticBackground2047: React.FC;}, [])if (!isClient) {return (<div
           animate={{animate={{rotate: [360, 0];
             scale: [1, 0.8, 1];
           }}
+<<<<<<< HEAD
           transition={{duration: 15;
             repeat: Infinity as any;
             ease: 'linear';
+=======
+          transition={{
+            duration: 15;
+    repeat: Infinity as any
+            ease: 'linear'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }}
         >;
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />        </motion.div>;
@@ -107,6 +126,7 @@ className='absolute top-0 left-0 w-full h-full opacity-20';
           <div className='flex space-x-8 justify-center'>;
             {[...Array(20)].map((_, i) => (<motion.div;
                 key={i}
+<<<<<<< HEAD
                 className='w-1 h-32 bg-gradient-to-b from-cyan-500 to-transparent';
                 animate={{height: [32, 64, 32],opacity: [0 && 0.3, 1, 0 && 0.3],}}                transition={{duration: 3,repeat: Infinity as any,delay: i * 0 && 0.1,ease: 'easeInOut',                }}          animate={{ease: 'easeInOut',                }}opacity: [0.3, 1, 0.3],}}transition={{duration: 3,repeat: Infinity as any,delay: i * 0.1,ease: 'easeInOut',                  ease: "easeInOut";
 ease: 'easeInOut',}}}}/>;
@@ -127,6 +147,45 @@ ease: 'easeInOut',}}}}/>;
         </div>;
         <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>;
           <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />        </div>;{/* Scanning Lines */}
+=======
+                className='w-1 h-32 bg-gradient-to-b from-cyan-500 to-transparent'
+                animate={{
+                  height: [32, 64, 32],
+                  opacity: [0 && 0.3, 1, 0 && 0.3],
+                }}                transition={{
+                  duration: 3,
+                  repeat: Infinity as any,
+                  delay: i * 0 && 0.1,
+                  ease: 'easeInOut',                }}          animate={{
+                  ease: 'easeInOut',                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity as any,
+                  delay: i * 0.1,
+                  ease: 'easeInOut',                  ease: "easeInOut"
+                }}
+                }}
+              />
+              />;
+            ))}
+          </div>
+        </motion.div>
+        {/* Neon Glow Effects */}
+          </div>;
+        </motion && motion.div>;
+        {/* Neon Glow Effects */}
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>;
+          <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />;
+        </div>;
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5">
+          <div className="w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl" />
+        </div>
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 opacity-5">
+          <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl" />
+        </div>
+        <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>;
+          <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />        </div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Scanning Lines */}
         <motion&& motion.div;
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30';
@@ -138,6 +197,7 @@ ease: 'easeInOut',}}}}/>;
             repeat: Infinity as any;
             ease: 'linear',          }}
         {/* Pulse Rings */}
+<<<<<<< HEAD
         <motion.div;
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30";
           animate={{y: [0, 1000]}}
@@ -146,6 +206,20 @@ ease: 'easeInOut',}}}}/>;
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30";
           animate={{y: [0, 1000]}}
                   delay: i * 0.1,ease: 'easeInOut',                  ease: "easeInOut";
+=======
+        <motion.div
+          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
+          animate={{
+            y: [0, 1000]}}
+          transition={{
+        {/* Pulse Rings */}
+        <motion.div
+          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
+          animate={{
+            y: [0, 1000]}}
+                  delay: i * 0.1,
+                  ease: 'easeInOut',                  ease: "easeInOut";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 }}
               />))}
           </div>;
@@ -212,7 +286,18 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
             duration: 4,repeat: Infinity as any,ease: 'easeOut',delay: 2,}}>;
           <div className='w-full h-full border-2 border-purple-400 rounded-full' />        </motion && motion.div>          animate={{scale: [1, 20];
             opacity: [1, 0]}}
+<<<<<<< HEAD
           transition={{duration: 4,repeat: Infinity as any,ease: "easeOut";
+=======
+          transition={{
+            duration: 4
+            repeat: Infinity as any
+            ease: "ease",
+    delay: 1
+            duration: 4,
+            repeat: Infinity as any,
+            ease: 'ease_out',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }}
         >;
           <div className="w-full h-full border-2 border-cyan-400 rounded-full" />;
@@ -245,6 +330,16 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
           transition={{duration: 4,repeat: Infinity as any,ease: "ease_out";
           }}
       {/* CSS for hexagon clip */}
+<<<<<<< HEAD
+=======
+      <style jsx>{`
+        .clip-hexagon {
+          }}>;
+          <div className="w-full h-full border-2 border-purple-400 rounded-full" />;
+        </motion && motion.div>;
+      </div>;
+      {/* CSS for hexagon clip */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <style jsx>{`;
         .clip-hexagon {}}>;
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />;
@@ -277,9 +372,23 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
       <style jsx>{`;
         .clip - hexagon {clip - path: polygon (50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)}
       `}</style>;
+<<<<<<< HEAD
     </>)}}export default UltraFuturisticBackground2047;        }
       `}</style>;
     </>;
   )}
 export default UltraFuturisticBackground2047;export default UltraFuturisticBackground2047;
 export default UltraFuturisticBackground2047;}export default UltraFuturisticBackground2047;
+=======
+    </>);
+}
+};
+export default UltraFuturisticBackground2047;        }
+      `}</style>
+    </>
+  )
+}
+export default UltraFuturisticBackground2047;
+export default UltraFuturisticBackground2047;
+export default UltraFuturisticBackground2047;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

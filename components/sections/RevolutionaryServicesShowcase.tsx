@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 const RevolutionaryServicesShowcase: React.FC = () => {const [activeCategory, setActiveCategory] = useState('all')const [visibleServices, setVisibleServices] = useState(12)const categories = [;
@@ -19,6 +20,51 @@ const RevolutionaryServicesShowcase: React.FC;
       })const loadMore = () => {setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length))setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length))duration: 0.5,},},}return (<section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}return (<section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
+=======
+const RevolutionaryServicesShowcase: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [visibleServices, setVisibleServices] = useState(12);
+  const categories = [
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: {
+      opacity: 1;
+    y: 0
+      transition: {
+  const filteredServices = activeCategory === 'all' ;
+    ? allServices ;
+    : allServices && allServices.filter(service => {;
+        if (activeCategory === 'ai') return service && service.category.includes('AI');
+        if (activeCategory === 'quantum') return service && service.category.includes('Quantum');
+        if (activeCategory === 'emerging') return emergingTech2025Services && emergingTech2025Services.includes(service);
+        if (activeCategory === 'enterprise') return enterpriseIT2025Services && enterpriseIT2025Services.includes(service);
+        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices && revolutionary2025MicroSaasServices.includes(service);
+        return true;
+      });
+  const loadMore = () => {;
+    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length))
+};
+  return (
+    <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
+      <div className='max-w-7xl mx-auto'>;
+        {/* Header */}
+  return (
+    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+  return (
+    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+        <motion&& motion.div
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
+  return (
+    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
         <motion.div;
@@ -71,8 +117,11 @@ const RevolutionaryServicesShowcase: React.FC;
           </p>;
         </motion.div>;
         {/* Category Filter */}
+<<<<<<< HEAD
 <motion.div;
           className='flex flex-wrap justify-center gap-4 mb-12';
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -90,9 +139,16 @@ const RevolutionaryServicesShowcase: React.FC;
                 {category.count}</span>;
             </button>;
           ))}
+<<<<<<< HEAD
         </motion.div>;
         {/* Services Grid */}<motion&& motion.div;
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12';
+=======
+        </motion.div>
+        {/* Services Grid */}
+        <motion&& motion.div
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           variants={containerVariants}
           initial='hidden';
           whileInView='visible'          viewport={{ once: true }}          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12";
@@ -196,10 +252,18 @@ className='group relative cursor-pointer';
         </motion.div>;
         {/* Services Grid */}
               style={{ perspective: '1000px' }}
+<<<<<<< HEAD
             >;
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>;
               <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full">;
                 {/* Background Effects */}<div className="absolute inset-0 rounded-2xl overflow-hidden">;
+=======
+            >
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>
+              <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full">
+                {/* Background Effects */}
+                <div className="absolute inset-0 rounded-2xl overflow-hidden">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>;
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>;
                 </div>;{/* Popular Badge */}
@@ -210,12 +274,23 @@ className='group relative cursor-pointer';
                   <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>;
                 </div>;
                 {/* Popular Badge */}
+<<<<<<< HEAD
                 {service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
                     <Star className='w-3 h-3 inline mr-1' />;
                     POPULAR;
                   </div>;
                 )}<div>;
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>;
+=======
+                {service.popular && (
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                    <Star className="w-3 h-3 inline mr-1" />
+                    POPULAR
+                  </div>
+                )}
+                      <div>
+                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <motion.div;
           className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12';
           variants={container_variants}
@@ -260,6 +335,7 @@ className='group relative cursor-pointer';
                     <div className='flex items - center space - x-3'>;
                       <div className='text - 4xl'>{service.icon}</div>;
                       <div>;
+<<<<<<< HEAD
                         <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;{/* Service Header */}
 <div className='relative z-10'>;
                   <div className='flex items-start justify-between mb-4'>;
@@ -267,6 +343,16 @@ className='group relative cursor-pointer';
                       <div className='text-4xl'>{service.icon}</div>;
                       <div>;
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>;
+=======
+                        <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
+                {/* Service Header */}
+                <div className='relative z-10'>
+                  <div className='flex items-start justify-between mb-4'>
+                    <div className='flex items-center space-x-3'>
+                      <div className='text-4xl'>{service.icon}</div>
+                      <div>
+                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 {/* Popular Badge */}
                 {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
                     <Star className='w-3 h-3 inline mr-1' />                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">;
@@ -321,6 +407,7 @@ className='group relative cursor-pointer';
                       Learn More;
                     </button>;
                   </div>;
+<<<<<<< HEAD
                 </div>;className='text-center'            initial={{ opacity: 0 }}          <motion.div;
             className='text-center'            initial={{ opacity: 0 }}          <motion.div;
         {visibleServices < filteredServices && filteredServices.length && (<motion&& motion.div;
@@ -406,10 +493,27 @@ className='group relative cursor-pointer';
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (<motion.div;
             className='text-center';
+=======
+                </div>;
+            className='text-center'            initial={{ opacity: 0 }}          <motion.div
+            className='text-center'            initial={{ opacity: 0 }}          <motion.div 
+        {visibleServices < filteredServices && filteredServices.length && (;
+          <motion&& motion.div
+            className='text-center'            initial={{ opacity: 0 }}          <motion && motion.div 
+            className="text-center"
+            className='text-center'            initial={{ opacity: 0 }}          <motion.div 
+            className="text-center"
+        {/* Load More Button */}
+        {visibleServices < filteredServices.length && (
+          <motion.div
+            className='text-center'            initial={{ opacity: 0 }}
+            className="text-center"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
+<<<<<<< HEAD
             <button;
               onClick={loadMore}className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
             >;
@@ -420,6 +524,20 @@ className='group relative cursor-pointer';
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div;
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20";
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}initial={{ opacity: 0, y: 30 }}
+=======
+            <button
+              onClick={loadMore}
+            >
+              Load More Revolutionary Services
+            </button>
+          </motion.div>
+        )}
+          className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div 
+          className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}>;
@@ -453,6 +571,7 @@ className='group relative cursor-pointer';
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'>;
               Start Your Transformation;
             </a>;
+<<<<<<< HEAD
             <a;
               href='/pricing';
           </h3>;
@@ -479,6 +598,38 @@ className='group relative cursor-pointer';
       </div>;
     </section>;
 }export default RevolutionaryServicesShowcase;  ))}}export default RevolutionaryServicesShowcase;
+=======
+            <a
+              href='/pricing'
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join the revolution with our cutting-edge AI, quantum, and emerging technology services.
+            Transform your business and stay ahead of the competition.
+          </p>
+          <div className="flex flex-col sm: flex-row items-center justify-center gap-4">
+            <a
+              href="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+            >
+              Start Your Transformation
+            </a>
+            <a
+              href="/pricing"
+              className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
+            >
+              View Pricing
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+};
+export default RevolutionaryServicesShowcase;  );
+  )
+}
+};
+export default RevolutionaryServicesShowcase;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 {/* Floating Particles */}
                 <div className='absolute inset - 0 pointer - events - none overflow - hidden'>;
                   <div;
@@ -573,4 +724,17 @@ className='group relative cursor-pointer';
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>)}export default RevolutionaryServicesShowcase)}export default RevolutionaryServicesShowcase;export default RevolutionaryServicesShowcase;})}export default RevolutionaryServicesShowcase;
+=======
+    </section>);
+}
+;
+export default RevolutionaryServicesShowcase);
+}
+;
+export default RevolutionaryServicesShowcase;
+export default RevolutionaryServicesShowcase
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

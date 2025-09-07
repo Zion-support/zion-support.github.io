@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export default function CookieConsent() {const [isVisible, setIsVisible] = useState(false)const [showSettings, setShowSettings] = useState(false)const [preferences, setPreferences] = useState({necessary: true;
@@ -11,6 +12,59 @@ export default function CookieConsent() {const [isVisible, setIsVisible] = useSt
       functional: true;
     }export default function CookieConsent() {const [isVisible, setIsVisible] = useState(false)const [showSettings, setShowSettings] = useState(false)const [preferences, setPreferences] = useState({necessary: true,analytics: false,marketing: false,functional: false,})useEffect(() => {const consent = localStorage && localStorage.getItem("cookie-consent")if (!consent) {setIsVisible(true)}
   }, [])const acceptAll = () => {const allAccepted = {necessary: true,analytics: true,marketing: true,functional: true,}setPreferences(allAccepted)localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted))setIsVisible(false)setPreferences(onlyNecessary)localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary))setIsVisible(false)return null;
+=======
+export default function CookieConsent() {;
+  const [isVisible, setIsVisible] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [preferences, setPreferences] = useState({
+    necessary: true;
+    analytics: false
+    marketing: false
+    functional: false
+  });
+  useEffect(() => {
+    const consent = localStorage.getItem("cookie-consent");
+    if (!consent) {
+      setIsVisible(true);
+    }
+  }, []);
+  const acceptAll = () => {
+    const allAccepted = {
+      necessary: true
+      analytics: true
+      marketing: true
+      functional: true
+    }
+export default function CookieConsent() {;
+  const [isVisible, setIsVisible] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [preferences, setPreferences] = useState({;
+    necessary: true,;
+    analytics: false,;
+    marketing: false,;
+    functional: false,;
+  });
+  useEffect(() => {;
+    const consent = localStorage && localStorage.getItem("cookie-consent");
+    if (!consent) {;
+      setIsVisible(true);
+    }
+  }, []);
+  const acceptAll = () => {;
+    const allAccepted = {;
+      necessary: true,;
+      analytics: true,;
+      marketing: true,;
+      functional: true,
+};
+    setPreferences(allAccepted);
+    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
+    setIsVisible(false);
+    setPreferences(onlyNecessary);
+    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
+    setIsVisible(false);
+    return null;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   return (We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;

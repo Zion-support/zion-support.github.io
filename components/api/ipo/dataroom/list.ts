@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -8,10 +9,13 @@ import { appendAuditLog, resolveDataPath  } from '../../../../utils/api/storage'
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
+<<<<<<< HEAD
 
 
   if (!fs.existsSync(dir)) return res.status(200).json([]);
@@ -28,6 +32,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const files = fs.readdirSync(dir).map((name) => ({ name }));
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const section = String(req && req.query.section || "General");
   const dir = resolveDataPath(path && path.join("dataroom", section));
   if (!fs && fs.existsSync(dir)) return res && res.status(200).json([]);
@@ -38,9 +44,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   appendAuditLog({ type: "file_list", section });
   res && res.status(200).json(files);
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -57,7 +66,11 @@ function handler() {const section = String (req.query.section || "General")const
   const files = fs.readdir_sync (dir).map ((name) => ({ name }));
   appendAuditLog ({ type: "file_list", section });
   res.status (200).json (files);
+<<<<<<< HEAD
 }
 
 
 
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

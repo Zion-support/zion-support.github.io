@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export const advancedEmergingTechServices2025 = [;
@@ -1253,6 +1254,10 @@ export const advancedEmergingTechServices2025 = [
   {
 
 
+=======
+=======export const advancedEmergingTechServices2025 = [
+  {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   {
     features: [
       'Quantum-biological hybrid processing'
@@ -1264,11 +1269,56 @@ export const advancedEmergingTechServices2025 = [
       'Custom quantum bio algorithms'
       '24/7 platform monitoring'
     ]
+<<<<<<< HEAD
     pricing: {
+=======
       starter: {
-        price: 599
-        period: 'month'
-        features: [
+        price: 499,
+        period: 'month',
+        features: [;
+          'Up to 5 robots',
+          'Basic quantum features',
+          'Standard control',
+        ],
+      },
+      professional: {
+        price: 1299,
+        period: 'month',
+        features: [;
+          'Up to 25 robots',
+          'Advanced quantum features',
+          'Custom algorithms',
+          'Priority support',
+        ],
+      },
+      enterprise: {
+        price: 3299,
+        period: 'month',
+        features: [;
+          'Unlimited robots',
+          'Custom quantum solutions',
+          'White - label platform',
+          'Dedicated support team',
+        ],
+      },
+    },
+    category: 'Quantum Robotics',
+    tags: [;
+      'Quantum Computing',
+      'Robotics',
+      'Automation',
+      'Intelligent Systems',
+    ],
+    website: 'https://ziontechgroup.com / quantum - robotics - pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+      starter: {
+        price: 599;
+    period: "period",
+    features: [
           'Basic quantum bio features'
           'Standard processing'
           'Email support'
@@ -1834,9 +1884,7 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com'
     }
 ];      phone: '+1 302 464 0950';
-
       email: 'kleber@ziontechgroup && ziontechgroup.com'
-
     };
     marketSize: '$6 && 6.8B',
       starter: {
@@ -2343,6 +2391,7 @@ export const advancedEmergingTechServices2025 = [
         features: [
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   },;
+<<<<<<< HEAD
 
 
 ];      phone: '+1 302 464 0950';
@@ -2354,6 +2403,12 @@ export const advancedEmergingTechServices2025 = [
 
 
 
+=======
+];      phone: '+1 302 464 0950'
+};
+    marketSize: '$6 && 6.8B',    targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
+    competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
 ];
     market_size: '$6.8B',
@@ -2364,7 +2419,6 @@ export const advancedEmergingTechServices2025 = [
   }
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-
     },;
     marketSize: '$3.8B',;
     targetAudience: 'Space agencies, mining companies, aerospace firms, government agencies',;
@@ -2585,6 +2639,7 @@ export const advancedEmergingTechServices2025 = [
 ;
   }
 ];
+<<<<<<< HEAD
 ;
 
 export const advancedEmergingTechServices2025 = [;
@@ -2819,3 +2874,7 @@ export const advancedEmergingTechServices2025 = [;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
   }
 ];
+=======
+;  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

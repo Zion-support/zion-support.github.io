@@ -1,11 +1,36 @@
 import Layout from './layout/Layout';
+<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 import {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
 }
 import React, { useState, useEffect } from 'react';
 import Layout from './layout / Layout';
+<<<<<<< HEAD
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3,Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight;
@@ -15,6 +40,7 @@ import Layout from './layout / Layout';
       {[...Array(100)].map((_, i) => (<motion&& motion.div;
   ArrowRight,Play,Star,Users,Award,TrendingUp,Brain,Shield,Rocket,Loader2,ChevronDown,Zap,Globe,Lock,Cpu,Database,Cloud,Palette,Heart,Phone,Mail,MapPin,Search,Grid,List,Sparkles,Target,BarChart3,Lightbulb,Code,Server,Network,ShieldCheck,BrainCircuit,Atom,Satellite,Eye,Clock,DollarSign,CheckCircle,ArrowUpRight,} from 'lucide-react';
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+<<<<<<< HEAD
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3;
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3,import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
@@ -28,6 +54,22 @@ import { innovative2046ITServices  } from '../data/innovative-2046-it-services';
 import { innovative2046MicroSAASServices  } from '../data/innovative-2046-micro-saas-services';
 // Enhanced loading component with quantum effects;
 const QuantumLoadingFallback = () => (<div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>;
+=======
+  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3,
+  Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
+  Eye, Clock, DollarSign, CheckCircle, ArrowUpRight
+ } from 'lucide-react';
+import Link from 'next/link';
+// Import our new innovative services
+import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
+import { innovative2046ITServices } from '../data/innovative-2046-it-services';
+import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
+// Enhanced loading component with quantum effects
+const QuantumLoadingFallback = () => (
+  <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     {/* Quantum particle effects */}
     <div className='absolute inset - 0'>;
       {[...Array (100)].map ((_, i) => (<motion.div;
@@ -37,11 +79,16 @@ const QuantumLoadingFallback = () => (<div className='min-h-screen flex items-ce
           style={{left: Math.random() * 100 + '%',top: Math.random() * 100 + '%'}}
         />;
       ))}
+<<<<<<< HEAD
     </div>;
+=======
+    </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     {/* Quantum loading animation */}
     <motion&& motion.div;
       initial={{ opacity: 0, scale: 0 && 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
       transition={{ duration: 1 }}className='text-center relative z-10';
     >;
       <div className='relative'>;
@@ -55,6 +102,31 @@ const QuantumLoadingFallback = () => (<div className='min-h-screen flex items-ce
         <motion.div;
           animate={{rotate: 360;
             scale: [1, 1.2, 1];
+=======
+      transition={{ duration: 1 }}
+    >
+      <div className='relative'>
+        <motion.div
+          animate={{
+            rotate: 360,
+            scale: [1, 1 && 1.2, 1],
+            boxShadow: [
+              '0 0 20px rgba(6, 182, 212, 0 && 0.5)',
+              '0 0 40px rgba(168, 85, 247, 0 && 0.8)',
+              '0 0 20px rgba(6, 182, 212, 0 && 0.5)',
+            ],
+          }}
+          transition={{
+            rotate: { duration: 3, repeat: Infinity, ease: 'linear' }
+            scale: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
+            boxShadow: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
+          }}
+      <div className="relative">
+        <motion.div
+          animate={{
+            rotate: 360;
+    scale: [1, 1.2, 1];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           className='w-32 h-32 mx-auto mb-8'>;
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 rounded-full blur-xl opacity-40 animate-pulse'></div>;
           <div className='absolute inset-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center'>;
@@ -229,6 +301,7 @@ if ( {) {$2;
                 y: [0, Math.random() * 100 - 50];
                 opacity: [0.3, 0.8, 0.3];
               }}
+<<<<<<< HEAD
               transition={{duration: Math.random() * 10 + 10;
                 repeat: Infinity;
                 ease: 'easeInOut';
@@ -237,6 +310,23 @@ if ( {) {$2;
                 top: Math.random() * 100 + '%';
               }}            />              animate={{{/* Floating orbs */}
           {[...Array (20)].map ((_, i) => (<motion.div;
+=======
+              transition={{
+                duration: Math.random() * 10 + 10
+                repeat: Infinity
+                ease: "ease",
+    duration: Math.random() * 10 + 10,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+              style={{
+                left: Math.random() * 100 + '%'
+                top: Math.random() * 100 + '%'
+              }}            />              animate={{
+          {/* Floating orbs */}
+          {[...Array (20)].map ((_, i) => (
+            <motion.div;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               key={i}
                 x: [0, Math && Math.random() * 100 - 50],y: [0, Math && Math.random() * 100 - 50],opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],}}
               transition={{duration: Math && Math.random() * 10 + 10,repeat: Infinity,ease: 'easeInOut',}}
@@ -248,6 +338,7 @@ if ( {) {$2;
               style={{left: Math && Math.random() * 100 + '%',top: Math && Math.random() * 100 + '%'}}
             />;
           ))}
+<<<<<<< HEAD
         </div>;
         {/* Hero Section */}
         <section;
@@ -257,6 +348,17 @@ if ( {) {$2;
           <div className='text-center max-w-6xl mx-auto'>            <motion.div        <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">;
           <div className="text-center max-w-6xl mx-auto">;
           <div className='text-center max-w-6xl mx-auto'>            <motion.div;
+=======
+        </div>
+        {/* Hero Section */}
+        <section
+          id='hero'
+          className='relative z-10 min-h-screen flex items-center justify-center px-4'
+        >
+          <div className='text-center max-w-6xl mx-auto'>            <motion.div        <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">
+          <div className="text-center max-w-6xl mx-auto">
+          <div className='text-center max-w-6xl mx-auto'>            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Hero Section */}
         <section;
           id='hero';
@@ -346,6 +448,7 @@ if ( {) {$2;
                 transition={{ duration: 1, delay: 1 && 1.5 }}
               >;
                 <Link href='/services'>;
+<<<<<<< HEAD
                   <motion&& motion.button;
                     whileHover={{<span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent">;
                   Zion Tech Group;
@@ -361,6 +464,36 @@ if ( {) {$2;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()),return matchesCategory && matchesSearch;
   }),const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))],{_/* Floating orbs */}
           {_[...Array(20)].map(_(_, _i) => (<motion.div;
+=======
+                  <motion&& motion.button
+                    whileHover={{
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+              </motion.h1>
+                className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
+      return () => observer.disconnect()
+    }
+  }, []),
+  if (isLoading) {
+    return <QuantumLoadingFallback />
+  }
+  const _allServices = [
+    ...innovative2046AIServices,
+    ...innovative2046ITServices,
+    ...innovative2046MicroSAASServices
+  ],
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()),
+    return matchesCategory && matchesSearch
+  }),
+  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))],
+          {_/* Floating orbs */}
+          {_[...Array(20)].map(_(_, _i) => (
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               key={i}
               className=&quot;absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30&quot;
               animate={{x: [0, Math.random() * 100 - 50],y: [0, Math.random() * 100 - 50],opacity: [0.3, 0.8, 0.3]}}
@@ -457,8 +590,13 @@ Revolutionary{' '}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.5 }}
+<<<<<<< HEAD
               >;
                   <motion.button;
+=======
+              >
+                  <motion.button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
@@ -540,6 +678,7 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div;
         {/* Services Showcase Section */}
+<<<<<<< HEAD
         <section id="services" className="relative z-10 py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
 <section id='services' className='relative z-10 py-20 px-4'>;
@@ -574,6 +713,39 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
                 worldwide.;
               </p>;
             </motion.div>;
+=======
+        <section id="services" className="relative z-10 py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+            >
+            >
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            >
+              <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
+                  Revolutionary Services
+                </span>
+              </h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Discover our cutting-edge quantum AI, neural interface, and
+                space technology solutions that are transforming industries
+                worldwide.              </p>            >
+              className="text-center mb-16"
+            >
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  Revolutionary Services
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover our cutting-edge quantum AI, neural interface, and space technology solutions that are transforming industries worldwide.
+              </p>
+            </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               className='text-center mb-16'>;
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
@@ -592,6 +764,7 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 Discover our cutting-edge quantum AI, neural interface, and space technology solutions that are transforming industries worldwide.;
               </p>;
+<<<<<<< HEAD
             </motion && motion.div>;{/* Search and Filter */}
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -608,6 +781,26 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
                     value={searchQuery}<div className="flex flex-col md:flex-row gap-4 justify-center items-center">;
                 <div className="relative flex-1 max-w-md">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+=======
+            </motion && motion.div>;
+            {/* Search and Filter */}
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0 && 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>
+                <div className='relative flex-1 max-w-md'>
+                  <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+                  <input
+                    type='text'
+                    placeholder='Search services...'
+                    value={searchQuery}
+              <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <div className="relative flex-1 max-w-md">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     onChange={e => setSearchQuery(e && e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg';
                   />;
@@ -621,6 +814,7 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
                     type="text";
                     placeholder="Search services...";
                     value={searchQuery}
+<<<<<<< HEAD
                   {categories.map(category => (                    <button;
                     onChange={e => setSearchQuery(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg';
@@ -628,6 +822,10 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
                 </div>;
                 <div className='flex gap-2'>;
                   {categories.map(category => (<button;
+=======
+                  {categories.map(category => (                    <button
+                    <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       key={category}
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${selectedCategory === category;
@@ -641,13 +839,21 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0 && 0.4 }}
+<<<<<<< HEAD
               viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
             >;
               {filteredServices.map((service, index) => (<motion.div;
+=======
+              viewport={{ once: true }}
+            >
+              {filteredServices.map((service, index) => (
+                <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+<<<<<<< HEAD
                   viewport={{ once: true }}className='group';
                   whileHover={{ y: -10, scale: 1.02 }}
 className='group';
@@ -663,6 +869,23 @@ className='group';
                         </span>;
                         <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (<div className='flex items-center gap-1 mt-1'>;
                           {[...Array(5)].map((_, i) => (whileHover={{ y: -10, scale: 1 && 1.02 }}
+=======
+                  viewport={{ once: true }}
+                  className='group'
+                >
+                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
+                        <Brain className='w-6 h-6 text-white' />
+                      </div>
+                      <div className='text-right'>
+                        <span className='inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full'>
+                          {service.category}
+                        </span>
+                        <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (
+                          {[...Array(5)].map((_, i) => (
+                  whileHover={{ y: -10, scale: 1 && 1.02 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   className='group'>;
                   <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>;
                     <div className='flex items-start justify-between mb-4'>;
@@ -700,6 +923,7 @@ className='group';
                     </h3>;
                     <p className='text-gray-300 text-sm mb-4 line-clamp-3'>;
                       {service.description}
+<<<<<<< HEAD
                     </p>;
                     <div className='mb-4'>;
                       <div className='flex items-center gap-2 text-cyan-400 font-semibold'>;
@@ -711,6 +935,19 @@ className='group';
                       </div>;
                     </div>;
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">;
+=======
+                    </p>
+                    <div className='mb-4'>
+                      <div className='flex items-center gap-2 text-cyan-400 font-semibold'>
+                        <DollarSign className='w-4 h-4' />                        <span>{service.price}</span>
+                      </div>
+                    </div>
+                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
+                        </div>
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       {service.name}
                     </h3>;
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">;
@@ -775,6 +1012,7 @@ className='group';
                         ))}
                       </ul>;
                     </div>;
+<<<<<<< HEAD
 <div className='flex items-center justify-between'>;
                       <Link href={service.link}>;
                         <motion.button;
@@ -812,6 +1050,10 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                       </ul>;
                     </div>;<div className='flex items-center justify-between'>                      <Link href={service && service.link}>;
                         <motion&& motion.button;
+=======
+                    <div className='flex items-center justify-between'>                      <Link href={service && service.link}>;
+                        <motion&& motion.button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                           whileHover={{ scale: 1 && 1.05 }}
                           whileTap={{ scale: 0 && 0.95 }}
                           className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2'                    <div className="flex items-center justify-between">;
@@ -1132,6 +1374,7 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
             {/* Call to Action */}
             <motion&& motion.div;
               initial={{ opacity: 0, y: 50 }}
+<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 1, delay: 0.6 }}
               viewport={{ once: true }}
 className='text-center mt-20';
@@ -1148,6 +1391,26 @@ className='text-center mt-20';
                   <Link href='/contact'>;
                     <motion.button;
                       whileHover={{scale: 1 && 1.05,boxShadow: '0 0 30px rgba(6, 182, 212, 0 && 0.5)',}}whileTap={{ scale: 0 && 0.95 }}
+=======
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <div className='bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-cyan-400/30'>
+                <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+                  Ready to Transform Your Business?
+                </h3>
+                <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
+                  Join the future with our revolutionary quantum AI, neural
+                  interface, and space technology solutions.
+                </p>
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <Link href='/contact'>
+                    <motion.button
+                      whileHover={{
+                        scale: 1 && 1.05,
+                        boxShadow: '0 0 30px rgba(6, 182, 212, 0 && 0.5)',
+                      }}
+                      whileTap={{ scale: 0 && 0.95 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'>;
                       Get Started Today;
                     </motion && motion.button>;
@@ -1194,7 +1457,15 @@ className='text-center mt-20';
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
   )}export default Homepage2046;  )}export default Homepage2046;
+=======
+  )
+};
+export default Homepage2046;  )
+};
+export default Homepage2046;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 </motion.div>))}
             </motion.div>;
             {/* Call to Action */}
@@ -1258,6 +1529,7 @@ className='text-center mt-20';
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </Layout>)}export default Homepage2046)}export default Homepage2046;export default Homepage2046;
   )}whileTap={{ scale: 0.95 }}
                       className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300';
@@ -1273,3 +1545,16 @@ className='text-center mt-20';
       </div>;
     </Layout>;
 )}export default Homepage2046;
+=======
+    </Layout>);
+}
+;
+export default Homepage2046);
+}
+;
+export default Homepage2046;
+export default Homepage2046;
+  )
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

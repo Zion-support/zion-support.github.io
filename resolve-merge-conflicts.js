@@ -107,7 +107,6 @@ function resolveConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('') || !content.includes('') || !content.includes('>>>>>>> main')) {
       console.log(`✅ No conflicts in: ${filePath}`);
       return true;
     }
@@ -130,7 +129,6 @@ function resolveConflicts(filePath) {
       } else if (line.startsWith('')) {
         conflictType = 'main';
         continue;
-      } else if (line.startsWith('>>>>>>> main')) {
         inConflict = false;
         conflictType = null;
         continue;

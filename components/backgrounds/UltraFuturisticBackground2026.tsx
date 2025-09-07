@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useEffect, useRef } from 'react';
@@ -13,6 +14,9 @@ interface UltraFuturisticBackground2026Props  {children: React.ReactNode;
     canvas.height = window.innerHeight;
     let particles: Array<{x: number;
       y: number;vx: number;
+=======
+vx: number;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       vy: number;
       size: number;
       color: string;
@@ -44,6 +48,7 @@ interface UltraFuturisticBackground2026Props  {children: React.ReactNode;
       for (let i = 0; i < 100; i++) {particles && particles.push(createParticle())}        x;
         y;
         vx;
+<<<<<<< HEAD
         vy;y = -10;
           vx = (Math.random() - 0.5) * 2;
           vy = Math.random() * 2 + 1;
@@ -64,6 +69,60 @@ interface UltraFuturisticBackground2026Props  {children: React.ReactNode;
           vx = Math.random() * 2 + 1;
           vy = (Math.random() - 0.5) * 2;
 break;
+=======
+        vy;
+        // Draw particle
+        ctx.save();
+        ctx.globalAlpha = particle.alpha;
+        ctx.fillStyle = particle.color;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+        // Draw glow effect
+        const gradient = ctx.createRadialGradient(
+        );
+        gradient && gradient.addColorStop(0, particle && particle.color);
+        gradient && gradient.addColorStop(1, 'transparent');
+        ctx && ctx.fillStyle = gradient;
+        ctx && ctx.beginPath();
+        ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size * 3, 0, Math && Math.PI * 2);
+        ctx && ctx.fill();
+        ctx && ctx.restore();      });        ctx && ctx.restore();
+      });
+          );
+          if (distance < 100) {;
+            ctx && ctx.beginPath();
+            ctx && ctx.moveTo(particle1 && particle1.x, particle1 && particle1.y);
+            ctx && ctx.lineTo(particle2 && particle2.x, particle2 && particle2.y);
+            ctx && ctx.stroke();
+          }
+        });      });            ctx && ctx.stroke();
+          }
+        });
+      }
+      for (let coordinate_y = 0, y < canvas.height, y += grid_size) {
+        ctx.begin_path ();
+        ctx.move_to (0, y);
+        ctx.line_to (canvas.width, y);
+        ctx.stroke ();
+      }
+      animationRef && animationRef.current = requestAnimationFrame(animate)
+};
+    const handleResize = () => {;
+      canvas && canvas.width = window && window.innerWidth;
+      canvas && canvas.height = window && window.innerHeight
+};        ctx && ctx.beginPath();
+        ctx && ctx.moveTo(x, 0);
+        ctx && ctx.lineTo(x, canvas && canvas.height);
+        ctx && ctx.stroke();
+      }
+      for (let y = 0, y < canvas && canvas.height, y += gridSize) {;
+        ctx && ctx.beginPath();
+        ctx && ctx.moveTo(0, y);
+        ctx && ctx.lineTo(canvas && canvas.width, y);
+        ctx && ctx.stroke();
+      }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
       return {x,y,vx,vy,size: Math.random() * 3 + 1,color: colors[Math.floor(Math.random() * colors.length)],alpha: Math.random() * 0.8 + 0.2,life: 0,maxLife: Math.random() * 200 + 100,}}const initParticles = () => {particles = [];
 for (let i = 0; i < 100; i++) {particles.push(createParticle())}
@@ -111,10 +170,19 @@ canvas.height = window.innerHeight;
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20";
           animate={{}}
         />;
+<<<<<<< HEAD
         <motion&& motion.div;
           className='absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full';
           animate={{transition={{duration: 6;
             repeat: Infinity;
+=======
+        <motion&& motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full'
+          animate={{
+          transition={{
+            duration: 6;
+    repeat: Infinity
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ease: 'easeInOut',          }}
         />;
         <motion&& motion.div;
@@ -159,10 +227,18 @@ canvas.height = window.innerHeight;
             repeat: Infinity;
             ease: 'linear',          }}          }}
         />;
+<<<<<<< HEAD
         <motion&& motion.div;
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12";
           animate={{rotate: [0, -180, -360];
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4];
+=======
+        <motion&& motion.div
+          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12"
+          animate={{
+            rotate: [0, -180, -360]
+            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }}
           transition={{duration: 10;
             repeat: Infinity;
@@ -174,8 +250,16 @@ canvas.height = window.innerHeight;
       </div>;{/* Energy Field Effects */}/>;
       </div>;
       {/* Energy Field Effects */}
+<<<<<<< HEAD
 <div className='fixed inset-0 pointer-events-none z-20'>;
         <motion.div;
+=======
+        />
+      </div>
+      {/* Energy Field Effects */}
+      <div className='fixed inset-0 pointer-events-none z-20'>
+        <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Energy Field Effects */}
       <div className='fixed inset-0 pointer-events-none z-20'>;
         <motion&& motion.div;
@@ -188,6 +272,7 @@ canvas.height = window.innerHeight;
       <div className='fixed inset - 0 pointer - events - none z - 20'>;
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent';
+<<<<<<< HEAD
             duration: 10,repeat: Infinity,/>;
       </div>;
       {/* Energy Field Effects */}
@@ -214,6 +299,51 @@ ease: 'linear',}}}}duration: 20,repeat: Infinity,}}/>;
       </div>;{/* Content */}
           }}
       <div className='relative z-30'>{children}</div>;{/* Holographic Overlay */}
+=======
+            duration: 10,
+            repeat: Infinity,
+        />
+      </div>
+      {/* Energy Field Effects */}
+      <div className='fixed inset-0 pointer-events-none z-20'>
+        <motion.div
+          className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
+          animate={{
+            coordinate_x: ['-100%', '100%'],          }}
+          transition={{
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent"
+            ease: 'linear',        <motion.div;
+          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan-500 / 5 to-transparent";
+          animate={{
+            coordinate_x: ['-100%100%'];
+          }}
+          transition={{
+          animate={{
+            coordinate_y: ['-100%100%'];
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+          }}
+            duration: 20,
+            repeat: Infinity,
+            ease: 'linear',            ease: "linear"
+          }}
+          }}
+            duration: 20,
+            repeat: Infinity,
+          }}
+        />
+      </div>
+      {/* Content */}
+      <div className='relative z-30'>{children}</div>
+        />;
+      </div>;
+      {/* Content */}
+          }}
+      <div className='relative z-30'>{children}</div>;
+      {/* Holographic Overlay */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className='fixed inset-0 pointer-events-none z-40'>;
         <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />;
         <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />;
@@ -237,6 +367,7 @@ ease: 'linear',}}}}duration: 20,repeat: Infinity,}}/>;
       </div>;
     </div>)}export default UltraFuturisticBackground2026;<div className='relative z-30'>{children}</div>;
       {/* Holographic Overlay */}
+<<<<<<< HEAD
       <div className='fixed inset-0 pointer-events-none z-40'>;
         <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />;
         <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />;
@@ -251,3 +382,25 @@ ease: 'linear',}}}}duration: 20,repeat: Infinity,}}/>;
   )}
 export default UltraFuturisticBackground2026;export default UltraFuturisticBackground2026;
 export default UltraFuturisticBackground2026;}
+=======
+      <div className='fixed inset-0 pointer-events-none z-40'>
+        <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />
+        <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />
+      </div>
+    </div>
+  );
+export default UltraFuturisticBackground2026;
+      {/* Holographic Overlay */}
+      <div className="fixed inset-0 pointer-events-none z-40">
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent" />
+      </div>
+    </div>
+  )
+}
+export default UltraFuturisticBackground2026;
+export default UltraFuturisticBackground2026;
+export default UltraFuturisticBackground2026
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

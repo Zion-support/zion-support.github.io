@@ -21,6 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const vendors = listVendors();
   res.status(200).json({ vendors })
+<<<<<<< HEAD
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -29,6 +30,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const vendors = listVendors();
   res.status(200).json({ vendors })
 }
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import { list_vendors } from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -41,6 +45,7 @@ function handler() {
 function handler() {
   const vendors = list_vendors ();
   res.status (200).json ({ vendors });
+<<<<<<< HEAD
 }
 
 
@@ -58,3 +63,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 }
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

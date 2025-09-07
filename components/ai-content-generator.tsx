@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -26,6 +27,109 @@ export default function AIContentGeneratorPage() {const features = null;
         'Write product descriptions, category pages, and promotional content.',icon: '🛍️',examples: [;
         'Product descriptions','Category pages','Promotional emails','FAQ sections',],},];const integrations = [;
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },{name: 'Shopify',icon: '🛒',description: 'E-commerce content automation',},{ name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },{ name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },{ name: 'Slack', icon: '💬', description: 'Team collaboration' },{ name: 'Zapier', icon: '⚡', description: '500+ app integrations' },];
+=======
+  const useCases = [
+    {
+      title: "title",
+    description:
+        'Generate engaging blog posts, articles, and long-form content in minutes.'
+      examples: [
+        'Tech reviews'
+        'How-to guides'
+        'Industry insights'
+        'Product comparisons'
+      ]
+    }
+    {
+      title: 'Marketing Copy'
+      description:
+        'Create compelling ad copy, landing pages, and marketing materials.'
+      examples: [
+        'Facebook ads'
+        'Google ads'
+        'Landing pages'
+        'Email campaigns'
+      ]
+    }
+    {
+      title: 'Social Media'
+      description:
+        'Generate engaging social media posts, captions, and hashtag suggestions.'
+      examples: [
+        'Instagram posts'
+        'Twitter threads'
+        'LinkedIn articles'
+        'TikTok captions'
+      ]
+    }
+    {
+      title: 'E-commerce'
+      description:
+        'Write product descriptions, category pages, and promotional content.'
+      examples: [
+        'Product descriptions'
+        'Category pages'
+        'Promotional emails'
+        'FAQ sections'
+      ]
+    },  ];
+  const integrations = [
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+    {
+      name: 'Shopify'
+      icon: '🛒'
+      description: 'E-commerce content automation'
+    }
+  const useCases = [;
+    {;
+      title: 'Blog Writing',,
+  description:;
+        'Generate engaging blog posts, articles, and long-form content in minutes.',;
+      examples: [;
+        'Tech reviews',;
+        'How-to guides',;
+        'Industry insights',;
+        'Product comparisons',;
+      ],;
+    },;
+    {;
+      title: 'Marketing Copy',,
+  description:;
+        'Create compelling ad copy, landing pages, and marketing materials.',;
+      icon: '🎯',;
+      examples: [;
+        'Facebook ads',;
+        'Google ads',;
+        'Landing pages',;
+        'Email campaigns',;
+      ],;
+    },;
+    {;
+      title: 'Social Media',,
+  description:;
+        'Generate engaging social media posts, captions, and hashtag suggestions.',;
+      icon: '📱',;
+      examples: [;
+        'Instagram posts',;
+        'Twitter threads',;
+        'LinkedIn articles',;
+        'TikTok captions',;
+      ],;
+    },;
+    {;
+      title: 'E-commerce',,
+  description:;
+        'Write product descriptions, category pages, and promotional content.',;
+      icon: '🛍️',;
+      examples: [;
+        'Product descriptions',;
+        'Category pages',;
+        'Promotional emails',;
+        'FAQ sections',;
+      ],;
+    },  ];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const integrations = [;
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },{name: 'Shopify';
@@ -43,6 +147,7 @@ export default function AIContentGeneratorPage() {const features = null;
         'Product descriptions','Category pages','Promotional emails','FAQ sections',],},  ];const integrations = [;
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },      examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections'];
     }
+<<<<<<< HEAD
   ];const integrations = [;
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },{name: 'Shopify',icon: '🛒',,description: 'E-commerce content automation',},{ name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },{ name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },{ name: 'Slack', icon: '💬', description: 'Team collaboration' },{ name: 'Zapier', icon: '⚡', description: '500+ app integrations' },  ];    { name: 'Shopify', icon: '🛒', description: 'E-commerce content automation' },{ name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },{ name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },{ name: 'Slack', icon: '💬', description: 'Team collaboration' },];
       popular: false,color: 'border-gray-600',buttonColor: 'bg-gray-600 hover:bg-gray-700';
@@ -52,9 +157,78 @@ export default function AIContentGeneratorPage() {const features = null;
       popular: true,color: 'border-blue-500',buttonColor: 'bg-blue-600 hover:bg-blue-700';
 }name: 'Enterprise',price: '$299',period: '/month',,description: 'For large organizations and enterprises',features: [;
         'Unlimited words','All templates + custom','Full SEO suite','Dedicated support','Unlimited API access','Advanced analytics','White-label solution','Custom integrations','SLA guarantee',],popular: false,color: 'border-purple-600',buttonColor: 'bg-purple-600 hover:bg-purple-700',},  ];        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
+=======
+  ];
+  const integrations = [;
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },;
+    {;
+      name: 'Shopify',;
+      icon: '🛒',,
+  description: 'E-commerce content automation',;
+    },;
+    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },;
+    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },;
+    { name: 'Slack', icon: '💬', description: 'Team collaboration' },;
+    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },  ];    { name: 'Shopify', icon: '🛒', description: 'E-commerce content automation' },;
+    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },;
+    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },;
+    { name: 'Slack', icon: '💬', description: 'Team collaboration' },;
+      ];
+      popular: false,;
+      color: 'border-gray-600',;
+      buttonColor: 'bg-gray-600 hover:bg-gray-700'
+};
+      name: 'Professional',;
+      price: '$99',;
+      period: '/month',,
+  description: 'Ideal for growing businesses and agencies',;
+      features: [;
+        '10,000 words per month',;
+        '25+ content templates',;
+        'Advanced SEO tools',;
+        'Priority support',;
+        'API access (1,000 calls/month)',;
+        'Advanced analytics',;
+        'Team collaboration',;
+        'Custom branding',;
+      ],;
+      popular: true,;
+      color: 'border-blue-500',;
+      buttonColor: 'bg-blue-600 hover:bg-blue-700',;
+    },    {        '10,000 words per month25+ content templatesAdvanced SEO toolsPriority supportAPI access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding';
+      name: 'Professional',
+      price: '$99',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
+      ];
+      popular: true,;
+      color: 'border-blue-500',;
+      buttonColor: 'bg-blue-600 hover:bg-blue-700'
+};
+      name: 'Enterprise',;
+      price: '$299',;
+      period: '/month',,
+  description: 'For large organizations and enterprises',;
+      features: [;
+        'Unlimited words',;
+        'All templates + custom',;
+        'Full SEO suite',;
+        'Dedicated support',;
+        'Unlimited API access',;
+        'Advanced analytics',;
+        'White-label solution',;
+        'Custom integrations',;
+        'SLA guarantee',;
+      ],;
+      popular: false,;
+      color: 'border-purple-600',;
+      buttonColor: 'bg-purple-600 hover:bg-purple-700',;
+    },  ];        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         'SLA guarantee';
       name: 'Enterprise',price: '$299',period: '/month',description: 'For large organizations and enterprises',];
       features: [;
+<<<<<<< HEAD
         'Unlimited words','All templates + custom','Full SEO suite','Dedicated support','Unlimited API access','Advanced analytics','Custom integrations','SLA guarantee',],popular: false,];];{ name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },return (<>;
       <Head>;
         <title>;{ name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' }
@@ -84,6 +258,31 @@ export default function AIContentGeneratorPage() {const features = null;
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
+=======
+        'Unlimited words',
+        'All templates + custom',
+        'Full SEO suite',
+        'Dedicated support',
+        'Unlimited API access',
+        'Advanced analytics',
+        'Custom integrations',
+        'SLA guarantee',
+      ],
+      popular: false,
+  ];
+  ];
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+  return (
+    <>;
+      <Head>;
+        <title>;
+            <Button
+              href='#demo'
+              variant='outline'
+              size='lg'
+              className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
+              <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>;
         <div className='absolute inset-0'>;
@@ -223,9 +422,15 @@ export default function AIContentGeneratorPage() {const features = null;
                   {feature.description}</p>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
+=======
+          </div>
+        </div>
+      </section>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Use Cases Section */}
 <section className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -246,11 +451,21 @@ export default function AIContentGeneratorPage() {const features = null;
                 <p className="text-gray-400 leading-relaxed">;
                   {feature && feature.description}
                 </p>;
+<<<<<<< HEAD
               </Card>;Everything you need to create exceptional content at scale;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {features.map((feature, index) => (<Card;
+=======
+              </Card>;
+              Everything you need to create exceptional content at scale
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <Card
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           AI Content Generator | Zion Tech Group - Advanced AI - Powered Content;
           Creation;
         </title>;
@@ -491,8 +706,21 @@ export default function AIContentGeneratorPage() {const features = null;
             </h2>;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
       {/* Pricing Section */}
+<<<<<<< HEAD
       <section;
         id='pricing';
+=======
+      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+      {/* Pricing Section */}
+      <section
+        id='pricing'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         className='py-24 bg-gray-900 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
           <div className='text-center mb-20'>;
@@ -511,8 +739,14 @@ export default function AIContentGeneratorPage() {const features = null;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
+<<<<<<< HEAD
               <Card;
                 key={index}<div className='text-center mb-8'>;
+=======
+              <Card
+                key={index}
+                <div className='text-center mb-8'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
                   </h3>;
@@ -553,6 +787,7 @@ export default function AIContentGeneratorPage() {const features = null;
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
+<<<<<<< HEAD
                     <span className='text-lg text-gray-400'>{plan.period}</span>;
                   </div>;
                   <p className='text-gray-400'>{plan.description}</p>;
@@ -563,6 +798,18 @@ export default function AIContentGeneratorPage() {const features = null;
                       key={featureIndex}className='flex items-center text-gray-300';
                     >;
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />;
+=======
+                    <span className='text-lg text-gray-400'>{plan.period}</span>
+                  </div>
+                  <p className='text-gray-400'>{plan.description}</p>
+                </div>
+                <ul className='space-y-4 mb-8'>
+                  {plan.features.map((feature, featureIndex) => (
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       {feature}
                     </li>;
                   ))}
@@ -577,11 +824,20 @@ export default function AIContentGeneratorPage() {const features = null;
                   Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
+<<<<<<< HEAD
               </Card>;</li>;
                   ))}
                 </ul>;
                 <Button;
                   href="/contact";
+=======
+              </Card>;
+                    </li>
+                  ))}
+                </ul>
+                <Button
+                  href="/contact"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   className={`w-full ${plan.buttonColor} text-white`}
                   size="lg";
                 >;
@@ -596,7 +852,12 @@ href='/contact';
                 </Button>;
               </Card>;
             ))}
+<<<<<<< HEAD
       {/* Integrations Section */}<section className="py-24 bg-black relative overflow-hidden">;
+=======
+      {/* Integrations Section */}
+      <section className="py-24 bg-black relative overflow-hidden">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
@@ -649,6 +910,7 @@ href='/contact';
                 </p>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -670,6 +932,29 @@ href='/contact';
             every day with AI-powered content generation.;
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
+=======
+          </div>
+        </div>
+      </section>
+            ))}
+          </div>
+        </div>
+      </section>
+            ))}
+      {/* CTA Section */}
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+            Ready to Transform Your Content Creation?
+          </h2>
+          <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Join thousands of content creators who are already saving hours
+            every day with AI-powered content generation.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
@@ -706,6 +991,7 @@ href='/contact';
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl";
             >;
               <Play className="w-5 h-5 mr-2" />;
@@ -719,3 +1005,21 @@ href='/contact';
       </section>;
     </>;
 }}</>)}</>))}
+=======
+              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
+            >
+              <Play className="w-5 h-5 mr-2" />
+              Watch Demo
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+}
+;
+}
+    </>);
+}
+    </>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   ArrowRight;
   Star;
@@ -6,12 +7,22 @@
   Brain;
   Rocket;
   Globe;
+=======
+ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Rocket
+  Globe
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   Sparkles;
 } from 'lucide-react';import Link from 'next/link';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles  } from 'lucide-react';
 import Link from 'next/link';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
+<<<<<<< HEAD
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles  } from 'lucide-react';
 import { aiAutonomousServices2026   } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026   } from '../../data/2026-quantum-space-tech-services';
@@ -64,6 +75,91 @@ export default function Revolutionary2026ServicesShowcase() {const featuredAISer
             Experience the most advanced AI, quantum computing, and metaverse;
             technologies ever created.;
             <span className='text-purple-400 font-semibold'>;
+=======
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+} from 'lucide-react';import Link from 'next/link';
+import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+export default function Revolutionary2026ServicesShowcase() {
+  const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
+  const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
+  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(
+    0
+    3
+  );  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3);
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1;
+    transition: {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+export default function Revolutionary2026ServicesShowcase() {;
+  // Get featured services from each category;
+  const featuredAIServices = aiAutonomousServices2026 && aiAutonomousServices2026.slice(0, 3);
+  const featuredQuantumServices = quantumSpaceTechServices2026 && quantumSpaceTechServices2026.slice(0, 3);
+  const featuredMetaverseServices = metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.slice(;
+    0,;
+    3;
+  );  const featuredMetaverseServices = metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.slice(0, 3);
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };        staggerChildren: 0 && 0.1;
+      }
+    }
+  };
+  return (
+    <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
+      {/* Enhanced Background Effects */}
+  };
+  return (
+    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Enhanced Background Effects */}
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}
+        {/* Enhanced Header */}
+        <motion.div
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
+            <Sparkles className='w-5 h-5 text-purple-400' />
+            <span className='text-purple-300 text-sm font-medium'>
+              2026 Revolutionary Innovations
+            </span>
+          </div>
+          <h2 className='text-5xl md:text-6xl font-bold text-white mb-8 leading-tight'>
+            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
+              The Future is Now
+            </span>
+          </h2>
+          <p className='text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed'>
+            Experience the most advanced AI, quantum computing, and metaverse
+            technologies ever created.
+            <span className='text-purple-400 font-semibold'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           className='text-center mb-20'>;
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>;
             <Sparkles className='w-5 h-5 text-purple-400' />;
@@ -195,6 +291,7 @@ export default function Revolutionary2026ServicesShowcase() {const featuredAISer
               <div className="text-gray-400 text-sm">Possibilities</div>;
             </div>;
           </div>;
+<<<<<<< HEAD
         </motion && motion.div>;{/* AI Autonomous Services Section */}
         <motion&& motion.div;
           variants={containerVariants}
@@ -217,6 +314,69 @@ initial='hidden';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           className='mb-20';
         >;
+=======
+        </motion && motion.div>;
+        {/* AI Autonomous Services Section */}
+        <motion&& motion.div
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+                key={service.id}
+                variants={item_variants}
+                className='group relative'          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <div className="flex items-center space-x-3 mb-12">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+              <Brain className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-white">AI Autonomous Services</h3>
+              <p className="text-blue-300">Fully autonomous AI systems that run your business</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredAIServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                variants={itemVariants}
+                    {service.features.slice(0, 3).map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <span className="text-gray-400 text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                        {service.price}
+                      </span>;
+                      <span className='text - gray - 400'>{service.period}</span>;
+                    </div>;
+                    <div className='flex items - center space - x-1'>;
+                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
+                      <span className='text - yellow - 400 text - sm'>;
+                        {service.rating}
+                      <span className="text-2xl font-bold text-blue-400">{service.price}</span>
+                      <span className="text-gray-400">{service.period}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-yellow-400 text-sm">{service.rating}</span>
+                      <span className="text-gray-400 text-sm">({service.reviews})</span>
+                    </div>
+                  </div>
+                  <Link 
+                    href={service.link} 
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+                  >
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          className='mb-20'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           <div className='flex items-center space-x-3 mb-12'>;
             <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center'>;
               <Brain className='w-6 h-6 text-white' />;
@@ -233,6 +393,7 @@ initial='hidden';
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {featuredAIServices.map((service, index) => (<motion.div;
                 key={service.id}
+<<<<<<< HEAD
                 variants={itemVariants}{service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2">;
                         <div className="w-2 h-2 bg-blue-400 rounded-full"></div>;
                         <span className="text-gray-400 text-sm">{feature}</span>;
@@ -346,6 +507,10 @@ initial='hidden';
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredQuantumServices.map((service, index) => (<motion.div;
                 key={service.id}<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredAIServices && featuredAIServices.map((service, index) => (<motion&& motion.div;
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredAIServices && featuredAIServices.map((service, index) => (;
+              <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 key={service && service.id}
                 variants={itemVariants}
                 className='group relative'          viewport={{ once: true }}
@@ -358,8 +523,14 @@ initial='hidden';
               <h3 className="text-3xl font-bold text-white">AI Autonomous Services</h3>;
               <p className="text-blue-300">Fully autonomous AI systems that run your business</p>;
             </div>;
+<<<<<<< HEAD
           </div>;{/* Quantum Space Tech Services Section */}
         <motion&& motion.div;
+=======
+          </div>;
+        {/* Quantum Space Tech Services Section */}
+        <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           variants={containerVariants}
                 key={service.id}
                 variants={item_variants}
@@ -419,6 +590,7 @@ initial='hidden';
                     <div className='flex items - center space - x-1'>;
                       <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                       <span className='text - yellow - 400 text - sm'>;
+<<<<<<< HEAD
                         {service.rating}<span className="text-2xl font-bold text-indigo-400">{service.price}</span>;
                       <span className="text-gray-400">{service.period}</span>;
                     </div>;
@@ -445,6 +617,26 @@ initial='hidden';
                   </Link>;
                 </div>;
               </motion.div>;
+=======
+                        {service.rating}
+                      <span className="text-2xl font-bold text-indigo-400">{service.price}</span>
+                      <span className="text-gray-400">{service.period}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-yellow-400 text-sm">{service.rating}</span>
+                      <span className="text-gray-400 text-sm">({service.reviews})</span>
+                    </div>
+                  </div>
+                  <Link 
+                    href={service.link} 
+                    className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
+                  >
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ))}
           </div>;
 <div className='text-center mt-8'>;
@@ -463,13 +655,23 @@ initial='hidden';
           </div>;<ArrowRight className='w-5 h-5 ml-2' />;
             </Link>;
           </div>;
+<<<<<<< HEAD
         </motion.div>;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Metaverse & Digital Reality Services Section */}
         <motion&& motion.div;
           variants={containerVariants}
+<<<<<<< HEAD
 initial='hidden';
           whileInView='visible';
           viewport={{ once: true }}</span>;
+=======
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+                      </span>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       <span className='text - gray - 400 text - sm'>;
                         ({service.reviews})</span>;
                     </div>;
@@ -532,8 +734,15 @@ initial='hidden';
               </p>;
             </div>;
           </div>;
+<<<<<<< HEAD
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {featuredMetaverseServices.map ((service, index) => (<motion.div;{/* Metaverse & Digital Reality Services Section */}
         <motion&& motion.div;
+=======
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {featuredMetaverseServices.map ((service, index) => (
+              <motion.div;
+        {/* Metaverse & Digital Reality Services Section */}
+        <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           variants={containerVariants}
                 key={service.id}
                 variants={item_variants}
@@ -607,6 +816,7 @@ className='group relative';
                     <div className='flex items - center space - x-1'>;
                       <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                       <span className='text - yellow - 400 text - sm'>;
+<<<<<<< HEAD
                         {service.rating}<span className="text-2xl font-bold text-pink-400">{service.price}</span>;
                       <span className="text-gray-400">{service.period}</span>;
                     </div>;
@@ -633,6 +843,26 @@ className='group relative';
                   </Link>;
                 </div>;
               </motion.div>;
+=======
+                        {service.rating}
+                      <span className="text-2xl font-bold text-pink-400">{service.price}</span>
+                      <span className="text-gray-400">{service.period}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-yellow-400 text-sm">{service.rating}</span>
+                      <span className="text-gray-400 text-sm">({service.reviews})</span>
+                    </div>
+                  </div>
+                  <Link 
+                    href={service.link} 
+                    className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
+                  >
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ))}
           </div>;
 <div className='text-center mt-8'>;
@@ -649,15 +879,20 @@ className='group relative';
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;
               View All Metaverse Services <ArrowRight className="w-5 h-5 ml-2" />;
           </div>;
+<<<<<<< HEAD
         </motion && motion.div>;<ArrowRight className='w-5 h-5 ml-2' />;
             </Link>;
           </div>;
         </motion.div>;
+=======
+        </motion && motion.div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Call to Action Section */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
           viewport={{ once: true }}className='text-center';
         >;
           <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
@@ -703,6 +938,25 @@ className='group relative';
         </motion.div>;
       </div>;
     </section>;
+=======
+          viewport={{ once: true }}
+              Ready to Experience the Future?
+            </h3>
+            <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">
+              Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies. 
+              <span className="text-purple-400 font-semibold"> Contact us today</span> to start your transformation.
+            </p>
+              <p className="text-gray-400 text-sm mb-2">Contact Information</p>
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
+                <span className="text-purple-300">📱 +1 302 464 0950</span>
+                <span className="text-purple-300">✉️ kleber@ziontechgroup.com</span>
+                <span className="text-purple-300">🌐 ziontechgroup.com</span>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               to start your transformation.;
             </p>;
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
@@ -737,7 +991,15 @@ className='group relative';
         </motion && motion.div>;
       </div>;
     </section>;
+<<<<<<< HEAD
   ))}
+=======
+  );
+  );
+}
+}
+  );
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
   )}
                       </span>;
@@ -835,4 +1097,9 @@ className='group relative';
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>)})}
+=======
+    </section>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

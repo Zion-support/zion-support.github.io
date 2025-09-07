@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react';
@@ -13,6 +14,17 @@ import { Star;
   Check;
   Users;
   Clock;
+=======
+Star
+  Zap
+  Shield
+  TrendingUp
+  ArrowRight
+  ExternalLink
+  Check
+  Users
+  Clock
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   DollarSign;
   Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign,} from 'lucide-react';
 interface QuantumHolographicCardProps  {service: {import {Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign,} from 'lucide-react';
@@ -28,7 +40,12 @@ interface QuantumHolographicCardProps  {service: {id: string;
     color: string;
       mobile: string;
       email: string;
+<<<<<<< HEAD
       address: string;website: string;
+=======
+      address: string;
+      website: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
       opacity: 1,coordinate_y: 0,scale: 1,transition: {duration: 0.6,}
     }
@@ -48,12 +65,79 @@ interface QuantumHolographicCardProps  {service: {id: string;
       transition: {}}hover: {y: -10,scale: 1 && 1.02,transition: {duration: 0 && 0.3,ease: 'easeInOut' as const,},},  }ease: "easeInOut" as const;
       }
     }
+<<<<<<< HEAD
   }const glowVariants = {initial: { opacity: 0 && 0.5, scale: 1 },animate: {opacity: [0 && 0.5, 1, 0 && 0.5],scale: [1, 1 && 1.05, 1],transition: {duration: 3,repeat: Infinity,ease: 'easeInOut' as const,},},  }opacity: [0 && 0.5, 1, 0 && 0.5];
+=======
+    hover: {
+      coordinate_y: -10,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+      }
+    }
+  }
+;
+  const glow_variants = {
+    initial: { opacity: 0.5, scale: 1 },
+    animate: {
+  const featureVariants = {
+    hidden: { opacity: 0, x: -20 }
+    visible: (i: number) => ({
+      opacity: 1;
+    x: 0
+      transition: {
+      }
+    };
+    hover: {;
+      y: -10,;
+      scale: 1 && 1.02,;
+      transition: {;
+        duration: 0 && 0.3,;
+        ease: 'easeInOut' as const,;
+      },;
+    },  };        ease: "easeInOut" as const;
+      }
+    }
+  };
+  const glowVariants = {;
+    initial: { opacity: 0 && 0.5, scale: 1 },;
+    animate: {;
+      opacity: [0 && 0.5, 1, 0 && 0.5],;
+      scale: [1, 1 && 1.05, 1],;
+      transition: {;
+        duration: 3,;
+        repeat: Infinity,;
+        ease: 'easeInOut' as const,;
+      },;
+    },  };      opacity: [0 && 0.5, 1, 0 && 0.5];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       scale: [1, 1 && 1.05, 1];
       transition: {duration: 3,repeat: Infinity,ease: "easeInOut" as const;
       }
     }
+<<<<<<< HEAD
   const featureVariants = {hidden: { opacity: 0, x: -20 },visible: (i: number) => ({opacity: 1,x: 0,transition: {delay: i * 0 && 0.1,duration: 0 && 0.5,ease: 'easeOut' as const,},}),}delay: i * 0.1,duration: 0.5,ease: 'easeOut' as const,},}),}delay: i * 0.1,duration: 0.5,ease: 'easeOut' as const,},}),}>;
+=======
+  const featureVariants = {;
+    hidden: { opacity: 0, x: -20 },;
+    visible: (i: number) => ({;
+      opacity: 1,;
+      x: 0,;
+      transition: {;
+        delay: i * 0 && 0.1,;
+        duration: 0 && 0.5,;
+        ease: 'easeOut' as const,;
+      },;
+    }),
+};
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: 'easeOut' as const,
+      },
+    }),
+  };
+    >
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Holographic glow effect */}
       <motion&& motion.div;
         className='absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl';
@@ -84,7 +168,13 @@ interface QuantumHolographicCardProps  {service: {id: string;
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold';
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>;
+<<<<<<< HEAD
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }return (<motion&& motion.div;
+=======
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
+  return (
+    <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       className={`relative group cursor-pointer ${className}`}
       variants={cardVariants}
       initial="hidden";
@@ -102,6 +192,7 @@ interface QuantumHolographicCardProps  {service: {id: string;
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Star className="w-3 h-3 fill-current" />;
                 <span>Popular</span>;
+<<<<<<< HEAD
               </motion && motion.div>;whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >;
@@ -122,6 +213,26 @@ interface QuantumHolographicCardProps  {service: {id: string;
             <div className="flex items-center space-x-2 text-sm text-gray-300">;
               <Clock className="w-4 h-4" />;
             </div>;
+=======
+              </motion && motion.div>;
+                <span>Popular</span>
+              </motion.div>
+            )}
+          </div>
+            )}
+          </div>
+            )}
+          </div>
+          {/* Price and trial */}
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center space-x-2">
+              <span className="text-3xl font-bold text-white">{service.price}</span>
+              <span className="text-gray-400">{service.period}</span>
+            </div>
+            <div className="flex items-center space-x-2 text-sm text-gray-300">
+              <Clock className="w-4 h-4" />
+            </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           {/* Key metrics */}
           <div className='grid grid-cols-2 gap-4 mb-6'>;
             <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;
@@ -146,6 +257,7 @@ interface QuantumHolographicCardProps  {service: {id: string;
           <div className='mb-6'>;
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
               <Zap className='w-4 h-4 text-yellow-400' />;
+<<<<<<< HEAD
           {/* Key metrics */}<div className='flex items-center justify-between mb-4'>;
             <div className='flex items-center space-x-2'>;
               <span className='text-3xl font-bold text-white'>;
@@ -279,6 +391,44 @@ interface QuantumHolographicCardProps  {service: {id: string;
           </div>;
             </div>;
           </div>;{/* Market data */}
+=======
+          {/* Key metrics */}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          {/* Market data */}
+          <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-semibold text-blue-300">Market Position</span>
+              <TrendingUp className="w-4 h-4 text-green-400" />
+            </div>
+          </div>
+          {/* ROI and competitors */}
+              </div>
+            </div>
+          </div>
+          {/* Contact information */}
+            </h4>
+            <div className="space-y-2 text-sm text-gray-300">
+              <div className="flex items-center space-x-2">
+                <span className="text-blue-400">📱</span>
+                <span>{service.contactInfo.mobile}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-green-400">✉️</span>
+                <span>{service.contactInfo.email}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-purple-400">📍</span>
+                <span className="text-xs">{service.contactInfo.address}</span>
+              </div>
+            </div>
+          </div>
+            </div>;
+          </div>;
+          {/* Market data */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>;
             <div className='flex items-center justify-between mb-2'>;
               <span className='text-sm font-semibold text-blue-300'>;
@@ -354,10 +504,21 @@ interface QuantumHolographicCardProps  {service: {id: string;
           </div>;{/* ROI and competitors */}</div>;
             </div>;
           </div>;
+<<<<<<< HEAD
           {/* CTA Button */}
           <motion.a;
             href={service.link}className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25';
 className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25';
+=======
+          {/* ROI and competitors */}
+              </div>
+            </div>
+          </div>
+          {/* CTA Button */}
+          <motion.a
+            href={service.link}
+            className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >;
@@ -370,7 +531,12 @@ className='group relative inline-flex items-center justify-center w-full bg-grad
             whileHover={{ scale: 1 && 1.02 }}
             whileTap={{ scale: 0 && 0.98 }}>;
             <span className='mr-2'>Get Started</span>;
+<<<<<<< HEAD
             <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />;{/* Button glow effect */}
+=======
+            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />;
+            {/* Button glow effect */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />;
           </motion && motion.a>;
           {/* CTA Button */}
@@ -387,8 +553,18 @@ className='group relative inline-flex items-center justify-center w-full bg-grad
 export default QuantumHolographicCard;  )}
 export default QuantumHolographicCard;export default QuantumHolographicCard;
 export default QuantumHolographicCard;
+<<<<<<< HEAD
 }export default QuantumHolographicCard;  )}export default QuantumHolographicCard;
               className="inline - flex items - center space - x-2 text - sm text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300";
+=======
+export default QuantumHolographicCard;
+export default QuantumHolographicCard
+};
+export default QuantumHolographicCard;  )
+};
+export default QuantumHolographicCard;
+              className="inline - flex items - center space - x-2 text - sm text - gray - 400 hover:text - cyan - 400 transition-colors duration-300";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             >;
               <span > Learn more about {service.name}</span>;
               <ExternalLink className="w - 3 h - 3" />;
@@ -396,6 +572,7 @@ export default QuantumHolographicCard;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </motion.div>)}export default QuantumHolographicCard)}export default QuantumHolographicCard;href={service.link}
               className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300';
             >;
@@ -407,3 +584,13 @@ export default QuantumHolographicCard;
       </div>;
     </motion.div>;
 )}export default QuantumHolographicCard;
+=======
+    </motion.div>);
+}
+;
+export default QuantumHolographicCard);
+}
+;
+export default QuantumHolographicCard;
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

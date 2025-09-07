@@ -157,6 +157,17 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {const
   )}
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {const slug  = String(ctx.params?.slug |'')export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {const slug = String(ctx.params?.slug || '')const { getVendorBySlug } = await import('../../utils/vendor-store')const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
+<<<<<<< HEAD
 }const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } }}}}const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } }}
+=======
+}
+
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } }
+};
+}
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

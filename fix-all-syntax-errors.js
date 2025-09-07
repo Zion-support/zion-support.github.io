@@ -91,4 +91,8 @@ if ( {) {$2;
 }
     console.log ('\n📝 Adding fixed files...')try {const { exec_sync } = await import ('child_process')exec_sync ('git add .', { stdio: 'inherit' })console.log ('✅ Files added to staging area')} catch (error) {console.error ('❌ Error adding files:', error.message)}
   }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }

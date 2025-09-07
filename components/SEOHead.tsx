@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -10,6 +11,16 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: any;
+=======
+title?: string;
+  description?: string;
+  keywords?: string;
+  canonical_url?: string;
+  og_image?: string;
+  og_type?: string;
+  twitter_card?: string;
+  structured_data?: object;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   noindex?: boolean;
   nofollow?: boolean;
 }
@@ -21,17 +32,29 @@ interface SEOHeadProps {
       {/* Structured Data */}
       <script;
         type="application / ld + json";
+<<<<<<< HEAD
         dangerouslySetInnerHTML={{{/* Preconnect to external domains */}
+=======
+        dangerouslySetInnerHTML={{
+      {/* Preconnect to external domains */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
       <link rel="preconnect" href="https://images && images.unsplash.com" />;
     </Head>;
+<<<<<<< HEAD
   )__html: JSON.stringify (structured_data || defaultStructuredData)}}
+=======
+  );
+          __html: JSON.stringify (structured_data || defaultStructuredData);
+        }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       />;
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />;
       <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="anonymous" />;
       <link rel="preconnect" href="https://images.unsplash.com" />;
+<<<<<<< HEAD
     </Head>)}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -148,3 +171,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 };
 
 export default SEOHead;
+=======
+    </Head>);
+}
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   Zap;
   Globe;
@@ -54,11 +55,124 @@
   Zap,Globe,Phone,Mail,MapPin,ArrowRight,Brain,Atom,Shield,Rocket,Target,BookOpen,Users,Star,Sparkles,Cpu,Lock,Cloud,BarChart3,Settings,Eye,Award,Clock,Heart,Lightbulb,Twitter,Linkedin,Facebook,Instagram,Youtube,Github,MessageCircle,MessageSquare,ArrowUp,ExternalLink,Building,Code,Database,Network,Server,Monitor,Smartphone,Camera,Gamepad2,Palette,Music,Film,BookOpenCheck,HelpCircle,FileText,Video,Headphones,} from 'lucide-react';import {Zap, Globe, Phone, Mail, MapPin, ArrowRight,Video,Headphones,} from 'lucide-react';import { Zap, Globe, Phone, Mail, MapPin, ArrowRight,import React from 'react',import Link from 'next/link';
 import { motion  } from 'framer-motion';
 import { Zap, Globe, Phone, Mail, MapPin, ArrowRight;Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
+=======
+Zap
+  Globe
+  Phone
+  Mail
+  MapPin
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Rocket
+  Target
+  BookOpen
+  Users
+  Star
+  Sparkles
+  Cpu
+  Lock
+  Cloud
+  BarChart3
+  Settings
+  Eye
+  Award
+  Clock
+  Heart
+  Lightbulb
+  Twitter
+  Linkedin
+  Facebook
+  Instagram
+  Youtube
+  Github
+  MessageCircle
+  MessageSquare
+  ArrowUp
+  ExternalLink
+  Building
+  Code
+  Database
+  Network
+  Server
+  Monitor
+  Smartphone
+  Camera
+  Gamepad2
+  Palette
+  Music
+  Film
+  BookOpenCheck
+  HelpCircle
+  FileText
+  Video
+  Headphones;} from 'lucide-react';import {
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight
+  Zap,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  BookOpen,
+  Users,
+  Star,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,
+  MessageCircle,
+  MessageSquare,
+  ArrowUp,
+  ExternalLink,
+  Building,
+  Code,
+  Database,
+  Network,
+  Server,
+  Monitor,
+  Smartphone,
+  Camera,
+  Gamepad2,
+  Palette,
+  Music,
+  Film,
+  BookOpenCheck,
+  HelpCircle,
+  FileText,
+  Video,;
+  Headphones,;} from 'lucide-react';import {
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight, ;
+  Video,
+  Headphones,;} from 'lucide-react';import { 
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
+  Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2;{ name: 'Services Advertising', href: '/services-advertising' }
     ];
   }
+<<<<<<< HEAD
 ];Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones;
  } from 'lucide-react';
 const contactInfo = null;
@@ -93,6 +207,11 @@ const contactInfo = null;
       { name: 'Healthcare Solutions', href: '/healthcare-solutions' },{ name: 'Financial Services', href: '/financial-solutions' },{ name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },{ name: 'Retail Technology', href: '/retail-technology-solutions' },{ name: 'Education Technology', href: '/education-technology-solutions' },{name: 'Government Solutions',href: '/government-technology-solutions',},{ name: 'Energy & Utilities', href: '/energy-utilities-solutions' },{ name: 'Biotech AI Research', href: '/biotech-ai-research-platform' },],},{title: 'Resources',description: 'Documentation, support, and learning',icon: <BookOpen className='w-5 h-5 text-cyan-400' />,links: [;
       { name: 'Documentation', href: '/docs' },{ name: 'API Reference', href: '/api-documentation' },{ name: 'Case Studies', href: '/case-studies' },{ name: 'Blog & News', href: '/blog' },{ name: 'Support Center', href: '/support' },{ name: 'Developer Portal', href: '/developer' },{ name: 'Training & Certification', href: '/training' },{ name: 'Community Forum', href: '/community' },{ name: 'Market Pricing', href: '/market-pricing' },{ name: 'Services Advertising', href: '/services-advertising' },],},];const socialLinks = [;
   {name: 'Twitter',href: 'https://twitter.com/ziontechgroup',icon: <Twitter className='w-5 h-5' />,},{name: 'LinkedIn',href: 'https://linkedin.com/company/ziontechgroup',icon: <Linkedin className='w-5 h-5' />,},{name: 'Facebook',href: 'https://facebook.com/ziontechgroup',icon: <Facebook className='w-5 h-5' />,},{name: 'Instagram',href: 'https://instagram.com/ziontechgroup',icon: <Instagram className='w-5 h-5' />,},{name: 'YouTube',href: 'https://youtube.com/@ziontechgroup',icon: <Youtube className='w-5 h-5' />,},{name: 'GitHub',href: 'https://github.com/Zion-Holdings',icon: <Github className='w-5 h-5' />,},];const UltraFuturisticFooter2035: React.FC = () => {const scrollToTop = () => {window.scrollTo({ top: 0, behavior: 'smooth' })}return (<footer className="relative bg-black text-white overflow-hidden">;
+=======
+];
+  return (
+    <footer className="relative bg-black text-white overflow-hidden">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Background Effects */}
       <div className="absolute inset-0">;
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black" />;
@@ -107,7 +226,17 @@ const contactInfo = null;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8'>;
             {/* Company Info */}
   }
+<<<<<<< HEAD
   }const scrollToTop = () =>: any {window.scroll_to ({ top: 0, behavior: 'smooth' })}return (<footer className='relative bg - black text - white overflow - hidden'>;
+=======
+  };
+  const scrollToTop = () =>: any {
+    window.scroll_to ({ top: 0, behavior: 'smooth' });
+  }
+;
+  return (
+    <footer className='relative bg - black text - white overflow - hidden'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Background Effects */}
       <div className='absolute inset - 0'>;
         <div className='absolute inset - 0 bg - gradient - to - b from - gray - 900 via - black to - black' />;
@@ -129,9 +258,31 @@ const contactInfo = null;
       </div>;
       <div className='relative z-10'>            ease: 'linear';
           }}
+<<<<<<< HEAD
         />;
       </div>;
       <div className='relative z-10'>;
+=======
+          transition={{
+            duration: 20;
+    repeat: Infinity
+            ease: 'linear',          }}
+        />
+      </div>
+      <div className='relative z-10'>            ease: 'linear'
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: 'linear',          }}
+        />
+      </div>
+      <div className='relative z-10'>            ease: 'linear'
+          }}
+        />
+      </div>
+      <div className='relative z-10'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         />;
       </div>;
       <div className='relative z - 10'>            ease: 'linear';
@@ -184,18 +335,34 @@ const contactInfo = null;
                     <MapPin className="w-4 h-4" />;
                     <span className="text-sm">{contactInfo && contactInfo.address}</span>;
                   </div>;
+<<<<<<< HEAD
                 </div>;<a;
                       key={social && social.name}
                       href={social && social.href}
                       target="_blank";
                       rel="noopener noreferrer";
                       className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110";
+=======
+                </div>;
+                    <a
+                      key={social && social.name}
+                      href={social && social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       {social.icon}
                     </a>;
                   ))}
+<<<<<<< HEAD
                 </div>;
               </motion.div>;
             </div>;
+=======
+                </div>
+              </motion.div>
+            </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   ))}
             {/* Footer Sections */}
             {footerSections && footerSections.map((section, index) => (<motion&& motion.div;
@@ -207,6 +374,7 @@ const contactInfo = null;
               <motion.div;
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.6 }}
 className='space-y-6';
               >;
@@ -266,6 +434,26 @@ className='space-y-6';
                 {/* Social Links */}>;
                       className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110';
                     >;
+=======
+              >
+                <div className='flex items-center gap-4'>
+                  {socialLinks.map(social => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110'                    >                <div className="flex items-center gap-4">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
+                {/* Social Links */}
+                    >
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       {social.icon}
                     </a>;
                   ))}
@@ -300,6 +488,7 @@ className='space-y-4';
                   {section && section.links.map((link) => (<li key={link && link.name}>;
                       <Link;
                         href={link && link.href}
+<<<<<<< HEAD
                         className={`text-sm transition-colors duration-200 ${link && link.featured;
                             ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured;
                             ? 'text-cyan-400 hover:text-cyan-300';
@@ -308,6 +497,15 @@ className='space-y-4';
 link.featured;
                             ? 'text-cyan-400 hover:text-cyan-300';
                             : 'text-gray-400 hover:text-white';
+=======
+                        className={`text-sm transition-colors duration-200 ${
+                          link && link.featured
+                            ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured 
+                            ? 'text-cyan-400 hover:text-cyan-300' 
+                          link.featured 
+                            ? 'text-cyan-400 hover:text-cyan-300' 
+                            : 'text-gray-400 hover:text-white'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                         }`}
                       >;
                         {link.name}
@@ -325,6 +523,7 @@ link.featured;
           {/* Bottom Section */}
           <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.3 }}
 className='mt-16 pt-8 border-t border-gray-800/50';
           >;
@@ -333,6 +532,15 @@ className='mt-16 pt-8 border-t border-gray-800/50';
                 © 2025 Zion Tech Group. All rights reserved.;
               </div>;
               <div className='flex items-center gap-6 text-sm text-gray-400'>;
+=======
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
+              <div className='text-sm text-gray-400'>
+                © 2025 Zion Tech Group. All rights reserved.
+              </div>
+              <div className='flex items-center gap-6 text-sm text-gray-400'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
             className='mt-16 pt-8 border-t border-gray-800/50'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
@@ -384,6 +592,7 @@ className='mt-16 pt-8 border-t border-gray-800/50';
                   Cookie Policy;
                 </Link>;
               </div>;
+<<<<<<< HEAD
               <button;
                 onClick={scrollToTop}/* Animated grid */;
   /* Animated grid */;
@@ -412,6 +621,47 @@ className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hove
 }<li key= {link && link.name;
 }> <Linkhref= {link && link.href;
 }className= {`text-sm transition-colors duration-200 $ {<p className='text - gray - 300 leading - relaxed max - w-md'>;
+=======
+              <button
+                onClick={scrollToTop}
+/* Animated grid */ 
+  /* Animated grid */ 
+}<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
+  social.icon
+}</a>) )
+}</div> </motion.div> </div> {
+  /* Footer Sections */
+}{
+  footerSections.map ( (section, index) => (<motion.div key= {
+  section.title
+}<li key= {
+  link.name
+}> <Link href= {
+  link.href
+}className= {
+  `text-sm transition-colors duration-200 $ {
+  link.featured ? 'text-cyan-400 hover:text-cyan-300' : 'text-gray-400 hover:text-white'
+}`
+}> </li>) )
+}</ul> </motion.div>) )
+}</div> {
+  /* Animated grid */ ;
+}<motion && motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {;
+  social && social.icon ;
+}</a>) ) ;
+}</div> </motion && motion.div> </div> {;
+  /* Footer Sections */ ;
+}{;
+  footerSections && footerSections.map ( (section, index) => (<motion&& motion.div key= {
+  section && section.title 
+}<li key= {
+  link && link.name 
+}> <Linkhref= {
+  link && link.href 
+}className= {
+  `text-sm transition-colors duration-200 $ {
+                <p className='text - gray - 300 leading - relaxed max - w-md'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   Leading the future with cutting - edge AI consciousness, quantum;
                   computing, and innovative micro SAAS solutions. Transform your;
                   business with our revolutionary technology.;
@@ -573,6 +823,20 @@ className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hove
 }> <Link href= {link.href;
 }className= {`text - sm transition - colors duration - 200 $ {link.featured ? 'text - cyan - 400 hover:text - cyan - 300' : 'text - gray - 400 hover:text - white';
 }`;
+<<<<<<< HEAD
 }> </li>) )}</ul> </motion.div>) )}</div> {/* Bottom Section */;
 }<motion.div > <div className="flex flex - col md:flex - row items - center justify - between gap - 4" > <div className="text - sm text - gray - 400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items - center gap - 6 text - sm text - gray - 400" > <Link href="/privacy" className="hover:text - white transition - colors duration - 200" > Privacy Policy </a> <Link href="/terms" className="hover:text - white transition - colors duration - 200" > Terms of Service </a> <Link href="/cookies" className="hover:text - white transition - colors duration - 200" > Cookie Policy </a> </div> <button aria - label="Scroll to top" w - 5 h - 5" /> </button> </div> </motion.div> </div> </div> </footer>)}
 export default UltraFuturisticFooter2035)}export default UltraFuturisticFooter2035;;
+=======
+}> </li>) );
+}</ul> </motion.div>) );
+}</div> {
+  /* Bottom Section */;
+}<motion.div > <div className="flex flex - col md:flex - row items - center justify-between gap-4" > <div className="text - sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items - center gap - 6 text - sm text-gray-400" > <Link href="/privacy" className="hover:text - white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text - white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text - white transition-colors duration-200" > Cookie Policy </a> </div> <button aria - label="Scroll to top" w - 5 h - 5" /> </button> </div> </motion.div> </div> </div> </footer>);
+}
+export default UltraFuturisticFooter2035);
+}
+;
+export default UltraFuturisticFooter2035;
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

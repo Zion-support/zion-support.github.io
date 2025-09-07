@@ -13,7 +13,6 @@ const fs = require('fs')const path = require('path')const { execSync } = require
     // Create logs directory;
     const logsDir = path.join(this.projectRoot, 'automation', 'logs')if (!fs.existsSync(logsDir)) {fs.mkdirSync(logsDir, { recursive: true })}<:automation/error-monitor.js;
 =;
->>>>>>>> main:corrupted_backup/error-monitor.js;
 ursor/automate-test-improve-and-merge-code-646c;
 =;
     // Initial health check;
@@ -32,7 +31,6 @@ ursor/automate-test-improve-and-merge-code-646c;
         timestamp: new Date().toISOString()timestamp: new Date().toISOString()ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
         timestamp: new Date().toISOString()origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-        timestamp: new Date().toISOString()=        timestamp: new Date().toISOString()>>>>>>>> main:corrupted_backup/error-monitor.js;
         timestamp: new Date().toISOString()timestamp: new Date().toISOString()timestamp: new Date().toISOString()ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
         timestamp: new Date().toISOString()origin/cursor/integrate-build-improve-and-re-verify-c7b5;
@@ -145,14 +143,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         )if (match) {errors.push({type: 'typescript_error',file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),timestamp: new Date().toISOString()ursor/automate-test-improve-and-merge-code-646c;
             timestamp: new Date().toISOString()timestamp: new Date().toISOString()})}
       }
-    }>>>>>>>> main:corrupted_backup/error-monitor.js;
             timestamp: new Date().toISOString()timestamp: new Date().toISOString()timestamp: new Date().toISOString()}))}
       }
     }<:automation/error-monitor.js;
             timestamp: new Date().toISOString()}))}
       }
     }=;
->>>>>>>> main:corrupted_backup/error-monitor.js;
             timestamp: new Date().toISOString()timestamp: new Date().toISOString()=;
             timestamp: new Date().toISOString()timestamp: new Date().toISOString()})}
     }
@@ -162,28 +158,37 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           });
         }
       }
+<<<<<<< HEAD
     }ursor/automate-test-improve-and-merge-code-646c;
     return errors;
+=======
+    }
+            timestamp: new Date().toISOString(),
+          });
+    );
+        }
+      }
+    }
+=    return errors;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   parseESLintErrors(output) {const errors = [];
     const lines = output.split('\n')=;
 <:automation/error-monitor.js;
 =;
-    for (const line of lines) {const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/)if (match) {errors.push({type: 'eslint_error',file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),>>>>>>>> main:corrupted_backup/error-monitor.js;
           timestamp: new Date().toISOString()})}
     }<:automation/error-monitor.js;
     )}
     }
-=>>>>>>>> main:corrupted_backup/error-monitor.js;
 ursor/automate-test-improve-and-merge-code-646c;
           timestamp: new Date().toISOString()})}
     }<:automation/error-monitor.js;
 =;
->>>>>>>> main:corrupted_backup/error-monitor.js;
 ursor/automate-test-improve-and-merge-code-646c;
 >          timestamp: new Date().toISOString()})}
   parseESLintErrors(output) {
     const errors = [];
+<<<<<<< HEAD
     const lines = output.split('\n');
     for (const line of lines) {
       const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
@@ -195,6 +200,13 @@ ursor/automate-test-improve-and-merge-code-646c;
           column: parseInt(match[3]),
           message: match[4].trim(),
           timestamp: new Date().toISOString()
+=======
+    const lines = output.split('\n');<
+    );
+      }
+    }
+          timestamp: new Date().toISOString(),
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         });
       }
     }
@@ -230,12 +242,10 @@ ursor/automate-test-improve-and-merge-code-646c;
 =;
     console.log(`📊 Health Status: ${status.toUpperCase()}`)console.log(`📈 Total Errors: ${totalErrors}`)console.log(`⚠️  Total Warnings: ${totalWarnings}`)<:automation/error-monitor.js;
 =;
-    console.log(`📊 Health Status: ${status.toUpperCase()}`)console.log(`📈 Total Errors: ${totalErrors}`)console.log(`⚠️  Total Warnings: ${totalWarnings}`)>>>>>>>> main:corrupted_backup/error-monitor.js;
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`)console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`)console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`)<:automation/error-monitor.js;
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`)console.log(`📊 Health Status: ${status.toUpperCase()}`)console.log(`📈 Total Errors: ${totalErrors}`)console.log(`⚠️  Total Warnings: ${totalWarnings}`)>    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`)console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`)console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`)<    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`)console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`)console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`)ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`)console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`)console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`)origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-    console.log(`📊 Health Status: ${status.toUpperCase()}`)console.log(`📈 Total Errors: ${totalErrors}`)console.log(`⚠️  Total Warnings: ${totalWarnings}`)console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`)console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`)console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`)=>>>>>>>> main:corrupted_backup/error-monitor.js;
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`)=;
 >    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`)console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`)console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`)console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`)console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`)console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`)ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
@@ -247,14 +257,12 @@ ursor/automate-test-improve-and-merge-code-646c;
     )}
   async triggerErrorFixer() {console.log('🚀 Triggering error fixer...')try {const ErrorFixerAutomation = require('./error-fixer-automation.js')const automation = new ErrorFixerAutomation()await automation.run()<:automation/error-monitor.js;
       console.log('✅ Error fixer completed')ursor/fix-syntax-push-and-merge-to-main-40de;
-=      console.log('✅ Error fixer completed')>>>>>>>> main:corrupted_backup/error-monitor.js;
       console.log('✅ Error fixer completed')console.log('✅ Error fixer completed')ursor/automate-test-improve-and-merge-code-646c;
       console.log('✅ Error fixer completed')=;
       console.log('✅ Error fixer completed')console.log('✅ Error fixer completed')} catch (error) {console.error('❌ Error fixer failed:', error)this.monitoringReport.errorsDetected.push({type: 'error_fixer_failure',message: error.message,<:automation/error-monitor.js;
         timestamp: new Date().toISOString()timestamp: new Date().toISOString()ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
         timestamp: new Date().toISOString()origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-        timestamp: new Date().toISOString()=        timestamp: new Date().toISOString()>>>>>>>> main:corrupted_backup/error-monitor.js;
         timestamp: new Date().toISOString()timestamp: new Date().toISOString()timestamp: new Date().toISOString()ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
         timestamp: new Date().toISOString()origin/cursor/integrate-build-improve-and-re-verify-c7b5;
@@ -268,7 +276,6 @@ ursor/automate-test-improve-and-merge-code-646c;
   async saveReport() {const reportPath = path.join(this.projectRoot,'error-reports',`error-monitor-report-${Date.now()}.json`;
     )const reportDir = path.dirname(reportPath)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { recursive: true })}<:automation/error-monitor.js;
 =;
->>>>>>>> main:corrupted_backup/error-monitor.js;
 ursor/automate-test-improve-and-merge-code-646c;
 =;
     // Add duration to report;
@@ -327,8 +334,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
 ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-        timestamp: new Date().toISOString()
+ursor/fix-syntax-push-and-merge-to-main-40de;
+    timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
@@ -387,6 +394,11 @@ if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
 }
+<<<<<<< HEAD
 module.exports = ErrorMonitor;
 }
 module.exports = ErrorMonitor;
+=======
+module.exports = ErrorMonitor;}
+module.exports = ErrorMonitor;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

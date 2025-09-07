@@ -478,16 +478,19 @@ export interface SpaceMetaverseService {;
     currency: string;
     trialDays: number;
     setupTime: string;
+<<<<<<< HEAD
 
 
   {
 
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms'
+=======
+  {
+      'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     realImplementation: true,
-
-    implementationDetails:
-      'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.'
+    implementationDetails: "implementationDetails",
     roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.'
     useCases: [
       'Virtual reality games'
@@ -656,6 +659,7 @@ export interface SpaceMetaverseService {;
     rating: 4.7,
     reviews: 1400;
   }
+
 ;
     rating: 4.7,
     reviews: 1400;
@@ -927,6 +931,11 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     rating: 4.7,;
     reviews: 1400;
     rating: 4.7,
+<<<<<<< HEAD
     reviews: 1400;
   }
 ];
+=======
+    reviews: 1400;  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

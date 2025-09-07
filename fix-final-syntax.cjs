@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node
@@ -5,6 +6,8 @@
 const fs = require('fs');
 const path = require('path');
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Final targeted fixes for remaining syntax errors
 const fixes = [
   // Fix missing semicolons in import statements
@@ -12,27 +15,45 @@ const fixes = [
     pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
     replacement: 'import { $1 } from \'$2\';'
   },
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   // Fix malformed import statements
   {
     pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
     replacement: 'import { $1 } from \'$2\';\n\nexport default function'
   },
+<<<<<<< HEAD
 
   // Fix missing semicolons after import statements
+=======
+// Fix missing semicolons after import statements
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   {
     pattern: /import\s+([^]+)\s*$/gm,
     replacement: 'import $1;'
   },
+<<<<<<< HEAD
 
   // Fix unterminated string literals
 
+=======
+  // Fix unterminated string literals
+=======
+  // Fix missing semicolons after export statements
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   // Fix unterminated string literals
 
   {
     pattern: /export\s+([^]+)\s*$/gm,
     replacement: 'export $1;'
   },
+<<<<<<< HEAD
 
   // Fix malformed function declarations
 
@@ -45,12 +66,17 @@ const fixes = [
 
   // Fix missing closing brackets and parentheses
 
+=======
+=======
+  // Fix missing closing brackets and parentheses
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   // Fix missing closing brackets and parentheses
 
   {
     pattern: /function\s+([^(]+)\s*\([^)]*\)\s*{\s*$/gm,
     replacement: 'function $1() {\n'
   },
+<<<<<<< HEAD
 
   // Fix malformed JSX attributes
 
@@ -61,20 +87,32 @@ const fixes = [
     replacement: 'const $1 = () => $2;'
   },
 
+=======
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   // Fix missing semicolons in object properties
   {
     pattern: /(\w+):\s*([^,}]+)\s*$/gm,
     replacement: '$1: $2,'
   },
+<<<<<<< HEAD
 
   // Fix malformed return statements
 
+=======
+// Fix malformed return statements
+=======
+  // Fix missing semicolons in array elements
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   // Fix malformed return statements
 
   {
     pattern: /(\w+)\s*$/gm,
     replacement: '$1,'
   },
+<<<<<<< HEAD
 
   // Fix duplicated content (remove duplicate lines)
 
@@ -87,12 +125,17 @@ const fixes = [
 
   // Fix missing closing brackets in arrays
 
+=======
+=======
+  // Fix missing closing brackets in arrays
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   // Fix missing closing brackets in arrays
 
   {
     pattern: /if\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'if (condition) {\n'
   },
+<<<<<<< HEAD
 
   // Fix malformed JSX closing tags
 
@@ -203,6 +246,11 @@ console.log('🔧 Fixing final syntax errors...');
 
 console.log('🔧 Fixing final syntax errors...');
 
+=======
+=======
+console.log('🔧 Fixing final syntax errors...');
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Fix specific files with known issues
 const filesToFix = [
     'src/components/SEO.tsx',
@@ -210,10 +258,15 @@ const filesToFix = [
     'src/components/ui/card.tsx',
     'src/components/ui/textarea.tsx',
     'src/components/ui/use-toast.ts'
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ];
-
 function fixFile(filePath) {
+<<<<<<< HEAD
     if (!fs.existsSync(filePath)) {
 
     }
@@ -315,6 +368,7 @@ console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
 
+
 if (totalFixes > 0) {
 
 if (totalFixes > 0) {
@@ -396,3 +450,6 @@ const path = require('path')
     "replacement"
     "replacement"
 
+=======
+    if (!fs.existsSync(filePath)) {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

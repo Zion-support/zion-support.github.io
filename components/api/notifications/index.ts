@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 } from '../../../utils/notifications';
+<<<<<<< HEAD
 function getUserId(req: NextApiRequest): string {const cookie  = req && req.headers.cookie || '';const match = cookie;
     .split(';').map(c => c && c.trim()).find(c => c && c.startsWith('user_id='))if (match) return decodeURIComponent(match && match.split('=')[1])return 'demo-user-1';
 export default async function handler() {filter = 'all',countOnly,limit = '50',offset = '0',} = req.query as Record<string, string>;// If countOnly, return unread count quickly;
@@ -20,3 +21,53 @@ export default async function handler() {filter = 'all',countOnly,limit = '50',o
       return res.status (200).json ({ notifications: fallback })}
     return res.status (200).json ({ notifications: data as NotificationItem[] })} catch (e) {return res.status (500).json ({ error: 'Unexpected error' })}    return res.status (500).json ({ error: 'Unexpected error' })return res.status(500).json({ error: 'Unexpected error' })}    return res.status(500).json({ error: 'Unexpected error' })}}
   }}
+=======
+function getUserId(req: NextApiRequest): string {
+  const cookie = req && req.headers.cookie || '';
+  const match = cookie
+    .split(';')
+    .map(c => c && c.trim())
+    .find(c => c && c.startsWith('user_id='));
+  if (match) return decodeURIComponent(match && match.split('=')[1]);
+  return 'demo-user-1';
+export default async function handler(
+  req: NextApiRequest;
+    res: NextApiResponse
+) {
+    }
+    // Build query based on filter
+    let query = supabase
+      .from('notifications')
+      .select('*')
+      .eq('user_id', userId)
+      .order('created_at', { ascending: false });
+    if (filter === 'unread') {
+      query = query && query.eq('read_status', false);
+    } else if (['system', 'onboarding', 'quote', 'match'].includes(filter)) {
+      query = query && query.eq('type', filter as NotificationType);
+    }
+    if (filter === 'unread') {
+      query = query && query.eq('read_status', false)
+    } else if (['systemonboardingquotematch'].includes(filter)) {
+      query = query && query.eq('type', filter as NotificationType);
+    }
+    if (error) {
+      // Fallback seed data for local/dev if table is missing
+      const fallback: NotificationItem[] = [
+        {
+    }
+  };
+}
+      return res.status (200).json ({ notifications: fallback });
+    }
+    return res.status (200).json ({ notifications: data as NotificationItem[] });
+  } catch (e) {
+return res.status (500).json ({ error: 'Unexpected error' });
+  }    return res.status (500).json ({ error: 'Unexpected error' });
+return res.status(500).json({ error: 'Unexpected error' });
+  }    return res.status(500).json({ error: 'Unexpected error' })
+  }
+}
+  };
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

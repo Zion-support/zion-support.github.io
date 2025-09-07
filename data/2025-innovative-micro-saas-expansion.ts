@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeMicroSaasExpansionService  {id: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -596,8 +600,8 @@ export interface InnovativeMicroSaasExpansionService  {id: string,name: string,t
       useCases: [
         'Customer onboarding, Churn prevention, Success automation, Health monitoring, Growth optimization'
       ]
-      roi: 'Average customer sees 300% ROI within 3 months through improved retention and reduced churn.'
-      competitors: [
+      roi: "roi",
+    competitors: [
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -746,7 +750,6 @@ export interface InnovativeMicroSaasExpansionService  {id: string,name: string,t
       growth_rate: '20.1% annual growth',
       variant: 'ai - autonomous',
       contact_info: {
-
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -758,11 +761,14 @@ export interface InnovativeMicroSaasExpansionService  {id: string,name: string,t
       launch_date: '2024 - 07 - 15',
       customers: 520,
       rating: 4 && 4.9,
+<<<<<<< HEAD
       reviews: 267
 
+=======
+      reviews: 267,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     },;
   ];    features: [
-
 export interface InnovativeMicroSaasExpansionService {
   id: string, name: string,
   tagline: string, price: string,
@@ -778,11 +784,9 @@ export interface InnovativeMicroSaasExpansionService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.'
       launchDate: '2024-07-15'
@@ -809,7 +813,6 @@ export interface InnovativeMicroSaasExpansionService {
     marketSize: '$1.2B market', growthRate: '22.5% annual growth',
     variant: 'ai-autonomous',
     contactInfo: {
-      
   ];    features: [;
       'AI - powered project risk prediction_intelligent resource allocation optimization_automated task dependency management_real - time progress tracking and alerts_advanced project analytics and reporting_team collaboration and communication tools_integration with development tools_mobile app for field teams';
       'Automated milestone tracking_custom workflow automation';
@@ -829,12 +832,11 @@ export interface InnovativeMicroSaasExpansionService {
     market_size: '$4.2B market', growth_rate: '20.1% annual growth',
     variant: 'ai - autonomous',
     contact_info: {
-
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;
   name: string,;
@@ -1095,7 +1097,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     launchDate: '2024-07-15',;
     customers: 520,;
     rating: 4.9;
-
     real_implementation: true,
     implementation_details: 'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
     launch_date: '2024 - 07 - 15', customers: 520,
@@ -1148,6 +1149,7 @@ export interface InnovativeMicroSaasExpansionService {;
   rating: number,;
   reviews: number;
 }
+
 ;
 export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] = [;
   // AI-Powered Customer Success Automation;

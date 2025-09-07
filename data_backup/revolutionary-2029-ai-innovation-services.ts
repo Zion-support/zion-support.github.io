@@ -1675,6 +1675,7 @@ export const "revolutionaryAIInnovationServices2029": RevolutionaryAIInnovationS
       ],"category": 'AI & HR',"icon": '👥',"color": 'from-indigo-600 to-purple-700',"textColor": 'text-indigo-200',"link": 'https://ziontechgroup.com/services/ai-interview-assessment',"marketPosition": 'AI-powered interview assessment for modern HR teams',"targetAudience": ['HR', 'Recruiting', 'Talent Acquisition'],"trialDays": 14,"setupTime": '1 day',"realService": true,"technology": ['Computer Vision', 'NLP', 'Machine Learning'],"integrations": ['Workday', 'BambooHR', 'Greenhouse', 'Lever'],"useCases": ['Candidate screening','Skills assessment','Cultural fit evaluation';
       ],"roi": 'Improve hiring accuracy by 60% and reduce time-to-hire by 50%',"competitors": ['HireVue', 'Pymetrics', 'HackerRank'],"marketSize": '$8B HR Tech',"growthRate": '20% CAGR',"variant": 'ai-hr',"contactInfo": {mobile: '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709'},"realImplementation": true,"implementationDetails": 'AI models, video analysis, assessment engine',"launchDate": '2025-01-30',"customers": 41,"rating": 4.6,"reviews": 23}
   ];
+<<<<<<< HEAD
 export const getAIServicesByCategory = ("category": string) => {return revolutionaryAIInnovationServices2029.filter(service => service.category === category;
   )}export const getPopularAIServices = () => {return revolutionaryAIInnovationServices2029.filter(service => service.isPopular;
   )}export const getNewAIServices = () => {return revolutionaryAIInnovationServices2029.filter(service => service.isNew)}export const getAIServicesByPriceRange = ("minPrice": number,"maxPrice": number;
@@ -2165,3 +2166,23 @@ export const getAIServicesByCategory = ("category": string) => {return revolutio
   )}export const getPopularAIServices = () => {return revolutionaryAIInnovationServices2029.filter(service => service.isPopular;
   )}export const getNewAIServices = () => {return revolutionaryAIInnovationServices2029.filter(service => service.isNew)}export const getAIServicesByPriceRange = ("minPrice": number,"maxPrice": number;
 ) => {return revolutionaryAIInnovationServices2029.filter(service => {const price = parseInt(service.price.replace('$', '').replace(',', ''))return price >= minPrice && price <= maxPrice})}
+=======
+export const getAIServicesByCategory = ("category": string) => {
+  return revolutionaryAIInnovationServices2029.filter(
+    service => service.category === category
+  )};
+export const getPopularAIServices = () => {
+  return revolutionaryAIInnovationServices2029.filter(
+    service => service.isPopular
+  )};
+export const getNewAIServices = () => {
+  return revolutionaryAIInnovationServices2029.filter(service => service.isNew)};
+export const getAIServicesByPriceRange = (
+  "minPrice": number,
+  "maxPrice": number
+) => {
+  return revolutionaryAIInnovationServices2029.filter(service => {
+    const price = parseInt(service.price.replace('$', '').replace(',', ''));
+    return price >= minPrice && price <= maxPrice})}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

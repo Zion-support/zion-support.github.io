@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export default function Partners() {const [form, setForm] = useState({export default function Partners() {const [form, setForm] = useState({name: '',entityType: '',pocName: '',pocEmail: '',useCaseType: 'Education Partnership',})const [result, setResult] = useState<any>(null)name: "",entityType: "",pocName: "",pocEmail: "",useCaseType: "Education Partnership"}),const [loading, setLoading]  = useState(false)name: '';
@@ -15,6 +16,46 @@ export default function Partners() {const [form, setForm] = useState({export def
     pocEmail: "";
     useCaseType: "Education Partnership"})const [result, setResult] = useState<any>(null),const [loading, setLoading] = useState(false)async function submit() {e.preventDefault()setLoading(true)setResult(null)class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+export default function Partners() {
+  const [form, setForm] = useState({
+export default function Partners() {
+  const [form, setForm] = useState({
+    name: '',
+    entityType: '',
+    pocName: '',
+    pocEmail: '',
+    useCaseType: 'Education Partnership',;
+  });  const [result, setResult] = useState<any>(null);    name: "",
+    entityType: "",
+    pocName: "",
+    pocEmail: "",
+    useCaseType: "Education Partnership"}),
+  const [loading, setLoading] = useState(false);
+    name: "name",
+    entityType: ''
+    pocName: ''
+    pocEmail: ''
+    useCaseType: 'Education Partnership'
+  });  const [result, setResult] = useState<any>(null);    name: ""
+    entityType: ""
+    pocName: ""
+    pocEmail: ""
+    useCaseType: "Education Partnership"})
+  const [loading, setLoading] = useState(false);
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    setResult(null);
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     return this.props.children;
   }
@@ -159,12 +200,23 @@ export default function Partners() {const [form, setForm] = useState({name: '',e
             <p className="text-sm">Your API Key:</p>;
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result && result.apiKey}</pre>;
             <a href={result && result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>;
+<<<<<<< HEAD
           <div className="mt-8 bg-white p-6 rounded-lg shadow">;
             <h3 className="text-lg font-medium mb-2">Registration Successful</h3>;
             <p className="text-sm">Your API Key:</p>;
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>;
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>;
 })}</div>;
+=======
+          <div className="mt-8 bg-white p-6 rounded-lg shadow">
+            <h3 className="text-lg font-medium mb-2">Registration Successful</h3>
+            <p className="text-sm">Your API Key:</p>
+            <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
+            <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
+}
+        )}
+      </div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     </div>;
   )}
         )}
@@ -265,6 +317,7 @@ export default function Partners() {const [form, setForm] = useState({name: '',e
             <pre className="bg - gray - 100 p - 3 rounded text-xs overflow-auto">{result.api_key}</pre>;
             <a href={result.dashboard_url} className="inline - block mt - 4 bg - black text - white px-4 py-2 rounded">Go to Dashboard</a>)}
       </div>;
+<<<<<<< HEAD
     </div>)}
   )}<div className='mt-8 bg-white p-6 rounded-lg shadow'>;
             <h3 className='text-lg font-medium mb-2'>;
@@ -285,3 +338,9 @@ export default function Partners() {const [form, setForm] = useState({name: '',e
       </div>;
     </div>;
   )}
+=======
+    </div>);
+}
+  );
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

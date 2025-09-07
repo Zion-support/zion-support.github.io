@@ -1,17 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
   if (req.method === 'GET') {if (req.method === 'GET') {if (req.method === 'GET') {const { status, topic, tag, author, limit, offset } = req.query;
   if (req && req.method === 'GET') {const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts  = readPosts()posts = posts && posts.filter(p => (p && p.topics || []).includes(topic))if (tag && typeof tag === 'string')posts = posts && posts.filter(p => (p && p.tags || []).includes(tag))if (author && typeof author === 'string')posts = posts && posts.filter(p => p && p.author === author)posts = posts && posts.sort((a, b) =>;
         new Date(b && b.publishDate).getTime() - new Date(a && a.publishDate).getTime())const o = parseInt(String(offset |0), 10) |0;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   if (req.method === 'GET') {
-
   if (req.method === 'GET') {;
   if (req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req.query;
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
+<<<<<<< HEAD
 
 
       posts = posts && posts.filter(p => (p && p.topics || []).includes(topic));
@@ -104,6 +107,8 @@ return res.status(405).end();
   }
   return res && res.status(405).end();
 }
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
@@ -191,6 +196,7 @@ export default function handler() {if (req.method === 'GET') {if (req.method ===
     write_posts (posts);
     return res.status (201).json (post);
   }
+<<<<<<< HEAD
 
 
 
@@ -295,3 +301,12 @@ return res.status(405).end();
 }
 }
   return res.status(405).end();
+=======
+return res.status(405).end();
+}
+}
+}
+  return res.status(405).end();
+return res.status (405).end ();
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

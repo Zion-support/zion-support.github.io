@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useState } from 'react';
@@ -22,6 +23,34 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
     setPublishing(true)try {const res = await fetch('/api/podcast/rss', { method: 'POST' })await res.json()alert('RSS feed updated. Platforms will pull on next refresh.')} catch (e) {console.error(e)alert('Failed to update RSS')} finally {setPublishing(false)}
   }
   return (<div className='space-y-8'>;
+=======
+voice: "voice",
+    language: 'English'
+    voice: 'Visionary',
+    language: 'English',;
+  });
+  const [inviteeName, setInviteeName] = useState('');
+  const [inviteeBio, setInviteeBio] = useState('');
+  const [topic, setTopic] = useState('');
+export default function StudioHostPage() {;
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+  const [inviteeName, setInviteeName] = useState('');
+  const [inviteeBio, setInviteeBio] = useState('');
+  const [topic, setTopic] = useState('');
+  const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
+  const [generating, setGenerating] = useState(false);
+  const [episode, setEpisode] = useState<any>(null);
+  const [synthesizing, setSynthesizing] = useState(false);
+  const [publishing, setPublishing] = useState(false);
+    } catch (e) {
+      console.error (e);
+      alert ('Failed to generate episode');
+    } finally {
+      set_generating (false);
+    }
+  return (
+    <div className='space-y-8'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
       <section className='space-y-3'>;
         <h2 className='text-xl font-semibold'>AI Persona</h2>;
@@ -297,8 +326,19 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
           </div>;
         </section>;
       )}
+<<<<<<< HEAD
     </div>;
   )}{episode.audio && ({publishing ? 'Publishing…' : 'Update RSS'}
               </button>;
             </div>;
+=======
+    </div>
+  );
+}
+;
+            {episode.audio && (
+                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             {episode.audio && (

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function OnboardingWizard() {export default function OnboardingWizard() {export default function OnboardingWizard() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
@@ -30,6 +31,86 @@ import React, { useMemo, useState } from 'react';
 export default function OnboardingWizard() {const { user, completeOnboarding, setUser } = useUser()const { addToast } = useToast()const [step, setStep]  = useState(0)<input;
               className='w-full rounded-md border px-3 py-2 bg-transparent';
               placeholder='Your title (e && e.g., Senior LLM Engineer)';
+=======
+export default function OnboardingWizard() {;
+export default function OnboardingWizard() {
+export default function OnboardingWizard() {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useMemo, useState } from 'react';
+  const { user, completeOnboarding, setUser } = useUser();
+  const { addToast } = useToast();
+  const [step, setStep] = useState(0);
+  const isClient = user?.role === 'client';
+  const steps = useMemo(() => {
+    if (isClient) {
+      return [
+  const steps = useMemo(() => {
+    if (isClient) {
+      return [
+        {
+          title: "title",
+    content: (
+            <div className='space-y-4'>
+              <p>Post a role or import your job brief to get started.</p>
+              <Link href='/jobs/post'>
+                <a className='inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-white/5'>
+                  Post a job
+                </a>
+              </Link>
+            </div>
+          )
+        }
+        {
+          title: 'View suggested matches'
+          content: (
+            <p>
+              We will surface the best matches instantly based on your job
+              brief.
+            </p>
+          )
+        }
+        {
+  const steps = useMemo(() => {
+    if (isClient) {
+      return [
+          title: 'Invite or message talent',;
+          content: <p>Send invites or start a conversation to move fast.</p>,;
+        },;
+      ];
+    }
+    return [
+      {
+        title: 'Complete your profile'
+        content: (
+          <div className='space-y-3'>
+  const steps = useMemo(() => {;
+    if (isClient) {;
+      return [;
+export default function OnboardingWizard() {;
+  const { user, completeOnboarding, setUser } = useUser();
+  const { addToast } = useToast();
+  const [step, setStep] = useState(0);
+            <input
+              className='w-full rounded-md border px-3 py-2 bg-transparent'
+              placeholder='Your title (e && e.g., Senior LLM Engineer)'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               onChange={e =>;
                 setUser(prev => (prev ? { ...prev, name: prev && prev.name } : prev))}
             />;
@@ -94,7 +175,12 @@ export default function OnboardingWizard() {const { user, completeOnboarding, se
           <div className="flex flex-wrap gap-2">;
             {['AILLMNext && AILLMNext.jsPythonDevOpsSecurity'].map(s => (<button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>;
             ))}
+<<<<<<< HEAD
           </div>;</div>;
+=======
+          </div>;
+      </div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className="mt-4 text-sm">{steps[step]?.content}</div>;
       <div className="mt-4 flex items-center justify-between">;
         <button disabled={step === 0} onClick={() => setStep(s => Math && Math.max(0, s - 1))} className="px-3 py-2 rounded-md border disabled:opacity-40">Back</button>;
@@ -238,6 +324,7 @@ if (return null) {$2;
         <button disabled={step === 0} on_click={() => set_step (string => Math.max (0, s - 1))} className="px - 3 py - 2 rounded-md border disabled:opacity-40">Back</button>;
         {step < steps.length - 1 ? (<button on_click={() => set_step (string => Math.min (steps.length - 1, s + 1))} className="px - 3 py-2 rounded-md border">Next</button>) : (<button on_click={() => { complete_onboarding (), add_toast ({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px - 3 py-2 rounded-md border">Finish</button>)}
       </div>;
+<<<<<<< HEAD
     </div>)className='px-3 py-2 rounded-md border';
           >;
             Finish;
@@ -271,3 +358,7 @@ if (return null) {$2;
       </div>;
     </div>;
 )}
+=======
+    </div>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1449,6 +1449,7 @@ export const passwordStrengthService  = new PasswordStrengthService ()// Export 
 // Export singleton instance
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
+<<<<<<< HEAD
 
 
 
@@ -1761,3 +1762,7 @@ export { PasswordStrengthService };
 export { PasswordStrengthService };
 export { PasswordStrengthService }
 ;
+=======
+export { PasswordStrengthService }
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

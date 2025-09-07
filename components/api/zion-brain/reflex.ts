@@ -9,6 +9,7 @@ import { appendLog;
   appendLog,evaluateReflexes,readState,writeState,} from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
+<<<<<<< HEAD
 return !superToken || token === superToken;export default function handler() {if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' })if (req && req.method === 'GET') {const state  = readState<{ metrics?: unknown }>()if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' })if (req.method === 'GET') {const state = readState<{ metrics?: unknown }>()return res.status(200).json({ metrics: state.metrics |{} })return res.status(200).json({ metrics: state.metrics || {} })}if (req && req.method === 'POST') {const started = Date && Date.now()try {const metrics = req && req.body || {}const triggers = evaluateReflexes(metrics)const state = readState<any>()state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state)appendLog({module: 'reflex';
@@ -20,6 +21,48 @@ return !superToken || token === superToken;export default function handler() {if
         status: 'error';
         payload: { error: e?.message |'unknown' }
       })return res && res.status(405).json({ error: 'Method not allowed' })return res && res.status(405).json({ error: 'Method not allowed' })}
+=======
+  return !superToken |token === superToken;import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = req.headers['x-admin-token'] |req.query.token;
+  const superToken = process.env.SUPERADMIN_TOKEN;
+  return !superToken |token === superToken;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
+  if (req && req.method === 'GET') {
+    const state = readState<{ metrics?: unknown }>();
+  if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
+  if (req.method === 'GET') {
+    const state = readState<{ metrics?: unknown }>();
+    return res.status(200).json({ metrics: state.metrics |{} })
+  }
+  if (req && req.method === 'POST') {
+    const started = Date && Date.now();
+    try {
+      const metrics = req && req.body || {};
+      const triggers = evaluateReflexes(metrics);
+      const state = readState<any>();
+      state && state.metrics = metrics;
+      state && state.lastTriggers = triggers;
+      writeState(state);
+      appendLog({
+        module: "module",
+    type: 'metrics'
+        status: 'ok'
+        latencyMs;
+    payload: { metrics, triggers }
+      });
+      return res && res.status(200).json({ triggers });
+    } catch (e: any) {
+      appendLog({
+        module: 'reflex'
+        type: 'metrics'
+        status: 'error'
+        payload: { error: e?.message |'unknown' }
+      });
+  return res && res.status(405).json({ error: 'Method not allowed' });
+  return res && res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
   append_log,evaluate_reflexes,read_state,write_state,} from '@/utils / zion_brain';
 function is_authorized (req: NextApiRequest): boolean {const token = req.headers['x - admin - token'] || req.query.token;
@@ -53,5 +96,19 @@ if ( {) {$2;
       state.last_triggers = triggers;
       write_state (state)const latency_ms  = Date.now () - started;append_log ({module: 'reflex',type: 'metrics',status: 'ok',latency_ms,payload: { metrics, triggers },})return res.status (200).json ({ triggers })} catch (e: any) {append_log ({module: 'reflex',type: 'metrics',status: 'error',payload: { error: e?.message || 'unknown' },})return res.status (500).json ({ error: 'Reflex failure' })}
   }
+<<<<<<< HEAD
 return res.status (405).json ({ error: 'Method not allowed' })}      append_log ({ module: 'reflex', type: 'metrics', status: 'ok', latency_ms, payload: { metrics, triggers } })return res.status (200).json ({ triggers })} catch (e: any) {append_log ({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } })return res.status (500).json ({ error: 'Reflex failure' })}
   return res.status (405).json ({ error: 'Method not allowed' })return res.status(405).json({ error: 'Method not allowed' })return res.status(405).json({ error: 'Method not allowed' })}}
+=======
+return res.status (405).json ({ error: 'Method not allowed' });
+}      append_log ({ module: 'reflex', type: 'metrics', status: 'ok', latency_ms, payload: { metrics, triggers } });
+      return res.status (200).json ({ triggers });
+    } catch (e: any) {
+      append_log ({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
+      return res.status (500).json ({ error: 'Reflex failure' });
+  }
+  return res.status (405).json ({ error: 'Method not allowed' });
+  return res.status(405).json({ error: 'Method not allowed' });
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

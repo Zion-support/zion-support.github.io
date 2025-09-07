@@ -1,6 +1,11 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { import Head from 'next / head';
+=======
+import {
+import Head from 'next / head';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {Code,GitBranch,Database,Cloud,Shield,Zap,Star,ExternalLink,CheckCircle,TrendingUp,Code;
@@ -10,6 +15,7 @@ import {Code,GitBranch,Database,Cloud,Shield,Zap,Star,ExternalLink,CheckCircle,T
   Shield;
   Zap;
   Code;
+<<<<<<< HEAD
   GitBranch,Database,Cloud,Shield,Zap,import { Code;
   GitBranch;
   Database;
@@ -49,6 +55,123 @@ export default function DeveloperToolsPage() {const developerTools = null;
     }
     {title: 'AI Code Tools',value: '$2.1B',growth: '+45% YoY',}
   ];return (<>;
+=======
+  GitBranch
+  Database
+  Cloud
+  Shield
+  Zap
+  Code;
+  GitBranch,
+  Database,
+  Cloud,
+  Shield,
+  Zap,
+  Star;
+  ExternalLink;
+  CheckCircle;
+  TrendingUp;
+  Cpu;
+      pricing: '$10 / month',
+      market_price: '$10 - 20 / month',
+      website: 'https://github.com / features / copilot',
+      color: 'bg - gradient - to - br from - gray - 500 to - black',
+      text_color: 'text - gray - 400',
+      gradient: 'from - gray - 400 to - black',
+      popular: true,
+      ];
+      pricing: '$4 / month',
+      market_price: '$4 / month',
+      website: 'https://github.com / pricing',
+      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
+      text_color: 'text - green - 400',
+      gradient: 'from - green - 400 to - emerald - 500',
+      popular: true,
+      ];
+      pricing: '$9 / month',
+      market_price: '$9 - 57 / month',
+      website: 'https://www.mongodb.com / atlas',
+      color: 'bg - gradient - to - br from - green - 500 to - blue - 600',
+      text_color: 'text - green - 400',
+      gradient: 'from - green - 400 to - blue - 500',
+      popular: false,
+      ];
+      pricing: '$20 / month',
+      market_price: '$20 / month',
+      website: 'https://vercel.com / pricing',
+      color: 'bg - gradient - to - br from - black to - gray - 600',
+      text_color: 'text - gray - 400',
+      gradient: 'from - black to - gray - 500',
+      popular: false,
+      ];
+      pricing: '$25 / month',
+      market_price: '$25 - 100 / month',
+      website: 'https://snyk.io / pricing',
+      color: 'bg - gradient - to - br from - red - 500 to - pink - 600',
+      text_color: 'text - red - 400',
+      gradient: 'from - red - 400 to - pink - 500',
+      popular: false,
+      ];
+      pricing: '$12 / month',
+      market_price: '$12 - 99 / month',
+      website: 'https://www.postman.com / pricing',
+      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
+      text_color: 'text - orange - 400',
+      gradient: 'from - orange - 400 to - red - 500',
+      popular: false,
+  ];
+    {
+      description: 'Average productivity improvement'
+    },  ],
+  description: 'Global developer tools market size'
+    }
+    {
+      title: "title",
+    value: '$2.1B'
+      growth: '+45% YoY'
+      description: 'AI-powered development tools market'
+    },      description: 'AI-powered development tools market'
+    }
+    {
+      title: 'Cloud Dev Tools'
+      value: '$4.8B'
+      growth: '+32% YoY'
+      description: 'Cloud-based development platforms'
+    },      description: 'Cloud-based development platforms'
+    }
+    {
+      title: 'Dev Productivity'
+      value: '35%'
+      growth: '+18% YoY'
+      description: 'Average productivity improvement'
+    },      description: 'Average productivity improvement'
+    }
+  ];
+  const devCategories = [
+      description: 'AI - powered development tools market',
+    },    {
+      title: 'Cloud Dev Tools',
+      value: '$4.8B',
+      growth: '+32% YoY',
+      description: 'Cloud - based development platforms',
+    },    {
+      title: 'Dev Productivity',
+      value: '35%',
+      growth: '+18% YoY',
+      description: 'Average productivity improvement',
+    },  ],
+  description: 'Global developer tools market size';
+    }
+    {
+      title: 'AI Code Tools',
+      value: '$2.1B',
+      growth: '+45% YoY',
+    }
+  ];
+;
+  return (
+    <>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <Head>;
         <title>Developer Tools & Services | Zion Tech Group - Real Dev Tools with;
           Pricing;
@@ -124,6 +247,7 @@ export default function DeveloperToolsPage() {const developerTools = null;
               informed decisions about your development stack.;
             </p>;
           </div>;
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>;
             {devMarketStats.map((stat, index) => (<Card;
                 key={index}
@@ -147,6 +271,21 @@ export default function DeveloperToolsPage() {const developerTools = null;
           </div>;
         </div>;
       </section>;
+=======
+      {/* Developer Tools Grid */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+              Curated Developer Tools & Services
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {developerTools.map((tool, index) => (
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Developer Tools Grid */}
 <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -292,6 +431,7 @@ export default function DeveloperToolsPage() {const developerTools = null;
         </div>;
       </section>;
       {/* Developer Workflow */}
+<<<<<<< HEAD
 <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -299,6 +439,21 @@ export default function DeveloperToolsPage() {const developerTools = null;
               Complete Developer Workflow;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+=======
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+              Complete Developer Workflow
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Build a complete development pipeline with these essential tools
+              that work together seamlessly.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {devWorkflow.map((phase, index) => (
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               Build a complete development pipeline with these essential tools;
               that work together seamlessly.;
             </p>;
@@ -362,7 +517,12 @@ export default function DeveloperToolsPage() {const developerTools = null;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {devCategories.map((category, index) => (</div>;
         </div>;
+<<<<<<< HEAD
       </section>;{/* Tool Categories */}
+=======
+      </section>;
+      {/* Tool Categories */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -427,12 +587,23 @@ export default function DeveloperToolsPage() {const developerTools = null;
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
           </div>;
         </div>;
       </section>;{/* CTA Section */}Start with one tool or build a complete development stack. Each tool;
+=======
+          </div>
+        </div>
+      </section>
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+            Start with one tool or build a complete development stack. Each tool;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             is designed to work independently and integrate seamlessly with your;
             existing workflow.;
           </p>;
@@ -466,6 +637,7 @@ href='/contact';
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/ai-tools";
               variant="primary";
               size="lg";
@@ -481,3 +653,11 @@ href='/contact';
       </section>;
     </>;
   )}
+=======
+              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/ai-tools"
+              variant="primary"
+              size="lg"
+              className="bg-cursor-blue hover:bg-cursor-blue-dark"
+              Explore AI Tools
+            </Button>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

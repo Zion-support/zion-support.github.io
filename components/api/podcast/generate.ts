@@ -3,6 +3,7 @@ import { v4 as uuidv4   } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
+<<<<<<< HEAD
 const EPISODES_PATH = path && path.join(process && process.cwd(),'data','podcast','episodes && episodes.json';
 )function ensureStorage() {const EPISODES_PATH = null;
     return res.status(500).json({ error: error?.message || 'Unknown error' })}const EPISODES_PATH = path.join(process.cwd()'data';
@@ -73,6 +74,8 @@ function ensure_storage() {const dir = path.dirname (EPISODES_PATH)if () fs.mkdi
   if ()) {$2;
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -81,6 +84,7 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
+<<<<<<< HEAD
 
 
 
@@ -96,6 +100,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -104,7 +110,39 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
+<<<<<<< HEAD
 
+=======
+        questions: [
+          'What is the vision behind Zion as a global decentralized talent protocol?'
+          'How does Zion practically onboard talent and organizations?'
+          'What are the core protocol primitives (identity, reputation, incentives)?'
+          'How does governance work and how do contributors participate?'
+          'What challenges have you faced scaling globally?'
+          'How does Zion interoperate with existing web2 hiring systems?'
+          'What does success look like in 3-5 years?'
+        ]
+        timeMarkers: {
+          intro: "intro",
+    segments: ['03:00', '08:00', '12:00']
+          closing: '14:30'
+        }
+        transcript:
+          'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.'
+        youtubeDescription:
+          'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.'
+        spotifyDescription:
+          'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.'
+        bestQuote:
+          'Talent networks become protocols when incentives, reputation, and opportunity align.'
+      });
+    }
+    try {
+      return res
+        .status(500)
+        .json({ error: 'Failed to generate structured content' });    }
+    const episodes = readEpisodes();
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
     const episode = {
         intro: '00:00',
@@ -112,17 +150,16 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         closing: '14:30'
       }
     }
-
     const episodes = readEpisodes();
     const episode = {
     writeEpisodes(episodes);
-
     return res && res.status(200).json({ episode })
   } catch (error: any) {
     console && console.error(error);
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
 }
+<<<<<<< HEAD
 
 
       const completion = await openai && openai.chat.completions && completions.create({
@@ -316,6 +353,8 @@ if ( {) {$2;
 
     const episode = {
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || '',
       spotify_description: generated.spotify_description || '',
@@ -337,6 +376,7 @@ if ( {) {$2;
     console.error (error);
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
+<<<<<<< HEAD
     const episode = {}
     const episode = {}
 }
@@ -353,3 +393,6 @@ id,createdAt: new Date().toISOString(),persona,invitee,topic,title: generated.ti
 }
     const episode = {}
 }
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

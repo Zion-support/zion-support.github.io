@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { NextPage } from 'next';
@@ -14,6 +15,8 @@ const DataScienceChat: NextPage = () => {return (<div>;
       </Head>;<meta name="description" content="DataScienceChat blog post" />;
       </Head>;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -30,6 +33,7 @@ const DataScienceChat: NextPage = () => {;
       <Head>;
         <title>DataScienceChat - Zion Tech Solutions</title>;
         <meta name="description" content="DataScienceChat blog post" />{" "}
+<<<<<<< HEAD
 
 
 const DataScienceChat: NextPage = () => {
@@ -40,6 +44,9 @@ const DataScienceChat: NextPage = () => {
       </Head>;
 
 
+=======
+      </Head>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <main>
         <h1>DataScienceChat</h1>
         <p>Blog content coming soon...</p>
@@ -47,7 +54,6 @@ const DataScienceChat: NextPage = () => {
       </main>
     </div>
       </Head>;
-
       <main>;
         <h1>DataScienceChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -68,11 +74,14 @@ ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
 export default DataScienceChat;
+<<<<<<< HEAD
 
 
 
         <title>DataScienceChat - Zion Tech Solutions</title>
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -116,6 +125,7 @@ export default DataScienceChat;<title>DataScienceChat - Zion Tech Solutions</tit
 }
 ;
 export default DataScienceChat;
+<<<<<<< HEAD
 ;
     <div>
       <Head>
@@ -136,22 +146,9 @@ export default DataScienceChat
 
 
 
-const DataScienceChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>DataScienceChat - Zion Tech Solutions</title>
-        <meta name="description" content="DataScienceChat blog post" />{" "}
-      </Head>
-      <main>
-        <h1>DataScienceChat</h1>
-        <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
-      </main>
-    </div>
-  );
-}
-export default DataScienceChat;
 
         <title>DataScienceChat - Zion Tech Solutions</title>
         <title>DataScienceChat - Zion Tech Solutions</title>
+=======
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

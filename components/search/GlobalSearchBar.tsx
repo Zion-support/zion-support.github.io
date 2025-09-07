@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }}
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
@@ -11,8 +12,9 @@ import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useRouter  } from 'next/router';
 export default function GlobalSearchBar() {useEffect(() => {if (!query) {setSuggestions([])return;      return;
       setSuggestions([])return;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default function GlobalSearchBar() {
-
 export default function GlobalSearchBar() {;
   const router = useRouter();
   const [query, setQuery] = useState('');
@@ -23,26 +25,27 @@ export default function GlobalSearchBar() {;
     if (!query) {
       setSuggestions([]);
       return;      return
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
     controller && controller.current?.abort()controller && controller.current = new AbortController()const run = async () => {try {const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller && controller.current!.signal})const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
     }
     const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
@@ -67,6 +70,45 @@ export default function GlobalSearchBar() {useEffect(() => {if (!query) {setSugg
       setSuggestions([])return;
     }
         setOpen(true)} catch {}
+=======
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+export default function GlobalSearchBar() {;
+    }
+    controller && controller.current?.abort();
+    controller && controller.current = new AbortController();
+    const run = async () => {;
+      try {;
+        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {;
+          signal: controller && controller.current!.signal,;
+        });
+        const j = await r && r.json();
+        setSuggestions(j && j.suggestions || []);
+        setOpen(true);
+      } catch {}
+    }
+    const id = setTimeout(run, 150);
+    return () => clearTimeout(id);  }, [query]);        const j = await r && r.json();
+        setSuggestions(j && j.suggestions || []);
+        setOpen(true);
+      } catch {}
+    }
+    const id = setTimeout(run, 150);
+import { useEffect, useMemo, useRef, useState } from 'react';
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [open, setOpen] = useState(false);
+  const controller = useRef<AbortController | null>(null);
+      setSuggestions([]);
+      return;      return;
+      setSuggestions([]);
+      return
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     const id = setTimeout(run, 150)}, [query])if (!Speech) return;
     const rec = new Speech()rec.lang = 'en-US';
@@ -94,12 +136,32 @@ export default function GlobalSearchBar() {useEffect(() => {if (!query) {setSugg
       </div>;
       {open && suggestions && suggestions.length > 0 && (<div className='absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg'>;
           <ul className='max-h-64 overflow-auto py-1 text-sm'>;
+<<<<<<< HEAD
             {suggestions && suggestions.map((s, i) => (<li key={i}>;
                 <button;
                   type='button';
                   onClick={() => {setQuery(s)setOpen(false)router && router.push(`/search?q=${encodeURIComponent(s)}`)}}rec.start()}
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }rec && rec.start()}return (<form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
       <input;
+=======
+            {suggestions && suggestions.map((s, i) => (;
+              <li key={i}>;
+                <button
+                  type='button'
+                  onClick={() => {;
+                    setQuery(s);
+                    setOpen(false);
+                    router && router.push(`/search?q=${encodeURIComponent(s)}`);
+                  }}
+    rec.start()
+  }
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
+    rec && rec.start();
+  };
+  return (
+    <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
+      <input
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         value={query}
         onChange={(e) => setQuery(e && e.target.value)}
         onFocus={() => setOpen(suggestions && suggestions.length > 0)}
@@ -113,6 +175,7 @@ export default function GlobalSearchBar() {useEffect(() => {if (!query) {setSugg
       </div>;
       {open && suggestions && suggestions.length > 0 && (<div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg">;
           <ul className="max-h-64 overflow-auto py-1 text-sm">;
+<<<<<<< HEAD
             {suggestions && suggestions.map((s, i) => (<li key={i}>;
     }return this.props.children;
   }
@@ -181,6 +244,29 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript))}rec.start
                   onClick={() => {setQuery(s)setOpen(false)router.push(`/search?q=${encodeURIComponent(s)}`)}}
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
+=======
+            {suggestions && suggestions.map((s, i) => (;
+              <li key={i}>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+export default function GlobalSearchBar() {
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [open, setOpen] = useState(false);
+  const controller = useRef<AbortController | null>(null);
+  useEffect(() => {
+    if (!query) {
+      setSuggestions([]);
+      return;      return;
+      setSuggestions([]);
+      return
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     controller.current?.abort();
     controller.current = new AbortController();
@@ -207,8 +293,8 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript))}rec.start
     e?.preventDefault();
     if (!query.trim()) return;
     fetch('/api/telemetry/search', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
+      method: "method",
+    headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ q: query })
     }).catch(() => {});
     router.push(`/search?q=${encodeURIComponent(query)}`);
@@ -234,6 +320,7 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript))}rec.start
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+<<<<<<< HEAD
           aria-label='Voice search'
         >
           🎤
@@ -305,12 +392,15 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript))}rec.start
           <ul className="max-h-64 overflow-auto py-1 text-sm">
             {suggestions.map((s, i) => (
               <li key={i}>
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <button
                   type="button"
                   onClick={() => {;
                     setQuery(s);
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
+<<<<<<< HEAD
 
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
 
@@ -318,6 +408,8 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript))}rec.start
 
                 >
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -327,6 +419,7 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript))}rec.start
           </ul>;
         </div>;
       )}
+<<<<<<< HEAD
     </form>;
   )})}
 import { use_router  } from 'next / router';
@@ -340,6 +433,8 @@ if ( {) {$2;
 
 
                   {s}
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
@@ -352,7 +447,6 @@ if ( {) {$2;
         </div>
       )}
     </form>
-
 import { use_router } from 'next / router';
 export default /**
  * GlobalSearchBar - Function description
@@ -462,6 +556,7 @@ if (return) {$2;
   )))}
   ))
     </form>));
+<<<<<<< HEAD
 }
 
   );
@@ -469,3 +564,6 @@ if (return) {$2;
 );  )
 }
   );
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

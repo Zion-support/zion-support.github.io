@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   return (return (}<div className="py - 10">;
       <h1 className="text - 2xl font - semibold text - white">Services Schema</h1>;
@@ -33,3 +34,5 @@
 }
 }
   return (
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

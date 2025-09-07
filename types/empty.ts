@@ -1,3 +1,3 @@
-
-// Empty TypeScript file;
+// Empty TypeScript file
 export {}
+}

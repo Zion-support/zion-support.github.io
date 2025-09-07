@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type {;
@@ -8,9 +9,15 @@ import type {;
 
 ;
 import type {GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';
+=======
+GrantCategory,;
+  GrantStatus,;
+} from '../../types/grants';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];
 const statuses: GrantStatus[] = [;
+<<<<<<< HEAD
   'Draft','Submitted','Under Review','Approved','Rejected'];export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[]>([])sector?: string;
     status?: string;
     region?: string;
@@ -101,8 +108,22 @@ export default function GrantsPage() {const categories: GrantCategory[] = ['Ecos
           </Link>;
           <Link href='/incubator'>;
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
+=======
+  'Draft',;
+  'Submitted',;
+  'Under Review',;
+  'Approved',;
+  'Rejected',;
+];
+export default function GrantsPage() {;
+  const [items, setItems] = useState<GrantApplication[]>([]);
+    sector?: string;
+    status?: string;
+    region?: string;
+    program?: string;
+  }>({});
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   useEffect(() => {
-
     const params = new URLSearchParams();
     if (filters.sector) params.set('sector', filters.sector);
     if (filters.status) params.set('status', filters.status);
@@ -114,7 +135,6 @@ const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
-
   useEffect(() => {;
     const params = new URLSearchParams();
     if (filters && filters.sector) params && params.set('sector', filters && filters.sector);
@@ -127,7 +147,6 @@ export default function GrantsPage() {;
       .catch(() => setItems([]));  }, [filters]);
   return (
       .catch(() => setItems([]))
-
     <EnhancedLayout>      .then((r) => r && r.json());
       .then((d) => setItems(d && d.items || []));
       .catch(() => setItems([]));
@@ -151,6 +170,7 @@ export default function GrantsPage() {;
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+<<<<<<< HEAD
           }
         >
           <option value=''>All Sectors</option>
@@ -254,6 +274,8 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
         />;
         <select;
           className='border rounded p-2';
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }
         >
           <option value=''>All Stages</option>
@@ -266,15 +288,19 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
         <input
           className='border rounded p-2'
           placeholder='Region'
+<<<<<<< HEAD
 
           value={filters && filters.region || ''}
           onChange={e =>;
             setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }
         />
         <select
           className='border rounded p-2'
+<<<<<<< HEAD
 
       <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
         <select;
@@ -283,6 +309,8 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           on_change={e =>;
             set_filters (function => ({ ...f, sector: e.target.value || undefined }))}
             set_filters (function => ({ ...f, sector: e.target.value || undefined }));
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }
         >;
           <option value=''>All Sectors</option>;
@@ -308,6 +336,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
         />;<select;
           className='border rounded p-2';
         />;
+<<<<<<< HEAD
         <select;
           className='border rounded p - 2';
           value={filters.program || ''}
@@ -337,11 +366,14 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 
         <select
           className='border rounded p-2'
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
+<<<<<<< HEAD
 
           value={filters && filters.program || ''}
           onChange={e =>;
@@ -352,6 +384,8 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           <option value='incubator'>Incubator</option>;
         </select>;
       </div>;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
@@ -359,6 +393,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
         </div>
       </div>
+<<<<<<< HEAD
 
 
       <div className='grid gap-4'>;
@@ -400,6 +435,11 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
       </div>;
       <div className='grid gap-4'>;
         {items && items.map(g => (<div;
+=======
+      <div className='grid gap-4'>;
+        {items && items.map(g => (;
+          <div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             key={g && g.id}
             className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
             <div className='flex items-center justify-between'>;
@@ -422,12 +462,15 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
+<<<<<<< HEAD
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 )}
                 {g && g.status === 'Approved' && (<span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
                     Grant Winner;
@@ -461,6 +504,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
         {items && items.length === 0 && (;
           <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
+<<<<<<< HEAD
 
 
       </div>
@@ -498,3 +542,6 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
     </EnhancedLayout>)})
     </EnhancedLayout>);
 }
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

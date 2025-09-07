@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   Menu;
   X;
@@ -80,6 +81,123 @@ className='flex items-center';
                 <div className='text-xs text-gray-400'>;
                   Revolutionary Technology;
                 </div>              </div>          >;
+=======
+Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Brain
+  Rocket
+  Dna
+  Globe
+  Shield
+  Wifi
+  Package
+  Bot
+  Car
+  Building2
+  DollarSign
+  Monitor
+  Users
+  Cpu
+  Zap
+  Atom
+  Database
+  Cloud
+  Lock
+  Code;
+} from 'lucide-react';
+import Link from 'next/link';import {
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Rocket,
+  Dna,
+  Globe,
+  Shield,
+  Wifi,
+  Package,
+  Bot,
+  Car,
+  Building2,
+  DollarSign,
+  Monitor,
+  Users,
+  Cpu,
+  Zap,
+  Atom,
+  Database,
+  Cloud,
+  Lock,
+  Code,
+} from 'lucide-react';
+import Link from 'next/link';import { ;
+  Lock,
+  Code,
+} from 'lucide-react';
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+  Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
+  Bot, Car, Building2, DollarSign, Monitor, Users;
+    {
+      name: "name",
+    href: '#'
+      icon: Brain;
+    description: 'Cutting-edge AI solutions'
+      dropdown: [
+      description: 'Benchmarks & vendor references'
+    }
+    {
+      name: 'About'
+      href: '/about',          price: '$7,999/month'
+        }
+      ]
+    }
+      name: 'Micro SaaS'
+      href: '/services'
+      icon: Monitor
+      description: '300+ micro SaaS services'
+    },      description: '300+ micro SaaS services'
+    }
+    {
+      name: 'Market Pricing'
+      href: '/market-pricing'
+      icon: DollarSign
+      description: 'Benchmarks & vendor references'
+    },    {
+    {
+      name: 'Contact'
+      href: '/contact'
+      icon: null
+    }
+    {
+    >;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='flex justify-between items-center h-20'>          {/* Logo */}  return (
+    <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
+        : 'bg-transparent'
+          >
+            <Link href='/' className='flex items-center space-x-3 group'>
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <Zap className='w-6 h-6 text-white' />
+              </div>
+              <div className='hidden sm:block'>
+                <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
+                  Zion Tech Group
+                </div>
+                <div className='text-xs text-gray-400'>
+                  Revolutionary Technology
+                </div>              </div>          >
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }`}>;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center h-20">;
@@ -121,6 +239,7 @@ className='flex items-center';
                 <div className="text-xs text-gray-400">Revolutionary Technology</div>;
               </div>;
             </Link>;
+<<<<<<< HEAD
           </motion && motion.div>;{/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>;
             {navigationItems.map((item, index) => (<div key={item.name} className='relative group'>;
@@ -145,10 +264,17 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                     <span>{item.name}</span>;
                   </Link>;
                 )})}
+=======
+          </motion && motion.div>;
+                  </Link>
+                )}
+                )}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 {/* Dropdown Menu */}
                 {item && item.dropdown && (<AnimatePresence>;
                     {activeDropdown === item && item.name && (<motion&& motion.div;
                         initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
+<<<<<<< HEAD
                         animate={{ opacity: 1, y: 0, scale: 1 }}>;
                         <div className="p-4">;
                           <div className="text-sm text-gray-400 mb-3">{item.description}</div>;
@@ -158,6 +284,22 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                 )}{/* Dropdown Menu */}
                 {item.dropdown && (<AnimatePresence>;
                     {activeDropdown === item.name && (<motion.div;
+=======
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                      >
+                        <div className="p-4">
+                          <div className="text-sm text-gray-400 mb-3">{item.description}</div>
+                          <div className="space-y-2">
+                            {item.dropdown.map((dropdownItem) => (
+                              <Link
+                  </Link>
+                )}
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -200,6 +342,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
           {/* Contact Info & CTA */}<div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;<div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
+<<<<<<< HEAD
               <a;
               </a>;
               <a;
@@ -218,6 +361,26 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
             </div>;
             <motion.a;
               href="/contact";
+=======
+              <a
+              </a>
+              <a
+          </div>
+          {/* Contact Info & CTA */}
+          <div className="hidden lg:flex items-center space-x-6">
+            <div className="flex items-center space-x-4 text-sm text-gray-300">
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
+                <Phone className="w-4 h-4" />
+                <span className="hidden xl:inline">{contactInfo.mobile}</span>
+              </a>
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
+                <Mail className="w-4 h-4" />
+                <span className="hidden xl:inline">{contactInfo.email}</span>
+              </a>
+            </div>
+            <motion.a
+              href="/contact"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300";
@@ -298,6 +461,7 @@ className='block py-2 text-gray-400 hover:text-white transition-colors duration-
                     </div>;
                   ) : (<Link;
                       href={item.href}
+<<<<<<< HEAD
                       onClick={() => setIsOpen(false)}{item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>;
 className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3';
                     >;
@@ -342,6 +506,33 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
                 </div>;
                 <motion.a;
                   href="/contact";
+=======
+                      onClick={() => setIsOpen(false)}
+                      {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
+                      <span>{item.name}</span>
+                    </Link>
+                  )}
+                </div>
+              ))}
+              {/* Mobile Contact Info */}
+              <div className="pt-6 border-t border-gray-800/50">
+                <div className="space-y-3 text-sm text-gray-400">
+                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
+                    <Phone className="w-4 h-4" />
+                    <span>{contactInfo.mobile}</span>
+                  </a>
+                  <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
+                    <Mail className="w-4 h-4" />
+                    <span>{contactInfo.email}</span>
+                  </a>
+                  <div className="flex items-start space-x-3">
+                    <MapPin className="w-4 h-4 mt-0.5" />
+                    <span>{contactInfo.address}</span>
+                  </div>
+                </div>
+                <motion.a
+                  href="/contact"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}
                   className="block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">;
@@ -353,7 +544,15 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
         )}
       </AnimatePresence>;
     </nav>;
+<<<<<<< HEAD
   )}export default UltraAdvancedNavigation;  )}export default UltraAdvancedNavigation;
+=======
+  )
+};
+export default UltraAdvancedNavigation;  )
+};
+export default UltraAdvancedNavigation;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (<motion.div;
@@ -463,6 +662,7 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
             </div>;
           </motion.div>)}
       </AnimatePresence>;
+<<<<<<< HEAD
     </nav>)}export default UltraAdvancedNavigation)}export default UltraAdvancedNavigation;export default UltraAdvancedNavigation;
   )}href='/contact';
                   whileHover={{ scale: 1.05 }}
@@ -478,3 +678,16 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
       </AnimatePresence>;
     </nav>;
 )}export default UltraAdvancedNavigation;
+=======
+    </nav>);
+}
+;
+export default UltraAdvancedNavigation);
+}
+;
+export default UltraAdvancedNavigation;
+export default UltraAdvancedNavigation;
+  )
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

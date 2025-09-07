@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 }
@@ -30,25 +31,23 @@ xmlns='http://www.w3.org/2000/svg';
               fill={active ? 'gold' : 'none'}export default StarRating;xmlns="http://www.w3.org/2000/svg";
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -56,43 +55,56 @@ class ErrorBoundary extends React.Component {
 }) ;
 }</div>) ;
 };
+<<<<<<< HEAD
 
 
 
 type Props = {
+=======
+type Props = {;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   value: number,;
   onChange: (val: number) => void,;
   size?: number;
   readOnly?: boolean;
 };
-
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {;
-
   const stars = [1, 2, 3, 4, 5];
   return (
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           <button
             key={star}
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
           >;
             <svg
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               width={size}
               height={size}
               view_box='0 0 24 24';
               fill={active ? 'gold' : 'none'}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default StarRating;
-
               xmlns="http://www.w3.org/2000/svg"
               width={size}
               stroke={active ? 'gold' : 'current_color'}
@@ -131,7 +143,11 @@ export default StarRating;              width={size}
     </div>);
 }
 ;
+<<<<<<< HEAD
 export default StarRating;
 
 ;
 
+=======
+export default StarRating;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

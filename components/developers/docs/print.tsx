@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 
 ;
   return {props: {docs: content as DocsContent,},}}import React, { useEffect } from 'react';
+=======
+return {
+    props: {
+      docs: content as DocsContent,
+    },
+  }}import React, { useEffect } from 'react';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { GetStaticProps } from 'next';
 import content from '../../../data / docs / content.json';
 export type Section = {id: string,title: string,html?: string;
@@ -19,11 +27,56 @@ export type Section = {id: string;
 type DocsContent = {title: string;
   sections: Section[];
 }
+<<<<<<< HEAD
 type PageProps = {docs: DocsContent;
 }
 export const getStaticProps: GetStaticProps<PageProps> = async () => {return {props: {docs: content as DocsContent}}
 export default function PrintDocs() {useEffect(() => {const id  = setTimeout(() => window.print(), 500)class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+;
+type PageProps = {
+  docs: DocsContent;
+}
+;
+export const getStaticProps: GetStaticProps < PageProps> = async () => {
+  return {
+    props: {
+      docs: content as DocsContent
+    }
+  }
+};import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data/docs/content.json';
+export type Section = {
+  id: string;
+    title: string
+  html?: string;
+  code?: { language?: string, content: string }[]
+}
+type DocsContent = {
+  title: string
+  sections: Section[]
+}
+type PageProps = {
+  docs: DocsContent
+}
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+  return {
+    props: {
+      docs: content as DocsContent}}
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {
+    const id = setTimeout(() => window.print(), 500);
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     return this.props.children;
   }
@@ -46,11 +99,23 @@ export type Section = any;}, [])return (<div className='p-8 max-w-4xl mx-auto'>;
                   key={i}className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'>;
                   {c && c.content}
                 </pre>;
+<<<<<<< HEAD
               ))}          </section>  }, [])}export default function PrintDocs() {useEffect(() => {const id = setTimeout(() => window.print(), 500)return () => clearTimeout(id)}, [])className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap';
                 >;
                   {c.content}
                 </pre>;
               ))}return (<div className="p-8 max-w-4xl mx-auto">;
+=======
+              ))}          </section>  }, [])
+};
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {
+    const id = setTimeout(() => window.print(), 500);
+    return () => clearTimeout(id)
+  }, []);
+  return (
+    <div className="p-8 max-w-4xl mx-auto">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
       <div className="space-y-8">;
         {docs && docs.sections.map((s) => (<section key={s && s.id}>;
@@ -86,6 +151,13 @@ function PrintDocs() {useEffect (() => {const id = set_timeout (() => window.pri
     </div>)))}
           </section>;
         ))}
+<<<<<<< HEAD
       </div>;
     </div>;
   )})}
+=======
+      </div>
+    </div>
+  );
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

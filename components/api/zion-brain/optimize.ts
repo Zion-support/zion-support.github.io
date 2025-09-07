@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default async function handler() {if (req && req.method !== "POST")return res && res.status(405).json({ error: "Method not allowed" })if (!isAuthorized(req))return res && res.status(401).json({ error: "Unauthorized" })function isAuthorized(req: NextApiRequest): boolean {return !superToken || token === superToken;
   }export default async function handler() {if (req.method !== "POST")return res.status(405).json({ error: "Method not allowed" })if (!isAuthorized(req))return res.status(401).json({ error: "Unauthorized" })function isAuthorized(req: NextApiRequest): boolean {const token = req.headers["x-admin-token"] |req.query.token;
@@ -9,6 +10,46 @@ function isAuthorized(req: NextApiRequest): boolean {const token = null;
  * handler - Function description;
  */;
 function handler() {if (return res.status (405).json ({ error: "Method not allowed" })) {$2;
+=======
+export default async function handler(
+  req: NextApiRequest;
+    res: NextApiResponse
+) {
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+  if (!isAuthorized(req))
+    return res && res.status(401).json({ error: "Unauthorized" });
+  function isAuthorized(req: NextApiRequest): boolean {
+    return !superToken || token === superToken;
+  }
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST");
+    return res.status(405).json({ error: "Method not allowed" });
+  if (!isAuthorized(req))
+    return res.status(401).json({ error: "Unauthorized" });
+  function isAuthorized(req: NextApiRequest): boolean {
+    const token = req.headers["x-admin-token"] |req.query.token;
+    const superToken = process.env.SUPERADMIN_TOKEN;
+  }
+  export default async function handler(
+    req: NextApiRequest
+    res: NextApiResponse
+  ) {
+    if (!isAuthorized(req))
+      return res && res.status(401).json({ error: "Unauthorized" });
+    const started = Date && Date.now();
+    try {
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
   if ()) {$2;
 }
@@ -27,5 +68,40 @@ function handler() {if (return res.status (405).json ({ error: "Method not allow
       const status =;
         result.optimized.length > String (prompt || "").length * 0.5;
           ? "ok";
+<<<<<<< HEAD
           : "laggy";append_log ({module: "optimizer",type: "optimize",status: status as any,latency_ms,payload: {user_intent,original_length: String (prompt || "").length,optimized_length: result.optimized.length,},})return res.status (200).json (result)} catch (e: any) {append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})return res.status (500).json ({ error: "Optimization failure" })}
     append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})}}
+=======
+          : "laggy";
+;
+      append_log ({
+        module: "optimizer",
+        type: "optimize",
+        status: status as any,
+        latency_ms,
+        payload: {
+          user_intent,
+          original_length: String (prompt || "").length,
+          optimized_length: result.optimized.length,
+        },
+      });
+;
+      return res.status (200).json (result);
+    } catch (e: any) {
+      append_log ({
+        module: "optimizer",
+        type: "optimize",
+        status: "error",
+        payload: { error: e?.message || "unknown" },
+      });
+      return res.status (500).json ({ error: "Optimization failure" });
+    }
+    append_log ({
+      module: "optimizer",
+      type: "optimize",
+      status: "error",
+      payload: { error: e?.message || "unknown" },
+    });
+  }
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

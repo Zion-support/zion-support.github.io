@@ -127,6 +127,7 @@ export interface AIEmergingTechService {
   customers: number;
   rating: number;
   reviews: number}
+<<<<<<< HEAD
 export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered Video Generation Platform;
   {id:,ai-video-generation-platform',"name": 'AI Video Generation Platform,tagline:,Create professional videos with AI in minutes',"price": '$499;
     period:;
@@ -145,6 +146,141 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     ],"popular": true,icon:,⚛️',"color": 'from-indigo-500 to-blue-600,textColor:,text-indigo-400',"link": 'https://ziontechgroup.com/quantum-machine-learning-platform,"marketPosition": 'Competitive with IBM Quantum ($0.60/credit), Amazon Braket ($0.30/hour), and Google Quantum ($0.50/credit). Our "advantage": Better algorithms, comprehensive tools, and research support.,,"targetAudience": Data scientists, Researchers, AI engineers, Quantum computing enthusiasts, Academic institutions',"trialDays": 14,setupTime:,1 day',"category": 'Quantum Computing,"realService": true,technology:,Python, Qiskit, Cirq, TensorFlow Quantum, React, Node.js, AWS',"integrations": IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum,,"useCases": Drug discovery, Financial modeling, Logistics optimization, Climate modeling, AI research,,"roi": 'Average customer sees 800% ROI within 6 months through breakthrough research and competitive advantage.,"competitors": [,IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum'],"marketSize": '$1.8B market,growthRate:,65% annual growth',"variant": 'quantum-futuristic,"contactInfo": {mobile:,+1 302 464 0950',"email": 'kleber@ziontechgroup.com,address:,364 E Main St STE 1008 Middletown DE 19709',"website": 'https://ziontechgroup.com;
     },"realImplementation": true,implementationDetails:,Advanced quantum ML platform with hybrid classical-quantum algorithms, real-time quantum simulation, and comprehensive research tools. Includes educational resources and collaboration features.',"launchDate": '2024-01-15,"customers": 450,"rating": 4.9;
     reviews: 280;
+=======
+export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered Video Generation Platform
+  {
+    id:,
+  ai-video-generation-platform',
+    "name": 'AI Video Generation Platform,
+    tagline:,
+  Create professional videos with AI in minutes',
+    "price": '$499;
+    period:
+  /month',
+    "description": Advanced AI-powered video generation platform that creates professional-quality videos from text, images, and audio inputs. Perfect for marketers, content creators, and businesses.
+    "features": [
+  'Text-to-video generation
+  'Image-to-video conversion',
+      'AI voice synthesis'
+  'Automatic scene generation',
+      'Professional templates library'
+  'Multi-language support',
+      '4K video export'
+  'Brand customization',
+      'Social media optimization'
+  'API access for developers'
+    ],
+    "popular": true,
+    icon:,
+  🎬',
+    "color": 'from-purple-500 to-pink-600,
+    textColor:,
+  text-purple-400',
+    "link": 'https://ziontechgroup.com/ai-video-generation-platform,
+    "marketPosition": 'Competitive with Runway ML ($35/month), Synthesia ($30/month), and Lumen5 ($19/month). Our "advantage": Better quality, more features, and professional-grade output.,
+  ,
+    "targetAudience": Content creators, Marketing teams, Video producers, Social media managers, Businesses',
+    "trialDays": 7,
+    setupTime:,
+  30 minutes',
+    "category": 'AI & Content Creation,
+    "realService": true,
+    technology:,
+  Python, TensorFlow, PyTorch, React, Node.js, AWS, GPU clusters',
+    "integrations": YouTube, Vimeo, Facebook, Instagram, TikTok, Adobe Premiere,
+  ,
+    "useCases": Marketing videos, Social media content, Product demos, Training videos, Brand storytelling,
+  ,
+    "roi": 'Average customer sees 500% ROI within 3 months through increased engagement and reduced production costs.,
+    "competitors": [,
+  Runway ML, Synthesia, Lumen5, InVideo, Pictory'],
+    "marketSize": '$3.2B market,
+    growthRate:,
+  45% annual growth',
+    "variant": 'ai-futuristic,
+    "contactInfo": {
+      mobile:,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      "website": 'https://ziontechgroup.com
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Production-ready AI video generation platform with state-of-the-art models, GPU acceleration, and comprehensive video editing tools. Includes mobile apps and API access.',
+    "launchDate": '2024-02-01,
+    "customers": 3200,
+    "rating": 4.8,
+    "reviews": 1800
+  },
+  // Quantum Machine Learning Platform
+  {
+    id:,
+  quantum-machine-learning-platform',
+    "name": 'Quantum Machine Learning Platform,
+    tagline:,
+  Harness quantum computing for advanced ML',
+    "price": $1,999,
+  ,
+    "period": '/month,
+    description:,
+  Cutting-edge quantum machine learning platform that leverages quantum computing principles to solve complex optimization problems and accelerate AI model training.',
+    "features": ['Quantum neural networks,
+  'Quantum optimization algorithms',
+  'Hybrid classical-quantum models',
+  'Quantum feature selection',
+  'Quantum clustering algorithms',
+  'Real-time quantum simulation',
+  'API access to quantum computers',
+  'Performance benchmarking',
+  'Research collaboration tools',
+  'Educational resources'
+    ],
+    "popular": true,
+    icon:,
+  ⚛️',
+    "color": 'from-indigo-500 to-blue-600,
+    textColor:,
+  text-indigo-400',
+    "link": 'https://ziontechgroup.com/quantum-machine-learning-platform,
+    "marketPosition": 'Competitive with IBM Quantum ($0.60/credit), Amazon Braket ($0.30/hour), and Google Quantum ($0.50/credit). Our "advantage": Better algorithms, comprehensive tools, and research support.,
+  ,
+    "targetAudience": Data scientists, Researchers, AI engineers, Quantum computing enthusiasts, Academic institutions',
+    "trialDays": 14,
+    setupTime:,
+  1 day',
+    "category": 'Quantum Computing,
+    "realService": true,
+    technology:,
+  Python, Qiskit, Cirq, TensorFlow Quantum, React, Node.js, AWS',
+    "integrations": IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum,
+  ,
+    "useCases": Drug discovery, Financial modeling, Logistics optimization, Climate modeling, AI research,
+  ,
+    "roi": 'Average customer sees 800% ROI within 6 months through breakthrough research and competitive advantage.,
+    "competitors": [,
+  IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum'],
+    "marketSize": '$1.8B market,
+    growthRate:,
+  65% annual growth',
+    "variant": 'quantum-futuristic,
+    "contactInfo": {
+      mobile:,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      "website": 'https://ziontechgroup.com
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Advanced quantum ML platform with hybrid classical-quantum algorithms, real-time quantum simulation, and comprehensive research tools. Includes educational resources and collaboration features.',
+    "launchDate": '2024-01-15,
+    "customers": 450,
+    "rating": 4.9
+    reviews: 280
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   // AI-Powered Cybersecurity Platform;
   {id:,ai-cybersecurity-platform',"name": 'AI-Powered Cybersecurity Platform,tagline:,Next-generation threat detection and response',"price": '$799,period:,/month',"description": Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and predictive security analytics to protect your digital assets.,,"features": ['AI-powered threat detection,'Behavioral analysis','Automated incident response','Predictive threat intelligence','Zero-day vulnerability detection','Compliance reporting','Security orchestration','Threat hunting automation','Mobile security monitoring','Cloud security integration';
@@ -259,5 +395,9 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     ],"popular": true,icon:,🌍',"color": 'from-teal-500 to-cyan-600,textColor:,text-teal-400',"link": 'https://ziontechgroup.com/ai-climate-modeling-platform,"marketPosition": 'Competitive with ClimateAI ($5000/month), Jupiter Intelligence ($10000/month), and Climate X ($3000/month). Our "advantage": Lower cost, better AI models, and comprehensive features.,,"targetAudience": Climate scientists, Government agencies, Insurance companies, Urban planners, Environmental organizations',"trialDays": 21,setupTime:,1 week',"category": 'Climate Tech & AI,"realService": true,technology:,Python, TensorFlow, PyTorch, Climate models, React, Node.js, AWS, GPU clusters',"integrations": Climate databases, Satellite data, Weather stations, GIS systems, Policy databases,,"useCases": Climate prediction, Risk assessment, Adaptation planning, Policy development, Research collaboration,,"roi": 'Average customer sees 600% ROI within 8 months through improved planning and reduced climate risks.,"competitors": [,ClimateAI, Jupiter Intelligence, Climate X, The Climate Corporation, Climate Central'],"marketSize": '$1.8B market,growthRate:,35% annual growth',"variant": 'simulation-futuristic,"contactInfo": {mobile:,+1 302 464 0950',"email": 'kleber@ziontechgroup.com,address:,364 E Main St STE 1008 Middletown DE 19709',"website": 'https://ziontechgroup.com;
     },"realImplementation": true,implementationDetails:,Advanced climate modeling platform with AI prediction models, comprehensive risk assessment, and adaptation planning tools. Includes real-time monitoring, scenario modeling, and policy recommendations.',"launchDate": '2024-02-01,"customers": 420,"rating": 4.8,"reviews": 280;
   }
+<<<<<<< HEAD
 ];ursor/automate-test-improve-and-merge-code-646c;
 ];
+=======
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

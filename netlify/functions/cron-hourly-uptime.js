@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
     const endpoints = [;
@@ -19,6 +20,9 @@ exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
     const endpoints = [
+=======
+const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       '/'
       '/learn'
       '/dao'
@@ -87,8 +91,8 @@ exports && exports.handler = async function () {
         const content = JSON && JSON.stringify(arr, null, 2);
         await upsertFile({
           owner
-          repo
-          path: existingPath
+          repo;
+    path: existingPath
           content
           message: 'chore(automation): hourly uptime log update'
           token

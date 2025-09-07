@@ -1,0 +1,79 @@
+<<<<<<< HEAD
+
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  quality?: number;
+
+'use client'
+import React, { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
+interface OptimizedImageProps {
+'use client, ';''''
+  'import Image from 'next/image
+  ';interface OptimizedImageProps {'
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  quality?: number
+  placeholder?: 'blur' | 'empty'
+  blurDataURL?: string
+  sizes?: string
+  fill?: boolean
+  style?: React.CSSProperties
+  onClick?: () => void
+  onLoad?: () => void
+  onError?: () => void
+}
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width = 800,
+  height = 600,
+  className = "",
+  priority = false,
+  quality = 75,
+}) => {
+=======
+width?: number;
+  height?: number;
+  class_name?: string;
+  priority?: boolean;
+  quality?: number;
+}
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+  src;
+  alt;
+  width = 800;
+  height = 600;
+=======
+>>>>>>> 
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+<<<<<<< HEAD
+      className={className}
+      priority={priority}
+      quality={quality}
+      placeholder="blur"
+      blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+    />
+  );
+};
+export default OptimizedImage;
+
+
+=======
+ a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+=======
+>>>>>>>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

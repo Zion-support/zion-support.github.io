@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  ;
 ursor/automate-test-improve-and-merge-code-646c;
 const fs = require('fs')const path = require('path')const { execSync } = require('child_process')class SecurityScanner {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString()const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const auditResult = execSync('npm audit --json', {cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'})const audit = JSON.parse(auditResult)return {success: true;
@@ -50,6 +51,8 @@ const scanner = new SecurityScanner()scanner.run().catch(error = > {process.exit
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true });,
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -511,8 +514,23 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   async generateSecurityReport() {}
     this.log('Generating security report...')',try {}
       const report = {}
+<<<<<<< HEAD
         timestamp: new Date().toISOString(),processName: this.processName,dependencyScan: this.scanDependencies ? await this.scanDependencies() : null,codeScan: this.scanCode ? await this.scanCode() : null,configScan: this.scanConfigs ? await this.scanConfigs() : null,environment: {}
           nodeVersion: process.version,platform: process.platform,cwd: process.cwd()}},// Calculate overall security score;
+=======
+        timestamp: new Date().toISOString(),
+        processName: this.processName,
+        dependencyScan: this.scanDependencies ? await this.scanDependencies() : null,
+        codeScan: this.scanCode ? await this.scanCode() : null,
+        configScan: this.scanConfigs ? await this.scanConfigs() : null,
+        environment: {,}
+          nodeVersion: process.version,
+          platform: process.platform,
+          cwd: process.cwd(),
+        }
+};,
+      // Calculate overall security score;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       let totalIssues = 0;
       let criticalIssues = 0;
       if (report.dependencyScan?.success) {}
@@ -636,11 +654,6 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 
 
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-scanner.run().catch(error = > {process.exit(1)}));}),);
-}),);
 
 
 
@@ -924,6 +937,7 @@ const scanner = new SecurityScanner()scanner.run().catch(error => {process.exit(
 const scanner = new SecurityScanner();
 scanner.run().catch(error => {;
   process.exit(1);
+<<<<<<< HEAD
 
 
 
@@ -1192,6 +1206,8 @@ scanner.run().catch(error => {,
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require ('fs');
 const path = require ('path');
 const { exec_sync } = require ('child_process');
@@ -1229,6 +1245,7 @@ class SecurityScanner { constructor () { this.project_root = process.cwd (); thi
 ; // Check for debug mode in production configs; if (&& content.includes ('debug: true')) {, config_issues.push ({, file: config_file, type: 'debug - mode', severity: 'medium', ) {
   $2
 }
+<<<<<<< HEAD
     message: 'Debug mode enabled in production configuration'})}}})return { success: true,issues: config_issues}} catch (error) { return { success: false, error: error.message, issues: []}}}async generate_report (dep_results, code_results, config_results) { const report = { timestamp: new Date ().toISOString (), summary: {, dependencies: dep_results.success ? 'secure': 'vulnerable', code: code_results.issues.length = = = 0 ? 'secure': 'issues - found', configs: config_results.issues.length = = = 0 ? 'secure': 'issues - found',overall: (dep_results.success && code_results.issues.length = = = 0 && config_results.issues.length = = = 0) ? 'secure': 'issues - found';
     },details: {, dependencies: dep_results, code: code_results,configs: config_results} recommendations: []}// Generate recommendations; // Check condition;
 if ( {) {$2;
@@ -1253,14 +1270,65 @@ origin/automation-improvements-final;
     issues: configIssues}} catch (error) {return {success: false, error: error.message, issues: []}}}async generateReport(depResults, codeResults, configResults) {const report = {timestamp: new Date().toISOString(), summary: {, dependencies: depResults.success ? 'secure': 'vulnerable', code: codeResults.issues.length = = = 0 ? 'secure': 'issues-found', configs: configResults.issues.length = = = 0 ? 'secure': 'issues-found';
     overall: (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found';
 origin/automation-improvements-final
+=======
+    message: 'Debug mode enabled in production configuration'})}}});
+; return { success: true,
+    issues: config_issues}} catch (error) { return { success: false, error: error.message, issues: []}}}
+; async generate_report (dep_results, code_results, config_results) { const report = { timestamp: new Date ().toISOString (), summary: {
+      , dependencies: dep_results.success ? 'secure': 'vulnerable', code: code_results.issues.length = = = 0 ? 'secure': 'issues - found', configs: config_results.issues.length = = = 0 ? 'secure': 'issues - found',
+    overall: (dep_results.success && code_results.issues.length = = = 0 && config_results.issues.length = = = 0) ? 'secure': 'issues - found';
+    },
+    details: {, dependencies: dep_results, code: code_results,
+    configs: config_results} recommendations: []}
+; // Generate recommendations; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'critical', message: 'Dependency vulnerabilities found', action: 'Run npm audit fix to resolve vulnerabilities'})}
+; // Check condition
+if ( {) {
+  $2
+} const high_severity = code_results.issues.filter (issue = > issue.severity = = = 'high').length; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'high',
+    message: `${high_severity} high - severity security issues found in code`; action: 'Review and fix high - severity security issues'})}}
+; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'medium', message: 'Configuration security issues found', action: 'Review configuration files for security issues'})}
+; return report}
+; async save_report (report) { try { const report_dir = path.dirname (this.report_file); if () {) {
+  $2
+} fs.mkdir_sync (report_dir, { recursive: true })}
+; fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2)); this.log (`Report saved to: ${this.report_file}`)} catch (error) { this.log (`Error saving report: ${error.message}`)}}
+; async run () { this.log ('🛡️ Starting Security Scanner...'); this.log (`Project root: ${this.project_root}`);
+; try { // Create logs directory if it doesn't exist; const logs_dir = path.dirname (this.log_file); if () {) {
+  $2
+} fs.mkdir_sync (logs_dir, { recursive: true })}
+; // Run all security scans; const dep_results = await this.scan_dependencies (); const code_results = await this.scan_code (); const config_results = await this.scan_configs ();
+; // Generate report; this.log ('📊 Generating security report...'); const report = await this.generate_report (dep_results, code_results, config_results);
+; // Save report; await this.save_report (report);
+; const duration = Date.now () - this.start_time;
+; // Log summary; this.log ('\n📊 Security Scanner Summary: '); this.log (`Dependencies: ${report.summary.dependencies}`); this.log (`Code: ${report.summary.code}`); this.log (`Configs: ${report.summary.configs}`); this.log (`Overall: ${report.summary.overall}`); this.log (`Duration: ${duration}ms`);
+; // Check condition
+if ( {) {
+  $2
+} this.log ('\n💡 Recommendations: '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`); this.log (` Action: ${rec.action}`)})} else { this.log ('\n✨ No security issues found!')}
+} catch (error) { this.log (`❌ Error running security scanner: ${error.message}`); process.exit (1)}}}
+;
+// Run the security scanner;
+const scanner = new SecurityScanner();
+scanner.run().catch(error = > {process.exit(1)}));}),);
+}),);
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-class SecurityScanner {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async scanDependencies() {try {; this.log('🔒 Scanning dependencies for vulnerabilities...'); const auditResult = execSync('npm audit --json', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'}); const audit = JSON.parse(auditResult); return {success: true
+class SecurityScanner {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async scanDependencies() {try {; this.log('🔒 Scanning dependencies for vulnerabilities...'); const auditResult = execSync('npm audit --json', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'}); const audit = JSON.parse(auditResult); return {success: true;
     vulnerabilities: audit.vulnerabilities |{}; summary: audit.metadata |{}}} catch (error) {// npm audit might fail if there are vulnerabilities; try {; const output = error.stdout?.toString() |error.stderr?.toString() |''; if (output.includes('npm ERR!')) {; return {; success: false, error: 'Vulnerabilities found', output: output}}} catch (parseError) {this.log(`Error parsing npm audit output: ${parseError.message}`)}; return {success: false, error: error.message, output: error.stdout |error.stderr |''}}}; async scanCode() {try {; this.log('🔍 Scanning code for security issues...'); // Check for common security issues in code; const securityIssues = []; const files = this.getSourceFiles(); files.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const lines = content.split('\n'); lines.forEach((line, index) = > {; const lineNum = index + 1; // Check for hardcoded secrets; if (line.match(/password\s* = \s*["'][^"']+["']/i)) {; securityIssues.push({; file: file, line: lineNum, type: 'hardcoded-password', severity: 'high', message: 'Hardcoded password detected'})}}}; scanDirectory(this.projectRoot); return files}; async scanConfigs() {try {; this.log('⚙️ Scanning configuration files...'); const configIssues = []; const configFiles = [
     ; 'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local'
     '.env.production'
-  ]; configFiles.forEach(configFile = > {; const filePath = path.join(this.projectRoot, configFile); if (fs.existsSync(filePath)) {; const content = fs.readFileSync(filePath, 'utf8'); // Check for exposed secrets in config files; if (content.match(/password\s* = \s*["'][^"']+["']/i)) {; configIssues.push({; file: configFile, type: 'exposed-secret', severity: 'high'
+  ]; configFiles.forEach(configFile = > {; const filePath = path.join(this.projectRoot, configFile); if (fs.existsSync(filePath)) {; const content = fs.readFileSync(filePath, 'utf8'); // Check for exposed secrets in config files; if (content.match(/password\s* = \s*["'][^"']+["']/i)) {; configIssues.push({; file: configFile, type: 'exposed-secret', severity: "severity",
     message: 'Potential secret exposed in configuration file'})}; // Check for debug mode in production configs; if (configFile.includes('production') && content.includes('debug: true')) {, configIssues.push({, file: configFile, type: 'debug-mode', severity: 'medium'
     message: 'Debug mode enabled in production configuration'})}}}); return {success: true
     issues: configIssues}} catch (error) {return {; success: false, error: error.message, issues: []}}}; async generateReport(depResults, codeResults, configResults) {const report = {; timestamp: new Date().toISOString(), summary: {
@@ -1280,6 +1348,7 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 }),),;
+<<<<<<< HEAD
 const scanner = new SecurityScanner ();
 scanner.run ().catch (error = > { process.exit (1)}));}), );
 }), );
@@ -1965,3 +2034,6 @@ scanner.run().catch(error => {,
 }),);
 
 module.exports = SecurityScanner;
+=======
+module.exports = SecurityScanner;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

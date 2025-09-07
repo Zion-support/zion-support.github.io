@@ -26,6 +26,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
       'Grafana and Datadog exporters'
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📈',
     marketPosition:
       'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [
@@ -2386,6 +2387,9 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
 
 
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
+=======
+    icon: '📈',import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const contact = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;

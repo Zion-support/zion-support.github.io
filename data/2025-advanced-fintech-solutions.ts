@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -448,6 +449,9 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
       'Alternative data analysisMachine learning modelsReal-time scoringRisk predictionFraud detectionCompliance reportingAPI integrationCustom scoring models','Performance analyticsRegulatory compliance';
     ],popular: true,icon: '💳',color: 'from-green-600 via-emerald-600 to-teal-600',textColor: 'text-green-400',link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment',marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis',targetAudience: 'Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies',trialDays: 30,setupTime: '15-20 days',category: 'Fintech',realService: true,technology: ['Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],integrations: ['Core banking systems, Credit bureaus, Payment processors, CRM systems, Compliance tools'],useCases: ['Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance'],roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.',competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],marketSize: '$35B credit scoring market',growthRate: '25% annual growth',variant: 'ai-finance-enterprise',contactInfo: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
       'Alternative data analysis',
+=======
+'Alternative data analysis',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'Machine learning models',
       'Real - time scoring',
       'Risk prediction',
@@ -459,7 +463,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
       'Regulatory compliance'
     ],
     popular: true,
-    id: 'regtech-compliance-automation-platform'
+    id: "id",
     name: 'RegTech Compliance Automation Platform'
     tagline: 'Automated regulatory compliance and reporting'
     price: '$699'
@@ -478,7 +482,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
       'Real-time updates'
       'Performance analytics'
     ]
-    popular: false
+    popular: false;
     icon: '📋'
     color: 'from-gray-600 via-slate-600 to-zinc-600'
     textColor: 'text-gray-400'
@@ -539,7 +543,6 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
     growth_rate: '25% annual growth',
     variant: 'ai - finance - enterprise',
     contact_info: {
-
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -758,8 +761,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
     launchDate: '2025-02-12';
     customers: 89;
-
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedFintechSolution2025 {;
   id: string,;
   name: string,;
@@ -880,10 +882,15 @@ export interface AdvancedFintechSolution2025  {id: string,name: string,tagline: 
     rating: 4.5,
     reviews: 52;
   }
+
+];
+
+
 ;
 ];
 ;
   }
+<<<<<<< HEAD
 ];
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -1143,3 +1150,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     reviews: 52;
   }
 ];
+=======
+];  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

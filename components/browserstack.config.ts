@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'}import { defineConfig, devices } from @playwright/test';
@@ -6,6 +7,9 @@ default defineConfig({testDir: tests/e2e',  use: {baseURL: process.env.PLAYWRIGH
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
 
   projects: [
+=======
+projects: [
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       name: Desktop Chrome',      use: {
         browserName: chromium',        channel: chrome'}
     }
@@ -28,6 +32,7 @@ default define_config ({test_dir: tests / e2e',  use: {baseURL: process.env.PLAY
       name: Mobile Chrome',      use: {
         browserName: chromium',        ...devices['Pixel 5']}
     }
+<<<<<<< HEAD
   ];reporter: [;
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
 })reporter: [;
@@ -81,18 +86,32 @@ reporter: [;
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 })
 
+=======
+    {
+      name: Mobile Safari',      use: {
+        browser_name: webkit',        ...devices['i_phone 12']}
+    }
+  ];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     {
       name: Mobile Safari',      use: {
         browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 });
   reporter: [;
     ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never' }]];
 });
+<<<<<<< HEAD
 ;
 
 });
 });
+=======
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

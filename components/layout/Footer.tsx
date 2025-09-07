@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
@@ -670,6 +671,12 @@ const Footer: React.FC = () => {
               <Link href="/cookies" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
                 Cookie Policy
               </Link>
+=======
+</div>
+            </div>
+          </div>
+        </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
@@ -680,6 +687,7 @@ const Footer: React.FC = () => {
               <span className="ml-2">companies worldwide</span>
             </div>
           </div>
+<<<<<<< HEAD
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
@@ -691,3 +699,10 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+=======
+        </div>
+      </div>
+    </footer>
+  )
+};
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

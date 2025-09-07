@@ -73,5 +73,11 @@ if ( {) {$2;
       </a>)}
   return (<button on_click={on_click} className={classes}>;
       {children}
+<<<<<<< HEAD
     </button>)}children;
 }</button>)}
+=======
+    </button>);
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

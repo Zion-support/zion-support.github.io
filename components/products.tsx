@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {return (<main className='min-h-screen p-8'>;
@@ -21,6 +22,8 @@ export default function Placeholder() {
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -38,10 +41,13 @@ export default function Placeholder() {
         </Link>
       </div>
   );export default function Placeholder() {
+<<<<<<< HEAD
 export default function Placeholder() {;
 export default function Placeholder() {
 export default function Placeholder() {;
 export default function Placeholder() {
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   return (
     <main className='min-h-screen p-8'>;
       <Head>;
@@ -71,9 +77,12 @@ export default function Placeholder() {
     </main>;
   )}}}
   );
+<<<<<<< HEAD
 
 }
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**;
@@ -120,6 +129,7 @@ function Placeholder() {return (<main className="min - h-screen p - 8">;
   )}
   )}import Head from 'next/head';
     </main>);
+<<<<<<< HEAD
 }
 
 }
@@ -196,3 +206,6 @@ export default function Placeholder() {return (<main className='min-h-screen p-8
 }
 
 }
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

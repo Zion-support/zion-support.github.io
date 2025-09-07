@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Code,CheckCircle,AlertTriangle,Zap,BarChart3,ArrowRight,Play,Shield,Clock,TrendingUp,export default function CodeQualityCheckerPage() {} from 'lucide-react';
 export default function CodeQualityCheckerPage() {const [isAnalyzing, setIsAnalyzing] = useState(false)const [analysisResults, setAnalysisResults] = useState(null)const [codeInput, setCodeInput]  = useState(''){ name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },{ name: 'C++', icon: '⚙️', features: ['Clang - tidy_static analysis_memory leak detection'] },{ name: 'Go', icon: '🟢', features: ['Golangci - lint_go vet_performance analysis'] },{ name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp  } from 'lucide-react';
 export default function CodeQualityCheckerPage() {const [isAnalyzing, setIsAnalyzing] = useState(false)const [analysisResults, setAnalysisResults] = useState(null)const [codeInput, setCodeInput] = useState('')icon: <Code className='w-8 h-8 text-white' />,title: 'Multi-Language Support',description:;
@@ -57,10 +58,52 @@ export default function CodeQualityCheckerPage() {const [isAnalyzing, setIsAnaly
       price: '$29';
       period: '/month';
       description: 'Perfect for individual developers and small projects';
+=======
+import {
+  Code,
+  CheckCircle,
+  AlertTriangle,
+  Zap,
+  BarChart3,
+  ArrowRight,
+  Play,
+  Shield,
+  Clock,;
+  TrendingUp,;
+export default function CodeQualityCheckerPage() {;
+} from 'lucide-react';
+export default function CodeQualityCheckerPage() {;
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResults, setAnalysisResults] = useState(null);
+  const [codeInput, setCodeInput] = useState('');
+    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },
+    { name: 'C++', icon: '⚙️', features: ['Clang - tidy_static analysis_memory leak detection'] },
+    { name: 'Go', icon: '🟢', features: ['Golangci - lint_go vet_performance analysis'] },
+    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
+  const pricing = [
+    {
+      name: "name",
+    price: '$29'
+      period: '/month'
+      description: 'Perfect for individual developers and small projects'
+      features: [
+        '100 code analyses/monthBasic quality metrics5 programming languagesEmail supportBasic reportingCommunity rules'
+      ];
+      popular: false
+    };
+    {
+  const pricing = [;
+    {
+      name: 'Developer',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for individual developers and small projects',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       features: [;
         '100 code analyses/monthBasic quality metrics5 programming languagesEmail supportBasic reportingCommunity rules';
       ];
       popular: false;
+<<<<<<< HEAD
     }{const pricing = [;
     {name: 'Developer',price: '$29',period: '/month',description: 'Perfect for individual developers and small projects',features: [;
         '100 code analyses / month','100 code analyses/month','Basic quality metrics','5 programming languages','Email support','Basic reporting','Community rules',],popular: false,},    {        '100 code analyses / month_basic quality metrics5 programming languages_email support_basic reporting_community rules';
@@ -71,6 +114,41 @@ export default function CodeQualityCheckerPage() {const [isAnalyzing, setIsAnaly
 'Unlimited analyses','Enterprise metrics','Custom language support','24/7 dedicated support','Custom reporting','White-label options','On-premise deployment','Custom integrations',],popular: false,},];const handleAnalyzeCode = async () => {if (!codeInput.trim()) return;setIsAnalyzing(true)// Simulate code analysis;
     setTimeout(() => {setAnalysisResults({language: 'JavaScript';
         qualityScore: 85;
+=======
+    }
+      name: 'Team',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for development teams and growing companies',
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations with complex codebases',
+    setIsAnalyzing(true);
+    // Simulate code analysis
+    setTimeout(() => {
+      setAnalysisResults({
+        language: 'JavaScript'
+        qualityScore: 85;
+    issues: [
+        recommendations: [
+          'Use const for immutable variables to improve code clarity'
+          'Break down large functions into smaller, more focused functions'
+          'Add proper error handling for better robustness'
+          'Consider adding JSDoc comments for better documentation'
+        ]
+      });
+      setIsAnalyzing(false);
+    }, 3000)
+};      setIsAnalyzing(false)
+    }, 3000)
+    setIsAnalyzing(true);
+    // Simulate code analysis;
+    setTimeout(() => {;
+      setAnalysisResults({;
+        language: 'JavaScript',;
+        qualityScore: 85,;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         issues: [;
 {type: 'warning',message:;
               'Consider using const instead of let for variables that are not reassigned';
@@ -242,6 +320,7 @@ href='/contact';
           </div>;
               <Card;
                 key={index}
+<<<<<<< HEAD
                 className="card-hover group border-gradient-teal";
               className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl';
             >;
@@ -289,6 +368,29 @@ href='/contact';
                 </div>;
               </Card>;
             ))}{/* Supported Languages Section */}<section className='section-padding bg-gradient-cursor'>;
+=======
+                className="card-hover group border-gradient-teal"
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+      {/* Supported Languages Section */}
+              Multi-Language Support
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              We support a wide range of programming languages with
+              language-specific analysis rules and best practices.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {supportedLanguages.map((language, index) => (
+          </div>;
+        </div>;
+      </section>;
+      {/* Supported Languages Section */}
+      <section className='section-padding bg-gradient-cursor'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
@@ -369,6 +471,14 @@ href='/contact';
                 </ul>;
               </Card>;
             ))}
+<<<<<<< HEAD
+=======
+          </div>
+        </div>
+      </section>
+      {/* Demo Analysis Results */}
+      {analysisResults && (
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           </div>;
         </div>;
       </section>;
@@ -452,6 +562,7 @@ href='/contact';
               <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
                 Code Quality Analysis Results;
               </h2>;
+<<<<<<< HEAD
               <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;Here's a sample code quality analysis. Get comprehensive;
                 insights for your own code.;
               </p>;
@@ -462,6 +573,9 @@ href='/contact';
                 Code Quality Analysis Results;
               </h2>;
               <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+=======
+              <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 Here's a sample code quality analysis. Get comprehensive;
                 insights for your own code.;
               </p>;
@@ -537,6 +651,7 @@ href='/contact';
               <Card className="border-gradient-teal">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>;
                 <div className="space-y-3">;
+<<<<<<< HEAD
                   {analysisResults && analysisResults.issues.map((issue, index) => (<div key={index} className="flex items-start space-x-3">;
                       {issue && issue.type === 'error' ? (<AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />;
                       ) : issue && issue.type === 'warning' ? (<AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />;
@@ -553,6 +668,17 @@ href='/contact';
                   ))}
                 </div>;
               </Card>;
+=======
+                  {analysisResults && analysisResults.issues.map((issue, index) => (;
+                    <div key={index} className="flex items-start space-x-3">;
+                      {issue && issue.type === 'error' ? (;
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />;
+                      ) : issue && issue.type === 'warning' ? (;
+                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />;
+                      ) : (;
+                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
+                      )}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               {/* Quality Metrics */}
 <Card className='border-gradient-teal'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
@@ -563,11 +689,19 @@ href='/contact';
                     <span className='text-gray-400'>Complexity</span>;
                     <span className='text-orange-400 font-bold'>;
                       {analysisResults.metrics.complexity}
+<<<<<<< HEAD
                     </span>;
                   </div>;
                   <div className='flex justify-between items-center'>;
                     <span className='text-gray-400'>Maintainability</span>;
                     <span className='text-green-400 font-bold'>;
+=======
+                    </span>
+                  </div>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-400'>Maintainability</span>
+                    <span className='text-green-400 font-bold'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       {analysisResults.metrics.maintainability}
                     </span>;
                   </div>;
@@ -575,6 +709,7 @@ href='/contact';
                     <span className='text-gray-400'>Test Coverage</span>;
                     <span className='text-blue-400 font-bold'>;
                       {analysisResults.metrics.testCoverage}
+<<<<<<< HEAD
                     </span>;
                   </div>;
                   <div className='flex justify-between items-center'>;
@@ -615,6 +750,47 @@ href='/contact';
                     <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />;
                     <span className='text-gray-300'>{rec}</span>                  </div>;
                   </div>;
+=======
+                    </span>
+                  </div>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-400'>Security Score</span>
+                    <span className='text-green-400 font-bold'>
+                      {analysisResults.metrics.securityScore}
+                    </span>                  </div>                  </div>
+              <Card className="border-gradient-teal">
+                <h3 className="text-2xl font-bold mb-6 text-white">Quality Metrics</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Complexity</span>
+                    <span className="text-orange-400 font-bold">{analysisResults.metrics.complexity}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Maintainability</span>
+                    <span className="text-green-400 font-bold">{analysisResults.metrics.maintainability}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Test Coverage</span>
+                    <span className="text-blue-400 font-bold">{analysisResults.metrics.testCoverage}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Security Score</span>
+                    <span className="text-green-400 font-bold">{analysisResults.metrics.securityScore}</span>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            <Card className='border-gradient-teal'>
+              <h3 className='text-2xl font-bold mb-6 text-white'>
+                Improvement Recommendations
+              </h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                {analysisResults.recommendations.map((rec, index) => (
+                  <div key={index} className='flex items-start space-x-3'>
+                    <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />
+                    <span className='text-gray-300'>{rec}</span>                  </div>
+                  </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             <Card className='border-gradient-teal'>;
               <h3 className='text-2xl font-bold mb-6 text-white'>;
                 Improvement Recommendations;
@@ -634,7 +810,12 @@ href='/contact';
             </Card>;
           </div>;
         </section>;
+<<<<<<< HEAD
       )}Simple Pricing;
+=======
+      )}
+              Simple Pricing
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Pricing Section */}
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
@@ -846,10 +1027,18 @@ href='/contact';
                       {feature}
                     </li>;
                   ))}
+<<<<<<< HEAD
                 <Button;
 href='/contact';
                   size='lg';
                       {feature}</li>;
+=======
+                <Button
+                  href='/contact'
+                  size='lg'
+                      {feature}
+                    </li>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   ))}
                 </ul>;
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
@@ -859,6 +1048,7 @@ href='/contact';
                 </Button>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -868,6 +1058,17 @@ href='/contact';
         </div>;
       </section>;
               </Card>;
+=======
+          </div>
+        </div>
+      </section>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+              </Card>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
@@ -912,6 +1113,7 @@ href='/contact';
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
   )}
     </>)}className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl';
             >;
@@ -922,3 +1124,9 @@ href='/contact';
       </section>;
     </>;
   )}
+=======
+  );
+}
+    </>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -18,6 +18,7 @@ function generateShortCode (length: number = 6): string {const chars =;id: strin
 // In-memory storage (in production, use a database)const chars =;
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
+<<<<<<< HEAD
   for (let index = 0; i < length; i++) {result += chars.char_at (Math.floor (Math.random () * chars.length))}return result;  let result = '';
   for (let index = 0, i < length, i++) {result += chars.char_at (Math.floor (Math.random () * chars.length))}
   return result;return result;// Validate URL format;
@@ -49,6 +50,72 @@ export async function getServerSideProps() {const shortCode = params.shortCode;
     }}if (!shortUrl || !shortUrl && shortUrl.isActive) {return {notFound: true,}}
   // Increment click count;
       permanent: false;
+=======
+  for (let index = 0; i < length; i++) {
+    result += chars.char_at (Math.floor (Math.random () * chars.length));
+  }
+  return result;  let result = '';
+  for (let index = 0, i < length, i++) {
+    result += chars.char_at (Math.floor (Math.random () * chars.length));
+  }
+  return result;
+// Validate URL format
+function isValidUrl(url: string): boolean {
+  try {
+    new URL(url);
+    return true;
+  } catch {
+    return false;
+  }  } catch {
+export default async function handler(
+  req: NextApiRequest;
+    res: NextApiResponse<UrlShortenerResponse>
+) {
+    } catch (error) {
+      console.error ('URL shortening error:', error);
+      res.status (500).json ({
+        success: false,
+      success: false,
+      error: 'Method not allowed',
+    });
+  }
+  params,
+}: {;
+  params: { shortCode: string };
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
+  const shortCode = params.shortCode;
+  const shortUrl = urlStorage.get(shortCode);
+  if (!shortUrl |!shortUrl.isActive) {
+  params: { shortCode: string };
+}) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+  const shortCode = params && params.shortCode;
+  const shortUrl = urlStorage && urlStorage.get(shortCode);
+      data: urls as any
+    })
+  } else {
+    res.status(405).json({
+      success: false,
+      error: 'Method not allowed'
+    })
+  }
+}
+// Handle redirects for short URLs
+export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+  const shortCode = params.shortCode;
+  const shortUrl = urlStorage.get(shortCode);
+  if (!shortUrl || !shortUrl.isActive) {
+    return {
+      notFound: true
+    };
+  }
+  if (!shortUrl || !shortUrl && shortUrl.isActive) {
+    return {
+      notFound: true,    };      notFound: true
+    }
+  }
+  // Increment click count
+      permanent: false
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
 }
       permanent: false;
@@ -70,6 +137,7 @@ if ( {) {$2;
   }
   // Increment click count;
   short_url.clicks++;
+<<<<<<< HEAD
   url_storage.set (short_code, short_url)// Redirect to original URL;
   return {destination: shortUrl.originalUrl,permanent: false,},}destination: shortUrl.originalUrl;
       permanent: false;
@@ -78,6 +146,21 @@ if ( {) {$2;
   }shortUrl.clicks++;
   urlStorage.set(shortCode, shortUrl)// Redirect to original URL;
   return {redirect: {destination: shortUrl.originalUrl,permanent: false,},}permanent: false;
+=======
+  url_storage.set (short_code, short_url);
+;
+  // Redirect to original URL;
+  return {
+      destination: shortUrl.originalUrl,
+      permanent: false,
+    },
+  };      destination: shortUrl.originalUrl;
+      permanent: false
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
 }
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }

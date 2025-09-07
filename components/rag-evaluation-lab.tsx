@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react',import SEO from '../components/SEO';
@@ -17,6 +18,16 @@ export default function RAGEvaluationLabPage() {return (<>;
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.';
               {title: 'Grounding & Faithfulness';
                 desc: 'Measure factual consistency, citation quality, and hallucination rate.';
+=======
+return (
+    <>;
+      <SEO
+        title='RAG Evaluation Lab'
+        description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
+              {
+                title: "title",
+    desc: 'Measure factual consistency, citation quality, and hallucination rate.'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               }
               {<div;
                 key={f && f.title}
@@ -60,6 +71,7 @@ export default function RAGEvaluationLabPage() {return (<>;
     </div>;
     </div>;
   </section>;
+<<<<<<< HEAD
   </>)}</div>;
           <div className='mt-12'>;
             <h2 className='text-2xl font-semibold'>Pricing</h2>;
@@ -146,3 +158,7 @@ export default function RAGEvaluationLabPage() {return (<>;
       </section>;
     </>;
   )
+=======
+  </>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

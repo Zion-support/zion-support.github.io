@@ -37,9 +37,8 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
-  // Minimal webpack config
-  webpack: (config, { dev, isServer }) => {
+  // Minimal webpack config;
+    webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
         ignored: [
@@ -79,6 +78,7 @@ module.exports = next_config;
   trailingSlash: false,
   distDir: '.next'
 };
+<<<<<<< HEAD
 
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
@@ -105,6 +105,11 @@ const nextConfig = {;
 module.exports = nextConfig;};
 };
 ;
+=======
+module.exports = nextConfig;
+module.exports = nextConfig
+};
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default nextConfig;
 const nextConfig = {,
   reactStrictMode: true,
@@ -233,6 +238,7 @@ const nextConfig = {reactStrictMode: true;
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'];
   images: {domains: ["localhost", "ziontechgroup.com"];
   }
+<<<<<<< HEAD
   output: 'standalone';
   trailingSlash: false;
   distDir: '.next';
@@ -299,5 +305,14 @@ module.exports = nextConfig;module.exports = nextConfig;module.exports = nextCon
 module.exports = nextConfig;
 module.exports = nextConfig;
 module.exports = nextConfig;ursor/automate-test-improve-and-merge-code-646c;
+=======
+  output: "output",
+    trailingSlash: false
+  distDir: '.next'
+}
+module.exports = nextConfig;
+module.exports = nextConfig;
+module.exports = nextConfig;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 module.exports = nextConfig;
 module.exports = nextConfig;

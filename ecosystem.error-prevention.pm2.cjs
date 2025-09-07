@@ -17,8 +17,8 @@ module.exports = {
       out_file: 'automation/logs/error-prevention-out.log',
       log_file: 'automation/logs/error-prevention-combined.log',
       time: true,
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      max_memory_restart: '1G'
+      cron_restart: '0 */6 * * *', // Restart every 6 hours;
+    max_memory_restart: '1G'
     },
     {
       name: 'linting-automation',

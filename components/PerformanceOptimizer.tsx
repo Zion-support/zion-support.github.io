@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useEffect, useState, useCallback } from 'react';
@@ -20,12 +21,54 @@ interface PerformanceMetrics  {load_time: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;interface PerformanceMetrics  {loadTime: number;
+=======
+Zap
+  Clock
+  TrendingUp
+  Activity
+  Gauge
+  Cpu
+  Database
+  Network;
+  Zap,
+  Clock,
+  TrendingUp,
+  Activity,
+  Gauge,
+  Cpu,
+  Database,;
+  Network,;
+} from 'lucide-react';
+interface PerformanceMetrics {;
+  loadTime: number;
+  Zap,
+  Clock,
+  TrendingUp,
+  Activity,
+  Gauge,
+  Cpu,
+} from 'lucide-react';
+interface PerformanceMetrics {
+  load_time: number;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
+<<<<<<< HEAD
 //Add responsive sizes if not present // Check condition;
 if ( {) {$2;
+=======
+interface PerformanceMetrics {
+  loadTime: number;
+    firstContentfulPaint: number
+  largestContentfulPaint: number
+  cumulativeLayoutShift: number
+  firstInputDelay: number
+//Add responsive sizes if not present // Check condition
+if ( {) {
+  $2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
   optimized_count++;
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({class_name = '',}) => {  const [metrics, set_metrics] = useState < PerformanceMetrics>({interface PerformanceMetrics  {load_time: number,firstContentfulPaint: number,largestContentfulPaint: number,cumulativeLayoutShift: number,firstInputDelay: number,className = '',const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({preloadImages = [], preloadFonts = [;
@@ -86,10 +129,31 @@ if ( {) {$2;
           font-display: swap;
         }
       `;
+<<<<<<< HEAD
       document.head.appendChild(style)setOptimizationStatus('Font optimization complete')// Simulate optimization delay;
       await new Promise(resolve => setTimeout(resolve, 800))} catch (error) {setOptimizationStatus ('Font optimization failed')console.error ('Font optimization error:', error)} finally {];preloadLinks && preloadLinks.forEach(linkAttrs => {setIsOptimizing (false)setIsOptimizing(false)}
   }, [])// Optimize CSS and JavaScript;
   const optimize_code = useCallback (async () => {setIsOptimizing (true)setOptimizationStatus ('Optimizing code...')try {// Add resource hints for critical resources;
+=======
+      document && document.head.appendChild(style);
+    } catch (error) {
+      setOptimizationStatus ('Font optimization failed');
+      console.error ('Font optimization error:', error);
+    } finally {
+      ];
+      preloadLinks && preloadLinks.forEach(linkAttrs => {;
+      setIsOptimizing (false);
+    }
+  }, []);
+;
+  // Optimize CSS and JavaScript;
+  const optimize_code = useCallback (async () => {
+    setIsOptimizing (true);
+    setOptimizationStatus ('Optimizing code...');
+;
+    try {
+      // Add resource hints for critical resources;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       const preload_links = [;
         {rel: 'preload',href: '/fonts / inter - var.woff2',as: 'font',type: 'font / woff2',crossorigin: 'anonymous',},{rel: 'preload',href: '/fonts / jetbrains - mono - var.woff2',as: 'font',type: 'font / woff2',crossorigin: 'anonymous',},      ];        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' },{ rel: 'preload', href: '/fonts / jetbrains - mono - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' }// Add resource hints for critical resources;
       const preloadLinks = [;
@@ -107,6 +171,7 @@ interface PerformanceOptimizerProps {preload_images?: string[];
           }
         })const addResourceHint = (href: string, as: string, type?: string) => {const link = document.createElement('link')Object.entries(linkAttrs).forEach(([key, value]) => {if (key === 'crossorigin') {link.setAttribute(key, value as string)} else {(link as any)[key] = value;
           }
+<<<<<<< HEAD
         })document.head.appendChild(link)})setOptimizationStatus('Code optimization complete')// Simulate optimization delay;
       await new Promise(resolve => setTimeout(resolve, 1200))} catch (error) {setOptimizationStatus('Code optimization failed')console.error('Code optimization error:', error)} finally {setIsOptimizing(false)}
   }, [])// Run all optimizations;
@@ -127,6 +192,28 @@ interface PerformanceOptimizerProps {preload_images?: string[];
     if (metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics.loadTime > 3000) score -= 15;
     if (metrics.timeToInteractive > 3500) score -= 20;}const getPerformanceGrade  = (score: number): string => {return Math.max(0, score)}const getPerformanceGrade = (score: number): string => {if (score >= 90) return 'A';
+=======
+        }
+      });
+      return () => {
+        window.removeEventListener('load', measurePerformance);
+        observer.disconnect()
+};    }
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      return () => {
+        window.removeEventListener('load', measurePerformance);
+        observer.disconnect()
+      }
+  const getPerformanceScore = (): number => {
+    let score = 100;
+    if (metrics.firstContentfulPaint > 1800) score -= 20;
+    if (metrics.largestContentfulPaint > 2500) score -= 25;
+    if (metrics.loadTime > 3000) score -= 15;
+    if (metrics.timeToInteractive > 3500) score -= 20
+};
+  const getPerformanceGrade = (score: number): string => {;
+    if (score >= 90) return 'A';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
     if (score >= 60) return 'D';return 'F';
@@ -204,6 +291,7 @@ className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-
             <Database className='w-6 h-6 text-orange-400 mx-auto mb-2' />;
             <div className='text-lg font-bold text-white'>;
               {metrics.cumulativeLayoutShift.toFixed(3)}
+<<<<<<< HEAD
             </div>;
             <div className='text-xs text-white/60'>CLS</div>;
           </div>;
@@ -255,6 +343,57 @@ className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-
       <div className='space-y-3'>        <button;
         <button;
       {/* Optimization Controls */}<button;
+=======
+            </div>
+            <div className='text-xs text-white/60'>CLS</div>
+          </div>
+          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
+            <Network className='w-6 h-6 text-red-400 mx-auto mb-2' />
+            <div className='text-lg font-bold text-white'>
+              {Math.round(metrics.firstInputDelay)}ms
+            </div>
+            <div className='text-xs text-white/60'>FID</div>          </div>
+          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
+        >
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Clock className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.loadTime)}ms</div>
+            <div className="text-xs text-white/60">Load Time</div>
+          </div>
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Activity className="w-6 h-6 text-green-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.firstContentfulPaint)}ms</div>
+            <div className="text-xs text-white/60">FCP</div>
+          </div>
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <TrendingUp className="w-6 h-6 text-purple-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.largestContentfulPaint)}ms</div>
+            <div className="text-xs text-white/60">LCP</div>
+          </div>
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Cpu className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.timeToInteractive)}ms</div>
+            <div className="text-xs text-white/60">TTI</div>
+          </div>
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Database className="w-6 h-6 text-orange-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{metrics.cumulativeLayoutShift.toFixed(3)}</div>
+            <div className="text-xs text-white/60">CLS</div>
+          </div>
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
+            <div className="text-xs text-white/60">FID</div>
+      <div className='space-y-3'>        <button      <div className="space-y-3">
+        <button
+      {/* Optimization Controls */}
+      <div className='space-y-3'>        <button      <div className="space-y-3">
+        <button
+      <div className='space-y-3'>        <button
+        <button
+      {/* Optimization Controls */}
+        <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${isOptimizing;
@@ -295,6 +434,7 @@ className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>;
         <ul className="text-xs text-white/60 space-y-1">;
       {/* Performance Tips */}
+<<<<<<< HEAD
       <div className="mt-6 pt-4 border-t border-white/10">;
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>;
         <ul className="text-xs text-white/60 space-y-1">;
@@ -331,6 +471,38 @@ className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-
     </div>;
   }, [measure_performance])const getPerformanceScore = (): number => {let score  = 100;// Check condition;
 if (score -= 20) {$2;
+=======
+      <div className="mt-6 pt-4 border-t border-white/10">
+        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
+        <ul className="text-xs text-white/60 space-y-1">
+      {/* Performance Tips */}
+      <div className="mt-6 pt-4 border-t border-white/10">
+        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
+        <ul className="text-xs text-white/60 space-y-1">
+        )}
+      </div>
+      {/* Performance Tips */}
+      <div className='mt-6 pt-4 border-t border-white/10'>
+        <h4 className='text-sm font-semibold text-white/80 mb-3'>
+          Performance Tips
+        </h4>
+          <li>• Use WebP images for better compression</li>
+          <li>• Implement lazy loading for images</li>
+          <li>• Minimize CSS and JavaScript bundles</li>
+          <li>• Use CDN for static assets</li>
+          <li>• Enable gzip compression</li>
+        </ul>
+      </div>
+    </div>
+  }, [measure_performance]);
+;
+  const getPerformanceScore = (): number => {
+    let score = 100;
+;
+    // Check condition
+if (score -= 20) {
+  $2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
     // Check condition;
 if (score -= 25) {$2;
@@ -528,5 +700,14 @@ if ( {'              window.addEventListener ('load', function () {'            
 interface PerformanceOptimizerProps  {onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enable_reporting?: boolean;
 }
+<<<<<<< HEAD
       measureWebVitals()} else {window && window.addEventListener('load', measureWebVitals)}
 export default PerformanceOptimizer;)
+=======
+      measureWebVitals();
+    } else {;
+      window && window.addEventListener('load', measureWebVitals);
+    }
+export default PerformanceOptimizer;
+  );
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -4,6 +4,10 @@ const createJestConfig = nextJest({
   dir: './'
 });
 
+<<<<<<< HEAD
+=======
+const customJestConfig = {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
@@ -34,6 +38,7 @@ const createJestConfig = nextJest({
     '<rootDir>/temp_components/',
     '<rootDir>/temp_conflicts/',
     '<rootDir>/temp_working/',
+<<<<<<< HEAD
     '<rootDir>/backup*/',
     '<rootDir>/corrupted_backup/',
     '<rootDir>/temp_*/',
@@ -105,6 +110,14 @@ const createJestConfig = nextJest({
     '<rootDir>/automation/backup*/'
   ],
 
+=======
+    '<rootDir>/.next/',
+  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  verbose: true,
+  collectCoverage: false,
+  testTimeout: 30000,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   coverageThreshold: {
     global: {
       branches: 70,
@@ -113,6 +126,7 @@ const createJestConfig = nextJest({
       statements: 70
     }
   },
+<<<<<<< HEAD
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   verbose: true,
   collectCoverage: false,
@@ -122,3 +136,8 @@ const createJestConfig = nextJest({
 
 module.exports = createJestConfig(config);
 
+=======
+};
+
+module.exports = createJestConfig(customJestConfig);
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

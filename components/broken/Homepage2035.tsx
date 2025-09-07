@@ -1,14 +1,43 @@
 import Layout from './layout/Layout';
+<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 import { import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette;
   } from 'lucide-react';
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
+  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
+ } from 'lucide-react';
+import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
 }
 import React, { useState, useEffect } from 'react';
 import Layout from './layout / Layout';
+<<<<<<< HEAD
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
 import { innovative2025MicroSaasBatch   } from '../data/innovative-2025-micro-saas-batch';
@@ -20,7 +49,11 @@ const LoadingFallback = () => (<div className='min-h-screen flex items-center ju
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component;
+<<<<<<< HEAD
       transition: { duration: 1.5, ease: "easeOut" as const }
+=======
+    transition: { duration: 1.5, ease: "easeOut" as const }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
   }
   const categories = [;
@@ -164,6 +197,7 @@ if (return () {$2;
 if ( {) {$2;
 }
   }
+<<<<<<< HEAD
   }return (<Layout>;
       <UltraFuturisticBackground2035>;
         {/* Hero Section */}}return (<Layout>;
@@ -171,6 +205,19 @@ if ( {) {$2;
         {/* Hero Section */}<section className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>;
             <motion.div;
+=======
+  }
+  return (
+    <Layout>;
+      <UltraFuturisticBackground2035>;
+        {/* Hero Section */}
+  }
+  return (
+    <Layout>
+      <UltraFuturisticBackground2035>
+        {/* Hero Section */}
+            <motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}whileHover={{ scale: 1.05 }}
@@ -243,8 +290,14 @@ className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-bla
                   <span>Watch Demo</span>;
                 </motion && motion.button>;
               </div>;
+<<<<<<< HEAD
             </motion && motion.div>;{/* Stats */}
             <motion&& motion.div;
+=======
+            </motion && motion.div>;
+            {/* Stats */}
+            <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.2 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
@@ -266,6 +319,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                   key={index}
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}</motion && motion.div>;
           </div>;
         </section>;className='text-center';
@@ -278,6 +332,12 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                   </div>;
                   <div className='text-gray-400 text-sm'>{stat.label}</div>;
                 </motion.div>;
+=======
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+            </motion && motion.div>;
+          </div>;
+        </section>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               ))}
         {/* Services Section */}<section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -289,6 +349,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
               viewport={{ once: true }}className='text-center mb-16';
             >;
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>;
@@ -307,6 +368,25 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                 designed to transform your business;
               </p>;
             </motion.div>;
+=======
+              viewport={{ once: true }}
+            >
+              <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
+                Revolutionary Technology Solutions
+              </h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Discover our comprehensive portfolio of cutting-edge services
+                designed to transform your business              </p>            >
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+                Revolutionary Technology Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover our comprehensive portfolio of cutting-edge services designed to transform your business
+              </p>
+            </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               className='text-center mb-16'>;
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>;
                 Revolutionary Technology Solutions;
@@ -320,6 +400,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 Discover our comprehensive portfolio of cutting-edge services designed to transform your business;
               </p>;
+<<<<<<< HEAD
             </motion && motion.div>;{/* Category Filter */}
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -328,6 +409,15 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
               viewport={{ once: true }}className='flex flex-wrap justify-center gap-4 mb-12';
             >;
               {categories.map(category => (<motion.button;
+=======
+            </motion && motion.div>;
+            {/* Category Filter */}
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              viewport={{ once: true }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -340,8 +430,14 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                   {category && category.icon}
                   <span>{category && category.name}</span>;
                 </motion && motion.button>;
+<<<<<<< HEAD
               ))}{/* Services Grid */}
             <motion&& motion.div;
+=======
+              ))}
+            {/* Services Grid */}
+            <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               variants={staggerContainer}
 initial='initial';
               whileInView='animate';
@@ -398,6 +494,7 @@ className='w-full';
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">;
           <div className="max-w-7xl mx-auto">;
+<<<<<<< HEAD
             <motion&& motion.div;
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto";
               >;
@@ -435,6 +532,38 @@ className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 ho
                   description:;
                   description:;
                     'Military-grade security protocols and compliance standards to protect your business';
+=======
+            <motion&& motion.div
+                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
+              >
+                <span>View All Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </motion.button>
+            </motion.div>
+          </div>
+        </section>
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                We combine innovation, expertise, and cutting-edge technology to
+                deliver exceptional results
+              </p>
+            </motion.div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
+                {
+                  icon: <Brain className='w-12 h-12' />
+                  title: "title",
+    description:
+                  description:
+                    'Military-grade security protocols and compliance standards to protect your business'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 }
                 {icon: <Rocket className='w-12 h-12' />;
                   title: 'Space Technology';
@@ -475,14 +604,22 @@ className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 ho
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+<<<<<<< HEAD
                   viewport={{ once: true }}className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group';
 className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group';
                 >;
                   <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>;
+=======
+                  viewport={{ once: true }}
+                  className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
+                >
+                  <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     {feature.icon}
                   </div>;
                   <h3 className='text-xl font-bold text-white mb-3'>;
                     {feature.title}
+<<<<<<< HEAD
                   </h3>;
                   <p className='text-gray-300'>{feature.description}</p>                </motion.div>;
                   <p className='text-gray-300'>{feature.description}</p>;
@@ -490,6 +627,15 @@ className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 
             </div>;
           </div>;
         </section>;{/* CTA Section */}
+=======
+                  </h3>
+                  <p className='text-gray-300'>{feature.description}</p>                </motion.div>
+                </motion.div>
+            </div>;
+          </div>;
+        </section>;
+        {/* CTA Section */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -543,6 +689,7 @@ className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 
         </section>;
       </UltraFuturisticBackground2035>;
     </Layout>;
+<<<<<<< HEAD
   )}animate: {animate: {}transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >;
@@ -576,11 +723,22 @@ className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-bla
       </UltraFuturisticBackground2035>;
     </Layout>;
 )}animate: {transition: {staggerChildren: 0.1, delayChildren: 0.2;
+=======
+  )
+};
+animate: {
+  animate: {
+};
+  animate: {
+  transition: {
+  staggerChildren: 0.1, delayChildren: 0.2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 }
 ];
 ...innovative2025ITEnterpriseBatch;
 ...innovative2025AIServicesBatch ];
+<<<<<<< HEAD
 const filteredServices = activeCategory === 'all' ? allServices return (<Layout> <UltraFuturisticBackground2035> > <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Zion Tech Group </span> </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Explore Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button > <Play className="w-5 h-5" /> <span>Watch Demo</span> </motion.button> </div> </motion.div> {/* Stats */;
 }<motion.div </motion.div>) )}</motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Revolutionary Technology Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of cutting-edge services designed to transform your business </p> </motion.div> {/* Category Filter */;
 }<motion.div > {categories.map ( (category) => (<motion.button key= {category.id;
@@ -598,6 +756,56 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 }whileInView= {{opacity: 1, y: 0;
 }transition= {{}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
 }export default Homepage2035;className='text - center';
+=======
+const filteredServices = activeCategory === 'all' ? allServices return (<Layout> <UltraFuturisticBackground2035> > <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Zion Tech Group </span> </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Explore Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button > <Play className="w-5 h-5" /> <span>Watch Demo</span> </motion.button> </div> </motion.div> {
+  /* Stats */
+}<motion.div </motion.div>) )
+}</motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Revolutionary Technology Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of cutting-edge services designed to transform your business </p> </motion.div> {
+  /* Category Filter */
+}<motion.div > {
+  categories.map ( (category) => (<motion.button key= {
+  category.id
+}whileHover= {
+  {
+  scale: 1.05
+}whileTap= {
+  {
+  scale: 0.95
+}onClick= {
+  () => setActiveCategory (category.id)
+}className= {
+  `flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 $ {
+  activeCategory === category.id ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400' : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
+}`
+}> {
+  category.icon
+}<span> {
+  category.name
+}</span> </motion.button>) )
+}</motion.div> {
+  /* Services Grid */
+}<motion.div > {
+  filteredServices.map ( (service, index) => (<motion.div key= {
+  service.id
+}> <UltraFuturisticServiceCard2035 service= {
+  service
+}/> </motion.div>) )
+}</motion.div> {
+  /* View All Services Button */
+}<motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> </motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion.div> </motion.div>) )
+}</div> </div> </section> <motion.div initial= {
+  {
+  opacity: 0, y: 30
+}whileInView= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button 
+};
+export default Homepage2035;
+                  className='text - center';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 >;
                   <div className='text - cyan - 400 mb - 2 flex justify - center'>;
                     {stat.icon}
@@ -846,6 +1054,7 @@ const filtered_services = active_category === 'all' ? all_services return (<Layo
 }while_tap= {{scale: 0.95;
 }on_click= {() => setActiveCategory (category.id)}className= {`flex items - center space - x-2 px - 6 py - 3 rounded - full border transition - all duration - 300 $ {active_category === category.id ? 'border - cyan - 400 bg - cyan - 400 / 10 text - cyan - 400' : 'border - gray - 600 text - gray - 300 hover:border - cyan - 400 hover:text - cyan - 400';
 }`;
+<<<<<<< HEAD
 }> {category.icon;
 }<span> {category.name;
 }</span> </motion.button>) )}</motion.div> {/* Services Grid */;
@@ -857,3 +1066,37 @@ const filtered_services = active_category === 'all' ? all_services return (<Layo
 }transition= {{duration: 0.8;
 }viewport= {{}
 export default Homepage2035)}export default Homepage2035;
+=======
+}> {
+  category.icon;
+}<span> {
+  category.name;
+}</span> </motion.button>) );
+}</motion.div> {
+  /* Services Grid */;
+}<motion.div > {
+  filtered_services.map ( (service, index) => (<motion.div key= {
+  service.id;
+}> <UltraFuturisticServiceCard2035 service= {
+  service;
+}/> </motion.div>) );
+}</motion.div> {
+  /* View All Services Button */;
+}<motion.div > <span > View All Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> </motion.div> </div> </section> > <h2 className="text - 4xl sm:text - 5xl font - bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text - xl text - gray - 300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting - edge technology to deliver exceptional results </p> </motion.div> </motion.div>) );
+}</div> </div> </section> <motion.div initial= {
+  {
+  opacity: 0, coordinate_y: 30;
+}whileInView= {
+  {
+  opacity: 1, coordinate_y: 0;
+}transition= {
+  {
+  duration: 0.8;
+}viewport= {
+  {
+}
+export default Homepage2035);
+}
+;
+export default Homepage2035;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

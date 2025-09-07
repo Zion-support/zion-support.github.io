@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
       x: number;import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
@@ -8,6 +9,17 @@ const UltraFuturisticBackground2040: React.FC;
   const canvas_ref  = useRef < HTMLCanvasElement>(null)useEffect (() => {const canvas = canvas_ref.current;
     // Check condition;
 if (return) {$2;
+=======
+x: number;
+      y: number;
+  const canvas_ref = useRef < HTMLCanvasElement>(null);
+;
+  useEffect (() => {
+    const canvas = canvas_ref.current;
+    // Check condition
+if (return) {
+  $2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
     const ctx = canvas.get_context ('2d')// Check condition;
 if (return) {$2;
@@ -44,10 +56,19 @@ if (return) {$2;
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
       ctx.lineWidth = 0.5;for (let i = 0, i < particles.length, i++) {for (let j = i + 1, j < particles.length, j++) {const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
+<<<<<<< HEAD
           const distance = Math.sqrt(dx * dx + dy * dy)ctx.stroke()}for (let i = 0; i < particles.length; i++) {for (let j = i + 1; j < particles.length; j++) {const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy)if (distance < 100) {ctx.beginPath()ctx.moveTo(particles[i].x, particles[i].y)ctx.lineTo(particles[j].x, particles[j].y)ctx.stroke()}}
       }// Draw animated grid;
+=======
+          const distance = Math.sqrt(dx * dx + dy * dy);
+            ctx.stroke();          }
+          }
+        }
+      }
+      // Draw animated grid
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;{ x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }const gridSize = 50;
       const offset = (time * 20) % gridSize;
@@ -141,6 +162,7 @@ canvas.height = window.innerHeight;
         />;
         <motion.div;
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple-400 / 20 rounded-full";
+<<<<<<< HEAD
           animate={{transition={{duration: 12;
             repeat: Infinity;
             ease: 'linear',          }}/>;
@@ -161,11 +183,21 @@ canvas.height = window.innerHeight;
           animate={{rotate: [45, 405],scale: [1, 1.15, 1],opacity: [0.2, 0.3, 0.2],}}
           transition={{duration: 12,repeat: Infinity,ease: 'linear',}}
         />;
+=======
+          animate={{
+          transition={{
+            duration: 12;
+    repeat: Infinity
+            ease: 'linear',          }}
+          }}
+        />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Additional Floating Elements */}
         <motion.div;
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12';
           animate={{rotate: [12, 372];
             scale: [1, 1.1, 1];
+<<<<<<< HEAD
             opacity: [0.15, 0.25, 0.15],          }}
           transition={{duration: 15;
             repeat: Infinity;
@@ -177,6 +209,9 @@ canvas.height = window.innerHeight;
           animate={{rotate: [12, 372];
             scale: [1, 1.1, 1];
             opacity: [0.15, 0.25, 0.15];
+=======
+            opacity: [0.15, 0.25, 0.15]
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             rotate: [360, 0];
             scale: [1, 1.2, 1];
             opacity: [0.2, 0.5, 0.2];
@@ -202,8 +237,16 @@ canvas.height = window.innerHeight;
           transition={{duration: 15,repeat: Infinity,transition={{duration: 18;
             repeat: Infinity;
             ease: 'linear',          }}
+<<<<<<< HEAD
             duration: 15,repeat: Infinity,ease: "linear";
           }}className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full";
+=======
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         />;
         <motion.div;
           className='absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full';
@@ -226,6 +269,7 @@ canvas.height = window.innerHeight;
             repeat: Infinity;
             ease: 'easeInOut',          }}
         {/* Particle Effects */}
+<<<<<<< HEAD
         <motion&& motion.div;
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full";
           animate={{}}
@@ -239,6 +283,28 @@ canvas.height = window.innerHeight;
             repeat: Infinity;
             ease: 'easeInOut';
             delay: 1,          }}
+=======
+        <motion&& motion.div
+          className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
+          animate={{
+          }}
+          transition={{
+            duration: 3
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+        />;
+        <motion&& motion.div
+          className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
+          animate={{
+            y: [0, -15, 0],
+            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }}
+          transition={{
+            duration: 4
+            repeat: Infinity
+            ease: "ease",
+    delay: 1,          }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }}
           transition={{duration: 3,repeat: Infinity,ease: "easeInOut";
           }}
@@ -250,12 +316,33 @@ canvas.height = window.innerHeight;
           transition={{duration: 4,repeat: Infinity,ease: "easeInOut",delay: 1;
           }}delay: 2;
           }}
+<<<<<<< HEAD
+=======
+            delay: 2
+          }}
+          }}
+        />
+      </div>
+          }}
+        />
+      </div>
+            duration: 5,
+            repeat: Infinity,
+      <style jsx>{`
+        @keyframes gridMove {
+          0% {
+            duration: 5,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 2,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }}
         />;
       </div>;
           }}
         />;
       </div>;
+<<<<<<< HEAD
             duration: 5,repeat: Infinity,<style jsx>{`;
         @keyframes gridMove {0% {duration: 5,repeat: Infinity,ease: 'easeInOut',delay: 2,}}
         />;
@@ -273,11 +360,24 @@ canvas.height = window.innerHeight;
           transition={{duration: 5,repeat: Infinity,ease: 'easeInOut',delay: 2,}}
         />;
       </div>;
+=======
+            transform: translate(0, 0);
+          }
+          100% {;
+            transform: translate(50px, 50px);
+          }
+        }
+        @keyframes pulse {
+          0%
+          100% {
+            opacity: 0.2;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* CSS Animations */}
       <style jsx>{`;
         @keyframes gridMove {0% {transform: translate(0, 0)}
           100% {transform: translate(50px, 50px)}
         }
+<<<<<<< HEAD
         @keyframes pulse {0%;
           100% {opacity: 0.2;{/* CSS Animations */}
       <style jsx>{`;
@@ -285,14 +385,25 @@ canvas.height = window.innerHeight;
           50% {opacity: 0 && 0.5;          }
         }`}</style>;
     </div>)}export default UltraFuturisticBackground2040;            opacity: 0.5;
+=======
+      `}</style>;
+    </div>);
+}export default UltraFuturisticBackground2040;            opacity: 0.5;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }
         }
       `}</style>;
     </div>)}  )}export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
+<<<<<<< HEAD
 export default UltraFuturisticBackground2040;50% {opacity: 0.5;
           }
         }
       `}</style>;
     </div>;
 )}export default UltraFuturisticBackground2040;
+=======
+export default UltraFuturisticBackground2040;
+export default UltraFuturisticBackground2040;
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

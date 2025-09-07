@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node;
@@ -23,3 +24,6 @@ const manifest = { "functions": [], "generatedAt": new Date().toISOString() };";
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log("["netlify":manifest] wrote", manifestPath)} catch (e) {  console.log("["netlify":manifest] skipped (write failed)")}";process.exit(0);
 
+=======
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

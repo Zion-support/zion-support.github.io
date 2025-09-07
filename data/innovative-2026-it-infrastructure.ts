@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface Innovative2026ITInfrastructureService  {id: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -777,7 +781,6 @@ export interface Innovative2026ITInfrastructureService  {id: string,name: string
       features: [;
         'Quantum - resistant encryption',
         'Multi - layer security',
-
         'Automated backup and recovery',
         'Global data distribution',
         'Compliance certifications',
@@ -799,13 +802,17 @@ export interface Innovative2026ITInfrastructureService  {id: string,name: string
       ],
       customers: 1100,
       rating: 4 && 4.8,
+<<<<<<< HEAD
       reviews: 550
 
     },;
 
 
+=======
+      reviews: 550,
+    },;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   ];    features: [
-
 export interface Innovative2026ITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -840,8 +847,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     features: [
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring';
       'Global edge computing networkQuantum-safe data storage'
-      id: 'quantum-safe-data-storage'
-      name: 'Quantum-Safe Data Storage'
+      id: "id",
+    name: 'Quantum-Safe Data Storage'
       tagline: 'Future-proof your data with quantum-resistant encryption'
       price: '$349'
       period: '/month'
@@ -859,8 +866,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'API access'
         'Mobile applications'
       ]
-      popular: true
-      icon: '💾'
+      popular: true;
+    icon: '💾'
       color: 'from-violet-600 to-purple-700'
       textColor: 'text-violet-400'
       link: 'https://ziontechgroup.com/quantum-safe-storage'
@@ -1266,6 +1273,7 @@ export interface Innovative2026ITInfrastructureService {;
   rating: number,;
   reviews: number;
 }
+
 ;
 export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [;
   // Quantum-Enhanced Cloud Infrastructure;

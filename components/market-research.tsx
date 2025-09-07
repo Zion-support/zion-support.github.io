@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export default function MarketResearchPage() {const marketSegments = [;
@@ -20,6 +21,30 @@ export default function MarketResearchPage() {'Generative AI adoption accelerati
         'Real-time analytics dashboards';
         'Data visualization tools';
         'Query optimization platforms';
+=======
+export default function MarketResearchPage() {
+  const marketSegments = [
+    {
+      name: "name",
+    marketSize: '$15.7B'
+      growthRate: '23.4% CAGR'
+      keyTrends: [
+    {
+      name: 'Database & Analytics'
+      marketSize: '$8.9B'
+      growthRate: '18.7% CAGR'
+      keyTrends: [
+      opportunities: [
+        'Database performance monitoring'
+        'Real-time analytics dashboards'
+        'Data visualization tools'
+        'Query optimization platforms'
+      ]
+      color: 'from-cyan-500 to-blue-600'
+      icon: <BarChart3 className='w-8 h-8 text-white' />
+    },    {      opportunities: [
+        'Database performance monitoringReal-time analytics dashboardsData visualization toolsQuery optimization platforms'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       ];
       color: 'from-cyan-500 to-blue-600';
       icon: <BarChart3 className='w-8 h-8 text-white' />;
@@ -104,6 +129,7 @@ export default function MarketResearchPage() {'Generative AI adoption accelerati
         'AI content generation tools','Predictive analytics platforms','Automated customer service','Intelligent process automation',],color: 'from-fuchsia-500 to-purple-600',icon: <Zap className='w-8 h-8 text-white' />,},    {      opportunities: [;
         'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation';
       ];
+<<<<<<< HEAD
       color: 'from-fuchsia-500 to-purple-600',icon: <Zap className="w-8 h-8 text-white" />;
     }{name: 'Database & Analytics',marketSize: '$8.9B',growthRate: '18.7% CAGR',keyTrends: [;
         'Real-time analytics demand','Cloud database migration','Data privacy regulations','Performance optimization focus',],topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],opportunities: [;
@@ -122,10 +148,123 @@ export default function MarketResearchPage() {'Generative AI adoption accelerati
   const competitiveAnalysis = [;
     {company: 'Enterprise Giants',examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],strengths: [;
         'Extensive resources and R&DEstablished customer baseComprehensive feature setsGlobal presence and support';
+=======
+      color: 'from-fuchsia-500 to-purple-600',
+      icon: <Zap className="w-8 h-8 text-white" />
+    };
+    {
+      name: 'Database & Analytics',
+      marketSize: '$8.9B',
+      growthRate: '18.7% CAGR',
+      keyTrends: [
+        'Real-time analytics demand',
+        'Cloud database migration',
+        'Data privacy regulations',
+        'Performance optimization focus',
+      ],
+      topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
+      opportunities: [
+        'Database performance monitoring',
+        'Real-time analytics dashboards',
+        'Data visualization tools',
+        'Query optimization platforms',
+      ],
+      color: 'from-cyan-500 to-blue-600',
+      icon: <BarChart3 className='w-8 h-8 text-white' />,
+    },    {
+    {
+      name: 'Security & Identity',
+      marketSize: '$12.3B',
+      growthRate: '21.2% CAGR',
+      keyTrends: [
+        'Zero-trust security adoption',
+        'Multi-factor authentication growth',
+        'API security concerns',
+        'Compliance requirements increasing',
+      ],
+      topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
+      opportunities: [
+        'Identity verification platforms',
+        'API security gateways',
+        'Compliance monitoring tools',
+        'Threat detection systems',
+      ],
+      color: 'from-green-500 to-emerald-600',
+      icon: <Target className='w-8 h-8 text-white' />,
+    },    {
+    {
+      name: 'Business Intelligence',
+      marketSize: '$22.1B',
+      growthRate: '19.8% CAGR',
+      keyTrends: [
+        'Self-service BI adoption',
+        'Real-time data integration',
+        'Mobile BI growth',
+        'Predictive analytics demand',
+      ],
+      topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
+      opportunities: [
+        'Custom dashboard builders',
+        'Data integration platforms',
+        'Mobile analytics solutions',
+        'Predictive modeling tools',
+      ],
+      color: 'from-orange-500 to-red-600',
+      icon: <Activity className='w-8 h-8 text-white' />,
+    },    {
+    {
+      name: 'API Management',
+      marketSize: '$6.8B',
+      growthRate: '24.1% CAGR',
+      keyTrends: [
+        'Microservices architecture growth',
+        'API-first development',
+        'Rate limiting importance',
+        'Developer experience focus',
+      ],
+      topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
+      opportunities: [
+        'API rate limiting services',
+        'Developer portal platforms',
+        'API analytics tools',
+        'Webhook management systems',
+      ],
+      color: 'from-indigo-500 to-purple-600',
+      icon: <Globe className='w-8 h-8 text-white' />,
+    },    {
+    {
+      name: 'User Experience Analytics',
+      marketSize: '$9.4B',
+      growthRate: '20.5% CAGR',
+      keyTrends: [
+        'Privacy-compliant tracking',
+        'Real-time user insights',
+        'Conversion optimization focus',
+        'Mobile app analytics growth',
+      ],
+      topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
+      opportunities: [
+        'Heatmap and session recording',
+        'A/B testing platforms',
+        'User journey mapping tools',
+        'Conversion funnel analytics',
+      ],
+      color: 'from-teal-500 to-cyan-600',
+      icon: <Users className='w-8 h-8 text-white' />,
+    },  ];
+  ];
+  const competitiveAnalysis = [
+    {
+      company: 'Enterprise Giants',
+      examples: ['SalesforceMicrosoftOracleSAP'],
+      strengths: [
+        'Extensive resources and R&DEstablished customer baseComprehensive feature setsGlobal presence and support'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       ];
       weaknesses: [;
         'High pricing and complexitySlow innovation cyclesDifficult customizationLong implementation times';
       ];
+<<<<<<< HEAD
       marketShare: '45-60%',pricing: 'High ($1000+/month)';
     },    {company: 'Mid-Market Leaders';
       examples: ['HubSpot', 'Atlassian', 'Slack', 'Zoom'];
@@ -155,6 +294,52 @@ export default function MarketResearchPage() {'Generative AI adoption accelerati
       timeline: '2024-2026';
       examples: [;
 import {TrendingUp,BarChart3,DollarSign,Users,Globe,Target,Clock,Award,ArrowRight,ExternalLink,PieChart,LineChart,Activity,Zap,import Head from 'next / head';
+=======
+      marketShare: '45-60%',
+      pricing: 'High ($1000+/month)'
+    },    {
+      company: 'Mid-Market Leaders'
+      examples: ['HubSpot', 'Atlassian', 'Slack', 'Zoom']
+      strengths: [
+        'Balanced features and pricing'
+        'Strong user experience'
+        'Active community support'
+        'Regular feature updates'
+      ]
+      weaknesses: [
+        'Limited customization options'
+        'Growing complexity over time'
+        'Dependency on integrations'
+        'Scalability challenges'
+      ]
+      marketShare: '25-35%'
+      pricing: 'Medium ($100-500/month)'
+    }
+  ];
+  const marketTrends = [
+    {
+      trend: 'AI-First Approach'
+      description: 'Companies prioritizing AI capabilities in their products'
+      impact: 'High'
+      timeline: '2024-2026'
+      examples: [
+import {;
+  TrendingUp,;
+  BarChart3,;
+  DollarSign,;
+  Users,;
+  Globe,;
+  Target,;
+  Clock,;
+  Award,;
+  ArrowRight,;
+  ExternalLink,;
+  PieChart,;
+  LineChart,;
+  Activity,;
+  Zap,;
+import Head from 'next / head';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
   TrendingUp,BarChart3,DollarSign,Users,Globe,Target,Clock,Award,ArrowRight,ExternalLink,PieChart,LineChart,Activity,Zap,} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap  } from 'lucide-react';
@@ -415,6 +600,7 @@ import { Zap  } from 'lucide-react';
                           {segment.opportunities.map((opportunity, oppIndex) => (<div key={oppIndex} className="flex items-start text-gray-300 text-sm">;
                               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />;
                               {opportunity}
+<<<<<<< HEAD
                             </div>;
                           ))}</div>;
                           )}
@@ -442,6 +628,35 @@ import { Zap  } from 'lucide-react';
           </div>;
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
             {competitiveAnalysis.map((analysis, index) => (<Card;
+=======
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Competitive Analysis */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+              Competitive Landscape Analysis
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Understanding the competitive landscape and positioning strategies
+              for different types of SaaS companies.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+            {competitiveAnalysis.map((analysis, index) => (
+              <Card
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 key={index}
                 className='card - hover border - gradient - blue';
                 style={{ animation_delay: `${index * 0.1}s` }}
@@ -579,6 +794,7 @@ import { Zap  } from 'lucide-react';
                           <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />;
                           {strength}</li>;
                       ))}
+<<<<<<< HEAD
                     </ul>;
                   </div>;
                   {/* Weaknesses */}
@@ -591,6 +807,10 @@ import { Zap  } from 'lucide-react';
                           <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />;
                           {weakness}
                         </li>;
+=======
+                    </ul>
+                  </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       ))}
                   {/* Weaknesses */}
                   <div>;
@@ -611,6 +831,7 @@ import { Zap  } from 'lucide-react';
               </Card>;
             ))}
       {/* Market Trends */}
+<<<<<<< HEAD
 <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -618,6 +839,21 @@ import { Zap  } from 'lucide-react';
               Emerging Market Trends;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+=======
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+              Emerging Market Trends
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Key trends shaping the micro SaaS landscape and creating new
+              opportunities for innovation and growth.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {marketTrends.map((trend, index) => (
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               Key trends shaping the micro SaaS landscape and creating new;
               opportunities for innovation and growth.;
             </p>;
@@ -703,6 +939,7 @@ import { Zap  } from 'lucide-react';
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -721,6 +958,27 @@ import { Zap  } from 'lucide-react';
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
             {pricingStrategies.map((strategy, index) => (<Card;
             <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+=======
+          </div>
+        </div>
+      </section>
+      {/* Pricing Strategies */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+              Pricing Strategy Analysis
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Analysis of different pricing strategies used in the micro SaaS
+              market and their implications for business success.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+            {pricingStrategies.map((strategy, index) => (
+              <Card
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               Key trends shaping the micro SaaS landscape and creating new opportunities for innovation and growth.;
             </p>;
           </div>;
@@ -831,7 +1089,12 @@ import { Zap  } from 'lucide-react';
                         {trend && trend.timeline}
                       </span>;
                     </div>;
+<<<<<<< HEAD
                   </div>;<p className='text-gray-300 mb-4'>{trend && trend.description}</p>;
+=======
+                  </div>;
+                  <p className='text-gray-300 mb-4'>{trend && trend.description}</p>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   <div className='mb-4'>;
                     <h4 className='text-sm font-semibold text-gray-400 mb-2'>;
                       Examples:;
@@ -870,8 +1133,13 @@ import { Zap  } from 'lucide-react';
                           <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />;
                           {pro}</li>;
                       ))}
+<<<<<<< HEAD
                     </ul>;
                   </div>;
+=======
+                    </ul>
+                  </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   {/* Cons */}
 <div className='mb-4'>;
                     <h4 className='text-sm font-semibold text-red-400 mb-2'>;
@@ -883,6 +1151,7 @@ import { Zap  } from 'lucide-react';
                           {con}
                         </li>;
                       ))}
+<<<<<<< HEAD
                     </ul>;
                   </div>;
                   {/* Best For */}
@@ -897,6 +1166,19 @@ import { Zap  } from 'lucide-react';
                 </div>;
               </Card>;
             ))}{/* Pricing Strategies */}
+=======
+                    </ul>
+                  </div>
+                  {/* Best For */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
+                    <p className="text-xs text-gray-300">{strategy.bestFor}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+      {/* Pricing Strategies */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -907,8 +1189,15 @@ import { Zap  } from 'lucide-react';
               Analysis of different pricing strategies used in the micro SaaS;
               market and their implications for business success.;
             </p>;
+<<<<<<< HEAD
           </div>;<div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
             {pricingStrategies && pricingStrategies.map((strategy, index) => (<Card;
+=======
+          </div>;
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
+            {pricingStrategies && pricingStrategies.map((strategy, index) => (;
+              <Card
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 key={index}
                 className='card-hover border-gradient-blue';
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
@@ -916,7 +1205,12 @@ import { Zap  } from 'lucide-react';
                   <h3 className='text-xl font-bold text-white mb-3'>;
                     {strategy && strategy.strategy}
                   </h3>;
+<<<<<<< HEAD
                   <p className='text-gray-300 mb-6'>{strategy && strategy.description}</p>;{/* Pros */}
+=======
+                  <p className='text-gray-300 mb-6'>{strategy && strategy.description}</p>;
+                  {/* Pros */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   <div className='mb-4'>;
                     <h4 className='text-sm font-semibold text-green-400 mb-2'>;
                       Pros:;
@@ -928,14 +1222,26 @@ import { Zap  } from 'lucide-react';
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.;
             </p>;
+<<<<<<< HEAD
           </div>;<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {pricingStrategies && pricingStrategies.map((strategy, index) => (<Card;
+=======
+          </div>;
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+            {pricingStrategies && pricingStrategies.map((strategy, index) => (;
+              <Card
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 key={index}
                 className="card-hover border-gradient-blue";
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <div className="p-6">;
                   <h3 className="text-xl font-bold text-white mb-3">{strategy && strategy.strategy}</h3>;
+<<<<<<< HEAD
                   <p className="text-gray-300 mb-6">{strategy && strategy.description}</p>;{/* Pros */}
+=======
+                  <p className="text-gray-300 mb-6">{strategy && strategy.description}</p>;
+                  {/* Pros */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
@@ -970,6 +1276,7 @@ import { Zap  } from 'lucide-react';
               </Card>;
             ))}
       {/* CTA Section */}
+<<<<<<< HEAD
 <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-dots opacity-10' />;
         <div className='container-cursor text-center relative z-10'>;
@@ -1005,10 +1312,47 @@ import { Zap  } from 'lucide-react';
             </Button>;
             <Button;
               View Our Services;
+=======
+      <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-dots opacity-10' />
+        <div className='container-cursor text-center relative z-10'>
+          <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+            Ready to Apply This Market Intelligence?
+          </h2>
+          <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Use our market research and competitive analysis to inform your
+            business strategy, pricing decisions, and market positioning.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+            <Button
+              href='/contact'
+              size='lg'
+              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow'            >
+              Get Strategic Consultation
+            </Button>
+            <Button
+              href='/services'
+              variant='outline'
+              size='lg'
+          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Use our market research and competitive analysis to inform your business strategy, pricing decisions, and market positioning.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
+            <Button
+              href="/contact"
+              size="lg"
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
+            >
+              Get Strategic Consultation
+            </Button>
+            <Button
+              View Our Services
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
     </>)href='/services';
               variant='outline';
               size='lg';
@@ -1021,3 +1365,7 @@ import { Zap  } from 'lucide-react';
       </section>;
     </>;
   )}
+=======
+    </>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

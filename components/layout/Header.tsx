@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     { name: 'Contact', href: '/contact', icon: Phone }];
   const service_categories = [;
     {name: 'Micro SaaS',href: '/services / micro - saas',description: 'Innovative focused software solutions',popular: ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];
@@ -259,6 +260,10 @@ const Header = () => {
 
   ];
 
+=======
+{ name: 'Contact', href: '/contact', icon: Phone }
+  ];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const service_categories = [;
     {
       name: 'Micro SaaS',
@@ -276,11 +281,14 @@ const Header = () => {
       name: 'AI Services',
       href: '/services / ai - services',
       description: 'Cutting - edge AI & machine learning',
+<<<<<<< HEAD
 
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
 }
   ];
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     { ;
       name: 'Micro SaaS',;
       href: '/services/micro-saas',;
@@ -314,11 +322,14 @@ const Header = () => {
     { name: 'Partners', href: '/partners' },;
     { name: 'Team', href: '/team' },;
     { name: 'Careers', href: '/careers' },;
+<<<<<<< HEAD
 
   ];
   const isActive = (path: string) => location && location.pathname === path;
   const resourceCategories = [;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     { name: 'Blog', href: '/blog' },;
     { name: 'Case Studies', href: '/case-studies' },;
     { name: 'Webinars', href: '/webinars' },;
@@ -332,7 +343,6 @@ const Header = () => {
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
         : 'bg-transparent'
-
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
 }
   ];
@@ -340,7 +350,16 @@ const Header = () => {
   const isActive = (path: string) => location && location.pathname === path;
   const resourceCategories = [;
   const service_categories = [;
+<<<<<<< HEAD
     { name: 'AI Solutions', href: '/services / ai - solutions' },{ name: 'Cloud & DevOps', href: '/services / cloud' },{ name: 'Cybersecurity', href: '/services / cybersecurity' },{ name: 'Data & Analytics', href: '/services / data' },{ name: 'Micro SaaS', href: '/services / micro - saas' },{ name: 'Digital Transformation', href: '/services / transformation' }
+=======
+    { name: 'AI Solutions', href: '/services / ai - solutions' },
+    { name: 'Cloud & DevOps', href: '/services / cloud' },
+    { name: 'Cybersecurity', href: '/services / cybersecurity' },
+    { name: 'Data & Analytics', href: '/services / data' },
+    { name: 'Micro SaaS', href: '/services / micro - saas' },
+    { name: 'Digital Transformation', href: '/services / transformation' },
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   ];
   const solution_categories = [;
     { name: 'Enterprise', href: '/solutions / enterprise' },{ name: 'SMB', href: '/solutions / smb' },{ name: 'Startup', href: '/solutions / startup' }
@@ -359,14 +378,20 @@ const Header = () => {
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
         <div className="flex items - center justify - between h - 16">;
           {/* Logo */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           <div className="flex-shrink-0">;
             <Link href="/" className="text-2xl font-bold text-blue-600">;
               Zion Tech Group;
             </Link>;
           </div>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           {/* Desktop Navigation */}
           <div className="hidden md:block">;
             <div className="ml-10 flex items-baseline space-x-4">;
@@ -377,6 +402,7 @@ const Header = () => {
                   {item && item.name}
                 </Link>;
               ))}
+<<<<<<< HEAD
             </div>;
           </div>;
 
@@ -389,18 +415,23 @@ const Header = () => {
 
             </div>;
           </div>;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-blue-600 p-2";
             >;
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+<<<<<<< HEAD
 
             </button>;
           </div>;
         </div>;
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isMenuOpen && (<motion&& motion.div;
@@ -424,6 +455,7 @@ const Header = () => {
         </AnimatePresence>;
       </nav>;
     </header>;
+<<<<<<< HEAD
   )<div className="flex - shrink - 0">;
   );
 }
@@ -434,6 +466,9 @@ export default Header;
 
 
 
+=======
+  );
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           <div className="flex - shrink - 0">;
             <Link href="/" className="text - 2xl font - bold text - blue - 600">;
               Zion Tech Group;
@@ -489,6 +524,7 @@ export default Header;
           </a>;
     </header>);
 }
+<<<<<<< HEAD
 ;
 export default Header;
 import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge'; const Header: React.FC = () => { const [is_scrolled, setIsScrolled] = useState (false); useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll); return () => window.removeEventListener ('scroll', handle_scroll)}, []); const navigation_items = [ { name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' } ]; return ( <header className="sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 h - 14 flex items - center justify - between"> <Link href="/" className="text - white font - bold">Zion Tech Group</Link> <nav className="hidden md:flex items - center gap - 6 text - sm"> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className="text - gray - 300 hover:text - white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
@@ -1284,16 +1320,21 @@ const Header: React.FC  = () => {const [isMenuOpen, setIsMenuOpen] = useState(fa
                         <div className="grid grid-cols-2 gap-2">;
                           {item.children?.map((child) => (<Link;
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Mobile Menu */}
         {/* Mobile Navigation */}
 
         {/* Mobile Menu */}
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -1453,7 +1494,6 @@ const Header: React.FC  = () => {const [isMenuOpen, setIsMenuOpen] = useState(fa
   )}export default Header;
                   </div>
                 ))}
-                
                 <div className="pt-4 border-t border-gray-200">
                   <Link
                     href="/contact"
@@ -1469,6 +1509,7 @@ const Header: React.FC  = () => {const [isMenuOpen, setIsMenuOpen] = useState(fa
       </nav>
     </header>
   );
+<<<<<<< HEAD
 };
 
 export default Header;
@@ -1487,3 +1528,10 @@ export default Header;}
 };
 
 export default Header;
+=======
+}
+export default Header;
+import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 0)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' },]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems.map((item) => ( <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
+export default Header;
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

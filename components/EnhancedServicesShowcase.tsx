@@ -1,4 +1,47 @@
+<<<<<<< HEAD
 
+=======
+Brain
+  Shield
+  Rocket
+  Cpu
+  Database
+  Atom
+  Users
+  CheckCircle
+  TrendingUp
+  Clock
+  Star
+  Filter
+  ChevronDown;
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Users,
+  CheckCircle,
+  TrendingUp,
+  Clock,
+  Star,
+  Filter,;
+  ChevronDown,;
+} from 'lucide-react';
+interface Service {;
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Users,
+  CheckCircle,
+  TrendingUp,
+  Clock,
+  Star,
+} from 'lucide-react';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ;
 import React, { useState } from 'react';
 import { Brain, Shield, Rocket, Cpu, Database, Atom, Users;
@@ -50,6 +93,7 @@ interface Service  {id: string;
   marketSize: string;
   growthRate: string;
   popular?: boolean;
+<<<<<<< HEAD
   icon: React.ComponentType<any>;
   color: string;
 }
@@ -99,6 +143,38 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
   })const getCategoryIcon = (category: string) => {const iconMap: { [key: string]: React.ComponentType<any> } = {'AI & Analytics': Brain,Security: Shield,Infrastructure: Cpu,'Space Tech': Rocket,'Emerging Tech': Brain,'Quantum AI': Atom,}return iconMap[category] || Brain;
   }return (<section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}}return (<section id="services" className="py-24 px-6 relative overflow-hidden">;
+=======
+  ];
+  const filteredServices = services.filter(service => {
+    const matchesCategory =
+      selectedCategory === 'all' |service.category === selectedCategory;
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;  });
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]: React.ComponentType<any> } = {    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]: React.ComponentType<any> } = {
+      'AI & Analytics': Brain;
+    Security: Shield
+      Infrastructure: Cpu
+      'Space Tech': Rocket
+      'Emerging Tech': Brain
+      'Quantum AI': Atom
+    }
+    return iconMap[category] |Brain;
+  }
+  return (
+    <section id='services' className='py-24 px-6 relative overflow-hidden'>;
+      {/* Background */}
+  };
+  return (
+    <section id="services" className="py-24 px-6 relative overflow-hidden">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {/* Background */}
         {/* Filters */}
           {/* Category Filter */}
@@ -149,6 +225,7 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
           </div>;
           {/* Search */}
           <div className='relative'>;
+<<<<<<< HEAD
             <input;
               type='text';
               placeholder='Search services...';
@@ -167,6 +244,24 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
             <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />;
           </div>;
         </div>;
+=======
+            <input
+              type='text'
+              placeholder='Search services...'
+              value={searchTerm}
+          {/* Search */}
+          <div className="relative">;
+            <input
+              type="text"
+              placeholder="Search services..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
+            />
+            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
+          </div>
+        </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Services Grid */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {filteredServices.map((service, index) => (<div;
@@ -174,6 +269,7 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
             >;
               {/* Popular Badge */}
+<<<<<<< HEAD
               {service.popular && (<div className='absolute top-4 right-4 z-20'>;
                   <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>;
                     <Star className='w-3 h-3' />;
@@ -182,6 +278,28 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                 </div>;
               )}{/* Service Content */}<div className='p-8'>;
         </div>;
+=======
+              {service.popular && (
+                <div className='absolute top-4 right-4 z-20'>
+                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
+                    <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <Star className="w-3 h-3" />
+                    Popular
+                  </div>
+                </div>
+              )}
+              {/* Service Content */}
+              <div className='p-8'>
+        </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {filteredServices && filteredServices.map((service, index) => (<div;
@@ -204,9 +322,22 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
               {/* Service Content */}<div className='p-8'>;
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>;
+<<<<<<< HEAD
                   <div;
       color: 'from - blue - 500 to - cyan - 500',},];const categories = [;
     'all',...Array.from (new Set (services.map (string => s.category))),const filtered_services = services.filter (service => {const matches_category =;
+=======
+                  <div
+      color: 'from - blue - 500 to - cyan - 500',
+    },
+  ];
+;
+  const categories = [;
+    'all',
+    ...Array.from (new Set (services.map (string => s.category))),
+  const filtered_services = services.filter (service => {
+    const matches_category =;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       selected_category === 'all' || service.category === selected_category;
     const matches_search =;
       service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
@@ -331,6 +462,7 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
               {/* Service Content */}
               <div className='p - 8'>;
               {/* Service Content */}
+<<<<<<< HEAD
               <div className='p-8'>;
         </div>;
         {/* Services Grid */}Popular;
@@ -338,6 +470,17 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                 </div>;
               )}{/* Service Content */}
               <div className='p-8'>;
+=======
+              <div className='p-8'>
+        </div>
+        {/* Services Grid */}
+                    Popular
+                  </div>
+                </div>
+              )}
+              {/* Service Content */}
+              <div className='p-8'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 {/* Icon and Category */}
                 <div className='flex items - center justify - between mb - 4'>;
                   <div;
@@ -347,7 +490,13 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                   </div>;
                   <div className='text - right'>;
                     <div className='text - xs text - white / 60 mb - 1'>;
+<<<<<<< HEAD
                       {getCategoryIcon (service.category)({class_name: 'w - 3 h - 3',})}
+=======
+                      {getCategoryIcon (service.category)({
+                        class_name: 'w - 3 h - 3',
+                      })}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     </div>;
                     <div className='text - xs text - white / 40'>;
                       {service.category}
@@ -392,6 +541,7 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
                 {/* Service Info */}
 <h3 className='text-xl font-bold mb-3 text-white'>;
                   {service.name}
@@ -465,6 +615,22 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                   <div className='mt-2 text-xs text-white/60'>;
                     Market: {service.marketSize} • Growth: {service.growthRate}</div>;
                 </div>;
+=======
+                {/* Benefits */}
+                    ))}
+                  </div>
+                </div>
+                {/* ROI and Market Info */}
+                <div className="mb-6 p-4 bg-white/5 rounded-lg">
+                  <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>
+                  <div className="text-xs text-white/80 leading-relaxed">{service.roi}</div>
+                  <div className="mt-2 text-xs text-white/60">
+                    Market: {service.marketSize} • Growth: {service.growthRate}
+                {/* Benefits */}
+                    ))}
+                  </div>
+                </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   </div>;
                 </div>;
                 {/* ROI and Market Info */}
@@ -510,6 +676,7 @@ onClick={() =>;
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
         </div>;
         </div>;{/* CTA Section */}{/* CTA Section */}
 <div className='text-center mt-16'>;
@@ -522,6 +689,22 @@ onClick={() =>;
               accelerate your digital transformation journey.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+=======
+        </div>
+        </div>;
+        {/* CTA Section */}
+        {/* CTA Section */}
+        <div className='text-center mt-16'>
+          <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              Ready to Transform Your Business?
+            </h3>
+            <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
+              Let's discuss how our cutting-edge technology solutions can
+              accelerate your digital transformation journey.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           ))}
         {/* CTA Section */}
         <div className='text-center mt-16'>;
@@ -602,6 +785,7 @@ export default EnhancedServicesShowcase;  )}export default EnhancedServicesShowc
     </section>)}export default EnhancedServicesShowcase)}export default EnhancedServicesShowcase;)export default EnhancedServicesShowcase;  )}
 export default EnhancedServicesShowcase;}
 }
+<<<<<<< HEAD
 export default EnhancedServicesShowcase;href='mailto:kleber@ziontechgroup.com?subject=Consultation Request';
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
               >;
@@ -619,3 +803,18 @@ href='tel:+13024640950';
       </div>;
     </section>;
 )}export default EnhancedServicesShowcase;
+=======
+;
+export default EnhancedServicesShowcase);
+}
+;
+export default EnhancedServicesShowcase;
+;
+  );
+export default EnhancedServicesShowcase;  )
+}
+export default EnhancedServicesShowcase;
+}
+}
+export default EnhancedServicesShowcase;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

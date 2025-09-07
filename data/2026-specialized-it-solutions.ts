@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 }id: string;
 export interface SpecializedITSolution2026  {id: string;name: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -726,7 +730,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
-
   })
 }
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
@@ -941,7 +944,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     implementationDetails: 'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
     launchDate: '2024-05-25', customers: 67,
     rating: 4.4,
-    reviews: 33
+    reviews: 33;
     website: string;
   }
 
@@ -954,7 +957,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>: an
   return specializedITSolutions2026.filter (
     solution => solution.category === category);
 }
-
 export interface SpecializedITSolution2026 {;
   id: string,;
   name: string,;
@@ -1010,7 +1012,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   });
 }
 ;
+<<<<<<< HEAD
 
 export interface SpecializedITSolution2026 {;
 
 };
+=======
+export interface SpecializedITSolution2026 {
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

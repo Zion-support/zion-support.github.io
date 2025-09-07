@@ -1,7 +1,50 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react';
 import { motion   } from 'framer-motion';
+=======
+ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Rocket
+  Globe
+  Sparkles
+  CheckCircle
+  Phone
+  Mail
+  MapPin;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Globe,
+  Sparkles,
+  CheckCircle,
+  Phone,
+  Mail,;
+  MapPin,;
+} from 'lucide-react';
+import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+export default function UltraAdvancedHero2026() {
+  const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
+  const contactInfo = {
+    phone: "phone",
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
+  const containerVariants = {
+    hidden: { opacity: 0 }
+import {motion} from 'framer-motion';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import Link from 'next/link';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin   } from 'lucide-react';
 import { aiAutonomousServices2026   } from '../../data/2026-ai-autonomous-services';
@@ -31,6 +74,7 @@ export default function UltraAdvancedHero2026() {const totalServices = aiAutonom
     aiAutonomousServices2026.length +;
     quantumSpaceTechServices2026.length +;
     metaverseDigitalRealityServices2026.length;
+<<<<<<< HEAD
   const contactInfo = {phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}const containerVariants = {hidden: { opacity: 0 }
 import { motion } from 'framer-motion';
 import Link from 'next / link';
@@ -67,6 +111,38 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
       </div>;
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         <motion.div;
+=======
+;
+  const contact_info = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',  }import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
+import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
+import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaverse - digital - reality - services';
+export default /**
+ * UltraAdvancedHero2026 - Function description
+ */
+function UltraAdvancedHero2026() {
+  const total_services = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
+;
+  const contact_info = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709';
+  }
+;
+  const container_variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1;
+    transition: {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           variants={containerVariants}
           initial='hidden';
           animate='visible';
@@ -77,6 +153,7 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
           {/* Main Heading */}
           <motion&& motion.h1;
             variants={itemVariants}
+<<<<<<< HEAD
             className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight';
           >;
             <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
@@ -85,14 +162,30 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
             <br />;
             <span className='text-white'>is Now</span>;
           </motion.h1>;
+=======
+            className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight'
+          >
+            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
+              The Future
+            </span>
+            <br />
+            <span className='text-white'>is Now</span>
+          </motion.h1>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight'>;
             <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
               The Future;
             </span>;
             <br />;
             <span className='text-white'>is Now</span>;
+<<<<<<< HEAD
           </motion && motion.h1>;{/* Subheading */}
           <motion&& motion.p;
+=======
+          </motion && motion.h1>;
+          {/* Subheading */}
+          <motion&& motion.p
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             variants={itemVariants}
             className='text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed'>;
             Experience the most advanced AI, quantum computing, and metaverse;
@@ -102,8 +195,16 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
               1000% ROI guaranteed;
             </span>{' '}
           {/* Service Statistics */}
+<<<<<<< HEAD
           <motion&& motion.div;
             variants={itemVariants}stagger_children: 0.1,},},  }        stagger_children: 0.1;
+=======
+          <motion&& motion.div
+            variants={itemVariants}
+        stagger_children: 0.1,
+      },
+    },  }        stagger_children: 0.1;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       }
     }
   }const item_variants = {hidden: { opacity: 0, coordinate_y: 30 },visible: {opacity: 1,coordinate_y: 0,transition: {duration: 0.8,},},}return (<section className='relative min - h-screen flex items - center justify - center overflow - hidden'>;
@@ -165,7 +266,12 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
             className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto';
           >;
             <div className='text - center p - 4 bg - gradient - to - br from - purple - 800 / 20 to - purple - 900 / 20 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl'>;
+<<<<<<< HEAD
               <div className='text - 3xl font - bold text - purple - 400'>;{aiAutonomousServices2026.length}
+=======
+              <div className='text - 3xl font - bold text - purple - 400'>;
+                {aiAutonomousServices2026.length}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               </div>;
               <div className='text - gray - 300 text - sm'>;
                 AI Autonomous Services;
@@ -184,6 +290,7 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
           initial="hidden";
           animate="visible";
           className="space-y-8">;
+<<<<<<< HEAD
           {/* Badge */}className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto';
           >;
             <div className='text-center p-4 bg-gradient-to-br from-purple-800/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl'>;
@@ -249,6 +356,49 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
               <span className="text-gray-200 font-medium">24/7 Autonomous Operation</span>;
             </div>;
           </motion.div>;
+=======
+          {/* Badge */}
+            </div>
+            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
+              <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
+              <span className='text-gray-200 font-medium'>
+                24/7 Autonomous Operation
+              </span>            </div>
+          </motion.div>
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+          >
+            <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl">
+              <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
+              <span className="text-gray-200 font-medium">First-to-Market Technology</span>
+            </div>
+            <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-purple-500/20 rounded-xl">
+              <CheckCircle className="w-6 h-6 text-purple-400 flex-shrink-0" />
+              <span className="text-gray-200 font-medium">1000% ROI Guaranteed</span>
+            </div>
+            <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl">
+              <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+              <span className="text-gray-200 font-medium">24/7 Autonomous Operation</span>
+            </div>
+          </motion.div>
+            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+          >
+            <Link
+              href="/services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl"
+            >
+              <Rocket className="w-6 h-6 mr-3" />
+              Explore All Services
+              <ArrowRight className="w-6 h-6 ml-3" />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
+            >
+              <Zap className="w-6 h-6 mr-3" />
+              Get Started Today
+            </Link>
+          </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6";
           >;
             <Link;
@@ -259,6 +409,7 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
               Explore All Services;
               <ArrowRight className="w-6 h-6 ml-3" />;
             </Link>;
+<<<<<<< HEAD
             <Link;
               href="/contact";
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30";
@@ -298,10 +449,15 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
               <ArrowRight className="w-6 h-6 ml-3" />;
             </Link>;<Link;
               href="/contact";
+=======
+            <Link
+              href="/contact"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;
               <Zap className="w-6 h-6 mr-3" />;
               Get Started Today;
             </Link>;
+<<<<<<< HEAD
           </motion && motion.div>;{/* Contact Information */}className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto";
           >;
             <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>;
@@ -370,6 +526,43 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
               </div>;
             </div>;
           </motion.div>;
+=======
+          </motion && motion.div>;
+          {/* Contact Information */}
+            className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto"
+          >
+            <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <div className="text-white font-semibold">Call Us</div>
+                  <div className="text-purple-300">{contactInfo.phone}</div>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <div className="text-white font-semibold">Email Us</div>
+                  <div className="text-cyan-300">{contactInfo.email}</div>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <div className="text-white font-semibold">Visit Us</div>
+                  <div className="text-purple-300 text-sm">{contactInfo.address}</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto'>;
             <h3 className='text-2xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
@@ -383,7 +576,12 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
                   <div className='text-white font-semibold'>Call Us</div>;
                   <div className='text-purple-300'>{contactInfo && contactInfo.phone}</div>;
                 </div>;
+<<<<<<< HEAD
               </div>;<div className='flex items-center space-x-3'>;
+=======
+              </div>;
+              <div className='flex items-center space-x-3'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <div className='w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center'>;
                   <Mail className='w-6 h-6 text-white' />;
                 </div>;
@@ -391,7 +589,12 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
                   <div className='text-white font-semibold'>Email Us</div>;
                   <div className='text-cyan-300'>{contactInfo && contactInfo.email}</div>;
                 </div>;
+<<<<<<< HEAD
               </div>;<div className='flex items-center space-x-3'>;
+=======
+              </div>;
+              <div className='flex items-center space-x-3'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center'>;
                   <MapPin className='w-6 h-6 text-white' />;
                 </div>;
@@ -412,7 +615,12 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
                   <div className="text-white font-semibold">Call Us</div>;
                   <div className="text-purple-300">{contactInfo && contactInfo.phone}</div>;
                 </div>;
+<<<<<<< HEAD
               </div>;<div className="flex items-center space-x-3">;
+=======
+              </div>;
+              <div className="flex items-center space-x-3">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">;
                   <Mail className="w-6 h-6 text-white" />;
                 </div>;
@@ -420,7 +628,12 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
                   <div className="text-white font-semibold">Email Us</div>;
                   <div className="text-cyan-300">{contactInfo && contactInfo.email}</div>;
                 </div>;
+<<<<<<< HEAD
               </div>;<div className="flex items-center space-x-3">;
+=======
+              </div>;
+              <div className="flex items-center space-x-3">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">;
                   <MapPin className="w-6 h-6 text-white" />;
                 </div>;
@@ -430,6 +643,7 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
           </motion && motion.div>;{/* Trust Indicators */}<Zap className="w-5 h-5 text-purple-400" />;
 <motion.div;
             variants={itemVariants}
@@ -449,6 +663,16 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
           </motion.div>;
         </motion.div>;
       </div>;
+=======
+          </motion && motion.div>;
+          {/* Trust Indicators */}
+              <Zap className="w-5 h-5 text-purple-400" />
+              <span>24/7 Support</span>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           }}
           transition={{duration: 6;
             repeat: Infinity;
@@ -486,8 +710,49 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
             repeat: Infinity;
             ease: 'easeInOut';
           }}
+<<<<<<< HEAD
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div;
           animate={{y: [0, -20, 0];
+=======
+          transition={{
+            duration: 9
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+          className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div
+          animate={{ 
+            y: [0, -20, 0]
+            rotate: [0, 5, 0]
+          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: "easeInOut"
+          }}
+            rotate: [0, -5, 0]
+          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: "easeInOut"
+          }}
+            rotate: [0, 3, 0]
+          }}
+          transition={{
+            duration: 7
+            repeat: Infinity
+            ease: "easeInOut"
+          }}
+            rotate: [0, -3, 0]
+          }}
+          transition={{
+            duration: 9
+            repeat: Infinity
+}
+          className='absolute bottom - 1/3 right - 10 text - 5xl opacity - 20'        >        <motion.div;
+          animate={{
+            coordinate_y: [0, -20, 0];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             rotate: [0, 5, 0];
           }}
           transition={{duration: 6;
@@ -573,6 +838,7 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
           🌐;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>))})ease: 'easeInOut';
           }}
           className='absolute bottom-1/3 right-10 text-5xl opacity-20';
@@ -585,3 +851,8 @@ function UltraAdvancedHero2026() {const total_services  = aiAutonomousServices20
       </div>;
     </section>;
 )
+=======
+    </section>));
+}
+  );
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

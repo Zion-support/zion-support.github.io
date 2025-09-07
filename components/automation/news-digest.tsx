@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 ;
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
+=======
+}</div> </div>) import fs from "fs";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import path from 'path';
  </div> </div>) )}</div> </div>) import fs from 'fs';
 }</div> </div>) import fs from 'fs';
@@ -14,7 +18,14 @@ type NewsItem = { source: string, title: string, url: string, summary: string, t
   try {items = json.items || [];type NewsItem = any;generatedAt = json.generatedAt || '';
   } catch {}
   return { props: { items, generatedAt } }
+<<<<<<< HEAD
 }export default function NewsDigestPage() {return (<div className="space-y-6">;
+=======
+}
+export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
+  return (
+    <div className="space-y-6">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>;
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>;
       <div className="grid grid-cols-1 gap-4">;
@@ -28,10 +39,25 @@ type NewsItem = { source: string, title: string, url: string, summary: string, t
               {n && n.tags?.map(t => (<span key={t} className="text-xs px-2 py-0 && 0.5 rounded bg-gray-100">{t}</span>))}
             </div>;
           </div>;
+<<<<<<< HEAD
         ))}</div>;)})}export default /**;
  * NewsDigestPage - Function description;
  */;
 function NewsDigestPage() {return (<div className="space-y-6">;
+=======
+        ))}
+    </div>;
+);
+}
+  );
+}
+export default /**
+ * NewsDigestPage - Function description
+ */
+function NewsDigestPage() {
+  return (
+    <div className="space-y-6">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       <div className="grid grid - cols-1 gap-4">;
@@ -46,4 +72,8 @@ function NewsDigestPage() {return (<div className="space-y-6">;
             </div>;
           </div>))}
       </div>;
+<<<<<<< HEAD
     </div>)
+=======
+    </div>);
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

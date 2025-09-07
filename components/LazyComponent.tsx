@@ -1,12 +1,24 @@
+<<<<<<< HEAD
 
 ;
 import React, { Suspense, lazy } from 'react',interface LazyComponentProps  {component: () => Promise<{ default: React.ComponentType < any> }>,fallback?: React.ReactNode,[key: string]: any;
+=======
+import React, { Suspense, lazy } from 'react',
+interface LazyComponentProps {
+  component: () => Promise<{ default: React.ComponentType < any> }>,
+  fallback?: React.ReactNode,
+  [key: string]: any;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 const LazyComponent: React.FC < LazyComponentProps> = ({component,fallback = <div > Loading...</div>,...props;
 }) => {const LazyLoadedComponent = lazy (component),return (<Suspense fallback={fallback}>;
       <LazyLoadedComponent {...props} />;
     </Suspense>)},export default LazyComponent;
     </Suspense>);
+<<<<<<< HEAD
 },
 
 export default LazyComponent;
+=======
+},
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

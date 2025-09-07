@@ -1887,6 +1887,7 @@ export const "revolutionarySpecializedIndustryServices2029": RevolutionarySpecia
       ],"useCases": ['Crop monitoring','Precision farming','Sustainability management';
       ],"roi": 'Increase crop yields by 30% and reduce costs by 20%',"competitors": ['John Deere', 'Climate Corporation', 'Farmers Edge'],"marketSize": '$35B AgTech',"growthRate": '25% CAGR',"variant": 'agriculture-tech',"contactInfo": {mobile: '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709'},"realImplementation": true,"implementationDetails": 'AI monitoring engine, IoT platform, agriculture analytics',"launchDate": '2025-01-28',"customers": 24,"rating": 4.7,"reviews": 17,"isNew": true}
   ];
+<<<<<<< HEAD
 export const getSpecializedIndustryServicesByCategory = ("category": string) => {return revolutionarySpecializedIndustryServices2029.filter(service => service.category === category;
   )}export const getPopularSpecializedIndustryServices = () => {return revolutionarySpecializedIndustryServices2029.filter(service => service.isPopular;
   )}export const getNewSpecializedIndustryServices = () => {return revolutionarySpecializedIndustryServices2029.filter(service => service.isNew;
@@ -2450,3 +2451,25 @@ export const getSpecializedIndustryServicesByCategory = ("category": string) => 
   )}export const getNewSpecializedIndustryServices = () => {return revolutionarySpecializedIndustryServices2029.filter(service => service.isNew;
   )}export const getSpecializedIndustryServicesByPriceRange = ("minPrice": number,"maxPrice": number;
 ) => {return revolutionarySpecializedIndustryServices2029.filter(service => {const price = parseInt(service.price.replace('$', '').replace(',', ''))return price >= minPrice && price <= maxPrice})}
+=======
+export const getSpecializedIndustryServicesByCategory = ("category": string) => {
+  return revolutionarySpecializedIndustryServices2029.filter(
+    service => service.category === category
+  )};
+export const getPopularSpecializedIndustryServices = () => {
+  return revolutionarySpecializedIndustryServices2029.filter(
+    service => service.isPopular
+  )};
+export const getNewSpecializedIndustryServices = () => {
+  return revolutionarySpecializedIndustryServices2029.filter(
+    service => service.isNew
+  )};
+export const getSpecializedIndustryServicesByPriceRange = (
+  "minPrice": number,
+  "maxPrice": number
+) => {
+  return revolutionarySpecializedIndustryServices2029.filter(service => {
+    const price = parseInt(service.price.replace('$', '').replace(',', ''));
+    return price >= minPrice && price <= maxPrice})}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

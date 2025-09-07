@@ -17,12 +17,38 @@ import {Phone,Mail,MapPin,Globe,Rocket,Brain,Atom,Cpu,Target,Microscope,Shield,Z
       { name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2,999/month' }
     ];
   }
+<<<<<<< HEAD
     title: '🌌 Space & Metaverse Tech',icon: Rocket,color: 'from-teal-500 to-emerald-600',services: [;
       {name: 'Space Mining Automation',href: '/space - mining - automation - platform',description: 'Space mining platform',price: '$9, 999 / month',},{name: 'Metaverse Development',href: '/metaverse - development - platform',description: 'Metaverse platform',price: '$3, 999 / month',},{const quickLinks = [;
   {name: 'Services Overview';
     href: '/enhanced-services-overview';
     icon: Globe;
     color: 'from-cyan-500 to-blue-600';
+=======
+    title: '🌌 Space & Metaverse Tech',
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-600',
+    services: [
+      {
+        name: 'Space Mining Automation',
+        href: '/space - mining - automation - platform',
+        description: 'Space mining platform',
+        price: '$9, 999 / month',
+      },
+      {
+        name: 'Metaverse Development',
+        href: '/metaverse - development - platform',
+        description: 'Metaverse platform',
+        price: '$3, 999 / month',
+      },
+      {
+const quickLinks = [
+  {
+    name: "name",
+    href: '/enhanced-services-overview'
+    icon: Globe;
+    color: 'from-cyan-500 to-blue-600'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   {name: 'AI Services';
     href: '/ai-services';
@@ -44,6 +70,7 @@ import {Phone,Mail,MapPin,Globe,Rocket,Brain,Atom,Cpu,Target,Microscope,Shield,Z
     icon: Cpu;
     color: 'from-blue-500 to-cyan-600';
   }
+<<<<<<< HEAD
 ];const quick_links = [;
   {name: 'Services Overview',href: '/enhanced - services - overview',icon: Globe,color: 'from - cyan - 500 to - blue - 600',},{name: 'AI Services',href: '/ai - services',icon: Brain,color: 'from - violet - 500 to - purple - 600',},{name: 'Quantum Tech',href: '/quantum - services',icon: Atom,color: 'from - indigo - 500 to - blue - 600',},{name: 'Space Tech',href: '/space - technology',icon: Rocket,color: 'from - teal - 500 to - emerald - 600',},{name: 'Enterprise IT',href: '/enterprise - it',icon: Cpu,color: 'from - blue - 500 to - cyan - 600',},{{ name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' },{ name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' },{ name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },{ name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },{ name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }Phone,Mail,MapPin,Globe,Rocket,Brain,Atom,Cpu,Target,Microscope,Shield,Zap,Sparkles,Menu,X,Search,ChevronDown,Home,Briefcase,DollarSign,BookOpen,Users,MessageCircle,} from 'lucide-react';import {Phone, Mail, MapPin, Globe, Rocket, Brain, Atom,import React, { useState, useEffect } from 'react',import Link from 'next/link';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -81,12 +108,115 @@ const contactInfo = {mobile: '+1 302 464 0950';
   website: 'https://ziontechgroup.com';
 }} from 'lucide-react';
 const contactInfo  = null;{name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1, 999/month';
+=======
+];
+;
+const quick_links = [;
+  {
+    name: 'Services Overview',
+    href: '/enhanced - services - overview',
+    icon: Globe,
+    color: 'from - cyan - 500 to - blue - 600',
+  },
+  {
+    name: 'AI Services',
+    href: '/ai - services',
+    icon: Brain,
+    color: 'from - violet - 500 to - purple - 600',
+  },
+  {
+    name: 'Quantum Tech',
+    href: '/quantum - services',
+    icon: Atom,
+    color: 'from - indigo - 500 to - blue - 600',
+  },
+  {
+    name: 'Space Tech',
+    href: '/space - technology',
+    icon: Rocket,
+    color: 'from - teal - 500 to - emerald - 600',
+  },
+  {
+    name: 'Enterprise IT',
+    href: '/enterprise - it',
+    icon: Cpu,
+    color: 'from - blue - 500 to - cyan - 600',
+  },
+  {
+  { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' },
+  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' },
+  { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
+  { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Cpu,
+  Target,
+  Microscope,
+  Shield,
+  Zap,
+  Sparkles,
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  Home,
+  Briefcase,
+  DollarSign,
+  BookOpen,
+  Users,;
+  MessageCircle,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, ;
+  Cpu, Target, Microscope, Shield, Zap, Sparkles;
+  Menu, X, Search, ChevronDown, Home, Briefcase, 
+  DollarSign, BookOpen, Users, MessageCircle
+import {
+  Phone
+  Mail
+  MapPin
+  Globe
+  Rocket
+  Brain
+  Atom
+  Cpu
+  Target
+  Microscope
+  Shield
+  Zap
+  Sparkles
+  Menu
+  X
+  Search
+  ChevronDown
+  Home
+  Briefcase
+  DollarSign
+  BookOpen
+  Users
+  MessageCircle;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom
+  Cpu, Target, Microscope, Shield, Zap, Sparkles;
+  Menu, X, Search, ChevronDown, Home, Briefcase
+  DollarSign, BookOpen, Users, MessageCircle
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 {name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Creative AI solutions', price: '$1, 499/month';
 }
 {name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3, 999/month';
 }];
 }
+<<<<<<< HEAD
 {title: '⚛️ Quantum & Emerging Tech', icon: Atom, color: 'from-indigo-500 to-blue-600', services: [ {name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4, 999/month';
 }
 {name: 'Biotech DNA Computing', href: '/biotech-dna-computing-platform', description: 'DNA computing platform', price: '$3, 999/month';
@@ -178,6 +308,69 @@ const serviceCategories = [;
       }
       {name: 'Virtual Event Holograms',href: '/virtual-event-hologram-platform',description: 'Holographic events',price: '$2,499/month',},],},];const quickLinks = [;
   {name: 'Services Overview',href: '/enhanced-services-overview',icon: Globe,color: 'from-cyan-500 to-blue-600',},{name: 'AI Services',href: '/ai-services',icon: Brain,color: 'from-violet-500 to-purple-600',},{name: 'Quantum Tech',href: '/quantum-services',icon: Atom,color: 'from-indigo-500 to-blue-600',},{name: 'Space Tech',href: '/space-technology',icon: Rocket,color: 'from-teal-500 to-emerald-600',},{name: 'Enterprise IT',href: '/enterprise-it',icon: Cpu,color: 'from-blue-500 to-cyan-600',},{name: 'Micro SAAS',href: '/enhanced-micro-saas-showcase',icon: Target,color: 'from-green-500 to-yellow-600',},];export default function UltraFuturisticNavigation2033() {const [isOpen, setIsOpen] = useState(false)const [isOpen, setIsOpen]  = useState(false)export default function UltraFuturisticNavigation2033() {const [isOpen, setIsOpen] = useState(false)const [activeCategory, setActiveCategory] = useState<string | null>(null)const [searchQuery, setSearchQuery] = useState('')const toggleMenu = () => setIsOpen(!isOpen)const closeMenu  = () => setIsOpen(false)className='flex items-center space-x-3';
+=======
+const serviceCategories = [
+      {
+        name: 'AI Autonomous Business Manager',
+        href: '/ai - autonomous - business - manager',
+        description: 'Autonomous business AI',
+        price: '$3, 999 / month',
+      },
+    ],
+    title: '⚛️ Quantum & Emerging Tech',
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-600',
+    services: [
+      {
+        name: 'Swarm Robotics Platform',
+        href: '/swarm - robotics - platform',
+        description: 'Collective robot intelligence',
+        price: '$1, 199 / month',
+      },
+    ],
+    title: '🏙️ Enterprise IT Solutions',
+    icon: Cpu,
+    color: 'from-blue-500 to-cyan-600',
+    services: [
+      {
+        name: 'AI IT Operations Center',
+        href: '/ai - it - operations - center',
+        description: 'AI - powered IT ops',
+        price: '$2, 999 / month',
+      },
+    ],
+    title: '🌌 Space & Metaverse Tech',
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-600',
+    services: [
+      {
+        name: 'Virtual Event Holograms',
+        href: '/virtual - event - hologram - platform',
+        description: 'Holographic events',
+        price: '$2, 499 / month',
+      },
+    ],
+  },
+  {
+    name: 'Micro SAAS',
+    href: '/enhanced - micro - saas - showcase',
+    icon: Target,
+  { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' },
+  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' },
+  { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
+  { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
+export default function UltraFuturisticNavigation2033() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+export default function UltraFuturisticNavigation2033() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+              className='flex items-center space-x-3'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               whileHover={{ scale: 1 && 1.05 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}>;
               <Link href='/' className='flex items-center space-x-3'>;
@@ -205,6 +398,7 @@ const serviceCategories = [;
               <div className="relative group">;
                 <button;
                   onMouseEnter={() => setActiveCategory('services')}
+<<<<<<< HEAD
                   onMouseLeave={() => setActiveCategory(null)}// Close menu on escape key;
   useEffect(() => {const handleEscape = (e: KeyboardEvent) => {if (e.key === 'Escape') closeMenu()}document.addEventListener('keydown', handleEscape)return () => document.removeEventListener('keydown', handleEscape)}, [])return (<>;
       {/* Top Contact Bar */}
@@ -275,6 +469,9 @@ const serviceCategories = [;
                 </div>;
               </Link>;
             </motion.div>;
+=======
+                  onMouseLeave={() => setActiveCategory(null)}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>;
               {/* Services Mega Menu */}
@@ -282,12 +479,20 @@ const serviceCategories = [;
                 <button;
                   onMouseEnter={() => setActiveCategory('services')}
                   onMouseLeave={() => setActiveCategory(null)}
+<<<<<<< HEAD
                   className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50';
                 >;
                   <span>Services</span>;
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>;
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />;
                 </button>;
+=======
+                  className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+                >
+                  <span>Services</span>
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>
+                </button>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 {/* Mega Menu */}
                 <AnimatePresence>;
                   {activeCategory === 'services' && (<motion&& motion.div;
@@ -296,18 +501,29 @@ const serviceCategories = [;
                       exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                       transition={{ duration: 0 && 0.2 }}
                       onMouseEnter={() => setActiveCategory('services')}
+<<<<<<< HEAD
                       onMouseLeave={() => setActiveCategory(null)}className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4';
                     >;
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>;
                         {serviceCategories.map(category => (<div key={category.title} className='space-y-4'>;
                             <div className='flex items-center space-x-3'>;
                               <div;
+=======
+                      onMouseLeave={() => setActiveCategory(null)}
+                    >
+                      <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
+                        {serviceCategories.map(category => (
+                          <div key={category.title} className='space-y-4'>
+                            <div className='flex items-center space-x-3'>
+                              <div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                                 className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}
                               >;
                                 <category.icon className='w-5 h-5 text-white' />;
                               </div>;
                               <h3 className='text-lg font-semibold text-white'>;
                                 {category.title}
+<<<<<<< HEAD
                               </h3>;
                             </div>;
                             <div className='space-y-3'>;
@@ -324,6 +540,27 @@ const serviceCategories = [;
                             </div>;
                             <div className="space-y-3">;
                               {category.services.map((service) => (<Link;
+=======
+                              </h3>
+                            </div>
+                            <div className='space-y-3'>
+                              {category.services.map(service => (
+                                <Link
+                      className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
+                    >
+                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                        {serviceCategories.map((category) => (
+                          <div key={category.title} className="space-y-4">
+                            <div className="flex items-center space-x-3">
+                              <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+                                <category.icon className="w-5 h-5 text-white" />
+                              </div>
+                              <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                            </div>
+                            <div className="space-y-3">
+                              {category.services.map((service) => (
+                                <Link
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             </motion.div>;
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8'>;
@@ -394,8 +631,15 @@ const serviceCategories = [;
                               </div>;
                               <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
                             </div>;
+<<<<<<< HEAD
                             <div className="space - y-3">;
                               {category.services.map ((service) => (<Link;key={service.name}
+=======
+                            <div className="space-y-3">;
+                              {category.services.map ((service) => (
+                                <Link;
+                                  key={service.name}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                                   href={service.href}
                                   className="block group";
                                 >;
@@ -433,6 +677,7 @@ const serviceCategories = [;
                   href={link && link.href}
                   className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50";
               ))}
+<<<<<<< HEAD
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >;
                 >;
                 </AnimatePresence>;
@@ -473,6 +718,40 @@ href='/contact';
             {/* Mobile Menu Button */}<div className="lg:hidden">;
 <div className='lg:hidden'>;
               <button;
+=======
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
+                >
+                  {link.name}
+                </Link>
+              ))}
+              {/* Contact Button */}
+              <motion&& motion.div
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}>;
+                <Link
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
+                >
+                  {link.name}
+                </Link>
+              ))}
+              {/* Contact Button */}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href='/contact'
+                  href="/contact"
+                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            </div>
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden">
+              <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 onClick={toggleMenu}
                 className='text-gray-300 hover:text-white transition-colors duration-200 p-2';
               >;
@@ -524,9 +803,17 @@ href='/contact';
                         ))}
                       </div>;
                     </div>;
+<<<<<<< HEAD
                   ))}{/* Mobile Quick Links */}))}
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>;
+=======
+                  ))}
+                {/* Mobile Quick Links */}
+                    ))}
+                {/* Mobile Contact Button */}
+                <div className='pt-4'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     ))}
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>;
@@ -627,6 +914,7 @@ className='text-sm text-gray-400 hover:text-cyan-400 transition-colors';
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
+<<<<<<< HEAD
     </>)}while_tap= {{<div className='pt-4'>;
                   <Link;
                     href='/contact';
@@ -646,3 +934,16 @@ className='text-sm text-gray-400 hover:text-cyan-400 transition-colors';
 }> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {/* Mobile Menu */;
 }<AnimatePresence>) )}</div> </div>) )}</div>) )}</div> </div> > Get Started </a> </div> </div> </motion.div>)}</AnimatePresence> </nav> </>) }
 }</AnimatePresence> </nav> </>)}</AnimatePresence> </nav> </>)
+=======
+    </>);
+;
+}while_tap= {
+  {
+  /* Mobile Menu */ 
+}<AnimatePresence>) ) 
+}</div> </div>) ) 
+}</div>) ) 
+}</div> </div> > Get Started </a> </div> </div> </motion.div>) 
+}</AnimatePresence> </nav> </>) }
+}</AnimatePresence> </nav> </>)
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

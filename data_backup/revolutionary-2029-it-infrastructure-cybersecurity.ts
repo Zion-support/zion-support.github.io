@@ -1857,6 +1857,7 @@ export const "revolutionaryITInfrastructureServices2029": RevolutionaryITInfrast
       ],"category": 'Cloud & Infrastructure',"icon": '☁️',"color": 'from-blue-600 to-cyan-700',"textColor": 'text-blue-200',"link": 'https://ziontechgroup.com/services/hybrid-cloud-management',"marketPosition": 'Unified hybrid cloud management for enterprises',"targetAudience": ['Cloud', 'Infrastructure', 'DevOps'],"trialDays": 21,"setupTime": '1 week',"realService": true,"technology": ['Multi-cloud', 'Orchestration', 'Automation'],"integrations": ['AWS', 'Azure', 'GCP', 'On-premises'],"useCases": ['Hybrid cloud management','Multi-cloud operations','Infrastructure optimization';
       ],"roi": 'Reduce cloud management overhead by 50% and improve performance by 30%',"competitors": ['VMware', 'Red Hat', 'HashiCorp'],"marketSize": '$35B Cloud Management',"growthRate": '18% CAGR',"variant": 'hybrid-cloud',"contactInfo": {mobile: '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709'},"realImplementation": true,"implementationDetails": 'Multi-cloud platform, orchestration engine, management console',"launchDate": '2025-01-28',"customers": 34,"rating": 4.8,"reviews": 20,"isNew": true}
   ];
+<<<<<<< HEAD
 export const getITInfrastructureServicesByCategory = ("category": string) => {return revolutionaryITInfrastructureServices2029.filter(service => service.category === category;
   )}export const getPopularITInfrastructureServices = () => {return revolutionaryITInfrastructureServices2029.filter(service => service.isPopular;
   )}export const getNewITInfrastructureServices = () => {return revolutionaryITInfrastructureServices2029.filter(service => service.isNew;
@@ -2402,3 +2403,25 @@ export const getITInfrastructureServicesByCategory = ("category": string) => {re
   )}export const getNewITInfrastructureServices = () => {return revolutionaryITInfrastructureServices2029.filter(service => service.isNew;
   )}export const getITInfrastructureServicesByPriceRange = ("minPrice": number,"maxPrice": number;
 ) => {return revolutionaryITInfrastructureServices2029.filter(service => {const price = parseInt(service.price.replace('$', '').replace(',', ''))return price >= minPrice && price <= maxPrice})}
+=======
+export const getITInfrastructureServicesByCategory = ("category": string) => {
+  return revolutionaryITInfrastructureServices2029.filter(
+    service => service.category === category
+  )};
+export const getPopularITInfrastructureServices = () => {
+  return revolutionaryITInfrastructureServices2029.filter(
+    service => service.isPopular
+  )};
+export const getNewITInfrastructureServices = () => {
+  return revolutionaryITInfrastructureServices2029.filter(
+    service => service.isNew
+  )};
+export const getITInfrastructureServicesByPriceRange = (
+  "minPrice": number,
+  "maxPrice": number
+) => {
+  return revolutionaryITInfrastructureServices2029.filter(service => {
+    const price = parseInt(service.price.replace('$', '').replace(',', ''));
+    return price >= minPrice && price <= maxPrice})}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

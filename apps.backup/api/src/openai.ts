@@ -41,10 +41,10 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 type OpenAIClient = OpenAI;export function createOpenAIClient (api_key: string): OpenAIClient {return new OpenAI ({ api_key })}
 export async function generateJobPost (openai: OpenAIClient, role: string, opts: any): Promise < string> {const prompt = `Create a concise, compelling job post for a ${role}.;
   const completion = await openai.responses.create({
-    model: 'gpt-4o-mini'
+    model: "model",
     input: prompt
 });
-import OpenAI from 'openai',;
+import OpenAI from 'openai';
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
@@ -79,10 +79,13 @@ Add responsibilities, requirements, and benefits in bullet points.`,;
   });
   return completion.output_text;
 }
-
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
   return new OpenAI({ apiKey })
+<<<<<<< HEAD
+=======
+import OpenAI from 'openai';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
@@ -98,11 +101,13 @@ Add responsibilities, requirements, and benefits in bullet points.`,;
     model: 'gpt-4o-mini';
     input: prompt;
   });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   return completion.output_text;
 }
-
 Company: ${opts && opts.company || 'Confidential'}
 Location: ${opts && opts.location || 'Remote'}
 Key skills: ${(opts && opts.tags || []).join() || 'N/A'}

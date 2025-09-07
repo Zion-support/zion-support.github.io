@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { NextPage } from 'next';
@@ -14,6 +15,8 @@ const CybersecurityChat: NextPage = () => {return (<div>;
       </Head>;<meta name="description" content="CybersecurityChat blog post" />;
       </Head>;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -30,6 +33,7 @@ const CybersecurityChat: NextPage = () => {;
       <Head>;
         <title>CybersecurityChat - Zion Tech Solutions</title>;
         <meta name="description" content="CybersecurityChat blog post" />{" "}
+<<<<<<< HEAD
 
 
 const CybersecurityChat: NextPage = () => {
@@ -40,6 +44,9 @@ const CybersecurityChat: NextPage = () => {
       </Head>;
 
 
+=======
+      </Head>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <main>
         <h1>CybersecurityChat</h1>
         <p>Blog content coming soon...</p>
@@ -47,7 +54,6 @@ const CybersecurityChat: NextPage = () => {
       </main>
     </div>
       </Head>;
-
       <main>;
         <h1>CybersecurityChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -68,11 +74,14 @@ ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
 export default CybersecurityChat;
+<<<<<<< HEAD
 
 
 
         <title>CybersecurityChat - Zion Tech Solutions</title>
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -116,6 +125,7 @@ export default CybersecurityChat;<title>CybersecurityChat - Zion Tech Solutions<
 }
 ;
 export default CybersecurityChat;
+<<<<<<< HEAD
 ;
     <div>
       <Head>
@@ -136,22 +146,9 @@ export default CybersecurityChat
 
 
 
-const CybersecurityChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>CybersecurityChat - Zion Tech Solutions</title>
-        <meta name="description" content="CybersecurityChat blog post" />{" "}
-      </Head>
-      <main>
-        <h1>CybersecurityChat</h1>
-        <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
-      </main>
-    </div>
-  );
-}
-export default CybersecurityChat;
 
         <title>CybersecurityChat - Zion Tech Solutions</title>
         <title>CybersecurityChat - Zion Tech Solutions</title>
+=======
+;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -105,5 +105,12 @@ if (return null) {$2;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>;
   )}
+=======
+
+    </UltraAdvancedFuturisticBackground>);
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

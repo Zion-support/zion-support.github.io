@@ -57,13 +57,11 @@ export interface PortfolioPerformance  {total_return: number;
 export interface PortfolioAsset {
 
   riskTolerance: 'conservative' | 'moderate' | 'aggressive'
-
   assets: PortfolioAsset[];
   last_rebalanced: Date;
   performance: PortfolioPerformance;
 }
 export interface PortfolioAsset {
-
 export interface PortfolioAsset {;
 }
 export interface PortfolioAsset {
@@ -71,6 +69,7 @@ export interface PortfolioAsset {
   symbol: string;
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
+<<<<<<< HEAD
   quantity: number;
 
   current_price: number;
@@ -229,16 +228,46 @@ export interface FinancialPlan  {id: string;
   }
 }
 export interface PortfolioPerformance  {export interface PortfolioPerformance  {totalReturn: number;
+=======
+  quantity: number;  id: string;
+  user_id: string;
+  currentPrice: number;
+  marketValue: number;
+    allocation: number, // percentage of portfolio
+  purchasePrice: number;
+  purchaseDate: Date;
+  performance: {
+    dailyReturn: number;
+    weeklyReturn: number;
+    monthlyReturn: number;
+    yearlyReturn: number
+    totalReturn: number
+  }
+}
+export interface PortfolioPerformance {
+export interface PortfolioPerformance {;
+  totalReturn: number;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   annualizedReturn: number;
   volatility: number;
   sharpeRatio: number;
   maxDrawdown: number;
   beta: number;
   alpha: number;
+<<<<<<< HEAD
   trackingError: number;informationRatio: number;
   sortinoRatio: number;
 }
 export interface InvestmentRecommendation  {export interface InvestmentRecommendation  {id: string;
+=======
+  trackingError: number;
+  informationRatio: number
+  sortinoRatio: number
+}
+export interface InvestmentRecommendation {
+export interface InvestmentRecommendation {;
+  id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   userId: string;
   asset: {symbol: string;
     name: string;  insurance: {life: boolean;
@@ -369,6 +398,7 @@ export interface FinancialPlan {
   insurance: {
     life: boolean;
     health: boolean;
+<<<<<<< HEAD
     disability: boolean;property: boolean,recommendations: string[];
   }
   tax: {estimatedTaxLiability: number;
@@ -384,6 +414,9 @@ export interface FinancialPlan {
   created_at: Date,
   updated_at: Date;
 
+=======
+    disability: boolean;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     property: boolean,
     recommendations: string[];
   }
@@ -467,10 +500,8 @@ export interface FinancialResponse  {success: boolean;
   updated_at: Date;
 }
   userId: string;
-
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
-
   preferences?: Record<string, any>
 }
 export interface FinancialRequest {
@@ -478,13 +509,15 @@ export interface FinancialRequest {
   request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record < string, any>;
   preferences?: Record < string, any>;
+<<<<<<< HEAD
 
 }
 export interface FinancialResponse {
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
-
   preferences?: Record<string, any>
 }
 
@@ -543,28 +576,23 @@ export class AIFinancialAdvisorService {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify({ userId, riskTolerance, investmentHorizon })});
-
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
-
       const data = await response && response.json();
       return data && data.recommendations || []
-
     } catch (error) {
       console && console.error('Error getting investment recommendations:', error);
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
-
       const data = await response && response.json();
       return data && data.recommendations || []
-
     } catch (error) {
       console && console.error('Error getting investment recommendations:', error);
       const response = await fetch(`${this.baseUrl}/api/financial/recommendations`, {
-        method: 'POST'
-        headers: {
+        method: "method",
+    headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'}
         body: JSON.stringify({ userId, riskTolerance, investmentHorizon })});
@@ -608,6 +636,7 @@ export class AIFinancialAdvisorService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
+<<<<<<< HEAD
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
@@ -621,24 +650,28 @@ export class AIFinancialAdvisorService {
     } catch (error) {
       console && console.error('Error tracking financial goals:', error);
     } catch (error) {
+=======
+          'Authorization': `Bearer ${this && this.apiKey}`}});    } catch (error) {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       console && console.error('Error tracking financial goals:', error);
       throw error
     }
   }
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
     try {
+<<<<<<< HEAD
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
 
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {        headers: {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           'Authorization': `Bearer ${this && this.apiKey}`}});
-
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
-
       const data = await response && response.json();
       return data && data.analysis
-
     } catch (error) {
       console && console.error('Error getting market analysis:', error);
     } catch (error) {
@@ -701,8 +734,11 @@ export class AIFinancialAdvisorService {
     expectedImpact: string
   }> {
     try {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST',
         headers: {
@@ -1155,6 +1191,7 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process &
   lastRebalanced: Date,;
   performance: PortfolioPerformance,;
   createdAt: Date,;
+<<<<<<< HEAD
   updatedAt: Date;
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
@@ -1754,3 +1791,6 @@ export class AIFinancialAdvisorService {;
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+=======
+  updatedAt: Date;export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

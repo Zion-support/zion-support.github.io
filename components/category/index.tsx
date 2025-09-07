@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <div className="container mx-auto px-4 py-10">;
 export default function CategoryIndexPage() {return (<div className="container mx-auto px-4 py-10">;
@@ -37,11 +38,21 @@ function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-
         Browse AI categories. Content coming soon.
       </p>
     </div>;
+=======
+return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Categories</h1>
+      <p className='mt-2 text-gray-600'>
+        Browse AI categories. Content coming soon.
+      </p>
+    </div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     </div>
   );    <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Categories</h1>
       <p className="mt-2 text-gray-600">Browse AI categories. Content coming soon.</p>
     </div>
+<<<<<<< HEAD
   );
 
 
@@ -72,3 +83,6 @@ function CategoryIndexPage() {
 }
 }
 }
+=======
+  );
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

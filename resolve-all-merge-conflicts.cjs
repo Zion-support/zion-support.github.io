@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -85,6 +86,8 @@ try {
 }
 
 console.log('🎉 Merge conflict resolution completed!');
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 class MergeConflictResolver {
   constructor() {
     this.resolvedFiles = [];
@@ -215,6 +218,7 @@ class MergeConflictResolver {
 const resolver = new MergeConflictResolver();
 resolver.resolveMergeConflicts().catch(console.error);
 module.exports = MergeConflictResolver;
+<<<<<<< HEAD
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -232,36 +236,6 @@ function resolveMergeConflicts(filePath) {
     content = content.replace(/[\s\S]*?
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 
-// Function to resolve modify/delete conflicts by removing the files
-function resolveModifyDeleteConflicts() {
-  console.log('📁 Resolving modify/delete conflicts...');
-  
-  try {
-    // Get list of conflicted files
-    const statusOutput = execSync('git status --porcelain', { encoding: 'utf8' });
-    const conflictedFiles = statusOutput
-      .split('\n')
-      .filter(line => line.includes('CONFLICT (modify/delete)'))
-      .map(line => line.split(' ').pop())
-      .filter(file => file && !file.includes('temp_conflicts/'));
-    
-    console.log(`Found ${conflictedFiles.length} modify/delete conflicts`);
-    
-    // Remove the conflicted files (they were deleted in main)
-    conflictedFiles.forEach(file => {
-      if (fs.existsSync(file)) {
-        console.log(`Removing ${file} (deleted in main)`);
-        fs.unlinkSync(file);
-        execSync(`git add ${file}`);
-      }
-    });
-    
-    return conflictedFiles.length;
-  } catch (error) {
-    console.error('Error resolving modify/delete conflicts:', error.message);
-    return 0;
-  }
-}
 
 // Function to resolve content conflicts by choosing main branch version
 function resolveContentConflicts() {
@@ -458,3 +432,9 @@ main();
 ursor/integrate-build-improve-and-re-verify-7ffc
         content = content.replace(/
           const parts = match.split('
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

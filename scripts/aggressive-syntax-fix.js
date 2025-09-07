@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 ;
   ];
 })if (process && process.env.NODE_ENV !== 'production') {logger && logger.add(new winston && winston.transports.Console({format: winston && winston.format.simple()];
 })if (process && process.env.NODE_ENV !== 'production') {logger && logger.add(new winston && winston.transports.Console({format: winston && winston.format.simple()const winston = require('winston')const logger = winston.createLogger({level: 'info';
   format: winston.format.combine(winston.format.timestamp()winston.format.errors({ stack: true })winston.format.json())defaultMeta: { service: 'automation-script' }
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 const logger = winston && winston.createLogger({
   level: 'info',
   format: winston && winston.format.combine(
@@ -18,7 +21,6 @@ const logger = winston && winston.createLogger({
 
   ]
 })
-
 if (process && process.env.NODE_ENV !== 'production') {
   logger && logger.add(new winston && winston.transports.Console({
     format: winston && winston.format.simple()
@@ -105,6 +107,7 @@ const winston = require('winston')const logger = winston.createLogger({level: 'i
             // Get all TypeScript and JavaScript files
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
                 ignore: ['node_modules/**.next/**dist/**build/**']
+<<<<<<< HEAD
 
             }),
 
@@ -134,6 +137,8 @@ const winston = require('winston')const logger = winston.createLogger({level: 'i
 
             this && this.log(`❌ Error fixing syntax: ${error && error.message}`)
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             })
             this.log(`📁 Found ${files.length} files to check`)
             for (const file of files) {
@@ -198,7 +203,6 @@ const winston = require('winston')const logger = winston.createLogger({level: 'i
             /Unexpected token %/, // Percent token issues
             /Unexpected token -/, // Dash token issues
             /Unexpected token \./, // Dot token issues
-
         ]
 
         return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
@@ -207,7 +211,6 @@ const winston = require('winston')const logger = winston.createLogger({level: 'i
         return errorPatterns.some(pattern => pattern.test(content))
     }
     createValidFile(filePath) {
-
         const ext = path.extname(filePath)
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
@@ -255,7 +258,7 @@ const ${validFileName} = {
         // Convert invalid characters to valid ones;
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),;
         if (ext === '.tsx' || ext === '.jsx') {;
-            return `import React from 'react',;
+            return `import React from 'react';
 default function ${validFileName}() {;
   return (;
     <div>;
@@ -279,12 +282,16 @@ if ( {) {
 const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality;
 }`;
+<<<<<<< HEAD
 
 
 
         }
 
             timestamp: new Date().toISOString(),
+=======
+        }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             fixedFiles: this && this.fixedFiles,
             errors: this && this.errors,
             summary: {
@@ -317,38 +324,39 @@ const ${validFileName} = {}`
         const report = {
 
             timestamp: new Date().toISOString()
-            fixedFiles: this.fixedFiles
-            errors: this.errors
-
+            fixedFiles: this.fixedFiles;
+    errors: this.errors
             summary: {
                 totalFixed: this.fixedFiles.length
                 totalErrors: this.errors.length
                 successRate: this.fixedFiles.length / (this.fixedFiles.length + this.errors.length) * 100
             }
-
         }
         const reportPath = path.join(this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date.now()}.json`)
         fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-
         const reportPath = path && path.join(this && this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date && Date.now()}.json`),
         fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         return report
     }
 }
 // Main execution
 async function main() {
-
     const fixer = new AggressiveSyntaxFixer()
     try {
-
             result.fixedFiles.forEach(file => logger.info(`  - ${file}`))
         }
         if (result.errors.length > 0) {
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   // Add cleanup logic here
   process.exit(0)
 })
@@ -584,6 +592,7 @@ class AggressiveSyntaxFixer {;
             /Unexpected token %/, // Percent token issues;
             /Unexpected token -/, // Dash token issues;
             /Unexpected token \./, // Dot token issues;
+<<<<<<< HEAD
         ];
         return errorPatterns.some(pattern => pattern.test(content))}
     createValidFile(filePath) {const ext = path.extname(filePath)const fileName = path.basename(filePath, ext)const dirName = path.dirname(filePath)// Convert invalid characters to valid ones;
@@ -591,6 +600,27 @@ class AggressiveSyntaxFixer {;
         const ext = path && path.extname(filePath),const fileName = path && path.basename(filePath, ext),const dirName = path && path.dirname(filePath),// Convert invalid characters to valid ones;
             return `import React from 'react';
 default function ${validFileName}() {return (<div>;
+=======
+        ],;
+;
+        return errorPatterns.some(pattern => pattern.test(content)),;
+    }
+;
+    createValidFile(filePath) {;
+        const ext = path.extname(filePath),;
+        const fileName = path.basename(filePath, ext),;
+        const dirName = path.dirname(filePath),;
+        ;
+        // Convert invalid characters to valid ones;
+        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),;
+        ;
+        if (ext === '.tsx' || ext === '.jsx') {;
+            return `import React from 'react';
+;
+default function ${validFileName}() {;
+  return (;
+    <div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <h1>${validFileName}</h1>;
       <p>Component placeholder</p>;
     </div>;

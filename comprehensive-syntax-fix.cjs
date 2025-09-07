@@ -1,12 +1,25 @@
+<<<<<<< HEAD
 
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    return match.replace(/,\s*$/, '')
+  // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
+  content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
+  content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, '$"1": "$2"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
           content = content.replace(/
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 console.log('🔧 Running comprehensive syntax fix...');
 
 // Fix specific files with known issues
@@ -260,6 +273,10 @@ for (const fix of fixes) {
 }
 
 console.log(`✅ Fixed ${fixedCount} files`);
+<<<<<<< HEAD
 
           content = content.replace(/
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

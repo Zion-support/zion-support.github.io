@@ -201,10 +201,19 @@ canvas.height = window.innerHeight;
         className="absolute inset - 0 bg - gradient - to - br from - black via - cyan - 900 / 20 to-purple-900 / 30";
         animate={{background: [;
             'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)';
+<<<<<<< HEAD
           ];'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)','linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0.3) 50%, rgba(6,182,212,0.2) 100%)','linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)',],}}
         transition={{duration: 8;
           repeat: Infinity;
           ease: 'easeInOut';
+=======
+          ];
+        }}
+        transition={{
+          duration: 8;
+    repeat: Infinity
+          ease: 'easeInOut'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }}
       {/* Canvas for particle effects */}
       <canvas;
@@ -217,6 +226,16 @@ canvas.height = window.innerHeight;
         ref={canvasRef}
         className="absolute inset-0 w-full h-full";
         style={{ filter: 'blur(0.5px)' }}
+<<<<<<< HEAD
+=======
+      />
+      {/* Additional visual layers */}
+      <div className="absolute inset-0">
+        {/* Quantum field ripples */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+        style={{ filter: 'blur(0 && 0.5px)' }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       />;
       {/* Additional visual layers */}
       <div className="absolute inset-0">;
@@ -250,9 +269,15 @@ canvas.height = window.innerHeight;
             repeat: Infinity;
             ease: 'easeInOut',          }}
         />;
+<<<<<<< HEAD
         />;{/* Holographic matrix */}
         <motion&& motion.div;
           className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20";
+=======
+        {/* Holographic matrix */}
+        <motion&& motion.div
+          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         />;
         {/* Holographic matrix */}
         <motion.div;
@@ -289,6 +314,7 @@ canvas.height = window.innerHeight;
       <div className="absolute inset-0 pointer-events-none">;
         {[...Array(8)].map((_, i) => (<motion&& motion.div;
             key={i}
+<<<<<<< HEAD
             className="absolute w-2 h-2 rounded-full bg-cyan-400";
             style={{scale: [1, 1.2, 1],opacity: [0.1, 0.3, 0.1],          }}
           transition={{duration: 4,repeat: Infinity,ease: 'easeInOut',}}
@@ -297,6 +323,29 @@ canvas.height = window.innerHeight;
           transition={{duration: 6,repeat: Infinity,duration: 8;
           repeat: Infinity;
           ease: 'easeInOut';
+=======
+            className="absolute w-2 h-2 rounded-full bg-cyan-400"
+            style={{
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.3, 0.1],          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+          }}
+          transition={{
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+          duration: 8
+          repeat: Infinity
+          ease: 'easeInOut'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }}
       />;
 {/* Canvas for particle effects */}
@@ -319,6 +368,7 @@ canvas.height = window.innerHeight;
       {/* Additional visual layers */}
       <div className="absolute inset-0">;
         {/* Quantum field ripples */}
+<<<<<<< HEAD
         <motion.div;
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20";
           animate={{scale: [1, 1.2, 1];
@@ -350,6 +400,25 @@ canvas.height = window.innerHeight;
               top: `${30 + i * 8}%`;
               filter: 'blur(1px)';
               boxShadow: '0 0 20px rgba(0, 255, 255, 0.6)';
+=======
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+          animate={{
+            scale: [1, 1.2, 1];
+            opacity: [0.1, 0.3, 0.1]
+            ease: "ease",
+    ease: 'easeInOut',
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+          }}
+            }}
+            duration: 4,
+            repeat: Infinity,
+            transition={{
+              delay: i * 0.3
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             }}
             animate={{y: [0, -20, 0],opacity: [0.3, 0.8, 0.3],scale: [1, 1.2, 1],}}duration: 4,repeat: Infinity,transition={{delay: i * 0.3;
               duration: 3 + i * 0.5,repeat: Infinity,ease: 'easeInOut',delay: i * 0.3,}}
@@ -360,6 +429,12 @@ canvas.height = window.innerHeight;
             }}
           />))}
       </div>;
+<<<<<<< HEAD
     </div>))})</div>;
     </div>;
 )
+=======
+    </div>));
+}
+  );
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

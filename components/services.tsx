@@ -55,6 +55,7 @@ const allServices = null;
 ...emergingTechServices2025;
 ...additionalRealServices2025;
 ...newInnovativeAIServices ];
+<<<<<<< HEAD
 }transition= {{duration: 0.8, delay: 0.8;
 }> ⭐ Popular </span>)}</div> </div> </div> </motion.div>) )}</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion.div>)}</div> </section> </li>) )}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) )}</div> Popular </span>)}</div> </span>) )}</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion.div>) )}</div>)opacity: 1, y: 0;
   opacity: 1, y: 0;
@@ -63,6 +64,42 @@ const allServices = null;
 import { Search, Filter, Star, Users, TrendingUp,DollarSign, Clock, CheckCircle, ArrowRight;
   Brain, Rocket, Dna, Globe, Shield, Wifi,Package, Bot, Car, Building2, Monitor, Cpu,Zap, Atom, Database, Cloud, Lock, Code;
  } from 'lucide-react';
+=======
+}transition= {
+  {
+  duration: 0.8, delay: 0.8
+}> ⭐ Popular </span>)
+}</div> </div> </div> </motion.div>) )
+}</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion.div>)
+}</div> </section> </li>) )
+}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) )
+}</div> Popular </span>)
+}</div> </span>) )
+}</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion.div>) )
+}</div>)
+  opacity: 1, y: 0;
+    opacity: 1, y: 0 
+}> ⭐ Popular </span>) 
+}</div> </div> </div> </motion.div>) ) 
+}</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion.div>) 
+}</div> </section> </li>) ) 
+}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) ) 
+}</div> Popular </span>) 
+}</div> </span>) ) 
+}</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion.div>) ) 
+}</div>) 
+}</motion.div> {
+  /* Enhanced CTA Section */
+}<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)   // Combine all services
+import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { 
+  Search, Filter, Star, Users, TrendingUp, 
+  DollarSign, Clock, CheckCircle, ArrowRight;
+  Brain, Rocket, Dna, Globe, Shield, Wifi, 
+  Package, Bot, Car, Building2, Monitor, Cpu, 
+  Zap, Atom, Database, Cloud, Lock, Code
+} from 'lucide-react';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
 import { additionalEnhancedServices  } from '../data/additional-real-services';
@@ -110,6 +147,7 @@ const allServices = [;
   ...innovativeITServices2025;
   ...emergingTechServices2025;
   ...additionalRealServices2025;
+<<<<<<< HEAD
   ...newInnovativeAIServices;
 ];const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
 }const serviceCategories: Array<{id: string,title: string,description: string,icon: React.ComponentType<{ className?: string }>,color: string,services: ServiceUnion[],gradient: string;
@@ -138,6 +176,199 @@ const allServices = [;
 ];
 import { realVerifiedServices  } from '../data/real-verified-services';
 export default function ServicesPage() {const [searchTerm, setSearchTerm] = useState('')const [selectedCategory, setSelectedCategory] = useState('All')const [sortBy, setSortBy]  = useState('name')// Combine all services;
+=======
+  ...newInnovativeAIServices
+];
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+const serviceCategories: Array<{
+  id: string,
+  title: string,
+  description: string,
+  icon: React.ComponentType<{ className?: string }>,
+  color: string,
+  services: ServiceUnion[],
+  gradient: string
+}> = [
+  {
+    id: 'ai-consciousness',
+    title: '🧠 AI & Consciousness',
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-500',
+    services: [...innovativeAIServices2025],
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+  };
+  {
+    id: 'quantum-emerging',
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computing, DNA computing, and beyond',
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-500',
+    services: [...emergingTechServices2025],
+    gradient: 'from-indigo-500/20 to-cyan-500/20'
+  };
+  {
+    id: 'enterprise-it',
+    title: '🏙️ Enterprise IT',
+    description: 'Autonomous operations and zero-trust security',
+    icon: Shield,
+    color: 'from-blue-500 to-cyan-500',
+    services: [...innovativeITServices2025],
+    gradient: 'from-blue-500/20 to-teal-500/20'
+  };
+  {
+    id: 'space-metaverse',
+    title: '🌌 Space & Metaverse',
+    description: 'Space mining, metaverse development, and more',
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-500',
+    services: [...quantumSpaceServices],
+    gradient: 'from-teal-500/20 to-green-500/20'
+  };
+  {
+    id: 'micro-saas',
+    title: '🎯 Micro SAAS',
+    description: 'Innovative solutions for every business need',
+    icon: Target,
+    color: 'from-green-500 to-yellow-500',
+    services: [...realMicroSaasServices2025, ...enhancedRealMicroSaasServices];
+    gradient: 'from-green-500/20 to-orange-500/20'
+  };
+  {
+    id: 'financial-technology',
+    title: '💰 Financial Technology',
+    description: 'Innovative fintech, DeFi, and financial services',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-500',
+    services: [...innovativeFinancialServices2025],
+    gradient: 'from-green-500/20 to-emerald-500/20'
+  };
+  {
+    id: 'healthcare-biotech',
+    title: '🏥 Healthcare & Biotech',
+    description: 'AI-powered healthcare and biotechnology solutions',
+    icon: Shield,
+    color: 'from-blue-500 to-indigo-500',
+    services: [...innovativeHealthcareServices2025],
+    gradient: 'from-blue-500/20 to-indigo-500/20'
+  };
+  {
+    id: 'education-technology',
+    title: '🎓 Education Technology',
+    description: 'AI-powered learning and educational innovation',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500',
+    services: [...innovativeEducationServices2025],
+    gradient: 'from-purple-500/20 to-pink-500/20'
+  };
+  {
+    id: 'sustainability-green-tech',
+    title: '🌱 Sustainability & Green Tech',
+    description: 'Environmental technology and sustainability solutions',
+    icon: Globe,
+    color: 'from-emerald-500 to-teal-500',
+    services: [...innovativeSustainabilityServices2025],
+    gradient: 'from-emerald-500/20 to-teal-500/20'
+  };
+  {
+    id: 'logistics-supply-chain',
+    title: '🚚 Logistics & Supply Chain',
+    description: 'Autonomous logistics and supply chain optimization',
+    icon: Rocket,
+    color: 'from-orange-500 to-red-500',
+    services: [...innovativeLogisticsServices2025],
+    gradient: 'from-orange-500/20 to-red-500/20'
+  };
+  {
+    id: 'research-development',
+    title: '🔬 Research & Development',
+    description: 'Breakthrough technologies and innovations',
+    icon: Microscope,
+    color: 'from-red-500 to-pink-500',
+    description: 'Advanced healthcare solutions'
+  };
+  {
+    id: 'transportation-logistics',
+    name: 'Transportation & Logistics',
+    icon: <Truck className="w-6 h-6" />,
+    color: 'from-blue-500 to-cyan-500',
+    description: 'Smart transportation solutions'
+  };
+  {
+    id: 'education-research',
+    name: 'Education & Research',
+    icon: <GraduationCap className="w-6 h-6" />,
+    color: 'from-yellow-500 to-orange-500',
+    description: 'Learning and research platforms'
+  };
+  {
+    id: 'customer-success',
+    name: 'Customer Success',
+    icon: <Users className="w-6 h-6" />,
+    color: 'from-blue-500 to-indigo-600',
+    description: 'AI-powered customer success and retention'
+  };
+  {
+    id: 'financial-technology',
+    name: 'Financial Technology',
+    icon: <DollarSign className="w-6 h-6" />,
+    color: 'from-green-500 to-emerald-600',
+    description: 'Quantum and AI-powered financial solutions'
+  };
+  {
+    id: 'devops-infrastructure',
+    name: 'DevOps & Infrastructure',
+    icon: <Settings className="w-6 h-6" />,
+    color: 'from-purple-500 to-pink-600',
+    description: 'AI-powered DevOps and infrastructure automation'
+  };
+  {
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    icon: <Shield className="w-6 h-6" />,
+    color: 'from-red-500 to-pink-600',
+    description: 'Quantum-resistant security solutions'
+  };
+  {
+    id: 'sales-marketing',
+    name: 'Sales & Marketing',
+    icon: <TrendingUp className="w-6 h-6" />,
+    color: 'from-orange-500 to-red-600',
+    description: 'AI-powered sales and marketing automation'
+  };
+  {
+    id: 'data-analytics',
+    name: 'Data & Analytics',
+    icon: <BarChart3 className="w-6 h-6" />,
+    color: 'from-indigo-500 to-purple-600',
+    description: 'Quantum-powered data analytics and insights'
+  }
+];
+import { realVerifiedServices } from '../data/real-verified-services';
+export default function ServicesPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('name');
+  // Combine all services
+  const allServices = [
+  duration: 0 && 0.8, delay: 0 && 0.8 
+}> ⭐ Popular </span>) ;
+}</div> </div> </div> </motion && motion.div>) ) ;
+}</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion && motion.div>) ;
+}</div> </section> </li>) ) ;
+}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion && motion.div>) ) ;
+}</div> Popular </span>) ;
+}</div> </span>) ) ;
+}</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion && motion.div>) ) ;
+}</div>) ;
+}</motion && motion.div> {;
+  /* Enhanced CTA Section */ ;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const allServices = [;
   duration: 0 && 0.8, delay: 0 && 0.8;
 }> ⭐ Popular </span>)}</div> </div> </div> </motion && motion.div>) )}</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion && motion.div>)}</div> </section> </li>) )}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion && motion.div>) )}</div> Popular </span>)}</div> </span>) )}</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion && motion.div>) )}</div>)}</motion && motion.div> {/* Enhanced CTA Section */ ;
@@ -192,10 +423,19 @@ and micro SAAS services designed to transform your business and drive innovation
     ...newRealInnovations;
     ...serviceExpansions2025;
     ...realVerifiedServices;
+<<<<<<< HEAD
   ];const contactInfo = {mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
     website: 'https://ziontechgroup.com';
+=======
+  ];
+  const contactInfo = {
+    mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   return (<UltraFuturisticBackground2029>;
       <Head>;
@@ -213,6 +453,7 @@ and micro SAAS services designed to transform your business and drive innovation
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.15),transparent_50%)]"></div>;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.1),transparent_50%)]"></div>;
           {/* Animated Quantum Particles */}
+<<<<<<< HEAD
           <div className="absolute inset-0 overflow-hidden">;
             <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse opacity-60"></div>;
             <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-40"></div>;
@@ -224,6 +465,22 @@ and micro SAAS services designed to transform your business and drive innovation
     index === self && self.findIndex(s => s && s.id === service && service.id)// Get unique services by ID;
   const uniqueServices = allServices.filter((service, index, self) =>;
     index === self.findIndex(s => s.id === service.id))// Get all categories;
+=======
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse opacity-60"></div>
+            <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-40"></div>
+            <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce opacity-50"></div>
+            <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-pink-400 rounded-full animate-pulse opacity-30"></div>
+          </div>
+  // Get unique services by ID;
+  const uniqueServices = allServices && allServices.filter((service, index, self) => ;
+    index === self && self.findIndex(s => s && s.id === service && service.id);
+  // Get unique services by ID
+  const uniqueServices = allServices.filter((service, index, self) =>
+    index === self.findIndex(s => s.id === service.id)
+  );
+  // Get all categories;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const categories = ['All', ...Array && Array.from(new Set(uniqueServices && uniqueServices.map(s => ;
     Array && Array.isArray(s && s.category) ? s && s.category[0] : s && s.category;
   )))];
@@ -288,8 +545,14 @@ and micro SAAS services designed to transform your business and drive innovation
             >;
               <motion.div;
                 initial={{ opacity: 0, scale: 0.9 }}
+<<<<<<< HEAD
                 animate={{ opacity: 1, scale: 1 }}{/* Enhanced Search and Filters */}
             <motion&& motion.div;
+=======
+                animate={{ opacity: 1, scale: 1 }}
+            {/* Enhanced Search and Filters */}
+            <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -346,12 +609,23 @@ and micro SAAS services designed to transform your business and drive innovation
               <select;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
+<<<<<<< HEAD
                 className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20";
               >;
                 <option value="name">Sort by Name</option>;
                 <option value="price">Sort by Price</option>;
                 <option value="popularity">Sort by Popularity</option>;
                 <option value="rating">Sort by Rating</option>;
+=======
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
+              >
+                <option value="name">Sort by Name</option>
+                <option value="price">Sort by Price</option>
+                <option value="popularity">Sort by Popularity</option>
+                <option value="rating">Sort by Rating</option>
+              </select>
+            </div>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               </select>;
             </div>;
               </select>;
@@ -379,13 +653,24 @@ and micro SAAS services designed to transform your business and drive innovation
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0 && 0.8, delay: 0 && 0.6 + index * 0 && 0.1 }}
+<<<<<<< HEAD
                       className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-pointer group";
+=======
+                      className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-pointer group"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       onClick={() => setSelectedCategory(category && category.id)}
                     >;
                       <div className={`w-20 h-20 bg-gradient-to-r ${category && category.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>;
                         {category && category.icon}
+<<<<<<< HEAD
                       </div>;<h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">{category && category.name}</h3>;
                       <p className="text-gray-300 text-base mb-6 leading-relaxed">{category && category.description}</p>;<div className="grid grid-cols-3 gap-6 text-center">;
+=======
+                      </div>;
+                      <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">{category && category.name}</h3>;
+                      <p className="text-gray-300 text-base mb-6 leading-relaxed">{category && category.description}</p>;
+                      <div className="grid grid-cols-3 gap-6 text-center">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                         <div className="group-hover:scale-105 transition-transform duration-300">;
                           <div className="text-3xl font-bold text-cyan-400">{stats && stats.count}</div>;
                           <div className="text-sm text-gray-400">Services</div>;
@@ -398,12 +683,23 @@ and micro SAAS services designed to transform your business and drive innovation
                           <div className="text-3xl font-bold text-green-400">{stats && stats.avgRating}</div>;
                           <div className="text-sm text-gray-400">Rating</div>;
                         </div>;
+<<<<<<< HEAD
                       </div>;<div className="mt-6 pt-6 border-t border-gray-700/50">;
                         <div className="text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors duration-300">;
                           Click to explore →;
                         </div>;
                       </div>;{/* Services Grid/List */}
             <motion&& motion.div;
+=======
+                      </div>;
+                      <div className="mt-6 pt-6 border-t border-gray-700/50">;
+                        <div className="text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors duration-300">;
+                          Click to explore →;
+                        </div>;
+                      </div>;
+            {/* Services Grid/List */}
+            <motion&& motion.div
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
                       initial={{ opacity: 0, y: 20 }}
@@ -491,8 +787,12 @@ and micro SAAS services designed to transform your business and drive innovation
                           <div className="text-gray-300 text-xs">Setup</div>;
                         </div>;
                       </div>;
+<<<<<<< HEAD
                         </ul>;
                       </div>;{/* Enhanced Stats */}
+=======
+                      {/* Enhanced Stats */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       <div className="grid grid-cols-3 gap-3 mb-6 text-center relative z-10">;
                         <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-cyan-500/30 transition-colors duration-300">;
                           <div className="text-cyan-400 font-bold text-lg">{service && service.rating}/5</div>;
@@ -535,6 +835,7 @@ and micro SAAS services designed to transform your business and drive innovation
                                 Popular;
                               </span>;
                             )}
+<<<<<<< HEAD
                           </div>;<p className="text-gray-300 mb-3">{service && service.description}</p>;<div className="flex flex-wrap gap-2 mb-4">;
                             {service && service.features.slice(0, 4).map((feature, idx) => (<span key={idx} className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-lg">;{feature}
                               </span>;
@@ -558,12 +859,47 @@ and micro SAAS services designed to transform your business and drive innovation
                           </div>;
                           </div>;
                         </div>;{/* Pricing & Stats */}
+=======
+                          </div>;
+                          <p className="text-gray-300 mb-3">{service && service.description}</p>;
+                          <div className="flex flex-wrap gap-2 mb-4">;
+                            {service && service.features.slice(0, 4).map((feature, idx) => (;
+                              <span key={idx} className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-lg">;
+                                {feature}
+                              </span>
+                            ))}
+                        {/* Pricing & Stats */}
+                        <div className="lg:w-48 space-y-4">
+                          <div className="text-center">
+                            <div className="text-3xl font-bold text-white">${service.price.monthly}</div>
+                            <div className="text-sm text-gray-400">/month</div>
+                            <div className="text-xs text-green-400">{service.price.trialDays}-day trial</div>
+                          </div>
+                          <div className="grid grid-cols-2 gap-2 text-center text-xs">
+                            <div className="bg-gray-800/30 rounded-lg p-2">
+                              <div className="text-cyan-400 font-semibold">{service.rating}/5</div>
+                              <div className="text-gray-400">Rating</div>
+                            </div>
+                            <div className="bg-gray-800/30 rounded-lg p-2">
+                              <div className="text-purple-400 font-semibold">{service.customers}+</div>
+                              <div className="text-gray-400">Customers</div>
+                            </div>
+                          </div>
+                          </div>;
+                        </div>;
+                        {/* Pricing & Stats */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                         <div className="lg:w-48 space-y-4">;
                           <div className="text-center">;
                             <div className="text-3xl font-bold text-white">${service && service.price.monthly}</div>;
                             <div className="text-sm text-gray-400">/month</div>;
                             <div className="text-xs text-green-400">{service && service.price.trialDays}-day trial</div>;
+<<<<<<< HEAD
                           </div>;<div className="grid grid-cols-2 gap-2 text-center text-xs">;
+=======
+                          </div>;
+                          <div className="grid grid-cols-2 gap-2 text-center text-xs">;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                             <div className="bg-gray-800/30 rounded-lg p-2">;
                               <div className="text-cyan-400 font-semibold">{service && service.rating}/5</div>;
                               <div className="text-gray-400">Rating</div>;
@@ -572,7 +908,12 @@ and micro SAAS services designed to transform your business and drive innovation
                               <div className="text-purple-400 font-semibold">{service && service.customers}+</div>;
                               <div className="text-gray-400">Customers</div>;
                             </div>;
+<<<<<<< HEAD
                           </div>;<a;
+=======
+                          </div>;
+                          <a
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                             href={service && service.link}
                             className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg text-center text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">;
                             Learn More;
@@ -811,6 +1152,7 @@ and micro SAAS services designed to transform your business and drive innovation
                   <motion.div;
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
                     transition={{ duration: 1, delay: 1.4 }}className="mb-8";
                   >;
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6">;
@@ -856,3 +1198,6 @@ and micro SAAS services designed to transform your business and drive innovation
       <UltraFuturisticFooter2029 />;
     </UltraFuturisticBackground2029>;
   )}
+=======
+                    transition={{ duration: 1, delay: 1.4 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
   Search,TrendingUp,Target,BarChart3,Globe,Zap,Users,CheckCircle,ArrowRight,Play,Star,Eye,Brain,Shield,Lock,Sparkles,ChartBar,Lightbulb,Rocket,Settings,} from 'lucide-react';
 export default function AISeosuitePage() {const features = [;
     {icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings  } from 'lucide-react';
@@ -13,6 +14,47 @@ export default function AISeosuitePage() {const features = [;
       title: 'Ranking Analytics';
       description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.';
       color: 'bg-gradient-to-br from-green-500 to-emerald-600';
+=======
+  Search,
+  TrendingUp,
+  Target,
+  BarChart3,
+  Globe,
+  Zap,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Eye,
+  Brain,
+  Shield,
+  Lock,
+  Sparkles,
+  ChartBar,
+  Lightbulb,
+  Rocket,;
+  Settings,;
+} from 'lucide-react';
+export default function AISeosuitePage() {
+  const features = [
+    {;
+      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+    {
+      icon: <Search className='w-8 h-8 text-white' />,
+export default function AISeosuitePage() {
+  const features = [
+} from 'lucide-react';
+export default function AISeosuitePage() {;
+  const features = [;
+    {;
+      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+    {
+      icon: <TrendingUp className="w-8 h-8 text-white" />
+      title: "title",
+    description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       gradient: 'from-green-400 to-emerald-500'}
     {icon: <Target className="w-8 h-8 text-white" />;
       title: 'Content Optimization';
@@ -52,6 +94,7 @@ export default function AISeosuitePage() {const features = null;
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
       gradient: 'from-blue-400 to-cyan-500';
     }
+<<<<<<< HEAD
     {icon: <TrendingUp className='w-8 h-8 text-white' />;
       title: 'Ranking Analytics';
       description:;
@@ -255,6 +298,43 @@ export default function AISeosuitePage() {const features = null;
             <Button;
               href='#pricing';
               size='lg';
+=======
+export default function AISeosuitePage() {
+  const features = [
+    {
+  ];
+  const pricingPlans = [
+    {
+      name: 'Starter'
+      price: '$39'
+      period: '/month'
+      description: 'Perfect for small websites and blogs'
+      features: [
+    };
+    {;
+      category: 'On-Page SEO',;
+      icon: <Target className="w-6 h-6 text-green-400" />,;
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
+};
+    {;
+      category: 'Technical SEO',;
+      icon: <Settings className="w-6 h-6 text-purple-400" />,;
+      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
+};
+    {;
+      category: 'Analytics & Reporting',;
+      icon: <BarChart3 className="w-6 h-6 text-orange-400" />,;
+      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards'];
+    }
+  ];
+    { metric: 'ROI', value: '400%', description: 'Average return on investment' }
+  ];
+    { metric: 'ROI', value: '400%', description: 'Average return on investment' }
+  return (
+            <Button
+              href='#pricing'
+              size='lg'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               className='bg-blue-600 hover:bg-blue-700 shadow-2xl shadow-blue-500/25'>;
               Start Free Trial;
               <ArrowRight className='w-5 h-5 ml-2' />;
@@ -365,10 +445,18 @@ export default function AISeosuitePage() {const features = null;
                   {feature.description}</p>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
       {/* SEO Tools Section */}<section className="py-24 bg-black relative overflow-hidden">;
+=======
+          </div>
+        </div>
+      </section>
+      {/* SEO Tools Section */}
+      <section className="py-24 bg-black relative overflow-hidden">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
@@ -442,6 +530,7 @@ export default function AISeosuitePage() {const features = null;
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
       {/* Success Metrics Section */}<section className="py-24 bg-gray-900 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
@@ -450,6 +539,17 @@ export default function AISeosuitePage() {const features = null;
             </h2>;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               <Card;
+=======
+      {/* Success Metrics Section */}
+      <section className="py-24 bg-gray-900 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <Card
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>;
                 <div className='text-4xl font-bold mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
@@ -491,6 +591,7 @@ export default function AISeosuitePage() {const features = null;
               </Card>;
             ))}{/* Use Cases Section */}<section className="py-24 bg-black relative overflow-hidden">;
             ))}
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
@@ -509,6 +610,18 @@ export default function AISeosuitePage() {const features = null;
           </div>;
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {useCases.map((useCase, index) => (<Card;
+=======
+      {/* Use Cases Section */}
+      <section className="py-24 bg-black relative overflow-hidden">
+            ))}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Use Cases
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <Card
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
                 <div className='flex items-start space-x-4'>;
@@ -556,8 +669,21 @@ export default function AISeosuitePage() {const features = null;
             </h2>;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
       {/* Pricing Section */}
+<<<<<<< HEAD
       <section;
         id='pricing';
+=======
+      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+      {/* Pricing Section */}
+      <section
+        id='pricing'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         className='py-24 bg-gray-900 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
           <div className='text-center mb-20'>;
@@ -576,8 +702,14 @@ export default function AISeosuitePage() {const features = null;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
+<<<<<<< HEAD
               <Card;
                 key={index}<div className='text-center mb-8'>;
+=======
+              <Card
+                key={index}
+                <div className='text-center mb-8'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
                   </h3>;
@@ -618,6 +750,7 @@ export default function AISeosuitePage() {const features = null;
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
+<<<<<<< HEAD
                     <span className='text-lg text-gray-400'>{plan.period}</span>;
                   </div>;
                   <p className='text-gray-400'>{plan.description}</p>;
@@ -628,6 +761,18 @@ export default function AISeosuitePage() {const features = null;
                       key={featureIndex}className='flex items-center text-gray-300';
                     >;
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />;
+=======
+                    <span className='text-lg text-gray-400'>{plan.period}</span>
+                  </div>
+                  <p className='text-gray-400'>{plan.description}</p>
+                </div>
+                <ul className='space-y-4 mb-8'>
+                  {plan.features.map((feature, featureIndex) => (
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       {feature}
                     </li>;
                   ))}
@@ -642,11 +787,20 @@ export default function AISeosuitePage() {const features = null;
                   Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
+<<<<<<< HEAD
               </Card>;</li>;
                   ))}
                 </ul>;
                 <Button;
                   href="/contact";
+=======
+              </Card>;
+                    </li>
+                  ))}
+                </ul>
+                <Button
+                  href="/contact"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   className={`w-full ${plan.buttonColor} text-white`}
                   size="lg";
                 >;
@@ -661,7 +815,12 @@ href='/contact';
                 </Button>;
               </Card>;
             ))}
+<<<<<<< HEAD
       {/* Integrations Section */}<section className="py-24 bg-black relative overflow-hidden">;
+=======
+      {/* Integrations Section */}
+      <section className="py-24 bg-black relative overflow-hidden">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
@@ -714,6 +873,7 @@ href='/contact';
                 </p>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -735,6 +895,29 @@ href='/contact';
             driving more organic traffic.;
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
+=======
+          </div>
+        </div>
+      </section>
+            ))}
+          </div>
+        </div>
+      </section>
+            ))}
+      {/* CTA Section */}
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+            Ready to Dominate Search Rankings?
+          </h2>
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Join thousands of businesses who are already ranking higher and
+            driving more organic traffic.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
@@ -762,15 +945,23 @@ href='/contact';
               Start Free Trial;
               <ArrowRight className="w-5 h-5 ml-2" />;
             </Button>;
+<<<<<<< HEAD
             <Button;
               href="#demo";
               variant="outline";
               size="lg";
+=======
+            <Button
+              href="#demo"
+              variant="outline"
+              size="lg"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               Watch Demo;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 })}
     </>)}className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl';
             >;
@@ -782,3 +973,10 @@ href='/contact';
       </section>;
     </>;
   )}
+=======
+}
+  );
+}
+    </>);
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -984,9 +984,33 @@ href='/2025-innovative-services-showcase-v2';
       </section>;
       {/* Footer */}
       <UltraFuturisticFooter2047 />;
+<<<<<<< HEAD
     </div>)}export default Homepage2047)}export default Homepage2047;{/* Footer */}
       <UltraFuturisticFooter2047 />;
     </div>;
   )export default Homepage2047;  )}
 export default Homepage2047;export default Homepage2047;
 export default Homepage2047;})}export default Homepage2047;
+=======
+    </div>);
+}
+;
+export default Homepage2047);
+}
+;
+export default Homepage2047;
+;
+
+      {/* Footer */}
+      <UltraFuturisticFooter2047 />
+    </div>
+  );
+export default Homepage2047;  )
+}
+export default Homepage2047;
+
+export default Homepage2047;
+export default Homepage2047
+}
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,6 +1,23 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     return this.props.children;
   }
@@ -83,6 +100,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
   getRevolutionaryServicesByCategory;
   getPopularRevolutionaryServices;
   getRevolutionaryServicesByPriceRange;
+<<<<<<< HEAD
   revolutionaryMicroSaasServices,revolutionaryServiceCategories,getRevolutionaryServicesByCategory,getPopularRevolutionaryServices,getRevolutionaryServicesByPriceRange,import {revolutionaryMicroSaasServices,revolutionaryServiceCategories,getRevolutionaryServicesByCategory,getPopularRevolutionaryServices,getRevolutionaryServicesByPriceRange,} from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon  } from 'lucide-react';
@@ -91,6 +109,43 @@ import { motion, AnimatePresence  } from 'framer-motion';
 import { Zap, Star, Calendar  } from 'lucide-react';
 export default function RevolutionaryServicesPage() {const [selectedCategory, setSelectedCategory] = useState('All')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),const [priceRange, setPriceRange] = useState('All')const [searchQuery, setSearchQuery] = useState('')const [sortBy, setSortBy] = useState('name')const [showFilters, setShowFilters]  = useState(false)const priceRanges = [;
     { value: 'All', label: 'All Prices' },{ value: '0-1000', label: '$0 - $1,000' },{ value: '1001-2500', label: '$1,001 - $2,500' },{ value: '2501-5000', label: '$2,501 - $5,000' },{ value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' }{ value: '1001-2500', label: '$1,001 - $2,500' }{ value: '2501-5000', label: '$2,501 - $5,000' }{ value: '5001+', label: '$5,001+' }
+=======
+  revolutionaryMicroSaasServices,
+  revolutionaryServiceCategories,
+  getRevolutionaryServicesByCategory,
+  getPopularRevolutionaryServices,;
+  getRevolutionaryServicesByPriceRange,;
+import {;
+  revolutionaryMicroSaasServices,;
+  revolutionaryServiceCategories,;
+  getRevolutionaryServicesByCategory,;
+  getPopularRevolutionaryServices,;
+  getRevolutionaryServicesByPriceRange,;
+} from '../data/revolutionary-micro-saas-services';
+import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+import Button from '../components/ui/Button';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Zap, Star, Calendar } from 'lucide-react';
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [priceRange, setPriceRange] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('name');
+  const [showFilters, setShowFilters] = useState(false);
+  const priceRanges = [;
+    { value: 'All', label: 'All Prices' },;
+    { value: '0-1000', label: '$0 - $1,000' },;
+    { value: '1001-2500', label: '$1,001 - $2,500' },;
+    { value: '2501-5000', label: '$2,501 - $5,000' },;
+    { value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' };
+    { value: '1001-2500', label: '$1,001 - $2,500' };
+    { value: '2501-5000', label: '$2,501 - $5,000' };
+    { value: '5001+', label: '$5,001+' }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const sortOptions = [;
     { value: 'name', label: 'Name A-Z' },{ value: 'price', label: 'Price Low-High' },{ value: 'popularity', label: 'Most Popular' },{ value: 'category', label: 'Category' },{ value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
   ];
@@ -98,6 +153,7 @@ export default function RevolutionaryServicesPage() {const [selectedCategory, se
   if (priceRange !== 'All') {const [min, max] = priceRange;
       .split('-').map(p => (p === '+' ? Infinity : parseInt(p)))filteredServices = getRevolutionaryServicesByPriceRange(min, max)}
   // Price range filter;
+<<<<<<< HEAD
   if (priceRange !== 'All') {const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p))filteredServices = getRevolutionaryServicesByPriceRange(min, max)}
   // Price range filter;
   if (priceRange !== 'All') {const [min, max] = priceRange;
@@ -205,6 +261,44 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
       icon: <LeafIcon className='w-6 h-6' />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy';
       ).length,color: 'from-yellow-500 to-orange-600',},];const containerVariants = {hidden: { opacity: 0 }
+=======
+  if (priceRange !== 'All') {;
+    const [min, max] = priceRange;
+      .split('-');
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max);
+  }
+  // Sort services
+  filteredServices.sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      case 'category':
+        return a.category.localeCompare(b.category);
+      case 'roi':
+        return bRoi - aRoi;
+      default:;
+        return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
+    }
+  });
+  const contactInfo = {
+    mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
+    }
+  });
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+  const containerVariants = {
+    hidden: { opacity: 0 }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }const popular_services  = getPopularRevolutionaryServices ()// Enhanced service categories with better descriptions;
   const enhanced_categories = [;
@@ -218,11 +312,50 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
         'AI platforms for autonomous vehicles and smart transportation',icon: <CarIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Autonomous Vehicles & Smart Transportation').length,color: 'from - emerald - 500 to - green - 600',},{name: 'Smart Energy & Renewable Energy',description:;
         'AI platforms for smart energy grids and renewable energy optimization',icon: <LeafIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600',},  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',icon: <LeafIcon className="w - 6 h - 6" />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600';
     }
+<<<<<<< HEAD
   const container_variants = {hidden: { opacity: 0 },visible: {opacity: 1;
       transition: {staggerChildren: 0.1,},},}const itemVariants = {hidden: { y: 20, opacity: 0 }
     visible: {y: 0;
       opacity: 1;
       transition: {duration: 0.5,},},duration: 0.5,},},}return (<UltraFuturisticBackground variant='quantum' intensity='high'>;
+=======
+  const container_variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1;
+    transition: {
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 }
+    visible: {
+      y: 0
+      opacity: 1
+      transition: {
+        duration: 0.5,
+      },
+    },
+  return (
+    <UltraFuturisticBackground variant='quantum' intensity='high'>
+      <div className='min-h-screen'>
+        <Head>
+          <title>
+            Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI
+            Autonomous Systems, Space Technology
+          </title>
+      }
+    }
+  };
+  const itemVariants = {;
+    hidden: { y: 20, opacity: 0 },;
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0 && 0.5,;
+      },;
+    },;
+  return (
+    <UltraFuturisticBackground variant='quantum' intensity='high'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className='min-h-screen'>;
         <Head>;
           <title>Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI;
@@ -465,6 +598,7 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
                   variants={itemVariants}
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}>;
+<<<<<<< HEAD
                   <UltraFuturisticCard;
         {/* Popular Services Showcase */}<section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -499,6 +633,15 @@ variant='quantum-advanced';
                     <div className='text-xs text-gray-500'>Services</div>;
                   </UltraFuturisticCard>;
                 </motion.div>;
+=======
+                  <UltraFuturisticCard
+        {/* Popular Services Showcase */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               ))}
             </motion.div>;
           </div>;
@@ -523,12 +666,23 @@ variant='quantum-advanced';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.;
               </p>;
+<<<<<<< HEAD
             </motion && motion.div>;<motion&& motion.div;
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
               variants={containerVariants}
               initial="hidden";
               whileInView="visible";
                     onClick={() => setSelectedService(service)}variants={item_variants}
+=======
+            </motion && motion.div>;
+            <motion&& motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+                    onClick={() => setSelectedService(service)}
+                  variants={item_variants}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   while_hover={{ coordinate_y: -10 }}
                 >;
                   <UltraFuturisticCard;
@@ -598,10 +752,19 @@ size='large';
                   </UltraFuturisticCard>;
                 </motion.div>;
               ))}
+<<<<<<< HEAD
         {/* Services Grid */}<section id='services-grid' className='py-16'>;
           <div className='container mx-auto px-4'>;{/* Services Grid */}
         <section id="services-grid" className="py-16">;
           <div className="container mx-auto px-4">;
+=======
+        {/* Services Grid */}
+        <section id='services-grid' className='py-16'>;
+          <div className='container mx-auto px-4'>;
+        {/* Services Grid */}
+        <section id="services-grid" className="py-16">
+          <div className="container mx-auto px-4">
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             {/* Filters and Controls */}
             <motion&& motion.div;
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
@@ -648,10 +811,18 @@ size='large';
                     </button>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
               </div>;whileInView='visible'              viewport={{ once: true }}            <motion.div;
               className={viewMode === 'grid';
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8";
                 : "space-y-6";
+=======
+              </div>;
+              whileInView='visible'              viewport={{ once: true }}            <motion.div 
+              className={viewMode === 'grid' 
+                ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
+                : "space-y-6"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               }
               variants={containerVariants}
               initial="hidden";
@@ -874,9 +1045,20 @@ size='large';
         </section>;
         {/* Service Details Modal */}
         <AnimatePresence>;
+<<<<<<< HEAD
           {selectedService && (<motion.div;
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4';
+=======
+          {selectedService && (;
+            <motion&& motion.div
+              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+        {/* Service Details Modal */}
+        <AnimatePresence>
+          {selectedService && (
+            <motion.div
+              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1066,6 +1248,7 @@ className='text-gray-400 hover:text-white text-2xl';
               </motion.div>;
             </motion.div>;
           )}
+<<<<<<< HEAD
         </AnimatePresence>;
         {/* Contact Section */}<section className="py-20">;
           <div className="container mx-auto px-4 text-center">;
@@ -1076,6 +1259,15 @@ className='text-gray-400 hover:text-white text-2xl';
             <motion.div;
               className='max-w-4xl mx-auto';
               initial={{ opacity: 0, y: 20 }}whileInView={{ opacity: 1, y: 0 }}
+=======
+        </AnimatePresence>
+        {/* Contact Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              className="max-w-4xl mx-auto"
+              whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >;
@@ -1317,4 +1509,10 @@ className='text-gray-400 hover:text-white text-2xl';
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </UltraFuturisticBackground>))}))
+=======
+    </UltraFuturisticBackground>));
+}
+  );
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

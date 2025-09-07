@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 }const MainLayout: React.FC<MainLayoutProps> = ({children,title,description,keywords,image,url,type = 'website',noindex = false,nofollow = false,canonical;
@@ -25,11 +26,18 @@ const MainLayout: React.FC<MainLayoutProps> = ({children;
   image = '/og-image.jpg';
   url;
 ursor/automate-test-improve-and-merge-code-646c;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
+<<<<<<< HEAD
 interface MainLayoutProps  {title: string;
+=======
+interface MainLayoutProps {
+  title: string,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   description: string;
   children: React.ReactNode;
   keywords?: string;
@@ -135,7 +143,6 @@ interface MainLayoutProps  {children: ReactNode;
     </>;
   )}}export default MainLayout;ursor/automate-test-improve-and-merge-code-646c;
 }
-
 export default function MainLayout({ 
   title, 
   description, 
@@ -148,6 +155,7 @@ export default function MainLayout({
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
@@ -254,10 +262,13 @@ import React from 'react'; import Head from 'next/head'; import Header from './H
     </>);
 }
 export default MainLayout;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
+<<<<<<< HEAD
       
 
 interface MainLayoutProps {
@@ -270,6 +281,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
   return (
     <>
       <SEOHead title={title} description={description} />
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -279,4 +292,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

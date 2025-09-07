@@ -94,8 +94,11 @@ export interface ComprehensiveITService {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   {
 
     id: 'quantum - cloud - infrastructure',
@@ -1715,10 +1718,14 @@ export interface ComprehensiveITService  {id: string,name: string,tagline: strin
   rating: number,
   reviews: number
 }
-
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
   {
+<<<<<<< HEAD
+=======
+    id: 'enterprise-it-infrastructure', name: 'Enterprise IT Infrastructure Management',
+    tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     price: '$25,999',
     period: '/month',
     description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',
@@ -1741,11 +1748,9 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     growthRate: '8% annual growth', variant: 'enterprise-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
-    reviews: 156
-  id: string,;
+    reviews: 156;
+    id: string,;
   name: string,;
   tagline: string,;
   price: string,;
@@ -1831,8 +1836,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     reviews: 156;
 ;
     realImplementation: true
-    implementationDetails:
-      'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'
+    implementationDetails: "implementationDetails",
     launchDate: '2024-02-01'
     customers: 18
     rating: 4.7
@@ -2510,6 +2514,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     launchDate: '2024-09-15';
     customers: 180;
     rating: 4.9
+<<<<<<< HEAD
 
     reviews: 156
   }
@@ -3858,3 +3863,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
 ;
   }
 ];
+=======
+    reviews: 156
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

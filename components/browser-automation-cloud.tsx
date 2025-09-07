@@ -1,6 +1,7 @@
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
+<<<<<<< HEAD
 }import React from 'react';
 import SEO from '../components / SEO';
 import { Check, ExternalLink } from 'lucide-react';
@@ -21,6 +22,32 @@ import {Check, ExternalLink} from 'lucide-react';
 
 
 
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import SEO from '../components / SEO';
+import {Check, ExternalLink} from 'lucide-react';
+export default function BrowserAutomationCloudPage() {
+  const features = [
+    'Parallel Playwright/Puppeteer execution',
+    'Queued jobs with retries and rate limits',
+    'Artifacts: HAR, traces, screenshots, videos',
+    'Rotating proxies and geo targeting',
+    'Webhook callbacks and REST API',;
+  ];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const features = [
     'Parallel Playwright/Puppeteer execution'
     'Queued jobs with retries and rate limits'
@@ -75,6 +102,7 @@ import {Check, ExternalLink} from 'lucide-react';
               target='_blank';
               rel='noreferrer';
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
+<<<<<<< HEAD
               <ExternalLink className='w-4 h-4' /> Puppeteer;className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
 export default /**;
@@ -85,6 +113,9 @@ function BrowserAutomationCloudPage() {const features = [;
     'Webhook callbacks and REST API';
     'Webhook callbacks and REST API';
   ];return (<>;
+=======
+              <ExternalLink className='w-4 h-4' /> Puppeteer;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -154,8 +185,11 @@ function BrowserAutomationCloudPage() {
         </section>;
       </main>;</>)return (<>;
       </main>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -214,6 +248,7 @@ export default function BrowserAutomationCloudPage() {export default function Br
             {features.map(f => (<div;
   </>)
 }
+<<<<<<< HEAD
 	const features = [
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	];
@@ -401,3 +436,7 @@ export default function BrowserAutomationCloudPage() {
 }
 	)
 }
+=======
+	),
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

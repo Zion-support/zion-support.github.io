@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Menu,ChevronDown,X,Phone,Mail,MapPin,ArrowRight,Brain,Rocket,Shield,Zap,Target,Atom,BookOpen,Truck,DollarSign,BarChart3,Globe,Users,Star,Sparkles,Cpu,Lock,Cloud,Settings,Eye,Award,Clock,Heart,Lightbulb,Search,Grid,List,TrendingUp,Shield as ShieldIcon,Globe as GlobeIcon,User,ShoppingCart,Bell,HelpCircle,FileText,Video,Headphones,Code,Database,Network,Server,Monitor,Smartphone,Camera,Gamepad2,Palette,Music,Film,BookOpenCheck,Building,MessageCircle,} from 'lucide-react';
 import { Menu;
@@ -59,6 +60,130 @@ import { Menu;
   MessageCircle;
  } from 'lucide-react';
 interface NavigationItem  {name: string;href: string;  icon?: React.ReactNode;import {Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
+=======
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Shield,
+  Zap,
+  Target,
+  Atom,
+  BookOpen,
+  Truck,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Users,
+  Star,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  Search,
+  Grid,
+  List,
+  TrendingUp,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  User,
+  ShoppingCart,
+  Bell,
+  HelpCircle,
+  FileText,
+  Video,
+  Headphones,
+  Code,
+  Database,
+  Network,
+  Server,
+  Monitor,
+  Smartphone,
+  Camera,
+  Gamepad2,
+  Palette,
+  Music,
+  Film,
+  BookOpenCheck,
+  Building,;
+  MessageCircle,;
+} from 'lucide-react';
+import {
+  Menu
+  ChevronDown
+  X
+  Phone
+  Mail
+  MapPin
+  ArrowRight
+  Brain
+  Rocket
+  Shield
+  Zap
+  Target
+  Atom
+  BookOpen
+  Truck
+  DollarSign
+  BarChart3
+  Globe
+  Users
+  Star
+  Sparkles
+  Cpu
+  Lock
+  Cloud
+  Settings
+  Eye
+  Award
+  Clock
+  Heart
+  Lightbulb
+  Search
+  Grid
+  List
+  TrendingUp
+  Shield as ShieldIcon
+  Globe as GlobeIcon
+  User
+  ShoppingCart
+  Bell
+  HelpCircle
+  FileText
+  Video
+  Headphones
+  Code
+  Database
+  Network
+  Server
+  Monitor
+  Smartphone
+  Camera
+  Gamepad2
+  Palette
+  Music
+  Film
+  BookOpenCheck
+  Building
+  MessageCircle;
+} from 'lucide-react';
+interface NavigationItem {
+  name: string;
+  href: string;  icon?: React.ReactNode;import { ;
+  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles;
   Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
@@ -103,10 +228,28 @@ const contactInfo = {mobile: '+1 302 464 0950';
   address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com',}website: 'https://ziontechgroup.com';
 }
+<<<<<<< HEAD
   featured?: boolean;const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
 }const navigationItems: NavigationItem[] = [;
   {name: 'Pricing',href: '/pricing',icon: <DollarSign className="w-5 h-5" />,description: 'Plans and average market prices',children: [;
     ];
+=======
+  featured?: boolean;
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+const navigationItems: NavigationItem[] = [
+  {
+    name: 'Pricing',
+    href: '/pricing',
+    icon: <DollarSign className="w-5 h-5" />,
+    description: 'Plans and average market prices',
+    children: [
+    ]
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   featured?: boolean;  featured?: boolean;
 }
 const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com', }  website: 'https://ziontechgroup.com';
@@ -124,6 +267,226 @@ const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com
       { name: 'Case Studies', href: '/case-studies', description: 'Proven results' }
       { name: 'Developer', href: '/developer', description: 'Docs and SDKs' }
       { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' }
+<<<<<<< HEAD
+=======
+    ]
+  }
+  {
+    name: 'All Services',
+    href: '/comprehensive - services - showcase - 2025',
+    icon: <Globe className="w-5 h-5" />,
+    description: 'Complete portfolio of all technology services',
+    badge: 'Showcase',
+    featured: true,
+      {
+        name: 'Zero Trust Security',
+        href: '/zero-trust-security-platform',
+        description: 'Next-generation security architecture',
+      },
+      {
+        name: 'Quantum Cloud Infrastructure',
+        href: '/quantum-cloud-infrastructure',
+        description: 'Quantum-enhanced cloud computing',
+      },
+      {
+        name: 'Autonomous IT Operations',
+        href: '/autonomous-it-operations-center',
+        description: 'Self-managing IT infrastructure',
+      },
+      {
+        name: 'Edge Computing Orchestration',
+        href: '/edge-computing-orchestration',
+        description: 'Distributed edge computing',
+      },
+      {
+        name: 'Blockchain Infrastructure',
+        href: '/blockchain-infrastructure-platform',
+        description: 'Enterprise blockchain solutions',
+      },
+      {
+        name: 'AI-Powered DevOps',
+        href: '/ai-powered-devops-platform',
+        description: 'Intelligent development operations',
+      },
+      {
+        name: 'Quantum Cybersecurity',
+        href: '/quantum-cybersecurity-services',
+        description: 'Next-gen quantum security',
+      },
+      {
+        name: 'AI-Powered Cybersecurity',
+        href: '/ai-powered-cybersecurity',
+        description: 'Intelligent threat detection',
+      },
+    ],
+  },
+    name: 'Industry Solutions',
+    href: '/industry-solutions',
+    icon: <Building className='w-5 h-5' />,
+    description: 'Industry-specific technology solutions',
+    badge: 'Industry',
+    children: [
+      {
+        name: 'Healthcare AI',
+        href: '/healthcare-ai-solutions',
+        description: 'AI-powered healthcare',
+      },
+      {
+        name: 'Financial Technology',
+        href: '/fintech-solutions',
+        description: 'Next-gen fintech',
+      },
+      {
+        name: 'Manufacturing AI',
+        href: '/manufacturing-ai-solutions',
+        description: 'Smart manufacturing',
+      },
+      {
+        name: 'Retail Technology',
+        href: '/innovative-business-solutions',
+        description: 'Digital retail transformation',
+      },
+      {
+        name: 'Education Technology',
+        href: '/training',
+        description: 'AI-powered learning',
+      },
+      {
+        name: 'Government Solutions',
+        href: '/enterprise-solutions-showcase',
+        description: 'Public sector innovation',
+      },
+      {
+        name: 'Energy & Utilities',
+        href: '/quantum-energy',
+        description: 'Sustainable energy tech',
+      },
+      {
+        name: 'Biotech AI Research',
+        href: '/biotech-ai',
+        description: 'AI-driven biotech',
+  }
+  {
+      { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
+    ]
+    href: '/ai - services',
+    icon: <Brain className="w-5 h-5" />,
+    badge: 'New',
+    featured: true,
+    children: [;
+      {
+        name: 'AI Customer Success Platform',
+        href: '/ai - customer - success - platform',
+        description: 'Predict and prevent churn with AI',
+        featured: true,
+      },
+      {
+        name: 'AI Sales Intelligence',
+        href: '/ai - sales - intelligence - platform',
+        description: 'Supercharge sales with AI automation',
+      },
+      {
+        name: 'AI Financial Planning',
+        href: '/ai - financial - planning - platform',
+        description: 'Intelligent financial forecasting',
+      },
+      {
+        name: 'AI Decision Engine',
+        href: '/ai - powered - decision - engine',
+        description: 'AI - powered business decisions',
+      },
+      {
+        name: 'AI Content Automation',
+        href: '/intelligent - content - automation - platform',
+        description: 'Automate content creation',
+      },
+      {
+        name: 'AI HR Analytics',
+        href: '/ai - hr - analytics - platform',
+        description: 'Transform HR with AI insights',
+      },
+      {
+        name: 'AI Consciousness Evolution',
+        href: '/ai - consciousness - evolution - 2029',
+        description: 'Emotional intelligence and self - awareness',
+      },
+      {
+        name: 'AI Quantum Neural Network',
+        href: '/ai - quantum - neural - network',
+        description: 'Hybrid AI - Quantum computing platform',
+      },
+      {
+        name: 'AI Autonomous Business Operations',
+        href: '/ai - autonomous - business - operations',
+        description: 'Fully autonomous business management',
+      },
+      {
+        name: 'AI Autonomous Research',
+        href: '/ai - autonomous - research - assistant',
+        description: 'Self - directed AI research',
+      },
+      {
+        name: 'AI Emotional Intelligence',
+        href: '/ai - emotional - intelligence - training',
+        description: 'EQ training platform',
+      },
+      {
+        name: 'AI Predictive Maintenance',
+        href: '/ai - predictive - maintenance - platform',
+        description: 'Equipment failure prediction',
+      },
+      {
+        name: 'AI Content Personalization',
+        href: '/ai - content - personalization - engine',
+        description: 'Personalized content delivery',
+      },
+      {
+        name: 'AI Autonomous Ecosystem',
+        href: '/ai - autonomous - ecosystem - manager',
+        description: 'Self - managing AI systems',
+      },
+      {
+        name: 'AI Ethics & Governance',
+        href: '/ai - ethics - governance - framework',
+        description: 'Ethical AI frameworks',
+      },
+      {
+        name: 'Advanced AI Automation',
+        href: '/advanced - ai - automation - services',
+        description:;
+          'AI automation for development, testing, DevOps, security, and data',
+      },
+    ],
+  },
+  {
+  }
+  {
+    name: 'AI & Consciousness',
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    closeDropdowns();    }
+    name: 'Micro SAAS Solutions',
+    href: '/micro - saas',
+    icon: <Rocket className='w - 5 h - 5' />,    description: 'Innovative business solutions for modern enterprises',
+    badge: 'Hot',
+    featured: true,
+    children: [      { name: 'AI Customer Success Platform', href: '/ai - customer - success - platform', description: 'Predict and prevent churn with AI', featured: true },
+      { name: 'AI Sales Intelligence', href: '/ai - sales - intelligence - platform', description: 'Supercharge sales with AI automation' },
+      { name: 'AI Financial Planning', href: '/ai - financial - planning - platform', description: 'Intelligent financial forecasting' },
+      { name: 'AI Decision Engine', href: '/ai - powered - decision - engine', description: 'AI - powered business decisions' },
+      { name: 'AI Content Automation', href: '/intelligent - content - automation - platform', description: 'Automate content creation' },
+      { name: 'AI HR Analytics', href: '/ai - hr - analytics - platform', description: 'Transform HR with AI insights' },
+      { name: 'AI Consciousness Evolution', href: '/ai - consciousness - evolution - 2029', description: 'Emotional intelligence and self - awareness' },
+      { name: 'AI Quantum Neural Network', href: '/ai - quantum - neural - network', description: 'Hybrid AI - Quantum computing platform' },
+      { name: 'AI Autonomous Business Operations', href: '/ai - autonomous - business - operations', description: 'Fully autonomous business management' },
+      { name: 'AI Autonomous Research', href: '/ai - autonomous - research - assistant', description: 'Self - directed AI research' },
+      { name: 'AI Emotional Intelligence', href: '/ai - emotional - intelligence - training', description: 'EQ training platform' },
+      { name: 'AI Predictive Maintenance', href: '/ai - predictive - maintenance - platform', description: 'Equipment failure prediction' },
+      { name: 'AI Content Personalization', href: '/ai - content - personalization - engine', description: 'Personalized content delivery' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai - autonomous - ecosystem - manager', description: 'Self - managing AI systems' },
+      { name: 'AI Ethics & Governance', href: '/ai - ethics - governance - framework', description: 'Ethical AI frameworks' },
+      { name: 'Advanced AI Automation', href: '/advanced - ai - automation - services', description: 'AI automation for development, testing, DevOps, security, and data' }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ];
   }
   {name: 'All Services',href: '/comprehensive - services - showcase - 2025',icon: <Globe className="w - 5 h - 5" />,description: 'Complete portfolio of all technology services',badge: 'Showcase',featured: true,{name: 'Zero Trust Security',href: '/zero-trust-security-platform',description: 'Next-generation security architecture',},{name: 'Quantum Cloud Infrastructure',href: '/quantum-cloud-infrastructure',description: 'Quantum-enhanced cloud computing',},{name: 'Autonomous IT Operations',href: '/autonomous-it-operations-center',description: 'Self-managing IT infrastructure',},{name: 'Edge Computing Orchestration',href: '/edge-computing-orchestration',description: 'Distributed edge computing',},{name: 'Blockchain Infrastructure',href: '/blockchain-infrastructure-platform',description: 'Enterprise blockchain solutions',},{name: 'AI-Powered DevOps',href: '/ai-powered-devops-platform',description: 'Intelligent development operations',},{name: 'Quantum Cybersecurity',href: '/quantum-cybersecurity-services',description: 'Next-gen quantum security',},{name: 'AI-Powered Cybersecurity',href: '/ai-powered-cybersecurity',description: 'Intelligent threat detection',},],},name: 'Industry Solutions',href: '/industry-solutions',icon: <Building className='w-5 h-5' />,description: 'Industry-specific technology solutions',badge: 'Industry',children: [;
@@ -210,11 +573,72 @@ const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com
   }
   {];
   }
+<<<<<<< HEAD
     name: 'Industry Solutions';
     href: '/industry-solutions';
     icon: <Building className='w-5 h-5' />;
     description: 'Industry-specific technology solutions';
     badge: 'Industry';
+=======
+    name: "name",
+    href: '/industry-solutions'
+    icon: <Building className='w-5 h-5' />
+    description: 'Industry-specific technology solutions'
+    badge: 'Industry'
+    children: [
+      {
+        name: 'Healthcare AI'
+        href: '/healthcare-ai-solutions'
+        description: 'AI-powered healthcare'
+      }
+      {
+        name: 'Financial Technology'
+        href: '/fintech-solutions'
+        description: 'Next-gen fintech'
+      }
+      {
+        name: 'Manufacturing AI'
+        href: '/manufacturing-ai-solutions'
+        description: 'Smart manufacturing'
+      }
+      {
+        name: 'Retail Technology'
+        href: '/innovative-business-solutions'
+        description: 'Digital retail transformation'
+      }
+      {
+        name: 'Education Technology'
+        href: '/training'
+        description: 'AI-powered learning'
+      }
+      {
+        name: 'Government Solutions'
+        href: '/enterprise-solutions-showcase'
+        description: 'Public sector innovation'
+      }
+      {
+        name: 'Energy & Utilities'
+        href: '/quantum-energy'
+        description: 'Sustainable energy tech'
+      }
+      {
+        name: 'Biotech AI Research'
+        href: '/biotech-ai'
+        description: 'AI-driven biotech'
+      }
+    ]
+  }
+  {
+    name: 'Resources'
+    href: '/resources'
+    icon: <BookOpen className='w-5 h-5' />
+    description: 'Documentation, support, and learning resources'
+    children: [
+    href: '/enterprise - it',
+    icon: <Shield className="w-5 h-5" />,
+    badge: 'Enterprise',
+    featured: true,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     children: [;
       {name: 'Healthcare AI';
         href: '/healthcare-ai-solutions';
@@ -371,6 +795,7 @@ const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com
       }
     ];
   }
+<<<<<<< HEAD
   {name: 'Quantum & Emerging Tech',href: '/quantum-services',icon: <Atom className='w-5 h-5' />,description: 'Quantum computing and breakthrough technologies',badge: 'Hot',featured: true,children: [;
 {name: 'Quantum-Secure Cloud Infrastructure',href: '/quantum-secure-cloud-infrastructure',description: 'Unbreakable quantum encryption',},{name: 'Quantum Financial Trading Platform';
         href: '/quantum-financial-trading';
@@ -473,6 +898,20 @@ const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com
   const closeDropdowns = () => {setActiveDropdown(null)setIsScrolled(window.scrollY > 10)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const toggleDropdown = (name: string) => {setActiveDropdown(activeDropdown === name ? null : name)}
   const closeDropdowns = () => {setActiveDropdown(null)}const closeMobileMenu = () => {setIsOpen(false)closeDropdowns()}{/* Desktop Navigation */}  }return (<nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled;
         ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl';
+=======
+  const closeDropdowns = () => {
+    setActiveDropdown(null)
+  };
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    closeDropdowns()
+  };
+            {/* Desktop Navigation */}  };
+  return (
+    <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled
+        ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
             {/* Desktop Navigation */}
                   <button;
                     onClick={() => toggleDropdown(item && item.name)}
@@ -516,6 +955,7 @@ const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com
               {navigationItems.map((item) => (<div key={item.name} className="relative group">;
                   <button;
                     onClick={() => toggleDropdown(item.name)}
+<<<<<<< HEAD
                     className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400";
                         item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :;
                         item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :;
@@ -584,6 +1024,38 @@ closeDropdowns()}>;
                       }`}
                     />;
                   </button>;
+=======
+                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
+                        item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
+                        item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :
+                        item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :
+                        item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
+                        item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
+                        item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                    {item.badge && (
+                  </button>
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === item.name && (<motion.div;
@@ -701,8 +1173,30 @@ closeDropdowns()}>;
                   <Mail className="w-4 h-4" />;
                   <span className="hidden xl:inline">{contactInfo && contactInfo.email}</span>;
               </div>;
+<<<<<<< HEAD
             </div>;{/* Mobile Menu Button */}
             <button;
+=======
+            </div>;
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
+              aria-label='Toggle mobile menu'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+              aria-label="Toggle mobile menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </div>
+        </div>
+            {/* Mobile Menu Button */}
+            <button
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               onClick={() => setIsOpen(!isOpen)}
               className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200';
               aria-label='Toggle mobile menu';
@@ -715,6 +1209,7 @@ closeDropdowns()}>;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </div>;
         </div>;
+<<<<<<< HEAD
             {/* Mobile Menu Button */}
             <button;
               onClick={() => setIsOpen(!isOpen)}
@@ -731,6 +1226,9 @@ closeDropdowns()}>;
         </div>;
           </div>;
         </div>;{/* Mobile Menu */}
+=======
+        {/* Mobile Menu */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <AnimatePresence>;
           {isOpen && (<motion&& motion.div;
                         item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :;
@@ -799,9 +1297,14 @@ closeDropdowns()}>;
             {/* Right Side Actions */}
 <div className='hidden lg:flex items-center gap-4'>;
               {/* Quick Actions */}
+<<<<<<< HEAD
               <div className='flex items-center gap-2'>;
                   <Link;
                 {quickActions.map(action => (<Link;
+=======
+              <div className='flex items-center gap-2'>
+                  <Link
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                     key={action.name}
                     href={action.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${action.primary;
@@ -844,6 +1347,7 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
           </div>;
         </div>;
         {/* Mobile Menu */}
+<<<<<<< HEAD
         <AnimatePresence>;
           {isOpen && (<motion.div;
               initial={{ opacity: 0, height: 0 }}
@@ -873,17 +1377,38 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
                               }`}
                             >;
                               {item.badge}</span>;
+=======
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+                            </span>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                           )}
                         </div>;
 <ChevronDown;
                           className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : '';
                           }`}
+<<<<<<< HEAD
                         />;
                       </button>;
                         />                      </button>                        <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item && item.name ? 'rotate-180' : '';
                         }`} />;
                       </button>;{/* Mobile Dropdown */}<AnimatePresence>;
                         {activeDropdown === item && item.name && (<motion&& motion.div;
+=======
+                        />                      </button>                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                        />                      </button>                        <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
+                          activeDropdown === item && item.name ? 'rotate-180' : ''
+                        }`} />;
+                      </button>;
+                      {/* Mobile Dropdown */}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                       <AnimatePresence>;
                         {activeDropdown === item.name && (<motion.div;
                             initial={{ opacity: 0, height: 0 }}
@@ -902,6 +1427,7 @@ className='ml-6 mt-2 space-y-2';
                                 {child && child.description && (<div className='text-sm opacity-75 mt-1'>;
                                     {child && child.description}
                                   </div>                                )}                                <div className="font-medium">{child && child.name}</div>;
+<<<<<<< HEAD
                                 {child && child.description && (<div className="text-sm opacity-75 mt-1">{child && child.description}</div>;child.featured;
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400';
                                     : 'text-gray-400 hover:text-white hover:bg-gray-800/50';
@@ -913,16 +1439,26 @@ className='ml-6 mt-2 space-y-2';
                                     {child.description}
                                   </div>;
                                 )}</Link>;
+=======
+                                {child && child.description && (;
+                                  <div className="text-sm opacity-75 mt-1">{child && child.description}</div>;
+                                )}
+                              </Link>
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                               </Link>;
                             ))}
                           </motion && motion.div>;
                         )}
                       </AnimatePresence>;
                     </div>;
+<<<<<<< HEAD
                   ))}{/* Mobile Quick Actions */}
 <div className='pt-4 border-t border-gray-800/50'>;
                     <div className='space-y-3'>;
                       {quickActions.map(action => (<Link;
+=======
+                  ))}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                           key={action.name}
                           href={action.href}
                         <Link;
@@ -1018,9 +1554,31 @@ className='ml-6 mt-2 space-y-2';
 }href= {child.href;
 }className= {`block p - 3 rounded - lg transition - colors duration - 200 $ {child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400': 'text - gray - 400 hover:text - white hover:bg - gray - 800 / 50';
 }`;
+<<<<<<< HEAD
 }on_click= {closeMobileMenu;
 }>)}</a>) )}</motion.div>)}</AnimatePresence> </div>) )}<Link key= {action.name;
 }href= {action.href;
 }className= {}
 export default UltraFuturisticNavigation2035)}export default UltraFuturisticNavigation2035;export default UltraFuturisticNavigation2035;  )}export default UltraFuturisticNavigation2035;
+=======
+}on_click= {
+  closeMobileMenu;
+}>);
+}</a>) );
+}</motion.div>);
+}</AnimatePresence> </div>) );
+}<Link key= {
+  action.name;
+}href= {
+  action.href;
+}className= {
+}
+export default UltraFuturisticNavigation2035);
+}
+;
+export default UltraFuturisticNavigation2035;
+export default UltraFuturisticNavigation2035;  )
+};
+export default UltraFuturisticNavigation2035;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default UltraFuturisticNavigation2035;

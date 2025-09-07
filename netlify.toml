@@ -1,4 +1,5 @@
 [build]
+<<<<<<< HEAD
 
 command = "npm ci && npm run build"
 publish = ".next"
@@ -14,16 +15,25 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> main
   command = "npm install --legacy-peer-deps && npm run build"
   publish = ".next"
+=======
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
 command = "npm ci && npm run build"
+<<<<<<< HEAD
 publish = ".next"
+=======
+publish = "dist"
+>>>>>>> 79d75ebd63c0929536b7d47cf5dc16d1ef769356
 
 [build.environment]
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
+<<<<<<< HEAD
 =======
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
@@ -32,6 +42,7 @@ package = "@netlify/plugin-nextjs"
 directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
 <<<<<<< HEAD
   from = "/api/*"
   to = "/.netlify/functions/:splat"
@@ -43,6 +54,8 @@ status = 200
 
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
 from = "/api/*"
 to = "/.netlify/functions/:splat"
 status = 200
@@ -74,9 +87,12 @@ X-Permitted-Cross-Domain-Policies = "none"
 Origin-Agent-Cluster = "?1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
 # SPA fallback for client-side routing
 [[redirects]]
 from = "/*"
@@ -85,12 +101,15 @@ status = 200
 
 # Static redirects for specific routes
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Static redirects for exported site
 ursor/automate-test-improve-and-merge-code-646c
 # Static redirects for exported site
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -128,6 +147,7 @@ status = 301
 
 [[redirects]]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
@@ -151,3 +171,8 @@ from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+>>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb

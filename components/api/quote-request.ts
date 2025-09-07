@@ -14,6 +14,7 @@ const supabaseKey =;
 const openaiApiKey = process.env.OPENAI_API_KEY;
   process && process.env.SUPABASE_SERVICE_ROLE_KEY ||;
   process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+<<<<<<< HEAD
 const supabase =;
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;const openaiApiKey = process.env.OPENAI_API_KEY;
 const openai  = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;export default async function handler() {export default async function handler() {}
@@ -23,6 +24,39 @@ const openai  = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;expor
           ? tagsLine;
               .split(",").map((t) => t && t.trim()).filter(Boolean): [];
       }export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' })const { service, description, timeline, budgetRange, email } = req.body || {}if (!service || !description || !email) {return res.status(400).json({ message: 'Missing required fields' })}
+=======
+const supabase =
+  supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+export default async function handler(
+  req: NextApiRequest;
+    res: NextApiResponse
+) {
+  export default async function handler(
+    req: NextApiRequest
+    res: NextApiResponse
+  ) {
+    }
+    try {
+      let aiSummary: string | null = null;
+      let aiTags: string[] = [];
+      if (openai) {
+        )
+          .replace(/tags?:/i, "")
+          .trim();
+        aiTags = tagsLine
+          ? tagsLine
+              .split(",")
+              .map((t) => t && t.trim())
+              .filter(Boolean)
+          : [];
+      }
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
+  const { service, description, timeline, budgetRange, email } = req.body || {};
+  if (!service || !description || !email) {
+    return res.status(400).json({ message: 'Missing required fields' });
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_client   } from '@supabase / supabase - js';
@@ -78,6 +112,7 @@ if (throw error) {$2;
         saved = data;
       }
       return res;
+<<<<<<< HEAD
         .status (200).json ({ ok: true, summary: ai_summary, tags: ai_tags, id: saved?.id })} catch (e: any) {console.error ("quote - request error", e)return res.status (500).json ({ message: "Server error" })}
     return res.status (500).json ({ message: "Server error" })}
 }if (req.method !== 'POST')return res.status(405).json({ message: 'Method not allowed' })const { service, description, timeline, budgetRange, email } = req.body || {}if (!service || !description || !email) {return res.status(400).json({ message: 'Missing required fields' })}try {let aiSummary: string | null = null;
@@ -95,3 +130,21 @@ if (throw error) {$2;
     }return res;
       .status(200).json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id })} catch (e: any) {console.error('quote-request error', e)return res.status(500).json({ message: 'Server error' })}}
 }
+=======
+        .status (200);
+        .json ({ ok: true, summary: ai_summary, tags: ai_tags, id: saved?.id });
+    } catch (e: any) {
+      console.error ("quote - request error", e);
+      return res.status (500).json ({ message: "Server error" });
+    }
+    return res.status (500).json ({ message: "Server error" });
+  }
+}
+    return res
+      .status(200)
+      .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
+  } catch (e: any) {
+    console.error('quote-request error', e);
+    return res.status(500).json({ message: 'Server error' });
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

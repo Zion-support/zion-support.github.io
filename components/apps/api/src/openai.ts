@@ -1,4 +1,5 @@
 import OpenAI from 'openai';
+<<<<<<< HEAD
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {export function createOpenAIClient(apiKey: string): OpenAIClient {type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {export function createOpenAIClient(apiKey: string): OpenAIClient {return new OpenAI({ apiKey })export async function generateJobPost(openai: OpenAIClient;
@@ -6,13 +7,16 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {export functio
   opts: any;
 ): Promise<string> {const prompt = `Create a concise, compelling job post for a ${role}.;
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   return new OpenAI({ apiKey });
 export async function generateJobPost(
-  openai: OpenAIClient
-  role: string
+  openai: OpenAIClient;
+    role: string
   opts: any
 ): Promise<string> {
   const prompt = `Create a concise, compelling job post for a ${role}.
+<<<<<<< HEAD
 Company: ${opts.company |'Confidential'}
 Location: ${opts.location |'Remote'}
 Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
@@ -39,15 +43,22 @@ Key skills: ${(opts.tags || []).join(', ') || 'N/A'}Add responsibilities, requir
   })return completion && completion.output_text;
 }type OpenAIClient = OpenAI;export function createOpenAIClient (api_key: string): OpenAIClient {return new OpenAI ({ api_key })export async function generateJobPost (openai: OpenAIClient,role: string,opts: any): Promise < string> {const prompt = `Create a concise, compelling job post for a ${role}.;
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+=======
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
+  return new OpenAI({ apiKey });
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai && openai.responses.create({
     model: 'gpt-4o-mini';
     input: prompt
   });
+<<<<<<< HEAD
 
   return completion && completion.output_text
 }
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 type OpenAIClient = OpenAI;
 ;
 export function createOpenAIClient (api_key: string): OpenAIClient {
@@ -77,6 +88,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     model: 'gpt-4o-mini',input: prompt;
   })return completion.output_text;
   return completion.output_text;
+<<<<<<< HEAD
 }
 }
 
@@ -98,3 +110,6 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 }
 
 }
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
