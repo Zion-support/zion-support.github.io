@@ -1,58 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Service | Zion Tech Group',
-  description: 'Professional services for your business needs.',
-  keywords: 'services, business, technology',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Service | Zion Tech Group',
-    description: 'Professional services for your business needs.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Zion Tech Group',
-  },
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Service
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Professional services for your business needs
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Coming Soon
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            This service page is under development. Please contact us for more information.
-          </p>
-          <a
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
-          >
-            Contact Us
-          </a>
-        </div>
-      </section>
-    </div>
-  );
-}
-=======
-export const metadata = { 
+export const metadata: Metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, SRE, cybersecurity, and infrastructure management. Enterprise-grade solutions for modern businesses.'
 };
@@ -65,8 +14,8 @@ export default function ITServicesPage() {
           IT Services & Solutions
         </h1>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
-          Cloud, DevOps, SRE, and security services engineered for uptime, efficiency, and scalability. 
-          We help modern businesses build and maintain robust, secure, and cost-effective IT infrastructure.
+          Comprehensive IT services including cloud migration, DevOps, SRE, cybersecurity, 
+          and infrastructure management. Enterprise-grade solutions for modern businesses.
         </p>
       </section>
 
@@ -75,46 +24,46 @@ export default function ITServicesPage() {
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our IT Solutions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ITSolution
-            title="Cloud Migration & Strategy"
-            description="Complete cloud migration services with cost optimization and performance tuning"
-            features={["AWS/GCP/Azure migration", "Cost optimization", "Performance tuning", "Disaster recovery", "Multi-cloud strategy"]}
-            pricing="$15k-100k"
+            title="Cloud Migration"
+            description="Seamless migration to AWS, Azure, or GCP with zero downtime and optimized performance"
+            features={["Infrastructure assessment", "Migration planning", "Data migration", "Security compliance", "Cost optimization"]}
+            pricing="$10k-100k"
             icon="☁️"
           />
           <ITSolution
-            title="DevOps & CI/CD"
-            description="Modern DevOps practices with automated pipelines and infrastructure as code"
-            features={["CI/CD pipeline setup", "Infrastructure as Code", "Container orchestration", "Automated testing", "Deployment automation"]}
-            pricing="$10k-75k"
-            icon="🔄"
+            title="DevOps & SRE"
+            description="Complete DevOps implementation with CI/CD pipelines, monitoring, and site reliability engineering"
+            features={["CI/CD pipelines", "Infrastructure as Code", "Monitoring & alerting", "Incident response", "Performance optimization"]}
+            pricing="$15k-150k"
+            icon="⚙️"
           />
           <ITSolution
-            title="Site Reliability Engineering"
-            description="SRE services to ensure high availability, performance, and reliability of your systems"
-            features={["Monitoring & alerting", "Incident response", "Capacity planning", "Chaos engineering", "SLO/SLI management"]}
-            pricing="$20k-120k"
-            icon="📊"
-          />
-          <ITSolution
-            title="Cybersecurity & Compliance"
-            description="Comprehensive security services including penetration testing and compliance management"
-            features={["Security assessment", "Penetration testing", "Compliance audit", "Zero Trust implementation", "Security monitoring"]}
-            pricing="$25k-150k"
+            title="Cybersecurity"
+            description="Comprehensive security solutions including threat detection, vulnerability assessment, and compliance"
+            features={["Security audits", "Penetration testing", "Compliance management", "Incident response", "Security training"]}
+            pricing="$20k-200k"
             icon="🔒"
           />
           <ITSolution
             title="Infrastructure Management"
-            description="24/7 infrastructure monitoring, maintenance, and optimization services"
-            features={["24/7 monitoring", "Proactive maintenance", "Performance optimization", "Capacity management", "Incident response"]}
-            pricing="$5k-50k/mo"
-            icon="⚙️"
+            description="24/7 infrastructure monitoring, maintenance, and optimization for maximum uptime"
+            features={["Server management", "Database administration", "Backup & recovery", "Performance tuning", "Capacity planning"]}
+            pricing="$5k-50k/month"
+            icon="🖥️"
           />
           <ITSolution
-            title="Data & Analytics Platform"
-            description="Modern data platforms with real-time processing and advanced analytics capabilities"
-            features={["Data pipeline design", "Real-time processing", "Data warehousing", "Analytics dashboards", "ML/AI integration"]}
-            pricing="$30k-200k"
-            icon="📈"
+            title="Network Solutions"
+            description="Enterprise networking including SD-WAN, VPN, and network security implementation"
+            features={["Network design", "SD-WAN deployment", "VPN setup", "Firewall configuration", "Network monitoring"]}
+            pricing="$8k-80k"
+            icon="🌐"
+          />
+          <ITSolution
+            title="IT Consulting"
+            description="Strategic IT consulting to align technology with business objectives and digital transformation"
+            features={["Technology assessment", "Digital strategy", "Vendor selection", "Project management", "Change management"]}
+            pricing="$150-300/hour"
+            icon="💡"
           />
         </div>
       </section>
@@ -126,62 +75,62 @@ export default function ITServicesPage() {
           <ITServiceItem 
             title="Cloud & Infrastructure" 
             details={[
-              "AWS, GCP, Azure cloud services",
-              "Kubernetes & container orchestration",
-              "Serverless architecture design",
+              "AWS, Azure, and GCP migration",
+              "Container orchestration (Kubernetes)",
               "Infrastructure as Code (Terraform)",
-              "Multi-cloud & hybrid cloud solutions",
-              "Disaster recovery & backup strategies"
+              "Disaster recovery planning",
+              "Cost optimization strategies",
+              "Multi-cloud architecture"
             ]} 
           />
           <ITServiceItem 
-            title="DevOps & SRE" 
+            title="DevOps & Automation" 
             details={[
               "CI/CD pipeline implementation",
-              "Observability & monitoring setup",
-              "Autoscaling & load balancing",
-              "Chaos engineering & testing",
-              "Incident management processes",
-              "Performance optimization"
+              "GitOps workflows",
+              "Infrastructure automation",
+              "Configuration management",
+              "Release management",
+              "Site reliability engineering"
             ]} 
           />
           <ITServiceItem 
             title="Security & Compliance" 
             details={[
-              "Security hardening & assessment",
-              "Zero Trust architecture implementation",
+              "Security architecture design",
               "Vulnerability management",
-              "Compliance (SOC2, GDPR, HIPAA)",
-              "Security monitoring & SIEM",
-              "Penetration testing & audits"
+              "Compliance frameworks (SOC2, ISO27001)",
+              "Identity and access management",
+              "Security monitoring and SIEM",
+              "Incident response planning"
             ]} 
           />
         </div>
       </section>
 
-      {/* Industry Solutions */}
+      {/* Technology Stack */}
       <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industry Solutions</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Technology Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <IndustryCard
-            title="Healthcare"
-            description="HIPAA-compliant infrastructure and secure data management"
-            icon="🏥"
+          <TechCard
+            title="Cloud Platforms"
+            description="AWS, Azure, Google Cloud Platform"
+            icon="☁️"
           />
-          <IndustryCard
-            title="Financial Services"
-            description="PCI DSS compliance and high-availability trading systems"
-            icon="🏦"
+          <TechCard
+            title="DevOps Tools"
+            description="Docker, Kubernetes, Jenkins, GitLab"
+            icon="🔧"
           />
-          <IndustryCard
-            title="E-commerce"
-            description="Scalable platforms for high-traffic online stores"
-            icon="🛒"
+          <TechCard
+            title="Monitoring"
+            description="Prometheus, Grafana, ELK Stack"
+            icon="📊"
           />
-          <IndustryCard
-            title="SaaS Platforms"
-            description="Multi-tenant architecture and API management"
-            icon="💻"
+          <TechCard
+            title="Security"
+            description="WAF, SIEM, Vulnerability Scanners"
+            icon="🛡️"
           />
         </div>
       </section>
@@ -192,40 +141,40 @@ export default function ITServicesPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ITPricingPlan 
             name="IT Assessment" 
-            price="$4k–$10k" 
-            duration="2 weeks"
+            price="$5k–$15k" 
+            duration="1–2 weeks"
             features={[
               "Infrastructure audit",
               "Security assessment",
               "Performance analysis",
-              "Cost optimization review",
-              "Strategic roadmap"
+              "Recommendations report",
+              "Implementation roadmap"
             ]}
             popular={false}
           />
           <ITPricingPlan 
-            name="Implementation" 
-            price="$15k–$50k" 
-            duration="4–8 weeks"
+            name="Managed IT Services" 
+            price="$2k–$10k/month" 
+            duration="Ongoing"
             features={[
-              "Infrastructure setup",
-              "CI/CD pipeline implementation",
-              "Monitoring & alerting",
-              "Security hardening",
-              "3 months support"
+              "24/7 monitoring",
+              "Proactive maintenance",
+              "Security updates",
+              "Backup management",
+              "Help desk support"
             ]}
             popular={true}
           />
           <ITPricingPlan 
-            name="Managed Services" 
-            price="$5k+/mo" 
-            duration="Ongoing"
+            name="Enterprise IT" 
+            price="Custom" 
+            duration="Project-based"
             features={[
-              "24/7 monitoring & support",
-              "SLO management",
-              "Cost optimization",
-              "Security updates",
-              "Monthly reporting"
+              "Custom solutions",
+              "Dedicated team",
+              "SLA guarantees",
+              "Advanced security",
+              "Compliance support"
             ]}
             popular={false}
           />
@@ -282,7 +231,7 @@ function ITServiceItem({ title, details }: {
   );
 }
 
-function IndustryCard({ title, description, icon }: {
+function TechCard({ title, description, icon }: {
   title: string;
   description: string;
   icon: string;
@@ -341,11 +290,11 @@ function ContactCTA() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center mt-12">
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Modernize Your IT Infrastructure?
+        Ready to Transform Your IT Infrastructure?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your IT needs and create a robust, secure, and scalable solution. 
-        Our team has managed infrastructure for 200+ companies across various industries.
+        Let's discuss your IT needs and create a robust, scalable solution. 
+        Our team has delivered 200+ successful IT projects across various industries.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
@@ -367,4 +316,3 @@ function ContactCTA() {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
