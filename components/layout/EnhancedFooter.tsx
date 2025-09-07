@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 ursor/automate-test-fix-improve-and-merge-code-48f3;
@@ -166,6 +167,17 @@ return (    <footer className='bg-gray-900 text-white' />
           <div className='flex flex-col md: flex-row justify-between items-center' />
             <p className='text-gray-300 text-sm' />
               &copy 2024 Zion Tech Group. All rights reserved.
+=======
+const EnhancedFooter = () => {
+  return (
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">About Us</h3>
+            <p className="text-gray-300">
+              Leading technology solutions for modern businesses.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-e405
             </p>
             <div className='flex space-x-6 mt-4 md:mt-0' />
               <Link href='/privacy' className='text-gray-300 hover:text-white text-sm transition-colors' />

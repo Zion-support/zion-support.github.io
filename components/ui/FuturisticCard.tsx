@@ -1,6 +1,13 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
+<<<<<<< HEAD
 type Props = {import React from './react';
+=======
+interface FuturisticCardProps {
+  children: ReactNode;
+  className?: string;
+}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-e405
 
 type Props = {title: string,description: string;
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle  } from 'lucide-react';
 ursor/automate-test-improve-and-merge-code-646c;
@@ -56,6 +57,9 @@ interface Notification  {id: string;}
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 export interface Notification {
+=======
+interface Notification {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-e405
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
   title?: string;
@@ -70,6 +74,7 @@ interface NotificationSystemProps {
 }
 }
 
+<<<<<<< HEAD
 const NotificationSystem: React.FC<NotificationSystemProps /> = ({ notifications,
   onDismiss}
   position = 'top-right'}
@@ -114,6 +119,14 @@ const getNotificationStyles = (
    ;
   const baseStyles = 'border-l-4';
     
+=======
+const NotificationSystem = ({ 
+  notifications, 
+  onDismiss, 
+  className = '' 
+}) => {
+  const getNotificationStyles = (type: Notification['type']) => {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-e405
     switch (type) {
       case 'success':) => {
   return $3;}

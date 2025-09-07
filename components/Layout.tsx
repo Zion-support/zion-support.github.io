@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React, { ReactNode } from 'react';
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-e405
 import Head from 'next/head';
+import { ReactNode } from 'react';
 
 interface LayoutProps {
   children: ReactNode;
@@ -13,6 +17,7 @@ interface LayoutProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Layout({ children, title, description }: LayoutProps) {
   return (
     <>
@@ -21,6 +26,9 @@ export default function Layout({ children, title, description }: LayoutProps) {
         <meta name="description" content={description || 'Leading provider of AI-powered solutions and digital transformation services.'} />
 =======
 export default function Layout({ 
+=======
+const Layout = ({ 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-e405
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",
   description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
