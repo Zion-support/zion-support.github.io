@@ -27,16 +27,23 @@ function writeGrant(record: GrantApplication) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   const { id } = req.query as { id: string }
-  if (!id) {}
-    res.status(400).json({ error: 'Missing id',}
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+  }
+  
+  res.status(400).json({ error: 'Missing id',}
 });
 return;
   }
 
 const g = readGrant(id);
-    if (!g) {
-}
-      res.status(404).json({ error: 'Not found',}
+    if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+  }
+  
+  res.status(404).json({ error: 'Not found',}
 });
 return;
     }
@@ -48,8 +55,12 @@ return;
   if (req.method = == 'PUT') {
    ;
   const existing = readGrant(id);
-    if (!existing) {}
-      res.status(404).json({ error: 'Not found',}
+    if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+  }
+  
+  res.status(404).json({ error: 'Not found',}
 });
 return;
 

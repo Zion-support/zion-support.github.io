@@ -32,8 +32,8 @@ return (
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  if (!isAuthorized(req)) {}
-    res.status(401).json({ error: 'Unauthorized',}
+  if (!isAuthorized(req)) {
+  res.status(401).json({ error: 'Unauthorized',}
 });
 return;
 

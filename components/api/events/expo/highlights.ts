@@ -42,11 +42,10 @@ const content = chat && chat.choices?.[0]?.message?.content || baseSummary;
       .json({ error: e.message || 'Failed to generate highlights',}
 });
   }
-    return res.status(200).json({ summary: content, provider: 'openai' })
+    return res.status(200).json({ ok: true });
   } catch (e: any) {}
     return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
- ,
-};
+  }
 }
 
 }

@@ -39,14 +39,12 @@ const files = null;
     try {
      ;
   const payload = req.body as CreateGrantPayload;
-if (
-        !payload ||
-        !payload.projectName ||
-        !payload.teamInfo ||
-        !payload.proposalSummary ||
-        !payload.timeline;
-      ) {}
-        res.status(400).json({ error: 'Missing required fields',}
+if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+  }
+  
+  res.status(400).json({ error: 'Missing required fields',}
 });
         return;
       }
@@ -84,8 +82,8 @@ id,
         'utf8'
       );
       res.status(201).json({ id, record });
-    } catch (e: any) {}
-      res.status(500).json({ error: e?.message |'Failed to create grant',}
+    } catch (e: any) {
+  res.status(500).json({ error: e?.message |'Failed to create grant',}
 });
     }
 

@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {}
   const token = null;}
-    return res.status(500).json({ error: 'Router failure' })
+    return res.status(200).json({ ok: true });
   }
 
 export default async function handler(

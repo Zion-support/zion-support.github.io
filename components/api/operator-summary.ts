@@ -43,8 +43,8 @@ const instances =  ;
 
     res.status(200).json({ summary, timestamp: new Date().toISOString(),}
 });
-  } catch (e) {}
-    res.status (200).json ({ summary: [], error: 'Failed to compute summary',}
+  } catch (e) {
+  res.status (200).json ({ summary: [], error: 'Failed to compute summary',}
 });
   }
 

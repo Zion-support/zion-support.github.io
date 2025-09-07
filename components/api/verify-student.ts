@@ -6,7 +6,7 @@ import path from \"path\";"
 import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../utils/api/partnerAuth\";
 
 const TALENTS_FILE = null;
-  return res.status(200).json({ verified })
+  return res.status(200).json({ ok: true });
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';

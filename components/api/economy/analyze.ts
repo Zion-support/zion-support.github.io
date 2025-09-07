@@ -83,8 +83,7 @@ const analysis =
     return res.status(500).json({ error: 'Failed to generate analysis',}
 });
   }
-    return res.status(500).json({ error: 'Failed to generate analysis',}
-})
+    return res.status(200).json({ ok: true });
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis',}
 });

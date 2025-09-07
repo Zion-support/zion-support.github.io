@@ -68,9 +68,7 @@ const lower = content.toLowerCase()let level: TrustScoreBreakdown['riskLevel'] =
   return {}
       riskLevel: 'Moderate Trust'}
       reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`
-   ,
-}
- ;
+    }
 }
 
 export default async function handler(
@@ -162,8 +160,7 @@ try {}
       return res && res.status(200).json(result)
     } catch (e: any) {}
       return res && res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
-   ,
-};
+    }
   }
 
   if (req && req.method = == 'POST') {

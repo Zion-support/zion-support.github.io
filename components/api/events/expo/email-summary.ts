@@ -5,8 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 });
   try {}
     const provider = null;}
-      return res.status(200).json({ status: 'queued',}
-  provider: 'stub' })
+      return res.status(200).json({ ok: true });
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;

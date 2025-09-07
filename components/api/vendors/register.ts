@@ -120,8 +120,7 @@ const vendor = registerVendor({
     res && res.status(500).json({ error: e && e.message,}
 });
   }    res && res.status(500).json({ error: e && e.message })
- ,
-};
+  }
 }
 
     verification_docs,
@@ -156,8 +155,8 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],c
       case_studies: Array.is_array (case_studies) ? case_studies : [,
 });
     res.status (201).json ({ vendor });
-  } catch (e: any) {}
-    res.status (500).json ({ error: e.message,}
+  } catch (e: any) {
+  res.status (500).json ({ error: e.message,}
 });
   }
 verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
@@ -165,8 +164,8 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
    ,
 });
     res.status (201).json ({ vendor });
-  } catch (e: any) {}
-    res.status (500).json ({ error: e.message,}
+  } catch (e: any) {
+  res.status (500).json ({ error: e.message,}
 });
   }    res.status (500).json ({ error: e.message,}
 });

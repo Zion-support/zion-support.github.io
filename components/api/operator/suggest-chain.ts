@@ -190,9 +190,7 @@ const ranked = candidates.map (key => ({ key: k, chain: (CHAINS as any)[k],}
 const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k],}
 }))res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1) },
 }.json({ recommendation: ranked[0], alternatives: ranked.slice(1),}
-})res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) },
-}
-;
+})res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) } }
   const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k],}
 }));
   res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1),}

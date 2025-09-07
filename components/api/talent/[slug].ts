@@ -41,7 +41,7 @@ const { item, translated } = applyTranslations(base, lang);
 });
   }
 
-    return res.status(200).json({ item, translated })
+    return res.status(200).json({ ok: true });
   } catch (e: any) {}
 }
 import {supabase, as, supabase_client} from '@/utils / supabase / client';

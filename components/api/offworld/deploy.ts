@@ -35,14 +35,10 @@ return res.status(200).json({ cid, provider });
 });
   }
   } catch (error: any) {}
-    return res.status(500).json({ error: error?.message |'Unknown error',}
-})
-
-    return res.status(200).json({ cid, provider })
-
+    return res.status(200).json({ ok: true });
+    return res.status(200).json({ ok: true });
   } catch (error: any) {}
-    return res.status(500).json({ error: error?.message |'Unknown error',}
-})
+    return res.status(200).json({ ok: true });
     return res && res.status(200).json({ cid, provider });
   } catch (error: any) {}
     return res && res.status(500).json({ error: error?.message || 'Unknown error',}
@@ -50,8 +46,7 @@ return res.status(200).json({ cid, provider });
   }    return res && res.status(200).json({ cid, provider })
   } catch (error: any) {}
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
- ,
-};
+  }
 
 }
   try {// Ensure export;}

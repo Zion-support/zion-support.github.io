@@ -88,8 +88,7 @@ const shortUrl: ShortUrl = {
 }`,
         createdAt: new Date().toISOString(),
         clicks: 0,
-        isActive: true,
-      };
+        isActive: true }
 
       urlStorage.set(shortCode, shortUrl);
       res.status(201).json({
@@ -177,8 +176,7 @@ return {
     redirect: {
       destination: shortUrl.originalUrl,}
 permanent: false,}
-    },
-  };
+    } }
       permanent: false;
     }
 },

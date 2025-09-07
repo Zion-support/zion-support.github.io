@@ -34,7 +34,7 @@ return res.status(200).json({ cid, provider });
     return res.status(500).json({ error: e.message,}
 });
   }
-      return res.status(200).json({ ok })
+      return res.status(200).json({ ok: true });
     }
     return res && res.status(400).json({ error: 'Unsupported action' })
   } catch (e: any) {}

@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const EPISODES_PATH = null;
-  return res.status(200).json({ episode })
+  return res.status(200).json({ ok: true });
 }
 
 const EPISODES_PATH = path.join(

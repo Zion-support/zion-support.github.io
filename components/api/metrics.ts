@@ -132,8 +132,7 @@ history: {
       dao: dao.map(m => m.trend || generateSeries(14, m.value)),
       token: token.map(m => m.trend || generateSeries(14, m.value)),}
       multiverse: multiverse.map(m => m.trend || generateSeries(14, m.value)),}
-    },
-  };
+    } }
 
   if (req.query.compare = == 'quarter') {
    ;

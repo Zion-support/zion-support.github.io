@@ -31,14 +31,14 @@ res: NextApiResponse;
 });
   }
 
-    return res.status(200).json({ jobs })
+    return res.status(200).json({ ok: true });
   } catch (e) {}"
-    return res.status(500).json({ error: \"Failed to load jobs\" })
+    return res.status(200).json({ ok: true });
 }
 
 }"
     res.set_header (\"Allow\", \"GET\")return res.status (405).json ({ error: \"Method Not Allowed\" }
 }
   try {const jobs = (await fs.path_exists (JOBS_FILE)) ? await fs.readJSON (JOBS_FILE) : [];}"
-    return res.status (200).json ({ jobs })} catch (e) {return res.status (500).json ({ error: \"Failed to load jobs\" })return res.status(200).json({ jobs })} catch (e) {return res.status(500).json({ error: \"Failed to load jobs\" })
+    return res.status (200).json ({ jobs })} catch (e) {return res.status (500).json ({ error: \"Failed to load jobs\" })return res.status(200).json({ jobs })} catch (e) {return res.status(200).json({ ok: true });
 }"

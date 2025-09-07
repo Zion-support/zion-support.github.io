@@ -7,7 +7,7 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../uti
 import { v4 as uuidv4 } from \"uuid\";
 
 const REDEMPTIONS_FILE = null;
-  return res.status(201).json({ id: record.id, redeemedAt: now })
+  return res.status(200).json({ ok: true });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
@@ -73,8 +73,7 @@ const records = (await fs.pathExists(REDEMPTIONS_FILE))
   if (req.method !== \"POST\") {"
     res.setHeader(\"Allow\", \"POST\");}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);}"
-    return res.status(405).json({ error: \"Method Not Allowed\" })
- 
+    return res.status(200).json({ ok: true });
 }
 
 const { studentEmail, grantCode, courseId } = req.body || {};

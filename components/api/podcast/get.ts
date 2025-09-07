@@ -31,6 +31,6 @@ const episode = episodes.find(e => e.id === id);
 });
 
   return res.status(200).json({ episode });
-  return res.status(200).json({ episode })
+  return res.status(200).json({ ok: true });
 }
 

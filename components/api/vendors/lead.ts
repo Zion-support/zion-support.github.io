@@ -19,14 +19,14 @@ const vendor = null;
     const item = addPipelineItem(vendorId, title);}
 }
 res.status(201).json({ item });
-  } catch (e: any) {}
-    res.status(500).json({ error: e.message,}
+  } catch (e: any) {
+  res.status(500).json({ error: e.message,}
 });
   }
-  } catch (e: any) {}
-    res.status(500).json({ error: e.message })
-  }  } catch (e: any) {}
-    res.status(500).json({ error: e.message })
+  } catch (e: any) {
+  res.status(500).json({ error: e.message })
+  }  } catch (e: any) {
+  res.status(500).json({ error: e.message })
   },
 }
 

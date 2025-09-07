@@ -23,8 +23,7 @@ return res.status(200).json({ ok: true,}
   }
   } catch (e) {}
     return res && res.status(500).json({ error: 'Unexpected error' })
- ,
-};
+  }
 }
 }
 }
