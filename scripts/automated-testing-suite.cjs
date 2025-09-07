@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 #!/usr/bin/env node
@@ -14,12 +7,8 @@ const fs = require('fs');
 console.log('🧪 Automated Testing Suite');
 console.log('=====');
 =======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 
 
@@ -28,14 +17,11 @@ console.log('=====');
 const { execSync } = require('child_process');
 const fs = require('fs');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 console.log('🧪 Automated Testing Suite');
 console.log('==========================');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 async function runTests() {
   const tests = [
     { name: 'Unit Tests', command: 'npm run test:unit' },
@@ -45,18 +31,12 @@ async function runTests() {
     { name: 'Lint Tests', command: 'npm run lint' },
     { name: 'Type Check', command: 'npm run type-check' }
   ];
-<<<<<<< HEAD
   const results = [];
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
   const results = [];
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   for (const test of tests) {
     try {
       console.log(`\n🔍 Running ${test.name}...`);
@@ -68,10 +48,6 @@ async function runTests() {
       results.push({ name: test.name, status: 'failed', error: error.message });
     }
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Generate report
   const report = {
     timestamp: new Date().toISOString(),
@@ -82,72 +58,42 @@ async function runTests() {
       failed: results.filter(r => r.status === 'failed').length
     }
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 
 =======
 console.log('🧪 Automated Testing Suite');
 console.log('
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   console.log('\n📊 Test Summary:');
   console.log(`Total: ${report.summary.total}`);`;
   console.log(`Passed: ${report.summary.passed}`);`;
   console.log(`Failed: ${report.summary.failed}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
   return report;
 }
 
-<<<<<<< HEAD
-=======
-runTests().catch(console.error);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   
   return report;
 }
-<<<<<<< HEAD
-=======
-
-  return report;
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 runTests().catch(console.error);
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 =======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
-<<<<<<< HEAD
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -530,17 +476,9 @@ if (require.main === module) {
 }
 
 module.exports = AutomatedTestingSuite;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

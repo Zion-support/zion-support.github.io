@@ -571,44 +571,6 @@ export default function MicroSaasPage() {
     }
   ];
 
-<<<<<<< HEAD
-=======
-  const categories = [...new Set(microSaasServices.map(service => service.category))];
-
-  const competitiveAdvantages = [
-    {
-      icon: '⚡',
-      title: 'Lightning Fast Setup',
-      description: 'Get started in minutes, not weeks. Our services are designed for immediate value delivery with intuitive interfaces and automated onboarding.'
-    },
-    {
-      icon: '💰',
-      title: 'Transparent Pricing',
-      description: 'No hidden fees, no enterprise sales calls. Simple monthly pricing that scales with your business needs and growth.'
-    },
-    {
-      icon: '🔒',
-      title: 'Enterprise Security',
-      description: 'Bank-level security, SOC 2 compliance, and 99.9% uptime guarantee for all services. Built for production use.'
-    },
-    {
-      icon: '🎯',
-      title: 'Focused Solutions',
-      description: 'Each service solves a specific business problem without the complexity of enterprise platforms. Do one thing exceptionally well.'
-    },
-    {
-      icon: '📱',
-      title: 'Mobile First',
-      description: 'All services are optimized for mobile devices, ensuring your team can work efficiently from anywhere, anytime.'
-    },
-    {
-      icon: '🔄',
-      title: 'Seamless Integration',
-      description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
-    }
-  ];
-
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-website-improvements-33cc
   return (
     <>
       <Head>

@@ -1,26 +1,11 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
 
 =======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 =======
 
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -30,9 +15,6 @@ class EnhancedMasterAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     this.results = {};
   }
     const timestamp = new Date().toISOString();
@@ -49,14 +31,7 @@ class EnhancedMasterAutomationOrchestrator {
 const orchestrator = new EnhancedMasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
 =======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.results = {
 
       "testSuite": { success: false, duration: 0, errors: [] }"
@@ -64,21 +39,15 @@ orchestrator.run().catch(console.error);
     this.logFile = `enhanced-automation-log-${Date.now()}.txt`;
 "
   log(message, type = 'INFO') {
-<<<<<<< HEAD
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type}] ${message}`;
-<<<<<<< HEAD
     
     
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Write to log file
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   async runScript(scriptName, scriptPath, args = []) {
     const startTime = Date.now();`;
@@ -102,8 +71,6 @@ orchestrator.run().catch(console.error);
 
   async runDependencyFix() {
     this.log('\n🔧 PHASE 1: DEPENDENCY FIXING');
-<<<<<<< HEAD
-<<<<<<< HEAD
     this.log('=============================');
     
     const result = await this.runScript('Dependency Fixer', 'automation/dependency-fixer.cjs');
@@ -280,34 +247,10 @@ if (require.main === module) {
   const orchestrator = new EnhancedMasterAutomationOrchestrator();
   orchestrator.run().catch(console.error);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-<<<<<<< HEAD
 =======
-    this.results = {};
-  }
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type}] ${message}`;
-    console.log(logMessage);
-  }
-
-  async run() {
-    this.log('🚀 Running enhanced automation orchestrator...');
-    this.log('✅ Enhanced automation orchestrator completed');
-  }
-}
-
-const orchestrator = new EnhancedMasterAutomationOrchestrator();
-orchestrator.run().catch(console.error);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     this.log('
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 

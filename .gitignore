@@ -1,3 +1,13 @@
+node_modules/
+.next/
+dist/
+out/
+coverage/
+*.log
+*.tmp
+*.swp
+.DS_Store
+**/*.orig
 # Dependencies
 node_modules/
 npm-debug.log*

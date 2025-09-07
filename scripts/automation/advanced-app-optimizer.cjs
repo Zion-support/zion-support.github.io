@@ -1,33 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Advanced App Optimizer Automation;
  * Advanced optimization for Next.js applications;
  */
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-=======
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class AdvancedAppOptimizer {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -42,11 +26,7 @@ class AdvancedAppOptimizer {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         console.log(message)};
     optimizeNextConfig() {}
         this.log('Optimizing Next.js configuration...');
@@ -54,14 +34,12 @@ class AdvancedAppOptimizer {}
         let nextConfig = ;';';
 =======
         console.log(message)};
-<<<<<<< HEAD
     optimizeNextConfig() {}
         this.log('Optimizing Next.js configuration...');
         
         const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
         let nextConfig = ;';';
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         if () {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
         const optimizedConfig = "/** @type {import('next').NextConfig} */
@@ -70,10 +48,6 @@ const nextConfig = {}
   "compress": true,
   "poweredByHeader": false,
   "generateEtags": false,
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Image optimization;
   "images": {}
     domains: ['ziontechgroup.com'],
@@ -89,10 +63,6 @@ const nextConfig = {}
   "compress": true,
   "poweredByHeader": false,
   "generateEtags": false,
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Image optimization;
   "images": {}
     domains: ['ziontechgroup.com'],
@@ -100,10 +70,6 @@ const nextConfig = {}
     "minimumCacheTTL": 60,
     "dangerouslyAllowSVG": true,
     "contentSecurityPolicy": "default-src 'sel}f;'; script-src 'none'; sandbox;"},
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Bundle optimization;
   "webpack": (config, { dev, isServer }) => {}
 =======
@@ -111,25 +77,15 @@ const nextConfig = {}
 
   // Bundle optimization;"
   "webpack": (config, { dev, isServer }) => {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Production optimizations;
     if ( {})
       config.optimization.splitChunks = {}"
 
     return config}},
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Experimental features for performance;
   "experimental": {}
     optimizeCss: true,
     "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons']},
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Headers for security and performance;
   async headers() {}
     return [;]
@@ -145,10 +101,6 @@ const nextConfig = {}
           {}
             "key": 'Referrer-Policy',
             "value": 'origin-when-cross-origin'}]}]},
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Redirects and rewrites;
   async redirects() {}
     return [;]
@@ -156,7 +108,6 @@ const nextConfig = {}
         "source": '/home',
         "destination": '/',
         "permanent": true}]}};
-<<<<<<< HEAD
 module.exports = nextConfig;
 ";
         fs.writeFileSync(nextConfigPath, optimizedConfig);
@@ -166,19 +117,12 @@ module.exports = nextConfig;
         this.log('Optimizing Tailwind CSS configuration...');
         const tailwindConfigPath = path.join(this.projectRoot, 'tailwind.config.js';);
         let tailwindConfig = ;';';
-=======
-=======
-  // Experimental features for performance;"
-  "experimental": {}"
-    optimizeCss: true,"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         "permanent": true}]}};"
 module.exports = nextConfig;"
 ";"
         fs.writeFileSync(nextConfigPath, optimizedConfig);"
         this.log('Next.js configuration optimized');
-<<<<<<< HEAD
         
         return { "status": 'success', "message": 'Next.js config optimized' }};
     optimizeTailwindConfig() {}
@@ -187,7 +131,6 @@ module.exports = nextConfig;"
         const tailwindConfigPath = path.join(this.projectRoot, 'tailwind.config.js';);
         let tailwindConfig = ;';';
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         if () {}
             tailwindConfig = fs.readFileSync(tailwindConfigPath, 'utf8')};
         const optimizedConfig = "/** @type {import('tailwindcss').Config} */
@@ -296,22 +239,11 @@ module.exports = {}
         'animate-bounce-subtle']}}};
 };
 ";
-<<<<<<< HEAD
         fs.writeFileSync(tailwindConfigPath, optimizedConfig);
         this.log('Tailwind CSS configuration optimized');
         return { "status": 'success', "message": 'Tailwind config optimized' }};
     createPerformanceMonitoring() {}
         this.log('Creating performance monitoring utilities...');
-=======
-
-        fs.writeFileSync(tailwindConfigPath, optimizedConfig);
-        this.log('Tailwind CSS configuration optimized');
-        
-        return { "status": 'success', "message": 'Tailwind config optimized' }};
-    createPerformanceMonitoring() {}
-        this.log('Creating performance monitoring utilities...');
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const utilsDir = path.join(this.projectRoot, 'utils';);
         if () {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
@@ -320,26 +252,9 @@ module.exports = {}
  * Performance Monitoring Utility;
  * Tracks and reports performance metrics;
  */
-<<<<<<< HEAD
-=======
-=======
 
-  "theme": {}"
-    extend: {}
-      colors: {}
-        primary: {}"
-
-            fs.mkdirSync(utilsDir, { "recursive": true })};"
-        // Performance monitoring utility;"
-        const performanceMonitor = "/**"
- * Performance Monitoring Utility;
- * Tracks and reports performance metrics;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export class PerformanceMonitor {}
     this.metrics = new Map) {}
-<<<<<<< HEAD
     ) {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
         // Performance monitoring utility;
@@ -347,10 +262,6 @@ export class PerformanceMonitor {}
  * Performance Monitoring Utility;
  * Tracks and reports performance metrics;
  */
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export class PerformanceMonitor {}
   constructor() {}
     this.metrics = new Map}(;);
@@ -360,7 +271,6 @@ export class PerformanceMonitor {}
 
     this.metrics = new Map}(;);"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   startTiming(name) {}
     if ( {})`;
       performance.mark(\`\${name}-start\`)};
@@ -370,36 +280,23 @@ export class PerformanceMonitor {}
      {}`;
       performance.mark(\`\${name}-end\`)};`;
       performance.measure(name, \`\${name}-start\`, \`\${name}-end\`);
-<<<<<<< HEAD
-<<<<<<< HEAD
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
       
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
 
       
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
       
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       // Log slow operations;
 
         console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};"
@@ -412,48 +309,28 @@ export class PerformanceMonitor {}
       performance.clearMarks()) {}
       performance.clearMarks()};
       performance.clearMeasures()};
-<<<<<<< HEAD
   };
 };
 export const performanceMonitor = new PerformanceMonitor;(;);
 ";
-<<<<<<< HEAD
         fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);
-=======
-
-        fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 export const performanceMonitor = new PerformanceMonitor;(;);"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Web Vitals utility;
         const webVitals = "/**"
  * Web Vitals Utility;
  * Measures Core Web Vitals;
-<<<<<<< HEAD
  */
-<<<<<<< HEAD
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vital;s;';
-=======
-
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vital;s;';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export function reportWebVitals(metric) {}
   // Send to analytics service;
   if ( {})
     window.gtag('event', metric.name, {})
       "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       "event_label": metric.id,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       "non_interaction": true})};
   // Log to console in development;
   if (process.env.NODE_ENV === 'development') {}
@@ -468,7 +345,6 @@ export function reportWebVitals(metric) {}
 =======
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.log(metric)}};
 export function initWebVitals() {}
     getCLS(reportWebVitals)) {}
@@ -477,50 +353,27 @@ export function initWebVitals() {}
     getFCP(reportWebVitals);
     getLCP(reportWebVitals);
     getTTFB(reportWebVitals)};
-<<<<<<< HEAD
 };
 ";
-<<<<<<< HEAD
         fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
-=======
-
-        fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         this.log('Performance monitoring utilities created');
         return { "status": 'success', "message": 'Performance monitoring created' }};
     optimizeImages() {}
         this.log('Optimizing images...');
-<<<<<<< HEAD
         const publicDir = path.join(this.projectRoot, 'public';);
         const imageFiles = this.findImageFiles(publicDir;);
         let optimizedCount = ;0;
         const optimizations = [];
-=======
-        
-        const publicDir = path.join(this.projectRoot, 'public';);
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const imageFiles = this.findImageFiles(publicDir;);
         let optimizedCount = ;0;
         const optimizations = [];
-<<<<<<< HEAD
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         for (const file of imageFiles) {}
             try {}
                 const stats = fs.statSync(file;);
                 const sizeKB = Math.round(stats.size / 1024;);
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-                
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 if ( { // Only optimize large images;})
                     optimizations.push({})
 
@@ -533,43 +386,23 @@ export function initWebVitals() {}
                     optimizations.push({})"
 
         const files = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
         if () return file) {}
     ) return file}s;
 =======
-        
         if () return file) {}
     ) return file}s;
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-        if () return file) {}
-    ) return file}s;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const items = fs.readdirSync(dir;);
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             if () {}
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
                 files.push(fullPath)};
         return files) {}
         return files}};
     generateOptimizationReport() {}
-<<<<<<< HEAD
         this.log('Generating advanced app optimization report...');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -581,15 +414,8 @@ export function initWebVitals() {}
             },
             "recommendations": this.generateOptimizationRecommendations();
        };
-<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Advanced app optimization report saved to ${this.reportFile}");
-=======
-
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log("Advanced app optimization report saved to ${this.reportFile}");
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         return report};
     generateOptimizationRecommendations() {}
         return [;]
@@ -606,10 +432,6 @@ export function initWebVitals() {}
         ]};
     async run() {}
         this.log('Advanced App Optimizer started');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         try {}
             const report = this.generateOptimizationReport(;);
             this.log('Advanced App Optimizer completed successfully');
@@ -631,29 +453,16 @@ export function initWebVitals() {}
     generateOptimizationRecommendations() {}
         return [;]"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
 // Run the optimizer if this script is executed directly;
     const optimizer = new AdvancedAppOptimizer) {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 module.exports = AdvancedAppOptimizer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-module.exports = AdvancedAppOptimizer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = AdvancedAppOptimizer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

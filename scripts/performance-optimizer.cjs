@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 /**
-<<<<<<< HEAD
  * Performance Optimizer
  * Analyzes and optimizes application performance
  * Provides comprehensive performance monitoring and optimization recommendations
@@ -14,30 +10,12 @@ const { execSync } = require('child_process');
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-=======
- * Performance Optimization Script
- * Optimizes the app for better performance
- */
-const fs = require("fs");
-const path = require("path");
-=======
 
-
-const fs = require('fs');
-const path = require('path');
->>>>>>> main
-
->>>>>>> origin/main
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 
 class PerformanceOptimizer {
   constructor() {
-<<<<<<< HEAD
     this.reportFile = path.join(__dirname, '..', 'performance-optimization-report.json');
     this.optimizations = [];
-=======
-    this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, "performance-reports");
     this.optimizations = [];
     this.metrics = {
@@ -439,9 +417,6 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-=======
-<<<<<<< HEAD
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
   }
 
   log(message) {
@@ -501,23 +476,7 @@ if (require.main === module) {
     }
   }
 
-<<<<<<< HEAD
   async generateReport() {
-=======
-  async run() {
-    this.log("Starting performance optimization...");
-    await this.optimizeImages();
-    await this.optimizeBundle();
-    await this.optimizeDatabase();
-    this.log("Performance optimization completed!", "success");
-  }
-}
-
-const optimizer = new PerformanceOptimizer();
-optimizer.run().catch(console.error);
-=======
-    this.optimizations = [];
->>>>>>> main
 
 
   getAllFiles(dir, extensions) {
@@ -677,7 +636,6 @@ export const config = {
 
   async createPerformanceReport() {
     this.log('📊 Creating performance report...');
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
     const report = {
       timestamp: new Date().toISOString(),
       optimizations: this.optimizations,

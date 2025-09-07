@@ -1,36 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Health Checker;
  * Comprehensive health check for the application;
  */
 const fs = require("child_process");
 const path = require("child_process");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const { execSync } = require("child_process");
 =======
 const { execSync } = require("child_process");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class HealthChecker {}
   constructor() {}
     this.projectRoot = process.cwd();"
@@ -162,28 +146,14 @@ class HealthChecker {}
 if (require.main === module) {}
   const checker = new HealthChecker();
   checker.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 module.exports = HealthChecker;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-module.exports = HealthChecker;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = HealthChecker;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
 #!/usr/bin/env node
@@ -422,16 +392,6 @@ class HealthChecker {
 // Run the health checker
 if (require.main === module) {
   const checker = new HealthChecker();
-<<<<<<< HEAD
   checker.run().catch(console.error)};
 
 =======
-  checker.runHealthChecks().catch(console.error);
-}
-
-module.exports = HealthChecker;
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

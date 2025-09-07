@@ -70,12 +70,10 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1ea4
     };
   }, []);
 
   return (
-<<<<<<< HEAD
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
       {/* Animated Background Layers */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />

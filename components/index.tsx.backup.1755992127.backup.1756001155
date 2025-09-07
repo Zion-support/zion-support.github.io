@@ -310,7 +310,6 @@ export default function HomePage() {
                 </button>
               </Link>
             </motion.div>
-<<<<<<< HEAD
 
             {/* Contact Information */}
             <motion.div
@@ -332,8 +331,6 @@ export default function HomePage() {
                 <span className="text-sm">{contactInfo.address}</span>
               </div>
             </motion.div>
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-29c7
           </div>
 
           {/* Scroll Indicator */}

@@ -11,7 +11,6 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
   intensity = 'medium',
 =======
   className = '',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d317
   children
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -24,7 +23,6 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-<<<<<<< HEAD
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 

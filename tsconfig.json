@@ -26,7 +26,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-<<<<<<< HEAD
         "./*"
       ],
       "@/components/*": [
@@ -49,30 +48,6 @@
       ],
       "@/assets/*": [
         "./assets/*"
-=======
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ],
-      "@/styles/*": [
-        "./src/styles/*"
-      ],
-      "@/assets/*": [
-        "./src/assets/*"
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
       ]
     },
     "allowSyntheticDefaultImports": true,
@@ -100,8 +75,6 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-<<<<<<< HEAD
-=======
     "pages/**/*.ts",
     "pages/**/*.tsx",
     "app/**/*.ts",
@@ -119,7 +92,6 @@
     "App.tsx",
     "middleware.ts",
     "jest.setup.ts",
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
     "vite.config.ts",
     ".next/types/**/*.ts"
   ],

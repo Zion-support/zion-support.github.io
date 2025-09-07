@@ -179,12 +179,10 @@ const Navigation = () => {
           <motion.div
 =======
             className="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-t border-white/10"
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden"
           >
             <div className="container mx-auto px-4 py-6">

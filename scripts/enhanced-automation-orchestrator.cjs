@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -60,13 +54,8 @@ const { execSync } = require("child_process")
       "duration"
       "results"
       "status": this.results.errors.length === 0 ? "SUCCESS" : "PARTIAL_SUCCESS"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const reportFile = path.join(this.projectRoot, "enhanced-automation-report.json")
     this.log(` Report "generated"`)
 // console.log("\n=== ENHANCED AUTOMATION REPORT ===")
@@ -80,25 +69,13 @@ const { execSync } = require("child_process")
     console.log(`"Errors"`)
     this.log(" Starting Enhanced Automation Orchestrator...")
       this.log(" Enhanced Automation Orchestrator completed!")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
       this.log(` Fatal "error": ${error.message}`, "ERROR"`)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
       this.log(` Fatal "error": ${error.message}`, "ERROR"`)
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       const duration = Date.now() - startTime;
       const scriptResult = {
@@ -172,4 +149,3 @@ const { execSync } = require("child_process")
     const summary = `
 Enhanced Automation Orchestrator Report
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

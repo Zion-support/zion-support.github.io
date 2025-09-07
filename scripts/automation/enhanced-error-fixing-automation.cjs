@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 =======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -26,20 +12,14 @@ const { execSync } = require("child_process");
           const lines = content.split("\n");"
           const newLines = [];
           let inConflict = false;
-<<<<<<< HEAD
           
           for (const line of lines) {
-<<<<<<< HEAD
               continue;
             } else if (line.includes("")) {
-=======
-            if (line.includes("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               inConflict = false;
               continue;
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             } else if (!inConflict) {
               newLines.push(line);
             }
@@ -100,33 +80,20 @@ if (require.main === module) {
   automation.run().catch(console.error);
 
 module.exports = EnhancedErrorFixingAutomation;
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node;
 #!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-<<<<<<< HEAD
 =======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 #!/usr/bin/env node;
 #!/usr/bin/env node;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("fs")
 const path = require("path")
 console.log( Starting Enhanced Error Fixing Automation System...")
@@ -296,30 +263,14 @@ export default function"
       "summary"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-<<<<<<< HEAD
-        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -44,24 +44,13 @@
 // Run the enhanced performance monitor;
 main();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 =======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -110,17 +99,12 @@ console.log('=')
       "priority"
       "message"
       "action"
-<<<<<<< HEAD
       log('warn', 'Performance "Alerts")
       log('info', 'Performance "Recommendations")
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
-<<<<<<< HEAD
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
@@ -300,6 +284,3 @@ monitor
   });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

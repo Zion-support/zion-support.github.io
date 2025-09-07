@@ -217,14 +217,12 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 
     window.addEventListener('resize', handleResize);
 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-24ae
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-<<<<<<< HEAD
   }, []);
 
   return (

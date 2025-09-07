@@ -471,27 +471,6 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
           </div>
         )}
       </motion.div>
-<<<<<<< HEAD
-=======
-
-      {/* External Glow */}
-      <motion.div
-        className="absolute inset-0 rounded-xl blur-xl opacity-50"
-        style={{
-          background: `radial-gradient(circle at 50% 50%, ${finalGlowColor}, transparent 70%)`,
-          zIndex: -1
-        }}
-        animate={{
-          scale: [1, 1.05, 1],
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1ea4
     </motion.div>
   );
 };

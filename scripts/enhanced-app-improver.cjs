@@ -1,34 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+=======
 =======
 #!/usr/bin/env node;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 #!/usr/bin/env node;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     console.log(" Enhanced App Improver Starting...");""
 
@@ -51,7 +32,6 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     "default-src "self", script-src "self" "unsafe-eval" "unsafe-inline", style-src "self" "unsafe-inline", img-src "self" "data": "https":", font-src "self", connect-src "self", frame-ancestors "none"].join();";";  response.headers.set("Content-Security-Policy", csp);";"
   "matcher": [/((?!api|_next/static|_next/image|favicon.ico).*)", "],,"};";"
     this.writeFile("middleware.ts", securityMiddleware);";    this.improvements.push("Created security middleware with CSP headers");"}"
-<<<<<<< HEAD
     console.log(" Optimizing SEO...");""
     const seoComponent = "import Head from "next/head"";";interface SEOProps {"}
 export const "SEO": React.FC<SEOProps> = ({";  title = "Zion Tech Group - Advanced AI Solutions", ";  description = "Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.", ";  keywords = "AI, artificial intelligence, cloud computing, digital transformation, automation", ";  image = "/og-image.jpg", ";  url = ""https"://ziontechgroup.com", ";  type = "website""}) => {"}
@@ -134,43 +114,24 @@ module.exports = DeploymentAutomation";"
     console.log("\\n Fixes "Applied":");";    this.fixes.forEach(fix => {);      console.log(" ${fix}");"
       "timestamp": new Date().toISOString(),""improvements": this.improvements,""fixes": this.fixes,""summary": {""totalImprovements": this.improvements.length,""totalFixes": this.fixes.length,,"}
     fs.writeFileSync();      path.join(this.projectRoot, "enhanced-app-improvement-report.json"),";      JSON.stringify(report, null, 2);"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
     console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-    console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
     console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 =======
 =======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
-<<<<<<< HEAD
     try {
       await this.optimizePerformance();
       await this.improveCodeQuality();
@@ -845,17 +806,9 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedAppImprover;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -6,7 +6,6 @@ interface EnhancedFuturisticBackgroundProps {
 =======
   variant?: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'matrix' | 'quantum-cyberpunk' | 'holographic-matrix';
   intensity?: 'low' | 'medium' | 'high';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8601
   className?: string;
 }
 
@@ -36,7 +35,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       vy: number;
       size: number;
       color: string;
-<<<<<<< HEAD
       life: number;
       maxLife: number;
     }> = [];

@@ -546,7 +546,6 @@ export default function MicroSaasPage() {
       trialDays: 14,
       setupTime: '30 minutes',
       category: 'Customer Experience'
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-website-improvements-05c6
     }
   ];
 
@@ -610,7 +609,6 @@ export default function MicroSaasPage() {
               Specialized Tools for
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400"> Every Business Need</span>
             </h1>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
               Discover our comprehensive suite of AI-powered micro SaaS solutions, all hosted on <strong className="text-green-400">ziontechgroup.com</strong>. 
               From content creation to compliance monitoring, we provide specialized tools that integrate seamlessly with your existing workflows. 

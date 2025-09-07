@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 [\s\S]*?
 
     
@@ -8,28 +6,17 @@
     content = content.replace(/^
 ursor/fix-lint-push-and-merge-to-main-28da
     
-=======
-
-
-    // Clean up any remaining conflict markers
-    content = content.replace(/^.*$/gm, "");
-    content = content.replace(/^
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
     
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     fs.writeFileSync(filePath, content);
     return true} catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false}
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 // Function to remove unused imports
 function removeUnusedImports(filePath) {
@@ -147,12 +134,9 @@ try {
 ursor/fix-lint-push-and-merge-to-main-28da
 ursor/automate-test-improve-and-merge-code-59d5
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")

@@ -51,7 +51,6 @@ class WorkingAutomationSuite {
     }
   }
 
-<<<<<<< HEAD
   async preAutomationChecks() {
     this.log("Running pre-automation checks...");
     
@@ -66,18 +65,12 @@ class WorkingAutomationSuite {
     
     this.results.success.push("Pre-automation checks passed");
   }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 
   async installDependencies() {
     this.log("📦 Installing dependencies...");
     await this.runCommand("npm install", "Dependency Installation");
   }
 
-<<<<<<< HEAD
   async runLinting() {
     this.log("🔍 Running linting...");
     await this.runCommand("npm run lint:fix", "ESLint Fix");
@@ -297,8 +290,6 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
 // Run the automation suite
 const suite = new WorkingAutomationSuite();
 suite.run().catch(console.error);
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 =======
 
@@ -307,10 +298,8 @@ suite.run().catch(console.error);
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Zion Tech Group - Working Automation Suite')
 
->>>>>>> origin/main

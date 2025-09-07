@@ -178,7 +178,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         }
       }
 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a489
       animationRef.current = requestAnimationFrame(animate);
     };
 
@@ -321,7 +320,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             ease: "easeInOut"
           }}
         />
-<<<<<<< HEAD
       </div>
 
       {/* Content Layer */}

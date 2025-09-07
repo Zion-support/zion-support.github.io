@@ -11,7 +11,6 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
   children,
 =======
   className = '',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
   intensity = 'medium',
   colorScheme = 'quantum'
 }) => {
@@ -361,7 +360,6 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
           />
         ))}
       </div>
-<<<<<<< HEAD
     </div>
   );
 };

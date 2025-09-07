@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -71,38 +58,17 @@ const { execSync } = require('child_process')
     if (this.metrics.performanceScore < 60) grade = 'F'
     this.log(' Starting Performance Monitor', 'PERFORMANCE')
       this.log(`Error during performance monitoring: ${error.message}`, 'ERROR'`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 #!/usr/bin/env node
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
-<<<<<<< HEAD
-=======
-
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 #!/usr/bin/env node
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 =======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node
 
 
@@ -111,27 +77,16 @@ main
 #!/usr/bin/env node
 
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
 
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 #!/usr/bin/env node
 
@@ -140,21 +95,13 @@ const { execSync } = require('child_process')
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
 #!/usr/bin/env node
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -224,7 +171,6 @@ const performanceChecks = [
       if (!fs.existsSync(buildDir)) {
         console.log('⚠️  Build directory not found. Running build...');
         execSync('npm run build', { stdio: 'pipe' });
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       }
       
       const staticDir = path.join(buildDir, 'static');
@@ -242,7 +188,6 @@ const performanceChecks = [
         console.log(`📦 Bundle size: ${sizeInMB}MB`);
         return totalSize < 50 * 1024 * 1024; // 50MB limit
       }
-<<<<<<< HEAD
     };
 
     const reportPath = path.join(this.projectRoot, 'performance-report.json');
@@ -266,9 +211,7 @@ const performanceChecks = [
     this.log('Starting Performance Monitor...');
     this.log('
 
-<<<<<<< HEAD
 const monitor = new PerformanceMonitor();
-<<<<<<< HEAD
 monitor.measureBuildTime();
 monitor.measureBundleSize();
 const report = monitor.generateReport();
@@ -276,13 +219,6 @@ const report = monitor.generateReport();
 fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
 console.log('Performance report generated');
 =======
-monitor.run().catch(console.error);
-
-=======
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 console.log('⚡ Starting performance monitoring...');
 
 const performanceMetrics = {
@@ -308,7 +244,6 @@ function getDirectorySize(dirPath) {
     name: 'Build Time Check',
     check: () => {
       const startTime = Date.now();
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       try {
         execSync('npm run build', { stdio: 'pipe' });
         const endTime = Date.now();
@@ -351,7 +286,6 @@ performanceChecks.forEach(check => {
 
 console.log(`\n📊 Performance Results: ${passed} passed, ${failed} failed`);
 
-<<<<<<< HEAD
 // Check node_modules;
 const nodeModulesSize = getDirectorySize('node_modules');
 
@@ -388,14 +322,12 @@ if (fs.existsSync(publicDir)) {
 
 // Display results;
 
-<<<<<<< HEAD
 if (performanceMetrics.recommendations.length > 0) {
   console.log('\n💡 Recommendations:');
   performanceMetrics.recommendations.forEach(rec => console.log(`   - ${rec}`));
 } else {
   console.log('\n✅ No performance issues detected');
 }
-<<<<<<< HEAD
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -416,47 +348,29 @@ monitor.run().catch(console.error);
 
 main
 
-=======
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 // Save report
 fs.writeFileSync('performance-metrics.json', JSON.stringify(performanceMetrics, null, 2));
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 console.log('\n📄 Performance report saved to performance-metrics.json');
 // Exit after a delay to prevent rapid restarts;
 setTimeout(() => {
   process.exit(0);
 }, 1000);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
 =======
 =======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/automate-test-improve-and-merge-code-59d5
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log('⚡ Performance Monitor');
 console.log('=====================');
 =======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -573,28 +487,17 @@ if (require.main === module) {
   monitor.runPerformanceMonitoring().catch(console.error);
 
 module.exports = PerformanceMonitor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 =======
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
 =======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
 if (failed === 0) {
   console.log('🎉 All performance checks passed!');
@@ -603,4 +506,3 @@ if (failed === 0) {
   console.log('⚠️  Some performance checks failed. Please review the issues.');
   process.exit(1);
 }
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

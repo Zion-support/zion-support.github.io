@@ -16,13 +16,11 @@ const Header: React.FC = () => {
     };
 =======
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navigation = [
-<<<<<<< HEAD
     { name: 'Home', href: '/' },
     { 
       name: 'Services', 

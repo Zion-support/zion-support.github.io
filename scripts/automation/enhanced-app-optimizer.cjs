@@ -1,38 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class EnhancedAppOptimizer {}
   constructor() {}
     this.projectRoot = process.cwd();
 
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if () {}
         fs.mkdirSync(dirPath, { "recursive": true })};"
     })};"
@@ -45,25 +29,16 @@ class EnhancedAppOptimizer {}
     const logMessage = `[${timestamp}] [${level}] ${message};;`
     console.log(logMessage);
     try {}
-<<<<<<< HEAD
       fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
       console.error('Failed to write to log "file": ', error.message)};
   };
   async optimizePerformance() {}
     this.log('Starting performance optimization...');
     const optimizations = [];
-<<<<<<< HEAD
     try {}
       // Analyze bundle size;
       const bundleAnalysis = execSync('npm run "build": analyze', { })
         "cwd": this.projectRoot,
-=======
-
-    try {}
-      // Analyze bundle size;
-      const bundleAnalysis = execSync('npm run "build": analyze', { })
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "stdio": 'pipe',
         "timeout": 120000;
       };);
@@ -102,10 +77,6 @@ class EnhancedAppOptimizer {}
   async optimizeSEO() {}
     this.log('Starting SEO optimization...');
     const seoOptimizations = [];
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Generate sitemap;
     try {}
       const sitemapContent = this.generateSitemap(;);
@@ -140,18 +111,10 @@ class EnhancedAppOptimizer {}
   async optimizeSecurity() {}
     this.log('Starting security optimization...');
     const securityOptimizations = [];
-<<<<<<< HEAD
     // Run security audit;
     try {}
       execSync('npm audit --audit-level=moderate', { })
         "cwd": this.projectRoot,
-=======
-
-    // Run security audit;
-    try {}
-      execSync('npm audit --audit-level=moderate', { })
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -187,10 +150,6 @@ class EnhancedAppOptimizer {}
   async optimizeAccessibility() {}
     this.log('Starting accessibility optimization...');
     const accessibilityOptimizations = [];
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Check for alt text in images;
     try {}
       const pagesDir = path.join(this.projectRoot, 'pages';);
@@ -203,16 +162,10 @@ class EnhancedAppOptimizer {}
         const pages = this.findPageFiles(pagesDir) {}
         const pages = this.findPageFiles(pagesDir})
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let imageCount = ;0;
       let altTextCount = ;0;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       [pagesDir, componentsDir].forEach(dir => {})
           const files = this.findReactFiles(dir) {}
-<<<<<<< HEAD
     ) {}
           const files = this.findReactFiles(dir}
 });
@@ -224,18 +177,10 @@ class EnhancedAppOptimizer {}
             altTextCount += altTexts.length})};
       }
 });
-<<<<<<< HEAD
       accessibilityOptimizations.push({ })
         "type": 'alt-text-check',
         "status": 'completed',
         "images": imageCount,
-=======
-
-      accessibilityOptimizations.push({ })
-        "type": 'alt-text-check', 
-        "status": 'completed', 
-        "images": imageCount, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "altTexts": altTextCount,
         "coverage": imageCount > 0 ? Math.round((altTextCount / imageCount) * 100) : 100;
       }
@@ -247,17 +192,9 @@ class EnhancedAppOptimizer {}
   findImageFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-<<<<<<< HEAD
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-=======
-    
-    items.forEach(item => {})
-      const fullPath = path.join(dir, item;);
-      const stat = fs.statSync(fullPath;);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if () {}
         files.push(...this.findImageFiles(fullPath))} else if (/\.(jpg|jpeg|png|gif|webp|svg)$/i.test(item)) {}
         files.push(fullPath)};
@@ -270,17 +207,9 @@ class EnhancedAppOptimizer {}
   findPageFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-<<<<<<< HEAD
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-=======
-    
-    items.forEach(item => {})
-      const fullPath = path.join(dir, item;);
-      const stat = fs.statSync(fullPath;);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if () {}
         files.push(...this.findPageFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {}
         files.push(fullPath)};
@@ -293,17 +222,9 @@ class EnhancedAppOptimizer {}
   findReactFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-<<<<<<< HEAD
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-=======
-    
-    items.forEach(item => {})
-      const fullPath = path.join(dir, item;);
-      const stat = fs.statSync(fullPath;);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
         files.push(fullPath)};
@@ -330,20 +251,10 @@ class EnhancedAppOptimizer {}
       '/privacy',
       '/terms'
     ];
-<<<<<<< HEAD
     const baseUrl = '"https": //ziontechgroup.com;';
     const currentDate = new Date().toISOString(;);
     let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\;n;';
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-=======
-
-    const baseUrl = '"https": //ziontechgroup.com;';
-    const currentDate = new Date().toISOString(;);
-
-    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\;n;';
-    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     pages.forEach(page => {})
       sitemap += '  <url>\n';
       sitemap += `    <loc>${baseUrl}${page}</loc>\n`;`
@@ -352,19 +263,11 @@ class EnhancedAppOptimizer {}
       sitemap += '    <priority>0.8</priority>\n';
       sitemap += '  </url>\n'}
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     sitemap += '</urlset>';
     return sitemap};
   generateRobotsTxt() {}
     return "User-"agent": *;
 Allow: /
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for respectful crawling;
 Crawl-delay: 1;
@@ -380,18 +283,10 @@ Disallow: /private/"};
       await this.optimizeSEO();
       await this.optimizeSecurity();
       await this.optimizeAccessibility();
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Save results;
       const reportFile = path.join(this.projectRoot, 'automation', 'logs', 'enhanced-app-optimizer-report.json';);
       fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
       this.log(`Optimization report saved to ${reportFile}`);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.log('Enhanced App Optimizer completed successfully!');
       return this.results} catch(error) {}
       this.log(`Enhanced App Optimizer "failed": ${error.message}`, 'ERROR');
@@ -403,28 +298,15 @@ if ( {})
      {}
   const optimizer = new EnhancedAppOptimizer}(;);
   optimizer.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 module.exports = EnhancedAppOptimizer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-module.exports = EnhancedAppOptimizer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = EnhancedAppOptimizer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 module.exports = EnhancedAppOptimizer;
 =======
           const files = this.findReactFiles(dir})
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

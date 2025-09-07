@@ -76,13 +76,11 @@ import Link from 'next/link';
   const featuredServices = services.filter(service => service.popular).slice(0, 6);
   const regularServices = services.filter(service => !service.popular).slice(0, 12);
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-cyan-900/5" />
       
-<<<<<<< HEAD
       <motion.div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <motion.div

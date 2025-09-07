@@ -12,21 +12,13 @@ function fixFile(filePath) {
     // Remove all merge conflict markers;
     content = content.replace(/
 
-<<<<<<< HEAD
 
 
 
-<<<<<<< HEAD
     content = content.replace(/[^\n]+\n?/g, '');
-=======
-    content = content.replace(/
-
-    content = content.replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     
     // Fix common syntax issues
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
     content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g, 'const blogPosts');
     content = content.replace(/,\s*"title":/g, ',');

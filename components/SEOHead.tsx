@@ -14,17 +14,10 @@ interface SEOHeadProps {
   nofollow?: boolean;
 }
 
-<<<<<<< HEAD
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
   keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',
-=======
-export default function SEOHead({
-  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions',
-  description = 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
-  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions',
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
   canonicalUrl,
   ogImage = '/og-image.jpg',
   ogType = 'website',
@@ -86,10 +79,6 @@ export default function SEOHead({
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     </Head>
   );
-<<<<<<< HEAD
 };
 
 export default SEOHead;
-=======
-}
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

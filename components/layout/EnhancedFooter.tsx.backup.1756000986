@@ -22,12 +22,10 @@ import {
   Instagram,
   Youtube
 } from 'lucide-react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',

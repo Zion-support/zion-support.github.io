@@ -1,9 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 const fs = require('fs');
 const path = require('path');
@@ -220,8 +215,6 @@ class ComprehensiveSyntaxFixer {
 
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer();
-<<<<<<< HEAD
-<<<<<<< HEAD
 fixer.run().catch(console.error);    }
   }
 }
@@ -232,12 +225,6 @@ fixer.run().catch(console.error);    }
     } catch (error) {
       this.log(`❌ Comprehensive syntax fixing failed: ${error.message}`);
       process.exit(1);
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 fixer.run().catch(console.error);
 =======
 const fs = require('fs');
@@ -431,29 +418,11 @@ class ComprehensiveSyntaxFixer {
       
     } catch (error) {
       this.log(`Error in syntax fixer: ${error.message}`, 'ERROR');
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-<<<<<<< HEAD
 =======
-fixer.run().catch(console.error);    }
-  }
-}
-
-      this.log('🎉 Comprehensive syntax fixing completed successfully!');
-      this.log(`📊 Fixed ${this.fixedFiles.length} files`);
-      this.log(`❌ ${this.errors.length} errors encountered`);
-    } catch (error) {
-      this.log(`❌ Comprehensive syntax fixing failed: ${error.message}`);
-      process.exit(1);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
 
@@ -461,34 +430,16 @@ if (require.main === module) {
   const fixer = new ComprehensiveSyntaxFixer();
 
 module.exports = ComprehensiveSyntaxFixer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
-<<<<<<< HEAD
 =======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

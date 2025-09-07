@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 #!/usr/bin/env node;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
-<<<<<<< HEAD
     this.log("� Checking file structure");"";    const requiredDirs = ["src", "public", "pages"];";    const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"];""
       "directories": {},""files": {},""issues": [],,"
         results.issues.push("Missing "directory": ${dir}");"
@@ -49,43 +36,25 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
       this.log(" Health check completed");";      return report,"
       this.log(" Health check "failed": ${error.message}");"
   .then(report => {);    console.log(" Health check completed successfully");";    process.exit(0),"}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-  .catch(error => {);    console.error(" Health check "failed":", error.message);"}
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 =======
 
-<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 
   async checkFileStructure() {
@@ -276,20 +245,14 @@ checker
     console.error('❌ Health check failed:', error.message);
     process.exit(1);
   });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
     this.log("� Checking file structure");"";    const requiredDirs = ["src", "public", "pages"];";    const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"];""
       "directories": {},""files": {},""issues": [],,"
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         results.issues.push("Missing "directory": ${dir}");"
         results.issues.push(`Missing "file": ${file});
     this.log("⚙ Checking configuration files");
@@ -318,13 +281,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       this.log(" Health check completed");";      return report,"
       this.log(" Health check "failed": ${error.message}");"
 
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
 
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

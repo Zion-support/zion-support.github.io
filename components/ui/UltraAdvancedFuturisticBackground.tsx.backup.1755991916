@@ -312,7 +312,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     };
 =======
   }, [variant, intensity]);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ae10
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -323,7 +322,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         style={{ background: 'transparent' }}
       />
       
-<<<<<<< HEAD
       {/* Enhanced floating geometric shapes */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <motion.div
