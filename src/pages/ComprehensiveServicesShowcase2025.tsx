@@ -467,6 +467,41 @@ export default function ComprehensiveServicesShowcase2025() {
     }
   };
 
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'rating':
+        return b.rating - a.rating;
+      case 'price':
+        return a.price - b.price;
+      case 'reviews':
+        return b.reviewCount - a.reviewCount;
+      case 'name':
+        return a.title.localeCompare(b.title);
+      case 'aiScore':
+        return b.aiScore - a.aiScore;
+      default:
+        return 0;
+    }
+  });
+
+  const getPriceTier = (price: number) => {
+    if (price <= 2000) return { tier: 'Bronze', icon: Bronze, color: 'text-amber-600' };
+    if (price <= 3500) return { tier: 'Silver', icon: Silver, color: 'text-gray-400' };
+    if (price <= 5000) return { tier: 'Gold', icon: Gold, color: 'text-yellow-500' };
+    if (price <= 7000) return { tier: 'Platinum', icon: Platinum, color: 'text-cyan-400' };
+    return { tier: 'Diamond', icon: Diamond, color: 'text-purple-500' };
+  };
+
+  const openServiceModal = (service: any) => {
+    setSelectedService(service);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedService(null);
+  };
+
   return (
     <div className="min-h-screen bg-zion-blue">
       <SEO 

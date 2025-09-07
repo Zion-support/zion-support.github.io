@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   Check, 
+  X, 
   Star, 
+  TrendingUp, 
+  Shield, 
   Zap, 
   Shield, 
   Cloud, 
@@ -13,6 +17,7 @@ import {
   Globe,
   Award
 } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 const pricingTiers = [
   {
@@ -279,7 +284,6 @@ export default function Pricing() {
             ))}
           </div>
         </div>
-      </section>
 
       {/* Innovative Services */}
       <section className="py-20 bg-slate-800/30">
@@ -414,7 +418,6 @@ export default function Pricing() {
             ))}
           </div>
         </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-zion-slate">
@@ -446,7 +449,6 @@ export default function Pricing() {
             </div>
           </div>
         </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
